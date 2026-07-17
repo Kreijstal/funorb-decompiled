@@ -13,9 +13,10 @@ final class ip extends ml {
         } else {
           var4 = param1 * 2;
           var5 = param0 & 255;
+          int incrementValue$2 = var4;
           var4++;
-          ((ip) this).field_x[var4] = (byte)(var5 * 3 >> 66555013);
-          ((ip) this).field_x[var4] = (byte)(var5 * 3 >> 1886067877);
+          ((ip) this).field_x[incrementValue$2] = (byte)(var5 * 3 >> 5);
+          ((ip) this).field_x[var4] = (byte)(var5 * 3 >> 5);
           return;
         }
     }
@@ -32,44 +33,44 @@ final class ip extends ml {
     }
 
     final static void d(int param0) {
+        RuntimeException var1 = null;
         int var2 = 0;
+        RuntimeException decompiledCaughtException = null;
         var2 = Sumoblitz.field_L ? 1 : 0;
-        if (oj.a(false)) {
-          boolean discarded$3 = pu.field_e.a(cc.field_j, c.field_r, true, param0 + -1886067878);
-          if (param0 == 1886067877) {
-            pu.field_e.h(-104);
-            L0: while (true) {
-              if (!wd.c(-81)) {
-                return;
-              } else {
-                boolean discarded$4 = pu.field_e.a(np.field_c, tg.field_a, true);
-                continue L0;
+        try {
+          L0: {
+            if (oj.a(false)) {
+              boolean discarded$15 = pu.field_e.a(cc.field_j, c.field_r, true, -1);
+              pu.field_e.h(-104);
+              L1: while (true) {
+                if (!wd.c(-81)) {
+                  break L0;
+                } else {
+                  boolean discarded$16 = pu.field_e.a(np.field_c, tg.field_a, true);
+                  continue L1;
+                }
               }
-            }
-          } else {
-            ip.d((byte) -127);
-            pu.field_e.h(-104);
-            L1: while (true) {
-              if (!wd.c(-81)) {
-                return;
-              } else {
-                boolean discarded$5 = pu.field_e.a(np.field_c, tg.field_a, true);
-                continue L1;
-              }
-            }
-          }
-        } else {
-          if (null != gk.field_o) {
-            if (!gk.field_o.field_a) {
-              return;
             } else {
-              ib.d(1);
-              pu.field_e.a((byte) 113, (pk) (Object) new u(pu.field_e, am.field_e));
+              L2: {
+                if (null == gk.field_o) {
+                  break L2;
+                } else {
+                  if (gk.field_o.field_a) {
+                    ib.d(1);
+                    pu.field_e.a((byte) 113, (pk) (Object) new u(pu.field_e, am.field_e));
+                    break L2;
+                  } else {
+                    break L2;
+                  }
+                }
+              }
               return;
             }
-          } else {
-            return;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw qo.a((Throwable) (Object) var1, "ip.D(" + 1886067877 + 41);
         }
     }
 

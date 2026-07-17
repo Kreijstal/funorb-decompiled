@@ -49,6 +49,7 @@ final class ml extends wf {
 
     final static ml a(ci param0, int param1, int param2) {
         try {
+            ml var4_ref = null;
             if (!ml.a(param0)) {
                 boolean discarded$0 = param0.a(param2, 0, param1);
                 return null;
@@ -57,13 +58,11 @@ final class ml extends wf {
             if (var3 == null) {
                 return null;
             }
-            ml var4 = null;
-            try {
-                var4 = new ml(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
+            Object var4 = null;
+            {
+                var4_ref = new ml(var3);
             }
-            return var4;
+            return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -108,12 +107,13 @@ final class ml extends wf {
                     if ((var7 & -256) == 0) {
                       break L3;
                     } else {
-                      var7 = (var7 ^ -1) >> 31;
+                      var7 = ~var7 >> 31;
                       break L3;
                     }
                   }
+                  int incrementValue$1 = var2;
                   var2++;
-                  var1[var2] = (byte)(var7 - 128);
+                  var1[incrementValue$1] = (byte)(var7 - 128);
                   var6++;
                   continue L2;
                 } else {
@@ -246,12 +246,13 @@ final class ml extends wf {
                       if ((var6 & -256) == 0) {
                         break L8;
                       } else {
-                        var6 = (var6 ^ -1) >> 31;
+                        var6 = ~var6 >> 31;
                         break L8;
                       }
                     }
+                    int incrementValue$1 = var3;
                     var3++;
-                    ((ml) this).field_J[var3] = (byte)(var6 - 128);
+                    ((ml) this).field_J[incrementValue$1] = (byte)(var6 - 128);
                     var5++;
                     continue L6;
                   }
@@ -282,7 +283,6 @@ final class ml extends wf {
         int var16 = 0;
         int var17_int = 0;
         Object var17 = null;
-        float[] var17_array = null;
         int var18_int = 0;
         float[] var18 = null;
         int var19 = 0;
@@ -798,7 +798,7 @@ final class ml extends wf {
                   var50 = var54;
                   var46 = var50;
                   var40 = var46;
-                  var17_array = var40;
+                  var17 = (Object) (Object) var40;
                   if (((ml) this).field_G) {
                     break L36;
                   } else {
@@ -856,7 +856,7 @@ final class ml extends wf {
               }
             }
             ((ml) this).field_G = stackIn_111_1 != 0;
-            return var17_array;
+            return (float[]) var17;
           } else {
             var42 = field_t[var14.field_d[var17_int]];
             var55 = field_K;
@@ -1117,7 +1117,7 @@ final class ml extends wf {
 
     private final static void a(byte[] param0, int param1) {
         field_I = param0;
-        field_j = param1;
+        field_j = 0;
         field_v = 0;
     }
 
@@ -1132,7 +1132,7 @@ final class ml extends wf {
         ((ml) this).field_l = var2.c((byte) -127);
         ((ml) this).field_z = var2.c((byte) -104);
         if (((ml) this).field_z < 0) {
-            ((ml) this).field_z = ((ml) this).field_z ^ -1;
+            ((ml) this).field_z = ~((ml) this).field_z;
             ((ml) this).field_A = true;
         }
         int var3 = var2.c((byte) -124);
@@ -1154,6 +1154,7 @@ final class ml extends wf {
 
     final static ml a(ci param0, String param1, String param2) {
         try {
+            ml var4_ref = null;
             if (!ml.a(param0)) {
                 boolean discarded$0 = param0.a((byte) 35, param2, param1);
                 return null;
@@ -1162,13 +1163,11 @@ final class ml extends wf {
             if (var3 == null) {
                 return null;
             }
-            ml var4 = null;
-            try {
-                var4 = new ml(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
+            Object var4 = null;
+            {
+                var4_ref = new ml(var3);
             }
-            return var4;
+            return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

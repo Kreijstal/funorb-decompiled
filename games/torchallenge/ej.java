@@ -23,7 +23,6 @@ final class ej extends da {
         int var12 = 0;
         int var13 = 0;
         s var14 = null;
-        s var14_ref = null;
         int[] var15 = null;
         int[] var17 = null;
         int[] var18 = null;
@@ -113,12 +112,12 @@ final class ej extends da {
                               if (var14 != null) {
                                 break L7;
                               } else {
-                                var14_ref = new s(new byte[128]);
-                                ((ej) this).field_j.a(-104, (da) (Object) var14_ref, (long)var13);
+                                var14 = new s(new byte[128]);
+                                ((ej) this).field_j.a(-104, (da) (Object) var14, (long)var13);
                                 break L7;
                               }
                             }
-                            var14_ref.field_o[var11] = (byte) 1;
+                            var14.field_o[var11] = (byte) 1;
                             break L6;
                           }
                         }
@@ -360,6 +359,7 @@ final class ej extends da {
                     var60 = 0;
                     L4: while (true) {
                       if (var60 >= var2) {
+                        return;
                       } else {
                         var51.a(1297379947, false);
                         var51.field_q = var51.field_q + 4;
@@ -369,8 +369,9 @@ final class ej extends da {
                           L6: {
                             var63 = param0.f(-9);
                             var51.b((byte) 117, var63);
+                            int incrementValue$29 = var29;
                             var29++;
-                            var64 = param0.field_m[var29] & 255;
+                            var64 = param0.field_m[incrementValue$29] & 255;
                             if (var64 == var62) {
                               stackOut_72_0 = 0;
                               stackIn_73_0 = stackOut_72_0;
@@ -403,8 +404,9 @@ final class ej extends da {
                                                 break L7;
                                               }
                                             }
+                                            int incrementValue$30 = var44;
                                             var44++;
-                                            var51.d((int) param0.field_m[var44], (byte) 122);
+                                            var51.d((int) param0.field_m[incrementValue$30], (byte) 122);
                                             continue L5;
                                           }
                                         } else {
@@ -416,10 +418,12 @@ final class ej extends da {
                                               break L8;
                                             }
                                           }
+                                          int incrementValue$31 = var37;
                                           var37++;
-                                          var53 = var53 + param0.field_m[var37];
+                                          var53 = var53 + param0.field_m[incrementValue$31];
+                                          int incrementValue$32 = var31;
                                           var31++;
-                                          var58 = var58 + param0.field_m[var31];
+                                          var58 = var58 + param0.field_m[incrementValue$32];
                                           var51.d(var53 & 127, (byte) 122);
                                           var51.d(var58 & 127, (byte) 122);
                                           continue L5;
@@ -433,8 +437,9 @@ final class ej extends da {
                                             break L9;
                                           }
                                         }
+                                        int incrementValue$33 = var32;
                                         var32++;
-                                        var57 = var57 + param0.field_m[var32];
+                                        var57 = var57 + param0.field_m[incrementValue$33];
                                         var51.d(var57 & 127, (byte) 122);
                                         continue L5;
                                       }
@@ -447,10 +452,12 @@ final class ej extends da {
                                           break L10;
                                         }
                                       }
+                                      int incrementValue$34 = var45;
                                       var45++;
-                                      var56 = var56 + param0.field_m[var45];
+                                      var56 = var56 + param0.field_m[incrementValue$34];
+                                      int incrementValue$35 = var33;
                                       var33++;
-                                      var56 = var56 + (param0.field_m[var33] << 7);
+                                      var56 = var56 + (param0.field_m[incrementValue$35] << 7);
                                       var51.d(var56 & 127, (byte) 122);
                                       var51.d(var56 >> 7 & 127, (byte) 122);
                                       continue L5;
@@ -466,8 +473,9 @@ final class ej extends da {
                                     }
                                     L12: {
                                       L13: {
+                                        int incrementValue$36 = var15;
                                         var15++;
-                                        var28 = var28 + param0.field_m[var15] & 127;
+                                        var28 = var28 + param0.field_m[incrementValue$36] & 127;
                                         var51.d(var28, (byte) 122);
                                         if (var28 == 0) {
                                           break L13;
@@ -497,8 +505,9 @@ final class ej extends da {
                                                                           break L14;
                                                                         } else {
                                                                           if (var28 != 123) {
+                                                                            int incrementValue$37 = var39;
                                                                             var39++;
-                                                                            var66 = param0.field_m[var39];
+                                                                            var66 = param0.field_m[incrementValue$37];
                                                                             break L12;
                                                                           } else {
                                                                             break L14;
@@ -508,57 +517,68 @@ final class ej extends da {
                                                                     }
                                                                   }
                                                                 }
+                                                                int incrementValue$38 = var30;
                                                                 var30++;
-                                                                var66 = param0.field_m[var30];
+                                                                var66 = param0.field_m[incrementValue$38];
                                                                 break L12;
                                                               } else {
+                                                                int incrementValue$39 = var49;
                                                                 var49++;
-                                                                var66 = param0.field_m[var49];
+                                                                var66 = param0.field_m[incrementValue$39];
                                                                 break L12;
                                                               }
                                                             } else {
+                                                              int incrementValue$40 = var48;
                                                               var48++;
-                                                              var66 = param0.field_m[var48];
+                                                              var66 = param0.field_m[incrementValue$40];
                                                               break L12;
                                                             }
                                                           } else {
+                                                            int incrementValue$41 = var47;
                                                             var47++;
-                                                            var66 = param0.field_m[var47];
+                                                            var66 = param0.field_m[incrementValue$41];
                                                             break L12;
                                                           }
                                                         } else {
+                                                          int incrementValue$42 = var46;
                                                           var46++;
-                                                          var66 = param0.field_m[var46];
+                                                          var66 = param0.field_m[incrementValue$42];
                                                           break L12;
                                                         }
                                                       } else {
+                                                        int incrementValue$43 = var43;
                                                         var43++;
-                                                        var66 = param0.field_m[var43];
+                                                        var66 = param0.field_m[incrementValue$43];
                                                         break L12;
                                                       }
                                                     } else {
+                                                      int incrementValue$44 = var36;
                                                       var36++;
-                                                      var66 = param0.field_m[var36];
+                                                      var66 = param0.field_m[incrementValue$44];
                                                       break L12;
                                                     }
                                                   } else {
+                                                    int incrementValue$45 = var42;
                                                     var42++;
-                                                    var66 = param0.field_m[var42];
+                                                    var66 = param0.field_m[incrementValue$45];
                                                     break L12;
                                                   }
                                                 } else {
+                                                  int incrementValue$46 = var35;
                                                   var35++;
-                                                  var66 = param0.field_m[var35];
+                                                  var66 = param0.field_m[incrementValue$46];
                                                   break L12;
                                                 }
                                               } else {
+                                                int incrementValue$47 = var41;
                                                 var41++;
-                                                var66 = param0.field_m[var41];
+                                                var66 = param0.field_m[incrementValue$47];
                                                 break L12;
                                               }
                                             } else {
+                                              int incrementValue$48 = var34;
                                               var34++;
-                                              var66 = param0.field_m[var34];
+                                              var66 = param0.field_m[incrementValue$48];
                                               break L12;
                                             }
                                           } else {
@@ -566,8 +586,9 @@ final class ej extends da {
                                           }
                                         }
                                       }
+                                      int incrementValue$49 = var44;
                                       var44++;
-                                      var66 = param0.field_m[var44];
+                                      var66 = param0.field_m[incrementValue$49];
                                       break L12;
                                     }
                                     var66 = var66 + var70[var28];
@@ -584,10 +605,12 @@ final class ej extends da {
                                       break L15;
                                     }
                                   }
+                                  int incrementValue$50 = var37;
                                   var37++;
-                                  var53 = var53 + param0.field_m[var37];
+                                  var53 = var53 + param0.field_m[incrementValue$50];
+                                  int incrementValue$51 = var40;
                                   var40++;
-                                  var55 = var55 + param0.field_m[var40];
+                                  var55 = var55 + param0.field_m[incrementValue$51];
                                   var51.d(var53 & 127, (byte) 122);
                                   var51.d(var55 & 127, (byte) 122);
                                   continue L5;
@@ -601,10 +624,12 @@ final class ej extends da {
                                     break L16;
                                   }
                                 }
+                                int incrementValue$52 = var37;
                                 var37++;
-                                var53 = var53 + param0.field_m[var37];
+                                var53 = var53 + param0.field_m[incrementValue$52];
+                                int incrementValue$53 = var38;
                                 var38++;
-                                var54 = var54 + param0.field_m[var38];
+                                var54 = var54 + param0.field_m[incrementValue$53];
                                 var51.d(var53 & 127, (byte) 122);
                                 var51.d(var54 & 127, (byte) 122);
                                 continue L5;
@@ -620,12 +645,15 @@ final class ej extends da {
                               }
                               var51.d(81, (byte) 122);
                               var51.d(3, (byte) 122);
+                              int incrementValue$54 = var50;
                               var50++;
-                              var51.d((int) param0.field_m[var50], (byte) 122);
+                              var51.d((int) param0.field_m[incrementValue$54], (byte) 122);
+                              int incrementValue$55 = var50;
                               var50++;
-                              var51.d((int) param0.field_m[var50], (byte) 122);
+                              var51.d((int) param0.field_m[incrementValue$55], (byte) 122);
+                              int incrementValue$56 = var50;
                               var50++;
-                              var51.d((int) param0.field_m[var50], (byte) 122);
+                              var51.d((int) param0.field_m[incrementValue$56], (byte) 122);
                               continue L5;
                             }
                           } else {
@@ -756,7 +784,7 @@ final class ej extends da {
                   }
                 }
               } else {
-                int discarded$1 = param0.f(-102);
+                int discarded$57 = param0.f(-102);
                 var15++;
                 continue L1;
               }

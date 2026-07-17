@@ -11,23 +11,22 @@ abstract class v implements tl {
     private long field_a;
 
     final static void a(int param0, boolean param1, int param2, ic param3, pn param4, java.awt.Component param5, int param6, int param7) {
-        tb.a(param2, param1, 10);
-        fc.field_a = tb.a(param4, param5, 0, param0);
-        cm.field_j = tb.a(param4, param5, 1, param6);
-        ll.field_e = new wg();
-        ej.field_B = param6 * 1000 / param2;
-        cm.field_j.a((we) (Object) ll.field_e);
-        if (param7 > -71) {
-            field_g = 'ﾓ';
-        } else {
+        try {
+            tb.a(param2, param1, 10);
+            fc.field_a = tb.a(param4, param5, 0, param0);
+            cm.field_j = tb.a(param4, param5, 1, param6);
+            ll.field_e = new wg();
+            ej.field_B = param6 * 1000 / param2;
+            cm.field_j.a((we) (Object) ll.field_e);
+            if (param7 > -71) {
+                field_g = 'ﾓ';
+            }
             q.field_f = param3;
             q.field_f.a(ll.field_q, 1000000);
             fc.field_a.a((we) (Object) q.field_f);
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw ci.a((Throwable) (Object) runtimeException, "v.V(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 44 + param6 + 44 + param7 + 41);
         }
-        q.field_f = param3;
-        q.field_f.a(ll.field_q, 1000000);
-        fc.field_a.a((we) (Object) q.field_f);
     }
 
     public final void a(int param0) {
@@ -39,7 +38,7 @@ abstract class v implements tl {
 
     public final vd a(byte param0) {
         if (!((v) this).b(true)) {
-          if ((mm.a(114) ^ -1L) > (((v) this).field_a + 350L ^ -1L)) {
+          if (~mm.a(114) > ~(((v) this).field_a + 350L)) {
             return nh.field_J;
           } else {
             if (param0 != 21) {
@@ -68,30 +67,65 @@ abstract class v implements tl {
     abstract vd b(int param0);
 
     public static void c(boolean param0) {
-        Object var2 = null;
         field_b = null;
-        if (!param0) {
-          var2 = null;
-          v.a(-71, false, 92, (ic) null, (pn) null, (java.awt.Component) null, -72, -65);
-          field_f = null;
-          field_d = null;
-          field_c = null;
-          return;
-        } else {
-          field_f = null;
-          field_d = null;
-          field_c = null;
-          return;
-        }
+        field_f = null;
+        field_d = null;
+        field_c = null;
     }
 
     abstract String b(byte param0);
 
     final static void a(int param0, String param1, int param2) {
-        ji.field_i = param0;
-        in.field_i = bg.field_G;
-        if (param2 != 10) {
-            field_d = null;
+        RuntimeException var3 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
+        try {
+          ji.field_i = param0;
+          in.field_i = bg.field_G;
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L0: {
+            var3 = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var3;
+            stackOut_2_1 = new StringBuilder().append("v.AA(").append(param0).append(44);
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
+            if (param1 == null) {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L0;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L0;
+            }
+          }
+          throw ci.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 10 + 41);
         }
     }
 

@@ -66,9 +66,6 @@ final class go {
     public static void b(int param0) {
         field_g = null;
         field_d = null;
-        if (param0 >= -15) {
-            boolean discarded$0 = go.a(62);
-        }
         field_c = null;
         field_e = null;
         field_h = null;
@@ -76,17 +73,82 @@ final class go {
     }
 
     final void a(int param0, ha param1) {
+        int[] var3 = null;
+        RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
-        int var6 = ArmiesOfGielinor.field_M ? 1 : 0;
-        int[] var7 = ((go) this).field_a;
-        int[] var3 = var7;
-        for (var4 = 0; var4 < var7.length; var4++) {
-            var5 = var7[var4];
-            param1.b(param0 ^ 10002, var5, true);
-        }
-        if (param0 != 3) {
-            field_g = null;
+        int var6 = 0;
+        int[] var7 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        var6 = ArmiesOfGielinor.field_M ? 1 : 0;
+        try {
+          L0: {
+            var7 = ((go) this).field_a;
+            var3 = var7;
+            var4 = 0;
+            L1: while (true) {
+              if (var4 >= var7.length) {
+                L2: {
+                  if (param0 == 3) {
+                    break L2;
+                  } else {
+                    field_g = null;
+                    break L2;
+                  }
+                }
+                break L0;
+              } else {
+                var5 = var7[var4];
+                param1.b(param0 ^ 10002, var5, true);
+                var4++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var3_ref = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var3_ref;
+            stackOut_7_1 = new StringBuilder().append("go.E(").append(param0).append(44);
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param1 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L3;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L3;
+            }
+          }
+          throw ig.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
         }
     }
 
@@ -98,8 +160,12 @@ final class go {
     }
 
     go(String param0, int[] param1) {
-        ((go) this).field_b = param0;
-        ((go) this).field_a = param1;
+        try {
+            ((go) this).field_b = param0;
+            ((go) this).field_a = param1;
+        } catch (RuntimeException runtimeException) {
+            throw ig.a((Throwable) (Object) runtimeException, "go.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

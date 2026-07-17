@@ -17,21 +17,61 @@ final class al {
     }
 
     private final void a(d param0, int param1) {
-        L0: {
+        RuntimeException var3 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
           if (param0 != null) {
             param0.f(0);
             param0.h(0);
             ((al) this).field_g = ((al) this).field_g + param0.field_t;
-            break L0;
+            return;
           } else {
-            break L0;
+            return;
           }
-        }
-        if (param1 <= 51) {
-          ((al) this).field_h = null;
-          return;
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L0: {
+            var3 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_1 = new StringBuilder().append("al.C(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L0;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L0;
+            }
+          }
+          throw rb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 111 + 41);
         }
     }
 
@@ -46,71 +86,42 @@ final class al {
     }
 
     final void a(long param0, Object param1, byte param2) {
-        if (param2 != 116) {
-          int discarded$2 = al.a(0.6495872916691957, (byte) 34);
-          this.a(1, param0, param1, true);
-          return;
-        } else {
-          this.a(1, param0, param1, true);
-          return;
+        try {
+            if (param2 != 116) {
+                int discarded$0 = al.a(0.6495872916691957, (byte) 34);
+            }
+            this.a(1, param0, param1, true);
+        } catch (RuntimeException runtimeException) {
+            throw rb.a((Throwable) (Object) runtimeException, "al.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
     }
 
     private final void a(int param0, long param1, Object param2, boolean param3) {
-        en var6 = null;
-        int var7 = 0;
-        d var8 = null;
-        d var10 = null;
-        var7 = Torquing.field_u;
-        if (((al) this).field_b >= param0) {
-          this.a(param1, 18998);
-          if (param3) {
-            ((al) this).field_g = ((al) this).field_g - param0;
-            L0: while (true) {
-              if (0 <= ((al) this).field_g) {
-                var6 = new en(param2, param0);
-                ((al) this).field_a.a(param1, (byte) 92, (q) (Object) var6);
-                ((al) this).field_h.a((ta) (Object) var6, (byte) -60);
-                ((d) (Object) var6).field_l = 0L;
-                return;
-              } else {
-                var10 = (d) (Object) ((al) this).field_h.a(4);
-                this.a(var10, 111);
-                continue L0;
-              }
+        d var6 = null;
+        en var6_ref = null;
+        int var7 = Torquing.field_u;
+        try {
+            if (((al) this).field_b < param0) {
+                throw new IllegalStateException();
             }
-          } else {
-            al.a((byte) 76);
+            this.a(param1, 18998);
             ((al) this).field_g = ((al) this).field_g - param0;
-            L1: while (true) {
-              if (0 <= ((al) this).field_g) {
-                var6 = new en(param2, param0);
-                ((al) this).field_a.a(param1, (byte) 92, (q) (Object) var6);
-                ((al) this).field_h.a((ta) (Object) var6, (byte) -60);
-                ((d) (Object) var6).field_l = 0L;
-                return;
-              } else {
-                var8 = (d) (Object) ((al) this).field_h.a(4);
-                this.a(var8, 111);
-                continue L1;
-              }
+            while (0 > ((al) this).field_g) {
+                var6 = (d) (Object) ((al) this).field_h.a(4);
+                this.a(var6, 111);
             }
-          }
-        } else {
-          throw new IllegalStateException();
+            var6_ref = new en(param2, param0);
+            ((al) this).field_a.a(param1, (byte) 92, (q) (Object) var6_ref);
+            ((al) this).field_h.a((ta) (Object) var6_ref, (byte) -60);
+            ((d) (Object) var6_ref).field_l = 0L;
+        } catch (RuntimeException runtimeException) {
+            throw rb.a((Throwable) (Object) runtimeException, "al.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + 1 + 41);
         }
     }
 
     private final void a(long param0, int param1) {
-        d var4 = null;
-        var4 = (d) (Object) ((al) this).field_a.a(param0, param1 + -19110);
+        d var4 = (d) (Object) ((al) this).field_a.a(param0, -112);
         this.a(var4, 111);
-        if (param1 != 18998) {
-          Object discarded$2 = ((al) this).a(30, 43L);
-          return;
-        } else {
-          return;
-        }
     }
 
     final Object a(int param0, long param1) {

@@ -26,21 +26,24 @@ final class wc extends lu {
     }
 
     final void a(uia param0, boolean param1) {
-        if (param1) {
-          ((wc) this).field_f = null;
-          param0.a(((wc) this).field_g, (byte) 0);
-          param0.a(((wc) this).field_f, -127);
-          return;
-        } else {
-          param0.a(((wc) this).field_g, (byte) 0);
-          param0.a(((wc) this).field_f, -127);
-          return;
+        try {
+            if (param1) {
+                ((wc) this).field_f = null;
+            }
+            param0.a(((wc) this).field_g, (byte) 0);
+            param0.a(((wc) this).field_f, -127);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "wc.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
     wc(String param0, String param1) {
-        ((wc) this).field_f = param1;
-        ((wc) this).field_g = param0;
+        try {
+            ((wc) this).field_f = param1;
+            ((wc) this).field_g = param0;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "wc.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

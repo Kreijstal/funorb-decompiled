@@ -8,42 +8,23 @@ final class kg {
     static int field_b;
 
     final static void a(String param0, String param1, byte param2) {
-        Object var4 = null;
-        if (null == fa.field_G) {
-          wi.field_c = new rg(param1, param0, false, true, true);
-          if (param2 != 92) {
-            var4 = null;
-            kg.a((String) null, (String) null, (byte) 89);
+        try {
+            if (null != fa.field_G) {
+                fa.field_G.n(-104);
+            }
+            wi.field_c = new rg(param1, param0, false, true, true);
+            if (param2 != 92) {
+                Object var4 = null;
+                kg.a((String) null, (String) null, (byte) 89);
+            }
             t.field_h.c(20317, (uj) (Object) wi.field_c);
-            return;
-          } else {
-            t.field_h.c(20317, (uj) (Object) wi.field_c);
-            return;
-          }
-        } else {
-          fa.field_G.n(-104);
-          wi.field_c = new rg(param1, param0, false, true, true);
-          if (param2 == 92) {
-            t.field_h.c(20317, (uj) (Object) wi.field_c);
-            return;
-          } else {
-            var4 = null;
-            kg.a((String) null, (String) null, (byte) 89);
-            t.field_h.c(20317, (uj) (Object) wi.field_c);
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "kg.D(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
     }
 
     final static long b(byte param0) {
-        Object var2 = null;
-        if (param0 != -71) {
-          var2 = null;
-          kg.a((String) null, (String) null, (byte) 108);
-          return dd.b(param0 + 150) - ik.field_p;
-        } else {
-          return dd.b(param0 + 150) - ik.field_p;
-        }
+        return dd.b(79) - ik.field_p;
     }
 
     public static void a(byte param0) {
@@ -55,13 +36,17 @@ final class kg {
     }
 
     final static void a(vi param0, int param1, int param2, ue param3) {
-        mh.field_k = wc.a(-43) * param2 / 1000;
-        dh.a((byte) 115, param3);
-        nb.a(param3, (byte) 124);
-        lc.a(false, param3);
-        p.a((byte) -68);
-        fi.c((byte) -96);
-        qb.field_h = -mh.field_k + param1;
+        try {
+            mh.field_k = wc.a(-43) * param2 / 1000;
+            dh.a((byte) 115, param3);
+            nb.a(param3, (byte) 124);
+            lc.a(false, param3);
+            p.a((byte) -68);
+            fi.c((byte) -96);
+            qb.field_h = -mh.field_k + param1;
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "kg.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

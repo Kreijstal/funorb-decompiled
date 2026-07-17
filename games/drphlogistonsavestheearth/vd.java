@@ -12,16 +12,20 @@ final class vd {
     static he[] field_g;
 
     final void a(int param0, gi param1) {
-        if (param1.field_b != null) {
-            param1.a(-16175);
+        try {
+            if (param1.field_b != null) {
+                param1.a(-16175);
+            }
+            if (param0 < 16) {
+                field_b = null;
+            }
+            param1.field_b = ((vd) this).field_c;
+            param1.field_e = ((vd) this).field_c.field_e;
+            param1.field_b.field_e = param1;
+            param1.field_e.field_b = param1;
+        } catch (RuntimeException runtimeException) {
+            throw ie.a((Throwable) (Object) runtimeException, "vd.M(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        if (param0 < 16) {
-            field_b = null;
-        }
-        param1.field_b = ((vd) this).field_c;
-        param1.field_e = ((vd) this).field_c.field_e;
-        param1.field_b.field_e = param1;
-        param1.field_e.field_b = param1;
     }
 
     final void g(int param0) {
@@ -78,9 +82,6 @@ final class vd {
 
     public static void a(boolean param0) {
         field_b = null;
-        if (!param0) {
-            field_b = null;
-        }
         field_g = null;
         field_a = null;
         field_d = null;
@@ -133,16 +134,20 @@ final class vd {
     }
 
     final void a(gi param0, int param1) {
-        if (param1 != 255) {
-            nh[] discarded$0 = vd.b((byte) 99);
+        try {
+            if (param1 != 255) {
+                nh[] discarded$0 = vd.b((byte) 99);
+            }
+            if (null != param0.field_b) {
+                param0.a(-16175);
+            }
+            param0.field_b = ((vd) this).field_c.field_b;
+            param0.field_e = ((vd) this).field_c;
+            param0.field_b.field_e = param0;
+            param0.field_e.field_b = param0;
+        } catch (RuntimeException runtimeException) {
+            throw ie.a((Throwable) (Object) runtimeException, "vd.O(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
-        if (null != param0.field_b) {
-            param0.a(-16175);
-        }
-        param0.field_b = ((vd) this).field_c.field_b;
-        param0.field_e = ((vd) this).field_c;
-        param0.field_b.field_e = param0;
-        param0.field_e.field_b = param0;
     }
 
     final boolean a(int param0) {
@@ -238,7 +243,7 @@ final class vd {
                   var2++;
                   continue L1;
                 } else {
-                  var6_ref_int__[var7] = li.a(rk.a(255, (int) var23[var7]) << 180479896, aj.field_a[rk.a((int) var24[var7], 255)]);
+                  var6_ref_int__[var7] = li.a(rk.a(255, (int) var23[var7]) << 24, aj.field_a[rk.a((int) var24[var7], 255)]);
                   var7++;
                   continue L3;
                 }
@@ -266,17 +271,77 @@ final class vd {
     }
 
     final static StringBuilder a(char param0, StringBuilder param1, int param2, boolean param3) {
+        int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
-        int var6 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        int var4 = param1.length();
-        param1.setLength(param2);
-        if (param3) {
-            field_a = null;
+        int var6 = 0;
+        StringBuilder stackIn_5_0 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        StringBuilder stackOut_4_0 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        var6 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
+        try {
+          L0: {
+            var4_int = param1.length();
+            param1.setLength(param2);
+            var5 = var4_int;
+            L1: while (true) {
+              if (param2 <= var5) {
+                stackOut_4_0 = (StringBuilder) param1;
+                stackIn_5_0 = stackOut_4_0;
+                break L0;
+              } else {
+                param1.setCharAt(var5, param0);
+                var5++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var4 = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var4;
+            stackOut_6_1 = new StringBuilder().append("vd.J(").append(param0).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param1 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L2;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L2;
+            }
+          }
+          throw ie.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param2 + 44 + 0 + 41);
         }
-        for (var5 = var4; param2 > var5; var5++) {
-            param1.setCharAt(var5, param0);
-        }
-        return param1;
+        return stackIn_5_0;
     }
 
     static {

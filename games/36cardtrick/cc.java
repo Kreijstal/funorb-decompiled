@@ -19,10 +19,7 @@ final class cc {
         if (var2 == 0) {
             throw new IllegalArgumentException("" + Integer.toString(var2, 16));
         }
-        if (param1 != 63) {
-            boolean discarded$0 = cc.a(0);
-        }
-        if ((var2 ^ -1) <= -129) {
+        if (var2 >= 128) {
             if (var2 < 160) {
                 var3 = se.field_K[-128 + var2];
                 if (var3 == 0) {
@@ -35,17 +32,33 @@ final class cc {
     }
 
     final static void b(int param0) {
+        int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        int var4 = Main.field_T;
-        int var1 = mb.field_c[0];
-        for (var2 = 1; var2 < mb.field_c.length; var2++) {
-            var3 = mb.field_c[var2];
-            og.a(lf.field_a, var2 << -718198940, lf.field_a, var1, var3);
-            var1 = var1 + var3;
-        }
-        if (param0 <= 34) {
-            field_a = 35;
+        int var4 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var4 = Main.field_T;
+        try {
+          L0: {
+            var1_int = mb.field_c[0];
+            var2 = 1;
+            L1: while (true) {
+              if (var2 >= mb.field_c.length) {
+                break L0;
+              } else {
+                var3 = mb.field_c[var2];
+                og.a(lf.field_a, var2 << 4, lf.field_a, var1_int, var3);
+                var1_int = var1_int + var3;
+                var2++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw ma.a((Throwable) (Object) var1, "cc.B(" + 124 + 41);
         }
     }
 
@@ -92,9 +105,6 @@ final class cc {
     }
 
     public static void a(byte param0) {
-        if (param0 <= 98) {
-            field_e = -118;
-        }
         field_f = null;
         field_b = null;
     }

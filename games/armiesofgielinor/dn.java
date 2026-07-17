@@ -152,7 +152,7 @@ final class dn extends je {
                   break L6;
                 }
               }
-              if ((-(((dn) this).field_Jb.field_ab - -((dn) this).field_Jb.field_db) ^ -1) > -1) {
+              if (-(((dn) this).field_Jb.field_ab - -((dn) this).field_Jb.field_db) < 0) {
                 L7: {
                   ((dn) this).field_Jb.field_db = -((dn) this).field_Jb.field_ab;
                   if (((dn) this).field_Ib.a(false)) {
@@ -225,7 +225,7 @@ final class dn extends je {
                   break L12;
                 }
               }
-              if ((-(((dn) this).field_Jb.field_ab - -((dn) this).field_Jb.field_db) ^ -1) > -1) {
+              if (-(((dn) this).field_Jb.field_ab - -((dn) this).field_Jb.field_db) < 0) {
                 L13: {
                   ((dn) this).field_Jb.field_db = -((dn) this).field_Jb.field_ab;
                   if (((dn) this).field_Ib.a(false)) {
@@ -323,7 +323,7 @@ final class dn extends je {
                 break L21;
               }
             }
-            if ((-(((dn) this).field_Jb.field_ab - -((dn) this).field_Jb.field_db) ^ -1) <= -1) {
+            if (-(((dn) this).field_Jb.field_ab - -((dn) this).field_Jb.field_db) >= 0) {
               L22: {
                 if (((dn) this).field_Ib.a(false)) {
                   ((dn) this).field_Jb.field_ab = -((dn) this).field_Ib.a(((dn) this).field_Nb.field_ob, param2, ((dn) this).field_Jb.field_ob, 112);
@@ -384,12 +384,16 @@ final class dn extends je {
 
     dn(long param0, je param1, je param2, ll param3) {
         super(param0, (je) null);
-        ((dn) this).field_Nb = new je(0L, param2);
-        ((dn) this).field_Ib = new ll(0L, param3);
-        ((dn) this).a(((dn) this).field_Nb, 53);
-        ((dn) this).a((je) (Object) ((dn) this).field_Ib, 39);
-        ((dn) this).field_Jb = param1;
-        ((dn) this).field_Nb.a(param1, 54);
+        try {
+            ((dn) this).field_Nb = new je(0L, param2);
+            ((dn) this).field_Ib = new ll(0L, param3);
+            ((dn) this).a(((dn) this).field_Nb, 53);
+            ((dn) this).a((je) (Object) ((dn) this).field_Ib, 39);
+            ((dn) this).field_Jb = param1;
+            ((dn) this).field_Nb.a(param1, 54);
+        } catch (RuntimeException runtimeException) {
+            throw ig.a((Throwable) (Object) runtimeException, "dn.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

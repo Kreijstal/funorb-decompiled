@@ -50,29 +50,73 @@ final class jn {
     }
 
     final void a(ms param0, int param1) {
-        if (param0.field_g == null) {
-          param0.field_g = ((jn) this).field_e;
-          param0.field_b = ((jn) this).field_e.field_b;
-          param0.field_g.field_b = param0;
-          param0.field_b.field_g = param0;
-          if (param1 != -10295) {
-            ((jn) this).field_a = null;
-            return;
-          } else {
-            return;
+        RuntimeException var3 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0.field_g == null) {
+                break L1;
+              } else {
+                param0.b(false);
+                break L1;
+              }
+            }
+            param0.field_g = ((jn) this).field_e;
+            param0.field_b = ((jn) this).field_e.field_b;
+            param0.field_g.field_b = param0;
+            param0.field_b.field_g = param0;
+            if (param1 == -10295) {
+              break L0;
+            } else {
+              ((jn) this).field_a = null;
+              return;
+            }
           }
-        } else {
-          param0.b(false);
-          param0.field_g = ((jn) this).field_e;
-          param0.field_b = ((jn) this).field_e.field_b;
-          param0.field_g.field_b = param0;
-          param0.field_b.field_g = param0;
-          if (param1 == -10295) {
-            return;
-          } else {
-            ((jn) this).field_a = null;
-            return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_1 = new StringBuilder().append("jn.A(");
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param0 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L2;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L2;
+            }
           }
+          throw qo.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
         }
     }
 
@@ -132,22 +176,19 @@ final class jn {
     }
 
     final void a(ms param0, byte param1) {
-        L0: {
-          if (param0.field_g != null) {
+        if (!(param0.field_g == null)) {
             param0.b(false);
-            break L0;
-          } else {
-            break L0;
-          }
         }
         param0.field_b = ((jn) this).field_e;
         param0.field_g = ((jn) this).field_e.field_g;
         param0.field_g.field_b = param0;
         if (param1 != 39) {
-          return;
-        } else {
-          param0.field_b.field_g = param0;
-          return;
+            return;
+        }
+        try {
+            param0.field_b.field_g = param0;
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "jn.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
@@ -187,11 +228,6 @@ final class jn {
 
     public static void c(byte param0) {
         field_d = null;
-        if (param0 != 117) {
-            field_b = 93;
-            field_c = null;
-            return;
-        }
         field_c = null;
     }
 

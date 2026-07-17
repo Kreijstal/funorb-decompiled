@@ -8,7 +8,7 @@ final class bn {
     static String field_a;
 
     final static int a(int param0, byte param1, int param2) {
-        int var3 = param0 >>> 1346386079;
+        int var3 = param0 >>> 31;
         if (param1 <= 118) {
             return 121;
         }
@@ -18,38 +18,86 @@ final class bn {
     public static void a(byte param0) {
         field_c = null;
         field_a = null;
-        if (param0 > -108) {
-            int discarded$0 = bn.a(-84, (byte) 74, -123);
-        }
     }
 
     final static boolean a(int param0, char param1) {
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        char[] var3 = null;
         int var4 = 0;
         int var5 = 0;
-        int var6 = Virogrid.field_F ? 1 : 0;
-        if (Character.isISOControl(param1)) {
-            return false;
-        }
-        int var2 = 70 / ((0 - param0) / 60);
-        if (kn.a(param1, (byte) -69)) {
-            return true;
-        }
-        char[] var7 = va.field_e;
-        char[] var3 = var7;
-        for (var4 = 0; var7.length > var4; var4++) {
-            var5 = var7[var4];
-            if (param1 == var5) {
-                return true;
+        int var6 = 0;
+        char[] var7 = null;
+        int stackIn_3_0 = 0;
+        int stackIn_6_0 = 0;
+        int stackIn_11_0 = 0;
+        int stackIn_17_0 = 0;
+        int stackIn_20_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_19_0 = 0;
+        int stackOut_16_0 = 0;
+        int stackOut_10_0 = 0;
+        int stackOut_5_0 = 0;
+        int stackOut_2_0 = 0;
+        var6 = Virogrid.field_F ? 1 : 0;
+        try {
+          L0: {
+            if (!Character.isISOControl(param1)) {
+              var2_int = 70 / ((0 - param0) / 60);
+              if (!kn.a(param1, (byte) -69)) {
+                var7 = va.field_e;
+                var3 = var7;
+                var4 = 0;
+                L1: while (true) {
+                  if (var7.length <= var4) {
+                    var3 = li.field_f;
+                    var4 = 0;
+                    L2: while (true) {
+                      if (var4 >= var3.length) {
+                        stackOut_19_0 = 0;
+                        stackIn_20_0 = stackOut_19_0;
+                        break L0;
+                      } else {
+                        var5 = var3[var4];
+                        if (var5 != param1) {
+                          var4++;
+                          continue L2;
+                        } else {
+                          stackOut_16_0 = 1;
+                          stackIn_17_0 = stackOut_16_0;
+                          return stackIn_17_0 != 0;
+                        }
+                      }
+                    }
+                  } else {
+                    var5 = var7[var4];
+                    if (param1 != var5) {
+                      var4++;
+                      continue L1;
+                    } else {
+                      stackOut_10_0 = 1;
+                      stackIn_11_0 = stackOut_10_0;
+                      return stackIn_11_0 != 0;
+                    }
+                  }
+                }
+              } else {
+                stackOut_5_0 = 1;
+                stackIn_6_0 = stackOut_5_0;
+                return stackIn_6_0 != 0;
+              }
+            } else {
+              stackOut_2_0 = 0;
+              stackIn_3_0 = stackOut_2_0;
+              return stackIn_3_0 != 0;
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw kg.a((Throwable) (Object) var2, "bn.B(" + param0 + 44 + param1 + 41);
         }
-        var3 = li.field_f;
-        for (var4 = 0; var4 < var3.length; var4++) {
-            var5 = var3[var4];
-            if (var5 == param1) {
-                return true;
-            }
-        }
-        return false;
+        return stackIn_20_0 != 0;
     }
 
     static {

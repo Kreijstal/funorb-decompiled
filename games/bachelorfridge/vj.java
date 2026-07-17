@@ -14,15 +14,15 @@ final class vj extends pu {
 
     final static int a(int param0, int param1, byte param2) {
         int var3 = 0;
-        if ((param0 ^ -1) == -2) {
+        if (param0 == 1) {
           if (!ad.a(30, param1)) {
-            var3 = -80 / ((param2 - 82) / 44);
+            var3 = -80;
             return tj.field_e[param0];
           } else {
             return 29;
           }
         } else {
-          var3 = -80 / ((param2 - 82) / 44);
+          var3 = -80;
           return tj.field_e[param0];
         }
     }
@@ -30,7 +30,7 @@ final class vj extends pu {
     public static void b(int param0) {
         field_p = null;
         field_m = null;
-        int var1 = -87 % ((param0 - 37) / 34);
+        int var1 = -1;
         field_o = null;
         field_q = null;
         field_l = null;

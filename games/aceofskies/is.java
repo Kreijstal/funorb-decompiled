@@ -7,7 +7,7 @@ final class is {
 
     public static void a(int param0) {
         field_a = null;
-        int var1 = -8 % ((41 - param0) / 36);
+        int var1 = -2;
     }
 
     static {

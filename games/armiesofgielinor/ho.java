@@ -19,50 +19,79 @@ final class ho {
 
     final static void a(java.applet.Applet param0, byte param1) {
         try {
-            Exception exception = null;
             java.net.URL var2 = null;
+            RuntimeException var2_ref = null;
+            Exception var2_ref2 = null;
             Object var3 = null;
+            RuntimeException stackIn_7_0 = null;
+            StringBuilder stackIn_7_1 = null;
+            RuntimeException stackIn_8_0 = null;
+            StringBuilder stackIn_8_1 = null;
+            RuntimeException stackIn_9_0 = null;
+            StringBuilder stackIn_9_1 = null;
+            String stackIn_9_2 = null;
             Throwable decompiledCaughtException = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        try {
-                            var2 = new java.net.URL(param0.getCodeBase(), "quit.ws");
-                            param0.getAppletContext().showDocument(ck.a(-3780, var2, param0), "_top");
-                            statePc = 3;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_0) {
-                            caughtException = stateCaught_0;
-                            statePc = 2;
-                            continue stateLoop;
-                        }
-                    }
-                    case 2: {
-                        exception = (Exception) (Object) caughtException;
-                        exception.printStackTrace();
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                    case 3: {
-                        if (param1 != -3) {
-                            statePc = 5;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    }
-                    case 4: {
-                        return;
-                    }
-                    case 5: {
-                        var3 = null;
-                        ho.a((java.applet.Applet) null, (byte) -10);
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            RuntimeException stackOut_6_0 = null;
+            StringBuilder stackOut_6_1 = null;
+            RuntimeException stackOut_8_0 = null;
+            StringBuilder stackOut_8_1 = null;
+            String stackOut_8_2 = null;
+            RuntimeException stackOut_7_0 = null;
+            StringBuilder stackOut_7_1 = null;
+            String stackOut_7_2 = null;
+            try {
+              L0: {
+                try {
+                  L1: {
+                    var2 = new java.net.URL(param0.getCodeBase(), "quit.ws");
+                    param0.getAppletContext().showDocument(ck.a(-3780, var2, param0), "_top");
+                    break L1;
+                  }
+                } catch (java.lang.Exception decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  L2: {
+                    var2_ref2 = (Exception) (Object) decompiledCaughtException;
+                    var2_ref2.printStackTrace();
+                    break L2;
+                  }
                 }
+                if (param1 == -3) {
+                  break L0;
+                } else {
+                  var3 = null;
+                  ho.a((java.applet.Applet) null, (byte) -10);
+                  return;
+                }
+              }
+            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L3: {
+                var2_ref = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_6_0 = (RuntimeException) var2_ref;
+                stackOut_6_1 = new StringBuilder().append("ho.C(");
+                stackIn_8_0 = stackOut_6_0;
+                stackIn_8_1 = stackOut_6_1;
+                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_1 = stackOut_6_1;
+                if (param0 == null) {
+                  stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+                  stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+                  stackOut_8_2 = "null";
+                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_1 = stackOut_8_1;
+                  stackIn_9_2 = stackOut_8_2;
+                  break L3;
+                } else {
+                  stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+                  stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+                  stackOut_7_2 = "{...}";
+                  stackIn_9_0 = stackOut_7_0;
+                  stackIn_9_1 = stackOut_7_1;
+                  stackIn_9_2 = stackOut_7_2;
+                  break L3;
+                }
+              }
+              throw ig.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -72,12 +101,6 @@ final class ho {
     }
 
     public static void a(byte param0) {
-        if (param0 >= -113) {
-            ho.a(3);
-            field_d = null;
-            field_a = null;
-            return;
-        }
         field_d = null;
         field_a = null;
     }

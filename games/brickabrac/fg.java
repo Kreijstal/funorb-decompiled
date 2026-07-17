@@ -158,24 +158,24 @@ final class fg {
         int[] stackIn_14_0 = null;
         int stackIn_14_1 = 0;
         int stackIn_14_2 = 0;
-        int stackOut_4_0;
-        int stackOut_3_0;
-        int[] stackOut_11_0;
-        int stackOut_11_1;
-        int[] stackOut_13_0;
-        int stackOut_13_1;
-        int stackOut_13_2;
-        int[] stackOut_12_0;
-        int stackOut_12_1;
-        int stackOut_12_2;
-        int[] stackOut_7_0;
-        int stackOut_7_1;
-        int[] stackOut_9_0;
-        int stackOut_9_1;
-        int stackOut_9_2;
-        int[] stackOut_8_0;
-        int stackOut_8_1;
-        int stackOut_8_2;
+        int stackOut_4_0 = 0;
+        int stackOut_3_0 = 0;
+        int[] stackOut_11_0 = null;
+        int stackOut_11_1 = 0;
+        int[] stackOut_13_0 = null;
+        int stackOut_13_1 = 0;
+        int stackOut_13_2 = 0;
+        int[] stackOut_12_0 = null;
+        int stackOut_12_1 = 0;
+        int stackOut_12_2 = 0;
+        int[] stackOut_7_0 = null;
+        int stackOut_7_1 = 0;
+        int[] stackOut_9_0 = null;
+        int stackOut_9_1 = 0;
+        int stackOut_9_2 = 0;
+        int[] stackOut_8_0 = null;
+        int stackOut_8_1 = 0;
+        int stackOut_8_2 = 0;
         var3 = ((fg) this).field_e.length;
         var4 = field_l[((fg) this).field_k - 1];
         var5 = field_g;
@@ -415,6 +415,7 @@ final class fg {
                             field_g = new boolean[var5];
                             break L4;
                           }
+                          return;
                         } else {
                           var7 = ((fg) this).field_i[var6];
                           var8 = 0;
@@ -423,8 +424,9 @@ final class fg {
                               var6++;
                               continue L3;
                             } else {
+                              int incrementValue$2 = var5;
                               var5++;
-                              ((fg) this).field_e[var5] = bk.c(var4);
+                              ((fg) this).field_e[incrementValue$2] = bk.c(var4);
                               var8++;
                               continue L6;
                             }
@@ -440,8 +442,9 @@ final class fg {
                 } else {
                   L7: {
                     ((fg) this).field_a[var4] = bk.c(3) + 1;
-                    ((fg) this).field_h[var4] = bk.c(2);
-                    var5 = bk.c(2);
+                    int dupTemp$3 = bk.c(2);
+                    ((fg) this).field_h[var4] = dupTemp$3;
+                    var5 = dupTemp$3;
                     if (var5 == 0) {
                       break L7;
                     } else {
@@ -519,8 +522,9 @@ final class fg {
             for (var12 = 0; var12 < var8; var12++) {
                 var13 = ((fg) this).field_b[var7][var11 & var10];
                 var11 = var11 >>> var9;
+                int incrementValue$0 = var5;
                 var5++;
-                field_c[var5] = var13 >= 0 ? bk.field_M[var13].a() : 0;
+                field_c[incrementValue$0] = var13 >= 0 ? bk.field_M[var13].a() : 0;
             }
         }
         return true;

@@ -7,52 +7,196 @@ final class gn {
     static String field_a;
 
     final static int a(int param0, byte[] param1, boolean param2) {
-        if (!param2) {
-            gn.a(4);
+        RuntimeException var3 = null;
+        int stackIn_3_0 = 0;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_2_0 = 0;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param2) {
+                break L1;
+              } else {
+                gn.a(4);
+                break L1;
+              }
+            }
+            stackOut_2_0 = qn.a(-1648911295, 0, param0, param1);
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_1 = new StringBuilder().append("gn.D(").append(param0).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param1 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw lj.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param2 + 41);
         }
-        return qn.a(-1648911295, 0, param0, param1);
+        return stackIn_3_0;
     }
 
     final static ea[] a(int param0, int param1, int param2, boolean param3) {
-        if (param3) {
-            Object var5 = null;
-            int discarded$0 = gn.a(-10, (byte[]) null, false);
-        }
         return lc.a(param2, 1, param1, param0, (byte) 127);
     }
 
     final static vk[] a(int param0, vf param1) {
+        RuntimeException var2 = null;
+        int[] var3 = null;
+        vk[] var4 = null;
         int var5 = 0;
         vk var6 = null;
-        int var7 = MinerDisturbance.field_ab;
-        if (!(param1.b((byte) 104))) {
-            return new vk[]{};
+        int var7 = 0;
+        ia var8 = null;
+        int[] var9 = null;
+        int[] var10 = null;
+        int[] var11 = null;
+        int[] var12 = null;
+        vk[] stackIn_4_0 = null;
+        vk[] stackIn_12_0 = null;
+        vk[] stackIn_17_0 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        String stackIn_21_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        vk[] stackOut_3_0 = null;
+        vk[] stackOut_11_0 = null;
+        vk[] stackOut_16_0 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
+        var7 = MinerDisturbance.field_ab;
+        try {
+          L0: {
+            if (!param1.b((byte) 104)) {
+              stackOut_3_0 = new vk[]{};
+              stackIn_4_0 = stackOut_3_0;
+              return stackIn_4_0;
+            } else {
+              L1: {
+                var8 = param1.a((byte) -114);
+                if (param0 == -591) {
+                  break L1;
+                } else {
+                  field_b = null;
+                  break L1;
+                }
+              }
+              L2: while (true) {
+                if (var8.field_c != 0) {
+                  if (var8.field_c == 2) {
+                    stackOut_11_0 = new vk[]{};
+                    stackIn_12_0 = stackOut_11_0;
+                    return stackIn_12_0;
+                  } else {
+                    var12 = (int[]) var8.field_a;
+                    var11 = var12;
+                    var10 = var11;
+                    var9 = var10;
+                    var3 = var9;
+                    var4 = new vk[var12.length >> 2];
+                    var5 = 0;
+                    L3: while (true) {
+                      if (var5 >= var4.length) {
+                        stackOut_16_0 = (vk[]) var4;
+                        stackIn_17_0 = stackOut_16_0;
+                        break L0;
+                      } else {
+                        var6 = new vk();
+                        var4[var5] = var6;
+                        var6.field_f = var3[var5 << 2];
+                        var6.field_c = var3[(var5 << 2) - -1];
+                        var6.field_h = var3[2 + (var5 << 2)];
+                        var6.field_b = var3[(var5 << 2) - -3];
+                        var5++;
+                        continue L3;
+                      }
+                    }
+                  }
+                } else {
+                  gf.a(10L, param0 + -9718);
+                  continue L2;
+                }
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var2 = decompiledCaughtException;
+            stackOut_18_0 = (RuntimeException) var2;
+            stackOut_18_1 = new StringBuilder().append("gn.C(").append(param0).append(44);
+            stackIn_20_0 = stackOut_18_0;
+            stackIn_20_1 = stackOut_18_1;
+            stackIn_19_0 = stackOut_18_0;
+            stackIn_19_1 = stackOut_18_1;
+            if (param1 == null) {
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "null";
+              stackIn_21_0 = stackOut_20_0;
+              stackIn_21_1 = stackOut_20_1;
+              stackIn_21_2 = stackOut_20_2;
+              break L4;
+            } else {
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "{...}";
+              stackIn_21_0 = stackOut_19_0;
+              stackIn_21_1 = stackOut_19_1;
+              stackIn_21_2 = stackOut_19_2;
+              break L4;
+            }
+          }
+          throw lj.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 41);
         }
-        ia var8 = param1.a((byte) -114);
-        if (param0 != -591) {
-            field_b = null;
-        }
-        while (-1 == (var8.field_c ^ -1)) {
-            gf.a(10L, param0 + -9718);
-        }
-        if (!((var8.field_c ^ -1) != -3)) {
-            return new vk[]{};
-        }
-        int[] var12 = (int[]) var8.field_a;
-        int[] var11 = var12;
-        int[] var10 = var11;
-        int[] var9 = var10;
-        int[] var3 = var9;
-        vk[] var4 = new vk[var12.length >> 989840002];
-        for (var5 = 0; var5 < var4.length; var5++) {
-            var6 = new vk();
-            var4[var5] = var6;
-            var6.field_f = var3[var5 << 1451436130];
-            var6.field_c = var3[(var5 << -1048749150) - -1];
-            var6.field_h = var3[2 + (var5 << -418419230)];
-            var6.field_b = var3[(var5 << 1024740450) - -3];
-        }
-        return var4;
+        return stackIn_17_0;
     }
 
     public static void a(int param0) {
@@ -66,10 +210,15 @@ final class gn {
     }
 
     final static void a(bj param0, byte param1) {
-        int var2 = 86 % ((param1 - -42) / 57);
-        b.a(param0.a("", 0, "headers.packvorbis"));
-        b var3 = b.a(param0, "jagex logo2.packvorbis", "");
-        ji discarded$0 = var3.a();
+        b var3 = null;
+        try {
+            int var2_int = 86 % ((param1 - -42) / 57);
+            b.a(param0.a("", 0, "headers.packvorbis"));
+            var3 = b.a(param0, "jagex logo2.packvorbis", "");
+            ji discarded$0 = var3.a();
+        } catch (RuntimeException runtimeException) {
+            throw lj.a((Throwable) (Object) runtimeException, "gn.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     static {

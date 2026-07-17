@@ -57,7 +57,7 @@ final class ac {
                   var7 = 0;
                   L2: while (true) {
                     if (var7 >= var4) {
-                      ((ac) this).field_f[var6] = var3 ^ -1;
+                      ((ac) this).field_f[var6] = ~var3;
                       if (var6 >= var2) {
                         var2 = var6 + 1;
                         var3++;
@@ -181,7 +181,7 @@ final class ac {
         while (((ac) this).field_f[var1] >= 0) {
             var1 = qd.c() != 0 ? ((ac) this).field_f[var1] : var1 + 1;
         }
-        return ((ac) this).field_f[var1] ^ -1;
+        return ~((ac) this).field_f[var1];
     }
 
     final float[] b() {

@@ -11,14 +11,14 @@ abstract class rra {
     final static int a(boolean param0, int param1) {
         if (!param0) {
           if (0 > param1) {
-            if ((param1 ^ -1) > 65535) {
+            if (param1 < -65536) {
               return wl.field_i[134217728 / -param1] - 2048;
             } else {
-              return -wl.field_i[-param1 >> 396714277];
+              return -wl.field_i[-param1 >> 5];
             }
           } else {
-            if (-65537 <= (param1 ^ -1)) {
-              return wl.field_i[param1 >> 303835941];
+            if (param1 <= 65536) {
+              return wl.field_i[param1 >> 5];
             } else {
               return -wl.field_i[134217728 / param1] + 2048;
             }
@@ -34,47 +34,37 @@ abstract class rra {
         try {
             int var1 = 0;
             Exception var2 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        var1 = 103 % ((12 - param0) / 39);
-                        if (fua.field_b == null) {
-                            statePc = 4;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        try {
-                            fua.field_b.a((byte) 27, 0L);
-                            fua.field_b.a(vc.field_q.field_g, vc.field_q.field_h, (byte) -17, 24);
-                            statePc = 2;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_1) {
-                            caughtException = stateCaught_1;
-                            statePc = 3;
-                            continue stateLoop;
-                        }
-                    }
-                    case 2: {
-                        vc.field_q.field_h = vc.field_q.field_h + 24;
-                        return;
-                    }
-                    case 3: {
-                        var2 = (Exception) (Object) caughtException;
-                        statePc = 4;
-                        continue stateLoop;
-                    }
-                    case 4: {
-                        vc.field_q.field_h = vc.field_q.field_h + 24;
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
+            L0: {
+              var1 = 0;
+              if (fua.field_b == null) {
+                break L0;
+              } else {
+                try {
+                  L1: {
+                    fua.field_b.a((byte) 27, 0L);
+                    fua.field_b.a(vc.field_q.field_g, vc.field_q.field_h, (byte) -17, 24);
+                    decompiledRegionSelector0 = 0;
+                    break L1;
+                  }
+                } catch (java.lang.Exception decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  L2: {
+                    var2 = (Exception) (Object) decompiledCaughtException;
+                    decompiledRegionSelector0 = 1;
+                    break L2;
+                  }
                 }
+                if (decompiledRegionSelector0 == 0) {
+                  vc.field_q.field_h = vc.field_q.field_h + 24;
+                  return;
+                } else {
+                  break L0;
+                }
+              }
             }
+            vc.field_q.field_h = vc.field_q.field_h + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -256,12 +246,6 @@ abstract class rra {
     }
 
     public static void a(boolean param0) {
-        if (param0) {
-            rra.a(false);
-            field_a = null;
-            field_e = null;
-            return;
-        }
         field_a = null;
         field_e = null;
     }

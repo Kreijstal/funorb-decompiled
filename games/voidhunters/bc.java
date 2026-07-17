@@ -20,7 +20,11 @@ final class bc {
     }
 
     bc(phb[] param0) {
-        ((bc) this).field_c = param0;
+        try {
+            ((bc) this).field_c = param0;
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "bc.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

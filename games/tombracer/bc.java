@@ -7,9 +7,6 @@ final class bc {
     private static String[] field_c;
 
     final static boolean a(boolean param0) {
-        if (!param0) {
-            return false;
-        }
         if (bl.field_a == null) {
             return false;
         }
@@ -22,11 +19,6 @@ final class bc {
     public static void a(int param0) {
         field_b = null;
         field_a = null;
-        if (param0 <= 71) {
-            boolean discarded$0 = bc.a(true);
-            field_c = null;
-            return;
-        }
         field_c = null;
     }
 

@@ -7,10 +7,6 @@ final class ql extends jj {
     static ak field_n;
 
     final static int g(int param0) {
-        if (param0 != 13428) {
-            field_m = -88;
-            return oi.field_c;
-        }
         return oi.field_c;
     }
 
@@ -18,9 +14,6 @@ final class ql extends jj {
         h.field_X = bi.b(4);
         wa.field_c = new kn();
         rd.a(true, -17130, true);
-        if (param0) {
-            ql.d(-24);
-        }
     }
 
     public static void f(int param0) {
@@ -33,28 +26,13 @@ final class ql extends jj {
     }
 
     final static boolean e(int param0) {
-        if (param0 >= 94) {
-          if (null != lb.field_x) {
-            if (null == lb.field_x.n(640)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+        if (null == lb.field_x) {
             return false;
-          }
-        } else {
-          ql.f(30);
-          if (null != lb.field_x) {
-            if (null == lb.field_x.n(640)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
         }
+        if (null == lb.field_x.n(640)) {
+            return false;
+        }
+        return true;
     }
 
     final void a(boolean param0) {
@@ -68,19 +46,14 @@ final class ql extends jj {
         String var2 = null;
         String var3 = null;
         long var4 = 0L;
-        c.field_T = true;
-        var2 = "tuhstatbut";
-        if (param1 != -7624) {
-          field_o = 58;
-          var3 = "rvnadlm";
-          var4 = -1L;
-          nn.a(param0, 78, var3, var2, var4);
-          return;
-        } else {
-          var3 = "rvnadlm";
-          var4 = -1L;
-          nn.a(param0, 78, var3, var2, var4);
-          return;
+        try {
+            c.field_T = true;
+            var2 = "tuhstatbut";
+            var3 = "rvnadlm";
+            var4 = -1L;
+            nn.a(param0, 78, var3, var2, var4);
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "ql.C(" + (param0 != null ? "{...}" : "null") + 44 + -7624 + 41);
         }
     }
 
@@ -94,8 +67,8 @@ final class ql extends jj {
         var1 = 32 / ((-65 - param0) / 51);
         if (!to.field_s) {
           var2 = ra.field_g;
-          if ((var2 ^ -1) < -1) {
-            if ((var2 ^ -1) == -2) {
+          if (var2 > 0) {
+            if (var2 == 1) {
               wp.field_a = to.field_o;
               wp.field_a = gi.a(0, new CharSequence[3]);
               to.field_r.p(-100);

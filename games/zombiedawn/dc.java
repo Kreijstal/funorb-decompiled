@@ -5,34 +5,16 @@ final class dc {
     static vn[] field_a;
 
     final static void a(byte param0) {
-        if (param0 > 107) {
-          if (!df.field_h) {
+        if (!df.field_h) {
             df.field_h = true;
             return;
-          } else {
-            nm.field_b = false;
-            df.field_h = false;
-            vj.field_o = 0;
-            return;
-          }
-        } else {
-          field_a = null;
-          if (!df.field_h) {
-            df.field_h = true;
-            return;
-          } else {
-            nm.field_b = false;
-            df.field_h = false;
-            vj.field_o = 0;
-            return;
-          }
         }
+        nm.field_b = false;
+        df.field_h = false;
+        vj.field_o = 0;
     }
 
     public static void a(int param0) {
-        if (param0 > -26) {
-            return;
-        }
         field_a = null;
     }
 

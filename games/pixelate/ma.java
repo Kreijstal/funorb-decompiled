@@ -19,11 +19,12 @@ final class ma extends bg {
     private int field_p;
 
     final static void d(byte param0) {
-        int var1 = 0;
+        RuntimeException var1 = null;
+        int var1_int = 0;
         int[] var2 = null;
         int var3 = 0;
-        rl var4_ref_rl = null;
         int var4 = 0;
+        rl var4_ref_rl = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -37,122 +38,123 @@ final class ma extends bg {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        rl var17 = null;
         int var17_int = 0;
+        rl var17 = null;
         int var18 = 0;
         int var19 = 0;
         int[] var20 = null;
         int[] var21 = null;
         int[] var22 = null;
         int[] var23 = null;
+        RuntimeException decompiledCaughtException = null;
         var19 = Pixelate.field_H ? 1 : 0;
-        bg.field_a = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
-        var1 = ck.field_b.length;
-        var23 = new int[var1];
-        var22 = var23;
-        var21 = var22;
-        var20 = var21;
-        var2 = var20;
-        var3 = 0;
-        L0: while (true) {
-          if (var1 <= var3) {
-            L1: {
-              if (param0 == 106) {
-                break L1;
-              } else {
-                field_z = null;
-                break L1;
-              }
-            }
-            L2: {
-              var3 = bg.field_a[9] >> -1079431544;
-              var4 = bg.field_a[10] >> -500785240;
-              var5 = bg.field_a[11] >> -1386663992;
-              var6 = ga.field_f << 1880007972;
-              var7 = 0;
-              var8 = mi.d(-4096, var6) >> -156295704;
-              var9 = th.a(var6, param0 + 8085) >> 977282984;
-              if ((uf.field_d ^ -1) == 0) {
-                break L2;
-              } else {
-                if (-1 == bg.field_k) {
-                  break L2;
-                } else {
-                  var9 = -128;
-                  var8 = -bg.field_k + 240;
-                  var7 = -320 + uf.field_d;
-                  break L2;
-                }
-              }
-            }
-            var10 = 256.0 / Math.sqrt((double)(var9 * var9 + var7 * var7 - -(var8 * var8)));
-            var7 = (int)((double)var7 * var10);
-            var9 = (int)((double)var9 * var10);
-            var8 = (int)((double)var8 * var10);
-            var12 = var7 + -var3;
-            var13 = -var4 + var8;
-            var14 = var9 - var5;
-            var10 = 256.0 / Math.sqrt((double)(var12 * var12 - -(var13 * var13) + var14 * var14));
-            var14 = (int)((double)var14 * var10);
-            var13 = (int)((double)var13 * var10);
-            var12 = (int)((double)var12 * var10);
-            var15 = 0;
-            L3: while (true) {
-              if (var15 >= ck.field_b.length) {
-                return;
-              } else {
-                var16 = 0;
-                var17_int = 1;
-                L4: while (true) {
-                  if (var17_int >= ck.field_b.length) {
-                    var23[var16] = -2147483648;
-                    var17 = ck.field_b[var16];
-                    g.a(var16, 100);
-                    var18 = 0;
-                    L5: while (true) {
-                      if (-4 >= (var18 ^ -1)) {
-                        qm.a(var17, bg.field_a, false, oe.field_Hb, (byte) 98, true, false);
-                        uk.a(var14, var17, var12, var9, var8, var13, 20126, var7);
-                        var15++;
-                        continue L3;
-                      } else {
-                        oe.field_Hb[var18] = oe.field_Hb[var18] + wc.field_p[var15][var18];
-                        var18++;
-                        continue L5;
-                      }
-                    }
+        try {
+          L0: {
+            bg.field_a = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
+            var1_int = ck.field_b.length;
+            var23 = new int[var1_int];
+            var22 = var23;
+            var21 = var22;
+            var20 = var21;
+            var2 = var20;
+            var3 = 0;
+            L1: while (true) {
+              if (var1_int <= var3) {
+                L2: {
+                  var3 = bg.field_a[9] >> 8;
+                  var4 = bg.field_a[10] >> 8;
+                  var5 = bg.field_a[11] >> 8;
+                  var6 = ga.field_f << 4;
+                  var7 = 0;
+                  var8 = mi.d(-4096, var6) >> 8;
+                  var9 = th.a(var6, 8191) >> 8;
+                  if (uf.field_d == -1) {
+                    break L2;
                   } else {
-                    if (var23[var17_int] > var23[var16]) {
-                      var16 = var17_int;
-                      var17_int++;
-                      continue L4;
+                    if (-1 == bg.field_k) {
+                      break L2;
                     } else {
-                      var17_int++;
-                      continue L4;
+                      var9 = -128;
+                      var8 = -bg.field_k + 240;
+                      var7 = -320 + uf.field_d;
+                      break L2;
                     }
                   }
                 }
+                var10 = 256.0 / Math.sqrt((double)(var9 * var9 + var7 * var7 - -(var8 * var8)));
+                var7 = (int)((double)var7 * var10);
+                var9 = (int)((double)var9 * var10);
+                var8 = (int)((double)var8 * var10);
+                var12 = var7 + -var3;
+                var13 = -var4 + var8;
+                var14 = var9 - var5;
+                var10 = 256.0 / Math.sqrt((double)(var12 * var12 - -(var13 * var13) + var14 * var14));
+                var14 = (int)((double)var14 * var10);
+                var13 = (int)((double)var13 * var10);
+                var12 = (int)((double)var12 * var10);
+                var15 = 0;
+                L3: while (true) {
+                  if (var15 >= ck.field_b.length) {
+                    break L0;
+                  } else {
+                    var16 = 0;
+                    var17_int = 1;
+                    L4: while (true) {
+                      if (var17_int >= ck.field_b.length) {
+                        var23[var16] = -2147483648;
+                        var17 = ck.field_b[var16];
+                        g.a(var16, 100);
+                        var18 = 0;
+                        L5: while (true) {
+                          if (var18 >= 3) {
+                            qm.a(var17, bg.field_a, false, oe.field_Hb, (byte) 98, true, false);
+                            uk.a(var14, var17, var12, var9, var8, var13, 20126, var7);
+                            var15++;
+                            continue L3;
+                          } else {
+                            oe.field_Hb[var18] = oe.field_Hb[var18] + wc.field_p[var15][var18];
+                            var18++;
+                            continue L5;
+                          }
+                        }
+                      } else {
+                        L6: {
+                          if (var23[var17_int] > var23[var16]) {
+                            var16 = var17_int;
+                            break L6;
+                          } else {
+                            break L6;
+                          }
+                        }
+                        var17_int++;
+                        continue L4;
+                      }
+                    }
+                  }
+                }
+              } else {
+                var4_ref_rl = ck.field_b[var3];
+                var4_ref_rl.a((byte) -17);
+                g.a(var3, 67);
+                var5 = var4_ref_rl.field_c + var4_ref_rl.field_b >> 1;
+                var6 = var4_ref_rl.field_F + var4_ref_rl.field_t >> 1;
+                var7 = var4_ref_rl.field_g + var4_ref_rl.field_x >> 1;
+                var8 = bg.field_a[9] >> 2;
+                var9 = bg.field_a[10] >> 2;
+                var10_int = bg.field_a[11] >> 2;
+                var11 = var8 * oe.field_Hb[3] + (var9 * oe.field_Hb[4] - -(var10_int * oe.field_Hb[5])) >> 14;
+                var12 = var9 * oe.field_Hb[7] + var8 * oe.field_Hb[6] - -(oe.field_Hb[8] * var10_int) >> 14;
+                var13 = var10_int * oe.field_Hb[11] + var9 * oe.field_Hb[10] + var8 * oe.field_Hb[9] >> 14;
+                var2[var3] = var13 * var7 + var11 * var5 + var12 * var6 >> 16;
+                var3++;
+                continue L1;
               }
             }
-          } else {
-            var4_ref_rl = ck.field_b[var3];
-            var17 = var4_ref_rl;
-            var17 = var4_ref_rl;
-            var4_ref_rl.a((byte) -17);
-            g.a(var3, 67);
-            var5 = var4_ref_rl.field_c + var4_ref_rl.field_b >> -331582207;
-            var6 = var4_ref_rl.field_F + var4_ref_rl.field_t >> 1271052833;
-            var7 = var4_ref_rl.field_g + var4_ref_rl.field_x >> 641027521;
-            var8 = bg.field_a[9] >> -2139004798;
-            var9 = bg.field_a[10] >> -60562686;
-            var10_int = bg.field_a[11] >> -179205566;
-            var11 = var8 * oe.field_Hb[3] + (var9 * oe.field_Hb[4] - -(var10_int * oe.field_Hb[5])) >> 271572462;
-            var12 = var9 * oe.field_Hb[7] + var8 * oe.field_Hb[6] - -(oe.field_Hb[8] * var10_int) >> 1419286606;
-            var13 = var10_int * oe.field_Hb[11] + var9 * oe.field_Hb[10] + var8 * oe.field_Hb[9] >> -1131507826;
-            var2[var3] = var13 * var7 + var11 * var5 + var12 * var6 >> -1725414608;
-            var3++;
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw aa.a((Throwable) (Object) var1, "ma.B(" + 106 + 41);
         }
     }
 
@@ -174,37 +176,29 @@ final class ma extends bg {
         long var3 = 0L;
         int var5 = 0;
         int var6 = 0;
-        L0: {
-          var6 = Pixelate.field_H ? 1 : 0;
-          var1 = hm.a(64);
-          if (param0) {
-            break L0;
-          } else {
-            boolean discarded$2 = ma.a(true);
-            break L0;
-          }
-        }
+        var6 = Pixelate.field_H ? 1 : 0;
+        var1 = hm.a(64);
         var3 = -io.field_d + var1;
         if (30000L < var3) {
           io.field_d = var1;
           on.field_ob = 0;
           return true;
         } else {
-          L1: {
+          L0: {
             var5 = 3000;
-            if (-8 >= (on.field_ob ^ -1)) {
+            if (on.field_ob >= 7) {
               var5 = 12000;
-              break L1;
+              break L0;
             } else {
-              if (-6 >= (on.field_ob ^ -1)) {
+              if (on.field_ob >= 5) {
                 var5 = 9000;
-                break L1;
+                break L0;
               } else {
                 if (on.field_ob >= 3) {
                   var5 = 6000;
-                  break L1;
+                  break L0;
                 } else {
-                  break L1;
+                  break L0;
                 }
               }
             }
@@ -221,19 +215,20 @@ final class ma extends bg {
 
     final static void a(byte param0, long param1) {
         try {
-            if (false) throw (InterruptedException) null;
-            Thread.sleep(param1);
-        } catch (InterruptedException interruptedException) {
-        }
-        if (param0 != 37) {
-            field_o = null;
+            {
+                Thread.sleep(param1);
+            }
+            if (param0 != 37) {
+                field_o = null;
+            }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+            throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+            throw new RuntimeException(decompiledCheckedException);
         }
     }
 
     final static boolean e(byte param0) {
-        if (param0 != 37) {
-            return true;
-        }
         return to.field_s;
     }
 
@@ -260,8 +255,8 @@ final class ma extends bg {
         int[] stackOut_19_0 = null;
         L0: {
           var8 = Pixelate.field_H ? 1 : 0;
-          var2 = (((ma) this).field_v << -1032182367) + (((ma) this).field_n >> -806683327);
-          if (-1 < (var2 ^ -1)) {
+          var2 = (((ma) this).field_v << 1) + (((ma) this).field_n >> 1);
+          if (var2 < 0) {
             var2 = 0;
             break L0;
           } else {
@@ -310,7 +305,7 @@ final class ma extends bg {
               if (var4 <= var5) {
                 break L2;
               } else {
-                if (-1 != (var5 ^ -1)) {
+                if (var5 != 0) {
                   L6: {
                     if (0 > var5) {
                       stackOut_20_0 = kp.field_z;
@@ -330,8 +325,8 @@ final class ma extends bg {
                   var7 = 31;
                   var7 = 31 + -(31 * Math.abs(-((ma) this).field_v + var5) / Math.abs(-((ma) this).field_A + ((ma) this).field_v));
                   if (var7 > 0) {
-                    t.a(320 - -var5 << -414374652, ((ma) this).field_m + -7 << -821295196, 64, var7, var12);
-                    t.a(320 + var5 << 1487511588, ((ma) this).field_m + 30 << 681533700, 64, var7, var12);
+                    t.a(320 - -var5 << 4, ((ma) this).field_m + -7 << 4, 64, var7, var12);
+                    t.a(320 + var5 << 4, ((ma) this).field_m + 30 << 4, 64, var7, var12);
                     var5 += 2;
                     continue L5;
                   } else {
@@ -410,7 +405,7 @@ final class ma extends bg {
           }
         }
         L3: {
-          var4 = var3 * 299 >> -1152011510;
+          var4 = var3 * 299 >> 10;
           if (((ma) this).field_w) {
             var4 = -var4;
             break L3;
@@ -427,15 +422,15 @@ final class ma extends bg {
               var5 = Math.abs(-((ma) this).field_r + ((ma) this).field_v);
               ((ma) this).field_u = 60 * var5 / 640;
               ((ma) this).field_x = 0;
-              if (-2 < (((ma) this).field_u ^ -1)) {
+              if (((ma) this).field_u < 1) {
                 ((ma) this).field_u = 1;
                 break L5;
               } else {
                 break L5;
               }
             }
-            if ((var5 ^ -1) > -129) {
-              ((ma) this).field_s = -(var5 * 20 >> 1097225831);
+            if (var5 < 128) {
+              ((ma) this).field_s = -(var5 * 20 >> 7);
               break L4;
             } else {
               ((ma) this).field_s = -20;
@@ -475,10 +470,14 @@ final class ma extends bg {
         ((ma) this).field_A = 0;
         ((ma) this).field_q = 0;
         ((ma) this).field_p = 0;
-        ((ma) this).field_n = param2;
-        ((ma) this).field_t = param0;
-        ((ma) this).field_m = param3;
-        ((ma) this).field_w = param1 ? true : false;
+        try {
+            ((ma) this).field_n = param2;
+            ((ma) this).field_t = param0;
+            ((ma) this).field_m = param3;
+            ((ma) this).field_w = param1 ? true : false;
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "ma.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+        }
     }
 
     static {

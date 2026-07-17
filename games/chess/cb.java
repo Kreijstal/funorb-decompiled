@@ -15,14 +15,15 @@ final class cb {
     int field_g;
 
     final static void a(int param0, String param1, String param2) {
-        i.a(false, param2, -5136, param1);
-        int var3 = 59 % ((param0 - 43) / 38);
+        try {
+            i.a(false, param2, -5136, param1);
+            int var3_int = 59 % ((param0 - 43) / 38);
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "cb.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void a(int param0) {
-        if (param0 != -1) {
-            return;
-        }
         field_e = null;
         field_k = null;
         field_h = null;
@@ -30,58 +31,60 @@ final class cb {
 
     final static void a(byte param0) {
         Object var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
         Throwable var3 = null;
         int var4 = 0;
         Throwable decompiledCaughtException = null;
         var4 = Chess.field_G;
-        var1 = (Object) (Object) lg.field_d;
-        synchronized (var1) {
+        try {
           L0: {
-            L1: {
-              ph.field_h = ta.field_y;
-              si.field_o = si.field_o + 1;
-              if (0 <= lk.field_e) {
-                L2: while (true) {
-                  if (sc.field_i == lk.field_e) {
-                    break L1;
+            var1 = (Object) (Object) lg.field_d;
+            synchronized (var1) {
+              L1: {
+                L2: {
+                  ph.field_h = ta.field_y;
+                  si.field_o = si.field_o + 1;
+                  if (0 <= lk.field_e) {
+                    L3: while (true) {
+                      if (sc.field_i == lk.field_e) {
+                        break L2;
+                      } else {
+                        var2 = kl.field_h[sc.field_i];
+                        sc.field_i = 1 + sc.field_i & 127;
+                        if (0 <= var2) {
+                          ok.field_Jb[var2] = true;
+                          continue L3;
+                        } else {
+                          ok.field_Jb[~var2] = false;
+                          continue L3;
+                        }
+                      }
+                    }
                   } else {
-                    var2 = kl.field_h[sc.field_i];
-                    sc.field_i = 1 + sc.field_i & 127;
-                    if (0 <= var2) {
-                      ok.field_Jb[var2] = true;
-                      continue L2;
-                    } else {
-                      ok.field_Jb[var2 ^ -1] = false;
-                      continue L2;
+                    var2 = 0;
+                    L4: while (true) {
+                      if (var2 >= 112) {
+                        lk.field_e = sc.field_i;
+                        break L2;
+                      } else {
+                        ok.field_Jb[var2] = false;
+                        var2++;
+                        continue L4;
+                      }
                     }
                   }
                 }
-              } else {
-                var2 = 0;
-                L3: while (true) {
-                  if (var2 >= 112) {
-                    lk.field_e = sc.field_i;
-                    break L1;
-                  } else {
-                    ok.field_Jb[var2] = false;
-                    var2++;
-                    continue L3;
-                  }
-                }
-              }
-            }
-            L4: {
-              ta.field_y = ce.field_e;
-              if (param0 == 12) {
-                break L4;
-              } else {
-                field_k = null;
-                break L4;
+                ta.field_y = ce.field_e;
+                break L1;
               }
             }
             break L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = (RuntimeException) (Object) decompiledCaughtException;
+          throw fk.a((Throwable) (Object) var1_ref, "cb.B(" + 12 + 41);
         }
     }
 

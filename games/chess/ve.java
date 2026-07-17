@@ -99,44 +99,78 @@ final class ve extends ci {
     }
 
     final static int f(byte param0) {
-        int var1 = 0;
-        int var2 = Chess.field_G;
-        boolean discarded$8 = jh.field_e.a(-120, hd.field_d, vj.field_h, true);
-        jh.field_e.f((byte) 70);
-        while (kf.d(param0 ^ -19010)) {
-            boolean discarded$9 = jh.field_e.a(d.field_Ib, 57, vg.field_a);
-        }
-        if (!(rn.field_a == -1)) {
-            var1 = rn.field_a;
-            uk.a(false, -1);
-            return var1;
-        }
-        if (cf.field_Nb) {
-            return 3;
-        }
-        if (!(vl.field_A != ci.field_ub)) {
-            return 1;
-        }
-        if (!pi.field_c.b((byte) 125)) {
-            return 1;
-        }
-        if (param0 != -76) {
-            field_Nb = null;
-            if (!(g.field_a != ci.field_ub)) {
-                return 2;
+        int var1_int = 0;
+        RuntimeException var1 = null;
+        int var2 = 0;
+        int stackIn_7_0 = 0;
+        int stackIn_10_0 = 0;
+        int stackIn_14_0 = 0;
+        int stackIn_17_0 = 0;
+        int stackIn_21_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_6_0 = 0;
+        int stackOut_13_0 = 0;
+        int stackOut_20_0 = 0;
+        int stackOut_16_0 = 0;
+        int stackOut_9_0 = 0;
+        var2 = Chess.field_G;
+        try {
+          L0: {
+            boolean discarded$12 = jh.field_e.a(-120, hd.field_d, vj.field_h, true);
+            jh.field_e.f((byte) 70);
+            L1: while (true) {
+              if (!kf.d(18954)) {
+                if (rn.field_a != -1) {
+                  var1_int = rn.field_a;
+                  uk.a(false, -1);
+                  stackOut_6_0 = var1_int;
+                  stackIn_7_0 = stackOut_6_0;
+                  return stackIn_7_0;
+                } else {
+                  if (!cf.field_Nb) {
+                    if (vl.field_A == ci.field_ub) {
+                      stackOut_13_0 = 1;
+                      stackIn_14_0 = stackOut_13_0;
+                      return stackIn_14_0;
+                    } else {
+                      if (pi.field_c.b((byte) 125)) {
+                        if (g.field_a == ci.field_ub) {
+                          stackOut_20_0 = 2;
+                          stackIn_21_0 = stackOut_20_0;
+                          break L0;
+                        } else {
+                          return -1;
+                        }
+                      } else {
+                        stackOut_16_0 = 1;
+                        stackIn_17_0 = stackOut_16_0;
+                        return stackIn_17_0;
+                      }
+                    }
+                  } else {
+                    stackOut_9_0 = 3;
+                    stackIn_10_0 = stackOut_9_0;
+                    return stackIn_10_0;
+                  }
+                }
+              } else {
+                boolean discarded$13 = jh.field_e.a(d.field_Ib, 57, vg.field_a);
+                continue L1;
+              }
             }
-            return -1;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw fk.a((Throwable) (Object) var1, "ve.B(" + -76 + 41);
         }
-        if (!(g.field_a != ci.field_ub)) {
-            return 2;
-        }
-        return -1;
+        return stackIn_21_0;
     }
 
     public static void l(int param0) {
         field_Qb = null;
         field_Gb = null;
-        int var1 = -2 % ((param0 - 29) / 63);
+        int var1 = 0;
         field_Nb = null;
         field_Hb = null;
     }

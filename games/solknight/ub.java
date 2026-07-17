@@ -14,28 +14,21 @@ final class ub {
     }
 
     final static void a(dl param0, boolean param1, int param2, int param3, java.awt.Component param4, mf param5, boolean param6, int param7) {
-        gj.a(param7, param1, 10);
-        if (param6) {
-          field_a = null;
-          kj.field_P = gj.a(param0, param4, 0, param2);
-          ql.field_r = gj.a(param0, param4, 1, param3);
-          ti.field_f = new e();
-          ak.field_a = 1000 * param3 / param7;
-          ql.field_r.a((ej) (Object) ti.field_f);
-          ua.field_I = param5;
-          ua.field_I.d(1349013231, la.field_k);
-          kj.field_P.a((ej) (Object) ua.field_I);
-          return;
-        } else {
-          kj.field_P = gj.a(param0, param4, 0, param2);
-          ql.field_r = gj.a(param0, param4, 1, param3);
-          ti.field_f = new e();
-          ak.field_a = 1000 * param3 / param7;
-          ql.field_r.a((ej) (Object) ti.field_f);
-          ua.field_I = param5;
-          ua.field_I.d(1349013231, la.field_k);
-          kj.field_P.a((ej) (Object) ua.field_I);
-          return;
+        try {
+            gj.a(param7, param1, 10);
+            if (param6) {
+                field_a = null;
+            }
+            kj.field_P = gj.a(param0, param4, 0, param2);
+            ql.field_r = gj.a(param0, param4, 1, param3);
+            ti.field_f = new e();
+            ak.field_a = 1000 * param3 / param7;
+            ql.field_r.a((ej) (Object) ti.field_f);
+            ua.field_I = param5;
+            ua.field_I.d(1349013231, la.field_k);
+            kj.field_P.a((ej) (Object) ua.field_I);
+        } catch (RuntimeException runtimeException) {
+            throw fc.a((Throwable) (Object) runtimeException, "ub.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 44 + param6 + 44 + param7 + 41);
         }
     }
 
@@ -55,10 +48,10 @@ final class ub {
               var3 = 0;
               var4 = param1;
               L0: while (true) {
-                if (-1L == (var4 ^ -1L)) {
+                if (var4 == 0L) {
                   var6 = new StringBuilder(var3);
                   L1: while (true) {
-                    if (-1L == (param1 ^ -1L)) {
+                    if (param1 == 0L) {
                       if (param0 >= -35) {
                         var12 = null;
                         ub.a((dl) null, true, 99, 116, (java.awt.Component) null, (mf) null, false, 43);

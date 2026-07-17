@@ -12,32 +12,25 @@ final class tj {
     va field_d;
 
     final static java.awt.Container b(int param0) {
-        if (null == rla.field_x) {
-          if (param0 != 25128) {
-            field_c = -12;
-            return (java.awt.Container) (Object) di.a(param0 + -25099);
-          } else {
-            return (java.awt.Container) (Object) di.a(param0 + -25099);
-          }
-        } else {
-          return (java.awt.Container) (Object) rla.field_x;
+        if (null != rla.field_x) {
+            return (java.awt.Container) (Object) rla.field_x;
         }
+        return (java.awt.Container) (Object) di.a(29);
     }
 
     public static void a(int param0) {
-        if (param0 != 360) {
-            field_a = 58;
-            field_h = null;
-            return;
-        }
         field_h = null;
     }
 
     tj(va param0, int param1, int param2, int param3) {
-        ((tj) this).field_g = (byte)param3;
-        ((tj) this).field_e = (short)param1;
-        ((tj) this).field_d = param0;
-        ((tj) this).field_f = (byte)param2;
+        try {
+            ((tj) this).field_g = (byte)param3;
+            ((tj) this).field_e = (short)param1;
+            ((tj) this).field_d = param0;
+            ((tj) this).field_f = (byte)param2;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "tj.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+        }
     }
 
     static {

@@ -15,20 +15,10 @@ final class ah {
     String field_h;
 
     public static void a(int param0) {
-        if (param0 >= -76) {
-          field_d = null;
-          field_d = null;
-          field_e = null;
-          field_a = null;
-          field_f = null;
-          return;
-        } else {
-          field_d = null;
-          field_e = null;
-          field_a = null;
-          field_f = null;
-          return;
-        }
+        field_d = null;
+        field_e = null;
+        field_a = null;
+        field_f = null;
     }
 
     final static int[] a(int param0, byte param1, int param2) {
@@ -36,11 +26,11 @@ final class ah {
         int var4 = ue.b(param2, 123);
         int var5 = qf.a(param0, (byte) -78);
         int var6 = ue.b(param0, 127);
-        int var7 = (int)((long)var5 * (long)var3 >> -198404080);
-        int var8 = (int)((long)var3 * (long)var6 >> -692529520);
-        int var9 = (int)((long)var4 * (long)var5 >> 1410590736);
+        int var7 = (int)((long)var5 * (long)var3 >> 16);
+        int var8 = (int)((long)var3 * (long)var6 >> 16);
+        int var9 = (int)((long)var4 * (long)var5 >> 16);
         int var11 = 62 % ((-44 - param1) / 36);
-        int var10 = (int)((long)var6 * (long)var4 >> 1758265360);
+        int var10 = (int)((long)var6 * (long)var4 >> 16);
         return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
     }
 

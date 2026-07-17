@@ -120,11 +120,6 @@ final class mj {
     }
 
     public static void c(byte param0) {
-        if (param0 >= -23) {
-            mj.b((byte) 115);
-            field_a = null;
-            return;
-        }
         field_a = null;
     }
 

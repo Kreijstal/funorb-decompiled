@@ -24,9 +24,6 @@ final class lh extends tk {
         field_C = null;
         field_D = null;
         field_x = null;
-        if (param0 != -44) {
-            return;
-        }
         field_B = null;
     }
 
@@ -70,7 +67,7 @@ final class lh extends tk {
         field_D = new long[11];
         var0 = 0;
         L0: while (true) {
-          if (-257 >= (var0 ^ -1)) {
+          if (var0 >= 256) {
             field_D[0] = 0L;
             var0 = 1;
             L1: while (true) {
@@ -87,7 +84,7 @@ final class lh extends tk {
             L2: {
               var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
               if ((var0 & 1) == 0) {
-                stackOut_4_0 = (long)(var1 >>> -380795032);
+                stackOut_4_0 = (long)(var1 >>> 8);
                 stackIn_5_0 = stackOut_4_0;
                 break L2;
               } else {
@@ -98,8 +95,8 @@ final class lh extends tk {
             }
             L3: {
               var2 = stackIn_5_0;
-              var4 = var2 << 427065473;
-              if ((var4 ^ -1L) > -257L) {
+              var4 = var2 << 1;
+              if (var4 < 256L) {
                 break L3;
               } else {
                 var4 = var4 ^ 285L;
@@ -107,7 +104,7 @@ final class lh extends tk {
               }
             }
             L4: {
-              var6 = var4 << -196493631;
+              var6 = var4 << 1;
               if (var6 < 256L) {
                 break L4;
               } else {
@@ -117,7 +114,7 @@ final class lh extends tk {
             }
             L5: {
               var8 = var2 ^ var6;
-              var10 = var6 << 676223297;
+              var10 = var6 << 1;
               if (256L <= var10) {
                 var10 = var10 ^ 285L;
                 break L5;
@@ -126,14 +123,14 @@ final class lh extends tk {
               }
             }
             var12 = var2 ^ var10;
-            field_B[0][var0] = ib.b(var12, ib.b(ib.b(var8 << 2132248144, ib.b(var10 << 599388376, ib.b(var2 << -1327450464, ib.b(var6 << 845779816, ib.b(var2 << 478458608, var2 << 1163443704))))), var4 << 309202440));
+            field_B[0][var0] = ib.b(var12, ib.b(ib.b(var8 << 16, ib.b(var10 << 24, ib.b(var2 << 32, ib.b(var6 << 40, ib.b(var2 << 48, var2 << 56))))), var4 << 8));
             var14 = 1;
             L6: while (true) {
               if (8 <= var14) {
                 var0++;
                 continue L0;
               } else {
-                field_B[var14][var0] = ib.b(field_B[var14 + -1][var0] << -897768968, field_B[var14 + -1][var0] >>> -1105933624);
+                field_B[var14][var0] = ib.b(field_B[var14 + -1][var0] << 56, field_B[var14 + -1][var0] >>> 8);
                 var14++;
                 continue L6;
               }

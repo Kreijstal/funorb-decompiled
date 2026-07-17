@@ -11,9 +11,6 @@ final class oh {
 
     public static void a(boolean param0) {
         field_a = null;
-        if (!param0) {
-            return;
-        }
         field_b = null;
         field_c = null;
         field_e = null;

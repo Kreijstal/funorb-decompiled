@@ -20,9 +20,13 @@ final class kb {
     }
 
     kb(f[][] param0, String param1, int param2) {
-        ((kb) this).field_b = param0;
-        ((kb) this).field_e = param1;
-        ((kb) this).field_d = param2;
+        try {
+            ((kb) this).field_b = param0;
+            ((kb) this).field_e = param1;
+            ((kb) this).field_d = param2;
+        } catch (RuntimeException runtimeException) {
+            throw dn.a((Throwable) (Object) runtimeException, "kb.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     static {

@@ -183,8 +183,9 @@ final class kf extends pf {
                         } else {
                           L7: {
                             var10 = (var8 >> 12) * ((kf) this).field_a + (var7 >> 12);
+                            int incrementValue$18 = var6;
                             var6++;
-                            var11 = var6;
+                            var11 = incrementValue$18;
                             var58 = var3;
                             var49 = var58;
                             var40 = var49;
@@ -302,8 +303,9 @@ final class kf extends pf {
                                           var16 = ((kf) this).field_F[var15 & 255];
                                           var17 = (var16 & 16711935) * field_k & -16711936;
                                           var18 = (var16 & 65280) * field_k & 16711680;
+                                          int incrementValue$19 = var11;
                                           var11++;
-                                          var12[var11] = ((var17 | var18) >>> 8) + field_h;
+                                          var12[incrementValue$19] = ((var17 | var18) >>> 8) + field_h;
                                           break L7;
                                         }
                                       }
@@ -491,8 +493,9 @@ final class kf extends pf {
                         } else {
                           L18: {
                             var10 = (var8 >> 12) * ((kf) this).field_a + (var7 >> 12);
+                            int incrementValue$20 = var6;
                             var6++;
-                            var11 = var6;
+                            var11 = incrementValue$20;
                             var57 = var3;
                             var48 = var57;
                             var39 = var48;
@@ -610,8 +613,9 @@ final class kf extends pf {
                                           var16 = ((kf) this).field_F[var15 & 255];
                                           var17 = (var16 & 16711935) * field_k & -16711936;
                                           var18 = (var16 & 65280) * field_k & 16711680;
+                                          int incrementValue$21 = var11;
                                           var11++;
-                                          var12[var11] = ((var17 | var18) >>> 8) + field_h;
+                                          var12[incrementValue$21] = ((var17 | var18) >>> 8) + field_h;
                                           break L18;
                                         }
                                       }
@@ -776,8 +780,9 @@ final class kf extends pf {
                             } else {
                               L28: {
                                 var10 = (var8 >> 12) * ((kf) this).field_a + (var7 >> 12);
+                                int incrementValue$22 = var6;
                                 var6++;
-                                var11 = var6;
+                                var11 = incrementValue$22;
                                 var56 = var3;
                                 var47 = var56;
                                 var38 = var47;
@@ -895,8 +900,9 @@ final class kf extends pf {
                                               var16 = ((kf) this).field_F[var15 & 255];
                                               var17 = (var16 & 16711935) * field_k & -16711936;
                                               var18 = (var16 & 65280) * field_k & 16711680;
+                                              int incrementValue$23 = var11;
                                               var11++;
-                                              var12[var11] = ((var17 | var18) >>> 8) + field_h;
+                                              var12[incrementValue$23] = ((var17 | var18) >>> 8) + field_h;
                                               break L28;
                                             }
                                           }
@@ -1098,8 +1104,9 @@ final class kf extends pf {
                         } else {
                           L39: {
                             var10 = (var8 >> 12) * ((kf) this).field_a + (var7 >> 12);
+                            int incrementValue$24 = var6;
                             var6++;
-                            var11 = var6;
+                            var11 = incrementValue$24;
                             var55 = var3;
                             var46 = var55;
                             var37 = var46;
@@ -1217,8 +1224,9 @@ final class kf extends pf {
                                           var16 = ((kf) this).field_F[var15 & 255];
                                           var17 = (var16 & 16711935) * field_k & -16711936;
                                           var18 = (var16 & 65280) * field_k & 16711680;
+                                          int incrementValue$25 = var11;
                                           var11++;
-                                          var12[var11] = ((var17 | var18) >>> 8) + field_h;
+                                          var12[incrementValue$25] = ((var17 | var18) >>> 8) + field_h;
                                           break L39;
                                         }
                                       }
@@ -1407,8 +1415,9 @@ final class kf extends pf {
                         } else {
                           L50: {
                             var10 = (var8 >> 12) * ((kf) this).field_a + (var7 >> 12);
+                            int incrementValue$26 = var6;
                             var6++;
-                            var11 = var6;
+                            var11 = incrementValue$26;
                             var54 = var3;
                             var45 = var54;
                             var36 = var45;
@@ -1526,8 +1535,9 @@ final class kf extends pf {
                                           var16 = ((kf) this).field_F[var15 & 255];
                                           var17 = (var16 & 16711935) * field_k & -16711936;
                                           var18 = (var16 & 65280) * field_k & 16711680;
+                                          int incrementValue$27 = var11;
                                           var11++;
-                                          var12[var11] = ((var17 | var18) >>> 8) + field_h;
+                                          var12[incrementValue$27] = ((var17 | var18) >>> 8) + field_h;
                                           break L50;
                                         }
                                       }
@@ -1693,8 +1703,9 @@ final class kf extends pf {
                             } else {
                               L60: {
                                 var10 = (var8 >> 12) * ((kf) this).field_a + (var7 >> 12);
+                                int incrementValue$28 = var6;
                                 var6++;
-                                var11 = var6;
+                                var11 = incrementValue$28;
                                 var53 = var3;
                                 var44 = var53;
                                 var35 = var44;
@@ -1812,8 +1823,9 @@ final class kf extends pf {
                                               var16 = ((kf) this).field_F[var15 & 255];
                                               var17 = (var16 & 16711935) * field_k & -16711936;
                                               var18 = (var16 & 65280) * field_k & 16711680;
+                                              int incrementValue$29 = var11;
                                               var11++;
-                                              var12[var11] = ((var17 | var18) >>> 8) + field_h;
+                                              var12[incrementValue$29] = ((var17 | var18) >>> 8) + field_h;
                                               break L60;
                                             }
                                           }
@@ -1991,8 +2003,9 @@ final class kf extends pf {
                             } else {
                               L70: {
                                 var10 = (var8 >> 12) * ((kf) this).field_a + (var7 >> 12);
+                                int incrementValue$30 = var6;
                                 var6++;
-                                var11 = var6;
+                                var11 = incrementValue$30;
                                 var52 = var3;
                                 var43 = var52;
                                 var34 = var43;
@@ -2110,8 +2123,9 @@ final class kf extends pf {
                                               var16 = ((kf) this).field_F[var15 & 255];
                                               var17 = (var16 & 16711935) * field_k & -16711936;
                                               var18 = (var16 & 65280) * field_k & 16711680;
+                                              int incrementValue$31 = var11;
                                               var11++;
-                                              var12[var11] = ((var17 | var18) >>> 8) + field_h;
+                                              var12[incrementValue$31] = ((var17 | var18) >>> 8) + field_h;
                                               break L70;
                                             }
                                           }
@@ -2286,8 +2300,9 @@ final class kf extends pf {
                             } else {
                               L80: {
                                 var10 = (var8 >> 12) * ((kf) this).field_a + (var7 >> 12);
+                                int incrementValue$32 = var6;
                                 var6++;
-                                var11 = var6;
+                                var11 = incrementValue$32;
                                 var51 = var3;
                                 var42 = var51;
                                 var33 = var42;
@@ -2405,8 +2420,9 @@ final class kf extends pf {
                                               var16 = ((kf) this).field_F[var15 & 255];
                                               var17 = (var16 & 16711935) * field_k & -16711936;
                                               var18 = (var16 & 65280) * field_k & 16711680;
+                                              int incrementValue$33 = var11;
                                               var11++;
-                                              var12[var11] = ((var17 | var18) >>> 8) + field_h;
+                                              var12[incrementValue$33] = ((var17 | var18) >>> 8) + field_h;
                                               break L80;
                                             }
                                           }
@@ -2563,8 +2579,9 @@ final class kf extends pf {
                               } else {
                                 L88: {
                                   var10 = (var8 >> 12) * ((kf) this).field_a + (var7 >> 12);
+                                  int incrementValue$34 = var6;
                                   var6++;
-                                  var11 = var6;
+                                  var11 = incrementValue$34;
                                   var50 = var3;
                                   var41 = var50;
                                   var32 = var41;
@@ -2682,8 +2699,9 @@ final class kf extends pf {
                                                 var16 = ((kf) this).field_F[var15 & 255];
                                                 var17 = (var16 & 16711935) * field_k & -16711936;
                                                 var18 = (var16 & 65280) * field_k & 16711680;
+                                                int incrementValue$35 = var11;
                                                 var11++;
-                                                var12[var11] = ((var17 | var18) >>> 8) + field_h;
+                                                var12[incrementValue$35] = ((var17 | var18) >>> 8) + field_h;
                                                 break L88;
                                               }
                                             }
@@ -3771,8 +3789,9 @@ final class kf extends pf {
                                         var18++;
                                         continue L6;
                                       } else {
+                                        int incrementValue$35 = var8;
                                         var8++;
-                                        var20 = ((kf) this).field_E[var8];
+                                        var20 = ((kf) this).field_E[incrementValue$35];
                                         if (var20 == 0) {
                                           var7++;
                                           var19++;
@@ -3786,8 +3805,9 @@ final class kf extends pf {
                                           var23 = var21 + var22;
                                           var24 = (var21 & 16711935) + (var22 & 16711935);
                                           var22 = (var24 & 16777472) + (var23 - var24 & 65536);
+                                          int incrementValue$36 = var7;
                                           var7++;
-                                          var13[var7] = var23 - var22 | var22 - (var22 >>> 8);
+                                          var13[incrementValue$36] = var23 - var22 | var22 - (var22 >>> 8);
                                           var19++;
                                           continue L7;
                                         }
@@ -3811,8 +3831,9 @@ final class kf extends pf {
                                       continue L8;
                                     } else {
                                       L10: {
+                                        int incrementValue$37 = var8;
                                         var8++;
-                                        var16 = ((kf) this).field_E[var8];
+                                        var16 = ((kf) this).field_E[incrementValue$37];
                                         if (var16 <= 0) {
                                           stackOut_125_0 = 0;
                                           stackIn_126_0 = stackOut_125_0;
@@ -3832,8 +3853,9 @@ final class kf extends pf {
                                       var18 = var17 + var20;
                                       var19 = (var17 & 16711935) + (var20 & 16711935);
                                       var20 = (var19 & 16777472) + (var18 - var19 & 65536);
+                                      int incrementValue$38 = var7;
                                       var7++;
-                                      var13[var7] = var18 - var20 | var20 - (var20 >>> 8);
+                                      var13[incrementValue$38] = var18 - var20 | var20 - (var20 >>> 8);
                                       var15++;
                                       continue L9;
                                     }
@@ -3858,8 +3880,9 @@ final class kf extends pf {
                                     var17++;
                                     continue L11;
                                   } else {
+                                    int incrementValue$39 = var8;
                                     var8++;
-                                    var19 = ((kf) this).field_E[var8];
+                                    var19 = ((kf) this).field_E[incrementValue$39];
                                     if (var19 == 0) {
                                       var7++;
                                       var18++;
@@ -3874,8 +3897,9 @@ final class kf extends pf {
                                       var25 = var20 + var24;
                                       var26 = (var20 & 16711935) + (var24 & 16711935);
                                       var24 = (var26 & 16777472) + (var25 - var26 & 65536);
+                                      int incrementValue$40 = var7;
                                       var7++;
-                                      var13[var7] = var25 - var24 | var24 - (var24 >>> 8);
+                                      var13[incrementValue$40] = var25 - var24 | var24 - (var24 >>> 8);
                                       var18++;
                                       continue L12;
                                     }
@@ -3898,8 +3922,9 @@ final class kf extends pf {
                                   var14++;
                                   continue L13;
                                 } else {
+                                  int incrementValue$41 = var8;
                                   var8++;
-                                  var16 = ((kf) this).field_E[var8];
+                                  var16 = ((kf) this).field_E[incrementValue$41];
                                   if (var16 == 0) {
                                     var7++;
                                     var15++;
@@ -3910,8 +3935,9 @@ final class kf extends pf {
                                     var19 = var17 + var18;
                                     var20 = (var17 & 16711935) + (var18 & 16711935);
                                     var18 = (var20 & 16777472) + (var19 - var20 & 65536);
+                                    int incrementValue$42 = var7;
                                     var7++;
-                                    var13[var7] = var19 - var18 | var18 - (var18 >>> 8);
+                                    var13[incrementValue$42] = var19 - var18 | var18 - (var18 >>> 8);
                                     var15++;
                                     continue L14;
                                   }
@@ -3946,8 +3972,9 @@ final class kf extends pf {
                                       var18++;
                                       continue L15;
                                     } else {
+                                      int incrementValue$43 = var8;
                                       var8++;
-                                      var20 = ((kf) this).field_E[var8];
+                                      var20 = ((kf) this).field_E[incrementValue$43];
                                       if (var20 == 0) {
                                         var7++;
                                         var19++;
@@ -3956,8 +3983,9 @@ final class kf extends pf {
                                         var21 = ((kf) this).field_F[var20 & 255];
                                         var16 = (var21 & 16711935) * var14 & -16711936;
                                         var17 = (var21 & 65280) * var14 & 16711680;
+                                        int incrementValue$44 = var7;
                                         var7++;
-                                        var13[var7] = ((var16 | var17) >>> 8) + param3;
+                                        var13[incrementValue$44] = ((var16 | var17) >>> 8) + param3;
                                         var19++;
                                         continue L16;
                                       }
@@ -3983,8 +4011,9 @@ final class kf extends pf {
                                     continue L17;
                                   } else {
                                     L19: {
+                                      int incrementValue$45 = var8;
                                       var8++;
-                                      var18 = ((kf) this).field_E[var8];
+                                      var18 = ((kf) this).field_E[incrementValue$45];
                                       if (var18 <= 0) {
                                         stackOut_83_0 = 0;
                                         stackIn_84_0 = stackOut_83_0;
@@ -4014,8 +4043,9 @@ final class kf extends pf {
                                         }
                                       }
                                     }
+                                    int incrementValue$46 = var7;
                                     var7++;
-                                    var13[var7] = var22;
+                                    var13[incrementValue$46] = var22;
                                     var17++;
                                     continue L18;
                                   }
@@ -4043,8 +4073,9 @@ final class kf extends pf {
                                     var19++;
                                     continue L21;
                                   } else {
+                                    int incrementValue$47 = var8;
                                     var8++;
-                                    var21 = ((kf) this).field_E[var8];
+                                    var21 = ((kf) this).field_E[incrementValue$47];
                                     if (var21 == 0) {
                                       var7++;
                                       var20++;
@@ -4055,8 +4086,9 @@ final class kf extends pf {
                                         var23 = (var22 & 16711680) * var14 & -16777216;
                                         var24 = (var22 & 65280) * var15 & 16711680;
                                         var25 = (var22 & 255) * var16 & 65280;
+                                        int incrementValue$48 = var7;
                                         var7++;
-                                        var13[var7] = (var23 | var24 | var25) >>> 8;
+                                        var13[incrementValue$48] = (var23 | var24 | var25) >>> 8;
                                         var20++;
                                         continue L22;
                                       } else {
@@ -4065,8 +4097,9 @@ final class kf extends pf {
                                         var25 = (var22 & 255) * var16 & 65280;
                                         var22 = (var23 | var24 | var25) >>> 8;
                                         var26 = var30[var7];
+                                        int incrementValue$49 = var7;
                                         var7++;
-                                        var13[var7] = ((var22 & 16711935) * var17 + (var26 & 16711935) * var18 & -16711936) + ((var22 & 65280) * var17 + (var26 & 65280) * var18 & 16711680) >> 8;
+                                        var13[incrementValue$49] = ((var22 & 16711935) * var17 + (var26 & 16711935) * var18 & -16711936) + ((var22 & 65280) * var17 + (var26 & 65280) * var18 & 16711680) >> 8;
                                         var20++;
                                         continue L22;
                                       }
@@ -4091,8 +4124,9 @@ final class kf extends pf {
                                     var16++;
                                     continue L23;
                                   } else {
+                                    int incrementValue$50 = var8;
                                     var8++;
-                                    var18 = ((kf) this).field_E[var8];
+                                    var18 = ((kf) this).field_E[incrementValue$50];
                                     if (var18 == 0) {
                                       var7++;
                                       var17++;
@@ -4100,8 +4134,9 @@ final class kf extends pf {
                                     } else {
                                       var19 = ((kf) this).field_F[var18 & 255];
                                       var20 = var30[var7];
+                                      int incrementValue$51 = var7;
                                       var7++;
-                                      var13[var7] = ((var19 & 16711935) * var14 + (var20 & 16711935) * var15 & -16711936) + ((var19 & 65280) * var14 + (var20 & 65280) * var15 & 16711680) >> 8;
+                                      var13[incrementValue$51] = ((var19 & 16711935) * var14 + (var20 & 16711935) * var15 & -16711936) + ((var19 & 65280) * var14 + (var20 & 65280) * var15 & 16711680) >> 8;
                                       var17++;
                                       continue L24;
                                     }
@@ -4125,8 +4160,9 @@ final class kf extends pf {
                                 var14++;
                                 continue L25;
                               } else {
+                                int incrementValue$52 = var8;
                                 var8++;
-                                var16 = ((kf) this).field_E[var8];
+                                var16 = ((kf) this).field_E[incrementValue$52];
                                 if (var16 == 0) {
                                   var7++;
                                   var15++;
@@ -4136,8 +4172,9 @@ final class kf extends pf {
                                   var18 = 255;
                                   var19 = 0;
                                   var20 = var30[var7];
+                                  int incrementValue$53 = var7;
                                   var7++;
-                                  var13[var7] = (((var17 & 16711935) * var18 + (var20 & 16711935) * var19 & -16711936) >> 8) + (((var17 & -16711936) >>> 8) * var18 + ((var20 & -16711936) >>> 8) * var19 & -16711936);
+                                  var13[incrementValue$53] = (((var17 & 16711935) * var18 + (var20 & 16711935) * var19 & -16711936) >> 8) + (((var17 & -16711936) >>> 8) * var18 + ((var20 & -16711936) >>> 8) * var19 & -16711936);
                                   var15++;
                                   continue L26;
                                 }
@@ -4172,12 +4209,14 @@ final class kf extends pf {
                                     var18++;
                                     continue L27;
                                   } else {
+                                    int incrementValue$54 = var8;
                                     var8++;
-                                    var20 = ((kf) this).field_F[((kf) this).field_E[var8] & 255];
+                                    var20 = ((kf) this).field_F[((kf) this).field_E[incrementValue$54] & 255];
                                     var16 = (var20 & 16711935) * var14 & -16711936;
                                     var17 = (var20 & 65280) * var14 & 16711680;
+                                    int incrementValue$55 = var7;
                                     var7++;
-                                    var13[var7] = ((var16 | var17) >>> 8) + param3;
+                                    var13[incrementValue$55] = ((var16 | var17) >>> 8) + param3;
                                     var19++;
                                     continue L28;
                                   }
@@ -4199,13 +4238,15 @@ final class kf extends pf {
                                   var14++;
                                   continue L29;
                                 } else {
+                                  int incrementValue$56 = var8;
                                   var8++;
-                                  var16 = ((kf) this).field_F[((kf) this).field_E[var8] & 255];
+                                  var16 = ((kf) this).field_F[((kf) this).field_E[incrementValue$56] & 255];
                                   var17 = var16 + param3;
                                   var18 = (var16 & 16711935) + (param3 & 16711935);
                                   var19 = (var18 & 16777472) + (var17 - var18 & 65536);
+                                  int incrementValue$57 = var7;
                                   var7++;
-                                  var13[var7] = var17 - var19 | var19 - (var19 >>> 8);
+                                  var13[incrementValue$57] = var17 - var19 | var19 - (var19 >>> 8);
                                   var15++;
                                   continue L30;
                                 }
@@ -4230,13 +4271,15 @@ final class kf extends pf {
                                 var17++;
                                 continue L31;
                               } else {
+                                int incrementValue$58 = var8;
                                 var8++;
-                                var19 = ((kf) this).field_F[((kf) this).field_E[var8] & 255];
+                                var19 = ((kf) this).field_F[((kf) this).field_E[incrementValue$58] & 255];
                                 var20 = (var19 & 16711680) * var14 & -16777216;
                                 var21 = (var19 & 65280) * var15 & 16711680;
                                 var22 = (var19 & 255) * var16 & 65280;
+                                int incrementValue$59 = var7;
                                 var7++;
-                                var13[var7] = (var20 | var21 | var22) >>> 8;
+                                var13[incrementValue$59] = (var20 | var21 | var22) >>> 8;
                                 var18++;
                                 continue L32;
                               }
@@ -4261,25 +4304,35 @@ final class kf extends pf {
                                   var14++;
                                   continue L33;
                                 } else {
+                                  int incrementValue$60 = var7;
                                   var7++;
+                                  int incrementValue$61 = var8;
                                   var8++;
-                                  var13[var7] = ((kf) this).field_F[((kf) this).field_E[var8] & 255];
+                                  var13[incrementValue$60] = ((kf) this).field_F[((kf) this).field_E[incrementValue$61] & 255];
                                   continue L35;
                                 }
                               }
                             } else {
+                              int incrementValue$62 = var7;
                               var7++;
+                              int incrementValue$63 = var8;
                               var8++;
-                              var13[var7] = ((kf) this).field_F[((kf) this).field_E[var8] & 255];
+                              var13[incrementValue$62] = ((kf) this).field_F[((kf) this).field_E[incrementValue$63] & 255];
+                              int incrementValue$64 = var7;
                               var7++;
+                              int incrementValue$65 = var8;
                               var8++;
-                              var13[var7] = ((kf) this).field_F[((kf) this).field_E[var8] & 255];
+                              var13[incrementValue$64] = ((kf) this).field_F[((kf) this).field_E[incrementValue$65] & 255];
+                              int incrementValue$66 = var7;
                               var7++;
+                              int incrementValue$67 = var8;
                               var8++;
-                              var13[var7] = ((kf) this).field_F[((kf) this).field_E[var8] & 255];
+                              var13[incrementValue$66] = ((kf) this).field_F[((kf) this).field_E[incrementValue$67] & 255];
+                              int incrementValue$68 = var7;
                               var7++;
+                              int incrementValue$69 = var8;
                               var8++;
-                              var13[var7] = ((kf) this).field_F[((kf) this).field_E[var8] & 255];
+                              var13[incrementValue$68] = ((kf) this).field_F[((kf) this).field_E[incrementValue$69] & 255];
                               continue L34;
                             }
                           }
@@ -5306,8 +5359,9 @@ final class kf extends pf {
                                             var30 = var28 + var29;
                                             var31 = (var28 & 16711935) + (var29 & 16711935);
                                             var29 = (var31 & 16777472) + (var30 - var31 & 65536);
+                                            int incrementValue$14 = var16;
                                             var16++;
-                                            var18[var16] = var30 - var29 | var29 - (var29 >>> 8);
+                                            var18[incrementValue$14] = var30 - var29 | var29 - (var29 >>> 8);
                                             break L12;
                                           }
                                         }
@@ -5357,8 +5411,9 @@ final class kf extends pf {
                                       var25 = var24 + var27;
                                       var26 = (var24 & 16711935) + (var27 & 16711935);
                                       var27 = (var26 & 16777472) + (var25 - var26 & 65536);
+                                      int incrementValue$15 = var16;
                                       var16++;
-                                      var18[var16] = var25 - var27 | var27 - (var27 >>> 8);
+                                      var18[incrementValue$15] = var25 - var27 | var27 - (var27 >>> 8);
                                       var9 = var9 + var14;
                                       var22++;
                                       continue L14;
@@ -5402,8 +5457,9 @@ final class kf extends pf {
                                         var32 = var27 + var31;
                                         var33 = (var27 & 16711935) + (var31 & 16711935);
                                         var31 = (var33 & 16777472) + (var32 - var33 & 65536);
+                                        int incrementValue$16 = var16;
                                         var16++;
-                                        var18[var16] = var32 - var31 | var31 - (var31 >>> 8);
+                                        var18[incrementValue$16] = var32 - var31 | var31 - (var31 >>> 8);
                                         break L18;
                                       }
                                     }
@@ -5443,8 +5499,9 @@ final class kf extends pf {
                                       var26 = var24 + var25;
                                       var27 = (var24 & 16711935) + (var25 & 16711935);
                                       var25 = (var27 & 16777472) + (var26 - var27 & 65536);
+                                      int incrementValue$17 = var16;
                                       var16++;
-                                      var18[var16] = var26 - var25 | var25 - (var25 >>> 8);
+                                      var18[incrementValue$17] = var26 - var25 | var25 - (var25 >>> 8);
                                       break L21;
                                     }
                                   }
@@ -5494,8 +5551,9 @@ final class kf extends pf {
                                           var28 = ((kf) this).field_F[var27 & 255];
                                           var21 = (var28 & 16711935) * var19 & -16711936;
                                           var22 = (var28 & 65280) * var19 & 16711680;
+                                          int incrementValue$18 = var16;
                                           var16++;
-                                          var18[var16] = ((var21 | var22) >>> 8) + param5;
+                                          var18[incrementValue$18] = ((var21 | var22) >>> 8) + param5;
                                           break L24;
                                         }
                                       }
@@ -5557,8 +5615,9 @@ final class kf extends pf {
                                         }
                                       }
                                     }
+                                    int incrementValue$19 = var16;
                                     var16++;
-                                    var18[var16] = var29;
+                                    var18[incrementValue$19] = var29;
                                     var9 = var9 + var14;
                                     var24++;
                                     continue L26;
@@ -5601,8 +5660,9 @@ final class kf extends pf {
                                           var30 = (var29 & 16711680) * var20 & -16777216;
                                           var31 = (var29 & 65280) * var21 & 16711680;
                                           var32 = (var29 & 255) * var22 & 65280;
+                                          int incrementValue$20 = var16;
                                           var16++;
-                                          var18[var16] = (var30 | var31 | var32) >>> 8;
+                                          var18[incrementValue$20] = (var30 | var31 | var32) >>> 8;
                                           break L31;
                                         } else {
                                           var30 = (var29 & 16711680) * var20 & -16777216;
@@ -5610,8 +5670,9 @@ final class kf extends pf {
                                           var32 = (var29 & 255) * var22 & 65280;
                                           var29 = (var30 | var31 | var32) >>> 8;
                                           var33 = var37[var16];
+                                          int incrementValue$21 = var16;
                                           var16++;
-                                          var18[var16] = ((var29 & 16711935) * var23 + (var33 & 16711935) * var24 & -16711936) + ((var29 & 65280) * var23 + (var33 & 65280) * var24 & 16711680) >> 8;
+                                          var18[incrementValue$21] = ((var29 & 16711935) * var23 + (var33 & 16711935) * var24 & -16711936) + ((var29 & 65280) * var23 + (var33 & 65280) * var24 & 16711680) >> 8;
                                           var9 = var9 + var14;
                                           var27++;
                                           continue L30;
@@ -5651,8 +5712,9 @@ final class kf extends pf {
                                       } else {
                                         var26 = ((kf) this).field_F[var25 & 255];
                                         var27 = var37[var16];
+                                        int incrementValue$22 = var16;
                                         var16++;
-                                        var18[var16] = ((var26 & 16711935) * var20 + (var27 & 16711935) * var21 & -16711936) + ((var26 & 65280) * var20 + (var27 & 65280) * var21 & 16711680) >> 8;
+                                        var18[incrementValue$22] = ((var26 & 16711935) * var20 + (var27 & 16711935) * var21 & -16711936) + ((var26 & 65280) * var20 + (var27 & 65280) * var21 & 16711680) >> 8;
                                         break L34;
                                       }
                                     }
@@ -5688,8 +5750,9 @@ final class kf extends pf {
                                     var16++;
                                     break L37;
                                   } else {
+                                    int incrementValue$23 = var16;
                                     var16++;
-                                    var18[var16] = ((kf) this).field_F[var23 & 255];
+                                    var18[incrementValue$23] = ((kf) this).field_F[var23 & 255];
                                     break L37;
                                   }
                                 }
@@ -5733,8 +5796,9 @@ final class kf extends pf {
                                     var27 = ((kf) this).field_F[((kf) this).field_E[(var9 >> 16) + var25] & 255];
                                     var21 = (var27 & 16711935) * var19 & -16711936;
                                     var22 = (var27 & 65280) * var19 & 16711680;
+                                    int incrementValue$24 = var16;
                                     var16++;
-                                    var18[var16] = ((var21 | var22) >>> 8) + param5;
+                                    var18[incrementValue$24] = ((var21 | var22) >>> 8) + param5;
                                     var9 = var9 + var14;
                                     var26++;
                                     continue L39;
@@ -5776,8 +5840,9 @@ final class kf extends pf {
                                   var25 = var24 + param5;
                                   var26 = (var24 & 16711935) + (param5 & 16711935);
                                   var27 = (var26 & 16777472) + (var25 - var26 & 65536);
+                                  int incrementValue$25 = var16;
                                   var16++;
-                                  var18[var16] = var25 - var27 | var27 - (var27 >>> 8);
+                                  var18[incrementValue$25] = var25 - var27 | var27 - (var27 >>> 8);
                                   var9 = var9 + var14;
                                   var22++;
                                   continue L41;
@@ -5810,8 +5875,9 @@ final class kf extends pf {
                                 var27 = (var26 & 16711680) * var19 & -16777216;
                                 var28 = (var26 & 65280) * var20 & 16711680;
                                 var29 = (var26 & 255) * var21 & 65280;
+                                int incrementValue$26 = var16;
                                 var16++;
-                                var18[var16] = (var27 | var28 | var29) >>> 8;
+                                var18[incrementValue$26] = (var27 | var28 | var29) >>> 8;
                                 var9 = var9 + var14;
                                 var25++;
                                 continue L44;
@@ -5837,8 +5903,9 @@ final class kf extends pf {
                               var20++;
                               continue L45;
                             } else {
+                              int incrementValue$27 = var16;
                               var16++;
-                              var18[var16] = ((kf) this).field_F[((kf) this).field_E[(var9 >> 16) + var21] & 255];
+                              var18[incrementValue$27] = ((kf) this).field_F[((kf) this).field_E[(var9 >> 16) + var21] & 255];
                               var9 = var9 + var14;
                               var22++;
                               continue L46;

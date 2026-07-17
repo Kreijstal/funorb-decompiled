@@ -35,16 +35,17 @@ final class hd {
     }
 
     final static void a(int param0, ta param1, int param2, int param3) {
-        lm.field_c = param1;
-        int var4 = -108 % ((46 - param0) / 37);
-        hn.field_a = param2;
-        bh.field_vb = param3;
+        try {
+            lm.field_c = param1;
+            int var4_int = -108 % ((46 - param0) / 37);
+            hn.field_a = param2;
+            bh.field_vb = param3;
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) (Object) runtimeException, "hd.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
+        }
     }
 
     public static void a(int param0) {
-        if (param0 != 12) {
-            return;
-        }
         field_a = null;
         field_c = null;
         field_b = null;
@@ -53,7 +54,7 @@ final class hd {
 
     final static void a(boolean param0) {
         ga.field_i = 12;
-        cm.field_s = param0 ? true : false;
+        cm.field_s = true;
         tb.field_eb = null;
         rf.field_f = true;
         pp.field_a = 12;

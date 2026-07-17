@@ -10,45 +10,97 @@ final class ln extends ana {
     private boolean field_y;
 
     private final void h(int param0) {
-        if (param0 != -11007) {
-            return;
-        }
         ((ln) this).field_n.field_p = 0;
     }
 
     final static byte[] a(int param0, byte[] param1, int param2, int param3) {
         byte[] var4 = null;
+        RuntimeException var4_ref = null;
         int var5_int = 0;
         ur var5 = null;
         byte[] var6 = null;
         int var7 = 0;
         byte[] var8 = null;
-        L0: {
-          var7 = BachelorFridge.field_y;
-          if (0 >= param2) {
-            var4 = param1;
-            break L0;
-          } else {
-            var8 = new byte[param0];
-            var4 = var8;
-            var5_int = 0;
-            L1: while (true) {
-              if (var5_int >= param0) {
-                break L0;
+        byte[] stackIn_7_0 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        byte[] stackOut_6_0 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        var7 = BachelorFridge.field_y;
+        try {
+          L0: {
+            L1: {
+              if (0 >= param2) {
+                var4 = param1;
+                break L1;
               } else {
-                var8[var5_int] = param1[var5_int + param2];
-                var5_int++;
-                continue L1;
+                var8 = new byte[param0];
+                var4 = var8;
+                var5_int = 0;
+                L2: while (true) {
+                  if (var5_int >= param0) {
+                    break L1;
+                  } else {
+                    var8[var5_int] = param1[var5_int + param2];
+                    var5_int++;
+                    continue L2;
+                  }
+                }
               }
             }
+            var5 = new ur();
+            var5.b(true);
+            var5.a(var4, (long)(param0 * 8), 0);
+            var6 = new byte[64];
+            var5.a(65, 0, var6);
+            stackOut_6_0 = (byte[]) var6;
+            stackIn_7_0 = stackOut_6_0;
+            break L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var4_ref = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var4_ref;
+            stackOut_8_1 = new StringBuilder().append("ln.E(").append(param0).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param1 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L3;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L3;
+            }
+          }
+          throw pe.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param2 + 44 + 8 + 41);
         }
-        var5 = new ur();
-        var5.b(true);
-        var5.a(var4, (long)(param0 * param3), 0);
-        var6 = new byte[64];
-        var5.a(65, 0, var6);
-        return var6;
+        return stackIn_7_0;
     }
 
     private final void g(int param0) {
@@ -83,9 +135,6 @@ final class ln extends ana {
     public static void d(int param0) {
         field_v = null;
         field_x = null;
-        if (param0 != 4) {
-            ln.f(41);
-        }
     }
 
     final static void e(int param0) {
@@ -121,7 +170,7 @@ final class ln extends ana {
             return false;
         }
         if (!((ln) this).field_w) {
-            if (-49 > (((ln) this).field_n.field_p ^ -1)) {
+            if (((ln) this).field_n.field_p > 48) {
                 ((ln) this).field_w = true;
                 aba.a((byte) 18, 60);
             }
@@ -136,18 +185,26 @@ final class ln extends ana {
 
     ln(gj param0, ima param1) {
         super(param0, (bca) (Object) param1);
-        ((ln) this).field_n.field_p = -256;
-        ((ln) this).field_A = param1;
+        try {
+            ((ln) this).field_n.field_p = -256;
+            ((ln) this).field_A = param1;
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "ln.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static void f(int param0) {
-        int var1 = 0;
+        int var1_int = 0;
         int var3 = BachelorFridge.field_y;
-        fi.field_m = new js(4);
-        for (var1 = 0; jl.field_q.length > var1; var1++) {
-            fi.field_m.a((long)jl.field_q[var1].hashCode(), (byte) 86, (bw) (Object) new ji(var1 - -1));
+        try {
+            fi.field_m = new js(4);
+            for (var1_int = 0; jl.field_q.length > var1_int; var1_int++) {
+                fi.field_m.a((long)jl.field_q[var1_int].hashCode(), (byte) 86, (bw) (Object) new ji(var1_int - -1));
+            }
+            int var2 = -38 % ((param0 - 43) / 46);
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "ln.B(" + param0 + 41);
         }
-        int var2 = -38 % ((param0 - 43) / 46);
     }
 
     static {

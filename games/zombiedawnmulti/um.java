@@ -16,11 +16,13 @@ final class um {
 
     final void a(int param0, byte param1, ja param2, int param3, int param4, int param5) {
         if (param1 != 33) {
-          return;
-        } else {
-          param2.e(-16 + (int)((um) this).field_d + param5, -16 + (int)((um) this).field_e + param0, param4);
-          param2.c(param5 + (int)((um) this).field_d - 16, (int)((um) this).field_e + (param0 - 16), param3);
-          return;
+            return;
+        }
+        try {
+            param2.e(-16 + (int)((um) this).field_d + param5, -16 + (int)((um) this).field_e + param0, param4);
+            param2.c(param5 + (int)((um) this).field_d - 16, (int)((um) this).field_e + (param0 - 16), param3);
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) (Object) runtimeException, "um.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
     }
 
@@ -89,7 +91,7 @@ final class um {
     }
 
     public static void a(int param0) {
-        int var1 = 48 / ((param0 - -1) / 58);
+        int var1 = -48;
         field_c = null;
         field_b = null;
         field_i = null;

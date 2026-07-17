@@ -13,36 +13,29 @@ final class qm {
     }
 
     final static void a(int param0, int param1) {
-        int var2 = 0;
+        int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        int var7 = 0;
-        var7 = ZombieDawn.field_J;
-        sh.field_e = param1;
-        if (param0 == sh.field_e) {
-          ne.field_c = new no(-28 + hp.field_A.a(true), 8 + hp.field_A.f(237239984));
-          og.field_A = false;
-          pl.field_t = new lm[100];
-          var2 = 0;
-          L0: while (true) {
-            if (-101 < (var2 ^ -1)) {
-              var3 = so.c(8192);
-              var4 = so.c(90);
-              var5 = (var4 * fb.a(1311979239, var3) >> 658316112) + 480;
-              var6 = 490 - -(var4 * rd.a(true, var3) >> -1330995504);
-              pl.field_t[var2] = new lm(var5, var6, -15 + so.c(30));
-              var2++;
-              continue L0;
-            } else {
-              qd.a(true, param0 + 111);
-              return;
+        int var7 = ZombieDawn.field_J;
+        try {
+            sh.field_e = param1;
+            if (param0 == sh.field_e) {
+                ne.field_c = new no(-28 + hp.field_A.a(true), 8 + hp.field_A.f(237239984));
+                og.field_A = false;
+                pl.field_t = new lm[100];
+                for (var2_int = 0; var2_int < 100; var2_int++) {
+                    var3 = so.c(8192);
+                    var4 = so.c(90);
+                    var5 = (var4 * fb.a(1311979239, var3) >> 16) + 480;
+                    var6 = 490 - -(var4 * rd.a(true, var3) >> 16);
+                    pl.field_t[var2_int] = new lm(var5, var6, -15 + so.c(30));
+                }
             }
-          }
-        } else {
-          qd.a(true, param0 + 111);
-          return;
+            qd.a(true, param0 + 111);
+        } catch (RuntimeException runtimeException) {
+            throw sh.a((Throwable) (Object) runtimeException, "qm.A(" + param0 + 44 + param1 + 41);
         }
     }
 

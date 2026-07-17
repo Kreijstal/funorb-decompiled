@@ -16,7 +16,7 @@ final class of {
           }
         }
         L1: {
-          if ((param3 ^ -1) > -1) {
+          if (param3 < 0) {
             param3 = -param3;
             break L1;
           } else {
@@ -321,7 +321,7 @@ final class of {
           }
           L9: {
             if (dc.field_R.field_nb != 0) {
-              if ((vj.field_b.length ^ -1) != -2) {
+              if (vj.field_b.length != 1) {
                 qa.a((byte) 78, 0, p.field_e, param0, true, oj.field_Vb);
                 break L9;
               } else {
@@ -339,7 +339,7 @@ final class of {
             }
           }
           L10: {
-            if (-1 == (nk.field_H.field_nb ^ -1)) {
+            if (nk.field_H.field_nb == 0) {
               break L10;
             } else {
               ao.field_Gb = false;
@@ -531,7 +531,7 @@ final class of {
           L20: {
             if (dc.field_R.field_nb != 0) {
               L21: {
-                if ((vj.field_b.length ^ -1) != -2) {
+                if (vj.field_b.length != 1) {
                   break L21;
                 } else {
                   if (vj.field_b[0] == oj.field_Vb) {
@@ -549,7 +549,7 @@ final class of {
             }
           }
           L22: {
-            if (-1 == (nk.field_H.field_nb ^ -1)) {
+            if (nk.field_H.field_nb == 0) {
               break L22;
             } else {
               ao.field_Gb = false;
@@ -562,9 +562,6 @@ final class of {
 
     public static void a(byte param0) {
         field_c = null;
-        if (param0 != 110) {
-            return;
-        }
         field_b = null;
     }
 

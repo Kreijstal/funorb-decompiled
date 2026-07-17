@@ -8,165 +8,109 @@ final class ic {
 
     final static void a(boolean param0, om param1) {
         om var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
         var3 = BrickABrac.field_J ? 1 : 0;
-        if (param0) {
+        try {
+          L0: {
+            if (param0) {
+              break L0;
+            } else {
+              field_b = 8L;
+              break L0;
+            }
+          }
           param1.b((byte) 111);
           var2 = (om) (Object) rq.field_a.d(-76);
-          L0: while (true) {
-            if (var2 != null) {
-              if (var2.a(param1, true)) {
-                var2 = (om) (Object) rq.field_a.a((byte) 116);
-                continue L0;
+          L1: while (true) {
+            L2: {
+              if (var2 == null) {
+                break L2;
               } else {
-                L1: {
-                  if (var2 == null) {
-                    rq.field_a.a((nm) (Object) param1, (byte) 3);
-                    break L1;
-                  } else {
-                    il.a((nm) (Object) param1, -90, (nm) (Object) var2);
-                    break L1;
-                  }
-                }
-                return;
-              }
-            } else {
-              L2: {
-                if (var2 == null) {
-                  rq.field_a.a((nm) (Object) param1, (byte) 3);
+                if (!var2.a(param1, true)) {
                   break L2;
                 } else {
-                  il.a((nm) (Object) param1, -90, (nm) (Object) var2);
-                  break L2;
+                  var2 = (om) (Object) rq.field_a.a((byte) 116);
+                  continue L1;
                 }
               }
+            }
+            if (var2 == null) {
+              rq.field_a.a((nm) (Object) param1, (byte) 3);
+              return;
+            } else {
+              il.a((nm) (Object) param1, -90, (nm) (Object) var2);
               return;
             }
           }
-        } else {
-          field_b = 8L;
-          param1.b((byte) 111);
-          var2 = (om) (Object) rq.field_a.d(-76);
-          L3: while (true) {
-            if (var2 != null) {
-              if (var2.a(param1, true)) {
-                var2 = (om) (Object) rq.field_a.a((byte) 116);
-                continue L3;
-              } else {
-                if (var2 == null) {
-                  rq.field_a.a((nm) (Object) param1, (byte) 3);
-                  return;
-                } else {
-                  il.a((nm) (Object) param1, -90, (nm) (Object) var2);
-                  return;
-                }
-              }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2_ref = decompiledCaughtException;
+            stackOut_11_0 = (RuntimeException) var2_ref;
+            stackOut_11_1 = new StringBuilder().append("ic.A(").append(param0).append(44);
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
+            if (param1 == null) {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L3;
             } else {
-              if (var2 == null) {
-                rq.field_a.a((nm) (Object) param1, (byte) 3);
-                return;
-              } else {
-                il.a((nm) (Object) param1, -90, (nm) (Object) var2);
-                return;
-              }
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L3;
             }
           }
+          throw qb.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
         }
     }
 
     public static void a(boolean param0) {
         field_a = null;
-        if (param0) {
-            return;
-        }
         field_c = null;
     }
 
     final static void a(byte param0) {
         Object var1 = null;
         Throwable var2 = null;
-        Object var3 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    if (gp.field_c != null) {
-                        statePc = 4;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    if (param0 <= -63) {
-                        statePc = 3;
-                    } else {
-                        statePc = 2;
-                    }
-                    continue stateLoop;
-                }
-                case 2: {
-                    var3 = null;
-                    ic.a(true, (om) null);
-                    statePc = 3;
-                    continue stateLoop;
-                }
-                case 3: {
-                    return;
-                }
-                case 4: {
-                    var1 = (Object) (Object) gp.field_c;
-                    // monitorenter gp.field_c
-                    statePc = 5;
-                    continue stateLoop;
-                }
-                case 5: {
-                    try {
-                        gp.field_c = null;
-                        // monitorexit var1
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    if (param0 <= -63) {
-                        statePc = 8;
-                    } else {
-                        statePc = 7;
-                    }
-                    continue stateLoop;
-                }
-                case 7: {
-                    var3 = null;
-                    ic.a(true, (om) null);
-                    statePc = 8;
-                    continue stateLoop;
-                }
-                case 8: {
-                    return;
-                }
-                case 9: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1
-                        statePc = 10;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        if (gp.field_c != null) {
+          var1 = (Object) (Object) gp.field_c;
+          synchronized (var1) {
+            L0: {
+              gp.field_c = null;
+              break L0;
             }
+          }
+          return;
+        } else {
+          return;
         }
     }
 

@@ -17,8 +17,9 @@ final class kj extends gi {
     static boolean field_B;
 
     final void a(int param0, byte param1) {
+        int fieldTemp$0 = ((kj) this).field_p;
         ((kj) this).field_p = ((kj) this).field_p + 1;
-        ((kj) this).field_t[((kj) this).field_p] = (byte)(param0 + ((kj) this).field_A.c(-96));
+        ((kj) this).field_t[fieldTemp$0] = (byte)(param0 + ((kj) this).field_A.c(-96));
         if (param1 != -117) {
             field_y = null;
         }
@@ -30,28 +31,84 @@ final class kj extends gi {
         field_G = null;
         field_z = null;
         field_H = null;
-        if (!param0) {
-            return;
-        }
         field_x = null;
         field_E = null;
         field_C = null;
     }
 
     final void a(int param0, int param1, byte[] param2, int param3) {
-        int var5 = 0;
-        int var6 = SteelSentinels.field_G;
-        if (param3 < 49) {
-            field_E = null;
-            for (var5 = 0; var5 < param1; var5++) {
-                ((kj) this).field_p = ((kj) this).field_p + 1;
-                param2[param0 + var5] = (byte)(((kj) this).field_t[((kj) this).field_p] + -((kj) this).field_A.c(-93));
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int var6 = 0;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        var6 = SteelSentinels.field_G;
+        try {
+          L0: {
+            L1: {
+              if (param3 >= 49) {
+                break L1;
+              } else {
+                field_E = null;
+                break L1;
+              }
             }
-            return;
-        }
-        for (var5 = 0; var5 < param1; var5++) {
-            ((kj) this).field_p = ((kj) this).field_p + 1;
-            param2[param0 + var5] = (byte)(((kj) this).field_t[((kj) this).field_p] + -((kj) this).field_A.c(-93));
+            var5_int = 0;
+            L2: while (true) {
+              if (var5_int >= param1) {
+                break L0;
+              } else {
+                int fieldTemp$5 = ((kj) this).field_p;
+                ((kj) this).field_p = ((kj) this).field_p + 1;
+                param2[param0 + var5_int] = (byte)(((kj) this).field_t[fieldTemp$5] + -((kj) this).field_A.c(-93));
+                var5_int++;
+                continue L2;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var5 = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var5;
+            stackOut_7_1 = new StringBuilder().append("kj.EB(").append(param0).append(44).append(param1).append(44);
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param2 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L3;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L3;
+            }
+          }
+          throw ci.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param3 + 41);
         }
     }
 
@@ -77,12 +134,14 @@ final class kj extends gi {
     }
 
     final void a(int param0, int[] param1) {
-        if (param0 != -1833430685) {
-            field_B = true;
+        try {
+            if (param0 != -1833430685) {
+                field_B = true;
+            }
             ((kj) this).field_A = new ie(param1);
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw ci.a((Throwable) (Object) runtimeException, "kj.WA(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        ((kj) this).field_A = new ie(param1);
     }
 
     final void d(boolean param0) {
@@ -94,13 +153,14 @@ final class kj extends gi {
 
     final int g(int param0, int param1) {
         int var7 = SteelSentinels.field_G;
-        int var3 = ((kj) this).field_F >> -1833430685;
+        int var3 = ((kj) this).field_F >> 3;
         int var4 = -(((kj) this).field_F & 7) + 8;
         ((kj) this).field_F = ((kj) this).field_F + param1;
         int var5 = 0;
         while (param1 > var4) {
+            int incrementValue$0 = var3;
             var3++;
-            var5 = var5 + ((((kj) this).field_t[var3] & kd.field_r[var4]) << param1 + -var4);
+            var5 = var5 + ((((kj) this).field_t[incrementValue$0] & kd.field_r[var4]) << param1 + -var4);
             param1 = param1 - var4;
             var4 = 8;
         }
@@ -125,8 +185,9 @@ final class kj extends gi {
         if (param0) {
             return -93;
         }
+        int fieldTemp$0 = ((kj) this).field_p;
         ((kj) this).field_p = ((kj) this).field_p + 1;
-        return 255 & ((kj) this).field_t[((kj) this).field_p] - ((kj) this).field_A.c(-102);
+        return 255 & ((kj) this).field_t[fieldTemp$0] - ((kj) this).field_A.c(-102);
     }
 
     static {

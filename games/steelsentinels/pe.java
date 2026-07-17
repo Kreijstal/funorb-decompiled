@@ -168,11 +168,11 @@ final class pe {
           var6 = SteelSentinels.field_G;
           var2 = 0;
           var3 = vn.field_h;
-          if (-6 < (var3 ^ -1)) {
+          if (var3 < 5) {
             var2 = var3 * var3 * 8192 / 1100;
             break L0;
           } else {
-            if ((var3 ^ -1) > -106) {
+            if (var3 < 105) {
               var2 = (16384 * var3 - 40960) / 220;
               break L0;
             } else {
@@ -205,7 +205,7 @@ final class pe {
           }
         }
         L3: {
-          if (-5 == param0) {
+          if (param0 == 4) {
             var5 = 1;
             var4 = 1;
             break L3;
@@ -214,7 +214,7 @@ final class pe {
           }
         }
         L4: {
-          if (-6 != param0) {
+          if (param0 != 5) {
             break L4;
           } else {
             var4 = -1;
@@ -234,7 +234,7 @@ final class pe {
         if (param1 < -24) {
           L6: {
             L7: {
-              if (-8 == (param0 ^ -1)) {
+              if (param0 == 7) {
                 break L7;
               } else {
                 if (8 == param0) {
@@ -275,7 +275,7 @@ final class pe {
             }
           }
           L11: {
-            if (-15 != param0) {
+            if (param0 != 14) {
               break L11;
             } else {
               var4 = -1;
@@ -284,7 +284,7 @@ final class pe {
             }
           }
           L12: {
-            if (-16 != param0) {
+            if (param0 != 15) {
               break L12;
             } else {
               var4 = 1;
@@ -319,9 +319,6 @@ final class pe {
         field_b = null;
         field_h = null;
         field_O = null;
-        if (param0 >= -114) {
-            return;
-        }
         field_v = null;
         field_o = null;
         field_U = null;
@@ -358,18 +355,19 @@ final class pe {
         field_o = new int[128];
         var2 = 0;
         L0: while (true) {
-          if ((var2 ^ -1) <= -129) {
+          if (var2 >= 128) {
             field_b = new int[128];
             var2 = 0;
             L1: while (true) {
-              if (-129 >= (var2 ^ -1)) {
+              if (var2 >= 128) {
                 field_q = new int[128];
                 var2 = 0;
                 L2: while (true) {
                   if (128 <= var2) {
+                    return;
                   } else {
                     var3 = field_o[var2] & 255;
-                    var4 = (16719614 & field_o[var2]) >> -689682448;
+                    var4 = (16719614 & field_o[var2]) >> 16;
                     field_q[var2] = var4 + 65792 * var3;
                     var2++;
                     continue L2;
@@ -377,8 +375,8 @@ final class pe {
                 }
               } else {
                 var3 = 255 & field_o[var2];
-                var4 = field_o[var2] >> -937322256 & 255;
-                field_b[var2] = (var3 << 248522256) - -(257 * var4);
+                var4 = field_o[var2] >> 16 & 255;
+                field_b[var2] = (var3 << 16) - -(257 * var4);
                 var2++;
                 continue L1;
               }
@@ -386,10 +384,10 @@ final class pe {
           } else {
             var0 = 1114111;
             var1 = (var0 & 16711935) * ((255 + var2 * 255) / 128);
-            field_o[var2] = ec.a(-16711936, var1) - -ec.a(16711680, var0 * (255 * (1 + var2) / 128) - var1) >>> -930670712;
+            field_o[var2] = ec.a(-16711936, var1) - -ec.a(16711680, var0 * (255 * (1 + var2) / 128) - var1) >>> 8;
             var0 = 16776976;
             var1 = (255 + var2 * 255) / 128 * (var0 & 16711935);
-            field_N[var2] = ec.a(-var1 + (1 + var2) * 255 / 128 * var0, 16711680) + ec.a(var1, -16711936) >>> -1086323128;
+            field_N[var2] = ec.a(-var1 + (1 + var2) * 255 / 128 * var0, 16711680) + ec.a(var1, -16711936) >>> 8;
             var2++;
             continue L0;
           }

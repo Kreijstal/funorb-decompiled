@@ -34,7 +34,7 @@ class ae extends na {
             L2: while (true) {
               L3: {
                 L4: {
-                  if ((var2_int ^ -1) <= (nd.field_Mb ^ -1)) {
+                  if (~var2_int <= ~nd.field_Mb) {
                     break L4;
                   } else {
                     qd.field_W[var2_int - -param1] = var2_int;
@@ -54,7 +54,7 @@ class ae extends na {
                 break L3;
               }
               L5: {
-                if ((nd.field_Mb ^ -1) >= (param1 ^ -1)) {
+                if (~nd.field_Mb >= ~param1) {
                   break L5;
                 } else {
                   nd.field_Mb = param1;
@@ -544,14 +544,14 @@ class ae extends na {
               L2: {
                 L3: {
                   var5 = null;
-                  if ((ji.field_Tb ^ -1) == -3) {
+                  if (ji.field_Tb == 2) {
                     break L3;
                   } else {
                     L4: {
                       L5: {
                         mi.field_Kb.field_jb = dg.field_m;
                         go.field_d.field_S = false;
-                        if ((ji.field_Tb ^ -1) == -2) {
+                        if (ji.field_Tb == 1) {
                           break L5;
                         } else {
                           pj.field_f.field_Rb.field_Ob.field_jb = kl.field_f;
@@ -663,7 +663,7 @@ class ae extends na {
                             var7.field_Wb.field_L = var11;
                             var7.field_Tb.field_L = var11;
                             var13 = 0;
-                            var14 = var7.field_Hb - 80 + -2;
+                            var14 = var7.field_Hb - 82;
                             if (var12 != 0) {
                               var13 = db.field_b.field_t - -3;
                               var14 = var14 - var13;
@@ -676,7 +676,7 @@ class ae extends na {
                             stackOut_41_0 = var7.field_Tb;
                             stackIn_44_0 = stackOut_41_0;
                             stackIn_42_0 = stackOut_41_0;
-                            if ((var14 ^ -1) < -1) {
+                            if (var14 > 0) {
                               stackOut_44_0 = (hl) (Object) stackIn_44_0;
                               stackOut_44_1 = jb.a(var7.field_Tb.field_Ib, var7.field_Mb, var14);
                               stackIn_45_0 = stackOut_44_0;
@@ -755,7 +755,7 @@ class ae extends na {
                                 }
                               }
                               L23: {
-                                if ((var7.field_F ^ -1) == -1) {
+                                if (var7.field_F == 0) {
                                   break L23;
                                 } else {
                                   L24: {
@@ -824,7 +824,7 @@ class ae extends na {
                         }
                       }
                     }
-                    if ((pj.field_f.field_Sb.field_F ^ -1) == -1) {
+                    if (pj.field_f.field_Sb.field_F == 0) {
                       break L7;
                     } else {
                       lf.field_b = new vg(pj.field_f.field_Sb.field_eb, pj.field_f.field_Sb.field_z, pj.field_f.field_Sb.field_Hb, pj.field_f.field_Sb.field_R, qj.field_d, um.field_n, bk.field_i, bk.field_i);
@@ -832,7 +832,7 @@ class ae extends na {
                       break L7;
                     }
                   }
-                  if ((pj.field_f.field_Pb.field_F ^ -1) != -1) {
+                  if (pj.field_f.field_Pb.field_F != 0) {
                     lf.field_b = new vg(pj.field_f.field_Pb.field_eb, pj.field_f.field_Pb.field_z, pj.field_f.field_Pb.field_Hb, pj.field_f.field_Pb.field_R, wg.field_g, um.field_n, bk.field_i, bk.field_i);
                     ke.field_c = 1;
                     break L2;
@@ -887,10 +887,10 @@ class ae extends na {
                 break L1;
               } else {
                 L2: {
-                  if ((param0 ^ -1) == -85) {
+                  if (param0 == 84) {
                     break L2;
                   } else {
-                    if (-84 == (param0 ^ -1)) {
+                    if (param0 == 83) {
                       break L2;
                     } else {
                       break L1;
@@ -1285,7 +1285,7 @@ class ae extends na {
                     if (!((ae) this).b(aa.field_Nb, 1343807649, param1, param2, a.field_a)) {
                       break L2;
                     } else {
-                      if ((ho.field_X ^ -1) == -1) {
+                      if (ho.field_X == 0) {
                         ((ae) this).b(-param2 + a.field_a, -param1 + aa.field_Nb, 80, ((ae) this).field_x);
                         break L2;
                       } else {

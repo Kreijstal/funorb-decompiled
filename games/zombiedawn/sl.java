@@ -28,7 +28,7 @@ final class sl {
             var2 = 8192 * (var3 * var3) / 1100;
             var4 = 1;
             var5 = 0;
-            if ((param1 ^ -1) != -2) {
+            if (param1 != 1) {
               break L0;
             } else {
               var5 = 1;
@@ -44,7 +44,7 @@ final class sl {
             }
           }
           L2: {
-            if (-5 != (param1 ^ -1)) {
+            if (param1 != 4) {
               break L2;
             } else {
               var5 = 1;
@@ -53,7 +53,7 @@ final class sl {
             }
           }
           L3: {
-            if (-6 == (param1 ^ -1)) {
+            if (param1 == 5) {
               var4 = -1;
               var5 = 1;
               break L3;
@@ -62,7 +62,7 @@ final class sl {
             }
           }
           L4: {
-            if (-7 == (param1 ^ -1)) {
+            if (param1 == 6) {
               var5 = -1;
               var4 = 1;
               break L4;
@@ -72,7 +72,7 @@ final class sl {
           }
           L5: {
             L6: {
-              if ((param1 ^ -1) == -8) {
+              if (param1 == 7) {
                 break L6;
               } else {
                 if (param1 == 8) {
@@ -87,7 +87,7 @@ final class sl {
             break L5;
           }
           L7: {
-            if (-12 != (param1 ^ -1)) {
+            if (param1 != 11) {
               break L7;
             } else {
               var4 = -1;
@@ -95,7 +95,7 @@ final class sl {
             }
           }
           L8: {
-            if ((param1 ^ -1) == -13) {
+            if (param1 == 12) {
               var5 = -1;
               var4 = -1;
               break L8;
@@ -104,7 +104,7 @@ final class sl {
             }
           }
           L9: {
-            if ((param1 ^ -1) == -14) {
+            if (param1 == 13) {
               var4 = 1;
               var5 = -1;
               break L9;
@@ -123,7 +123,7 @@ final class sl {
           }
           if (param0) {
             L11: {
-              if ((param1 ^ -1) == -16) {
+              if (param1 == 15) {
                 var4 = 1;
                 var5 = 1;
                 break L11;
@@ -136,7 +136,7 @@ final class sl {
           } else {
             L12: {
               sl.a((byte) 45);
-              if ((param1 ^ -1) == -16) {
+              if (param1 == 15) {
                 var4 = 1;
                 var5 = 1;
                 break L12;
@@ -148,12 +148,12 @@ final class sl {
             return;
           }
         } else {
-          if (-106 < (var3 ^ -1)) {
+          if (var3 < 105) {
             L13: {
               var2 = (-40960 + var3 * 16384) / 220;
               var4 = 1;
               var5 = 0;
-              if ((param1 ^ -1) != -2) {
+              if (param1 != 1) {
                 break L13;
               } else {
                 var5 = 1;
@@ -169,7 +169,7 @@ final class sl {
               }
             }
             L15: {
-              if (-5 != (param1 ^ -1)) {
+              if (param1 != 4) {
                 break L15;
               } else {
                 var5 = 1;
@@ -178,7 +178,7 @@ final class sl {
               }
             }
             L16: {
-              if (-6 == (param1 ^ -1)) {
+              if (param1 == 5) {
                 var4 = -1;
                 var5 = 1;
                 break L16;
@@ -187,7 +187,7 @@ final class sl {
               }
             }
             L17: {
-              if (-7 == (param1 ^ -1)) {
+              if (param1 == 6) {
                 var5 = -1;
                 var4 = 1;
                 break L17;
@@ -195,10 +195,10 @@ final class sl {
                 break L17;
               }
             }
-            if ((param1 ^ -1) != -8) {
+            if (param1 != 7) {
               if (param1 != 8) {
                 L18: {
-                  if (-12 != (param1 ^ -1)) {
+                  if (param1 != 11) {
                     break L18;
                   } else {
                     var4 = -1;
@@ -206,7 +206,7 @@ final class sl {
                   }
                 }
                 L19: {
-                  if ((param1 ^ -1) == -13) {
+                  if (param1 == 12) {
                     var5 = -1;
                     var4 = -1;
                     break L19;
@@ -215,7 +215,7 @@ final class sl {
                   }
                 }
                 L20: {
-                  if ((param1 ^ -1) == -14) {
+                  if (param1 == 13) {
                     var4 = 1;
                     var5 = -1;
                     break L20;
@@ -234,7 +234,7 @@ final class sl {
                 }
                 if (param0) {
                   L22: {
-                    if ((param1 ^ -1) == -16) {
+                    if (param1 == 15) {
                       var4 = 1;
                       var5 = 1;
                       break L22;
@@ -247,7 +247,7 @@ final class sl {
                 } else {
                   L23: {
                     sl.a((byte) 45);
-                    if ((param1 ^ -1) == -16) {
+                    if (param1 == 15) {
                       var4 = 1;
                       var5 = 1;
                       break L23;
@@ -262,7 +262,7 @@ final class sl {
                 L24: {
                   var5 = -1;
                   var4 = -1;
-                  if (-12 != (param1 ^ -1)) {
+                  if (param1 != 11) {
                     break L24;
                   } else {
                     var4 = -1;
@@ -270,7 +270,7 @@ final class sl {
                   }
                 }
                 L25: {
-                  if ((param1 ^ -1) == -13) {
+                  if (param1 == 12) {
                     var5 = -1;
                     var4 = -1;
                     break L25;
@@ -279,7 +279,7 @@ final class sl {
                   }
                 }
                 L26: {
-                  if ((param1 ^ -1) == -14) {
+                  if (param1 == 13) {
                     var4 = 1;
                     var5 = -1;
                     break L26;
@@ -298,7 +298,7 @@ final class sl {
                 }
                 if (param0) {
                   L28: {
-                    if ((param1 ^ -1) == -16) {
+                    if (param1 == 15) {
                       var4 = 1;
                       var5 = 1;
                       break L28;
@@ -311,7 +311,7 @@ final class sl {
                 } else {
                   L29: {
                     sl.a((byte) 45);
-                    if ((param1 ^ -1) == -16) {
+                    if (param1 == 15) {
                       var4 = 1;
                       var5 = 1;
                       break L29;
@@ -327,7 +327,7 @@ final class sl {
               L30: {
                 var5 = -1;
                 var4 = -1;
-                if (-12 != (param1 ^ -1)) {
+                if (param1 != 11) {
                   break L30;
                 } else {
                   var4 = -1;
@@ -335,7 +335,7 @@ final class sl {
                 }
               }
               L31: {
-                if ((param1 ^ -1) == -13) {
+                if (param1 == 12) {
                   var5 = -1;
                   var4 = -1;
                   break L31;
@@ -344,7 +344,7 @@ final class sl {
                 }
               }
               L32: {
-                if ((param1 ^ -1) == -14) {
+                if (param1 == 13) {
                   var4 = 1;
                   var5 = -1;
                   break L32;
@@ -363,7 +363,7 @@ final class sl {
               }
               if (param0) {
                 L34: {
-                  if ((param1 ^ -1) == -16) {
+                  if (param1 == 15) {
                     var4 = 1;
                     var5 = 1;
                     break L34;
@@ -376,7 +376,7 @@ final class sl {
               } else {
                 L35: {
                   sl.a((byte) 45);
-                  if ((param1 ^ -1) == -16) {
+                  if (param1 == 15) {
                     var4 = 1;
                     var5 = 1;
                     break L35;
@@ -389,13 +389,13 @@ final class sl {
               }
             }
           } else {
-            if ((var3 ^ -1) > -121) {
+            if (var3 < 120) {
               L36: {
                 var3 = 120 - var3;
                 var2 = -(8192 * (var3 * var3) / 3300) + 8192;
                 var4 = 1;
                 var5 = 0;
-                if ((param1 ^ -1) != -2) {
+                if (param1 != 1) {
                   break L36;
                 } else {
                   var5 = 1;
@@ -411,7 +411,7 @@ final class sl {
                 }
               }
               L38: {
-                if (-5 != (param1 ^ -1)) {
+                if (param1 != 4) {
                   break L38;
                 } else {
                   var5 = 1;
@@ -420,7 +420,7 @@ final class sl {
                 }
               }
               L39: {
-                if (-6 == (param1 ^ -1)) {
+                if (param1 == 5) {
                   var4 = -1;
                   var5 = 1;
                   break L39;
@@ -429,7 +429,7 @@ final class sl {
                 }
               }
               L40: {
-                if (-7 == (param1 ^ -1)) {
+                if (param1 == 6) {
                   var5 = -1;
                   var4 = 1;
                   break L40;
@@ -439,7 +439,7 @@ final class sl {
               }
               L41: {
                 L42: {
-                  if ((param1 ^ -1) == -8) {
+                  if (param1 == 7) {
                     break L42;
                   } else {
                     if (param1 == 8) {
@@ -454,7 +454,7 @@ final class sl {
                 break L41;
               }
               L43: {
-                if (-12 != (param1 ^ -1)) {
+                if (param1 != 11) {
                   break L43;
                 } else {
                   var4 = -1;
@@ -462,7 +462,7 @@ final class sl {
                 }
               }
               L44: {
-                if ((param1 ^ -1) == -13) {
+                if (param1 == 12) {
                   var5 = -1;
                   var4 = -1;
                   break L44;
@@ -471,7 +471,7 @@ final class sl {
                 }
               }
               L45: {
-                if ((param1 ^ -1) == -14) {
+                if (param1 == 13) {
                   var4 = 1;
                   var5 = -1;
                   break L45;
@@ -490,7 +490,7 @@ final class sl {
               }
               if (param0) {
                 L47: {
-                  if ((param1 ^ -1) == -16) {
+                  if (param1 == 15) {
                     var4 = 1;
                     var5 = 1;
                     break L47;
@@ -503,7 +503,7 @@ final class sl {
               } else {
                 L48: {
                   sl.a((byte) 45);
-                  if ((param1 ^ -1) == -16) {
+                  if (param1 == 15) {
                     var4 = 1;
                     var5 = 1;
                     break L48;
@@ -518,7 +518,7 @@ final class sl {
               L49: {
                 var4 = 1;
                 var5 = 0;
-                if ((param1 ^ -1) != -2) {
+                if (param1 != 1) {
                   break L49;
                 } else {
                   var5 = 1;
@@ -534,7 +534,7 @@ final class sl {
                 }
               }
               L51: {
-                if (-5 != (param1 ^ -1)) {
+                if (param1 != 4) {
                   break L51;
                 } else {
                   var5 = 1;
@@ -543,7 +543,7 @@ final class sl {
                 }
               }
               L52: {
-                if (-6 == (param1 ^ -1)) {
+                if (param1 == 5) {
                   var4 = -1;
                   var5 = 1;
                   break L52;
@@ -552,7 +552,7 @@ final class sl {
                 }
               }
               L53: {
-                if (-7 == (param1 ^ -1)) {
+                if (param1 == 6) {
                   var5 = -1;
                   var4 = 1;
                   break L53;
@@ -560,10 +560,10 @@ final class sl {
                   break L53;
                 }
               }
-              if ((param1 ^ -1) != -8) {
+              if (param1 != 7) {
                 if (param1 != 8) {
                   L54: {
-                    if (-12 != (param1 ^ -1)) {
+                    if (param1 != 11) {
                       break L54;
                     } else {
                       var4 = -1;
@@ -571,7 +571,7 @@ final class sl {
                     }
                   }
                   L55: {
-                    if ((param1 ^ -1) == -13) {
+                    if (param1 == 12) {
                       var5 = -1;
                       var4 = -1;
                       break L55;
@@ -580,7 +580,7 @@ final class sl {
                     }
                   }
                   L56: {
-                    if ((param1 ^ -1) == -14) {
+                    if (param1 == 13) {
                       var4 = 1;
                       var5 = -1;
                       break L56;
@@ -599,7 +599,7 @@ final class sl {
                   }
                   if (param0) {
                     L58: {
-                      if ((param1 ^ -1) == -16) {
+                      if (param1 == 15) {
                         var4 = 1;
                         var5 = 1;
                         break L58;
@@ -612,7 +612,7 @@ final class sl {
                   } else {
                     L59: {
                       sl.a((byte) 45);
-                      if ((param1 ^ -1) == -16) {
+                      if (param1 == 15) {
                         var4 = 1;
                         var5 = 1;
                         break L59;
@@ -627,7 +627,7 @@ final class sl {
                   L60: {
                     var5 = -1;
                     var4 = -1;
-                    if (-12 != (param1 ^ -1)) {
+                    if (param1 != 11) {
                       break L60;
                     } else {
                       var4 = -1;
@@ -635,7 +635,7 @@ final class sl {
                     }
                   }
                   L61: {
-                    if ((param1 ^ -1) == -13) {
+                    if (param1 == 12) {
                       var5 = -1;
                       var4 = -1;
                       break L61;
@@ -644,7 +644,7 @@ final class sl {
                     }
                   }
                   L62: {
-                    if ((param1 ^ -1) == -14) {
+                    if (param1 == 13) {
                       var4 = 1;
                       var5 = -1;
                       break L62;
@@ -670,7 +670,7 @@ final class sl {
                     }
                   }
                   L65: {
-                    if ((param1 ^ -1) == -16) {
+                    if (param1 == 15) {
                       var4 = 1;
                       var5 = 1;
                       break L65;
@@ -685,7 +685,7 @@ final class sl {
                 L66: {
                   var5 = -1;
                   var4 = -1;
-                  if (-12 != (param1 ^ -1)) {
+                  if (param1 != 11) {
                     break L66;
                   } else {
                     var4 = -1;
@@ -693,7 +693,7 @@ final class sl {
                   }
                 }
                 L67: {
-                  if ((param1 ^ -1) == -13) {
+                  if (param1 == 12) {
                     var5 = -1;
                     var4 = -1;
                     break L67;
@@ -702,7 +702,7 @@ final class sl {
                   }
                 }
                 L68: {
-                  if ((param1 ^ -1) == -14) {
+                  if (param1 == 13) {
                     var4 = 1;
                     var5 = -1;
                     break L68;
@@ -728,7 +728,7 @@ final class sl {
                   }
                 }
                 L71: {
-                  if ((param1 ^ -1) == -16) {
+                  if (param1 == 15) {
                     var4 = 1;
                     var5 = 1;
                     break L71;
@@ -749,9 +749,6 @@ final class sl {
         field_a = null;
         field_b = null;
         field_c = null;
-        if (param0 <= 45) {
-            sl.a((byte) 63);
-        }
     }
 
     static {

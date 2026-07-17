@@ -6,9 +6,6 @@ final class ce {
     static boolean field_b;
 
     public static void a(byte param0) {
-        if (param0 != -55) {
-            return;
-        }
         field_a = null;
     }
 

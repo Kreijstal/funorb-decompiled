@@ -14,150 +14,72 @@ final class cn {
     static la field_b;
 
     final static sn[] b(int param0) {
-        if (param0 != 31114) {
-          return null;
-        } else {
-          return new sn[]{em.field_J, wn.field_a, u.field_e};
-        }
+        return new sn[]{em.field_J, wn.field_a, u.field_e};
     }
 
     final static void a(boolean param0, boolean param1) {
         int var2 = 0;
         int var3 = 0;
         var3 = ZombieDawn.field_J;
-        if ((be.field_j ^ -1) >= -1) {
+        if (be.field_j <= 0) {
           if (po.w(13296)) {
             var2 = 0;
-            if (!param1) {
-              L0: {
-                if (rn.field_b != null) {
-                  break L0;
-                } else {
-                  if (em.field_H) {
-                    ti.a(var2, 113, param0);
-                    break L0;
-                  } else {
-                    return;
-                  }
-                }
+            if (rn.field_b == null) {
+              if (!em.field_H) {
+                return;
+              } else {
+                ti.a(var2, 113, param0);
+                return;
               }
-              return;
             } else {
-              L1: {
-                field_g = 58;
-                if (rn.field_b != null) {
-                  break L1;
-                } else {
-                  if (em.field_H) {
-                    ti.a(var2, 113, param0);
-                    break L1;
-                  } else {
-                    return;
-                  }
-                }
-              }
               return;
             }
           } else {
             var2 = 1;
-            if (!param1) {
-              L2: {
-                if (rn.field_b != null) {
-                  break L2;
-                } else {
-                  if (em.field_H) {
-                    ti.a(var2, 113, param0);
-                    break L2;
-                  } else {
-                    return;
-                  }
-                }
+            if (rn.field_b == null) {
+              if (!em.field_H) {
+                return;
+              } else {
+                ti.a(var2, 113, param0);
+                return;
               }
-              return;
             } else {
-              L3: {
-                field_g = 58;
-                if (rn.field_b != null) {
-                  break L3;
-                } else {
-                  if (em.field_H) {
-                    ti.a(var2, 113, param0);
-                    break L3;
-                  } else {
-                    return;
-                  }
-                }
-              }
               return;
             }
           }
         } else {
           if (null == rn.field_b) {
-            field_b = nf.a(480, 640, vh.field_a, 0, param1, 0);
+            field_b = nf.a(480, 640, vh.field_a, 0, false, 0);
             if (null != field_b) {
               se.a(20922, (java.awt.Canvas) (Object) field_b);
               var2 = 2;
-              if (param1) {
-                field_g = 58;
-                if (rn.field_b != null) {
-                  return;
-                } else {
-                  L4: {
-                    if (em.field_H) {
-                      ti.a(var2, 113, param0);
-                      break L4;
-                    } else {
-                      break L4;
-                    }
-                  }
-                  return;
-                }
+              if (rn.field_b != null) {
+                return;
               } else {
-                if (rn.field_b != null) {
-                  return;
-                } else {
-                  L5: {
-                    if (em.field_H) {
-                      ti.a(var2, 113, param0);
-                      break L5;
-                    } else {
-                      break L5;
-                    }
+                L0: {
+                  if (em.field_H) {
+                    ti.a(var2, 113, param0);
+                    break L0;
+                  } else {
+                    break L0;
                   }
-                  return;
                 }
+                return;
               }
             } else {
               var2 = 3;
-              if (param1) {
-                field_g = 58;
-                if (rn.field_b != null) {
-                  return;
-                } else {
-                  L6: {
-                    if (em.field_H) {
-                      ti.a(var2, 113, param0);
-                      break L6;
-                    } else {
-                      break L6;
-                    }
-                  }
-                  return;
-                }
+              if (rn.field_b != null) {
+                return;
               } else {
-                if (rn.field_b != null) {
-                  return;
-                } else {
-                  L7: {
-                    if (em.field_H) {
-                      ti.a(var2, 113, param0);
-                      break L7;
-                    } else {
-                      break L7;
-                    }
+                L1: {
+                  if (em.field_H) {
+                    ti.a(var2, 113, param0);
+                    break L1;
+                  } else {
+                    break L1;
                   }
-                  return;
                 }
+                return;
               }
             }
           } else {
@@ -166,55 +88,33 @@ final class cn {
             if (null != field_b) {
               se.a(20922, (java.awt.Canvas) (Object) field_b);
               var2 = 2;
-              if (!param1) {
-                if (rn.field_b == null) {
-                  if (em.field_H) {
-                    ti.a(var2, 113, param0);
-                    return;
-                  } else {
-                    return;
-                  }
-                } else {
-                  return;
-                }
+              if (rn.field_b != null) {
+                return;
               } else {
-                field_g = 58;
-                if (rn.field_b == null) {
+                L2: {
                   if (em.field_H) {
                     ti.a(var2, 113, param0);
-                    return;
+                    break L2;
                   } else {
-                    return;
+                    break L2;
                   }
-                } else {
-                  return;
                 }
+                return;
               }
             } else {
               var2 = 3;
-              if (!param1) {
-                if (rn.field_b == null) {
-                  if (!em.field_H) {
-                    return;
-                  } else {
-                    ti.a(var2, 113, param0);
-                    return;
-                  }
-                } else {
-                  return;
-                }
+              if (rn.field_b != null) {
+                return;
               } else {
-                field_g = 58;
-                if (rn.field_b == null) {
-                  if (!em.field_H) {
-                    return;
-                  } else {
+                L3: {
+                  if (em.field_H) {
                     ti.a(var2, 113, param0);
-                    return;
+                    break L3;
+                  } else {
+                    break L3;
                   }
-                } else {
-                  return;
                 }
+                return;
               }
             }
           }
@@ -229,9 +129,6 @@ final class cn {
         field_c = null;
         field_i = null;
         field_d = null;
-        if (param0 < 54) {
-            cn.a((byte) -37);
-        }
     }
 
     final static void a(byte param0) {

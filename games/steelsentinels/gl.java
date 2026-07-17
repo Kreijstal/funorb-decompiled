@@ -21,7 +21,7 @@ final class gl extends al {
 
     final void c(byte param0) {
         ((gl) this).field_n = 0L;
-        if ((((gl) this).field_k ^ -1L) > (((gl) this).field_m ^ -1L)) {
+        if (~((gl) this).field_k > ~((gl) this).field_m) {
             ((gl) this).field_k = ((gl) this).field_k + (-((gl) this).field_k + ((gl) this).field_m);
         }
         if (param0 >= -116) {
@@ -31,12 +31,154 @@ final class gl extends al {
     }
 
     final static gk a(cm param0, byte param1, String param2, String param3) {
-        int var4 = param0.a(param2, 44);
-        if (param1 != 85) {
-            return null;
+        int var4_int = 0;
+        RuntimeException var4 = null;
+        int var5 = 0;
+        Object stackIn_2_0 = null;
+        gk stackIn_4_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        gk stackOut_3_0 = null;
+        Object stackOut_1_0 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        try {
+          L0: {
+            var4_int = param0.a(param2, 44);
+            if (param1 == 85) {
+              var5 = param0.a(var4_int, -32759, param3);
+              stackOut_3_0 = va.a(var4_int, param0, true, var5);
+              stackIn_4_0 = stackOut_3_0;
+              break L0;
+            } else {
+              stackOut_1_0 = null;
+              stackIn_2_0 = stackOut_1_0;
+              return (gk) (Object) stackIn_2_0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var4 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var4;
+            stackOut_5_1 = new StringBuilder().append("gl.L(");
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param0 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L1;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L1;
+            }
+          }
+          L2: {
+            stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(param1).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param2 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L2;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L2;
+            }
+          }
+          L3: {
+            stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44);
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
+            if (param3 == null) {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L3;
+            } else {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L3;
+            }
+          }
+          throw ci.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
         }
-        int var5 = param0.a(var4, -32759, param3);
-        return va.a(var4, param0, true, var5);
+        return stackIn_4_0;
     }
 
     final long a(byte param0) {
@@ -53,9 +195,6 @@ final class gl extends al {
     public static void c(int param0) {
         field_l = null;
         field_j = null;
-        if (param0 != 0) {
-            java.awt.Canvas discarded$0 = gl.a(false);
-        }
         field_y = null;
         field_t = null;
         field_x = null;
@@ -65,60 +204,98 @@ final class gl extends al {
     }
 
     final static java.awt.Canvas a(boolean param0) {
-        if (param0) {
-            field_w = null;
-        }
-        return (java.awt.Canvas) (null == wb.field_c ? sl.field_n : wb.field_c);
+        return null == wb.field_c ? sl.field_n : (java.awt.Canvas) (Object) wb.field_c;
     }
 
     final int a(long param0, byte param1) {
         int var4 = 0;
-        int var5 = SteelSentinels.field_G;
-        if (param1 != -97) {
-            return 92;
-        }
-        if ((((gl) this).field_k ^ -1L) <= (((gl) this).field_m ^ -1L)) {
+        int var5 = 0;
+        var5 = SteelSentinels.field_G;
+        if (param1 == -97) {
+          if (~((gl) this).field_k > ~((gl) this).field_m) {
+            ((gl) this).field_n = ((gl) this).field_n + (-((gl) this).field_k + ((gl) this).field_m);
+            ((gl) this).field_k = ((gl) this).field_k + (-((gl) this).field_k + ((gl) this).field_m);
+            ((gl) this).field_m = ((gl) this).field_m + param0;
+            return 1;
+          } else {
             var4 = 0;
-            do {
+            L0: while (true) {
+              L1: {
                 var4++;
                 ((gl) this).field_m = ((gl) this).field_m + param0;
-                // if_icmpge L77
-            } while ((((gl) this).field_k ^ -1L) < (((gl) this).field_m ^ -1L));
-            if (!((((gl) this).field_m ^ -1L) <= (((gl) this).field_k ^ -1L))) {
-                ((gl) this).field_m = ((gl) this).field_k;
+                if (var4 >= 10) {
+                  break L1;
+                } else {
+                  if (~((gl) this).field_k < ~((gl) this).field_m) {
+                    continue L0;
+                  } else {
+                    break L1;
+                  }
+                }
+              }
+              L2: {
+                if (~((gl) this).field_m > ~((gl) this).field_k) {
+                  ((gl) this).field_m = ((gl) this).field_k;
+                  break L2;
+                } else {
+                  break L2;
+                }
+              }
+              return var4;
             }
-            return var4;
+          }
+        } else {
+          return 92;
         }
-        ((gl) this).field_n = ((gl) this).field_n + (-((gl) this).field_k + ((gl) this).field_m);
-        ((gl) this).field_k = ((gl) this).field_k + (-((gl) this).field_k + ((gl) this).field_m);
-        ((gl) this).field_m = ((gl) this).field_m + param0;
-        return 1;
     }
 
     private final long d(byte param0) {
-        int var9 = SteelSentinels.field_G;
-        long var2 = System.nanoTime();
-        long var4 = -((gl) this).field_n + var2;
-        ((gl) this).field_n = var2;
-        if (var4 > -5000000000L) {
-            if (!(-5000000001L >= (var4 ^ -1L))) {
-                ((gl) this).field_q[((gl) this).field_o] = var4;
-                if (!((((gl) this).field_s ^ -1) <= -2)) {
+        long var2 = 0L;
+        long var4 = 0L;
+        long var6 = 0L;
+        int var8 = 0;
+        int var9 = 0;
+        L0: {
+          L1: {
+            var9 = SteelSentinels.field_G;
+            var2 = System.nanoTime();
+            var4 = -((gl) this).field_n + var2;
+            ((gl) this).field_n = var2;
+            if (var4 <= -5000000000L) {
+              break L1;
+            } else {
+              if (var4 < 5000000000L) {
+                L2: {
+                  ((gl) this).field_q[((gl) this).field_o] = var4;
+                  if (((gl) this).field_s < 1) {
                     ((gl) this).field_s = ((gl) this).field_s + 1;
+                    break L2;
+                  } else {
+                    break L2;
+                  }
                 }
                 ((gl) this).field_o = (1 + ((gl) this).field_o) % 10;
+                break L1;
+              } else {
+                var6 = 0L;
+                var8 = 1;
+                break L0;
+              }
             }
+          }
+          var6 = 0L;
+          var8 = 1;
+          break L0;
         }
-        long var6 = 0L;
-        int var8 = 1;
-        if (param0 >= -38) {
-            return 114L;
-        }
-        while (var8 <= ((gl) this).field_s) {
+        L3: while (true) {
+          if (var8 > ((gl) this).field_s) {
+            return var6 / (long)((gl) this).field_s;
+          } else {
             var6 = var6 + ((gl) this).field_q[(10 + ((gl) this).field_o - var8) % 10];
             var8++;
+            continue L3;
+          }
         }
-        return var6 / (long)((gl) this).field_s;
     }
 
     gl() {
@@ -139,6 +316,6 @@ final class gl extends al {
     private static void $cfr$clinit() {
         field_j = new rf();
         field_r = "<%1> was too close to a bomb intercepted by <%0>";
-        field_w = new char[]{(char)8364, (char)0, (char)8218, (char)402, (char)8222, (char)8230, (char)8224, (char)8225, (char)710, (char)8240, (char)352, (char)8249, (char)338, (char)0, (char)381, (char)0, (char)0, (char)8216, (char)8217, (char)8220, (char)8221, (char)8226, (char)8211, (char)8212, (char)732, (char)8482, (char)353, (char)8250, (char)339, (char)0, (char)382, (char)376};
+        field_w = new char[]{'€', ' ', '‚', 'ƒ', '„', '…', '†', '‡', 'ˆ', '‰', 'Š', '‹', 'Œ', ' ', 'Ž', ' ', ' ', '‘', '’', '“', '”', '•', '–', '—', '˜', '™', 'š', '›', 'œ', ' ', 'ž', 'Ÿ'};
     }
 }

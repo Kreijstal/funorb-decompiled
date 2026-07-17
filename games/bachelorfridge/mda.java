@@ -9,8 +9,8 @@ final class mda {
     final static int a(int param0, int param1) {
         int var2 = 0;
         var2 = 0;
-        if (-1 >= (param0 ^ -1)) {
-          if ((param0 ^ -1) <= -65537) {
+        if (param0 >= 0) {
+          if (param0 >= 65536) {
             L0: {
               var2 += 16;
               param0 = param0 >>> 16;
@@ -23,7 +23,7 @@ final class mda {
               }
             }
             L1: {
-              if (param0 >= param1) {
+              if (param0 >= 16) {
                 var2 += 4;
                 param0 = param0 >>> 4;
                 break L1;
@@ -32,7 +32,7 @@ final class mda {
               }
             }
             L2: {
-              if ((param0 ^ -1) > -5) {
+              if (param0 < 4) {
                 break L2;
               } else {
                 param0 = param0 >>> 2;
@@ -61,7 +61,7 @@ final class mda {
               }
             }
             L5: {
-              if (param0 >= param1) {
+              if (param0 >= 16) {
                 var2 += 4;
                 param0 = param0 >>> 4;
                 break L5;
@@ -70,7 +70,7 @@ final class mda {
               }
             }
             L6: {
-              if ((param0 ^ -1) > -5) {
+              if (param0 < 4) {
                 break L6;
               } else {
                 param0 = param0 >>> 2;
@@ -102,7 +102,7 @@ final class mda {
             }
           }
           L9: {
-            if (param0 >= param1) {
+            if (param0 >= 16) {
               var2 += 4;
               param0 = param0 >>> 4;
               break L9;
@@ -111,7 +111,7 @@ final class mda {
             }
           }
           L10: {
-            if ((param0 ^ -1) > -5) {
+            if (param0 < 4) {
               break L10;
             } else {
               param0 = param0 >>> 2;
@@ -136,9 +136,6 @@ final class mda {
         field_c = null;
         field_b = null;
         field_a = null;
-        if (param0 != 15) {
-            field_b = null;
-        }
     }
 
     static {

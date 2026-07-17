@@ -22,188 +22,482 @@ final class ng extends mc {
     byte[] field_A;
 
     final static sj a(byte param0, String[] param1) {
-        if (param0 != -67) {
-            return null;
+        sj var2 = null;
+        RuntimeException var2_ref = null;
+        Object stackIn_2_0 = null;
+        sj stackIn_4_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        sj stackOut_3_0 = null;
+        Object stackOut_1_0 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            if (param0 == -67) {
+              var2 = new sj(false);
+              var2.field_h = param1;
+              stackOut_3_0 = (sj) var2;
+              stackIn_4_0 = stackOut_3_0;
+              break L0;
+            } else {
+              stackOut_1_0 = null;
+              stackIn_2_0 = stackOut_1_0;
+              return (sj) (Object) stackIn_2_0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var2_ref = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var2_ref;
+            stackOut_5_1 = new StringBuilder().append("ng.D(").append(param0).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param1 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L1;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L1;
+            }
+          }
+          throw oi.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
         }
-        sj var2 = new sj(false);
-        var2.field_h = param1;
-        return var2;
+        return stackIn_4_0;
     }
 
     final boolean a(int[] param0, fa param1, byte param2, byte[] param3) {
-        int var5 = 0;
+        int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         Object var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        L0: {
-          var10 = TetraLink.field_J;
-          if (param2 == -114) {
-            break L0;
-          } else {
-            ng.a(-121);
-            break L0;
-          }
-        }
-        var5 = 1;
-        var6 = 0;
-        var7 = null;
-        var8 = 0;
-        L1: while (true) {
-          if ((var8 ^ -1) <= -129) {
-            return var5 != 0;
-          } else {
-            L2: {
-              L3: {
-                if (param3 == null) {
-                  break L3;
-                } else {
-                  if (-1 == (param3[var8] ^ -1)) {
-                    break L2;
-                  } else {
-                    break L3;
-                  }
-                }
-              }
-              var9 = ((ng) this).field_B[var8];
-              if (-1 == (var9 ^ -1)) {
-                break L2;
+        int stackIn_19_0 = 0;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        String stackIn_23_2 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        String stackIn_26_2 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        RuntimeException stackIn_28_0 = null;
+        StringBuilder stackIn_28_1 = null;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
+        String stackIn_29_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_18_0 = 0;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        String stackOut_22_2 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        RuntimeException stackOut_25_0 = null;
+        StringBuilder stackOut_25_1 = null;
+        String stackOut_25_2 = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        String stackOut_24_2 = null;
+        RuntimeException stackOut_26_0 = null;
+        StringBuilder stackOut_26_1 = null;
+        RuntimeException stackOut_28_0 = null;
+        StringBuilder stackOut_28_1 = null;
+        String stackOut_28_2 = null;
+        RuntimeException stackOut_27_0 = null;
+        StringBuilder stackOut_27_1 = null;
+        String stackOut_27_2 = null;
+        var10 = TetraLink.field_J;
+        try {
+          L0: {
+            L1: {
+              if (param2 == -114) {
+                break L1;
               } else {
-                L4: {
-                  if (var9 == var6) {
-                    break L4;
-                  } else {
-                    L5: {
-                      var6 = var9;
-                      var9--;
-                      if ((var9 & 1) != 0) {
-                        var7 = (Object) (Object) param1.a(param0, var9 >> 1272737410, 95);
-                        break L5;
-                      } else {
-                        var7 = (Object) (Object) param1.a((byte) 67, var9 >> 1455264514, param0);
-                        break L5;
-                      }
-                    }
-                    if (var7 != null) {
-                      break L4;
-                    } else {
-                      var5 = 0;
-                      break L4;
-                    }
-                  }
-                }
-                if (var7 == null) {
-                  break L2;
-                } else {
-                  ((ng) this).field_z[var8] = (wf) var7;
-                  ((ng) this).field_B[var8] = 0;
-                  break L2;
-                }
+                ng.a(-121);
+                break L1;
               }
             }
-            var8++;
-            continue L1;
+            var5_int = 1;
+            var6 = 0;
+            var7 = null;
+            var8 = 0;
+            L2: while (true) {
+              if (var8 >= 128) {
+                stackOut_18_0 = var5_int;
+                stackIn_19_0 = stackOut_18_0;
+                break L0;
+              } else {
+                L3: {
+                  L4: {
+                    if (param3 == null) {
+                      break L4;
+                    } else {
+                      if (param3[var8] == 0) {
+                        break L3;
+                      } else {
+                        break L4;
+                      }
+                    }
+                  }
+                  var9 = ((ng) this).field_B[var8];
+                  if (var9 == 0) {
+                    break L3;
+                  } else {
+                    L5: {
+                      if (var9 == var6) {
+                        break L5;
+                      } else {
+                        L6: {
+                          var6 = var9;
+                          var9--;
+                          if ((var9 & 1) != 0) {
+                            var7 = (Object) (Object) param1.a(param0, var9 >> 2, 95);
+                            break L6;
+                          } else {
+                            var7 = (Object) (Object) param1.a((byte) 67, var9 >> 2, param0);
+                            break L6;
+                          }
+                        }
+                        if (var7 != null) {
+                          break L5;
+                        } else {
+                          var5_int = 0;
+                          break L5;
+                        }
+                      }
+                    }
+                    if (var7 == null) {
+                      break L3;
+                    } else {
+                      ((ng) this).field_z[var8] = (wf) var7;
+                      ((ng) this).field_B[var8] = 0;
+                      break L3;
+                    }
+                  }
+                }
+                var8++;
+                continue L2;
+              }
+            }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L7: {
+            var5 = decompiledCaughtException;
+            stackOut_20_0 = (RuntimeException) var5;
+            stackOut_20_1 = new StringBuilder().append("ng.A(");
+            stackIn_22_0 = stackOut_20_0;
+            stackIn_22_1 = stackOut_20_1;
+            stackIn_21_0 = stackOut_20_0;
+            stackIn_21_1 = stackOut_20_1;
+            if (param0 == null) {
+              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_2 = "null";
+              stackIn_23_0 = stackOut_22_0;
+              stackIn_23_1 = stackOut_22_1;
+              stackIn_23_2 = stackOut_22_2;
+              break L7;
+            } else {
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "{...}";
+              stackIn_23_0 = stackOut_21_0;
+              stackIn_23_1 = stackOut_21_1;
+              stackIn_23_2 = stackOut_21_2;
+              break L7;
+            }
+          }
+          L8: {
+            stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+            stackOut_23_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(44);
+            stackIn_25_0 = stackOut_23_0;
+            stackIn_25_1 = stackOut_23_1;
+            stackIn_24_0 = stackOut_23_0;
+            stackIn_24_1 = stackOut_23_1;
+            if (param1 == null) {
+              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
+              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_2 = "null";
+              stackIn_26_0 = stackOut_25_0;
+              stackIn_26_1 = stackOut_25_1;
+              stackIn_26_2 = stackOut_25_2;
+              break L8;
+            } else {
+              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
+              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_2 = "{...}";
+              stackIn_26_0 = stackOut_24_0;
+              stackIn_26_1 = stackOut_24_1;
+              stackIn_26_2 = stackOut_24_2;
+              break L8;
+            }
+          }
+          L9: {
+            stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
+            stackOut_26_1 = ((StringBuilder) (Object) stackIn_26_1).append(stackIn_26_2).append(44).append(param2).append(44);
+            stackIn_28_0 = stackOut_26_0;
+            stackIn_28_1 = stackOut_26_1;
+            stackIn_27_0 = stackOut_26_0;
+            stackIn_27_1 = stackOut_26_1;
+            if (param3 == null) {
+              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
+              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_2 = "null";
+              stackIn_29_0 = stackOut_28_0;
+              stackIn_29_1 = stackOut_28_1;
+              stackIn_29_2 = stackOut_28_2;
+              break L9;
+            } else {
+              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
+              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_2 = "{...}";
+              stackIn_29_0 = stackOut_27_0;
+              stackIn_29_1 = stackOut_27_1;
+              stackIn_29_2 = stackOut_27_2;
+              break L9;
+            }
+          }
+          throw oi.a((Throwable) (Object) stackIn_29_0, stackIn_29_2 + 41);
         }
+        return stackIn_19_0 != 0;
     }
 
     final static void a(String param0, boolean param1) {
-        cl.field_b = param0;
-        if (!param1) {
-            ng.a(-44);
+        RuntimeException var2 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
+        try {
+          L0: {
+            cl.field_b = param0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var2 = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var2;
+            stackOut_2_1 = new StringBuilder().append("ng.F(");
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
+            if (param0 == null) {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
+            }
+          }
+          throw oi.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 1 + 41);
         }
     }
 
     final static void a(byte param0, int param1, boolean param2, hm param3, boolean param4) {
-        int var5 = 0;
+        RuntimeException var5 = null;
+        int var5_int = 0;
         int var6 = 0;
         String var7 = null;
-        L0: {
-          ai.field_e[0] = ca.field_i.nextInt();
-          ai.field_e[1] = ca.field_i.nextInt();
-          tb.field_j.field_t = 0;
-          ai.field_e[2] = (int)(ca.field_g >> -242410592);
-          ai.field_e[3] = (int)ca.field_g;
-          tb.field_j.d(ai.field_e[0], (byte) -124);
-          tb.field_j.d(ai.field_e[1], (byte) -124);
-          tb.field_j.d(ai.field_e[2], (byte) -124);
-          tb.field_j.d(ai.field_e[3], (byte) -124);
-          mh.a(-105, tb.field_j);
-          tb.field_j.b(param1, false);
-          param3.a(-22017, tb.field_j);
-          nd.field_Lb.field_t = 0;
-          if (param2) {
-            nd.field_Lb.a(18, false);
-            break L0;
-          } else {
-            nd.field_Lb.a(16, false);
-            break L0;
-          }
-        }
-        if (param0 == -34) {
-          L1: {
-            nd.field_Lb.field_t = nd.field_Lb.field_t + 2;
-            var5 = nd.field_Lb.field_t;
-            nd.field_Lb.d(lm.field_g, (byte) -124);
-            nd.field_Lb.a(-1, tc.field_s);
-            var6 = 0;
-            if (pg.field_m) {
-              var6 = var6 | 1;
-              break L1;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        String stackIn_27_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        RuntimeException stackOut_26_0 = null;
+        StringBuilder stackOut_26_1 = null;
+        String stackOut_26_2 = null;
+        RuntimeException stackOut_25_0 = null;
+        StringBuilder stackOut_25_1 = null;
+        String stackOut_25_2 = null;
+        try {
+          L0: {
+            L1: {
+              ai.field_e[0] = ca.field_i.nextInt();
+              ai.field_e[1] = ca.field_i.nextInt();
+              tb.field_j.field_t = 0;
+              ai.field_e[2] = (int)(ca.field_g >> 32);
+              ai.field_e[3] = (int)ca.field_g;
+              tb.field_j.d(ai.field_e[0], (byte) -124);
+              tb.field_j.d(ai.field_e[1], (byte) -124);
+              tb.field_j.d(ai.field_e[2], (byte) -124);
+              tb.field_j.d(ai.field_e[3], (byte) -124);
+              mh.a(-105, tb.field_j);
+              tb.field_j.b(param1, false);
+              param3.a(-22017, tb.field_j);
+              nd.field_Lb.field_t = 0;
+              if (param2) {
+                nd.field_Lb.a(18, false);
+                break L1;
+              } else {
+                nd.field_Lb.a(16, false);
+                break L1;
+              }
+            }
+            if (param0 == -34) {
+              L2: {
+                nd.field_Lb.field_t = nd.field_Lb.field_t + 2;
+                var5_int = nd.field_Lb.field_t;
+                nd.field_Lb.d(lm.field_g, (byte) -124);
+                nd.field_Lb.a(-1, tc.field_s);
+                var6 = 0;
+                if (pg.field_m) {
+                  var6 = var6 | 1;
+                  break L2;
+                } else {
+                  break L2;
+                }
+              }
+              L3: {
+                if (mc.field_k) {
+                  var6 = var6 | 4;
+                  break L3;
+                } else {
+                  break L3;
+                }
+              }
+              L4: {
+                if (param4) {
+                  var6 = var6 | 8;
+                  break L4;
+                } else {
+                  break L4;
+                }
+              }
+              L5: {
+                if (null == cl.field_b) {
+                  break L5;
+                } else {
+                  var6 = var6 | 16;
+                  break L5;
+                }
+              }
+              L6: {
+                nd.field_Lb.a(var6, false);
+                var7 = dd.a(lk.q(13), (byte) -87);
+                if (var7 == null) {
+                  var7 = "";
+                  break L6;
+                } else {
+                  break L6;
+                }
+              }
+              L7: {
+                nd.field_Lb.a(var7, 0);
+                if (cl.field_b != null) {
+                  nd.field_Lb.a(cl.field_b, (byte) 103);
+                  break L7;
+                } else {
+                  break L7;
+                }
+              }
+              ae.a(ki.field_c, (bh) (Object) nd.field_Lb, tb.field_j, jg.field_c, 97);
+              nd.field_Lb.a((byte) 17, nd.field_Lb.field_t - var5_int);
+              ak.a((byte) -82, -1);
+              break L0;
             } else {
-              break L1;
+              return;
             }
           }
-          L2: {
-            if (mc.field_k) {
-              var6 = var6 | 4;
-              break L2;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L8: {
+            var5 = decompiledCaughtException;
+            stackOut_24_0 = (RuntimeException) var5;
+            stackOut_24_1 = new StringBuilder().append("ng.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackIn_26_0 = stackOut_24_0;
+            stackIn_26_1 = stackOut_24_1;
+            stackIn_25_0 = stackOut_24_0;
+            stackIn_25_1 = stackOut_24_1;
+            if (param3 == null) {
+              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
+              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_2 = "null";
+              stackIn_27_0 = stackOut_26_0;
+              stackIn_27_1 = stackOut_26_1;
+              stackIn_27_2 = stackOut_26_2;
+              break L8;
             } else {
-              break L2;
+              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
+              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_2 = "{...}";
+              stackIn_27_0 = stackOut_25_0;
+              stackIn_27_1 = stackOut_25_1;
+              stackIn_27_2 = stackOut_25_2;
+              break L8;
             }
           }
-          L3: {
-            if (param4) {
-              var6 = var6 | 8;
-              break L3;
-            } else {
-              break L3;
-            }
-          }
-          L4: {
-            if (null == cl.field_b) {
-              break L4;
-            } else {
-              var6 = var6 | 16;
-              break L4;
-            }
-          }
-          L5: {
-            nd.field_Lb.a(var6, false);
-            var7 = dd.a(lk.q(13), (byte) -87);
-            if (var7 == null) {
-              var7 = "";
-              break L5;
-            } else {
-              break L5;
-            }
-          }
-          L6: {
-            nd.field_Lb.a(var7, 0);
-            if (cl.field_b != null) {
-              nd.field_Lb.a(cl.field_b, (byte) 103);
-              break L6;
-            } else {
-              break L6;
-            }
-          }
-          ae.a(ki.field_c, (bh) (Object) nd.field_Lb, tb.field_j, jg.field_c, 97);
-          nd.field_Lb.a((byte) 17, nd.field_Lb.field_t - var5);
-          ak.a((byte) -82, -1);
-          return;
-        } else {
-          return;
+          throw oi.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 44 + param4 + 41);
         }
     }
 
@@ -336,7 +630,7 @@ final class ng extends mc {
                     var7 = var43;
                     var8 = 0;
                     L3: while (true) {
-                      if ((var8 ^ -1) <= (var6 ^ -1)) {
+                      if (~var8 <= ~var6) {
                         var38.field_t = var38.field_t + 1;
                         var6++;
                         var8 = var38.field_t;
@@ -378,7 +672,7 @@ final class ng extends mc {
                                             break L8;
                                           } else {
                                             L9: {
-                                              if ((var13_int ^ -1) > (var15_int ^ -1)) {
+                                              if (~var13_int > ~var15_int) {
                                                 break L9;
                                               } else {
                                                 var15_int--;
@@ -402,10 +696,10 @@ final class ng extends mc {
                                 var13 = new lm[var12];
                                 var14 = 0;
                                 L10: while (true) {
-                                  if ((var14 ^ -1) <= (var13.length ^ -1)) {
+                                  if (~var14 <= ~var13.length) {
                                     L11: {
                                       var14 = var38.d((byte) -99);
-                                      if ((var14 ^ -1) >= -1) {
+                                      if (var14 <= 0) {
                                         stackOut_37_0 = null;
                                         stackIn_38_0 = (byte[]) (Object) stackOut_37_0;
                                         break L11;
@@ -419,7 +713,7 @@ final class ng extends mc {
                                       var46 = stackIn_38_0;
                                       var15_array = var46;
                                       var14 = var38.d((byte) -99);
-                                      if ((var14 ^ -1) < -1) {
+                                      if (var14 > 0) {
                                         stackOut_40_0 = new byte[2 * var14];
                                         stackIn_41_0 = stackOut_40_0;
                                         break L12;
@@ -444,7 +738,7 @@ final class ng extends mc {
                                         var18 = var41;
                                         var19 = 0;
                                         L14: while (true) {
-                                          if ((var17 ^ -1) >= (var19 ^ -1)) {
+                                          if (~var17 >= ~var19) {
                                             var38.field_t = var38.field_t + 1;
                                             var17++;
                                             var19 = 0;
@@ -460,7 +754,7 @@ final class ng extends mc {
                                                     var22 = 0;
                                                     var23 = 0;
                                                     L17: while (true) {
-                                                      if (-129 >= (var23 ^ -1)) {
+                                                      if (var23 >= 128) {
                                                         var20 = 0;
                                                         var21 = 0;
                                                         var23 = 0;
@@ -478,7 +772,7 @@ final class ng extends mc {
                                                                 var25 = null;
                                                                 var26 = 0;
                                                                 L20: while (true) {
-                                                                  if (-129 >= (var26 ^ -1)) {
+                                                                  if (var26 >= 128) {
                                                                     var20 = 0;
                                                                     var21 = 0;
                                                                     var26 = 0;
@@ -488,7 +782,7 @@ final class ng extends mc {
                                                                         ((ng) this).field_C = 1 + var38.d((byte) -99);
                                                                         var27 = 0;
                                                                         L22: while (true) {
-                                                                          if ((var12 ^ -1) >= (var27 ^ -1)) {
+                                                                          if (~var12 >= ~var27) {
                                                                             L23: {
                                                                               if (var15_array == null) {
                                                                                 break L23;
@@ -523,10 +817,10 @@ final class ng extends mc {
                                                                             }
                                                                             var27 = 0;
                                                                             L27: while (true) {
-                                                                              if ((var12 ^ -1) >= (var27 ^ -1)) {
+                                                                              if (~var12 >= ~var27) {
                                                                                 var27 = 0;
                                                                                 L28: while (true) {
-                                                                                  if ((var27 ^ -1) <= (var12 ^ -1)) {
+                                                                                  if (~var27 <= ~var12) {
                                                                                     L29: {
                                                                                       if (var15_array == null) {
                                                                                         break L29;
@@ -535,7 +829,7 @@ final class ng extends mc {
                                                                                         var15_array[0] = (byte)var19;
                                                                                         var27 = 2;
                                                                                         L30: while (true) {
-                                                                                          if ((var46.length ^ -1) >= (var27 ^ -1)) {
+                                                                                          if (~var46.length >= ~var27) {
                                                                                             var27 = var46[0];
                                                                                             var28 = var46[1];
                                                                                             var29 = 0;
@@ -543,14 +837,14 @@ final class ng extends mc {
                                                                                               if (var29 >= var27) {
                                                                                                 var29 = 2;
                                                                                                 L32: while (true) {
-                                                                                                  if ((var46.length ^ -1) >= (var29 ^ -1)) {
+                                                                                                  if (~var46.length >= ~var29) {
                                                                                                     var15_array = null;
                                                                                                     var30 = var27;
                                                                                                     L33: while (true) {
                                                                                                       if (128 <= var30) {
                                                                                                         break L29;
                                                                                                       } else {
-                                                                                                        ((ng) this).field_A[var30] = (byte)(((ng) this).field_A[var30] * var28 - -32 >> 1839677958);
+                                                                                                        ((ng) this).field_A[var30] = (byte)(((ng) this).field_A[var30] * var28 - -32 >> 6);
                                                                                                         var30++;
                                                                                                         continue L33;
                                                                                                       }
@@ -561,14 +855,14 @@ final class ng extends mc {
                                                                                                     var32 = var28 * (-var27 + var30) - -((var30 - var27) / 2);
                                                                                                     var33 = var27;
                                                                                                     L34: while (true) {
-                                                                                                      if ((var33 ^ -1) <= (var30 ^ -1)) {
+                                                                                                      if (~var33 <= ~var30) {
                                                                                                         var29 += 2;
                                                                                                         var27 = var30;
                                                                                                         var28 = var31;
                                                                                                         continue L32;
                                                                                                       } else {
                                                                                                         var34 = sd.c(var32, -var27 + var30, -97);
-                                                                                                        ((ng) this).field_A[var33] = (byte)(var34 * ((ng) this).field_A[var33] + 32 >> 1379923430);
+                                                                                                        ((ng) this).field_A[var33] = (byte)(var34 * ((ng) this).field_A[var33] + 32 >> 6);
                                                                                                         var32 = var32 + (-var28 + var31);
                                                                                                         var33++;
                                                                                                         continue L34;
@@ -577,7 +871,7 @@ final class ng extends mc {
                                                                                                   }
                                                                                                 }
                                                                                               } else {
-                                                                                                ((ng) this).field_A[var29] = (byte)(32 + var28 * ((ng) this).field_A[var29] >> 1495696870);
+                                                                                                ((ng) this).field_A[var29] = (byte)(32 + var28 * ((ng) this).field_A[var29] >> 6);
                                                                                                 var29++;
                                                                                                 continue L31;
                                                                                               }
@@ -601,10 +895,10 @@ final class ng extends mc {
                                                                                         L36: while (true) {
                                                                                           if (var27 >= var70.length) {
                                                                                             var27 = var70[0];
-                                                                                            var28 = var70[1] << 507058657;
+                                                                                            var28 = var70[1] << 1;
                                                                                             var29 = 0;
                                                                                             L37: while (true) {
-                                                                                              if ((var29 ^ -1) <= (var27 ^ -1)) {
+                                                                                              if (~var29 <= ~var27) {
                                                                                                 var29 = 2;
                                                                                                 L38: while (true) {
                                                                                                   if (var70.length <= var29) {
@@ -624,7 +918,7 @@ final class ng extends mc {
                                                                                                           }
                                                                                                         }
                                                                                                         L41: {
-                                                                                                          if (-129 <= (var31 ^ -1)) {
+                                                                                                          if (var31 <= 128) {
                                                                                                             break L41;
                                                                                                           } else {
                                                                                                             var31 = 128;
@@ -638,12 +932,12 @@ final class ng extends mc {
                                                                                                     }
                                                                                                   } else {
                                                                                                     var30 = var70[var29];
-                                                                                                    var31 = var16[var29 - -1] << 193396001;
+                                                                                                    var31 = var16[var29 - -1] << 1;
                                                                                                     var32 = (var30 - var27) * var28 + (var30 + -var27) / 2;
                                                                                                     var37 = var27;
                                                                                                     var33 = var37;
                                                                                                     L42: while (true) {
-                                                                                                      if ((var30 ^ -1) >= (var37 ^ -1)) {
+                                                                                                      if (~var30 >= ~var37) {
                                                                                                         var29 += 2;
                                                                                                         var28 = var31;
                                                                                                         var27 = var30;
@@ -712,7 +1006,7 @@ final class ng extends mc {
                                                                                       if (var12 <= var27) {
                                                                                         var27 = 0;
                                                                                         L48: while (true) {
-                                                                                          if ((var27 ^ -1) <= (var12 ^ -1)) {
+                                                                                          if (~var27 <= ~var12) {
                                                                                             var27 = 0;
                                                                                             L49: while (true) {
                                                                                               if (var27 >= var12) {
@@ -726,7 +1020,7 @@ final class ng extends mc {
                                                                                                       } else {
                                                                                                         L52: {
                                                                                                           var52 = var13[var27];
-                                                                                                          if (-1 <= (var52.field_c ^ -1)) {
+                                                                                                          if (var52.field_c <= 0) {
                                                                                                             break L52;
                                                                                                           } else {
                                                                                                             var52.field_h = var38.d((byte) -99);
@@ -740,7 +1034,7 @@ final class ng extends mc {
                                                                                                   } else {
                                                                                                     L53: {
                                                                                                       var51 = var13[var27];
-                                                                                                      if ((var51.field_k ^ -1) >= -1) {
+                                                                                                      if (var51.field_k <= 0) {
                                                                                                         break L53;
                                                                                                       } else {
                                                                                                         var51.field_c = var38.d((byte) -99);
@@ -911,7 +1205,7 @@ final class ng extends mc {
                                                                     }
                                                                   } else {
                                                                     L67: {
-                                                                      if ((((ng) this).field_B[var26] ^ -1) == -1) {
+                                                                      if (((ng) this).field_B[var26] == 0) {
                                                                         break L67;
                                                                       } else {
                                                                         L68: {
@@ -961,7 +1255,7 @@ final class ng extends mc {
                                                                         }
                                                                         int incrementValue$13 = var8;
                                                                         var8++;
-                                                                        var24 = 16 + var38.field_u[incrementValue$13] << 1181506754;
+                                                                        var24 = 16 + var38.field_u[incrementValue$13] << 2;
                                                                         break L70;
                                                                       }
                                                                     }
@@ -976,7 +1270,7 @@ final class ng extends mc {
                                                             }
                                                           } else {
                                                             L72: {
-                                                              if ((((ng) this).field_B[var24] ^ -1) == -1) {
+                                                              if (((ng) this).field_B[var24] == 0) {
                                                                 break L72;
                                                               } else {
                                                                 L73: {
@@ -1011,11 +1305,11 @@ final class ng extends mc {
                                                         }
                                                       } else {
                                                         L75: {
-                                                          if (-1 != (var20 ^ -1)) {
+                                                          if (var20 != 0) {
                                                             break L75;
                                                           } else {
                                                             L76: {
-                                                              if ((var66.length ^ -1) < (var21 ^ -1)) {
+                                                              if (~var66.length < ~var21) {
                                                                 int incrementValue$16 = var21;
                                                                 var21++;
                                                                 var20 = var18[incrementValue$16];
@@ -1029,7 +1323,7 @@ final class ng extends mc {
                                                             break L75;
                                                           }
                                                         }
-                                                        ((ng) this).field_o[var23] = (short)(((ng) this).field_o[var23] + (pl.a(2, -1 + var22) << 1495549134));
+                                                        ((ng) this).field_o[var23] = (short)(((ng) this).field_o[var23] + (pl.a(2, -1 + var22) << 14));
                                                         var20--;
                                                         ((ng) this).field_B[var23] = var22;
                                                         var23++;
@@ -1038,7 +1332,7 @@ final class ng extends mc {
                                                     }
                                                   } else {
                                                     var19 = var19 + var38.d((byte) -99);
-                                                    ((ng) this).field_o[var20] = (short)(((ng) this).field_o[var20] + (var19 << -1787546392));
+                                                    ((ng) this).field_o[var20] = (short)(((ng) this).field_o[var20] + (var19 << 8));
                                                     var20++;
                                                     continue L16;
                                                   }
@@ -1081,7 +1375,7 @@ final class ng extends mc {
                                         break L78;
                                       } else {
                                         var15.field_e = new byte[var16_int * 2 + 2];
-                                        var40.field_e[1] = (byte)64;
+                                        var40.field_e[1] = (byte) 64;
                                         break L78;
                                       }
                                     }

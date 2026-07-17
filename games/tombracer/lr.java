@@ -9,42 +9,126 @@ final class lr extends RuntimeException {
     static int field_c;
 
     final static int a(una param0, int param1) {
-        if (param0 != una.field_a) {
-          if (param0 != una.field_k) {
-            if (param0 != una.field_m) {
-              if (una.field_g != param0) {
-                if (una.field_f != param0) {
-                  if (param0 != una.field_i) {
-                    if (param0 != una.field_l) {
-                      if (param0 != una.field_h) {
-                        if (param1 != 5126) {
-                          return 1;
+        RuntimeException var2 = null;
+        int stackIn_3_0 = 0;
+        int stackIn_6_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackIn_14_0 = 0;
+        int stackIn_17_0 = 0;
+        int stackIn_19_0 = 0;
+        int stackIn_21_0 = 0;
+        int stackIn_23_0 = 0;
+        int stackIn_26_0 = 0;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
+        RuntimeException stackIn_31_0 = null;
+        StringBuilder stackIn_31_1 = null;
+        String stackIn_31_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_22_0 = 0;
+        int stackOut_20_0 = 0;
+        int stackOut_18_0 = 0;
+        int stackOut_25_0 = 0;
+        int stackOut_16_0 = 0;
+        int stackOut_13_0 = 0;
+        int stackOut_8_0 = 0;
+        int stackOut_5_0 = 0;
+        int stackOut_2_0 = 0;
+        RuntimeException stackOut_28_0 = null;
+        StringBuilder stackOut_28_1 = null;
+        RuntimeException stackOut_30_0 = null;
+        StringBuilder stackOut_30_1 = null;
+        String stackOut_30_2 = null;
+        RuntimeException stackOut_29_0 = null;
+        StringBuilder stackOut_29_1 = null;
+        String stackOut_29_2 = null;
+        try {
+          if (param0 == una.field_a) {
+            stackOut_22_0 = 5120;
+            stackIn_23_0 = stackOut_22_0;
+            return stackIn_23_0;
+          } else {
+            if (param0 != una.field_k) {
+              if (param0 != una.field_m) {
+                if (una.field_g != param0) {
+                  if (una.field_f == param0) {
+                    stackOut_20_0 = 5123;
+                    stackIn_21_0 = stackOut_20_0;
+                    return stackIn_21_0;
+                  } else {
+                    if (param0 == una.field_i) {
+                      stackOut_18_0 = 5125;
+                      stackIn_19_0 = stackOut_18_0;
+                      return stackIn_19_0;
+                    } else {
+                      if (param0 != una.field_l) {
+                        if (param0 != una.field_h) {
+                          if (param1 == 5126) {
+                            throw new IllegalArgumentException("");
+                          } else {
+                            stackOut_25_0 = 1;
+                            stackIn_26_0 = stackOut_25_0;
+                            return stackIn_26_0;
+                          }
                         } else {
-                          throw new IllegalArgumentException("");
+                          stackOut_16_0 = 5126;
+                          stackIn_17_0 = stackOut_16_0;
+                          return stackIn_17_0;
                         }
                       } else {
-                        return 5126;
+                        stackOut_13_0 = 5131;
+                        stackIn_14_0 = stackOut_13_0;
+                        return stackIn_14_0;
                       }
-                    } else {
-                      return 5131;
                     }
-                  } else {
-                    return 5125;
                   }
                 } else {
-                  return 5123;
+                  stackOut_8_0 = 5121;
+                  stackIn_9_0 = stackOut_8_0;
+                  return stackIn_9_0;
                 }
               } else {
-                return 5121;
+                stackOut_5_0 = 5124;
+                stackIn_6_0 = stackOut_5_0;
+                return stackIn_6_0;
               }
             } else {
-              return 5124;
+              stackOut_2_0 = 5122;
+              stackIn_3_0 = stackOut_2_0;
+              return stackIn_3_0;
             }
-          } else {
-            return 5122;
           }
-        } else {
-          return 5120;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L0: {
+            var2 = decompiledCaughtException;
+            stackOut_28_0 = (RuntimeException) var2;
+            stackOut_28_1 = new StringBuilder().append("lr.B(");
+            stackIn_30_0 = stackOut_28_0;
+            stackIn_30_1 = stackOut_28_1;
+            stackIn_29_0 = stackOut_28_0;
+            stackIn_29_1 = stackOut_28_1;
+            if (param0 == null) {
+              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
+              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
+              stackOut_30_2 = "null";
+              stackIn_31_0 = stackOut_30_0;
+              stackIn_31_1 = stackOut_30_1;
+              stackIn_31_2 = stackOut_30_2;
+              break L0;
+            } else {
+              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
+              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
+              stackOut_29_2 = "{...}";
+              stackIn_31_0 = stackOut_29_0;
+              stackIn_31_1 = stackOut_29_1;
+              stackIn_31_2 = stackOut_29_2;
+              break L0;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + 44 + param1 + 41);
         }
     }
 
@@ -65,10 +149,6 @@ final class lr extends RuntimeException {
     public static void a(boolean param0) {
         field_e = null;
         field_b = null;
-        if (param0) {
-            Object var2 = null;
-            int discarded$0 = lr.a((una) null, 48);
-        }
     }
 
     static {

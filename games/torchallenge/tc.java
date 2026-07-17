@@ -11,20 +11,17 @@ final class tc extends da {
     static boolean field_k;
 
     final static void a(h param0, h param1, byte param2, int param3, int param4, int param5) {
-        kk.field_e = param1;
-        if (param2 != 27) {
-          tc.c(-10);
-          ai.field_a = param3;
-          tf.field_f = param0;
-          uc.field_Y = param5;
-          ni.field_i = param4;
-          return;
-        } else {
-          ai.field_a = param3;
-          tf.field_f = param0;
-          uc.field_Y = param5;
-          ni.field_i = param4;
-          return;
+        try {
+            kk.field_e = param1;
+            if (param2 != 27) {
+                tc.c(-10);
+            }
+            ai.field_a = param3;
+            tf.field_f = param0;
+            uc.field_Y = param5;
+            ni.field_i = param4;
+        } catch (RuntimeException runtimeException) {
+            throw oj.a((Throwable) (Object) runtimeException, "tc.A(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
     }
 
@@ -32,60 +29,19 @@ final class tc extends da {
         int var1 = 0;
         Object var2 = null;
         Throwable var3 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var1 = 124 % ((param0 - -32) / 63);
-                    if (null != te.field_b) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    return;
-                }
-                case 2: {
-                    var2 = (Object) (Object) te.field_b;
-                    // monitorenter te.field_b
-                    statePc = 3;
-                    continue stateLoop;
-                }
-                case 3: {
-                    try {
-                        te.field_b = null;
-                        // monitorexit var2
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    return;
-                }
-                case 5: {
-                    try {
-                        var3 = caughtException;
-                        // monitorexit var2
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    throw (RuntimeException) (Object) var3;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        var1 = 124 % ((param0 - -32) / 63);
+        if (null != te.field_b) {
+          var2 = (Object) (Object) te.field_b;
+          synchronized (var2) {
+            L0: {
+              te.field_b = null;
+              break L0;
             }
+          }
+          return;
+        } else {
+          return;
         }
     }
 
@@ -94,11 +50,6 @@ final class tc extends da {
 
     public static void a(int param0) {
         field_m = null;
-        if (param0 < 97) {
-            field_m = null;
-            field_o = null;
-            return;
-        }
         field_o = null;
     }
 

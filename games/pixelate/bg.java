@@ -41,11 +41,11 @@ abstract class bg {
     void a(byte param0) {
         int var2 = 0;
         ((bg) this).field_e = ((bg) this).field_e + ((bg) this).field_g;
-        var2 = hp.field_Gb.field_A << 1884989552;
+        var2 = hp.field_Gb.field_A << 16;
         if (((bg) this).field_e <= var2) {
           if (0 < ((bg) this).field_h) {
             ((bg) this).field_h = ((bg) this).field_h - 12;
-            if ((((bg) this).field_h ^ -1) > -1) {
+            if (((bg) this).field_h < 0) {
               ((bg) this).field_h = 0;
               if (param0 != 21) {
                 ((bg) this).b(38);
@@ -73,7 +73,7 @@ abstract class bg {
           ((bg) this).field_e = ((bg) this).field_e - var2;
           if (0 < ((bg) this).field_h) {
             ((bg) this).field_h = ((bg) this).field_h - 12;
-            if ((((bg) this).field_h ^ -1) > -1) {
+            if (((bg) this).field_h < 0) {
               ((bg) this).field_h = 0;
               if (param0 == 21) {
                 return;
@@ -105,37 +105,93 @@ abstract class bg {
         field_d = null;
         field_l = null;
         field_f = null;
-        if (param0 >= -63) {
-          return;
-        } else {
-          field_b = null;
-          field_j = null;
-          field_c = null;
-          field_i = null;
-          return;
-        }
+        field_b = null;
+        field_j = null;
+        field_c = null;
+        field_i = null;
     }
 
     final static void a(int param0, java.applet.Applet param1) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         String var3 = null;
         CharSequence var4 = null;
-        var2 = 123 % ((51 - param0) / 41);
-        var3 = param1.getParameter("username");
-        if (var3 != null) {
-          var4 = (CharSequence) (Object) var3;
-          if ((nh.a(var4, -29667) ^ -1L) == -1L) {
-            return;
-          } else {
-            return;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              var2_int = 123 % ((51 - param0) / 41);
+              var3 = param1.getParameter("username");
+              if (var3 == null) {
+                break L1;
+              } else {
+                var4 = (CharSequence) (Object) var3;
+                if (nh.a(var4, -29667) == 0L) {
+                  break L1;
+                } else {
+                  decompiledRegionSelector0 = 1;
+                  break L0;
+                }
+              }
+            }
+            decompiledRegionSelector0 = 0;
+            break L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_1 = new StringBuilder().append("bg.O(").append(param0).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param1 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw aa.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
         } else {
           return;
         }
     }
 
     final static void a(int param0) {
-        oa.field_j = param0;
+        oa.field_j = 2;
     }
 
     final void a(int param0, int param1) {
@@ -165,7 +221,7 @@ abstract class bg {
           t.b(bf.field_r);
           t.b(var6, param2, -(2 * ui.field_f.field_A) + param3, 0);
           t.b(var6, 25 + param2 - 1, param3 - 2 * ui.field_f.field_A, 0);
-          var8 = ((bg) this).field_e >> -1205348624;
+          var8 = ((bg) this).field_e >> 16;
           mh.a(param2, gd.field_h[param1], var8 - hp.field_Gb.field_A, 0);
           mh.a(param2, gd.field_h[param1], var8, 0);
           t.a(bf.field_r);
@@ -183,10 +239,10 @@ abstract class bg {
             t.e(var6 - -2, param2 - -2, var9, 0, 128);
             t.e(2 + var6, param2 + 22, var9, 0, 128);
             fi.a(var6, 7 + param2, var7, param2 + 7, 4, 7, gd.field_b);
-            if (-1 > (((bg) this).field_h ^ -1)) {
-              var10 = gd.field_c.length * ((bg) this).field_h >> 1518253512;
+            if (((bg) this).field_h > 0) {
+              var10 = gd.field_c.length * ((bg) this).field_h >> 8;
               var10 -= 2;
-              if ((var10 ^ -1) < -1) {
+              if (var10 > 0) {
                 fi.a(var6, 12 + param2, var7, param2 - -12, 12, var10, gd.field_c);
                 return;
               } else {

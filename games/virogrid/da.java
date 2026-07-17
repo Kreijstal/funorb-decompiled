@@ -202,8 +202,8 @@ final class da extends l {
               var12 = qd.a(param0 ^ -18302, var8_ref_cj);
               var8_ref_cj.field_t = new km(0L, wh.field_d, var11);
               var6 = var6 + param3;
-              var8_ref_cj.field_t.field_ab = ((wh.field_d.field_ab & 16711422) >> 266162529) + -(8355711 & var12 >> 918370913) + var12;
-              var8_ref_cj.field_t.field_A = -(var12 >> 1495010849 & 8355711) + var12 + (wh.field_d.field_A >> 582344545 & 8355711);
+              var8_ref_cj.field_t.field_ab = ((wh.field_d.field_ab & 16711422) >> 1) + -(8355711 & var12 >> 1) + var12;
+              var8_ref_cj.field_t.field_A = -(var12 >> 1 & 8355711) + var12 + (wh.field_d.field_A >> 1 & 8355711);
               var8_ref_cj.field_t.field_E = var12;
               var8_ref_cj.field_t.field_C = hk.field_Ob;
               var5++;

@@ -16,21 +16,18 @@ final class sja {
     int field_h;
 
     final void a(int param0, sja param1, int param2, aja param3, int param4, int param5, int param6) {
-        ((sja) this).field_e = param1;
-        ((sja) this).field_k = param3;
-        if (param4 != 4096) {
-          sja.a((byte) 30);
-          ((sja) this).field_h = param6;
-          ((sja) this).field_f = param5;
-          ((sja) this).field_a = param2;
-          ((sja) this).field_l = param0;
-          return;
-        } else {
-          ((sja) this).field_h = param6;
-          ((sja) this).field_f = param5;
-          ((sja) this).field_a = param2;
-          ((sja) this).field_l = param0;
-          return;
+        try {
+            ((sja) this).field_e = param1;
+            ((sja) this).field_k = param3;
+            if (param4 != 4096) {
+                sja.a((byte) 30);
+            }
+            ((sja) this).field_h = param6;
+            ((sja) this).field_f = param5;
+            ((sja) this).field_a = param2;
+            ((sja) this).field_l = param0;
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "sja.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 44 + param6 + 41);
         }
     }
 

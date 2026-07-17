@@ -6,10 +6,21 @@ class ora {
     jaclib.memory.Buffer field_b;
 
     final void a(byte[] param0, int param1) {
-        if (((ora) this).field_b != null) {
-            // if_icmpge L36
+        L0: {
+          L1: {
+            if (((ora) this).field_b == null) {
+              break L1;
+            } else {
+              if (((ora) this).field_b.getSize() >= param1) {
+                break L0;
+              } else {
+                break L1;
+              }
+            }
+          }
+          ((ora) this).field_b = (jaclib.memory.Buffer) (Object) ((ora) this).field_a.field_md.a(param1, false);
+          break L0;
         }
-        ((ora) this).field_b = (jaclib.memory.Buffer) (Object) ((ora) this).field_a.field_md.a(param1, false);
         ((ora) this).field_b.a(param0, 0, 0, param1);
     }
 

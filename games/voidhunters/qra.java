@@ -9,71 +9,35 @@ final class qra extends rqa {
 
     final static void a(int param0) {
         Exception exception = null;
-        File var1 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    if (null == wqb.field_e) {
-                        statePc = 2;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 2: {
-                    return;
-                }
-                case 3: {
-                    var1 = null;
-                    statePc = 4;
-                    continue stateLoop;
-                }
-                case 4: {
-                    try {
-                        var1 = lfb.a(ata.field_L, (byte) 34);
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    exception = (Exception) (Object) caughtException;
-                    statePc = 7;
-                    continue stateLoop;
-                }
-                case 7: {
-                    if (param0 <= -95) {
-                        statePc = 9;
-                    } else {
-                        statePc = 8;
-                    }
-                    continue stateLoop;
-                }
-                case 8: {
-                    return;
-                }
-                case 9: {
-                    if (var1 == null) {
-                        statePc = 11;
-                    } else {
-                        statePc = 10;
-                    }
-                    continue stateLoop;
-                }
-                case 10: {
-                    fkb.a(67, (Object) (Object) wqb.field_e, var1);
-                    return;
-                }
-                case 11: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Object var1 = null;
+        File var1_ref = null;
+        Throwable decompiledCaughtException = null;
+        if (null == wqb.field_e) {
+          return;
+        } else {
+          var1 = null;
+          try {
+            L0: {
+              var1_ref = lfb.a(ata.field_L, (byte) 34);
+              break L0;
             }
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            L1: {
+              exception = (Exception) (Object) decompiledCaughtException;
+              break L1;
+            }
+          }
+          if (param0 <= -95) {
+            if (var1_ref == null) {
+              return;
+            } else {
+              fkb.a(67, (Object) (Object) wqb.field_e, var1_ref);
+              return;
+            }
+          } else {
+            return;
+          }
         }
     }
 
@@ -82,20 +46,74 @@ final class qra extends rqa {
     }
 
     final nc a(nc[] param0, int param1) {
-        si.a(132, 62, param0[0].a(12));
-        if (param1 > -119) {
-          return null;
-        } else {
-          return new nc((Object) (Object) "void");
+        RuntimeException var3 = null;
+        Object stackIn_2_0 = null;
+        nc stackIn_4_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        nc stackOut_3_0 = null;
+        Object stackOut_1_0 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            si.a(132, 62, param0[0].a(12));
+            if (param1 <= -119) {
+              stackOut_3_0 = new nc((Object) (Object) "void");
+              stackIn_4_0 = stackOut_3_0;
+              break L0;
+            } else {
+              stackOut_1_0 = null;
+              stackIn_2_0 = stackOut_1_0;
+              return (nc) (Object) stackIn_2_0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var3 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_1 = new StringBuilder().append("qra.A(");
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param0 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L1;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L1;
+            }
+          }
+          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
         }
+        return stackIn_4_0;
     }
 
     public static void e(byte param0) {
-        if (param0 != -80) {
-            field_p = null;
-            field_p = null;
-            return;
-        }
         field_p = null;
     }
 

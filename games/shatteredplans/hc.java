@@ -11,123 +11,40 @@ final class hc {
         IllegalArgumentException var1 = null;
         si var2 = null;
         int var3 = 0;
-        Object stackIn_3_0 = null;
-        jo stackIn_6_0 = null;
-        si stackIn_8_0 = null;
-        Object stackOut_2_0 = null;
+        jo stackIn_5_0 = null;
+        si stackIn_7_0 = null;
+        Throwable decompiledCaughtException = null;
+        jo stackOut_3_0 = null;
         jo stackOut_4_0 = null;
-        jo stackOut_5_0 = null;
-        si stackOut_7_0 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var3 = ShatteredPlansClient.field_F ? 1 : 0;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        var1_int = 0;
-                        if (!param0) {
-                            statePc = 4;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        stackOut_2_0 = null;
-                        stackIn_3_0 = stackOut_2_0;
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    return (si) (Object) stackIn_3_0;
-                }
-                case 4: {
-                    stackOut_4_0 = kq.field_A;
-                    stackIn_6_0 = stackOut_4_0;
-                    statePc = 6;
-                    continue stateLoop;
-                }
-                case 5: {
-                    try {
-                        stackOut_5_0 = kq.field_A;
-                        stackIn_6_0 = stackOut_5_0;
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        var2 = ((jo) (Object) stackIn_6_0).a(var1_int, (byte) 100);
-                        if (!var2.field_y) {
-                            statePc = 9;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        stackOut_7_0 = (si) var2;
-                        stackIn_8_0 = stackOut_7_0;
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    return stackIn_8_0;
-                }
-                case 9: {
-                    try {
-                        var1_int++;
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    var1 = (IllegalArgumentException) (Object) caughtException;
-                    return null;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        si stackOut_6_0 = null;
+        var3 = ShatteredPlansClient.field_F ? 1 : 0;
+        try {
+          var1_int = 0;
+          stackOut_3_0 = kq.field_A;
+          stackIn_5_0 = stackOut_3_0;
+          L0: while (true) {
+            var2 = ((jo) (Object) stackIn_5_0).a(var1_int, (byte) 100);
+            if (!var2.field_y) {
+              var1_int++;
+              stackOut_4_0 = kq.field_A;
+              stackIn_5_0 = stackOut_4_0;
+              continue L0;
+            } else {
+              stackOut_6_0 = (si) var2;
+              stackIn_7_0 = stackOut_6_0;
+              return stackIn_7_0;
             }
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = (IllegalArgumentException) (Object) decompiledCaughtException;
+          return null;
         }
     }
 
     final static lp a(int param0, int param1, int param2) {
         lp var9 = new lp(param0, param2, 209, rs.field_Cb.field_J);
-        int var4 = (-rs.field_Cb.c(ho.field_g) + 209 + -20) / 2;
+        int var4 = (-rs.field_Cb.c(ho.field_g) + 189) / 2;
         vc.field_b = new bi(var4, 2);
         int var5 = 112 / ((param1 - 89) / 37);
         ra.a(-107);
@@ -145,11 +62,6 @@ final class hc {
 
     public static void a(byte param0) {
         field_c = null;
-        if (param0 < 41) {
-            lp discarded$0 = hc.a(-92, -95, -94);
-            field_b = null;
-            return;
-        }
         field_b = null;
     }
 

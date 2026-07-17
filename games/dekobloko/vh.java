@@ -17,40 +17,29 @@ final class vh {
         int var5 = 0;
         int var6 = 0;
         var6 = client.field_A ? 1 : 0;
-        if (param0 > 50) {
-          var1 = ik.a(4);
-          var3 = -wg.field_i + var1;
-          if (-30001L <= (var3 ^ -1L)) {
-            var5 = 3000;
-            if (-8 < (af.field_d ^ -1)) {
-              if (-6 < (af.field_d ^ -1)) {
-                L0: {
-                  if (-4 < (af.field_d ^ -1)) {
-                    break L0;
-                  } else {
-                    var5 = 6000;
-                    break L0;
-                  }
-                }
-                if ((long)var5 < var3) {
-                  wg.field_i = var1;
-                  af.field_d = af.field_d + 1;
-                  return true;
+        var1 = ik.a(4);
+        var3 = -wg.field_i + var1;
+        if (var3 <= 30000L) {
+          var5 = 3000;
+          if (af.field_d < 7) {
+            if (af.field_d < 5) {
+              L0: {
+                if (af.field_d < 3) {
+                  break L0;
                 } else {
-                  return false;
-                }
-              } else {
-                var5 = 9000;
-                if ((long)var5 < var3) {
-                  wg.field_i = var1;
-                  af.field_d = af.field_d + 1;
-                  return true;
-                } else {
-                  return false;
+                  var5 = 6000;
+                  break L0;
                 }
               }
+              if ((long)var5 < var3) {
+                wg.field_i = var1;
+                af.field_d = af.field_d + 1;
+                return true;
+              } else {
+                return false;
+              }
             } else {
-              var5 = 12000;
+              var5 = 9000;
               if ((long)var5 < var3) {
                 wg.field_i = var1;
                 af.field_d = af.field_d + 1;
@@ -60,29 +49,27 @@ final class vh {
               }
             }
           } else {
-            af.field_d = 0;
-            wg.field_i = var1;
-            return true;
+            var5 = 12000;
+            if ((long)var5 < var3) {
+              wg.field_i = var1;
+              af.field_d = af.field_d + 1;
+              return true;
+            } else {
+              return false;
+            }
           }
         } else {
-          return false;
+          af.field_d = 0;
+          wg.field_i = var1;
+          return true;
         }
     }
 
     final static a a(int param0) {
-        if (param0 != 1424) {
-          return null;
-        } else {
-          L0: {
-            if (null == sm.field_c) {
-              sm.field_c = new a(bj.field_f, 20, 0, 0, 0, 11579568, -1, 0, 0, bj.field_f.field_R, -1, 2147483647, true);
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          return sm.field_c;
+        if (!(null != sm.field_c)) {
+            sm.field_c = new a(bj.field_f, 20, 0, 0, 0, 11579568, -1, 0, 0, bj.field_f.field_R, -1, 2147483647, true);
         }
+        return sm.field_c;
     }
 
     public static void a(boolean param0) {
@@ -91,16 +78,13 @@ final class vh {
         field_a = null;
         field_f = null;
         field_c = null;
-        if (!param0) {
-            field_a = null;
-        }
     }
 
     final static int a(int param0, int param1, int param2, int param3) {
         if (hk.field_j >= param2 + param3) {
           return param3;
         } else {
-          if ((-param2 + param3 + param0 ^ -1) <= -1) {
+          if (-param2 + param3 + param0 >= 0) {
             return param0 + param3 + -param2;
           } else {
             if (param1 != -18265) {

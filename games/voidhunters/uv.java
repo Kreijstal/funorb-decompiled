@@ -23,7 +23,7 @@ final class uv implements wwa {
         var2 = kba.field_a.a(param1, (byte) 121) + -kba.field_a.field_d;
         var3 = param0 - -(var2 / 4);
         if (var3 <= 250) {
-          if (-7 < (var3 ^ -1)) {
+          if (var3 < 6) {
             var3 = 6;
             return var3;
           } else {
@@ -65,6 +65,7 @@ final class uv implements wwa {
     }
 
     public final void a(int param0, shb param1, int param2, int param3, boolean param4) {
+        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -72,84 +73,132 @@ final class uv implements wwa {
         int var11 = 0;
         jla var12 = null;
         shb stackIn_3_0 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_19_2 = null;
+        RuntimeException decompiledCaughtException = null;
         Object stackOut_2_0 = null;
         shb stackOut_1_0 = null;
-        L0: {
-          if (!(param1 instanceof jla)) {
-            stackOut_2_0 = null;
-            stackIn_3_0 = (shb) (Object) stackOut_2_0;
-            break L0;
-          } else {
-            stackOut_1_0 = (shb) param1;
-            stackIn_3_0 = stackOut_1_0;
-            break L0;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (!(param1 instanceof jla)) {
+                stackOut_2_0 = null;
+                stackIn_3_0 = (shb) (Object) stackOut_2_0;
+                break L1;
+              } else {
+                stackOut_1_0 = (shb) param1;
+                stackIn_3_0 = stackOut_1_0;
+                break L1;
+              }
+            }
+            L2: {
+              var12 = (jla) (Object) stackIn_3_0;
+              if (var12 != null) {
+                param4 = param4 & var12.field_x;
+                break L2;
+              } else {
+                break L2;
+              }
+            }
+            L3: {
+              var7 = 5592405;
+              if (param4) {
+                var7 = 16777215;
+                break L3;
+              } else {
+                break L3;
+              }
+            }
+            L4: {
+              dma.d(param2 + param1.field_g, param3 + param1.field_r, param1.field_h, param1.field_f, ((uv) this).field_k);
+              var8 = ((uv) this).field_d + (param2 + param1.field_g);
+              var9 = param1.field_r + param3 + ((uv) this).field_n;
+              dma.c(var8, var9, ((uv) this).field_l, ((uv) this).field_i, 5592405);
+              dma.d(var8, var9, ((uv) this).field_l, ((uv) this).field_i, var7);
+              if (var12.field_u) {
+                dma.a(var8, var9, var8 + ((uv) this).field_l, ((uv) this).field_i + var9, 1);
+                dma.a(var8 + ((uv) this).field_l, var9, var8, ((uv) this).field_i + var9, 1);
+                break L4;
+              } else {
+                break L4;
+              }
+            }
+            var10 = 49 % ((param0 - -27) / 35);
+            if (null != ((uv) this).field_j) {
+              var11 = ((uv) this).field_l + ((uv) this).field_d + ((uv) this).field_m;
+              int discarded$1 = ((uv) this).field_j.a(param1.field_j, var11 + (param2 - -param1.field_g), ((uv) this).field_c + param3 - -param1.field_r, -((uv) this).field_m + (-var11 + param1.field_h), -(((uv) this).field_m << 1) + param1.field_f, ((uv) this).field_g, ((uv) this).field_h, ((uv) this).field_b, ((uv) this).field_e, 0);
+              break L0;
+            } else {
+              return;
+            }
           }
-        }
-        L1: {
-          var12 = (jla) (Object) stackIn_3_0;
-          if (var12 != null) {
-            param4 = param4 & var12.field_x;
-            break L1;
-          } else {
-            break L1;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L5: {
+            var6 = decompiledCaughtException;
+            stackOut_16_0 = (RuntimeException) var6;
+            stackOut_16_1 = new StringBuilder().append("uv.A(").append(param0).append(44);
+            stackIn_18_0 = stackOut_16_0;
+            stackIn_18_1 = stackOut_16_1;
+            stackIn_17_0 = stackOut_16_0;
+            stackIn_17_1 = stackOut_16_1;
+            if (param1 == null) {
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "null";
+              stackIn_19_0 = stackOut_18_0;
+              stackIn_19_1 = stackOut_18_1;
+              stackIn_19_2 = stackOut_18_2;
+              break L5;
+            } else {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "{...}";
+              stackIn_19_0 = stackOut_17_0;
+              stackIn_19_1 = stackOut_17_1;
+              stackIn_19_2 = stackOut_17_2;
+              break L5;
+            }
           }
-        }
-        L2: {
-          var7 = 5592405;
-          if (param4) {
-            var7 = 16777215;
-            break L2;
-          } else {
-            break L2;
-          }
-        }
-        L3: {
-          dma.d(param2 + param1.field_g, param3 + param1.field_r, param1.field_h, param1.field_f, ((uv) this).field_k);
-          var8 = ((uv) this).field_d + (param2 + param1.field_g);
-          var9 = param1.field_r + param3 + ((uv) this).field_n;
-          dma.c(var8, var9, ((uv) this).field_l, ((uv) this).field_i, 5592405);
-          dma.d(var8, var9, ((uv) this).field_l, ((uv) this).field_i, var7);
-          if (var12.field_u) {
-            dma.a(var8, var9, var8 + ((uv) this).field_l, ((uv) this).field_i + var9, 1);
-            dma.a(var8 + ((uv) this).field_l, var9, var8, ((uv) this).field_i + var9, 1);
-            break L3;
-          } else {
-            break L3;
-          }
-        }
-        L4: {
-          var10 = 49 % ((param0 - -27) / 35);
-          if (null != ((uv) this).field_j) {
-            var11 = ((uv) this).field_l + ((uv) this).field_d + ((uv) this).field_m;
-            int discarded$1 = ((uv) this).field_j.a(param1.field_j, var11 + (param2 - -param1.field_g), ((uv) this).field_c + param3 - -param1.field_r, -((uv) this).field_m + (-var11 + param1.field_h), -(((uv) this).field_m << -1325802399) + param1.field_f, ((uv) this).field_g, ((uv) this).field_h, ((uv) this).field_b, ((uv) this).field_e, 0);
-            break L4;
-          } else {
-            break L4;
-          }
+          throw rta.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
     public static void a(int param0) {
         field_f = null;
         field_a = null;
-        if (param0 != 22089) {
-            field_f = null;
-        }
     }
 
     uv(no param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         ((uv) this).field_e = 1;
         ((uv) this).field_b = 1;
-        ((uv) this).field_m = param1;
-        ((uv) this).field_n = param6;
-        ((uv) this).field_c = param2;
-        ((uv) this).field_l = param8;
-        ((uv) this).field_j = param0;
-        ((uv) this).field_h = param4;
-        ((uv) this).field_d = param5;
-        ((uv) this).field_g = param3;
-        ((uv) this).field_k = param9;
-        ((uv) this).field_i = param7;
+        try {
+            ((uv) this).field_m = param1;
+            ((uv) this).field_n = param6;
+            ((uv) this).field_c = param2;
+            ((uv) this).field_l = param8;
+            ((uv) this).field_j = param0;
+            ((uv) this).field_h = param4;
+            ((uv) this).field_d = param5;
+            ((uv) this).field_g = param3;
+            ((uv) this).field_k = param9;
+            ((uv) this).field_i = param7;
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "uv.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 41);
+        }
     }
 
     static {

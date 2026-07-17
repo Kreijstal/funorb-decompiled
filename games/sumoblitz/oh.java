@@ -9,16 +9,17 @@ final class oh {
     static int field_e;
 
     oh(on param0, long param1, qj[] param2) {
-        ((oh) this).field_a = param0;
-        ((oh) this).field_d = param1;
+        try {
+            ((oh) this).field_a = param0;
+            ((oh) this).field_d = param1;
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "oh.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void a(byte param0) {
         field_c = null;
         field_b = null;
-        if (param0 != -60) {
-            field_b = null;
-        }
     }
 
     protected final void finalize() throws Throwable {

@@ -11,7 +11,7 @@ final class la extends be {
 
     final int d(int param0, int param1) {
         int var6 = TrackController.field_F ? 1 : 0;
-        int var3 = ((la) this).field_r >> -1900129789;
+        int var3 = ((la) this).field_r >> 3;
         int var4 = 8 + -(((la) this).field_r & 7);
         int var5 = param0;
         ((la) this).field_r = ((la) this).field_r + param1;
@@ -35,24 +35,74 @@ final class la extends be {
     }
 
     final void a(int param0, boolean param1, int param2, byte[] param3) {
-        int var5 = 0;
+        int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
         var6 = TrackController.field_F ? 1 : 0;
-        var5 = 0;
-        if (param1) {
-          return;
-        } else {
-          L0: while (true) {
-            if (var5 < param0) {
-              int fieldTemp$4 = ((la) this).field_k;
-              ((la) this).field_k = ((la) this).field_k + 1;
-              param3[var5 + param2] = (byte)(((la) this).field_j[fieldTemp$4] + -((la) this).field_n.c(127));
-              var5++;
-              continue L0;
+        try {
+          L0: {
+            var5_int = 0;
+            if (!param1) {
+              L1: while (true) {
+                if (var5_int >= param0) {
+                  break L0;
+                } else {
+                  int fieldTemp$5 = ((la) this).field_k;
+                  ((la) this).field_k = ((la) this).field_k + 1;
+                  param3[var5_int + param2] = (byte)(((la) this).field_j[fieldTemp$5] + -((la) this).field_n.c(127));
+                  var5_int++;
+                  continue L1;
+                }
+              }
             } else {
               return;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var5 = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var5;
+            stackOut_6_1 = new StringBuilder().append("la.UA(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param3 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L2;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L2;
+            }
+          }
+          throw sl.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
         }
     }
 
@@ -68,7 +118,11 @@ final class la extends be {
         if (param0 != -83) {
             return;
         }
-        ((la) this).field_n = new nf(param1);
+        try {
+            ((la) this).field_n = new nf(param1);
+        } catch (RuntimeException runtimeException) {
+            throw sl.a((Throwable) (Object) runtimeException, "la.TA(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     la(int param0) {
@@ -76,9 +130,6 @@ final class la extends be {
     }
 
     public static void d(boolean param0) {
-        if (param0) {
-            return;
-        }
         field_p = null;
         field_q = null;
     }

@@ -18,22 +18,11 @@ final class je {
         field_i = null;
         field_d = null;
         field_b = null;
-        if (param0 != 0) {
-          field_h = null;
-          field_c = null;
-          field_h = null;
-          field_a = null;
-          field_g = null;
-          field_f = null;
-          return;
-        } else {
-          field_c = null;
-          field_h = null;
-          field_a = null;
-          field_g = null;
-          field_f = null;
-          return;
-        }
+        field_c = null;
+        field_h = null;
+        field_a = null;
+        field_g = null;
+        field_f = null;
     }
 
     static {

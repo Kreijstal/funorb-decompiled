@@ -14,27 +14,31 @@ abstract class rl extends oh {
 
     final static void d(int param0) {
         md var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
+        RuntimeException decompiledCaughtException = null;
         var3 = CrazyCrystals.field_B;
-        var1 = tp.field_f;
-        L0: while (true) {
-          if (!cn.b(114)) {
-            if (param0 != 0) {
+        try {
+          var1 = tp.field_f;
+          L0: while (true) {
+            if (!cn.b(114)) {
               field_g = null;
               return;
             } else {
-              return;
+              var1.d(8, 8);
+              int fieldTemp$2 = var1.field_f + 1;
+              var1.field_f = var1.field_f + 1;
+              var2 = fieldTemp$2;
+              ke.a(var1, -9129);
+              tp.field_f.c((byte) 47, var1.field_f - var2);
+              continue L0;
             }
-          } else {
-            var1.d(param0 ^ 8, 8);
-            int fieldTemp$2 = var1.field_f + 1;
-            var1.field_f = var1.field_f + 1;
-            var2 = fieldTemp$2;
-            ke.a(var1, -9129);
-            tp.field_f.c((byte) 47, var1.field_f - var2);
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw dn.a((Throwable) (Object) var1_ref, "rl.K(" + 0 + 41);
         }
     }
 
@@ -83,13 +87,7 @@ abstract class rl extends oh {
     }
 
     final static nd c(int param0) {
-        if (null != p.field_i) {
-          if (param0 != -9918) {
-            return null;
-          } else {
-            return p.field_i;
-          }
-        } else {
+        if (null == p.field_i) {
           p.field_i = new nd();
           p.field_i.a(ai.field_h, false);
           p.field_i.field_l = 6;
@@ -100,11 +98,9 @@ abstract class rl extends oh {
           p.field_i.field_d = 0;
           p.field_i.field_h = 2763306;
           p.field_i.field_m = ba.field_i;
-          if (param0 != -9918) {
-            return null;
-          } else {
-            return p.field_i;
-          }
+          return p.field_i;
+        } else {
+          return p.field_i;
         }
     }
 
@@ -132,7 +128,7 @@ abstract class rl extends oh {
           lo.field_b = null;
           rc.field_a = ol.field_z[param1];
           jo.field_o = param1;
-          if (-1 == (param1 ^ -1)) {
+          if (param1 == 0) {
             vh.field_a = true;
             break L0;
           } else {
@@ -171,9 +167,9 @@ abstract class rl extends oh {
         int stackOut_4_0 = 0;
         param0 = param0 & 8191;
         if (param1 == -23) {
-          if ((param0 ^ -1) > -4097) {
+          if (param0 < 4096) {
             L0: {
-              if ((param0 ^ -1) > -2049) {
+              if (param0 < 2048) {
                 stackOut_9_0 = fe.field_h[param0];
                 stackIn_10_0 = stackOut_9_0;
                 break L0;
@@ -186,7 +182,7 @@ abstract class rl extends oh {
             return stackIn_10_0;
           } else {
             L1: {
-              if ((param0 ^ -1) > -6145) {
+              if (param0 < 6144) {
                 stackOut_5_0 = -fe.field_h[param0 - 4096];
                 stackIn_6_0 = stackOut_5_0;
                 break L1;

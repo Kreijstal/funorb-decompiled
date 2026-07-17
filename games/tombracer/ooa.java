@@ -70,7 +70,7 @@ final class ooa extends wka {
         field_f = null;
         field_h = null;
         field_e = null;
-        int var1 = -88 % ((70 - param0) / 47);
+        int var1 = 0;
     }
 
     final static boolean a(int param0, int param1, int param2) {
@@ -81,7 +81,7 @@ final class ooa extends wka {
           return true;
         } else {
           L0: {
-            if (-1 == (param1 & 8192 ^ -1)) {
+            if ((param1 & 8192) == 0) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L0;

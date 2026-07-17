@@ -153,9 +153,9 @@ final class hl extends uda {
           if (((hl) this).field_k) {
             var4 = ((hl) this).field_e.field_Mc;
             var5 = 1 << (param1 & 3);
-            var6 = (float)(1 << ((62 & param1) >> 587788579)) / 32.0f;
+            var6 = (float)(1 << ((62 & param1) >> 3)) / 32.0f;
             var7 = param0 & 65535;
-            var8 = (float)((231074 & param0) >> -1918989904) / 8.0f;
+            var8 = (float)((231074 & param0) >> 16) / 8.0f;
             int discarded$8 = var4.b(14, (float)(((hl) this).field_d.field_pc * var5 % 40000) / 40000.0f, 0.0f, 0.0f, 0.0f);
             int discarded$9 = var4.b(15, var6, 0.0f, 0.0f, 0.0f);
             int discarded$10 = var4.a(4, (float)var7, 0.0f, 0.0f, 0.0f);
@@ -196,7 +196,7 @@ final class hl extends uda {
                   break L1;
                 }
               }
-              int discarded$5 = var2.a(0, (float)(((hl) this).field_d.field_lc >> 1342980304 & 255) / 255.0f, (float)(((hl) this).field_d.field_lc >> 1774345960 & 255) / 255.0f, (float)(((hl) this).field_d.field_lc & 255) / 255.0f, 0.0f);
+              int discarded$5 = var2.a(0, (float)(((hl) this).field_d.field_lc >> 16 & 255) / 255.0f, (float)(((hl) this).field_d.field_lc >> 8 & 255) / 255.0f, (float)(((hl) this).field_d.field_lc & 255) / 255.0f, 0.0f);
               break L0;
             }
           }
@@ -297,21 +297,25 @@ final class hl extends uda {
           ((hl) this).field_h = null;
           ((hl) this).field_j = false;
           ((hl) this).field_g = null;
+          return;
         } else {
           if (!((hl) this).field_d.field_vb) {
             ((hl) this).field_h = null;
             ((hl) this).field_j = false;
             ((hl) this).field_g = null;
+            return;
           } else {
             if (!((hl) this).field_d.field_uc) {
               ((hl) this).field_h = null;
               ((hl) this).field_j = false;
               ((hl) this).field_g = null;
+              return;
             } else {
               if ((((hl) this).field_e.field_Hc.VertexShaderVersion & 65535) < 257) {
                 ((hl) this).field_h = null;
                 ((hl) this).field_j = false;
                 ((hl) this).field_g = null;
+                return;
               } else {
                 L0: {
                   L1: {
@@ -351,6 +355,7 @@ final class hl extends uda {
                   break L0;
                 }
                 ((hl) this).field_j = stackIn_9_1 != 0;
+                return;
               }
             }
           }

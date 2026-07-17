@@ -29,7 +29,7 @@ final class iqa {
 
     public static void a(int param0) {
         field_g = null;
-        int var1 = 13 % ((param0 - 26) / 56);
+        int var1 = 0;
         field_c = null;
     }
 
@@ -90,9 +90,13 @@ final class iqa {
     }
 
     iqa(ha param0, ei param1, java.awt.Canvas param2) {
-        ((iqa) this).field_a = param2;
-        ((iqa) this).field_d = param0;
-        ((iqa) this).field_b = param1;
+        try {
+            ((iqa) this).field_a = param2;
+            ((iqa) this).field_d = param0;
+            ((iqa) this).field_b = param1;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "iqa.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

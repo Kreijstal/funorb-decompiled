@@ -17,7 +17,7 @@ final class qi extends jj {
     public static void b(byte param0) {
         field_o = null;
         field_p = null;
-        int var1 = -88 % ((param0 - 59) / 34);
+        int var1 = 0;
     }
 
     final void a(boolean param0) {
@@ -57,14 +57,14 @@ final class qi extends jj {
                 var2.field_n = var3 == var2.field_n ? 5 : var3;
                 var2.field_k = Math.random() < 0.5 ? true : false;
             }
-            if (!(-148481 <= (var2.field_r ^ -1))) {
+            if (!(var2.field_r <= 148480)) {
                 var2.c(2779);
             }
             var2 = (jn) (Object) ((qi) this).field_n.f(param0 + 1504642274);
         }
         int fieldTemp$1 = ((qi) this).field_m - 1;
         ((qi) this).field_m = ((qi) this).field_m - 1;
-        if (!((fieldTemp$1 ^ -1) <= param0)) {
+        if (!(~fieldTemp$1 <= param0)) {
             ((qi) this).field_n.a(22125, (fa) (Object) new jn(od.a((byte) 41, 189440, -25600), -25600));
             ((qi) this).field_m = od.a((byte) 41, 75, 25);
         }
@@ -72,12 +72,16 @@ final class qi extends jj {
 
     qi(String param0, tf[] param1) {
         super(param0, param1);
-        int var3 = 0;
-        ((qi) this).field_n = new bb();
-        for (var3 = 0; 5 > var3; var3++) {
-            ((qi) this).field_n.a(22125, (fa) (Object) new jn(od.a((byte) 41, 189440, -25600), od.a((byte) 41, 148480, -25600)));
+        int var3_int = 0;
+        try {
+            ((qi) this).field_n = new bb();
+            for (var3_int = 0; 5 > var3_int; var3_int++) {
+                ((qi) this).field_n.a(22125, (fa) (Object) new jn(od.a((byte) 41, 189440, -25600), od.a((byte) 41, 148480, -25600)));
+            }
+            ((qi) this).field_m = od.a((byte) 41, 75, 25);
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "qi.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        ((qi) this).field_m = od.a((byte) 41, 75, 25);
     }
 
     static {

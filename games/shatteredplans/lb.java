@@ -122,64 +122,30 @@ final class lb {
         Object var5 = null;
         Throwable var6 = null;
         int stackIn_2_0 = 0;
+        Throwable decompiledCaughtException = null;
         int stackOut_1_0 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var5 = (Object) (Object) field_a;
-                    // monitorenter field_a
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        field_a.field_n = param2;
-                        field_a.field_b = param4;
-                        field_a.field_E = param0;
-                        field_a.field_d = 0;
-                        field_a.field_B = param1;
-                        field_a.field_m = 0;
-                        field_a.field_h = 0;
-                        field_a.field_j = 0;
-                        field_a.field_p = 0;
-                        lb.a(field_a);
-                        param1 = param1 - field_a.field_B;
-                        field_a.field_n = null;
-                        field_a.field_E = null;
-                        // monitorexit var5
-                        stackOut_1_0 = param1;
-                        stackIn_2_0 = stackOut_1_0;
-                        statePc = 2;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    return stackIn_2_0;
-                }
-                case 3: {
-                    try {
-                        var6 = caughtException;
-                        // monitorexit var5
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    throw (RuntimeException) (Object) var6;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
-            }
+        var5 = (Object) (Object) field_a;
+        synchronized (var5) {
+          L0: {
+            field_a.field_n = param2;
+            field_a.field_b = 9;
+            field_a.field_E = param0;
+            field_a.field_d = 0;
+            field_a.field_B = param1;
+            field_a.field_m = 0;
+            field_a.field_h = 0;
+            field_a.field_j = 0;
+            field_a.field_p = 0;
+            lb.a(field_a);
+            param1 = param1 - field_a.field_B;
+            field_a.field_n = null;
+            field_a.field_E = null;
+            stackOut_1_0 = param1;
+            stackIn_2_0 = stackOut_1_0;
+            break L0;
+          }
         }
+        return stackIn_2_0;
     }
 
     private final static void a(na param0) {
@@ -206,11 +172,8 @@ final class lb {
         int var21 = 0;
         int var22 = 0;
         Object var23 = null;
-        int[] var23_array = null;
         Object var24 = null;
-        int[] var24_array = null;
         Object var25 = null;
-        int[] var25_array = null;
         int var26 = 0;
         byte[] var27_ref_byte__ = null;
         int var27 = 0;
@@ -340,9 +303,9 @@ final class lb {
                                                           var12 = 50;
                                                           var21 = param0.field_t[var11];
                                                           var22 = param0.field_i[var21];
-                                                          var23_array = param0.field_o[var21];
-                                                          var25_array = param0.field_H[var21];
-                                                          var24_array = param0.field_y[var21];
+                                                          var23 = (Object) (Object) param0.field_o[var21];
+                                                          var25 = (Object) (Object) param0.field_H[var21];
+                                                          var24 = (Object) (Object) param0.field_y[var21];
                                                           break L13;
                                                         }
                                                       }
@@ -350,13 +313,13 @@ final class lb {
                                                       var18 = var22;
                                                       var19 = lb.a(var18, param0);
                                                       L14: while (true) {
-                                                        if (var19 > var23_array[var18]) {
+                                                        if (var19 > ((int[]) var23)[var18]) {
                                                           var18++;
                                                           var20 = lb.c(param0);
                                                           var19 = var19 << 1 | var20;
                                                           continue L14;
                                                         } else {
-                                                          var13 = var25_array[var19 - var24_array[var18]];
+                                                          var13 = ((int[]) var25)[var19 - ((int[]) var24)[var18]];
                                                           L15: while (true) {
                                                             if (var13 != var10) {
                                                               L16: {
@@ -406,7 +369,7 @@ final class lb {
                                                                                 }
                                                                               } else {
                                                                                 param0.field_K[var31] = param0.field_K[var31] - 1;
-                                                                                param0.field_D[param0.field_K[var31]] = param0.field_D[param0.field_K[var31 - 1] + 16 - 1];
+                                                                                param0.field_D[param0.field_K[var31]] = param0.field_D[param0.field_K[var31 - 1] + 15];
                                                                                 var31--;
                                                                                 continue L19;
                                                                               }
@@ -455,9 +418,9 @@ final class lb {
                                                                         var12 = 50;
                                                                         var21 = param0.field_t[var11];
                                                                         var22 = param0.field_i[var21];
-                                                                        var23_array = param0.field_o[var21];
-                                                                        var25_array = param0.field_H[var21];
-                                                                        var24_array = param0.field_y[var21];
+                                                                        var23 = (Object) (Object) param0.field_o[var21];
+                                                                        var25 = (Object) (Object) param0.field_H[var21];
+                                                                        var24 = (Object) (Object) param0.field_y[var21];
                                                                         break L24;
                                                                       }
                                                                     }
@@ -465,13 +428,13 @@ final class lb {
                                                                     var18 = var22;
                                                                     var19 = lb.a(var18, param0);
                                                                     L25: while (true) {
-                                                                      if (var19 > var23_array[var18]) {
+                                                                      if (var19 > ((int[]) var23)[var18]) {
                                                                         var18++;
                                                                         var20 = lb.c(param0);
                                                                         var19 = var19 << 1 | var20;
                                                                         continue L25;
                                                                       } else {
-                                                                        var13 = var25_array[var19 - var24_array[var18]];
+                                                                        var13 = ((int[]) var25)[var19 - ((int[]) var24)[var18]];
                                                                         continue L15;
                                                                       }
                                                                     }
@@ -492,7 +455,7 @@ final class lb {
                                                                       break L27;
                                                                     }
                                                                   } else {
-                                                                    var15 = var15 + 1 * var16;
+                                                                    var15 = var15 + var16;
                                                                     break L27;
                                                                   }
                                                                 }
@@ -505,9 +468,9 @@ final class lb {
                                                                     var12 = 50;
                                                                     var21 = param0.field_t[var11];
                                                                     var22 = param0.field_i[var21];
-                                                                    var23_array = param0.field_o[var21];
-                                                                    var25_array = param0.field_H[var21];
-                                                                    var24_array = param0.field_y[var21];
+                                                                    var23 = (Object) (Object) param0.field_o[var21];
+                                                                    var25 = (Object) (Object) param0.field_H[var21];
+                                                                    var24 = (Object) (Object) param0.field_y[var21];
                                                                     break L28;
                                                                   }
                                                                 }
@@ -515,13 +478,13 @@ final class lb {
                                                                 var18 = var22;
                                                                 var19 = lb.a(var18, param0);
                                                                 L29: while (true) {
-                                                                  if (var19 > var23_array[var18]) {
+                                                                  if (var19 > ((int[]) var23)[var18]) {
                                                                     var18++;
                                                                     var20 = lb.c(param0);
                                                                     var19 = var19 << 1 | var20;
                                                                     continue L29;
                                                                   } else {
-                                                                    var13 = var25_array[var19 - var24_array[var18]];
+                                                                    var13 = ((int[]) var25)[var19 - ((int[]) var24)[var18]];
                                                                     if (var13 == 0) {
                                                                       continue L26;
                                                                     } else {
@@ -670,11 +633,11 @@ final class lb {
                                                 var1 = lb.c(param0);
                                                 if (var1 != 0) {
                                                   var1 = lb.c(param0);
-                                                  if (var1 == 0) {
+                                                  if (var1 != 0) {
                                                     var17--;
                                                     continue L39;
                                                   } else {
-                                                    var17--;
+                                                    var17++;
                                                     continue L39;
                                                   }
                                                 } else {

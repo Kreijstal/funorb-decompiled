@@ -32,7 +32,7 @@ final class ll {
             if (var4 != null) {
               L1: {
                 var5.a(new wf(var4), 0);
-                if ((param1 ^ -1) <= -32769) {
+                if (param1 >= 32768) {
                   var5.d((byte) -80);
                   break L1;
                 } else {
@@ -43,7 +43,7 @@ final class ll {
               return var5;
             } else {
               L2: {
-                if ((param1 ^ -1) <= -32769) {
+                if (param1 >= 32768) {
                   var5.d((byte) -80);
                   break L2;
                 } else {
@@ -57,7 +57,7 @@ final class ll {
             me discarded$1 = ((ll) this).a(-98, 88);
             if (var4 == null) {
               L3: {
-                if ((param1 ^ -1) <= -32769) {
+                if (param1 >= 32768) {
                   var5.d((byte) -80);
                   break L3;
                 } else {
@@ -69,7 +69,7 @@ final class ll {
             } else {
               L4: {
                 var5.a(new wf(var4), 0);
-                if ((param1 ^ -1) <= -32769) {
+                if (param1 >= 32768) {
                   var5.d((byte) -80);
                   break L4;
                 } else {

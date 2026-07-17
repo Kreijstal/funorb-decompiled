@@ -10,9 +10,6 @@ final class oe {
     final static si a(boolean param0, byte param1) {
         si var2 = new si(true);
         var2.field_f = param0 ? true : false;
-        if (param1 <= 93) {
-            return null;
-        }
         return var2;
     }
 
@@ -54,8 +51,8 @@ final class oe {
                 var1++;
                 continue L0;
               } else {
-                if ((1 & var0 ^ -1) == -2) {
-                  var0 = var0 >>> -1065330367 ^ -306674912;
+                if ((1 & var0) == 1) {
+                  var0 = var0 >>> 1 ^ -306674912;
                   var2++;
                   continue L1;
                 } else {

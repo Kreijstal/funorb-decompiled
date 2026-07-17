@@ -160,7 +160,7 @@ final class fb extends com.ms.dll.Callback {
             var5 = param3 & 65535;
             if (var5 != 1) {
               if (param1 != 101024) {
-                if (-2 == (param1 ^ -1)) {
+                if (param1 == 1) {
                   ((fb) this).field_c = 0;
                   ((fb) this).field_d = true;
                   return com.ms.win32.User32.CallWindowProc(((fb) this).field_e, param0, param1, param2, param3);
@@ -199,7 +199,7 @@ final class fb extends com.ms.dll.Callback {
             }
           } else {
             if (param1 != 101024) {
-              if (-2 == (param1 ^ -1)) {
+              if (param1 == 1) {
                 ((fb) this).field_c = 0;
                 ((fb) this).field_d = true;
                 return com.ms.win32.User32.CallWindowProc(((fb) this).field_e, param0, param1, param2, param3);

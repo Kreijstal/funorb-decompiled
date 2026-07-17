@@ -6,7 +6,8 @@ final class je {
     static int[] field_a;
 
     final static String a(int param0, String param1, String param2, char param3) {
-        int var4 = 0;
+        int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -15,102 +16,144 @@ final class je {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        StringBuilder var12 = null;
-        StringBuilder var13 = null;
+        String stackIn_12_0 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_19_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        String stackOut_11_0 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
         var11 = Terraphoenix.field_V;
-        var4 = param2.length();
-        var5 = param1.length();
-        if (param0 >= 54) {
-          var6 = var4;
-          var7 = -1 + var5;
-          if (0 != var7) {
-            var8_int = 0;
-            L0: while (true) {
-              var8_int = param2.indexOf((int) param3, var8_int);
-              if (0 <= var8_int) {
-                var8_int++;
-                var6 = var6 + var7;
-                continue L0;
+        try {
+          L0: {
+            L1: {
+              var4_int = param2.length();
+              var5 = param1.length();
+              if (param0 >= 54) {
+                break L1;
               } else {
-                var13 = new StringBuilder(var6);
-                var8 = var13;
-                var9 = 0;
-                L1: while (true) {
-                  var10 = param2.indexOf((int) param3, var9);
-                  if (-1 >= (var10 ^ -1)) {
-                    StringBuilder discarded$13 = var13.append(param2.substring(var9, var10));
-                    StringBuilder discarded$14 = var13.append(param1);
-                    var9 = 1 + var10;
-                    continue L1;
+                int discarded$15 = je.a(-16, 65);
+                break L1;
+              }
+            }
+            L2: {
+              var6 = var4_int;
+              var7 = -1 + var5;
+              if (0 == var7) {
+                break L2;
+              } else {
+                var8_int = 0;
+                L3: while (true) {
+                  var8_int = param2.indexOf('_', var8_int);
+                  if (0 > var8_int) {
+                    break L2;
                   } else {
-                    StringBuilder discarded$15 = var13.append(param2.substring(var9));
-                    return var13.toString();
+                    var8_int++;
+                    var6 = var6 + var7;
+                    continue L3;
                   }
                 }
               }
             }
-          } else {
-            var12 = new StringBuilder(var6);
-            var9 = 0;
-            L2: while (true) {
-              var10 = param2.indexOf((int) param3, var9);
-              if (-1 >= (var10 ^ -1)) {
-                StringBuilder discarded$16 = var12.append(param2.substring(var9, var10));
-                StringBuilder discarded$17 = var12.append(param1);
-                var9 = 1 + var10;
-                continue L2;
-              } else {
-                StringBuilder discarded$18 = var12.append(param2.substring(var9));
-                return var12.toString();
-              }
-            }
-          }
-        } else {
-          int discarded$19 = je.a(-16, 65);
-          var6 = var4;
-          var7 = -1 + var5;
-          if (0 != var7) {
-            var8_int = 0;
-            L3: while (true) {
-              var8_int = param2.indexOf((int) param3, var8_int);
-              if (0 <= var8_int) {
-                var8_int++;
-                var6 = var6 + var7;
-                continue L3;
-              } else {
-                var8 = new StringBuilder(var6);
-                var9 = 0;
-                L4: while (true) {
-                  var10 = param2.indexOf((int) param3, var9);
-                  if (-1 >= (var10 ^ -1)) {
-                    StringBuilder discarded$20 = var8.append(param2.substring(var9, var10));
-                    StringBuilder discarded$21 = var8.append(param1);
-                    var9 = 1 + var10;
-                    continue L4;
-                  } else {
-                    StringBuilder discarded$22 = var8.append(param2.substring(var9));
-                    return var8.toString();
-                  }
-                }
-              }
-            }
-          } else {
             var8 = new StringBuilder(var6);
             var9 = 0;
-            L5: while (true) {
-              var10 = param2.indexOf((int) param3, var9);
-              if (-1 >= (var10 ^ -1)) {
-                StringBuilder discarded$23 = var8.append(param2.substring(var9, var10));
-                StringBuilder discarded$24 = var8.append(param1);
+            L4: while (true) {
+              var10 = param2.indexOf('_', var9);
+              if (var10 >= 0) {
+                StringBuilder discarded$16 = var8.append(param2.substring(var9, var10));
+                StringBuilder discarded$17 = var8.append(param1);
                 var9 = 1 + var10;
-                continue L5;
+                continue L4;
               } else {
-                StringBuilder discarded$25 = var8.append(param2.substring(var9));
-                return var8.toString();
+                StringBuilder discarded$18 = var8.append(param2.substring(var9));
+                stackOut_11_0 = var8.toString();
+                stackIn_12_0 = stackOut_11_0;
+                break L0;
               }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L5: {
+            var4 = decompiledCaughtException;
+            stackOut_13_0 = (RuntimeException) var4;
+            stackOut_13_1 = new StringBuilder().append("je.B(").append(param0).append(44);
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
+            if (param1 == null) {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L5;
+            } else {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L5;
+            }
+          }
+          L6: {
+            stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44);
+            stackIn_18_0 = stackOut_16_0;
+            stackIn_18_1 = stackOut_16_1;
+            stackIn_17_0 = stackOut_16_0;
+            stackIn_17_1 = stackOut_16_1;
+            if (param2 == null) {
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "null";
+              stackIn_19_0 = stackOut_18_0;
+              stackIn_19_1 = stackOut_18_1;
+              stackIn_19_2 = stackOut_18_2;
+              break L6;
+            } else {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "{...}";
+              stackIn_19_0 = stackOut_17_0;
+              stackIn_19_1 = stackOut_17_1;
+              stackIn_19_2 = stackOut_17_2;
+              break L6;
+            }
+          }
+          throw qk.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + 95 + 41);
         }
+        return stackIn_12_0;
     }
 
     final static int a(int param0, int param1) {
@@ -118,7 +161,7 @@ final class je {
         if (param0 <= -63) {
           var2 = 0;
           if (0 <= param1) {
-            if ((param1 ^ -1) <= -65537) {
+            if (param1 >= 65536) {
               L0: {
                 param1 = param1 >>> 16;
                 var2 += 16;
@@ -131,7 +174,7 @@ final class je {
                 }
               }
               L1: {
-                if ((param1 ^ -1) > -17) {
+                if (param1 < 16) {
                   break L1;
                 } else {
                   param1 = param1 >>> 4;
@@ -140,7 +183,7 @@ final class je {
                 }
               }
               L2: {
-                if ((param1 ^ -1) > -5) {
+                if (param1 < 4) {
                   break L2;
                 } else {
                   param1 = param1 >>> 2;
@@ -169,7 +212,7 @@ final class je {
                 }
               }
               L5: {
-                if ((param1 ^ -1) > -17) {
+                if (param1 < 16) {
                   break L5;
                 } else {
                   param1 = param1 >>> 4;
@@ -178,7 +221,7 @@ final class je {
                 }
               }
               L6: {
-                if ((param1 ^ -1) > -5) {
+                if (param1 < 4) {
                   break L6;
                 } else {
                   param1 = param1 >>> 2;
@@ -210,7 +253,7 @@ final class je {
               }
             }
             L9: {
-              if ((param1 ^ -1) > -17) {
+              if (param1 < 16) {
                 break L9;
               } else {
                 param1 = param1 >>> 4;
@@ -219,7 +262,7 @@ final class je {
               }
             }
             L10: {
-              if ((param1 ^ -1) > -5) {
+              if (param1 < 4) {
                 break L10;
               } else {
                 param1 = param1 >>> 2;
@@ -273,11 +316,6 @@ final class je {
 
     public static void a(byte param0) {
         field_a = null;
-        if (param0 >= -110) {
-            field_b = null;
-            field_b = null;
-            return;
-        }
         field_b = null;
     }
 

@@ -12,10 +12,6 @@ final class bj {
         field_d = null;
         field_a = null;
         field_b = null;
-        if (!param0) {
-            Object var2 = null;
-            bj.a(34, 120, (h) null);
-        }
     }
 
     final static int a(boolean param0, int param1, int param2) {
@@ -23,56 +19,43 @@ final class bj {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        var3 = param1 >> 1702595472;
+        var3 = param1 >> 16;
         var4 = 65535 & param1;
         if (param0) {
           field_c = null;
-          var5 = param2 >> -2068060976;
+          var5 = param2 >> 16;
           var6 = 65535 & param2;
-          return var4 * var5 + (var3 * param2 + (var6 * var4 >> -192823024));
+          return var4 * var5 + (var3 * param2 + (var6 * var4 >> 16));
         } else {
-          var5 = param2 >> -2068060976;
+          var5 = param2 >> 16;
           var6 = 65535 & param2;
-          return var4 * var5 + (var3 * param2 + (var6 * var4 >> -192823024));
+          return var4 * var5 + (var3 * param2 + (var6 * var4 >> 16));
         }
     }
 
     final static boolean a(int param0) {
-        if (param0 == 13) {
-          if (af.field_b >= 10) {
-            if (hj.field_f < 13) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+        if (af.field_b < 10) {
             return false;
-          }
-        } else {
-          bj.a(4, -20);
-          if (af.field_b >= 10) {
-            if (hj.field_f < 13) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
         }
+        if (hj.field_f < 13) {
+            return false;
+        }
+        return true;
     }
 
     final static void a(int param0, int param1, h param2) {
         lh var3 = null;
         if (param1 > -15) {
-          return;
-        } else {
-          var3 = nj.field_p;
-          var3.d(param0, -18392);
-          var3.c(2, (byte) -126);
-          var3.c(0, (byte) -128);
-          var3.c(param2.field_h, (byte) -127);
-          return;
+            return;
+        }
+        try {
+            var3 = nj.field_p;
+            var3.d(param0, -18392);
+            var3.c(2, (byte) -126);
+            var3.c(0, (byte) -128);
+            var3.c(param2.field_h, (byte) -127);
+        } catch (RuntimeException runtimeException) {
+            throw ie.a((Throwable) (Object) runtimeException, "bj.C(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

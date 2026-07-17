@@ -8,7 +8,8 @@ abstract class rb {
     static hr[] field_a;
 
     final static void a(int param0) {
-        double var1 = 0.0;
+        RuntimeException var1 = null;
+        double var1_double = 0.0;
         int var3 = 0;
         int var4 = 0;
         float var5 = 0.0f;
@@ -30,105 +31,107 @@ abstract class rb {
         int var21 = 0;
         int var22 = 0;
         int var23 = 0;
+        RuntimeException decompiledCaughtException = null;
         var23 = Sumoblitz.field_L ? 1 : 0;
-        if (null != jg.field_b) {
-          return;
-        } else {
-          jg.field_b = new int[65536];
+        try {
           L0: {
-            var1 = 0.7 + (-0.015 + 0.03 * Math.random());
-            var3 = 0;
-            if (param0 == -129) {
-              break L0;
-            } else {
-              field_c = null;
-              break L0;
-            }
-          }
-          var4 = 0;
-          L1: while (true) {
-            if ((var4 ^ -1) <= -513) {
+            if (null != jg.field_b) {
               return;
             } else {
-              var5 = (0.0078125f + (float)(var4 >> -591842621) / 64.0f) * 360.0f;
-              var6 = 0.0625f + (float)(var4 & 7) / 8.0f;
-              var7 = 0;
-              L2: while (true) {
-                if ((var7 ^ -1) <= -129) {
-                  var4++;
-                  continue L1;
+              jg.field_b = new int[65536];
+              var1_double = 0.7 + (-0.015 + 0.03 * Math.random());
+              var3 = 0;
+              var4 = 0;
+              L1: while (true) {
+                if (var4 >= 512) {
+                  break L0;
                 } else {
-                  L3: {
-                    var8 = (float)var7 / 128.0f;
-                    var9 = 0.0f;
-                    var10 = 0.0f;
-                    var11 = 0.0f;
-                    var12 = var5 / 60.0f;
-                    var13 = (int)var12;
-                    var14 = var13 % 6;
-                    var15 = var12 - (float)var13;
-                    var16 = (-var6 + 1.0f) * var8;
-                    var17 = (1.0f - var15 * var6) * var8;
-                    var18 = (-((1.0f - var15) * var6) + 1.0f) * var8;
-                    if (var14 == 0) {
-                      var10 = var18;
-                      var9 = var8;
-                      var11 = var16;
-                      break L3;
+                  var5 = (0.0078125f + (float)(var4 >> 3) / 64.0f) * 360.0f;
+                  var6 = 0.0625f + (float)(var4 & 7) / 8.0f;
+                  var7 = 0;
+                  L2: while (true) {
+                    if (var7 >= 128) {
+                      var4++;
+                      continue L1;
                     } else {
-                      if (1 == var14) {
-                        var9 = var17;
-                        var10 = var8;
-                        var11 = var16;
-                        break L3;
-                      } else {
-                        if ((var14 ^ -1) == -3) {
-                          var9 = var16;
-                          var10 = var8;
-                          var11 = var18;
+                      L3: {
+                        var8 = (float)var7 / 128.0f;
+                        var9 = 0.0f;
+                        var10 = 0.0f;
+                        var11 = 0.0f;
+                        var12 = var5 / 60.0f;
+                        var13 = (int)var12;
+                        var14 = var13 % 6;
+                        var15 = var12 - (float)var13;
+                        var16 = (-var6 + 1.0f) * var8;
+                        var17 = (1.0f - var15 * var6) * var8;
+                        var18 = (-((1.0f - var15) * var6) + 1.0f) * var8;
+                        if (var14 == 0) {
+                          var10 = var18;
+                          var9 = var8;
+                          var11 = var16;
                           break L3;
                         } else {
-                          if (var14 != 3) {
-                            if (var14 != 4) {
-                              if (5 != var14) {
-                                break L3;
+                          if (1 == var14) {
+                            var9 = var17;
+                            var10 = var8;
+                            var11 = var16;
+                            break L3;
+                          } else {
+                            if (var14 == 2) {
+                              var9 = var16;
+                              var10 = var8;
+                              var11 = var18;
+                              break L3;
+                            } else {
+                              if (var14 != 3) {
+                                if (var14 != 4) {
+                                  if (5 != var14) {
+                                    break L3;
+                                  } else {
+                                    var9 = var8;
+                                    var10 = var16;
+                                    var11 = var17;
+                                    break L3;
+                                  }
+                                } else {
+                                  var9 = var18;
+                                  var10 = var16;
+                                  var11 = var8;
+                                  break L3;
+                                }
                               } else {
-                                var9 = var8;
-                                var10 = var16;
-                                var11 = var17;
+                                var11 = var8;
+                                var10 = var17;
+                                var9 = var16;
                                 break L3;
                               }
-                            } else {
-                              var9 = var18;
-                              var10 = var16;
-                              var11 = var8;
-                              break L3;
                             }
-                          } else {
-                            var11 = var8;
-                            var10 = var17;
-                            var9 = var16;
-                            break L3;
                           }
                         }
                       }
+                      var9 = (float)Math.pow((double)var9, var1_double);
+                      var10 = (float)Math.pow((double)var10, var1_double);
+                      var11 = (float)Math.pow((double)var11, var1_double);
+                      var19 = (int)(256.0f * var9);
+                      var20 = (int)(var10 * 256.0f);
+                      var21 = (int)(256.0f * var11);
+                      var22 = (var20 << 8) + (var19 << 16) + (-16777216 - -var21);
+                      int incrementValue$1 = var3;
+                      var3++;
+                      jg.field_b[incrementValue$1] = var22;
+                      var7++;
+                      continue L2;
                     }
                   }
-                  var9 = (float)Math.pow((double)var9, var1);
-                  var10 = (float)Math.pow((double)var10, var1);
-                  var11 = (float)Math.pow((double)var11, var1);
-                  var19 = (int)(256.0f * var9);
-                  var20 = (int)(var10 * 256.0f);
-                  var21 = (int)(256.0f * var11);
-                  var22 = (var20 << -436219704) + (var19 << -1030549680) + (-16777216 - -var21);
-                  var3++;
-                  jg.field_b[var3] = var22;
-                  var7++;
-                  continue L2;
                 }
               }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw qo.a((Throwable) (Object) var1, "rb.K(" + -129 + 41);
         }
     }
 
@@ -138,9 +141,6 @@ abstract class rb {
         field_a = null;
         field_d = null;
         field_c = null;
-        if (param0 != -45) {
-            field_b = -92;
-        }
     }
 
     abstract int a(int param0, int param1);

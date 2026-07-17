@@ -36,7 +36,11 @@ final class ih extends bf {
 
     ih(jm param0, boolean param1, int param2, int param3, int param4, int param5) {
         this(param0, param1);
-        ((ih) this).a(param3, 34, param5, param4, param2);
+        try {
+            ((ih) this).a(param3, 34, param5, param4, param2);
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "ih.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+        }
     }
 
     final boolean h(byte param0) {
@@ -92,21 +96,25 @@ final class ih extends bf {
 
     private ih(jm param0, boolean param1) {
         super(0, 0, 0, 0, (jm) null);
-        ((ih) this).field_R = (qn) (Object) new bg("", (rg) null, 2);
-        ((ih) this).field_P = (qn) (Object) new bg("", (rg) null, 2);
-        ((ih) this).field_W = (qn) (Object) new bg("", (rg) null, 4);
-        ((ih) this).field_W.field_n = param0;
-        ((ih) this).field_P.field_n = param0;
-        ((ih) this).field_R.field_n = param0;
-        ((ih) this).field_X = param1 ? true : false;
-        if (((ih) this).field_X) {
-            ((ih) this).b((mf) (Object) ((ih) this).field_P, 95);
-            ((ih) this).b((mf) (Object) ((ih) this).field_R, 95);
-        } else {
-            ((ih) this).b((mf) (Object) ((ih) this).field_R, 95);
-            ((ih) this).b((mf) (Object) ((ih) this).field_P, 95);
+        try {
+            ((ih) this).field_R = (qn) (Object) new bg("", (rg) null, 2);
+            ((ih) this).field_P = (qn) (Object) new bg("", (rg) null, 2);
+            ((ih) this).field_W = (qn) (Object) new bg("", (rg) null, 4);
+            ((ih) this).field_W.field_n = param0;
+            ((ih) this).field_P.field_n = param0;
+            ((ih) this).field_R.field_n = param0;
+            ((ih) this).field_X = param1 ? true : false;
+            if (((ih) this).field_X) {
+                ((ih) this).b((mf) (Object) ((ih) this).field_P, 95);
+                ((ih) this).b((mf) (Object) ((ih) this).field_R, 95);
+            } else {
+                ((ih) this).b((mf) (Object) ((ih) this).field_R, 95);
+                ((ih) this).b((mf) (Object) ((ih) this).field_P, 95);
+            }
+            ((ih) this).b((mf) (Object) ((ih) this).field_W, 95);
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "ih.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
-        ((ih) this).b((mf) (Object) ((ih) this).field_W, 95);
     }
 
     final int c(boolean param0) {
@@ -137,16 +145,20 @@ final class ih extends bf {
     }
 
     final void a(boolean param0, ri param1) {
-        super.a(param0, param1);
-        ((ih) this).field_R.field_p = (rg) (Object) param1;
-        ((ih) this).field_P.field_p = (rg) (Object) param1;
-        ((ih) this).field_W.field_p = (rg) (Object) param1;
+        try {
+            super.a(param0, param1);
+            ((ih) this).field_R.field_p = (rg) (Object) param1;
+            ((ih) this).field_P.field_p = (rg) (Object) param1;
+            ((ih) this).field_W.field_p = (rg) (Object) param1;
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "ih.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         super.a(param0, 34, param2, param3, param4);
-        var6 = -130 + param3 >> -1117338143;
+        var6 = -130 + param3 >> 1;
         if (((ih) this).field_X) {
           ((ih) this).field_P.a(0, 34, param2, 25, var6);
           ((ih) this).field_R.a(0, 34, param2, 25, var6 + 45);
@@ -188,30 +200,22 @@ final class ih extends bf {
         field_V = null;
         field_T = null;
         field_Y = null;
-        if (param0 != 48) {
-            return;
-        }
         field_S = null;
     }
 
     final static void a(int param0, boolean param1, int param2, int param3) {
         rf.a((byte) -122, param1);
-        if (param3 != -1) {
-          field_U = true;
-          bb.a(param1, param3 ^ -70, param0, param2);
-          return;
-        } else {
-          bb.a(param1, param3 ^ -70, param0, param2);
-          return;
-        }
+        bb.a(param1, 69, param0, param2);
     }
 
     private final void a(mf param0, int param1, String param2, int param3, int param4) {
         if (param3 != -2200) {
-          return;
-        } else {
-          rc.field_a.b(param2, (param0.field_y >> -1079263903) + (param1 + param0.field_u), param0.field_r + (param4 - 5), 16777215, -1);
-          return;
+            return;
+        }
+        try {
+            rc.field_a.b(param2, (param0.field_y >> 1) + (param1 + param0.field_u), param0.field_r + (param4 - 5), 16777215, -1);
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "ih.P(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 41);
         }
     }
 
@@ -249,7 +253,7 @@ final class ih extends bf {
     private static void $cfr$clinit() {
         field_O = 0;
         field_Y = "Use this alternative as your account name";
-        field_S = new byte[]{(byte)3};
+        field_S = new byte[]{(byte) 3};
         field_V = "<%0> cannot join; the game has started.";
     }
 }

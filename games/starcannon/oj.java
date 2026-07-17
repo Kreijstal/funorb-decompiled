@@ -10,10 +10,6 @@ final class oj extends rf {
     static java.applet.Applet field_f;
 
     final static int a(int param0) {
-        if (param0 > -15) {
-            field_k = null;
-            return pg.field_g;
-        }
         return pg.field_g;
     }
 
@@ -33,9 +29,6 @@ final class oj extends rf {
         field_j = null;
         field_g = null;
         field_k = null;
-        if (param0 >= -70) {
-            hl discarded$0 = oj.a(-48, -110, -128);
-        }
     }
 
     final static hl[] a(int param0, int param1, int param2, int param3, int param4) {
@@ -43,15 +36,17 @@ final class oj extends rf {
         hl[] var6 = null;
         var6 = new hl[9];
         var5 = var6;
-        var6[6] = oj.a(0, param1, param2);
-        var5[3] = oj.a(0, param1, param2);
-        var5[2] = oj.a(0, param1, param2);
-        var5[1] = oj.a(0, param1, param2);
-        var5[0] = oj.a(0, param1, param2);
-        var6[8] = oj.a(0, param3, param2);
-        var5[7] = oj.a(0, param3, param2);
-        var5[5] = oj.a(0, param3, param2);
-        if ((param4 ^ -1) != param0) {
+        hl dupTemp$4 = oj.a(0, param1, param2);
+        var6[6] = dupTemp$4;
+        var5[3] = dupTemp$4;
+        var5[2] = dupTemp$4;
+        var5[1] = dupTemp$4;
+        var5[0] = dupTemp$4;
+        hl dupTemp$5 = oj.a(0, param3, param2);
+        var6[8] = dupTemp$5;
+        var5[7] = dupTemp$5;
+        var5[5] = dupTemp$5;
+        if (~param4 != param0) {
           var6[4] = oj.a(0, param4, 64);
           return var5;
         } else {

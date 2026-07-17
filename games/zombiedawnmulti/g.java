@@ -93,13 +93,12 @@ final class g {
     }
 
     final static void c() {
-        oh var0_ref = null;
         oh var0 = (oh) (Object) field_c.a(true);
         if (var0 == null) {
-            var0_ref = new oh();
+            var0 = new oh();
         }
-        var0_ref.a(oo.field_i, oo.field_b, oo.field_l, oo.field_f, oo.field_e, oo.field_g, oo.field_d);
-        field_b.a((br) (Object) var0_ref, false);
+        var0.a(oo.field_i, oo.field_b, oo.field_l, oo.field_f, oo.field_e, oo.field_g, oo.field_d);
+        field_b.a((br) (Object) var0, false);
     }
 
     final static ja b(ja param0) {
@@ -200,15 +199,27 @@ final class g {
     }
 
     private final static boolean b(th param0) {
-        br var1 = param0.c(51);
-        while (var1 instanceof id) {
-            // ifeq L63
-            if (((id) (Object) var1).field_E > ((id) (Object) var1.field_d).field_E) {
-                return false;
+        br var1 = null;
+        var1 = param0.c(51);
+        L0: while (true) {
+          L1: {
+            if (!(var1 instanceof id)) {
+              break L1;
+            } else {
+              if (!(var1.field_d instanceof id)) {
+                break L1;
+              } else {
+                if (((id) (Object) var1).field_E <= ((id) (Object) var1.field_d).field_E) {
+                  var1 = var1.field_d;
+                  continue L0;
+                } else {
+                  return false;
+                }
+              }
             }
-            var1 = var1.field_d;
+          }
+          return true;
         }
-        return true;
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -229,8 +240,9 @@ final class g {
                 var12++;
                 continue L0;
               } else {
+                int incrementValue$66 = param3;
                 param3++;
-                param2 = param1[param3];
+                param2 = param1[incrementValue$66];
                 if (param2 == 0) {
                   param4++;
                   var13++;
@@ -238,8 +250,9 @@ final class g {
                 } else {
                   var10 = param0[param4];
                   var11 = 256 - ((param2 & 255) * param9 >> 8);
+                  int incrementValue$67 = param4;
                   param4++;
-                  param0[param4] = (var10 & 16711935) * var11 >> 8 & 16711935 | (var10 & 65280) * var11 >> 8 & 65280;
+                  param0[incrementValue$67] = (var10 & 16711935) * var11 >> 8 & 16711935 | (var10 & 65280) * var11 >> 8 & 65280;
                   var13++;
                   continue L1;
                 }
@@ -353,14 +366,16 @@ final class g {
                         }
                       }
                     }
+                    int incrementValue$7877 = var1;
                     var1++;
-                    var6[var1] = param0;
+                    var6[incrementValue$7877] = param0;
                     var8++;
                     continue L1;
                   }
                 }
+                int incrementValue$7878 = var1;
                 var1++;
-                var6[var1] = var2[var1];
+                var6[incrementValue$7878] = var2[incrementValue$7878];
                 var8++;
                 continue L1;
               }
@@ -370,31 +385,32 @@ final class g {
     }
 
     final static void a(th param0) {
-        br var1 = null;
+        Object var1 = null;
+        br var1_ref = null;
         br var2 = null;
         L0: while (true) {
           if (g.b(param0)) {
             return;
           } else {
-            var1 = param0.c(51);
+            var1_ref = param0.c(51);
             L1: while (true) {
-              if (!(var1 instanceof id)) {
+              if (!(var1_ref instanceof id)) {
                 continue L0;
               } else {
-                if (!(var1.field_d instanceof id)) {
+                if (!(var1_ref.field_d instanceof id)) {
                   continue L0;
                 } else {
                   L2: {
-                    var2 = var1.field_d;
-                    if (((id) (Object) var1).field_E <= ((id) (Object) var2).field_E) {
+                    var2 = var1_ref.field_d;
+                    if (((id) (Object) var1_ref).field_E <= ((id) (Object) var2).field_E) {
                       break L2;
                     } else {
-                      var1.a(true);
-                      qc.a(var1, var2, 0);
+                      var1_ref.a(true);
+                      qc.a(var1_ref, var2, 0);
                       break L2;
                     }
                   }
-                  var1 = var2;
+                  var1_ref = var2;
                   continue L1;
                 }
               }
@@ -585,8 +601,9 @@ final class g {
                 var11++;
                 continue L0;
               } else {
+                int incrementValue$66 = param3;
                 param3++;
-                param2 = param1[param3];
+                param2 = param1[incrementValue$66];
                 if (param2 == 0) {
                   param4++;
                   var12++;
@@ -594,8 +611,9 @@ final class g {
                 } else {
                   var9 = param0[param4];
                   var10 = 256 - (param2 & 255);
+                  int incrementValue$67 = param4;
                   param4++;
-                  param0[param4] = (var9 & 16711935) * var10 >> 8 & 16711935 | (var9 & 65280) * var10 >> 8 & 65280;
+                  param0[incrementValue$67] = (var9 & 16711935) * var10 >> 8 & 16711935 | (var9 & 65280) * var10 >> 8 & 65280;
                   var12++;
                   continue L1;
                 }

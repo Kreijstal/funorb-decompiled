@@ -21,9 +21,6 @@ final class ce {
         field_a = null;
         field_c = null;
         field_f = null;
-        if (!param0) {
-            ce.b(true);
-        }
     }
 
     final boolean a(int param0) {
@@ -44,7 +41,11 @@ final class ce {
     ce(String param0) {
         ((ce) this).field_g = false;
         ((ce) this).field_d = false;
-        ((ce) this).field_e = param0;
+        try {
+            ((ce) this).field_e = param0;
+        } catch (RuntimeException runtimeException) {
+            throw fc.a((Throwable) (Object) runtimeException, "ce.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void a(boolean param0, byte param1) {

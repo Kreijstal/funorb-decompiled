@@ -23,9 +23,6 @@ abstract class ce extends ms {
         field_p = null;
         field_q = null;
         field_o = null;
-        if (param0 >= -19) {
-            field_l = null;
-        }
     }
 
     static {

@@ -43,7 +43,7 @@ final class ok {
           return;
         } else {
           L0: {
-            if ((vl.field_h ^ -1) >= -1) {
+            if (vl.field_h <= 0) {
               ((ok) this).field_a = false;
               break L0;
             } else {
@@ -53,7 +53,7 @@ final class ok {
           if (!((ok) this).field_a) {
             L1: {
               if (ng.field_d >= ((ok) this).field_b) {
-                if (-1 > (((ok) this).field_b ^ -1)) {
+                if (((ok) this).field_b > 0) {
                   bl.field_a = 0;
                   break L1;
                 } else {
@@ -81,8 +81,9 @@ final class ok {
             }
             return;
           } else {
+            int fieldTemp$2 = ((ok) this).field_v - 1;
             ((ok) this).field_v = ((ok) this).field_v - 1;
-            if (-1 > (((ok) this).field_v - 1 ^ -1)) {
+            if (fieldTemp$2 > 0) {
               return;
             } else {
               ((ok) this).field_v = ((ok) this).field_g;
@@ -103,13 +104,13 @@ final class ok {
     }
 
     final static void a(boolean param0) {
-        ja var1_ref = null;
-        int var1 = 0;
+        ja var1 = null;
+        int var1_int = 0;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        String var5_ref = null;
+        String var5_ref_String = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -247,7 +248,7 @@ final class ok {
                           break L0;
                         } else {
                           ao.field_h[var7].a();
-                          int discarded$6 = gf.field_e.a(nj.field_a[var7], 3, 3, ao.field_h[var7].field_x - 6, -6 + ao.field_h[var7].field_w, hk.field_e, -1, 1, 1, gf.field_e.field_C - -gf.field_e.field_r);
+                          int discarded$3 = gf.field_e.a(nj.field_a[var7], 3, 3, ao.field_h[var7].field_x - 6, -6 + ao.field_h[var7].field_w, hk.field_e, -1, 1, 1, gf.field_e.field_C - -gf.field_e.field_r);
                           sq.a(5, ao.field_h[var7].field_x, 3, ao.field_h[var7].field_w, ao.field_h[var7], 1, 0, 0);
                           var7++;
                           continue L1;
@@ -344,13 +345,13 @@ final class ok {
                 q.field_c.j();
                 var9 = new ja(q.field_c.field_z, q.field_c.field_u);
                 var9.a();
-                int discarded$7 = dc.field_Lb.a(var14, pg.field_c, em.field_bb, ol.field_p, ai.field_a, 16777215, -1, 1, 1, dc.field_Lb.field_r + dc.field_Lb.field_C);
+                int discarded$4 = dc.field_Lb.a(var14, pg.field_c, em.field_bb, ol.field_p, ai.field_a, 16777215, -1, 1, 1, dc.field_Lb.field_r + dc.field_Lb.field_C);
                 sq.a(5, var9.field_z, 3, var9.field_u, var9, 1, 0, 0);
                 q.field_c.a();
                 var9.g(0, 0);
                 ej.field_j = new ja(640, 480);
                 ej.field_j.a();
-                q.field_c.d(ed.field_b + (q.field_c.field_z >> -2139018463), pn.field_e + (q.field_c.field_u >> 326108097), qd.field_N, 4096);
+                q.field_c.d(ed.field_b + (q.field_c.field_z >> 1), pn.field_e + (q.field_c.field_u >> 1), qd.field_N, 4096);
                 q.field_c = null;
                 ej.field_j.d();
                 oo.a(var28, var2, var3);
@@ -369,10 +370,10 @@ final class ok {
                 var3 = oo.field_l;
                 oo.a(b.field_f);
                 var16 = new ja(412, 43);
-                var5_ref = vl.a(vk.field_F, new String[1], 2);
+                var5_ref_String = vl.a(vk.field_F, new String[1], 2);
                 ie.field_ib = null;
                 var16.a();
-                int discarded$8 = gf.field_e.a(var5_ref, 3, 3, var16.field_x + -6, -6 + var16.field_w, 16777215, -1, 0, 1, gf.field_e.field_C - -gf.field_e.field_r);
+                int discarded$5 = gf.field_e.a(var5_ref_String, 3, 3, var16.field_x + -6, -6 + var16.field_w, 16777215, -1, 0, 1, gf.field_e.field_C - -gf.field_e.field_r);
                 sq.a(5, var16.field_x, 3, var16.field_w, var16, 1, 0, 0);
                 rq.field_v.a();
                 var16.g(-rq.field_v.field_r + 199, -rq.field_v.field_y + 83);
@@ -448,16 +449,16 @@ final class ok {
               } else {
                 L13: {
                   ha.field_l.g(231, 390);
-                  var1_ref = ig.field_e;
+                  var1 = ig.field_e;
                   if (gl.field_H.field_d == 0) {
-                    var1_ref = kg.field_j;
+                    var1 = kg.field_j;
                     break L13;
                   } else {
                     break L13;
                   }
                 }
                 L14: {
-                  var1_ref.g(0, 0);
+                  var1.g(0, 0);
                   stackOut_46_0 = 105;
                   stackOut_46_1 = fn.field_c;
                   stackIn_48_0 = stackOut_46_0;
@@ -483,16 +484,16 @@ final class ok {
                   }
                 }
                 L15: {
-                  var2 = (q.a((byte) stackIn_49_0, stackIn_49_1 << stackIn_49_2) * 40 >> 505315792) + 40;
-                  if ((var2 ^ -1) < -1) {
+                  var2 = (q.a((byte) stackIn_49_0, stackIn_49_1 << stackIn_49_2) * 40 >> 16) + 40;
+                  if (var2 > 0) {
                     ha.field_l.e(230, 389, var2);
                     ha.field_l.e(232, 389, var2);
                     ha.field_l.e(232, 391, var2);
                     ha.field_l.e(230, 391, var2);
-                    var1_ref.e(1, 1, var2);
-                    var1_ref.e(-1, 1, var2);
-                    var1_ref.e(1, -1, var2);
-                    var1_ref.e(-1, -1, var2);
+                    var1.e(1, 1, var2);
+                    var1.e(-1, 1, var2);
+                    var1.e(1, -1, var2);
+                    var1.e(-1, -1, var2);
                     break L15;
                   } else {
                     break L15;
@@ -591,26 +592,26 @@ final class ok {
           }
           L20: {
             if (null != fa.field_Tb) {
-              var1 = -(fa.field_Tb.field_u / 2) + 357;
-              fa.field_Tb.g(269 - fa.field_Tb.field_z, var1);
-              mb.field_j.g(586, var1);
-              if (var1 >= bo.field_d) {
+              var1_int = -(fa.field_Tb.field_u / 2) + 357;
+              fa.field_Tb.g(269 - fa.field_Tb.field_z, var1_int);
+              mb.field_j.g(586, var1_int);
+              if (var1_int >= bo.field_d) {
                 break L20;
               } else {
-                if (bo.field_d >= var1 - -fa.field_Tb.field_w) {
+                if (bo.field_d >= var1_int - -fa.field_Tb.field_w) {
                   break L20;
                 } else {
-                  var2 = 40 + (40 * q.a((byte) -47, fn.field_c << -1016290268) >> 715507184);
-                  if ((var2 ^ -1) < -1) {
+                  var2 = 40 + (40 * q.a((byte) -47, fn.field_c << 4) >> 16);
+                  if (var2 > 0) {
                     L21: {
                       if (269 - fa.field_Tb.field_x >= bd.field_g) {
                         break L21;
                       } else {
                         if (269 > bd.field_g) {
-                          fa.field_Tb.e(-fa.field_Tb.field_z + 268, var1 + -1, var2);
-                          fa.field_Tb.e(1 + (-fa.field_Tb.field_z + 269), var1 + -1, var2);
-                          fa.field_Tb.e(-fa.field_Tb.field_z + 268, 1 + var1, var2);
-                          fa.field_Tb.e(269 - fa.field_Tb.field_z + 1, var1 - -1, var2);
+                          fa.field_Tb.e(-fa.field_Tb.field_z + 268, var1_int + -1, var2);
+                          fa.field_Tb.e(1 + (-fa.field_Tb.field_z + 269), var1_int + -1, var2);
+                          fa.field_Tb.e(-fa.field_Tb.field_z + 268, 1 + var1_int, var2);
+                          fa.field_Tb.e(269 - fa.field_Tb.field_z + 1, var1_int - -1, var2);
                           break L20;
                         } else {
                           break L21;
@@ -623,10 +624,10 @@ final class ok {
                       if (586 + fa.field_Tb.field_x <= bd.field_g) {
                         break L20;
                       } else {
-                        mb.field_j.e(585, -1 + var1, var2);
-                        mb.field_j.e(587, var1 - 1, var2);
-                        mb.field_j.e(585, var1 - -1, var2);
-                        mb.field_j.e(587, 1 + var1, var2);
+                        mb.field_j.e(585, -1 + var1_int, var2);
+                        mb.field_j.e(587, var1_int - 1, var2);
+                        mb.field_j.e(585, var1_int - -1, var2);
+                        mb.field_j.e(587, 1 + var1_int, var2);
                         break L20;
                       }
                     }
@@ -640,12 +641,8 @@ final class ok {
             }
           }
           cd.c((byte) -57);
-          if (!param0) {
-            return;
-          } else {
-            ao.field_h[gf.field_g].g(269, 340);
-            return;
-          }
+          ao.field_h[gf.field_g].g(269, 340);
+          return;
         }
     }
 
@@ -739,7 +736,7 @@ final class ok {
             break L3;
           }
           L5: {
-            if (((ok) this).field_b <= param0) {
+            if (((ok) this).field_b <= 0) {
               break L5;
             } else {
               bl.field_a = (-ng.field_d + ((ok) this).field_b) / 2;
@@ -762,28 +759,24 @@ final class ok {
     }
 
     final static void a(int param0, int param1, ga param2, int param3, int param4, int param5) {
-        if (!op.field_m.field_c) {
-          if (df.field_I) {
+        if (op.field_m.field_c) {
+            return;
+        }
+        if (df.field_I) {
             cf.field_s.a(param1, -11513, 0, param5, param4);
             return;
-          } else {
-            L0: {
-              if (param0 < -95) {
-                break L0;
-              } else {
+        }
+        try {
+            if (param0 >= -95) {
                 ok.e(112);
-                break L0;
-              }
             }
             param2.b((byte) -35, 59);
             param2.a(param3, (byte) -87);
             param2.a(123, param5);
             param2.a(param4, (byte) -112);
             param2.a(param1, (byte) -50);
-            return;
-          }
-        } else {
-          return;
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) (Object) runtimeException, "ok.G(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
     }
 

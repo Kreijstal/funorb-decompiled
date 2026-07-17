@@ -19,7 +19,7 @@ final class jp {
     int field_d;
 
     final void a(byte param0, int param1, int param2) {
-        if ((param1 ^ -1) <= (((jp) this).field_h ^ -1)) {
+        if (~param1 <= ~((jp) this).field_h) {
           throw new IllegalArgumentException();
         } else {
           if (((jp) this).field_h <= param2) {
@@ -27,7 +27,7 @@ final class jp {
           } else {
             ((jp) this).field_b = 0;
             ((jp) this).field_e = 0;
-            if (-1 != (ci.field_d ^ -1)) {
+            if (ci.field_d != 0) {
               ((jp) this).field_e = ci.field_d;
               ((jp) this).field_d = param2;
               ((jp) this).field_j = true;
@@ -35,10 +35,10 @@ final class jp {
               ((jp) this).field_k = di.field_M;
               if (((jp) this).field_l != 0) {
                 L0: {
-                  if (-1 == (kc.field_R ^ -1)) {
+                  if (kc.field_R == 0) {
                     break L0;
                   } else {
-                    if (-1 > (((jp) this).field_k ^ -1)) {
+                    if (((jp) this).field_k > 0) {
                       ((jp) this).field_k = ((jp) this).field_k - 1;
                       break L0;
                     } else {
@@ -48,7 +48,7 @@ final class jp {
                     }
                   }
                 }
-                if ((ci.field_d ^ -1) == -1) {
+                if (ci.field_d == 0) {
                   if (kc.field_R == 0) {
                     L1: {
                       ((jp) this).field_l = 0;
@@ -82,7 +82,7 @@ final class jp {
                             break L2;
                           }
                         } else {
-                          if ((((jp) this).field_d ^ -1) != (param1 ^ -1)) {
+                          if (~((jp) this).field_d != ~param1) {
                             ((jp) this).field_d = param1;
                             ((jp) this).field_j = true;
                             break L2;
@@ -110,7 +110,7 @@ final class jp {
                                 return;
                               }
                             } else {
-                              if ((((jp) this).field_d ^ -1) != (param1 ^ -1)) {
+                              if (~((jp) this).field_d != ~param1) {
                                 ((jp) this).field_d = param1;
                                 ((jp) this).field_j = true;
                                 return;
@@ -132,7 +132,7 @@ final class jp {
                                   return;
                                 }
                               } else {
-                                if ((((jp) this).field_d ^ -1) != (param1 ^ -1)) {
+                                if (~((jp) this).field_d != ~param1) {
                                   ((jp) this).field_d = param1;
                                   ((jp) this).field_j = true;
                                   return;
@@ -172,7 +172,7 @@ final class jp {
                               return;
                             }
                           } else {
-                            if ((((jp) this).field_d ^ -1) != (param1 ^ -1)) {
+                            if (~((jp) this).field_d != ~param1) {
                               ((jp) this).field_d = param1;
                               ((jp) this).field_j = true;
                               return;
@@ -202,7 +202,7 @@ final class jp {
                               return;
                             }
                           } else {
-                            if ((((jp) this).field_d ^ -1) != (param1 ^ -1)) {
+                            if (~((jp) this).field_d != ~param1) {
                               ((jp) this).field_d = param1;
                               ((jp) this).field_j = true;
                               return;
@@ -224,7 +224,7 @@ final class jp {
                                 return;
                               }
                             } else {
-                              if ((((jp) this).field_d ^ -1) != (param1 ^ -1)) {
+                              if (~((jp) this).field_d != ~param1) {
                                 ((jp) this).field_d = param1;
                                 ((jp) this).field_j = true;
                                 return;
@@ -264,7 +264,7 @@ final class jp {
                             return;
                           }
                         } else {
-                          if ((((jp) this).field_d ^ -1) != (param1 ^ -1)) {
+                          if (~((jp) this).field_d != ~param1) {
                             ((jp) this).field_d = param1;
                             ((jp) this).field_j = true;
                             return;
@@ -281,7 +281,7 @@ final class jp {
                 }
               } else {
                 L10: {
-                  if ((ci.field_d ^ -1) != -1) {
+                  if (ci.field_d != 0) {
                     break L10;
                   } else {
                     if (kc.field_R != 0) {
@@ -319,7 +319,7 @@ final class jp {
                               break L12;
                             }
                           } else {
-                            if ((((jp) this).field_d ^ -1) != (param1 ^ -1)) {
+                            if (~((jp) this).field_d != ~param1) {
                               ((jp) this).field_d = param1;
                               ((jp) this).field_j = true;
                               break L12;
@@ -349,7 +349,7 @@ final class jp {
                             return;
                           }
                         } else {
-                          if ((((jp) this).field_d ^ -1) != (param1 ^ -1)) {
+                          if (~((jp) this).field_d != ~param1) {
                             ((jp) this).field_d = param1;
                             ((jp) this).field_j = true;
                             return;
@@ -372,7 +372,7 @@ final class jp {
                                 break L15;
                               }
                             } else {
-                              if ((((jp) this).field_d ^ -1) != (param1 ^ -1)) {
+                              if (~((jp) this).field_d != ~param1) {
                                 ((jp) this).field_d = param1;
                                 ((jp) this).field_j = true;
                                 break L15;
@@ -414,7 +414,7 @@ final class jp {
                           break L16;
                         }
                       } else {
-                        if ((((jp) this).field_d ^ -1) != (param1 ^ -1)) {
+                        if (~((jp) this).field_d != ~param1) {
                           ((jp) this).field_d = param1;
                           ((jp) this).field_j = true;
                           break L16;
@@ -434,10 +434,10 @@ final class jp {
                 if (((jp) this).field_l == 0) {
                   break L18;
                 } else {
-                  if (-1 == (kc.field_R ^ -1)) {
+                  if (kc.field_R == 0) {
                     break L18;
                   } else {
-                    if (-1 > (((jp) this).field_k ^ -1)) {
+                    if (((jp) this).field_k > 0) {
                       ((jp) this).field_k = ((jp) this).field_k - 1;
                       break L18;
                     } else {
@@ -449,7 +449,7 @@ final class jp {
                 }
               }
               L19: {
-                if ((ci.field_d ^ -1) != -1) {
+                if (ci.field_d != 0) {
                   break L19;
                 } else {
                   if (kc.field_R != 0) {
@@ -487,7 +487,7 @@ final class jp {
                             break L21;
                           }
                         } else {
-                          if ((((jp) this).field_d ^ -1) != (param1 ^ -1)) {
+                          if (~((jp) this).field_d != ~param1) {
                             ((jp) this).field_d = param1;
                             ((jp) this).field_j = true;
                             break L21;
@@ -517,7 +517,7 @@ final class jp {
                           return;
                         }
                       } else {
-                        if ((((jp) this).field_d ^ -1) != (param1 ^ -1)) {
+                        if (~((jp) this).field_d != ~param1) {
                           ((jp) this).field_d = param1;
                           ((jp) this).field_j = true;
                           return;
@@ -540,7 +540,7 @@ final class jp {
                               break L24;
                             }
                           } else {
-                            if ((((jp) this).field_d ^ -1) != (param1 ^ -1)) {
+                            if (~((jp) this).field_d != ~param1) {
                               ((jp) this).field_d = param1;
                               ((jp) this).field_j = true;
                               break L24;
@@ -582,7 +582,7 @@ final class jp {
                         break L25;
                       }
                     } else {
-                      if ((((jp) this).field_d ^ -1) != (param1 ^ -1)) {
+                      if (~((jp) this).field_d != ~param1) {
                         ((jp) this).field_d = param1;
                         ((jp) this).field_j = true;
                         break L25;
@@ -646,162 +646,277 @@ final class jp {
 
     final static java.net.URL a(byte param0, java.net.URL param1, String param2, String param3, int param4) {
         try {
-            String var5 = null;
+            RuntimeException var5 = null;
+            String var5_ref = null;
             int var6 = 0;
             int var7_int = 0;
             StringBuilder var7 = null;
             Exception var8 = null;
             int var9 = 0;
-            java.net.URL stackIn_42_0 = null;
+            java.net.URL stackIn_38_0 = null;
+            java.net.URL stackIn_40_0 = null;
+            RuntimeException stackIn_42_0 = null;
+            StringBuilder stackIn_42_1 = null;
+            RuntimeException stackIn_43_0 = null;
+            StringBuilder stackIn_43_1 = null;
+            RuntimeException stackIn_44_0 = null;
+            StringBuilder stackIn_44_1 = null;
+            String stackIn_44_2 = null;
+            RuntimeException stackIn_45_0 = null;
+            StringBuilder stackIn_45_1 = null;
+            RuntimeException stackIn_46_0 = null;
+            StringBuilder stackIn_46_1 = null;
+            RuntimeException stackIn_47_0 = null;
+            StringBuilder stackIn_47_1 = null;
+            String stackIn_47_2 = null;
+            RuntimeException stackIn_48_0 = null;
+            StringBuilder stackIn_48_1 = null;
+            RuntimeException stackIn_49_0 = null;
+            StringBuilder stackIn_49_1 = null;
+            RuntimeException stackIn_50_0 = null;
+            StringBuilder stackIn_50_1 = null;
+            String stackIn_50_2 = null;
             Throwable decompiledCaughtException = null;
-            java.net.URL stackOut_41_0 = null;
-            L0: {
-              var9 = ZombieDawn.field_J;
-              if (param0 == 97) {
-                var5 = param1.getFile();
-                var6 = 0;
-                break L0;
-              } else {
-                field_c = null;
-                var5 = param1.getFile();
-                var6 = 0;
-                break L0;
+            java.net.URL stackOut_37_0 = null;
+            java.net.URL stackOut_39_0 = null;
+            RuntimeException stackOut_41_0 = null;
+            StringBuilder stackOut_41_1 = null;
+            RuntimeException stackOut_43_0 = null;
+            StringBuilder stackOut_43_1 = null;
+            String stackOut_43_2 = null;
+            RuntimeException stackOut_42_0 = null;
+            StringBuilder stackOut_42_1 = null;
+            String stackOut_42_2 = null;
+            RuntimeException stackOut_44_0 = null;
+            StringBuilder stackOut_44_1 = null;
+            RuntimeException stackOut_46_0 = null;
+            StringBuilder stackOut_46_1 = null;
+            String stackOut_46_2 = null;
+            RuntimeException stackOut_45_0 = null;
+            StringBuilder stackOut_45_1 = null;
+            String stackOut_45_2 = null;
+            RuntimeException stackOut_47_0 = null;
+            StringBuilder stackOut_47_1 = null;
+            RuntimeException stackOut_49_0 = null;
+            StringBuilder stackOut_49_1 = null;
+            String stackOut_49_2 = null;
+            RuntimeException stackOut_48_0 = null;
+            StringBuilder stackOut_48_1 = null;
+            String stackOut_48_2 = null;
+            var9 = ZombieDawn.field_J;
+            try {
+              L0: {
+                if (param0 == 97) {
+                  break L0;
+                } else {
+                  field_c = null;
+                  break L0;
+                }
               }
-            }
-            L1: while (true) {
-              L2: {
-                if (var5.regionMatches(var6, "/l=", 0, 3)) {
-                  var7_int = var5.indexOf('/', var6 - -1);
-                  if ((var7_int ^ -1) <= -1) {
-                    if (-1 >= (param4 ^ -1)) {
-                      var5 = var5.substring(0, var6) + var5.substring(var7_int);
-                      continue L1;
-                    } else {
+              var5_ref = param1.getFile();
+              var6 = 0;
+              L1: while (true) {
+                L2: {
+                  if (var5_ref.regionMatches(var6, "/l=", 0, 3)) {
+                    var7_int = var5_ref.indexOf('/', var6 - -1);
+                    if (var7_int >= 0) {
                       var6 = var7_int;
                       continue L1;
+                    } else {
+                      break L2;
                     }
                   } else {
                     break L2;
                   }
-                } else {
-                  break L2;
                 }
-              }
-              L3: {
-                if (!var5.regionMatches(var6, "/a=", 0, 3)) {
-                  break L3;
-                } else {
-                  var7_int = var5.indexOf('/', 1 + var6);
-                  if (0 > var7_int) {
+                L3: {
+                  if (!var5_ref.regionMatches(var6, "/a=", 0, 3)) {
                     break L3;
                   } else {
-                    var6 = var7_int;
-                    continue L1;
-                  }
-                }
-              }
-              L4: {
-                if (!var5.regionMatches(var6, "/p=", 0, 3)) {
-                  break L4;
-                } else {
-                  var7_int = var5.indexOf('/', 1 + var6);
-                  if ((var7_int ^ -1) <= -1) {
-                    if (param3 != null) {
-                      var5 = var5.substring(0, var6) + var5.substring(var7_int);
-                      continue L1;
+                    var7_int = var5_ref.indexOf('/', 1 + var6);
+                    if (0 > var7_int) {
+                      break L3;
                     } else {
                       var6 = var7_int;
                       continue L1;
                     }
-                  } else {
-                    break L4;
                   }
                 }
-              }
-              L5: {
-                L6: {
-                  if (var5.regionMatches(var6, "/s=", 0, 3)) {
-                    break L6;
+                L4: {
+                  if (!var5_ref.regionMatches(var6, "/p=", 0, 3)) {
+                    break L4;
                   } else {
-                    if (!var5.regionMatches(var6, "/c=", 0, 3)) {
-                      break L5;
+                    var7_int = var5_ref.indexOf('/', 1 + var6);
+                    if (var7_int >= 0) {
+                      if (param3 != null) {
+                        var5_ref = var5_ref.substring(0, var6) + var5_ref.substring(var7_int);
+                        continue L1;
+                      } else {
+                        var6 = var7_int;
+                        continue L1;
+                      }
                     } else {
-                      break L6;
+                      break L4;
                     }
                   }
                 }
-                var7_int = var5.indexOf('/', var6 - -1);
-                if ((var7_int ^ -1) <= -1) {
+                L5: {
+                  L6: {
+                    if (var5_ref.regionMatches(var6, "/s=", 0, 3)) {
+                      break L6;
+                    } else {
+                      if (!var5_ref.regionMatches(var6, "/c=", 0, 3)) {
+                        break L5;
+                      } else {
+                        break L6;
+                      }
+                    }
+                  }
+                  var7_int = var5_ref.indexOf('/', var6 - -1);
+                  if (var7_int >= 0) {
+                    if (param2 == null) {
+                      var6 = var7_int;
+                      continue L1;
+                    } else {
+                      var5_ref = var5_ref.substring(0, var6) + var5_ref.substring(var7_int);
+                      continue L1;
+                    }
+                  } else {
+                    break L5;
+                  }
+                }
+                L7: {
+                  var7 = new StringBuilder(var6);
+                  StringBuilder discarded$7 = var7.append(var5_ref.substring(0, var6));
+                  if (param3 == null) {
+                    break L7;
+                  } else {
+                    if (param3.length() <= 0) {
+                      break L7;
+                    } else {
+                      StringBuilder discarded$8 = var7.append("/p=");
+                      StringBuilder discarded$9 = var7.append(param3);
+                      break L7;
+                    }
+                  }
+                }
+                L8: {
                   if (param2 == null) {
-                    var6 = var7_int;
-                    continue L1;
-                  } else {
-                    var5 = var5.substring(0, var6) + var5.substring(var7_int);
-                    continue L1;
-                  }
-                } else {
-                  break L5;
-                }
-              }
-              L7: {
-                var7 = new StringBuilder(var6);
-                StringBuilder discarded$9 = var7.append(var5.substring(0, var6));
-                if (param4 > 0) {
-                  StringBuilder discarded$10 = var7.append("/l=");
-                  StringBuilder discarded$11 = var7.append(Integer.toString(param4));
-                  break L7;
-                } else {
-                  break L7;
-                }
-              }
-              L8: {
-                if (param3 == null) {
-                  break L8;
-                } else {
-                  if (-1 <= (param3.length() ^ -1)) {
                     break L8;
                   } else {
-                    StringBuilder discarded$12 = var7.append("/p=");
-                    StringBuilder discarded$13 = var7.append(param3);
-                    break L8;
+                    if (param2.length() > 0) {
+                      StringBuilder discarded$10 = var7.append("/s=");
+                      StringBuilder discarded$11 = var7.append(param2);
+                      break L8;
+                    } else {
+                      break L8;
+                    }
                   }
                 }
-              }
-              L9: {
-                if (param2 == null) {
-                  break L9;
-                } else {
-                  if (param2.length() > 0) {
-                    StringBuilder discarded$14 = var7.append("/s=");
-                    StringBuilder discarded$15 = var7.append(param2);
+                L9: {
+                  if (var6 < var5_ref.length()) {
+                    StringBuilder discarded$12 = var7.append(var5_ref.substring(var6, var5_ref.length()));
                     break L9;
                   } else {
+                    StringBuilder discarded$13 = var7.append(47);
                     break L9;
                   }
                 }
-              }
-              L10: {
-                if ((var6 ^ -1) > (var5.length() ^ -1)) {
-                  StringBuilder discarded$16 = var7.append(var5.substring(var6, var5.length()));
-                  break L10;
-                } else {
-                  StringBuilder discarded$17 = var7.append(47);
-                  break L10;
+                try {
+                  L10: {
+                    stackOut_37_0 = new java.net.URL(param1, var7.toString());
+                    stackIn_38_0 = stackOut_37_0;
+                    break L10;
+                  }
+                } catch (java.lang.Exception decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  var8 = (Exception) (Object) decompiledCaughtException;
+                  var8.printStackTrace();
+                  stackOut_39_0 = (java.net.URL) param1;
+                  stackIn_40_0 = stackOut_39_0;
+                  return stackIn_40_0;
                 }
+                return stackIn_38_0;
               }
-              try {
-                L11: {
-                  stackOut_41_0 = new java.net.URL(param1, var7.toString());
-                  stackIn_42_0 = stackOut_41_0;
+            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L11: {
+                var5 = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_41_0 = (RuntimeException) var5;
+                stackOut_41_1 = new StringBuilder().append("jp.F(").append(param0).append(44);
+                stackIn_43_0 = stackOut_41_0;
+                stackIn_43_1 = stackOut_41_1;
+                stackIn_42_0 = stackOut_41_0;
+                stackIn_42_1 = stackOut_41_1;
+                if (param1 == null) {
+                  stackOut_43_0 = (RuntimeException) (Object) stackIn_43_0;
+                  stackOut_43_1 = (StringBuilder) (Object) stackIn_43_1;
+                  stackOut_43_2 = "null";
+                  stackIn_44_0 = stackOut_43_0;
+                  stackIn_44_1 = stackOut_43_1;
+                  stackIn_44_2 = stackOut_43_2;
+                  break L11;
+                } else {
+                  stackOut_42_0 = (RuntimeException) (Object) stackIn_42_0;
+                  stackOut_42_1 = (StringBuilder) (Object) stackIn_42_1;
+                  stackOut_42_2 = "{...}";
+                  stackIn_44_0 = stackOut_42_0;
+                  stackIn_44_1 = stackOut_42_1;
+                  stackIn_44_2 = stackOut_42_2;
                   break L11;
                 }
-              } catch (java.lang.Exception decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var8 = (Exception) (Object) decompiledCaughtException;
-                var8.printStackTrace();
-                return param1;
               }
-              return stackIn_42_0;
+              L12: {
+                stackOut_44_0 = (RuntimeException) (Object) stackIn_44_0;
+                stackOut_44_1 = ((StringBuilder) (Object) stackIn_44_1).append(stackIn_44_2).append(44);
+                stackIn_46_0 = stackOut_44_0;
+                stackIn_46_1 = stackOut_44_1;
+                stackIn_45_0 = stackOut_44_0;
+                stackIn_45_1 = stackOut_44_1;
+                if (param2 == null) {
+                  stackOut_46_0 = (RuntimeException) (Object) stackIn_46_0;
+                  stackOut_46_1 = (StringBuilder) (Object) stackIn_46_1;
+                  stackOut_46_2 = "null";
+                  stackIn_47_0 = stackOut_46_0;
+                  stackIn_47_1 = stackOut_46_1;
+                  stackIn_47_2 = stackOut_46_2;
+                  break L12;
+                } else {
+                  stackOut_45_0 = (RuntimeException) (Object) stackIn_45_0;
+                  stackOut_45_1 = (StringBuilder) (Object) stackIn_45_1;
+                  stackOut_45_2 = "{...}";
+                  stackIn_47_0 = stackOut_45_0;
+                  stackIn_47_1 = stackOut_45_1;
+                  stackIn_47_2 = stackOut_45_2;
+                  break L12;
+                }
+              }
+              L13: {
+                stackOut_47_0 = (RuntimeException) (Object) stackIn_47_0;
+                stackOut_47_1 = ((StringBuilder) (Object) stackIn_47_1).append(stackIn_47_2).append(44);
+                stackIn_49_0 = stackOut_47_0;
+                stackIn_49_1 = stackOut_47_1;
+                stackIn_48_0 = stackOut_47_0;
+                stackIn_48_1 = stackOut_47_1;
+                if (param3 == null) {
+                  stackOut_49_0 = (RuntimeException) (Object) stackIn_49_0;
+                  stackOut_49_1 = (StringBuilder) (Object) stackIn_49_1;
+                  stackOut_49_2 = "null";
+                  stackIn_50_0 = stackOut_49_0;
+                  stackIn_50_1 = stackOut_49_1;
+                  stackIn_50_2 = stackOut_49_2;
+                  break L13;
+                } else {
+                  stackOut_48_0 = (RuntimeException) (Object) stackIn_48_0;
+                  stackOut_48_1 = (StringBuilder) (Object) stackIn_48_1;
+                  stackOut_48_2 = "{...}";
+                  stackIn_50_0 = stackOut_48_0;
+                  stackIn_50_1 = stackOut_48_1;
+                  stackIn_50_2 = stackOut_48_2;
+                  break L13;
+                }
+              }
+              throw sh.a((Throwable) (Object) stackIn_50_0, stackIn_50_2 + 44 + -1 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -912,7 +1027,7 @@ final class jp {
         if (param0 != -97) {
             return false;
         }
-        return (((jp) this).field_b ^ -1) == -97 ? true : false;
+        return ((jp) this).field_b == 96 ? true : false;
     }
 
     final boolean e(int param0) {
@@ -925,7 +1040,7 @@ final class jp {
         if (param0 != -98) {
           L0: {
             ((jp) this).b(42, -37);
-            if ((((jp) this).field_b ^ -1) != -98) {
+            if (((jp) this).field_b != 97) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -938,7 +1053,7 @@ final class jp {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if ((((jp) this).field_b ^ -1) != -98) {
+            if (((jp) this).field_b != 97) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -982,7 +1097,7 @@ final class jp {
                   }
                 }
                 if (((jp) this).field_l == 0) {
-                  if ((kg.field_i ^ -1) == -100) {
+                  if (kg.field_i == 99) {
                     ((jp) this).field_d = ((jp) this).field_d + 1;
                     ((jp) this).field_j = false;
                     if (((jp) this).field_h <= ((jp) this).field_d) {
@@ -1009,7 +1124,7 @@ final class jp {
             }
           }
           if (((jp) this).field_l == 0) {
-            if ((kg.field_i ^ -1) == -100) {
+            if (kg.field_i == 99) {
               ((jp) this).field_d = ((jp) this).field_d + 1;
               ((jp) this).field_j = false;
               if (((jp) this).field_h <= ((jp) this).field_d) {
@@ -1030,7 +1145,7 @@ final class jp {
     }
 
     final static void a(byte param0) {
-        int var1 = -48 / ((param0 - 16) / 50);
+        int var1 = 48;
         if (!(null == kk.field_i)) {
             kk.field_i.h((byte) 74);
         }
@@ -1053,11 +1168,6 @@ final class jp {
 
     final static void b(byte param0) {
         rl.c(9);
-        if (param0 != -50) {
-            field_a = -13;
-            og.b(-126, 4);
-            return;
-        }
         og.b(-126, 4);
     }
 
@@ -1065,43 +1175,34 @@ final class jp {
         if (param0) {
             return false;
         }
-        return (((jp) this).field_b ^ -1) == -103 ? true : false;
+        return ((jp) this).field_b == 102 ? true : false;
     }
 
     public static void a(boolean param0) {
         field_f = null;
-        if (param0) {
-          field_a = 85;
-          field_i = null;
-          field_c = null;
-          field_g = null;
-          return;
-        } else {
-          field_i = null;
-          field_c = null;
-          field_g = null;
-          return;
-        }
+        field_i = null;
+        field_c = null;
+        field_g = null;
     }
 
     final boolean d(int param0) {
         if (param0 >= -119) {
             ((jp) this).field_h = -98;
-            if (-1 != (((jp) this).field_e ^ -1)) {
+            if (((jp) this).field_e != 0) {
                 return true;
             }
-            if (-85 == (((jp) this).field_b ^ -1)) {
+            if (((jp) this).field_b == 84) {
                 return true;
             }
-            return (((jp) this).field_b ^ -1) == -84 ? true : false;
+            return ((jp) this).field_b == 83 ? true : false;
         }
-        if (-1 != (((jp) this).field_e ^ -1)) {
+        if (((jp) this).field_e != 0) {
             return true;
         }
-        if (-85 == (((jp) this).field_b ^ -1)) {
+        if (((jp) this).field_b == 84) {
             return true;
         }
-        if ((((jp) this).field_b ^ -1) == -84) {
+        if (((jp) this).field_b == 83) {
             return true;
         }
         return false;
@@ -1131,7 +1232,7 @@ final class jp {
         if (param0 != -104) {
           L0: {
             field_m = false;
-            if ((((jp) this).field_b ^ -1) != -104) {
+            if (((jp) this).field_b != 103) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -1144,7 +1245,7 @@ final class jp {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if ((((jp) this).field_b ^ -1) != -104) {
+            if (((jp) this).field_b != 103) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -1162,20 +1263,20 @@ final class jp {
         ((jp) this).field_e = 0;
         ((jp) this).field_b = 0;
         if (0 == ((jp) this).field_l) {
-          if (-97 == (kg.field_i ^ -1)) {
-            if (-1 > (((jp) this).field_d ^ -1)) {
+          if (kg.field_i == 96) {
+            if (((jp) this).field_d > 0) {
               ((jp) this).field_d = ((jp) this).field_d - 1;
               ((jp) this).field_j = false;
-              if (param1 == (((jp) this).field_l ^ -1)) {
+              if (param1 == ~((jp) this).field_l) {
                 L0: {
                   ((jp) this).field_b = kg.field_i;
                   if (0 != ((jp) this).field_l) {
                     break L0;
                   } else {
-                    if (-98 == (kg.field_i ^ -1)) {
+                    if (kg.field_i == 97) {
                       ((jp) this).field_d = ((jp) this).field_d + 1;
                       ((jp) this).field_j = false;
-                      if ((((jp) this).field_h ^ -1) < (((jp) this).field_d ^ -1)) {
+                      if (~((jp) this).field_h < ~((jp) this).field_d) {
                         break L0;
                       } else {
                         ((jp) this).field_d = 0;
@@ -1187,11 +1288,11 @@ final class jp {
                   }
                 }
                 L1: {
-                  if (-1 != (((jp) this).field_l ^ -1)) {
+                  if (((jp) this).field_l != 0) {
                     break L1;
                   } else {
                     L2: {
-                      if (-99 == (kg.field_i ^ -1)) {
+                      if (kg.field_i == 98) {
                         break L2;
                       } else {
                         if (99 == kg.field_i) {
@@ -1219,10 +1320,10 @@ final class jp {
                   if (0 != ((jp) this).field_l) {
                     break L4;
                   } else {
-                    if (-98 == (kg.field_i ^ -1)) {
+                    if (kg.field_i == 97) {
                       ((jp) this).field_d = ((jp) this).field_d + 1;
                       ((jp) this).field_j = false;
-                      if ((((jp) this).field_h ^ -1) < (((jp) this).field_d ^ -1)) {
+                      if (~((jp) this).field_h < ~((jp) this).field_d) {
                         break L4;
                       } else {
                         ((jp) this).field_d = 0;
@@ -1234,11 +1335,11 @@ final class jp {
                   }
                 }
                 L5: {
-                  if (-1 != (((jp) this).field_l ^ -1)) {
+                  if (((jp) this).field_l != 0) {
                     break L5;
                   } else {
                     L6: {
-                      if (-99 == (kg.field_i ^ -1)) {
+                      if (kg.field_i == 98) {
                         break L6;
                       } else {
                         if (99 == kg.field_i) {
@@ -1267,7 +1368,7 @@ final class jp {
               L8: {
                 ((jp) this).field_d = ((jp) this).field_d - 1;
                 ((jp) this).field_j = false;
-                if (param1 != (((jp) this).field_l ^ -1)) {
+                if (param1 != ~((jp) this).field_l) {
                   break L8;
                 } else {
                   ((jp) this).field_b = kg.field_i;
@@ -1278,10 +1379,10 @@ final class jp {
                 if (0 != ((jp) this).field_l) {
                   break L9;
                 } else {
-                  if (-98 == (kg.field_i ^ -1)) {
+                  if (kg.field_i == 97) {
                     ((jp) this).field_d = ((jp) this).field_d + 1;
                     ((jp) this).field_j = false;
-                    if ((((jp) this).field_h ^ -1) < (((jp) this).field_d ^ -1)) {
+                    if (~((jp) this).field_h < ~((jp) this).field_d) {
                       break L9;
                     } else {
                       ((jp) this).field_d = 0;
@@ -1293,11 +1394,11 @@ final class jp {
                 }
               }
               L10: {
-                if (-1 != (((jp) this).field_l ^ -1)) {
+                if (((jp) this).field_l != 0) {
                   break L10;
                 } else {
                   L11: {
-                    if (-99 == (kg.field_i ^ -1)) {
+                    if (kg.field_i == 98) {
                       break L11;
                     } else {
                       if (99 == kg.field_i) {
@@ -1322,24 +1423,24 @@ final class jp {
               return;
             }
           } else {
-            if (param1 != (((jp) this).field_l ^ -1)) {
+            if (param1 != ~((jp) this).field_l) {
               L13: {
                 if (0 != ((jp) this).field_l) {
                   break L13;
                 } else {
-                  if (-98 == (kg.field_i ^ -1)) {
+                  if (kg.field_i == 97) {
                     ((jp) this).field_d = ((jp) this).field_d + 1;
                     ((jp) this).field_j = false;
-                    if ((((jp) this).field_h ^ -1) < (((jp) this).field_d ^ -1)) {
+                    if (~((jp) this).field_h < ~((jp) this).field_d) {
                       break L13;
                     } else {
                       L14: {
                         ((jp) this).field_d = 0;
-                        if (-1 != (((jp) this).field_l ^ -1)) {
+                        if (((jp) this).field_l != 0) {
                           break L14;
                         } else {
                           L15: {
-                            if (-99 == (kg.field_i ^ -1)) {
+                            if (kg.field_i == 98) {
                               break L15;
                             } else {
                               if (99 == kg.field_i) {
@@ -1365,11 +1466,11 @@ final class jp {
                     }
                   } else {
                     L17: {
-                      if (-1 != (((jp) this).field_l ^ -1)) {
+                      if (((jp) this).field_l != 0) {
                         break L17;
                       } else {
                         L18: {
-                          if (-99 == (kg.field_i ^ -1)) {
+                          if (kg.field_i == 98) {
                             break L18;
                           } else {
                             if (99 == kg.field_i) {
@@ -1396,11 +1497,11 @@ final class jp {
                 }
               }
               L20: {
-                if (-1 != (((jp) this).field_l ^ -1)) {
+                if (((jp) this).field_l != 0) {
                   break L20;
                 } else {
                   L21: {
-                    if (-99 == (kg.field_i ^ -1)) {
+                    if (kg.field_i == 98) {
                       break L21;
                     } else {
                       if (99 == kg.field_i) {
@@ -1426,17 +1527,17 @@ final class jp {
             } else {
               ((jp) this).field_b = kg.field_i;
               if (0 == ((jp) this).field_l) {
-                if (-98 == (kg.field_i ^ -1)) {
+                if (kg.field_i == 97) {
                   ((jp) this).field_d = ((jp) this).field_d + 1;
                   ((jp) this).field_j = false;
-                  if ((((jp) this).field_h ^ -1) >= (((jp) this).field_d ^ -1)) {
+                  if (~((jp) this).field_h >= ~((jp) this).field_d) {
                     L23: {
                       ((jp) this).field_d = 0;
-                      if (-1 != (((jp) this).field_l ^ -1)) {
+                      if (((jp) this).field_l != 0) {
                         break L23;
                       } else {
                         L24: {
-                          if (-99 == (kg.field_i ^ -1)) {
+                          if (kg.field_i == 98) {
                             break L24;
                           } else {
                             if (99 == kg.field_i) {
@@ -1461,11 +1562,11 @@ final class jp {
                     return;
                   } else {
                     L26: {
-                      if (-1 != (((jp) this).field_l ^ -1)) {
+                      if (((jp) this).field_l != 0) {
                         break L26;
                       } else {
                         L27: {
-                          if (-99 == (kg.field_i ^ -1)) {
+                          if (kg.field_i == 98) {
                             break L27;
                           } else {
                             if (99 == kg.field_i) {
@@ -1491,11 +1592,11 @@ final class jp {
                   }
                 } else {
                   L29: {
-                    if (-1 != (((jp) this).field_l ^ -1)) {
+                    if (((jp) this).field_l != 0) {
                       break L29;
                     } else {
                       L30: {
-                        if (-99 == (kg.field_i ^ -1)) {
+                        if (kg.field_i == 98) {
                           break L30;
                         } else {
                           if (99 == kg.field_i) {
@@ -1521,11 +1622,11 @@ final class jp {
                 }
               } else {
                 L32: {
-                  if (-1 != (((jp) this).field_l ^ -1)) {
+                  if (((jp) this).field_l != 0) {
                     break L32;
                   } else {
                     L33: {
-                      if (-99 == (kg.field_i ^ -1)) {
+                      if (kg.field_i == 98) {
                         break L33;
                       } else {
                         if (99 == kg.field_i) {
@@ -1552,24 +1653,24 @@ final class jp {
             }
           }
         } else {
-          if (param1 != (((jp) this).field_l ^ -1)) {
+          if (param1 != ~((jp) this).field_l) {
             L35: {
               if (0 != ((jp) this).field_l) {
                 break L35;
               } else {
-                if (-98 == (kg.field_i ^ -1)) {
+                if (kg.field_i == 97) {
                   ((jp) this).field_d = ((jp) this).field_d + 1;
                   ((jp) this).field_j = false;
-                  if ((((jp) this).field_h ^ -1) < (((jp) this).field_d ^ -1)) {
+                  if (~((jp) this).field_h < ~((jp) this).field_d) {
                     break L35;
                   } else {
                     L36: {
                       ((jp) this).field_d = 0;
-                      if (-1 != (((jp) this).field_l ^ -1)) {
+                      if (((jp) this).field_l != 0) {
                         break L36;
                       } else {
                         L37: {
-                          if (-99 == (kg.field_i ^ -1)) {
+                          if (kg.field_i == 98) {
                             break L37;
                           } else {
                             if (99 == kg.field_i) {
@@ -1595,11 +1696,11 @@ final class jp {
                   }
                 } else {
                   L39: {
-                    if (-1 != (((jp) this).field_l ^ -1)) {
+                    if (((jp) this).field_l != 0) {
                       break L39;
                     } else {
                       L40: {
-                        if (-99 == (kg.field_i ^ -1)) {
+                        if (kg.field_i == 98) {
                           break L40;
                         } else {
                           if (99 == kg.field_i) {
@@ -1626,11 +1727,11 @@ final class jp {
               }
             }
             L42: {
-              if (-1 != (((jp) this).field_l ^ -1)) {
+              if (((jp) this).field_l != 0) {
                 break L42;
               } else {
                 L43: {
-                  if (-99 == (kg.field_i ^ -1)) {
+                  if (kg.field_i == 98) {
                     break L43;
                   } else {
                     if (99 == kg.field_i) {
@@ -1659,10 +1760,10 @@ final class jp {
               if (0 != ((jp) this).field_l) {
                 break L45;
               } else {
-                if (-98 == (kg.field_i ^ -1)) {
+                if (kg.field_i == 97) {
                   ((jp) this).field_d = ((jp) this).field_d + 1;
                   ((jp) this).field_j = false;
-                  if ((((jp) this).field_h ^ -1) < (((jp) this).field_d ^ -1)) {
+                  if (~((jp) this).field_h < ~((jp) this).field_d) {
                     break L45;
                   } else {
                     ((jp) this).field_d = 0;
@@ -1674,11 +1775,11 @@ final class jp {
               }
             }
             L46: {
-              if (-1 != (((jp) this).field_l ^ -1)) {
+              if (((jp) this).field_l != 0) {
                 break L46;
               } else {
                 L47: {
-                  if (-99 == (kg.field_i ^ -1)) {
+                  if (kg.field_i == 98) {
                     break L47;
                   } else {
                     if (99 == kg.field_i) {

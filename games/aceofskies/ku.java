@@ -24,17 +24,16 @@ final class ku extends af {
     }
 
     final void a(byte param0, byte[] param1) {
-        byte[] var4 = null;
-        ((ku) this).field_d = java.nio.ByteBuffer.allocateDirect(param1.length);
-        java.nio.Buffer discarded$11 = ((ku) this).field_d.position(0);
-        if (param0 != 56) {
-          var4 = (byte[]) null;
-          ((ku) this).a((byte) -3, (byte[]) null);
-          java.nio.ByteBuffer discarded$12 = ((ku) this).field_d.put(param1);
-          return;
-        } else {
-          java.nio.ByteBuffer discarded$13 = ((ku) this).field_d.put(param1);
-          return;
+        try {
+            ((ku) this).field_d = java.nio.ByteBuffer.allocateDirect(param1.length);
+            java.nio.Buffer discarded$6 = ((ku) this).field_d.position(0);
+            if (param0 != 56) {
+                Object var4 = null;
+                ((ku) this).a((byte) -3, (byte[]) null);
+            }
+            java.nio.ByteBuffer discarded$7 = ((ku) this).field_d.put(param1);
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) (Object) runtimeException, "ku.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -54,7 +53,7 @@ final class ku extends af {
         var5 = new byte[param2];
         var4 = var5;
         if (param0 != -19920) {
-          field_g = (String) null;
+          field_g = null;
           java.nio.ByteBuffer discarded$7 = ((ku) this).field_d.get(var5, 0, param2);
           return var5;
         } else {

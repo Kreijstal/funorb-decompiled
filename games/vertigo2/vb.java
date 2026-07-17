@@ -11,19 +11,9 @@ final class vb extends dh {
 
     public static void b(byte param0) {
         field_j = null;
-        if (param0 >= -40) {
-            field_g = false;
-        }
     }
 
     final static String c(int param0) {
-        if (param0 != -15381) {
-            field_g = false;
-            if (qe.field_V == null) {
-                return "";
-            }
-            return qe.field_V;
-        }
         if (qe.field_V == null) {
             return "";
         }
@@ -32,145 +22,80 @@ final class vb extends dh {
 
     final static void d(int param0) {
         try {
-            IOException iOException = null;
-            int var1 = 0;
+            IOException var1 = null;
+            RuntimeException var1_ref = null;
+            int var1_int = 0;
             IOException var2 = null;
             int var3 = 0;
             Throwable decompiledCaughtException = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        var3 = Vertigo2.field_L ? 1 : 0;
-                        if (param0 > 34) {
-                            statePc = 2;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        field_h = 5;
-                        statePc = 2;
-                        continue stateLoop;
-                    }
-                    case 2: {
-                        if (kb.field_e == null) {
-                            statePc = 4;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    }
-                    case 3: {
-                        kb.field_e.b((byte) 9);
-                        statePc = 4;
-                        continue stateLoop;
-                    }
-                    case 4: {
-                        if (null == ap.field_a) {
-                            statePc = 6;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    }
-                    case 5: {
-                        ap.field_a.a(-82);
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                    case 6: {
-                        if (null != ad.field_g) {
-                            statePc = 8;
-                        } else {
-                            statePc = 11;
-                        }
-                        continue stateLoop;
-                    }
-                    case 8: {
-                        try {
-                            ad.field_g.b(-22473);
-                            statePc = 11;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_8) {
-                            caughtException = stateCaught_8;
-                            statePc = 10;
-                            continue stateLoop;
-                        }
-                    }
-                    case 10: {
-                        iOException = (IOException) (Object) caughtException;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                    case 11: {
-                        if (null != rg.field_g) {
-                            statePc = 13;
-                        } else {
-                            statePc = 12;
-                        }
-                        continue stateLoop;
-                    }
-                    case 12: {
-                        return;
-                    }
-                    case 13: {
-                        var1 = 0;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                    case 14: {
-                        if (rg.field_g.length > var1) {
-                            statePc = 16;
-                        } else {
-                            statePc = 15;
-                        }
-                        continue stateLoop;
-                    }
-                    case 15: {
-                        return;
-                    }
-                    case 16: {
-                        if (rg.field_g[var1] != null) {
-                            statePc = 19;
-                        } else {
-                            statePc = 17;
-                        }
-                        continue stateLoop;
-                    }
-                    case 17: {
-                        var1++;
-                        var1++;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                    case 19: {
-                        try {
-                            rg.field_g[var1].b(-22473);
-                            statePc = 20;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_19) {
-                            caughtException = stateCaught_19;
-                            statePc = 21;
-                            continue stateLoop;
-                        }
-                    }
-                    case 20: {
-                        var1++;
-                        var1++;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                    case 21: {
-                        var2 = (IOException) (Object) caughtException;
-                        var1++;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            var3 = Vertigo2.field_L ? 1 : 0;
+            try {
+              L0: {
+                L1: {
+                  if (kb.field_e == null) {
+                    break L1;
+                  } else {
+                    kb.field_e.b((byte) 9);
+                    break L1;
+                  }
                 }
+                L2: {
+                  if (null == ap.field_a) {
+                    break L2;
+                  } else {
+                    ap.field_a.a(-82);
+                    break L2;
+                  }
+                }
+                L3: {
+                  if (null != ad.field_g) {
+                    {
+                      L4: {
+                        ad.field_g.b(-22473);
+                        break L4;
+                      }
+                    }
+                    break L3;
+                  } else {
+                    break L3;
+                  }
+                }
+                L6: {
+                  if (null == rg.field_g) {
+                    break L6;
+                  } else {
+                    var1_int = 0;
+                    L7: while (true) {
+                      if (rg.field_g.length <= var1_int) {
+                        break L6;
+                      } else {
+                        L8: {
+                          if (rg.field_g[var1_int] == null) {
+                            var1_int++;
+                            break L8;
+                          } else {
+                            {
+                              L9: {
+                                rg.field_g[var1_int].b(-22473);
+                                var1_int++;
+                                break L9;
+                              }
+                            }
+                            break L8;
+                          }
+                        }
+                        var1_int++;
+                        continue L7;
+                      }
+                    }
+                  }
+                }
+                break L0;
+              }
+            } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
+              decompiledCaughtException = decompiledCaughtParameter2;
+              var1_ref = (RuntimeException) (Object) decompiledCaughtException;
+              throw wn.a((Throwable) (Object) var1_ref, "vb.E(" + 65 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -189,16 +114,15 @@ final class vb extends dh {
     }
 
     final void a(byte[] param0, boolean param1) {
-        ((vb) this).field_i = java.nio.ByteBuffer.allocateDirect(param0.length);
-        if (!param1) {
-          field_j = null;
-          java.nio.Buffer discarded$8 = ((vb) this).field_i.position(0);
-          java.nio.ByteBuffer discarded$9 = ((vb) this).field_i.put(param0);
-          return;
-        } else {
-          java.nio.Buffer discarded$10 = ((vb) this).field_i.position(0);
-          java.nio.ByteBuffer discarded$11 = ((vb) this).field_i.put(param0);
-          return;
+        try {
+            ((vb) this).field_i = java.nio.ByteBuffer.allocateDirect(param0.length);
+            if (!param1) {
+                field_j = null;
+            }
+            java.nio.Buffer discarded$0 = ((vb) this).field_i.position(0);
+            java.nio.ByteBuffer discarded$1 = ((vb) this).field_i.put(param0);
+        } catch (RuntimeException runtimeException) {
+            throw wn.a((Throwable) (Object) runtimeException, "vb.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 

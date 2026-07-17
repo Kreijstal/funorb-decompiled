@@ -7,9 +7,6 @@ final class gpa extends za {
 
     public static void a(int param0) {
         field_f = null;
-        if (param0 > -89) {
-            field_f = null;
-        }
     }
 
     final void a(boolean param0) {

@@ -77,7 +77,7 @@ final class nq extends rk {
             if (null == pq.field_c) {
               break L1;
             } else {
-              if ((pq.field_c.length ^ -1) <= (param14 ^ -1)) {
+              if (~pq.field_c.length <= ~param14) {
                 break L0;
               } else {
                 break L1;
@@ -145,7 +145,7 @@ final class nq extends rk {
             if (vm.field_a == null) {
               break L8;
             } else {
-              if ((vm.field_a.length ^ -1) > (param0 ^ -1)) {
+              if (~vm.field_a.length > ~param0) {
                 break L8;
               } else {
                 break L7;
@@ -166,7 +166,7 @@ final class nq extends rk {
               if (null == or.field_e) {
                 break L10;
               } else {
-                if ((param0 ^ -1) < (or.field_e.length ^ -1)) {
+                if (~param0 < ~or.field_e.length) {
                   break L10;
                 } else {
                   break L9;
@@ -221,7 +221,7 @@ final class nq extends rk {
               if (null == vf.field_y) {
                 break L16;
               } else {
-                if ((param0 ^ -1) < (vf.field_y.length ^ -1)) {
+                if (~param0 < ~vf.field_y.length) {
                   break L16;
                 } else {
                   break L15;
@@ -242,7 +242,7 @@ final class nq extends rk {
         L17: while (true) {
           L18: {
             L19: {
-              if ((var34 ^ -1) <= (param14 ^ -1)) {
+              if (~var34 <= ~param14) {
                 break L19;
               } else {
                 var24[var34] = -1;
@@ -263,7 +263,7 @@ final class nq extends rk {
           }
           L20: while (true) {
             L21: {
-              if ((var34 ^ -1) <= (param14 ^ -1)) {
+              if (~var34 <= ~param14) {
                 break L21;
               } else {
                 var25[var34] = -1;
@@ -282,7 +282,7 @@ final class nq extends rk {
             L22: while (true) {
               L23: {
                 L24: {
-                  if ((var39 ^ -1) <= (param0 ^ -1)) {
+                  if (~var39 <= ~param0) {
                     break L24;
                   } else {
                     var40 = param18[var39];
@@ -312,15 +312,17 @@ final class nq extends rk {
                             break L26;
                           } else {
                             L27: {
+                              int fieldTemp$46 = eb.field_b;
                               eb.field_b = eb.field_b + 1;
-                              var34 = eb.field_b;
+                              var34 = fieldTemp$46;
                               var35 = var24[var40];
-                              if ((var35 ^ -1) <= -1) {
+                              if (var35 >= 0) {
                                 break L27;
                               } else {
+                                int fieldTemp$47 = jd.field_d;
                                 jd.field_d = jd.field_d + 1;
-                                var35 = jd.field_d;
-                                var24[var40] = jd.field_d;
+                                var35 = fieldTemp$47;
+                                var24[var40] = fieldTemp$47;
                                 kh.field_c[var35] = var43;
                                 hk.field_q[var35] = var44;
                                 sa.field_c[var35] = var45;
@@ -330,12 +332,13 @@ final class nq extends rk {
                             L28: {
                               vm.field_a[var34] = var35;
                               var35 = var24[var41];
-                              if ((var35 ^ -1) <= -1) {
+                              if (var35 >= 0) {
                                 break L28;
                               } else {
+                                int fieldTemp$48 = jd.field_d;
                                 jd.field_d = jd.field_d + 1;
-                                var35 = jd.field_d;
-                                var24[var41] = jd.field_d;
+                                var35 = fieldTemp$48;
+                                var24[var41] = fieldTemp$48;
                                 kh.field_c[var35] = var46;
                                 hk.field_q[var35] = var47;
                                 sa.field_c[var35] = var48;
@@ -345,10 +348,11 @@ final class nq extends rk {
                             L29: {
                               al.field_s[var34] = var35;
                               var35 = var24[var42];
-                              if (-1 < (var35 ^ -1)) {
+                              if (var35 < 0) {
+                                int fieldTemp$49 = jd.field_d;
                                 jd.field_d = jd.field_d + 1;
-                                var35 = jd.field_d;
-                                var24[var42] = jd.field_d;
+                                var35 = fieldTemp$49;
+                                var24[var42] = fieldTemp$49;
                                 kh.field_c[var35] = var49;
                                 hk.field_q[var35] = var50;
                                 sa.field_c[var35] = var51;
@@ -377,11 +381,11 @@ final class nq extends rk {
                           }
                         }
                         L31: {
-                          if (((-var54 | (-var53 | -var52)) ^ -1) <= -1) {
+                          if ((-var54 | (-var53 | -var52)) >= 0) {
                             break L31;
                           } else {
                             L32: {
-                              if ((kh.field_c.length ^ -1) <= (param14 - -var30 - -4 ^ -1)) {
+                              if (~kh.field_c.length <= ~(param14 - -var30 - -4)) {
                                 break L32;
                               } else {
                                 var55 = new int[param14 + var30 + 104];
@@ -430,7 +434,7 @@ final class nq extends rk {
                                           if (-1 == param7[var39]) {
                                             break L38;
                                           } else {
-                                            if ((param7[var39] ^ -1) == 1) {
+                                            if (param7[var39] == -2) {
                                               break L38;
                                             } else {
                                               stackOut_83_0 = 1;
@@ -504,16 +508,17 @@ final class nq extends rk {
                                   if (0 <= var35) {
                                     break L43;
                                   } else {
+                                    int incrementValue$50 = var56;
                                     var56++;
-                                    var35 = var56;
-                                    var24[var40] = var56;
+                                    var35 = incrementValue$50;
+                                    var24[var40] = incrementValue$50;
                                     kh.field_c[var35] = var43;
                                     hk.field_q[var35] = var44;
                                     sa.field_c[var35] = var45;
                                     break L43;
                                   }
                                 }
-                                var26[0 + var58] = var35;
+                                var26[var58] = var35;
                                 var26[8 - -var58] = var36;
                                 var58++;
                                 break L42;
@@ -522,15 +527,16 @@ final class nq extends rk {
                               }
                             }
                             L44: {
-                              if (-1 > (var52 ^ -1)) {
+                              if (var52 > 0) {
                                 break L44;
                               } else {
                                 L45: {
                                   var35 = var25[var40];
-                                  if (-1 < (var35 ^ -1)) {
+                                  if (var35 < 0) {
+                                    int incrementValue$51 = var57;
                                     var57++;
-                                    var35 = var57;
-                                    var25[var40] = var57;
+                                    var35 = incrementValue$51;
+                                    var25[var40] = incrementValue$51;
                                     lf.field_z[var35] = var43;
                                     ga.field_hb[var35] = var44;
                                     rn.field_z[var35] = var45;
@@ -546,30 +552,32 @@ final class nq extends rk {
                               }
                             }
                             L46: {
-                              if ((var52 ^ -1) == -1) {
+                              if (var52 == 0) {
                                 break L46;
                               } else {
-                                if ((var53 ^ -1) == -1) {
+                                if (var53 == 0) {
                                   break L46;
                                 } else {
-                                  if ((var53 ^ var52 ^ -1) <= -1) {
+                                  if ((var53 ^ var52) >= 0) {
                                     break L46;
                                   } else {
                                     var64 = -var52 + var53;
                                     var60 = (-(var52 * var46) + var53 * var43) / var64;
+                                    int incrementValue$52 = var56;
                                     var56++;
-                                    var35 = var56;
+                                    var35 = incrementValue$52;
                                     var63 = (-(var37 * var52) + var36 * var53) / var64;
                                     var62 = (var45 * var53 - var48 * var52) / var64;
                                     var61 = (var44 * var53 - var52 * var47) / var64;
                                     kh.field_c[var35] = var60;
                                     hk.field_q[var35] = var61;
                                     sa.field_c[var35] = var62;
-                                    var26[var58 + 0] = var35;
+                                    var26[var58] = var35;
                                     var26[var58 + 8] = var63;
                                     var58++;
+                                    int incrementValue$53 = var57;
                                     var57++;
-                                    var35 = var57;
+                                    var35 = incrementValue$53;
                                     lf.field_z[var35] = var60;
                                     ga.field_hb[var35] = var61;
                                     rn.field_z[var35] = var62;
@@ -588,9 +596,10 @@ final class nq extends rk {
                                 L48: {
                                   var35 = var24[var41];
                                   if (0 > var35) {
+                                    int incrementValue$54 = var56;
                                     var56++;
-                                    var35 = var56;
-                                    var24[var41] = var56;
+                                    var35 = incrementValue$54;
+                                    var24[var41] = incrementValue$54;
                                     kh.field_c[var35] = var46;
                                     hk.field_q[var35] = var47;
                                     sa.field_c[var35] = var48;
@@ -599,24 +608,25 @@ final class nq extends rk {
                                     break L48;
                                   }
                                 }
-                                var26[var58 + 0] = var35;
+                                var26[var58] = var35;
                                 var26[var58 + 8] = var37;
                                 var58++;
                                 break L47;
                               }
                             }
                             L49: {
-                              if ((var53 ^ -1) < -1) {
+                              if (var53 > 0) {
                                 break L49;
                               } else {
                                 L50: {
                                   var35 = var25[var41];
-                                  if (-1 >= (var35 ^ -1)) {
+                                  if (var35 >= 0) {
                                     break L50;
                                   } else {
+                                    int incrementValue$55 = var57;
                                     var57++;
-                                    var35 = var57;
-                                    var25[var41] = var57;
+                                    var35 = incrementValue$55;
+                                    var25[var41] = incrementValue$55;
                                     lf.field_z[var35] = var46;
                                     ga.field_hb[var35] = var47;
                                     rn.field_z[var35] = var48;
@@ -639,18 +649,20 @@ final class nq extends rk {
                                   if ((var54 ^ var53) < 0) {
                                     var64 = -var53 + var54;
                                     var61 = (var54 * var47 + -(var50 * var53)) / var64;
+                                    int incrementValue$56 = var56;
                                     var56++;
-                                    var35 = var56;
+                                    var35 = incrementValue$56;
                                     var63 = (var37 * var54 - var53 * var38) / var64;
                                     var62 = (var48 * var54 - var53 * var51) / var64;
                                     var60 = (var46 * var54 + -(var53 * var49)) / var64;
                                     kh.field_c[var35] = var60;
                                     hk.field_q[var35] = var61;
                                     sa.field_c[var35] = var62;
-                                    var26[var58 + 0] = var35;
+                                    var26[var58] = var35;
                                     var26[var58 + 8] = var63;
+                                    int incrementValue$57 = var57;
                                     var57++;
-                                    var35 = var57;
+                                    var35 = incrementValue$57;
                                     var58++;
                                     lf.field_z[var35] = var60;
                                     ga.field_hb[var35] = var61;
@@ -670,9 +682,10 @@ final class nq extends rk {
                                 L53: {
                                   var35 = var24[var42];
                                   if (var35 < 0) {
+                                    int incrementValue$58 = var56;
                                     var56++;
-                                    var35 = var56;
-                                    var24[var42] = var56;
+                                    var35 = incrementValue$58;
+                                    var24[var42] = incrementValue$58;
                                     kh.field_c[var35] = var49;
                                     hk.field_q[var35] = var50;
                                     sa.field_c[var35] = var51;
@@ -681,7 +694,7 @@ final class nq extends rk {
                                     break L53;
                                   }
                                 }
-                                var26[var58 + 0] = var35;
+                                var26[var58] = var35;
                                 var26[var58 + 8] = var38;
                                 var58++;
                                 break L52;
@@ -695,12 +708,13 @@ final class nq extends rk {
                               } else {
                                 L55: {
                                   var35 = var25[var42];
-                                  if ((var35 ^ -1) <= -1) {
+                                  if (var35 >= 0) {
                                     break L55;
                                   } else {
+                                    int incrementValue$59 = var57;
                                     var57++;
-                                    var35 = var57;
-                                    var25[var42] = var57;
+                                    var35 = incrementValue$59;
+                                    var25[var42] = incrementValue$59;
                                     lf.field_z[var35] = var49;
                                     ga.field_hb[var35] = var50;
                                     rn.field_z[var35] = var51;
@@ -714,25 +728,27 @@ final class nq extends rk {
                               }
                             }
                             L56: {
-                              if (-1 == ((var52 | var54) ^ -1)) {
+                              if ((var52 | var54) == 0) {
                                 break L56;
                               } else {
                                 if ((var52 ^ var54) < 0) {
                                   var64 = -var54 + var52;
                                   var63 = (-(var36 * var54) + var52 * var38) / var64;
+                                  int incrementValue$60 = var56;
                                   var56++;
-                                  var35 = var56;
+                                  var35 = incrementValue$60;
                                   var61 = (-(var54 * var44) + var52 * var50) / var64;
                                   var62 = (var52 * var51 + -(var54 * var45)) / var64;
                                   var60 = (var52 * var49 + -(var43 * var54)) / var64;
                                   kh.field_c[var35] = var60;
                                   hk.field_q[var35] = var61;
                                   sa.field_c[var35] = var62;
-                                  var26[var58 + 0] = var35;
+                                  var26[var58] = var35;
                                   var26[var58 + 8] = var63;
                                   var58++;
+                                  int incrementValue$61 = var57;
                                   var57++;
-                                  var35 = var57;
+                                  var35 = incrementValue$61;
                                   lf.field_z[var35] = var60;
                                   ga.field_hb[var35] = var61;
                                   rn.field_z[var35] = var62;
@@ -749,7 +765,7 @@ final class nq extends rk {
                               var30 = var30 + (var56 + -jd.field_d);
                               jd.field_d = var56;
                               var34 = eb.field_b;
-                              if ((param0 + (var31 + var58) + -2 ^ -1) >= (vm.field_a.length ^ -1)) {
+                              if (~(param0 + (var31 + var58) + -2) >= ~vm.field_a.length) {
                                 break L57;
                               } else {
                                 var55 = new int[var58 + var31 + (param0 - -98)];
@@ -804,9 +820,10 @@ final class nq extends rk {
                               }
                             }
                             L60: {
+                              int incrementValue$62 = var34;
                               var34++;
-                              var27[var34] = var39;
-                              if ((var58 ^ -1) != -5) {
+                              var27[incrementValue$62] = var39;
+                              if (var58 != 4) {
                                 break L60;
                               } else {
                                 L61: {
@@ -835,8 +852,9 @@ final class nq extends rk {
                                     break L61;
                                   }
                                 }
+                                int incrementValue$63 = var34;
                                 var34++;
-                                var27[var34] = var39;
+                                var27[incrementValue$63] = var39;
                                 var31++;
                                 break L60;
                               }
@@ -846,7 +864,7 @@ final class nq extends rk {
                               eb.field_b = var34;
                               var34 = rm.field_y;
                               no.field_b = var57;
-                              if ((var59 + (param0 - -var33 - 2) ^ -1) >= (b.field_m.length ^ -1)) {
+                              if (~(var59 + (param0 - -var33 - 2)) >= ~b.field_m.length) {
                                 break L63;
                               } else {
                                 var55 = new int[98 + (param0 + var33) - -var59];
@@ -901,9 +919,10 @@ final class nq extends rk {
                               }
                             }
                             L66: {
+                              int incrementValue$64 = var34;
                               var34++;
-                              var28[var34] = var39;
-                              if (-5 == (var59 ^ -1)) {
+                              var28[incrementValue$64] = var39;
+                              if (var59 == 4) {
                                 L67: {
                                   b.field_m[var34] = var26[6];
                                   tf.field_p[var34] = var26[7];
@@ -930,8 +949,9 @@ final class nq extends rk {
                                     break L67;
                                   }
                                 }
+                                int incrementValue$65 = var34;
                                 var34++;
-                                var28[var34] = var39;
+                                var28[incrementValue$65] = var39;
                                 var33++;
                                 break L66;
                               } else {
@@ -947,13 +967,15 @@ final class nq extends rk {
                           }
                         }
                         L69: {
+                          int fieldTemp$66 = rm.field_y;
                           rm.field_y = rm.field_y + 1;
-                          var34 = rm.field_y;
+                          var34 = fieldTemp$66;
                           var35 = var25[var40];
-                          if ((var35 ^ -1) > -1) {
+                          if (var35 < 0) {
+                            int fieldTemp$67 = no.field_b;
                             no.field_b = no.field_b + 1;
-                            var35 = no.field_b;
-                            var25[var40] = no.field_b;
+                            var35 = fieldTemp$67;
+                            var25[var40] = fieldTemp$67;
                             lf.field_z[var35] = var43;
                             ga.field_hb[var35] = var44;
                             rn.field_z[var35] = var45;
@@ -966,9 +988,10 @@ final class nq extends rk {
                           b.field_m[var34] = var35;
                           var35 = var25[var41];
                           if (0 > var35) {
+                            int fieldTemp$68 = no.field_b;
                             no.field_b = no.field_b + 1;
-                            var35 = no.field_b;
-                            var25[var41] = no.field_b;
+                            var35 = fieldTemp$68;
+                            var25[var41] = fieldTemp$68;
                             lf.field_z[var35] = var46;
                             ga.field_hb[var35] = var47;
                             rn.field_z[var35] = var48;
@@ -983,9 +1006,10 @@ final class nq extends rk {
                           if (var35 >= 0) {
                             break L71;
                           } else {
+                            int fieldTemp$69 = no.field_b;
                             no.field_b = no.field_b + 1;
-                            var35 = no.field_b;
-                            var25[var42] = no.field_b;
+                            var35 = fieldTemp$69;
+                            var25[var42] = fieldTemp$69;
                             lf.field_z[var35] = var49;
                             ga.field_hb[var35] = var50;
                             rn.field_z[var35] = var51;
@@ -1025,7 +1049,7 @@ final class nq extends rk {
               }
               L73: {
                 L74: {
-                  if (stackIn_195_0 <= (param11 ^ -1)) {
+                  if (stackIn_195_0 <= ~param11) {
                     break L74;
                   } else {
                     L75: {
@@ -1034,12 +1058,13 @@ final class nq extends rk {
                       } else {
                         L76: {
                           L77: {
+                            byte[] fieldTemp$70 = param20.field_E;
                             hb.field_A.field_E = param20.field_E;
-                            qn.field_p.field_E = param20.field_E;
+                            qn.field_p.field_E = fieldTemp$70;
                             if (qn.field_p.field_M == null) {
                               break L77;
                             } else {
-                              if ((param11 ^ -1) >= (qn.field_p.field_M.length ^ -1)) {
+                              if (~param11 >= ~qn.field_p.field_M.length) {
                                 break L76;
                               } else {
                                 break L77;
@@ -1072,7 +1097,7 @@ final class nq extends rk {
                         L80: while (true) {
                           L81: {
                             L82: {
-                              if ((var39 ^ -1) <= (param11 ^ -1)) {
+                              if (~var39 <= ~param11) {
                                 break L82;
                               } else {
                                 stackOut_209_0 = (lg) param20;
@@ -1083,16 +1108,17 @@ final class nq extends rk {
                                 } else {
                                   L83: {
                                     L84: {
-                                      if ((stackIn_210_0.field_E[var39] ^ -1) != -1) {
+                                      if (stackIn_210_0.field_E[var39] != 0) {
                                         break L84;
                                       } else {
                                         L85: {
                                           var34 = param20.field_M[var39];
                                           var35 = var24[var34];
                                           if (var35 < 0) {
+                                            int fieldTemp$71 = jd.field_d;
                                             jd.field_d = jd.field_d + 1;
-                                            var35 = jd.field_d;
-                                            var24[var34] = jd.field_d;
+                                            var35 = fieldTemp$71;
+                                            var24[var34] = fieldTemp$71;
                                             kh.field_c[var35] = param17[var34];
                                             hk.field_q[var35] = param1[var34];
                                             sa.field_c[var35] = param6[var34];
@@ -1104,10 +1130,11 @@ final class nq extends rk {
                                         L86: {
                                           qn.field_p.field_M[var39] = (short)var35;
                                           var35 = var25[var34];
-                                          if ((var35 ^ -1) > -1) {
+                                          if (var35 < 0) {
+                                            int fieldTemp$72 = no.field_b;
                                             no.field_b = no.field_b + 1;
-                                            var35 = no.field_b;
-                                            var25[var34] = no.field_b;
+                                            var35 = fieldTemp$72;
+                                            var25[var34] = fieldTemp$72;
                                             lf.field_z[var35] = param17[var34];
                                             ga.field_hb[var35] = param1[var34];
                                             rn.field_z[var35] = param6[var34];
@@ -1120,10 +1147,11 @@ final class nq extends rk {
                                           hb.field_A.field_M[var39] = (short)var35;
                                           var34 = param20.field_P[var39];
                                           var35 = var24[var34];
-                                          if ((var35 ^ -1) > -1) {
+                                          if (var35 < 0) {
+                                            int fieldTemp$73 = jd.field_d;
                                             jd.field_d = jd.field_d + 1;
-                                            var35 = jd.field_d;
-                                            var24[var34] = jd.field_d;
+                                            var35 = fieldTemp$73;
+                                            var24[var34] = fieldTemp$73;
                                             kh.field_c[var35] = param17[var34];
                                             hk.field_q[var35] = param1[var34];
                                             sa.field_c[var35] = param6[var34];
@@ -1135,10 +1163,11 @@ final class nq extends rk {
                                         L88: {
                                           qn.field_p.field_P[var39] = (short)var35;
                                           var35 = var25[var34];
-                                          if (-1 < (var35 ^ -1)) {
+                                          if (var35 < 0) {
+                                            int fieldTemp$74 = no.field_b;
                                             no.field_b = no.field_b + 1;
-                                            var35 = no.field_b;
-                                            var25[var34] = no.field_b;
+                                            var35 = fieldTemp$74;
+                                            var25[var34] = fieldTemp$74;
                                             lf.field_z[var35] = param17[var34];
                                             ga.field_hb[var35] = param1[var34];
                                             rn.field_z[var35] = param6[var34];
@@ -1152,9 +1181,10 @@ final class nq extends rk {
                                           var34 = param20.field_F[var39];
                                           var35 = var24[var34];
                                           if (0 > var35) {
+                                            int fieldTemp$75 = jd.field_d;
                                             jd.field_d = jd.field_d + 1;
-                                            var35 = jd.field_d;
-                                            var24[var34] = jd.field_d;
+                                            var35 = fieldTemp$75;
+                                            var24[var34] = fieldTemp$75;
                                             kh.field_c[var35] = param17[var34];
                                             hk.field_q[var35] = param1[var34];
                                             sa.field_c[var35] = param6[var34];
@@ -1166,10 +1196,11 @@ final class nq extends rk {
                                         L90: {
                                           qn.field_p.field_F[var39] = (short)var35;
                                           var35 = var25[var34];
-                                          if (-1 < (var35 ^ -1)) {
+                                          if (var35 < 0) {
+                                            int fieldTemp$76 = no.field_b;
                                             no.field_b = no.field_b + 1;
-                                            var35 = no.field_b;
-                                            var25[var34] = no.field_b;
+                                            var35 = fieldTemp$76;
+                                            var25[var34] = fieldTemp$76;
                                             lf.field_z[var35] = param17[var34];
                                             ga.field_hb[var35] = param1[var34];
                                             rn.field_z[var35] = param6[var34];
@@ -1203,26 +1234,34 @@ final class nq extends rk {
                                 }
                               }
                             }
+                            byte[] fieldTemp$77 = param20.field_a;
                             hb.field_A.field_a = param20.field_a;
-                            qn.field_p.field_a = param20.field_a;
+                            qn.field_p.field_a = fieldTemp$77;
+                            short[] fieldTemp$78 = param20.field_m;
                             hb.field_A.field_m = param20.field_m;
-                            qn.field_p.field_m = param20.field_m;
+                            qn.field_p.field_m = fieldTemp$78;
+                            byte[] fieldTemp$79 = param20.field_I;
                             hb.field_A.field_I = param20.field_I;
-                            qn.field_p.field_I = param20.field_I;
+                            qn.field_p.field_I = fieldTemp$79;
+                            byte[] fieldTemp$80 = param20.field_h;
                             hb.field_A.field_h = param20.field_h;
-                            qn.field_p.field_h = param20.field_h;
+                            qn.field_p.field_h = fieldTemp$80;
+                            short[] fieldTemp$81 = param20.field_t;
                             hb.field_A.field_t = param20.field_t;
-                            qn.field_p.field_t = param20.field_t;
+                            qn.field_p.field_t = fieldTemp$81;
+                            short[] fieldTemp$82 = param20.field_b;
                             hb.field_A.field_b = param20.field_b;
-                            qn.field_p.field_b = param20.field_b;
+                            qn.field_p.field_b = fieldTemp$82;
+                            byte[] fieldTemp$83 = param20.field_J;
                             hb.field_A.field_J = param20.field_J;
-                            qn.field_p.field_J = param20.field_J;
+                            qn.field_p.field_J = fieldTemp$83;
                             stackOut_233_0 = qn.field_p;
                             stackIn_234_0 = stackOut_233_0;
                             break L81;
                           }
+                          byte[] fieldTemp$84 = param20.field_y;
                           hb.field_A.field_y = param20.field_y;
-                          stackIn_234_0.field_y = param20.field_y;
+                          stackIn_234_0.field_y = fieldTemp$84;
                           if (var66 == 0) {
                             break L74;
                           } else {
@@ -1236,7 +1275,7 @@ final class nq extends rk {
                         if (qp.field_g == null) {
                           break L92;
                         } else {
-                          if ((param11 ^ -1) >= (qp.field_g.length ^ -1)) {
+                          if (~param11 >= ~qp.field_g.length) {
                             break L91;
                           } else {
                             break L92;
@@ -1253,7 +1292,7 @@ final class nq extends rk {
                         if (null == ga.field_jb) {
                           break L94;
                         } else {
-                          if ((ga.field_jb.length ^ -1) > (param11 ^ -1)) {
+                          if (~ga.field_jb.length > ~param11) {
                             break L94;
                           } else {
                             break L93;
@@ -1267,7 +1306,7 @@ final class nq extends rk {
                     }
                     var39 = 0;
                     L95: while (true) {
-                      if ((var39 ^ -1) <= (param11 ^ -1)) {
+                      if (~var39 <= ~param11) {
                         break L74;
                       } else {
                         var34 = param4[var39];
@@ -1279,9 +1318,10 @@ final class nq extends rk {
                             if (0 <= var35) {
                               break L96;
                             } else {
+                              int fieldTemp$85 = jd.field_d;
                               jd.field_d = jd.field_d + 1;
-                              var35 = jd.field_d;
-                              var24[var34] = jd.field_d;
+                              var35 = fieldTemp$85;
+                              var24[var34] = fieldTemp$85;
                               kh.field_c[var35] = param17[var34];
                               hk.field_q[var35] = param1[var34];
                               sa.field_c[var35] = param6[var34];
@@ -1294,9 +1334,10 @@ final class nq extends rk {
                             if (0 <= var35) {
                               break L97;
                             } else {
+                              int fieldTemp$86 = no.field_b;
                               no.field_b = no.field_b + 1;
-                              var35 = no.field_b;
-                              var25[var34] = no.field_b;
+                              var35 = fieldTemp$86;
+                              var25[var34] = fieldTemp$86;
                               lf.field_z[var35] = param17[var34];
                               ga.field_hb[var35] = param1[var34];
                               rn.field_z[var35] = param6[var34];
@@ -1307,10 +1348,11 @@ final class nq extends rk {
                             ga.field_jb[var39] = var35;
                             var34 = param8[var39];
                             var35 = var24[var34];
-                            if ((var35 ^ -1) > -1) {
+                            if (var35 < 0) {
+                              int fieldTemp$87 = jd.field_d;
                               jd.field_d = jd.field_d + 1;
-                              var35 = jd.field_d;
-                              var24[var34] = jd.field_d;
+                              var35 = fieldTemp$87;
+                              var24[var34] = fieldTemp$87;
                               kh.field_c[var35] = param17[var34];
                               hk.field_q[var35] = param1[var34];
                               sa.field_c[var35] = param6[var34];
@@ -1322,10 +1364,11 @@ final class nq extends rk {
                           L99: {
                             pd.field_a[var39] = var35;
                             var35 = var25[var34];
-                            if (-1 < (var35 ^ -1)) {
+                            if (var35 < 0) {
+                              int fieldTemp$88 = no.field_b;
                               no.field_b = no.field_b + 1;
-                              var35 = no.field_b;
-                              var25[var34] = no.field_b;
+                              var35 = fieldTemp$88;
+                              var25[var34] = fieldTemp$88;
                               lf.field_z[var35] = param17[var34];
                               ga.field_hb[var35] = param1[var34];
                               rn.field_z[var35] = param6[var34];
@@ -1341,9 +1384,10 @@ final class nq extends rk {
                             if (0 <= var35) {
                               break L100;
                             } else {
+                              int fieldTemp$89 = jd.field_d;
                               jd.field_d = jd.field_d + 1;
-                              var35 = jd.field_d;
-                              var24[var34] = jd.field_d;
+                              var35 = fieldTemp$89;
+                              var24[var34] = fieldTemp$89;
                               kh.field_c[var35] = param17[var34];
                               hk.field_q[var35] = param1[var34];
                               sa.field_c[var35] = param6[var34];
@@ -1353,12 +1397,13 @@ final class nq extends rk {
                           L101: {
                             da.field_k[var39] = var35;
                             var35 = var25[var34];
-                            if ((var35 ^ -1) <= -1) {
+                            if (var35 >= 0) {
                               break L101;
                             } else {
+                              int fieldTemp$90 = no.field_b;
                               no.field_b = no.field_b + 1;
-                              var35 = no.field_b;
-                              var25[var34] = no.field_b;
+                              var35 = fieldTemp$90;
+                              var25[var34] = fieldTemp$90;
                               lf.field_z[var35] = param17[var34];
                               ga.field_hb[var35] = param1[var34];
                               rn.field_z[var35] = param6[var34];
@@ -1390,309 +1435,168 @@ final class nq extends rk {
         Object stackIn_5_0 = null;
         byte[] stackIn_7_0 = null;
         RuntimeException decompiledCaughtException = null;
-        Object stackOut_4_0 = null;
         byte[] stackOut_6_0 = null;
+        Object stackOut_4_0 = null;
         try {
-          try {
+          L0: {
             if (!((nq) this).field_z) {
+              if (param0 == -106) {
+                stackOut_6_0 = ((nq) this).field_L;
+                stackIn_7_0 = stackOut_6_0;
+                break L0;
+              } else {
+                stackOut_4_0 = null;
+                stackIn_5_0 = stackOut_4_0;
+                return (byte[]) (Object) stackIn_5_0;
+              }
             } else {
               throw new RuntimeException();
             }
-          } catch (java.lang.RuntimeException decompiledCaughtParameter) {
-            decompiledCaughtException = decompiledCaughtParameter;
-            throw decompiledCaughtException;
           }
-          if (param0 == -106) {
-            return (byte[]) (Object) stackIn_5_0;
-          } else {
-            stackOut_4_0 = null;
-            stackIn_5_0 = stackOut_4_0;
-          }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
-          stackOut_6_0 = ((nq) this).field_L;
-          stackIn_7_0 = stackOut_6_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw wn.a((Throwable) (Object) var2, "nq.F(" + param0 + 41);
         }
-        return null;
+        return stackIn_7_0;
     }
 
     final static cr a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, cc param7, int param8, int param9, int param10, int param11, int param12) {
         RuntimeException var13 = null;
         cr var13_ref = null;
-        cr stackIn_5_0 = null;
+        cr stackIn_4_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_11_2 = null;
-        cr stackOut_4_0 = null;
-        RuntimeException stackOut_7_0 = null;
-        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        cr stackOut_3_0 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
         RuntimeException stackOut_8_0 = null;
         StringBuilder stackOut_8_1 = null;
         String stackOut_8_2 = null;
-        RuntimeException stackOut_10_0 = null;
-        StringBuilder stackOut_10_1 = null;
-        String stackOut_10_2 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    try {
-                        if (param10 >= 68) {
-                            statePc = 4;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_0) {
-                        caughtException = stateCaught_0;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 1: {
-                    try {
-                        nq.a(-57, (int[]) null, 62, (int[]) null, (int[]) null, (byte[]) null, (int[]) null, (int[]) null, (int[]) null, (int[]) null, (int[]) null, -30, (int[]) null, 85, 74, -104, -52, (int[]) null, (int[]) null, -25, (lg) null, -20, 0, (int[]) null);
-                        statePc = 2;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        var13_ref = new cr(0L, (cr) null);
-                        var13_ref.field_Bb = fk.c(-127, param5, param9);
-                        var13_ref.field_Q = fk.c(-127, param12, param2);
-                        var13_ref.field_cb = fk.c(-127, param3, param6);
-                        var13_ref.field_T = fk.c(-128, param0, param4);
-                        var13_ref.field_gb = fk.c(-127, param11, param8);
-                        var13_ref.field_A = param1;
-                        var13_ref.field_z = param7;
-                        stackOut_4_0 = (cr) var13_ref;
-                        stackIn_5_0 = stackOut_4_0;
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    return stackIn_5_0;
-                }
-                case 6: {
-                    var13 = (RuntimeException) (Object) caughtException;
-                    statePc = 7;
-                    continue stateLoop;
-                }
-                case 7: {
-                    try {
-                        stackOut_7_0 = (RuntimeException) var13;
-                        stackOut_7_1 = new StringBuilder().append("nq.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44);
-                        stackIn_10_0 = stackOut_7_0;
-                        stackIn_10_1 = stackOut_7_1;
-                        stackIn_8_0 = stackOut_7_0;
-                        stackIn_8_1 = stackOut_7_1;
-                        if (param7 == null) {
-                            statePc = 10;
-                        } else {
-                            statePc = 8;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
-                        stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
-                        stackOut_8_2 = "{...}";
-                        stackIn_11_0 = stackOut_8_0;
-                        stackIn_11_1 = stackOut_8_1;
-                        stackIn_11_2 = stackOut_8_2;
-                        statePc = 11;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    throw (RuntimeException) (Object) caughtException;
-                }
-                case 10: {
-                    stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
-                    stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
-                    stackOut_10_2 = "null";
-                    stackIn_11_0 = stackOut_10_0;
-                    stackIn_11_1 = stackOut_10_1;
-                    stackIn_11_2 = stackOut_10_2;
-                    statePc = 11;
-                    continue stateLoop;
-                }
-                case 11: {
-                    throw wn.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param8 + 44 + param9 + 44 + param10 + 44 + param11 + 44 + param12 + 41);
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param10 >= 68) {
+                break L1;
+              } else {
+                nq.a(-57, (int[]) null, 62, (int[]) null, (int[]) null, (byte[]) null, (int[]) null, (int[]) null, (int[]) null, (int[]) null, (int[]) null, -30, (int[]) null, 85, 74, -104, -52, (int[]) null, (int[]) null, -25, (lg) null, -20, 0, (int[]) null);
+                break L1;
+              }
             }
+            var13_ref = new cr(0L, (cr) null);
+            var13_ref.field_Bb = fk.c(-127, param5, param9);
+            var13_ref.field_Q = fk.c(-127, param12, param2);
+            var13_ref.field_cb = fk.c(-127, param3, param6);
+            var13_ref.field_T = fk.c(-128, param0, param4);
+            var13_ref.field_gb = fk.c(-127, param11, param8);
+            var13_ref.field_A = param1;
+            var13_ref.field_z = param7;
+            stackOut_3_0 = (cr) var13_ref;
+            stackIn_4_0 = stackOut_3_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var13 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var13;
+            stackOut_5_1 = new StringBuilder().append("nq.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44);
+            stackIn_8_0 = stackOut_5_0;
+            stackIn_8_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param7 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L2;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_9_0 = stackOut_6_0;
+              stackIn_9_1 = stackOut_6_1;
+              stackIn_9_2 = stackOut_6_2;
+              break L2;
+            }
+          }
+          throw wn.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param8 + 44 + param9 + 44 + param10 + 44 + param11 + 44 + param12 + 41);
         }
+        return stackIn_4_0;
     }
 
     public static void j(int param0) {
         RuntimeException var1 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          try {
-            L0: {
+          L0: {
+            L1: {
               field_I = null;
               field_J = null;
               if (param0 <= -120) {
-                break L0;
+                break L1;
               } else {
                 cr discarded$2 = nq.a(57, -73, 44, 92, 52, -107, 58, (cc) null, -88, 65, 75, 44, 36);
-                break L0;
+                break L1;
               }
             }
-          } catch (java.lang.RuntimeException decompiledCaughtParameter) {
-            decompiledCaughtException = decompiledCaughtParameter;
+            field_G = null;
+            field_K = null;
+            field_D = null;
+            break L0;
           }
-          throw decompiledCaughtException;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
-          field_G = null;
-          field_K = null;
-          field_D = null;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw wn.a((Throwable) (Object) var1, "nq.B(" + param0 + 41);
         }
     }
 
     final int i(int param0) {
         RuntimeException var2 = null;
         int stackIn_4_0 = 0;
-        int stackIn_10_0 = 0;
+        int stackIn_9_0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
-        int stackOut_9_0 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    try {
-                        if (((nq) this).field_z) {
-                            statePc = 3;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_0) {
-                        caughtException = stateCaught_0;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
+        int stackOut_8_0 = 0;
+        try {
+          L0: {
+            if (((nq) this).field_z) {
+              stackOut_3_0 = 0;
+              stackIn_4_0 = stackOut_3_0;
+              return stackIn_4_0;
+            } else {
+              L1: {
+                if (param0 >= 100) {
+                  break L1;
+                } else {
+                  ((nq) this).field_L = null;
+                  break L1;
                 }
-                case 1: {
-                    try {
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        stackOut_3_0 = 0;
-                        stackIn_4_0 = stackOut_3_0;
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    return stackIn_4_0;
-                }
-                case 5: {
-                    try {
-                        if (param0 >= 100) {
-                            statePc = 9;
-                        } else {
-                            statePc = 6;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        ((nq) this).field_L = null;
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        statePc = 9;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    try {
-                        stackOut_9_0 = 100;
-                        stackIn_10_0 = stackOut_9_0;
-                        statePc = 10;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 11;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    return stackIn_10_0;
-                }
-                case 11: {
-                    var2 = (RuntimeException) (Object) caughtException;
-                    throw wn.a((Throwable) (Object) var2, "nq.D(" + param0 + 41);
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
+              stackOut_8_0 = 100;
+              stackIn_9_0 = stackOut_8_0;
+              break L0;
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw wn.a((Throwable) (Object) var2, "nq.D(" + param0 + 41);
         }
+        return stackIn_9_0;
     }
 
     nq() {

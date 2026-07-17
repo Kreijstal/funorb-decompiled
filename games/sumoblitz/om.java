@@ -9,12 +9,16 @@ final class om extends ms {
     static String[] field_k;
 
     om(wc[] param0) {
-        ((om) this).field_o = param0;
+        try {
+            ((om) this).field_o = param0;
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "om.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void a(byte param0) {
         field_k = null;
-        int var1 = -126 / ((param0 - 34) / 59);
+        int var1 = -126;
         field_n = null;
         field_m = null;
     }
@@ -25,7 +29,7 @@ final class om extends ms {
     }
 
     final static boolean a(int param0, int param1, byte param2) {
-        int var3 = -118 / ((param2 - 64) / 51);
+        int var3 = 59;
         return em.a(false, param0, param1) & sg.a(param0, param1, 65);
     }
 

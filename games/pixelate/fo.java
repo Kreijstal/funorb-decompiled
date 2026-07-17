@@ -58,7 +58,7 @@ final class fo {
         var4 = (double)(-((fo) this).field_i + ((fo) this).field_q);
         var6 = Math.atan(var2 / var4);
         ((fo) this).field_k = (int)(var6 * 32768.0 / 3.141592653589793);
-        var8 = ((fo) this).field_l * 158 >> 1285262988;
+        var8 = ((fo) this).field_l * 158 >> 12;
         ((fo) this).field_r = ((fo) this).field_p - -(int)(Math.sin(var6) * (double)var8);
         ((fo) this).field_o = ((fo) this).field_i + (int)(Math.cos(var6) * (double)var8);
         ((fo) this).field_j[0].a(((fo) this).field_o, (byte) 48, ((fo) this).field_r);
@@ -71,7 +71,7 @@ final class fo {
         ki var9 = null;
         ki var10 = null;
         int var5 = Pixelate.field_H ? 1 : 0;
-        nm.field_f.b(1600, 2272, ((fo) this).field_p << 992240004, ((fo) this).field_i << -511045788, ((fo) this).field_k, ((fo) this).field_l);
+        nm.field_f.b(1600, 2272, ((fo) this).field_p << 4, ((fo) this).field_i << 4, ((fo) this).field_k, ((fo) this).field_l);
         ki[] var6 = ((fo) this).field_j;
         ki[] var2 = var6;
         for (var3 = 0; var3 < var6.length; var3++) {
@@ -88,7 +88,7 @@ final class fo {
             var8++;
         }
         t.b(((fo) this).field_p + -3, ((fo) this).field_i - 5, 299 + ((fo) this).field_d, ((fo) this).field_q, 3355392);
-        t.b(-2 + ((fo) this).field_p, ((fo) this).field_i + -5, ((fo) this).field_d + 0 - -300, ((fo) this).field_q, 6710784);
+        t.b(-2 + ((fo) this).field_p, ((fo) this).field_i + -5, ((fo) this).field_d - -300, ((fo) this).field_q, 6710784);
         t.b(-1 + ((fo) this).field_p, -5 + ((fo) this).field_i, 300 + ((fo) this).field_d + param0, ((fo) this).field_q, 3355392);
     }
 
@@ -101,7 +101,7 @@ final class fo {
 
     public static void b(byte param0) {
         field_u = null;
-        int var1 = 89 / ((35 - param0) / 41);
+        int var1 = 29;
         field_a = null;
         field_m = null;
     }
@@ -138,20 +138,20 @@ final class fo {
         ((fo) this).field_n = ok.a(ea.field_b, -120, 172);
         ((fo) this).field_c = new int[400];
         ((fo) this).field_h = new int[400];
-        var6 = 200 * ((fo) this).field_l >> 62553644;
-        var7 = ((fo) this).field_l * 50 >> 1790494828;
+        var6 = 200 * ((fo) this).field_l >> 12;
+        var7 = ((fo) this).field_l * 50 >> 12;
         var8 = 0;
         L0: while (true) {
-          if (-401 >= (var8 ^ -1)) {
+          if (var8 >= 400) {
             ((fo) this).field_b = new int[172];
             ((fo) this).field_s = new int[172];
-            var8 = 50 * ((fo) this).field_l >> 943383948;
+            var8 = 50 * ((fo) this).field_l >> 12;
             var9 = 0;
             L1: while (true) {
               if (var9 >= 172) {
                 ((fo) this).field_j = new ki[3];
-                var9 = ((fo) this).field_l * 40 >> -2090671124;
-                var10 = 3000 * ((fo) this).field_l >> -1831705172;
+                var9 = ((fo) this).field_l * 40 >> 12;
+                var10 = 3000 * ((fo) this).field_l >> 12;
                 ((fo) this).field_j[0] = new ki(((fo) this).field_r, ((fo) this).field_o, var9, var10);
                 ((fo) this).field_j[1] = new ki(((fo) this).field_r, ((fo) this).field_o, var9, (int)((double)var10 * 0.9));
                 ((fo) this).field_j[2] = new ki(((fo) this).field_r, ((fo) this).field_o, var9, (int)((double)var10 * 0.8));

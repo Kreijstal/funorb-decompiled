@@ -2247,7 +2247,7 @@ final class nb extends kd {
           if (param0.field_n.length == 0) {
             return null;
           } else {
-            return new nb(param0, param1, param2 << 6);
+            return new nb(param0, param1, 0);
           }
         } else {
           return null;
@@ -2259,7 +2259,7 @@ final class nb extends kd {
           if (param0.field_n.length == 0) {
             return null;
           } else {
-            return new nb(param0, (int)((long)param0.field_p * 256L * (long)param1 / (long)(100 * bp.field_h)), param2 << 6);
+            return new nb(param0, (int)((long)param0.field_p * 256L * (long)param1 / (long)(100 * bp.field_h)), 6144);
           }
         } else {
           return null;

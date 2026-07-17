@@ -993,8 +993,8 @@ final class na {
         int var5 = 0;
         for (var6 = 0; var6 < 4; var6++) {
             var5 = 128 - (var6 << 5);
-            na.f(param0 + var6, param1 + param3 + var6, param2, param4, var5);
-            na.c(param0 + param2 + var6, param1 + var6, param3 + 1, param4, var5);
+            na.f(param0 + var6, param1 + param3 + var6, param2, 5592405, var5);
+            na.c(param0 + param2 + var6, param1 + var6, param3 + 1, 5592405, var5);
         }
     }
 
@@ -1236,7 +1236,7 @@ final class na {
           } else {
             var11 = 65536 - var6 >> 8;
             var12 = var6 >> 8;
-            var13 = ((param4 & 16711935) * var11 + (param5 & 16711935) * var12 & -16711936) + ((param4 & 65280) * var11 + (param5 & 65280) * var12 & 16711680) >>> 8;
+            var13 = ((param4 & 16711935) * var11 + 0 * var12 & -16711936) + ((param4 & 65280) * var11 + 0 * var12 & 16711680) >>> 8;
             var14 = -param2;
             L5: while (true) {
               if (var14 >= 0) {
@@ -1397,8 +1397,8 @@ final class na {
     }
 
     final static void c(int param0, int param1, int param2, int param3, int param4, int param5) {
-        na.a(field_d, 0, param2 + param3 * field_e, param0, param2, param4, field_e - param4, param5);
-        na.a(field_d, 0, param2 + param3 * field_e, param1, param3, param5, field_e - param4, param2, param4);
+        na.a(field_d, 0, param2 + param3 * field_e, param0, param2, param4, field_e - param4, 140);
+        na.a(field_d, 0, param2 + param3 * field_e, param1, param3, 140, field_e - param4, param2, param4);
     }
 
     final static void c(int param0, int param1, int param2, int param3) {

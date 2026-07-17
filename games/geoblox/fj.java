@@ -18,7 +18,7 @@ abstract class fj extends rc {
 
     final static boolean f(int param0) {
         if (param0 == -31456) {
-          if ((hj.field_a ^ -1) <= -11) {
+          if (hj.field_a >= 10) {
             if (mi.field_C < 13) {
               return false;
             } else {
@@ -29,7 +29,7 @@ abstract class fj extends rc {
           }
         } else {
           field_q = null;
-          if ((hj.field_a ^ -1) <= -11) {
+          if (hj.field_a >= 10) {
             if (mi.field_C < 13) {
               return false;
             } else {
@@ -43,22 +43,21 @@ abstract class fj extends rc {
 
     public static void e(int param0) {
         field_p = null;
-        if (param0 > -92) {
-            boolean discarded$0 = fj.f(64);
-            field_q = null;
-            return;
-        }
         field_q = null;
     }
 
     final static void a(byte param0, rh param1, boolean param2, rh param3, rh param4) {
-        ih.field_c = bf.a((byte) 86, "");
-        int var5 = 103 / ((param0 - 70) / 34);
-        ih.field_c.a((byte) -126, false);
-        ha.a((byte) 103, param1, param4, param3);
-        qh.h((byte) -121);
-        kd.field_b = uf.field_l;
-        si.field_g = uf.field_l;
+        try {
+            ih.field_c = bf.a((byte) 86, "");
+            int var5_int = 103 / ((param0 - 70) / 34);
+            ih.field_c.a((byte) -126, false);
+            ha.a((byte) 103, param1, param4, param3);
+            qh.h((byte) -121);
+            kd.field_b = uf.field_l;
+            si.field_g = uf.field_l;
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) (Object) runtimeException, "fj.H(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

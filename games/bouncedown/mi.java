@@ -36,10 +36,10 @@ final class mi {
                 break L0;
               }
             }
-            if (-1 != (((mi) this).field_i ^ -1)) {
+            if (((mi) this).field_i != 0) {
               if (n.field_m != 0) {
                 L1: {
-                  if (-1 > (((mi) this).field_d ^ -1)) {
+                  if (((mi) this).field_d > 0) {
                     ((mi) this).field_d = ((mi) this).field_d - 1;
                     break L1;
                   } else {
@@ -586,24 +586,43 @@ final class mi {
     }
 
     final static int a(int param0, byte param1, int param2) {
-        int var3 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
+        int stackIn_3_0 = 0;
+        int stackIn_7_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_6_0 = 0;
+        int stackOut_2_0 = 0;
         var4 = Bounce.field_N;
-        var3 = 0;
-        if (param1 == 122) {
-          L0: while (true) {
-            if ((param0 ^ -1) >= -1) {
-              return var3;
+        try {
+          L0: {
+            var3_int = 0;
+            if (param1 == 122) {
+              L1: while (true) {
+                if (param0 <= 0) {
+                  stackOut_6_0 = var3_int;
+                  stackIn_7_0 = stackOut_6_0;
+                  break L0;
+                } else {
+                  var3_int = 1 & param2 | var3_int << 1;
+                  param2 = param2 >>> 1;
+                  param0--;
+                  continue L1;
+                }
+              }
             } else {
-              var3 = 1 & param2 | var3 << 1978875745;
-              param2 = param2 >>> 1;
-              param0--;
-              continue L0;
+              stackOut_2_0 = -76;
+              stackIn_3_0 = stackOut_2_0;
+              return stackIn_3_0;
             }
           }
-        } else {
-          return -76;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw ii.a((Throwable) (Object) var3, "mi.B(" + param0 + 44 + param1 + 44 + param2 + 41);
         }
+        return stackIn_7_0;
     }
 
     public static void b(byte param0) {
@@ -618,44 +637,95 @@ final class mi {
     }
 
     final static void a(int param0, int param1, he param2) {
+        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         ii var7 = null;
         ii var8 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
         var6 = Bounce.field_N;
-        var7 = hh.field_p;
-        var8 = var7;
-        var8.a(true, param0);
-        var8.field_h = var8.field_h + 1;
-        var4 = var8.field_h;
-        var8.a(1, (byte) 126);
-        var8.e(-750655096, param2.field_j);
-        var8.e(-750655096, param2.field_m);
-        var8.e(-750655096, param2.field_r);
-        var8.b(param2.field_s, (byte) 57);
-        var8.b(param2.field_h, (byte) 49);
-        var8.b(param2.field_q, (byte) 92);
-        var8.b(param2.field_t, (byte) -50);
-        var8.a(param2.field_g.length, (byte) 50);
-        var5 = 0;
-        L0: while (true) {
-          if (param2.field_g.length <= var5) {
-            if (param1 >= -58) {
-              mi.b((byte) -128);
-              int discarded$4 = var8.b(var4, -1);
-              var8.b(-var4 + var8.field_h, true);
-              return;
-            } else {
-              int discarded$5 = var8.b(var4, -1);
-              var8.b(-var4 + var8.field_h, true);
-              return;
+        try {
+          L0: {
+            var7 = hh.field_p;
+            var8 = var7;
+            var8.a(true, param0);
+            var8.field_h = var8.field_h + 1;
+            var4 = var8.field_h;
+            var8.a(1, (byte) 126);
+            var8.e(-750655096, param2.field_j);
+            var8.e(-750655096, param2.field_m);
+            var8.e(-750655096, param2.field_r);
+            var8.b(param2.field_s, (byte) 57);
+            var8.b(param2.field_h, (byte) 49);
+            var8.b(param2.field_q, (byte) 92);
+            var8.b(param2.field_t, (byte) -50);
+            var8.a(param2.field_g.length, (byte) 50);
+            var5 = 0;
+            L1: while (true) {
+              if (param2.field_g.length <= var5) {
+                L2: {
+                  if (param1 < -58) {
+                    break L2;
+                  } else {
+                    mi.b((byte) -128);
+                    break L2;
+                  }
+                }
+                int discarded$1 = var8.b(var4, -1);
+                var8.b(-var4 + var8.field_h, true);
+                break L0;
+              } else {
+                var7.b(param2.field_g[var5], (byte) -59);
+                var5++;
+                continue L1;
+              }
             }
-          } else {
-            var7.b(param2.field_g[var5], (byte) -59);
-            var5++;
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var3 = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var3;
+            stackOut_8_1 = new StringBuilder().append("mi.E(").append(param0).append(44).append(param1).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param2 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L3;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L3;
+            }
+          }
+          throw ii.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
         }
     }
 
@@ -665,7 +735,7 @@ final class mi {
         if (0 == ((mi) this).field_i) {
           if (98 == lh.field_f) {
             L0: {
-              if (-1 <= (((mi) this).field_b ^ -1)) {
+              if (((mi) this).field_b <= 0) {
                 ((mi) this).field_b = ((mi) this).field_f;
                 break L0;
               } else {
@@ -678,7 +748,7 @@ final class mi {
               if (param0 >= 58) {
                 if (((mi) this).field_i == 0) {
                   L1: {
-                    if ((lh.field_f ^ -1) != -100) {
+                    if (lh.field_f != 99) {
                       break L1;
                     } else {
                       L2: {
@@ -702,7 +772,7 @@ final class mi {
                 field_k = null;
                 if (((mi) this).field_i == 0) {
                   L3: {
-                    if ((lh.field_f ^ -1) != -100) {
+                    if (lh.field_f != 99) {
                       break L3;
                     } else {
                       L4: {
@@ -728,7 +798,7 @@ final class mi {
               if (param0 >= 58) {
                 if (((mi) this).field_i == 0) {
                   L5: {
-                    if ((lh.field_f ^ -1) != -100) {
+                    if (lh.field_f != 99) {
                       break L5;
                     } else {
                       L6: {
@@ -752,7 +822,7 @@ final class mi {
                 field_k = null;
                 if (((mi) this).field_i == 0) {
                   L7: {
-                    if ((lh.field_f ^ -1) != -100) {
+                    if (lh.field_f != 99) {
                       break L7;
                     } else {
                       L8: {
@@ -781,7 +851,7 @@ final class mi {
                   return;
                 } else {
                   L9: {
-                    if ((lh.field_f ^ -1) != -100) {
+                    if (lh.field_f != 99) {
                       break L9;
                     } else {
                       L10: {
@@ -805,7 +875,7 @@ final class mi {
                   return;
                 } else {
                   L11: {
-                    if ((lh.field_f ^ -1) != -100) {
+                    if (lh.field_f != 99) {
                       break L11;
                     } else {
                       L12: {
@@ -831,7 +901,7 @@ final class mi {
                   return;
                 } else {
                   L13: {
-                    if ((lh.field_f ^ -1) != -100) {
+                    if (lh.field_f != 99) {
                       break L13;
                     } else {
                       L14: {
@@ -855,7 +925,7 @@ final class mi {
                   return;
                 } else {
                   L15: {
-                    if ((lh.field_f ^ -1) != -100) {
+                    if (lh.field_f != 99) {
                       break L15;
                     } else {
                       L16: {
@@ -883,7 +953,7 @@ final class mi {
                 return;
               } else {
                 L17: {
-                  if ((lh.field_f ^ -1) != -100) {
+                  if (lh.field_f != 99) {
                     break L17;
                   } else {
                     L18: {
@@ -907,7 +977,7 @@ final class mi {
                 return;
               } else {
                 L19: {
-                  if ((lh.field_f ^ -1) != -100) {
+                  if (lh.field_f != 99) {
                     break L19;
                   } else {
                     L20: {
@@ -933,7 +1003,7 @@ final class mi {
                 return;
               } else {
                 L21: {
-                  if ((lh.field_f ^ -1) != -100) {
+                  if (lh.field_f != 99) {
                     break L21;
                   } else {
                     L22: {
@@ -957,7 +1027,7 @@ final class mi {
                 return;
               } else {
                 L23: {
-                  if ((lh.field_f ^ -1) != -100) {
+                  if (lh.field_f != 99) {
                     break L23;
                   } else {
                     L24: {

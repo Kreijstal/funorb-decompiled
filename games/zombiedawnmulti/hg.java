@@ -89,10 +89,10 @@ final class hg extends gm {
               var19 = var2 + var18;
               var2 = var19;
               var2 = var19;
-              if (0 == var9) {
+              if (var9 == -1) {
                 break L3;
               } else {
-                if (0 == var10) {
+                if (var10 == -1) {
                   break L3;
                 } else {
                   var12 = var8.indexOf(".java:", var9);
@@ -108,11 +108,11 @@ final class hg extends gm {
             var2 = var2 + 32;
             continue L1;
           } else {
-            if (param0 > -58) {
-              return null;
-            } else {
+            if (param0 <= -58) {
               var2 = var2 + "| " + var7;
               return var2;
+            } else {
+              return null;
             }
           }
         }
@@ -153,29 +153,79 @@ final class hg extends gm {
     }
 
     final void a(nm param0, byte param1) {
-        int var3 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
-        oo.c(param0.c(((hg) this).g(58), -20126), param0.d(((hg) this).h(102), 109), ((hg) this).field_kb, 16711680);
-        var3 = 0;
-        L0: while (true) {
-          if (((hg) this).field_fb <= var3) {
-            if (param1 <= 58) {
-              String discarded$2 = hg.a(-91, '', 11);
-              return;
-            } else {
-              return;
+        try {
+          L0: {
+            oo.c(param0.c(((hg) this).g(58), -20126), param0.d(((hg) this).h(102), 109), ((hg) this).field_kb, 16711680);
+            var3_int = 0;
+            L1: while (true) {
+              if (((hg) this).field_fb <= var3_int) {
+                if (param1 > 58) {
+                  break L0;
+                } else {
+                  String discarded$2 = hg.a(-91, '', 11);
+                  return;
+                }
+              } else {
+                var4 = param0.c(((hg) this).field_cb[var3_int], -20126);
+                var5 = param0.d(((hg) this).field_hb[var3_int], 126);
+                oo.e(-1 + var4, -1 + var5, 3, 3, 0);
+                oo.a(var4, var5, 65280);
+                var3_int++;
+                continue L1;
+              }
             }
-          } else {
-            var4 = param0.c(((hg) this).field_cb[var3], -20126);
-            var5 = param0.d(((hg) this).field_hb[var3], 126);
-            oo.e(-1 + var4, -1 + var5, 3, 3, 0);
-            oo.a(var4, var5, 65280);
-            var3++;
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var3;
+            stackOut_7_1 = new StringBuilder().append("hg.J(");
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param0 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L2;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L2;
+            }
+          }
+          throw fa.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 41);
         }
     }
 
@@ -197,95 +247,48 @@ final class hg extends gm {
     final static void h(byte param0) {
         Object var1 = null;
         Throwable var2 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var1 = (Object) (Object) on.field_Z;
-                    // monitorenter on.field_Z
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        pq.field_f = hh.field_e;
-                        gi.field_m = gi.field_m + 1;
-                        bd.field_g = pb.field_a;
-                        bo.field_d = da.field_e;
-                        wc.field_J = vj.field_m;
-                        vj.field_m = false;
-                        kd.field_b = s.field_f;
-                        vb.field_f = de.field_g;
-                        ka.field_t = s.field_b;
-                        s.field_f = 0;
-                        if (param0 < -82) {
-                            statePc = 3;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        field_sb = null;
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        jf.field_e = ak.field_b;
-                        // monitorexit var1
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                case 7: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
-            }
+        Throwable decompiledCaughtException = null;
+        var1 = (Object) (Object) on.field_Z;
+        synchronized (var1) {
+          L0: {
+            pq.field_f = hh.field_e;
+            gi.field_m = gi.field_m + 1;
+            bd.field_g = pb.field_a;
+            bo.field_d = da.field_e;
+            wc.field_J = vj.field_m;
+            vj.field_m = false;
+            kd.field_b = s.field_f;
+            vb.field_f = de.field_g;
+            ka.field_t = s.field_b;
+            s.field_f = 0;
+            jf.field_e = ak.field_b;
+            break L0;
+          }
         }
     }
 
     hg(int param0, int param1, int param2) {
         super(param0, param1, param2, 200704);
-        if (-3 != (((hg) this).field_C ^ -1)) {
-            if (((hg) this).field_C != -5) {
-                // if_icmpne L52
+        L0: {
+          L1: {
+            if (((hg) this).field_C == 2) {
+              break L1;
+            } else {
+              if (((hg) this).field_C == 4) {
+                break L1;
+              } else {
+                if (((hg) this).field_C != 6) {
+                  break L0;
+                } else {
+                  break L1;
+                }
+              }
             }
+          }
+          ((hg) this).field_fb = 21;
+          ((hg) this).field_bb = 143360;
+          break L0;
         }
-        ((hg) this).field_fb = 21;
-        ((hg) this).field_bb = 143360;
     }
 
     static {

@@ -7,23 +7,14 @@ final class nm {
     static int field_a;
 
     final static void a(int[] param0, int[] param1, byte param2) {
-        if (param2 < 17) {
-          field_c = null;
-          eo.a(param0, param1, param1.length - 1, true, 0);
-          return;
-        } else {
-          eo.a(param0, param1, param1.length - 1, true, 0);
-          return;
+        try {
+            eo.a(param0, param1, param1.length - 1, true, 0);
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "nm.B(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + 47 + 41);
         }
     }
 
     public static void a(byte param0) {
-        if (param0 != 4) {
-            field_c = null;
-            field_b = null;
-            field_c = null;
-            return;
-        }
         field_b = null;
         field_c = null;
     }

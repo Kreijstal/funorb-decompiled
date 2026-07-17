@@ -10,20 +10,13 @@ final class ek {
     public static void b(byte param0) {
         field_c = null;
         field_d = null;
-        if (param0 != -42) {
-          field_d = null;
-          field_a = null;
-          field_b = null;
-          return;
-        } else {
-          field_a = null;
-          field_b = null;
-          return;
-        }
+        field_a = null;
+        field_b = null;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        int var5 = 0;
+        RuntimeException var5 = null;
+        int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -32,159 +25,161 @@ final class ek {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        int stackIn_4_0 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_13_0 = 0;
-        int stackIn_59_0 = 0;
-        int stackIn_62_0 = 0;
-        int stackIn_65_0 = 0;
-        int stackIn_68_0 = 0;
-        int stackOut_58_0 = 0;
-        int stackOut_57_0 = 0;
-        int stackOut_61_0 = 0;
-        int stackOut_60_0 = 0;
-        int stackOut_64_0 = 0;
-        int stackOut_63_0 = 0;
-        int stackOut_67_0 = 0;
-        int stackOut_66_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_6_0 = 0;
+        int stackIn_6_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackIn_12_0 = 0;
+        int stackIn_15_0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int stackOut_5_0 = 0;
-        int stackOut_9_0 = 0;
+        int stackOut_4_0 = 0;
         int stackOut_8_0 = 0;
-        int stackOut_12_0 = 0;
+        int stackOut_7_0 = 0;
         int stackOut_11_0 = 0;
+        int stackOut_10_0 = 0;
+        int stackOut_14_0 = 0;
+        int stackOut_13_0 = 0;
         var13 = fleas.field_A ? 1 : 0;
-        var5 = param4 + param1;
-        if (param3 == 1) {
+        try {
           L0: {
-            var6 = param2 + param0;
-            if (gb.field_l >= param1) {
-              stackOut_58_0 = gb.field_l;
-              stackIn_59_0 = stackOut_58_0;
-              break L0;
-            } else {
-              stackOut_57_0 = param1;
-              stackIn_59_0 = stackOut_57_0;
-              break L0;
-            }
-          }
-          L1: {
-            var7 = stackIn_59_0;
-            if (param2 > gb.field_b) {
-              stackOut_61_0 = param2;
-              stackIn_62_0 = stackOut_61_0;
-              break L1;
-            } else {
-              stackOut_60_0 = gb.field_b;
-              stackIn_62_0 = stackOut_60_0;
-              break L1;
-            }
-          }
-          L2: {
-            var8 = stackIn_62_0;
-            if (gb.field_h > var5) {
-              stackOut_64_0 = var5;
-              stackIn_65_0 = stackOut_64_0;
-              break L2;
-            } else {
-              stackOut_63_0 = gb.field_h;
-              stackIn_65_0 = stackOut_63_0;
-              break L2;
-            }
-          }
-          L3: {
-            var9 = stackIn_65_0;
-            if (gb.field_i <= var6) {
-              stackOut_67_0 = gb.field_i;
-              stackIn_68_0 = stackOut_67_0;
-              break L3;
-            } else {
-              stackOut_66_0 = var6;
-              stackIn_68_0 = stackOut_66_0;
-              break L3;
-            }
-          }
-          L4: {
-            var10 = stackIn_68_0;
-            if (gb.field_l > param1) {
-              break L4;
-            } else {
-              if (param1 < gb.field_h) {
-                var11 = param1 + gb.field_d * var8;
-                var12 = -var8 + var10 + 1 >> -428364607;
-                L5: while (true) {
-                  var12--;
-                  if ((var12 ^ -1) > -1) {
-                    break L4;
-                  } else {
-                    gb.field_a[var11] = 16777215;
-                    var11 = var11 + gb.field_d * 2;
-                    continue L5;
-                  }
-                }
+            L1: {
+              var5_int = param4 + param1;
+              if (param3 == 1) {
+                break L1;
               } else {
-                L6: {
-                  if (gb.field_b > param2) {
-                    break L6;
-                  } else {
-                    if (var6 >= gb.field_i) {
+                field_c = null;
+                break L1;
+              }
+            }
+            L2: {
+              var6 = param2 + param0;
+              if (gb.field_l >= param1) {
+                stackOut_5_0 = gb.field_l;
+                stackIn_6_0 = stackOut_5_0;
+                break L2;
+              } else {
+                stackOut_4_0 = param1;
+                stackIn_6_0 = stackOut_4_0;
+                break L2;
+              }
+            }
+            L3: {
+              var7 = stackIn_6_0;
+              if (param2 > gb.field_b) {
+                stackOut_8_0 = param2;
+                stackIn_9_0 = stackOut_8_0;
+                break L3;
+              } else {
+                stackOut_7_0 = gb.field_b;
+                stackIn_9_0 = stackOut_7_0;
+                break L3;
+              }
+            }
+            L4: {
+              var8 = stackIn_9_0;
+              if (gb.field_h > var5_int) {
+                stackOut_11_0 = var5_int;
+                stackIn_12_0 = stackOut_11_0;
+                break L4;
+              } else {
+                stackOut_10_0 = gb.field_h;
+                stackIn_12_0 = stackOut_10_0;
+                break L4;
+              }
+            }
+            L5: {
+              var9 = stackIn_12_0;
+              if (gb.field_i <= var6) {
+                stackOut_14_0 = gb.field_i;
+                stackIn_15_0 = stackOut_14_0;
+                break L5;
+              } else {
+                stackOut_13_0 = var6;
+                stackIn_15_0 = stackOut_13_0;
+                break L5;
+              }
+            }
+            L6: {
+              var10 = stackIn_15_0;
+              if (gb.field_l > param1) {
+                break L6;
+              } else {
+                if (param1 < gb.field_h) {
+                  var11 = param1 + gb.field_d * var8;
+                  var12 = -var8 + var10 + 1 >> 1;
+                  L7: while (true) {
+                    var12--;
+                    if (var12 < 0) {
                       break L6;
                     } else {
-                      var11 = param2 * gb.field_d + var7;
-                      var12 = var9 + (1 - var7) >> -384811807;
-                      L7: while (true) {
-                        var12--;
-                        if (-1 < (var12 ^ -1)) {
-                          break L6;
-                        } else {
-                          gb.field_a[var11] = 16777215;
-                          var11 += 2;
-                          continue L7;
-                        }
-                      }
+                      gb.field_a[var11] = 16777215;
+                      var11 = var11 + gb.field_d * 2;
+                      continue L7;
                     }
                   }
+                } else {
+                  break L6;
                 }
-                L8: {
-                  if (gb.field_l > var5) {
-                    break L8;
-                  } else {
-                    if (var5 >= gb.field_h) {
+              }
+            }
+            L8: {
+              if (gb.field_b > param2) {
+                break L8;
+              } else {
+                if (var6 >= gb.field_i) {
+                  break L8;
+                } else {
+                  var11 = param2 * gb.field_d + var7;
+                  var12 = var9 + (1 - var7) >> 1;
+                  L9: while (true) {
+                    var12--;
+                    if (var12 < 0) {
                       break L8;
                     } else {
-                      var11 = var5 + ((var5 + -param1 & 1) + var8) * gb.field_d;
-                      var12 = var10 + 1 - var8 >> -738592351;
-                      L9: while (true) {
-                        var12--;
-                        if (0 > var12) {
-                          break L8;
-                        } else {
-                          gb.field_a[var11] = 16777215;
-                          var11 = var11 + 2 * gb.field_d;
-                          continue L9;
-                        }
-                      }
+                      gb.field_a[var11] = 16777215;
+                      var11 += 2;
+                      continue L9;
                     }
                   }
                 }
-                if (gb.field_b <= param2) {
-                  if (gb.field_i <= var6) {
-                    return;
-                  } else {
-                    var11 = var7 + var6 * gb.field_d - -(1 & -param2 + var6);
-                    var12 = -var7 + (var9 + 1) >> -725892063;
-                    L10: while (true) {
-                      var12--;
-                      if (0 > var12) {
-                        return;
-                      } else {
-                        gb.field_a[var11] = 16777215;
-                        var11 += 2;
-                        continue L10;
-                      }
+              }
+            }
+            L10: {
+              if (gb.field_l > var5_int) {
+                break L10;
+              } else {
+                if (var5_int >= gb.field_h) {
+                  break L10;
+                } else {
+                  var11 = var5_int + ((var5_int + -param1 & 1) + var8) * gb.field_d;
+                  var12 = var10 + 1 - var8 >> 1;
+                  L11: while (true) {
+                    var12--;
+                    if (0 > var12) {
+                      break L10;
+                    } else {
+                      gb.field_a[var11] = 16777215;
+                      var11 = var11 + 2 * gb.field_d;
+                      continue L11;
+                    }
+                  }
+                }
+              }
+            }
+            L12: {
+              if (gb.field_b > param2) {
+                break L12;
+              } else {
+                if (gb.field_i > var6) {
+                  var11 = var7 + var6 * gb.field_d - -(1 & -param2 + var6);
+                  var12 = -var7 + (var9 + 1) >> 1;
+                  L13: while (true) {
+                    var12--;
+                    if (0 > var12) {
+                      break L12;
+                    } else {
+                      gb.field_a[var11] = 16777215;
+                      var11 += 2;
+                      continue L13;
                     }
                   }
                 } else {
@@ -192,277 +187,12 @@ final class ek {
                 }
               }
             }
+            break L0;
           }
-          L11: {
-            if (gb.field_b > param2) {
-              break L11;
-            } else {
-              if (var6 >= gb.field_i) {
-                break L11;
-              } else {
-                var11 = param2 * gb.field_d + var7;
-                var12 = var9 + (1 - var7) >> -384811807;
-                L12: while (true) {
-                  var12--;
-                  if (-1 < (var12 ^ -1)) {
-                    break L11;
-                  } else {
-                    gb.field_a[var11] = 16777215;
-                    var11 += 2;
-                    continue L12;
-                  }
-                }
-              }
-            }
-          }
-          L13: {
-            if (gb.field_l > var5) {
-              break L13;
-            } else {
-              if (var5 >= gb.field_h) {
-                break L13;
-              } else {
-                var11 = var5 + ((var5 + -param1 & 1) + var8) * gb.field_d;
-                var12 = var10 + 1 - var8 >> -738592351;
-                L14: while (true) {
-                  var12--;
-                  if (0 > var12) {
-                    break L13;
-                  } else {
-                    gb.field_a[var11] = 16777215;
-                    var11 = var11 + 2 * gb.field_d;
-                    continue L14;
-                  }
-                }
-              }
-            }
-          }
-          L15: {
-            if (gb.field_b > param2) {
-              break L15;
-            } else {
-              if (gb.field_i > var6) {
-                var11 = var7 + var6 * gb.field_d - -(1 & -param2 + var6);
-                var12 = -var7 + (var9 + 1) >> -725892063;
-                L16: while (true) {
-                  var12--;
-                  if (0 > var12) {
-                    break L15;
-                  } else {
-                    gb.field_a[var11] = 16777215;
-                    var11 += 2;
-                    continue L16;
-                  }
-                }
-              } else {
-                return;
-              }
-            }
-          }
-          return;
-        } else {
-          L17: {
-            field_c = null;
-            var6 = param2 + param0;
-            if (gb.field_l >= param1) {
-              stackOut_3_0 = gb.field_l;
-              stackIn_4_0 = stackOut_3_0;
-              break L17;
-            } else {
-              stackOut_2_0 = param1;
-              stackIn_4_0 = stackOut_2_0;
-              break L17;
-            }
-          }
-          L18: {
-            var7 = stackIn_4_0;
-            if (param2 > gb.field_b) {
-              stackOut_6_0 = param2;
-              stackIn_7_0 = stackOut_6_0;
-              break L18;
-            } else {
-              stackOut_5_0 = gb.field_b;
-              stackIn_7_0 = stackOut_5_0;
-              break L18;
-            }
-          }
-          L19: {
-            var8 = stackIn_7_0;
-            if (gb.field_h > var5) {
-              stackOut_9_0 = var5;
-              stackIn_10_0 = stackOut_9_0;
-              break L19;
-            } else {
-              stackOut_8_0 = gb.field_h;
-              stackIn_10_0 = stackOut_8_0;
-              break L19;
-            }
-          }
-          L20: {
-            var9 = stackIn_10_0;
-            if (gb.field_i <= var6) {
-              stackOut_12_0 = gb.field_i;
-              stackIn_13_0 = stackOut_12_0;
-              break L20;
-            } else {
-              stackOut_11_0 = var6;
-              stackIn_13_0 = stackOut_11_0;
-              break L20;
-            }
-          }
-          L21: {
-            var10 = stackIn_13_0;
-            if (gb.field_l > param1) {
-              break L21;
-            } else {
-              if (param1 < gb.field_h) {
-                var11 = param1 + gb.field_d * var8;
-                var12 = -var8 + var10 + 1 >> -428364607;
-                L22: while (true) {
-                  var12--;
-                  if ((var12 ^ -1) > -1) {
-                    break L21;
-                  } else {
-                    gb.field_a[var11] = 16777215;
-                    var11 = var11 + gb.field_d * 2;
-                    continue L22;
-                  }
-                }
-              } else {
-                L23: {
-                  if (gb.field_b > param2) {
-                    break L23;
-                  } else {
-                    if (var6 >= gb.field_i) {
-                      break L23;
-                    } else {
-                      var11 = param2 * gb.field_d + var7;
-                      var12 = var9 + (1 - var7) >> -384811807;
-                      L24: while (true) {
-                        var12--;
-                        if (-1 < (var12 ^ -1)) {
-                          break L23;
-                        } else {
-                          gb.field_a[var11] = 16777215;
-                          var11 += 2;
-                          continue L24;
-                        }
-                      }
-                    }
-                  }
-                }
-                L25: {
-                  if (gb.field_l > var5) {
-                    break L25;
-                  } else {
-                    if (var5 >= gb.field_h) {
-                      break L25;
-                    } else {
-                      var11 = var5 + ((var5 + -param1 & 1) + var8) * gb.field_d;
-                      var12 = var10 + 1 - var8 >> -738592351;
-                      L26: while (true) {
-                        var12--;
-                        if (0 > var12) {
-                          break L25;
-                        } else {
-                          gb.field_a[var11] = 16777215;
-                          var11 = var11 + 2 * gb.field_d;
-                          continue L26;
-                        }
-                      }
-                    }
-                  }
-                }
-                L27: {
-                  if (gb.field_b > param2) {
-                    break L27;
-                  } else {
-                    if (gb.field_i > var6) {
-                      var11 = var7 + var6 * gb.field_d - -(1 & -param2 + var6);
-                      var12 = -var7 + (var9 + 1) >> -725892063;
-                      L28: while (true) {
-                        var12--;
-                        if (0 > var12) {
-                          break L27;
-                        } else {
-                          gb.field_a[var11] = 16777215;
-                          var11 += 2;
-                          continue L28;
-                        }
-                      }
-                    } else {
-                      break L27;
-                    }
-                  }
-                }
-                return;
-              }
-            }
-          }
-          L29: {
-            if (gb.field_b > param2) {
-              break L29;
-            } else {
-              if (var6 >= gb.field_i) {
-                break L29;
-              } else {
-                var11 = param2 * gb.field_d + var7;
-                var12 = var9 + (1 - var7) >> -384811807;
-                L30: while (true) {
-                  var12--;
-                  if (-1 < (var12 ^ -1)) {
-                    break L29;
-                  } else {
-                    gb.field_a[var11] = 16777215;
-                    var11 += 2;
-                    continue L30;
-                  }
-                }
-              }
-            }
-          }
-          L31: {
-            if (gb.field_l > var5) {
-              break L31;
-            } else {
-              if (var5 >= gb.field_h) {
-                break L31;
-              } else {
-                var11 = var5 + ((var5 + -param1 & 1) + var8) * gb.field_d;
-                var12 = var10 + 1 - var8 >> -738592351;
-                L32: while (true) {
-                  var12--;
-                  if (0 > var12) {
-                    break L31;
-                  } else {
-                    gb.field_a[var11] = 16777215;
-                    var11 = var11 + 2 * gb.field_d;
-                    continue L32;
-                  }
-                }
-              }
-            }
-          }
-          if (gb.field_b <= param2) {
-            if (gb.field_i <= var6) {
-              return;
-            } else {
-              var11 = var7 + var6 * gb.field_d - -(1 & -param2 + var6);
-              var12 = -var7 + (var9 + 1) >> -725892063;
-              L33: while (true) {
-                var12--;
-                if (0 > var12) {
-                  return;
-                } else {
-                  gb.field_a[var11] = 16777215;
-                  var11 += 2;
-                  continue L33;
-                }
-              }
-            }
-          } else {
-            return;
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          throw pf.a((Throwable) (Object) var5, "ek.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 

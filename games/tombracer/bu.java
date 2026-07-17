@@ -185,8 +185,7 @@ final class bu extends kta {
           }
         }
         L4: {
-          new javax.sound.sampled.AudioFormat(stackIn_13_3, stackIn_13_4, stackIn_13_5, true, false);
-          ((bu) this).field_y = stackIn_13_1;
+          ((bu) this).field_y = new javax.sound.sampled.AudioFormat(stackIn_13_3, stackIn_13_4, stackIn_13_5, true, false);
           stackOut_13_0 = this;
           stackOut_13_1 = 256;
           stackIn_15_0 = stackOut_13_0;
@@ -216,19 +215,12 @@ final class bu extends kta {
 
     final void a(int param0) throws javax.sound.sampled.LineUnavailableException {
         javax.sound.sampled.DataLine.Info var2 = null;
-        try {
+        {
             var2 = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, ((bu) this).field_y, param0 << (field_h ? 2 : 1));
             ((bu) this).field_x = (javax.sound.sampled.SourceDataLine) (Object) javax.sound.sampled.AudioSystem.getLine((javax.sound.sampled.Line.Info) (Object) var2);
             ((bu) this).field_x.open();
             ((bu) this).field_x.start();
             ((bu) this).field_w = param0;
-        } catch (javax.sound.sampled.LineUnavailableException lineUnavailableException) {
-            if (tda.a(-117, param0) != 1) {
-                ((bu) this).a(lla.a(false, param0));
-                return;
-            }
-            ((bu) this).field_x = null;
-            throw lineUnavailableException;
         }
     }
 

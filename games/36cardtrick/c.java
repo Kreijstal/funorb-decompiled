@@ -43,7 +43,7 @@ abstract class c extends fj {
                 if (ri.b((byte) 23)) {
                   break L2;
                 } else {
-                  if ((g.field_A ^ -1) > -11) {
+                  if (g.field_A < 10) {
                     break L1;
                   } else {
                     L3: {
@@ -51,7 +51,7 @@ abstract class c extends fj {
                         break L3;
                       } else {
                         L4: {
-                          if ((cd.field_e ^ -1) != -1) {
+                          if (cd.field_e != 0) {
                             break L4;
                           } else {
                             int discarded$4 = this.a(false, false, 10);
@@ -6922,7 +6922,7 @@ abstract class c extends fj {
             }
             L2: {
               var2_int = pd.field_l;
-              if ((var2_int ^ -1) <= -65) {
+              if (var2_int >= 64) {
                 break L2;
               } else {
                 if (nl.field_e[var2_int]) {
@@ -6932,11 +6932,11 @@ abstract class c extends fj {
                     } else {
                       L4: {
                         L5: {
-                          if ((var2_int ^ -1) == -2) {
+                          if (var2_int == 1) {
                             break L5;
                           } else {
                             L6: {
-                              if ((var2_int ^ -1) == -3) {
+                              if (var2_int == 2) {
                                 break L6;
                               } else {
                                 L7: {
@@ -6952,7 +6952,7 @@ abstract class c extends fj {
                                   }
                                 }
                                 L8: {
-                                  if (-5 == (var2_int ^ -1)) {
+                                  if (var2_int == 4) {
                                     break L8;
                                   } else {
                                     L9: {
@@ -6960,11 +6960,11 @@ abstract class c extends fj {
                                         break L9;
                                       } else {
                                         L10: {
-                                          if ((var2_int ^ -1) == -7) {
+                                          if (var2_int == 6) {
                                             break L10;
                                           } else {
                                             L11: {
-                                              if ((var2_int ^ -1) != -8) {
+                                              if (var2_int != 7) {
                                                 break L11;
                                               } else {
                                                 this.j((byte) -122);
@@ -6976,7 +6976,7 @@ abstract class c extends fj {
                                               }
                                             }
                                             L12: {
-                                              if (-9 != (var2_int ^ -1)) {
+                                              if (var2_int != 8) {
                                                 break L12;
                                               } else {
                                                 td.a((pb) (Object) rd.field_j, (byte) -121, al.field_a, jk.field_a);
@@ -6988,7 +6988,7 @@ abstract class c extends fj {
                                               }
                                             }
                                             L13: {
-                                              if (-17 != (var2_int ^ -1)) {
+                                              if (var2_int != 16) {
                                                 break L13;
                                               } else {
                                                 t.a((byte) 86);
@@ -7000,10 +7000,10 @@ abstract class c extends fj {
                                               }
                                             }
                                             L14: {
-                                              if (-12 == (var2_int ^ -1)) {
+                                              if (var2_int == 11) {
                                                 break L14;
                                               } else {
-                                                if (-13 == (var2_int ^ -1)) {
+                                                if (var2_int == 12) {
                                                   break L14;
                                                 } else {
                                                   L15: {
@@ -7023,7 +7023,7 @@ abstract class c extends fj {
                                                         }
                                                       }
                                                       L17: {
-                                                        if ((var2_int ^ -1) != -19) {
+                                                        if (var2_int != 18) {
                                                           break L17;
                                                         } else {
                                                           bc.a(-464379825);
@@ -7056,7 +7056,7 @@ abstract class c extends fj {
                                               stackOut_77_0 = 24881;
                                               stackIn_82_0 = stackOut_77_0;
                                               stackIn_78_0 = stackOut_77_0;
-                                              if ((var2_int ^ -1) != -13) {
+                                              if (var2_int != 12) {
                                                 stackOut_82_0 = stackIn_82_0;
                                                 stackOut_82_1 = 0;
                                                 stackIn_83_0 = stackOut_82_0;
@@ -7228,7 +7228,7 @@ abstract class c extends fj {
                       if (0 == var2_int) {
                         break L1;
                       } else {
-                        if (-2 == (var2_int ^ -1)) {
+                        if (var2_int == 1) {
                           break L1;
                         } else {
                           L2: {
@@ -7396,7 +7396,7 @@ abstract class c extends fj {
               if (th.a(true)) {
                 break L3;
               } else {
-                if (-12 != (cd.field_e ^ -1)) {
+                if (cd.field_e != 11) {
                   wk.a(false);
                   break L3;
                 } else {
@@ -7421,7 +7421,7 @@ abstract class c extends fj {
                   if (((c) this).field_v) {
                     break L6;
                   } else {
-                    if ((var3_int ^ -1) <= (mk.h(-1) ^ -1)) {
+                    if (~var3_int <= ~mk.h(-1)) {
                       break L5;
                     } else {
                       if (dj.c(0) <= var3_int) {
@@ -7447,7 +7447,7 @@ abstract class c extends fj {
                 if (-1 == w.field_n) {
                   break L8;
                 } else {
-                  if ((w.field_n ^ -1) == -1) {
+                  if (w.field_n == 0) {
                     break L8;
                   } else {
                     break L7;
@@ -7455,7 +7455,7 @@ abstract class c extends fj {
                 }
               }
               L9: {
-                if ((w.field_n ^ -1) != 0) {
+                if (w.field_n != -1) {
                   stackOut_37_0 = 0;
                   stackIn_38_0 = stackOut_37_0;
                   break L9;
@@ -7471,7 +7471,7 @@ abstract class c extends fj {
                 if (var3_int == 0) {
                   break L10;
                 } else {
-                  if (-1 == (w.field_n ^ -1)) {
+                  if (w.field_n == 0) {
                     if (cd.field_e != 11) {
                       break L10;
                     } else {
@@ -7503,13 +7503,13 @@ abstract class c extends fj {
               if (-1 == w.field_n) {
                 break L11;
               } else {
-                if ((w.field_n ^ -1) != -1) {
+                if (w.field_n != 0) {
                   L12: {
                     if (10 <= g.field_A) {
                       break L12;
                     } else {
                       L13: {
-                        if ((w.field_n ^ -1) != -4) {
+                        if (w.field_n != 3) {
                           break L13;
                         } else {
                           ((c) this).a((byte) -115, "js5crc");
@@ -7564,13 +7564,13 @@ abstract class c extends fj {
                       }
                     }
                   }
-                  if (-11 < (cd.field_e ^ -1)) {
+                  if (cd.field_e < 10) {
                     break L11;
                   } else {
                     L17: {
                       L18: {
                         wd.a(31668);
-                        if (-4 != (w.field_n ^ -1)) {
+                        if (w.field_n != 3) {
                           break L18;
                         } else {
                           nk.a(256, -9, kk.field_a);
@@ -7586,7 +7586,7 @@ abstract class c extends fj {
                           break L19;
                         } else {
                           L20: {
-                            if ((w.field_n ^ -1) == -3) {
+                            if (w.field_n == 2) {
                               break L20;
                             } else {
                               L21: {
@@ -7631,10 +7631,10 @@ abstract class c extends fj {
             L22: {
               L23: {
                 L24: {
-                  if (0 == (w.field_n ^ -1)) {
+                  if (w.field_n == -1) {
                     break L24;
                   } else {
-                    if (-1 != (w.field_n ^ -1)) {
+                    if (w.field_n != 0) {
                       break L23;
                     } else {
                       break L24;
@@ -7652,7 +7652,7 @@ abstract class c extends fj {
                 if (w.field_n == -1) {
                   break L22;
                 } else {
-                  if ((w.field_n ^ -1) != -1) {
+                  if (w.field_n != 0) {
                     w.field_n = -1;
                     ta.c(true);
                     break L22;
@@ -7665,7 +7665,7 @@ abstract class c extends fj {
               }
             }
             L25: {
-              if ((w.field_n ^ -1) != -1) {
+              if (w.field_n != 0) {
                 break L25;
               } else {
                 if (ie.b((byte) 34)) {
@@ -7677,7 +7677,7 @@ abstract class c extends fj {
               }
             }
             L26: {
-              if (-1 == (g.field_A ^ -1)) {
+              if (g.field_A == 0) {
                 if (!eh.a(37)) {
                   break L26;
                 } else {
@@ -7693,7 +7693,7 @@ abstract class c extends fj {
                 break L27;
               } else {
                 L28: {
-                  if (-1 != (hf.field_I ^ -1)) {
+                  if (hf.field_I != 0) {
                     lb.field_a = aj.a(1, jj.field_b);
                     break L28;
                   } else {
@@ -7709,7 +7709,7 @@ abstract class c extends fj {
               }
             }
             L29: {
-              if (-3 == (g.field_A ^ -1)) {
+              if (g.field_A == 2) {
                 L30: {
                   if (null == lb.field_a) {
                     break L30;
@@ -7751,7 +7751,7 @@ abstract class c extends fj {
               }
             }
             L32: {
-              if ((g.field_A ^ -1) == -4) {
+              if (g.field_A == 3) {
                 if (!uh.a(jk.field_c, sg.field_a, aa.field_db, 2)) {
                   break L32;
                 } else {
@@ -7887,7 +7887,7 @@ abstract class c extends fj {
               }
             }
             L41: {
-              if (-12 != (g.field_A ^ -1)) {
+              if (g.field_A != 11) {
                 break L41;
               } else {
                 L42: {
@@ -7931,7 +7931,7 @@ abstract class c extends fj {
               }
             }
             L45: {
-              if ((g.field_A ^ -1) == -14) {
+              if (g.field_A == 13) {
                 L46: {
                   var4 = 1;
                   if (null != rh.field_l) {
@@ -8176,7 +8176,7 @@ abstract class c extends fj {
                   }
                 }
                 L5: {
-                  if (param0 >= (((c) this).field_m ^ -1)) {
+                  if (param0 >= ~((c) this).field_m) {
                     ((c) this).field_m = 0;
                     break L5;
                   } else {
@@ -8252,7 +8252,7 @@ abstract class c extends fj {
           L0: {
             L1: {
               var2_int = rd.field_j.f(50);
-              if ((1 & var2_int ^ -1) == -1) {
+              if ((1 & var2_int) == 0) {
                 stackOut_3_0 = 0;
                 stackIn_4_0 = stackOut_3_0;
                 break L1;
@@ -8477,11 +8477,11 @@ abstract class c extends fj {
             try {
               L0: {
                 var4_int = mj.a(hf.field_I, eg.field_f, param0, true);
-                if (-1 == (var4_int ^ -1)) {
+                if (var4_int == 0) {
                   throw new IllegalStateException();
                 } else {
                   L1: {
-                    if (-2 != (var4_int ^ -1)) {
+                    if (var4_int != 1) {
                       break L1;
                     } else {
                       L2: {
@@ -8507,7 +8507,7 @@ abstract class c extends fj {
                   L3: {
                     if (var4_int == 2) {
                       var5_int = qa.a(c.h((byte) -58), ij.a((byte) 120), ja.a(-7705), de.a(565192680), td.a(-2), true, ((c) this).field_p);
-                      if ((var5_int ^ -1) != 0) {
+                      if (var5_int != -1) {
                         sj.a(44, e.field_a, ll.field_f, var5_int);
                         e.field_a = null;
                         ll.field_f = null;
@@ -8525,7 +8525,7 @@ abstract class c extends fj {
                         if (w.field_n == -1) {
                           break L5;
                         } else {
-                          if ((w.field_n ^ -1) != -1) {
+                          if (w.field_n != 0) {
                             w.field_n = -1;
                             ta.c(true);
                             break L5;
@@ -8547,7 +8547,7 @@ abstract class c extends fj {
                         }
                       }
                       var5_int = ha.a(((c) this).field_r, td.a(-2), 29, false, ((c) this).field_p, ij.a((byte) 114));
-                      if ((var5_int ^ -1) == 0) {
+                      if (var5_int == -1) {
                         break L4;
                       } else {
                         L7: {
@@ -8574,7 +8574,7 @@ abstract class c extends fj {
                     }
                   }
                   L8: {
-                    if (-5 == (var4_int ^ -1)) {
+                    if (var4_int == 4) {
                       L9: {
                         if (dg.field_F) {
                           break L9;
@@ -8595,7 +8595,7 @@ abstract class c extends fj {
                     }
                   }
                   L10: {
-                    if ((var4_int ^ -1) == -6) {
+                    if (var4_int == 5) {
                       pb.a((byte) -124, mk.g(-126));
                       break L10;
                     } else {
@@ -8603,7 +8603,7 @@ abstract class c extends fj {
                     }
                   }
                   L11: {
-                    if ((var4_int ^ -1) != -7) {
+                    if (var4_int != 6) {
                       break L11;
                     } else {
                       if (tj.field_K) {
@@ -8647,7 +8647,7 @@ abstract class c extends fj {
                     }
                   }
                   L16: {
-                    if (-12 != (var4_int ^ -1)) {
+                    if (var4_int != 11) {
                       break L16;
                     } else {
                       wh.a(mk.g(-125), 63);
@@ -8719,7 +8719,7 @@ abstract class c extends fj {
                     }
                   }
                   L25: {
-                    if (-16 != (var4_int ^ -1)) {
+                    if (var4_int != 15) {
                       break L25;
                     } else {
                       cd.field_e = 10;
@@ -8731,7 +8731,7 @@ abstract class c extends fj {
                     stackIn_105_0 = stackOut_104_0;
                     return stackIn_105_0;
                   } else {
-                    if (-18 != (var4_int ^ -1)) {
+                    if (var4_int != 17) {
                       stackOut_109_0 = 0;
                       stackIn_110_0 = stackOut_109_0;
                       break L0;

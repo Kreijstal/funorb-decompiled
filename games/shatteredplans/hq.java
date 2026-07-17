@@ -11,12 +11,14 @@ final class hq {
         param2.c(12, (byte) -126);
         param2.d(17, param3 + 235);
         if (param3 != 20) {
-          return;
-        } else {
-          param2.d(param1, 255);
-          param2.d(param0, 255);
-          param2.c(param4, (byte) -59);
-          return;
+            return;
+        }
+        try {
+            param2.d(param1, 255);
+            param2.d(param0, 255);
+            param2.c(param4, (byte) -59);
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "hq.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 41);
         }
     }
 
@@ -78,9 +80,6 @@ final class hq {
     }
 
     public static void a(int param0) {
-        if (param0 <= 70) {
-            return;
-        }
         field_a = null;
         field_b = null;
         field_d = null;

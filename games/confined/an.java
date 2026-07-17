@@ -12,20 +12,20 @@ final class an extends rk {
 
     final static int a(int param0, int param1) {
         int var2 = 0;
-        var2 = param1 >>> -201766783;
-        var2 = var2 | var2 >>> 79616961;
-        var2 = var2 | var2 >>> -29003230;
+        var2 = param1 >>> 1;
+        var2 = var2 | var2 >>> 1;
+        var2 = var2 | var2 >>> 2;
         if (param0 != -484803804) {
           an.b(91);
-          var2 = var2 | var2 >>> -484803804;
-          var2 = var2 | var2 >>> 2117438696;
-          var2 = var2 | var2 >>> -1606370768;
-          return param1 & (var2 ^ -1);
+          var2 = var2 | var2 >>> 4;
+          var2 = var2 | var2 >>> 8;
+          var2 = var2 | var2 >>> 16;
+          return param1 & ~var2;
         } else {
-          var2 = var2 | var2 >>> -484803804;
-          var2 = var2 | var2 >>> 2117438696;
-          var2 = var2 | var2 >>> -1606370768;
-          return param1 & (var2 ^ -1);
+          var2 = var2 | var2 >>> 4;
+          var2 = var2 | var2 >>> 8;
+          var2 = var2 | var2 >>> 16;
+          return param1 & ~var2;
         }
     }
 

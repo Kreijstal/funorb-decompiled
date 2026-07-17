@@ -10,44 +10,46 @@ final class jj {
         if (!(eb.field_H)) {
             throw new IllegalStateException();
         }
-        if (param0 != 0) {
-            return;
-        }
-        if (be.field_b != null) {
-            be.field_b.o(param0 ^ -18861);
-        }
-        String var1 = mh.b((byte) 105);
-        dd.field_d = new h(var1, (String) null, true, false, false);
-        bo.field_F.b((hm) (Object) rd.field_c, 97);
-        rd.field_c.a((hm) (Object) dd.field_d, 30);
-        rd.field_c.b(false);
     }
 
     public static void b(int param0) {
         field_a = null;
-        if (param0 != 9) {
-            field_b = 96;
-        }
         field_c = null;
     }
 
     final static void a(boolean param0) {
+        int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         mb var6 = null;
-        int var1 = jb.field_j.length;
-        jb.field_i = new mb[var1];
-        for (var2 = 0; var2 < var1; var2++) {
-            var3 = jb.field_j[var2];
-            var4 = jb.field_y[var2];
-            var5 = jb.field_x[var2];
-            var6 = new mb(var3, var4, var5);
-            jb.field_i[var2] = var6;
-        }
-        if (param0) {
-            field_b = 97;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          L0: {
+            var1_int = jb.field_j.length;
+            jb.field_i = new mb[var1_int];
+            var2 = 0;
+            L1: while (true) {
+              if (var2 >= var1_int) {
+                field_b = 97;
+                break L0;
+              } else {
+                var3 = jb.field_j[var2];
+                var4 = jb.field_y[var2];
+                var5 = jb.field_x[var2];
+                var6 = new mb(var3, var4, var5);
+                jb.field_i[var2] = var6;
+                var2++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw t.a((Throwable) (Object) var1, "jj.B(" + 0 + 41);
         }
     }
 

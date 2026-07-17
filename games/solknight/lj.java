@@ -40,7 +40,7 @@ final class lj extends ki implements ka {
           L0: {
             L1: {
               var2_int = param0.j(255);
-              if (param1 != (var2_int ^ -1)) {
+              if (param1 != ~var2_int) {
                 stackOut_3_0 = 0;
                 stackIn_4_0 = stackOut_3_0;
                 break L1;
@@ -7466,7 +7466,7 @@ final class lj extends ki implements ka {
               L1: while (true) {
                 L2: {
                   L3: {
-                    if ((((lj) this).field_K ^ -1) >= (var5 ^ -1)) {
+                    if (~((lj) this).field_K >= ~var5) {
                       break L3;
                     } else {
                       var3[var5] = ((lj) this).field_E[var5];

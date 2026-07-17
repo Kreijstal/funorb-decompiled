@@ -39,7 +39,7 @@ final class vh {
             return;
         }
         if (!(!param0)) {
-            ((vh) this).field_k[((vh) this).field_j >> 1151845829] = hm.a(((vh) this).field_k[((vh) this).field_j >> 1151845829], 1 << pf.b(31, ((vh) this).field_j));
+            ((vh) this).field_k[((vh) this).field_j >> 5] = hm.a(((vh) this).field_k[((vh) this).field_j >> 5], 1 << pf.b(31, ((vh) this).field_j));
         }
         ((vh) this).field_j = ((vh) this).field_j + 1;
     }
@@ -48,7 +48,7 @@ final class vh {
         if (param0 <= 26) {
             return true;
         }
-        return (((vh) this).field_k[param1 >> 2065069605] & 1 << (param1 & 31)) != 0 ? true : false;
+        return (((vh) this).field_k[param1 >> 5] & 1 << (param1 & 31)) != 0 ? true : false;
     }
 
     final static void a(int param0, int param1) {
@@ -69,7 +69,7 @@ final class vh {
               var2 = (-40960 + 16384 * var3) / 220;
               break L0;
             } else {
-              if ((var3 ^ -1) > -121) {
+              if (var3 < 120) {
                 var3 = -var3 + 120;
                 var2 = 8192 + -(var3 * var3 * 8192 / 3300);
                 break L0;
@@ -129,7 +129,7 @@ final class vh {
             if (7 == param0) {
               break L7;
             } else {
-              if ((param0 ^ -1) != -9) {
+              if (param0 != 8) {
                 break L6;
               } else {
                 break L7;
@@ -150,7 +150,7 @@ final class vh {
         }
         if (param1 == 10718) {
           L9: {
-            if ((param0 ^ -1) != -13) {
+            if (param0 != 12) {
               break L9;
             } else {
               var5 = -1;
@@ -159,7 +159,7 @@ final class vh {
             }
           }
           L10: {
-            if (-14 == (param0 ^ -1)) {
+            if (param0 == 13) {
               var5 = -1;
               var4 = 1;
               break L10;
@@ -177,7 +177,7 @@ final class vh {
             }
           }
           L12: {
-            if (-16 != (param0 ^ -1)) {
+            if (param0 != 15) {
               break L12;
             } else {
               var5 = 1;

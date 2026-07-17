@@ -18,9 +18,6 @@ final class hab extends uda {
     }
 
     public static void e(int param0) {
-        if (param0 != -18951) {
-            return;
-        }
         field_e = null;
         field_g = null;
         field_j = null;
@@ -38,14 +35,14 @@ final class hab extends uda {
     }
 
     final void a(byte param0, int param1, ura param2) {
-        ((hab) this).field_d.a(param2, -121);
-        if (param0 <= 42) {
-          ((hab) this).b(-13, true);
-          ((hab) this).field_d.h(-126, param1);
-          return;
-        } else {
-          ((hab) this).field_d.h(-126, param1);
-          return;
+        try {
+            ((hab) this).field_d.a(param2, -121);
+            if (param0 <= 42) {
+                ((hab) this).b(-13, true);
+            }
+            ((hab) this).field_d.h(-126, param1);
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "hab.E(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

@@ -475,12 +475,6 @@ final class io {
 
     public static void a(byte param0) {
         field_b = null;
-        if (param0 != -57) {
-            field_c = null;
-            field_c = null;
-            field_d = null;
-            return;
-        }
         field_c = null;
         field_d = null;
     }

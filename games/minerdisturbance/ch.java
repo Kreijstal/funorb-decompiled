@@ -24,9 +24,6 @@ abstract class ch {
 
     public static void c(int param0) {
         field_g = null;
-        if (param0 >= -11) {
-            field_f = 16;
-        }
     }
 
     final boolean c(byte param0) {
@@ -67,7 +64,7 @@ abstract class ch {
     }
 
     final ee a(byte param0, int param1, boolean param2, int param3, int param4) {
-        long var6 = (long)param3 + ((long)param4 << 1461895584);
+        long var6 = (long)param3 + ((long)param4 << 32);
         ee var8 = new ee();
         if (param1 != -21) {
             ((ch) this).field_d = -79;
@@ -75,7 +72,7 @@ abstract class ch {
             var8.field_v = param2 ? true : false;
             var8.field_p = var6;
             if (param2) {
-                if (!(-21 < (((ch) this).a(-11975) ^ -1))) {
+                if (!(((ch) this).a(-11975) < 20)) {
                     throw new RuntimeException();
                 }
                 ((ch) this).field_n.a((al) (Object) var8, false);
@@ -91,7 +88,7 @@ abstract class ch {
         var8.field_v = param2 ? true : false;
         var8.field_p = var6;
         if (param2) {
-            if (!(-21 < (((ch) this).a(-11975) ^ -1))) {
+            if (!(((ch) this).a(-11975) < 20)) {
                 throw new RuntimeException();
             }
             ((ch) this).field_n.a((al) (Object) var8, false);

@@ -46,7 +46,7 @@ final class ri {
                           if (((ri) this).field_d.length <= var3_int) {
                             break L4;
                           } else {
-                            stackOut_12_0 = ((ri) this).field_d[-1 + var3_int] - -((ri) this).field_d[var3_int] >> -1977068703;
+                            stackOut_12_0 = ((ri) this).field_d[-1 + var3_int] - -((ri) this).field_d[var3_int] >> 1;
                             stackOut_12_1 = param1;
                             stackIn_20_0 = stackOut_12_0;
                             stackIn_20_1 = stackOut_12_1;
@@ -150,7 +150,7 @@ final class ri {
                 if (((ri) this).field_d == null) {
                   break L3;
                 } else {
-                  if (-1 == (((ri) this).field_d.length ^ -1)) {
+                  if (((ri) this).field_d.length == 0) {
                     break L3;
                   } else {
                     stackOut_7_0 = ((ri) this).field_d[((ri) this).field_d.length + -1];
@@ -208,12 +208,12 @@ final class ri {
           L0: {
             var1_ref = sh.field_qb;
             var2 = var1_ref.g(11132);
-            if (-1 != (var2 ^ -1)) {
+            if (var2 != 0) {
               if (var2 != 1) {
-                if (-3 != (var2 ^ -1)) {
+                if (var2 != 2) {
                   if (var2 == 3) {
                     L1: {
-                      if (-3 != (oa.field_q ^ -1)) {
+                      if (oa.field_q != 2) {
                         break L1;
                       } else {
                         oa.field_q = 1;
@@ -245,7 +245,7 @@ final class ri {
                   }
                 } else {
                   L3: {
-                    if (-2 != (oa.field_q ^ -1)) {
+                    if (oa.field_q != 1) {
                       break L3;
                     } else {
                       oa.field_q = 2;

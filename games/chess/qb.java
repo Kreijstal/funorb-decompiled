@@ -10,7 +10,7 @@ final class qb {
 
     public static void a(byte param0) {
         field_d = null;
-        int var1 = -41 % ((-43 - param0) / 54);
+        int var1 = 0;
     }
 
     static {

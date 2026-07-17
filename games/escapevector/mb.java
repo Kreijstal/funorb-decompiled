@@ -16,411 +16,712 @@ final class mb {
         L0: {
           var3 = EscapeVector.field_A;
           var4 = qa.f((byte) -49);
-          if (-1 != (p.field_h ^ -1)) {
-            if (!aj.b(-124)) {
-              if (1 == p.field_h) {
-                L1: {
-                  kh.a(true, -1230, true);
-                  if (p.field_h == 2) {
+          if (p.field_h != 0) {
+            if (aj.b(-124)) {
+              L1: {
+                p.field_h = 0;
+                mj.field_d = 0;
+                gi.a((byte) -105);
+                if (var4 == null) {
+                  if (null == ma.field_a) {
                     L2: {
-                      n.field_h = false;
-                      gi.a((byte) -126);
-                      di.field_d = null;
-                      if (null != de.field_i) {
-                        ml.a(de.field_i, 3, (byte) 101);
+                      if (!wk.field_c) {
+                        pf.e((byte) -111);
                         break L2;
                       } else {
                         break L2;
                       }
                     }
-                    ci.a(0);
-                    break L1;
-                  } else {
-                    break L1;
-                  }
-                }
-                p.field_h = 0;
-                mj.field_d = 0;
-                gi.a((byte) -105);
-                break L0;
-              } else {
-                L3: {
-                  if (p.field_h == 2) {
-                    L4: {
-                      n.field_h = false;
-                      gi.a((byte) -126);
-                      di.field_d = null;
-                      if (null != de.field_i) {
-                        ml.a(de.field_i, 3, (byte) 101);
-                        break L4;
-                      } else {
-                        break L4;
-                      }
-                    }
-                    ci.a(0);
-                    break L3;
-                  } else {
-                    break L3;
-                  }
-                }
-                p.field_h = 0;
-                mj.field_d = 0;
-                gi.a((byte) -105);
-                if (param0 < -47) {
-                  L5: {
-                    if (var4 == null) {
-                      L6: {
-                        if (null != ma.field_a) {
-                          break L6;
-                        } else {
-                          if (!wk.field_c) {
-                            pf.e((byte) -111);
-                            break L6;
+                    if (!wk.field_c) {
+                      if (pg.field_b) {
+                        L3: {
+                          qj.a(-883);
+                          hm.field_o.e(117);
+                          lh.a(72);
+                          if (!aj.b(-102)) {
+                            ce.field_f.d(-32464);
+                            ua.field_c.b(126);
+                            break L3;
                           } else {
-                            if (!wk.field_c) {
-                              if (pg.field_b) {
-                                L7: {
-                                  qj.a(-883);
-                                  hm.field_o.e(117);
-                                  lh.a(72);
-                                  if (!aj.b(-102)) {
-                                    ce.field_f.d(-32464);
-                                    ua.field_c.b(126);
-                                    break L7;
-                                  } else {
-                                    break L7;
-                                  }
-                                }
-                                return;
-                              } else {
-                                if (0 <= od.field_q) {
-                                  L8: {
-                                    sn.c(-1);
-                                    hn.field_l.j(2525);
-                                    lh.a(72);
-                                    if (!aj.b(-102)) {
-                                      ce.field_f.d(-32464);
-                                      ua.field_c.b(126);
-                                      break L8;
-                                    } else {
-                                      break L8;
-                                    }
-                                  }
-                                  return;
-                                } else {
-                                  L9: {
-                                    if (!n.field_h) {
-                                      if (!e.field_a) {
-                                        if (!hn.field_n) {
-                                          if (!ch.field_b) {
-                                            if (pl.field_q == null) {
-                                              if (null != da.field_c) {
-                                                L10: {
-                                                  rl.e(-46);
-                                                  lh.a(72);
-                                                  if (!aj.b(-102)) {
-                                                    ce.field_f.d(-32464);
-                                                    ua.field_c.b(126);
-                                                    break L10;
-                                                  } else {
-                                                    break L10;
-                                                  }
-                                                }
-                                                return;
-                                              } else {
-                                                L11: {
-                                                  if (mj.field_d < 1000) {
-                                                    mj.field_d = mj.field_d + 1;
-                                                    break L11;
-                                                  } else {
-                                                    break L11;
-                                                  }
-                                                }
-                                                L12: {
-                                                  ma.field_a.h(-41);
-                                                  lh.a(72);
-                                                  if (!aj.b(-102)) {
-                                                    ce.field_f.d(-32464);
-                                                    ua.field_c.b(126);
-                                                    break L12;
-                                                  } else {
-                                                    break L12;
-                                                  }
-                                                }
-                                                return;
-                                              }
-                                            } else {
-                                              L13: {
-                                                ff.a((byte) 127);
-                                                lh.a(72);
-                                                if (!aj.b(-102)) {
-                                                  ce.field_f.d(-32464);
-                                                  ua.field_c.b(126);
-                                                  break L13;
-                                                } else {
-                                                  break L13;
-                                                }
-                                              }
-                                              return;
-                                            }
+                            break L3;
+                          }
+                        }
+                        return;
+                      } else {
+                        if (0 <= od.field_q) {
+                          L4: {
+                            sn.c(-1);
+                            hn.field_l.j(2525);
+                            lh.a(72);
+                            if (!aj.b(-102)) {
+                              ce.field_f.d(-32464);
+                              ua.field_c.b(126);
+                              break L4;
+                            } else {
+                              break L4;
+                            }
+                          }
+                          return;
+                        } else {
+                          L5: {
+                            if (!n.field_h) {
+                              if (!e.field_a) {
+                                if (!hn.field_n) {
+                                  if (!ch.field_b) {
+                                    if (pl.field_q == null) {
+                                      if (null != da.field_c) {
+                                        L6: {
+                                          rl.e(-46);
+                                          lh.a(72);
+                                          if (!aj.b(-102)) {
+                                            ce.field_f.d(-32464);
+                                            ua.field_c.b(126);
+                                            break L6;
                                           } else {
-                                            if (qk.field_e.f(-1)) {
-                                              return;
-                                            } else {
-                                              break L9;
-                                            }
-                                          }
-                                        } else {
-                                          mn.d((byte) -120);
-                                          if (rc.field_a.f(-91)) {
-                                            return;
-                                          } else {
-                                            break L9;
+                                            break L6;
                                           }
                                         }
+                                        return;
                                       } else {
-                                        if (da.field_b.j(-122)) {
-                                          return;
+                                        L7: {
+                                          if (mj.field_d < 1000) {
+                                            mj.field_d = mj.field_d + 1;
+                                            break L7;
+                                          } else {
+                                            break L7;
+                                          }
+                                        }
+                                        L8: {
+                                          ma.field_a.h(-41);
+                                          lh.a(72);
+                                          if (!aj.b(-102)) {
+                                            ce.field_f.d(-32464);
+                                            ua.field_c.b(126);
+                                            break L8;
+                                          } else {
+                                            break L8;
+                                          }
+                                        }
+                                        return;
+                                      }
+                                    } else {
+                                      L9: {
+                                        ff.a((byte) 127);
+                                        lh.a(72);
+                                        if (!aj.b(-102)) {
+                                          ce.field_f.d(-32464);
+                                          ua.field_c.b(126);
+                                          break L9;
                                         } else {
                                           break L9;
                                         }
                                       }
+                                      return;
+                                    }
+                                  } else {
+                                    if (qk.field_e.f(-1)) {
+                                      return;
                                     } else {
-                                      if (!mm.a(-59)) {
-                                        break L9;
-                                      } else {
-                                        return;
-                                      }
+                                      break L5;
                                     }
                                   }
-                                  L14: {
-                                    lh.a(72);
-                                    if (!aj.b(-102)) {
-                                      ce.field_f.d(-32464);
-                                      ua.field_c.b(126);
-                                      break L14;
-                                    } else {
-                                      break L14;
-                                    }
+                                } else {
+                                  mn.d((byte) -120);
+                                  if (rc.field_a.f(-91)) {
+                                    return;
+                                  } else {
+                                    break L5;
                                   }
+                                }
+                              } else {
+                                if (da.field_b.j(-122)) {
                                   return;
+                                } else {
+                                  break L5;
                                 }
                               }
                             } else {
-                              L15: {
-                                kc.a((byte) -75);
+                              if (!mm.a(-59)) {
+                                break L5;
+                              } else {
+                                return;
+                              }
+                            }
+                          }
+                          lh.a(72);
+                          break L1;
+                        }
+                      }
+                    } else {
+                      L10: {
+                        kc.a((byte) -75);
+                        lh.a(72);
+                        if (!aj.b(-102)) {
+                          ce.field_f.d(-32464);
+                          ua.field_c.b(126);
+                          break L10;
+                        } else {
+                          break L10;
+                        }
+                      }
+                      return;
+                    }
+                  } else {
+                    if (!wk.field_c) {
+                      if (pg.field_b) {
+                        L11: {
+                          qj.a(-883);
+                          hm.field_o.e(117);
+                          lh.a(72);
+                          if (!aj.b(-102)) {
+                            ce.field_f.d(-32464);
+                            ua.field_c.b(126);
+                            break L11;
+                          } else {
+                            break L11;
+                          }
+                        }
+                        return;
+                      } else {
+                        if (0 <= od.field_q) {
+                          L12: {
+                            sn.c(-1);
+                            hn.field_l.j(2525);
+                            lh.a(72);
+                            if (!aj.b(-102)) {
+                              ce.field_f.d(-32464);
+                              ua.field_c.b(126);
+                              break L12;
+                            } else {
+                              break L12;
+                            }
+                          }
+                          return;
+                        } else {
+                          L13: {
+                            if (!n.field_h) {
+                              if (!e.field_a) {
+                                if (!hn.field_n) {
+                                  if (!ch.field_b) {
+                                    if (pl.field_q == null) {
+                                      if (null != da.field_c) {
+                                        L14: {
+                                          rl.e(-46);
+                                          lh.a(72);
+                                          if (!aj.b(-102)) {
+                                            ce.field_f.d(-32464);
+                                            ua.field_c.b(126);
+                                            break L14;
+                                          } else {
+                                            break L14;
+                                          }
+                                        }
+                                        return;
+                                      } else {
+                                        L15: {
+                                          if (mj.field_d < 1000) {
+                                            mj.field_d = mj.field_d + 1;
+                                            break L15;
+                                          } else {
+                                            break L15;
+                                          }
+                                        }
+                                        L16: {
+                                          ma.field_a.h(-41);
+                                          lh.a(72);
+                                          if (!aj.b(-102)) {
+                                            ce.field_f.d(-32464);
+                                            ua.field_c.b(126);
+                                            break L16;
+                                          } else {
+                                            break L16;
+                                          }
+                                        }
+                                        return;
+                                      }
+                                    } else {
+                                      L17: {
+                                        ff.a((byte) 127);
+                                        lh.a(72);
+                                        if (!aj.b(-102)) {
+                                          ce.field_f.d(-32464);
+                                          ua.field_c.b(126);
+                                          break L17;
+                                        } else {
+                                          break L17;
+                                        }
+                                      }
+                                      return;
+                                    }
+                                  } else {
+                                    if (qk.field_e.f(-1)) {
+                                      return;
+                                    } else {
+                                      break L13;
+                                    }
+                                  }
+                                } else {
+                                  mn.d((byte) -120);
+                                  if (rc.field_a.f(-91)) {
+                                    return;
+                                  } else {
+                                    break L13;
+                                  }
+                                }
+                              } else {
+                                if (da.field_b.j(-122)) {
+                                  return;
+                                } else {
+                                  break L13;
+                                }
+                              }
+                            } else {
+                              if (!mm.a(-59)) {
+                                break L13;
+                              } else {
+                                return;
+                              }
+                            }
+                          }
+                          L18: {
+                            lh.a(72);
+                            if (!aj.b(-102)) {
+                              ce.field_f.d(-32464);
+                              ua.field_c.b(126);
+                              break L18;
+                            } else {
+                              break L18;
+                            }
+                          }
+                          return;
+                        }
+                      }
+                    } else {
+                      L19: {
+                        kc.a((byte) -75);
+                        lh.a(72);
+                        if (!aj.b(-102)) {
+                          ce.field_f.d(-32464);
+                          ua.field_c.b(126);
+                          break L19;
+                        } else {
+                          break L19;
+                        }
+                      }
+                      return;
+                    }
+                  }
+                } else {
+                  var4.e((byte) 62);
+                  break L1;
+                }
+              }
+              L20: {
+                if (!aj.b(-102)) {
+                  ce.field_f.d(-32464);
+                  ua.field_c.b(126);
+                  break L20;
+                } else {
+                  break L20;
+                }
+              }
+              return;
+            } else {
+              if (1 == p.field_h) {
+                kh.a(true, -1230, true);
+                if (p.field_h == 2) {
+                  L21: {
+                    n.field_h = false;
+                    gi.a((byte) -126);
+                    di.field_d = null;
+                    if (null != de.field_i) {
+                      ml.a(de.field_i, 3, (byte) 101);
+                      break L21;
+                    } else {
+                      break L21;
+                    }
+                  }
+                  ci.a(0);
+                  p.field_h = 0;
+                  mj.field_d = 0;
+                  gi.a((byte) -105);
+                  break L0;
+                } else {
+                  L22: {
+                    p.field_h = 0;
+                    mj.field_d = 0;
+                    gi.a((byte) -105);
+                    if (var4 == null) {
+                      if (null == ma.field_a) {
+                        L23: {
+                          if (!wk.field_c) {
+                            pf.e((byte) -111);
+                            break L23;
+                          } else {
+                            break L23;
+                          }
+                        }
+                        if (!wk.field_c) {
+                          if (pg.field_b) {
+                            L24: {
+                              qj.a(-883);
+                              hm.field_o.e(117);
+                              lh.a(72);
+                              if (!aj.b(-102)) {
+                                ce.field_f.d(-32464);
+                                ua.field_c.b(126);
+                                break L24;
+                              } else {
+                                break L24;
+                              }
+                            }
+                            return;
+                          } else {
+                            if (0 <= od.field_q) {
+                              L25: {
+                                sn.c(-1);
+                                hn.field_l.j(2525);
                                 lh.a(72);
                                 if (!aj.b(-102)) {
                                   ce.field_f.d(-32464);
                                   ua.field_c.b(126);
-                                  break L15;
+                                  break L25;
                                 } else {
-                                  break L15;
+                                  break L25;
+                                }
+                              }
+                              return;
+                            } else {
+                              L26: {
+                                if (!n.field_h) {
+                                  if (!e.field_a) {
+                                    if (!hn.field_n) {
+                                      if (!ch.field_b) {
+                                        if (pl.field_q == null) {
+                                          if (null != da.field_c) {
+                                            L27: {
+                                              rl.e(-46);
+                                              lh.a(72);
+                                              if (!aj.b(-102)) {
+                                                ce.field_f.d(-32464);
+                                                ua.field_c.b(126);
+                                                break L27;
+                                              } else {
+                                                break L27;
+                                              }
+                                            }
+                                            return;
+                                          } else {
+                                            L28: {
+                                              if (mj.field_d < 1000) {
+                                                mj.field_d = mj.field_d + 1;
+                                                break L28;
+                                              } else {
+                                                break L28;
+                                              }
+                                            }
+                                            L29: {
+                                              ma.field_a.h(-41);
+                                              lh.a(72);
+                                              if (!aj.b(-102)) {
+                                                ce.field_f.d(-32464);
+                                                ua.field_c.b(126);
+                                                break L29;
+                                              } else {
+                                                break L29;
+                                              }
+                                            }
+                                            return;
+                                          }
+                                        } else {
+                                          L30: {
+                                            ff.a((byte) 127);
+                                            lh.a(72);
+                                            if (!aj.b(-102)) {
+                                              ce.field_f.d(-32464);
+                                              ua.field_c.b(126);
+                                              break L30;
+                                            } else {
+                                              break L30;
+                                            }
+                                          }
+                                          return;
+                                        }
+                                      } else {
+                                        if (qk.field_e.f(-1)) {
+                                          return;
+                                        } else {
+                                          break L26;
+                                        }
+                                      }
+                                    } else {
+                                      mn.d((byte) -120);
+                                      if (rc.field_a.f(-91)) {
+                                        return;
+                                      } else {
+                                        break L26;
+                                      }
+                                    }
+                                  } else {
+                                    if (da.field_b.j(-122)) {
+                                      return;
+                                    } else {
+                                      break L26;
+                                    }
+                                  }
+                                } else {
+                                  if (!mm.a(-59)) {
+                                    break L26;
+                                  } else {
+                                    return;
+                                  }
+                                }
+                              }
+                              lh.a(72);
+                              break L22;
+                            }
+                          }
+                        } else {
+                          L31: {
+                            kc.a((byte) -75);
+                            lh.a(72);
+                            if (!aj.b(-102)) {
+                              ce.field_f.d(-32464);
+                              ua.field_c.b(126);
+                              break L31;
+                            } else {
+                              break L31;
+                            }
+                          }
+                          return;
+                        }
+                      } else {
+                        if (!wk.field_c) {
+                          if (pg.field_b) {
+                            L32: {
+                              qj.a(-883);
+                              hm.field_o.e(117);
+                              lh.a(72);
+                              if (!aj.b(-102)) {
+                                ce.field_f.d(-32464);
+                                ua.field_c.b(126);
+                                break L32;
+                              } else {
+                                break L32;
+                              }
+                            }
+                            return;
+                          } else {
+                            if (0 <= od.field_q) {
+                              L33: {
+                                sn.c(-1);
+                                hn.field_l.j(2525);
+                                lh.a(72);
+                                if (!aj.b(-102)) {
+                                  ce.field_f.d(-32464);
+                                  ua.field_c.b(126);
+                                  break L33;
+                                } else {
+                                  break L33;
+                                }
+                              }
+                              return;
+                            } else {
+                              L34: {
+                                if (!n.field_h) {
+                                  if (!e.field_a) {
+                                    if (!hn.field_n) {
+                                      if (!ch.field_b) {
+                                        if (pl.field_q == null) {
+                                          if (null != da.field_c) {
+                                            L35: {
+                                              rl.e(-46);
+                                              lh.a(72);
+                                              if (!aj.b(-102)) {
+                                                ce.field_f.d(-32464);
+                                                ua.field_c.b(126);
+                                                break L35;
+                                              } else {
+                                                break L35;
+                                              }
+                                            }
+                                            return;
+                                          } else {
+                                            L36: {
+                                              if (mj.field_d < 1000) {
+                                                mj.field_d = mj.field_d + 1;
+                                                break L36;
+                                              } else {
+                                                break L36;
+                                              }
+                                            }
+                                            L37: {
+                                              ma.field_a.h(-41);
+                                              lh.a(72);
+                                              if (!aj.b(-102)) {
+                                                ce.field_f.d(-32464);
+                                                ua.field_c.b(126);
+                                                break L37;
+                                              } else {
+                                                break L37;
+                                              }
+                                            }
+                                            return;
+                                          }
+                                        } else {
+                                          L38: {
+                                            ff.a((byte) 127);
+                                            lh.a(72);
+                                            if (!aj.b(-102)) {
+                                              ce.field_f.d(-32464);
+                                              ua.field_c.b(126);
+                                              break L38;
+                                            } else {
+                                              break L38;
+                                            }
+                                          }
+                                          return;
+                                        }
+                                      } else {
+                                        if (qk.field_e.f(-1)) {
+                                          return;
+                                        } else {
+                                          break L34;
+                                        }
+                                      }
+                                    } else {
+                                      mn.d((byte) -120);
+                                      if (rc.field_a.f(-91)) {
+                                        return;
+                                      } else {
+                                        break L34;
+                                      }
+                                    }
+                                  } else {
+                                    if (da.field_b.j(-122)) {
+                                      return;
+                                    } else {
+                                      break L34;
+                                    }
+                                  }
+                                } else {
+                                  if (!mm.a(-59)) {
+                                    break L34;
+                                  } else {
+                                    return;
+                                  }
+                                }
+                              }
+                              L39: {
+                                lh.a(72);
+                                if (!aj.b(-102)) {
+                                  ce.field_f.d(-32464);
+                                  ua.field_c.b(126);
+                                  break L39;
+                                } else {
+                                  break L39;
                                 }
                               }
                               return;
                             }
                           }
-                        }
-                      }
-                      if (!wk.field_c) {
-                        if (pg.field_b) {
-                          L16: {
-                            qj.a(-883);
-                            hm.field_o.e(117);
+                        } else {
+                          L40: {
+                            kc.a((byte) -75);
                             lh.a(72);
                             if (!aj.b(-102)) {
                               ce.field_f.d(-32464);
                               ua.field_c.b(126);
-                              break L16;
+                              break L40;
                             } else {
-                              break L16;
+                              break L40;
                             }
                           }
                           return;
-                        } else {
-                          if (0 <= od.field_q) {
-                            L17: {
-                              sn.c(-1);
-                              hn.field_l.j(2525);
-                              lh.a(72);
-                              if (!aj.b(-102)) {
-                                ce.field_f.d(-32464);
-                                ua.field_c.b(126);
-                                break L17;
-                              } else {
-                                break L17;
-                              }
-                            }
-                            return;
-                          } else {
-                            L18: {
-                              if (!n.field_h) {
-                                if (!e.field_a) {
-                                  if (!hn.field_n) {
-                                    if (!ch.field_b) {
-                                      if (pl.field_q == null) {
-                                        if (null != da.field_c) {
-                                          L19: {
-                                            rl.e(-46);
-                                            lh.a(72);
-                                            if (!aj.b(-102)) {
-                                              ce.field_f.d(-32464);
-                                              ua.field_c.b(126);
-                                              break L19;
-                                            } else {
-                                              break L19;
-                                            }
-                                          }
-                                          return;
-                                        } else {
-                                          L20: {
-                                            if (mj.field_d < 1000) {
-                                              mj.field_d = mj.field_d + 1;
-                                              break L20;
-                                            } else {
-                                              break L20;
-                                            }
-                                          }
-                                          L21: {
-                                            ma.field_a.h(-41);
-                                            lh.a(72);
-                                            if (!aj.b(-102)) {
-                                              ce.field_f.d(-32464);
-                                              ua.field_c.b(126);
-                                              break L21;
-                                            } else {
-                                              break L21;
-                                            }
-                                          }
-                                          return;
-                                        }
-                                      } else {
-                                        L22: {
-                                          ff.a((byte) 127);
-                                          lh.a(72);
-                                          if (!aj.b(-102)) {
-                                            ce.field_f.d(-32464);
-                                            ua.field_c.b(126);
-                                            break L22;
-                                          } else {
-                                            break L22;
-                                          }
-                                        }
-                                        return;
-                                      }
-                                    } else {
-                                      if (qk.field_e.f(-1)) {
-                                        return;
-                                      } else {
-                                        break L18;
-                                      }
-                                    }
-                                  } else {
-                                    mn.d((byte) -120);
-                                    if (rc.field_a.f(-91)) {
-                                      return;
-                                    } else {
-                                      break L18;
-                                    }
-                                  }
-                                } else {
-                                  if (da.field_b.j(-122)) {
-                                    return;
-                                  } else {
-                                    break L18;
-                                  }
-                                }
-                              } else {
-                                if (!mm.a(-59)) {
-                                  break L18;
-                                } else {
-                                  return;
-                                }
-                              }
-                            }
-                            lh.a(72);
-                            break L5;
-                          }
                         }
-                      } else {
-                        L23: {
-                          kc.a((byte) -75);
-                          lh.a(72);
-                          if (!aj.b(-102)) {
-                            ce.field_f.d(-32464);
-                            ua.field_c.b(126);
-                            break L23;
-                          } else {
-                            break L23;
-                          }
-                        }
-                        return;
                       }
                     } else {
                       var4.e((byte) 62);
-                      break L5;
+                      break L22;
                     }
                   }
-                  L24: {
+                  L41: {
                     if (!aj.b(-102)) {
                       ce.field_f.d(-32464);
                       ua.field_c.b(126);
-                      break L24;
+                      break L41;
                     } else {
-                      break L24;
+                      break L41;
                     }
                   }
                   return;
-                } else {
-                  return;
                 }
-              }
-            } else {
-              p.field_h = 0;
-              mj.field_d = 0;
-              gi.a((byte) -105);
-              if (param0 < -47) {
+              } else {
+                L42: {
+                  if (p.field_h == 2) {
+                    L43: {
+                      n.field_h = false;
+                      gi.a((byte) -126);
+                      di.field_d = null;
+                      if (null != de.field_i) {
+                        ml.a(de.field_i, 3, (byte) 101);
+                        break L43;
+                      } else {
+                        break L43;
+                      }
+                    }
+                    ci.a(0);
+                    p.field_h = 0;
+                    mj.field_d = 0;
+                    gi.a((byte) -105);
+                    break L42;
+                  } else {
+                    p.field_h = 0;
+                    mj.field_d = 0;
+                    gi.a((byte) -105);
+                    break L42;
+                  }
+                }
                 if (var4 == null) {
-                  L25: {
+                  L44: {
                     if (null != ma.field_a) {
-                      break L25;
+                      break L44;
                     } else {
                       if (!wk.field_c) {
                         pf.e((byte) -111);
-                        break L25;
+                        break L44;
                       } else {
-                        break L25;
+                        break L44;
                       }
                     }
                   }
                   if (!wk.field_c) {
                     if (pg.field_b) {
-                      L26: {
+                      L45: {
                         qj.a(-883);
                         hm.field_o.e(117);
                         lh.a(72);
                         if (!aj.b(-102)) {
                           ce.field_f.d(-32464);
                           ua.field_c.b(126);
-                          break L26;
+                          break L45;
                         } else {
-                          break L26;
+                          break L45;
                         }
                       }
                       return;
                     } else {
                       if (0 <= od.field_q) {
-                        L27: {
+                        L46: {
                           sn.c(-1);
                           hn.field_l.j(2525);
                           lh.a(72);
                           if (!aj.b(-102)) {
                             ce.field_f.d(-32464);
                             ua.field_c.b(126);
-                            break L27;
+                            break L46;
                           } else {
-                            break L27;
+                            break L46;
                           }
                         }
                         return;
@@ -431,50 +732,50 @@ final class mb {
                               if (!ch.field_b) {
                                 if (pl.field_q == null) {
                                   if (null != da.field_c) {
-                                    L28: {
+                                    L47: {
                                       rl.e(-46);
                                       lh.a(72);
                                       if (!aj.b(-102)) {
                                         ce.field_f.d(-32464);
                                         ua.field_c.b(126);
-                                        break L28;
+                                        break L47;
                                       } else {
-                                        break L28;
+                                        break L47;
                                       }
                                     }
                                     return;
                                   } else {
-                                    L29: {
+                                    L48: {
                                       if (mj.field_d < 1000) {
                                         mj.field_d = mj.field_d + 1;
-                                        break L29;
+                                        break L48;
                                       } else {
-                                        break L29;
+                                        break L48;
                                       }
                                     }
-                                    L30: {
+                                    L49: {
                                       ma.field_a.h(-41);
                                       lh.a(72);
                                       if (!aj.b(-102)) {
                                         ce.field_f.d(-32464);
                                         ua.field_c.b(126);
-                                        break L30;
+                                        break L49;
                                       } else {
-                                        break L30;
+                                        break L49;
                                       }
                                     }
                                     return;
                                   }
                                 } else {
-                                  L31: {
+                                  L50: {
                                     ff.a((byte) 127);
                                     lh.a(72);
                                     if (!aj.b(-102)) {
                                       ce.field_f.d(-32464);
                                       ua.field_c.b(126);
-                                      break L31;
+                                      break L50;
                                     } else {
-                                      break L31;
+                                      break L50;
                                     }
                                   }
                                   return;
@@ -483,14 +784,14 @@ final class mb {
                                 if (qk.field_e.f(-1)) {
                                   return;
                                 } else {
-                                  L32: {
+                                  L51: {
                                     lh.a(72);
                                     if (!aj.b(-102)) {
                                       ce.field_f.d(-32464);
                                       ua.field_c.b(126);
-                                      break L32;
+                                      break L51;
                                     } else {
-                                      break L32;
+                                      break L51;
                                     }
                                   }
                                   return;
@@ -501,14 +802,14 @@ final class mb {
                               if (rc.field_a.f(-91)) {
                                 return;
                               } else {
-                                L33: {
+                                L52: {
                                   lh.a(72);
                                   if (!aj.b(-102)) {
                                     ce.field_f.d(-32464);
                                     ua.field_c.b(126);
-                                    break L33;
+                                    break L52;
                                   } else {
-                                    break L33;
+                                    break L52;
                                   }
                                 }
                                 return;
@@ -518,14 +819,14 @@ final class mb {
                             if (da.field_b.j(-122)) {
                               return;
                             } else {
-                              L34: {
+                              L53: {
                                 lh.a(72);
                                 if (!aj.b(-102)) {
                                   ce.field_f.d(-32464);
                                   ua.field_c.b(126);
-                                  break L34;
+                                  break L53;
                                 } else {
-                                  break L34;
+                                  break L53;
                                 }
                               }
                               return;
@@ -533,14 +834,14 @@ final class mb {
                           }
                         } else {
                           if (!mm.a(-59)) {
-                            L35: {
+                            L54: {
                               lh.a(72);
                               if (!aj.b(-102)) {
                                 ce.field_f.d(-32464);
                                 ua.field_c.b(126);
-                                break L35;
+                                break L54;
                               } else {
-                                break L35;
+                                break L54;
                               }
                             }
                             return;
@@ -551,279 +852,131 @@ final class mb {
                       }
                     }
                   } else {
-                    L36: {
+                    L55: {
                       kc.a((byte) -75);
                       lh.a(72);
                       if (!aj.b(-102)) {
                         ce.field_f.d(-32464);
                         ua.field_c.b(126);
-                        break L36;
+                        break L55;
                       } else {
-                        break L36;
+                        break L55;
                       }
                     }
                     return;
                   }
                 } else {
                   var4.e((byte) 62);
-                  L37: {
+                  L56: {
                     if (!aj.b(-102)) {
                       ce.field_f.d(-32464);
                       ua.field_c.b(126);
-                      break L37;
+                      break L56;
                     } else {
-                      break L37;
+                      break L56;
                     }
                   }
                   return;
                 }
-              } else {
-                return;
               }
             }
           } else {
             break L0;
           }
         }
-        if (param0 < -47) {
-          L38: {
-            if (var4 == null) {
-              L39: {
-                if (null != ma.field_a) {
-                  break L39;
+        L57: {
+          if (var4 == null) {
+            if (null == ma.field_a) {
+              L58: {
+                if (!wk.field_c) {
+                  pf.e((byte) -111);
+                  break L58;
                 } else {
-                  if (!wk.field_c) {
-                    pf.e((byte) -111);
-                    break L39;
-                  } else {
-                    if (!wk.field_c) {
-                      if (pg.field_b) {
-                        L40: {
-                          qj.a(-883);
-                          hm.field_o.e(117);
-                          lh.a(72);
-                          if (!aj.b(-102)) {
-                            ce.field_f.d(-32464);
-                            ua.field_c.b(126);
-                            break L40;
-                          } else {
-                            break L40;
-                          }
-                        }
-                        return;
-                      } else {
-                        if (0 <= od.field_q) {
-                          L41: {
-                            sn.c(-1);
-                            hn.field_l.j(2525);
-                            lh.a(72);
-                            if (!aj.b(-102)) {
-                              ce.field_f.d(-32464);
-                              ua.field_c.b(126);
-                              break L41;
-                            } else {
-                              break L41;
-                            }
-                          }
-                          return;
-                        } else {
-                          L42: {
-                            if (!n.field_h) {
-                              if (!e.field_a) {
-                                if (!hn.field_n) {
-                                  if (!ch.field_b) {
-                                    if (pl.field_q == null) {
-                                      if (null != da.field_c) {
-                                        L43: {
-                                          rl.e(-46);
-                                          lh.a(72);
-                                          if (!aj.b(-102)) {
-                                            ce.field_f.d(-32464);
-                                            ua.field_c.b(126);
-                                            break L43;
-                                          } else {
-                                            break L43;
-                                          }
-                                        }
-                                        return;
-                                      } else {
-                                        L44: {
-                                          if (mj.field_d < 1000) {
-                                            mj.field_d = mj.field_d + 1;
-                                            break L44;
-                                          } else {
-                                            break L44;
-                                          }
-                                        }
-                                        L45: {
-                                          ma.field_a.h(-41);
-                                          lh.a(72);
-                                          if (!aj.b(-102)) {
-                                            ce.field_f.d(-32464);
-                                            ua.field_c.b(126);
-                                            break L45;
-                                          } else {
-                                            break L45;
-                                          }
-                                        }
-                                        return;
-                                      }
-                                    } else {
-                                      L46: {
-                                        ff.a((byte) 127);
-                                        lh.a(72);
-                                        if (!aj.b(-102)) {
-                                          ce.field_f.d(-32464);
-                                          ua.field_c.b(126);
-                                          break L46;
-                                        } else {
-                                          break L46;
-                                        }
-                                      }
-                                      return;
-                                    }
-                                  } else {
-                                    if (qk.field_e.f(-1)) {
-                                      return;
-                                    } else {
-                                      break L42;
-                                    }
-                                  }
-                                } else {
-                                  mn.d((byte) -120);
-                                  if (rc.field_a.f(-91)) {
-                                    return;
-                                  } else {
-                                    break L42;
-                                  }
-                                }
-                              } else {
-                                if (da.field_b.j(-122)) {
-                                  return;
-                                } else {
-                                  break L42;
-                                }
-                              }
-                            } else {
-                              if (!mm.a(-59)) {
-                                break L42;
-                              } else {
-                                return;
-                              }
-                            }
-                          }
-                          L47: {
-                            lh.a(72);
-                            if (!aj.b(-102)) {
-                              ce.field_f.d(-32464);
-                              ua.field_c.b(126);
-                              break L47;
-                            } else {
-                              break L47;
-                            }
-                          }
-                          return;
-                        }
-                      }
-                    } else {
-                      L48: {
-                        kc.a((byte) -75);
-                        lh.a(72);
-                        if (!aj.b(-102)) {
-                          ce.field_f.d(-32464);
-                          ua.field_c.b(126);
-                          break L48;
-                        } else {
-                          break L48;
-                        }
-                      }
-                      return;
-                    }
-                  }
+                  break L58;
                 }
               }
               if (!wk.field_c) {
                 if (pg.field_b) {
-                  L49: {
+                  L59: {
                     qj.a(-883);
                     hm.field_o.e(117);
                     lh.a(72);
                     if (!aj.b(-102)) {
                       ce.field_f.d(-32464);
                       ua.field_c.b(126);
-                      break L49;
+                      break L59;
                     } else {
-                      break L49;
+                      break L59;
                     }
                   }
                   return;
                 } else {
                   if (0 <= od.field_q) {
-                    L50: {
+                    L60: {
                       sn.c(-1);
                       hn.field_l.j(2525);
                       lh.a(72);
                       if (!aj.b(-102)) {
                         ce.field_f.d(-32464);
                         ua.field_c.b(126);
-                        break L50;
+                        break L60;
                       } else {
-                        break L50;
+                        break L60;
                       }
                     }
                     return;
                   } else {
-                    L51: {
+                    L61: {
                       if (!n.field_h) {
                         if (!e.field_a) {
                           if (!hn.field_n) {
                             if (!ch.field_b) {
                               if (pl.field_q == null) {
                                 if (null != da.field_c) {
-                                  L52: {
+                                  L62: {
                                     rl.e(-46);
                                     lh.a(72);
                                     if (!aj.b(-102)) {
                                       ce.field_f.d(-32464);
                                       ua.field_c.b(126);
-                                      break L52;
+                                      break L62;
                                     } else {
-                                      break L52;
+                                      break L62;
                                     }
                                   }
                                   return;
                                 } else {
-                                  L53: {
+                                  L63: {
                                     if (mj.field_d < 1000) {
                                       mj.field_d = mj.field_d + 1;
-                                      break L53;
+                                      break L63;
                                     } else {
-                                      break L53;
+                                      break L63;
                                     }
                                   }
-                                  L54: {
+                                  L64: {
                                     ma.field_a.h(-41);
                                     lh.a(72);
                                     if (!aj.b(-102)) {
                                       ce.field_f.d(-32464);
                                       ua.field_c.b(126);
-                                      break L54;
+                                      break L64;
                                     } else {
-                                      break L54;
+                                      break L64;
                                     }
                                   }
                                   return;
                                 }
                               } else {
-                                L55: {
+                                L65: {
                                   ff.a((byte) 127);
                                   lh.a(72);
                                   if (!aj.b(-102)) {
                                     ce.field_f.d(-32464);
                                     ua.field_c.b(126);
-                                    break L55;
+                                    break L65;
                                   } else {
-                                    break L55;
+                                    break L65;
                                   }
                                 }
                                 return;
@@ -832,7 +985,7 @@ final class mb {
                               if (qk.field_e.f(-1)) {
                                 return;
                               } else {
-                                break L51;
+                                break L61;
                               }
                             }
                           } else {
@@ -840,59 +993,200 @@ final class mb {
                             if (rc.field_a.f(-91)) {
                               return;
                             } else {
-                              break L51;
+                              break L61;
                             }
                           }
                         } else {
                           if (da.field_b.j(-122)) {
                             return;
                           } else {
-                            break L51;
+                            break L61;
                           }
                         }
                       } else {
                         if (!mm.a(-59)) {
-                          break L51;
+                          break L61;
                         } else {
                           return;
                         }
                       }
                     }
                     lh.a(72);
-                    break L38;
+                    break L57;
                   }
                 }
               } else {
-                L56: {
+                L66: {
                   kc.a((byte) -75);
                   lh.a(72);
                   if (!aj.b(-102)) {
                     ce.field_f.d(-32464);
                     ua.field_c.b(126);
-                    break L56;
+                    break L66;
                   } else {
-                    break L56;
+                    break L66;
                   }
                 }
                 return;
               }
             } else {
-              var4.e((byte) 62);
-              break L38;
+              if (!wk.field_c) {
+                if (pg.field_b) {
+                  L67: {
+                    qj.a(-883);
+                    hm.field_o.e(117);
+                    lh.a(72);
+                    if (!aj.b(-102)) {
+                      ce.field_f.d(-32464);
+                      ua.field_c.b(126);
+                      break L67;
+                    } else {
+                      break L67;
+                    }
+                  }
+                  return;
+                } else {
+                  if (0 <= od.field_q) {
+                    L68: {
+                      sn.c(-1);
+                      hn.field_l.j(2525);
+                      lh.a(72);
+                      if (!aj.b(-102)) {
+                        ce.field_f.d(-32464);
+                        ua.field_c.b(126);
+                        break L68;
+                      } else {
+                        break L68;
+                      }
+                    }
+                    return;
+                  } else {
+                    L69: {
+                      if (!n.field_h) {
+                        if (!e.field_a) {
+                          if (!hn.field_n) {
+                            if (!ch.field_b) {
+                              if (pl.field_q == null) {
+                                if (null != da.field_c) {
+                                  L70: {
+                                    rl.e(-46);
+                                    lh.a(72);
+                                    if (!aj.b(-102)) {
+                                      ce.field_f.d(-32464);
+                                      ua.field_c.b(126);
+                                      break L70;
+                                    } else {
+                                      break L70;
+                                    }
+                                  }
+                                  return;
+                                } else {
+                                  L71: {
+                                    if (mj.field_d < 1000) {
+                                      mj.field_d = mj.field_d + 1;
+                                      break L71;
+                                    } else {
+                                      break L71;
+                                    }
+                                  }
+                                  L72: {
+                                    ma.field_a.h(-41);
+                                    lh.a(72);
+                                    if (!aj.b(-102)) {
+                                      ce.field_f.d(-32464);
+                                      ua.field_c.b(126);
+                                      break L72;
+                                    } else {
+                                      break L72;
+                                    }
+                                  }
+                                  return;
+                                }
+                              } else {
+                                L73: {
+                                  ff.a((byte) 127);
+                                  lh.a(72);
+                                  if (!aj.b(-102)) {
+                                    ce.field_f.d(-32464);
+                                    ua.field_c.b(126);
+                                    break L73;
+                                  } else {
+                                    break L73;
+                                  }
+                                }
+                                return;
+                              }
+                            } else {
+                              if (qk.field_e.f(-1)) {
+                                return;
+                              } else {
+                                break L69;
+                              }
+                            }
+                          } else {
+                            mn.d((byte) -120);
+                            if (rc.field_a.f(-91)) {
+                              return;
+                            } else {
+                              break L69;
+                            }
+                          }
+                        } else {
+                          if (da.field_b.j(-122)) {
+                            return;
+                          } else {
+                            break L69;
+                          }
+                        }
+                      } else {
+                        if (!mm.a(-59)) {
+                          break L69;
+                        } else {
+                          return;
+                        }
+                      }
+                    }
+                    L74: {
+                      lh.a(72);
+                      if (!aj.b(-102)) {
+                        ce.field_f.d(-32464);
+                        ua.field_c.b(126);
+                        break L74;
+                      } else {
+                        break L74;
+                      }
+                    }
+                    return;
+                  }
+                }
+              } else {
+                L75: {
+                  kc.a((byte) -75);
+                  lh.a(72);
+                  if (!aj.b(-102)) {
+                    ce.field_f.d(-32464);
+                    ua.field_c.b(126);
+                    break L75;
+                  } else {
+                    break L75;
+                  }
+                }
+                return;
+              }
             }
+          } else {
+            var4.e((byte) 62);
+            break L57;
           }
-          L57: {
-            if (!aj.b(-102)) {
-              ce.field_f.d(-32464);
-              ua.field_c.b(126);
-              break L57;
-            } else {
-              break L57;
-            }
+        }
+        L76: {
+          if (!aj.b(-102)) {
+            ce.field_f.d(-32464);
+            ua.field_c.b(126);
+            break L76;
+          } else {
+            break L76;
           }
-          return;
-        } else {
-          return;
         }
     }
 
@@ -1335,38 +1629,25 @@ final class mb {
 
     final static void a(ed param0, int param1) {
         int[] var3 = null;
-        int[] var2 = null;
-        ah.field_j = param0;
-        of.field_a = new ed(param0.field_A, param0.field_z);
-        if (param1 > -11) {
-            field_a = null;
+        try {
+            ah.field_j = param0;
+            of.field_a = new ed(param0.field_A, param0.field_z);
             var3 = new int[4];
-            var2 = var3;
+            int[] var2 = var3;
             em.a(var3);
             of.field_a.g();
             param0.c(0, 0);
             md.field_D.a(107);
             em.b(var3);
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) (Object) runtimeException, "mb.C(" + (param0 != null ? "{...}" : "null") + 44 + -84 + 41);
         }
-        var3 = new int[4];
-        var2 = var3;
-        em.a(var3);
-        of.field_a.g();
-        param0.c(0, 0);
-        md.field_D.a(107);
-        em.b(var3);
     }
 
     public static void a(int param0) {
         field_b = null;
         field_g = null;
         field_f = null;
-        if (param0 != 4) {
-            boolean discarded$0 = mb.b((byte) -110);
-            field_a = null;
-            return;
-        }
         field_a = null;
     }
 
@@ -1374,7 +1655,7 @@ final class mb {
         if (((mb) this).field_c != param1) {
             return;
         }
-        if ((((mb) this).field_d ^ -1) < (param2 ^ -1)) {
+        if (~((mb) this).field_d < ~param2) {
             return;
         }
         oe var4 = ma.field_a;
@@ -1406,8 +1687,12 @@ final class mb {
         if (param1 != 4) {
             return;
         }
-        if (rc.field_b != null) {
-            rc.field_b.field_K.a(args, (byte) -103);
+        try {
+            if (rc.field_b != null) {
+                rc.field_b.field_K.a(args, (byte) -103);
+            }
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) (Object) runtimeException, "mb.E(" + (args != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 

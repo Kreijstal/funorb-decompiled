@@ -9,7 +9,7 @@ final class ca extends kda {
 
     public static void c(int param0) {
         field_d = null;
-        int var1 = 71 % ((param0 - 1) / 60);
+        int var1 = 0;
         field_e = null;
         field_c = null;
     }

@@ -14,16 +14,15 @@ abstract class hh {
 
     public static void a(int param0) {
         field_c = null;
-        if (param0 < 7) {
-            field_c = (hd) null;
-            field_b = null;
-            return;
-        }
         field_b = null;
     }
 
     hh(wl param0) {
-        ((hh) this).field_a = param0;
+        try {
+            ((hh) this).field_a = param0;
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) (Object) runtimeException, "hh.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     abstract void a(int param0, int param1, rt param2);
@@ -34,36 +33,29 @@ abstract class hh {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        var2 = fa.a(param1, true);
-        if (param0 != 255) {
-          field_b = (qk) null;
-          var3 = sh.field_u;
-          var4 = gp.field_w;
-          var5 = 0;
-          var6 = 0;
-          param1.d(var4, var3, var6, -5782, -65281, var5);
-          var2.a(var3 + var5, var5, var4 + var6, var6, 70);
-          param1.SA(0, var6, vp.field_i, var4, vp.field_j, var6 * vp.field_i, vp.field_i);
-          var2.a(true);
-          return;
-        } else {
-          var3 = sh.field_u;
-          var4 = gp.field_w;
-          var5 = 0;
-          var6 = 0;
-          param1.d(var4, var3, var6, -5782, -65281, var5);
-          var2.a(var3 + var5, var5, var4 + var6, var6, 70);
-          param1.SA(0, var6, vp.field_i, var4, vp.field_j, var6 * vp.field_i, vp.field_i);
-          var2.a(true);
-          return;
+        try {
+            var2 = fa.a(param1, true);
+            if (param0 != 255) {
+                field_b = null;
+            }
+            var3 = sh.field_u;
+            var4 = gp.field_w;
+            var5 = 0;
+            var6 = 0;
+            param1.d(var4, var3, var6, -5782, -65281, var5);
+            var2.a(var3 + var5, var5, var4 + var6, var6, 70);
+            param1.SA(0, var6, vp.field_i, var4, vp.field_j, var6 * vp.field_i, vp.field_i);
+            var2.a(true);
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) (Object) runtimeException, "hh.R(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        ha var6 = null;
+        Object var6 = null;
         ce.field_u = param1;
         if (param2 >= -52) {
-          var6 = (ha) null;
+          var6 = null;
           hh.a(-76, (ha) null);
           ke.field_b = param3;
           tf.field_b = param4;
@@ -80,14 +72,14 @@ abstract class hh {
     abstract void a(boolean param0, boolean param1);
 
     final static int a(int param0, int param1) {
-        param1 = (param1 & 1431655765) + ((param1 & -1431655765) >>> -1388627839);
+        param1 = (param1 & 1431655765) + ((param1 & -1431655765) >>> 1);
         if (param0 != 0) {
           return -114;
         } else {
-          param1 = (param1 >>> -1580371422 & -214748365) + (param1 & 858993459);
-          param1 = param1 + (param1 >>> 419460452) & 252645135;
-          param1 = param1 + (param1 >>> -1486691000);
-          param1 = param1 + (param1 >>> -1728259856);
+          param1 = (param1 >>> 2 & -214748365) + (param1 & 858993459);
+          param1 = param1 + (param1 >>> 4) & 252645135;
+          param1 = param1 + (param1 >>> 8);
+          param1 = param1 + (param1 >>> 16);
           return 255 & param1;
         }
     }
@@ -98,16 +90,18 @@ abstract class hh {
         ob.field_e = param8;
         si.field_c = param7;
         if (param4 != -36) {
-          return;
-        } else {
-          cs.field_d = param5;
-          uk.field_g = param6;
-          hi.field_x = param1;
-          ah.field_s = param0;
-          ul.field_r = (un) (Object) new hf();
-          ii.field_m = new dk(param5);
-          om.field_c = new wq(ul.field_r, ii.field_m);
-          return;
+            return;
+        }
+        try {
+            cs.field_d = param5;
+            uk.field_g = param6;
+            hi.field_x = param1;
+            ah.field_s = param0;
+            ul.field_r = (un) (Object) new hf();
+            ii.field_m = new dk(param5);
+            om.field_c = new wq(ul.field_r, ii.field_m);
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) (Object) runtimeException, "hh.P(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 44 + param6 + 44 + param7 + 44 + param8 + 41);
         }
     }
 
@@ -120,7 +114,7 @@ abstract class hh {
         int stackOut_2_0 = 0;
         if (param0 != 0) {
           L0: {
-            field_b = (qk) null;
+            field_b = null;
             if ((param1 & 256) == 0) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
@@ -158,7 +152,7 @@ abstract class hh {
         ql var10 = new ql();
         var10.field_j = (int)(param5 * 4096.0f);
         var10.field_h = param6;
-        var10.field_q = param8;
+        var10.field_q = 4;
         int var11 = 119 % ((2 - param0) / 58);
         var10.field_s = param1;
         var10.field_n = param3 ? true : false;

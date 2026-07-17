@@ -822,9 +822,6 @@ final class amb implements dja {
     public static void a(int param0) {
         field_a = null;
         field_b = null;
-        if (param0 > -36) {
-            field_a = null;
-        }
     }
 
     static {

@@ -7,7 +7,7 @@ final class iu extends at {
     private int field_j;
 
     final static gs a(int param0, byte param1, int param2, int param3) {
-        gs var4 = null;
+        Object var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -104,7 +104,7 @@ final class iu extends at {
                                 }
                               }
                               qh.field_l = stackIn_117_0 != 0;
-                              return var4;
+                              return (gs) var4;
                             } else {
                               L4: {
                                 af.field_b.a(true, 0, param3, param0 * param3 * 2);
@@ -119,7 +119,7 @@ final class iu extends at {
                                 }
                               }
                               qh.field_l = stackIn_113_0 != 0;
-                              return var4;
+                              return (gs) var4;
                             }
                           }
                         }
@@ -140,7 +140,7 @@ final class iu extends at {
                           }
                         }
                         qh.field_l = stackIn_128_0 != 0;
-                        return var4;
+                        return (gs) var4;
                       } else {
                         L6: {
                           af.field_b.a(true, 0, param3, param0 * param3 * 2);
@@ -155,7 +155,7 @@ final class iu extends at {
                           }
                         }
                         qh.field_l = stackIn_124_0 != 0;
-                        return var4;
+                        return (gs) var4;
                       }
                     } else {
                       L7: {
@@ -187,7 +187,7 @@ final class iu extends at {
                                 }
                               }
                               qh.field_l = stackIn_94_0 != 0;
-                              return var4;
+                              return (gs) var4;
                             } else {
                               L9: {
                                 af.field_b.a(true, 0, param3, param0 * param3 * 2);
@@ -202,7 +202,7 @@ final class iu extends at {
                                 }
                               }
                               qh.field_l = stackIn_90_0 != 0;
-                              return var4;
+                              return (gs) var4;
                             }
                           }
                         }
@@ -223,7 +223,7 @@ final class iu extends at {
                           }
                         }
                         qh.field_l = stackIn_105_0 != 0;
-                        return var4;
+                        return (gs) var4;
                       } else {
                         L11: {
                           af.field_b.a(true, 0, param3, param0 * param3 * 2);
@@ -238,7 +238,7 @@ final class iu extends at {
                           }
                         }
                         qh.field_l = stackIn_101_0 != 0;
-                        return var4;
+                        return (gs) var4;
                       }
                     }
                   } else {
@@ -274,7 +274,7 @@ final class iu extends at {
                             }
                           }
                           qh.field_l = stackIn_81_0 != 0;
-                          return var4;
+                          return (gs) var4;
                         } else {
                           L14: {
                             af.field_b.a(true, 0, param3, param0 * param3 * 2);
@@ -289,7 +289,7 @@ final class iu extends at {
                             }
                           }
                           qh.field_l = stackIn_77_0 != 0;
-                          return var4;
+                          return (gs) var4;
                         }
                       } else {
                         L15: {
@@ -314,7 +314,7 @@ final class iu extends at {
                           }
                         }
                         qh.field_l = stackIn_69_0 != 0;
-                        return var4;
+                        return (gs) var4;
                       }
                     } else {
                       L17: {
@@ -352,7 +352,7 @@ final class iu extends at {
                         }
                       }
                       qh.field_l = stackIn_62_0 != 0;
-                      return var4;
+                      return (gs) var4;
                     }
                   }
                 } else {
@@ -364,7 +364,7 @@ final class iu extends at {
                       if (0 == var16.field_h.field_R) {
                         break L20;
                       } else {
-                        var4 = var16;
+                        var4 = (Object) (Object) var16;
                         break L20;
                       }
                     }
@@ -441,7 +441,7 @@ final class iu extends at {
                     }
                   }
                   qh.field_l = stackIn_42_0 != 0;
-                  return var4;
+                  return (gs) var4;
                 } else {
                   var15 = kw.field_k[var8];
                   if (null != var15.field_h) {
@@ -451,7 +451,7 @@ final class iu extends at {
                       if (0 == var15.field_h.field_R) {
                         break L27;
                       } else {
-                        var4 = var15;
+                        var4 = (Object) (Object) var15;
                         break L27;
                       }
                     }
@@ -529,9 +529,9 @@ final class iu extends at {
               var8_ref_gs.field_h = new sna(0L, uc.field_l, var11);
               var8_ref_gs.field_h.field_jb = dc.field_r;
               var6 = var6 + param3;
-              var8_ref_gs.field_h.field_ab = ((uc.field_l.field_ab & 16711422) >> 1515988417) + var12 + -(var12 >> -1638641311 & 8355711);
+              var8_ref_gs.field_h.field_ab = ((uc.field_l.field_ab & 16711422) >> 1) + var12 + -(var12 >> 1 & 8355711);
               var8_ref_gs.field_h.field_gb = var12;
-              var8_ref_gs.field_h.field_G = var12 + (-((16711423 & var12) >> 1076241409) - -(8355711 & uc.field_l.field_G >> -201339135));
+              var8_ref_gs.field_h.field_G = var12 + (-((16711423 & var12) >> 1) - -(8355711 & uc.field_l.field_G >> 1));
               var7--;
               continue L0;
             }
@@ -547,10 +547,6 @@ final class iu extends at {
 
     public static void e(int param0) {
         field_l = null;
-        if (param0 != -15434) {
-            Object var2 = null;
-            iu.a(-126, (vr) null);
-        }
     }
 
     final static void d(int param0) {
@@ -568,10 +564,66 @@ final class iu extends at {
     }
 
     final static void a(int param0, vr param1) {
-        fi.field_p = param1.a((byte) 123, "minimal/fridge-view-bg.jpg", "");
-        gla.field_j = new kv(fi.field_p, (java.awt.Component) (Object) dca.field_y);
-        if (param0 != -1638641311) {
-            iu.d(-98);
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        try {
+          L0: {
+            L1: {
+              fi.field_p = param1.a((byte) 123, "minimal/fridge-view-bg.jpg", "");
+              gla.field_j = new kv(fi.field_p, (java.awt.Component) (Object) dca.field_y);
+              if (param0 == -1638641311) {
+                break L1;
+              } else {
+                iu.d(-98);
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_1 = new StringBuilder().append("iu.E(").append(param0).append(44);
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param1 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
+            }
+          }
+          throw pe.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
         }
     }
 

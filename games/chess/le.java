@@ -131,7 +131,7 @@ final class le {
             var2 = null;
             if (param0 >= 42) {
               L1: {
-                if (-1 != (vk.field_g ^ -1)) {
+                if (vk.field_g != 0) {
                   break L1;
                 } else {
                   if (null == ib.field_d) {
@@ -143,7 +143,7 @@ final class le {
                 }
               }
               L2: {
-                if ((vk.field_g ^ -1) != -3) {
+                if (vk.field_g != 2) {
                   break L2;
                 } else {
                   if (!jd.b((byte) 75)) {
@@ -204,7 +204,7 @@ final class le {
                       var5 = "|";
                       var6 = vk.field_g;
                       var7 = 0;
-                      if (-3 != (var6 ^ -1)) {
+                      if (var6 != 2) {
                         break L8;
                       } else {
                         L9: {
@@ -315,7 +315,7 @@ final class le {
                         if (!eg.field_f.field_F) {
                           break L18;
                         } else {
-                          if ((var9 ^ -1) < (-eg.field_f.field_U + hn.field_k ^ -1)) {
+                          if (~var9 < ~(-eg.field_f.field_U + hn.field_k)) {
                             if (qf.field_b) {
                               var1 = (Object) (Object) "Broken!";
                               break L18;
@@ -328,7 +328,7 @@ final class le {
                           }
                         }
                       }
-                      if (-1 == (eg.field_f.field_L ^ -1)) {
+                      if (eg.field_f.field_L == 0) {
                         break L7;
                       } else {
                         if (eg.field_f.field_qb >= var9) {
@@ -494,9 +494,9 @@ final class le {
         try {
           L0: {
             var1_int = -vh.field_g + tf.field_o;
-            vh.field_g = -(var1_int >> 510459617) + of.field_k;
+            vh.field_g = -(var1_int >> 1) + of.field_k;
             tf.field_o = var1_int + vh.field_g;
-            id.field_c = -(bd.field_d >> -920076767) + pd.field_Fb;
+            id.field_c = -(bd.field_d >> 1) + pd.field_Fb;
             var2 = id.field_c;
             var3 = 0;
             L1: while (true) {
@@ -521,7 +521,7 @@ final class le {
                             break L5;
                           } else {
                             L6: {
-                              if ((nj.field_u.field_h ^ -1) != (var4 ^ -1)) {
+                              if (~nj.field_u.field_h != ~var4) {
                                 break L6;
                               } else {
                                 var5 = cm.field_w;
@@ -571,10 +571,10 @@ final class le {
                       }
                       L8: {
                         var7 = in.a(stackIn_17_0, stackIn_17_1, stackIn_17_2 != 0);
-                        var8 = of.field_k + -(var7 >> -594478431);
-                        if (-1 >= (var4 ^ -1)) {
+                        var8 = of.field_k + -(var7 >> 1);
+                        if (var4 >= 0) {
                           L9: {
-                            if ((nj.field_u.field_h ^ -1) == (var4 ^ -1)) {
+                            if (~nj.field_u.field_h == ~var4) {
                               stackOut_23_0 = ig.field_b;
                               stackIn_24_0 = stackOut_23_0;
                               break L9;
@@ -590,7 +590,7 @@ final class le {
                             if (var9 == null) {
                               break L10;
                             } else {
-                              var9.a(-gm.field_e + var8, var7 + (gm.field_e << -516381503), (fh.field_e << -2091089887) + ug.field_a, true, var2);
+                              var9.a(-gm.field_e + var8, var7 + (gm.field_e << 1), (fh.field_e << 1) + ug.field_a, true, var2);
                               break L10;
                             }
                           }
@@ -602,7 +602,7 @@ final class le {
                       }
                       L11: {
                         L12: {
-                          if (-1 < (var4 ^ -1)) {
+                          if (var4 < 0) {
                             break L12;
                           } else {
                             vl.field_M.a(var6, var8, var2 + th.field_a, var5, -1);

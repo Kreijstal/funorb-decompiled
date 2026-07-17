@@ -37,20 +37,81 @@ final class hc extends dj implements nl {
     }
 
     final static boolean a(byte param0, CharSequence param1) {
-        if (param0 <= 80) {
-            field_R = -109;
-            return bi.a(false, param1, (byte) -121);
+        RuntimeException var2 = null;
+        boolean stackIn_3_0 = false;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        boolean stackOut_2_0 = false;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 > 80) {
+                break L1;
+              } else {
+                field_R = -109;
+                break L1;
+              }
+            }
+            stackOut_2_0 = bi.a(false, param1, (byte) -121);
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_1 = new StringBuilder().append("hc.IA(").append(param0).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param1 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw t.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
         }
-        return bi.a(false, param1, (byte) -121);
+        return stackIn_3_0;
     }
 
     final void a(boolean param0, int param1, el param2, int param3) {
         if (param0) {
-          return;
-        } else {
-          super.a(param0, param1, param2, param3);
-          ((hc) this).field_S = -((hc) this).field_v + (qa.field_a - param3);
-          return;
+            return;
+        }
+        try {
+            super.a(param0, param1, param2, param3);
+            ((hc) this).field_S = -((hc) this).field_v + (qa.field_a - param3);
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) (Object) runtimeException, "hc.H(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
         }
     }
 
@@ -73,15 +134,15 @@ final class hc extends dj implements nl {
             hc.k(82);
             var2 = param0;
             if (32 != var2) {
-              if (-161 != var2) {
+              if (var2 != 160) {
                 if (var2 == 95) {
                   break L0;
                 } else {
-                  if (-46 == var2) {
+                  if (var2 == 45) {
                     break L0;
                   } else {
                     L1: {
-                      if ((var2 ^ -1) == -92) {
+                      if (var2 == 91) {
                         break L1;
                       } else {
                         if (93 == var2) {
@@ -89,11 +150,11 @@ final class hc extends dj implements nl {
                         } else {
                           if (35 != var2) {
                             L2: {
-                              if ((var2 ^ -1) != -225) {
+                              if (var2 != 224) {
                                 if (var2 != 225) {
-                                  if (var2 != -227) {
-                                    if (-229 != var2) {
-                                      if ((var2 ^ -1) == -228) {
+                                  if (var2 != 226) {
+                                    if (var2 != 228) {
+                                      if (var2 == 227) {
                                         break L2;
                                       } else {
                                         if (var2 == 192) {
@@ -101,63 +162,63 @@ final class hc extends dj implements nl {
                                         } else {
                                           if (var2 != 193) {
                                             if (var2 != 194) {
-                                              if (var2 == -197) {
+                                              if (var2 == 196) {
                                                 break L2;
                                               } else {
                                                 if (var2 == 195) {
                                                   break L2;
                                                 } else {
                                                   L3: {
-                                                    if (-233 == var2) {
+                                                    if (var2 == 232) {
                                                       break L3;
                                                     } else {
-                                                      if (var2 == -234) {
+                                                      if (var2 == 233) {
                                                         break L3;
                                                       } else {
-                                                        if (-235 != var2) {
-                                                          if ((var2 ^ -1) == -236) {
+                                                        if (var2 != 234) {
+                                                          if (var2 == 235) {
                                                             break L3;
                                                           } else {
-                                                            if ((var2 ^ -1) != -201) {
+                                                            if (var2 != 200) {
                                                               if (var2 != 201) {
-                                                                if (var2 == -203) {
+                                                                if (var2 == 202) {
                                                                   break L3;
                                                                 } else {
-                                                                  if (-204 != var2) {
-                                                                    if ((var2 ^ -1) != -238) {
-                                                                      if ((var2 ^ -1) != -239) {
+                                                                  if (var2 != 203) {
+                                                                    if (var2 != 237) {
+                                                                      if (var2 != 238) {
                                                                         if (239 != var2) {
                                                                           L4: {
-                                                                            if (var2 == -206) {
+                                                                            if (var2 == 205) {
                                                                               break L4;
                                                                             } else {
-                                                                              if (-207 == var2) {
+                                                                              if (var2 == 206) {
                                                                                 break L4;
                                                                               } else {
-                                                                                if ((var2 ^ -1) == -208) {
+                                                                                if (var2 == 207) {
                                                                                   break L4;
                                                                                 } else {
                                                                                   L5: {
-                                                                                    if ((var2 ^ -1) == -243) {
+                                                                                    if (var2 == 242) {
                                                                                       break L5;
                                                                                     } else {
                                                                                       if (243 != var2) {
-                                                                                        if (var2 != -245) {
+                                                                                        if (var2 != 244) {
                                                                                           if (var2 == 246) {
                                                                                             break L5;
                                                                                           } else {
-                                                                                            if (-246 == var2) {
+                                                                                            if (var2 == 245) {
                                                                                               break L5;
                                                                                             } else {
-                                                                                              if (-211 != var2) {
-                                                                                                if (-212 != var2) {
-                                                                                                  if (-213 == var2) {
+                                                                                              if (var2 != 210) {
+                                                                                                if (var2 != 211) {
+                                                                                                  if (var2 == 212) {
                                                                                                     break L5;
                                                                                                   } else {
                                                                                                     if (var2 == 214) {
                                                                                                       break L5;
                                                                                                     } else {
-                                                                                                      if (-214 == var2) {
+                                                                                                      if (var2 == 213) {
                                                                                                         break L5;
                                                                                                       } else {
                                                                                                         L6: {
@@ -165,11 +226,11 @@ final class hc extends dj implements nl {
                                                                                                             break L6;
                                                                                                           } else {
                                                                                                             if (250 != var2) {
-                                                                                                              if (var2 != -252) {
-                                                                                                                if (-253 != var2) {
-                                                                                                                  if (var2 != -218) {
+                                                                                                              if (var2 != 251) {
+                                                                                                                if (var2 != 252) {
+                                                                                                                  if (var2 != 217) {
                                                                                                                     if (218 != var2) {
-                                                                                                                      if (-220 != var2) {
+                                                                                                                      if (var2 != 219) {
                                                                                                                         if (var2 == 220) {
                                                                                                                           break L6;
                                                                                                                         } else {
@@ -177,13 +238,13 @@ final class hc extends dj implements nl {
                                                                                                                             if (var2 == 199) {
                                                                                                                               return 'c';
                                                                                                                             } else {
-                                                                                                                              if (-256 != var2) {
-                                                                                                                                if (-377 == var2) {
+                                                                                                                              if (var2 != 255) {
+                                                                                                                                if (var2 == 376) {
                                                                                                                                   return 'y';
                                                                                                                                 } else {
-                                                                                                                                  if (-242 != (var2 ^ -1)) {
+                                                                                                                                  if (var2 != 241) {
                                                                                                                                     if (var2 != 209) {
-                                                                                                                                      if ((var2 ^ -1) == -224) {
+                                                                                                                                      if (var2 == 223) {
                                                                                                                                         return 'b';
                                                                                                                                       } else {
                                                                                                                                         return Character.toLowerCase(param0);
@@ -320,21 +381,21 @@ final class hc extends dj implements nl {
         } else {
           var2 = param0;
           if (32 != var2) {
-            if (-161 != (var2 ^ -1)) {
+            if (var2 != 160) {
               if (var2 != 95) {
-                if (-46 != (var2 ^ -1)) {
-                  if ((var2 ^ -1) != -92) {
+                if (var2 != 45) {
+                  if (var2 != 91) {
                     L7: {
                       if (93 == var2) {
                         break L7;
                       } else {
                         if (35 != var2) {
                           L8: {
-                            if ((var2 ^ -1) != -225) {
+                            if (var2 != 224) {
                               if (var2 != 225) {
-                                if (var2 != -227) {
-                                  if (-229 != var2) {
-                                    if ((var2 ^ -1) == -228) {
+                                if (var2 != 226) {
+                                  if (var2 != 228) {
+                                    if (var2 == 227) {
                                       break L8;
                                     } else {
                                       if (var2 == 192) {
@@ -342,63 +403,63 @@ final class hc extends dj implements nl {
                                       } else {
                                         if (var2 != 193) {
                                           if (var2 != 194) {
-                                            if (var2 == -197) {
+                                            if (var2 == 196) {
                                               break L8;
                                             } else {
                                               if (var2 == 195) {
                                                 break L8;
                                               } else {
                                                 L9: {
-                                                  if (-233 == var2) {
+                                                  if (var2 == 232) {
                                                     break L9;
                                                   } else {
-                                                    if (var2 == -234) {
+                                                    if (var2 == 233) {
                                                       break L9;
                                                     } else {
-                                                      if (-235 != var2) {
-                                                        if ((var2 ^ -1) == -236) {
+                                                      if (var2 != 234) {
+                                                        if (var2 == 235) {
                                                           break L9;
                                                         } else {
-                                                          if ((var2 ^ -1) != -201) {
+                                                          if (var2 != 200) {
                                                             if (var2 != 201) {
-                                                              if (var2 == -203) {
+                                                              if (var2 == 202) {
                                                                 break L9;
                                                               } else {
-                                                                if (-204 != var2) {
+                                                                if (var2 != 203) {
                                                                   L10: {
-                                                                    if ((var2 ^ -1) != -238) {
-                                                                      if ((var2 ^ -1) != -239) {
+                                                                    if (var2 != 237) {
+                                                                      if (var2 != 238) {
                                                                         if (239 != var2) {
-                                                                          if (var2 == -206) {
+                                                                          if (var2 == 205) {
                                                                             break L10;
                                                                           } else {
-                                                                            if (-207 == var2) {
+                                                                            if (var2 == 206) {
                                                                               break L10;
                                                                             } else {
-                                                                              if ((var2 ^ -1) == -208) {
+                                                                              if (var2 == 207) {
                                                                                 break L10;
                                                                               } else {
                                                                                 L11: {
-                                                                                  if ((var2 ^ -1) == -243) {
+                                                                                  if (var2 == 242) {
                                                                                     break L11;
                                                                                   } else {
                                                                                     if (243 != var2) {
-                                                                                      if (var2 != -245) {
+                                                                                      if (var2 != 244) {
                                                                                         if (var2 == 246) {
                                                                                           break L11;
                                                                                         } else {
-                                                                                          if (-246 == var2) {
+                                                                                          if (var2 == 245) {
                                                                                             break L11;
                                                                                           } else {
-                                                                                            if (-211 != var2) {
-                                                                                              if (-212 != var2) {
-                                                                                                if (-213 == var2) {
+                                                                                            if (var2 != 210) {
+                                                                                              if (var2 != 211) {
+                                                                                                if (var2 == 212) {
                                                                                                   break L11;
                                                                                                 } else {
                                                                                                   if (var2 == 214) {
                                                                                                     break L11;
                                                                                                   } else {
-                                                                                                    if (-214 == var2) {
+                                                                                                    if (var2 == 213) {
                                                                                                       break L11;
                                                                                                     } else {
                                                                                                       L12: {
@@ -406,11 +467,11 @@ final class hc extends dj implements nl {
                                                                                                           break L12;
                                                                                                         } else {
                                                                                                           if (250 != var2) {
-                                                                                                            if (var2 != -252) {
-                                                                                                              if (-253 != var2) {
-                                                                                                                if (var2 != -218) {
+                                                                                                            if (var2 != 251) {
+                                                                                                              if (var2 != 252) {
+                                                                                                                if (var2 != 217) {
                                                                                                                   if (218 != var2) {
-                                                                                                                    if (-220 != var2) {
+                                                                                                                    if (var2 != 219) {
                                                                                                                       if (var2 == 220) {
                                                                                                                         break L12;
                                                                                                                       } else {
@@ -418,13 +479,13 @@ final class hc extends dj implements nl {
                                                                                                                           if (var2 == 199) {
                                                                                                                             return 'c';
                                                                                                                           } else {
-                                                                                                                            if (-256 != var2) {
-                                                                                                                              if (-377 == var2) {
+                                                                                                                            if (var2 != 255) {
+                                                                                                                              if (var2 == 376) {
                                                                                                                                 return 'y';
                                                                                                                               } else {
-                                                                                                                                if (-242 != (var2 ^ -1)) {
+                                                                                                                                if (var2 != 241) {
                                                                                                                                   if (var2 != 209) {
-                                                                                                                                    if ((var2 ^ -1) == -224) {
+                                                                                                                                    if (var2 == 223) {
                                                                                                                                       return 'b';
                                                                                                                                     } else {
                                                                                                                                       return Character.toLowerCase(param0);
@@ -568,78 +629,28 @@ final class hc extends dj implements nl {
     final static void b(boolean param0) {
         Object var1 = null;
         Throwable var2 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    if (param0) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    field_T = -8;
-                    statePc = 2;
-                    continue stateLoop;
-                }
-                case 2: {
-                    if (pg.field_c == null) {
-                        statePc = 8;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 3: {
-                    var1 = (Object) (Object) pg.field_c;
-                    // monitorenter pg.field_c
-                    statePc = 4;
-                    continue stateLoop;
-                }
-                case 4: {
-                    try {
-                        pg.field_c = null;
-                        // monitorexit var1
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    return;
-                }
-                case 6: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                case 8: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        if (pg.field_c == null) {
+          return;
+        } else {
+          var1 = (Object) (Object) pg.field_c;
+          synchronized (var1) {
+            L0: {
+              pg.field_c = null;
+              break L0;
             }
+          }
+          return;
         }
     }
 
     final void a(byte param0, dg param1) {
-        ((hc) this).field_Q = param1;
-        int var3 = 48 % ((param0 - 34) / 39);
+        try {
+            ((hc) this).field_Q = param1;
+            int var3_int = 48 % ((param0 - 34) / 39);
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) (Object) runtimeException, "hc.GA(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void g(byte param0) {

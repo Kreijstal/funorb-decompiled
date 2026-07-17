@@ -9,9 +9,6 @@ abstract class wf implements oe {
     public static void f(int param0) {
         field_a = null;
         field_b = null;
-        if (param0 != 350) {
-            field_a = null;
-        }
     }
 
     public final void a(byte param0) {
@@ -48,14 +45,7 @@ abstract class wf implements oe {
 
     final static void d(int param0) {
         k.field_d = new rf();
-        if (param0 != 350) {
-          boolean discarded$2 = wf.c((byte) -49);
-          gf.field_cb.c(-3399, (rc) (Object) k.field_d);
-          return;
-        } else {
-          gf.field_cb.c(-3399, (rc) (Object) k.field_d);
-          return;
-        }
+        gf.field_cb.c(-3399, (rc) (Object) k.field_d);
     }
 
     public final qf b(int param0) {

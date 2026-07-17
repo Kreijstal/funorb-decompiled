@@ -51,60 +51,46 @@ final class rma extends mfb {
     }
 
     final static void b(int param0, byte param1) {
-        if (param1 == 71) {
-          kib.field_d = 3 & param0 >> 2061097700;
-          if (kib.field_d >= -3) {
-            idb.field_p = (13 & param0) >> -1884757342;
-            lla.field_h = param0 & 3;
-            if (-3 <= (idb.field_p ^ -1)) {
-              if (2 < lla.field_h) {
-                lla.field_h = 2;
-                return;
-              } else {
-                return;
-              }
-            } else {
-              idb.field_p = 2;
-              if (2 < lla.field_h) {
-                lla.field_h = 2;
-                return;
-              } else {
-                return;
-              }
-            }
-          } else {
+        if (param1 != 71) {
+            return;
+        }
+        kib.field_d = 3 & param0 >> 4;
+        if (kib.field_d > 2) {
             kib.field_d = 2;
-            idb.field_p = (13 & param0) >> -1884757342;
+            idb.field_p = (13 & param0) >> 2;
             lla.field_h = param0 & 3;
-            if (-3 < idb.field_p) {
-              idb.field_p = 2;
-              if (2 >= lla.field_h) {
+            if (idb.field_p <= 2) {
+                if (2 < lla.field_h) {
+                    lla.field_h = 2;
+                    return;
+                }
                 return;
-              } else {
-                lla.field_h = 2;
-                return;
-              }
-            } else {
-              if (2 < lla.field_h) {
-                lla.field_h = 2;
-                return;
-              } else {
-                return;
-              }
             }
-          }
-        } else {
-          return;
+            idb.field_p = 2;
+            if (2 >= lla.field_h) {
+                return;
+            }
+            lla.field_h = 2;
+            return;
+        }
+        idb.field_p = (13 & param0) >> 2;
+        lla.field_h = param0 & 3;
+        if (idb.field_p > 2) {
+            idb.field_p = 2;
+            if (2 < lla.field_h) {
+                lla.field_h = 2;
+                return;
+            }
+            return;
+        }
+        if (2 < lla.field_h) {
+            lla.field_h = 2;
+            return;
         }
     }
 
     public static void l(int param0) {
         field_c = null;
-        if (param0 != 3) {
-            rma.b(-77, (byte) 54);
-            field_d = null;
-            return;
-        }
         field_d = null;
     }
 

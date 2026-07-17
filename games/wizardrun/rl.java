@@ -7,9 +7,6 @@ final class rl {
 
     final static void a(boolean param0, boolean param1) {
         uk.a((byte) -123, param0, true);
-        if (param1) {
-            rl.a(true, false);
-        }
     }
 
     public static void b(int param0) {

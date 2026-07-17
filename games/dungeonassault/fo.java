@@ -11,9 +11,6 @@ final class fo {
         field_c = null;
         field_d = null;
         field_a = null;
-        if (param0 != -73) {
-            field_a = null;
-        }
     }
 
     final static cn[] a(int param0) {
@@ -24,7 +21,7 @@ final class fo {
         int var6 = 0;
         int var7 = DungeonAssault.field_K;
         cn[] var1 = new cn[dk.field_d];
-        for (var2 = param0; var2 < dk.field_d; var2++) {
+        for (var2 = 0; var2 < dk.field_d; var2++) {
             var3 = jn.field_k[var2] * jc.field_f[var2];
             var4 = ub.field_q[var2];
             var5 = new int[var3];

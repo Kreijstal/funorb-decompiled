@@ -13,7 +13,7 @@ final class tb extends wf {
 
     public static void a(byte param0) {
         field_e = null;
-        int var1 = -17 % ((19 - param0) / 35);
+        int var1 = -1;
         field_g = null;
     }
 
@@ -56,8 +56,9 @@ final class tb extends wf {
 
     final boolean a(int param0) {
         int var2 = -39 / ((param0 - -45) / 55);
+        int fieldTemp$0 = ((tb) this).field_i + 1;
         ((tb) this).field_i = ((tb) this).field_i + 1;
-        return ((tb) this).field_l + (((tb) this).field_h + ((tb) this).field_f) < ((tb) this).field_i + 1 ? true : false;
+        return ((tb) this).field_l + (((tb) this).field_h + ((tb) this).field_f) < fieldTemp$0 ? true : false;
     }
 
     final void d(int param0) {
@@ -70,39 +71,47 @@ final class tb extends wf {
             return;
           } else {
             var2 = ((tb) this).field_i - ((tb) this).field_f - ((tb) this).field_h;
-            var3 = (((tb) this).field_l + -var2 << -1892655192) / ((tb) this).field_l;
-            if (-1 <= (var3 ^ -1)) {
+            var3 = (((tb) this).field_l + -var2 << 8) / ((tb) this).field_l;
+            if (var3 <= 0) {
               return;
             } else {
               var4 = 80 * var2 / ((tb) this).field_l;
-              rb.field_j.a(99, ((tb) this).field_j | var3 << 746661016, -1, param0 + (gp.field_w - var4), sh.field_u >> 2051331681, ((tb) this).field_k);
+              rb.field_j.a(99, ((tb) this).field_j | var3 << 24, -1, param0 + (gp.field_w - var4), sh.field_u >> 1, ((tb) this).field_k);
               return;
             }
           }
         } else {
-          var2 = (((tb) this).field_i << -1356388696) / ((tb) this).field_f;
+          var2 = (((tb) this).field_i << 8) / ((tb) this).field_f;
           var3 = (-((tb) this).field_i + ((tb) this).field_f) * 80 / ((tb) this).field_f;
-          rb.field_j.a(122, var2 << 1043097080 | ((tb) this).field_j, -1, var3 + (-50 + gp.field_w), 320, ((tb) this).field_k);
+          rb.field_j.a(122, var2 << 24 | ((tb) this).field_j, -1, var3 + (-50 + gp.field_w), 320, ((tb) this).field_k);
           return;
         }
     }
 
     tb(String param0, int param1) {
-        ((tb) this).field_f = 20;
-        ((tb) this).field_j = param1;
-        ((tb) this).field_k = param0;
-        ((tb) this).field_l = 80;
-        ((tb) this).field_i = 0;
-        ((tb) this).field_h = 150;
+        try {
+            ((tb) this).field_f = 20;
+            ((tb) this).field_j = param1;
+            ((tb) this).field_k = param0;
+            ((tb) this).field_l = 80;
+            ((tb) this).field_i = 0;
+            ((tb) this).field_h = 150;
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) (Object) runtimeException, "tb.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     tb(String param0, int param1, int param2) {
-        ((tb) this).field_f = 20;
-        ((tb) this).field_h = param2;
-        ((tb) this).field_i = 0;
-        ((tb) this).field_j = param1;
-        ((tb) this).field_k = param0;
-        ((tb) this).field_l = 80;
+        try {
+            ((tb) this).field_f = 20;
+            ((tb) this).field_h = param2;
+            ((tb) this).field_i = 0;
+            ((tb) this).field_j = param1;
+            ((tb) this).field_k = param0;
+            ((tb) this).field_l = 80;
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) (Object) runtimeException, "tb.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     static {

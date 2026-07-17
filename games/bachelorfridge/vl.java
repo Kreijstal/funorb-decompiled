@@ -14,7 +14,7 @@ final class vl {
         field_c = null;
         field_e = null;
         field_a = null;
-        int var1 = -6 / ((param0 - 2) / 36);
+        int var1 = -3;
         field_d = null;
     }
 

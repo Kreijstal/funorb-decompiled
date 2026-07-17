@@ -93,16 +93,13 @@ final class rk {
         if (hw.field_i == 256) {
             var5.c(var3, var4);
         } else {
-            var6 = hw.field_i * var5.field_o >> 644990088;
-            var7 = var5.field_v * hw.field_i >> 1613551528;
+            var6 = hw.field_i * var5.field_o >> 8;
+            var7 = var5.field_v * hw.field_i >> 8;
             var5.a(var3, var4, var6, var7);
         }
     }
 
     public static void a(int param0) {
-        if (param0 != 0) {
-            return;
-        }
         field_h = null;
         field_g = null;
         field_d = null;

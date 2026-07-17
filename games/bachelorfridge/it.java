@@ -33,9 +33,6 @@ final class it {
     }
 
     public static void d(int param0) {
-        if (param0 <= 102) {
-            field_c = null;
-        }
         field_l = null;
         field_c = null;
         field_s = null;
@@ -57,23 +54,23 @@ final class it {
         L1: {
           nk.a(qa.field_k, param1 + 16 + ((it) this).field_p, 4 + ((it) this).field_j, 48, 28);
           if (((it) this).field_a) {
-            if (-1 == (((it) this).field_b ^ -1)) {
+            if (((it) this).field_b == 0) {
               ca.field_c[((it) this).field_e].e(16 + ((it) this).field_p - -param1, -22 + ((it) this).field_j);
               break L1;
             } else {
               L2: {
                 dc.field_y[((it) this).field_e].e(param1 + (16 + ((it) this).field_p), -22 + ((it) this).field_j);
-                if ((256 + -(((it) this).field_b >> -1733221438) ^ -1) < -1) {
-                  tr.a(((it) this).field_j - 22, dc.field_y[((it) this).field_e], -(((it) this).field_b >> 1371791234) + 256, ((it) this).field_k, ua.field_d, ((it) this).field_q, -26512, param1 + ((it) this).field_p + 16);
+                if (256 + -(((it) this).field_b >> 2) > 0) {
+                  tr.a(((it) this).field_j - 22, dc.field_y[((it) this).field_e], -(((it) this).field_b >> 2) + 256, ((it) this).field_k, ua.field_d, ((it) this).field_q, -26512, param1 + ((it) this).field_p + 16);
                   break L2;
                 } else {
                   break L2;
                 }
               }
-              if (0 >= -(((it) this).field_b >> -2045144447) + 256) {
+              if (0 >= -(((it) this).field_b >> 1) + 256) {
                 break L1;
               } else {
-                tr.a(-22 + ((it) this).field_j, dc.field_y[((it) this).field_e], -(((it) this).field_b >> 1208595073) + 256, ((it) this).field_k, aw.field_y, ((it) this).field_q, -26512, param1 + (16 + ((it) this).field_p));
+                tr.a(-22 + ((it) this).field_j, dc.field_y[((it) this).field_e], -(((it) this).field_b >> 1) + 256, ((it) this).field_k, aw.field_y, ((it) this).field_q, -26512, param1 + (16 + ((it) this).field_p));
                 break L1;
               }
             }
@@ -112,7 +109,7 @@ final class it {
             uca.a(8, (byte) -44);
         }
         if (((it) this).field_f) {
-            if (!((((it) this).field_n ^ -1) >= -1)) {
+            if (!(((it) this).field_n <= 0)) {
                 ((it) this).field_n = ((it) this).field_n - 1;
             }
             if (!(((it) this).field_n >= 0)) {
@@ -133,18 +130,46 @@ final class it {
     }
 
     final static void a(int param0, int param1) {
-        int var2 = 0;
-        int var3 = BachelorFridge.field_y;
-        laa.a(param1, wt.field_u, ut.field_l, true, waa.field_a, param0 + -2392, 0);
-        if (param0 != 8766) {
-            it.a(127, 20);
-        }
-        for (var2 = 0; var2 < ut.field_l; var2++) {
-            fn.field_k[var2 - -param1] = var2;
-        }
-        laa.a(param1 + param1, af.field_c, param1 + ut.field_l, false, mt.field_r, 6374, param1);
-        if (param1 < ut.field_l) {
-            ut.field_l = param1;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var3 = BachelorFridge.field_y;
+        try {
+          L0: {
+            L1: {
+              laa.a(param1, wt.field_u, ut.field_l, true, waa.field_a, param0 + -2392, 0);
+              if (param0 == 8766) {
+                break L1;
+              } else {
+                it.a(127, 20);
+                break L1;
+              }
+            }
+            var2_int = 0;
+            L2: while (true) {
+              if (var2_int >= ut.field_l) {
+                L3: {
+                  laa.a(param1 + param1, af.field_c, param1 + ut.field_l, false, mt.field_r, 6374, param1);
+                  if (param1 >= ut.field_l) {
+                    break L3;
+                  } else {
+                    ut.field_l = param1;
+                    break L3;
+                  }
+                }
+                break L0;
+              } else {
+                fn.field_k[var2_int - -param1] = var2_int;
+                var2_int++;
+                continue L2;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw pe.a((Throwable) (Object) var2, "it.B(" + param0 + 44 + param1 + 41);
         }
     }
 
@@ -161,14 +186,18 @@ final class it {
 
     it(lu param0) {
         ((it) this).field_a = true;
-        ((it) this).field_e = param0.b(16711935);
-        ((it) this).field_h = param0.b(16711935);
-        ((it) this).field_m = param0.b(16711935);
-        ((it) this).field_d = fw.field_h[((it) this).field_e];
-        ((it) this).field_p = this.a(-19);
-        ((it) this).field_j = this.c(98);
-        ((it) this).field_b = param0.e((byte) 87);
-        ((it) this).field_a = -2 == (param0.b(16711935) ^ -1) ? true : false;
+        try {
+            ((it) this).field_e = param0.b(16711935);
+            ((it) this).field_h = param0.b(16711935);
+            ((it) this).field_m = param0.b(16711935);
+            ((it) this).field_d = fw.field_h[((it) this).field_e];
+            ((it) this).field_p = this.a(-19);
+            ((it) this).field_j = this.c(98);
+            ((it) this).field_b = param0.e((byte) 87);
+            ((it) this).field_a = param0.b(16711935) == 1 ? true : false;
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "it.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

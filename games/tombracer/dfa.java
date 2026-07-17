@@ -27,14 +27,14 @@ abstract class dfa {
         }
         var3 = stackIn_3_0;
         if (fna.field_h != 9) {
-          if ((fna.field_h ^ -1) != -11) {
+          if (fna.field_h != 10) {
             if (!param1) {
               if (fna.field_h != 11) {
                 return false;
               } else {
                 if (ns.field_f) {
                   L1: {
-                    if (-3 != (gm.field_n ^ -1)) {
+                    if (gm.field_n != 2) {
                       break L1;
                     } else {
                       if (ota.a(apa.field_a, (byte) 13, cr.field_b)) {
@@ -76,7 +76,7 @@ abstract class dfa {
               } else {
                 if (ns.field_f) {
                   L4: {
-                    if (-3 != (gm.field_n ^ -1)) {
+                    if (gm.field_n != 2) {
                       break L4;
                     } else {
                       if (ota.a(apa.field_a, (byte) 13, cr.field_b)) {
@@ -123,7 +123,7 @@ abstract class dfa {
         } else {
           if (sqa.a(uba.field_f, 110, fp.field_d, tba.field_g, bla.field_I)) {
             L7: {
-              if (-3 == (uba.field_f ^ -1)) {
+              if (uba.field_f == 2) {
                 break L7;
               } else {
                 if (var3 == 0) {
@@ -135,13 +135,13 @@ abstract class dfa {
             }
             return eca.a((byte) -121, uba.field_f, bla.field_I, fp.field_d, tba.field_g);
           } else {
-            if ((fna.field_h ^ -1) != -11) {
+            if (fna.field_h != 10) {
               if (param1) {
                 field_e = null;
                 if (fna.field_h == 11) {
                   if (ns.field_f) {
                     L8: {
-                      if (-3 != (gm.field_n ^ -1)) {
+                      if (gm.field_n != 2) {
                         break L8;
                       } else {
                         if (ota.a(apa.field_a, (byte) 13, cr.field_b)) {
@@ -181,7 +181,7 @@ abstract class dfa {
               } else {
                 if (fna.field_h == 11) {
                   if (ns.field_f) {
-                    if (-3 == (gm.field_n ^ -1)) {
+                    if (gm.field_n == 2) {
                       if (!ota.a(apa.field_a, (byte) 13, cr.field_b)) {
                         return false;
                       } else {
@@ -259,7 +259,7 @@ abstract class dfa {
         int var3 = 0;
         L0: {
           var3 = 118 % ((24 - param2) / 41);
-          if (-1 >= (param0 ^ -1)) {
+          if (param0 >= 0) {
             break L0;
           } else {
             param0 = param1 + param0 % param1;
@@ -274,89 +274,69 @@ abstract class dfa {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        int var5 = 0;
+        int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         Object var7 = null;
         int var8 = 0;
+        RuntimeException decompiledCaughtException = null;
         var6 = TombRacer.field_G ? 1 : 0;
-        if (param1 >= param2) {
-          var8 = param2;
-          var5 = var8;
-          L0: while (true) {
-            if (param1 <= var8) {
-              if (param4 != 0) {
-                var7 = null;
-                String discarded$6 = dfa.a('N', (String) null, (String) null, 30);
-                return;
+        try {
+          L0: {
+            L1: {
+              if (param1 >= param2) {
+                var8 = param2;
+                var5_int = var8;
+                L2: while (true) {
+                  if (param1 <= var8) {
+                    break L1;
+                  } else {
+                    vaa.field_a[var8][param0] = param3;
+                    var8++;
+                    continue L2;
+                  }
+                }
               } else {
-                return;
-              }
-            } else {
-              vaa.field_a[var8][param0] = param3;
-              var8++;
-              continue L0;
-            }
-          }
-        } else {
-          var5 = param1;
-          L1: while (true) {
-            if (param2 > var5) {
-              vaa.field_a[var5][param0] = param3;
-              var5++;
-              continue L1;
-            } else {
-              if (param4 != 0) {
-                var7 = null;
-                String discarded$7 = dfa.a('N', (String) null, (String) null, 30);
-                return;
-              } else {
-                return;
+                var5_int = param1;
+                L3: while (true) {
+                  if (param2 <= var5_int) {
+                    break L1;
+                  } else {
+                    vaa.field_a[var5_int][param0] = param3;
+                    var5_int++;
+                    continue L3;
+                  }
+                }
               }
             }
+            if (param4 == 0) {
+              break L0;
+            } else {
+              var7 = null;
+              String discarded$1 = dfa.a('N', (String) null, (String) null, 30);
+              return;
+            }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          throw tba.a((Throwable) (Object) var5, "dfa.FC(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
     final static void c(byte param0) {
-        L0: {
-          og.b(0);
-          if (null != nma.field_l) {
+        og.b(0);
+        if (!(null == nma.field_l)) {
             pq.a(nma.field_l, false);
-            break L0;
-          } else {
-            break L0;
-          }
         }
         ola.f((byte) 101);
         pc.a(5);
-        if (param0 != 62) {
-          L1: {
-            boolean discarded$12 = dfa.a(-50, false, 79);
-            rda.e(0);
-            if (bl.b(param0 + -62)) {
-              ql.field_k.k(1, -2988);
-              bl.a(0, -1);
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          dea.a(60);
-          return;
-        } else {
-          L2: {
-            rda.e(0);
-            if (bl.b(param0 + -62)) {
-              ql.field_k.k(1, -2988);
-              bl.a(0, -1);
-              break L2;
-            } else {
-              break L2;
-            }
-          }
-          dea.a(60);
-          return;
+        rda.e(0);
+        if (!(!bl.b(0))) {
+            ql.field_k.k(1, -2988);
+            bl.a(0, -1);
         }
+        dea.a(60);
     }
 
     abstract boolean b(int param0);
@@ -367,12 +347,6 @@ abstract class dfa {
 
     public static void b(byte param0) {
         field_b = null;
-        if (param0 != -104) {
-            field_b = null;
-            field_e = null;
-            field_a = null;
-            return;
-        }
         field_e = null;
         field_a = null;
     }
@@ -380,7 +354,8 @@ abstract class dfa {
     abstract void a(int param0);
 
     final static String a(char param0, String param1, String param2, int param3) {
-        int var4 = 0;
+        int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -389,55 +364,136 @@ abstract class dfa {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        StringBuilder var12 = null;
-        StringBuilder var13 = null;
+        String stackIn_11_0 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_18_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        String stackOut_10_0 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
         var11 = TombRacer.field_G ? 1 : 0;
-        var4 = param2.length();
-        var5 = param1.length();
-        var6 = var4;
-        var7 = var5 + -1;
-        if (param3 != var7) {
-          var8_int = 0;
-          L0: while (true) {
-            var8_int = param2.indexOf((int) param0, var8_int);
-            if (-1 >= (var8_int ^ -1)) {
-              var8_int++;
-              var6 = var6 + var7;
-              continue L0;
-            } else {
-              var13 = new StringBuilder(var6);
-              var8 = var13;
-              var9 = 0;
-              L1: while (true) {
-                var10 = param2.indexOf((int) param0, var9);
-                if (var10 < 0) {
-                  StringBuilder discarded$6 = var13.append(param2.substring(var9));
-                  return var13.toString();
-                } else {
-                  StringBuilder discarded$7 = var13.append(param2.substring(var9, var10));
-                  var9 = var10 + 1;
-                  StringBuilder discarded$8 = var13.append(param1);
-                  continue L1;
+        try {
+          L0: {
+            L1: {
+              var4_int = param2.length();
+              var5 = param1.length();
+              var6 = var4_int;
+              var7 = var5 + -1;
+              if (param3 != var7) {
+                var8_int = 0;
+                L2: while (true) {
+                  var8_int = param2.indexOf((int) param0, var8_int);
+                  if (var8_int >= 0) {
+                    var8_int++;
+                    var6 = var6 + var7;
+                    continue L2;
+                  } else {
+                    break L1;
+                  }
                 }
+              } else {
+                break L1;
+              }
+            }
+            var8 = new StringBuilder(var6);
+            var9 = 0;
+            L3: while (true) {
+              var10 = param2.indexOf((int) param0, var9);
+              if (var10 < 0) {
+                StringBuilder discarded$3 = var8.append(param2.substring(var9));
+                stackOut_10_0 = var8.toString();
+                stackIn_11_0 = stackOut_10_0;
+                break L0;
+              } else {
+                StringBuilder discarded$4 = var8.append(param2.substring(var9, var10));
+                var9 = var10 + 1;
+                StringBuilder discarded$5 = var8.append(param1);
+                continue L3;
               }
             }
           }
-        } else {
-          var12 = new StringBuilder(var6);
-          var9 = 0;
-          L2: while (true) {
-            var10 = param2.indexOf((int) param0, var9);
-            if (var10 < 0) {
-              StringBuilder discarded$9 = var12.append(param2.substring(var9));
-              return var12.toString();
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var4 = decompiledCaughtException;
+            stackOut_12_0 = (RuntimeException) var4;
+            stackOut_12_1 = new StringBuilder().append("dfa.EC(").append(param0).append(44);
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
+            if (param1 == null) {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L4;
             } else {
-              StringBuilder discarded$10 = var12.append(param2.substring(var9, var10));
-              var9 = var10 + 1;
-              StringBuilder discarded$11 = var12.append(param1);
-              continue L2;
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L4;
             }
           }
+          L5: {
+            stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44);
+            stackIn_17_0 = stackOut_15_0;
+            stackIn_17_1 = stackOut_15_1;
+            stackIn_16_0 = stackOut_15_0;
+            stackIn_16_1 = stackOut_15_1;
+            if (param2 == null) {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "null";
+              stackIn_18_0 = stackOut_17_0;
+              stackIn_18_1 = stackOut_17_1;
+              stackIn_18_2 = stackOut_17_2;
+              break L5;
+            } else {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "{...}";
+              stackIn_18_0 = stackOut_16_0;
+              stackIn_18_1 = stackOut_16_1;
+              stackIn_18_2 = stackOut_16_2;
+              break L5;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + param3 + 41);
         }
+        return stackIn_11_0;
     }
 
     abstract boolean a(int param0, char param1, int param2);

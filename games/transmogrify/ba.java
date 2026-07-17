@@ -15,12 +15,7 @@ final class ba extends wf {
     int field_i;
 
     final static hg e(int param0) {
-        if (param0 > 0) {
-          field_n = -53;
-          return new hg(le.h(23), uf.a((byte) -76));
-        } else {
-          return new hg(le.h(23), uf.a((byte) -76));
-        }
+        return new hg(le.h(23), uf.a((byte) -76));
     }
 
     public static void d(int param0) {

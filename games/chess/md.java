@@ -46,7 +46,7 @@ class md {
                 }
               }
               field_q = stackIn_7_0 != 0;
-              field_s = param2;
+              field_s = 10;
               return;
             } else {
               break L0;
@@ -204,12 +204,12 @@ class md {
     }
 
     private final void a(int param0) {
-        ((md) this).field_p = ((md) this).field_p - param0;
+        ((md) this).field_p = ((md) this).field_p - 256;
         if (((md) this).field_p < 0) {
             ((md) this).field_p = 0;
         }
         if (((md) this).field_c != null) {
-            ((md) this).field_c.a(param0);
+            ((md) this).field_c.a(256);
             return;
         }
     }
@@ -405,7 +405,7 @@ class md {
         nm var15 = null;
         int var15_int = 0;
         L0: {
-          var3 = param1;
+          var3 = 256;
           if (!field_q) {
             break L0;
           } else {
@@ -415,7 +415,7 @@ class md {
         }
         L1: {
           ne.a(param0, 0, var3);
-          ((md) this).field_p = ((md) this).field_p - param1;
+          ((md) this).field_p = ((md) this).field_p - 256;
           if (((md) this).field_c == null) {
             break L1;
           } else {
@@ -449,7 +449,7 @@ class md {
                       if (var9 != 0) {
                         L6: {
                           if ((var9 & 1) != 0) {
-                            var5 = var5 & (1 << var7_int ^ -1);
+                            var5 = var5 & ~(1 << var7_int);
                             var10 = null;
                             var11 = ((md) this).field_f[var7_int];
                             var14 = var11;
@@ -582,7 +582,7 @@ class md {
           if (((md) this).field_c == null) {
             break L17;
           } else {
-            ((md) this).field_c.a(param0, 0, param1);
+            ((md) this).field_c.a(param0, 0, 256);
             break L17;
           }
         }

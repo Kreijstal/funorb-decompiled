@@ -26,12 +26,12 @@ public final class TombRacer extends rfa implements ls {
           } else {
             if (1 != param2) {
               if (param2 != 2) {
-                if (-4 != param2) {
-                  if (-28 != param2) {
-                    if (-6 == param2) {
+                if (param2 != 3) {
+                  if (param2 != 27) {
+                    if (param2 == 5) {
                       return true;
                     } else {
-                      if (-7 == param2) {
+                      if (param2 == 6) {
                         return true;
                       } else {
                         if (param2 == 7) {
@@ -42,12 +42,12 @@ public final class TombRacer extends rfa implements ls {
                             pca.a(od.field_i, param0 + -26037, 0);
                             return true;
                           } else {
-                            if (param2 == -10) {
+                            if (param2 == 9) {
                               od.field_i = 50;
                               pca.a(od.field_i, param0 ^ 26043, 0);
                               return true;
                             } else {
-                              if (-11 == param2) {
+                              if (param2 == 10) {
                                 od.field_i = 80;
                                 pca.a(od.field_i, param0 + -26037, 5);
                                 return true;
@@ -57,12 +57,12 @@ public final class TombRacer extends rfa implements ls {
                                   pca.a(od.field_i, param0 ^ 26043, 0);
                                   return true;
                                 } else {
-                                  if (-13 == (param2 ^ -1)) {
+                                  if (param2 == 12) {
                                     od.field_i = 200;
                                     pca.a(od.field_i, param0 + -26037, 0);
                                     return true;
                                   } else {
-                                    if ((param2 ^ -1) != -53) {
+                                    if (param2 != 52) {
                                       break L0;
                                     } else {
                                       if (oj.field_tb[81]) {
@@ -158,209 +158,263 @@ public final class TombRacer extends rfa implements ls {
     }
 
     private final void a(boolean param0, rqa param1, byte param2) {
-        int var4 = 0;
-        ssa var5_ref = null;
+        RuntimeException var4 = null;
+        int var4_int = 0;
+        ssa var5_ref_ssa = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         ssa var9 = null;
         int var10 = 0;
-        int stackIn_18_0 = 0;
-        int stackIn_32_0 = 0;
-        int stackIn_46_0 = 0;
+        int stackIn_19_0 = 0;
+        int stackIn_33_0 = 0;
+        int stackIn_47_0 = 0;
+        RuntimeException stackIn_56_0 = null;
+        StringBuilder stackIn_56_1 = null;
+        RuntimeException stackIn_57_0 = null;
+        StringBuilder stackIn_57_1 = null;
+        RuntimeException stackIn_58_0 = null;
+        StringBuilder stackIn_58_1 = null;
+        String stackIn_58_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_18_0 = 0;
         int stackOut_17_0 = 0;
-        int stackOut_16_0 = 0;
+        int stackOut_32_0 = 0;
         int stackOut_31_0 = 0;
-        int stackOut_30_0 = 0;
-        boolean stackOut_45_0 = false;
-        int stackOut_44_0 = 0;
+        boolean stackOut_46_0 = false;
+        int stackOut_45_0 = 0;
+        RuntimeException stackOut_55_0 = null;
+        StringBuilder stackOut_55_1 = null;
+        RuntimeException stackOut_57_0 = null;
+        StringBuilder stackOut_57_1 = null;
+        String stackOut_57_2 = null;
+        RuntimeException stackOut_56_0 = null;
+        StringBuilder stackOut_56_1 = null;
+        String stackOut_56_2 = null;
         var10 = field_G ? 1 : 0;
-        if (null == tga.field_a) {
-          return;
-        } else {
+        try {
           L0: {
-            this.z(91);
-            if (null != cs.field_c) {
-              cs.field_c.a((byte) -28, false);
-              break L0;
+            if (null == tga.field_a) {
+              return;
             } else {
-              break L0;
-            }
-          }
-          L1: {
-            if (wka.field_d) {
-              break L1;
-            } else {
-              if (param1 == null) {
-                break L1;
-              } else {
-                if ((Object) (Object) wm.field_a == (Object) (Object) param1) {
+              L1: {
+                this.z(91);
+                if (null != cs.field_c) {
+                  cs.field_c.a((byte) -28, false);
                   break L1;
                 } else {
-                  if ((Object) (Object) hb.field_t == (Object) (Object) param1) {
-                    break L1;
-                  } else {
-                    param1.a((byte) -28, false);
-                    break L1;
-                  }
+                  break L1;
                 }
               }
-            }
-          }
-          L2: {
-            if (null != wm.field_a) {
-              if (!wm.field_a.b(31923)) {
-                wm.field_a.a((byte) -28, false);
-                break L2;
-              } else {
-                if (param1 != null) {
+              L2: {
+                if (wka.field_d) {
                   break L2;
                 } else {
-                  L3: {
-                    if (wm.field_a instanceof ala) {
-                      stackOut_17_0 = 0;
-                      stackIn_18_0 = stackOut_17_0;
-                      break L3;
+                  if (param1 == null) {
+                    break L2;
+                  } else {
+                    if ((Object) (Object) wm.field_a == (Object) (Object) param1) {
+                      break L2;
                     } else {
-                      stackOut_16_0 = 1;
-                      stackIn_18_0 = stackOut_16_0;
-                      break L3;
+                      if ((Object) (Object) hb.field_t == (Object) (Object) param1) {
+                        break L2;
+                      } else {
+                        param1.a((byte) -28, false);
+                        break L2;
+                      }
                     }
                   }
-                  var4 = stackIn_18_0;
-                  if (var4 != 0) {
+                }
+              }
+              L3: {
+                if (null != wm.field_a) {
+                  if (!wm.field_a.b(31923)) {
                     wm.field_a.a((byte) -28, false);
-                    tga.field_a.SA(0, 0, aaa.a(false), koa.b(param2 ^ 17), bea.field_l, 0, aaa.a(false));
-                    break L2;
+                    break L3;
                   } else {
-                    break L2;
+                    if (param1 != null) {
+                      break L3;
+                    } else {
+                      L4: {
+                        if (wm.field_a instanceof ala) {
+                          stackOut_18_0 = 0;
+                          stackIn_19_0 = stackOut_18_0;
+                          break L4;
+                        } else {
+                          stackOut_17_0 = 1;
+                          stackIn_19_0 = stackOut_17_0;
+                          break L4;
+                        }
+                      }
+                      var4_int = stackIn_19_0;
+                      if (var4_int != 0) {
+                        wm.field_a.a((byte) -28, false);
+                        tga.field_a.SA(0, 0, aaa.a(false), koa.b(param2 ^ 17), bea.field_l, 0, aaa.a(false));
+                        break L3;
+                      } else {
+                        break L3;
+                      }
+                    }
+                  }
+                } else {
+                  break L3;
+                }
+              }
+              L5: {
+                var4_int = 0;
+                if (hb.field_t == null) {
+                  break L5;
+                } else {
+                  if (hb.field_t.b(31923)) {
+                    bea.a();
+                    var4_int = 1;
+                    hb.field_t.a((byte) -28, true);
+                    break L5;
+                  } else {
+                    hb.field_t.a((byte) -28, true);
+                    break L5;
                   }
                 }
               }
-            } else {
-              break L2;
-            }
-          }
-          L4: {
-            var4 = 0;
-            if (hb.field_t == null) {
-              break L4;
-            } else {
-              if (hb.field_t.b(31923)) {
-                bea.a();
-                var4 = 1;
-                hb.field_t.a((byte) -28, true);
-                break L4;
-              } else {
-                hb.field_t.a((byte) -28, true);
-                break L4;
-              }
-            }
-          }
-          L5: {
-            if (param0) {
-              iqa.field_c.d(true);
-              if (!iqa.field_c.e(-8832)) {
-                break L5;
-              } else {
-                L6: {
-                  bea.a();
-                  if ((((TombRacer) this).field_E & 8) != 0) {
-                    stackOut_31_0 = 0;
-                    stackIn_32_0 = stackOut_31_0;
+              L6: {
+                if (param0) {
+                  iqa.field_c.d(true);
+                  if (!iqa.field_c.e(-8832)) {
                     break L6;
                   } else {
-                    stackOut_30_0 = 1;
-                    stackIn_32_0 = stackOut_30_0;
+                    L7: {
+                      bea.a();
+                      if ((((TombRacer) this).field_E & 8) != 0) {
+                        stackOut_32_0 = 0;
+                        stackIn_33_0 = stackOut_32_0;
+                        break L7;
+                      } else {
+                        stackOut_31_0 = 1;
+                        stackIn_33_0 = stackOut_31_0;
+                        break L7;
+                      }
+                    }
+                    wma.a(stackIn_33_0 != 0, 0);
+                    bi.a(tga.field_a, param2 ^ 17);
                     break L6;
                   }
+                } else {
+                  break L6;
                 }
-                wma.a(stackIn_32_0 != 0, 0);
-                bi.a(tga.field_a, param2 ^ 17);
-                break L5;
               }
-            } else {
-              break L5;
-            }
-          }
-          L7: {
-            if (((TombRacer) this).field_D != null) {
-              ((TombRacer) this).field_D.b((byte) -65);
-              break L7;
-            } else {
-              break L7;
-            }
-          }
-          L8: {
-            ((TombRacer) this).field_H.a((byte) -90);
-            if (param2 == 17) {
-              break L8;
-            } else {
-              field_F = null;
-              break L8;
-            }
-          }
-          L9: {
-            if (lca.a(false)) {
-              var4 = 1;
-              bka.a((byte) 126);
-              break L9;
-            } else {
-              break L9;
-            }
-          }
-          L10: {
-            if (!fja.h(param2 ^ 110)) {
-              break L10;
-            } else {
-              if (lca.a(false)) {
-                break L10;
-              } else {
-                L11: {
-                  tga.field_a.c(-1073741824, 0, aaa.a(false), 0, param2 ^ -22956, koa.b(0));
-                  var5_ref = uja.a((byte) 65, tga.field_a);
-                  var5_ref.a(aaa.a(false) + mp.a((byte) -112) >> 392059489, koa.b(0) + -qra.a(96) >> -1253084863, (byte) -12, koa.b(0) + qra.a(96) >> 1911206177, aaa.a(false) - mp.a((byte) -125) >> 451852449);
-                  if (dq.field_f == null) {
-                    stackOut_45_0 = bn.field_n;
-                    stackIn_46_0 = stackOut_45_0 ? 1 : 0;
+              L8: {
+                if (((TombRacer) this).field_D != null) {
+                  ((TombRacer) this).field_D.b((byte) -65);
+                  break L8;
+                } else {
+                  break L8;
+                }
+              }
+              L9: {
+                ((TombRacer) this).field_H.a((byte) -90);
+                if (param2 == 17) {
+                  break L9;
+                } else {
+                  field_F = null;
+                  break L9;
+                }
+              }
+              L10: {
+                if (lca.a(false)) {
+                  var4_int = 1;
+                  bka.a((byte) 126);
+                  break L10;
+                } else {
+                  break L10;
+                }
+              }
+              L11: {
+                if (!fja.h(param2 ^ 110)) {
+                  break L11;
+                } else {
+                  if (lca.a(false)) {
                     break L11;
                   } else {
-                    stackOut_44_0 = 1;
-                    stackIn_46_0 = stackOut_44_0;
+                    L12: {
+                      tga.field_a.c(-1073741824, 0, aaa.a(false), 0, param2 ^ -22956, koa.b(0));
+                      var5_ref_ssa = uja.a((byte) 65, tga.field_a);
+                      var5_ref_ssa.a(aaa.a(false) + mp.a((byte) -112) >> 1, koa.b(0) + -qra.a(96) >> 1, (byte) -12, koa.b(0) + qra.a(96) >> 1, aaa.a(false) - mp.a((byte) -125) >> 1);
+                      if (dq.field_f == null) {
+                        stackOut_46_0 = bn.field_n;
+                        stackIn_47_0 = stackOut_46_0 ? 1 : 0;
+                        break L12;
+                      } else {
+                        stackOut_45_0 = 1;
+                        stackIn_47_0 = stackOut_45_0;
+                        break L12;
+                      }
+                    }
+                    bqa.a(stackIn_47_0 != 0, 106);
+                    tga.field_a.SA(0, 0, bea.field_g, bea.field_a, bea.field_l, 0, bea.field_g);
+                    var5_ref_ssa.a(param2 + 84);
                     break L11;
                   }
                 }
-                bqa.a(stackIn_46_0 != 0, 106);
-                tga.field_a.SA(0, 0, bea.field_g, bea.field_a, bea.field_l, 0, bea.field_g);
-                var5_ref.a(param2 + 84);
-                break L10;
               }
+              L13: {
+                if (var4_int != 0) {
+                  L14: {
+                    if (!lca.a(false)) {
+                      tga.field_a.SA(0, 0, bea.field_g, bea.field_a, bea.field_l, 0, bea.field_g);
+                      break L14;
+                    } else {
+                      tga.field_a.c(-1073741824, 0, aaa.a(false), 0, -22971, koa.b(0));
+                      var5 = f.a(false);
+                      var6 = gw.A(-1);
+                      var7 = m.A(param2 + -7128);
+                      var8 = rs.a((byte) 124);
+                      var9 = uja.a((byte) 65, tga.field_a);
+                      var9.a(var5 + var7, var6, (byte) -12, var6 + var8, var5);
+                      tga.field_a.SA(0, 0, bea.field_g, bea.field_a, bea.field_l, 0, bea.field_g);
+                      var9.a(99);
+                      break L14;
+                    }
+                  }
+                  this.x(-28581);
+                  break L13;
+                } else {
+                  this.x(-28581);
+                  break L13;
+                }
+              }
+              break L0;
             }
           }
-          L12: {
-            if (var4 == 0) {
-              break L12;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L15: {
+            var4 = decompiledCaughtException;
+            stackOut_55_0 = (RuntimeException) var4;
+            stackOut_55_1 = new StringBuilder().append("TombRacer.FB(").append(param0).append(44);
+            stackIn_57_0 = stackOut_55_0;
+            stackIn_57_1 = stackOut_55_1;
+            stackIn_56_0 = stackOut_55_0;
+            stackIn_56_1 = stackOut_55_1;
+            if (param1 == null) {
+              stackOut_57_0 = (RuntimeException) (Object) stackIn_57_0;
+              stackOut_57_1 = (StringBuilder) (Object) stackIn_57_1;
+              stackOut_57_2 = "null";
+              stackIn_58_0 = stackOut_57_0;
+              stackIn_58_1 = stackOut_57_1;
+              stackIn_58_2 = stackOut_57_2;
+              break L15;
             } else {
-              if (!lca.a(false)) {
-                tga.field_a.SA(0, 0, bea.field_g, bea.field_a, bea.field_l, 0, bea.field_g);
-                break L12;
-              } else {
-                tga.field_a.c(-1073741824, 0, aaa.a(false), 0, -22971, koa.b(0));
-                var5 = f.a(false);
-                var6 = gw.A(-1);
-                var7 = m.A(param2 + -7128);
-                var8 = rs.a((byte) 124);
-                var9 = uja.a((byte) 65, tga.field_a);
-                var9.a(var5 + var7, var6, (byte) -12, var6 + var8, var5);
-                tga.field_a.SA(0, 0, bea.field_g, bea.field_a, bea.field_l, 0, bea.field_g);
-                var9.a(99);
-                break L12;
-              }
+              stackOut_56_0 = (RuntimeException) (Object) stackIn_56_0;
+              stackOut_56_1 = (StringBuilder) (Object) stackIn_56_1;
+              stackOut_56_2 = "{...}";
+              stackIn_58_0 = stackOut_56_0;
+              stackIn_58_1 = stackOut_56_1;
+              stackIn_58_2 = stackOut_56_2;
+              break L15;
             }
           }
-          this.x(-28581);
-          return;
+          throw tba.a((Throwable) (Object) stackIn_58_0, stackIn_58_2 + 44 + param2 + 41);
         }
     }
 
@@ -1209,7 +1263,7 @@ public final class TombRacer extends rfa implements ls {
         }
         if (2147483647 == jm.field_n) {
         } else {
-            if (1 == (jm.field_n ^ -1)) {
+            if (jm.field_n == -2) {
                 uv.d(30785);
             } else {
                 ira.a(false, jm.field_n, (byte) -46);
@@ -1267,7 +1321,7 @@ public final class TombRacer extends rfa implements ls {
           if (null == mq.field_e) {
             break L1;
           } else {
-            if ((mq.field_e.a(54) ^ -1) >= -1) {
+            if (mq.field_e.a(54) <= 0) {
               break L1;
             } else {
               if (((TombRacer) this).field_D != null) {
@@ -1473,8 +1527,9 @@ public final class TombRacer extends rfa implements ls {
     }
 
     final boolean a(int param0, kh param1, byte param2) {
+        RuntimeException var4 = null;
         int var4_int = 0;
-        int[] var4 = null;
+        int[] var4_array = null;
         int var5_int = 0;
         int[] var5 = null;
         int var6 = 0;
@@ -1512,338 +1567,463 @@ public final class TombRacer extends rfa implements ls {
         int[] var43 = null;
         int[] var44 = null;
         int[] var45 = null;
-        int stackIn_42_0 = 0;
-        int stackOut_41_0 = 0;
-        int stackOut_40_0 = 0;
+        int stackIn_5_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackIn_11_0 = 0;
+        int stackIn_17_0 = 0;
+        int stackIn_21_0 = 0;
+        int stackIn_29_0 = 0;
+        int stackIn_32_0 = 0;
+        int stackIn_38_0 = 0;
+        int stackIn_45_0 = 0;
+        int stackIn_52_0 = 0;
+        int stackIn_65_0 = 0;
+        int stackIn_70_0 = 0;
+        int stackIn_76_0 = 0;
+        int stackIn_86_0 = 0;
+        int stackIn_92_0 = 0;
+        int stackIn_94_0 = 0;
+        int stackIn_97_0 = 0;
+        int stackIn_101_0 = 0;
+        int stackIn_105_0 = 0;
+        int stackIn_114_0 = 0;
+        boolean stackIn_116_0 = false;
+        RuntimeException stackIn_118_0 = null;
+        StringBuilder stackIn_118_1 = null;
+        RuntimeException stackIn_119_0 = null;
+        StringBuilder stackIn_119_1 = null;
+        RuntimeException stackIn_120_0 = null;
+        StringBuilder stackIn_120_1 = null;
+        String stackIn_120_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_20_0 = 0;
+        int stackOut_28_0 = 0;
+        int stackOut_44_0 = 0;
+        int stackOut_75_0 = 0;
+        int stackOut_85_0 = 0;
+        int stackOut_91_0 = 0;
+        int stackOut_93_0 = 0;
+        int stackOut_100_0 = 0;
+        int stackOut_104_0 = 0;
+        boolean stackOut_115_0 = false;
+        int stackOut_113_0 = 0;
+        int stackOut_96_0 = 0;
+        int stackOut_69_0 = 0;
+        int stackOut_51_0 = 0;
+        int stackOut_50_0 = 0;
+        int stackOut_64_0 = 0;
+        int stackOut_37_0 = 0;
+        int stackOut_31_0 = 0;
+        int stackOut_16_0 = 0;
+        int stackOut_10_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_4_0 = 0;
+        RuntimeException stackOut_117_0 = null;
+        StringBuilder stackOut_117_1 = null;
+        RuntimeException stackOut_119_0 = null;
+        StringBuilder stackOut_119_1 = null;
+        String stackOut_119_2 = null;
+        RuntimeException stackOut_118_0 = null;
+        StringBuilder stackOut_118_1 = null;
+        String stackOut_118_2 = null;
         var16 = field_G ? 1 : 0;
-        if ((param0 ^ -1) != -76) {
-          if ((param0 ^ -1) != -10) {
-            if (param0 != 14) {
-              if (15 != param0) {
-                L0: {
-                  if (10 != param0) {
-                    break L0;
-                  } else {
-                    if (!vd.field_n) {
-                      break L0;
-                    } else {
-                      qt.a(-64);
-                      return true;
-                    }
-                  }
-                }
-                if ((param0 ^ -1) == -12) {
-                  L1: {
-                    var19 = ila.a(-18787, false);
-                    k.a((byte) 124, var19);
-                    if (null == rba.field_a) {
-                      break L1;
-                    } else {
-                      if (!var19.field_m) {
-                        var20 = var19.field_g;
-                        var21 = im.a(var19.field_d, var19.field_f, 100, rba.field_a.a(false, var20), var20);
-                        iqa.field_c.a(0, var21);
+        try {
+          L0: {
+            if (param0 != 75) {
+              if (param0 != 9) {
+                if (param0 != 14) {
+                  if (15 != param0) {
+                    L1: {
+                      if (10 != param0) {
                         break L1;
                       } else {
-                        return true;
+                        if (!vd.field_n) {
+                          break L1;
+                        } else {
+                          qt.a(-64);
+                          stackOut_20_0 = 1;
+                          stackIn_21_0 = stackOut_20_0;
+                          return stackIn_21_0 != 0;
+                        }
                       }
                     }
-                  }
-                  return true;
-                } else {
-                  if (param2 > 34) {
-                    if (12 != param0) {
-                      if (-77 == (param0 ^ -1)) {
-                        var4_int = param1.h(255);
-                        var5_int = 0;
-                        L2: while (true) {
-                          if (var4_int <= var5_int) {
-                            return true;
+                    if (param0 == 11) {
+                      L2: {
+                        var19 = ila.a(-18787, false);
+                        k.a((byte) 124, var19);
+                        if (null == rba.field_a) {
+                          break L2;
+                        } else {
+                          if (!var19.field_m) {
+                            var20 = var19.field_g;
+                            var21 = im.a(var19.field_d, var19.field_f, 100, rba.field_a.a(false, var20), var20);
+                            iqa.field_c.a(0, var21);
+                            break L2;
                           } else {
-                            String discarded$2 = param1.e((byte) -76);
-                            var5_int++;
-                            continue L2;
+                            return true;
                           }
                         }
-                      } else {
-                        L3: {
-                          if (64 == param0) {
-                            break L3;
+                      }
+                      stackOut_28_0 = 1;
+                      stackIn_29_0 = stackOut_28_0;
+                      return stackIn_29_0 != 0;
+                    } else {
+                      if (param2 > 34) {
+                        if (12 != param0) {
+                          if (param0 == 76) {
+                            var4_int = param1.h(255);
+                            var5_int = 0;
+                            L3: while (true) {
+                              if (var4_int <= var5_int) {
+                                stackOut_44_0 = 1;
+                                stackIn_45_0 = stackOut_44_0;
+                                return stackIn_45_0 != 0;
+                              } else {
+                                String discarded$2 = param1.e((byte) -76);
+                                var5_int++;
+                                continue L3;
+                              }
+                            }
                           } else {
-                            if ((param0 ^ -1) != -66) {
-                              if (param0 != 66) {
-                                if (param0 == 86) {
-                                  if (toa.field_j) {
-                                    return true;
-                                  } else {
-                                    L4: {
-                                      var26 = new aoa();
-                                      var26.a(param1, (byte) -19);
-                                      mq.field_e = var26.a(false);
-                                      mq.field_e.field_a = mq.field_e.field_o.get(78);
-                                      mp.a(2, mq.field_e.field_h);
-                                      cf.a(mq.field_e.field_k, -114);
-                                      if (null == baa.field_d) {
-                                        if (!wka.field_d) {
-                                          break L4;
-                                        } else {
-                                          if (mq.field_e.field_l) {
-                                            break L4;
+                            L4: {
+                              if (64 == param0) {
+                                break L4;
+                              } else {
+                                if (param0 != 65) {
+                                  if (param0 != 66) {
+                                    if (param0 == 86) {
+                                      if (toa.field_j) {
+                                        stackOut_75_0 = 1;
+                                        stackIn_76_0 = stackOut_75_0;
+                                        return stackIn_76_0 != 0;
+                                      } else {
+                                        L5: {
+                                          var26 = new aoa();
+                                          var26.a(param1, (byte) -19);
+                                          mq.field_e = var26.a(false);
+                                          mq.field_e.field_a = mq.field_e.field_o.get(78);
+                                          mp.a(2, mq.field_e.field_h);
+                                          cf.a(mq.field_e.field_k, -114);
+                                          if (null == baa.field_d) {
+                                            break L5;
                                           } else {
-                                            if (bh.field_p) {
-                                              break L4;
+                                            if (baa.field_d.field_i != null) {
+                                              eda.a(mq.field_e.field_g, true);
+                                              break L5;
                                             } else {
-                                              caa.a((byte) 101);
-                                              break L4;
+                                              break L5;
                                             }
                                           }
                                         }
-                                      } else {
-                                        if (!wka.field_d) {
-                                          break L4;
-                                        } else {
-                                          if (mq.field_e.field_l) {
-                                            break L4;
+                                        L6: {
+                                          if (!wka.field_d) {
+                                            break L6;
                                           } else {
-                                            if (bh.field_p) {
-                                              break L4;
+                                            if (mq.field_e.field_l) {
+                                              break L6;
                                             } else {
-                                              caa.a((byte) 101);
-                                              break L4;
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                    return true;
-                                  }
-                                } else {
-                                  if (param0 == 85) {
-                                    if (null == mq.field_e) {
-                                      return true;
-                                    } else {
-                                      var27 = new bga();
-                                      var27.a(param1, (byte) -19);
-                                      var27.a(mq.field_e, (byte) -128);
-                                      return true;
-                                    }
-                                  } else {
-                                    if (87 != param0) {
-                                      if (88 == param0) {
-                                        dea.a(60);
-                                        return true;
-                                      } else {
-                                        if (param0 == 89) {
-                                          uca.field_a = param1.c((byte) 71);
-                                          ea.field_j = param1.c((byte) 48);
-                                          return true;
-                                        } else {
-                                          if (param0 != 72) {
-                                            return this.a(param1, param0, (byte) 111);
-                                          } else {
-                                            var42 = fqa.e(true);
-                                            var37 = var42;
-                                            var33 = var37;
-                                            var29 = var33;
-                                            var4 = var29;
-                                            var17 = var4;
-                                            var5 = var17;
-                                            var28 = param1;
-                                            var7 = ((uia) (Object) var28).h(255);
-                                            var8 = 0;
-                                            L5: while (true) {
-                                              if (var7 <= var8) {
-                                                var43 = sb.a(0, var42);
-                                                ((TombRacer) this).field_H.a((byte) 6, var43);
-                                                var44 = rb.field_o;
-                                                var39 = var44;
-                                                var18 = var39;
-                                                var45 = var4;
-                                                var8 = 0;
-                                                L6: while (true) {
-                                                  if ((var8 ^ -1) <= -9) {
-                                                    return true;
-                                                  } else {
-                                                    var18[var8] = fh.a(var44[var8], var45[var8]);
-                                                    var8++;
-                                                    continue L6;
-                                                  }
-                                                }
+                                              if (bh.field_p) {
+                                                break L6;
                                               } else {
-                                                var17[var8] = ((uia) (Object) var28).e(-41);
-                                                var8++;
-                                                continue L5;
+                                                caa.a((byte) 101);
+                                                break L6;
                                               }
                                             }
                                           }
                                         }
+                                        stackOut_85_0 = 1;
+                                        stackIn_86_0 = stackOut_85_0;
+                                        return stackIn_86_0 != 0;
                                       }
                                     } else {
-                                      gh.a(param1, (byte) -79);
-                                      return true;
-                                    }
-                                  }
-                                }
-                              } else {
-                                L7: {
-                                  if (rba.field_a == null) {
-                                    break L7;
-                                  } else {
-                                    rba.field_a.b(false, true, 0);
-                                    ira.a(false, -2, (byte) -33);
-                                    iqa.field_c.d(96);
-                                    break L7;
-                                  }
-                                }
-                                vda.field_q = false;
-                                return true;
-                              }
-                            } else {
-                              break L3;
-                            }
-                          }
-                        }
-                        L8: {
-                          var4_int = param1.e(-108);
-                          if (0 == param1.h(255)) {
-                            stackOut_41_0 = 0;
-                            stackIn_42_0 = stackOut_41_0;
-                            break L8;
-                          } else {
-                            stackOut_40_0 = 1;
-                            stackIn_42_0 = stackOut_40_0;
-                            break L8;
-                          }
-                        }
-                        var5_int = stackIn_42_0;
-                        var6 = param1.h(255);
-                        var7 = param1.h(255);
-                        var8 = param1.h(255);
-                        var9 = new String[param1.h(255)];
-                        var10 = param1.c((byte) 94);
-                        var11_int = 0;
-                        L9: while (true) {
-                          if (var11_int >= var9.length) {
-                            var11 = new BitSet[var9.length];
-                            param1.h((byte) -96);
-                            var41 = new boolean[var9.length];
-                            var36 = var41;
-                            var32 = var36;
-                            var25 = var32;
-                            var12 = var25;
-                            var13 = 0;
-                            L10: while (true) {
-                              if (var11.length <= var13) {
-                                param1.i((byte) 98);
-                                qv.field_o = null;
-                                rba.field_a = new qh(true, var4_int, var9, var10, var5_int != 0, var6, -1 + var6, var7, var8, 0, var11, var41, (ou) null);
-                                rba.field_a.a(120, param1);
-                                rba.field_a.j((byte) -121);
-                                iqa.field_c.a(-68);
-                                ira.a(false, -1, (byte) 83);
-                                vda.field_q = false;
-                                return true;
-                              } else {
-                                var12[var13] = uha.a(5907, param1);
-                                var14 = pa.b((byte) 121);
-                                var11[var13] = new BitSet(var14);
-                                var15 = 0;
-                                L11: while (true) {
-                                  if (var14 <= var15) {
-                                    var13++;
-                                    continue L10;
-                                  } else {
-                                    L12: {
-                                      if (uha.a(5907, param1)) {
-                                        var11[var13].set(var15);
-                                        break L12;
+                                      if (param0 == 85) {
+                                        if (null == mq.field_e) {
+                                          stackOut_91_0 = 1;
+                                          stackIn_92_0 = stackOut_91_0;
+                                          return stackIn_92_0 != 0;
+                                        } else {
+                                          var27 = new bga();
+                                          var27.a(param1, (byte) -19);
+                                          var27.a(mq.field_e, (byte) -128);
+                                          stackOut_93_0 = 1;
+                                          stackIn_94_0 = stackOut_93_0;
+                                          return stackIn_94_0 != 0;
+                                        }
                                       } else {
-                                        break L12;
+                                        if (87 != param0) {
+                                          if (88 == param0) {
+                                            dea.a(60);
+                                            stackOut_100_0 = 1;
+                                            stackIn_101_0 = stackOut_100_0;
+                                            return stackIn_101_0 != 0;
+                                          } else {
+                                            if (param0 == 89) {
+                                              uca.field_a = param1.c((byte) 71);
+                                              ea.field_j = param1.c((byte) 48);
+                                              stackOut_104_0 = 1;
+                                              stackIn_105_0 = stackOut_104_0;
+                                              return stackIn_105_0 != 0;
+                                            } else {
+                                              if (param0 != 72) {
+                                                stackOut_115_0 = this.a(param1, param0, (byte) 111);
+                                                stackIn_116_0 = stackOut_115_0;
+                                                break L0;
+                                              } else {
+                                                var42 = fqa.e(true);
+                                                var37 = var42;
+                                                var33 = var37;
+                                                var29 = var33;
+                                                var4_array = var29;
+                                                var17 = var4_array;
+                                                var5 = var17;
+                                                var28 = param1;
+                                                var7 = ((uia) (Object) var28).h(255);
+                                                var8 = 0;
+                                                L7: while (true) {
+                                                  if (var7 <= var8) {
+                                                    var43 = sb.a(0, var42);
+                                                    ((TombRacer) this).field_H.a((byte) 6, var43);
+                                                    var44 = rb.field_o;
+                                                    var39 = var44;
+                                                    var18 = var39;
+                                                    var45 = var4_array;
+                                                    var8 = 0;
+                                                    L8: while (true) {
+                                                      if (var8 >= 8) {
+                                                        stackOut_113_0 = 1;
+                                                        stackIn_114_0 = stackOut_113_0;
+                                                        return stackIn_114_0 != 0;
+                                                      } else {
+                                                        var18[var8] = fh.a(var44[var8], var45[var8]);
+                                                        var8++;
+                                                        continue L8;
+                                                      }
+                                                    }
+                                                  } else {
+                                                    var17[var8] = ((uia) (Object) var28).e(-41);
+                                                    var8++;
+                                                    continue L7;
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        } else {
+                                          gh.a(param1, (byte) -79);
+                                          stackOut_96_0 = 1;
+                                          stackIn_97_0 = stackOut_96_0;
+                                          return stackIn_97_0 != 0;
+                                        }
                                       }
                                     }
-                                    boolean discarded$3 = var11[var13].get(var15);
-                                    var15++;
-                                    continue L11;
+                                  } else {
+                                    L9: {
+                                      if (rba.field_a == null) {
+                                        break L9;
+                                      } else {
+                                        rba.field_a.b(false, true, 0);
+                                        ira.a(false, -2, (byte) -33);
+                                        iqa.field_c.d(96);
+                                        break L9;
+                                      }
+                                    }
+                                    vda.field_q = false;
+                                    stackOut_69_0 = 1;
+                                    stackIn_70_0 = stackOut_69_0;
+                                    return stackIn_70_0 != 0;
                                   }
+                                } else {
+                                  break L4;
                                 }
                               }
                             }
-                          } else {
-                            var9[var11_int] = param1.e((byte) -76);
-                            var11_int++;
-                            continue L9;
+                            L10: {
+                              var4_int = param1.e(-108);
+                              if (0 == param1.h(255)) {
+                                stackOut_51_0 = 0;
+                                stackIn_52_0 = stackOut_51_0;
+                                break L10;
+                              } else {
+                                stackOut_50_0 = 1;
+                                stackIn_52_0 = stackOut_50_0;
+                                break L10;
+                              }
+                            }
+                            var5_int = stackIn_52_0;
+                            var6 = param1.h(255);
+                            var7 = param1.h(255);
+                            var8 = param1.h(255);
+                            var9 = new String[param1.h(255)];
+                            var10 = param1.c((byte) 94);
+                            var11_int = 0;
+                            L11: while (true) {
+                              if (var11_int >= var9.length) {
+                                var11 = new BitSet[var9.length];
+                                param1.h((byte) -96);
+                                var41 = new boolean[var9.length];
+                                var36 = var41;
+                                var32 = var36;
+                                var25 = var32;
+                                var12 = var25;
+                                var13 = 0;
+                                L12: while (true) {
+                                  if (var11.length <= var13) {
+                                    param1.i((byte) 98);
+                                    qv.field_o = null;
+                                    rba.field_a = new qh(true, var4_int, var9, var10, var5_int != 0, var6, -1 + var6, var7, var8, 0, var11, var41, (ou) null);
+                                    rba.field_a.a(120, param1);
+                                    rba.field_a.j((byte) -121);
+                                    iqa.field_c.a(-68);
+                                    ira.a(false, -1, (byte) 83);
+                                    vda.field_q = false;
+                                    stackOut_64_0 = 1;
+                                    stackIn_65_0 = stackOut_64_0;
+                                    return stackIn_65_0 != 0;
+                                  } else {
+                                    var12[var13] = uha.a(5907, param1);
+                                    var14 = pa.b((byte) 121);
+                                    var11[var13] = new BitSet(var14);
+                                    var15 = 0;
+                                    L13: while (true) {
+                                      if (var14 <= var15) {
+                                        var13++;
+                                        continue L12;
+                                      } else {
+                                        L14: {
+                                          if (uha.a(5907, param1)) {
+                                            var11[var13].set(var15);
+                                            break L14;
+                                          } else {
+                                            break L14;
+                                          }
+                                        }
+                                        boolean discarded$3 = var11[var13].get(var15);
+                                        var15++;
+                                        continue L13;
+                                      }
+                                    }
+                                  }
+                                }
+                              } else {
+                                var9[var11_int] = param1.e((byte) -76);
+                                var11_int++;
+                                continue L11;
+                              }
+                            }
                           }
-                        }
-                      }
-                    } else {
-                      L13: {
-                        var22 = ila.a(-18787, true);
-                        k.a((byte) 114, var22);
-                        if (rba.field_a == null) {
-                          break L13;
                         } else {
-                          if (var22.field_m) {
-                            break L13;
-                          } else {
-                            var23 = var22.field_g;
-                            var24 = im.a(var22.field_d, var22.field_f, -87, rba.field_a.a(false, var23), var23);
-                            iqa.field_c.a(0, var24);
-                            break L13;
+                          L15: {
+                            var22 = ila.a(-18787, true);
+                            k.a((byte) 114, var22);
+                            if (rba.field_a == null) {
+                              break L15;
+                            } else {
+                              if (var22.field_m) {
+                                break L15;
+                              } else {
+                                var23 = var22.field_g;
+                                var24 = im.a(var22.field_d, var22.field_f, -87, rba.field_a.a(false, var23), var23);
+                                iqa.field_c.a(0, var24);
+                                break L15;
+                              }
+                            }
                           }
+                          stackOut_37_0 = 1;
+                          stackIn_38_0 = stackOut_37_0;
+                          return stackIn_38_0 != 0;
                         }
+                      } else {
+                        stackOut_31_0 = 0;
+                        stackIn_32_0 = stackOut_31_0;
+                        return stackIn_32_0 != 0;
                       }
-                      return true;
                     }
                   } else {
-                    return false;
+                    L16: {
+                      if (vd.field_n) {
+                        cv.o((byte) -108);
+                        ik.a(5);
+                        era.field_c = true;
+                        vd.field_n = false;
+                        iqa.field_c.c(88);
+                        ira.a(false, 0, (byte) 111);
+                        break L16;
+                      } else {
+                        break L16;
+                      }
+                    }
+                    rpa.field_d = false;
+                    vda.field_q = false;
+                    stackOut_16_0 = 1;
+                    stackIn_17_0 = stackOut_16_0;
+                    return stackIn_17_0 != 0;
                   }
+                } else {
+                  uha.a(mh.r((byte) 107), lla.a(false, 4), (byte) -51, vo.e(35040), lla.a(false, 2000), ws.field_o.length, jf.field_t, 1024, oh.b(19845), 150);
+                  us.a(-8250, mo.b(-80), fa.b((byte) 123));
+                  vd.field_n = true;
+                  rpa.field_d = false;
+                  ira.a(false, -2, (byte) 90);
+                  stackOut_10_0 = 1;
+                  stackIn_11_0 = stackOut_10_0;
+                  return stackIn_11_0 != 0;
                 }
               } else {
-                L14: {
-                  if (vd.field_n) {
-                    cv.o((byte) -108);
-                    ik.a(5);
-                    era.field_c = true;
-                    vd.field_n = false;
-                    iqa.field_c.c(88);
-                    ira.a(false, 0, (byte) 111);
-                    break L14;
-                  } else {
-                    break L14;
-                  }
-                }
                 rpa.field_d = false;
-                vda.field_q = false;
-                return true;
+                ira.a(false, 1, (byte) -77);
+                vj.a(param1.e((byte) -76), -79);
+                stackOut_7_0 = 1;
+                stackIn_8_0 = stackOut_7_0;
+                return stackIn_8_0 != 0;
               }
             } else {
-              uha.a(mh.r((byte) 107), lla.a(false, 4), (byte) -51, vo.e(35040), lla.a(false, 2000), ws.field_o.length, jf.field_t, 1024, oh.b(19845), 150);
-              us.a(-8250, mo.b(-80), fa.b((byte) 123));
-              vd.field_n = true;
-              rpa.field_d = false;
-              ira.a(false, -2, (byte) 90);
-              return true;
+              L17: {
+                if (null == rba.field_a) {
+                  break L17;
+                } else {
+                  var4_int = param1.e(113);
+                  ql.field_k.k(69, -2988);
+                  ql.field_k.a(var4_int, (byte) 125);
+                  rba.field_a.b(106, param1);
+                  break L17;
+                }
+              }
+              stackOut_4_0 = 1;
+              stackIn_5_0 = stackOut_4_0;
+              return stackIn_5_0 != 0;
             }
-          } else {
-            rpa.field_d = false;
-            ira.a(false, 1, (byte) -77);
-            vj.a(param1.e((byte) -76), -79);
-            return true;
           }
-        } else {
-          L15: {
-            if (null == rba.field_a) {
-              break L15;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L18: {
+            var4 = decompiledCaughtException;
+            stackOut_117_0 = (RuntimeException) var4;
+            stackOut_117_1 = new StringBuilder().append("TombRacer.CB(").append(param0).append(44);
+            stackIn_119_0 = stackOut_117_0;
+            stackIn_119_1 = stackOut_117_1;
+            stackIn_118_0 = stackOut_117_0;
+            stackIn_118_1 = stackOut_117_1;
+            if (param1 == null) {
+              stackOut_119_0 = (RuntimeException) (Object) stackIn_119_0;
+              stackOut_119_1 = (StringBuilder) (Object) stackIn_119_1;
+              stackOut_119_2 = "null";
+              stackIn_120_0 = stackOut_119_0;
+              stackIn_120_1 = stackOut_119_1;
+              stackIn_120_2 = stackOut_119_2;
+              break L18;
             } else {
-              var4_int = param1.e(113);
-              ql.field_k.k(69, -2988);
-              ql.field_k.a(var4_int, (byte) 125);
-              rba.field_a.b(106, param1);
-              break L15;
+              stackOut_118_0 = (RuntimeException) (Object) stackIn_118_0;
+              stackOut_118_1 = (StringBuilder) (Object) stackIn_118_1;
+              stackOut_118_2 = "{...}";
+              stackIn_120_0 = stackOut_118_0;
+              stackIn_120_1 = stackOut_118_1;
+              stackIn_120_2 = stackOut_118_2;
+              break L18;
             }
           }
-          return true;
+          throw tba.a((Throwable) (Object) stackIn_120_0, stackIn_120_2 + 44 + param2 + 41);
         }
+        return stackIn_116_0;
     }
 
     public final void init() {
@@ -1863,171 +2043,257 @@ public final class TombRacer extends rfa implements ls {
     }
 
     private final void x(int param0) {
-        try {
-            qva var2 = null;
-            Throwable decompiledCaughtException = null;
-            L0: {
-              if (!mba.e(-22766)) {
-                tga.field_a.a(0, (ob[]) null);
-                if (dia.field_o == null) {
-                  break L0;
-                } else {
-                  if (!dia.field_o.a(param0 + 28579)) {
-                    break L0;
-                  } else {
-                    tga.field_a.SA(0, 0, bea.field_g, bea.field_a, bea.field_l, 0, bea.field_g);
-                    break L0;
-                  }
-                }
-              } else {
-                tga.field_a.a(0, (ob[]) null);
-                if (dia.field_o == null) {
-                  break L0;
-                } else {
-                  if (!dia.field_o.a(param0 + 28579)) {
-                    break L0;
-                  } else {
-                    tga.field_a.SA(0, 0, bea.field_g, bea.field_a, bea.field_l, 0, bea.field_g);
-                    break L0;
-                  }
-                }
-              }
-            }
-            if (param0 == -28581) {
-              try {
-                tga.field_a.e(param0 + 28581);
-              } catch (qva decompiledCaughtParameter) {
-                decompiledCaughtException = decompiledCaughtParameter;
-              }
-              var2 = (qva) (Object) decompiledCaughtException;
-              System.out.println((Object) (Object) var2);
+        L0: {
+          if (!mba.e(-22766)) {
+            tga.field_a.a(0, (ob[]) null);
+            if (dia.field_o == null) {
+              break L0;
             } else {
-              return;
+              if (!dia.field_o.a(-2)) {
+                break L0;
+              } else {
+                tga.field_a.SA(0, 0, bea.field_g, bea.field_a, bea.field_l, 0, bea.field_g);
+                break L0;
+              }
             }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          } else {
+            tga.field_a.a(0, (ob[]) null);
+            if (dia.field_o == null) {
+              break L0;
+            } else {
+              if (!dia.field_o.a(-2)) {
+                break L0;
+              } else {
+                tga.field_a.SA(0, 0, bea.field_g, bea.field_a, bea.field_l, 0, bea.field_g);
+                break L0;
+              }
+            }
+          }
         }
     }
 
     private final boolean a(kh param0, int param1, byte param2) {
-        int var4 = 0;
+        RuntimeException var4 = null;
+        int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         String var8 = null;
         jha var9 = null;
         int var10 = 0;
+        int stackIn_3_0 = 0;
+        int stackIn_6_0 = 0;
+        int stackIn_10_0 = 0;
+        int stackIn_22_0 = 0;
+        int stackIn_26_0 = 0;
+        int stackIn_30_0 = 0;
+        int stackIn_34_0 = 0;
+        int stackIn_37_0 = 0;
+        int stackIn_39_0 = 0;
+        RuntimeException stackIn_41_0 = null;
+        StringBuilder stackIn_41_1 = null;
+        RuntimeException stackIn_42_0 = null;
+        StringBuilder stackIn_42_1 = null;
+        RuntimeException stackIn_43_0 = null;
+        StringBuilder stackIn_43_1 = null;
+        String stackIn_43_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_9_0 = 0;
+        int stackOut_21_0 = 0;
+        int stackOut_25_0 = 0;
+        int stackOut_29_0 = 0;
+        int stackOut_33_0 = 0;
+        int stackOut_38_0 = 0;
+        int stackOut_36_0 = 0;
+        int stackOut_5_0 = 0;
+        int stackOut_2_0 = 0;
+        RuntimeException stackOut_40_0 = null;
+        StringBuilder stackOut_40_1 = null;
+        RuntimeException stackOut_42_0 = null;
+        StringBuilder stackOut_42_1 = null;
+        String stackOut_42_2 = null;
+        RuntimeException stackOut_41_0 = null;
+        StringBuilder stackOut_41_1 = null;
+        String stackOut_41_2 = null;
         var10 = field_G ? 1 : 0;
-        if (null != rba.field_a) {
-          if (74 != param1) {
-            if ((param1 ^ -1) == -68) {
-              var4 = param0.c((byte) 102);
-              rba.field_a.a((byte) -54, var4);
-              return true;
-            } else {
-              if (68 == param1) {
-                var4 = param0.h(255);
-                var5 = 0;
-                L0: while (true) {
-                  if (var5 >= rba.field_a.field_k.field_k) {
-                    rba.field_a.field_k.field_b = var4;
-                    return true;
-                  } else {
-                    var6 = 1 & var4 >> var5;
-                    var7 = 1 & rba.field_a.field_k.field_b >> var5;
-                    if (var6 != var7) {
-                      if (1 == var6) {
-                        var8 = rba.field_a.field_k.c(var5, 0);
-                        var9 = im.a(1, gl.a((byte) 107, ad.field_h, new String[1]), 111, var5, var8);
-                        iqa.field_c.a(0, var9);
-                        var5++;
-                        continue L0;
+        try {
+          L0: {
+            if (null != rba.field_a) {
+              if (74 != param1) {
+                if (param1 == 67) {
+                  var4_int = param0.c((byte) 102);
+                  rba.field_a.a((byte) -54, var4_int);
+                  stackOut_9_0 = 1;
+                  stackIn_10_0 = stackOut_9_0;
+                  return stackIn_10_0 != 0;
+                } else {
+                  if (68 == param1) {
+                    var4_int = param0.h(255);
+                    var5 = 0;
+                    L1: while (true) {
+                      if (var5 >= rba.field_a.field_k.field_k) {
+                        rba.field_a.field_k.field_b = var4_int;
+                        stackOut_21_0 = 1;
+                        stackIn_22_0 = stackOut_21_0;
+                        return stackIn_22_0 != 0;
                       } else {
+                        L2: {
+                          var6 = 1 & var4_int >> var5;
+                          var7 = 1 & rba.field_a.field_k.field_b >> var5;
+                          if (var6 != var7) {
+                            if (1 == var6) {
+                              var8 = rba.field_a.field_k.c(var5, 0);
+                              var9 = im.a(1, gl.a((byte) 107, ad.field_h, new String[1]), 111, var5, var8);
+                              iqa.field_c.a(0, var9);
+                              break L2;
+                            } else {
+                              break L2;
+                            }
+                          } else {
+                            break L2;
+                          }
+                        }
                         var5++;
-                        continue L0;
+                        continue L1;
                       }
+                    }
+                  } else {
+                    if (param1 == 69) {
+                      var4_int = param0.h(255);
+                      rba.field_a.d(5, var4_int);
+                      stackOut_25_0 = 1;
+                      stackIn_26_0 = stackOut_25_0;
+                      return stackIn_26_0 != 0;
                     } else {
-                      var5++;
-                      continue L0;
+                      if (param1 == 70) {
+                        rba.field_a.field_k.field_t = param0.h(255);
+                        stackOut_29_0 = 1;
+                        stackIn_30_0 = stackOut_29_0;
+                        return stackIn_30_0 != 0;
+                      } else {
+                        if (param1 == 71) {
+                          var4_int = param0.h(255);
+                          rba.field_a.a(var4_int, (byte) -23);
+                          stackOut_33_0 = 1;
+                          stackIn_34_0 = stackOut_33_0;
+                          return stackIn_34_0 != 0;
+                        } else {
+                          if (!rba.field_a.a(param1, -4, param0)) {
+                            stackOut_38_0 = 0;
+                            stackIn_39_0 = stackOut_38_0;
+                            break L0;
+                          } else {
+                            stackOut_36_0 = 1;
+                            stackIn_37_0 = stackOut_36_0;
+                            return stackIn_37_0 != 0;
+                          }
+                        }
+                      }
                     }
                   }
                 }
               } else {
-                if (param1 == 69) {
-                  var4 = param0.h(255);
-                  rba.field_a.d(5, var4);
-                  return true;
-                } else {
-                  if (param1 == 70) {
-                    rba.field_a.field_k.field_t = param0.h(255);
-                    return true;
-                  } else {
-                    if ((param1 ^ -1) == -72) {
-                      var4 = param0.h(255);
-                      rba.field_a.a(var4, (byte) -23);
-                      return true;
-                    } else {
-                      L1: {
-                        if (param2 > 108) {
-                          break L1;
-                        } else {
-                          field_F = null;
-                          break L1;
-                        }
-                      }
-                      if (!rba.field_a.a(param1, -4, param0)) {
-                        return false;
-                      } else {
-                        return true;
-                      }
-                    }
-                  }
-                }
+                stackOut_5_0 = 1;
+                stackIn_6_0 = stackOut_5_0;
+                return stackIn_6_0 != 0;
               }
+            } else {
+              stackOut_2_0 = 0;
+              stackIn_3_0 = stackOut_2_0;
+              return stackIn_3_0 != 0;
             }
-          } else {
-            return true;
           }
-        } else {
-          return false;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var4 = decompiledCaughtException;
+            stackOut_40_0 = (RuntimeException) var4;
+            stackOut_40_1 = new StringBuilder().append("TombRacer.VA(");
+            stackIn_42_0 = stackOut_40_0;
+            stackIn_42_1 = stackOut_40_1;
+            stackIn_41_0 = stackOut_40_0;
+            stackIn_41_1 = stackOut_40_1;
+            if (param0 == null) {
+              stackOut_42_0 = (RuntimeException) (Object) stackIn_42_0;
+              stackOut_42_1 = (StringBuilder) (Object) stackIn_42_1;
+              stackOut_42_2 = "null";
+              stackIn_43_0 = stackOut_42_0;
+              stackIn_43_1 = stackOut_42_1;
+              stackIn_43_2 = stackOut_42_2;
+              break L3;
+            } else {
+              stackOut_41_0 = (RuntimeException) (Object) stackIn_41_0;
+              stackOut_41_1 = (StringBuilder) (Object) stackIn_41_1;
+              stackOut_41_2 = "{...}";
+              stackIn_43_0 = stackOut_41_0;
+              stackIn_43_1 = stackOut_41_1;
+              stackIn_43_2 = stackOut_41_2;
+              break L3;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_43_0, stackIn_43_2 + 44 + param1 + 44 + 111 + 41);
         }
+        return stackIn_39_0 != 0;
     }
 
     final void b(int param0, int param1) {
-        int var4 = field_G ? 1 : 0;
-        ql.a(2, -28521);
-        if (param1 < 107) {
+        int var4 = 0;
+        L0: {
+          var4 = field_G ? 1 : 0;
+          ql.a(2, -28521);
+          if (param1 >= 107) {
+            break L0;
+          } else {
             ((TombRacer) this).field_D = null;
+            break L0;
+          }
         }
-        ki.b(false, 3);
-        ua.b(4, 2);
-        gw.b(-104, 6);
-        mda.b(7, (byte) -120);
-        if ((param0 ^ -1) == -2) {
-            vda.field_q = true;
-            rpa.field_d = true;
-        } else {
-            if (vd.field_n) {
-                era.field_c = true;
-                if (null != rba.field_a) {
-                    // ifne L122
-                    vj.a(ph.field_k, -114);
-                    rba.field_a = null;
-                    ira.a(false, 1, (byte) 122);
-                } else {
-                    wm.field_a = null;
-                    rba.field_a = null;
-                    fp.a(-82);
-                    ira.a(false, 0, (byte) 124);
+        L1: {
+          ki.b(false, 3);
+          ua.b(4, 2);
+          gw.b(-104, 6);
+          mda.b(7, (byte) -120);
+          if (param0 != 1) {
+            L2: {
+              if (!vd.field_n) {
+                break L2;
+              } else {
+                L3: {
+                  L4: {
+                    era.field_c = true;
+                    if (null == rba.field_a) {
+                      break L4;
+                    } else {
+                      if (rba.field_a.d((byte) 79)) {
+                        break L4;
+                      } else {
+                        vj.a(ph.field_k, -114);
+                        rba.field_a = null;
+                        ira.a(false, 1, (byte) 122);
+                        break L3;
+                      }
+                    }
+                  }
+                  wm.field_a = null;
+                  rba.field_a = null;
+                  fp.a(-82);
+                  ira.a(false, 0, (byte) 124);
+                  break L3;
                 }
                 ((wv) (Object) hb.field_t).a(0, 0, false);
                 vd.field_n = false;
                 iqa.field_c.c(-89);
+                break L2;
+              }
             }
             vda.field_q = false;
             rpa.field_d = false;
+            break L1;
+          } else {
+            vda.field_q = true;
+            rpa.field_d = true;
+            break L1;
+          }
         }
     }
 
@@ -2038,7 +2304,7 @@ public final class TombRacer extends rfa implements ls {
         }
         ih.D(17229);
         cna.field_a = false;
-        if (oq.a((byte) 124).a(param0 ^ -1)) {
+        if (oq.a((byte) 124).a(~param0)) {
             return;
         }
         this.a(true, (rqa) (Object) rba.field_a, (byte) 17);

@@ -36,11 +36,11 @@ final class usb extends oda {
           if (null != ((usb) this).field_u) {
             if (0 < ((usb) this).field_u.length) {
               if (var7.length > 0) {
-                if (-1 > (param2 ^ -1)) {
-                  cua.a((Object[]) (Object) ((usb) this).field_u, 0, (Object[]) (Object) var5, 0, Math.min(param2, param0) * var4);
+                if (param2 <= 0) {
                   ((usb) this).field_u = var5;
                   return;
                 } else {
+                  cua.a((Object[]) (Object) ((usb) this).field_u, 0, (Object[]) (Object) var5, 0, Math.min(param2, param0) * var4);
                   ((usb) this).field_u = var5;
                   return;
                 }
@@ -63,7 +63,7 @@ final class usb extends oda {
           if (null != ((usb) this).field_u) {
             if (0 < ((usb) this).field_u.length) {
               if (var6.length > 0) {
-                if (-1 <= (param2 ^ -1)) {
+                if (param2 <= 0) {
                   ((usb) this).field_u = var5;
                   return;
                 } else {
@@ -173,15 +173,21 @@ final class usb extends oda {
 
     usb(int param0, int param1, int param2, int param3, wwa param4, int param5, int param6) {
         super(param0, param1, param2, param3, param4);
+        int[] var10 = null;
+        int[] var9 = null;
         ((usb) this).field_w = 92;
         ((usb) this).field_B = 0;
-        int[] var10 = new int[param5];
-        int[] var8 = var10;
-        cua.a(var10, 0, param5, 1);
-        int[] var9 = new int[param6];
-        cua.a(var9, 0, param6, 1);
-        this.a(0, var10);
-        this.a((byte) -115, var9);
+        try {
+            var10 = new int[param5];
+            int[] var8 = var10;
+            cua.a(var10, 0, param5, 1);
+            var9 = new int[param6];
+            cua.a(var9, 0, param6, 1);
+            this.a(0, var10);
+            this.a((byte) -115, var9);
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "usb.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 44 + param6 + 41);
+        }
     }
 
     final void d(int param0) {
@@ -205,8 +211,9 @@ final class usb extends oda {
                     continue L0;
                   } else {
                     if (var4 < ((usb) this).field_y.length) {
+                      int incrementValue$1 = var2;
                       var2++;
-                      var5 = ((usb) this).field_u[var2];
+                      var5 = ((usb) this).field_u[incrementValue$1];
                       if (var5 != null) {
                         this.a(var3, (byte) 72, var4, var5);
                         var4++;
@@ -238,53 +245,50 @@ final class usb extends oda {
     }
 
     final void a(shb param0, byte param1, int param2) {
-        int var4 = 0;
+        int var4_int = 0;
         int var5 = 0;
-        var4 = ((usb) this).field_B % ((usb) this).field_y.length;
-        if (param1 <= -10) {
-          var5 = ((usb) this).field_B / ((usb) this).field_y.length;
-          ((usb) this).field_v[((usb) this).field_B] = param2;
-          ((usb) this).field_u[((usb) this).field_B] = param0;
-          if (param0 != null) {
-            this.a(var5, (byte) 104, var4, param0);
+        try {
+            var4_int = ((usb) this).field_B % ((usb) this).field_y.length;
+            if (param1 > -10) {
+                ((usb) this).field_w = 54;
+            }
+            var5 = ((usb) this).field_B / ((usb) this).field_y.length;
+            ((usb) this).field_v[((usb) this).field_B] = param2;
+            ((usb) this).field_u[((usb) this).field_B] = param0;
+            if (param0 != null) {
+                this.a(var5, (byte) 104, var4_int, param0);
+            }
             ((usb) this).field_B = ((usb) this).field_B + 1;
-            return;
-          } else {
-            ((usb) this).field_B = ((usb) this).field_B + 1;
-            return;
-          }
-        } else {
-          ((usb) this).field_w = 54;
-          var5 = ((usb) this).field_B / ((usb) this).field_y.length;
-          ((usb) this).field_v[((usb) this).field_B] = param2;
-          ((usb) this).field_u[((usb) this).field_B] = param0;
-          if (param0 == null) {
-            ((usb) this).field_B = ((usb) this).field_B + 1;
-            return;
-          } else {
-            this.a(var5, (byte) 104, var4, param0);
-            ((usb) this).field_B = ((usb) this).field_B + 1;
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "usb.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }
     }
 
     private final void a(byte param0, int[] param1) {
-        int var9 = VoidHunters.field_G;
-        int var3 = 9 % ((-48 - param0) / 36);
-        int var4 = ((usb) this).field_A == null ? 0 : ((usb) this).field_A.length;
-        int var5 = param1.length;
-        ((usb) this).field_A = param1;
-        int[] var6 = param1;
+        int var4 = 0;
+        int var5 = 0;
+        int[] var6 = null;
         int var7 = 0;
         int var8 = 0;
-        while (var6.length > var7) {
-            var8 = var8 + var6[var7];
-            var6[var7] = var8 + var6[var7];
-            var7++;
+        int var9 = VoidHunters.field_G;
+        try {
+            int var3_int = 9 % ((-48 - param0) / 36);
+            var4 = ((usb) this).field_A == null ? 0 : ((usb) this).field_A.length;
+            var5 = param1.length;
+            ((usb) this).field_A = param1;
+            var6 = param1;
+            var7 = 0;
+            var8 = 0;
+            while (var6.length > var7) {
+                var8 = var8 + var6[var7];
+                var6[var7] = var8 + var6[var7];
+                var7++;
+            }
+            this.a(var5, (byte) -83, var4);
+            this.b(var5, (byte) -100, var4);
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "usb.I(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        this.a(var5, (byte) -83, var4);
-        this.b(var5, (byte) -100, var4);
     }
 
     final void c(int param0, int param1, int param2) {
@@ -324,7 +328,7 @@ final class usb extends oda {
         var5 = new int[var4 * param0];
         var6 = -71 % ((-51 - param1) / 35);
         if (null != ((usb) this).field_v) {
-          if (-1 > (((usb) this).field_v.length ^ -1)) {
+          if (((usb) this).field_v.length > 0) {
             if (var5.length > 0) {
               if (param2 <= 0) {
                 ((usb) this).field_v = var5;
@@ -349,33 +353,101 @@ final class usb extends oda {
     }
 
     final boolean a(int param0, int param1, int param2, int param3, shb param4, int param5, byte param6) {
-        if (param6 > -17) {
-          ((usb) this).field_x = 25;
-          return super.a(param0, param1, param2, param3, param4, param5, (byte) -120);
-        } else {
-          return super.a(param0, param1, param2, param3, param4, param5, (byte) -120);
+        RuntimeException var8 = null;
+        boolean stackIn_3_0 = false;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        boolean stackOut_2_0 = false;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param6 <= -17) {
+                break L1;
+              } else {
+                ((usb) this).field_x = 25;
+                break L1;
+              }
+            }
+            stackOut_2_0 = super.a(param0, param1, param2, param3, param4, param5, (byte) -120);
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var8 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var8;
+            stackOut_4_1 = new StringBuilder().append("usb.S(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param4 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param5 + 44 + param6 + 41);
         }
+        return stackIn_3_0;
     }
 
     private final void a(int param0, int[] param1) {
-        int var8 = VoidHunters.field_G;
-        int var3 = null != ((usb) this).field_y ? ((usb) this).field_y.length : 0;
-        int var4 = param1.length;
-        ((usb) this).field_y = param1;
-        int[] var5 = param1;
+        int var3_int = 0;
+        int var4 = 0;
+        int[] var5 = null;
         int var6 = 0;
-        int var7 = param0;
-        while (var5.length > var6) {
-            var7 = var7 + var5[var6];
-            var5[var6] = var7 + var5[var6];
-            var6++;
+        int var7 = 0;
+        int var8 = VoidHunters.field_G;
+        try {
+            var3_int = null != ((usb) this).field_y ? ((usb) this).field_y.length : 0;
+            var4 = param1.length;
+            ((usb) this).field_y = param1;
+            var5 = param1;
+            var6 = 0;
+            var7 = param0;
+            while (var5.length > var6) {
+                var7 = var7 + var5[var6];
+                var5[var6] = var7 + var5[var6];
+                var6++;
+            }
+            this.c(var3_int, (byte) -86, var4);
+            this.b(var4, param0 + -70, var3_int);
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "usb.M(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        this.c(var3, (byte) -86, var4);
-        this.b(var4, param0 + -70, var3);
     }
 
     private final void a(int param0, byte param1, int param2, shb param3) {
-        int var5 = 0;
+        RuntimeException var5 = null;
+        int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -391,655 +463,434 @@ final class usb extends oda {
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
-        int stackIn_3_0 = 0;
         int stackIn_4_0 = 0;
         int stackIn_5_0 = 0;
         int stackIn_6_0 = 0;
-        int stackIn_6_1 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
+        int stackIn_7_0 = 0;
+        int stackIn_7_1 = 0;
+        RuntimeException stackIn_34_0 = null;
+        StringBuilder stackIn_34_1 = null;
+        RuntimeException stackIn_35_0 = null;
+        StringBuilder stackIn_35_1 = null;
+        RuntimeException stackIn_36_0 = null;
+        StringBuilder stackIn_36_1 = null;
+        String stackIn_36_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int stackOut_3_0 = 0;
+        int stackOut_2_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_6_1 = 0;
         int stackOut_5_0 = 0;
         int stackOut_5_1 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_4_1 = 0;
-        L0: {
-          var20 = VoidHunters.field_G;
-          var5 = ((usb) this).field_y[-1 + ((usb) this).field_y.length];
-          var6 = ((usb) this).field_A[((usb) this).field_A.length - 1];
-          if (0 >= param2) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            break L0;
-          } else {
-            stackOut_1_0 = ((usb) this).field_y[param2 + -1];
-            stackIn_3_0 = stackOut_1_0;
-            break L0;
-          }
-        }
-        L1: {
-          var7 = stackIn_3_0 * ((usb) this).field_h / var5;
-          stackOut_3_0 = ((usb) this).field_f;
-          stackIn_5_0 = stackOut_3_0;
-          stackIn_4_0 = stackOut_3_0;
-          if (0 >= param0) {
-            stackOut_5_0 = stackIn_5_0;
-            stackOut_5_1 = 0;
-            stackIn_6_0 = stackOut_5_0;
-            stackIn_6_1 = stackOut_5_1;
-            break L1;
-          } else {
-            stackOut_4_0 = stackIn_4_0;
-            stackOut_4_1 = ((usb) this).field_A[param0 + -1];
-            stackIn_6_0 = stackOut_4_0;
-            stackIn_6_1 = stackOut_4_1;
-            break L1;
-          }
-        }
-        var8 = stackIn_6_0 * stackIn_6_1 / var6;
-        var9 = ((usb) this).field_y[param2] * ((usb) this).field_h / var5;
-        var10 = ((usb) this).field_f * ((usb) this).field_A[param0] / var6;
-        var11 = param0 * ((usb) this).field_y.length - -param2;
-        var12 = ((usb) this).field_v[var11] & 48;
-        var13 = 192 & ((usb) this).field_v[var11];
-        var14 = param3.field_g;
-        if (param1 <= 45) {
-          ((usb) this).c(14, 96, 93);
-          var15 = param3.field_r;
-          var16 = param3.field_h;
-          var17 = param3.field_f;
-          if (var16 < -var7 + var9) {
-            L2: {
-              if ((1 & ((usb) this).field_v[var11]) == 0) {
-                L3: {
-                  if (var9 + -var7 >= var16) {
-                    break L3;
-                  } else {
-                    if ((4 & ((usb) this).field_v[var11]) == -1) {
-                      break L3;
-                    } else {
-                      var16 = -var7 + var9;
-                      var14 = var7;
-                      break L2;
-                    }
-                  }
-                }
-                if (16 == var12) {
-                  var14 = -var16 + var9 + var7 >> -662596863;
-                  break L2;
-                } else {
-                  if (-33 == var12) {
-                    L4: {
-                      var14 = -var16 + var9;
-                      if (var17 >= var10 - var8) {
-                        break L4;
-                      } else {
-                        if (-1 == (((usb) this).field_v[var11] & 2 ^ -1)) {
-                          break L4;
-                        } else {
-                          var17 = var10 - var8;
-                          var15 = var8;
-                          var18 = ((usb) this).field_z;
-                          var19 = ((usb) this).field_x;
-                          param3.a(var18 + var14, -(var18 * 2) + var16, -(2 * var19) + var17, 1, var15 - -var19);
-                          return;
-                        }
-                      }
-                    }
-                    L5: {
-                      if (var10 - var8 >= var17) {
-                        break L5;
-                      } else {
-                        if (-1 == (8 & ((usb) this).field_v[var11] ^ -1)) {
-                          break L5;
-                        } else {
-                          var17 = var10 - var8;
-                          var15 = var8;
-                          var18 = ((usb) this).field_z;
-                          var19 = ((usb) this).field_x;
-                          param3.a(var18 + var14, -(var18 * 2) + var16, -(2 * var19) + var17, 1, var15 - -var19);
-                          return;
-                        }
-                      }
-                    }
-                    if (var13 != 64) {
-                      if ((var13 ^ -1) != -129) {
-                        var15 = var8;
-                        var18 = ((usb) this).field_z;
-                        var19 = ((usb) this).field_x;
-                        param3.a(var18 + var14, -(var18 * 2) + var16, -(2 * var19) + var17, 1, var15 - -var19);
-                        return;
-                      } else {
-                        var15 = var10 + -var17;
-                        var18 = ((usb) this).field_z;
-                        var19 = ((usb) this).field_x;
-                        param3.a(var18 + var14, -(var18 * 2) + var16, -(2 * var19) + var17, 1, var15 - -var19);
-                        return;
-                      }
-                    } else {
-                      var15 = -var17 + var10 + var8 >> 1917246113;
-                      var18 = ((usb) this).field_z;
-                      var19 = ((usb) this).field_x;
-                      param3.a(var18 + var14, -(var18 * 2) + var16, -(2 * var19) + var17, 1, var15 - -var19);
-                      return;
-                    }
-                  } else {
-                    L6: {
-                      L7: {
-                        var14 = var7;
-                        if (var17 >= var10 - var8) {
-                          break L7;
-                        } else {
-                          if (-1 == (((usb) this).field_v[var11] & 2 ^ -1)) {
-                            break L7;
-                          } else {
-                            var17 = var10 - var8;
-                            var15 = var8;
-                            break L6;
-                          }
-                        }
-                      }
-                      L8: {
-                        if (var10 - var8 >= var17) {
-                          break L8;
-                        } else {
-                          if (-1 == (8 & ((usb) this).field_v[var11] ^ -1)) {
-                            break L8;
-                          } else {
-                            var17 = var10 - var8;
-                            var15 = var8;
-                            break L6;
-                          }
-                        }
-                      }
-                      if (var13 != 64) {
-                        if ((var13 ^ -1) != -129) {
-                          var15 = var8;
-                          var18 = ((usb) this).field_z;
-                          var19 = ((usb) this).field_x;
-                          param3.a(var18 + var14, -(var18 * 2) + var16, -(2 * var19) + var17, 1, var15 - -var19);
-                          return;
-                        } else {
-                          var15 = var10 + -var17;
-                          var18 = ((usb) this).field_z;
-                          var19 = ((usb) this).field_x;
-                          param3.a(var18 + var14, -(var18 * 2) + var16, -(2 * var19) + var17, 1, var15 - -var19);
-                          return;
-                        }
-                      } else {
-                        var15 = -var17 + var10 + var8 >> 1917246113;
-                        var18 = ((usb) this).field_z;
-                        var19 = ((usb) this).field_x;
-                        param3.a(var18 + var14, -(var18 * 2) + var16, -(2 * var19) + var17, 1, var15 - -var19);
-                        return;
-                      }
-                    }
-                    var18 = ((usb) this).field_z;
-                    var19 = ((usb) this).field_x;
-                    param3.a(var18 + var14, -(var18 * 2) + var16, -(2 * var19) + var17, 1, var15 - -var19);
-                    return;
-                  }
-                }
+        RuntimeException stackOut_33_0 = null;
+        StringBuilder stackOut_33_1 = null;
+        RuntimeException stackOut_35_0 = null;
+        StringBuilder stackOut_35_1 = null;
+        String stackOut_35_2 = null;
+        RuntimeException stackOut_34_0 = null;
+        StringBuilder stackOut_34_1 = null;
+        String stackOut_34_2 = null;
+        var20 = VoidHunters.field_G;
+        try {
+          L0: {
+            L1: {
+              var5_int = ((usb) this).field_y[-1 + ((usb) this).field_y.length];
+              var6 = ((usb) this).field_A[((usb) this).field_A.length - 1];
+              if (0 >= param2) {
+                stackOut_3_0 = 0;
+                stackIn_4_0 = stackOut_3_0;
+                break L1;
               } else {
-                var16 = -var7 + var9;
-                var14 = var7;
+                stackOut_2_0 = ((usb) this).field_y[param2 + -1];
+                stackIn_4_0 = stackOut_2_0;
+                break L1;
+              }
+            }
+            L2: {
+              var7 = stackIn_4_0 * ((usb) this).field_h / var5_int;
+              stackOut_4_0 = ((usb) this).field_f;
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_5_0 = stackOut_4_0;
+              if (0 >= param0) {
+                stackOut_6_0 = stackIn_6_0;
+                stackOut_6_1 = 0;
+                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_1 = stackOut_6_1;
+                break L2;
+              } else {
+                stackOut_5_0 = stackIn_5_0;
+                stackOut_5_1 = ((usb) this).field_A[param0 + -1];
+                stackIn_7_0 = stackOut_5_0;
+                stackIn_7_1 = stackOut_5_1;
                 break L2;
               }
             }
-            L9: {
-              if (var17 >= var10 - var8) {
-                break L9;
+            L3: {
+              var8 = stackIn_7_0 * stackIn_7_1 / var6;
+              var9 = ((usb) this).field_y[param2] * ((usb) this).field_h / var5_int;
+              var10 = ((usb) this).field_f * ((usb) this).field_A[param0] / var6;
+              var11 = param0 * ((usb) this).field_y.length - -param2;
+              var12 = ((usb) this).field_v[var11] & 48;
+              var13 = 192 & ((usb) this).field_v[var11];
+              var14 = param3.field_g;
+              if (param1 > 45) {
+                break L3;
               } else {
-                if (-1 == (((usb) this).field_v[var11] & 2 ^ -1)) {
-                  break L9;
-                } else {
-                  var17 = var10 - var8;
-                  var15 = var8;
-                  var18 = ((usb) this).field_z;
-                  var19 = ((usb) this).field_x;
-                  param3.a(var18 + var14, -(var18 * 2) + var16, -(2 * var19) + var17, 1, var15 - -var19);
-                  return;
-                }
+                ((usb) this).c(14, 96, 93);
+                break L3;
               }
             }
-            L10: {
-              if (var10 - var8 >= var17) {
-                break L10;
-              } else {
-                if (-1 == (8 & ((usb) this).field_v[var11] ^ -1)) {
-                  break L10;
+            L4: {
+              L5: {
+                var15 = param3.field_r;
+                var16 = param3.field_h;
+                var17 = param3.field_f;
+                if (var16 >= -var7 + var9) {
+                  break L5;
                 } else {
-                  var17 = var10 - var8;
-                  var15 = var8;
-                  var18 = ((usb) this).field_z;
-                  var19 = ((usb) this).field_x;
-                  param3.a(var18 + var14, -(var18 * 2) + var16, -(2 * var19) + var17, 1, var15 - -var19);
-                  return;
-                }
-              }
-            }
-            if (var13 != 64) {
-              if ((var13 ^ -1) != -129) {
-                var15 = var8;
-                var18 = ((usb) this).field_z;
-                var19 = ((usb) this).field_x;
-                param3.a(var18 + var14, -(var18 * 2) + var16, -(2 * var19) + var17, 1, var15 - -var19);
-                return;
-              } else {
-                var15 = var10 + -var17;
-                var18 = ((usb) this).field_z;
-                var19 = ((usb) this).field_x;
-                param3.a(var18 + var14, -(var18 * 2) + var16, -(2 * var19) + var17, 1, var15 - -var19);
-                return;
-              }
-            } else {
-              var15 = -var17 + var10 + var8 >> 1917246113;
-              var18 = ((usb) this).field_z;
-              var19 = ((usb) this).field_x;
-              param3.a(var18 + var14, -(var18 * 2) + var16, -(2 * var19) + var17, 1, var15 - -var19);
-              return;
-            }
-          } else {
-            L11: {
-              L12: {
-                if (var9 + -var7 >= var16) {
-                  break L12;
-                } else {
-                  if ((4 & ((usb) this).field_v[var11]) == -1) {
-                    break L12;
+                  if ((1 & ((usb) this).field_v[var11]) == 0) {
+                    break L5;
                   } else {
                     var16 = -var7 + var9;
                     var14 = var7;
-                    break L11;
+                    break L4;
+                  }
+                }
+              }
+              L6: {
+                if (~(var9 + -var7) <= ~var16) {
+                  break L6;
+                } else {
+                  if ((4 & ((usb) this).field_v[var11]) == 0) {
+                    break L6;
+                  } else {
+                    var16 = -var7 + var9;
+                    var14 = var7;
+                    break L4;
                   }
                 }
               }
               if (16 == var12) {
-                var14 = -var16 + var9 + var7 >> -662596863;
-                break L11;
+                var14 = -var16 + var9 + var7 >> 1;
+                break L4;
               } else {
-                if (-33 != var12) {
-                  L13: {
-                    L14: {
-                      var14 = var7;
-                      if (var17 >= var10 - var8) {
-                        break L14;
-                      } else {
-                        if (-1 == (((usb) this).field_v[var11] & 2 ^ -1)) {
-                          break L14;
-                        } else {
-                          var17 = var10 - var8;
-                          var15 = var8;
-                          break L13;
-                        }
-                      }
-                    }
-                    L15: {
-                      if (var10 - var8 >= var17) {
-                        break L15;
-                      } else {
-                        if (-1 == (8 & ((usb) this).field_v[var11] ^ -1)) {
-                          break L15;
-                        } else {
-                          var17 = var10 - var8;
-                          var15 = var8;
-                          break L13;
-                        }
-                      }
-                    }
-                    if (var13 != 64) {
-                      if ((var13 ^ -1) == -129) {
-                        var15 = var10 + -var17;
-                        break L13;
-                      } else {
-                        var15 = var8;
-                        break L13;
-                      }
-                    } else {
-                      var15 = -var17 + var10 + var8 >> 1917246113;
-                      break L13;
-                    }
-                  }
-                  var18 = ((usb) this).field_z;
-                  var19 = ((usb) this).field_x;
-                  param3.a(var18 + var14, -(var18 * 2) + var16, -(2 * var19) + var17, 1, var15 - -var19);
-                  return;
+                if (var12 == 32) {
+                  var14 = -var16 + var9;
+                  break L4;
                 } else {
-                  L16: {
-                    L17: {
-                      var14 = -var16 + var9;
-                      if (var17 >= var10 - var8) {
-                        break L17;
-                      } else {
-                        if (-1 == (((usb) this).field_v[var11] & 2 ^ -1)) {
-                          break L17;
-                        } else {
-                          var17 = var10 - var8;
-                          var15 = var8;
-                          break L16;
-                        }
-                      }
-                    }
-                    L18: {
-                      if (var10 - var8 >= var17) {
-                        break L18;
-                      } else {
-                        if (-1 == (8 & ((usb) this).field_v[var11] ^ -1)) {
-                          break L18;
-                        } else {
-                          var17 = var10 - var8;
-                          var15 = var8;
-                          break L16;
-                        }
-                      }
-                    }
-                    if (var13 != 64) {
-                      if ((var13 ^ -1) == -129) {
-                        var15 = var10 + -var17;
-                        break L16;
-                      } else {
-                        var15 = var8;
-                        break L16;
-                      }
-                    } else {
-                      var15 = -var17 + var10 + var8 >> 1917246113;
-                      break L16;
-                    }
-                  }
-                  var18 = ((usb) this).field_z;
-                  var19 = ((usb) this).field_x;
-                  param3.a(var18 + var14, -(var18 * 2) + var16, -(2 * var19) + var17, 1, var15 - -var19);
-                  return;
-                }
-              }
-            }
-            L19: {
-              if (var17 >= var10 - var8) {
-                break L19;
-              } else {
-                if (-1 == (((usb) this).field_v[var11] & 2 ^ -1)) {
-                  break L19;
-                } else {
-                  var17 = var10 - var8;
-                  var15 = var8;
-                  var18 = ((usb) this).field_z;
-                  var19 = ((usb) this).field_x;
-                  param3.a(var18 + var14, -(var18 * 2) + var16, -(2 * var19) + var17, 1, var15 - -var19);
-                  return;
-                }
-              }
-            }
-            L20: {
-              if (var10 - var8 >= var17) {
-                break L20;
-              } else {
-                if (-1 == (8 & ((usb) this).field_v[var11] ^ -1)) {
-                  break L20;
-                } else {
-                  var17 = var10 - var8;
-                  var15 = var8;
-                  var18 = ((usb) this).field_z;
-                  var19 = ((usb) this).field_x;
-                  param3.a(var18 + var14, -(var18 * 2) + var16, -(2 * var19) + var17, 1, var15 - -var19);
-                  return;
-                }
-              }
-            }
-            if (var13 != 64) {
-              if ((var13 ^ -1) != -129) {
-                var15 = var8;
-                var18 = ((usb) this).field_z;
-                var19 = ((usb) this).field_x;
-                param3.a(var18 + var14, -(var18 * 2) + var16, -(2 * var19) + var17, 1, var15 - -var19);
-                return;
-              } else {
-                var15 = var10 + -var17;
-                var18 = ((usb) this).field_z;
-                var19 = ((usb) this).field_x;
-                param3.a(var18 + var14, -(var18 * 2) + var16, -(2 * var19) + var17, 1, var15 - -var19);
-                return;
-              }
-            } else {
-              var15 = -var17 + var10 + var8 >> 1917246113;
-              var18 = ((usb) this).field_z;
-              var19 = ((usb) this).field_x;
-              param3.a(var18 + var14, -(var18 * 2) + var16, -(2 * var19) + var17, 1, var15 - -var19);
-              return;
-            }
-          }
-        } else {
-          L21: {
-            L22: {
-              var15 = param3.field_r;
-              var16 = param3.field_h;
-              var17 = param3.field_f;
-              if (var16 >= -var7 + var9) {
-                break L22;
-              } else {
-                if ((1 & ((usb) this).field_v[var11]) == 0) {
-                  break L22;
-                } else {
-                  var16 = -var7 + var9;
                   var14 = var7;
-                  break L21;
+                  break L4;
                 }
               }
             }
-            L23: {
-              if (var9 + -var7 >= var16) {
-                break L23;
-              } else {
-                if ((4 & ((usb) this).field_v[var11]) == -1) {
-                  break L23;
+            L7: {
+              L8: {
+                if (var17 >= var10 - var8) {
+                  break L8;
                 } else {
-                  var16 = -var7 + var9;
-                  var14 = var7;
-                  break L21;
-                }
-              }
-            }
-            if (16 == var12) {
-              var14 = -var16 + var9 + var7 >> -662596863;
-              break L21;
-            } else {
-              if (-33 != var12) {
-                L24: {
-                  L25: {
-                    var14 = var7;
-                    if (var17 >= var10 - var8) {
-                      break L25;
-                    } else {
-                      if (-1 == (((usb) this).field_v[var11] & 2 ^ -1)) {
-                        break L25;
-                      } else {
-                        var17 = var10 - var8;
-                        var15 = var8;
-                        break L24;
-                      }
-                    }
-                  }
-                  L26: {
-                    if (var10 - var8 >= var17) {
-                      break L26;
-                    } else {
-                      if (-1 == (8 & ((usb) this).field_v[var11] ^ -1)) {
-                        break L26;
-                      } else {
-                        var17 = var10 - var8;
-                        var15 = var8;
-                        break L24;
-                      }
-                    }
-                  }
-                  if (var13 != 64) {
-                    if ((var13 ^ -1) == -129) {
-                      var15 = var10 + -var17;
-                      break L24;
-                    } else {
-                      var15 = var8;
-                      break L24;
-                    }
+                  if ((((usb) this).field_v[var11] & 2) == 0) {
+                    break L8;
                   } else {
-                    var15 = -var17 + var10 + var8 >> 1917246113;
-                    break L24;
+                    var17 = var10 - var8;
+                    var15 = var8;
+                    break L7;
                   }
                 }
-                var18 = ((usb) this).field_z;
-                var19 = ((usb) this).field_x;
-                param3.a(var18 + var14, -(var18 * 2) + var16, -(2 * var19) + var17, 1, var15 - -var19);
-                return;
-              } else {
-                L27: {
-                  L28: {
-                    var14 = -var16 + var9;
-                    if (var17 >= var10 - var8) {
-                      break L28;
-                    } else {
-                      if (-1 == (((usb) this).field_v[var11] & 2 ^ -1)) {
-                        break L28;
-                      } else {
-                        var17 = var10 - var8;
-                        var15 = var8;
-                        break L27;
-                      }
-                    }
-                  }
-                  L29: {
-                    if (var10 - var8 >= var17) {
-                      break L29;
-                    } else {
-                      if (-1 == (8 & ((usb) this).field_v[var11] ^ -1)) {
-                        break L29;
-                      } else {
-                        var17 = var10 - var8;
-                        var15 = var8;
-                        break L27;
-                      }
-                    }
-                  }
-                  if (var13 != 64) {
-                    if ((var13 ^ -1) == -129) {
-                      var15 = var10 + -var17;
-                      break L27;
-                    } else {
-                      var15 = var8;
-                      break L27;
-                    }
+              }
+              L9: {
+                if (~(var10 - var8) <= ~var17) {
+                  break L9;
+                } else {
+                  if ((8 & ((usb) this).field_v[var11]) == 0) {
+                    break L9;
                   } else {
-                    var15 = -var17 + var10 + var8 >> 1917246113;
-                    break L27;
+                    var17 = var10 - var8;
+                    var15 = var8;
+                    break L7;
                   }
                 }
-                var18 = ((usb) this).field_z;
-                var19 = ((usb) this).field_x;
-                param3.a(var18 + var14, -(var18 * 2) + var16, -(2 * var19) + var17, 1, var15 - -var19);
-                return;
               }
-            }
-          }
-          L30: {
-            if (var17 >= var10 - var8) {
-              break L30;
-            } else {
-              if (-1 == (((usb) this).field_v[var11] & 2 ^ -1)) {
-                break L30;
+              if (var13 != 64) {
+                if (var13 == 128) {
+                  var15 = var10 + -var17;
+                  break L7;
+                } else {
+                  var15 = var8;
+                  break L7;
+                }
               } else {
-                var17 = var10 - var8;
-                var15 = var8;
-                var18 = ((usb) this).field_z;
-                var19 = ((usb) this).field_x;
-                param3.a(var18 + var14, -(var18 * 2) + var16, -(2 * var19) + var17, 1, var15 - -var19);
-                return;
+                var15 = -var17 + var10 + var8 >> 1;
+                break L7;
               }
             }
-          }
-          L31: {
-            if (var10 - var8 >= var17) {
-              break L31;
-            } else {
-              if (-1 == (8 & ((usb) this).field_v[var11] ^ -1)) {
-                break L31;
-              } else {
-                var17 = var10 - var8;
-                var15 = var8;
-                var18 = ((usb) this).field_z;
-                var19 = ((usb) this).field_x;
-                param3.a(var18 + var14, -(var18 * 2) + var16, -(2 * var19) + var17, 1, var15 - -var19);
-                return;
-              }
-            }
-          }
-          if (var13 != 64) {
-            if ((var13 ^ -1) != -129) {
-              var15 = var8;
-              var18 = ((usb) this).field_z;
-              var19 = ((usb) this).field_x;
-              param3.a(var18 + var14, -(var18 * 2) + var16, -(2 * var19) + var17, 1, var15 - -var19);
-              return;
-            } else {
-              var15 = var10 + -var17;
-              var18 = ((usb) this).field_z;
-              var19 = ((usb) this).field_x;
-              param3.a(var18 + var14, -(var18 * 2) + var16, -(2 * var19) + var17, 1, var15 - -var19);
-              return;
-            }
-          } else {
-            var15 = -var17 + var10 + var8 >> 1917246113;
             var18 = ((usb) this).field_z;
             var19 = ((usb) this).field_x;
             param3.a(var18 + var14, -(var18 * 2) + var16, -(2 * var19) + var17, 1, var15 - -var19);
-            return;
+            break L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L10: {
+            var5 = decompiledCaughtException;
+            stackOut_33_0 = (RuntimeException) var5;
+            stackOut_33_1 = new StringBuilder().append("usb.H(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackIn_35_0 = stackOut_33_0;
+            stackIn_35_1 = stackOut_33_1;
+            stackIn_34_0 = stackOut_33_0;
+            stackIn_34_1 = stackOut_33_1;
+            if (param3 == null) {
+              stackOut_35_0 = (RuntimeException) (Object) stackIn_35_0;
+              stackOut_35_1 = (StringBuilder) (Object) stackIn_35_1;
+              stackOut_35_2 = "null";
+              stackIn_36_0 = stackOut_35_0;
+              stackIn_36_1 = stackOut_35_1;
+              stackIn_36_2 = stackOut_35_2;
+              break L10;
+            } else {
+              stackOut_34_0 = (RuntimeException) (Object) stackIn_34_0;
+              stackOut_34_1 = (StringBuilder) (Object) stackIn_34_1;
+              stackOut_34_2 = "{...}";
+              stackIn_36_0 = stackOut_34_0;
+              stackIn_36_1 = stackOut_34_1;
+              stackIn_36_2 = stackOut_34_2;
+              break L10;
+            }
+          }
+          throw rta.a((Throwable) (Object) stackIn_36_0, stackIn_36_2 + 41);
         }
     }
 
     final boolean a(int param0, int param1, shb param2, char param3) {
-        int var5 = 0;
+        int var5_int = 0;
+        RuntimeException var5 = null;
         Object var6 = null;
-        if (super.a(param0 + 0, param1, param2, param3)) {
-          return true;
-        } else {
-          var5 = param1;
-          if (var5 != 98) {
-            if (var5 != 99) {
-              if (96 != var5) {
-                if (97 != var5) {
-                  if (param0 != -15834) {
-                    var6 = null;
-                    usb.a(-25, (no) null, (String) null, 107, 85, 63, 106);
-                    return false;
-                  } else {
-                    return false;
-                  }
+        int stackIn_3_0 = 0;
+        boolean stackIn_11_0 = false;
+        boolean stackIn_13_0 = false;
+        boolean stackIn_15_0 = false;
+        boolean stackIn_17_0 = false;
+        int stackIn_21_0 = 0;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        String stackIn_25_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_2_0 = 0;
+        boolean stackOut_12_0 = false;
+        boolean stackOut_14_0 = false;
+        boolean stackOut_16_0 = false;
+        int stackOut_20_0 = 0;
+        boolean stackOut_10_0 = false;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        String stackOut_24_2 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        String stackOut_23_2 = null;
+        try {
+          L0: {
+            if (super.a(param0, param1, param2, param3)) {
+              stackOut_2_0 = 1;
+              stackIn_3_0 = stackOut_2_0;
+              return stackIn_3_0 != 0;
+            } else {
+              var5_int = param1;
+              if (var5_int != 98) {
+                if (var5_int == 99) {
+                  stackOut_12_0 = ((usb) this).a(((usb) this).field_y.length, param2, 0);
+                  stackIn_13_0 = stackOut_12_0;
+                  return stackIn_13_0;
                 } else {
-                  return ((usb) this).b(param2, (byte) 39);
+                  if (96 == var5_int) {
+                    stackOut_14_0 = ((usb) this).a(param2, (byte) -123);
+                    stackIn_15_0 = stackOut_14_0;
+                    return stackIn_15_0;
+                  } else {
+                    if (97 == var5_int) {
+                      stackOut_16_0 = ((usb) this).b(param2, (byte) 39);
+                      stackIn_17_0 = stackOut_16_0;
+                      return stackIn_17_0;
+                    } else {
+                      L1: {
+                        if (param0 == -15834) {
+                          break L1;
+                        } else {
+                          var6 = null;
+                          usb.a(-25, (no) null, (String) null, 107, 85, 63, 106);
+                          break L1;
+                        }
+                      }
+                      stackOut_20_0 = 0;
+                      stackIn_21_0 = stackOut_20_0;
+                      break L0;
+                    }
+                  }
                 }
               } else {
-                return ((usb) this).a(param2, (byte) -123);
+                stackOut_10_0 = ((usb) this).a(param2, 103, ((usb) this).field_y.length);
+                stackIn_11_0 = stackOut_10_0;
+                return stackIn_11_0;
               }
-            } else {
-              return ((usb) this).a(((usb) this).field_y.length, param2, 0);
             }
-          } else {
-            return ((usb) this).a(param2, 103, ((usb) this).field_y.length);
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var5 = decompiledCaughtException;
+            stackOut_22_0 = (RuntimeException) var5;
+            stackOut_22_1 = new StringBuilder().append("usb.N(").append(param0).append(44).append(param1).append(44);
+            stackIn_24_0 = stackOut_22_0;
+            stackIn_24_1 = stackOut_22_1;
+            stackIn_23_0 = stackOut_22_0;
+            stackIn_23_1 = stackOut_22_1;
+            if (param2 == null) {
+              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
+              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_2 = "null";
+              stackIn_25_0 = stackOut_24_0;
+              stackIn_25_1 = stackOut_24_1;
+              stackIn_25_2 = stackOut_24_2;
+              break L2;
+            } else {
+              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_2 = "{...}";
+              stackIn_25_0 = stackOut_23_0;
+              stackIn_25_1 = stackOut_23_1;
+              stackIn_25_2 = stackOut_23_2;
+              break L2;
+            }
+          }
+          throw rta.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + param3 + 41);
         }
+        return stackIn_21_0 != 0;
     }
 
     final static void a(int param0, no param1, String param2, int param3, int param4, int param5, int param6) {
-        int var7 = param1.b(param2);
-        int var8 = param1.field_A + param1.field_o;
-        int var9 = param3;
-        if (!(dma.field_g >= var7 + (var9 - -6))) {
-            var9 = -var7 + (dma.field_g - 6);
+        int var7_int = 0;
+        RuntimeException var7 = null;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        try {
+          L0: {
+            L1: {
+              var7_int = param1.b(param2);
+              var8 = param1.field_A + param1.field_o;
+              var9 = param3;
+              if (dma.field_g < var7_int + (var9 - -6)) {
+                var9 = -var7_int + (dma.field_g - 6);
+                break L1;
+              } else {
+                break L1;
+              }
+            }
+            L2: {
+              var10 = 32 + (-param1.field_o + param0);
+              if (dma.field_j >= var8 + var10 - -6) {
+                break L2;
+              } else {
+                var10 = -var8 + (dma.field_j - 6);
+                break L2;
+              }
+            }
+            dma.b(var9, var10, 6 + var7_int, 6 + var8, param5);
+            dma.d(param4 + var9, var10 - -1, 4 + var7_int, var8 + 4, param6);
+            param1.c(param2, 3 + var9, param1.field_o + (var10 + 3), param5, -1);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var7 = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var7;
+            stackOut_7_1 = new StringBuilder().append("usb.P(").append(param0).append(44);
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param1 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L3;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L3;
+            }
+          }
+          L4: {
+            stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(44);
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
+            if (param2 == null) {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L4;
+            } else {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L4;
+            }
+          }
+          throw rta.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
         }
-        int var10 = 32 + (-param1.field_o + param0);
-        if (dma.field_j < var8 + var10 - -6) {
-            var10 = -var8 + (dma.field_j - 6);
-        }
-        dma.b(var9, var10, 6 + var7, 6 + var8, param5);
-        dma.d(param4 + var9, var10 - -1, 4 + var7, var8 + 4, param6);
-        param1.c(param2, 3 + var9, param1.field_o + (var10 + 3), param5, -1);
     }
 
     private final void c(int param0, byte param1, int param2) {
@@ -1065,8 +916,8 @@ final class usb extends oda {
         var4 = stackIn_3_0;
         var5 = new shb[param2 * var4];
         if (null != ((usb) this).field_u) {
-          if ((((usb) this).field_u.length ^ -1) < -1) {
-            if (-1 > (var5.length ^ -1)) {
+          if (((usb) this).field_u.length > 0) {
+            if (var5.length > 0) {
               if (param0 > 0) {
                 var6 = 0;
                 L1: while (true) {

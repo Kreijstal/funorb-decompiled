@@ -14,9 +14,13 @@ final class mi extends cj {
 
     mi(long param0, ja param1, ja param2, int param3, cj param4, String param5) {
         this(param0, (cj) null, param4, param5);
-        ((mi) this).field_Lb.field_lb = param3;
-        ((mi) this).field_Lb.field_rb = param2;
-        ((mi) this).field_Lb.field_O = param1;
+        try {
+            ((mi) this).field_Lb.field_lb = param3;
+            ((mi) this).field_Lb.field_rb = param2;
+            ((mi) this).field_Lb.field_O = param1;
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) (Object) runtimeException, "mi.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 41);
+        }
     }
 
     mi(long param0, mi param1, String param2) {
@@ -54,64 +58,104 @@ final class mi extends cj {
     public static void d(boolean param0) {
         field_Kb = null;
         field_Ib = null;
-        if (param0) {
-          mi.d(false);
-          field_Nb = null;
-          field_Mb = null;
-          field_Jb = null;
-          return;
-        } else {
-          field_Nb = null;
-          field_Mb = null;
-          field_Jb = null;
-          return;
-        }
+        field_Nb = null;
+        field_Mb = null;
+        field_Jb = null;
     }
 
     final static void a(jh param0, int param1) {
         jh var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
         var3 = ZombieDawnMulti.field_E ? 1 : 0;
-        if (param1 < -52) {
-          param0.a(true);
-          var2 = (jh) (Object) tn.field_C.c(79);
-          L0: while (true) {
-            if (var2 != null) {
-              if (var2.a(param0, (byte) -53)) {
-                var2 = (jh) (Object) tn.field_C.b(6);
-                continue L0;
-              } else {
-                if (var2 != null) {
-                  vc.a((br) (Object) var2, (br) (Object) param0, true);
-                  return;
+        try {
+          if (param1 < -52) {
+            param0.a(true);
+            var2 = (jh) (Object) tn.field_C.c(79);
+            L0: while (true) {
+              L1: {
+                if (var2 == null) {
+                  break L1;
                 } else {
-                  tn.field_C.a((br) (Object) param0, false);
-                  return;
+                  if (!var2.a(param0, (byte) -53)) {
+                    break L1;
+                  } else {
+                    var2 = (jh) (Object) tn.field_C.b(6);
+                    continue L0;
+                  }
                 }
               }
-            } else {
-              if (var2 != null) {
-                vc.a((br) (Object) var2, (br) (Object) param0, true);
+              if (var2 == null) {
+                tn.field_C.a((br) (Object) param0, false);
                 return;
               } else {
-                tn.field_C.a((br) (Object) param0, false);
+                vc.a((br) (Object) var2, (br) (Object) param0, true);
                 return;
               }
             }
+          } else {
+            return;
           }
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2_ref = decompiledCaughtException;
+            stackOut_11_0 = (RuntimeException) var2_ref;
+            stackOut_11_1 = new StringBuilder().append("mi.CA(");
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
+            if (param0 == null) {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L2;
+            } else {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L2;
+            }
+          }
+          throw fa.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param1 + 41);
         }
     }
 
     private mi(long param0, cj param1, cj param2, String param3) {
         super(param0, (cj) null);
-        ((mi) this).field_Lb = new cj(0L, param1);
-        ((mi) this).field_Fb = new cj(0L, param2);
-        ((mi) this).field_Fb.field_wb = param3;
-        ((mi) this).a((byte) 50, ((mi) this).field_Lb);
-        ((mi) this).a((byte) 50, ((mi) this).field_Fb);
-        ((mi) this).f(-128);
+        try {
+            ((mi) this).field_Lb = new cj(0L, param1);
+            ((mi) this).field_Fb = new cj(0L, param2);
+            ((mi) this).field_Fb.field_wb = param3;
+            ((mi) this).a((byte) 50, ((mi) this).field_Lb);
+            ((mi) this).a((byte) 50, ((mi) this).field_Fb);
+            ((mi) this).f(-128);
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) (Object) runtimeException, "mi.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static void b(int param0, int param1) {

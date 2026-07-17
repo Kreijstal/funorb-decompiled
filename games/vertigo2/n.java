@@ -11,7 +11,7 @@ final class n {
         field_a = null;
         field_c = null;
         field_b = null;
-        int var1 = 48 % ((4 - param0) / 42);
+        int var1 = 0;
     }
 
     static {

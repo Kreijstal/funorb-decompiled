@@ -31,39 +31,28 @@ final class wh extends gn {
     }
 
     final static void a(byte param0, vc[] param1) {
-        int var2 = 0;
+        int var2_int = 0;
         long var3 = 0L;
         cq var5 = null;
-        int var6 = 0;
-        var6 = Kickabout.field_G;
-        if (param0 > 66) {
-          var2 = 0;
-          L0: while (true) {
-            if (var2 >= param1.length) {
-              gb.field_F = true;
-              return;
-            } else {
-              var3 = param1[var2].field_a;
-              var5 = (cq) (Object) ic.field_h.field_O.g(24009);
-              L1: while (true) {
-                if (var5 != null) {
-                  if ((var5.field_i ^ -1L) == (var3 ^ -1L)) {
-                    i.field_A[var5.field_l] = param1[var2];
-                    var2++;
-                    continue L0;
-                  } else {
+        int var6 = Kickabout.field_G;
+        if (param0 <= 66) {
+            return;
+        }
+        try {
+            for (var2_int = 0; var2_int < param1.length; var2_int++) {
+                var3 = param1[var2_int].field_a;
+                var5 = (cq) (Object) ic.field_h.field_O.g(24009);
+                while (var5 != null) {
+                    if (!(~var5.field_i != ~var3)) {
+                        i.field_A[var5.field_l] = param1[var2_int];
+                        break;
+                    }
                     var5 = (cq) (Object) ic.field_h.field_O.c(33);
-                    continue L1;
-                  }
-                } else {
-                  var2++;
-                  continue L0;
                 }
-              }
             }
-          }
-        } else {
-          return;
+            gb.field_F = true;
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "wh.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -79,10 +68,7 @@ final class wh extends gn {
     }
 
     private final void a(byte param0) {
-        int var2 = ((wh) this).field_i * mn.field_a >> -341429720;
-        if (param0 != 99) {
-            this.e(81);
-        }
+        int var2 = ((wh) this).field_i * mn.field_a >> 8;
         ((wh) this).field_m = vm.a(vg.field_Db[((wh) this).field_n].field_l, 100, var2, ((wh) this).field_f);
         if (!(!((wh) this).field_j)) {
             ((wh) this).field_m.i();
@@ -90,7 +76,7 @@ final class wh extends gn {
         if (!((wh) this).field_r) {
             ag discarded$1 = ga.a(((wh) this).field_m, 114);
         } else {
-            ag discarded$2 = w.a(((wh) this).field_m, param0 ^ 14);
+            ag discarded$2 = w.a(((wh) this).field_m, 109);
         }
         ((wh) this).field_k = ((wh) this).field_k - 1;
         ((wh) this).field_o = false;
@@ -98,13 +84,10 @@ final class wh extends gn {
 
     private final void g(byte param0) {
         int var2 = 0;
-        if (param0 >= -73) {
-            this.e(84);
-        }
         if (!(((wh) this).field_t >= ((wh) this).field_u)) {
             var2 = ((wh) this).field_t * (((wh) this).field_x / ((wh) this).field_u);
-            var2 = var2 * mn.field_a >> -485024728;
-            ((wh) this).field_m.f(var2 >> 1684914600);
+            var2 = var2 * mn.field_a >> 8;
+            ((wh) this).field_m.f(var2 >> 8);
         }
         ((wh) this).field_t = ((wh) this).field_t + 1;
     }
@@ -112,11 +95,11 @@ final class wh extends gn {
     private final void e(int param0) {
         int var3 = 0;
         int var2 = ((to) (Object) ((wh) this).field_m.field_h).field_i.length;
-        if (!(((wh) this).field_m.g() < -(((wh) this).field_s << -1445971351) + var2)) {
+        if (!(((wh) this).field_m.g() < -(((wh) this).field_s << 9) + var2)) {
             if (((wh) this).field_l < ((wh) this).field_s) {
                 var3 = -(((wh) this).field_l * (((wh) this).field_x / ((wh) this).field_s)) + ((wh) this).field_x;
-                var3 = var3 * mn.field_a >> 1863914568;
-                ((wh) this).field_m.f(var3 >> -929222904);
+                var3 = var3 * mn.field_a >> 8;
+                ((wh) this).field_m.f(var3 >> 8);
             }
             ((wh) this).field_l = ((wh) this).field_l + 1;
         }
@@ -183,7 +166,7 @@ final class wh extends gn {
         ((wh) this).field_n = param0;
         ((wh) this).field_i = param1;
         ((wh) this).field_j = param3 ? true : false;
-        ((wh) this).field_x = ((wh) this).field_i << 1681431816;
+        ((wh) this).field_x = ((wh) this).field_i << 8;
         ((wh) this).field_r = param4 ? true : false;
         ((wh) this).field_k = 1;
         ((wh) this).field_f = param2;

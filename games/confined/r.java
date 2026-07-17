@@ -6,11 +6,15 @@ final class r {
     static volatile int field_a;
 
     final static void a(byte param0, boolean param1, String param2) {
-        pc.field_f = param1 ? true : false;
-        s.field_K = true;
-        int var3 = 4 % ((param0 - 32) / 48);
-        ki.field_c = new dh(vg.field_Z, fd.field_k, param2, rk.field_f, pc.field_f);
-        vg.field_Z.c((fj) (Object) ki.field_c, 0);
+        try {
+            pc.field_f = param1;
+            s.field_K = true;
+            int var3_int = 4 % ((param0 - 32) / 48);
+            ki.field_c = new dh(vg.field_Z, fd.field_k, param2, rk.field_f, pc.field_f);
+            vg.field_Z.c((fj) (Object) ki.field_c, 0);
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "r.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static void a(bj param0, int param1, int param2) {
@@ -18,7 +22,11 @@ final class r {
         if (param1 != -1) {
             return;
         }
-        lf.a(param2, 102, param0);
+        try {
+            lf.a(3, 102, param0);
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "r.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 3 + 41);
+        }
     }
 
     public static void a(int param0) {

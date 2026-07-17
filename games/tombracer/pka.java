@@ -58,7 +58,7 @@ final class pka {
                 } else {
                   if (sr.a(125)) {
                     L2: {
-                      var2 = (-1 + lpa.field_o << -101376632) / 16;
+                      var2 = (-1 + lpa.field_o << 8) / 16;
                       if (0 >= var2) {
                         break L2;
                       } else {
@@ -76,7 +76,7 @@ final class pka {
             }
             if (sr.a(125)) {
               L3: {
-                var2 = (-1 + lpa.field_o << -101376632) / 16;
+                var2 = (-1 + lpa.field_o << 8) / 16;
                 if (0 >= var2) {
                   break L3;
                 } else {
@@ -116,7 +116,7 @@ final class pka {
                   } else {
                     if (sr.a(125)) {
                       L6: {
-                        var2 = (-1 + lpa.field_o << -101376632) / 16;
+                        var2 = (-1 + lpa.field_o << 8) / 16;
                         if (0 >= var2) {
                           break L6;
                         } else {
@@ -134,7 +134,7 @@ final class pka {
               }
               if (sr.a(125)) {
                 L7: {
-                  var2 = (-1 + lpa.field_o << -101376632) / 16;
+                  var2 = (-1 + lpa.field_o << 8) / 16;
                   if (0 >= var2) {
                     break L7;
                   } else {
@@ -170,7 +170,7 @@ final class pka {
                   } else {
                     if (sr.a(125)) {
                       L10: {
-                        var2 = (-1 + lpa.field_o << -101376632) / 16;
+                        var2 = (-1 + lpa.field_o << 8) / 16;
                         if (0 >= var2) {
                           break L10;
                         } else {
@@ -188,7 +188,7 @@ final class pka {
               }
               if (sr.a(125)) {
                 L11: {
-                  var2 = (-1 + lpa.field_o << -101376632) / 16;
+                  var2 = (-1 + lpa.field_o << 8) / 16;
                   if (0 >= var2) {
                     break L11;
                   } else {
@@ -230,7 +230,7 @@ final class pka {
                   return var1 != 0;
                 } else {
                   L14: {
-                    var2 = (-1 + lpa.field_o << -101376632) / 16;
+                    var2 = (-1 + lpa.field_o << 8) / 16;
                     if (0 >= var2) {
                       break L14;
                     } else {
@@ -248,7 +248,7 @@ final class pka {
             return var1 != 0;
           } else {
             L15: {
-              var2 = (-1 + lpa.field_o << -101376632) / 16;
+              var2 = (-1 + lpa.field_o << 8) / 16;
               if (0 >= var2) {
                 break L15;
               } else {

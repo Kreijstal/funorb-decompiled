@@ -13,12 +13,13 @@ final class rm implements Iterator {
     private fl field_d;
 
     final static void a(java.awt.Component param0, byte param1) {
-        if (param1 != 38) {
-            return;
+        try {
+            param0.addMouseListener((java.awt.event.MouseListener) (Object) om.field_b);
+            param0.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) om.field_b);
+            param0.addFocusListener((java.awt.event.FocusListener) (Object) om.field_b);
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) (Object) runtimeException, "rm.A(" + (param0 != null ? "{...}" : "null") + 44 + 38 + 41);
         }
-        param0.addMouseListener((java.awt.event.MouseListener) (Object) om.field_b);
-        param0.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) om.field_b);
-        param0.addFocusListener((java.awt.event.FocusListener) (Object) om.field_b);
     }
 
     public final boolean hasNext() {
@@ -27,12 +28,6 @@ final class rm implements Iterator {
 
     public static void a(boolean param0) {
         field_a = null;
-        if (!param0) {
-            field_c = false;
-            field_e = null;
-            field_g = null;
-            return;
-        }
         field_e = null;
         field_g = null;
     }
@@ -47,9 +42,13 @@ final class rm implements Iterator {
 
     rm(vb param0) {
         ((rm) this).field_d = null;
-        ((rm) this).field_f = param0;
-        ((rm) this).field_b = ((rm) this).field_f.field_c.field_j;
-        ((rm) this).field_d = null;
+        try {
+            ((rm) this).field_f = param0;
+            ((rm) this).field_b = ((rm) this).field_f.field_c.field_j;
+            ((rm) this).field_d = null;
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) (Object) runtimeException, "rm.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public final Object next() {

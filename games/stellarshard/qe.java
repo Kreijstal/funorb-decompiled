@@ -23,13 +23,156 @@ final class qe {
     double field_a;
 
     final static int a(String param0, boolean param1, boolean param2, String param3, int param4, String param5, int param6) {
-        am var7 = new am(param0);
-        if (!param2) {
-            Object var9 = null;
-            qe.a(-90, (String) null, (Throwable) null);
+        am var7 = null;
+        RuntimeException var7_ref = null;
+        am var8 = null;
+        Object var9 = null;
+        int stackIn_3_0 = 0;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_2_0 = 0;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        try {
+          L0: {
+            L1: {
+              var7 = new am(param0);
+              if (param2) {
+                break L1;
+              } else {
+                var9 = null;
+                qe.a(-90, (String) null, (Throwable) null);
+                break L1;
+              }
+            }
+            var8 = new am(param3);
+            stackOut_2_0 = gk.a(param4, param1, var7, param5, param6, var8, false);
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var7_ref = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var7_ref;
+            stackOut_4_1 = new StringBuilder().append("qe.G(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          L3: {
+            stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param3 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L3;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L3;
+            }
+          }
+          L4: {
+            stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(44).append(param4).append(44);
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
+            if (param5 == null) {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L4;
+            } else {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L4;
+            }
+          }
+          throw ma.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param6 + 41);
         }
-        am var8 = new am(param3);
-        return gk.a(param4, param1, var7, param5, param6, var8, false);
+        return stackIn_3_0;
     }
 
     private final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
@@ -208,7 +351,7 @@ final class qe {
               }
             }
             L3: {
-              if ((ff.field_k ^ -1) < -257) {
+              if (ff.field_k > 256) {
                 ff.field_k = 0;
                 break L3;
               } else {
@@ -216,7 +359,7 @@ final class qe {
               }
             }
             L4: {
-              if ((el.field_I ^ -1) < -1) {
+              if (el.field_I > 0) {
                 el.field_I = el.field_I - 1;
                 break L4;
               } else {
@@ -232,7 +375,7 @@ final class qe {
               }
             }
             L6: {
-              if ((((qe) this).field_j ^ -1) < -1) {
+              if (((qe) this).field_j > 0) {
                 ((qe) this).field_j = ((qe) this).field_j - 1;
                 break L6;
               } else {
@@ -248,7 +391,7 @@ final class qe {
               }
             }
             L8: {
-              if ((((qe) this).field_j ^ -1) >= -1) {
+              if (((qe) this).field_j <= 0) {
                 break L8;
               } else {
                 ((qe) this).field_j = ((qe) this).field_j - 1;
@@ -264,7 +407,7 @@ final class qe {
               }
             }
             L10: {
-              if ((nc.field_H ^ -1) != -1) {
+              if (nc.field_H != 0) {
                 break L10;
               } else {
                 break L10;
@@ -300,7 +443,7 @@ final class qe {
               L14: {
                 ((qe) this).field_i = ((qe) this).field_i + 1;
                 ((qe) this).field_j = 0;
-                if ((((qe) this).field_i ^ -1) < -51) {
+                if (((qe) this).field_i > 50) {
                   L15: {
                     var2_double = a.field_h[0].field_a - ((qe) this).field_a;
                     var4 = a.field_h[0].field_l - ((qe) this).field_l;
@@ -314,7 +457,7 @@ final class qe {
                     }
                   }
                   L16: {
-                    if (-129 > (var6 ^ -1)) {
+                    if (var6 > 128) {
                       var6 -= 256;
                       break L16;
                     } else {
@@ -325,7 +468,7 @@ final class qe {
                   break L14;
                 } else {
                   L17: {
-                    if ((((qe) this).field_h ^ -1) < -129) {
+                    if (((qe) this).field_h > 128) {
                       ((qe) this).field_h = ((qe) this).field_h - 256;
                       break L17;
                     } else {
@@ -341,7 +484,7 @@ final class qe {
                   }
                 }
               }
-              if (-101 <= (((qe) this).field_i ^ -1)) {
+              if (((qe) this).field_i <= 100) {
                 break L13;
               } else {
                 if (null != a.field_h[0]) {
@@ -434,7 +577,7 @@ final class qe {
                   break L24;
                 }
                 L26: {
-                  if (-129 > (var6 ^ -1)) {
+                  if (var6 > 128) {
                     var6 = 128;
                     break L26;
                   } else {
@@ -456,7 +599,7 @@ final class qe {
           }
         }
         L27: {
-          if (-7 != (((qe) this).field_m ^ -1)) {
+          if (((qe) this).field_m != 6) {
             break L27;
           } else {
             if (a.field_h[0] == null) {
@@ -472,7 +615,7 @@ final class qe {
                   break L28;
                 }
               }
-              if (-1 != (((qe) this).field_i % 10 ^ -1)) {
+              if (((qe) this).field_i % 10 != 0) {
                 break L27;
               } else {
                 L29: {
@@ -494,7 +637,7 @@ final class qe {
                   break L29;
                 }
                 L31: {
-                  if ((var6 ^ -1) < -129) {
+                  if (var6 > 128) {
                     var6 = 128;
                     break L31;
                   } else {
@@ -512,7 +655,7 @@ final class qe {
           }
         }
         L32: {
-          if ((((qe) this).field_m ^ -1) != -15) {
+          if (((qe) this).field_m != 14) {
             break L32;
           } else {
             if (null == a.field_h[0]) {
@@ -523,10 +666,10 @@ final class qe {
               ((qe) this).field_j = ((qe) this).field_i / 50;
               var2 = 0;
               L33: while (true) {
-                if (-1001 >= (var2 ^ -1)) {
+                if (var2 >= 1000) {
                   var2 = 0;
                   L34: while (true) {
-                    if (-3001 >= (var2 ^ -1)) {
+                    if (var2 >= 3000) {
                       L35: {
                         ((qe) this).field_i = ((qe) this).field_i + 1;
                         if (200.0 * Math.random() * 60.0 < (double)((qe) this).field_i) {
@@ -548,7 +691,7 @@ final class qe {
                         }
                       }
                       L36: {
-                        if (-3001 >= (((qe) this).field_i ^ -1)) {
+                        if (((qe) this).field_i >= 3000) {
                           break L36;
                         } else {
                           if (50 <= ((qe) this).field_g) {
@@ -571,7 +714,7 @@ final class qe {
                         }
                         var3_int = 0;
                         L38: while (true) {
-                          if ((var3_int ^ -1) > -257) {
+                          if (var3_int < 256) {
                             L39: {
                               var14 = new vl(3, (qe) this);
                               var14.field_j = var14.field_j - Math.sin(2.0 * (3.141592653589793 * (double)var3_int) / 256.0) * 4.0;
@@ -579,7 +722,7 @@ final class qe {
                               var14.field_c = 2.0 * var14.field_j + ((qe) this).field_a;
                               var14.field_k = 2.0 * var14.field_a + ((qe) this).field_l;
                               var4_int = eg.a(-101);
-                              if ((var4_int ^ -1) == 0) {
+                              if (var4_int == -1) {
                                 break L39;
                               } else {
                                 wk.field_b[var4_int] = var14;
@@ -594,10 +737,10 @@ final class qe {
                         }
                       } else {
                         L40: {
-                          if ((((qe) this).field_i % 10 ^ -1) == -1) {
+                          if (((qe) this).field_i % 10 == 0) {
                             break L40;
                           } else {
-                            if (-1 != (((qe) this).field_i % 5 ^ -1)) {
+                            if (((qe) this).field_i % 5 != 0) {
                               break L32;
                             } else {
                               if (7500 < ((qe) this).field_i) {
@@ -627,7 +770,7 @@ final class qe {
                           break L41;
                         }
                         L43: {
-                          if (-129 > (var6 ^ -1)) {
+                          if (var6 > 128) {
                             var6 = 128;
                             break L43;
                           } else {
@@ -771,7 +914,7 @@ final class qe {
           }
         }
         L56: {
-          if ((((qe) this).field_m ^ -1) != -14) {
+          if (((qe) this).field_m != 13) {
             break L56;
           } else {
             if (a.field_h[0] == null) {
@@ -817,7 +960,7 @@ final class qe {
                   }
                 }
               }
-              if ((((qe) this).field_i ^ -1) >= -101) {
+              if (((qe) this).field_i <= 100) {
                 break L56;
               } else {
                 L61: {
@@ -825,7 +968,7 @@ final class qe {
                   var4 = a.field_h[0].field_l - ((qe) this).field_l;
                   var6_double = Math.sqrt(var4 * var4 + var2_double * var2_double);
                   ((qe) this).field_k = ((qe) this).field_k + var4 * 0.1 / var6_double;
-                  if ((((qe) this).field_i ^ -1) >= -151) {
+                  if (((qe) this).field_i <= 150) {
                     break L61;
                   } else {
                     ((qe) this).field_i = 0;
@@ -844,7 +987,7 @@ final class qe {
             if (((qe) this).field_i > 100) {
               L63: {
                 ((qe) this).field_j = ((qe) this).field_j + 1;
-                if (-1 != (((qe) this).field_i % 10 ^ -1)) {
+                if (((qe) this).field_i % 10 != 0) {
                   break L63;
                 } else {
                   if (null != a.field_h[0]) {
@@ -867,7 +1010,7 @@ final class qe {
                       break L64;
                     }
                     L66: {
-                      if (-129 > (var6 ^ -1)) {
+                      if (var6 > 128) {
                         var6 = 128;
                         break L66;
                       } else {
@@ -922,7 +1065,7 @@ final class qe {
                       break L69;
                     }
                     L71: {
-                      if (-129 > (var6 ^ -1)) {
+                      if (var6 > 128) {
                         var6 = 128;
                         break L71;
                       } else {
@@ -987,7 +1130,7 @@ final class qe {
           if (-1 != ((qe) this).field_m) {
             break L75;
           } else {
-            if (-4 == (nc.field_H ^ -1)) {
+            if (nc.field_H == 3) {
               ((qe) this).field_g = 1;
               break L75;
             } else {
@@ -996,7 +1139,7 @@ final class qe {
           }
         }
         L76: {
-          if (0 != (((qe) this).field_m ^ -1)) {
+          if (((qe) this).field_m != -1) {
             break L76;
           } else {
             if (nc.field_H == 4) {
@@ -1008,23 +1151,23 @@ final class qe {
           }
         }
         L77: {
-          if ((((qe) this).field_g ^ -1) < -1) {
+          if (((qe) this).field_g > 0) {
             break L77;
           } else {
             L78: {
-              if ((((qe) this).field_m ^ -1) != 0) {
+              if (((qe) this).field_m != -1) {
                 break L78;
               } else {
-                if ((nc.field_H ^ -1) == -2) {
+                if (nc.field_H == 1) {
                   break L77;
                 } else {
-                  if (-3 == (nc.field_H ^ -1)) {
+                  if (nc.field_H == 2) {
                     break L77;
                   } else {
                     if (nc.field_H == 3) {
                       break L77;
                     } else {
-                      if ((nc.field_H ^ -1) != -5) {
+                      if (nc.field_H != 4) {
                         break L78;
                       } else {
                         break L77;
@@ -1041,7 +1184,7 @@ final class qe {
                 if (!fe.field_e) {
                   break L79;
                 } else {
-                  if (-1 <= (og.field_a ^ -1)) {
+                  if (og.field_a <= 0) {
                     ll.field_c.a(sb.field_e[35], 100, pk.field_h);
                     og.field_a = 7;
                     break L79;
@@ -1052,12 +1195,12 @@ final class qe {
               }
               var2 = 0;
               L80: while (true) {
-                if ((var2 ^ -1) >= (((qe) this).field_g ^ -1)) {
+                if (~var2 >= ~((qe) this).field_g) {
                   ((qe) this).field_g = ((qe) this).field_g - 1;
-                  if (199 >= (((qe) this).field_g ^ -1)) {
+                  if (((qe) this).field_g >= -200) {
                     break L77;
                   } else {
-                    if (-1 != (o.field_j ^ -1)) {
+                    if (o.field_j != 0) {
                       break L77;
                     } else {
                       this.c(-107);
@@ -1086,10 +1229,10 @@ final class qe {
         L81: {
           L82: {
             L83: {
-              if (0 == (((qe) this).field_m ^ -1)) {
+              if (((qe) this).field_m == -1) {
                 break L83;
               } else {
-                if (-12 != (((qe) this).field_m ^ -1)) {
+                if (((qe) this).field_m != 11) {
                   break L82;
                 } else {
                   break L83;
@@ -1099,7 +1242,7 @@ final class qe {
             if (2 == nc.field_H) {
               break L81;
             } else {
-              if (-5 != (nc.field_H ^ -1)) {
+              if (nc.field_H != 4) {
                 break L82;
               } else {
                 break L81;
@@ -1253,7 +1396,7 @@ final class qe {
                   var4 = ((ej) (Object) stackIn_14_0).a(stackIn_14_1, new java.net.URL(stackIn_14_4, stackIn_14_6 + "&v1=" + ej.field_g + "&v2=" + ej.field_r + "&e=" + var8));
                   var5 = -92 / ((param0 - -65) / 38);
                   L5: while (true) {
-                    if (-1 != (var4.field_f ^ -1)) {
+                    if (var4.field_f != 0) {
                       L6: {
                         if (1 != var4.field_f) {
                           break L6;
@@ -1674,8 +1817,8 @@ final class qe {
                 break L1;
               } else {
                 L2: {
-                  var4 = var2 - -48 << 1536853988;
-                  var5 = var3 - -48 << -1319105820;
+                  var4 = var2 - -48 << 4;
+                  var5 = var3 - -48 << 4;
                   var6 = 2048;
                   var7 = ((qe) this).field_i;
                   if (1000 <= var7) {
@@ -1687,12 +1830,12 @@ final class qe {
                 }
                 L3: {
                   var8 = var6 * var6;
-                  var9 = var4 - var6 >> -860311164;
-                  var10 = 15 + var4 >> -1365513756;
-                  var11 = var4 + (var6 + 15) >> 586944964;
-                  var12 = -var6 + var5 >> 919253604;
-                  var13_int = 15 + var5 >> 893507172;
-                  var14_int = 15 + var5 - -var6 >> 956476260;
+                  var9 = var4 - var6 >> 4;
+                  var10 = 15 + var4 >> 4;
+                  var11 = var4 + (var6 + 15) >> 4;
+                  var12 = -var6 + var5 >> 4;
+                  var13_int = 15 + var5 >> 4;
+                  var14_int = 15 + var5 - -var6 >> 4;
                   if (640 >= var11) {
                     break L3;
                   } else {
@@ -1709,7 +1852,7 @@ final class qe {
                   }
                 }
                 L5: {
-                  if (-1 < (var12 ^ -1)) {
+                  if (var12 < 0) {
                     var12 = 0;
                     break L5;
                   } else {
@@ -1717,7 +1860,7 @@ final class qe {
                   }
                 }
                 L6: {
-                  if (-481 > (var14_int ^ -1)) {
+                  if (var14_int > 480) {
                     var14_int = 480;
                     break L6;
                   } else {
@@ -1725,7 +1868,7 @@ final class qe {
                   }
                 }
                 L7: {
-                  if ((var10 ^ -1) > -1) {
+                  if (var10 < 0) {
                     var10 = 0;
                     break L7;
                   } else {
@@ -1741,7 +1884,7 @@ final class qe {
                   }
                 }
                 L9: {
-                  if ((var10 ^ -1) >= -641) {
+                  if (var10 <= 640) {
                     break L9;
                   } else {
                     var10 = 640;
@@ -1749,27 +1892,27 @@ final class qe {
                   }
                 }
                 L10: {
-                  if ((var13_int ^ -1) < -481) {
+                  if (var13_int > 480) {
                     var13_int = 480;
                     break L10;
                   } else {
                     break L10;
                   }
                 }
-                var15 = -var4 + (var10 << 1975196676);
+                var15 = -var4 + (var10 << 4);
                 var15 = var15 * var15;
-                var16 = -var4 + (var10 + 1 << 1160546532);
+                var16 = -var4 + (var10 + 1 << 4);
                 var16 = var16 * var16;
-                var17 = (var10 + 2 << -1705922012) + -var4;
+                var17 = (var10 + 2 << 4) + -var4;
                 var17 = var17 * var17;
                 var18 = -var15 + var16;
                 var19 = var17 - var16;
                 var20 = var19 + -var18;
-                var21 = -var5 + (var13_int << -1225063388);
+                var21 = -var5 + (var13_int << 4);
                 var21 = var21 * var21;
-                var22 = -var5 + (1 + var13_int << -2010402620);
+                var22 = -var5 + (1 + var13_int << 4);
                 var22 = var22 * var22;
-                var23 = (2 + var13_int << 1904863780) - var5;
+                var23 = (2 + var13_int << 4) - var5;
                 var23 = var23 * var23;
                 var24 = var22 - var21;
                 var25 = var23 + -var22;
@@ -1783,13 +1926,13 @@ final class qe {
                     var31 = var24;
                     var32 = var13_int;
                     L12: while (true) {
-                      if ((var14_int ^ -1) >= (var32 ^ -1)) {
+                      if (~var14_int >= ~var32) {
                         var31 = var24;
                         var29 = var10 + 640 * var13_int;
                         var30 = var21 + var15;
                         var32 = var13_int - 1;
                         L13: while (true) {
-                          if ((var12 ^ -1) < (var32 ^ -1)) {
+                          if (~var12 < ~var32) {
                             break L1;
                           } else {
                             var31 = var31 - var26;
@@ -1811,7 +1954,7 @@ final class qe {
                     }
                   } else {
                     var27--;
-                    var28 = 1 + var28 >>> -2071768127;
+                    var28 = 1 + var28 >>> 1;
                     continue L11;
                   }
                 }
@@ -1830,17 +1973,17 @@ final class qe {
                     } else {
                       if (((qe) this).a((byte) -51)) {
                         L16: {
-                          var4 = 48 + var2 << -2092226332;
-                          var5 = 48 + var3 << -1956533500;
+                          var4 = 48 + var2 << 4;
+                          var5 = 48 + var3 << 4;
                           var6 = 512;
                           var7 = 10000;
                           var8 = var6 * var6;
-                          var9 = -var6 + var4 >> 1302702788;
-                          var10 = 15 + var4 >> 1035890340;
-                          var11 = 15 + (var6 + var4) >> 1541224644;
-                          var12 = -var6 + var5 >> -283805532;
-                          var13_int = var5 - -15 >> -1247976252;
-                          if ((var12 ^ -1) > -1) {
+                          var9 = -var6 + var4 >> 4;
+                          var10 = 15 + var4 >> 4;
+                          var11 = 15 + (var6 + var4) >> 4;
+                          var12 = -var6 + var5 >> 4;
+                          var13_int = var5 - -15 >> 4;
+                          if (var12 < 0) {
                             var12 = 0;
                             break L16;
                           } else {
@@ -1848,7 +1991,7 @@ final class qe {
                           }
                         }
                         L17: {
-                          var14_int = 15 + var6 + var5 >> -534530940;
+                          var14_int = 15 + var6 + var5 >> 4;
                           if (0 > var9) {
                             var9 = 0;
                             break L17;
@@ -1889,7 +2032,7 @@ final class qe {
                           }
                         }
                         L22: {
-                          if (-641 <= (var10 ^ -1)) {
+                          if (var10 <= 640) {
                             break L22;
                           } else {
                             var10 = 640;
@@ -1897,27 +2040,27 @@ final class qe {
                           }
                         }
                         L23: {
-                          if ((var13_int ^ -1) >= -481) {
+                          if (var13_int <= 480) {
                             break L23;
                           } else {
                             var13_int = 480;
                             break L23;
                           }
                         }
-                        var15 = (var10 << -442272860) + -var4;
+                        var15 = (var10 << 4) + -var4;
                         var15 = var15 * var15;
-                        var16 = -var4 + (1 + var10 << 876476132);
+                        var16 = -var4 + (1 + var10 << 4);
                         var16 = var16 * var16;
-                        var17 = -var4 + (2 + var10 << 893000676);
+                        var17 = -var4 + (2 + var10 << 4);
                         var17 = var17 * var17;
                         var18 = var16 - var15;
                         var19 = var17 + -var16;
                         var20 = var19 - var18;
-                        var21 = -var5 + (var13_int << 1301261700);
+                        var21 = -var5 + (var13_int << 4);
                         var21 = var21 * var21;
-                        var22 = -var5 + (1 + var13_int << 1155794436);
+                        var22 = -var5 + (1 + var13_int << 4);
                         var22 = var22 * var22;
-                        var23 = -var5 + (var13_int + 2 << -1300724956);
+                        var23 = -var5 + (var13_int + 2 << 4);
                         var23 = var23 * var23;
                         var24 = var22 + -var21;
                         var25 = -var22 + var23;
@@ -1925,13 +2068,13 @@ final class qe {
                         var27 = 16;
                         var28 = var8;
                         L24: while (true) {
-                          if ((var8 ^ -1) >= (2147483647 >>> var27 ^ -1)) {
+                          if (~var8 >= ~(2147483647 >>> var27)) {
                             var29 = var10 + 640 * var13_int;
                             var30 = var15 - -var21;
                             var31 = var24;
                             var32 = var13_int;
                             L25: while (true) {
-                              if ((var32 ^ -1) <= (var14_int ^ -1)) {
+                              if (~var32 <= ~var14_int) {
                                 var29 = var10 + var13_int * 640;
                                 var30 = var21 + var15;
                                 var31 = var24;
@@ -1958,7 +2101,7 @@ final class qe {
                               }
                             }
                           } else {
-                            var28 = var28 + 1 >>> 1493876961;
+                            var28 = var28 + 1 >>> 1;
                             var27--;
                             continue L24;
                           }
@@ -1995,7 +2138,7 @@ final class qe {
                 }
               }
               L28: {
-                if ((ti.field_l ^ -1) <= (var9 + var6 ^ -1)) {
+                if (~ti.field_l <= ~(var9 + var6)) {
                   break L28;
                 } else {
                   var9 = var9 - (-ti.field_l + var6 + var9);
@@ -2017,7 +2160,7 @@ final class qe {
                 }
               }
               L30: {
-                if ((ti.field_c ^ -1) <= (var10 + var5 ^ -1)) {
+                if (~ti.field_c <= ~(var10 + var5)) {
                   break L30;
                 } else {
                   var13_int = var10 + (var5 + -ti.field_c);
@@ -2027,7 +2170,7 @@ final class qe {
                   break L30;
                 }
               }
-              if (-1 <= (var10 ^ -1)) {
+              if (var10 <= 0) {
                 break L14;
               } else {
                 if (0 >= var9) {
@@ -2039,11 +2182,11 @@ final class qe {
                   var37 = var38;
                   var13 = var37;
                   var14 = var4_ref_pb.field_z;
-                  var17 = -(var10 >> 1790805154);
+                  var17 = -(var10 >> 2);
                   var10 = -(3 & var10);
                   var21 = -var9;
                   L31: while (true) {
-                    if (-1 >= (var21 ^ -1)) {
+                    if (var21 >= 0) {
                       break L14;
                     } else {
                       var22 = var17 * 4 + var10;
@@ -2062,13 +2205,13 @@ final class qe {
                             if (var15 == 0) {
                               break L33;
                             } else {
-                              var18 = (var40[var7] & 16711680) >> -1987333168;
-                              var19 = (var40[var7] & 65280) >> 1732862888;
+                              var18 = (var40[var7] & 16711680) >> 16;
+                              var19 = (var40[var7] & 65280) >> 8;
                               var20 = 255 & var40[var7];
-                              var20 = (256 + -var15) * var20 + var15 * 255 >> 1855798377;
-                              var18 = (-var15 + 256) * var18 >> -2015670551;
-                              var19 = var19 * (256 + -var15) - -(var15 * 255) >> 123575369;
-                              var13[var7] = var20 + ((var19 << -516470328) + (var18 << -1789446032)) - -sa.a(var16 >> 1977934305, 8355711);
+                              var20 = (256 + -var15) * var20 + var15 * 255 >> 9;
+                              var18 = (-var15 + 256) * var18 >> 9;
+                              var19 = var19 * (256 + -var15) - -(var15 * 255) >> 9;
+                              var13[var7] = var20 + ((var19 << 8) + (var18 << 16)) - -sa.a(var16 >> 1, 8355711);
                               break L33;
                             }
                           }
@@ -2083,7 +2226,7 @@ final class qe {
               }
             }
             L34: {
-              if ((((qe) this).field_m ^ -1) != -12) {
+              if (((qe) this).field_m != 11) {
                 break L34;
               } else {
                 if (16 == ((qe) this).field_c) {
@@ -2109,7 +2252,7 @@ final class qe {
                         stackIn_170_1 = stackOut_169_1;
                         stackIn_170_2 = stackOut_169_2;
                         stackIn_170_3 = stackOut_169_3;
-                        if (-6 >= (ki.field_s ^ -1)) {
+                        if (ki.field_s >= 5) {
                           stackOut_171_0 = (ub) (Object) stackIn_171_0;
                           stackOut_171_1 = (String) (Object) stackIn_171_1;
                           stackOut_171_2 = stackIn_171_2;
@@ -2143,7 +2286,7 @@ final class qe {
               }
             }
             L36: {
-              if ((((qe) this).field_m ^ -1) == -14) {
+              if (((qe) this).field_m == 13) {
                 if (4 != qi.field_a) {
                   break L36;
                 } else {
@@ -2164,7 +2307,7 @@ final class qe {
                       stackIn_178_1 = stackOut_177_1;
                       stackIn_178_2 = stackOut_177_2;
                       stackIn_178_3 = stackOut_177_3;
-                      if (-6 >= (ki.field_s ^ -1)) {
+                      if (ki.field_s >= 5) {
                         stackOut_179_0 = (ub) (Object) stackIn_179_0;
                         stackOut_179_1 = (String) (Object) stackIn_179_1;
                         stackOut_179_2 = stackIn_179_2;
@@ -2199,7 +2342,7 @@ final class qe {
               }
             }
             L38: {
-              if (-13 != (((qe) this).field_m ^ -1)) {
+              if (((qe) this).field_m != 12) {
                 break L38;
               } else {
                 if (null == na.field_j) {
@@ -2207,13 +2350,13 @@ final class qe {
                     if (50 < ((qe) this).field_i) {
                       var4 = -(int)(8.0 * (Math.cos(3.141592653589793 * (double)((qe) this).field_h / 128.0) * (double)(-50 + ((qe) this).field_i)) / 25.0);
                       var5 = (int)(8.0 * (Math.sin(3.141592653589793 * (double)((qe) this).field_h / 128.0) * (double)(-50 + ((qe) this).field_i)) / 25.0);
-                      ti.a(var4 + 48 + var2 << 1808001668, var5 + var3 + 48 << -385938140, (((qe) this).field_i - 50) / 10 + 5 << 1090291428, 255, ml.field_c);
+                      ti.a(var4 + 48 + var2 << 4, var5 + var3 + 48 << 4, (((qe) this).field_i - 50) / 10 + 5 << 4, 255, ml.field_c);
                       break L39;
                     } else {
                       break L39;
                     }
                   }
-                  if (-6 != (qi.field_a ^ -1)) {
+                  if (qi.field_a != 5) {
                     break L38;
                   } else {
                     if (null == na.field_j) {
@@ -2269,7 +2412,7 @@ final class qe {
               }
             }
             L41: {
-              if ((((qe) this).field_m ^ -1) == -16) {
+              if (((qe) this).field_m == 15) {
                 if (7 != qi.field_a) {
                   break L41;
                 } else {
@@ -2288,7 +2431,7 @@ final class qe {
                       stackIn_200_1 = stackOut_199_1;
                       stackIn_200_2 = stackOut_199_2;
                       stackIn_200_3 = stackOut_199_3;
-                      if (-6 < (ki.field_s ^ -1)) {
+                      if (ki.field_s < 5) {
                         stackOut_201_0 = (ub) (Object) stackIn_201_0;
                         stackOut_201_1 = (String) (Object) stackIn_201_1;
                         stackOut_201_2 = stackIn_201_2;
@@ -2326,7 +2469,7 @@ final class qe {
             }
             L43: {
               if (((qe) this).field_m == 7) {
-                if (-9 != (qi.field_a ^ -1)) {
+                if (qi.field_a != 8) {
                   break L43;
                 } else {
                   if (null == na.field_j) {
@@ -2381,8 +2524,8 @@ final class qe {
               }
             }
             L45: {
-              if ((((qe) this).field_m ^ -1) == -7) {
-                if (-10 != (qi.field_a ^ -1)) {
+              if (((qe) this).field_m == 6) {
+                if (qi.field_a != 9) {
                   break L45;
                 } else {
                   if (na.field_j != null) {
@@ -2402,7 +2545,7 @@ final class qe {
                       stackIn_217_1 = stackOut_216_1;
                       stackIn_217_2 = stackOut_216_2;
                       stackIn_217_3 = stackOut_216_3;
-                      if (-6 < (ki.field_s ^ -1)) {
+                      if (ki.field_s < 5) {
                         stackOut_218_0 = (ub) (Object) stackIn_218_0;
                         stackOut_218_1 = (String) (Object) stackIn_218_1;
                         stackOut_218_2 = stackIn_218_2;
@@ -2439,7 +2582,7 @@ final class qe {
             if (((qe) this).field_m != 14) {
               break L0;
             } else {
-              if (-11 != (qi.field_a ^ -1)) {
+              if (qi.field_a != 10) {
                 break L0;
               } else {
                 if (null != na.field_j) {
@@ -2522,7 +2665,7 @@ final class qe {
             L50: {
               var4 = 0;
               var5 = 0;
-              var6 = ((qe) this).field_h << -321105629 & 2045;
+              var6 = ((qe) this).field_h << 3 & 2045;
               var7 = 0;
               var8 = 3;
               if (((qe) this).field_j >= -5) {
@@ -2533,7 +2676,7 @@ final class qe {
               }
             }
             L51: {
-              if (19 < (((qe) this).field_j ^ -1)) {
+              if (((qe) this).field_j < -20) {
                 var8 = 1;
                 break L51;
               } else {
@@ -2581,10 +2724,10 @@ final class qe {
               pd.field_h.a((byte) -107);
               if (0 == nc.field_H) {
                 L57: {
-                  if (-1 <= (el.field_I ^ -1)) {
+                  if (el.field_I <= 0) {
                     break L57;
                   } else {
-                    if ((15 & el.field_I ^ -1) <= -8) {
+                    if ((15 & el.field_I) >= 7) {
                       ((qe) this).b(640).b(var2, var3, 16777215);
                       break L56;
                     } else {
@@ -2595,7 +2738,7 @@ final class qe {
                 ((qe) this).b(640).e(var2, var3);
                 break L56;
               } else {
-                if ((nc.field_H ^ -1) == -2) {
+                if (nc.field_H == 1) {
                   L58: {
                     var10 = 16777215;
                     if (5 < gh.field_b) {
@@ -2622,7 +2765,7 @@ final class qe {
                     }
                   }
                   L61: {
-                    if ((gh.field_b ^ -1) == -3) {
+                    if (gh.field_b == 2) {
                       var10 = 16744703;
                       break L61;
                     } else {
@@ -2630,7 +2773,7 @@ final class qe {
                     }
                   }
                   L62: {
-                    if (-2 == (gh.field_b ^ -1)) {
+                    if (gh.field_b == 1) {
                       var10 = 16744576;
                       break L62;
                     } else {
@@ -2639,7 +2782,7 @@ final class qe {
                   }
                   L63: {
                     nd.a(128, var3 + 48, var10, 48 + var2, (byte) -54, 32);
-                    if ((el.field_I ^ -1) >= -1) {
+                    if (el.field_I <= 0) {
                       break L63;
                     } else {
                       if (7 > (el.field_I & 15)) {
@@ -2653,14 +2796,14 @@ final class qe {
                   ((qe) this).b(640).e(var2, var3);
                   break L56;
                 } else {
-                  if ((nc.field_H ^ -1) != -3) {
+                  if (nc.field_H != 2) {
                     break L56;
                   } else {
                     L64: {
-                      if ((gh.field_b ^ -1) < -51) {
+                      if (gh.field_b > 50) {
                         break L64;
                       } else {
-                        if ((gh.field_b % 10 ^ -1) <= -6) {
+                        if (gh.field_b % 10 >= 5) {
                           ((qe) this).b(640).e(var2, var3);
                           break L56;
                         } else {
@@ -2674,7 +2817,7 @@ final class qe {
                     L65: while (true) {
                       if (var11 >= var35.field_x) {
                         pd.field_h.a((byte) -107);
-                        if (-1 <= (gh.field_b & 48 ^ -1)) {
+                        if ((gh.field_b & 48) <= 0) {
                           var35.e(var2, var3);
                           break L56;
                         } else {
@@ -2716,14 +2859,14 @@ final class qe {
                   var12 = var12 + var36.field_s;
                   var13_int = 0;
                   L69: while (true) {
-                    if ((var13_int ^ -1) <= (var36.field_y ^ -1)) {
+                    if (~var13_int <= ~var36.field_y) {
                       break L67;
                     } else {
                       L70: {
                         var14_int = var11;
                         var15 = var13_int * var36.field_v;
                         var16 = 640 * (var13_int + var12) + var14_int;
-                        if ((var14_int ^ -1) <= -1) {
+                        if (var14_int >= 0) {
                           stackOut_65_0 = 0;
                           stackIn_66_0 = stackOut_65_0;
                           break L70;
@@ -2753,17 +2896,17 @@ final class qe {
                           continue L69;
                         } else {
                           L73: {
-                            if ((var34.field_z[var19 + var15] ^ -1) == -1) {
+                            if (var34.field_z[var19 + var15] == 0) {
                               break L73;
                             } else {
                               ti.field_a[var19 + var16 + -1] = 16777215;
                               ti.field_a[1 + var19 + var16] = 16777215;
                               ti.field_a[-640 + (var19 + var16)] = 16777215;
                               ti.field_a[640 + (var19 + var16)] = 16777215;
-                              ti.field_a[var19 + var16 + -640 - 1] = 16777215;
+                              ti.field_a[var19 + var16 - 641] = 16777215;
                               ti.field_a[var19 + (var16 + 639)] = 16777215;
-                              ti.field_a[var16 - -var19 - 640 - -1] = 16777215;
-                              ti.field_a[var16 - (-var19 - 640 - 1)] = 16777215;
+                              ti.field_a[var16 - -var19 - 639] = 16777215;
+                              ti.field_a[var16 - (-var19 - 641)] = 16777215;
                               break L73;
                             }
                           }
@@ -2787,10 +2930,10 @@ final class qe {
           }
         }
         L74: {
-          if (-3 < (ph.field_D ^ -1)) {
+          if (ph.field_D < 2) {
             break L74;
           } else {
-            if ((((qe) this).field_m ^ -1) == 0) {
+            if (((qe) this).field_m == -1) {
               break L74;
             } else {
               if (((qe) this).a((byte) -59)) {
@@ -2804,10 +2947,10 @@ final class qe {
         }
         if (param0 > 96) {
           L75: {
-            if (-3 < (ph.field_D ^ -1)) {
+            if (ph.field_D < 2) {
               break L75;
             } else {
-              if (-15 == (((qe) this).field_m ^ -1)) {
+              if (((qe) this).field_m == 14) {
                 qj.field_a.c("" + ((qe) this).field_i, var2 - -30, 50 + var3, 255, -1);
                 break L75;
               } else {
@@ -2839,7 +2982,7 @@ final class qe {
               ti.b(var2, var3, 4, 0);
               break L0;
             } else {
-              if (-2 != (((qe) this).field_m ^ -1)) {
+              if (((qe) this).field_m != 1) {
                 if (2 != ((qe) this).field_m) {
                   if (3 == ((qe) this).field_m) {
                     ti.c(var2, var3, 5, 65280, 64);
@@ -2847,22 +2990,22 @@ final class qe {
                     break L0;
                   } else {
                     if (4 != ((qe) this).field_m) {
-                      if ((((qe) this).field_m ^ -1) != -6) {
+                      if (((qe) this).field_m != 5) {
                         L1: {
                           if (6 == ((qe) this).field_m) {
                             break L1;
                           } else {
-                            if ((((qe) this).field_m ^ -1) == -15) {
+                            if (((qe) this).field_m == 14) {
                               break L1;
                             } else {
-                              if ((((qe) this).field_m ^ -1) == -8) {
+                              if (((qe) this).field_m == 7) {
                                 break L1;
                               } else {
                                 if (8 != ((qe) this).field_m) {
-                                  if ((((qe) this).field_m ^ -1) != -10) {
+                                  if (((qe) this).field_m != 9) {
                                     if (((qe) this).field_m != 10) {
                                       L2: {
-                                        if ((((qe) this).field_m ^ -1) != -12) {
+                                        if (((qe) this).field_m != 11) {
                                           break L2;
                                         } else {
                                           if (16 == ((qe) this).field_c) {
@@ -2878,10 +3021,10 @@ final class qe {
                                         if (((qe) this).field_m == 12) {
                                           break L3;
                                         } else {
-                                          if (-14 == (((qe) this).field_m ^ -1)) {
+                                          if (((qe) this).field_m == 13) {
                                             break L3;
                                           } else {
-                                            if ((((qe) this).field_m ^ -1) != -16) {
+                                            if (((qe) this).field_m != 15) {
                                               break L0;
                                             } else {
                                               break L3;
@@ -2955,7 +3098,7 @@ final class qe {
         if (param0 <= -36) {
           L0: {
             L1: {
-              if ((((qe) this).field_m ^ -1) != -12) {
+              if (((qe) this).field_m != 11) {
                 break L1;
               } else {
                 if (((qe) this).field_c != 16) {
@@ -2997,76 +3140,68 @@ final class qe {
         var30 = stellarshard.field_B;
         var2 = 0;
         L0: while (true) {
-          if (-1001 >= (var2 ^ -1)) {
-            L1: {
-              if (param0 <= -18) {
-                break L1;
-              } else {
-                int discarded$1 = ((qe) this).c((byte) 74);
-                break L1;
-              }
-            }
+          if (var2 >= 1000) {
             return;
           } else {
-            L2: {
+            L1: {
               if (a.field_h[var2] == null) {
-                break L2;
+                break L1;
               } else {
-                L3: {
+                L2: {
                   if (!a.field_h[var2].a((byte) -109)) {
-                    break L3;
+                    break L2;
                   } else {
                     if (((qe) this).field_m != 0) {
+                      break L1;
+                    } else {
                       break L2;
+                    }
+                  }
+                }
+                L3: {
+                  if (!((qe) this).a((byte) -48)) {
+                    break L3;
+                  } else {
+                    if (0 != a.field_h[var2].field_m) {
+                      break L1;
                     } else {
                       break L3;
                     }
                   }
                 }
-                L4: {
-                  if (!((qe) this).a((byte) -48)) {
-                    break L4;
-                  } else {
-                    if (0 != a.field_h[var2].field_m) {
-                      break L2;
-                    } else {
-                      break L4;
-                    }
-                  }
-                }
                 if (!gj.a(a.field_h[var2], 0, false, (qe) this)) {
-                  break L2;
+                  break L1;
                 } else {
-                  L5: {
+                  L4: {
                     if (a.field_h[var2].field_m != -1) {
-                      break L5;
+                      break L4;
                     } else {
-                      if ((a.field_h[var2].field_g ^ -1) >= -1) {
-                        break L2;
+                      if (a.field_h[var2].field_g <= 0) {
+                        break L1;
                       } else {
                         if (nc.field_H == 2) {
-                          break L2;
+                          break L1;
                         } else {
                           if (4 != nc.field_H) {
-                            break L5;
+                            break L4;
                           } else {
-                            break L2;
+                            break L1;
                           }
                         }
                       }
                     }
                   }
-                  L6: {
+                  L5: {
                     var3 = a.field_h[var2];
                     var4 = -var3.field_a + ((qe) this).field_a;
                     var6 = -var3.field_l + ((qe) this).field_l;
                     if (var4 != 0.0) {
-                      break L6;
+                      break L5;
                     } else {
                       if (0.0 == var6) {
-                        break L2;
+                        break L1;
                       } else {
-                        break L6;
+                        break L5;
                       }
                     }
                   }
@@ -3078,16 +3213,16 @@ final class qe {
                   var18 = var12 * ((qe) this).field_k + var10 * ((qe) this).field_d;
                   var20 = var3.field_k * var12 + var3.field_d * var10;
                   if (var20 <= var18) {
-                    break L2;
+                    break L1;
                   } else {
-                    L7: {
+                    L6: {
                       if (((qe) this).a((byte) -113)) {
-                        break L7;
+                        break L6;
                       } else {
                         if (a.field_h[var2].a((byte) -41)) {
-                          break L7;
+                          break L6;
                         } else {
-                          L8: {
+                          L7: {
                             this.a(100, ((qe) this).field_m);
                             this.a(100, a.field_h[var2].field_m);
                             var22 = (double)var3.field_n * var20 + (double)((qe) this).field_n * var18;
@@ -3097,179 +3232,179 @@ final class qe {
                             var28 = 0.0;
                             var28 = var26 + var24;
                             if (0.0 != var12) {
-                              break L8;
+                              break L7;
                             } else {
                               var12 = 0.00001;
+                              break L7;
+                            }
+                          }
+                          L8: {
+                            if (0.0 == var10) {
+                              var10 = 0.00001;
+                              break L8;
+                            } else {
                               break L8;
                             }
                           }
                           L9: {
-                            if (0.0 == var10) {
-                              var10 = 0.00001;
-                              break L9;
-                            } else {
-                              break L9;
-                            }
-                          }
-                          L10: {
                             ((qe) this).field_k = (-var14 + var26 / var10 * var12) / (var12 * var12 / var10 + var10);
                             ((qe) this).field_d = (-(var12 * ((qe) this).field_k) + var26) / var10;
                             var3.field_k = (var28 / var10 * var12 - var16) / (var12 * var12 / var10 + var10);
                             var3.field_d = (-(var3.field_k * var12) + var28) / var10;
-                            if (-12 != (var3.field_m ^ -1)) {
-                              L11: {
+                            if (var3.field_m != 11) {
+                              L10: {
                                 if (((qe) this).field_m == -1) {
-                                  break L11;
+                                  break L10;
                                 } else {
-                                  if ((var3.field_m ^ -1) != -15) {
-                                    break L10;
+                                  if (var3.field_m != 14) {
+                                    break L9;
                                   } else {
-                                    break L11;
+                                    break L10;
                                   }
                                 }
                               }
-                              L12: {
+                              L11: {
                                 if (14 == var3.field_m) {
                                   var3.field_i = var3.field_i + 50;
-                                  break L12;
+                                  break L11;
                                 } else {
-                                  break L12;
+                                  break L11;
                                 }
                               }
-                              L13: {
+                              L12: {
                                 if (0 != ((qe) this).field_m) {
-                                  break L13;
+                                  break L12;
                                 } else {
                                   if (0 >= el.field_I) {
-                                    break L13;
+                                    break L12;
                                   } else {
-                                    break L10;
+                                    break L9;
                                   }
                                 }
                               }
                               ((qe) this).field_g = ((qe) this).field_g - 1;
                               if (0 == ((qe) this).field_m) {
                                 el.field_I = 50;
-                                break L10;
+                                break L9;
                               } else {
-                                break L10;
+                                break L9;
                               }
                             } else {
-                              break L10;
+                              break L9;
                             }
                           }
                           if (-12 == ((qe) this).field_m) {
-                            break L7;
+                            break L6;
                           } else {
-                            L14: {
+                            L13: {
                               if (var3.field_m == -1) {
-                                break L14;
+                                break L13;
                               } else {
                                 if (-15 != ((qe) this).field_m) {
-                                  break L7;
+                                  break L6;
                                 } else {
-                                  break L14;
+                                  break L13;
                                 }
                               }
                             }
-                            L15: {
-                              if ((((qe) this).field_m ^ -1) != -15) {
-                                break L15;
+                            L14: {
+                              if (((qe) this).field_m != 14) {
+                                break L14;
                               } else {
                                 ((qe) this).field_i = ((qe) this).field_i + 50;
-                                break L15;
+                                break L14;
                               }
                             }
-                            L16: {
-                              if ((var3.field_m ^ -1) != 0) {
-                                break L16;
+                            L15: {
+                              if (var3.field_m != -1) {
+                                break L15;
                               } else {
                                 if (0 >= el.field_I) {
-                                  break L16;
+                                  break L15;
                                 } else {
-                                  break L7;
+                                  break L6;
                                 }
                               }
                             }
                             var3.field_g = var3.field_g - 1;
                             if (var3.field_m == -1) {
                               el.field_I = 50;
-                              break L7;
+                              break L6;
                             } else {
-                              break L7;
+                              break L6;
                             }
                           }
                         }
                       }
                     }
-                    L17: {
+                    L16: {
                       if (11 != ((qe) this).field_m) {
-                        break L17;
+                        break L16;
                       } else {
                         if (-1 != var3.field_m) {
-                          break L17;
+                          break L16;
                         } else {
                           if (-1 >= var3.field_g) {
                             o.a((qe) this, false);
-                            break L17;
+                            break L16;
                           } else {
-                            break L17;
+                            break L16;
                           }
                         }
                       }
                     }
-                    L18: {
+                    L17: {
                       if (-1 != ((qe) this).field_m) {
-                        break L18;
+                        break L17;
                       } else {
                         if (-12 != var3.field_m) {
-                          break L18;
+                          break L17;
                         } else {
                           if (0 <= ((qe) this).field_g) {
                             o.a(var3, false);
-                            break L18;
+                            break L17;
                           } else {
-                            break L18;
+                            break L17;
                           }
                         }
                       }
                     }
                     if (((qe) this).a((byte) -85)) {
-                      break L2;
+                      break L1;
                     } else {
                       if (!a.field_h[var2].a((byte) -105)) {
-                        L19: {
+                        L18: {
                           if (0.0 >= var14) {
-                            break L19;
+                            break L18;
                           } else {
                             ((qe) this).field_j = ((qe) this).field_j - 1;
+                            break L18;
+                          }
+                        }
+                        L19: {
+                          if (0.0 <= var14) {
+                            break L19;
+                          } else {
+                            ((qe) this).field_j = ((qe) this).field_j + 1;
                             break L19;
                           }
                         }
                         L20: {
-                          if (0.0 <= var14) {
-                            break L20;
-                          } else {
-                            ((qe) this).field_j = ((qe) this).field_j + 1;
-                            break L20;
-                          }
-                        }
-                        L21: {
                           if (0.0 < var16) {
                             var3.field_j = var3.field_j - 1;
-                            break L21;
+                            break L20;
                           } else {
-                            break L21;
+                            break L20;
                           }
                         }
                         if (0.0 <= var16) {
-                          break L2;
+                          break L1;
                         } else {
                           var3.field_j = var3.field_j + 1;
-                          break L2;
+                          break L1;
                         }
                       } else {
-                        break L2;
+                        break L1;
                       }
                     }
                   }
@@ -3291,13 +3426,13 @@ final class qe {
             }
             return e.field_g[var2];
         }
-        if ((((qe) this).field_h ^ -1) > -1) {
+        if (((qe) this).field_h < 0) {
             ((qe) this).field_h = ((qe) this).field_h + 256;
         }
         if (!(256 > ((qe) this).field_h)) {
             ((qe) this).field_h = ((qe) this).field_h - 256;
         }
-        if (!(0 != (((qe) this).field_m ^ -1))) {
+        if (!(((qe) this).field_m != -1)) {
             return ((qe) this).field_f[((qe) this).field_h / 4];
         }
         if (((qe) this).c((byte) 84) == -33) {
@@ -3321,55 +3456,24 @@ final class qe {
         ((qe) this).field_b = ((qe) this).field_b + ((qe) this).field_j;
         L0: while (true) {
           L1: {
-            if (-21 > (((qe) this).field_b ^ -1)) {
+            if (((qe) this).field_b > 20) {
               break L1;
             } else {
               if (-20 <= ((qe) this).field_b) {
                 L2: {
                   var2 = 64;
-                  if ((((qe) this).field_m ^ -1) != -15) {
+                  if (((qe) this).field_m != 14) {
                     break L2;
                   } else {
                     var2 = 128;
                     break L2;
                   }
                 }
-                L3: {
-                  var2 = 256;
-                  if (((qe) this).field_a >= (double)(-var2 + -320)) {
-                    break L3;
-                  } else {
-                    ((qe) this).field_a = ((qe) this).field_a + (double)(640 - -(2 * var2));
-                    break L3;
-                  }
-                }
-                if (param0 == 124) {
-                  L4: {
-                    if (((qe) this).field_a > (double)(var2 + 320)) {
-                      ((qe) this).field_a = ((qe) this).field_a - (double)(640 + 2 * var2);
-                      break L4;
-                    } else {
-                      break L4;
-                    }
-                  }
-                  L5: {
-                    if ((double)(-var2 + -240) <= ((qe) this).field_l) {
-                      break L5;
-                    } else {
-                      ((qe) this).field_l = ((qe) this).field_l + (double)(480 - -(2 * var2));
-                      break L5;
-                    }
-                  }
-                  L6: {
-                    if ((double)(240 + var2) < ((qe) this).field_l) {
-                      ((qe) this).field_l = ((qe) this).field_l - (double)(2 * var2 + 480);
-                      break L6;
-                    } else {
-                      break L6;
-                    }
-                  }
+                var2 = 256;
+                if (((qe) this).field_a >= (double)(-var2 + -320)) {
                   return;
                 } else {
+                  ((qe) this).field_a = ((qe) this).field_a + (double)(640 - -(2 * var2));
                   return;
                 }
               } else {
@@ -3377,17 +3481,17 @@ final class qe {
               }
             }
           }
-          L7: {
-            if ((((qe) this).field_b ^ -1) >= -21) {
-              break L7;
+          L3: {
+            if (((qe) this).field_b <= 20) {
+              break L3;
             } else {
               ((qe) this).field_h = ((qe) this).field_h + 1;
               ((qe) this).field_b = ((qe) this).field_b - 20;
               if (256 <= ((qe) this).field_h) {
                 ((qe) this).field_h = ((qe) this).field_h - 256;
-                break L7;
+                break L3;
               } else {
-                break L7;
+                break L3;
               }
             }
           }
@@ -3396,7 +3500,7 @@ final class qe {
           } else {
             ((qe) this).field_b = ((qe) this).field_b + 20;
             ((qe) this).field_h = ((qe) this).field_h - 1;
-            if (-1 >= (((qe) this).field_h ^ -1)) {
+            if (((qe) this).field_h >= 0) {
               continue L0;
             } else {
               ((qe) this).field_h = ((qe) this).field_h + 256;
@@ -3451,7 +3555,7 @@ final class qe {
           }
         }
         L2: {
-          if ((((qe) this).field_m ^ -1) != -4) {
+          if (((qe) this).field_m != 3) {
             break L2;
           } else {
             L3: {
@@ -3469,7 +3573,7 @@ final class qe {
           }
         }
         L4: {
-          if ((((qe) this).field_m ^ -1) != -6) {
+          if (((qe) this).field_m != 5) {
             break L4;
           } else {
             L5: {
@@ -3521,7 +3625,7 @@ final class qe {
           }
         }
         L10: {
-          if ((((qe) this).field_m ^ -1) == -5) {
+          if (((qe) this).field_m == 4) {
             L11: {
               if (fe.field_e) {
                 ll.field_c.a(sb.field_e[14], 100, 2 * pk.field_h);
@@ -3538,7 +3642,7 @@ final class qe {
           }
         }
         L12: {
-          if (-9 == (((qe) this).field_m ^ -1)) {
+          if (((qe) this).field_m == 8) {
             L13: {
               if (!fe.field_e) {
                 break L13;
@@ -3572,7 +3676,7 @@ final class qe {
           }
         }
         L16: {
-          if ((((qe) this).field_m ^ -1) == -11) {
+          if (((qe) this).field_m == 10) {
             var4 = 10;
             var5 = 8947967;
             if (fe.field_e) {
@@ -3586,11 +3690,11 @@ final class qe {
           }
         }
         L17: {
-          if (-14 == (((qe) this).field_m ^ -1)) {
+          if (((qe) this).field_m == 13) {
             L18: {
               int fieldTemp$5 = ta.field_p;
               ta.field_p = ta.field_p + 1;
-              if (-21 == (fieldTemp$5 ^ -1)) {
+              if (fieldTemp$5 == 20) {
                 hj.a(244, 11, 1);
                 break L18;
               } else {
@@ -3614,13 +3718,13 @@ final class qe {
           }
         }
         L20: {
-          if (-13 != (((qe) this).field_m ^ -1)) {
+          if (((qe) this).field_m != 12) {
             break L20;
           } else {
             L21: {
               int fieldTemp$6 = ta.field_p;
               ta.field_p = ta.field_p + 1;
-              if (-21 == (fieldTemp$6 ^ -1)) {
+              if (fieldTemp$6 == 20) {
                 hj.a(244, 11, 1);
                 break L21;
               } else {
@@ -3648,7 +3752,7 @@ final class qe {
             L24: {
               int fieldTemp$7 = ta.field_p;
               ta.field_p = ta.field_p + 1;
-              if ((fieldTemp$7 ^ -1) != -21) {
+              if (fieldTemp$7 != 20) {
                 break L24;
               } else {
                 hj.a(244, 11, 1);
@@ -3671,11 +3775,11 @@ final class qe {
         }
         L26: {
           var6 = -40 / ((param0 - 63) / 34);
-          if (-16 == (((qe) this).field_m ^ -1)) {
+          if (((qe) this).field_m == 15) {
             L27: {
               int fieldTemp$8 = sd.field_b;
               sd.field_b = sd.field_b + 1;
-              if ((fieldTemp$8 ^ -1) == -11) {
+              if (fieldTemp$8 == 10) {
                 hj.a(243, 12, 1);
                 break L27;
               } else {
@@ -3699,7 +3803,7 @@ final class qe {
           }
         }
         L29: {
-          if (-8 != (((qe) this).field_m ^ -1)) {
+          if (((qe) this).field_m != 7) {
             break L29;
           } else {
             L30: {
@@ -3733,7 +3837,7 @@ final class qe {
           }
         }
         L33: {
-          if ((((qe) this).field_m ^ -1) != -2) {
+          if (((qe) this).field_m != 1) {
             break L33;
           } else {
             var3 = 3;
@@ -3742,7 +3846,7 @@ final class qe {
           }
         }
         L34: {
-          if (-1 != (((qe) this).field_m ^ -1)) {
+          if (((qe) this).field_m != 0) {
             break L34;
           } else {
             var2 = 8;
@@ -3769,7 +3873,7 @@ final class qe {
           }
         }
         L37: {
-          if (-6 != (((qe) this).field_m ^ -1)) {
+          if (((qe) this).field_m != 5) {
             break L37;
           } else {
             var2 = 4;
@@ -3838,11 +3942,11 @@ final class qe {
             if (4 != nc.field_H) {
               break L42;
             } else {
-              if ((tb.field_K ^ -1) <= -1001) {
+              if (tb.field_K >= 1000) {
                 break L42;
               } else {
                 tb.field_K = tb.field_K + var4;
-                if (-1001 >= (tb.field_K ^ -1)) {
+                if (tb.field_K >= 1000) {
                   hj.a(254, 1, 1);
                   break L42;
                 } else {
@@ -3856,14 +3960,14 @@ final class qe {
           if (((qe) this).field_m == 11) {
             break L43;
           } else {
-            if ((((qe) this).field_m ^ -1) == 0) {
+            if (((qe) this).field_m == -1) {
               break L43;
             } else {
-              if ((nc.field_H ^ -1) == -5) {
+              if (nc.field_H == 4) {
                 break L43;
               } else {
                 var7_int = dc.a(-118);
-                if (0 <= (var7_int ^ -1)) {
+                if (var7_int <= -1) {
                   if (!pk.a(-12663, 0)) {
                     break L43;
                   } else {
@@ -3871,7 +3975,7 @@ final class qe {
                       if (qi.field_a >= q.field_a) {
                         break L44;
                       } else {
-                        if ((ph.field_D ^ -1) > -3) {
+                        if (ph.field_D < 2) {
                           break L43;
                         } else {
                           if (si.field_jb[52]) {
@@ -3891,10 +3995,10 @@ final class qe {
                           break L43;
                         } else {
                           L46: {
-                            if (-31 > (var9_int ^ -1)) {
+                            if (var9_int > 30) {
                               break L46;
                             } else {
-                              if (-3 < (ph.field_D ^ -1)) {
+                              if (ph.field_D < 2) {
                                 break L43;
                               } else {
                                 if (!si.field_jb[52]) {
@@ -3954,7 +4058,7 @@ final class qe {
           }
         }
         L49: {
-          if (-1 > (var3 ^ -1)) {
+          if (var3 > 0) {
             var7 = 0.0;
             var9 = 0.0;
             var11 = 0;
@@ -3967,7 +4071,7 @@ final class qe {
                     var12 = new qe(var2);
                     var12.field_l = ((qe) this).field_l;
                     var12.field_a = ((qe) this).field_a;
-                    if ((var3 + -1 ^ -1) < (var11 ^ -1)) {
+                    if (~(var3 + -1) < ~var11) {
                       break L52;
                     } else {
                       if (var2 == 10) {
@@ -4041,13 +4145,13 @@ final class qe {
               }
               L5: {
                 L6: {
-                  if (-1 == (param1 ^ -1)) {
+                  if (param1 == 0) {
                     break L6;
                   } else {
-                    if (-2 == (param1 ^ -1)) {
+                    if (param1 == 1) {
                       break L6;
                     } else {
-                      if ((param1 ^ -1) != -9) {
+                      if (param1 != 8) {
                         break L5;
                       } else {
                         break L6;
@@ -4060,13 +4164,13 @@ final class qe {
               }
               L7: {
                 L8: {
-                  if (-3 == (param1 ^ -1)) {
+                  if (param1 == 2) {
                     break L8;
                   } else {
                     if (param1 == 3) {
                       break L8;
                     } else {
-                      if ((param1 ^ -1) == -10) {
+                      if (param1 == 9) {
                         break L8;
                       } else {
                         break L7;
@@ -4079,7 +4183,7 @@ final class qe {
               }
               L9: {
                 L10: {
-                  if ((param1 ^ -1) == -5) {
+                  if (param1 == 4) {
                     break L10;
                   } else {
                     if (5 == param1) {
@@ -4113,8 +4217,8 @@ final class qe {
         if (param0 <= 34) {
             ((qe) this).field_j = 36;
         }
-        if (-1 >= (((qe) this).field_m ^ -1)) {
-            if (!((((qe) this).field_m ^ -1) <= -9)) {
+        if (((qe) this).field_m >= 0) {
+            if (!(((qe) this).field_m >= 8)) {
                 return 48;
             }
         }
@@ -4130,13 +4234,78 @@ final class qe {
     }
 
     final static int a(byte param0, String param1, boolean param2) {
-        if (param0 > -10) {
-            return -37;
+        RuntimeException var3 = null;
+        int stackIn_2_0 = 0;
+        int stackIn_5_0 = 0;
+        int stackIn_7_0 = 0;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_6_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_1_0 = 0;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        try {
+          L0: {
+            if (param0 <= -10) {
+              if (!param2) {
+                stackOut_6_0 = pe.field_c.b(param1);
+                stackIn_7_0 = stackOut_6_0;
+                break L0;
+              } else {
+                stackOut_4_0 = mj.field_E.b(param1);
+                stackIn_5_0 = stackOut_4_0;
+                return stackIn_5_0;
+              }
+            } else {
+              stackOut_1_0 = -37;
+              stackIn_2_0 = stackOut_1_0;
+              return stackIn_2_0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var3 = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var3;
+            stackOut_8_1 = new StringBuilder().append("qe.Q(").append(param0).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param1 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L1;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L1;
+            }
+          }
+          throw ma.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param2 + 41);
         }
-        if (param2) {
-            return mj.field_E.b(param1);
-        }
-        return pe.field_c.b(param1);
+        return stackIn_7_0;
     }
 
     final static boolean b(int param0, int param1) {
@@ -4170,7 +4339,7 @@ final class qe {
                     }
                     if (var2_int <= 0) {
                       L2: {
-                        if (-1 < (var2_int ^ -1)) {
+                        if (var2_int < 0) {
                           break L2;
                         } else {
                           if (tk.b(param0 + 61) <= 30000L) {
@@ -4323,7 +4492,7 @@ final class qe {
           stackOut_0_0 = this;
           stackIn_2_0 = stackOut_0_0;
           stackIn_1_0 = stackOut_0_0;
-          if ((qi.field_a ^ -1) <= -3) {
+          if (qi.field_a >= 2) {
             stackOut_2_0 = this;
             stackOut_2_1 = 2;
             stackIn_3_0 = stackOut_2_0;
@@ -4339,7 +4508,7 @@ final class qe {
         }
         L1: {
           ((qe) this).field_g = stackIn_3_1;
-          if (0 != (param0 ^ -1)) {
+          if (param0 != -1) {
             break L1;
           } else {
             ((qe) this).field_g = 1;
@@ -4347,7 +4516,7 @@ final class qe {
           }
         }
         L2: {
-          if (-1 != (param0 ^ -1)) {
+          if (param0 != 0) {
             break L2;
           } else {
             L3: {
@@ -4380,7 +4549,7 @@ final class qe {
               stackOut_11_0 = this;
               stackIn_13_0 = stackOut_11_0;
               stackIn_12_0 = stackOut_11_0;
-              if (-9 < (qi.field_a ^ -1)) {
+              if (qi.field_a < 8) {
                 stackOut_13_0 = this;
                 stackOut_13_1 = qi.field_a;
                 stackIn_14_0 = stackOut_13_0;
@@ -4432,7 +4601,7 @@ final class qe {
               stackOut_21_0 = this;
               stackIn_23_0 = stackOut_21_0;
               stackIn_22_0 = stackOut_21_0;
-              if ((qi.field_a ^ -1) <= -9) {
+              if (qi.field_a >= 8) {
                 stackOut_23_0 = this;
                 stackOut_23_1 = 8;
                 stackIn_24_0 = stackOut_23_0;
@@ -4451,7 +4620,7 @@ final class qe {
           }
         }
         L10: {
-          if ((param0 ^ -1) != -4) {
+          if (param0 != 3) {
             break L10;
           } else {
             L11: {
@@ -4477,7 +4646,7 @@ final class qe {
           }
         }
         L12: {
-          if (-6 != (param0 ^ -1)) {
+          if (param0 != 5) {
             break L12;
           } else {
             L13: {
@@ -4503,7 +4672,7 @@ final class qe {
           }
         }
         L14: {
-          if ((param0 ^ -1) != -10) {
+          if (param0 != 9) {
             break L14;
           } else {
             L15: {
@@ -4537,7 +4706,7 @@ final class qe {
           }
         }
         L17: {
-          if (-12 != (param0 ^ -1)) {
+          if (param0 != 11) {
             break L17;
           } else {
             ((qe) this).field_g = 50;
@@ -4554,7 +4723,7 @@ final class qe {
           }
         }
         L19: {
-          if ((param0 ^ -1) != -13) {
+          if (param0 != 12) {
             break L19;
           } else {
             ((qe) this).field_n = 200;
@@ -4564,7 +4733,7 @@ final class qe {
           }
         }
         L20: {
-          if (-14 != (param0 ^ -1)) {
+          if (param0 != 13) {
             break L20;
           } else {
             ((qe) this).field_n = 200;
@@ -4584,7 +4753,7 @@ final class qe {
           }
         }
         L22: {
-          if (-7 != (param0 ^ -1)) {
+          if (param0 != 6) {
             break L22;
           } else {
             ((qe) this).field_g = 10 - -(qi.field_a / 5);
@@ -4594,7 +4763,7 @@ final class qe {
           }
         }
         L23: {
-          if ((param0 ^ -1) != -8) {
+          if (param0 != 7) {
             break L23;
           } else {
             ((qe) this).field_g = 10 - -(qi.field_a / 5);
@@ -4604,7 +4773,7 @@ final class qe {
           }
         }
         L24: {
-          if ((param0 ^ -1) <= -1) {
+          if (param0 >= 0) {
             break L24;
           } else {
             ((qe) this).field_f = cm.field_d;
@@ -4615,7 +4784,7 @@ final class qe {
           if (0 > param0) {
             break L25;
           } else {
-            if ((param0 ^ -1) <= -9) {
+            if (param0 >= 8) {
               break L25;
             } else {
               ((qe) this).field_f = fe.field_d[param0];
@@ -4633,10 +4802,10 @@ final class qe {
         }
         L27: {
           L28: {
-            if ((param0 ^ -1) == -1) {
+            if (param0 == 0) {
               break L28;
             } else {
-              if ((param0 ^ -1) == -3) {
+              if (param0 == 2) {
                 break L28;
               } else {
                 if (4 != param0) {
@@ -4671,10 +4840,10 @@ final class qe {
         }
         L31: {
           L32: {
-            if ((param0 ^ -1) == -2) {
+            if (param0 == 1) {
               break L32;
             } else {
-              if (-4 == (param0 ^ -1)) {
+              if (param0 == 3) {
                 break L32;
               } else {
                 if (param0 != 5) {

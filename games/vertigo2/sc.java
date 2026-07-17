@@ -8,7 +8,7 @@ final class sc {
 
     final static void a(boolean param0, int param1) {
         int var2 = 0;
-        var2 = (-268435329 & param1) << 1662533540;
+        var2 = (-268435329 & param1) << 4;
         ke.field_e[3] = oo.field_h[var2];
         if (!param0) {
           return;
@@ -29,9 +29,6 @@ final class sc {
         field_b = null;
         field_c = null;
         field_a = null;
-        if (param0 != 4) {
-            sc.a(true, 15);
-        }
     }
 
     static {

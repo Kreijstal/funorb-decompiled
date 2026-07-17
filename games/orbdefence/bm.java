@@ -30,20 +30,83 @@ final class bm {
 
     final static void a(int param0, java.applet.Applet param1) {
         try {
-            String var2 = param1.getDocumentBase().getFile();
-            int var3 = var2.indexOf('?');
-            String var4 = "reload.ws";
-            if (!((var3 ^ -1) > -1)) {
-                var4 = var4 + var2.substring(var3);
-            }
-            java.net.URL var5 = new java.net.URL(param1.getCodeBase(), var4);
-            if (param0 != 12979) {
-                return;
-            }
+            String var2 = null;
+            Exception var2_ref = null;
+            RuntimeException var2_ref2 = null;
+            int var3 = 0;
+            String var4 = null;
+            java.net.URL var5 = null;
+            RuntimeException stackIn_10_0 = null;
+            StringBuilder stackIn_10_1 = null;
+            RuntimeException stackIn_11_0 = null;
+            StringBuilder stackIn_11_1 = null;
+            RuntimeException stackIn_12_0 = null;
+            StringBuilder stackIn_12_1 = null;
+            String stackIn_12_2 = null;
+            Throwable decompiledCaughtException = null;
+            RuntimeException stackOut_9_0 = null;
+            StringBuilder stackOut_9_1 = null;
+            RuntimeException stackOut_11_0 = null;
+            StringBuilder stackOut_11_1 = null;
+            String stackOut_11_2 = null;
+            RuntimeException stackOut_10_0 = null;
+            StringBuilder stackOut_10_1 = null;
+            String stackOut_10_2 = null;
             try {
-                param1.getAppletContext().showDocument(f.a(param1, var5, -21), "_self");
-            } catch (Exception exception) {
-                exception.printStackTrace();
+              try {
+                L0: {
+                  var2 = param1.getDocumentBase().getFile();
+                  var3 = var2.indexOf('?');
+                  var4 = "reload.ws";
+                  if (var3 >= 0) {
+                    var4 = var4 + var2.substring(var3);
+                    break L0;
+                  } else {
+                    break L0;
+                  }
+                }
+                var5 = new java.net.URL(param1.getCodeBase(), var4);
+                if (param0 == 12979) {
+                  param1.getAppletContext().showDocument(f.a(param1, var5, -21), "_self");
+                  return;
+                } else {
+                  return;
+                }
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var2_ref = (Exception) (Object) decompiledCaughtException;
+                var2_ref.printStackTrace();
+                return;
+              }
+            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L1: {
+                var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_9_0 = (RuntimeException) var2_ref2;
+                stackOut_9_1 = new StringBuilder().append("bm.A(").append(param0).append(44);
+                stackIn_11_0 = stackOut_9_0;
+                stackIn_11_1 = stackOut_9_1;
+                stackIn_10_0 = stackOut_9_0;
+                stackIn_10_1 = stackOut_9_1;
+                if (param1 == null) {
+                  stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+                  stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+                  stackOut_11_2 = "null";
+                  stackIn_12_0 = stackOut_11_0;
+                  stackIn_12_1 = stackOut_11_1;
+                  stackIn_12_2 = stackOut_11_2;
+                  break L1;
+                } else {
+                  stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+                  stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+                  stackOut_10_2 = "{...}";
+                  stackIn_12_0 = stackOut_10_0;
+                  stackIn_12_1 = stackOut_10_1;
+                  stackIn_12_2 = stackOut_10_2;
+                  break L1;
+                }
+              }
+              throw dd.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

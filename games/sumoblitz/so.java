@@ -48,7 +48,7 @@ final class so {
         } else {
           if (gj.a((byte) -84, 10) >= 5) {
             kn.field_b = kn.field_b + param0;
-            if ((gj.a((byte) -84, 10) ^ -1) <= -6) {
+            if (gj.a((byte) -84, 10) >= 5) {
               ha.field_f = ha.field_f + param0;
               if (param1 < -92) {
                 return;
@@ -67,7 +67,7 @@ final class so {
             }
           } else {
             ts.field_a = ts.field_a + param0;
-            if ((gj.a((byte) -84, 10) ^ -1) <= -6) {
+            if (gj.a((byte) -84, 10) >= 5) {
               ha.field_f = ha.field_f + param0;
               if (param1 < -92) {
                 return;

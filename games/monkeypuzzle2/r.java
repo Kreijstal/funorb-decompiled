@@ -16,11 +16,19 @@ final class r extends java.awt.Canvas implements java.awt.event.FocusListener {
         if (param0 != -107) {
             return;
         }
-        rk.a(param1, ((r) this).field_c, false);
+        try {
+            rk.a(param1, ((r) this).field_c, false);
+        } catch (RuntimeException runtimeException) {
+            throw la.a((Throwable) (Object) runtimeException, "r.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public final void focusLost(java.awt.event.FocusEvent param0) {
-        ((r) this).field_d = true;
+        try {
+            ((r) this).field_d = true;
+        } catch (RuntimeException runtimeException) {
+            throw la.a((Throwable) (Object) runtimeException, "r.focusLost(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public final void paint(java.awt.Graphics param0) {
@@ -41,7 +49,7 @@ final class r extends java.awt.Canvas implements java.awt.event.FocusListener {
         int stackOut_3_0 = 0;
         param1 = param1 & 8191;
         if (param0 == 71) {
-          if (-4097 >= (param1 ^ -1)) {
+          if (param1 >= 4096) {
             L0: {
               if (6144 > param1) {
                 stackOut_18_0 = -tj.field_b[6144 + -param1];
@@ -70,7 +78,7 @@ final class r extends java.awt.Canvas implements java.awt.event.FocusListener {
           }
         } else {
           int discarded$1 = r.a((byte) -100, 80);
-          if (-4097 >= (param1 ^ -1)) {
+          if (param1 >= 4096) {
             L2: {
               if (6144 > param1) {
                 stackOut_8_0 = -tj.field_b[6144 + -param1];
@@ -103,7 +111,7 @@ final class r extends java.awt.Canvas implements java.awt.event.FocusListener {
     public static void a(byte param0) {
         field_a = null;
         field_b = null;
-        int var1 = -44 / ((param0 - -23) / 59);
+        int var1 = 44;
         field_f = null;
     }
 

@@ -8,35 +8,95 @@ final class km {
     String field_c;
 
     final static boolean a(int param0, int param1, wk param2, int param3) {
-        if (param0 != 21405) {
-            km.a((byte) 1);
-            if ((param1 ^ -1) >= 47) {
-                return false;
+        RuntimeException var4 = null;
+        int stackIn_8_0 = 0;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_6_0 = 0;
+        int stackOut_7_0 = 0;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 == 21405) {
+                break L1;
+              } else {
+                km.a((byte) 1);
+                break L1;
+              }
             }
-            if (47 <= (param1 ^ -1)) {
-                return false;
+            L2: {
+              L3: {
+                if (param1 <= -48) {
+                  break L3;
+                } else {
+                  if (param1 <= -48) {
+                    break L3;
+                  } else {
+                    if ((float)param1 >= (float)qj.field_d * 1.0f) {
+                      break L3;
+                    } else {
+                      if ((float)me.field_Bb * 1.0f <= (float)param3) {
+                        break L3;
+                      } else {
+                        stackOut_6_0 = 1;
+                        stackIn_8_0 = stackOut_6_0;
+                        break L2;
+                      }
+                    }
+                  }
+                }
+              }
+              stackOut_7_0 = 0;
+              stackIn_8_0 = stackOut_7_0;
+              break L2;
             }
-            if ((float)param1 >= (float)qj.field_d * 1.0f) {
-                return false;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var4 = decompiledCaughtException;
+            stackOut_9_0 = (RuntimeException) var4;
+            stackOut_9_1 = new StringBuilder().append("km.A(").append(param0).append(44).append(param1).append(44);
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
+            if (param2 == null) {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
+              break L4;
+            } else {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
+              break L4;
             }
-            if ((float)me.field_Bb * 1.0f <= (float)param3) {
-                return false;
-            }
-            return true;
+          }
+          throw sh.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param3 + 41);
         }
-        if ((param1 ^ -1) >= 47) {
-            return false;
-        }
-        if (47 <= (param1 ^ -1)) {
-            return false;
-        }
-        if ((float)param1 >= (float)qj.field_d * 1.0f) {
-            return false;
-        }
-        if ((float)me.field_Bb * 1.0f <= (float)param3) {
-            return false;
-        }
-        return true;
+        return stackIn_8_0 != 0;
     }
 
     public static void a(byte param0) {

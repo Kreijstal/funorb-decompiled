@@ -254,7 +254,7 @@ final class bb {
                                                                                 }
                                                                               } else {
                                                                                 param0.field_w[var31] = param0.field_w[var31] - 1;
-                                                                                param0.field_g[param0.field_w[var31]] = param0.field_g[param0.field_w[var31 - 1] + 16 - 1];
+                                                                                param0.field_g[param0.field_w[var31]] = param0.field_g[param0.field_w[var31 - 1] + 15];
                                                                                 var31--;
                                                                                 continue L19;
                                                                               }
@@ -340,7 +340,7 @@ final class bb {
                                                                       break L27;
                                                                     }
                                                                   } else {
-                                                                    var15 = var15 + 1 * var16;
+                                                                    var15 = var15 + var16;
                                                                     break L27;
                                                                   }
                                                                 }
@@ -634,7 +634,7 @@ final class bb {
         synchronized (var5) {
           L0: {
             field_a.field_i = param2;
-            field_a.field_p = param4;
+            field_a.field_p = 9;
             field_a.field_q = param0;
             field_a.field_n = 0;
             field_a.field_B = param1;

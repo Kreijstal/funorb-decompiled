@@ -71,7 +71,7 @@ final class cl extends ci {
                     var11 = 0;
                     L4: while (true) {
                       if (var4 <= var11) {
-                        var3[var9] = var5 * var10 >> 2068838160;
+                        var3[var9] = var5 * var10 >> 16;
                         var9++;
                         continue L3;
                       } else {
@@ -101,7 +101,7 @@ final class cl extends ci {
                         var9++;
                         continue L2;
                       } else {
-                        var11_ref_int__[var15] = var7 * var12 >> -1887913936;
+                        var11_ref_int__[var15] = var7 * var12 >> 16;
                         var12 = var12 - var10_ref_int__[una.field_b & -((cl) this).field_n + var15];
                         var15++;
                         var12 = var12 + var10_ref_int__[var15 - -((cl) this).field_n & una.field_b];
@@ -203,9 +203,9 @@ final class cl extends ci {
                     var16 = 0;
                     L4: while (true) {
                       if (var16 >= var4) {
-                        var9[var12] = var13 * var5 >> 355519536;
-                        var10[var12] = var5 * var14 >> -1041783952;
-                        var11[var12] = var15 * var5 >> -1113407696;
+                        var9[var12] = var13 * var5 >> 16;
+                        var10[var12] = var5 * var14 >> 16;
+                        var11[var12] = var15 * var5 >> 16;
                         var12++;
                         continue L3;
                       } else {
@@ -241,9 +241,9 @@ final class cl extends ci {
                         var9_int++;
                         continue L2;
                       } else {
-                        var18[var21] = var12 * var7 >> -972957328;
-                        var19[var21] = var13 * var7 >> -1727724016;
-                        var20[var21] = var7 * var14 >> -2048694992;
+                        var18[var21] = var12 * var7 >> 16;
+                        var19[var21] = var13 * var7 >> 16;
+                        var20[var21] = var7 * var14 >> 16;
                         var22 = var21 + -((cl) this).field_n & una.field_b;
                         var13 = var13 - var49[var22];
                         var21++;
@@ -273,62 +273,113 @@ final class cl extends ci {
     }
 
     final void a(byte param0, uia param1, int param2) {
-        int var4 = 0;
+        int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
-        Object stackIn_11_0 = null;
         Object stackIn_12_0 = null;
         Object stackIn_13_0 = null;
-        int stackIn_13_1 = 0;
-        Object stackOut_10_0 = null;
+        Object stackIn_14_0 = null;
+        int stackIn_14_1 = 0;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_19_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        Object stackOut_11_0 = null;
+        Object stackOut_13_0 = null;
+        int stackOut_13_1 = 0;
         Object stackOut_12_0 = null;
         int stackOut_12_1 = 0;
-        Object stackOut_11_0 = null;
-        int stackOut_11_1 = 0;
-        L0: {
-          var5 = TombRacer.field_G ? 1 : 0;
-          if (param0 == 107) {
-            break L0;
-          } else {
-            ((cl) this).field_m = -16;
-            break L0;
-          }
-        }
-        L1: {
-          var4 = param2;
-          if (var4 != -1) {
-            if (1 != var4) {
-              if (-3 == var4) {
-                L2: {
-                  stackOut_10_0 = this;
-                  stackIn_12_0 = stackOut_10_0;
-                  stackIn_11_0 = stackOut_10_0;
-                  if (1 != param1.h(255)) {
-                    stackOut_12_0 = this;
-                    stackOut_12_1 = 0;
-                    stackIn_13_0 = stackOut_12_0;
-                    stackIn_13_1 = stackOut_12_1;
-                    break L2;
-                  } else {
-                    stackOut_11_0 = this;
-                    stackOut_11_1 = 1;
-                    stackIn_13_0 = stackOut_11_0;
-                    stackIn_13_1 = stackOut_11_1;
-                    break L2;
-                  }
-                }
-                ((cl) this).field_g = stackIn_13_1 != 0;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        var5 = TombRacer.field_G ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              if (param0 == 107) {
                 break L1;
               } else {
+                ((cl) this).field_m = -16;
                 break L1;
               }
-            } else {
-              ((cl) this).field_m = param1.h(255);
-              break L1;
             }
-          } else {
-            ((cl) this).field_n = param1.h(255);
-            break L1;
+            L2: {
+              var4_int = param2;
+              if (var4_int != 0) {
+                if (1 != var4_int) {
+                  if (var4_int == 2) {
+                    L3: {
+                      stackOut_11_0 = this;
+                      stackIn_13_0 = stackOut_11_0;
+                      stackIn_12_0 = stackOut_11_0;
+                      if (1 != param1.h(255)) {
+                        stackOut_13_0 = this;
+                        stackOut_13_1 = 0;
+                        stackIn_14_0 = stackOut_13_0;
+                        stackIn_14_1 = stackOut_13_1;
+                        break L3;
+                      } else {
+                        stackOut_12_0 = this;
+                        stackOut_12_1 = 1;
+                        stackIn_14_0 = stackOut_12_0;
+                        stackIn_14_1 = stackOut_12_1;
+                        break L3;
+                      }
+                    }
+                    ((cl) this).field_g = stackIn_14_1 != 0;
+                    break L2;
+                  } else {
+                    break L2;
+                  }
+                } else {
+                  ((cl) this).field_m = param1.h(255);
+                  break L2;
+                }
+              } else {
+                ((cl) this).field_n = param1.h(255);
+                break L2;
+              }
+            }
+            break L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var4 = decompiledCaughtException;
+            stackOut_16_0 = (RuntimeException) var4;
+            stackOut_16_1 = new StringBuilder().append("cl.A(").append(param0).append(44);
+            stackIn_18_0 = stackOut_16_0;
+            stackIn_18_1 = stackOut_16_1;
+            stackIn_17_0 = stackOut_16_0;
+            stackIn_17_1 = stackOut_16_1;
+            if (param1 == null) {
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "null";
+              stackIn_19_0 = stackOut_18_0;
+              stackIn_19_1 = stackOut_18_1;
+              stackIn_19_2 = stackOut_18_2;
+              break L4;
+            } else {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "{...}";
+              stackIn_19_0 = stackOut_17_0;
+              stackIn_19_1 = stackOut_17_1;
+              stackIn_19_2 = stackOut_17_2;
+              break L4;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param2 + 41);
         }
     }
 

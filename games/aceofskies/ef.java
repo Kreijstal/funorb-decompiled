@@ -26,191 +26,179 @@ final class ef {
     static int field_m;
 
     public static void a(int param0) {
-        if (param0 != 0) {
-          float discarded$2 = ef.a(-0.783437192440033f, -0.508948802947998f, 119, 0.7036879658699036f, 56);
-          field_k = null;
-          field_g = null;
-          field_i = null;
-          return;
-        } else {
-          field_k = null;
-          field_g = null;
-          field_i = null;
-          return;
-        }
+        field_k = null;
+        field_g = null;
+        field_i = null;
     }
 
     final static void a(byte param0, rk param1, gk param2) {
+        RuntimeException var3 = null;
         int var4 = 0;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        String stackIn_27_2 = null;
+        RuntimeException stackIn_28_0 = null;
+        StringBuilder stackIn_28_1 = null;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
+        String stackIn_30_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        RuntimeException stackOut_26_0 = null;
+        StringBuilder stackOut_26_1 = null;
+        String stackOut_26_2 = null;
+        RuntimeException stackOut_25_0 = null;
+        StringBuilder stackOut_25_1 = null;
+        String stackOut_25_2 = null;
+        RuntimeException stackOut_27_0 = null;
+        StringBuilder stackOut_27_1 = null;
+        RuntimeException stackOut_29_0 = null;
+        StringBuilder stackOut_29_1 = null;
+        String stackOut_29_2 = null;
+        RuntimeException stackOut_28_0 = null;
+        StringBuilder stackOut_28_1 = null;
+        String stackOut_28_2 = null;
         var4 = AceOfSkies.field_G ? 1 : 0;
-        rj.field_b = param2;
-        bl.field_g = "";
-        if (param0 <= 93) {
+        try {
           L0: {
-            field_k = (gu) null;
-            bm.field_I = param1;
-            if (!rr.field_b.startsWith("win")) {
-              if (rr.field_b.startsWith("linux")) {
-                bl.field_g = bl.field_g + "linux/";
-                break L0;
-              } else {
-                if (rr.field_b.startsWith("mac")) {
-                  bl.field_g = bl.field_g + "macos/";
-                  break L0;
-                } else {
-                  if (!bm.field_I.field_p) {
-                    if (!rr.field_a.startsWith("amd64")) {
-                      if (!rr.field_a.startsWith("x86_64")) {
-                        if (!rr.field_a.startsWith("i386")) {
-                          if (!rr.field_a.startsWith("i486")) {
-                            if (!rr.field_a.startsWith("i586")) {
-                              if (!rr.field_a.startsWith("x86")) {
-                                if (!rr.field_a.startsWith("ppc")) {
-                                  bl.field_g = bl.field_g + "universal/";
-                                  return;
-                                } else {
-                                  bl.field_g = bl.field_g + "ppc/";
-                                  return;
-                                }
-                              } else {
-                                bl.field_g = bl.field_g + "x86/";
-                                return;
-                              }
-                            } else {
-                              bl.field_g = bl.field_g + "x86/";
-                              return;
-                            }
-                          } else {
-                            bl.field_g = bl.field_g + "x86/";
-                            return;
-                          }
-                        } else {
-                          bl.field_g = bl.field_g + "x86/";
-                          return;
-                        }
-                      } else {
-                        bl.field_g = bl.field_g + "x86_64/";
-                        return;
-                      }
-                    } else {
-                      bl.field_g = bl.field_g + "x86_64/";
-                      return;
-                    }
-                  } else {
-                    bl.field_g = bl.field_g + "msjava/";
-                    return;
-                  }
-                }
-              }
-            } else {
-              bl.field_g = bl.field_g + "windows/";
-              break L0;
-            }
-          }
-          if (!bm.field_I.field_p) {
-            if (!rr.field_a.startsWith("amd64")) {
-              if (!rr.field_a.startsWith("x86_64")) {
-                if (!rr.field_a.startsWith("i386")) {
-                  if (!rr.field_a.startsWith("i486")) {
-                    if (!rr.field_a.startsWith("i586")) {
-                      if (!rr.field_a.startsWith("x86")) {
-                        if (rr.field_a.startsWith("ppc")) {
-                          bl.field_g = bl.field_g + "ppc/";
-                          return;
-                        } else {
-                          bl.field_g = bl.field_g + "universal/";
-                          return;
-                        }
-                      } else {
-                        bl.field_g = bl.field_g + "x86/";
-                        return;
-                      }
-                    } else {
-                      bl.field_g = bl.field_g + "x86/";
-                      return;
-                    }
-                  } else {
-                    bl.field_g = bl.field_g + "x86/";
-                    return;
-                  }
-                } else {
-                  bl.field_g = bl.field_g + "x86/";
-                  return;
-                }
-              } else {
-                bl.field_g = bl.field_g + "x86_64/";
-                return;
-              }
-            } else {
-              bl.field_g = bl.field_g + "x86_64/";
-              return;
-            }
-          } else {
-            bl.field_g = bl.field_g + "msjava/";
-            return;
-          }
-        } else {
-          L1: {
-            bm.field_I = param1;
-            if (!rr.field_b.startsWith("win")) {
-              if (rr.field_b.startsWith("linux")) {
-                bl.field_g = bl.field_g + "linux/";
+            L1: {
+              rj.field_b = param2;
+              bl.field_g = "";
+              if (param0 > 93) {
                 break L1;
               } else {
-                if (!rr.field_b.startsWith("mac")) {
-                  break L1;
-                } else {
-                  bl.field_g = bl.field_g + "macos/";
-                  break L1;
-                }
+                field_k = null;
+                break L1;
               }
-            } else {
-              bl.field_g = bl.field_g + "windows/";
-              break L1;
             }
-          }
-          if (!bm.field_I.field_p) {
-            if (!rr.field_a.startsWith("amd64")) {
-              if (!rr.field_a.startsWith("x86_64")) {
-                if (!rr.field_a.startsWith("i386")) {
-                  if (!rr.field_a.startsWith("i486")) {
-                    if (!rr.field_a.startsWith("i586")) {
-                      if (!rr.field_a.startsWith("x86")) {
-                        if (rr.field_a.startsWith("ppc")) {
-                          bl.field_g = bl.field_g + "ppc/";
-                          return;
-                        } else {
-                          bl.field_g = bl.field_g + "universal/";
-                          return;
-                        }
-                      } else {
-                        bl.field_g = bl.field_g + "x86/";
-                        return;
-                      }
-                    } else {
-                      bl.field_g = bl.field_g + "x86/";
-                      return;
-                    }
-                  } else {
-                    bl.field_g = bl.field_g + "x86/";
-                    return;
-                  }
+            L2: {
+              bm.field_I = param1;
+              if (!rr.field_b.startsWith("win")) {
+                if (rr.field_b.startsWith("linux")) {
+                  bl.field_g = bl.field_g + "linux/";
+                  break L2;
                 } else {
-                  bl.field_g = bl.field_g + "x86/";
-                  return;
+                  if (!rr.field_b.startsWith("mac")) {
+                    break L2;
+                  } else {
+                    bl.field_g = bl.field_g + "macos/";
+                    break L2;
+                  }
                 }
               } else {
-                bl.field_g = bl.field_g + "x86_64/";
-                return;
+                bl.field_g = bl.field_g + "windows/";
+                break L2;
               }
-            } else {
-              bl.field_g = bl.field_g + "x86_64/";
-              return;
             }
-          } else {
-            bl.field_g = bl.field_g + "msjava/";
-            return;
+            L3: {
+              if (bm.field_I.field_p) {
+                bl.field_g = bl.field_g + "msjava/";
+                break L3;
+              } else {
+                L4: {
+                  if (rr.field_a.startsWith("amd64")) {
+                    break L4;
+                  } else {
+                    if (!rr.field_a.startsWith("x86_64")) {
+                      L5: {
+                        if (rr.field_a.startsWith("i386")) {
+                          break L5;
+                        } else {
+                          if (rr.field_a.startsWith("i486")) {
+                            break L5;
+                          } else {
+                            if (rr.field_a.startsWith("i586")) {
+                              break L5;
+                            } else {
+                              if (rr.field_a.startsWith("x86")) {
+                                break L5;
+                              } else {
+                                if (!rr.field_a.startsWith("ppc")) {
+                                  bl.field_g = bl.field_g + "universal/";
+                                  break L3;
+                                } else {
+                                  bl.field_g = bl.field_g + "ppc/";
+                                  break L3;
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                      bl.field_g = bl.field_g + "x86/";
+                      break L3;
+                    } else {
+                      break L4;
+                    }
+                  }
+                }
+                bl.field_g = bl.field_g + "x86_64/";
+                break L3;
+              }
+            }
+            break L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L6: {
+            var3 = decompiledCaughtException;
+            stackOut_24_0 = (RuntimeException) var3;
+            stackOut_24_1 = new StringBuilder().append("ef.D(").append(param0).append(44);
+            stackIn_26_0 = stackOut_24_0;
+            stackIn_26_1 = stackOut_24_1;
+            stackIn_25_0 = stackOut_24_0;
+            stackIn_25_1 = stackOut_24_1;
+            if (param1 == null) {
+              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
+              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_2 = "null";
+              stackIn_27_0 = stackOut_26_0;
+              stackIn_27_1 = stackOut_26_1;
+              stackIn_27_2 = stackOut_26_2;
+              break L6;
+            } else {
+              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
+              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_2 = "{...}";
+              stackIn_27_0 = stackOut_25_0;
+              stackIn_27_1 = stackOut_25_1;
+              stackIn_27_2 = stackOut_25_2;
+              break L6;
+            }
+          }
+          L7: {
+            stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
+            stackOut_27_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(44);
+            stackIn_29_0 = stackOut_27_0;
+            stackIn_29_1 = stackOut_27_1;
+            stackIn_28_0 = stackOut_27_0;
+            stackIn_28_1 = stackOut_27_1;
+            if (param2 == null) {
+              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
+              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
+              stackOut_29_2 = "null";
+              stackIn_30_0 = stackOut_29_0;
+              stackIn_30_1 = stackOut_29_1;
+              stackIn_30_2 = stackOut_29_2;
+              break L7;
+            } else {
+              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
+              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_2 = "{...}";
+              stackIn_30_0 = stackOut_28_0;
+              stackIn_30_1 = stackOut_28_1;
+              stackIn_30_2 = stackOut_28_2;
+              break L7;
+            }
+          }
+          throw pn.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 41);
         }
     }
 
@@ -255,7 +243,7 @@ final class ef {
                       if (td.field_b != var2) {
                         L2: {
                           ((ef) this).field_l.a(var3, false, var2);
-                          if (-1 <= (((ef) this).field_e ^ -1)) {
+                          if (((ef) this).field_e <= 0) {
                             break L2;
                           } else {
                             ci.field_g = (-td.field_b + ((ef) this).field_e) / 2;
@@ -287,7 +275,7 @@ final class ef {
               }
               if (td.field_b != var2) {
                 ((ef) this).field_l.a(var3, false, var2);
-                if (-1 > (((ef) this).field_e ^ -1)) {
+                if (((ef) this).field_e > 0) {
                   ci.field_g = (-td.field_b + ((ef) this).field_e) / 2;
                   return;
                 } else {
@@ -345,7 +333,7 @@ final class ef {
                     }
                   }
                 }
-                if (-1 > (((ef) this).field_e ^ -1)) {
+                if (((ef) this).field_e > 0) {
                   ci.field_g = (-td.field_b + ((ef) this).field_e) / 2;
                   return;
                 } else {
@@ -370,7 +358,7 @@ final class ef {
                         }
                       }
                       L6: {
-                        if (-1 <= (((ef) this).field_e ^ -1)) {
+                        if (((ef) this).field_e <= 0) {
                           break L6;
                         } else {
                           ci.field_g = (-td.field_b + ((ef) this).field_e) / 2;
@@ -394,7 +382,7 @@ final class ef {
                         }
                       }
                       L8: {
-                        if (-1 <= (((ef) this).field_e ^ -1)) {
+                        if (((ef) this).field_e <= 0) {
                           break L8;
                         } else {
                           ci.field_g = (-td.field_b + ((ef) this).field_e) / 2;
@@ -419,7 +407,7 @@ final class ef {
                       }
                     }
                     L10: {
-                      if (-1 <= (((ef) this).field_e ^ -1)) {
+                      if (((ef) this).field_e <= 0) {
                         break L10;
                       } else {
                         ci.field_g = (-td.field_b + ((ef) this).field_e) / 2;
@@ -443,7 +431,7 @@ final class ef {
                     }
                   }
                   L12: {
-                    if (-1 <= (((ef) this).field_e ^ -1)) {
+                    if (((ef) this).field_e <= 0) {
                       break L12;
                     } else {
                       ci.field_g = (-td.field_b + ((ef) this).field_e) / 2;
@@ -500,7 +488,7 @@ final class ef {
         float[] var5 = null;
         float[] var6 = null;
         if (param2 >= -30) {
-          field_k = (gu) null;
+          field_k = null;
           var6 = uj.field_a[param4];
           var5 = var6;
           return var6[1] * param3 + var6[0] * param0 + var6[2] * param1;
@@ -531,21 +519,17 @@ final class ef {
     }
 
     final static void a(int param0, mg param1, mg param2, int param3, int param4, int param5) {
-        if (param0 < 15) {
-          field_g = (String) null;
-          as.field_c = param3;
-          ej.field_a = param2;
-          pp.field_a = param5;
-          u.field_g = param1;
-          ud.field_g = param4;
-          return;
-        } else {
-          as.field_c = param3;
-          ej.field_a = param2;
-          pp.field_a = param5;
-          u.field_g = param1;
-          ud.field_g = param4;
-          return;
+        try {
+            if (param0 < 15) {
+                field_g = null;
+            }
+            as.field_c = param3;
+            ej.field_a = param2;
+            pp.field_a = param5;
+            u.field_g = param1;
+            ud.field_g = param4;
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) (Object) runtimeException, "ef.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
     }
 
@@ -577,11 +561,12 @@ final class ef {
     final void b(int param0) {
         if (jf.field_a == null) {
           if (param0 < 38) {
-            float discarded$1 = ef.a(0.5743587017059326f, 1.6069247722625732f, 74, -0.5514667630195618f, -105);
+            float discarded$5 = ef.a(0.5743587017059326f, 1.6069247722625732f, 74, -0.5514667630195618f, -105);
             if (qr.field_a > 0) {
               if (((ef) this).field_b) {
+                int fieldTemp$6 = ((ef) this).field_j - 1;
                 ((ef) this).field_j = ((ef) this).field_j - 1;
-                if (0 >= ((ef) this).field_j - 1) {
+                if (0 >= fieldTemp$6) {
                   ((ef) this).field_j = ((ef) this).field_f;
                   if (ki.field_g < ((ef) this).field_s) {
                     ((ef) this).field_b = false;
@@ -639,8 +624,9 @@ final class ef {
             } else {
               ((ef) this).field_b = false;
               if (((ef) this).field_b) {
+                int fieldTemp$7 = ((ef) this).field_j - 1;
                 ((ef) this).field_j = ((ef) this).field_j - 1;
-                if (0 >= ((ef) this).field_j - 1) {
+                if (0 >= fieldTemp$7) {
                   ((ef) this).field_j = ((ef) this).field_f;
                   if (ki.field_g < ((ef) this).field_s) {
                     ((ef) this).field_b = false;
@@ -708,8 +694,9 @@ final class ef {
           } else {
             if (qr.field_a > 0) {
               if (((ef) this).field_b) {
+                int fieldTemp$8 = ((ef) this).field_j - 1;
                 ((ef) this).field_j = ((ef) this).field_j - 1;
-                if (0 >= ((ef) this).field_j - 1) {
+                if (0 >= fieldTemp$8) {
                   ((ef) this).field_j = ((ef) this).field_f;
                   if (ki.field_g < ((ef) this).field_s) {
                     ((ef) this).field_b = false;
@@ -773,8 +760,9 @@ final class ef {
             } else {
               ((ef) this).field_b = false;
               if (((ef) this).field_b) {
+                int fieldTemp$9 = ((ef) this).field_j - 1;
                 ((ef) this).field_j = ((ef) this).field_j - 1;
-                if (0 >= ((ef) this).field_j - 1) {
+                if (0 >= fieldTemp$9) {
                   ((ef) this).field_j = ((ef) this).field_f;
                   if (ki.field_g < ((ef) this).field_s) {
                     ((ef) this).field_b = false;

@@ -14,7 +14,7 @@ final class ed {
         while (((ed) this).field_b[var1] >= 0) {
             var1 = ph.a() != 0 ? ((ed) this).field_b[var1] : var1 + 1;
         }
-        return ((ed) this).field_b[var1] ^ -1;
+        return ~((ed) this).field_b[var1];
     }
 
     private final static int a(int param0, int param1) {
@@ -65,7 +65,7 @@ final class ed {
                   var7 = 0;
                   L2: while (true) {
                     if (var7 >= var4) {
-                      ((ed) this).field_b[var6] = var3 ^ -1;
+                      ((ed) this).field_b[var6] = ~var3;
                       if (var6 >= var2) {
                         var2 = var6 + 1;
                         var3++;
@@ -216,7 +216,7 @@ final class ed {
         int stackOut_22_0 = 0;
         int stackOut_21_0 = 0;
         L0: {
-          int discarded$1 = ph.b(24);
+          int discarded$2 = ph.b(24);
           ((ed) this).field_f = ph.b(16);
           ((ed) this).field_a = ph.b(24);
           ((ed) this).field_c = new int[((ed) this).field_a];
@@ -283,8 +283,9 @@ final class ed {
                     var3_int++;
                     continue L5;
                   } else {
+                    int incrementValue$3 = var2;
                     var2++;
-                    ((ed) this).field_c[var2] = var3_int;
+                    ((ed) this).field_c[incrementValue$3] = var3_int;
                     var5++;
                     continue L6;
                   }

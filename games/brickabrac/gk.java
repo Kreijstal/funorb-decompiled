@@ -13,9 +13,6 @@ abstract class gk {
         field_d = null;
         field_c = null;
         field_b = null;
-        if (param0 < 72) {
-            field_a = 14;
-        }
     }
 
     abstract int b(int param0);

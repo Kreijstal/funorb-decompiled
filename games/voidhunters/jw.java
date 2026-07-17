@@ -11,9 +11,6 @@ final class jw {
     public static void a(boolean param0) {
         field_d = null;
         field_a = null;
-        if (param0) {
-            jw.a(false);
-        }
     }
 
     static {

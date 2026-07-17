@@ -79,22 +79,11 @@ abstract class um {
 
     public static void a(boolean param0) {
         field_d = null;
-        if (param0) {
-          um.a(-95, true);
-          field_e = null;
-          field_g = null;
-          field_i = null;
-          field_b = null;
-          field_c = null;
-          return;
-        } else {
-          field_e = null;
-          field_g = null;
-          field_i = null;
-          field_b = null;
-          field_c = null;
-          return;
-        }
+        field_e = null;
+        field_g = null;
+        field_i = null;
+        field_b = null;
+        field_c = null;
     }
 
     static {

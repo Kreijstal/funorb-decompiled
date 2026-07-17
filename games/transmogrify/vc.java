@@ -20,8 +20,12 @@ final class vc extends rg implements ie {
     }
 
     final void a(int param0, wa param1) {
-        int var3 = 32 / ((-1 - param0) / 56);
-        ((vc) this).field_Q = param1;
+        try {
+            int var3_int = 32 / ((-1 - param0) / 56);
+            ((vc) this).field_Q = param1;
+        } catch (RuntimeException runtimeException) {
+            throw ch.a((Throwable) (Object) runtimeException, "vc.G(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public final wa a(byte param0) {
@@ -52,33 +56,13 @@ final class vc extends rg implements ie {
     }
 
     final static boolean e(boolean param0) {
-        int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        if (!param0) {
-          if (-11 >= (gl.field_y ^ -1)) {
-            if (ge.field_x) {
-              return false;
-            } else {
-              L0: {
-                if (i.b(true)) {
-                  stackOut_7_0 = 0;
-                  stackIn_8_0 = stackOut_7_0;
-                  break L0;
-                } else {
-                  stackOut_6_0 = 1;
-                  stackIn_8_0 = stackOut_6_0;
-                  break L0;
-                }
-              }
-              return stackIn_8_0 != 0;
-            }
-          } else {
+        if (gl.field_y < 10) {
             return false;
-          }
-        } else {
-          return false;
         }
+        if (ge.field_x) {
+            return false;
+        }
+        return !i.b(true) ? true : false;
     }
 
     final String f(int param0) {
@@ -101,8 +85,12 @@ final class vc extends rg implements ie {
     }
 
     final void a(int param0, byte param1, qg param2, int param3) {
-        super.a(param0, param1, param2, param3);
-        ((vc) this).field_P = -param3 + (oa.field_j - ((vc) this).field_p);
+        try {
+            super.a(param0, param1, param2, param3);
+            ((vc) this).field_P = -param3 + (oa.field_j - ((vc) this).field_p);
+        } catch (RuntimeException runtimeException) {
+            throw ch.a((Throwable) (Object) runtimeException, "vc.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+        }
     }
 
     static {

@@ -43,9 +43,6 @@ final class ci implements dja {
 
     public static void a(int param0) {
         field_a = null;
-        if (param0 != -5254) {
-            return;
-        }
         field_c = null;
     }
 
@@ -59,7 +56,7 @@ final class ci implements dja {
         }
         if (param0 <= 9) {
             boolean discarded$7 = ci.b((byte) -116);
-            if (!((vja.field_a ^ -1) != 1)) {
+            if (!(vja.field_a != -2)) {
                 if (boa.a(2, 30000)) {
                     vja.field_a = qga.field_b.e(1869);
                     qga.field_b.field_e = 0;
@@ -69,7 +66,7 @@ final class ci implements dja {
             }
             return boa.a(vja.field_a, 30000);
         }
-        if (!((vja.field_a ^ -1) != 1)) {
+        if (!(vja.field_a != -2)) {
             if (boa.a(2, 30000)) {
                 vja.field_a = qga.field_b.e(1869);
                 qga.field_b.field_e = 0;

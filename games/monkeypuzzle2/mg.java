@@ -14,25 +14,16 @@ class mg extends a {
     }
 
     public final void a(boolean param0, we param1, int param2, int param3, int param4) {
-        if (!param0) {
-          if (param4 < 19) {
-            mg.c(88);
+        try {
+            if (param0) {
+                eb.b(param3 + param1.field_r, 0, param1.field_p, param1.field_l, param2 - -param1.field_e);
+            }
+            if (param4 < 19) {
+                mg.c(88);
+            }
             super.a(param0, param1, param2, param3, 49);
-            return;
-          } else {
-            super.a(param0, param1, param2, param3, 49);
-            return;
-          }
-        } else {
-          eb.b(param3 + param1.field_r, 0, param1.field_p, param1.field_l, param2 - -param1.field_e);
-          if (param4 >= 19) {
-            super.a(param0, param1, param2, param3, 49);
-            return;
-          } else {
-            mg.c(88);
-            super.a(param0, param1, param2, param3, 49);
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw la.a((Throwable) (Object) runtimeException, "mg.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 

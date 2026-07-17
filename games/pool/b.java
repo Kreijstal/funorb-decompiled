@@ -18,7 +18,7 @@ final class b extends ob {
           if (rn.field_a[((b) this).field_I] == pl.field_f) {
             L0: {
               L1: {
-                pl.field_a.c(qh.field_l + -pl.field_a.field_z >> 1326190049, -mc.field_e.field_C + var3);
+                pl.field_a.c(qh.field_l + -pl.field_a.field_z >> 1, -mc.field_e.field_C + var3);
                 var3 += 5;
                 if (bq.field_p != ((b) this).field_I) {
                   break L1;
@@ -30,7 +30,7 @@ final class b extends ob {
                   }
                 }
               }
-              ao.field_Lb = ug.a(aj.field_Ob[gj.field_S][((b) this).field_I], var2, rb.field_n[((b) this).field_I], var3 + 10, (lr) (Object) sa.field_h, true, qh.field_l + -var2 >> 1362067937);
+              ao.field_Lb = ug.a(aj.field_Ob[gj.field_S][((b) this).field_I], var2, rb.field_n[((b) this).field_I], var3 + 10, (lr) (Object) sa.field_h, true, qh.field_l + -var2 >> 1);
               cm.field_K = ef.a("</col>", rb.field_n[((b) this).field_I], (byte) 4, "<col=aaaaff>");
               bq.field_p = ((b) this).field_I;
               break L0;
@@ -38,7 +38,7 @@ final class b extends ob {
             L2: {
               sa.field_h.a((bb[]) (Object) nf.field_Z, bi.field_d);
               ((b) this).a((lr) (Object) sa.field_h, aj.field_Ob[gj.field_S][((b) this).field_I], 10 + var3, -16097, cm.field_K, var2, 13421772);
-              nj.a(vk.field_y, (byte) 21, 20 + var2, -10 + (qh.field_l - var2 >> 1900759969), var3, 190);
+              nj.a(vk.field_y, (byte) 21, 20 + var2, -10 + (qh.field_l - var2 >> 1), var3, 190);
               ((b) this).b(10 + var3, false);
               if (((b) this).field_I != qd.field_k) {
                 qd.field_k = ((b) this).field_I;
@@ -50,8 +50,8 @@ final class b extends ob {
             }
             kq.field_h.c(620 + -kq.field_h.field_z, -mc.field_e.field_C + 60);
             var4 = dp.a(104);
-            if (0 != (var4 ^ -1)) {
-              qa.a((byte) 71, qh.field_l >> 522170273, (lr) (Object) sa.field_h, re.field_e[var4], 15658734, 4144959);
+            if (var4 != -1) {
+              qa.a((byte) 71, qh.field_l >> 1, (lr) (Object) sa.field_h, re.field_e[var4], 15658734, 4144959);
               if (null == ((b) this).field_G) {
                 return;
               } else {
@@ -66,7 +66,7 @@ final class b extends ob {
               L4: {
                 pl.field_f = rn.field_a[((b) this).field_I];
                 pl.field_a = dq.a(4, 0, rn.field_a[((b) this).field_I]);
-                pl.field_a.c(qh.field_l + -pl.field_a.field_z >> 1326190049, -mc.field_e.field_C + var3);
+                pl.field_a.c(qh.field_l + -pl.field_a.field_z >> 1, -mc.field_e.field_C + var3);
                 var3 += 5;
                 if (bq.field_p != ((b) this).field_I) {
                   break L4;
@@ -78,7 +78,7 @@ final class b extends ob {
                   }
                 }
               }
-              ao.field_Lb = ug.a(aj.field_Ob[gj.field_S][((b) this).field_I], var2, rb.field_n[((b) this).field_I], var3 + 10, (lr) (Object) sa.field_h, true, qh.field_l + -var2 >> 1362067937);
+              ao.field_Lb = ug.a(aj.field_Ob[gj.field_S][((b) this).field_I], var2, rb.field_n[((b) this).field_I], var3 + 10, (lr) (Object) sa.field_h, true, qh.field_l + -var2 >> 1);
               cm.field_K = ef.a("</col>", rb.field_n[((b) this).field_I], (byte) 4, "<col=aaaaff>");
               bq.field_p = ((b) this).field_I;
               break L3;
@@ -86,7 +86,7 @@ final class b extends ob {
             L5: {
               sa.field_h.a((bb[]) (Object) nf.field_Z, bi.field_d);
               ((b) this).a((lr) (Object) sa.field_h, aj.field_Ob[gj.field_S][((b) this).field_I], 10 + var3, -16097, cm.field_K, var2, 13421772);
-              nj.a(vk.field_y, (byte) 21, 20 + var2, -10 + (qh.field_l - var2 >> 1900759969), var3, 190);
+              nj.a(vk.field_y, (byte) 21, 20 + var2, -10 + (qh.field_l - var2 >> 1), var3, 190);
               ((b) this).b(10 + var3, false);
               if (((b) this).field_I != qd.field_k) {
                 qd.field_k = ((b) this).field_I;
@@ -98,8 +98,8 @@ final class b extends ob {
             }
             kq.field_h.c(620 + -kq.field_h.field_z, -mc.field_e.field_C + 60);
             var4 = dp.a(104);
-            if (0 != (var4 ^ -1)) {
-              qa.a((byte) 71, qh.field_l >> 522170273, (lr) (Object) sa.field_h, re.field_e[var4], 15658734, 4144959);
+            if (var4 != -1) {
+              qa.a((byte) 71, qh.field_l >> 1, (lr) (Object) sa.field_h, re.field_e[var4], 15658734, 4144959);
               if (null == ((b) this).field_G) {
                 return;
               } else {
@@ -116,12 +116,12 @@ final class b extends ob {
           if (rn.field_a[((b) this).field_I] != pl.field_f) {
             pl.field_f = rn.field_a[((b) this).field_I];
             pl.field_a = dq.a(4, 0, rn.field_a[((b) this).field_I]);
-            pl.field_a.c(qh.field_l + -pl.field_a.field_z >> 1326190049, -mc.field_e.field_C + var3);
+            pl.field_a.c(qh.field_l + -pl.field_a.field_z >> 1, -mc.field_e.field_C + var3);
             var3 += 5;
             if (bq.field_p == ((b) this).field_I) {
               L6: {
                 if (null == cm.field_K) {
-                  ao.field_Lb = ug.a(aj.field_Ob[gj.field_S][((b) this).field_I], var2, rb.field_n[((b) this).field_I], var3 + 10, (lr) (Object) sa.field_h, true, qh.field_l + -var2 >> 1362067937);
+                  ao.field_Lb = ug.a(aj.field_Ob[gj.field_S][((b) this).field_I], var2, rb.field_n[((b) this).field_I], var3 + 10, (lr) (Object) sa.field_h, true, qh.field_l + -var2 >> 1);
                   cm.field_K = ef.a("</col>", rb.field_n[((b) this).field_I], (byte) 4, "<col=aaaaff>");
                   bq.field_p = ((b) this).field_I;
                   break L6;
@@ -132,7 +132,7 @@ final class b extends ob {
               L7: {
                 sa.field_h.a((bb[]) (Object) nf.field_Z, bi.field_d);
                 ((b) this).a((lr) (Object) sa.field_h, aj.field_Ob[gj.field_S][((b) this).field_I], 10 + var3, -16097, cm.field_K, var2, 13421772);
-                nj.a(vk.field_y, (byte) 21, 20 + var2, -10 + (qh.field_l - var2 >> 1900759969), var3, 190);
+                nj.a(vk.field_y, (byte) 21, 20 + var2, -10 + (qh.field_l - var2 >> 1), var3, 190);
                 ((b) this).b(10 + var3, false);
                 if (((b) this).field_I != qd.field_k) {
                   qd.field_k = ((b) this).field_I;
@@ -144,8 +144,8 @@ final class b extends ob {
               }
               kq.field_h.c(620 + -kq.field_h.field_z, -mc.field_e.field_C + 60);
               var4 = dp.a(104);
-              if (0 != (var4 ^ -1)) {
-                qa.a((byte) 71, qh.field_l >> 522170273, (lr) (Object) sa.field_h, re.field_e[var4], 15658734, 4144959);
+              if (var4 != -1) {
+                qa.a((byte) 71, qh.field_l >> 1, (lr) (Object) sa.field_h, re.field_e[var4], 15658734, 4144959);
                 if (null == ((b) this).field_G) {
                   return;
                 } else {
@@ -157,12 +157,12 @@ final class b extends ob {
               }
             } else {
               L8: {
-                ao.field_Lb = ug.a(aj.field_Ob[gj.field_S][((b) this).field_I], var2, rb.field_n[((b) this).field_I], var3 + 10, (lr) (Object) sa.field_h, true, qh.field_l + -var2 >> 1362067937);
+                ao.field_Lb = ug.a(aj.field_Ob[gj.field_S][((b) this).field_I], var2, rb.field_n[((b) this).field_I], var3 + 10, (lr) (Object) sa.field_h, true, qh.field_l + -var2 >> 1);
                 cm.field_K = ef.a("</col>", rb.field_n[((b) this).field_I], (byte) 4, "<col=aaaaff>");
                 bq.field_p = ((b) this).field_I;
                 sa.field_h.a((bb[]) (Object) nf.field_Z, bi.field_d);
                 ((b) this).a((lr) (Object) sa.field_h, aj.field_Ob[gj.field_S][((b) this).field_I], 10 + var3, -16097, cm.field_K, var2, 13421772);
-                nj.a(vk.field_y, (byte) 21, 20 + var2, -10 + (qh.field_l - var2 >> 1900759969), var3, 190);
+                nj.a(vk.field_y, (byte) 21, 20 + var2, -10 + (qh.field_l - var2 >> 1), var3, 190);
                 ((b) this).b(10 + var3, false);
                 if (((b) this).field_I != qd.field_k) {
                   qd.field_k = ((b) this).field_I;
@@ -175,8 +175,8 @@ final class b extends ob {
               L9: {
                 kq.field_h.c(620 + -kq.field_h.field_z, -mc.field_e.field_C + 60);
                 var4 = dp.a(104);
-                if (0 != (var4 ^ -1)) {
-                  qa.a((byte) 71, qh.field_l >> 522170273, (lr) (Object) sa.field_h, re.field_e[var4], 15658734, 4144959);
+                if (var4 != -1) {
+                  qa.a((byte) 71, qh.field_l >> 1, (lr) (Object) sa.field_h, re.field_e[var4], 15658734, 4144959);
                   if (null != ((b) this).field_G) {
                     ((b) this).field_G.a(15658734, 0, 128, -1, true, 0);
                     break L9;
@@ -192,7 +192,7 @@ final class b extends ob {
           } else {
             L10: {
               L11: {
-                pl.field_a.c(qh.field_l + -pl.field_a.field_z >> 1326190049, -mc.field_e.field_C + var3);
+                pl.field_a.c(qh.field_l + -pl.field_a.field_z >> 1, -mc.field_e.field_C + var3);
                 var3 += 5;
                 if (bq.field_p != ((b) this).field_I) {
                   break L11;
@@ -204,7 +204,7 @@ final class b extends ob {
                   }
                 }
               }
-              ao.field_Lb = ug.a(aj.field_Ob[gj.field_S][((b) this).field_I], var2, rb.field_n[((b) this).field_I], var3 + 10, (lr) (Object) sa.field_h, true, qh.field_l + -var2 >> 1362067937);
+              ao.field_Lb = ug.a(aj.field_Ob[gj.field_S][((b) this).field_I], var2, rb.field_n[((b) this).field_I], var3 + 10, (lr) (Object) sa.field_h, true, qh.field_l + -var2 >> 1);
               cm.field_K = ef.a("</col>", rb.field_n[((b) this).field_I], (byte) 4, "<col=aaaaff>");
               bq.field_p = ((b) this).field_I;
               break L10;
@@ -212,7 +212,7 @@ final class b extends ob {
             L12: {
               sa.field_h.a((bb[]) (Object) nf.field_Z, bi.field_d);
               ((b) this).a((lr) (Object) sa.field_h, aj.field_Ob[gj.field_S][((b) this).field_I], 10 + var3, -16097, cm.field_K, var2, 13421772);
-              nj.a(vk.field_y, (byte) 21, 20 + var2, -10 + (qh.field_l - var2 >> 1900759969), var3, 190);
+              nj.a(vk.field_y, (byte) 21, 20 + var2, -10 + (qh.field_l - var2 >> 1), var3, 190);
               ((b) this).b(10 + var3, false);
               if (((b) this).field_I != qd.field_k) {
                 qd.field_k = ((b) this).field_I;
@@ -225,8 +225,8 @@ final class b extends ob {
             L13: {
               kq.field_h.c(620 + -kq.field_h.field_z, -mc.field_e.field_C + 60);
               var4 = dp.a(104);
-              if (0 != (var4 ^ -1)) {
-                qa.a((byte) 71, qh.field_l >> 522170273, (lr) (Object) sa.field_h, re.field_e[var4], 15658734, 4144959);
+              if (var4 != -1) {
+                qa.a((byte) 71, qh.field_l >> 1, (lr) (Object) sa.field_h, re.field_e[var4], 15658734, 4144959);
                 if (null != ((b) this).field_G) {
                   ((b) this).field_G.a(15658734, 0, 128, -1, true, 0);
                   break L13;
@@ -449,10 +449,10 @@ final class b extends ob {
         int var5 = 0;
         var5 = Pool.field_O;
         var4 = ((b) this).field_h[param2];
-        if (-26 != (var4 ^ -1)) {
-          if (-27 != (var4 ^ -1)) {
+        if (var4 != 25) {
+          if (var4 != 26) {
             L0: {
-              super.b(param0 ^ 0, param1, param2);
+              super.b(param0, param1, param2);
               if (param0 == -16470) {
                 break L0;
               } else {
@@ -519,13 +519,13 @@ final class b extends ob {
 
     final boolean e(int param0, int param1) {
         int var3 = 0;
-        if (-1 == (param0 ^ -1)) {
-            if (-1 != (((b) this).field_I ^ -1)) {
+        if (param0 == 0) {
+            if (((b) this).field_I != 0) {
                 if (2 != param0) {
                     var3 = -55 % ((param1 - -42) / 49);
                     return true;
                 }
-                if ((rb.field_n.length - 1 ^ -1) != (((b) this).field_I ^ -1)) {
+                if (~(rb.field_n.length - 1) != ~((b) this).field_I) {
                     var3 = -55 % ((param1 - -42) / 49);
                     return true;
                 }
@@ -536,7 +536,7 @@ final class b extends ob {
             var3 = -55 % ((param1 - -42) / 49);
             return true;
         }
-        if ((rb.field_n.length - 1 ^ -1) != (((b) this).field_I ^ -1)) {
+        if (~(rb.field_n.length - 1) != ~((b) this).field_I) {
             var3 = -55 % ((param1 - -42) / 49);
             return true;
         }
@@ -551,12 +551,6 @@ final class b extends ob {
     }
 
     public static void f(byte param0) {
-        if (param0 != -90) {
-            field_K = false;
-            field_J = null;
-            field_H = null;
-            return;
-        }
         field_J = null;
         field_H = null;
     }
@@ -579,7 +573,7 @@ final class b extends ob {
         if (null == cm.field_K) {
             return;
         }
-        if ((bq.field_p ^ -1) != 0) {
+        if (bq.field_p != -1) {
             ((b) this).field_G = ag.a(gg.field_f, ao.field_Lb, wn.field_i, 15395);
             se.field_l = 12;
             eo.field_Vb = 12;

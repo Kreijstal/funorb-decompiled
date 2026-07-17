@@ -390,18 +390,18 @@ final class eka extends ci {
                   var59 = var52[2];
                   var21 = 0;
                   L1: while (true) {
-                    if (var21 >= ns.field_g) {
+                    if (~var21 <= ~ns.field_g) {
                       break L0;
                     } else {
-                      var12[var21] = var55[var21] * var54[var21] >> -1653014356;
-                      var13[var21] = var56[var21] * var57[var21] >> 319548236;
-                      var14[var21] = var58[var21] * var59[var21] >> 1727156300;
+                      var12[var21] = var55[var21] * var54[var21] >> 12;
+                      var13[var21] = var56[var21] * var57[var21] >> 12;
+                      var14[var21] = var58[var21] * var59[var21] >> 12;
                       var21++;
                       continue L1;
                     }
                   }
                 } else {
-                  if ((var21 ^ -1) == -5) {
+                  if (var21 == 4) {
                     var12 = var51[0];
                     var13 = var51[1];
                     var14 = var51[2];
@@ -413,7 +413,7 @@ final class eka extends ci {
                     var59 = var52[2];
                     var21 = 0;
                     L2: while (true) {
-                      if (var21 >= ns.field_g) {
+                      if (~var21 <= ~ns.field_g) {
                         break L0;
                       } else {
                         L3: {
@@ -437,7 +437,7 @@ final class eka extends ci {
                           } else {
                             stackOut_33_0 = (int[]) (Object) stackIn_33_0;
                             stackOut_33_1 = stackIn_33_1;
-                            stackOut_33_2 = (var54[var21] << 457908140) / var7;
+                            stackOut_33_2 = (var54[var21] << 12) / var7;
                             stackIn_35_0 = stackOut_33_0;
                             stackIn_35_1 = stackOut_33_1;
                             stackIn_35_2 = stackOut_33_2;
@@ -455,7 +455,7 @@ final class eka extends ci {
                           if (var8 != 0) {
                             stackOut_37_0 = (int[]) (Object) stackIn_37_0;
                             stackOut_37_1 = stackIn_37_1;
-                            stackOut_37_2 = (var56[var21] << -562289332) / var8;
+                            stackOut_37_2 = (var56[var21] << 12) / var8;
                             stackIn_38_0 = stackOut_37_0;
                             stackIn_38_1 = stackOut_37_1;
                             stackIn_38_2 = stackOut_37_2;
@@ -489,7 +489,7 @@ final class eka extends ci {
                           } else {
                             stackOut_39_0 = (int[]) (Object) stackIn_39_0;
                             stackOut_39_1 = stackIn_39_1;
-                            stackOut_39_2 = (var59[var21] << 152790572) / var9;
+                            stackOut_39_2 = (var59[var21] << 12) / var9;
                             stackIn_41_0 = stackOut_39_0;
                             stackIn_41_1 = stackOut_39_1;
                             stackIn_41_2 = stackOut_39_2;
@@ -502,7 +502,7 @@ final class eka extends ci {
                       }
                     }
                   } else {
-                    if ((var21 ^ -1) != -6) {
+                    if (var21 != 5) {
                       if (6 == var21) {
                         var12 = var51[0];
                         var13 = var51[1];
@@ -531,7 +531,7 @@ final class eka extends ci {
                               if (var7 < 2048) {
                                 stackOut_49_0 = (int[]) (Object) stackIn_49_0;
                                 stackOut_49_1 = stackIn_49_1;
-                                stackOut_49_2 = var54[var21] * var7 >> 542961675;
+                                stackOut_49_2 = var54[var21] * var7 >> 11;
                                 stackIn_50_0 = stackOut_49_0;
                                 stackIn_50_1 = stackOut_49_1;
                                 stackIn_50_2 = stackOut_49_2;
@@ -539,7 +539,7 @@ final class eka extends ci {
                               } else {
                                 stackOut_48_0 = (int[]) (Object) stackIn_48_0;
                                 stackOut_48_1 = stackIn_48_1;
-                                stackOut_48_2 = -((-var54[var21] + 4096) * (4096 + -var7) >> 1760039819) + 4096;
+                                stackOut_48_2 = -((-var54[var21] + 4096) * (4096 + -var7) >> 11) + 4096;
                                 stackIn_50_0 = stackOut_48_0;
                                 stackIn_50_1 = stackOut_48_1;
                                 stackIn_50_2 = stackOut_48_2;
@@ -557,7 +557,7 @@ final class eka extends ci {
                               if (2048 <= var8) {
                                 stackOut_52_0 = (int[]) (Object) stackIn_52_0;
                                 stackOut_52_1 = stackIn_52_1;
-                                stackOut_52_2 = 4096 + -((-var56[var21] + 4096) * (4096 - var8) >> -1070102005);
+                                stackOut_52_2 = 4096 + -((-var56[var21] + 4096) * (4096 - var8) >> 11);
                                 stackIn_53_0 = stackOut_52_0;
                                 stackIn_53_1 = stackOut_52_1;
                                 stackIn_53_2 = stackOut_52_2;
@@ -565,7 +565,7 @@ final class eka extends ci {
                               } else {
                                 stackOut_51_0 = (int[]) (Object) stackIn_51_0;
                                 stackOut_51_1 = stackIn_51_1;
-                                stackOut_51_2 = var8 * var56[var21] >> -1194306613;
+                                stackOut_51_2 = var8 * var56[var21] >> 11;
                                 stackIn_53_0 = stackOut_51_0;
                                 stackIn_53_1 = stackOut_51_1;
                                 stackIn_53_2 = stackOut_51_2;
@@ -580,10 +580,10 @@ final class eka extends ci {
                               stackIn_55_1 = stackOut_53_1;
                               stackIn_54_0 = stackOut_53_0;
                               stackIn_54_1 = stackOut_53_1;
-                              if (-2049 < (var9 ^ -1)) {
+                              if (var9 < 2048) {
                                 stackOut_55_0 = (int[]) (Object) stackIn_55_0;
                                 stackOut_55_1 = stackIn_55_1;
-                                stackOut_55_2 = var9 * var59[var21] >> 1004091659;
+                                stackOut_55_2 = var9 * var59[var21] >> 11;
                                 stackIn_56_0 = stackOut_55_0;
                                 stackIn_56_1 = stackOut_55_1;
                                 stackIn_56_2 = stackOut_55_2;
@@ -591,7 +591,7 @@ final class eka extends ci {
                               } else {
                                 stackOut_54_0 = (int[]) (Object) stackIn_54_0;
                                 stackOut_54_1 = stackIn_54_1;
-                                stackOut_54_2 = 4096 - ((4096 - var59[var21]) * (4096 - var9) >> -1146999381);
+                                stackOut_54_2 = 4096 - ((4096 - var59[var21]) * (4096 - var9) >> 11);
                                 stackIn_56_0 = stackOut_54_0;
                                 stackIn_56_1 = stackOut_54_1;
                                 stackIn_56_2 = stackOut_54_2;
@@ -604,7 +604,7 @@ final class eka extends ci {
                           }
                         }
                       } else {
-                        if (var21 == -8) {
+                        if (var21 == 7) {
                           var12 = var51[0];
                           var13 = var51[1];
                           var14 = var51[2];
@@ -640,7 +640,7 @@ final class eka extends ci {
                                 } else {
                                   stackOut_60_0 = (int[]) (Object) stackIn_60_0;
                                   stackOut_60_1 = stackIn_60_1;
-                                  stackOut_60_2 = (var55[var21] << -946048468) / (4096 - var4);
+                                  stackOut_60_2 = (var55[var21] << 12) / (4096 - var4);
                                   stackIn_62_0 = stackOut_60_0;
                                   stackIn_62_1 = stackOut_60_1;
                                   stackIn_62_2 = stackOut_60_2;
@@ -655,7 +655,7 @@ final class eka extends ci {
                                 stackIn_64_1 = stackOut_62_1;
                                 stackIn_63_0 = stackOut_62_0;
                                 stackIn_63_1 = stackOut_62_1;
-                                if (-4097 == (var5 ^ -1)) {
+                                if (var5 == 4096) {
                                   stackOut_64_0 = (int[]) (Object) stackIn_64_0;
                                   stackOut_64_1 = stackIn_64_1;
                                   stackOut_64_2 = 4096;
@@ -666,7 +666,7 @@ final class eka extends ci {
                                 } else {
                                   stackOut_63_0 = (int[]) (Object) stackIn_63_0;
                                   stackOut_63_1 = stackIn_63_1;
-                                  stackOut_63_2 = (var57[var21] << -1048574452) / (4096 - var5);
+                                  stackOut_63_2 = (var57[var21] << 12) / (4096 - var5);
                                   stackIn_65_0 = stackOut_63_0;
                                   stackIn_65_1 = stackOut_63_1;
                                   stackIn_65_2 = stackOut_63_2;
@@ -684,7 +684,7 @@ final class eka extends ci {
                                 if (var6 != 4096) {
                                   stackOut_67_0 = (int[]) (Object) stackIn_67_0;
                                   stackOut_67_1 = stackIn_67_1;
-                                  stackOut_67_2 = (var58[var21] << 2037198444) / (-var6 + 4096);
+                                  stackOut_67_2 = (var58[var21] << 12) / (-var6 + 4096);
                                   stackIn_68_0 = stackOut_67_0;
                                   stackIn_68_1 = stackOut_67_1;
                                   stackIn_68_2 = stackOut_67_2;
@@ -706,7 +706,7 @@ final class eka extends ci {
                           }
                         } else {
                           if (var21 != 8) {
-                            if (-10 == var21) {
+                            if (var21 == 9) {
                               var12 = var51[0];
                               var13 = var51[1];
                               var14 = var51[2];
@@ -786,7 +786,7 @@ final class eka extends ci {
                                     stackIn_91_1 = stackOut_89_1;
                                     stackIn_90_0 = stackOut_89_0;
                                     stackIn_90_1 = stackOut_89_1;
-                                    if (var6 >= var9) {
+                                    if (~var6 <= ~var9) {
                                       stackOut_91_0 = (int[]) (Object) stackIn_91_0;
                                       stackOut_91_1 = stackIn_91_1;
                                       stackOut_91_2 = var9;
@@ -811,7 +811,7 @@ final class eka extends ci {
                               }
                             } else {
                               if (var21 != 10) {
-                                if (-12 != (var21 ^ -1)) {
+                                if (var21 != 11) {
                                   if (12 != var21) {
                                     break L0;
                                   } else {
@@ -826,7 +826,7 @@ final class eka extends ci {
                                     var59 = var52[2];
                                     var21 = 0;
                                     L18: while (true) {
-                                      if (ns.field_g <= var21) {
+                                      if (~ns.field_g >= ~var21) {
                                         break L0;
                                       } else {
                                         var8 = var57[var21];
@@ -835,9 +835,9 @@ final class eka extends ci {
                                         var7 = var55[var21];
                                         var6 = var59[var21];
                                         var4 = var54[var21];
-                                        var12[var21] = -(var4 * var7 >> 303527115) + (var4 + var7);
-                                        var13[var21] = var5 + var8 - (var5 * var8 >> 956008523);
-                                        var14[var21] = -(var9 * var6 >> 1384036491) + var6 + var9;
+                                        var12[var21] = -(var4 * var7 >> 11) + (var4 + var7);
+                                        var13[var21] = var5 + var8 - (var5 * var8 >> 11);
+                                        var14[var21] = -(var9 * var6 >> 11) + var6 + var9;
                                         var21++;
                                         continue L18;
                                       }
@@ -871,7 +871,7 @@ final class eka extends ci {
                                         stackIn_109_1 = stackOut_107_1;
                                         stackIn_108_0 = stackOut_107_0;
                                         stackIn_108_1 = stackOut_107_1;
-                                        if (var7 >= var4) {
+                                        if (~var7 <= ~var4) {
                                           stackOut_109_0 = (int[]) (Object) stackIn_109_0;
                                           stackOut_109_1 = stackIn_109_1;
                                           stackOut_109_2 = -var4 + var7;
@@ -1027,7 +1027,7 @@ final class eka extends ci {
                                       stackIn_103_1 = stackOut_101_1;
                                       stackIn_102_0 = stackOut_101_0;
                                       stackIn_102_1 = stackOut_101_1;
-                                      if (var6 > var9) {
+                                      if (~var6 < ~var9) {
                                         stackOut_103_0 = (int[]) (Object) stackIn_103_0;
                                         stackOut_103_1 = stackIn_103_1;
                                         stackOut_103_2 = var6;
@@ -1064,7 +1064,7 @@ final class eka extends ci {
                             var59 = var52[2];
                             var21 = 0;
                             L27: while (true) {
-                              if (var21 >= ns.field_g) {
+                              if (~var21 <= ~ns.field_g) {
                                 break L0;
                               } else {
                                 L28: {
@@ -1077,10 +1077,10 @@ final class eka extends ci {
                                   stackIn_73_1 = stackOut_71_1;
                                   stackIn_72_0 = stackOut_71_0;
                                   stackIn_72_1 = stackOut_71_1;
-                                  if (-1 != (var4 ^ -1)) {
+                                  if (var4 != 0) {
                                     stackOut_73_0 = (int[]) (Object) stackIn_73_0;
                                     stackOut_73_1 = stackIn_73_1;
-                                    stackOut_73_2 = 4096 - (4096 + -var55[var21] << 1440635436) / var4;
+                                    stackOut_73_2 = 4096 - (4096 + -var55[var21] << 12) / var4;
                                     stackIn_74_0 = stackOut_73_0;
                                     stackIn_74_1 = stackOut_73_1;
                                     stackIn_74_2 = stackOut_73_2;
@@ -1114,7 +1114,7 @@ final class eka extends ci {
                                   } else {
                                     stackOut_75_0 = (int[]) (Object) stackIn_75_0;
                                     stackOut_75_1 = stackIn_75_1;
-                                    stackOut_75_2 = -((4096 - var57[var21] << -1521208308) / var5) + 4096;
+                                    stackOut_75_2 = -((4096 - var57[var21] << 12) / var5) + 4096;
                                     stackIn_77_0 = stackOut_75_0;
                                     stackIn_77_1 = stackOut_75_1;
                                     stackIn_77_2 = stackOut_75_2;
@@ -1132,7 +1132,7 @@ final class eka extends ci {
                                   if (var6 != 0) {
                                     stackOut_79_0 = (int[]) (Object) stackIn_79_0;
                                     stackOut_79_1 = stackIn_79_1;
-                                    stackOut_79_2 = 4096 - (4096 + -var58[var21] << 114801868) / var6;
+                                    stackOut_79_2 = 4096 - (4096 + -var58[var21] << 12) / var6;
                                     stackIn_80_0 = stackOut_79_0;
                                     stackIn_80_1 = stackOut_79_1;
                                     stackIn_80_2 = stackOut_79_2;
@@ -1170,9 +1170,9 @@ final class eka extends ci {
                         if (var21 >= ns.field_g) {
                           break L0;
                         } else {
-                          var12[var21] = 4096 - ((-var55[var21] + 4096) * (-var54[var21] + 4096) >> -522012308);
-                          var13[var21] = -((4096 - var57[var21]) * (4096 - var56[var21]) >> -400255092) + 4096;
-                          var14[var21] = 4096 - ((4096 + -var58[var21]) * (-var59[var21] + 4096) >> 1950092556);
+                          var12[var21] = 4096 - ((-var55[var21] + 4096) * (-var54[var21] + 4096) >> 12);
+                          var13[var21] = -((4096 - var57[var21]) * (4096 - var56[var21]) >> 12) + 4096;
+                          var14[var21] = 4096 - ((4096 + -var58[var21]) * (-var59[var21] + 4096) >> 12);
                           var21++;
                           continue L31;
                         }
@@ -1215,7 +1215,7 @@ final class eka extends ci {
               var59 = var52[2];
               var21 = 0;
               L33: while (true) {
-                if (ns.field_g <= var21) {
+                if (~ns.field_g >= ~var21) {
                   break L0;
                 } else {
                   var12[var21] = var54[var21] + var55[var21];
@@ -1245,7 +1245,7 @@ final class eka extends ci {
         int var2 = 0;
         if (param1 > 120) {
           var2 = param0;
-          if (0 == (var2 ^ -1)) {
+          if (var2 == -1) {
             return (dfa) (Object) rba.field_a;
           } else {
             if (var2 == -2) {
@@ -1260,57 +1260,108 @@ final class eka extends ci {
     }
 
     final void a(byte param0, uia param1, int param2) {
-        int var4 = 0;
+        int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
-        Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
-        int stackIn_7_1 = 0;
-        Object stackOut_4_0 = null;
+        Object stackIn_8_0 = null;
+        int stackIn_8_1 = 0;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        Object stackOut_5_0 = null;
+        Object stackOut_7_0 = null;
+        int stackOut_7_1 = 0;
         Object stackOut_6_0 = null;
         int stackOut_6_1 = 0;
-        Object stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
-        L0: {
-          var5 = TombRacer.field_G ? 1 : 0;
-          var4 = param2;
-          if (0 == var4) {
-            ((eka) this).field_m = param1.h(param0 + 148);
-            break L0;
-          } else {
-            if (1 != var4) {
-              break L0;
-            } else {
-              L1: {
-                stackOut_4_0 = this;
-                stackIn_6_0 = stackOut_4_0;
-                stackIn_5_0 = stackOut_4_0;
-                if (-2 != (param1.h(255) ^ -1)) {
-                  stackOut_6_0 = this;
-                  stackOut_6_1 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  stackIn_7_1 = stackOut_6_1;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        var5 = TombRacer.field_G ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              var4_int = param2;
+              if (0 == var4_int) {
+                ((eka) this).field_m = param1.h(param0 + 148);
+                break L1;
+              } else {
+                if (1 != var4_int) {
                   break L1;
                 } else {
-                  stackOut_5_0 = this;
-                  stackOut_5_1 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  stackIn_7_1 = stackOut_5_1;
+                  L2: {
+                    stackOut_5_0 = this;
+                    stackIn_7_0 = stackOut_5_0;
+                    stackIn_6_0 = stackOut_5_0;
+                    if (param1.h(255) != 1) {
+                      stackOut_7_0 = this;
+                      stackOut_7_1 = 0;
+                      stackIn_8_0 = stackOut_7_0;
+                      stackIn_8_1 = stackOut_7_1;
+                      break L2;
+                    } else {
+                      stackOut_6_0 = this;
+                      stackOut_6_1 = 1;
+                      stackIn_8_0 = stackOut_6_0;
+                      stackIn_8_1 = stackOut_6_1;
+                      break L2;
+                    }
+                  }
+                  ((eka) this).field_g = stackIn_8_1 != 0;
                   break L1;
                 }
               }
-              ((eka) this).field_g = stackIn_7_1 != 0;
-              break L0;
+            }
+            L3: {
+              if (param0 == 107) {
+                break L3;
+              } else {
+                dfa discarded$1 = eka.d(111, -90);
+                break L3;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var4 = decompiledCaughtException;
+            stackOut_12_0 = (RuntimeException) var4;
+            stackOut_12_1 = new StringBuilder().append("eka.A(").append(param0).append(44);
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
+            if (param1 == null) {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L4;
+            } else {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L4;
             }
           }
-        }
-        L2: {
-          if (param0 == 107) {
-            break L2;
-          } else {
-            dfa discarded$1 = eka.d(111, -90);
-            break L2;
-          }
+          throw tba.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param2 + 41);
         }
     }
 
@@ -1322,80 +1373,28 @@ final class eka extends ci {
         br stackIn_5_0 = null;
         Throwable decompiledCaughtException = null;
         br stackOut_4_0 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var3 = TombRacer.field_G ? 1 : 0;
-                    if (param0 == 86) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    return null;
-                }
-                case 2: {
-                    try {
-                        var1_int = 0;
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        var2 = taa.field_g.a((byte) 115, var1_int);
-                        if (!var2.field_m) {
-                            statePc = 6;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        stackOut_4_0 = (br) var2;
-                        stackIn_5_0 = stackOut_4_0;
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    return stackIn_5_0;
-                }
-                case 6: {
-                    try {
-                        var1_int++;
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    var1 = (IllegalArgumentException) (Object) caughtException;
-                    return null;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        var3 = TombRacer.field_G ? 1 : 0;
+        if (param0 == 86) {
+          try {
+            var1_int = 0;
+            L0: while (true) {
+              var2 = taa.field_g.a((byte) 115, var1_int);
+              if (!var2.field_m) {
+                var1_int++;
+                continue L0;
+              } else {
+                stackOut_4_0 = (br) var2;
+                stackIn_5_0 = stackOut_4_0;
+                return stackIn_5_0;
+              }
             }
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var1 = (IllegalArgumentException) (Object) decompiledCaughtException;
+            return null;
+          }
+        } else {
+          return null;
         }
     }
 
@@ -1526,10 +1525,10 @@ final class eka extends ci {
             var18 = ((eka) this).c(0, -89, param1);
             var17 = ((eka) this).c(1, -116, param1);
             var8 = ((eka) this).field_m;
-            if (var8 == -2) {
+            if (var8 == 1) {
               var8 = 0;
               L1: while (true) {
-                if (ns.field_g <= var8) {
+                if (~ns.field_g >= ~var8) {
                   break L0;
                 } else {
                   var3[var8] = var17[var8] + var18[var8];
@@ -1538,9 +1537,9 @@ final class eka extends ci {
                 }
               }
             } else {
-              if (-3 != var8) {
+              if (var8 != 2) {
                 if (var8 != 3) {
-                  if ((var8 ^ -1) != -5) {
+                  if (var8 != 4) {
                     if (5 != var8) {
                       if (var8 == 6) {
                         var8 = 0;
@@ -1556,10 +1555,10 @@ final class eka extends ci {
                               stackIn_43_1 = stackOut_41_1;
                               stackIn_42_0 = stackOut_41_0;
                               stackIn_42_1 = stackOut_41_1;
-                              if (-2049 >= (var5 ^ -1)) {
+                              if (var5 >= 2048) {
                                 stackOut_43_0 = (int[]) (Object) stackIn_43_0;
                                 stackOut_43_1 = stackIn_43_1;
-                                stackOut_43_2 = -((-var18[var8] + 4096) * (-var5 + 4096) >> 1884660843) + 4096;
+                                stackOut_43_2 = -((-var18[var8] + 4096) * (-var5 + 4096) >> 11) + 4096;
                                 stackIn_44_0 = stackOut_43_0;
                                 stackIn_44_1 = stackOut_43_1;
                                 stackIn_44_2 = stackOut_43_2;
@@ -1567,7 +1566,7 @@ final class eka extends ci {
                               } else {
                                 stackOut_42_0 = (int[]) (Object) stackIn_42_0;
                                 stackOut_42_1 = stackIn_42_1;
-                                stackOut_42_2 = var18[var8] * var5 >> -1042404373;
+                                stackOut_42_2 = var18[var8] * var5 >> 11;
                                 stackIn_44_0 = stackOut_42_0;
                                 stackIn_44_1 = stackOut_42_1;
                                 stackIn_44_2 = stackOut_42_2;
@@ -1605,7 +1604,7 @@ final class eka extends ci {
                                 } else {
                                   stackOut_48_0 = (int[]) (Object) stackIn_48_0;
                                   stackOut_48_1 = stackIn_48_1;
-                                  stackOut_48_2 = (var17[var8] << 209187404) / (-var4 + 4096);
+                                  stackOut_48_2 = (var17[var8] << 12) / (-var4 + 4096);
                                   stackIn_50_0 = stackOut_48_0;
                                   stackIn_50_1 = stackOut_48_1;
                                   stackIn_50_2 = stackOut_48_2;
@@ -1620,7 +1619,7 @@ final class eka extends ci {
                         } else {
                           if (8 != var8) {
                             if (9 != var8) {
-                              if ((var8 ^ -1) == -11) {
+                              if (var8 == 10) {
                                 var8 = 0;
                                 L6: while (true) {
                                   if (var8 >= ns.field_g) {
@@ -1659,7 +1658,7 @@ final class eka extends ci {
                                   }
                                 }
                               } else {
-                                if ((var8 ^ -1) == -12) {
+                                if (var8 == 11) {
                                   var8 = 0;
                                   L8: while (true) {
                                     if (var8 >= ns.field_g) {
@@ -1674,7 +1673,7 @@ final class eka extends ci {
                                         stackIn_73_1 = stackOut_71_1;
                                         stackIn_72_0 = stackOut_71_0;
                                         stackIn_72_1 = stackOut_71_1;
-                                        if (var4 > var5) {
+                                        if (~var4 < ~var5) {
                                           stackOut_73_0 = (int[]) (Object) stackIn_73_0;
                                           stackOut_73_1 = stackIn_73_1;
                                           stackOut_73_2 = var4 - var5;
@@ -1703,12 +1702,12 @@ final class eka extends ci {
                                   } else {
                                     var8 = 0;
                                     L10: while (true) {
-                                      if (var8 >= ns.field_g) {
+                                      if (~var8 <= ~ns.field_g) {
                                         break L0;
                                       } else {
                                         var4 = var18[var8];
                                         var5 = var17[var8];
-                                        var3[var8] = -(var5 * var4 >> 1987811435) + (var5 + var4);
+                                        var3[var8] = -(var5 * var4 >> 11) + (var5 + var4);
                                         var8++;
                                         continue L10;
                                       }
@@ -1719,7 +1718,7 @@ final class eka extends ci {
                             } else {
                               var8 = 0;
                               L11: while (true) {
-                                if (ns.field_g <= var8) {
+                                if (~ns.field_g >= ~var8) {
                                   break L0;
                                 } else {
                                   L12: {
@@ -1758,7 +1757,7 @@ final class eka extends ci {
                           } else {
                             var8 = 0;
                             L13: while (true) {
-                              if (var8 >= ns.field_g) {
+                              if (~var8 <= ~ns.field_g) {
                                 break L0;
                               } else {
                                 L14: {
@@ -1772,7 +1771,7 @@ final class eka extends ci {
                                   if (var4 != 0) {
                                     stackOut_55_0 = (int[]) (Object) stackIn_55_0;
                                     stackOut_55_1 = stackIn_55_1;
-                                    stackOut_55_2 = -((-var17[var8] + 4096 << 1478894028) / var4) + 4096;
+                                    stackOut_55_2 = -((-var17[var8] + 4096 << 12) / var4) + 4096;
                                     stackIn_56_0 = stackOut_55_0;
                                     stackIn_56_1 = stackOut_55_1;
                                     stackIn_56_2 = stackOut_55_2;
@@ -1801,7 +1800,7 @@ final class eka extends ci {
                         if (ns.field_g <= var8) {
                           break L0;
                         } else {
-                          var3[var8] = -((4096 + -var17[var8]) * (4096 - var18[var8]) >> 876374380) + 4096;
+                          var3[var8] = -((4096 + -var17[var8]) * (4096 - var18[var8]) >> 12) + 4096;
                           var8++;
                           continue L15;
                         }
@@ -1824,7 +1823,7 @@ final class eka extends ci {
                           if (var5 != 0) {
                             stackOut_34_0 = (int[]) (Object) stackIn_34_0;
                             stackOut_34_1 = stackIn_34_1;
-                            stackOut_34_2 = (var18[var8] << -1442815380) / var5;
+                            stackOut_34_2 = (var18[var8] << 12) / var5;
                             stackIn_35_0 = stackOut_34_0;
                             stackIn_35_1 = stackOut_34_1;
                             stackIn_35_2 = stackOut_34_2;
@@ -1848,10 +1847,10 @@ final class eka extends ci {
                 } else {
                   var8 = 0;
                   L18: while (true) {
-                    if (var8 >= ns.field_g) {
+                    if (~var8 <= ~ns.field_g) {
                       break L0;
                     } else {
-                      var3[var8] = var17[var8] * var18[var8] >> 58839820;
+                      var3[var8] = var17[var8] * var18[var8] >> 12;
                       var8++;
                       continue L18;
                     }

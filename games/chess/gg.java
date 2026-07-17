@@ -32,26 +32,13 @@ final class gg {
 
     public static void c(int param0) {
         field_e = null;
-        if (param0 != 0) {
-          gg.b((byte) 88);
-          field_q = null;
-          field_z = null;
-          field_a = null;
-          field_l = null;
-          field_g = null;
-          field_k = null;
-          field_y = null;
-          return;
-        } else {
-          field_q = null;
-          field_z = null;
-          field_a = null;
-          field_l = null;
-          field_g = null;
-          field_k = null;
-          field_y = null;
-          return;
-        }
+        field_q = null;
+        field_z = null;
+        field_a = null;
+        field_l = null;
+        field_g = null;
+        field_k = null;
+        field_y = null;
     }
 
     private final void d(int param0) {
@@ -536,7 +523,7 @@ final class gg {
           } else {
             int fieldTemp$1 = ((gg) this).field_u - 1;
             ((gg) this).field_u = ((gg) this).field_u - 1;
-            if (-1 <= (fieldTemp$1 ^ -1)) {
+            if (fieldTemp$1 <= 0) {
               ((gg) this).field_u = ((gg) this).field_b;
               if (((gg) this).field_j > jg.field_K) {
                 ((gg) this).field_c = false;
@@ -580,6 +567,7 @@ final class gg {
     }
 
     final static void b(byte param0) {
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -588,142 +576,86 @@ final class gg {
         int var6 = 0;
         uj var8 = null;
         nk var9 = null;
-        Object var18 = null;
-        uj var18_ref = null;
-        Object var20 = null;
-        uj var20_ref = null;
-        byte[] var23 = null;
-        byte[] var24 = null;
-        var18 = null;
-        var20 = null;
+        byte[] var13 = null;
+        RuntimeException decompiledCaughtException = null;
         var6 = Chess.field_G;
-        var9 = tk.field_h;
-        if (param0 == 84) {
-          var2 = var9.i(param0 ^ -46);
-          if (var2 == 0) {
-            var20_ref = (uj) (Object) vm.field_h.g(param0 ^ -18154);
-            if (var20_ref != null) {
-              L0: {
-                var4 = var9.i(-89);
-                if (var4 != 0) {
-                  var24 = new byte[var4];
-                  var9.a(var4, (byte) 123, var24, 0);
-                  break L0;
-                } else {
-                  var5 = null;
-                  break L0;
-                }
-              }
-              var9.field_l = var9.field_l + 4;
-              if (!var9.e(-114)) {
-                si.d(param0 ^ 65364);
-                return;
+        try {
+          L0: {
+            L1: {
+              var9 = tk.field_h;
+              if (param0 == 84) {
+                break L1;
               } else {
-                var20_ref.c(-2193);
-                return;
+                gg.b((byte) -2);
+                break L1;
               }
-            } else {
-              si.d(65280);
-              return;
             }
-          } else {
-            if (var2 == 1) {
-              var3 = var9.e((byte) -117);
-              var4_ref_om = (om) (Object) fg.field_c.g(-18110);
-              L1: while (true) {
-                if (var4_ref_om == null) {
-                  if (var4_ref_om == null) {
-                    si.d(65280);
-                    return;
+            L2: {
+              var2 = var9.i(param0 ^ -46);
+              if (var2 == 0) {
+                var8 = (uj) (Object) vm.field_h.g(param0 ^ -18154);
+                if (var8 != null) {
+                  L3: {
+                    var4 = var9.i(-89);
+                    if (var4 != 0) {
+                      var13 = new byte[var4];
+                      var9.a(var4, (byte) 123, var13, 0);
+                      break L3;
+                    } else {
+                      var5 = null;
+                      break L3;
+                    }
+                  }
+                  var9.field_l = var9.field_l + 4;
+                  if (var9.e(-114)) {
+                    var8.c(-2193);
+                    break L2;
                   } else {
-                    var4_ref_om.c(-2193);
+                    si.d(param0 ^ 65364);
                     return;
                   }
                 } else {
-                  if (var3 != var4_ref_om.field_k) {
-                    var4_ref_om = (om) (Object) fg.field_c.a((byte) -125);
-                    continue L1;
-                  } else {
+                  si.d(65280);
+                  return;
+                }
+              } else {
+                if (var2 == 1) {
+                  var3 = var9.e((byte) -117);
+                  var4_ref_om = (om) (Object) fg.field_c.g(-18110);
+                  L4: while (true) {
+                    L5: {
+                      if (var4_ref_om == null) {
+                        break L5;
+                      } else {
+                        if (var3 != var4_ref_om.field_k) {
+                          var4_ref_om = (om) (Object) fg.field_c.a((byte) -125);
+                          continue L4;
+                        } else {
+                          break L5;
+                        }
+                      }
+                    }
                     if (var4_ref_om == null) {
                       si.d(65280);
                       return;
                     } else {
                       var4_ref_om.c(-2193);
-                      return;
-                    }
-                  }
-                }
-              }
-            } else {
-              fg.a((Throwable) null, (byte) -77, "A1: " + tm.b((byte) -124));
-              si.d(65280);
-              return;
-            }
-          }
-        } else {
-          gg.b((byte) -2);
-          var2 = var9.i(param0 ^ -46);
-          if (var2 == 0) {
-            var18_ref = (uj) (Object) vm.field_h.g(param0 ^ -18154);
-            var8 = var18_ref;
-            if (var18_ref != null) {
-              L2: {
-                var4 = var9.i(-89);
-                if (var4 != 0) {
-                  var23 = new byte[var4];
-                  var9.a(var4, (byte) 123, var23, 0);
-                  break L2;
-                } else {
-                  var5 = null;
-                  break L2;
-                }
-              }
-              var9.field_l = var9.field_l + 4;
-              if (!var9.e(-114)) {
-                si.d(param0 ^ 65364);
-                return;
-              } else {
-                var18_ref.c(-2193);
-                return;
-              }
-            } else {
-              si.d(65280);
-              return;
-            }
-          } else {
-            if (var2 == 1) {
-              var3 = var9.e((byte) -117);
-              var4_ref_om = (om) (Object) fg.field_c.g(-18110);
-              L3: while (true) {
-                if (var4_ref_om != null) {
-                  if (var3 != var4_ref_om.field_k) {
-                    var4_ref_om = (om) (Object) fg.field_c.a((byte) -125);
-                    continue L3;
-                  } else {
-                    if (var4_ref_om == null) {
-                      si.d(65280);
-                      return;
-                    } else {
-                      var4_ref_om.c(-2193);
-                      return;
+                      break L2;
                     }
                   }
                 } else {
-                  if (var4_ref_om == null) {
-                    si.d(65280);
-                    return;
-                  } else {
-                    var4_ref_om.c(-2193);
-                    return;
-                  }
+                  fg.a((Throwable) null, (byte) -77, "A1: " + tm.b((byte) -124));
+                  si.d(65280);
+                  break L2;
                 }
               }
-            } else {
-              fg.a((Throwable) null, (byte) -77, "A1: " + tm.b((byte) -124));
-              si.d(65280);
-              return;
             }
+            break L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw fk.a((Throwable) (Object) var1, "gg.F(" + param0 + 41);
         }
     }
 

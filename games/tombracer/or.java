@@ -12,17 +12,18 @@ class or extends fi {
     final void a(int param0, byte param1, int param2) {
         if (param1 > -37) {
           ((or) this).c(-100);
-          ((or) this).field_n = ((or) this).field_n + (param0 * ((or) this).field_i[param2] >> -526253108);
+          ((or) this).field_n = ((or) this).field_n + (param0 * ((or) this).field_i[param2] >> 12);
           return;
         } else {
-          ((or) this).field_n = ((or) this).field_n + (param0 * ((or) this).field_i[param2] >> -526253108);
+          ((or) this).field_n = ((or) this).field_n + (param0 * ((or) this).field_i[param2] >> 12);
           return;
         }
     }
 
     void a(int param0, boolean param1, byte param2) {
+        int fieldTemp$0 = ((or) this).field_k;
         ((or) this).field_k = ((or) this).field_k + 1;
-        ((or) this).field_l[((or) this).field_k] = (byte)(127 + sea.c(127, param2 >> -332397343));
+        ((or) this).field_l[fieldTemp$0] = (byte)(127 + sea.c(127, param2 >> 1));
         if (param1) {
             field_m = null;
         }
@@ -42,28 +43,30 @@ class or extends fi {
         if (param0 != 32164) {
           L0: {
             ((or) this).field_n = 78;
-            if (-4097 >= (((or) this).field_n ^ -1)) {
+            if (((or) this).field_n >= 4096) {
               ((or) this).field_n = 4095;
               break L0;
             } else {
               break L0;
             }
           }
+          int fieldTemp$2 = ((or) this).field_k;
           ((or) this).field_k = ((or) this).field_k + 1;
-          ((or) this).a(((or) this).field_k, false, (byte)(((or) this).field_n >> -128544348));
+          ((or) this).a(fieldTemp$2, false, (byte)(((or) this).field_n >> 4));
           ((or) this).field_n = 0;
           return;
         } else {
           L1: {
-            if (-4097 >= (((or) this).field_n ^ -1)) {
+            if (((or) this).field_n >= 4096) {
               ((or) this).field_n = 4095;
               break L1;
             } else {
               break L1;
             }
           }
+          int fieldTemp$3 = ((or) this).field_k;
           ((or) this).field_k = ((or) this).field_k + 1;
-          ((or) this).a(((or) this).field_k, false, (byte)(((or) this).field_n >> -128544348));
+          ((or) this).a(fieldTemp$3, false, (byte)(((or) this).field_n >> 4));
           ((or) this).field_n = 0;
           return;
         }
@@ -74,7 +77,7 @@ class or extends fi {
         int var2 = 0;
         var1 = qd.a((byte) 82);
         var2 = mg.a(-62);
-        qqa.field_t.a((byte) 57, var1 - -(ro.field_p << 1553777153), -lsa.field_b + jua.field_d, am.field_o + -ro.field_p, (lsa.field_b << -1226152383) + var2);
+        qqa.field_t.a((byte) 57, var1 - -(ro.field_p << 1), -lsa.field_b + jua.field_d, am.field_o + -ro.field_p, (lsa.field_b << 1) + var2);
         if (param0 != -1226152383) {
           or.d(-112);
           fp.a((byte) -83);
@@ -87,9 +90,6 @@ class or extends fi {
 
     public static void e(int param0) {
         field_j = null;
-        if (param0 != 24451) {
-            return;
-        }
         field_m = null;
     }
 

@@ -23,7 +23,7 @@ final class ql {
         byte[] var2_ref_byte__ = null;
         int var2 = 0;
         byte[] var3 = null;
-        if ((param1 ^ -1) == -101) {
+        if (param1 == 100) {
           if (g.field_h <= 0) {
             L0: {
               if (5000 != param1) {
@@ -68,7 +68,7 @@ final class ql {
                       var2++;
                       break L3;
                     } else {
-                      if (-1 <= (sg.field_g[var2] ^ -1)) {
+                      if (sg.field_g[var2] <= 0) {
                         var2++;
                         break L3;
                       } else {
@@ -117,7 +117,7 @@ final class ql {
                             var2++;
                             break L5;
                           } else {
-                            if (-1 <= (sg.field_g[var2] ^ -1)) {
+                            if (sg.field_g[var2] <= 0) {
                               var2++;
                               break L5;
                             } else {
@@ -162,7 +162,7 @@ final class ql {
                           var2++;
                           break L7;
                         } else {
-                          if (-1 <= (sg.field_g[var2] ^ -1)) {
+                          if (sg.field_g[var2] <= 0) {
                             var2++;
                             break L7;
                           } else {
@@ -223,7 +223,7 @@ final class ql {
                       var2++;
                       break L10;
                     } else {
-                      if (-1 <= (sg.field_g[var2] ^ -1)) {
+                      if (sg.field_g[var2] <= 0) {
                         var2++;
                         break L10;
                       } else {
@@ -256,9 +256,6 @@ final class ql {
         ug.field_a = param2;
         qd.field_r = param1;
         jb.field_f = param0;
-        if (param4 != 66) {
-            ql.a((byte) 119);
-        }
     }
 
     final static int a(int param0, int param1) {
@@ -285,7 +282,7 @@ final class ql {
               }
             }
             L2: {
-              if ((param1 ^ -1) <= -5) {
+              if (param1 >= 4) {
                 var2 += 2;
                 param1 = param1 >>> 2;
                 break L2;
@@ -295,7 +292,7 @@ final class ql {
             }
             if (param0 < -109) {
               L3: {
-                if (-2 < (param1 ^ -1)) {
+                if (param1 < 1) {
                   break L3;
                 } else {
                   var2++;
@@ -307,7 +304,7 @@ final class ql {
             } else {
               L4: {
                 int discarded$3 = ql.a(99, -61);
-                if (-2 < (param1 ^ -1)) {
+                if (param1 < 1) {
                   break L4;
                 } else {
                   var2++;
@@ -339,7 +336,7 @@ final class ql {
               }
             }
             L7: {
-              if ((param1 ^ -1) <= -5) {
+              if (param1 >= 4) {
                 var2 += 2;
                 param1 = param1 >>> 2;
                 break L7;
@@ -349,7 +346,7 @@ final class ql {
             }
             if (param0 < -109) {
               L8: {
-                if (-2 < (param1 ^ -1)) {
+                if (param1 < 1) {
                   break L8;
                 } else {
                   var2++;
@@ -361,7 +358,7 @@ final class ql {
             } else {
               L9: {
                 int discarded$4 = ql.a(99, -61);
-                if (-2 < (param1 ^ -1)) {
+                if (param1 < 1) {
                   break L9;
                 } else {
                   var2++;
@@ -394,7 +391,7 @@ final class ql {
             }
           }
           L12: {
-            if ((param1 ^ -1) <= -5) {
+            if (param1 >= 4) {
               var2 += 2;
               param1 = param1 >>> 2;
               break L12;
@@ -404,7 +401,7 @@ final class ql {
           }
           if (param0 < -109) {
             L13: {
-              if (-2 < (param1 ^ -1)) {
+              if (param1 < 1) {
                 break L13;
               } else {
                 var2++;
@@ -416,7 +413,7 @@ final class ql {
           } else {
             L14: {
               int discarded$5 = ql.a(99, -61);
-              if (-2 < (param1 ^ -1)) {
+              if (param1 < 1) {
                 break L14;
               } else {
                 var2++;

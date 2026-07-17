@@ -14,7 +14,7 @@ final class ag {
 
     public static void a(int param0) {
         field_g = null;
-        int var1 = -33 / ((param0 - 69) / 55);
+        int var1 = 33;
         field_a = null;
         field_c = null;
         field_d = null;

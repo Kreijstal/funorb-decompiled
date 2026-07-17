@@ -32,10 +32,10 @@ final class og {
     final int b(byte param0) {
         int var2 = 0;
         if (!((og) this).field_l) {
-          if (-3 != (((og) this).field_d ^ -1)) {
+          if (((og) this).field_d != 2) {
             var2 = -57 / ((53 - param0) / 43);
-            if ((ea.field_h ^ -1L) != (((og) this).field_m ^ -1L)) {
-              if (-3 == (ob.field_H ^ -1)) {
+            if (~ea.field_h != ~((og) this).field_m) {
+              if (ob.field_H == 2) {
                 if (ll.a(((og) this).field_h, -153798488)) {
                   return 1;
                 } else {
@@ -50,8 +50,8 @@ final class og {
           } else {
             if (0 >= ((og) this).field_e) {
               var2 = -57 / ((53 - param0) / 43);
-              if ((ea.field_h ^ -1L) != (((og) this).field_m ^ -1L)) {
-                if (-3 == (ob.field_H ^ -1)) {
+              if (~ea.field_h != ~((og) this).field_m) {
+                if (ob.field_H == 2) {
                   if (ll.a(((og) this).field_h, -153798488)) {
                     return 1;
                   } else {

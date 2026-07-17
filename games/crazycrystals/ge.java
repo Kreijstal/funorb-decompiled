@@ -9,12 +9,6 @@ final class ge {
 
     public static void a(int param0) {
         field_d = null;
-        if (param0 > -101) {
-            field_d = null;
-            field_b = null;
-            field_a = null;
-            return;
-        }
         field_b = null;
         field_a = null;
     }

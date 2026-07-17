@@ -6,7 +6,7 @@ final class nh {
     private static String field_z;
 
     public static void a(byte param0) {
-        int var1 = -77 % ((-10 - param0) / 58);
+        int var1 = 0;
         field_a = null;
     }
 

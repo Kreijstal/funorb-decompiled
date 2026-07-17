@@ -17,10 +17,6 @@ final class lb {
     }
 
     final static boolean b(int param0) {
-        if (param0 != 0) {
-            field_e = null;
-            return ub.field_e;
-        }
         return ub.field_e;
     }
 

@@ -88,20 +88,21 @@ final class in {
     public static void b(int param0) {
         field_d = null;
         field_b = null;
-        if (param0 != -1) {
-            field_d = null;
-        }
     }
 
     final void a(eo param0, byte param1) {
-        if (!(param0.field_i == null)) {
-            param0.b(0);
+        try {
+            if (!(param0.field_i == null)) {
+                param0.b(0);
+            }
+            param0.field_i = ((in) this).field_a.field_i;
+            param0.field_m = ((in) this).field_a;
+            param0.field_i.field_m = param0;
+            int var3_int = -71 / ((param1 - 20) / 55);
+            param0.field_m.field_i = param0;
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "in.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
-        param0.field_i = ((in) this).field_a.field_i;
-        param0.field_m = ((in) this).field_a;
-        param0.field_i.field_m = param0;
-        int var3 = -71 / ((param1 - 20) / 55);
-        param0.field_m.field_i = param0;
     }
 
     static {

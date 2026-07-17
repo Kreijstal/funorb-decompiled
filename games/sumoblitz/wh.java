@@ -12,79 +12,28 @@ final class wh extends pj {
 
     public static void a(int param0) {
         field_r = null;
-        if (param0 != -1) {
-            return;
-        }
         field_w = null;
     }
 
     private final void f(int param0) {
-        L0: {
-          if (((wh) this).field_t > 0L) {
+        if (!(((wh) this).field_t <= 0L)) {
             ((wh) this).field_u.field_y.releasePbuffer(((wh) this).field_t);
             ((wh) this).field_t = 0L;
-            break L0;
-          } else {
-            break L0;
-          }
-        }
-        if (param0 != 30611) {
-          ((wh) this).field_u = null;
-          return;
-        } else {
-          return;
         }
     }
 
     final static String a(byte param0) {
-        String var1 = null;
-        L0: {
-          var1 = "";
-          if (no.field_a == null) {
-            break L0;
-          } else {
+        String var1 = "";
+        if (no.field_a != null) {
             var1 = no.field_a.a((byte) 48);
-            break L0;
-          }
         }
-        if (param0 > -53) {
-          L1: {
-            field_w = null;
-            if (0 != var1.length()) {
-              break L1;
-            } else {
-              var1 = kf.f(1);
-              break L1;
-            }
-          }
-          L2: {
-            if (var1.length() == 0) {
-              var1 = kq.field_R;
-              break L2;
-            } else {
-              break L2;
-            }
-          }
-          return var1;
-        } else {
-          L3: {
-            if (0 != var1.length()) {
-              break L3;
-            } else {
-              var1 = kf.f(1);
-              break L3;
-            }
-          }
-          L4: {
-            if (var1.length() == 0) {
-              var1 = kq.field_R;
-              break L4;
-            } else {
-              break L4;
-            }
-          }
-          return var1;
+        if (0 == var1.length()) {
+            var1 = kf.f(1);
         }
+        if (!(var1.length() != 0)) {
+            var1 = kq.field_R;
+        }
+        return var1;
     }
 
     protected final void finalize() throws Throwable {
@@ -100,9 +49,13 @@ final class wh extends pj {
     }
 
     wh(fr param0, int param1, int param2) {
-        ((wh) this).field_u = param0;
-        ((wh) this).field_v = param1 * param2;
-        ((wh) this).field_t = ((wh) this).field_u.field_y.createPbuffer(param1, param2);
+        try {
+            ((wh) this).field_u = param0;
+            ((wh) this).field_v = param1 * param2;
+            ((wh) this).field_t = ((wh) this).field_u.field_y.createPbuffer(param1, param2);
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "wh.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     static {

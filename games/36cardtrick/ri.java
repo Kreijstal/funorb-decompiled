@@ -37,31 +37,34 @@ final class ri {
     }
 
     final static void a(byte param0) {
+        kc var1 = null;
+        kc var2 = null;
         int var3 = 0;
         int var4 = Main.field_T;
-        kc var1 = new kc(540, 140);
-        dl.a(-78, var1);
-        jb.b();
-        vj.d();
-        h.field_F = 0;
-        de.b(30);
-        kc var2 = var1.b();
-        for (var3 = 0; (var3 ^ -1) > -16; var3++) {
-            var2.d(-2, -2, 16777215);
-            vj.c(4, 4, 0, 0, 540, 140);
+        try {
+            var1 = new kc(540, 140);
+            dl.a(-78, var1);
+            jb.b();
+            vj.d();
+            h.field_F = 0;
+            de.b(30);
+            var2 = var1.b();
+            for (var3 = 0; var3 < 15; var3++) {
+                var2.d(-2, -2, 16777215);
+                vj.c(4, 4, 0, 0, 540, 140);
+            }
+            rc.field_i.c();
+            var3 = 14;
+            var1.c(0, 0);
+            gg.a(14756);
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) (Object) runtimeException, "ri.B(" + -124 + 41);
         }
-        rc.field_i.c();
-        var3 = -29 / ((param0 - 1) / 58);
-        var1.c(0, 0);
-        gg.a(14756);
     }
 
     public static void a(int param0) {
         field_b = null;
         field_d = null;
-        if (param0 != -2) {
-            field_b = null;
-        }
         field_c = null;
         field_a = null;
     }

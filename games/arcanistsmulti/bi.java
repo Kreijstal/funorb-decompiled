@@ -9,75 +9,134 @@ final class bi extends rn implements el {
     static String field_W;
 
     final static void a(byte param0, int param1) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
+        RuntimeException decompiledCaughtException = null;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
-        nb.a(true, ao.field_g, -24595, 0, je.field_b, param1, tm.field_g);
-        var2 = 0;
-        L0: while (true) {
-          if (je.field_b <= var2) {
-            if (param0 <= -103) {
-              nb.a(false, ld.field_m, -24595, param1, param1 + je.field_b, param1 + param1, qa.field_m);
-              if (param1 < je.field_b) {
-                je.field_b = param1;
-                return;
+        try {
+          L0: {
+            nb.a(true, ao.field_g, -24595, 0, je.field_b, param1, tm.field_g);
+            var2_int = 0;
+            L1: while (true) {
+              if (je.field_b <= var2_int) {
+                L2: {
+                  if (param0 <= -103) {
+                    break L2;
+                  } else {
+                    field_U = null;
+                    break L2;
+                  }
+                }
+                nb.a(false, ld.field_m, -24595, param1, param1 + je.field_b, param1 + param1, qa.field_m);
+                if (param1 >= je.field_b) {
+                  break L0;
+                } else {
+                  je.field_b = param1;
+                  return;
+                }
               } else {
-                return;
-              }
-            } else {
-              field_U = null;
-              nb.a(false, ld.field_m, -24595, param1, param1 + je.field_b, param1 + param1, qa.field_m);
-              if (param1 >= je.field_b) {
-                return;
-              } else {
-                je.field_b = param1;
-                return;
+                ki.field_r[var2_int - -param1] = var2_int;
+                var2_int++;
+                continue L1;
               }
             }
-          } else {
-            ki.field_r[var2 - -param1] = var2;
-            var2++;
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw aa.a((Throwable) (Object) var2, "bi.H(" + param0 + 44 + param1 + 41);
         }
     }
 
     final static Object a(boolean param0, int param1, byte[] param2) {
         wi var3 = null;
-        if (param1 == 0) {
-          if (param2 != null) {
-            if (136 < param2.length) {
-              var3 = new wi();
-              ((bg) (Object) var3).a(110, param2);
-              return (Object) (Object) var3;
-            } else {
-              if (param0) {
-                return (Object) (Object) dd.a(param2, 0);
+        RuntimeException var3_ref = null;
+        wi stackIn_8_0 = null;
+        byte[] stackIn_11_0 = null;
+        byte[] stackIn_13_0 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        wi stackOut_7_0 = null;
+        byte[] stackOut_12_0 = null;
+        byte[] stackOut_10_0 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param1 == 0) {
+                break L1;
               } else {
-                return (Object) (Object) param2;
+                field_U = null;
+                break L1;
               }
             }
-          } else {
-            return null;
-          }
-        } else {
-          field_U = null;
-          if (param2 != null) {
-            if (136 < param2.length) {
-              var3 = new wi();
-              ((bg) (Object) var3).a(110, param2);
-              return (Object) (Object) var3;
-            } else {
-              if (param0) {
-                return (Object) (Object) dd.a(param2, 0);
+            if (param2 != null) {
+              if (136 < param2.length) {
+                var3 = new wi();
+                ((bg) (Object) var3).a(110, param2);
+                stackOut_7_0 = (wi) var3;
+                stackIn_8_0 = stackOut_7_0;
+                return (Object) (Object) stackIn_8_0;
               } else {
-                return (Object) (Object) param2;
+                if (!param0) {
+                  stackOut_12_0 = (byte[]) param2;
+                  stackIn_13_0 = stackOut_12_0;
+                  break L0;
+                } else {
+                  stackOut_10_0 = dd.a(param2, 0);
+                  stackIn_11_0 = stackOut_10_0;
+                  return (Object) (Object) stackIn_11_0;
+                }
               }
+            } else {
+              return null;
             }
-          } else {
-            return null;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3_ref = decompiledCaughtException;
+            stackOut_14_0 = (RuntimeException) var3_ref;
+            stackOut_14_1 = new StringBuilder().append("bi.I(").append(param0).append(44).append(param1).append(44);
+            stackIn_16_0 = stackOut_14_0;
+            stackIn_16_1 = stackOut_14_1;
+            stackIn_15_0 = stackOut_14_0;
+            stackIn_15_1 = stackOut_14_1;
+            if (param2 == null) {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "null";
+              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_1 = stackOut_16_1;
+              stackIn_17_2 = stackOut_16_2;
+              break L2;
+            } else {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "{...}";
+              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_1 = stackOut_15_1;
+              stackIn_17_2 = stackOut_15_2;
+              break L2;
+            }
+          }
+          throw aa.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
         }
+        return (Object) (Object) stackIn_13_0;
     }
 
     final String b(boolean param0) {
@@ -108,8 +167,12 @@ final class bi extends rn implements el {
     }
 
     final void a(qm param0, int param1, int param2, int param3) {
-        this.a(param0, param1, param2, param3);
-        ((bi) this).field_V = an.field_g - (((bi) this).field_n + param1);
+        try {
+            super.a(param0, param1, param2, param3);
+            ((bi) this).field_V = an.field_g - (((bi) this).field_n + param1);
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "bi.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+        }
     }
 
     public final pd a(int param0) {
@@ -120,15 +183,19 @@ final class bi extends rn implements el {
     }
 
     final void l(int param0) {
-        this.l(param0);
+        super.l(param0);
         if (!(null == ((bi) this).field_T)) {
             ((bi) this).field_T.b(-17444);
         }
     }
 
     final void a(pd param0, byte param1) {
-        ((bi) this).field_T = param0;
-        int var3 = -16 / ((-87 - param1) / 37);
+        try {
+            ((bi) this).field_T = param0;
+            int var3_int = -16 / ((-87 - param1) / 37);
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "bi.G(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     bi(String param0, wc param1, int param2) {
@@ -136,12 +203,6 @@ final class bi extends rn implements el {
     }
 
     public static void o(int param0) {
-        if (param0 != 0) {
-            bi.a((byte) 84, -108);
-            field_W = null;
-            field_U = null;
-            return;
-        }
         field_W = null;
         field_U = null;
     }

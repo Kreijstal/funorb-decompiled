@@ -13,22 +13,22 @@ final class cia {
     final int a(int param0) {
         if (param0 != 617) {
             ((cia) this).field_d = false;
-            return ((cia) this).field_e >> 2117830480;
+            return ((cia) this).field_e >> 16;
         }
-        return ((cia) this).field_e >> 2117830480;
+        return ((cia) this).field_e >> 16;
     }
 
     final int a(byte param0) {
         if (param0 != 25) {
             ((cia) this).field_e = 18;
-            return ((cia) this).field_b >> -1063178064;
+            return ((cia) this).field_b >> 16;
         }
-        return ((cia) this).field_b >> -1063178064;
+        return ((cia) this).field_b >> 16;
     }
 
     final void b(int param0, int param1, int param2) {
         ura.a(-10985);
-        hp.a(2048, ((cia) this).field_f, 1900, ((cia) this).field_c.b((byte) 74), -1918106173, (((cia) this).field_e >> 1790938064) + param1, param0 + (((cia) this).field_b >> 767302480));
+        hp.a(2048, ((cia) this).field_f, 1900, ((cia) this).field_c.b((byte) 74), -1918106173, (((cia) this).field_e >> 16) + param1, param0 + (((cia) this).field_b >> 16));
         se.f((byte) -6);
         int var4 = -43 / ((param2 - 6) / 58);
     }
@@ -94,10 +94,10 @@ final class cia {
                 break L2;
               }
             }
-            ((cia) this).field_e = ((cia) this).field_e + (var3 << 1836710161);
-            ((cia) this).field_b = ((cia) this).field_b + (var2 << -382754959);
+            ((cia) this).field_e = ((cia) this).field_e + (var3 << 17);
+            ((cia) this).field_b = ((cia) this).field_b + (var2 << 17);
             ((cia) this).field_d = true;
-            ((cia) this).field_f = (tia.a(var3 << -1336954328, var2 << 117113064, -29543) >> 454184994) - 512;
+            ((cia) this).field_f = (tia.a(var3 << 8, var2 << 8, -29543) >> 2) - 512;
             ((cia) this).field_c.a(0);
             return;
           } else {
@@ -121,10 +121,10 @@ final class cia {
                   break L3;
                 }
               }
-              ((cia) this).field_e = ((cia) this).field_e + (var3 << 1836710161);
-              ((cia) this).field_b = ((cia) this).field_b + (var2 << -382754959);
+              ((cia) this).field_e = ((cia) this).field_e + (var3 << 17);
+              ((cia) this).field_b = ((cia) this).field_b + (var2 << 17);
               ((cia) this).field_d = true;
-              ((cia) this).field_f = (tia.a(var3 << -1336954328, var2 << 117113064, -29543) >> 454184994) - 512;
+              ((cia) this).field_f = (tia.a(var3 << 8, var2 << 8, -29543) >> 2) - 512;
               ((cia) this).field_c.a(0);
               return;
             }
@@ -158,10 +158,10 @@ final class cia {
                 break L5;
               }
             }
-            ((cia) this).field_e = ((cia) this).field_e + (var3 << 1836710161);
-            ((cia) this).field_b = ((cia) this).field_b + (var2 << -382754959);
+            ((cia) this).field_e = ((cia) this).field_e + (var3 << 17);
+            ((cia) this).field_b = ((cia) this).field_b + (var2 << 17);
             ((cia) this).field_d = true;
-            ((cia) this).field_f = (tia.a(var3 << -1336954328, var2 << 117113064, -29543) >> 454184994) - 512;
+            ((cia) this).field_f = (tia.a(var3 << 8, var2 << 8, -29543) >> 2) - 512;
             ((cia) this).field_c.a(0);
             return;
           } else {
@@ -185,10 +185,10 @@ final class cia {
                   break L6;
                 }
               }
-              ((cia) this).field_e = ((cia) this).field_e + (var3 << 1836710161);
-              ((cia) this).field_b = ((cia) this).field_b + (var2 << -382754959);
+              ((cia) this).field_e = ((cia) this).field_e + (var3 << 17);
+              ((cia) this).field_b = ((cia) this).field_b + (var2 << 17);
               ((cia) this).field_d = true;
-              ((cia) this).field_f = (tia.a(var3 << -1336954328, var2 << 117113064, -29543) >> 454184994) - 512;
+              ((cia) this).field_f = (tia.a(var3 << 8, var2 << 8, -29543) >> 2) - 512;
               ((cia) this).field_c.a(0);
               return;
             }
@@ -197,8 +197,8 @@ final class cia {
     }
 
     final void a(int param0, int param1, int param2) {
-        ((cia) this).field_e = param1 << -212446672;
-        ((cia) this).field_b = param0 << 1823844912;
+        ((cia) this).field_e = param1 << 16;
+        ((cia) this).field_b = param0 << 16;
         if (param2 != 1823844912) {
             ((cia) this).b(127, 90, 24);
         }

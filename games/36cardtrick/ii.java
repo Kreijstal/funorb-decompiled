@@ -11,22 +11,17 @@ final class ii {
 
     public static void a(int param0) {
         field_b = null;
-        if (param0 != 4308) {
-            field_c = 119;
-            field_f = null;
-            field_e = null;
-            return;
-        }
         field_f = null;
         field_e = null;
     }
 
     final static void a(dh param0, int param1, int param2) {
-        if (param2 != 8192) {
-            return;
+        try {
+            vb.field_c.a((qb) (Object) param0, 27362);
+            ke.a(param0, param1, 21719);
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) (Object) runtimeException, "ii.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 8192 + 41);
         }
-        vb.field_c.a((qb) (Object) param0, 27362);
-        ke.a(param0, param1, 21719);
     }
 
     static {

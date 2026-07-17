@@ -368,7 +368,7 @@ final class au {
                                                                                 }
                                                                               } else {
                                                                                 param0.field_f[var31] = param0.field_f[var31] - 1;
-                                                                                param0.field_g[param0.field_f[var31]] = param0.field_g[param0.field_f[var31 - 1] + 16 - 1];
+                                                                                param0.field_g[param0.field_f[var31]] = param0.field_g[param0.field_f[var31 - 1] + 15];
                                                                                 var31--;
                                                                                 continue L19;
                                                                               }
@@ -454,7 +454,7 @@ final class au {
                                                                       break L27;
                                                                     }
                                                                   } else {
-                                                                    var15 = var15 + 1 * var16;
+                                                                    var15 = var15 + var16;
                                                                     break L27;
                                                                   }
                                                                 }
@@ -632,11 +632,11 @@ final class au {
                                                 var1 = au.e(param0);
                                                 if (var1 != 0) {
                                                   var1 = au.e(param0);
-                                                  if (var1 == 0) {
+                                                  if (var1 != 0) {
                                                     var17--;
                                                     continue L39;
                                                   } else {
-                                                    var17--;
+                                                    var17++;
                                                     continue L39;
                                                   }
                                                 } else {
@@ -929,7 +929,7 @@ final class au {
         synchronized (var5) {
           L0: {
             field_a.field_y = param2;
-            field_a.field_K = param4;
+            field_a.field_K = 9;
             field_a.field_h = param0;
             field_a.field_s = 0;
             field_a.field_F = param1;

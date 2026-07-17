@@ -9,40 +9,16 @@ final class ih {
     static int[] field_e;
 
     final static int b(int param0, int param1) {
-        if (param1 != 64763) {
-            return 81;
-        }
         return cc.field_g[param0 & 2047];
     }
 
     final synchronized static long a(byte param0) {
-        long var1 = 0L;
-        if (param0 != -98) {
-          L0: {
-            ih.a(-100);
-            var1 = System.currentTimeMillis();
-            if (bh.field_c > var1) {
-              gg.field_a = gg.field_a + (bh.field_c - var1);
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          bh.field_c = var1;
-          return gg.field_a + var1;
-        } else {
-          L1: {
-            var1 = System.currentTimeMillis();
-            if (bh.field_c > var1) {
-              gg.field_a = gg.field_a + (bh.field_c - var1);
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          bh.field_c = var1;
-          return gg.field_a + var1;
+        long var1 = System.currentTimeMillis();
+        if (!(bh.field_c <= var1)) {
+            gg.field_a = gg.field_a + (bh.field_c - var1);
         }
+        bh.field_c = var1;
+        return gg.field_a + var1;
     }
 
     static int a(int param0, int param1) {
@@ -64,28 +40,13 @@ final class ih {
     }
 
     final static boolean b(int param0) {
-        if (param0 == 12871) {
-          if (null != ob.field_b) {
-            if (la.field_O != sl.field_d) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+        if (null == ob.field_b) {
             return false;
-          }
-        } else {
-          field_a = null;
-          if (null != ob.field_b) {
-            if (la.field_O != sl.field_d) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
         }
+        if (la.field_O != sl.field_d) {
+            return false;
+        }
+        return true;
     }
 
     public static void a(int param0) {

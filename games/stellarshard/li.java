@@ -11,79 +11,119 @@ final class li {
     final static boolean a(String param0, byte param1) {
         String var2 = null;
         Exception var2_ref = null;
+        RuntimeException var2_ref2 = null;
         int var3 = 0;
         int var4 = 0;
         int stackIn_3_0 = 0;
         int stackIn_8_0 = 0;
-        int stackIn_11_0 = 0;
-        int stackIn_16_0 = 0;
-        int stackIn_19_0 = 0;
+        int stackIn_15_0 = 0;
+        int stackIn_18_0 = 0;
+        int stackIn_20_0 = 0;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        String stackIn_24_2 = null;
         Throwable decompiledCaughtException = null;
         int stackOut_7_0 = 0;
-        int stackOut_18_0 = 0;
-        int stackOut_15_0 = 0;
-        int stackOut_10_0 = 0;
+        int stackOut_17_0 = 0;
+        int stackOut_14_0 = 0;
         int stackOut_2_0 = 0;
+        int stackOut_19_0 = 0;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        String stackOut_23_2 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        String stackOut_22_2 = null;
         var4 = stellarshard.field_B;
         try {
-          L0: {
+          try {
             if (ej.field_k.startsWith("win")) {
-              L1: {
+              L0: {
                 if (param0.startsWith("http://")) {
-                  break L1;
+                  break L0;
                 } else {
                   if (!param0.startsWith("https://")) {
                     stackOut_7_0 = 0;
                     stackIn_8_0 = stackOut_7_0;
                     return stackIn_8_0 != 0;
                   } else {
-                    break L1;
+                    break L0;
                   }
                 }
               }
               var2 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
-              if (param1 == -5) {
-                var3 = 0;
-                L2: while (true) {
-                  if (param0.length() <= var3) {
-                    Process discarded$2 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param0 + "\"");
-                    stackOut_18_0 = 1;
-                    stackIn_19_0 = stackOut_18_0;
-                    break L0;
+              var3 = 0;
+              L1: while (true) {
+                if (param0.length() <= var3) {
+                  Process discarded$2 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param0 + "\"");
+                  stackOut_17_0 = 1;
+                  stackIn_18_0 = stackOut_17_0;
+                  return stackIn_18_0 != 0;
+                } else {
+                  if (-1 != var2.indexOf((int) param0.charAt(var3))) {
+                    var3++;
+                    continue L1;
                   } else {
-                    if (-1 != var2.indexOf((int) param0.charAt(var3))) {
-                      var3++;
-                      continue L2;
-                    } else {
-                      stackOut_15_0 = 0;
-                      stackIn_16_0 = stackOut_15_0;
-                      return stackIn_16_0 != 0;
-                    }
+                    stackOut_14_0 = 0;
+                    stackIn_15_0 = stackOut_14_0;
+                    return stackIn_15_0 != 0;
                   }
                 }
-              } else {
-                stackOut_10_0 = 0;
-                stackIn_11_0 = stackOut_10_0;
-                return stackIn_11_0 != 0;
               }
             } else {
               stackOut_2_0 = 0;
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0 != 0;
             }
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var2_ref = (Exception) (Object) decompiledCaughtException;
+            stackOut_19_0 = 0;
+            stackIn_20_0 = stackOut_19_0;
+            return stackIn_20_0 != 0;
           }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = (Exception) (Object) decompiledCaughtException;
-          return false;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+          decompiledCaughtException = decompiledCaughtParameter1;
+          L2: {
+            var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+            stackOut_21_0 = (RuntimeException) var2_ref2;
+            stackOut_21_1 = new StringBuilder().append("li.B(");
+            stackIn_23_0 = stackOut_21_0;
+            stackIn_23_1 = stackOut_21_1;
+            stackIn_22_0 = stackOut_21_0;
+            stackIn_22_1 = stackOut_21_1;
+            if (param0 == null) {
+              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_2 = "null";
+              stackIn_24_0 = stackOut_23_0;
+              stackIn_24_1 = stackOut_23_1;
+              stackIn_24_2 = stackOut_23_2;
+              break L2;
+            } else {
+              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_2 = "{...}";
+              stackIn_24_0 = stackOut_22_0;
+              stackIn_24_1 = stackOut_22_1;
+              stackIn_24_2 = stackOut_22_2;
+              break L2;
+            }
+          }
+          throw ma.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + -5 + 41);
         }
-        return stackIn_19_0 != 0;
     }
 
     public static void a(byte param0) {
         field_b = null;
         field_a = null;
-        int var1 = -88 / ((37 - param0) / 52);
+        int var1 = 88;
     }
 
     public final String toString() {

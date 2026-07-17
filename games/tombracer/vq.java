@@ -25,7 +25,7 @@ final class vq {
         while (((vq) this).field_f[var1] >= 0) {
             var1 = fg.c() != 0 ? ((vq) this).field_f[var1] : var1 + 1;
         }
-        return ((vq) this).field_f[var1] ^ -1;
+        return ~((vq) this).field_f[var1];
     }
 
     private final void b() {
@@ -69,7 +69,7 @@ final class vq {
                   var7 = 0;
                   L2: while (true) {
                     if (var7 >= var4) {
-                      ((vq) this).field_f[var6] = var3 ^ -1;
+                      ((vq) this).field_f[var6] = ~var3;
                       if (var6 >= var2) {
                         var2 = var6 + 1;
                         var3++;
@@ -216,7 +216,7 @@ final class vq {
         int stackOut_22_0 = 0;
         int stackOut_21_0 = 0;
         L0: {
-          int discarded$1 = fg.a(24);
+          int discarded$2 = fg.a(24);
           ((vq) this).field_d = fg.a(16);
           ((vq) this).field_e = fg.a(24);
           ((vq) this).field_a = new int[((vq) this).field_e];
@@ -283,8 +283,9 @@ final class vq {
                     var3_int++;
                     continue L5;
                   } else {
+                    int incrementValue$3 = var2;
                     var2++;
-                    ((vq) this).field_a[var2] = var3_int;
+                    ((vq) this).field_a[incrementValue$3] = var3_int;
                     var5++;
                     continue L6;
                   }

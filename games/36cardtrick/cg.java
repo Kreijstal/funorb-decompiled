@@ -9,90 +9,92 @@ abstract class cg extends k implements pi {
     static boolean field_f;
 
     final static boolean a(int param0, char param1) {
-        char[] var10 = null;
-        char[] var7 = null;
-        char[] var6 = null;
         char[] var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
-        char[] var11 = null;
-        char[] var8 = null;
-        char[] var12 = null;
-        char[] var9 = null;
-        int var5 = Main.field_T;
-        if (param1 > 0) {
-            if (param1 < 128) {
-                return true;
+        int var5 = 0;
+        char[] var6 = null;
+        int stackIn_8_0 = 0;
+        int stackIn_14_0 = 0;
+        int stackIn_19_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_7_0 = 0;
+        int stackOut_13_0 = 0;
+        int stackOut_18_0 = 0;
+        var5 = Main.field_T;
+        try {
+          L0: {
+            L1: {
+              if (param1 <= 0) {
+                break L1;
+              } else {
+                if (param1 < 128) {
+                  stackOut_7_0 = 1;
+                  stackIn_8_0 = stackOut_7_0;
+                  return stackIn_8_0 != 0;
+                } else {
+                  break L1;
+                }
+              }
             }
-            if (param1 < 160) {
-                if (0 != param1) {
-                    var10 = se.field_K;
-                    var7 = var10;
-                    var6 = var7;
-                    var2 = var6;
-                    for (var3 = 0; var10.length > var3; var3++) {
-                        var4 = var10[var3];
-                        if (param1 == var4) {
-                            return true;
-                        }
+            L2: {
+              if (param1 < 160) {
+                break L2;
+              } else {
+                if (param1 > 255) {
+                  break L2;
+                } else {
+                  return true;
+                }
+              }
+            }
+            L3: {
+              if (0 == param1) {
+                break L3;
+              } else {
+                var6 = se.field_K;
+                var2 = var6;
+                var3 = 0;
+                L4: while (true) {
+                  if (var6.length <= var3) {
+                    break L3;
+                  } else {
+                    var4 = var6[var3];
+                    if (param1 != var4) {
+                      var3++;
+                      continue L4;
+                    } else {
+                      stackOut_13_0 = 1;
+                      stackIn_14_0 = stackOut_13_0;
+                      return stackIn_14_0 != 0;
                     }
+                  }
                 }
-                if (param0 >= 94) {
-                    return false;
-                }
+              }
+            }
+            L5: {
+              if (param0 >= 94) {
+                break L5;
+              } else {
                 field_f = true;
-                return false;
+                break L5;
+              }
             }
-            if (param1 > 255) {
-                if (0 != param1) {
-                    var11 = se.field_K;
-                    var8 = var11;
-                    var6 = var8;
-                    var2 = var6;
-                    for (var3 = 0; var11.length > var3; var3++) {
-                        var4 = var11[var3];
-                        if (param1 == var4) {
-                            return true;
-                        }
-                    }
-                }
-                if (param0 < 94) {
-                    field_f = true;
-                    return false;
-                }
-                return false;
-            }
-            return true;
+            stackOut_18_0 = 0;
+            stackIn_19_0 = stackOut_18_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          throw ma.a((Throwable) (Object) var2_ref, "cg.P(" + param0 + 44 + param1 + 41);
         }
-        if (param1 >= 160) {
-            if (param1 <= 255) {
-                return true;
-            }
-        }
-        if (0 != param1) {
-            var12 = se.field_K;
-            var9 = var12;
-            var6 = var9;
-            var2 = var6;
-            for (var3 = 0; var12.length > var3; var3++) {
-                var4 = var12[var3];
-                if (param1 == var4) {
-                    return true;
-                }
-            }
-        }
-        if (param0 < 94) {
-            field_f = true;
-            return false;
-        }
-        return false;
+        return stackIn_19_0 != 0;
     }
 
     public static void f(int param0) {
         field_e = null;
-        if (param0 != 1) {
-            return;
-        }
         field_i = null;
     }
 
@@ -147,8 +149,7 @@ abstract class cg extends k implements pi {
     abstract sg a(String param0, int param1);
 
     final static aj b(boolean param0) {
-        L0: {
-          if (aj.field_a == null) {
+        if (!(aj.field_a != null)) {
             aj.field_a = new aj();
             aj.field_a.a(-1, j.field_C);
             aj.field_a.field_d = 2763306;
@@ -159,28 +160,132 @@ abstract class cg extends k implements pi {
             aj.field_a.field_f = 4;
             aj.field_a.field_j = 5;
             aj.field_a.field_c = 14;
-            break L0;
-          } else {
-            break L0;
-          }
         }
-        if (!param0) {
-          return null;
-        } else {
-          return aj.field_a;
-        }
+        return aj.field_a;
     }
 
     public final void a(hf param0, int param1) {
-        ((cg) this).a(-98);
-        if (param1 != 12891) {
-            field_f = true;
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        try {
+          L0: {
+            L1: {
+              ((cg) this).a(-98);
+              if (param1 == 12891) {
+                break L1;
+              } else {
+                field_f = true;
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_1 = new StringBuilder().append("cg.MA(");
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param0 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
+            }
+          }
+          throw ma.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
         }
     }
 
     public final void a(int param0, hf param1) {
-        if (param0 != -1) {
-            boolean discarded$0 = ((cg) this).a((byte) -37);
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 == -1) {
+                break L1;
+              } else {
+                boolean discarded$2 = ((cg) this).a((byte) -37);
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_1 = new StringBuilder().append("cg.GA(").append(param0).append(44);
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param1 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
+            }
+          }
+          throw ma.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
         }
     }
 
@@ -194,7 +299,11 @@ abstract class cg extends k implements pi {
     abstract String a(String param0, boolean param1);
 
     cg(hf param0) {
-        ((cg) this).field_g = param0;
+        try {
+            ((cg) this).field_g = param0;
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) (Object) runtimeException, "cg.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

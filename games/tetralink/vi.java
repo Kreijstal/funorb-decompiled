@@ -10,52 +10,31 @@ final class vi {
     final static String a(int param0) {
         if (2 <= vd.field_a) {
           if (d.field_i != null) {
-            if (!d.field_i.c(param0 ^ -31281)) {
+            if (!d.field_i.c(122)) {
               return eg.field_N;
             } else {
               return nj.field_e;
             }
           } else {
-            if (!rm.field_i.c(param0 ^ -31275)) {
+            if (!rm.field_i.c(96)) {
               return qa.field_C;
             } else {
               if (rm.field_i.a("commonui", (byte) -106)) {
-                if (param0 == -31307) {
-                  if (!ib.field_a.c(113)) {
-                    return nd.field_Kb;
-                  } else {
-                    if (ib.field_a.a("commonui", (byte) -119)) {
-                      if (!q.field_b.c(param0 ^ -31270)) {
-                        return fl.field_a;
-                      } else {
-                        if (!q.field_b.a(false)) {
-                          return v.field_w + " - " + q.field_b.b(22300) + "%";
-                        } else {
-                          return dg.field_m;
-                        }
-                      }
-                    } else {
-                      return hh.field_a + " - " + ib.field_a.a("commonui", true) + "%";
-                    }
-                  }
+                if (!ib.field_a.c(113)) {
+                  return nd.field_Kb;
                 } else {
-                  field_b = null;
-                  if (!ib.field_a.c(113)) {
-                    return nd.field_Kb;
-                  } else {
-                    if (ib.field_a.a("commonui", (byte) -119)) {
-                      if (!q.field_b.c(param0 ^ -31270)) {
-                        return fl.field_a;
-                      } else {
-                        if (!q.field_b.a(false)) {
-                          return v.field_w + " - " + q.field_b.b(22300) + "%";
-                        } else {
-                          return dg.field_m;
-                        }
-                      }
+                  if (ib.field_a.a("commonui", (byte) -119)) {
+                    if (!q.field_b.c(111)) {
+                      return fl.field_a;
                     } else {
-                      return hh.field_a + " - " + ib.field_a.a("commonui", true) + "%";
+                      if (!q.field_b.a(false)) {
+                        return v.field_w + " - " + q.field_b.b(22300) + "%";
+                      } else {
+                        return dg.field_m;
+                      }
                     }
+                  } else {
+                    return hh.field_a + " - " + ib.field_a.a("commonui", true) + "%";
                   }
                 }
               } else {
@@ -69,12 +48,6 @@ final class vi {
     }
 
     public static void b(int param0) {
-        if (param0 < 12) {
-            field_a = null;
-            field_b = null;
-            field_a = null;
-            return;
-        }
         field_b = null;
         field_a = null;
     }

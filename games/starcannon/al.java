@@ -50,19 +50,12 @@ final class al extends df {
 
     final void a(int param0) throws javax.sound.sampled.LineUnavailableException {
         javax.sound.sampled.DataLine.Info var2 = null;
-        try {
+        {
             var2 = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, ((al) this).field_y, param0 << (field_l ? 2 : 1));
             ((al) this).field_w = (javax.sound.sampled.SourceDataLine) (Object) javax.sound.sampled.AudioSystem.getLine((javax.sound.sampled.Line.Info) (Object) var2);
             ((al) this).field_w.open();
             ((al) this).field_w.start();
             ((al) this).field_v = param0;
-        } catch (javax.sound.sampled.LineUnavailableException lineUnavailableException) {
-            if (ej.a(true, param0) != 1) {
-                ((al) this).a(gb.a(param0, (byte) -126));
-                return;
-            }
-            ((al) this).field_w = null;
-            throw lineUnavailableException;
         }
     }
 
@@ -203,8 +196,7 @@ final class al extends df {
           }
         }
         L4: {
-          new javax.sound.sampled.AudioFormat(stackIn_13_3, stackIn_13_4, stackIn_13_5, true, false);
-          ((al) this).field_y = stackIn_13_1;
+          ((al) this).field_y = new javax.sound.sampled.AudioFormat(stackIn_13_3, stackIn_13_4, stackIn_13_5, true, false);
           stackOut_13_0 = this;
           stackOut_13_1 = 256;
           stackIn_15_0 = stackOut_13_0;

@@ -56,7 +56,7 @@ final class bh {
                     return -26;
                   }
                 } else {
-                  if (((bh) this).field_a[-1 + var3] - -((bh) this).field_a[var3] >> 1571861633 > param0) {
+                  if (((bh) this).field_a[-1 + var3] - -((bh) this).field_a[var3] >> 1 > param0) {
                     return var3 + -1;
                   } else {
                     var3++;
@@ -71,9 +71,6 @@ final class bh {
     }
 
     public static void b(byte param0) {
-        if (param0 < 95) {
-            return;
-        }
         field_d = null;
         field_e = null;
     }

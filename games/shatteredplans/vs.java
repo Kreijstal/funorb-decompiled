@@ -13,7 +13,7 @@ final class vs {
         gb var2 = null;
         var2 = new gb();
         vl.field_o.a((byte) -113, (oh) (Object) var2);
-        bo.a(param1, 2);
+        bo.a(4, 2);
         if (param0 != 88) {
           return null;
         } else {
@@ -32,41 +32,37 @@ final class vs {
 
     final static void a(int param0, byte param1) {
         oh var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
         lq var4 = null;
+        RuntimeException decompiledCaughtException = null;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
-        var4 = (lq) (Object) rs.field_Bb.d(0);
-        L0: while (true) {
-          if (var4 == null) {
-            if (param1 <= -18) {
-              var2 = vl.field_o.d(0);
-              L1: while (true) {
-                if (var2 == null) {
-                  return;
-                } else {
-                  bo.a(param0, 2);
-                  var2 = vl.field_o.a((byte) -71);
-                  continue L1;
+        try {
+          L0: {
+            var4 = (lq) (Object) rs.field_Bb.d(0);
+            L1: while (true) {
+              if (var4 == null) {
+                var2 = vl.field_o.d(0);
+                L2: while (true) {
+                  if (var2 == null) {
+                    break L0;
+                  } else {
+                    bo.a(param0, 2);
+                    var2 = vl.field_o.a((byte) -71);
+                    continue L2;
+                  }
                 }
-              }
-            } else {
-              field_b = null;
-              var2 = vl.field_o.d(0);
-              L2: while (true) {
-                if (var2 == null) {
-                  return;
-                } else {
-                  bo.a(param0, 2);
-                  var2 = vl.field_o.a((byte) -71);
-                  continue L2;
-                }
+              } else {
+                wj.a(320, param0, var4);
+                var4 = (lq) (Object) rs.field_Bb.a((byte) -71);
+                continue L1;
               }
             }
-          } else {
-            wj.a(320, param0, var4);
-            var4 = (lq) (Object) rs.field_Bb.a((byte) -71);
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          throw r.a((Throwable) (Object) var2_ref, "vs.A(" + param0 + 44 + -103 + 41);
         }
     }
 

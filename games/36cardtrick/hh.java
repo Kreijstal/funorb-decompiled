@@ -6,11 +6,6 @@ final class hh extends qb {
     int field_h;
 
     public static void a(int param0) {
-        if (param0 != 20364) {
-            String discarded$0 = hh.b((byte) -87);
-            field_g = null;
-            return;
-        }
         field_g = null;
     }
 

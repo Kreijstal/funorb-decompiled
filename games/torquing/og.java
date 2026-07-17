@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.net.URL;
+
 final class og extends q {
     static eb field_k;
     static String field_m;
@@ -8,9 +10,13 @@ final class og extends q {
     int field_j;
 
     final static void a(java.awt.Component param0, int param1) {
-        param0.removeKeyListener((java.awt.event.KeyListener) (Object) ha.field_b);
-        param0.removeFocusListener((java.awt.event.FocusListener) (Object) ha.field_b);
-        hb.field_y = param1;
+        try {
+            param0.removeKeyListener((java.awt.event.KeyListener) (Object) ha.field_b);
+            param0.removeFocusListener((java.awt.event.FocusListener) (Object) ha.field_b);
+            hb.field_y = -1;
+        } catch (RuntimeException runtimeException) {
+            throw rb.a((Throwable) (Object) runtimeException, "og.D(" + (param0 != null ? "{...}" : "null") + 44 + -1 + 41);
+        }
     }
 
     final static void a(int param0) {
@@ -22,71 +28,142 @@ final class og extends q {
     public static void a(byte param0) {
         field_m = null;
         field_k = null;
-        if (param0 <= 124) {
-            Object var2 = null;
-            java.net.URL discarded$0 = og.a((java.net.URL) null, (java.applet.Applet) null, (byte) 62);
-        }
     }
 
     final static java.net.URL a(java.net.URL param0, java.applet.Applet param1, byte param2) {
         Object var3 = null;
         Object var4 = null;
-        var3 = null;
-        if (param2 <= -65) {
+        java.net.URL stackIn_10_0 = null;
+        Object stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        Object stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        Object stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
+        Object stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        Object stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        Object stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        java.net.URL stackOut_9_0 = null;
+        Object stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        Object stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        Object stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        Object stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        Object stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        Object stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        try {
           L0: {
-            var4 = null;
-            if (rd.field_t == null) {
-              break L0;
-            } else {
-              if (rd.field_t.equals((Object) (Object) param1.getParameter("settings"))) {
-                break L0;
-              } else {
-                var3 = (Object) (Object) rd.field_t;
-                var4 = var3;
-                var4 = var3;
-                break L0;
-              }
-            }
-          }
-          if (null != jb.field_e) {
-            if (jb.field_e.equals((Object) (Object) param1.getParameter("session"))) {
-              return pg.a(-1, (String) var4, param0, 47, (String) var3);
-            } else {
-              var4 = (Object) (Object) jb.field_e;
-              return pg.a(-1, (String) var4, param0, 47, (String) var3);
-            }
-          } else {
-            return pg.a(-1, (String) var4, param0, 47, (String) var3);
-          }
-        } else {
-          L1: {
-            field_m = null;
-            var4 = null;
-            if (rd.field_t == null) {
-              break L1;
-            } else {
-              if (rd.field_t.equals((Object) (Object) param1.getParameter("settings"))) {
+            L1: {
+              var3 = null;
+              if (param2 <= -65) {
                 break L1;
               } else {
-                var3 = (Object) (Object) rd.field_t;
+                field_m = null;
                 break L1;
               }
             }
-          }
-          if (null == jb.field_e) {
-            return pg.a(-1, (String) var4, param0, 47, (String) var3);
-          } else {
             L2: {
-              if (!jb.field_e.equals((Object) (Object) param1.getParameter("session"))) {
-                var4 = (Object) (Object) jb.field_e;
+              var4 = null;
+              if (rd.field_t == null) {
                 break L2;
               } else {
-                break L2;
+                if (rd.field_t.equals((Object) (Object) param1.getParameter("settings"))) {
+                  break L2;
+                } else {
+                  var3 = (Object) (Object) rd.field_t;
+                  var4 = var3;
+                  var4 = var3;
+                  break L2;
+                }
               }
             }
-            return pg.a(-1, (String) var4, param0, 47, (String) var3);
+            L3: {
+              if (null == jb.field_e) {
+                break L3;
+              } else {
+                if (!jb.field_e.equals((Object) (Object) param1.getParameter("session"))) {
+                  var4 = (Object) (Object) jb.field_e;
+                  break L3;
+                } else {
+                  break L3;
+                }
+              }
+            }
+            stackOut_9_0 = pg.a(-1, (String) var4, param0, 47, (String) var3);
+            stackIn_10_0 = stackOut_9_0;
+            break L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var3 = (Object) (Object) decompiledCaughtException;
+            stackOut_11_0 = var3;
+            stackOut_11_1 = new StringBuilder().append("og.C(");
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
+            if (param0 == null) {
+              stackOut_13_0 = stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L4;
+            } else {
+              stackOut_12_0 = stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L4;
+            }
+          }
+          L5: {
+            stackOut_14_0 = stackIn_14_0;
+            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(44);
+            stackIn_16_0 = stackOut_14_0;
+            stackIn_16_1 = stackOut_14_1;
+            stackIn_15_0 = stackOut_14_0;
+            stackIn_15_1 = stackOut_14_1;
+            if (param1 == null) {
+              stackOut_16_0 = stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "null";
+              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_1 = stackOut_16_1;
+              stackIn_17_2 = stackOut_16_2;
+              break L5;
+            } else {
+              stackOut_15_0 = stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "{...}";
+              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_1 = stackOut_15_1;
+              stackIn_17_2 = stackOut_15_2;
+              break L5;
+            }
+          }
+          throw rb.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param2 + 41);
         }
+        return stackIn_10_0;
     }
 
     private og() throws Throwable {

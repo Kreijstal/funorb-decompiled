@@ -30,11 +30,11 @@ final class nf {
           var23 = var24;
           var22 = var23;
           var4 = var22;
-          var5 = 255 & param0 >> -48182352;
-          var6 = param0 >> -21889880 & 255;
+          var5 = 255 & param0 >> 16;
+          var6 = param0 >> 8 & 255;
           var7 = 255 & param0;
-          var8 = (double)((param3 >> -1883193808 & 255) - var5) / (double)param2;
-          var10 = (double)(((65280 & param3) >> -1992336248) + -var6) / (double)param2;
+          var8 = (double)((param3 >> 16 & 255) - var5) / (double)param2;
+          var10 = (double)(((65280 & param3) >> 8) + -var6) / (double)param2;
           var26[0] = param0;
           var12 = (double)(-var7 + (param3 & 255)) / (double)param2;
           var22[-1 + param2] = param3;
@@ -56,7 +56,7 @@ final class nf {
             var16 = var16 + var10;
             var18 = var18 + var12;
             var14 = var14 + var8;
-            var22[var20] = ic.a(ic.a(eb.a(1144783103, (int)Math.round(var14)) << -1650062192, eb.a((int)Math.round(var16), 1979711743) << -1121785080), eb.a((int)Math.round(var18), 255));
+            var22[var20] = ic.a(ic.a(eb.a(1144783103, (int)Math.round(var14)) << 16, eb.a((int)Math.round(var16), 1979711743) << 8), eb.a((int)Math.round(var18), 255));
             var20++;
             continue L1;
           }

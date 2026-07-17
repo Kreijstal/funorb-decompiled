@@ -31,9 +31,6 @@ final class pd extends rj {
         field_G = null;
         field_A = null;
         field_E = null;
-        if (param0 < 69) {
-            return;
-        }
         field_J = null;
     }
 
@@ -45,7 +42,7 @@ final class pd extends rj {
         if (var4 > ((pd) this).field_C) {
             var4 = ((pd) this).field_C;
         }
-        if (-1 < (var4 ^ -1)) {
+        if (var4 < 0) {
             var4 = 0;
         }
         ((pd) this).field_z = var4;
@@ -58,7 +55,7 @@ final class pd extends rj {
         if (param0 != 4973) {
             boolean discarded$0 = pd.c(-62, 37, (byte) -14);
         }
-        this.a(param1 >> -1887960315, -18566, param1, param1 >> 1910039748);
+        this.a(param1 >> 5, -18566, param1, param1 >> 4);
     }
 
     final static boolean c(int param0, int param1, byte param2) {
@@ -101,27 +98,84 @@ final class pd extends rj {
         if (param1 != -18566) {
             ((pd) this).field_F = 45;
         }
-        ((pd) this).field_D = (param3 ^ -1) < -1 ? param3 : 1;
+        ((pd) this).field_D = param3 > 0 ? param3 : 1;
         ((pd) this).field_C = param2;
     }
 
     final static void a(java.awt.Canvas param0, int param1) {
-        ud.a((java.awt.Component) (Object) param0, -1);
-        gn.a((byte) 127, (java.awt.Component) (Object) param0);
-        if (param1 != -32) {
-            field_B = null;
-        }
-        if (!(bn.field_j == null)) {
-            bn.field_j.a(false, (java.awt.Component) (Object) param0);
+        RuntimeException var2 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              ud.a((java.awt.Component) (Object) param0, -1);
+              gn.a((byte) 127, (java.awt.Component) (Object) param0);
+              if (bn.field_j != null) {
+                bn.field_j.a(false, (java.awt.Component) (Object) param0);
+                break L1;
+              } else {
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_1 = new StringBuilder().append("pd.R(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw vk.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + -32 + 41);
         }
     }
 
     final static void a(int param0, java.applet.Applet param1) {
-        sm.a(param1, 31500, "");
-        if (param0 != 5189) {
-            boolean discarded$0 = pd.c(66, -39, (byte) -110);
+        try {
+            sm.a(param1, 31500, "");
+            if (param0 != 5189) {
+                boolean discarded$0 = pd.c(66, -39, (byte) -110);
+            }
+            fk.a(param0 ^ 5137, param1);
+        } catch (RuntimeException runtimeException) {
+            throw vk.a((Throwable) (Object) runtimeException, "pd.L(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        fk.a(param0 ^ 5137, param1);
     }
 
     final void a(boolean param0, int param1, int param2) {
@@ -153,7 +207,7 @@ final class pd extends rj {
           if (var6 >= 7) {
             var6 = 0;
             L1: while (true) {
-              if ((var6 ^ -1) <= -4) {
+              if (var6 >= 3) {
                 var6 = 1;
                 L2: while (true) {
                   if (-1 + ((pd) this).field_F <= var6) {
@@ -182,7 +236,7 @@ final class pd extends rj {
                           break L3;
                         } else {
                           L5: {
-                            if (-1 == (((pd) this).field_C ^ -1)) {
+                            if (((pd) this).field_C == 0) {
                               stackOut_14_0 = 0;
                               stackIn_15_0 = stackOut_14_0;
                               break L5;
@@ -231,32 +285,50 @@ final class pd extends rj {
     }
 
     final void a(int param0, byte param1, int param2) {
-        if (param1 > -59) {
+        int var4 = 0;
+        if (param1 <= -59) {
+          if (((pd) this).field_F == 0) {
             return;
-        }
-        if (!(((pd) this).field_F != 0)) {
+          } else {
+            L0: {
+              var4 = this.a(param0, true);
+              if (var4 > ((pd) this).field_z) {
+                ((pd) this).field_z = ((pd) this).field_z + ((pd) this).field_D;
+                break L0;
+              } else {
+                if (var4 >= ((pd) this).field_z) {
+                  break L0;
+                } else {
+                  ((pd) this).field_z = ((pd) this).field_z - ((pd) this).field_D;
+                  break L0;
+                }
+              }
+            }
+            L1: {
+              if (((pd) this).field_C >= ((pd) this).field_z) {
+                break L1;
+              } else {
+                ((pd) this).field_z = ((pd) this).field_C;
+                break L1;
+              }
+            }
+            L2: {
+              if (((pd) this).field_z >= 0) {
+                break L2;
+              } else {
+                ((pd) this).field_z = 0;
+                break L2;
+              }
+            }
             return;
-        }
-        int var4 = this.a(param0, true);
-        if (var4 <= ((pd) this).field_z) {
-            // if_icmpge L76
-            ((pd) this).field_z = ((pd) this).field_z - ((pd) this).field_D;
+          }
         } else {
-            ((pd) this).field_z = ((pd) this).field_z + ((pd) this).field_D;
-        }
-        if (((pd) this).field_C < ((pd) this).field_z) {
-            ((pd) this).field_z = ((pd) this).field_C;
-        }
-        if (((pd) this).field_z < 0) {
-            ((pd) this).field_z = 0;
+          return;
         }
     }
 
     private final int a(int param0, boolean param1) {
         int var3 = 0;
-        if (!param1) {
-            ((pd) this).b(34, -43, 108);
-        }
         if (qh.field_q.field_v * 2 > ((pd) this).field_F) {
             var3 = (param0 + -16) * ((pd) this).field_C / (-23 + ((pd) this).field_F);
         } else {

@@ -15,7 +15,11 @@ final class fl {
     }
 
     final static void a(ka param0, int param1) {
-        param0.field_M.field_w = (double)param1;
+        try {
+            param0.field_M.field_w = (double)4;
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "fl.B(" + (param0 != null ? "{...}" : "null") + 44 + 4 + 41);
+        }
     }
 
     static {

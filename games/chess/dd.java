@@ -277,7 +277,7 @@ final class dd extends kk {
                               }
                             }
                             if (var9 > 64) {
-                              var10 = field_O[var8] - 64 - 1;
+                              var10 = field_O[var8] - 65;
                               var48 = field_U[var10];
                               var12 = 0;
                               L10: while (true) {
@@ -357,7 +357,7 @@ final class dd extends kk {
                           }
                         }
                         if (var9 > 64) {
-                          var10 = field_O[var8] - 64 - 1;
+                          var10 = field_O[var8] - 65;
                           var46 = field_U[var10];
                           var12 = 0;
                           L15: while (true) {
@@ -1302,7 +1302,7 @@ final class dd extends kk {
                     }
                   }
                   if (var2 > 64) {
-                    var3 = field_O[var1] - 64 - 1;
+                    var3 = field_O[var1] - 65;
                     var12 = field_U[var3];
                     var8 = 0;
                     var5 = var8;
@@ -1917,7 +1917,7 @@ final class dd extends kk {
                     }
                   }
                 }
-                ((dd) this).field_S[var9] = (short)-1;
+                ((dd) this).field_S[var9] = (short) -1;
                 var9++;
                 continue L1;
               }
@@ -1957,14 +1957,14 @@ final class dd extends kk {
                               break L3;
                             } else {
                               if (param0.field_Q[var11] == -1) {
-                                ((dd) this).field_H[var11] = (byte)-1;
+                                ((dd) this).field_H[var11] = (byte) -1;
                                 var11++;
                                 continue L7;
                               } else {
                                 ((dd) this).field_H[var11] = (byte)var9_ref_int__[param0.field_Q[var11] & 255];
                                 if (((dd) this).field_H[var11] == -1) {
                                   if (((dd) this).field_S != null) {
-                                    ((dd) this).field_S[var11] = (short)-1;
+                                    ((dd) this).field_S[var11] = (short) -1;
                                     var11++;
                                     continue L7;
                                   } else {

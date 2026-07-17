@@ -32,11 +32,6 @@ abstract class un {
         field_f = null;
         field_i = null;
         field_q = null;
-        if (param0 != 6) {
-            int discarded$0 = un.e(26);
-            field_o = null;
-            return;
-        }
         field_o = null;
     }
 
@@ -48,7 +43,7 @@ abstract class un {
 
     final int b(int param0) {
         if (param0 != -1048142560) {
-          ((un) this).field_b = (er) null;
+          ((un) this).field_b = null;
           return ((un) this).field_b.c(0) + ((un) this).field_g.c(0);
         } else {
           return ((un) this).field_b.c(0) + ((un) this).field_g.c(0);
@@ -68,7 +63,7 @@ abstract class un {
         gp stackOut_1_0 = null;
         int stackOut_1_1 = 0;
         L0: {
-          var6 = (long)param1 + ((long)param0 << -1048142560);
+          var6 = (long)param1 + ((long)param0 << 32);
           var8 = new gp();
           stackOut_0_0 = (gp) var8;
           stackIn_2_0 = stackOut_0_0;
@@ -87,7 +82,7 @@ abstract class un {
             break L0;
           }
         }
-        ((gp) (Object) stackIn_3_0).field_q = stackIn_3_1 != 0;
+        stackIn_3_0.field_q = stackIn_3_1 != 0;
         var8.field_i = var6;
         var8.field_z = param4;
         if (param2 == -21) {
@@ -99,7 +94,7 @@ abstract class un {
               return var8;
             }
           } else {
-            if ((((un) this).b(-1048142560) ^ -1) <= -21) {
+            if (((un) this).b(-1048142560) >= 20) {
               throw new RuntimeException();
             } else {
               ((un) this).field_b.a(2, (wt) (Object) var8);
@@ -107,7 +102,7 @@ abstract class un {
             }
           }
         } else {
-          ((un) this).field_d = (er) null;
+          ((un) this).field_d = null;
           if (!param3) {
             if (20 <= ((un) this).c(-116)) {
               throw new RuntimeException();
@@ -116,7 +111,7 @@ abstract class un {
               return var8;
             }
           } else {
-            if ((((un) this).b(-1048142560) ^ -1) <= -21) {
+            if (((un) this).b(-1048142560) >= 20) {
               throw new RuntimeException();
             } else {
               ((un) this).field_b.a(2, (wt) (Object) var8);
@@ -174,7 +169,7 @@ abstract class un {
           if (ml.field_m == null) {
             var3 = ka.a(param0 ^ 118);
             if (param0 != -21) {
-              field_i = (jb) null;
+              field_i = null;
               vr.field_b = new ce(var3, (String) null, true, false, false);
               vn.field_f.a((ea) (Object) ak.field_d, 0);
               ak.field_d.d((ea) (Object) vr.field_b, -30244);
@@ -197,7 +192,7 @@ abstract class un {
               ak.field_d.e((byte) 85);
               return;
             } else {
-              field_i = (jb) null;
+              field_i = null;
               vr.field_b = new ce(var2, (String) null, true, false, false);
               vn.field_f.a((ea) (Object) ak.field_d, 0);
               ak.field_d.d((ea) (Object) vr.field_b, -30244);
@@ -212,7 +207,7 @@ abstract class un {
 
     final boolean a(byte param0) {
         int var2 = -97 % ((param0 - -51) / 52);
-        return -21 >= (((un) this).c(-95) ^ -1) ? true : false;
+        return ((un) this).c(-95) >= 20 ? true : false;
     }
 
     abstract void a(int param0, boolean param1, Object param2);

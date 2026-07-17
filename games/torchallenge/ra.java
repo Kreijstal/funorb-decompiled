@@ -30,82 +30,78 @@ final class ra {
         int var11 = 0;
         int var12 = 0;
         var12 = TorChallenge.field_F ? 1 : 0;
-        if (param7 == -10440) {
-          var11 = 0;
-          L0: while (true) {
-            if (1 < var11) {
-              return;
-            } else {
-              L1: {
-                if (0 == var11) {
-                  var10 = gl.field_l[param0][param2][0][1];
-                  var9 = gl.field_l[param0][param2][0][0];
-                  break L1;
-                } else {
-                  L2: {
-                    if (0 != param2) {
+        var11 = 0;
+        L0: while (true) {
+          if (1 < var11) {
+            return;
+          } else {
+            L1: {
+              if (0 == var11) {
+                var10 = gl.field_l[param0][param2][0][1];
+                var9 = gl.field_l[param0][param2][0][0];
+                break L1;
+              } else {
+                L2: {
+                  if (0 != param2) {
+                    break L2;
+                  } else {
+                    if (var11 != 1) {
                       break L2;
                     } else {
-                      if (var11 != 1) {
-                        break L2;
-                      } else {
-                        var10 = gl.field_l[param0][param2][1][1];
-                        var9 = gl.field_l[param0][param2][0][1];
-                        break L1;
-                      }
+                      var10 = gl.field_l[param0][param2][1][1];
+                      var9 = gl.field_l[param0][param2][0][1];
+                      break L1;
                     }
                   }
-                  var9 = gl.field_l[param0][param2][1][0];
-                  var10 = gl.field_l[param0][param2][0][0];
-                  break L1;
                 }
+                var9 = gl.field_l[param0][param2][1][0];
+                var10 = gl.field_l[param0][param2][0][0];
+                break L1;
               }
-              L3: {
-                qg.a(ae.field_y);
-                qg.a(var9, param1, var10, param4);
-                if (-1 <= (1 & ic.field_E[vb.field_a[param0][param2]][param5] ^ -1)) {
-                  break L3;
-                } else {
-                  sf.field_d[param6][param2][var11].a(var9, param1);
-                  break L3;
-                }
-              }
-              L4: {
-                if ((2 & ic.field_E[vb.field_a[param0][param2]][param5]) <= 0) {
-                  break L4;
-                } else {
-                  sf.field_d[param6][param2][var11].a(var9, param1 + 16);
-                  break L4;
-                }
-              }
-              L5: {
-                if ((ic.field_E[vb.field_a[param0][param2]][param5] & 4 ^ -1) >= -1) {
-                  break L5;
-                } else {
-                  sf.field_d[param6][param2][var11].a(var9, 32 + param1);
-                  break L5;
-                }
-              }
-              L6: {
-                if ((8 & ic.field_E[vb.field_a[param0][param2]][param5] ^ -1) < -1) {
-                  sf.field_d[param6][param2][var11].a(var9, 48 + param1);
-                  break L6;
-                } else {
-                  break L6;
-                }
-              }
-              qg.b(ae.field_y);
-              var11++;
-              continue L0;
             }
+            L3: {
+              qg.a(ae.field_y);
+              qg.a(var9, param1, var10, param4);
+              if ((1 & ic.field_E[vb.field_a[param0][param2]][param5]) <= 0) {
+                break L3;
+              } else {
+                sf.field_d[param6][param2][var11].a(var9, param1);
+                break L3;
+              }
+            }
+            L4: {
+              if ((2 & ic.field_E[vb.field_a[param0][param2]][param5]) <= 0) {
+                break L4;
+              } else {
+                sf.field_d[param6][param2][var11].a(var9, param1 + 16);
+                break L4;
+              }
+            }
+            L5: {
+              if ((ic.field_E[vb.field_a[param0][param2]][param5] & 4) <= 0) {
+                break L5;
+              } else {
+                sf.field_d[param6][param2][var11].a(var9, 32 + param1);
+                break L5;
+              }
+            }
+            L6: {
+              if ((8 & ic.field_E[vb.field_a[param0][param2]][param5]) > 0) {
+                sf.field_d[param6][param2][var11].a(var9, 48 + param1);
+                break L6;
+              } else {
+                break L6;
+              }
+            }
+            qg.b(ae.field_y);
+            var11++;
+            continue L0;
           }
-        } else {
-          return;
         }
     }
 
     final static int a(int param0) {
-        if ((li.field_K ^ -1) > -3) {
+        if (li.field_K < 2) {
           return 0;
         } else {
           if (param0 == 1) {
@@ -216,10 +212,10 @@ final class ra {
             var9 = var7;
             L2: while (true) {
               if (param4 + param2 <= 16 * var9) {
-                if (-1 < (var7 >> 2070079810 ^ -1)) {
+                if (var7 >> 2 < 0) {
                   return true;
                 } else {
-                  if (((ra) this).field_a > var9 >> 1973651842) {
+                  if (((ra) this).field_a > var9 >> 2) {
                     var11 = var6;
                     L3: while (true) {
                       if (var8 <= var11) {
@@ -227,7 +223,7 @@ final class ra {
                       } else {
                         L4: {
                           var10 = var11;
-                          if (-1 < (var10 ^ -1)) {
+                          if (var10 < 0) {
                             var10 += 64;
                             break L4;
                           } else {
@@ -252,7 +248,7 @@ final class ra {
                               if (0 != (var12 & 3)) {
                                 break L7;
                               } else {
-                                if ((ic.field_E[var10][var12 >> -1039096350] & 1 ^ -1) < -1) {
+                                if ((ic.field_E[var10][var12 >> 2] & 1) > 0) {
                                   return true;
                                 } else {
                                   break L7;
@@ -263,7 +259,7 @@ final class ra {
                               if ((3 & var12) != 1) {
                                 break L8;
                               } else {
-                                if ((2 & ic.field_E[var10][var12 >> 1212130690]) <= 0) {
+                                if ((2 & ic.field_E[var10][var12 >> 2]) <= 0) {
                                   break L8;
                                 } else {
                                   return true;
@@ -274,7 +270,7 @@ final class ra {
                               if (2 != (3 & var12)) {
                                 break L9;
                               } else {
-                                if ((4 & ic.field_E[var10][var12 >> 568388706]) <= 0) {
+                                if ((4 & ic.field_E[var10][var12 >> 2]) <= 0) {
                                   break L9;
                                 } else {
                                   return true;
@@ -282,7 +278,7 @@ final class ra {
                               }
                             }
                             if (-4 == (3 & var12)) {
-                              if (-1 < (8 & ic.field_E[var10][var12 >> 1130917890])) {
+                              if (-1 < (8 & ic.field_E[var10][var12 >> 2])) {
                                 return true;
                               } else {
                                 var12++;
@@ -313,14 +309,15 @@ final class ra {
     }
 
     final void a(boolean param0, int param1, boolean param2, ka param3, int param4, int param5, int param6, int param7, int param8) {
-        int var10 = 0;
+        RuntimeException var10 = null;
+        int var10_int = 0;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        qe var16 = null;
-        qe var17 = null;
+        Object var16 = null;
+        Object var17 = null;
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
@@ -328,10 +325,6 @@ final class ra {
         int var22 = 0;
         int var23 = 0;
         Object var26 = null;
-        int stackIn_23_0 = 0;
-        int stackIn_23_1 = 0;
-        int stackIn_23_2 = 0;
-        int stackIn_23_3 = 0;
         int stackIn_24_0 = 0;
         int stackIn_24_1 = 0;
         int stackIn_24_2 = 0;
@@ -340,149 +333,165 @@ final class ra {
         int stackIn_25_1 = 0;
         int stackIn_25_2 = 0;
         int stackIn_25_3 = 0;
-        int stackIn_25_4 = 0;
+        int stackIn_26_0 = 0;
+        int stackIn_26_1 = 0;
+        int stackIn_26_2 = 0;
+        int stackIn_26_3 = 0;
+        int stackIn_26_4 = 0;
+        int stackIn_81_0 = 0;
+        int stackIn_82_0 = 0;
+        int stackIn_82_1 = 0;
+        int stackIn_83_0 = 0;
+        int stackIn_83_1 = 0;
         int stackIn_84_0 = 0;
-        int stackIn_85_0 = 0;
-        int stackIn_85_1 = 0;
-        int stackIn_86_0 = 0;
-        int stackIn_86_1 = 0;
-        int stackIn_87_0 = 0;
-        int stackIn_87_1 = 0;
-        int stackIn_87_2 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_22_1 = 0;
-        int stackOut_22_2 = 0;
-        int stackOut_22_3 = 0;
+        int stackIn_84_1 = 0;
+        int stackIn_84_2 = 0;
+        RuntimeException stackIn_143_0 = null;
+        StringBuilder stackIn_143_1 = null;
+        RuntimeException stackIn_144_0 = null;
+        StringBuilder stackIn_144_1 = null;
+        RuntimeException stackIn_145_0 = null;
+        StringBuilder stackIn_145_1 = null;
+        String stackIn_145_2 = null;
+        Throwable caughtException = null;
         int stackOut_23_0 = 0;
         int stackOut_23_1 = 0;
         int stackOut_23_2 = 0;
         int stackOut_23_3 = 0;
-        int stackOut_23_4 = 0;
         int stackOut_24_0 = 0;
         int stackOut_24_1 = 0;
         int stackOut_24_2 = 0;
         int stackOut_24_3 = 0;
         int stackOut_24_4 = 0;
+        int stackOut_25_0 = 0;
+        int stackOut_25_1 = 0;
+        int stackOut_25_2 = 0;
+        int stackOut_25_3 = 0;
+        int stackOut_25_4 = 0;
+        int stackOut_79_0 = 0;
+        int stackOut_80_0 = 0;
+        int stackOut_81_0 = 0;
+        int stackOut_81_1 = 0;
         int stackOut_82_0 = 0;
+        int stackOut_82_1 = 0;
+        int stackOut_82_2 = 0;
         int stackOut_83_0 = 0;
-        int stackOut_84_0 = 0;
-        int stackOut_84_1 = 0;
-        int stackOut_85_0 = 0;
-        int stackOut_85_1 = 0;
-        int stackOut_85_2 = 0;
-        int stackOut_86_0 = 0;
-        int stackOut_86_1 = 0;
-        int stackOut_86_2 = 0;
+        int stackOut_83_1 = 0;
+        int stackOut_83_2 = 0;
+        RuntimeException stackOut_142_0 = null;
+        StringBuilder stackOut_142_1 = null;
+        RuntimeException stackOut_143_0 = null;
+        StringBuilder stackOut_143_1 = null;
+        String stackOut_143_2 = null;
+        RuntimeException stackOut_144_0 = null;
+        StringBuilder stackOut_144_1 = null;
+        String stackOut_144_2 = null;
         int statePc = 0;
         stateLoop: while (true) {
             switch (statePc) {
                 case 0: {
                     var23 = TorChallenge.field_F ? 1 : 0;
-                    var10 = param6 / 64;
-                    var11 = var10 - -10;
-                    var12 = 64 * var10 - param6;
+                    statePc = 1;
+                    continue stateLoop;
+                }
+                case 1: {
+                    var10_int = param6 / 64;
+                    var11 = var10_int - -10;
+                    var12 = 64 * var10_int - param6;
                     var13 = param5 % 32;
                     var16 = null;
                     var17 = null;
                     je.field_i = false;
                     qg.a(vd.field_e);
-                    if ((var10 ^ -1) > -1) {
-                        statePc = 2;
-                    } else {
+                    if (var10_int < 0) {
                         statePc = 3;
+                    } else {
+                        statePc = 4;
                     }
-                    continue stateLoop;
-                }
-                case 2: {
-                    var11 = var11 - var10;
-                    var10 = 0;
-                    statePc = 3;
                     continue stateLoop;
                 }
                 case 3: {
+                    var11 = var11 - var10_int;
+                    var10_int = 0;
+                    statePc = 4;
+                    continue stateLoop;
+                }
+                case 4: {
                     if (var11 > ((ra) this).field_a) {
-                        statePc = 5;
-                    } else {
                         statePc = 6;
-                    }
-                    continue stateLoop;
-                }
-                case 5: {
-                    var10 = var10 - (-((ra) this).field_a + var11);
-                    var11 = ((ra) this).field_a;
-                    statePc = 6;
-                    continue stateLoop;
-                }
-                case 6: {
-                    ((ra) this).field_n[1][0] = var10;
-                    ((ra) this).field_n[1][1] = var11;
-                    if (param4 != 3) {
-                        statePc = 13;
                     } else {
                         statePc = 7;
                     }
                     continue stateLoop;
                 }
+                case 6: {
+                    var10_int = var10_int - (-((ra) this).field_a + var11);
+                    var11 = ((ra) this).field_a;
+                    statePc = 7;
+                    continue stateLoop;
+                }
                 case 7: {
-                    if (!param2) {
-                        statePc = 13;
+                    ((ra) this).field_n[1][0] = var10_int;
+                    ((ra) this).field_n[1][1] = var11;
+                    if (param4 != 3) {
+                        statePc = 14;
                     } else {
                         statePc = 8;
                     }
                     continue stateLoop;
                 }
                 case 8: {
-                    if (ub.field_i) {
-                        statePc = 10;
+                    if (!param2) {
+                        statePc = 14;
                     } else {
-                        statePc = 11;
+                        statePc = 9;
                     }
                     continue stateLoop;
                 }
-                case 10: {
-                    qg.a(0, 0, 640, 480 + -td.field_n);
-                    statePc = 11;
-                    continue stateLoop;
-                }
-                case 11: {
-                    qg.c(0, 0, 25, ((ra) this).field_a * 64, 14022908, 10533565);
-                    qg.c(615, 0, 25, 64 * ((ra) this).field_a, 14022908, 10533565);
-                    og.a(param5, param6, -15516);
-                    if (!ub.field_i) {
-                        statePc = 13;
+                case 9: {
+                    if (ub.field_i) {
+                        statePc = 11;
                     } else {
                         statePc = 12;
                     }
                     continue stateLoop;
                 }
+                case 11: {
+                    qg.a(0, 0, 640, 480 + -td.field_n);
+                    statePc = 12;
+                    continue stateLoop;
+                }
                 case 12: {
-                    qg.b(vd.field_e);
-                    statePc = 13;
+                    qg.c(0, 0, 25, ((ra) this).field_a * 64, 14022908, 10533565);
+                    qg.c(615, 0, 25, 64 * ((ra) this).field_a, 14022908, 10533565);
+                    og.a(param5, param6, -15516);
+                    if (!ub.field_i) {
+                        statePc = 14;
+                    } else {
+                        statePc = 13;
+                    }
                     continue stateLoop;
                 }
                 case 13: {
-                    var18 = -24;
+                    qg.b(vd.field_e);
                     statePc = 14;
                     continue stateLoop;
                 }
                 case 14: {
-                    if (0 < var18) {
-                        statePc = 135;
-                    } else {
-                        statePc = 15;
-                    }
+                    var18 = -24;
+                    statePc = 15;
                     continue stateLoop;
                 }
                 case 15: {
-                    if ((var18 ^ -1) > 15) {
-                        statePc = 18;
+                    if (0 < var18) {
+                        statePc = 129;
                     } else {
                         statePc = 16;
                     }
                     continue stateLoop;
                 }
                 case 16: {
-                    if ((var18 ^ -1) != 15) {
+                    if (var18 < -16) {
                         statePc = 19;
                     } else {
                         statePc = 17;
@@ -490,71 +499,65 @@ final class ra {
                     continue stateLoop;
                 }
                 case 17: {
-                    qg.b(vd.field_e);
-                    statePc = 19;
+                    if (var18 != -16) {
+                        statePc = 20;
+                    } else {
+                        statePc = 18;
+                    }
                     continue stateLoop;
                 }
                 case 18: {
                     qg.b(vd.field_e);
-                    qg.a(0, 0, 25, 480);
-                    statePc = 19;
+                    statePc = 20;
                     continue stateLoop;
                 }
                 case 19: {
-                    var19 = 8 + (16 + var18);
-                    var12 = -param6 + 64 * var10;
-                    if (3 != param4) {
-                        statePc = 32;
-                    } else {
-                        statePc = 20;
-                    }
+                    qg.b(vd.field_e);
+                    qg.a(0, 0, 25, 480);
+                    statePc = 20;
                     continue stateLoop;
                 }
                 case 20: {
-                    var20 = 0;
-                    statePc = 21;
-                    continue stateLoop;
-                }
-                case 21: {
-                    if (var20 < -2) {
-                        statePc = 56;
+                    var19 = 8 + (16 + var18);
+                    var12 = -param6 + 64 * var10_int;
+                    if (3 != param4) {
+                        statePc = 33;
                     } else {
-                        statePc = 22;
+                        statePc = 21;
                     }
                     continue stateLoop;
                 }
+                case 21: {
+                    var20 = 0;
+                    statePc = 22;
+                    continue stateLoop;
+                }
                 case 22: {
-                    stackOut_22_0 = var13;
-                    stackOut_22_1 = param5;
-                    stackOut_22_2 = var20;
-                    stackOut_22_3 = var19;
-                    stackIn_24_0 = stackOut_22_0;
-                    stackIn_24_1 = stackOut_22_1;
-                    stackIn_24_2 = stackOut_22_2;
-                    stackIn_24_3 = stackOut_22_3;
-                    stackIn_23_0 = stackOut_22_0;
-                    stackIn_23_1 = stackOut_22_1;
-                    stackIn_23_2 = stackOut_22_2;
-                    stackIn_23_3 = stackOut_22_3;
-                    if (-1 == var20) {
-                        statePc = 24;
+                    if (var20 > 1) {
+                        statePc = 56;
                     } else {
                         statePc = 23;
                     }
                     continue stateLoop;
                 }
                 case 23: {
-                    stackOut_23_0 = stackIn_23_0;
-                    stackOut_23_1 = stackIn_23_1;
-                    stackOut_23_2 = stackIn_23_2;
-                    stackOut_23_3 = stackIn_23_3;
-                    stackOut_23_4 = -var18;
+                    stackOut_23_0 = var13;
+                    stackOut_23_1 = param5;
+                    stackOut_23_2 = var20;
+                    stackOut_23_3 = var19;
                     stackIn_25_0 = stackOut_23_0;
                     stackIn_25_1 = stackOut_23_1;
                     stackIn_25_2 = stackOut_23_2;
                     stackIn_25_3 = stackOut_23_3;
-                    stackIn_25_4 = stackOut_23_4;
-                    statePc = 25;
+                    stackIn_24_0 = stackOut_23_0;
+                    stackIn_24_1 = stackOut_23_1;
+                    stackIn_24_2 = stackOut_23_2;
+                    stackIn_24_3 = stackOut_23_3;
+                    if (var20 == 0) {
+                        statePc = 25;
+                    } else {
+                        statePc = 24;
+                    }
                     continue stateLoop;
                 }
                 case 24: {
@@ -562,41 +565,50 @@ final class ra {
                     stackOut_24_1 = stackIn_24_1;
                     stackOut_24_2 = stackIn_24_2;
                     stackOut_24_3 = stackIn_24_3;
-                    stackOut_24_4 = var18;
-                    stackIn_25_0 = stackOut_24_0;
-                    stackIn_25_1 = stackOut_24_1;
-                    stackIn_25_2 = stackOut_24_2;
-                    stackIn_25_3 = stackOut_24_3;
-                    stackIn_25_4 = stackOut_24_4;
-                    statePc = 25;
+                    stackOut_24_4 = -var18;
+                    stackIn_26_0 = stackOut_24_0;
+                    stackIn_26_1 = stackOut_24_1;
+                    stackIn_26_2 = stackOut_24_2;
+                    stackIn_26_3 = stackOut_24_3;
+                    stackIn_26_4 = stackOut_24_4;
+                    statePc = 26;
                     continue stateLoop;
                 }
                 case 25: {
-                    p.a(stackIn_25_0, stackIn_25_1, stackIn_25_2, stackIn_25_3, stackIn_25_4, param6, -100, var10);
-                    if (-1 != (var19 ^ -1)) {
-                        statePc = 27;
-                    } else {
-                        statePc = 26;
-                    }
+                    stackOut_25_0 = stackIn_25_0;
+                    stackOut_25_1 = stackIn_25_1;
+                    stackOut_25_2 = stackIn_25_2;
+                    stackOut_25_3 = stackIn_25_3;
+                    stackOut_25_4 = var18;
+                    stackIn_26_0 = stackOut_25_0;
+                    stackIn_26_1 = stackOut_25_1;
+                    stackIn_26_2 = stackOut_25_2;
+                    stackIn_26_3 = stackOut_25_3;
+                    stackIn_26_4 = stackOut_25_4;
+                    statePc = 26;
                     continue stateLoop;
                 }
                 case 26: {
-                    ((ra) this).field_n[0][var20] = vb.field_a[var19][var20];
-                    statePc = 27;
-                    continue stateLoop;
-                }
-                case 27: {
-                    var14 = -gl.field_l[var19][var20][1][0] + gl.field_l[var19][var20][1][1];
-                    if (-1 > (var14 ^ -1)) {
-                        statePc = 29;
-                    } else {
+                    p.a(stackIn_26_0, stackIn_26_1, stackIn_26_2, stackIn_26_3, stackIn_26_4, param6, -100, var10_int);
+                    if (var19 != 0) {
                         statePc = 28;
+                    } else {
+                        statePc = 27;
                     }
                     continue stateLoop;
                 }
+                case 27: {
+                    ((ra) this).field_n[0][var20] = vb.field_a[var19][var20];
+                    statePc = 28;
+                    continue stateLoop;
+                }
                 case 28: {
-                    var20++;
-                    statePc = 21;
+                    var14 = -gl.field_l[var19][var20][1][0] + gl.field_l[var19][var20][1][1];
+                    if (var14 <= 0) {
+                        statePc = 32;
+                    } else {
+                        statePc = 29;
+                    }
                     continue stateLoop;
                 }
                 case 29: {
@@ -612,283 +624,264 @@ final class ra {
                     if (param3 != null) {
                         statePc = 31;
                     } else {
-                        statePc = 30;
+                        statePc = 32;
                     }
-                    continue stateLoop;
-                }
-                case 30: {
-                    var20++;
-                    statePc = 21;
                     continue stateLoop;
                 }
                 case 31: {
                     param3.d();
-                    var20++;
-                    statePc = 21;
+                    statePc = 32;
                     continue stateLoop;
                 }
                 case 32: {
-                    if (param4 == 6) {
-                        statePc = 48;
-                    } else {
-                        statePc = 33;
-                    }
+                    var20++;
+                    statePc = 22;
                     continue stateLoop;
                 }
                 case 33: {
-                    var20 = var10;
-                    if (var11 > var20) {
-                        statePc = 35;
+                    if (param4 == 6) {
+                        statePc = 47;
                     } else {
                         statePc = 34;
                     }
                     continue stateLoop;
                 }
                 case 34: {
-                    var18++;
-                    statePc = 14;
+                    var20 = var10_int;
+                    if (var11 <= var20) {
+                        statePc = 128;
+                    } else {
+                        statePc = 35;
+                    }
                     continue stateLoop;
                 }
                 case 35: {
                     var21 = 0;
-                    if (-2 <= var21) {
-                        statePc = 37;
+                    if (var21 > 1) {
+                        statePc = 127;
                     } else {
                         statePc = 36;
                     }
                     continue stateLoop;
                 }
                 case 36: {
-                    var12 += 64;
-                    var20++;
-                    statePc = 57;
-                    continue stateLoop;
-                }
-                case 37: {
-                    if (-1 != var18) {
-                        statePc = 78;
+                    if (var18 != 0) {
+                        statePc = 75;
                     } else {
-                        statePc = 38;
+                        statePc = 37;
                     }
                     continue stateLoop;
                 }
-                case 38: {
-                    if ((var21 ^ -1) == -2) {
-                        statePc = 40;
+                case 37: {
+                    if (var21 == 1) {
+                        statePc = 39;
                     } else {
-                        statePc = 78;
+                        statePc = 75;
+                    }
+                    continue stateLoop;
+                }
+                case 39: {
+                    if (param1 == 18) {
+                        statePc = 41;
+                    } else {
+                        statePc = 40;
                     }
                     continue stateLoop;
                 }
                 case 40: {
-                    if (param1 == 18) {
-                        statePc = 42;
-                    } else {
-                        statePc = 41;
-                    }
+                    var26 = null;
+                    ((ra) this).a(false, 6, false, (ka) null, 26, -8, -26, -57, 72);
+                    statePc = 41;
                     continue stateLoop;
                 }
                 case 41: {
-                    var26 = null;
-                    ((ra) this).a(false, 6, false, (ka) null, 26, -8, -26, -57, 72);
-                    statePc = 42;
+                    if (param4 == 3) {
+                        statePc = 43;
+                    } else {
+                        statePc = 67;
+                    }
                     continue stateLoop;
                 }
-                case 42: {
-                    if ((param4 ^ -1) == -4) {
-                        statePc = 44;
+                case 43: {
+                    nb.a((byte) 42, ((ra) this).field_n);
+                    if (param4 != 6) {
+                        statePc = 141;
                     } else {
-                        statePc = 70;
+                        statePc = 44;
                     }
                     continue stateLoop;
                 }
                 case 44: {
-                    nb.a((byte) 42, ((ra) this).field_n);
-                    if ((param4 ^ -1) != -7) {
-                        statePc = 147;
+                    if (!ub.field_i) {
+                        statePc = 141;
                     } else {
                         statePc = 45;
                     }
                     continue stateLoop;
                 }
                 case 45: {
-                    if (!ub.field_i) {
-                        statePc = 147;
+                    var18 = td.field_n >> 4;
+                    if (0 >= td.field_n - (var18 << 4)) {
+                        statePc = 71;
                     } else {
                         statePc = 46;
                     }
                     continue stateLoop;
                 }
                 case 46: {
-                    var18 = td.field_n >> 919859972;
-                    if (0 >= td.field_n - (var18 << -2061651004)) {
-                        statePc = 74;
-                    } else {
-                        statePc = 47;
-                    }
+                    var18++;
+                    statePc = 71;
                     continue stateLoop;
                 }
                 case 47: {
-                    var18++;
-                    statePc = 74;
+                    var20 = 0;
+                    statePc = 48;
                     continue stateLoop;
                 }
                 case 48: {
-                    var20 = 0;
-                    statePc = 49;
+                    if (var20 > 1) {
+                        statePc = 56;
+                    } else {
+                        statePc = 49;
+                    }
                     continue stateLoop;
                 }
                 case 49: {
-                    if (var20 > 1) {
-                        statePc = 56;
+                    ((ra) this).field_o[var20][0][0] = gl.field_l[var19][var20][0][0];
+                    ((ra) this).field_o[var20][0][1] = gl.field_l[var19][var20][0][1];
+                    if (var20 != 0) {
+                        statePc = 51;
                     } else {
                         statePc = 50;
                     }
                     continue stateLoop;
                 }
                 case 50: {
-                    ((ra) this).field_o[var20][0][0] = gl.field_l[var19][var20][0][0];
-                    ((ra) this).field_o[var20][0][1] = gl.field_l[var19][var20][0][1];
-                    if (var20 != 0) {
-                        statePc = 52;
-                    } else {
-                        statePc = 51;
-                    }
+                    ((ra) this).field_o[var20][1][0] = gl.field_l[var19][var20][0][1];
+                    ((ra) this).field_o[var20][1][1] = gl.field_l[var19][var20][1][1];
+                    statePc = 52;
                     continue stateLoop;
                 }
                 case 51: {
-                    ((ra) this).field_o[var20][1][0] = gl.field_l[var19][var20][0][1];
-                    ((ra) this).field_o[var20][1][1] = gl.field_l[var19][var20][1][1];
-                    statePc = 53;
+                    ((ra) this).field_o[var20][1][0] = gl.field_l[var19][var20][1][0];
+                    ((ra) this).field_o[var20][1][1] = gl.field_l[var19][var20][0][0];
+                    statePc = 52;
                     continue stateLoop;
                 }
                 case 52: {
-                    ((ra) this).field_o[var20][1][0] = gl.field_l[var19][var20][1][0];
-                    ((ra) this).field_o[var20][1][1] = gl.field_l[var19][var20][0][0];
-                    statePc = 53;
-                    continue stateLoop;
-                }
-                case 53: {
                     var15 = vb.field_a[var19][var20] & 1;
                     si.a(var18, ((ra) this).field_e[vb.field_a[var19][var20]], var20, ((ra) this).field_o, var15, 1);
                     if (param3 != null) {
-                        statePc = 55;
-                    } else {
                         statePc = 54;
+                    } else {
+                        statePc = 55;
                     }
                     continue stateLoop;
                 }
                 case 54: {
-                    var20++;
-                    statePc = 49;
+                    param3.d();
+                    statePc = 55;
                     continue stateLoop;
                 }
                 case 55: {
-                    param3.d();
                     var20++;
-                    statePc = 49;
+                    statePc = 48;
                     continue stateLoop;
                 }
                 case 56: {
-                    var20 = var10;
+                    var20 = var10_int;
                     statePc = 57;
                     continue stateLoop;
                 }
                 case 57: {
-                    if (var11 > var20) {
-                        statePc = 59;
+                    if (var11 <= var20) {
+                        statePc = 128;
                     } else {
                         statePc = 58;
                     }
                     continue stateLoop;
                 }
                 case 58: {
-                    var18++;
-                    statePc = 14;
+                    var21 = 0;
+                    statePc = 59;
                     continue stateLoop;
                 }
                 case 59: {
-                    var21 = 0;
-                    statePc = 60;
+                    if (var21 > 1) {
+                        statePc = 127;
+                    } else {
+                        statePc = 60;
+                    }
                     continue stateLoop;
                 }
                 case 60: {
-                    if (-2 <= var21) {
-                        statePc = 62;
+                    if (var18 != 0) {
+                        statePc = 75;
                     } else {
                         statePc = 61;
                     }
                     continue stateLoop;
                 }
                 case 61: {
-                    var12 += 64;
-                    var20++;
-                    statePc = 57;
-                    continue stateLoop;
-                }
-                case 62: {
-                    if (-1 != var18) {
-                        statePc = 78;
-                    } else {
+                    if (var21 == 1) {
                         statePc = 63;
+                    } else {
+                        statePc = 75;
                     }
                     continue stateLoop;
                 }
                 case 63: {
-                    if ((var21 ^ -1) == -2) {
-                        statePc = 65;
+                    if (param4 != 3) {
+                        statePc = 126;
                     } else {
-                        statePc = 78;
+                        statePc = 64;
+                    }
+                    continue stateLoop;
+                }
+                case 64: {
+                    if (param2) {
+                        statePc = 74;
+                    } else {
+                        statePc = 65;
                     }
                     continue stateLoop;
                 }
                 case 65: {
-                    if (param4 == 3) {
-                        statePc = 67;
-                    } else {
-                        statePc = 133;
-                    }
+                    var21++;
+                    statePc = 59;
                     continue stateLoop;
                 }
                 case 67: {
-                    if (param2) {
-                        statePc = 77;
+                    if (param4 != 6) {
+                        statePc = 141;
                     } else {
-                        statePc = 133;
+                        statePc = 68;
+                    }
+                    continue stateLoop;
+                }
+                case 68: {
+                    if (!ub.field_i) {
+                        statePc = 141;
+                    } else {
+                        statePc = 69;
+                    }
+                    continue stateLoop;
+                }
+                case 69: {
+                    var18 = td.field_n >> 4;
+                    if (0 >= td.field_n - (var18 << 4)) {
+                        statePc = 71;
+                    } else {
+                        statePc = 70;
                     }
                     continue stateLoop;
                 }
                 case 70: {
-                    if ((param4 ^ -1) != -7) {
-                        statePc = 147;
-                    } else {
-                        statePc = 71;
-                    }
+                    var18++;
+                    statePc = 71;
                     continue stateLoop;
                 }
                 case 71: {
-                    if (!ub.field_i) {
-                        statePc = 147;
-                    } else {
-                        statePc = 72;
-                    }
-                    continue stateLoop;
-                }
-                case 72: {
-                    var18 = td.field_n >> 919859972;
-                    if (0 >= td.field_n - (var18 << -2061651004)) {
-                        statePc = 74;
-                    } else {
-                        statePc = 73;
-                    }
-                    continue stateLoop;
-                }
-                case 73: {
-                    var18++;
-                    statePc = 74;
-                    continue stateLoop;
-                }
-                case 74: {
                     var19 = 480 + (-td.field_n + -16);
                     jf.field_qb.field_q = qg.field_g;
                     jf.field_qb.field_u = jf.field_qb.field_q;
@@ -902,54 +895,80 @@ final class ra {
                     mb.field_c.field_x = mb.field_c.field_v;
                     qg.f(0, var19 + 16, 640, 480 - (16 + var19), 1);
                     var20 = 0;
-                    statePc = 75;
+                    statePc = 72;
+                    continue stateLoop;
+                }
+                case 72: {
+                    if (~var18 >= ~var20) {
+                        statePc = 141;
+                    } else {
+                        statePc = 73;
+                    }
+                    continue stateLoop;
+                }
+                case 73: {
+                    ka.a(jf.field_qb, mb.field_c, 0, var19, 0, var19 - -16, 640, 16);
+                    var19 += 16;
+                    var20++;
+                    statePc = 72;
+                    continue stateLoop;
+                }
+                case 74: {
+                    tk.b(var21, var12, var20, var19, param1 + 46);
+                    hi.b(var21, 5446, var12, var19, var20);
+                    statePc = 126;
                     continue stateLoop;
                 }
                 case 75: {
-                    if (var18 <= var20) {
-                        statePc = 147;
+                    if (-16 > var18) {
+                        statePc = 78;
                     } else {
                         statePc = 76;
                     }
                     continue stateLoop;
                 }
                 case 76: {
-                    ka.a(jf.field_qb, mb.field_c, 0, var19, 0, var19 - -16, 640, 16);
-                    var19 += 16;
-                    var20++;
-                    statePc = 75;
+                    if (var18 != -16) {
+                        statePc = 85;
+                    } else {
+                        statePc = 77;
+                    }
                     continue stateLoop;
                 }
                 case 77: {
-                    tk.b(var21, var12, var20, var19, param1 + 46);
-                    hi.b(var21, 5446, var12, var19, var20);
-                    statePc = 133;
+                    qg.b(vd.field_e);
+                    statePc = 85;
                     continue stateLoop;
                 }
                 case 78: {
-                    if (-16 > var18) {
-                        statePc = 81;
+                    qg.b(vd.field_e);
+                    if (var21 == 0) {
+                        statePc = 80;
                     } else {
                         statePc = 79;
                     }
                     continue stateLoop;
                 }
                 case 79: {
-                    if (var18 != -16) {
-                        statePc = 88;
-                    } else {
-                        statePc = 80;
-                    }
+                    stackOut_79_0 = 615;
+                    stackIn_81_0 = stackOut_79_0;
+                    statePc = 81;
                     continue stateLoop;
                 }
                 case 80: {
-                    qg.b(vd.field_e);
-                    statePc = 88;
+                    stackOut_80_0 = 0;
+                    stackIn_81_0 = stackOut_80_0;
+                    statePc = 81;
                     continue stateLoop;
                 }
                 case 81: {
-                    qg.b(vd.field_e);
-                    if (var21 == 0) {
+                    stackOut_81_0 = stackIn_81_0;
+                    stackOut_81_1 = 0;
+                    stackIn_83_0 = stackOut_81_0;
+                    stackIn_83_1 = stackOut_81_1;
+                    stackIn_82_0 = stackOut_81_0;
+                    stackIn_82_1 = stackOut_81_1;
+                    if (0 == var21) {
                         statePc = 83;
                     } else {
                         statePc = 82;
@@ -957,366 +976,351 @@ final class ra {
                     continue stateLoop;
                 }
                 case 82: {
-                    stackOut_82_0 = 615;
+                    stackOut_82_0 = stackIn_82_0;
+                    stackOut_82_1 = stackIn_82_1;
+                    stackOut_82_2 = 640;
                     stackIn_84_0 = stackOut_82_0;
+                    stackIn_84_1 = stackOut_82_1;
+                    stackIn_84_2 = stackOut_82_2;
                     statePc = 84;
                     continue stateLoop;
                 }
                 case 83: {
-                    stackOut_83_0 = 0;
+                    stackOut_83_0 = stackIn_83_0;
+                    stackOut_83_1 = stackIn_83_1;
+                    stackOut_83_2 = 25;
                     stackIn_84_0 = stackOut_83_0;
+                    stackIn_84_1 = stackOut_83_1;
+                    stackIn_84_2 = stackOut_83_2;
                     statePc = 84;
                     continue stateLoop;
                 }
                 case 84: {
-                    stackOut_84_0 = stackIn_84_0;
-                    stackOut_84_1 = 0;
-                    stackIn_86_0 = stackOut_84_0;
-                    stackIn_86_1 = stackOut_84_1;
-                    stackIn_85_0 = stackOut_84_0;
-                    stackIn_85_1 = stackOut_84_1;
-                    if (0 == var21) {
-                        statePc = 86;
-                    } else {
-                        statePc = 85;
-                    }
+                    qg.a(stackIn_84_0, stackIn_84_1, stackIn_84_2, 480);
+                    statePc = 85;
                     continue stateLoop;
                 }
                 case 85: {
-                    stackOut_85_0 = stackIn_85_0;
-                    stackOut_85_1 = stackIn_85_1;
-                    stackOut_85_2 = 640;
-                    stackIn_87_0 = stackOut_85_0;
-                    stackIn_87_1 = stackOut_85_1;
-                    stackIn_87_2 = stackOut_85_2;
-                    statePc = 87;
+                    var14 = gl.field_l[var19][var21][1][1] - gl.field_l[var19][var21][1][0];
+                    if (param4 != 3) {
+                        statePc = 91;
+                    } else {
+                        statePc = 86;
+                    }
                     continue stateLoop;
                 }
                 case 86: {
-                    stackOut_86_0 = stackIn_86_0;
-                    stackOut_86_1 = stackIn_86_1;
-                    stackOut_86_2 = 25;
-                    stackIn_87_0 = stackOut_86_0;
-                    stackIn_87_1 = stackOut_86_1;
-                    stackIn_87_2 = stackOut_86_2;
-                    statePc = 87;
-                    continue stateLoop;
-                }
-                case 87: {
-                    qg.a(stackIn_87_0, stackIn_87_1, stackIn_87_2, 480);
-                    statePc = 88;
+                    if (var14 > 0) {
+                        statePc = 88;
+                    } else {
+                        statePc = 91;
+                    }
                     continue stateLoop;
                 }
                 case 88: {
-                    var14 = gl.field_l[var19][var21][1][1] - gl.field_l[var19][var21][1][0];
-                    if ((param4 ^ -1) != -4) {
-                        statePc = 94;
+                    if ((64 & ic.field_E[vb.field_a[var19][var21]][var20]) <= 0) {
+                        statePc = 90;
                     } else {
                         statePc = 89;
                     }
                     continue stateLoop;
                 }
                 case 89: {
-                    if ((var14 ^ -1) < -1) {
-                        statePc = 91;
-                    } else {
-                        statePc = 94;
-                    }
+                    var15 = vb.field_a[var19][var21] & 1;
+                    TorChallenge.a(var18, var12, var20, false, var12 - -64, var19, var21, var15);
+                    statePc = 91;
+                    continue stateLoop;
+                }
+                case 90: {
+                    var22 = ((ra) this).field_u[vb.field_a[var19][var21] >> 1][var20];
+                    b.a((byte) 114, var22, var21, var18, 64 + var12, var19, var12);
+                    statePc = 91;
                     continue stateLoop;
                 }
                 case 91: {
-                    if ((64 & ic.field_E[vb.field_a[var19][var21]][var20]) <= 0) {
-                        statePc = 93;
+                    if (param4 != 3) {
+                        statePc = 95;
                     } else {
                         statePc = 92;
                     }
                     continue stateLoop;
                 }
                 case 92: {
-                    var15 = vb.field_a[var19][var21] & 1;
-                    TorChallenge.a(var18, var12, var20, false, var12 - -64, var19, var21, var15);
-                    statePc = 94;
-                    continue stateLoop;
-                }
-                case 93: {
-                    var22 = ((ra) this).field_u[vb.field_a[var19][var21] >> -568546911][var20];
-                    b.a((byte) 114, var22, var21, var18, 64 + var12, var19, var12);
-                    statePc = 94;
-                    continue stateLoop;
-                }
-                case 94: {
-                    if (-4 != (param4 ^ -1)) {
-                        statePc = 98;
+                    if (param2) {
+                        statePc = 94;
                     } else {
                         statePc = 95;
                     }
                     continue stateLoop;
                 }
+                case 94: {
+                    tk.b(var21, var12, var20, var19, param1 + 46);
+                    hi.b(var21, param1 ^ 5460, var12, var19, var20);
+                    statePc = 95;
+                    continue stateLoop;
+                }
                 case 95: {
-                    if (param2) {
-                        statePc = 97;
+                    if (6 != param4) {
+                        statePc = 99;
                     } else {
-                        statePc = 98;
+                        statePc = 96;
                     }
                     continue stateLoop;
                 }
-                case 97: {
-                    tk.b(var21, var12, var20, var19, param1 + 46);
-                    hi.b(var21, param1 ^ 5460, var12, var19, var20);
-                    statePc = 98;
-                    continue stateLoop;
-                }
-                case 98: {
-                    if (6 != param4) {
-                        statePc = 102;
+                case 96: {
+                    if (param0) {
+                        statePc = 98;
                     } else {
                         statePc = 99;
                     }
                     continue stateLoop;
                 }
+                case 98: {
+                    qg.a(ae.field_y);
+                    var17 = (Object) (Object) hi.a(param6, vb.field_a[var19][var21], param5, 0, 101, var20);
+                    qg.b(ae.field_y);
+                    var16 = (Object) (Object) hi.a(param6, vb.field_a[var19][var21], param5, 1, 115, var20);
+                    qg.b(ae.field_y);
+                    statePc = 99;
+                    continue stateLoop;
+                }
                 case 99: {
-                    if (param0) {
-                        statePc = 101;
+                    if (param4 != 6) {
+                        statePc = 103;
                     } else {
-                        statePc = 102;
+                        statePc = 100;
                     }
                     continue stateLoop;
                 }
-                case 101: {
-                    qg.a(ae.field_y);
-                    var17 = hi.a(param6, vb.field_a[var19][var21], param5, 0, 101, var20);
-                    qg.b(ae.field_y);
-                    var16 = hi.a(param6, vb.field_a[var19][var21], param5, 1, 115, var20);
-                    qg.b(ae.field_y);
-                    statePc = 102;
-                    continue stateLoop;
-                }
-                case 102: {
-                    if (param4 != 6) {
-                        statePc = 106;
+                case 100: {
+                    if (0 == (16 & ic.field_E[vb.field_a[var19][var21]][var20])) {
+                        statePc = 102;
                     } else {
                         statePc = 103;
                     }
                     continue stateLoop;
                 }
+                case 102: {
+                    qg.a(ae.field_y);
+                    var22 = ((ra) this).field_r[vb.field_a[var19][var21]][var20];
+                    this.a(var19, var12, var21, var18, var12 - -64, var20, var22, -10440);
+                    qg.b(ae.field_y);
+                    statePc = 103;
+                    continue stateLoop;
+                }
                 case 103: {
-                    if (0 == (16 & ic.field_E[vb.field_a[var19][var21]][var20])) {
-                        statePc = 105;
-                    } else {
+                    if (param4 != 2) {
                         statePc = 106;
+                    } else {
+                        statePc = 104;
+                    }
+                    continue stateLoop;
+                }
+                case 104: {
+                    if (!param0) {
+                        statePc = 106;
+                    } else {
+                        statePc = 105;
                     }
                     continue stateLoop;
                 }
                 case 105: {
                     qg.a(ae.field_y);
-                    var22 = ((ra) this).field_r[vb.field_a[var19][var21]][var20];
-                    this.a(var19, var12, var21, var18, var12 - -64, var20, var22, -10440);
+                    var16 = (Object) (Object) hi.a(param6, vb.field_a[var19][var21], param5, 2, 113, var20);
                     qg.b(ae.field_y);
                     statePc = 106;
                     continue stateLoop;
                 }
                 case 106: {
-                    if ((param4 ^ -1) != -3) {
+                    if (6 == param4) {
                         statePc = 109;
                     } else {
-                        statePc = 107;
+                        statePc = 126;
                     }
-                    continue stateLoop;
-                }
-                case 107: {
-                    if (!param0) {
-                        statePc = 109;
-                    } else {
-                        statePc = 108;
-                    }
-                    continue stateLoop;
-                }
-                case 108: {
-                    qg.a(ae.field_y);
-                    var16 = hi.a(param6, vb.field_a[var19][var21], param5, 2, 113, var20);
-                    qg.b(ae.field_y);
-                    statePc = 109;
                     continue stateLoop;
                 }
                 case 109: {
-                    if (6 == param4) {
-                        statePc = 112;
+                    if (~gl.field_l[var19][var21][0][0] < ~param7) {
+                        statePc = 115;
                     } else {
-                        statePc = 133;
+                        statePc = 110;
+                    }
+                    continue stateLoop;
+                }
+                case 110: {
+                    if (var12 > param8) {
+                        statePc = 115;
+                    } else {
+                        statePc = 111;
+                    }
+                    continue stateLoop;
+                }
+                case 111: {
+                    if (~param8 <= ~(var12 - -64)) {
+                        statePc = 115;
+                    } else {
+                        statePc = 112;
                     }
                     continue stateLoop;
                 }
                 case 112: {
-                    if (gl.field_l[var19][var21][0][0] > param7) {
-                        statePc = 118;
-                    } else {
-                        statePc = 113;
-                    }
-                    continue stateLoop;
-                }
-                case 113: {
-                    if (var12 > param8) {
-                        statePc = 118;
-                    } else {
+                    if (~gl.field_l[var19][var21][0][1] < ~param7) {
                         statePc = 114;
-                    }
-                    continue stateLoop;
-                }
-                case 114: {
-                    if (param8 >= var12 - -64) {
-                        statePc = 118;
                     } else {
                         statePc = 115;
                     }
                     continue stateLoop;
                 }
+                case 114: {
+                    ((ra) this).field_l = vb.field_a[var19][var21];
+                    ((ra) this).field_i = var20;
+                    statePc = 115;
+                    continue stateLoop;
+                }
                 case 115: {
-                    if (gl.field_l[var19][var21][0][1] > param7) {
+                    if (~vb.field_a[var19][var21] != ~((ra) this).field_l) {
+                        statePc = 126;
+                    } else {
+                        statePc = 116;
+                    }
+                    continue stateLoop;
+                }
+                case 116: {
+                    if (~((ra) this).field_i != ~var20) {
+                        statePc = 126;
+                    } else {
                         statePc = 117;
+                    }
+                    continue stateLoop;
+                }
+                case 117: {
+                    if (!ol.field_a) {
+                        statePc = 126;
                     } else {
                         statePc = 118;
                     }
                     continue stateLoop;
                 }
-                case 117: {
-                    ((ra) this).field_l = vb.field_a[var19][var21];
-                    ((ra) this).field_i = var20;
-                    statePc = 118;
-                    continue stateLoop;
-                }
                 case 118: {
-                    if (vb.field_a[var19][var21] == ((ra) this).field_l) {
-                        statePc = 120;
-                    } else {
-                        statePc = 133;
-                    }
-                    continue stateLoop;
-                }
-                case 120: {
-                    if (((ra) this).field_i == var20) {
-                        statePc = 122;
-                    } else {
-                        statePc = 133;
-                    }
-                    continue stateLoop;
-                }
-                case 122: {
-                    if (ol.field_a) {
-                        statePc = 124;
-                    } else {
-                        statePc = 133;
-                    }
-                    continue stateLoop;
-                }
-                case 124: {
                     qg.a(ae.field_y);
                     qg.b(vd.field_e);
                     qg.b(gl.field_l[var19][var21][0][0], var12, -gl.field_l[var19][var21][0][0] + gl.field_l[var19][var21][0][1], 64, 16777215);
                     qg.a(ae.field_y[0], ae.field_y[1], ae.field_y[2], ae.field_y[3]);
                     if (var16 == null) {
-                        statePc = 127;
+                        statePc = 121;
                     } else {
-                        statePc = 125;
+                        statePc = 119;
                     }
+                    continue stateLoop;
+                }
+                case 119: {
+                    if (md.field_j == null) {
+                        statePc = 125;
+                    } else {
+                        statePc = 121;
+                    }
+                    continue stateLoop;
+                }
+                case 121: {
+                    if (var17 == null) {
+                        statePc = 126;
+                    } else {
+                        statePc = 122;
+                    }
+                    continue stateLoop;
+                }
+                case 122: {
+                    if (null == md.field_j) {
+                        statePc = 124;
+                    } else {
+                        statePc = 126;
+                    }
+                    continue stateLoop;
+                }
+                case 124: {
+                    md.field_j = (qe) var17;
+                    statePc = 126;
                     continue stateLoop;
                 }
                 case 125: {
-                    if (md.field_j == null) {
-                        statePc = 132;
-                    } else {
-                        statePc = 127;
-                    }
+                    md.field_j = (qe) var16;
+                    statePc = 126;
+                    continue stateLoop;
+                }
+                case 126: {
+                    var21++;
+                    statePc = 59;
                     continue stateLoop;
                 }
                 case 127: {
-                    if (var17 != null) {
-                        statePc = 129;
-                    } else {
-                        statePc = 133;
-                    }
+                    var12 += 64;
+                    var20++;
+                    statePc = 57;
+                    continue stateLoop;
+                }
+                case 128: {
+                    var18++;
+                    statePc = 15;
                     continue stateLoop;
                 }
                 case 129: {
-                    if (null == md.field_j) {
+                    if (param1 == 18) {
                         statePc = 131;
                     } else {
-                        statePc = 133;
+                        statePc = 130;
                     }
                     continue stateLoop;
                 }
-                case 131: {
-                    md.field_j = var17;
-                    statePc = 133;
+                case 130: {
+                    var26 = null;
+                    ((ra) this).a(false, 6, false, (ka) null, 26, -8, -26, -57, 72);
+                    statePc = 131;
                     continue stateLoop;
                 }
-                case 132: {
-                    md.field_j = var16;
-                    statePc = 133;
+                case 131: {
+                    if (param4 == 3) {
+                        statePc = 133;
+                    } else {
+                        statePc = 134;
+                    }
                     continue stateLoop;
                 }
                 case 133: {
-                    var21++;
-                    statePc = 60;
+                    nb.a((byte) 42, ((ra) this).field_n);
+                    statePc = 134;
+                    continue stateLoop;
+                }
+                case 134: {
+                    if (param4 != 6) {
+                        statePc = 141;
+                    } else {
+                        statePc = 135;
+                    }
                     continue stateLoop;
                 }
                 case 135: {
-                    if (param1 == 18) {
-                        statePc = 137;
+                    if (!ub.field_i) {
+                        statePc = 141;
                     } else {
                         statePc = 136;
                     }
                     continue stateLoop;
                 }
                 case 136: {
-                    var26 = null;
-                    ((ra) this).a(false, 6, false, (ka) null, 26, -8, -26, -57, 72);
-                    statePc = 137;
+                    var18 = td.field_n >> 4;
+                    if (0 >= td.field_n - (var18 << 4)) {
+                        statePc = 138;
+                    } else {
+                        statePc = 137;
+                    }
                     continue stateLoop;
                 }
                 case 137: {
-                    if ((param4 ^ -1) == -4) {
-                        statePc = 139;
-                    } else {
-                        statePc = 140;
-                    }
-                    continue stateLoop;
-                }
-                case 139: {
-                    nb.a((byte) 42, ((ra) this).field_n);
-                    statePc = 140;
-                    continue stateLoop;
-                }
-                case 140: {
-                    if ((param4 ^ -1) != -7) {
-                        statePc = 147;
-                    } else {
-                        statePc = 141;
-                    }
-                    continue stateLoop;
-                }
-                case 141: {
-                    if (!ub.field_i) {
-                        statePc = 147;
-                    } else {
-                        statePc = 142;
-                    }
-                    continue stateLoop;
-                }
-                case 142: {
-                    var18 = td.field_n >> 919859972;
-                    if (0 >= td.field_n - (var18 << -2061651004)) {
-                        statePc = 144;
-                    } else {
-                        statePc = 143;
-                    }
-                    continue stateLoop;
-                }
-                case 143: {
                     var18++;
-                    statePc = 144;
+                    statePc = 138;
                     continue stateLoop;
                 }
-                case 144: {
+                case 138: {
                     var19 = 480 + (-td.field_n + -16);
                     jf.field_qb.field_q = qg.field_g;
                     jf.field_qb.field_u = jf.field_qb.field_q;
@@ -1330,25 +1334,25 @@ final class ra {
                     mb.field_c.field_x = mb.field_c.field_v;
                     qg.f(0, var19 + 16, 640, 480 - (16 + var19), 1);
                     var20 = 0;
-                    statePc = 145;
+                    statePc = 139;
                     continue stateLoop;
                 }
-                case 145: {
-                    if (var18 <= var20) {
-                        statePc = 147;
+                case 139: {
+                    if (~var18 >= ~var20) {
+                        statePc = 141;
                     } else {
-                        statePc = 146;
+                        statePc = 140;
                     }
                     continue stateLoop;
                 }
-                case 146: {
+                case 140: {
                     ka.a(jf.field_qb, mb.field_c, 0, var19, 0, var19 - -16, 640, 16);
                     var19 += 16;
                     var20++;
-                    statePc = 145;
+                    statePc = 139;
                     continue stateLoop;
                 }
-                case 147: {
+                case 141: {
                     return;
                 }
                 default: throw new IllegalStateException("invalid CFG state " + statePc);
@@ -1363,7 +1367,7 @@ final class ra {
         field_d = null;
         field_p = null;
         field_m = null;
-        int var1 = 48 % ((param0 - 91) / 34);
+        int var1 = 0;
     }
 
     final void b(byte param0) {
@@ -1417,7 +1421,7 @@ final class ra {
           if (!gh.field_x) {
             break L0;
           } else {
-            var9 = -1 + (-6 + (var9 + 1) << 1356069889);
+            var9 = -1 + (-6 + (var9 + 1) << 1);
             break L0;
           }
         }
@@ -1437,7 +1441,7 @@ final class ra {
             L3: {
               var3 = 32 * var13;
               var4 = (-var3 + var2) % 2048;
-              if (-1 > (var4 ^ -1)) {
+              if (var4 > 0) {
                 stackOut_7_0 = 1;
                 stackIn_8_0 = stackOut_7_0;
                 break L3;
@@ -1455,7 +1459,7 @@ final class ra {
                 if (var4 < 511) {
                   break L5;
                 } else {
-                  if (-1537 < (var4 ^ -1)) {
+                  if (var4 < 1536) {
                     stackOut_12_0 = 1;
                     stackIn_13_0 = stackOut_12_0;
                     break L4;
@@ -1470,10 +1474,10 @@ final class ra {
             }
             L6: {
               var6 = stackIn_13_0;
-              ((ra) this).field_e[var13][0][0] = var6 * (fj.a(1870096848, var8, ng.field_H[var9] << -1612844304) >> -1763956400) + ng.field_K[var9];
+              ((ra) this).field_e[var13][0][0] = var6 * (fj.a(1870096848, var8, ng.field_H[var9] << 16) >> 16) + ng.field_K[var9];
               var5 = (-512 + (-16 + (-var3 + var2))) % 2048;
               ((ra) this).field_e[var13][0][1] = ((ra) this).field_e[var13][0][0];
-              if (-1 > var5) {
+              if (var5 > 0) {
                 stackOut_15_0 = 1;
                 stackIn_16_0 = stackOut_15_0;
                 break L6;
@@ -1488,7 +1492,7 @@ final class ra {
                 var7 = stackIn_16_0;
                 var5 = var7 * var5;
                 var8 = fj.field_m[var5];
-                if (-512 > var5) {
+                if (var5 < 511) {
                   break L8;
                 } else {
                   if (1536 <= var5) {
@@ -1507,8 +1511,8 @@ final class ra {
             L9: {
               var7 = stackIn_20_0;
               var5 = (496 + (var2 + -var3)) % 2048;
-              ((ra) this).field_e[var13][1][0] = var7 * (fj.a(1870096848, var8, ng.field_H[var9] << -1276470224) >> 594694832) - -ng.field_K[var9];
-              if (-1 > (var5 ^ -1)) {
+              ((ra) this).field_e[var13][1][0] = var7 * (fj.a(1870096848, var8, ng.field_H[var9] << 16) >> 16) - -ng.field_K[var9];
+              if (var5 > 0) {
                 stackOut_22_0 = 1;
                 stackIn_23_0 = stackOut_22_0;
                 break L9;
@@ -1541,11 +1545,11 @@ final class ra {
             L12: {
               var7 = stackIn_27_0;
               var8 = fj.field_m[var5];
-              ((ra) this).field_e[var13][1][1] = (fj.a(1870096848, var8, ng.field_H[var9] << 1634890736) >> 1441995920) * var7 - -ng.field_K[var9];
+              ((ra) this).field_e[var13][1][1] = (fj.a(1870096848, var8, ng.field_H[var9] << 16) >> 16) * var7 - -ng.field_K[var9];
               if (var13 == 0) {
                 L13: {
                   var10 = (var2 + -var3 - 16) % 2048;
-                  if (-1 <= (var10 ^ -1)) {
+                  if (var10 <= 0) {
                     stackOut_31_0 = -1;
                     stackIn_32_0 = stackOut_31_0;
                     break L13;
@@ -1563,7 +1567,7 @@ final class ra {
                     if (var10 < 511) {
                       break L15;
                     } else {
-                      if (-1537 >= (var10 ^ -1)) {
+                      if (var10 >= 1536) {
                         break L15;
                       } else {
                         stackOut_34_0 = 1;
@@ -1577,7 +1581,7 @@ final class ra {
                   break L14;
                 }
                 var12 = stackIn_36_0;
-                ((ra) this).field_h[var13][0] = (fj.a(1870096848, var8, ub.field_k[var9] << -1750430608) >> 470185168) * var12 - -ub.field_a[var9];
+                ((ra) this).field_h[var13][0] = (fj.a(1870096848, var8, ub.field_k[var9] << 16) >> 16) * var12 - -ub.field_a[var9];
                 break L12;
               } else {
                 ((ra) this).field_h[var13][0] = ((ra) this).field_h[-1 + var13][31];
@@ -1585,7 +1589,7 @@ final class ra {
               }
             }
             L16: {
-              if (-64 == (var13 ^ -1)) {
+              if (var13 == 63) {
                 ((ra) this).field_h[var13][31] = ((ra) this).field_h[0][0];
                 break L16;
               } else {
@@ -1623,7 +1627,7 @@ final class ra {
                   break L18;
                 }
                 var12 = stackIn_45_0;
-                ((ra) this).field_h[var13][31] = (fj.a(1870096848, var8, ub.field_k[var9] << -741080976) >> 439065808) * var12 + ub.field_a[var9];
+                ((ra) this).field_h[var13][31] = (fj.a(1870096848, var8, ub.field_k[var9] << 16) >> 16) * var12 + ub.field_a[var9];
                 break L16;
               }
             }
@@ -1643,10 +1647,10 @@ final class ra {
         if (0 > param1) {
           return;
         } else {
-          if ((param1 ^ -1) > -7) {
+          if (param1 < 6) {
             var3 = 0;
             L0: while (true) {
-              if (var3 <= -4) {
+              if (var3 >= 3) {
                 L1: {
                   if (param0 == 2) {
                     break L1;
@@ -1698,7 +1702,7 @@ final class ra {
               } else {
                 var4 = 0;
                 L6: while (true) {
-                  if (-2 < var4) {
+                  if (var4 > 1) {
                     var3++;
                     continue L0;
                   } else {
@@ -1754,7 +1758,7 @@ final class ra {
         L0: {
           var21 = TorChallenge.field_F ? 1 : 0;
           var2 = e.b((byte) 57, 16);
-          if ((var2 ^ -1) <= -3) {
+          if (var2 >= 2) {
             break L0;
           } else {
             var2 = 2;
@@ -1769,21 +1773,13 @@ final class ra {
             break L1;
           }
         }
-        L2: {
-          var3 = lj.field_h[0].field_q * lj.field_h[0].field_v;
-          var4 = 32;
-          var5 = 16;
-          var6 = var4 * 32;
-          var7 = 32 * var5;
-          var8 = var7 * var6;
-          if (param0 == 28026) {
-            break L2;
-          } else {
-            field_b = null;
-            break L2;
-          }
-        }
-        da.field_e = var2 * var8 / var3 >> -794065404;
+        var3 = lj.field_h[0].field_q * lj.field_h[0].field_v;
+        var4 = 32;
+        var5 = 16;
+        var6 = var4 * 32;
+        var7 = 32 * var5;
+        var8 = var7 * var6;
+        da.field_e = var2 * var8 / var3 >> 4;
         var26 = new int[1];
         var25 = var26;
         var24 = var25;
@@ -1791,16 +1787,16 @@ final class ra {
         var9 = var23;
         wc.field_e = new int[da.field_e][][];
         var10 = 0;
-        L3: while (true) {
+        L2: while (true) {
           if (var10 >= 0) {
             var10 = 0;
             var11 = 0;
-            L4: while (true) {
-              if (-1 >= (var11 ^ -1)) {
+            L3: while (true) {
+              if (var11 >= 0) {
                 var9[0] = -var10 + 16;
                 var12 = 0;
                 var19 = 0;
-                L5: while (true) {
+                L4: while (true) {
                   if (var19 >= da.field_e) {
                     return;
                   } else {
@@ -1808,22 +1804,22 @@ final class ra {
                     var11 = e.b((byte) 57, 16);
                     var10 = 0;
                     var20 = 0;
-                    L6: while (true) {
-                      L7: {
-                        if (-2 >= (var20 ^ -1)) {
-                          break L7;
+                    L5: while (true) {
+                      L6: {
+                        if (var20 >= 1) {
+                          break L6;
                         } else {
                           var10 = var10 + var26[var20];
                           if (var11 >= var10) {
                             var20++;
-                            continue L6;
+                            continue L5;
                           } else {
                             var12 = 1 + var20;
-                            break L7;
+                            break L6;
                           }
                         }
                       }
-                      if (-1 != (var12 ^ -1)) {
+                      if (var12 != 0) {
                         wc.field_e[var19] = new int[var12][3];
                         var13 = e.b((byte) 57, var4);
                         var14 = e.b((byte) 57, var5);
@@ -1831,7 +1827,7 @@ final class ra {
                         var16 = 16 + var14 * 32;
                         var22 = 0;
                         var20 = var22;
-                        L8: while (true) {
+                        L7: while (true) {
                           if (var12 > var22) {
                             var17 = e.b((byte) 57, 33);
                             var18 = e.b((byte) 57, 33);
@@ -1843,15 +1839,15 @@ final class ra {
                             wc.field_e[var19][var22][1] = var18;
                             wc.field_e[var19][var22][2] = e.b((byte) 57, 5);
                             var22++;
-                            continue L8;
+                            continue L7;
                           } else {
                             var19++;
-                            continue L5;
+                            continue L4;
                           }
                         }
                       } else {
                         var19++;
-                        continue L5;
+                        continue L4;
                       }
                     }
                   }
@@ -1859,13 +1855,13 @@ final class ra {
               } else {
                 var10 = var10 + var26[var11];
                 var11++;
-                continue L4;
+                continue L3;
               }
             }
           } else {
             var9[var10] = 8 >> var10;
             var10++;
-            continue L3;
+            continue L2;
           }
         }
     }
@@ -1901,16 +1897,16 @@ final class ra {
         ic.field_E = new int[64][((ra) this).field_a];
         var3_int = 0;
         L0: while (true) {
-          if ((var3_int ^ -1) <= -4) {
+          if (var3_int >= 3) {
             rj.field_b[0] = af.field_a[param1 * 2];
             rj.field_b[1] = af.field_a[1 + 2 * param1];
             var3_int = 0;
             L1: while (true) {
-              if (-3 >= (var3_int ^ -1)) {
+              if (var3_int >= 2) {
                 ((ra) this).field_r = new int[64][((ra) this).field_a];
                 var3_int = 0;
                 L2: while (true) {
-                  if (-65 >= (var3_int ^ -1)) {
+                  if (var3_int >= 64) {
                     ((ra) this).field_u = new int[32][((ra) this).field_a];
                     var3_int = 0;
                     L3: while (true) {
@@ -1924,6 +1920,7 @@ final class ra {
                             df.field_O = false;
                             bi.field_g = new int[64][((ra) this).field_a][3][];
                             this.b(28026);
+                            return;
                           } else {
                             var4 = 0;
                             L5: while (true) {

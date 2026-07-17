@@ -82,7 +82,7 @@ class ah extends qf {
 
     final static boolean a(int param0) {
         L0: {
-          if (0 == (oo.field_a ^ -1)) {
+          if (oo.field_a == -1) {
             if (!no.a(1, 0)) {
               return false;
             } else {
@@ -115,10 +115,6 @@ class ah extends qf {
     }
 
     final static String c(int param0) {
-        if (param0 != 2048) {
-            int discarded$0 = ah.a((byte) -71, 109);
-            return eb.field_c;
-        }
         return eb.field_c;
     }
 

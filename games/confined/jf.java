@@ -20,7 +20,7 @@ abstract class jf {
 
     final boolean c(int param0) {
         int var2 = -97 % ((31 - param0) / 58);
-        return (((jf) this).a(-28475) ^ -1) <= -21 ? true : false;
+        return ((jf) this).a(-28475) >= 20 ? true : false;
     }
 
     final int a(int param0) {
@@ -33,12 +33,6 @@ abstract class jf {
     }
 
     public static void b(byte param0) {
-        if (param0 != -88) {
-            jf.a(97, -16, 45);
-            field_b = null;
-            field_c = null;
-            return;
-        }
         field_b = null;
         field_c = null;
     }
@@ -56,7 +50,7 @@ abstract class jf {
         tn stackOut_1_0 = null;
         int stackOut_1_1 = 0;
         L0: {
-          var6 = (long)param3 + ((long)param0 << -1911606496);
+          var6 = (long)param3 + ((long)param0 << 32);
           var8 = new tn();
           stackOut_0_0 = (tn) var8;
           stackIn_2_0 = stackOut_0_0;
@@ -87,7 +81,7 @@ abstract class jf {
               return var8;
             }
           } else {
-            if (-21 >= (((jf) this).a(-28475) ^ -1)) {
+            if (((jf) this).a(-28475) >= 20) {
               throw new RuntimeException();
             } else {
               ((jf) this).field_o.a((jl) (Object) var8, (byte) -118);
@@ -104,7 +98,7 @@ abstract class jf {
               return var8;
             }
           } else {
-            if (-21 >= (((jf) this).a(-28475) ^ -1)) {
+            if (((jf) this).a(-28475) >= 20) {
               throw new RuntimeException();
             } else {
               ((jf) this).field_o.a((jl) (Object) var8, (byte) -118);
@@ -154,7 +148,11 @@ abstract class jf {
     }
 
     final static void a(kg param0, java.math.BigInteger param1, kg param2, int param3, java.math.BigInteger param4) {
-        id.a(param2, param1, 44, param3, param0.field_m, param4, param0.field_n);
+        try {
+            id.a(param2, param1, 44, param3, param0.field_m, param4, param0.field_n);
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "jf.M(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static e a(byte param0, int param1) {
@@ -212,16 +210,16 @@ abstract class jf {
             var3 = param1 + -135;
             var4 = -35 + param2;
             var5 = param0;
-            if ((tg.field_H ^ -1) <= -76) {
+            if (tg.field_H >= 75) {
               break L0;
             } else {
-              var5 = (tg.field_H << -379549464) / 75;
+              var5 = (tg.field_H << 8) / 75;
               break L0;
             }
           }
           L1: {
             if (tg.field_H > 200) {
-              var5 = (-tg.field_H + 250 << 1818274440) / 50;
+              var5 = (-tg.field_H + 250 << 8) / 50;
               break L1;
             } else {
               break L1;
@@ -231,20 +229,19 @@ abstract class jf {
           ti.b();
           fn.d();
           of.a(false);
-          if (var5 <= -257) {
+          if (var5 >= 256) {
             ib.b(false);
-            if (-151 >= (tg.field_H ^ -1)) {
+            if (tg.field_H >= 150) {
               ad.field_b.a(var3 - -15, var4 - -10, var5);
               var6 = tg.field_H + -125;
-              if ((var6 ^ -1) < -1) {
+              if (var6 > 0) {
                 if (50 > var6) {
-                  if ((var6 ^ -1) <= -21) {
-                    if (var6 >= 30) {
+                  if (var6 >= 20) {
+                    if (var6 < 30) {
                       L2: {
-                        var7 = (-var6 + 50) * 256 / 20;
-                        bg.field_c.c(var3, var4, var7);
+                        bg.field_c.c(var3, var4, 256);
                         var6 = tg.field_H - 140;
-                        if ((var6 ^ -1) >= -1) {
+                        if (var6 <= 0) {
                           break L2;
                         } else {
                           L3: {
@@ -256,16 +253,17 @@ abstract class jf {
                               break L3;
                             }
                           }
-                          ic.field_a.a(var3 + 15, var4 + 10, var7 * var5 >> 1302332904);
+                          ic.field_a.a(var3 + 15, var4 + 10, var7 * var5 >> 8);
                           break L2;
                         }
                       }
                       return;
                     } else {
                       L4: {
-                        bg.field_c.c(var3, var4, 256);
+                        var7 = (-var6 + 50) * 256 / 20;
+                        bg.field_c.c(var3, var4, var7);
                         var6 = tg.field_H - 140;
-                        if ((var6 ^ -1) >= -1) {
+                        if (var6 <= 0) {
                           break L4;
                         } else {
                           L5: {
@@ -277,7 +275,7 @@ abstract class jf {
                               break L5;
                             }
                           }
-                          ic.field_a.a(var3 + 15, var4 + 10, var7 * var5 >> 1302332904);
+                          ic.field_a.a(var3 + 15, var4 + 10, var7 * var5 >> 8);
                           break L4;
                         }
                       }
@@ -288,7 +286,7 @@ abstract class jf {
                       var7 = var6 * 256 / 20;
                       bg.field_c.c(var3, var4, var7);
                       var6 = tg.field_H - 140;
-                      if ((var6 ^ -1) >= -1) {
+                      if (var6 <= 0) {
                         break L6;
                       } else {
                         L7: {
@@ -300,7 +298,7 @@ abstract class jf {
                             break L7;
                           }
                         }
-                        ic.field_a.a(var3 + 15, var4 + 10, var7 * var5 >> 1302332904);
+                        ic.field_a.a(var3 + 15, var4 + 10, var7 * var5 >> 8);
                         break L6;
                       }
                     }
@@ -309,7 +307,7 @@ abstract class jf {
                 } else {
                   L8: {
                     var6 = tg.field_H - 140;
-                    if ((var6 ^ -1) >= -1) {
+                    if (var6 <= 0) {
                       break L8;
                     } else {
                       L9: {
@@ -321,7 +319,7 @@ abstract class jf {
                           break L9;
                         }
                       }
-                      ic.field_a.a(var3 + 15, var4 + 10, var7 * var5 >> 1302332904);
+                      ic.field_a.a(var3 + 15, var4 + 10, var7 * var5 >> 8);
                       break L8;
                     }
                   }
@@ -330,7 +328,7 @@ abstract class jf {
               } else {
                 L10: {
                   var6 = tg.field_H - 140;
-                  if ((var6 ^ -1) >= -1) {
+                  if (var6 <= 0) {
                     break L10;
                   } else {
                     L11: {
@@ -342,146 +340,147 @@ abstract class jf {
                         break L11;
                       }
                     }
-                    ic.field_a.a(var3 + 15, var4 + 10, var7 * var5 >> 1302332904);
+                    ic.field_a.a(var3 + 15, var4 + 10, var7 * var5 >> 8);
                     break L10;
                   }
                 }
                 return;
               }
             } else {
-              mi.field_a.b(var3, var4);
-              var6 = tg.field_H + -125;
-              if ((var6 ^ -1) < -1) {
-                if (50 > var6) {
-                  if ((var6 ^ -1) <= -21) {
-                    if (var6 >= 30) {
-                      L12: {
-                        var7 = (-var6 + 50) * 256 / 20;
+              L12: {
+                mi.field_a.b(var3, var4);
+                var6 = tg.field_H + -125;
+                if (var6 <= 0) {
+                  break L12;
+                } else {
+                  if (50 <= var6) {
+                    break L12;
+                  } else {
+                    if (var6 >= 20) {
+                      if (var6 < 30) {
+                        L13: {
+                          bg.field_c.c(var3, var4, 256);
+                          var6 = tg.field_H - 140;
+                          if (var6 <= 0) {
+                            break L13;
+                          } else {
+                            L14: {
+                              var7 = 256;
+                              if (var6 >= 20) {
+                                break L14;
+                              } else {
+                                var7 = 256 * var6 / 20;
+                                break L14;
+                              }
+                            }
+                            ic.field_a.a(var3 + 15, var4 + 10, var7 * var5 >> 8);
+                            break L13;
+                          }
+                        }
+                        return;
+                      } else {
+                        L15: {
+                          var7 = (-var6 + 50) * 256 / 20;
+                          bg.field_c.c(var3, var4, var7);
+                          var6 = tg.field_H - 140;
+                          if (var6 <= 0) {
+                            break L15;
+                          } else {
+                            L16: {
+                              var7 = 256;
+                              if (var6 >= 20) {
+                                break L16;
+                              } else {
+                                var7 = 256 * var6 / 20;
+                                break L16;
+                              }
+                            }
+                            ic.field_a.a(var3 + 15, var4 + 10, var7 * var5 >> 8);
+                            break L15;
+                          }
+                        }
+                        return;
+                      }
+                    } else {
+                      L17: {
+                        var7 = var6 * 256 / 20;
                         bg.field_c.c(var3, var4, var7);
                         var6 = tg.field_H - 140;
-                        if ((var6 ^ -1) >= -1) {
-                          break L12;
+                        if (var6 <= 0) {
+                          break L17;
                         } else {
-                          L13: {
+                          L18: {
                             var7 = 256;
                             if (var6 >= 20) {
-                              break L13;
+                              break L18;
                             } else {
                               var7 = 256 * var6 / 20;
-                              break L13;
+                              break L18;
                             }
                           }
-                          ic.field_a.a(var3 + 15, var4 + 10, var7 * var5 >> 1302332904);
-                          break L12;
-                        }
-                      }
-                      return;
-                    } else {
-                      L14: {
-                        bg.field_c.c(var3, var4, 256);
-                        var6 = tg.field_H - 140;
-                        if ((var6 ^ -1) >= -1) {
-                          break L14;
-                        } else {
-                          L15: {
-                            var7 = 256;
-                            if (var6 >= 20) {
-                              break L15;
-                            } else {
-                              var7 = 256 * var6 / 20;
-                              break L15;
-                            }
-                          }
-                          ic.field_a.a(var3 + 15, var4 + 10, var7 * var5 >> 1302332904);
-                          break L14;
+                          ic.field_a.a(var3 + 15, var4 + 10, var7 * var5 >> 8);
+                          break L17;
                         }
                       }
                       return;
                     }
-                  } else {
-                    L16: {
-                      var7 = var6 * 256 / 20;
-                      bg.field_c.c(var3, var4, var7);
-                      var6 = tg.field_H - 140;
-                      if ((var6 ^ -1) >= -1) {
-                        break L16;
-                      } else {
-                        L17: {
-                          var7 = 256;
-                          if (var6 >= 20) {
-                            break L17;
-                          } else {
-                            var7 = 256 * var6 / 20;
-                            break L17;
-                          }
-                        }
-                        ic.field_a.a(var3 + 15, var4 + 10, var7 * var5 >> 1302332904);
-                        break L16;
-                      }
-                    }
-                    return;
-                  }
-                } else {
-                  L18: {
-                    var6 = tg.field_H - 140;
-                    if ((var6 ^ -1) >= -1) {
-                      break L18;
-                    } else {
-                      L19: {
-                        var7 = 256;
-                        if (var6 >= 20) {
-                          break L19;
-                        } else {
-                          var7 = 256 * var6 / 20;
-                          break L19;
-                        }
-                      }
-                      ic.field_a.a(var3 + 15, var4 + 10, var7 * var5 >> 1302332904);
-                      break L18;
-                    }
-                  }
-                  return;
-                }
-              } else {
-                L20: {
-                  var6 = tg.field_H - 140;
-                  if ((var6 ^ -1) >= -1) {
-                    break L20;
-                  } else {
-                    L21: {
-                      var7 = 256;
-                      if (var6 >= 20) {
-                        break L21;
-                      } else {
-                        var7 = 256 * var6 / 20;
-                        break L21;
-                      }
-                    }
-                    ic.field_a.a(var3 + 15, var4 + 10, var7 * var5 >> 1302332904);
-                    break L20;
                   }
                 }
-                return;
               }
+              L19: {
+                var6 = tg.field_H - 140;
+                if (var6 <= 0) {
+                  break L19;
+                } else {
+                  L20: {
+                    var7 = 256;
+                    if (var6 >= 20) {
+                      break L20;
+                    } else {
+                      var7 = 256 * var6 / 20;
+                      break L20;
+                    }
+                  }
+                  ic.field_a.a(var3 + 15, var4 + 10, var7 * var5 >> 8);
+                  break L19;
+                }
+              }
+              return;
             }
           } else {
-            L22: {
+            L21: {
               fn.b(0, 0, fn.field_g, fn.field_l, 0, -var5 + 256);
               ib.b(false);
-              if (-151 <= tg.field_H) {
+              if (tg.field_H >= 150) {
                 ad.field_b.a(var3 - -15, var4 - -10, var5);
-                break L22;
+                break L21;
               } else {
                 mi.field_a.b(var3, var4);
-                break L22;
+                break L21;
               }
             }
             var6 = tg.field_H + -125;
-            if ((var6 ^ -1) < -1) {
-              if (50 <= var6) {
+            if (var6 > 0) {
+              if (50 > var6) {
+                L22: {
+                  if (var6 >= 20) {
+                    if (var6 < 30) {
+                      bg.field_c.c(var3, var4, 256);
+                      break L22;
+                    } else {
+                      var7 = (-var6 + 50) * 256 / 20;
+                      bg.field_c.c(var3, var4, var7);
+                      break L22;
+                    }
+                  } else {
+                    var7 = var6 * 256 / 20;
+                    bg.field_c.c(var3, var4, var7);
+                    break L22;
+                  }
+                }
                 L23: {
                   var6 = tg.field_H - 140;
-                  if ((var6 ^ -1) >= -1) {
+                  if (var6 <= 0) {
                     break L23;
                   } else {
                     L24: {
@@ -493,65 +492,49 @@ abstract class jf {
                         break L24;
                       }
                     }
-                    ic.field_a.a(var3 + 15, var4 + 10, var7 * var5 >> 1302332904);
+                    ic.field_a.a(var3 + 15, var4 + 10, var7 * var5 >> 8);
                     break L23;
                   }
                 }
                 return;
               } else {
                 L25: {
-                  if ((var6 ^ -1) <= -21) {
-                    if (var6 < 30) {
-                      bg.field_c.c(var3, var4, 256);
-                      break L25;
-                    } else {
-                      var7 = (-var6 + 50) * 256 / 20;
-                      bg.field_c.c(var3, var4, var7);
-                      break L25;
-                    }
-                  } else {
-                    var7 = var6 * 256 / 20;
-                    bg.field_c.c(var3, var4, var7);
-                    break L25;
-                  }
-                }
-                L26: {
                   var6 = tg.field_H - 140;
-                  if ((var6 ^ -1) >= -1) {
-                    break L26;
+                  if (var6 <= 0) {
+                    break L25;
                   } else {
-                    L27: {
+                    L26: {
                       var7 = 256;
                       if (var6 >= 20) {
-                        break L27;
+                        break L26;
                       } else {
                         var7 = 256 * var6 / 20;
-                        break L27;
+                        break L26;
                       }
                     }
-                    ic.field_a.a(var3 + 15, var4 + 10, var7 * var5 >> 1302332904);
-                    break L26;
+                    ic.field_a.a(var3 + 15, var4 + 10, var7 * var5 >> 8);
+                    break L25;
                   }
                 }
                 return;
               }
             } else {
-              L28: {
+              L27: {
                 var6 = tg.field_H - 140;
-                if ((var6 ^ -1) >= -1) {
-                  break L28;
+                if (var6 <= 0) {
+                  break L27;
                 } else {
-                  L29: {
+                  L28: {
                     var7 = 256;
                     if (var6 >= 20) {
-                      break L29;
+                      break L28;
                     } else {
                       var7 = 256 * var6 / 20;
-                      break L29;
+                      break L28;
                     }
                   }
-                  ic.field_a.a(var3 + 15, var4 + 10, var7 * var5 >> 1302332904);
-                  break L28;
+                  ic.field_a.a(var3 + 15, var4 + 10, var7 * var5 >> 8);
+                  break L27;
                 }
               }
               return;

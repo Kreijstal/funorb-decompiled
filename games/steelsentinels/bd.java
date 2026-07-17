@@ -28,9 +28,6 @@ final class bd {
         field_e = null;
         field_b = null;
         field_a = null;
-        if (param0 != -23333) {
-            field_f = null;
-        }
     }
 
     static {

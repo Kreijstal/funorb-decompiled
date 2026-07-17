@@ -14,9 +14,6 @@ final class kh implements Runnable {
     public static void a(int param0) {
         field_a = null;
         field_h = null;
-        if (param0 < 82) {
-            field_h = null;
-        }
     }
 
     final static String a(byte param0) {
@@ -60,7 +57,7 @@ final class kh implements Runnable {
         ((kh) this).field_c = true;
         try {
             while (!((kh) this).field_f) {
-                for (var1_int = 0; (var1_int ^ -1) > -3; var1_int++) {
+                for (var1_int = 0; var1_int < 2; var1_int++) {
                     var2 = ((kh) this).field_g[var1_int];
                     if (var2 != null) {
                         var2.b();

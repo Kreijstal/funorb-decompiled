@@ -19,7 +19,7 @@ final class cr {
         var7[0] = gr.a((byte) -57, param3, param1);
         var5 = 1;
         L0: while (true) {
-          if (-10 >= (var5 ^ -1)) {
+          if (var5 >= 9) {
             if (param2 != -10) {
               bi[] discarded$2 = cr.a(-10, 81, 16, 82);
               var4[4] = gr.a((byte) -124, param0, 64);
@@ -38,9 +38,6 @@ final class cr {
 
     public static void a(byte param0) {
         field_e = null;
-        if (param0 != 41) {
-            return;
-        }
         field_d = null;
         field_a = null;
     }

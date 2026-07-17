@@ -8,9 +8,6 @@ final class oi {
     static ri field_d;
 
     final static boolean a(byte param0) {
-        if (param0 != -64) {
-            return false;
-        }
         return pg.field_a;
     }
 
@@ -32,41 +29,17 @@ final class oi {
     }
 
     final static void a(int param0) {
-        if (wd.field_f == null) {
-          if (param0 == -27864) {
-            if (null != iv.field_a) {
-              iv.field_a.e();
-              return;
-            } else {
-              return;
-            }
-          } else {
-            field_d = null;
-            if (null != iv.field_a) {
-              iv.field_a.e();
-              return;
-            } else {
-              return;
-            }
-          }
-        } else {
-          wd.field_f.e();
-          if (param0 != -27864) {
-            field_d = null;
+        if (wd.field_f != null) {
+            wd.field_f.e();
             if (null == iv.field_a) {
-              return;
-            } else {
-              iv.field_a.e();
-              return;
+                return;
             }
-          } else {
-            if (null != iv.field_a) {
-              iv.field_a.e();
-              return;
-            } else {
-              return;
-            }
-          }
+            iv.field_a.e();
+            return;
+        }
+        if (null != iv.field_a) {
+            iv.field_a.e();
+            return;
         }
     }
 

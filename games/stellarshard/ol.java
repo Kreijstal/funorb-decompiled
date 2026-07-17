@@ -69,7 +69,7 @@ final class ol {
               return var3;
             } else {
               if (((ol) this).field_d) {
-                if (-1 == (var3 ^ -1)) {
+                if (var3 == 0) {
                   var3 = 1;
                   continue L0;
                 } else {
@@ -89,7 +89,7 @@ final class ol {
               return var3;
             } else {
               if (((ol) this).field_d) {
-                if (-1 == (var3 ^ -1)) {
+                if (var3 == 0) {
                   var3 = 1;
                   continue L1;
                 } else {
@@ -125,7 +125,7 @@ final class ol {
     }
 
     final void a(int param0, byte param1) {
-        if (-1 >= (param0 ^ -1)) {
+        if (param0 >= 0) {
           if (param0 <= ((ol) this).field_e) {
             if (param1 != 111) {
               L0: {
@@ -189,9 +189,6 @@ final class ol {
 
     final static void b(int param0) {
         sj.field_F = null;
-        if (param0 > -12) {
-            return;
-        }
         wc.field_C = null;
     }
 

@@ -225,7 +225,7 @@ final class q {
                                                                                 }
                                                                               } else {
                                                                                 param0.field_w[var31] = param0.field_w[var31] - 1;
-                                                                                param0.field_t[param0.field_w[var31]] = param0.field_t[param0.field_w[var31 - 1] + 16 - 1];
+                                                                                param0.field_t[param0.field_w[var31]] = param0.field_t[param0.field_w[var31 - 1] + 15];
                                                                                 var31--;
                                                                                 continue L19;
                                                                               }
@@ -311,7 +311,7 @@ final class q {
                                                                       break L27;
                                                                     }
                                                                   } else {
-                                                                    var15 = var15 + 1 * var16;
+                                                                    var15 = var15 + var16;
                                                                     break L27;
                                                                   }
                                                                 }
@@ -798,7 +798,7 @@ final class q {
         synchronized (var5) {
           L0: {
             field_a.field_k = param2;
-            field_a.field_I = param4;
+            field_a.field_I = 9;
             field_a.field_o = param0;
             field_a.field_l = 0;
             field_a.field_r = param1;

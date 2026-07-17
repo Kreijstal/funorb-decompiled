@@ -117,10 +117,6 @@ final class aq extends oh {
         field_n = null;
         field_p = null;
         field_k = null;
-        if (param0 < 71) {
-            Object var2 = null;
-            aq.a((byte) 4, (bi) null);
-        }
     }
 
     final static boolean a(int param0) {
@@ -131,9 +127,13 @@ final class aq extends oh {
     }
 
     final static void a(byte param0, bi param1) {
-        int var2 = -121 % ((29 - param0) / 51);
-        wh.a(false);
-        gf.a(param1.field_B, param1.field_o, param1.field_p);
+        try {
+            int var2_int = -121 % ((29 - param0) / 51);
+            wh.a(false);
+            gf.a(param1.field_B, param1.field_o, param1.field_p);
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "aq.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static gq a(int param0, int param1) {
@@ -144,7 +144,7 @@ final class aq extends oh {
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         var5 = dn.a(4);
         var2 = var5;
-        var3 = param1;
+        var3 = 0;
         L0: while (true) {
           if (var5.length > var3) {
             if (var5[var3].field_c == param0) {

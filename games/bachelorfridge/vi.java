@@ -11,72 +11,60 @@ final class vi {
     private int field_b;
 
     final void a(eo param0, long param1, int param2) {
-        eo var6 = null;
-        eo var7 = null;
-        eo var8 = null;
-        eo var9 = null;
-        if (param2 > 64) {
-          if (0 == ((vi) this).field_b) {
-            var8 = ((vi) this).field_c.a(true);
-            var8.a(false);
-            var8.b(0);
-            if (var8 != ((vi) this).field_e) {
-              ((vi) this).field_g.a(param1, (byte) -97, (bw) (Object) param0);
-              ((vi) this).field_c.a(param0, (byte) -107);
-              return;
-            } else {
-              var9 = ((vi) this).field_c.a(true);
-              var9.a(false);
-              var9.b(0);
-              ((vi) this).field_g.a(param1, (byte) -97, (bw) (Object) param0);
-              ((vi) this).field_c.a(param0, (byte) -107);
-              return;
+        eo var5 = null;
+        try {
+            if (param2 <= 64) {
+                vi.b(13);
             }
-          } else {
-            ((vi) this).field_b = ((vi) this).field_b - 1;
+            if (0 != ((vi) this).field_b) {
+                ((vi) this).field_b = ((vi) this).field_b - 1;
+            } else {
+                var5 = ((vi) this).field_c.a(true);
+                var5.a(false);
+                var5.b(0);
+                if (var5 == ((vi) this).field_e) {
+                    var5 = ((vi) this).field_c.a(true);
+                    var5.a(false);
+                    var5.b(0);
+                }
+            }
             ((vi) this).field_g.a(param1, (byte) -97, (bw) (Object) param0);
             ((vi) this).field_c.a(param0, (byte) -107);
-            return;
-          }
-        } else {
-          vi.b(13);
-          if (0 == ((vi) this).field_b) {
-            var6 = ((vi) this).field_c.a(true);
-            var6.a(false);
-            var6.b(0);
-            if (var6 != ((vi) this).field_e) {
-              ((vi) this).field_g.a(param1, (byte) -97, (bw) (Object) param0);
-              ((vi) this).field_c.a(param0, (byte) -107);
-              return;
-            } else {
-              var7 = ((vi) this).field_c.a(true);
-              var7.a(false);
-              var7.b(0);
-              ((vi) this).field_g.a(param1, (byte) -97, (bw) (Object) param0);
-              ((vi) this).field_c.a(param0, (byte) -107);
-              return;
-            }
-          } else {
-            ((vi) this).field_b = ((vi) this).field_b - 1;
-            ((vi) this).field_g.a(param1, (byte) -97, (bw) (Object) param0);
-            ((vi) this).field_c.a(param0, (byte) -107);
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "vi.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }
     }
 
     final static void b(int param0) {
-        int var1 = 0;
-        int var2 = BachelorFridge.field_y;
-        oi.field_v = new js(param0);
-        for (var1 = 0; var1 < ia.field_j.length; var1++) {
-            oi.field_v.a((long)ia.field_j[var1].toLowerCase().hashCode(), (byte) 102, (bw) (Object) new ji(var1));
+        int var1_int = 0;
+        RuntimeException var1 = null;
+        int var2 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var2 = BachelorFridge.field_y;
+        try {
+          L0: {
+            oi.field_v = new js(param0);
+            var1_int = 0;
+            L1: while (true) {
+              if (var1_int >= ia.field_j.length) {
+                break L0;
+              } else {
+                oi.field_v.a((long)ia.field_j[var1_int].toLowerCase().hashCode(), (byte) 102, (bw) (Object) new ji(var1_int));
+                var1_int++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw pe.a((Throwable) (Object) var1, "vi.A(" + param0 + 41);
         }
     }
 
     public static void a(int param0) {
         field_f = null;
-        int var1 = 64 % ((param0 - -31) / 62);
+        int var1 = 0;
         field_d = null;
     }
 

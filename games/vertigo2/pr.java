@@ -42,8 +42,9 @@ final class pr {
 
     final int a(int param0) {
         if (((pr) this).field_a >= ((pr) this).field_b) {
+            int fieldTemp$0 = ((pr) this).field_c;
             ((pr) this).field_c = ((pr) this).field_c + 1;
-            ((pr) this).field_j = ((pr) this).field_d[((pr) this).field_c] << 15;
+            ((pr) this).field_j = ((pr) this).field_d[fieldTemp$0] << 15;
             if (((pr) this).field_c >= ((pr) this).field_i) {
                 ((pr) this).field_c = ((pr) this).field_i - 1;
             }

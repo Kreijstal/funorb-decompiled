@@ -15,11 +15,6 @@ final class id {
 
     public static void a(byte param0) {
         field_f = null;
-        if (param0 != 106) {
-            field_f = (gb) null;
-            field_e = null;
-            return;
-        }
         field_e = null;
     }
 
@@ -41,7 +36,7 @@ final class id {
 
     final String b(int param0) {
         if (param0 != 2) {
-            field_f = (gb) null;
+            field_f = null;
             return ((id) this).field_b;
         }
         return ((id) this).field_b;
@@ -58,7 +53,11 @@ final class id {
     id(String param0) {
         ((id) this).field_a = false;
         ((id) this).field_c = false;
-        ((id) this).field_b = param0;
+        try {
+            ((id) this).field_b = param0;
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) (Object) runtimeException, "id.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

@@ -31,7 +31,7 @@ final class lk implements Runnable {
 
     private final la a(int param0, byte param1, String param2, boolean param3) {
         int var5 = -14 % ((param1 - 27) / 41);
-        return this.a(param0, (Object) (Object) param2, -14572, param3 ? 22 : 1, 0);
+        return this.a(param0, (Object) (Object) param2, -14572, 1, 0);
     }
 
     final la a(String param0, Class param1, int param2) {
@@ -74,7 +74,7 @@ final class lk implements Runnable {
             Throwable decompiledCaughtException = null;
             ma stackOut_14_0 = null;
             L0: {
-              if (-34 != (param1 ^ -1)) {
+              if (param1 != 33) {
                 if (param1 == 34) {
                   var4 = "jagex_" + param3 + "_preferences" + param2 + "_wip.dat";
                   break L0;
@@ -199,16 +199,10 @@ final class lk implements Runnable {
                   L3: while (true) {
                     if (!((lk) this).field_a) {
                       if (null == ((lk) this).field_c) {
-                        try {
+                        {
                           L4: {
                             this.wait();
                             break L4;
-                          }
-                        } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
-                          decompiledCaughtException = decompiledCaughtParameter0;
-                          L5: {
-                            var3 = (InterruptedException) (Object) decompiledCaughtException;
-                            break L5;
                           }
                         }
                         continue L3;
@@ -235,8 +229,8 @@ final class lk implements Runnable {
                 L7: {
                   L8: {
                     var2_int = var8_ref.field_e;
-                    if ((var2_int ^ -1) != -2) {
-                      if (-23 != (var2_int ^ -1)) {
+                    if (var2_int != 1) {
+                      if (var2_int != 22) {
                         if (2 == var2_int) {
                           var18 = new Thread((Runnable) var8_ref.field_d);
                           var18.setDaemon(true);
@@ -245,8 +239,8 @@ final class lk implements Runnable {
                           var8_ref.field_b = (Object) (Object) var18;
                           break L8;
                         } else {
-                          if ((var2_int ^ -1) != -5) {
-                            if (-9 != (var2_int ^ -1)) {
+                          if (var2_int != 4) {
+                            if (var2_int != 8) {
                               if (9 == var2_int) {
                                 L9: {
                                   var17 = (Object[]) var8_ref.field_d;
@@ -263,7 +257,7 @@ final class lk implements Runnable {
                                 var8_ref.field_b = (Object) (Object) ((Class) var17[0]).getDeclaredField((String) var17[1]);
                                 break L8;
                               } else {
-                                if ((var2_int ^ -1) != -19) {
+                                if (var2_int != 18) {
                                   if (var2_int == 19) {
                                     var7 = (java.awt.datatransfer.Transferable) var8_ref.field_d;
                                     var16 = java.awt.Toolkit.getDefaultToolkit().getSystemClipboard();
@@ -277,7 +271,7 @@ final class lk implements Runnable {
                                         if (field_n > td.b(128)) {
                                           throw new IOException();
                                         } else {
-                                          var15 = (var8_ref.field_c >> -152525032 & 255) + "." + ((var8_ref.field_c & 16763005) >> 1730215600) + "." + ((65512 & var8_ref.field_c) >> -1298296536) + "." + (var8_ref.field_c & 255);
+                                          var15 = (var8_ref.field_c >> 24 & 255) + "." + ((var8_ref.field_c & 16763005) >> 16) + "." + ((65512 & var8_ref.field_c) >> 8) + "." + (var8_ref.field_c & 255);
                                           var8_ref.field_b = (Object) (Object) java.net.InetAddress.getByName(var15).getHostName();
                                           break L8;
                                         }
@@ -289,7 +283,7 @@ final class lk implements Runnable {
                                               var8_ref.field_b = (Object) (Object) var14;
                                               var14.setResizable(false);
                                               if (((lk) this).field_m) {
-                                                ((lk) this).field_i.a(var14, var8_ref.field_c & 65535, var8_ref.field_a & 65535, var8_ref.field_c >>> -778296688, -7976, var8_ref.field_a >> -505615280);
+                                                ((lk) this).field_i.a(var14, var8_ref.field_c & 65535, var8_ref.field_a & 65535, var8_ref.field_c >>> 16, -7976, var8_ref.field_a >> 16);
                                                 break L8;
                                               } else {
                                                 Object discarded$6 = Class.forName("gg").getMethod("enter", new Class[5]).invoke(((lk) this).field_t, new Object[5]);
@@ -311,7 +305,7 @@ final class lk implements Runnable {
                                                       if (!((lk) this).field_f) {
                                                         break L10;
                                                       } else {
-                                                        if (-15 == (var2_int ^ -1)) {
+                                                        if (var2_int == 14) {
                                                           var3_int = var8_ref.field_c;
                                                           var4 = var8_ref.field_a;
                                                           if (((lk) this).field_m) {
@@ -330,7 +324,7 @@ final class lk implements Runnable {
                                                       if (!((lk) this).field_f) {
                                                         break L11;
                                                       } else {
-                                                        if ((var2_int ^ -1) == -16) {
+                                                        if (var2_int == 15) {
                                                           L12: {
                                                             if (0 == var8_ref.field_c) {
                                                               stackOut_84_0 = 0;
@@ -369,7 +363,7 @@ final class lk implements Runnable {
                                                         }
                                                       }
                                                     }
-                                                    if ((var2_int ^ -1) != -17) {
+                                                    if (var2_int != 16) {
                                                       throw lk.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
                                                     } else {
                                                       try {
@@ -437,7 +431,7 @@ final class lk implements Runnable {
                                             }
                                           }
                                         } else {
-                                          if ((td.b(128) ^ -1L) > (field_n ^ -1L)) {
+                                          if (~td.b(128) > ~field_n) {
                                             throw new IOException();
                                           } else {
                                             var8_ref.field_b = (Object) (Object) java.net.InetAddress.getByName((String) var8_ref.field_d).getAddress();
@@ -626,16 +620,10 @@ final class lk implements Runnable {
             }
             L4: {
               if (null != ((lk) this).field_b) {
-                try {
+                {
                   L5: {
                     ((lk) this).field_b.a(0);
                     break L5;
-                  }
-                } catch (java.io.IOException decompiledCaughtParameter1) {
-                  decompiledCaughtException = decompiledCaughtParameter1;
-                  L6: {
-                    var2_ref2 = (IOException) (Object) decompiledCaughtException;
-                    break L6;
                   }
                 }
                 break L4;
@@ -645,16 +633,10 @@ final class lk implements Runnable {
             }
             L7: {
               if (null != ((lk) this).field_x) {
-                try {
+                {
                   L8: {
-                    ((lk) this).field_x.a(param0 ^ 0);
+                    ((lk) this).field_x.a(param0);
                     break L8;
-                  }
-                } catch (java.io.IOException decompiledCaughtParameter2) {
-                  decompiledCaughtException = decompiledCaughtParameter2;
-                  L9: {
-                    var2_ref2 = (IOException) (Object) decompiledCaughtException;
-                    break L9;
                   }
                 }
                 break L7;
@@ -672,18 +654,11 @@ final class lk implements Runnable {
                     break L10;
                   } else {
                     if (((lk) this).field_u[var2_int] != null) {
-                      try {
+                      {
                         L12: {
                           ((lk) this).field_u[var2_int].a(0);
                           var2_int++;
                           break L12;
-                        }
-                      } catch (java.io.IOException decompiledCaughtParameter3) {
-                        decompiledCaughtException = decompiledCaughtParameter3;
-                        L13: {
-                          var3_ref = (IOException) (Object) decompiledCaughtException;
-                          var2_int++;
-                          break L13;
                         }
                       }
                       continue L11;
@@ -697,16 +672,10 @@ final class lk implements Runnable {
             }
             L14: {
               if (((lk) this).field_j != null) {
-                try {
+                {
                   L15: {
                     ((lk) this).field_j.a(0);
                     break L15;
-                  }
-                } catch (java.io.IOException decompiledCaughtParameter4) {
-                  decompiledCaughtException = decompiledCaughtParameter4;
-                  L16: {
-                    var2_ref2 = (IOException) (Object) decompiledCaughtException;
-                    break L16;
                   }
                 }
                 break L14;
@@ -725,7 +694,7 @@ final class lk implements Runnable {
         if (param0 > -49) {
             return null;
         }
-        return this.a(param2 + (param4 << -1134162064), (Object) null, -14572, 6, param3 + (param1 << -868017936));
+        return this.a(param2 + (param4 << 16), (Object) null, -14572, 6, param3 + (param1 << 16));
     }
 
     final la a(boolean param0, int param1, Runnable param2) {

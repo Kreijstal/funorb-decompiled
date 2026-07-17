@@ -25,44 +25,40 @@ final class hf implements ac, gs {
     }
 
     private final boolean b(int param0) {
-        int stackIn_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_8_0 = 0;
-        if (param0 >= 80) {
-          L0: {
-            L1: {
-              if ((((hf) this).field_f ^ -1) == -3) {
+        int stackIn_8_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_6_0 = 0;
+        L0: {
+          L1: {
+            if (((hf) this).field_f == 2) {
+              break L1;
+            } else {
+              if (((hf) this).field_f == 36) {
                 break L1;
               } else {
-                if (-37 == (((hf) this).field_f ^ -1)) {
+                if (((hf) this).field_f == 3) {
                   break L1;
                 } else {
-                  if ((((hf) this).field_f ^ -1) == -4) {
+                  if (32 == ((hf) this).field_f) {
                     break L1;
                   } else {
-                    if (32 == ((hf) this).field_f) {
-                      break L1;
+                    if (33 != ((hf) this).field_f) {
+                      stackOut_7_0 = 0;
+                      stackIn_8_0 = stackOut_7_0;
+                      break L0;
                     } else {
-                      if (33 != ((hf) this).field_f) {
-                        stackOut_9_0 = 0;
-                        stackIn_10_0 = stackOut_9_0;
-                        break L0;
-                      } else {
-                        break L1;
-                      }
+                      break L1;
                     }
                   }
                 }
               }
             }
-            stackOut_8_0 = 1;
-            stackIn_10_0 = stackOut_8_0;
-            break L0;
           }
-          return stackIn_10_0 != 0;
-        } else {
-          return true;
+          stackOut_6_0 = 1;
+          stackIn_8_0 = stackOut_6_0;
+          break L0;
         }
+        return stackIn_8_0 != 0;
     }
 
     public final int b(byte param0) {
@@ -79,28 +75,42 @@ final class hf implements ac, gs {
     }
 
     public final void f(int param0) {
-        if (!(!((hf) this).field_p.l(false))) {
-            return;
-        }
-        if (!(null != ((hf) this).field_c)) {
-            return;
-        }
-        ((hf) this).field_c.a(0);
-        ((hf) this).field_n.a(0);
-        ((hf) this).field_h = dfa.a(8 + ((hf) this).field_h, 2048, 106);
-        ((hf) this).field_l.a(((hf) this).field_p.g((byte) 115) + 2097152, (byte) 101, ((hf) this).field_p.e(9648), ((hf) this).field_p.d(3));
-        if (param0 != -4366) {
-            return;
-        }
-        if (11 == ((hf) this).field_p.d(false)) {
-            // if_icmplt L180
-            ((hf) this).field_l.c(-10874, 16777130);
-            ((hf) this).field_l.d(160, param0 ^ 4376);
-            ((hf) this).field_l.a(8).field_d = 0;
+        if (((hf) this).field_p.l(false)) {
+          return;
         } else {
-            ((hf) this).field_l.c(param0 ^ 15220, 16633231);
-            ((hf) this).field_l.d(128, -71);
-            ((hf) this).field_l.a(85).field_d = 11;
+          if (null == ((hf) this).field_c) {
+            return;
+          } else {
+            ((hf) this).field_c.a(0);
+            ((hf) this).field_n.a(0);
+            ((hf) this).field_h = dfa.a(8 + ((hf) this).field_h, 2048, 106);
+            ((hf) this).field_l.a(((hf) this).field_p.g((byte) 115) + 2097152, (byte) 101, ((hf) this).field_p.e(9648), ((hf) this).field_p.d(3));
+            if (param0 != -4366) {
+              return;
+            } else {
+              L0: {
+                L1: {
+                  if (11 != ((hf) this).field_p.d(false)) {
+                    break L1;
+                  } else {
+                    if (((hf) this).field_p.h(false) > 3) {
+                      break L1;
+                    } else {
+                      ((hf) this).field_l.c(-10874, 16777130);
+                      ((hf) this).field_l.d(160, param0 ^ 4376);
+                      ((hf) this).field_l.a(8).field_d = 0;
+                      break L0;
+                    }
+                  }
+                }
+                ((hf) this).field_l.c(param0 ^ 15220, 16633231);
+                ((hf) this).field_l.d(128, -71);
+                ((hf) this).field_l.a(85).field_d = 11;
+                break L0;
+              }
+              return;
+            }
+          }
         }
     }
 
@@ -112,40 +122,32 @@ final class hf implements ac, gs {
     }
 
     private final boolean b(boolean param0) {
-        int stackIn_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackOut_8_0 = 0;
+        int stackOut_7_0 = 0;
         L0: {
-          if (param0) {
-            break L0;
-          } else {
-            ((hf) this).a(-20, -33);
-            break L0;
-          }
-        }
-        L1: {
-          L2: {
-            if ((((hf) this).field_f ^ -1) == -30) {
-              break L2;
+          L1: {
+            if (((hf) this).field_f == 29) {
+              break L1;
             } else {
-              if ((((hf) this).field_f ^ -1) == -25) {
-                break L2;
+              if (((hf) this).field_f == 24) {
+                break L1;
               } else {
-                if ((((hf) this).field_f ^ -1) == -13) {
-                  break L2;
+                if (((hf) this).field_f == 12) {
+                  break L1;
                 } else {
-                  if ((((hf) this).field_f ^ -1) == -16) {
-                    break L2;
+                  if (((hf) this).field_f == 15) {
+                    break L1;
                   } else {
-                    if (-2 == (((hf) this).field_f ^ -1)) {
-                      break L2;
+                    if (((hf) this).field_f == 1) {
+                      break L1;
                     } else {
                       if (!this.b(83)) {
-                        stackOut_10_0 = 0;
-                        stackIn_11_0 = stackOut_10_0;
-                        break L1;
+                        stackOut_8_0 = 0;
+                        stackIn_9_0 = stackOut_8_0;
+                        break L0;
                       } else {
-                        break L2;
+                        break L1;
                       }
                     }
                   }
@@ -153,11 +155,11 @@ final class hf implements ac, gs {
               }
             }
           }
-          stackOut_9_0 = 1;
-          stackIn_11_0 = stackOut_9_0;
-          break L1;
+          stackOut_7_0 = 1;
+          stackIn_9_0 = stackOut_7_0;
+          break L0;
         }
-        return stackIn_11_0 != 0;
+        return stackIn_9_0 != 0;
     }
 
     private final void a(int param0, int param1, int param2, int param3) {
@@ -169,7 +171,7 @@ final class hf implements ac, gs {
         int var10 = 0;
         int var11 = 0;
         ka var12 = null;
-        ka var13_ref = null;
+        ka var13_ref_ka = null;
         int var13 = 0;
         ka var14 = null;
         int var15 = 0;
@@ -188,24 +190,24 @@ final class hf implements ac, gs {
             return;
           } else {
             L0: {
-              var5 = dfa.a(-((hf) this).field_p.g(-25787) >> 1569171554, 2048, -115);
+              var5 = dfa.a(-((hf) this).field_p.g(-25787) >> 2, 2048, -115);
               var6 = 0;
               var7 = ((hf) this).field_f;
               if (var7 == 3) {
                 var6 = 2883584;
                 break L0;
               } else {
-                if ((var7 ^ -1) == -33) {
+                if (var7 == 32) {
                   var6 = 1835008;
                   break L0;
                 } else {
-                  if ((var7 ^ -1) == -34) {
+                  if (var7 == 33) {
                     var6 = 1835008;
                     break L0;
                   } else {
                     if (26 == var7) {
                       var7 = ((hf) this).field_p.H(0);
-                      if ((var7 ^ -1) == -7) {
+                      if (var7 == 6) {
                         var6 = 1835008;
                         break L0;
                       } else {
@@ -221,7 +223,7 @@ final class hf implements ac, gs {
                         var6 = 1835008;
                         break L0;
                       } else {
-                        if (-37 != (var7 ^ -1)) {
+                        if (var7 != 36) {
                           var6 = -262144;
                           break L0;
                         } else {
@@ -252,7 +254,7 @@ final class hf implements ac, gs {
                       if (var11 == 0) {
                         break L2;
                       } else {
-                        var6 = (var6 >> 947187208) * 180;
+                        var6 = (var6 >> 8) * 180;
                         break L2;
                       }
                     }
@@ -263,7 +265,7 @@ final class hf implements ac, gs {
                 }
               }
               L3: {
-                if (-35 != (((hf) this).field_f ^ -1)) {
+                if (((hf) this).field_f != 34) {
                   stackOut_33_0 = 0;
                   stackIn_34_0 = stackOut_33_0;
                   break L3;
@@ -275,7 +277,7 @@ final class hf implements ac, gs {
               }
               L4: {
                 var10 = stackIn_34_0;
-                if ((((hf) this).field_f ^ -1) != -36) {
+                if (((hf) this).field_f != 35) {
                   stackOut_36_0 = 0;
                   stackIn_37_0 = stackOut_36_0;
                   break L4;
@@ -288,7 +290,7 @@ final class hf implements ac, gs {
               L5: {
                 var11 = stackIn_37_0;
                 var12 = ((hf) this).field_c.a(var11 != 0, -1, var10 != 0, (byte) 1);
-                if (-11 != (((hf) this).field_f ^ -1)) {
+                if (((hf) this).field_f != 10) {
                   gqa.a(var5, -83584144, var8, var7, var12, param2);
                   break L5;
                 } else {
@@ -297,8 +299,8 @@ final class hf implements ac, gs {
               }
               L6: {
                 if (((hf) this).field_f == 10) {
-                  var13_ref = ((hf) this).field_n.b((byte) 74);
-                  gqa.a(var5, -83584144, var8, var7, var13_ref, param2);
+                  var13_ref_ka = ((hf) this).field_n.b((byte) 74);
+                  gqa.a(var5, -83584144, var8, var7, var13_ref_ka, param2);
                   break L6;
                 } else {
                   break L6;
@@ -306,7 +308,7 @@ final class hf implements ac, gs {
               }
               L7: {
                 var13 = ((hf) this).field_p.u((byte) 126);
-                if (0 == (var13 ^ -1)) {
+                if (var13 == -1) {
                   break L7;
                 } else {
                   L8: {
@@ -346,23 +348,25 @@ final class hf implements ac, gs {
         pca var3 = null;
         int var4 = 0;
         int var5 = 0;
-        int stackIn_32_0 = 0;
-        int stackIn_36_0 = 0;
-        Object stackIn_42_0 = null;
-        Object stackIn_43_0 = null;
-        Object stackIn_44_0 = null;
-        int stackIn_44_1 = 0;
+        int stackIn_33_0 = 0;
+        int stackIn_39_0 = 0;
+        Object stackIn_45_0 = null;
+        Object stackIn_46_0 = null;
+        Object stackIn_47_0 = null;
+        int stackIn_47_1 = 0;
         int stackOut_31_0 = 0;
         int stackOut_30_0 = 0;
+        int stackOut_28_0 = 0;
         int stackOut_26_0 = 0;
         int stackOut_25_0 = 0;
+        int stackOut_37_0 = 0;
+        int stackOut_36_0 = 0;
         int stackOut_34_0 = 0;
-        int stackOut_35_0 = 0;
-        Object stackOut_41_0 = null;
-        Object stackOut_43_0 = null;
-        int stackOut_43_1 = 0;
-        Object stackOut_42_0 = null;
-        int stackOut_42_1 = 0;
+        Object stackOut_44_0 = null;
+        Object stackOut_46_0 = null;
+        int stackOut_46_1 = 0;
+        Object stackOut_45_0 = null;
+        int stackOut_45_1 = 0;
         L0: {
           var5 = TombRacer.field_G ? 1 : 0;
           if (((hf) this).field_p == null) {
@@ -381,7 +385,7 @@ final class hf implements ac, gs {
                       if (((hf) this).field_f != 6) {
                         break L2;
                       } else {
-                        if (-1 == (((hf) this).field_g ^ -1)) {
+                        if (((hf) this).field_g == 0) {
                           L3: {
                             if (!this.f((byte) 62)) {
                               fla discarded$7 = var2.a(new fm(70, ((hf) this).b((byte) -122), ((hf) this).c((byte) 93), ((hf) this).e((byte) -87)), param0 ^ -21487);
@@ -398,10 +402,10 @@ final class hf implements ac, gs {
                         }
                       }
                     }
-                    if ((((hf) this).field_f ^ -1) == -7) {
+                    if (((hf) this).field_f == 6) {
                       break L1;
                     } else {
-                      if ((((hf) this).field_g ^ -1) >= -1) {
+                      if (((hf) this).field_g <= 0) {
                         break L1;
                       } else {
                         ((hf) this).field_g = ((hf) this).field_g - 1;
@@ -412,68 +416,66 @@ final class hf implements ac, gs {
                   L4: {
                     if (this.b(true)) {
                       L5: {
-                        if ((((hf) this).field_f ^ -1) != -25) {
+                        if (((hf) this).field_f != 24) {
+                          if (((hf) this).field_c.b(param0 + -21463) != 1) {
+                            if (17 == ((hf) this).field_c.b(0)) {
+                              stackOut_31_0 = 1;
+                              stackIn_33_0 = stackOut_31_0;
+                              break L5;
+                            } else {
+                              stackOut_30_0 = 0;
+                              stackIn_33_0 = stackOut_30_0;
+                              break L5;
+                            }
+                          } else {
+                            stackOut_28_0 = 1;
+                            stackIn_33_0 = stackOut_28_0;
+                            break L5;
+                          }
+                        } else {
                           L6: {
-                            if (-2 == (((hf) this).field_c.b(param0 + -21463) ^ -1)) {
+                            if (((hf) this).field_c.b(0) == 1) {
                               break L6;
                             } else {
-                              if (17 != ((hf) this).field_c.b(0)) {
-                                stackOut_31_0 = 0;
-                                stackIn_32_0 = stackOut_31_0;
+                              if (((hf) this).field_c.b(0) != 9) {
+                                stackOut_26_0 = 0;
+                                stackIn_33_0 = stackOut_26_0;
                                 break L5;
                               } else {
                                 break L6;
                               }
                             }
                           }
-                          stackOut_30_0 = 1;
-                          stackIn_32_0 = stackOut_30_0;
-                          break L5;
-                        } else {
-                          L7: {
-                            if (((hf) this).field_c.b(0) == 1) {
-                              break L7;
-                            } else {
-                              if (((hf) this).field_c.b(0) != 9) {
-                                stackOut_26_0 = 0;
-                                stackIn_32_0 = stackOut_26_0;
-                                break L5;
-                              } else {
-                                break L7;
-                              }
-                            }
-                          }
                           stackOut_25_0 = 1;
-                          stackIn_32_0 = stackOut_25_0;
+                          stackIn_33_0 = stackOut_25_0;
                           break L5;
                         }
                       }
-                      L8: {
-                        L9: {
-                          var3_int = stackIn_32_0;
-                          if (var3_int == 0) {
-                            break L9;
+                      L7: {
+                        var3_int = stackIn_33_0;
+                        if (var3_int != 0) {
+                          if (((hf) this).field_c.c(0)) {
+                            stackOut_37_0 = 1;
+                            stackIn_39_0 = stackOut_37_0;
+                            break L7;
                           } else {
-                            if (!((hf) this).field_c.c(0)) {
-                              break L9;
-                            } else {
-                              stackOut_34_0 = 1;
-                              stackIn_36_0 = stackOut_34_0;
-                              break L8;
-                            }
+                            stackOut_36_0 = 0;
+                            stackIn_39_0 = stackOut_36_0;
+                            break L7;
                           }
+                        } else {
+                          stackOut_34_0 = 0;
+                          stackIn_39_0 = stackOut_34_0;
+                          break L7;
                         }
-                        stackOut_35_0 = 0;
-                        stackIn_36_0 = stackOut_35_0;
-                        break L8;
                       }
-                      var4 = stackIn_36_0;
+                      var4 = stackIn_39_0;
                       if (var4 == 0) {
                         break L4;
                       } else {
                         if (2 != ((hf) this).field_k) {
-                          if ((((hf) this).field_k ^ -1) != -2) {
-                            if (-4 != (((hf) this).field_k ^ -1)) {
+                          if (((hf) this).field_k != 1) {
+                            if (((hf) this).field_k != 3) {
                               break L4;
                             } else {
                               fla discarded$9 = var2.a(new fm(74, ((hf) this).b((byte) 70), ((hf) this).c((byte) 111), ((hf) this).e((byte) -96)), -58);
@@ -484,34 +486,34 @@ final class hf implements ac, gs {
                             break L4;
                           }
                         } else {
-                          L10: {
+                          L8: {
                             if (((hf) this).field_m) {
                               fla discarded$11 = var2.a(new fm(72, ((hf) this).b((byte) -119), ((hf) this).c((byte) 120), ((hf) this).e((byte) -116)), -58);
-                              break L10;
+                              break L8;
                             } else {
                               fla discarded$12 = var2.a(new fm(73, ((hf) this).b((byte) -102), ((hf) this).c((byte) 96), ((hf) this).e((byte) -114)), -58);
-                              break L10;
+                              break L8;
                             }
                           }
-                          L11: {
-                            stackOut_41_0 = this;
-                            stackIn_43_0 = stackOut_41_0;
-                            stackIn_42_0 = stackOut_41_0;
+                          L9: {
+                            stackOut_44_0 = this;
+                            stackIn_46_0 = stackOut_44_0;
+                            stackIn_45_0 = stackOut_44_0;
                             if (((hf) this).field_m) {
-                              stackOut_43_0 = this;
-                              stackOut_43_1 = 0;
-                              stackIn_44_0 = stackOut_43_0;
-                              stackIn_44_1 = stackOut_43_1;
-                              break L11;
+                              stackOut_46_0 = this;
+                              stackOut_46_1 = 0;
+                              stackIn_47_0 = stackOut_46_0;
+                              stackIn_47_1 = stackOut_46_1;
+                              break L9;
                             } else {
-                              stackOut_42_0 = this;
-                              stackOut_42_1 = 1;
-                              stackIn_44_0 = stackOut_42_0;
-                              stackIn_44_1 = stackOut_42_1;
-                              break L11;
+                              stackOut_45_0 = this;
+                              stackOut_45_1 = 1;
+                              stackIn_47_0 = stackOut_45_0;
+                              stackIn_47_1 = stackOut_45_1;
+                              break L9;
                             }
                           }
-                          ((hf) this).field_m = stackIn_44_1 != 0;
+                          ((hf) this).field_m = stackIn_47_1 != 0;
                           break L4;
                         }
                       }
@@ -519,38 +521,38 @@ final class hf implements ac, gs {
                       break L4;
                     }
                   }
-                  L12: {
+                  L10: {
                     ((hf) this).field_k = 0;
                     if (((hf) this).field_p.f((byte) 109) == null) {
-                      break L12;
+                      break L10;
                     } else {
                       if (((hf) this).field_p.f((byte) -123).f((byte) 93) != null) {
                         var3 = ((hf) this).field_p.f((byte) -88).f((byte) 93).a(((hf) this).c((byte) 106), ((hf) this).b((byte) 102), (byte) 119);
                         if (var3 == null) {
-                          break L12;
+                          break L10;
                         } else {
                           if (var3.b(param0 ^ 21463)) {
                             ((hf) this).field_k = 1;
-                            break L12;
+                            break L10;
                           } else {
-                            break L12;
+                            break L10;
                           }
                         }
                       } else {
-                        break L12;
+                        break L10;
                       }
                     }
                   }
-                  L13: {
+                  L11: {
                     if (((hf) this).field_o) {
-                      break L13;
+                      break L11;
                     } else {
                       if (((hf) this).field_p.j(-1)) {
                         fla discarded$13 = var2.a(new fm(79, ((hf) this).b((byte) 77), ((hf) this).c((byte) 114), ((hf) this).e((byte) -123)), -58);
                         ((hf) this).field_o = true;
-                        break L13;
+                        break L11;
                       } else {
-                        break L13;
+                        break L11;
                       }
                     }
                   }
@@ -576,25 +578,29 @@ final class hf implements ac, gs {
     }
 
     public final void a(int param0, int param1) {
-        ((hf) this).field_j = param0;
-        if (((hf) this).field_j >= 13) {
+        L0: {
+          ((hf) this).field_j = param0;
+          if (((hf) this).field_j < 13) {
+            break L0;
+          } else {
             ((hf) this).field_j = ((hf) this).field_j % 13;
+            break L0;
+          }
         }
-        if ((param0 ^ -1) > -1) {
-            return;
+        if (param0 < 0) {
+          return;
+        } else {
+          ((hf) this).field_c = new bua(0, ((hf) this).field_j, 1);
+          ((hf) this).field_c.a(((hf) this).field_j, false, 0, 0, true);
+          ((hf) this).field_c.a(false, 96);
+          ((hf) this).field_n = new bua(6, 3);
+          ((hf) this).field_n.a(param1, true, (byte) 58, 5);
+          return;
         }
-        ((hf) this).field_c = new bua(0, ((hf) this).field_j, 1);
-        ((hf) this).field_c.a(((hf) this).field_j, false, 0, 0, true);
-        ((hf) this).field_c.a(false, 96);
-        ((hf) this).field_n = new bua(6, 3);
-        ((hf) this).field_n.a(param1, true, (byte) 58, 5);
     }
 
     public static void g(byte param0) {
         field_a = null;
-        if (param0 < 124) {
-            return;
-        }
         field_e = null;
         field_d = null;
     }
@@ -640,7 +646,7 @@ final class hf implements ac, gs {
         if (null == ((hf) this).field_c) {
           return;
         } else {
-          if ((((hf) this).field_j ^ -1) != 0) {
+          if (((hf) this).field_j != -1) {
             L0: {
               var4 = -1;
               var5 = 1.0f;
@@ -660,7 +666,7 @@ final class hf implements ac, gs {
             L1: {
               var9 = (w) (Object) stackIn_8_0;
               var10 = param1;
-              if ((var10 ^ -1) == -1) {
+              if (var10 == 0) {
                 if (1 != ((hf) this).field_f) {
                   L2: {
                     if (null == ((hf) this).field_p.K(-163585215)) {
@@ -746,10 +752,10 @@ final class hf implements ac, gs {
                   } else {
                     if (1 == var10) {
                       L7: {
-                        if (-1 == (((hf) this).field_f ^ -1)) {
+                        if (((hf) this).field_f == 0) {
                           break L7;
                         } else {
-                          if ((((hf) this).field_f ^ -1) == -6) {
+                          if (((hf) this).field_f == 5) {
                             break L7;
                           } else {
                             if (23 == ((hf) this).field_f) {
@@ -778,7 +784,7 @@ final class hf implements ac, gs {
                         var11 = ((hf) this).field_p.H(0);
                         var6 = ((hf) this).field_c.a(((hf) this).field_j, (byte) 66, 0, var10);
                         if (var11 != 6) {
-                          if (-3 == (var11 ^ -1)) {
+                          if (var11 == 2) {
                             var4 = 33;
                             break L8;
                           } else {
@@ -793,7 +799,7 @@ final class hf implements ac, gs {
                       ((hf) this).field_c.a(param0 ^ 69, var6, ((hf) this).field_j, var4, 0);
                       break L1;
                     } else {
-                      if (-4 == (var10 ^ -1)) {
+                      if (var10 == 3) {
                         var4 = 2;
                         if (((hf) this).field_p.I(param0 ^ 31)) {
                           var4 = 36;
@@ -809,14 +815,14 @@ final class hf implements ac, gs {
                           ((hf) this).field_c.a(48, var6, ((hf) this).field_j, 0, 0);
                           break L1;
                         } else {
-                          if (-7 == (var10 ^ -1)) {
+                          if (var10 == 6) {
                             var4 = 5;
                             var6 = ((hf) this).field_c.a(((hf) this).field_j, (byte) 66, 0, var4);
                             ((hf) this).field_c.a(var4, 0, ((hf) this).field_j, param2, 0, var5);
                             ((hf) this).field_c.a(92, var6, ((hf) this).field_j, 0, 0);
                             break L1;
                           } else {
-                            if ((var10 ^ -1) != -19) {
+                            if (var10 != 18) {
                               if (var10 == 23) {
                                 var4 = 37;
                                 var6 = ((hf) this).field_c.a(((hf) this).field_j, (byte) 66, 0, var4);
@@ -829,10 +835,10 @@ final class hf implements ac, gs {
                                   ((hf) this).field_c.a(var4, 0, ((hf) this).field_j, param2, 0, var5);
                                   break L1;
                                 } else {
-                                  if ((var10 ^ -1) != -3) {
-                                    if ((var10 ^ -1) == -9) {
-                                      if (-1 != (var7 ^ -1)) {
-                                        if (-2 == (var7 ^ -1)) {
+                                  if (var10 != 2) {
+                                    if (var10 == 8) {
+                                      if (var7 != 0) {
+                                        if (var7 == 1) {
                                           var4 = 14;
                                           break L1;
                                         } else {
@@ -845,7 +851,7 @@ final class hf implements ac, gs {
                                       }
                                     } else {
                                       if (var10 == 9) {
-                                        if (-1 != (var7 ^ -1)) {
+                                        if (var7 != 0) {
                                           if (1 == var7) {
                                             var4 = 15;
                                             break L1;
@@ -859,7 +865,7 @@ final class hf implements ac, gs {
                                         }
                                       } else {
                                         if (10 != var10) {
-                                          if (-13 == (var10 ^ -1)) {
+                                          if (var10 == 12) {
                                             L9: {
                                               if (this.f((byte) 62)) {
                                                 var9.a(-107, new fm(85, ((hf) this).field_p.d(3), ((hf) this).field_p.e(9648), ((hf) this).field_p.g((byte) 115)));
@@ -917,7 +923,7 @@ final class hf implements ac, gs {
                                                         break L1;
                                                       } else {
                                                         if (var10 != 22) {
-                                                          if (-12 == (var10 ^ -1)) {
+                                                          if (var10 == 11) {
                                                             var4 = 7;
                                                             var6 = ((hf) this).field_c.a(((hf) this).field_j, (byte) 66, 0, var4);
                                                             ((hf) this).field_c.a(var4, 0, ((hf) this).field_j, param2, 0, var5);
@@ -926,7 +932,7 @@ final class hf implements ac, gs {
                                                             ((hf) this).field_c.a(42, var6, ((hf) this).field_j, 17, 0);
                                                             break L1;
                                                           } else {
-                                                            if (-16 == (var10 ^ -1)) {
+                                                            if (var10 == 15) {
                                                               var4 = 8;
                                                               var6 = 75;
                                                               ((hf) this).field_c.a(var4, 0, ((hf) this).field_j, param2, 0, var5);
@@ -991,8 +997,8 @@ final class hf implements ac, gs {
                                             }
                                           }
                                         } else {
-                                          if (-1 != (var7 ^ -1)) {
-                                            if (-2 != (var7 ^ -1)) {
+                                          if (var7 != 0) {
+                                            if (var7 != 1) {
                                               var4 = 4;
                                               break L1;
                                             } else {
@@ -1030,12 +1036,12 @@ final class hf implements ac, gs {
             }
             if (var4 != -1) {
               ((hf) this).field_f = var4;
-              if ((var6 ^ -1) != -1) {
+              if (var6 != 0) {
                 return;
               } else {
                 L15: {
                   ((hf) this).field_c.a(var4, param0 ^ param0, ((hf) this).field_j, param2, 0, var5);
-                  if (-11 != (((hf) this).field_f ^ -1)) {
+                  if (((hf) this).field_f != 10) {
                     break L15;
                   } else {
                     ((hf) this).field_n.a(1, true, (byte) 49, 5);
@@ -1060,53 +1066,49 @@ final class hf implements ac, gs {
         if (param0 <= 103) {
             return;
         }
-        this.a(125, ((hf) this).b((byte) -122), ((hf) this).e((byte) -114), ((hf) this).c((byte) 95));
+        try {
+            this.a(125, ((hf) this).b((byte) -122), ((hf) this).e((byte) -114), ((hf) this).c((byte) 95));
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "hf.DB(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     private final boolean f(byte param0) {
-        int stackIn_14_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_12_0 = 0;
+        int stackIn_12_0 = 0;
+        int stackOut_11_0 = 0;
+        int stackOut_10_0 = 0;
         L0: {
-          if (param0 == 62) {
-            break L0;
-          } else {
-            ((hf) this).a(-102, 87, -37, 69, 88);
-            break L0;
-          }
-        }
-        L1: {
-          L2: {
+          L1: {
             if (((hf) this).field_j == 0) {
-              break L2;
+              break L1;
             } else {
               if (((hf) this).field_j == 2) {
-                break L2;
+                break L1;
               } else {
-                if ((((hf) this).field_j ^ -1) == -5) {
-                  break L2;
+                if (((hf) this).field_j == 4) {
+                  break L1;
                 } else {
-                  if ((((hf) this).field_j ^ -1) == -11) {
-                    break L2;
+                  if (((hf) this).field_j == 10) {
+                    break L1;
                   } else {
                     if (12 == ((hf) this).field_j) {
-                      break L2;
+                      break L1;
                     } else {
                       if (1 == ((hf) this).field_j) {
-                        break L2;
+                        break L1;
                       } else {
                         if (((hf) this).field_j == 5) {
-                          break L2;
+                          break L1;
                         } else {
-                          if ((((hf) this).field_j ^ -1) == -8) {
-                            break L2;
+                          if (((hf) this).field_j == 7) {
+                            break L1;
                           } else {
-                            if ((((hf) this).field_j ^ -1) != -10) {
-                              stackOut_13_0 = 0;
-                              stackIn_14_0 = stackOut_13_0;
-                              break L1;
+                            if (((hf) this).field_j != 9) {
+                              stackOut_11_0 = 0;
+                              stackIn_12_0 = stackOut_11_0;
+                              break L0;
                             } else {
-                              break L2;
+                              break L1;
                             }
                           }
                         }
@@ -1117,11 +1119,11 @@ final class hf implements ac, gs {
               }
             }
           }
-          stackOut_12_0 = 1;
-          stackIn_14_0 = stackOut_12_0;
-          break L1;
+          stackOut_10_0 = 1;
+          stackIn_12_0 = stackOut_10_0;
+          break L0;
         }
-        return stackIn_14_0 != 0;
+        return stackIn_12_0 != 0;
     }
 
     public final int c(byte param0) {
@@ -1139,10 +1141,80 @@ final class hf implements ac, gs {
     }
 
     public final boolean a(boolean param0, uh param1) {
-        if (param0) {
-            field_b = 60;
+        RuntimeException var3 = null;
+        int stackIn_5_0 = 0;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_4_0 = 0;
+        int stackOut_3_0 = 0;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (!param0) {
+                break L1;
+              } else {
+                field_b = 60;
+                break L1;
+              }
+            }
+            L2: {
+              if (param1 != ((hf) this).field_l) {
+                stackOut_4_0 = 0;
+                stackIn_5_0 = stackOut_4_0;
+                break L2;
+              } else {
+                stackOut_3_0 = 1;
+                stackIn_5_0 = stackOut_3_0;
+                break L2;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var3 = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var3;
+            stackOut_6_1 = new StringBuilder().append("hf.D(").append(param0).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param1 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L3;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L3;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
         }
-        return param1 == ((hf) this).field_l ? true : false;
+        return stackIn_5_0 != 0;
     }
 
     final static boolean a(int param0, char param1) {
@@ -1181,19 +1253,25 @@ final class hf implements ac, gs {
     }
 
     hf(hca param0, int param1) {
+        aga var3 = null;
         ((hf) this).field_o = false;
         ((hf) this).field_h = 0;
         ((hf) this).field_g = 0;
         ((hf) this).field_k = 0;
         ((hf) this).field_m = false;
-        ((hf) this).field_p = param0;
-        ((hf) this).field_i = param1;
-        ((hf) this).a(param1, 1);
-        aga var3 = new aga(tga.field_a, 0, 0, 0, 0, 0, 0, 0);
-        ((hf) this).field_l = new uh(var3);
+        try {
+            ((hf) this).field_p = param0;
+            ((hf) this).field_i = param1;
+            ((hf) this).a(param1, 1);
+            var3 = new aga(tga.field_a, 0, 0, 0, 0, 0, 0, 0);
+            ((hf) this).field_l = new uh(var3);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "hf.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     public final void a(int param0, la param1) {
+        sva var5 = null;
         if (param1 == null) {
             return;
         }
@@ -1208,8 +1286,12 @@ final class hf implements ac, gs {
         if (!(var4 instanceof sva)) {
             return;
         }
-        sva var5 = (sva) (Object) var4;
-        var5.a((byte) 45, ((hf) this).field_l);
+        try {
+            var5 = (sva) (Object) var4;
+            var5.a((byte) 45, ((hf) this).field_l);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "hf.H(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

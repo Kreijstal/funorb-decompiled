@@ -35,10 +35,6 @@ final class rj extends gn {
     }
 
     final static nc j(int param0) {
-        if (param0 != -30272) {
-            field_G = null;
-            return (nc) (Object) new k();
-        }
         return (nc) (Object) new k();
     }
 

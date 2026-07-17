@@ -11,9 +11,6 @@ class qe extends oh {
     public static void a(byte param0) {
         field_l = null;
         field_j = null;
-        if (param0 != 93) {
-            return;
-        }
         field_k = null;
     }
 
@@ -77,9 +74,6 @@ class qe extends oh {
     }
 
     final static boolean a(int param0) {
-        if (param0 < 89) {
-            return true;
-        }
         if (rp.field_I == null) {
             return false;
         }

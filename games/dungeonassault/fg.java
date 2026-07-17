@@ -54,13 +54,13 @@ final class fg extends gj {
         int var5 = 0;
         var5 = DungeonAssault.field_K;
         if (param1 == 2048) {
-          if ((((fg) this).field_h ^ -1L) <= (((fg) this).field_l ^ -1L)) {
+          if (~((fg) this).field_h <= ~((fg) this).field_l) {
             var4 = 0;
             L0: while (true) {
               L1: {
                 ((fg) this).field_l = ((fg) this).field_l + param0;
                 var4++;
-                if ((var4 ^ -1) <= -11) {
+                if (var4 >= 10) {
                   break L1;
                 } else {
                   if (((fg) this).field_l < ((fg) this).field_h) {
@@ -70,7 +70,7 @@ final class fg extends gj {
                   }
                 }
               }
-              if ((((fg) this).field_h ^ -1L) < (((fg) this).field_l ^ -1L)) {
+              if (~((fg) this).field_h < ~((fg) this).field_l) {
                 ((fg) this).field_l = ((fg) this).field_h;
                 return var4;
               } else {
@@ -85,13 +85,13 @@ final class fg extends gj {
           }
         } else {
           field_m = null;
-          if ((((fg) this).field_h ^ -1L) <= (((fg) this).field_l ^ -1L)) {
+          if (~((fg) this).field_h <= ~((fg) this).field_l) {
             var4 = 0;
             L2: while (true) {
               L3: {
                 ((fg) this).field_l = ((fg) this).field_l + param0;
                 var4++;
-                if ((var4 ^ -1) <= -11) {
+                if (var4 >= 10) {
                   break L3;
                 } else {
                   if (((fg) this).field_l < ((fg) this).field_h) {
@@ -101,7 +101,7 @@ final class fg extends gj {
                   }
                 }
               }
-              if ((((fg) this).field_h ^ -1L) >= (((fg) this).field_l ^ -1L)) {
+              if (~((fg) this).field_h >= ~((fg) this).field_l) {
                 return var4;
               } else {
                 ((fg) this).field_l = ((fg) this).field_h;
@@ -176,8 +176,8 @@ final class fg extends gj {
         var4 = -((fg) this).field_k + var2;
         ((fg) this).field_k = var2;
         if (-5000000000L < var4) {
-          if ((var4 ^ -1L) <= -5000000001L) {
-            var6 = (long)param0;
+          if (var4 >= 5000000000L) {
+            var6 = 0L;
             var8 = 1;
             L0: while (true) {
               if (((fg) this).field_n < var8) {
@@ -191,7 +191,7 @@ final class fg extends gj {
           } else {
             L1: {
               ((fg) this).field_j[((fg) this).field_e] = var4;
-              if (-2 < (((fg) this).field_n ^ -1)) {
+              if (((fg) this).field_n < 1) {
                 ((fg) this).field_n = ((fg) this).field_n + 1;
                 break L1;
               } else {
@@ -199,7 +199,7 @@ final class fg extends gj {
               }
             }
             ((fg) this).field_e = (1 + ((fg) this).field_e) % 10;
-            var6 = (long)param0;
+            var6 = 0L;
             var8 = 1;
             L2: while (true) {
               if (((fg) this).field_n < var8) {
@@ -212,7 +212,7 @@ final class fg extends gj {
             }
           }
         } else {
-          var6 = (long)param0;
+          var6 = 0L;
           var8 = 1;
           L3: while (true) {
             if (((fg) this).field_n < var8) {

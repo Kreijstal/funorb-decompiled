@@ -154,11 +154,6 @@ abstract class dh {
 
     public static void a(int param0) {
         field_e = null;
-        if (param0 != 16) {
-            dh.c(-103);
-            field_g = null;
-            return;
-        }
         field_g = null;
     }
 

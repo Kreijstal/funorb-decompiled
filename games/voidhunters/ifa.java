@@ -14,9 +14,6 @@ final class ifa extends ksa {
         field_f = null;
         field_e = null;
         field_g = null;
-        if (param0 <= 20) {
-            field_g = null;
-        }
     }
 
     private ifa() throws Throwable {
@@ -33,7 +30,7 @@ final class ifa extends ksa {
         field_d = 9;
         field_h = "Improves energy recharge, but explosive";
         field_f = new char[64];
-        for (var0 = 0; -27 < (var0 ^ -1); var0++) {
+        for (var0 = 0; var0 < 26; var0++) {
             field_f[var0] = (char)(65 + var0);
         }
         for (var0 = 26; 52 > var0; var0++) {
@@ -42,7 +39,7 @@ final class ifa extends ksa {
         for (var0 = 52; 62 > var0; var0++) {
             field_f[var0] = (char)(var0 + -4);
         }
-        field_f[62] = (char)43;
-        field_f[63] = (char)47;
+        field_f[62] = '+';
+        field_f[63] = '/';
     }
 }

@@ -7,9 +7,6 @@ final class reb {
 
     public static void a(boolean param0) {
         field_a = null;
-        if (param0) {
-            field_a = null;
-        }
     }
 
     static {

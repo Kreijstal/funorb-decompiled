@@ -8,15 +8,23 @@ final class vr extends wp {
     static String field_F;
 
     final void a(int param0, int param1, pk param2, int param3) {
-        ((vr) this).field_E = ((vr) this).field_E + 1;
-        int var5 = 46 / ((param1 - -25) / 45);
-        super.a(param0, 54, param2, param3);
+        try {
+            ((vr) this).field_E = ((vr) this).field_E + 1;
+            int var5_int = 46 / ((param1 - -25) / 45);
+            super.a(param0, 54, param2, param3);
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "vr.U(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+        }
     }
 
     final static void a(java.awt.Component param0, int param1) {
-        param0.removeKeyListener((java.awt.event.KeyListener) (Object) wd.field_e);
-        param0.removeFocusListener((java.awt.event.FocusListener) (Object) wd.field_e);
-        lv.field_i = param1;
+        try {
+            param0.removeKeyListener((java.awt.event.KeyListener) (Object) wd.field_e);
+            param0.removeFocusListener((java.awt.event.FocusListener) (Object) wd.field_e);
+            lv.field_i = param1;
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "vr.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
@@ -36,8 +44,8 @@ final class vr extends wp {
         if (0 != param3) {
           return;
         } else {
-          var5 = (((vr) this).field_q >> 303200449) + (((vr) this).field_r + param0);
-          var6 = (((vr) this).field_p >> -1573516831) + param1 - -((vr) this).field_v;
+          var5 = (((vr) this).field_q >> 1) + (((vr) this).field_r + param0);
+          var6 = (((vr) this).field_p >> 1) + param1 - -((vr) this).field_v;
           var8 = ((vr) this).field_H.c(-103);
           if (mb.field_f != var8) {
             if (kt.field_a != var8) {
@@ -47,7 +55,7 @@ final class vr extends wp {
                     break L0;
                   } else {
                     var15 = fw.field_m[1];
-                    var15.d(var5 - (var15.field_x >> 732386913), var6 - (var15.field_u >> 698755105), 256);
+                    var15.d(var5 - (var15.field_x >> 1), var6 - (var15.field_u >> 1), 256);
                     break L0;
                   }
                 }
@@ -60,7 +68,7 @@ final class vr extends wp {
                 }
               } else {
                 var14 = fw.field_m[2];
-                var14.d(-(var14.field_x >> -1843542399) + var5, var6 + -(var14.field_u >> -1789690495), 256);
+                var14.d(-(var14.field_x >> 1) + var5, var6 + -(var14.field_u >> 1), 256);
                 if (param2 >= -35) {
                   var12 = null;
                   ((vr) this).a(86, -51, (pk) null, 16);
@@ -71,14 +79,14 @@ final class vr extends wp {
               }
             } else {
               var17 = fw.field_m[0];
-              var9 = var17.field_z << -210870079;
-              var10 = var17.field_w << -715242463;
+              var9 = var17.field_z << 1;
+              var10 = var17.field_w << 1;
               if (kv.field_a != null) {
                 if (var9 <= kv.field_a.field_x) {
                   if (var10 <= kv.field_a.field_u) {
                     jq.a(7161, kv.field_a);
                     lk.b();
-                    var17.a(112, 144, var17.field_z << -220647484, var17.field_w << -205145404, -((vr) this).field_E << -167177430, 4096);
+                    var17.a(112, 144, var17.field_z << 4, var17.field_w << 4, -((vr) this).field_E << 10, 4096);
                     su.a((byte) 126);
                     kv.field_a.d(var5 + -var17.field_z, -var17.field_w + var6, 256);
                     if (param2 >= -35) {
@@ -91,7 +99,7 @@ final class vr extends wp {
                   } else {
                     kv.field_a = new wb(var9, var10);
                     jq.a(7161, kv.field_a);
-                    var17.a(112, 144, var17.field_z << -220647484, var17.field_w << -205145404, -((vr) this).field_E << -167177430, 4096);
+                    var17.a(112, 144, var17.field_z << 4, var17.field_w << 4, -((vr) this).field_E << 10, 4096);
                     su.a((byte) 126);
                     kv.field_a.d(var5 + -var17.field_z, -var17.field_w + var6, 256);
                     if (param2 >= -35) {
@@ -106,7 +114,7 @@ final class vr extends wp {
                   L1: {
                     kv.field_a = new wb(var9, var10);
                     jq.a(7161, kv.field_a);
-                    var17.a(112, 144, var17.field_z << -220647484, var17.field_w << -205145404, -((vr) this).field_E << -167177430, 4096);
+                    var17.a(112, 144, var17.field_z << 4, var17.field_w << 4, -((vr) this).field_E << 10, 4096);
                     su.a((byte) 126);
                     kv.field_a.d(var5 + -var17.field_z, -var17.field_w + var6, 256);
                     if (param2 < -35) {
@@ -123,7 +131,7 @@ final class vr extends wp {
                 L2: {
                   kv.field_a = new wb(var9, var10);
                   jq.a(7161, kv.field_a);
-                  var17.a(112, 144, var17.field_z << -220647484, var17.field_w << -205145404, -((vr) this).field_E << -167177430, 4096);
+                  var17.a(112, 144, var17.field_z << 4, var17.field_w << 4, -((vr) this).field_E << 10, 4096);
                   su.a((byte) 126);
                   kv.field_a.d(var5 + -var17.field_z, -var17.field_w + var6, 256);
                   if (param2 < -35) {
@@ -139,15 +147,15 @@ final class vr extends wp {
             }
           } else {
             var16 = fw.field_m[0];
-            var9 = var16.field_z << -210870079;
-            var10 = var16.field_w << -715242463;
+            var9 = var16.field_z << 1;
+            var10 = var16.field_w << 1;
             if (kv.field_a != null) {
               if (var9 <= kv.field_a.field_x) {
                 if (var10 > kv.field_a.field_u) {
                   L3: {
                     kv.field_a = new wb(var9, var10);
                     jq.a(7161, kv.field_a);
-                    var16.a(112, 144, var16.field_z << -220647484, var16.field_w << -205145404, -((vr) this).field_E << -167177430, 4096);
+                    var16.a(112, 144, var16.field_z << 4, var16.field_w << 4, -((vr) this).field_E << 10, 4096);
                     su.a((byte) 126);
                     kv.field_a.d(var5 + -var16.field_z, -var16.field_w + var6, 256);
                     if (param2 < -35) {
@@ -163,7 +171,7 @@ final class vr extends wp {
                   L4: {
                     jq.a(7161, kv.field_a);
                     lk.b();
-                    var16.a(112, 144, var16.field_z << -220647484, var16.field_w << -205145404, -((vr) this).field_E << -167177430, 4096);
+                    var16.a(112, 144, var16.field_z << 4, var16.field_w << 4, -((vr) this).field_E << 10, 4096);
                     su.a((byte) 126);
                     kv.field_a.d(var5 + -var16.field_z, -var16.field_w + var6, 256);
                     if (param2 < -35) {
@@ -180,7 +188,7 @@ final class vr extends wp {
                 L5: {
                   kv.field_a = new wb(var9, var10);
                   jq.a(7161, kv.field_a);
-                  var16.a(112, 144, var16.field_z << -220647484, var16.field_w << -205145404, -((vr) this).field_E << -167177430, 4096);
+                  var16.a(112, 144, var16.field_z << 4, var16.field_w << 4, -((vr) this).field_E << 10, 4096);
                   su.a((byte) 126);
                   kv.field_a.d(var5 + -var16.field_z, -var16.field_w + var6, 256);
                   if (param2 < -35) {
@@ -197,7 +205,7 @@ final class vr extends wp {
               L6: {
                 kv.field_a = new wb(var9, var10);
                 jq.a(7161, kv.field_a);
-                var16.a(112, 144, var16.field_z << -220647484, var16.field_w << -205145404, -((vr) this).field_E << -167177430, 4096);
+                var16.a(112, 144, var16.field_z << 4, var16.field_w << 4, -((vr) this).field_E << 10, 4096);
                 su.a((byte) 126);
                 kv.field_a.d(var5 + -var16.field_z, -var16.field_w + var6, 256);
                 if (param2 < -35) {
@@ -228,24 +236,80 @@ final class vr extends wp {
     }
 
     final boolean a(pk param0, byte param1) {
-        if (param1 != 61) {
-            ((vr) this).field_E = 103;
-            return false;
+        RuntimeException var3 = null;
+        int stackIn_3_0 = 0;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_2_0 = 0;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            if (param1 == 61) {
+              stackOut_2_0 = 0;
+              stackIn_3_0 = stackOut_2_0;
+              break L0;
+            } else {
+              ((vr) this).field_E = 103;
+              return false;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var3 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_1 = new StringBuilder().append("vr.Q(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L1;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L1;
+            }
+          }
+          throw qo.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
         }
-        return false;
+        return stackIn_3_0 != 0;
     }
 
     public static void a(int param0) {
         field_G = null;
         field_F = null;
-        if (param0 != -21433) {
-            Object var2 = null;
-            vr.a((java.awt.Component) null, -80);
-        }
     }
 
     vr(v param0) {
-        ((vr) this).field_H = param0;
+        try {
+            ((vr) this).field_H = param0;
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "vr.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

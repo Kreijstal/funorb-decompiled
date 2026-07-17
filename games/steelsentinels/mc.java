@@ -16,16 +16,17 @@ final class mc {
         if (param2 != -21801) {
             return;
         }
-        od.field_i = param0;
-        q.field_l = param1;
+        try {
+            od.field_i = param0;
+            q.field_l = param1;
+        } catch (RuntimeException runtimeException) {
+            throw ci.a((Throwable) (Object) runtimeException, "mc.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     public static void a(int param0) {
         field_b = null;
         field_e = null;
-        if (param0 != 23225) {
-            return;
-        }
         field_d = null;
         field_c = null;
     }

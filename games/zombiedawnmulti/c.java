@@ -20,7 +20,7 @@ final class c {
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         var2 = 0;
         var3 = f.field_a;
-        if (-6 >= (var3 ^ -1)) {
+        if (var3 >= 5) {
           if (var3 >= 105) {
             if (120 > var3) {
               L0: {
@@ -36,7 +36,7 @@ final class c {
                 }
               }
               L1: {
-                if (-4 != param0) {
+                if (param0 != 3) {
                   break L1;
                 } else {
                   var4 = -1;
@@ -44,7 +44,7 @@ final class c {
                 }
               }
               L2: {
-                if (-5 == param0) {
+                if (param0 == 4) {
                   var4 = 1;
                   var5 = 1;
                   break L2;
@@ -53,7 +53,7 @@ final class c {
                 }
               }
               L3: {
-                if (param0 == -6) {
+                if (param0 == 5) {
                   var4 = -1;
                   var5 = 1;
                   break L3;
@@ -71,7 +71,7 @@ final class c {
                 }
               }
               L5: {
-                if (-8 == param0) {
+                if (param0 == 7) {
                   var5 = -1;
                   var4 = -1;
                   break L5;
@@ -90,7 +90,7 @@ final class c {
                       }
                     }
                     L7: {
-                      if (-13 != (param0 ^ -1)) {
+                      if (param0 != 12) {
                         break L7;
                       } else {
                         var4 = -1;
@@ -98,9 +98,7 @@ final class c {
                         break L7;
                       }
                     }
-                    if (param1 < 72) {
-                      return;
-                    } else {
+                    if (param1 >= 72) {
                       L8: {
                         if (13 == param0) {
                           var5 = -1;
@@ -120,7 +118,7 @@ final class c {
                         }
                       }
                       L10: {
-                        if ((param0 ^ -1) != -16) {
+                        if (param0 != 15) {
                           break L10;
                         } else {
                           var4 = 1;
@@ -129,6 +127,8 @@ final class c {
                         }
                       }
                       hl.field_c = me.a(var5 * var2, -2106461552, var2 * var4);
+                      return;
+                    } else {
                       return;
                     }
                   }
@@ -143,7 +143,7 @@ final class c {
                 }
               }
               L12: {
-                if (-13 != (param0 ^ -1)) {
+                if (param0 != 12) {
                   break L12;
                 } else {
                   var4 = -1;
@@ -151,9 +151,7 @@ final class c {
                   break L12;
                 }
               }
-              if (param1 < 72) {
-                return;
-              } else {
+              if (param1 >= 72) {
                 L13: {
                   if (13 == param0) {
                     var5 = -1;
@@ -173,7 +171,7 @@ final class c {
                   }
                 }
                 L15: {
-                  if ((param0 ^ -1) != -16) {
+                  if (param0 != 15) {
                     break L15;
                   } else {
                     var4 = 1;
@@ -182,6 +180,8 @@ final class c {
                   }
                 }
                 hl.field_c = me.a(var5 * var2, -2106461552, var2 * var4);
+                return;
+              } else {
                 return;
               }
             } else {
@@ -196,7 +196,7 @@ final class c {
                 }
               }
               L17: {
-                if (-4 != param0) {
+                if (param0 != 3) {
                   break L17;
                 } else {
                   var4 = -1;
@@ -204,7 +204,7 @@ final class c {
                 }
               }
               L18: {
-                if (-5 == param0) {
+                if (param0 == 4) {
                   var4 = 1;
                   var5 = 1;
                   break L18;
@@ -213,7 +213,7 @@ final class c {
                 }
               }
               L19: {
-                if (param0 == -6) {
+                if (param0 == 5) {
                   var4 = -1;
                   var5 = 1;
                   break L19;
@@ -231,7 +231,7 @@ final class c {
                 }
               }
               L21: {
-                if (-8 == param0) {
+                if (param0 == 7) {
                   var5 = -1;
                   var4 = -1;
                   break L21;
@@ -250,7 +250,7 @@ final class c {
                       }
                     }
                     L23: {
-                      if (-13 != (param0 ^ -1)) {
+                      if (param0 != 12) {
                         break L23;
                       } else {
                         var4 = -1;
@@ -258,9 +258,7 @@ final class c {
                         break L23;
                       }
                     }
-                    if (param1 < 72) {
-                      return;
-                    } else {
+                    if (param1 >= 72) {
                       L24: {
                         if (13 == param0) {
                           var5 = -1;
@@ -280,7 +278,7 @@ final class c {
                         }
                       }
                       L26: {
-                        if ((param0 ^ -1) != -16) {
+                        if (param0 != 15) {
                           break L26;
                         } else {
                           var4 = 1;
@@ -289,6 +287,8 @@ final class c {
                         }
                       }
                       hl.field_c = me.a(var5 * var2, -2106461552, var2 * var4);
+                      return;
+                    } else {
                       return;
                     }
                   }
@@ -303,7 +303,7 @@ final class c {
                 }
               }
               L28: {
-                if (-13 != (param0 ^ -1)) {
+                if (param0 != 12) {
                   break L28;
                 } else {
                   var4 = -1;
@@ -311,9 +311,7 @@ final class c {
                   break L28;
                 }
               }
-              if (param1 < 72) {
-                return;
-              } else {
+              if (param1 >= 72) {
                 L29: {
                   if (13 == param0) {
                     var5 = -1;
@@ -333,7 +331,7 @@ final class c {
                   }
                 }
                 L31: {
-                  if ((param0 ^ -1) != -16) {
+                  if (param0 != 15) {
                     break L31;
                   } else {
                     var4 = 1;
@@ -342,6 +340,8 @@ final class c {
                   }
                 }
                 hl.field_c = me.a(var5 * var2, -2106461552, var2 * var4);
+                return;
+              } else {
                 return;
               }
             }
@@ -358,7 +358,7 @@ final class c {
               }
             }
             L33: {
-              if (-4 != param0) {
+              if (param0 != 3) {
                 break L33;
               } else {
                 var4 = -1;
@@ -366,7 +366,7 @@ final class c {
               }
             }
             L34: {
-              if (-5 == param0) {
+              if (param0 == 4) {
                 var4 = 1;
                 var5 = 1;
                 break L34;
@@ -375,7 +375,7 @@ final class c {
               }
             }
             L35: {
-              if (param0 == -6) {
+              if (param0 == 5) {
                 var4 = -1;
                 var5 = 1;
                 break L35;
@@ -392,7 +392,7 @@ final class c {
                 break L36;
               }
             }
-            if (-8 != param0) {
+            if (param0 != 7) {
               L37: {
                 if (8 != param0) {
                   break L37;
@@ -411,7 +411,7 @@ final class c {
                 }
               }
               L39: {
-                if (-13 != (param0 ^ -1)) {
+                if (param0 != 12) {
                   break L39;
                 } else {
                   var4 = -1;
@@ -419,9 +419,7 @@ final class c {
                   break L39;
                 }
               }
-              if (param1 < 72) {
-                return;
-              } else {
+              if (param1 >= 72) {
                 L40: {
                   if (13 == param0) {
                     var5 = -1;
@@ -441,7 +439,7 @@ final class c {
                   }
                 }
                 L42: {
-                  if ((param0 ^ -1) != -16) {
+                  if (param0 != 15) {
                     break L42;
                   } else {
                     var4 = 1;
@@ -450,6 +448,8 @@ final class c {
                   }
                 }
                 hl.field_c = me.a(var5 * var2, -2106461552, var2 * var4);
+                return;
+              } else {
                 return;
               }
             } else {
@@ -464,7 +464,7 @@ final class c {
                 }
               }
               L44: {
-                if (-13 != (param0 ^ -1)) {
+                if (param0 != 12) {
                   break L44;
                 } else {
                   var4 = -1;
@@ -472,9 +472,7 @@ final class c {
                   break L44;
                 }
               }
-              if (param1 < 72) {
-                return;
-              } else {
+              if (param1 >= 72) {
                 L45: {
                   if (13 == param0) {
                     var5 = -1;
@@ -494,7 +492,7 @@ final class c {
                   }
                 }
                 L47: {
-                  if ((param0 ^ -1) != -16) {
+                  if (param0 != 15) {
                     break L47;
                   } else {
                     var4 = 1;
@@ -503,6 +501,8 @@ final class c {
                   }
                 }
                 hl.field_c = me.a(var5 * var2, -2106461552, var2 * var4);
+                return;
+              } else {
                 return;
               }
             }
@@ -520,7 +520,7 @@ final class c {
             }
           }
           L49: {
-            if (-4 != param0) {
+            if (param0 != 3) {
               break L49;
             } else {
               var4 = -1;
@@ -528,7 +528,7 @@ final class c {
             }
           }
           L50: {
-            if (-5 == param0) {
+            if (param0 == 4) {
               var4 = 1;
               var5 = 1;
               break L50;
@@ -537,7 +537,7 @@ final class c {
             }
           }
           L51: {
-            if (param0 == -6) {
+            if (param0 == 5) {
               var4 = -1;
               var5 = 1;
               break L51;
@@ -554,7 +554,7 @@ final class c {
               break L52;
             }
           }
-          if (-8 != param0) {
+          if (param0 != 7) {
             L53: {
               if (8 != param0) {
                 break L53;
@@ -573,7 +573,7 @@ final class c {
               }
             }
             L55: {
-              if (-13 != (param0 ^ -1)) {
+              if (param0 != 12) {
                 break L55;
               } else {
                 var4 = -1;
@@ -581,9 +581,7 @@ final class c {
                 break L55;
               }
             }
-            if (param1 < 72) {
-              return;
-            } else {
+            if (param1 >= 72) {
               L56: {
                 if (13 == param0) {
                   var5 = -1;
@@ -603,7 +601,7 @@ final class c {
                 }
               }
               L58: {
-                if ((param0 ^ -1) != -16) {
+                if (param0 != 15) {
                   break L58;
                 } else {
                   var4 = 1;
@@ -612,6 +610,8 @@ final class c {
                 }
               }
               hl.field_c = me.a(var5 * var2, -2106461552, var2 * var4);
+              return;
+            } else {
               return;
             }
           } else {
@@ -626,7 +626,7 @@ final class c {
               }
             }
             L60: {
-              if (-13 != (param0 ^ -1)) {
+              if (param0 != 12) {
                 break L60;
               } else {
                 var4 = -1;
@@ -634,9 +634,7 @@ final class c {
                 break L60;
               }
             }
-            if (param1 < 72) {
-              return;
-            } else {
+            if (param1 >= 72) {
               L61: {
                 if (13 == param0) {
                   var5 = -1;
@@ -656,7 +654,7 @@ final class c {
                 }
               }
               L63: {
-                if ((param0 ^ -1) != -16) {
+                if (param0 != 15) {
                   break L63;
                 } else {
                   var4 = 1;
@@ -666,16 +664,15 @@ final class c {
               }
               hl.field_c = me.a(var5 * var2, -2106461552, var2 * var4);
               return;
+            } else {
+              return;
             }
           }
         }
     }
 
     final static boolean a(byte param0) {
-        if (param0 != 98) {
-            return true;
-        }
-        return tj.field_a.c(param0 + -224);
+        return tj.field_a.c(-126);
     }
 
     public static void a(int param0) {
@@ -687,28 +684,85 @@ final class c {
     }
 
     final static int a(byte[] param0, int param1, boolean param2, int param3) {
-        int var4 = 0;
+        int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
+        int stackIn_7_0 = 0;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_6_0 = 0;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
-        var4 = -1;
-        var5 = param3;
-        L0: while (true) {
-          if (param1 <= var5) {
-            if (!param2) {
-              c.a(104);
-              var4 = var4 ^ -1;
-              return var4;
-            } else {
-              var4 = var4 ^ -1;
-              return var4;
+        try {
+          L0: {
+            var4_int = -1;
+            var5 = param3;
+            L1: while (true) {
+              if (param1 <= var5) {
+                L2: {
+                  if (param2) {
+                    break L2;
+                  } else {
+                    c.a(104);
+                    break L2;
+                  }
+                }
+                var4_int = ~var4_int;
+                stackOut_6_0 = var4_int;
+                stackIn_7_0 = stackOut_6_0;
+                break L0;
+              } else {
+                var4_int = var4_int >>> 8 ^ ed.field_a[255 & (param0[var5] ^ var4_int)];
+                var5++;
+                continue L1;
+              }
             }
-          } else {
-            var4 = var4 >>> -874646712 ^ ed.field_a[255 & (param0[var5] ^ var4)];
-            var5++;
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var4 = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var4;
+            stackOut_8_1 = new StringBuilder().append("c.H(");
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param0 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L3;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L3;
+            }
+          }
+          throw fa.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }
+        return stackIn_7_0;
     }
 
     final ff c(int param0) {
@@ -731,46 +785,34 @@ final class c {
     }
 
     final static void a(boolean param0, byte param1, float param2, String param3) {
-        int var4 = 0;
-        if (null == pj.field_I) {
-          pj.field_I = new ta(nb.field_a, pm.field_P);
-          nb.field_a.b(3016, (cf) (Object) pj.field_I);
-          pj.field_I.a(param3, param2, 66, param0);
-          oo.b();
-          var4 = 30 % ((param1 - -45) / 37);
-          wj.b(true, -114);
-          return;
-        } else {
-          pj.field_I.a(param3, param2, 66, param0);
-          oo.b();
-          var4 = 30 % ((param1 - -45) / 37);
-          wj.b(true, -114);
-          return;
+        try {
+            if (null == pj.field_I) {
+                pj.field_I = new ta(nb.field_a, pm.field_P);
+                nb.field_a.b(3016, (cf) (Object) pj.field_I);
+            }
+            pj.field_I.a(param3, param2, 66, param0);
+            oo.b();
+            int var4_int = 30 % ((param1 - -45) / 37);
+            wj.b(true, -114);
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) (Object) runtimeException, "c.C(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
     final void a(ff param0, boolean param1) {
-        if (null == param0.field_w) {
-          param0.field_v = ((c) this).field_a.field_v;
-          param0.field_w = ((c) this).field_a;
-          if (!param1) {
+        if (null != param0.field_w) {
+            param0.c((byte) -70);
+        }
+        param0.field_v = ((c) this).field_a.field_v;
+        param0.field_w = ((c) this).field_a;
+        if (!param1) {
             return;
-          } else {
+        }
+        try {
             param0.field_w.field_v = param0;
             param0.field_v.field_w = param0;
-            return;
-          }
-        } else {
-          param0.c((byte) -70);
-          param0.field_v = ((c) this).field_a.field_v;
-          param0.field_w = ((c) this).field_a;
-          if (!param1) {
-            return;
-          } else {
-            param0.field_w.field_v = param0;
-            param0.field_v.field_w = param0;
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) (Object) runtimeException, "c.G(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 

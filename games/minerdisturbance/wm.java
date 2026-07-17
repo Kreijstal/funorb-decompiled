@@ -22,7 +22,8 @@ final class wm {
     }
 
     final byte[] a(boolean param0, byte[] param1) {
-        int var3 = 0;
+        RuntimeException var3 = null;
+        int var3_int = 0;
         int[] var4 = null;
         int var5 = 0;
         int var6 = 0;
@@ -36,79 +37,133 @@ final class wm {
         int[] var18 = null;
         int[] var19 = null;
         int[] var20 = null;
-        L0: {
-          var11 = MinerDisturbance.field_ab;
-          if (param0) {
-            break L0;
-          } else {
-            ((wm) this).field_h = -34;
-            break L0;
-          }
-        }
-        L1: {
-          if (((wm) this).field_a != null) {
-            var3 = 14 + (int)((long)((wm) this).field_h * (long)param1.length / (long)((wm) this).field_b);
-            var20 = new int[var3];
-            var18 = var20;
-            var16 = var18;
-            var14 = var16;
-            var4 = var14;
-            var5 = 0;
-            var6 = 0;
-            var7 = 0;
-            L2: while (true) {
-              if (param1.length <= var7) {
-                param1 = new byte[var3];
-                var12 = 0;
-                var7 = var12;
+        byte[] stackIn_20_0 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        String stackIn_24_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        byte[] stackOut_19_0 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        String stackOut_23_2 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        String stackOut_22_2 = null;
+        var11 = MinerDisturbance.field_ab;
+        try {
+          L0: {
+            L1: {
+              if (param0) {
+                break L1;
+              } else {
+                ((wm) this).field_h = -34;
+                break L1;
+              }
+            }
+            L2: {
+              if (((wm) this).field_a != null) {
+                var3_int = 14 + (int)((long)((wm) this).field_h * (long)param1.length / (long)((wm) this).field_b);
+                var20 = new int[var3_int];
+                var18 = var20;
+                var16 = var18;
+                var14 = var16;
+                var4 = var14;
+                var5 = 0;
+                var6 = 0;
+                var7 = 0;
                 L3: while (true) {
-                  if ((var12 ^ -1) <= (var3 ^ -1)) {
-                    break L1;
-                  } else {
-                    L4: {
-                      var8 = 32768 + var20[var12] >> 1456988656;
-                      if (-128 > var8) {
-                        param1[var12] = (byte)-128;
-                        break L4;
+                  if (param1.length <= var7) {
+                    param1 = new byte[var3_int];
+                    var12 = 0;
+                    var7 = var12;
+                    L4: while (true) {
+                      if (~var12 <= ~var3_int) {
+                        break L2;
                       } else {
-                        if (-128 > (var8 ^ -1)) {
-                          param1[var12] = (byte)127;
-                          break L4;
-                        } else {
-                          param1[var12] = (byte)var8;
-                          break L4;
+                        L5: {
+                          var8 = 32768 + var20[var12] >> 16;
+                          if (-128 > var8) {
+                            param1[var12] = (byte) -128;
+                            break L5;
+                          } else {
+                            if (var8 > 127) {
+                              param1[var12] = (byte) 127;
+                              break L5;
+                            } else {
+                              param1[var12] = (byte)var8;
+                              break L5;
+                            }
+                          }
                         }
+                        var12++;
+                        continue L4;
                       }
                     }
-                    var12++;
-                    continue L3;
+                  } else {
+                    var8 = param1[var7];
+                    var19 = ((wm) this).field_a[var6];
+                    var10 = 0;
+                    L6: while (true) {
+                      if (var10 >= 14) {
+                        var6 = var6 + ((wm) this).field_h;
+                        var10 = var6 / ((wm) this).field_b;
+                        var6 = var6 - ((wm) this).field_b * var10;
+                        var5 = var5 + var10;
+                        var7++;
+                        continue L3;
+                      } else {
+                        var4[var5 + var10] = var4[var5 + var10] + var8 * var19[var10];
+                        var10++;
+                        continue L6;
+                      }
+                    }
                   }
                 }
               } else {
-                var8 = param1[var7];
-                var19 = ((wm) this).field_a[var6];
-                var10 = 0;
-                L5: while (true) {
-                  if (-15 >= (var10 ^ -1)) {
-                    var6 = var6 + ((wm) this).field_h;
-                    var10 = var6 / ((wm) this).field_b;
-                    var6 = var6 - ((wm) this).field_b * var10;
-                    var5 = var5 + var10;
-                    var7++;
-                    continue L2;
-                  } else {
-                    var4[var5 + var10] = var4[var5 + var10] + var8 * var19[var10];
-                    var10++;
-                    continue L5;
-                  }
-                }
+                break L2;
               }
             }
-          } else {
-            break L1;
+            stackOut_19_0 = (byte[]) param1;
+            stackIn_20_0 = stackOut_19_0;
+            break L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L7: {
+            var3 = decompiledCaughtException;
+            stackOut_21_0 = (RuntimeException) var3;
+            stackOut_21_1 = new StringBuilder().append("wm.E(").append(param0).append(44);
+            stackIn_23_0 = stackOut_21_0;
+            stackIn_23_1 = stackOut_21_1;
+            stackIn_22_0 = stackOut_21_0;
+            stackIn_22_1 = stackOut_21_1;
+            if (param1 == null) {
+              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_2 = "null";
+              stackIn_24_0 = stackOut_23_0;
+              stackIn_24_1 = stackOut_23_1;
+              stackIn_24_2 = stackOut_23_2;
+              break L7;
+            } else {
+              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_2 = "{...}";
+              stackIn_24_0 = stackOut_22_0;
+              stackIn_24_1 = stackOut_22_1;
+              stackIn_24_2 = stackOut_22_2;
+              break L7;
+            }
+          }
+          throw lj.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 41);
         }
-        return param1;
+        return stackIn_20_0;
     }
 
     final int b(int param0, byte param1) {
@@ -122,13 +177,29 @@ final class wm {
     }
 
     final static void a(boolean param0) {
-        int var1 = 0;
-        int var2 = MinerDisturbance.field_ab;
-        for (var1 = -1 + ke.field_X.length; var1 >= 0; var1--) {
-            ke.field_X[var1] = false;
-        }
-        if (param0) {
-            wm.a(false);
+        int var1_int = 0;
+        RuntimeException var1 = null;
+        int var2 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var2 = MinerDisturbance.field_ab;
+        try {
+          L0: {
+            var1_int = -1 + ke.field_X.length;
+            L1: while (true) {
+              if (var1_int < 0) {
+                wm.a(false);
+                break L0;
+              } else {
+                ke.field_X[var1_int] = false;
+                var1_int--;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw lj.a((Throwable) (Object) var1, "wm.D(" + 0 + 41);
         }
     }
 
@@ -168,7 +239,7 @@ final class wm {
                 var5 = ((wm) this).field_a[var4];
                 var6 = (double)var4 / (double)param0 + 6.0;
                 var8 = (int)Math.floor(-7.0 + var6 + 1.0);
-                if (-1 >= (var8 ^ -1)) {
+                if (var8 >= 0) {
                   break L1;
                 } else {
                   var8 = 0;

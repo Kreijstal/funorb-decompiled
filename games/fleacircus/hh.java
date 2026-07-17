@@ -9,18 +9,9 @@ final class hh {
     static bi[] field_a;
 
     public static void a(boolean param0) {
-        if (!param0) {
-          hh.a(72);
-          field_b = null;
-          field_c = null;
-          field_a = null;
-          return;
-        } else {
-          field_b = null;
-          field_c = null;
-          field_a = null;
-          return;
-        }
+        field_b = null;
+        field_c = null;
+        field_a = null;
     }
 
     final static void a(int param0) {

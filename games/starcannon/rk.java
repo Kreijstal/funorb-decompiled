@@ -29,59 +29,36 @@ final class rk {
     }
 
     final void b(int param0, rf param1) {
-        if (param0 > 55) {
-          if (param1.field_d != null) {
-            param1.b(4);
+        try {
+            if (param0 <= 55) {
+                rf discarded$0 = ((rk) this).c(-56);
+            }
+            if (param1.field_d != null) {
+                param1.b(4);
+            }
             param1.field_d = ((rk) this).field_c.field_d;
             param1.field_a = ((rk) this).field_c;
             param1.field_d.field_a = param1;
             param1.field_a.field_d = param1;
-            return;
-          } else {
-            param1.field_d = ((rk) this).field_c.field_d;
-            param1.field_a = ((rk) this).field_c;
-            param1.field_d.field_a = param1;
-            param1.field_a.field_d = param1;
-            return;
-          }
-        } else {
-          rf discarded$1 = ((rk) this).c(-56);
-          if (param1.field_d == null) {
-            param1.field_d = ((rk) this).field_c.field_d;
-            param1.field_a = ((rk) this).field_c;
-            param1.field_d.field_a = param1;
-            param1.field_a.field_d = param1;
-            return;
-          } else {
-            param1.b(4);
-            param1.field_d = ((rk) this).field_c.field_d;
-            param1.field_a = ((rk) this).field_c;
-            param1.field_d.field_a = param1;
-            param1.field_a.field_d = param1;
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "rk.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
     final void a(int param0, rf param1) {
-        L0: {
-          if (param1.field_d != null) {
-            param1.b(4);
-            break L0;
-          } else {
-            break L0;
-          }
-        }
-        param1.field_d = ((rk) this).field_c;
-        param1.field_a = ((rk) this).field_c.field_a;
-        param1.field_d.field_a = param1;
-        if (param0 >= -44) {
-          rf discarded$2 = ((rk) this).a(63);
-          param1.field_a.field_d = param1;
-          return;
-        } else {
-          param1.field_a.field_d = param1;
-          return;
+        try {
+            if (!(param1.field_d == null)) {
+                param1.b(4);
+            }
+            param1.field_d = ((rk) this).field_c;
+            param1.field_a = ((rk) this).field_c.field_a;
+            param1.field_d.field_a = param1;
+            if (param0 >= -44) {
+                rf discarded$0 = ((rk) this).a(63);
+            }
+            param1.field_a.field_d = param1;
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "rk.G(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

@@ -26,25 +26,16 @@ class db extends vf {
     }
 
     public final void a(byte param0, int param1, boolean param2, fj param3, int param4) {
-        if (!param2) {
-          if (param0 >= -97) {
-            db.a((byte) -16);
+        try {
+            if (param2) {
+                ea.a(true, param4 - -param3.field_m, param1 + param3.field_q, param3.field_z, param3.field_F);
+            }
+            if (param0 >= -97) {
+                db.a((byte) -16);
+            }
             super.a((byte) -113, param1, param2, param3, param4);
-            return;
-          } else {
-            super.a((byte) -113, param1, param2, param3, param4);
-            return;
-          }
-        } else {
-          ea.a(true, param4 - -param3.field_m, param1 + param3.field_q, param3.field_z, param3.field_F);
-          if (param0 < -97) {
-            super.a((byte) -113, param1, param2, param3, param4);
-            return;
-          } else {
-            db.a((byte) -16);
-            super.a((byte) -113, param1, param2, param3, param4);
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "db.C(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 41);
         }
     }
 

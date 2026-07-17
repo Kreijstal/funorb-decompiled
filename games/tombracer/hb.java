@@ -9,76 +9,120 @@ final class hb extends coa {
     static String field_v;
 
     final static mi a(in param0, boolean param1) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         StringBuilder var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        int stackIn_5_0 = 0;
-        int stackIn_14_0 = 0;
-        int stackOut_13_0 = 0;
+        int stackIn_13_0 = 0;
+        mi stackIn_14_0 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_18_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int stackOut_12_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
+        int stackOut_11_0 = 0;
+        mi stackOut_13_0 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
         var7 = TombRacer.field_G ? 1 : 0;
-        param0.field_b = param0.field_b - 1;
-        var2 = param0.field_b - 1;
-        var3 = new StringBuilder();
-        var4 = param0.b(21098);
-        StringBuilder discarded$7 = var3.append(var4);
-        var5 = param1 ? 1 : 0;
-        L0: while (true) {
-          if (!param0.a(0)) {
-            var6 = param0.b(21098);
-            if (var5 != 0) {
-              StringBuilder discarded$8 = var3.append(var6);
-              var5 = 0;
-              continue L0;
-            } else {
-              L1: {
-                if (var6 == 92) {
-                  var5 = 1;
-                  break L1;
+        try {
+          L0: {
+            int fieldTemp$9 = param0.field_b - 1;
+            param0.field_b = param0.field_b - 1;
+            var2_int = fieldTemp$9;
+            var3 = new StringBuilder();
+            var4 = param0.b(21098);
+            StringBuilder discarded$10 = var3.append(var4);
+            var5 = 0;
+            L1: while (true) {
+              L2: {
+                if (param0.a(0)) {
+                  break L2;
                 } else {
-                  StringBuilder discarded$9 = var3.append(var6);
-                  break L1;
-                }
-              }
-              if (var6 != var4) {
-                continue L0;
-              } else {
-                L2: {
-                  if (34 != var4) {
-                    stackOut_13_0 = nl.field_d;
-                    stackIn_14_0 = stackOut_13_0;
-                    break L2;
+                  var6 = param0.b(21098);
+                  if (var5 != 0) {
+                    StringBuilder discarded$11 = var3.append(var6);
+                    var5 = 0;
+                    continue L1;
                   } else {
-                    stackOut_12_0 = ma.field_e;
-                    stackIn_14_0 = stackOut_12_0;
-                    break L2;
+                    L3: {
+                      if (var6 == 92) {
+                        var5 = 1;
+                        break L3;
+                      } else {
+                        StringBuilder discarded$12 = var3.append(var6);
+                        break L3;
+                      }
+                    }
+                    if (var6 != var4) {
+                      continue L1;
+                    } else {
+                      break L2;
+                    }
                   }
                 }
-                var6 = stackIn_14_0;
-                return new mi(var6, var2, var3.toString());
               }
-            }
-          } else {
-            L3: {
-              if (34 != var4) {
-                stackOut_4_0 = nl.field_d;
-                stackIn_5_0 = stackOut_4_0;
-                break L3;
-              } else {
-                stackOut_3_0 = ma.field_e;
-                stackIn_5_0 = stackOut_3_0;
-                break L3;
+              L4: {
+                if (34 != var4) {
+                  stackOut_12_0 = nl.field_d;
+                  stackIn_13_0 = stackOut_12_0;
+                  break L4;
+                } else {
+                  stackOut_11_0 = ma.field_e;
+                  stackIn_13_0 = stackOut_11_0;
+                  break L4;
+                }
               }
+              var6 = stackIn_13_0;
+              stackOut_13_0 = new mi(var6, var2_int, var3.toString());
+              stackIn_14_0 = stackOut_13_0;
+              break L0;
             }
-            var6 = stackIn_5_0;
-            return new mi(var6, var2, var3.toString());
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L5: {
+            var2 = decompiledCaughtException;
+            stackOut_15_0 = (RuntimeException) var2;
+            stackOut_15_1 = new StringBuilder().append("hb.B(");
+            stackIn_17_0 = stackOut_15_0;
+            stackIn_17_1 = stackOut_15_1;
+            stackIn_16_0 = stackOut_15_0;
+            stackIn_16_1 = stackOut_15_1;
+            if (param0 == null) {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "null";
+              stackIn_18_0 = stackOut_17_0;
+              stackIn_18_1 = stackOut_17_1;
+              stackIn_18_2 = stackOut_17_2;
+              break L5;
+            } else {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "{...}";
+              stackIn_18_0 = stackOut_16_0;
+              stackIn_18_1 = stackOut_16_1;
+              stackIn_18_2 = stackOut_16_2;
+              break L5;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + 0 + 41);
         }
+        return stackIn_14_0;
     }
 
     public hb() {
@@ -89,14 +133,7 @@ final class hb extends coa {
         field_v = null;
         field_u = null;
         field_t = null;
-        if (!param0) {
-          field_u = null;
-          field_x = null;
-          return;
-        } else {
-          field_x = null;
-          return;
-        }
+        field_x = null;
     }
 
     final int[][] b(int param0, int param1) {
@@ -138,9 +175,9 @@ final class hb extends coa {
                 }
               } else {
                 var9 = ((hb) this).field_p[var8 % ((hb) this).field_m + var7];
-                var6[var8] = sea.c(4080, var9 << -617884060);
-                var5[var8] = sea.c(var9, 65280) >> 1974776580;
-                var4[var8] = sea.c(4080, var9 >> 1426423564);
+                var6[var8] = sea.c(4080, var9 << 4);
+                var5[var8] = sea.c(var9, 65280) >> 4;
+                var4[var8] = sea.c(4080, var9 >> 12);
                 var8++;
                 continue L0;
               }
@@ -181,7 +218,7 @@ final class hb extends coa {
 
     private static void $cfr$clinit() {
         field_u = "Connection timed out. Please try using a different server.";
-        field_x = new char[]{(char)91, (char)93, (char)35};
+        field_x = new char[]{'[', ']', '#'};
         field_v = "No Medal";
     }
 }

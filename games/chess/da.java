@@ -254,7 +254,7 @@ final class da extends ua {
             g.field_d = new ci[5];
             var18 = 0;
             L2: while (true) {
-              if (-6 >= (var18 ^ -1)) {
+              if (var18 >= 5) {
                 L3: {
                   L4: {
                     bj.field_jb = new ci(0L, param7);
@@ -836,7 +836,7 @@ final class da extends ua {
                     L9: {
                       var9 = tk.field_h.i(-115);
                       tk.field_h.field_l = 0;
-                      if (-101 < (var9 ^ -1)) {
+                      if (var9 < 100) {
                         break L9;
                       } else {
                         if (var9 <= 105) {
@@ -848,8 +848,8 @@ final class da extends ua {
                         }
                       }
                     }
-                    if ((var9 ^ -1) != -249) {
-                      if ((var9 ^ -1) == -100) {
+                    if (var9 != 248) {
+                      if (var9 == 99) {
                         boolean discarded$1 = tk.a(50, lg.a((byte) -122));
                         uc.field_b = new Boolean(fi.a(param5 + 68, (p) (Object) tk.field_h));
                         tk.field_h.field_l = 0;
@@ -910,7 +910,7 @@ final class da extends ua {
                 if (ii.field_P == tb.field_f) {
                   if (jl.a(false)) {
                     L13: {
-                      if (-256 == (wg.field_B ^ -1)) {
+                      if (wg.field_B == 255) {
                         var9_ref_String = tk.field_h.b(true);
                         if (null == var9_ref_String) {
                           break L13;
@@ -947,7 +947,7 @@ final class da extends ua {
                     break L14;
                   } else {
                     L15: {
-                      if ((ea.i((byte) -121) ^ -1L) >= -30001L) {
+                      if (ea.i((byte) -121) <= 30000L) {
                         n.field_c = li.field_b;
                         break L15;
                       } else {
@@ -1185,7 +1185,7 @@ final class da extends ua {
                             throw new RuntimeException();
                           } else {
                             ((da) this).field_n = new lj(var2_array, ((da) this).field_l, ((da) this).field_u);
-                            if ((((da) this).field_n.field_s ^ -1) == (((da) this).field_g ^ -1)) {
+                            if (~((da) this).field_n.field_s == ~((da) this).field_g) {
                               break L5;
                             } else {
                               throw new RuntimeException();
@@ -1408,13 +1408,13 @@ final class da extends ua {
                     L3: {
                       L4: {
                         var3 = (int)var2_ref.field_e;
-                        if ((var3 ^ -1) > -1) {
+                        if (var3 < 0) {
                           break L4;
                         } else {
-                          if ((var3 ^ -1) <= (((da) this).field_n.field_g ^ -1)) {
+                          if (~var3 <= ~((da) this).field_n.field_g) {
                             break L4;
                           } else {
-                            if (-1 != (((da) this).field_n.field_l[var3] ^ -1)) {
+                            if (((da) this).field_n.field_l[var3] != 0) {
                               L5: {
                                 if (((da) this).field_E[var3] != 0) {
                                   break L5;
@@ -1431,7 +1431,7 @@ final class da extends ua {
                                   break L6;
                                 }
                               }
-                              if (-2 == (((da) this).field_E[var3] ^ -1)) {
+                              if (((da) this).field_E[var3] == 1) {
                                 var2_ref.c(-2193);
                                 break L3;
                               } else {
@@ -1735,7 +1735,7 @@ final class da extends ua {
                         if (null == ((da) this).field_z) {
                           throw new RuntimeException();
                         } else {
-                          if (0 != (((da) this).field_E[param0] ^ -1)) {
+                          if (((da) this).field_E[param0] != -1) {
                             throw new RuntimeException();
                           } else {
                             if (((da) this).field_s.e(-21)) {
@@ -1782,7 +1782,7 @@ final class da extends ua {
                       eh.field_O.reset();
                       eh.field_O.update(var5, 0, var5.length - 2);
                       var6_int = (int)eh.field_O.getValue();
-                      if ((var6_int ^ -1) == (((da) this).field_n.field_p[param0] ^ -1)) {
+                      if (~var6_int == ~((da) this).field_n.field_p[param0]) {
                         L6: {
                           if (null == ((da) this).field_n.field_t) {
                             break L6;
@@ -1808,12 +1808,12 @@ final class da extends ua {
                             }
                           }
                         }
-                        var7 = ((var5[var5.length - 2] & 255) << -797303576) - -(var5[-1 + var5.length] & 255);
+                        var7 = ((var5[var5.length - 2] & 255) << 8) - -(var5[-1 + var5.length] & 255);
                         if (var7 == (65535 & ((da) this).field_n.field_b[param0])) {
                           L8: {
                             if (1 != ((da) this).field_E[param0]) {
                               L9: {
-                                if (-1 != (((da) this).field_E[param0] ^ -1)) {
+                                if (((da) this).field_E[param0] != 0) {
                                   break L9;
                                 } else {
                                   break L9;
@@ -1869,7 +1869,7 @@ final class da extends ua {
                                   var8 = kh.a(0, var5.length - 2, (byte) 111, var5);
                                   var9 = 0;
                                   L14: while (true) {
-                                    if (-65 >= (var9 ^ -1)) {
+                                    if (var9 >= 64) {
                                       break L13;
                                     } else {
                                       if (var8[var9] == var7_ref_byte__[var9]) {
@@ -1919,7 +1919,7 @@ final class da extends ua {
                   return (ab) (Object) stackIn_97_0;
                 }
                 L16: {
-                  var5[var5.length - 2] = (byte)(((da) this).field_n.field_b[param0] >>> -1497777528);
+                  var5[var5.length - 2] = (byte)(((da) this).field_n.field_b[param0] >>> 8);
                   var5[-1 + var5.length] = (byte)((da) this).field_n.field_b[param0];
                   if (null != ((da) this).field_z) {
                     tc discarded$1 = ((da) this).field_f.a(var5, param0, 2, ((da) this).field_z);
@@ -1992,7 +1992,7 @@ final class da extends ua {
               }
             }
             L2: {
-              if ((param0 ^ -1) > -1) {
+              if (param0 < 0) {
                 stackOut_6_0 = 0;
                 stackIn_7_0 = stackOut_6_0;
                 break L2;
@@ -2071,7 +2071,7 @@ final class da extends ua {
               stackIn_5_0 = stackOut_4_0;
               return stackIn_5_0;
             } else {
-              if ((param3 ^ -1) == param1) {
+              if (~param3 == param1) {
                 var4_ref = param0[param2];
                 if (null != var4_ref) {
                   stackOut_12_0 = ((Object) (Object) var4_ref).toString();
@@ -2087,7 +2087,7 @@ final class da extends ua {
                 var5 = 0;
                 var6_int = param2;
                 L1: while (true) {
-                  if ((var4_int ^ -1) >= (var6_int ^ -1)) {
+                  if (~var4_int >= ~var6_int) {
                     var6 = new StringBuilder(var5);
                     var7 = param2;
                     L2: while (true) {
@@ -2266,7 +2266,7 @@ final class da extends ua {
                                 if (stackIn_65_0 != stackIn_65_1) {
                                   if (!((da) this).field_s.e(-21)) {
                                     L5: {
-                                      if ((((da) this).field_E[((da) this).field_r] ^ -1) != -2) {
+                                      if (((da) this).field_E[((da) this).field_r] != 1) {
                                         ab discarded$4 = this.a(((da) this).field_r, 2, (byte) 77);
                                         break L5;
                                       } else {
@@ -2310,7 +2310,7 @@ final class da extends ua {
                         } else {
                           L8: {
                             var4 = (int)var3.field_e;
-                            if ((((da) this).field_E[var4] ^ -1) != -2) {
+                            if (((da) this).field_E[var4] != 1) {
                               ab discarded$5 = this.a(var4, 2, (byte) 54);
                               break L8;
                             } else {
@@ -2318,7 +2318,7 @@ final class da extends ua {
                             }
                           }
                           L9: {
-                            if ((((da) this).field_E[var4] ^ -1) != -2) {
+                            if (((da) this).field_E[var4] != 1) {
                               var2_int = 0;
                               break L9;
                             } else {
@@ -2338,15 +2338,15 @@ final class da extends ua {
                       if (null == var3) {
                         L11: while (true) {
                           L12: {
-                            if ((((da) this).field_r ^ -1) <= (((da) this).field_n.field_l.length ^ -1)) {
+                            if (~((da) this).field_r <= ~((da) this).field_n.field_l.length) {
                               break L12;
                             } else {
                               stackOut_22_0 = -1;
-                              stackOut_22_1 = ((da) this).field_n.field_l[((da) this).field_r] ^ -1;
+                              stackOut_22_1 = ~((da) this).field_n.field_l[((da) this).field_r];
                               stackIn_24_0 = stackOut_22_0;
                               stackIn_24_1 = stackOut_22_1;
                               if (stackIn_24_0 != stackIn_24_1) {
-                                if ((((da) this).field_f.field_c ^ -1) <= -251) {
+                                if (((da) this).field_f.field_c >= 250) {
                                   var2_int = 0;
                                   break L12;
                                 } else {
@@ -2392,7 +2392,7 @@ final class da extends ua {
                       } else {
                         L16: {
                           var4 = (int)var3.field_e;
-                          if (-1 == (((da) this).field_E[var4] ^ -1)) {
+                          if (((da) this).field_E[var4] == 0) {
                             ab discarded$7 = this.a(var4, 1, (byte) 67);
                             break L16;
                           } else {

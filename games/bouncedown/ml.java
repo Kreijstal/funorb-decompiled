@@ -13,16 +13,8 @@ final class ml {
         ge.field_c = 0;
         mh.field_Z = -1;
         nh.field_P = false;
-        if (param0 != 8192) {
-          field_f = null;
-          ha.field_b = -1;
-          oc.field_b = null;
-          return;
-        } else {
-          ha.field_b = -1;
-          oc.field_b = null;
-          return;
-        }
+        ha.field_b = -1;
+        oc.field_b = null;
     }
 
     final int a(byte param0) {
@@ -81,22 +73,19 @@ final class ml {
     }
 
     final void a(byte param0, ug param1) {
-        L0: {
-          if (param1.field_i != null) {
+        if (!(param1.field_i == null)) {
             param1.a(92);
-            break L0;
-          } else {
-            break L0;
-          }
         }
         param1.field_l = ((ml) this).field_a;
         param1.field_i = ((ml) this).field_a.field_i;
         param1.field_i.field_l = param1;
         if (param0 != -78) {
-          return;
-        } else {
-          param1.field_l.field_i = param1;
-          return;
+            return;
+        }
+        try {
+            param1.field_l.field_i = param1;
+        } catch (RuntimeException runtimeException) {
+            throw ii.a((Throwable) (Object) runtimeException, "ml.G(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

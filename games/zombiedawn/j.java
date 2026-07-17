@@ -20,18 +20,9 @@ final class j {
         field_b = null;
         field_l = null;
         field_h = null;
-        if (param0 != -3) {
-          field_j = null;
-          field_j = null;
-          field_e = null;
-          field_a = null;
-          return;
-        } else {
-          field_j = null;
-          field_e = null;
-          field_a = null;
-          return;
-        }
+        field_j = null;
+        field_e = null;
+        field_a = null;
     }
 
     static {

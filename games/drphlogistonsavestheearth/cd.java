@@ -16,21 +16,111 @@ final class cd {
     }
 
     final static void a(String param0, int param1, String param2) {
-        L0: {
-          if (null != ol.field_a) {
-            ol.field_a.d(true);
-            break L0;
-          } else {
-            break L0;
+        RuntimeException var3 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (null != ol.field_a) {
+                ol.field_a.d(true);
+                break L1;
+              } else {
+                break L1;
+              }
+            }
+            pi.field_O = new wa(param0, param2, false, true, true);
+            fb.field_e.a(33, (vg) (Object) pi.field_O);
+            if (param1 <= -2) {
+              break L0;
+            } else {
+              cd.b((byte) 3);
+              return;
+            }
           }
-        }
-        pi.field_O = new wa(param0, param2, false, true, true);
-        fb.field_e.a(33, (vg) (Object) pi.field_O);
-        if (param1 > -2) {
-          cd.b((byte) 3);
-          return;
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var3;
+            stackOut_6_1 = new StringBuilder().append("cd.D(");
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param0 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L2;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L2;
+            }
+          }
+          L3: {
+            stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+            stackOut_9_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_9_2).append(44).append(param1).append(44);
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
+            if (param2 == null) {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
+              break L3;
+            } else {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
+              break L3;
+            }
+          }
+          throw ie.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
         }
     }
 
@@ -50,83 +140,46 @@ final class cd {
     final static void a(int param0) {
         try {
             Exception var1 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        if (mi.field_f != null) {
-                            statePc = 4;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        dh.field_N.field_j = dh.field_N.field_j + 24;
-                        if (param0 == 4) {
-                            statePc = 3;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    }
-                    case 2: {
-                        cd.a(4);
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                    case 3: {
-                        return;
-                    }
-                    case 4: {
-                        try {
-                            mi.field_f.a(0L, (byte) -63);
-                            mi.field_f.a(24, dh.field_N.field_j, 18017, dh.field_N.field_h);
-                            statePc = 5;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_4) {
-                            caughtException = stateCaught_4;
-                            statePc = 8;
-                            continue stateLoop;
-                        }
-                    }
-                    case 5: {
-                        dh.field_N.field_j = dh.field_N.field_j + 24;
-                        if (param0 == 4) {
-                            statePc = 7;
-                        } else {
-                            statePc = 6;
-                        }
-                        continue stateLoop;
-                    }
-                    case 6: {
-                        cd.a(4);
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                    case 7: {
-                        return;
-                    }
-                    case 8: {
-                        var1 = (Exception) (Object) caughtException;
-                        dh.field_N.field_j = dh.field_N.field_j + 24;
-                        if (param0 != 4) {
-                            statePc = 10;
-                        } else {
-                            statePc = 9;
-                        }
-                        continue stateLoop;
-                    }
-                    case 9: {
-                        return;
-                    }
-                    case 10: {
-                        cd.a(4);
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            Throwable decompiledCaughtException = null;
+            if (mi.field_f != null) {
+              try {
+                L0: {
+                  mi.field_f.a(0L, (byte) -63);
+                  mi.field_f.a(24, dh.field_N.field_j, 18017, dh.field_N.field_h);
+                  break L0;
                 }
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var1 = (Exception) (Object) decompiledCaughtException;
+                dh.field_N.field_j = dh.field_N.field_j + 24;
+                if (param0 != 4) {
+                  cd.a(4);
+                  return;
+                } else {
+                  return;
+                }
+              }
+              L1: {
+                dh.field_N.field_j = dh.field_N.field_j + 24;
+                if (param0 == 4) {
+                  break L1;
+                } else {
+                  cd.a(4);
+                  break L1;
+                }
+              }
+              return;
+            } else {
+              L2: {
+                dh.field_N.field_j = dh.field_N.field_j + 24;
+                if (param0 == 4) {
+                  break L2;
+                } else {
+                  cd.a(4);
+                  break L2;
+                }
+              }
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

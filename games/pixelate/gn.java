@@ -51,9 +51,6 @@ abstract class gn extends lm {
         field_w = null;
         field_y = null;
         field_u = null;
-        if (param0 >= -91) {
-            field_z = null;
-        }
     }
 
     abstract byte[] h(int param0);

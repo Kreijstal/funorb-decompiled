@@ -16,9 +16,6 @@ final class ur {
 
     public static void a(int param0) {
         field_b = null;
-        if (param0 != -17614) {
-            return;
-        }
         field_a = null;
     }
 

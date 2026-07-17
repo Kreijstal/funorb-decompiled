@@ -18,7 +18,7 @@ final class bg extends nm {
 
     final static int a(int param0, int param1, int param2) {
         if (param1 == 29) {
-          if (-2 == (param2 ^ -1)) {
+          if (param2 == 1) {
             if (!gq.b(param0, -1)) {
               return rh.field_b[param2];
             } else {
@@ -29,7 +29,7 @@ final class bg extends nm {
           }
         } else {
           bg.a(6);
-          if (-2 == (param2 ^ -1)) {
+          if (param2 == 1) {
             if (gq.b(param0, -1)) {
               return 29;
             } else {
@@ -42,9 +42,6 @@ final class bg extends nm {
     }
 
     public static void a(int param0) {
-        if (param0 != 6) {
-            return;
-        }
         field_n = null;
         field_o = null;
         field_u = null;

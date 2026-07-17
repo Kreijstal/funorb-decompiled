@@ -34,7 +34,7 @@ final class uf extends wl {
     }
 
     final void j(int param0) {
-        if (-9 < (((uf) this).field_v ^ -1)) {
+        if (((uf) this).field_v < 8) {
             ((uf) this).field_n = ((uf) this).field_n + 1;
             ((uf) this).field_v = 8;
         }
@@ -74,58 +74,61 @@ final class uf extends wl {
     }
 
     final static void g(int param0, int param1) {
-        int var2 = 0;
+        RuntimeException var2 = null;
+        int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        L0: {
-          var7 = client.field_A ? 1 : 0;
-          if (param1 == -2093) {
-            break L0;
-          } else {
-            field_w = null;
-            break L0;
-          }
-        }
-        fl.a(130, 256, 16694016, mb.field_e, param0 + 80, (mm) (Object) w.field_kb);
-        var2 = 140;
-        var3 = 0;
-        var4 = 0;
-        L1: while (true) {
-          if (var4 >= 6) {
-            return;
-          } else {
-            L2: {
-              var5 = 245 * (var4 % 2) + (80 + param0);
-              fl.a(var2 - -14, 256, 16777215, nk.field_d[var4][0], var5, (mm) (Object) w.field_kb);
-              tg.a(true, var4).c(var5 - -param0, 20 + var2, 18, 18);
-              var6 = ga.a(211, 0, var2 + 20, nk.field_d[var4][1], 16, 64, 16777215, (mm) (Object) se.field_S, (byte) -128, 0, var5 + 24);
-              if (var3 < var6) {
-                var3 = var6;
-                break L2;
+        RuntimeException decompiledCaughtException = null;
+        var7 = client.field_A ? 1 : 0;
+        try {
+          L0: {
+            fl.a(130, 256, 16694016, mb.field_e, param0 + 80, (mm) (Object) w.field_kb);
+            var2_int = 140;
+            var3 = 0;
+            var4 = 0;
+            L1: while (true) {
+              if (var4 >= 6) {
+                break L0;
               } else {
-                break L2;
-              }
-            }
-            if (-2 == (var4 % 2 ^ -1)) {
-              var2 = var2 + (16 * var3 + 20 - -8);
-              var3 = 0;
-              if ((var4 ^ -1) > -5) {
-                hk.a(param0 + 80, -5 + var2, 480, 394758);
-                hk.a(param0 + 80, -4 + var2, 480, 6316128);
+                L2: {
+                  var5 = 245 * (var4 % 2) + (80 + param0);
+                  fl.a(var2_int - -14, 256, 16777215, nk.field_d[var4][0], var5, (mm) (Object) w.field_kb);
+                  tg.a(true, var4).c(var5 - -param0, 20 + var2_int, 18, 18);
+                  var6 = ga.a(211, 0, var2_int + 20, nk.field_d[var4][1], 16, 64, 16777215, (mm) (Object) se.field_S, (byte) -128, 0, var5 + 24);
+                  if (var3 < var6) {
+                    var3 = var6;
+                    break L2;
+                  } else {
+                    break L2;
+                  }
+                }
+                L3: {
+                  if (var4 % 2 == 1) {
+                    var2_int = var2_int + (16 * var3 + 28);
+                    var3 = 0;
+                    if (var4 < 4) {
+                      hk.a(param0 + 80, -5 + var2_int, 480, 394758);
+                      hk.a(param0 + 80, -4 + var2_int, 480, 6316128);
+                      break L3;
+                    } else {
+                      break L3;
+                    }
+                  } else {
+                    break L3;
+                  }
+                }
                 var4++;
                 continue L1;
-              } else {
-                var4++;
-                continue L1;
               }
-            } else {
-              var4++;
-              continue L1;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw dh.a((Throwable) (Object) var2, "uf.NA(" + param0 + 44 + -2093 + 41);
         }
     }
 
@@ -141,36 +144,92 @@ final class uf extends wl {
         if (lg.field_W > 0) {
             lg.field_W = lg.field_W - 1;
         } else {
-            if ((bf.field_r ^ -1) < -1) {
+            if (bf.field_r > 0) {
                 bf.field_r = bf.field_r - 1;
             } else {
-                if (-1 > (tg.field_e ^ -1)) {
+                if (tg.field_e > 0) {
                     tg.field_e = tg.field_e - 1;
                 }
             }
         }
-        if (!((lg.field_W ^ -1) >= -1)) {
+        if (!(lg.field_W <= 0)) {
             pa.g((byte) -89);
         }
         if (bf.field_r > 0) {
             qf.a(bf.field_r, 114);
         }
-        if (!((tg.field_e ^ -1) >= -1)) {
+        if (!(tg.field_e <= 0)) {
             qf.a(tg.field_e, 112);
-        }
-        if (param0 != -4840) {
-            uf.h((byte) 73);
         }
     }
 
     final void a(int param0, byte[] param1, int param2, int param3) {
-        int var5 = 0;
-        int var7 = client.field_A ? 1 : 0;
-        int var6 = 55 / ((5 - param0) / 45);
-        for (var5 = 0; var5 < param2; var5++) {
-            int fieldTemp$0 = ((uf) this).field_n;
-            ((uf) this).field_n = ((uf) this).field_n + 1;
-            param1[param3 + var5] = (byte)(((uf) this).field_r[fieldTemp$0] + -((uf) this).field_u.a(false));
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int var6 = 0;
+        int var7 = 0;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        var7 = client.field_A ? 1 : 0;
+        try {
+          L0: {
+            var6 = 55 / ((5 - param0) / 45);
+            var5_int = 0;
+            L1: while (true) {
+              if (var5_int >= param2) {
+                break L0;
+              } else {
+                int fieldTemp$5 = ((uf) this).field_n;
+                ((uf) this).field_n = ((uf) this).field_n + 1;
+                param1[param3 + var5_int] = (byte)(((uf) this).field_r[fieldTemp$5] + -((uf) this).field_u.a(false));
+                var5_int++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var5 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var5;
+            stackOut_5_1 = new StringBuilder().append("uf.TA(").append(param0).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param1 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L2;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L2;
+            }
+          }
+          throw dh.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param2 + 44 + param3 + 41);
         }
     }
 
@@ -206,7 +265,7 @@ final class uf extends wl {
         if (param1 <= 39) {
             return 9;
         }
-        int var3 = ((uf) this).field_x >> 227270371;
+        int var3 = ((uf) this).field_x >> 3;
         int var4 = -(7 & ((uf) this).field_x) + 8;
         int var5 = 0;
         ((uf) this).field_x = ((uf) this).field_x + param0;
@@ -241,9 +300,65 @@ final class uf extends wl {
     }
 
     final void a(int[] param0, byte param1) {
-        ((uf) this).field_u = new ee(param0);
-        if (param1 <= 61) {
-            int discarded$0 = ((uf) this).i((byte) -25);
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        try {
+          L0: {
+            L1: {
+              ((uf) this).field_u = new ee(param0);
+              if (param1 > 61) {
+                break L1;
+              } else {
+                int discarded$2 = ((uf) this).i((byte) -25);
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_1 = new StringBuilder().append("uf.RA(");
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param0 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
+            }
+          }
+          throw dh.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
         }
     }
 

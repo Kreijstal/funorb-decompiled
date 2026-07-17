@@ -18,9 +18,6 @@ final class nl {
         field_i = null;
         field_c = null;
         field_h = null;
-        if (param0 > -85) {
-            field_h = null;
-        }
     }
 
     static {

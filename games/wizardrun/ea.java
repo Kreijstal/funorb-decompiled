@@ -6966,7 +6966,7 @@ final class ea extends ib {
               L6: while (true) {
                 L7: {
                   L8: {
-                    if ((var9 ^ -1) <= (var8_array.length ^ -1)) {
+                    if (~var9 <= ~var8_array.length) {
                       break L8;
                     } else {
                       var10 = var8_array[var9];
@@ -7319,7 +7319,7 @@ final class ea extends ib {
                           if (var8 == null) {
                             break L8;
                           } else {
-                            if ((var9 ^ -1) <= -51) {
+                            if (var9 >= 50) {
                               break L8;
                             } else {
                               if (!var8.toLowerCase().startsWith(var10)) {
@@ -7334,7 +7334,7 @@ final class ea extends ib {
                                 L9: {
                                   var8 = var8.substring(var10.length()).trim();
                                   var11 = var8.indexOf(' ');
-                                  if (0 != (var11 ^ -1)) {
+                                  if (var11 != -1) {
                                     var8 = var8.substring(0, var11);
                                     break L9;
                                   } else {

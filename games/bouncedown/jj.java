@@ -17,63 +17,47 @@ final class jj {
 
     final static void a(int param0, boolean param1) {
         try {
-            IOException iOException = null;
             Throwable decompiledCaughtException = null;
             L0: {
-              if (param1) {
-                break L0;
-              } else {
-                field_a = null;
-                break L0;
-              }
-            }
-            L1: {
               if (dh.field_a == null) {
-                break L1;
+                break L0;
               } else {
-                L2: {
+                L1: {
                   if (param0 < 0) {
-                    break L2;
+                    break L1;
                   } else {
                     if (pj.field_a == b.field_b) {
+                      break L1;
+                    } else {
+                      break L0;
+                    }
+                  }
+                }
+                L2: {
+                  if (0 != hh.field_p.field_h) {
+                    break L2;
+                  } else {
+                    if (~fa.a(101) < ~(10000L + wa.field_e)) {
+                      hh.field_p.a(true, param0);
                       break L2;
                     } else {
-                      break L1;
+                      break L2;
                     }
                   }
                 }
                 L3: {
-                  if (0 != hh.field_p.field_h) {
+                  if (0 >= hh.field_p.field_h) {
                     break L3;
                   } else {
-                    if ((fa.a(101) ^ -1L) < (10000L + wa.field_e ^ -1L)) {
-                      hh.field_p.a(true, param0);
-                      break L3;
-                    } else {
-                      break L3;
-                    }
-                  }
-                }
-                L4: {
-                  if (0 >= hh.field_p.field_h) {
-                    break L4;
-                  } else {
-                    try {
-                      L5: {
+                    {
+                      L4: {
                         dh.field_a.a(hh.field_p.field_h, hh.field_p.field_i, 0, 0);
                         wa.field_e = fa.a(-76);
-                        break L5;
-                      }
-                    } catch (java.io.IOException decompiledCaughtParameter0) {
-                      decompiledCaughtException = decompiledCaughtParameter0;
-                      L6: {
-                        iOException = (IOException) (Object) decompiledCaughtException;
-                        kc.a((byte) 18);
-                        break L6;
+                        break L4;
                       }
                     }
                     hh.field_p.field_h = 0;
-                    break L4;
+                    break L3;
                   }
                 }
                 return;
@@ -88,10 +72,6 @@ final class jj {
     }
 
     final static sg a(int param0) {
-        if (param0 != 10000) {
-            field_a = null;
-            return (sg) (Object) new el();
-        }
         return (sg) (Object) new el();
     }
 
@@ -101,12 +81,12 @@ final class jj {
         byte[] var3 = null;
         if (param0 == 10000) {
           if (100 != param1) {
-            if ((param1 ^ -1) != -5001) {
+            if (param1 != 5000) {
               L0: {
                 if (30000 != param1) {
                   break L0;
                 } else {
-                  if ((ch.field_a ^ -1) >= -1) {
+                  if (ch.field_a <= 0) {
                     break L0;
                   } else {
                     int fieldTemp$45 = ch.field_a - 1;
@@ -146,7 +126,7 @@ final class jj {
                 return new byte[param1];
               }
             } else {
-              if (-1 > (hj.field_b ^ -1)) {
+              if (hj.field_b > 0) {
                 int fieldTemp$46 = hj.field_b - 1;
                 hj.field_b = hj.field_b - 1;
                 var2_ref_byte__ = jh.field_r[fieldTemp$46];
@@ -157,7 +137,7 @@ final class jj {
                   if (30000 != param1) {
                     break L3;
                   } else {
-                    if ((ch.field_a ^ -1) >= -1) {
+                    if (ch.field_a <= 0) {
                       break L3;
                     } else {
                       int fieldTemp$47 = ch.field_a - 1;
@@ -199,16 +179,16 @@ final class jj {
               }
             }
           } else {
-            if (-1 > (dk.field_a ^ -1)) {
+            if (dk.field_a > 0) {
               int fieldTemp$48 = dk.field_a - 1;
               dk.field_a = dk.field_a - 1;
               var2_ref_byte__ = qh.field_b[fieldTemp$48];
               qh.field_b[dk.field_a] = null;
               return var2_ref_byte__;
             } else {
-              if ((param1 ^ -1) != -5001) {
+              if (param1 != 5000) {
                 if (30000 == param1) {
-                  if ((ch.field_a ^ -1) < -1) {
+                  if (ch.field_a > 0) {
                     int fieldTemp$49 = ch.field_a - 1;
                     ch.field_a = ch.field_a - 1;
                     var2_ref_byte__ = hh.field_r[fieldTemp$49];
@@ -275,7 +255,7 @@ final class jj {
                   }
                 }
               } else {
-                if (-1 > (hj.field_b ^ -1)) {
+                if (hj.field_b > 0) {
                   int fieldTemp$50 = hj.field_b - 1;
                   hj.field_b = hj.field_b - 1;
                   var2_ref_byte__ = jh.field_r[fieldTemp$50];
@@ -286,7 +266,7 @@ final class jj {
                     if (30000 != param1) {
                       break L10;
                     } else {
-                      if ((ch.field_a ^ -1) >= -1) {
+                      if (ch.field_a <= 0) {
                         break L10;
                       } else {
                         int fieldTemp$51 = ch.field_a - 1;
@@ -335,15 +315,15 @@ final class jj {
         } else {
           field_a = null;
           if (100 == param1) {
-            if (-1 > (dk.field_a ^ -1)) {
+            if (dk.field_a > 0) {
               int fieldTemp$52 = dk.field_a - 1;
               dk.field_a = dk.field_a - 1;
               var2_ref_byte__ = qh.field_b[fieldTemp$52];
               qh.field_b[dk.field_a] = null;
               return var2_ref_byte__;
             } else {
-              if ((param1 ^ -1) == -5001) {
-                if (-1 > (hj.field_b ^ -1)) {
+              if (param1 == 5000) {
+                if (hj.field_b > 0) {
                   int fieldTemp$53 = hj.field_b - 1;
                   hj.field_b = hj.field_b - 1;
                   var2_ref_byte__ = jh.field_r[fieldTemp$53];
@@ -354,7 +334,7 @@ final class jj {
                     if (30000 != param1) {
                       break L14;
                     } else {
-                      if ((ch.field_a ^ -1) >= -1) {
+                      if (ch.field_a <= 0) {
                         break L14;
                       } else {
                         int fieldTemp$54 = ch.field_a - 1;
@@ -399,7 +379,7 @@ final class jj {
                   if (30000 != param1) {
                     break L17;
                   } else {
-                    if ((ch.field_a ^ -1) >= -1) {
+                    if (ch.field_a <= 0) {
                       break L17;
                     } else {
                       int fieldTemp$55 = ch.field_a - 1;
@@ -445,10 +425,10 @@ final class jj {
             }
           } else {
             L21: {
-              if ((param1 ^ -1) != -5001) {
+              if (param1 != 5000) {
                 break L21;
               } else {
-                if (-1 > (hj.field_b ^ -1)) {
+                if (hj.field_b > 0) {
                   int fieldTemp$56 = hj.field_b - 1;
                   hj.field_b = hj.field_b - 1;
                   var2_ref_byte__ = jh.field_r[fieldTemp$56];
@@ -463,7 +443,7 @@ final class jj {
               if (30000 != param1) {
                 break L22;
               } else {
-                if ((ch.field_a ^ -1) >= -1) {
+                if (ch.field_a <= 0) {
                   break L22;
                 } else {
                   int fieldTemp$57 = ch.field_a - 1;

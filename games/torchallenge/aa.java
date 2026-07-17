@@ -127,7 +127,7 @@ final class aa {
             var2 = ((aa) this).field_i[(int)((long)(((aa) this).field_d - 1) & ((aa) this).field_e)];
             L0: while (true) {
               if (((aa) this).field_j != var2) {
-                if ((((aa) this).field_e ^ -1L) != (((aa) this).field_j.field_l ^ -1L)) {
+                if (~((aa) this).field_e != ~((aa) this).field_j.field_l) {
                   ((aa) this).field_j = ((aa) this).field_j.field_k;
                   continue L0;
                 } else {
@@ -145,7 +145,7 @@ final class aa {
             var2 = ((aa) this).field_i[(int)((long)(((aa) this).field_d - 1) & ((aa) this).field_e)];
             L1: while (true) {
               if (((aa) this).field_j != var2) {
-                if ((((aa) this).field_e ^ -1L) != (((aa) this).field_j.field_l ^ -1L)) {
+                if (~((aa) this).field_e != ~((aa) this).field_j.field_l) {
                   ((aa) this).field_j = ((aa) this).field_j.field_k;
                   continue L1;
                 } else {
@@ -170,8 +170,9 @@ final class aa {
         ((aa) this).field_i = new w[param0];
         ((aa) this).field_d = param0;
         for (var2 = 0; param0 > var2; var2++) {
-            var3 = new w();
-            ((aa) this).field_i[var2] = new w();
+            w dupTemp$0 = new w();
+            var3 = dupTemp$0;
+            ((aa) this).field_i[var2] = dupTemp$0;
             var3.field_i = var3;
             var3.field_k = var3;
         }
@@ -179,26 +180,19 @@ final class aa {
 
     final void a(long param0, w param1, int param2) {
         w var5 = null;
-        int var6 = 0;
-        if (param1.field_i != null) {
-          param1.a(12695);
-          var5 = ((aa) this).field_i[(int)(param0 & (long)(((aa) this).field_d + -1))];
-          param1.field_k = var5;
-          param1.field_i = var5.field_i;
-          param1.field_i.field_k = param1;
-          param1.field_l = param0;
-          param1.field_k.field_i = param1;
-          var6 = 87 / ((35 - param2) / 63);
-          return;
-        } else {
-          var5 = ((aa) this).field_i[(int)(param0 & (long)(((aa) this).field_d + -1))];
-          param1.field_k = var5;
-          param1.field_i = var5.field_i;
-          param1.field_i.field_k = param1;
-          param1.field_l = param0;
-          param1.field_k.field_i = param1;
-          var6 = 87 / ((35 - param2) / 63);
-          return;
+        try {
+            if (param1.field_i != null) {
+                param1.a(12695);
+            }
+            var5 = ((aa) this).field_i[(int)(param0 & (long)(((aa) this).field_d + -1))];
+            param1.field_k = var5;
+            param1.field_i = var5.field_i;
+            param1.field_i.field_k = param1;
+            param1.field_l = param0;
+            param1.field_k.field_i = param1;
+            int var6 = 87 / ((35 - param2) / 63);
+        } catch (RuntimeException runtimeException) {
+            throw oj.a((Throwable) (Object) runtimeException, "aa.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
     }
 

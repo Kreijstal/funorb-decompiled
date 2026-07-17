@@ -12,16 +12,8 @@ abstract class rg {
     public static void a(byte param0) {
         field_a = null;
         field_d = null;
-        if (param0 != 66) {
-          field_e = null;
-          field_e = null;
-          field_c = null;
-          return;
-        } else {
-          field_e = null;
-          field_c = null;
-          return;
-        }
+        field_e = null;
+        field_c = null;
     }
 
     final static void a(byte param0, boolean param1) {
@@ -53,16 +45,16 @@ abstract class rg {
           var6 = Kickabout.field_G;
           var2 = 0;
           var3 = up.field_p;
-          if ((var3 ^ -1) > -6) {
+          if (var3 < 5) {
             var2 = 8192 * (var3 * var3) / 1100;
             break L0;
           } else {
-            if ((var3 ^ -1) > -106) {
+            if (var3 < 105) {
               L1: {
                 var2 = (-40960 + 16384 * var3) / 220;
                 var4 = param1;
                 var5 = 0;
-                if ((param0 ^ -1) == -4) {
+                if (param0 == 3) {
                   var4 = -1;
                   break L1;
                 } else {
@@ -70,7 +62,7 @@ abstract class rg {
                 }
               }
               L2: {
-                if (-2 == (param0 ^ -1)) {
+                if (param0 == 1) {
                   var5 = 1;
                   break L2;
                 } else {
@@ -96,7 +88,7 @@ abstract class rg {
                 }
               }
               L5: {
-                if (-7 == (param0 ^ -1)) {
+                if (param0 == 6) {
                   var5 = -1;
                   var4 = 1;
                   break L5;
@@ -106,7 +98,7 @@ abstract class rg {
               }
               L6: {
                 L7: {
-                  if ((param0 ^ -1) == -8) {
+                  if (param0 == 7) {
                     break L7;
                   } else {
                     if (param0 == 8) {
@@ -138,7 +130,7 @@ abstract class rg {
                 }
               }
               L10: {
-                if (-14 == (param0 ^ -1)) {
+                if (param0 == 13) {
                   var4 = 1;
                   var5 = -1;
                   break L10;
@@ -147,7 +139,7 @@ abstract class rg {
                 }
               }
               L11: {
-                if (-15 != (param0 ^ -1)) {
+                if (param0 != 14) {
                   break L11;
                 } else {
                   var4 = -1;
@@ -167,7 +159,7 @@ abstract class rg {
               hh.field_g = rf.a(var4 * var2, -125, var5 * var2);
               return;
             } else {
-              if ((var3 ^ -1) <= -121) {
+              if (var3 >= 120) {
                 break L0;
               } else {
                 L13: {
@@ -175,7 +167,7 @@ abstract class rg {
                   var2 = -(var3 * var3 * 8192 / 3300) + 8192;
                   var4 = param1;
                   var5 = 0;
-                  if ((param0 ^ -1) == -4) {
+                  if (param0 == 3) {
                     var4 = -1;
                     break L13;
                   } else {
@@ -183,7 +175,7 @@ abstract class rg {
                   }
                 }
                 L14: {
-                  if (-2 == (param0 ^ -1)) {
+                  if (param0 == 1) {
                     var5 = 1;
                     break L14;
                   } else {
@@ -209,7 +201,7 @@ abstract class rg {
                   }
                 }
                 L17: {
-                  if (-7 == (param0 ^ -1)) {
+                  if (param0 == 6) {
                     var5 = -1;
                     var4 = 1;
                     break L17;
@@ -217,7 +209,7 @@ abstract class rg {
                     break L17;
                   }
                 }
-                if ((param0 ^ -1) != -8) {
+                if (param0 != 7) {
                   if (param0 != 8) {
                     L18: {
                       if (param0 == 11) {
@@ -237,7 +229,7 @@ abstract class rg {
                       }
                     }
                     L20: {
-                      if (-14 == (param0 ^ -1)) {
+                      if (param0 == 13) {
                         var4 = 1;
                         var5 = -1;
                         break L20;
@@ -246,7 +238,7 @@ abstract class rg {
                       }
                     }
                     L21: {
-                      if (-15 != (param0 ^ -1)) {
+                      if (param0 != 14) {
                         break L21;
                       } else {
                         var4 = -1;
@@ -286,7 +278,7 @@ abstract class rg {
                       }
                     }
                     L25: {
-                      if (-14 == (param0 ^ -1)) {
+                      if (param0 == 13) {
                         var4 = 1;
                         var5 = -1;
                         break L25;
@@ -295,7 +287,7 @@ abstract class rg {
                       }
                     }
                     L26: {
-                      if (-15 != (param0 ^ -1)) {
+                      if (param0 != 14) {
                         break L26;
                       } else {
                         var4 = -1;
@@ -336,7 +328,7 @@ abstract class rg {
                     }
                   }
                   L30: {
-                    if (-14 == (param0 ^ -1)) {
+                    if (param0 == 13) {
                       var4 = 1;
                       var5 = -1;
                       break L30;
@@ -345,7 +337,7 @@ abstract class rg {
                     }
                   }
                   L31: {
-                    if (-15 != (param0 ^ -1)) {
+                    if (param0 != 14) {
                       break L31;
                     } else {
                       var4 = -1;
@@ -372,7 +364,7 @@ abstract class rg {
         L33: {
           var4 = param1;
           var5 = 0;
-          if ((param0 ^ -1) == -4) {
+          if (param0 == 3) {
             var4 = -1;
             break L33;
           } else {
@@ -380,7 +372,7 @@ abstract class rg {
           }
         }
         L34: {
-          if (-2 == (param0 ^ -1)) {
+          if (param0 == 1) {
             var5 = 1;
             break L34;
           } else {
@@ -406,7 +398,7 @@ abstract class rg {
           }
         }
         L37: {
-          if (-7 == (param0 ^ -1)) {
+          if (param0 == 6) {
             var5 = -1;
             var4 = 1;
             break L37;
@@ -416,7 +408,7 @@ abstract class rg {
         }
         L38: {
           L39: {
-            if ((param0 ^ -1) == -8) {
+            if (param0 == 7) {
               break L39;
             } else {
               if (param0 == 8) {
@@ -448,7 +440,7 @@ abstract class rg {
           }
         }
         L42: {
-          if (-14 == (param0 ^ -1)) {
+          if (param0 == 13) {
             var4 = 1;
             var5 = -1;
             break L42;
@@ -457,7 +449,7 @@ abstract class rg {
           }
         }
         L43: {
-          if (-15 != (param0 ^ -1)) {
+          if (param0 != 14) {
             break L43;
           } else {
             var4 = -1;
@@ -479,11 +471,6 @@ abstract class rg {
 
     final static void a(int param0) {
         or.field_d.b(9, (byte) -52);
-        if (param0 != -1822) {
-            rg.a(-16, -37);
-            ec.field_e = true;
-            return;
-        }
         ec.field_e = true;
     }
 

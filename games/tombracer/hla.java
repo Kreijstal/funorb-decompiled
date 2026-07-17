@@ -52,15 +52,19 @@ final class hla extends jea {
 
     hla(long param0, jea param1, jea param2, oj param3, jea param4, String param5, String param6) {
         super(param0, param1);
-        ((hla) this).field_tb = new jea(0L, (jea) null);
-        ((hla) this).field_vb = new iv(0L, ((hla) this).field_tb, param2, param3);
-        ((hla) this).field_yb = new jea(0L, param4);
-        ((hla) this).field_wb = new jea(0L, param4);
-        ((hla) this).field_yb.field_r = param5;
-        ((hla) this).field_wb.field_r = param6;
-        ((hla) this).b(-124, (jea) (Object) ((hla) this).field_vb);
-        ((hla) this).b(-124, ((hla) this).field_yb);
-        ((hla) this).b(-126, ((hla) this).field_wb);
+        try {
+            ((hla) this).field_tb = new jea(0L, (jea) null);
+            ((hla) this).field_vb = new iv(0L, ((hla) this).field_tb, param2, param3);
+            ((hla) this).field_yb = new jea(0L, param4);
+            ((hla) this).field_wb = new jea(0L, param4);
+            ((hla) this).field_yb.field_r = param5;
+            ((hla) this).field_wb.field_r = param6;
+            ((hla) this).b(-124, (jea) (Object) ((hla) this).field_vb);
+            ((hla) this).b(-124, ((hla) this).field_yb);
+            ((hla) this).b(-126, ((hla) this).field_wb);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "hla.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 44 + (param6 != null ? "{...}" : "null") + 41);
+        }
     }
 
     hla(long param0, hla param1, String param2, String param3) {

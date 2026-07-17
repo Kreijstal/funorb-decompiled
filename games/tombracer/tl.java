@@ -11,36 +11,90 @@ final class tl extends nv implements ut {
 
     final static void a(int param0, int param1, int param2, int param3, int[] param4) {
         int[] var5 = null;
+        RuntimeException var5_ref = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int[] var9 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
         var8 = TombRacer.field_G ? 1 : 0;
-        L0: while (true) {
-          param1--;
-          if ((param1 ^ -1) > -1) {
-            if (param3 != 1535993377) {
-              tl.a((byte) 72, -101, -90, -85, 66, 71, -106, -32);
-              return;
-            } else {
-              return;
+        try {
+          L0: {
+            L1: while (true) {
+              param1--;
+              if (param1 < 0) {
+                if (param3 == 1535993377) {
+                  break L0;
+                } else {
+                  tl.a((byte) 72, -101, -90, -85, 66, 71, -106, -32);
+                  return;
+                }
+              } else {
+                var9 = param4;
+                var5 = var9;
+                var6 = param0;
+                var7 = param2;
+                var9[var6] = var7 - -(sea.c(16711422, var9[var6]) >> 1);
+                param0++;
+                continue L1;
+              }
             }
-          } else {
-            var9 = param4;
-            var5 = var9;
-            var6 = param0;
-            var7 = param2;
-            var9[var6] = var7 - -(sea.c(16711422, var9[var6]) >> 1535993377);
-            param0++;
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var5_ref = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var5_ref;
+            stackOut_6_1 = new StringBuilder().append("tl.H(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param4 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L2;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L2;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
         }
     }
 
     final void a(boolean param0, kh param1) {
-        super.a(param0, param1);
-        ((tl) this).field_s.a(((tl) this).h((byte) 123), (byte) 76, param1);
-        ((tl) this).field_o.a(15637, param1);
+        try {
+            super.a(param0, param1);
+            ((tl) this).field_s.a(((tl) this).h((byte) 123), (byte) 76, param1);
+            ((tl) this).field_o.a(15637, param1);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "tl.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public final int c(int param0) {
@@ -69,7 +123,11 @@ final class tl extends nv implements ut {
         if (param1 >= -60) {
             return;
         }
-        ((tl) this).field_o = param0;
+        try {
+            ((tl) this).field_o = param0;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "tl.L(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     final static void a(byte param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
@@ -130,8 +188,12 @@ final class tl extends nv implements ut {
 
     tl(la param0, boolean param1) {
         super(param0, param1);
-        ((tl) this).field_s = new jma(15);
-        ((tl) this).field_o = new mg();
+        try {
+            ((tl) this).field_s = new jma(15);
+            ((tl) this).field_o = new mg();
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "tl.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     public final jma k(byte param0) {
@@ -153,9 +215,6 @@ final class tl extends nv implements ut {
         field_n = null;
         field_p = null;
         field_q = null;
-        if (param0 != 16711422) {
-            field_q = null;
-        }
     }
 
     public final int j(byte param0) {
@@ -176,8 +235,12 @@ final class tl extends nv implements ut {
 
     tl(la param0, kh param1, boolean param2) {
         super(param0, param1, param2);
-        ((tl) this).field_s = new jma(15, param0, param1);
-        ((tl) this).field_o = new mg(param0.field_E, param1);
+        try {
+            ((tl) this).field_s = new jma(15, param0, param1);
+            ((tl) this).field_o = new mg(param0.field_E, param1);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "tl.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     final void k(int param0) {

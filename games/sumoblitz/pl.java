@@ -13,8 +13,9 @@ final class pl extends fs {
     static String field_q;
 
     final void g(int param0, int param1) {
+        int fieldTemp$0 = ((pl) this).field_p;
         ((pl) this).field_p = ((pl) this).field_p + 1;
-        ((pl) this).field_n[((pl) this).field_p] = (byte)(param0 + ((pl) this).field_t.a(jg.a(param1, 264)));
+        ((pl) this).field_n[fieldTemp$0] = (byte)(param0 + ((pl) this).field_t.a(jg.a(param1, 264)));
         if (param1 != 8) {
             ((pl) this).i((byte) 39);
         }
@@ -30,7 +31,7 @@ final class pl extends fs {
         int var5 = 0;
         int var6 = 0;
         var6 = Sumoblitz.field_L ? 1 : 0;
-        var3 = ((pl) this).field_w >> 1570203171;
+        var3 = ((pl) this).field_w >> 3;
         var4 = 8 - (7 & ((pl) this).field_w);
         if (param1 >= -85) {
           return 116;
@@ -50,8 +51,9 @@ final class pl extends fs {
               }
               return var5;
             } else {
+              int incrementValue$1 = var3;
               var3++;
-              var5 = var5 + ((((pl) this).field_n[var3] & am.field_z[var4]) << param0 + -var4);
+              var5 = var5 + ((((pl) this).field_n[incrementValue$1] & am.field_z[var4]) << param0 + -var4);
               param0 = param0 - var4;
               var4 = 8;
               continue L0;
@@ -61,11 +63,70 @@ final class pl extends fs {
     }
 
     final void a(byte[] param0, int param1, int param2, int param3) {
-        int var5 = 0;
-        int var6 = Sumoblitz.field_L ? 1 : 0;
-        for (var5 = param1; param3 > var5; var5++) {
-            ((pl) this).field_p = ((pl) this).field_p + 1;
-            param0[var5 - -param2] = (byte)(((pl) this).field_n[((pl) this).field_p] + -((pl) this).field_t.a(256));
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int var6 = 0;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        var6 = Sumoblitz.field_L ? 1 : 0;
+        try {
+          L0: {
+            var5_int = param1;
+            L1: while (true) {
+              if (param3 <= var5_int) {
+                break L0;
+              } else {
+                int fieldTemp$5 = ((pl) this).field_p;
+                ((pl) this).field_p = ((pl) this).field_p + 1;
+                param0[var5_int - -param2] = (byte)(((pl) this).field_n[fieldTemp$5] + -((pl) this).field_t.a(256));
+                var5_int++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var5 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var5;
+            stackOut_5_1 = new StringBuilder().append("pl.I(");
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param0 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L2;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L2;
+            }
+          }
+          throw qo.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }
     }
 
@@ -82,45 +143,35 @@ final class pl extends fs {
     }
 
     final static void a(java.awt.Component param0, int param1) {
-        Object var3 = null;
-        if (param1 != 7) {
-          var3 = null;
-          pl.a((java.awt.Component) null, 93);
-          param0.removeMouseListener((java.awt.event.MouseListener) (Object) wk.field_h);
-          param0.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) wk.field_h);
-          param0.removeFocusListener((java.awt.event.FocusListener) (Object) wk.field_h);
-          b.field_a = 0;
-          return;
-        } else {
-          param0.removeMouseListener((java.awt.event.MouseListener) (Object) wk.field_h);
-          param0.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) wk.field_h);
-          param0.removeFocusListener((java.awt.event.FocusListener) (Object) wk.field_h);
-          b.field_a = 0;
-          return;
+        try {
+            if (param1 != 7) {
+                Object var3 = null;
+                pl.a((java.awt.Component) null, 93);
+            }
+            param0.removeMouseListener((java.awt.event.MouseListener) (Object) wk.field_h);
+            param0.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) wk.field_h);
+            param0.removeFocusListener((java.awt.event.FocusListener) (Object) wk.field_h);
+            b.field_a = 0;
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "pl.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
     final void a(byte param0, int[] param1) {
-        ((pl) this).field_t = new ok(param1);
-        int var3 = 41 % ((param0 - 21) / 39);
+        try {
+            ((pl) this).field_t = new ok(param1);
+            int var3_int = 41 % ((param0 - 21) / 39);
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "pl.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void j(int param0) {
         field_s = null;
-        if (param0 != 24599) {
-          field_y = 91;
-          field_q = null;
-          field_x = null;
-          field_v = null;
-          field_r = null;
-          return;
-        } else {
-          field_q = null;
-          field_x = null;
-          field_v = null;
-          field_r = null;
-          return;
-        }
+        field_q = null;
+        field_x = null;
+        field_v = null;
+        field_r = null;
     }
 
     pl(int param0) {
@@ -130,11 +181,13 @@ final class pl extends fs {
     final int i(int param0) {
         if (param0 != 255) {
           ((pl) this).field_w = 51;
+          int fieldTemp$4 = ((pl) this).field_p;
           ((pl) this).field_p = ((pl) this).field_p + 1;
-          return ((pl) this).field_n[((pl) this).field_p] - ((pl) this).field_t.a(256) & 255;
+          return ((pl) this).field_n[fieldTemp$4] - ((pl) this).field_t.a(256) & 255;
         } else {
+          int fieldTemp$5 = ((pl) this).field_p;
           ((pl) this).field_p = ((pl) this).field_p + 1;
-          return ((pl) this).field_n[((pl) this).field_p] - ((pl) this).field_t.a(256) & 255;
+          return ((pl) this).field_n[fieldTemp$5] - ((pl) this).field_t.a(256) & 255;
         }
     }
 

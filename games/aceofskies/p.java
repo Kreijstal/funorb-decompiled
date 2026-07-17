@@ -38,7 +38,7 @@ final class p extends wf implements e {
         java.awt.Dimension var4 = null;
         synchronized (((p) this).field_i.getTreeLock()) {
             var4 = ((p) this).field_i.getSize();
-            this.H(param0, param1, ((java.awt.Dimension) var4).width, ((java.awt.Dimension) var4).height);
+            this.H(param0, param1, var4.width, var4.height);
             field_e = false;
         }
     }

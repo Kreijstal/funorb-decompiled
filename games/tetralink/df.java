@@ -10,9 +10,6 @@ final class df {
     int field_d;
 
     final static int a(boolean param0) {
-        if (!param0) {
-            return 51;
-        }
         return new Date().getYear() - -1900;
     }
 
@@ -24,9 +21,6 @@ final class df {
         field_a = null;
         field_c = null;
         field_b = null;
-        if (param0 > -106) {
-            int discarded$0 = df.a(true);
-        }
     }
 
     df(int param0) {

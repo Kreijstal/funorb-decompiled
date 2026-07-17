@@ -9,11 +9,6 @@ final class d {
     public static void a(int param0) {
         field_b = null;
         field_a = null;
-        if (param0 != 0) {
-            field_a = null;
-            field_c = null;
-            return;
-        }
         field_c = null;
     }
 
@@ -37,7 +32,7 @@ final class d {
 
     final static int a(boolean param0, int param1) {
         L0: {
-          if (-1 >= (param1 ^ -1)) {
+          if (param1 >= 0) {
             param1 = Math.max(param1 - 91750, 0);
             break L0;
           } else {

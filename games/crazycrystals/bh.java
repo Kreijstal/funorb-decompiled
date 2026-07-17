@@ -33,7 +33,7 @@ final class bh {
                 if (var3 >= ((bh) this).field_e.length) {
                   return ((bh) this).field_e.length - 1;
                 } else {
-                  if (((bh) this).field_e[-1 + var3] - -((bh) this).field_e[var3] >> -2051005375 > param1) {
+                  if (((bh) this).field_e[-1 + var3] - -((bh) this).field_e[var3] >> 1 > param1) {
                     return var3 - 1;
                   } else {
                     var3++;
@@ -48,9 +48,6 @@ final class bh {
     }
 
     final static boolean a(byte param0) {
-        if (param0 != 78) {
-            return false;
-        }
         return qh.field_f;
     }
 

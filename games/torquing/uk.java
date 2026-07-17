@@ -65,53 +65,21 @@ final class uk {
 
     final void a(ta param0, long param1, int param2) {
         ta var5 = null;
-        ta var6 = null;
-        ta var7 = null;
-        ta var8 = null;
-        ta var9 = null;
-        if (param2 == 0) {
-          if (param0.field_j != null) {
-            param0.h(0);
-            var8 = ((uk) this).field_c[(int)((long)(-1 + ((uk) this).field_e) & param1)];
-            var5 = var8;
+        try {
+            if (param2 != 0) {
+                ta discarded$0 = ((uk) this).a(-67L, 6);
+            }
+            if (param0.field_j != null) {
+                param0.h(0);
+            }
+            var5 = ((uk) this).field_c[(int)((long)(-1 + ((uk) this).field_e) & param1)];
             param0.field_p = var5;
-            param0.field_j = var8.field_j;
+            param0.field_j = var5.field_j;
             param0.field_j.field_p = param0;
             param0.field_p.field_j = param0;
             param0.field_l = param1;
-            return;
-          } else {
-            var9 = ((uk) this).field_c[(int)((long)(-1 + ((uk) this).field_e) & param1)];
-            var5 = var9;
-            param0.field_p = var5;
-            param0.field_j = var9.field_j;
-            param0.field_j.field_p = param0;
-            param0.field_p.field_j = param0;
-            param0.field_l = param1;
-            return;
-          }
-        } else {
-          ta discarded$1 = ((uk) this).a(-67L, 6);
-          if (param0.field_j == null) {
-            var6 = ((uk) this).field_c[(int)((long)(-1 + ((uk) this).field_e) & param1)];
-            var5 = var6;
-            param0.field_p = var5;
-            param0.field_j = var6.field_j;
-            param0.field_j.field_p = param0;
-            param0.field_p.field_j = param0;
-            param0.field_l = param1;
-            return;
-          } else {
-            param0.h(0);
-            var7 = ((uk) this).field_c[(int)((long)(-1 + ((uk) this).field_e) & param1)];
-            var5 = var7;
-            param0.field_p = var5;
-            param0.field_j = var7.field_j;
-            param0.field_j.field_p = param0;
-            param0.field_p.field_j = param0;
-            param0.field_l = param1;
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw rb.a((Throwable) (Object) runtimeException, "uk.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }
     }
 
@@ -155,9 +123,6 @@ final class uk {
     public static void a(int param0) {
         field_a = null;
         field_b = null;
-        if (param0 != 0) {
-            field_b = null;
-        }
     }
 
     uk(int param0) {

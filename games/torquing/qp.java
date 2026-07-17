@@ -15,7 +15,7 @@ final class qp extends q {
     public static void a(int param0) {
         field_r = null;
         field_o = null;
-        int var1 = -26 / ((param0 - 30) / 49);
+        int var1 = 26;
     }
 
     qp(int param0, int param1, int param2, int param3, int param4, int param5) {

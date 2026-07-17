@@ -11,19 +11,10 @@ final class ia extends af {
     static int field_i;
 
     final static void d(int param0) {
-        if (param0 < 37) {
-          return;
+        if (of.field_m < 140) {
+            ea.b(-36, of.field_m - -20);
         } else {
-          L0: {
-            if (-141 >= (of.field_m ^ -1)) {
-              ea.b(-108, 160);
-              break L0;
-            } else {
-              ea.b(-36, of.field_m - -20);
-              break L0;
-            }
-          }
-          return;
+            ea.b(-108, 160);
         }
     }
 
@@ -38,7 +29,7 @@ final class ia extends af {
         int stackIn_6_0 = 0;
         int stackOut_5_0 = 0;
         int stackOut_4_0 = 0;
-        if (0 == (param1 ^ -1)) {
+        if (param1 == -1) {
           return true;
         } else {
           L0: {
@@ -274,7 +265,7 @@ final class ia extends af {
           if (wp.field_v[3] == null) {
             break L14;
           } else {
-            if (-1 == (wp.field_v[3].field_u ^ -1)) {
+            if (wp.field_v[3].field_u == 0) {
               break L14;
             } else {
               ph.f(var4, var19, var17, var20);
@@ -296,7 +287,7 @@ final class ia extends af {
           if (wp.field_v[5] == null) {
             break L16;
           } else {
-            if (-1 == (wp.field_v[5].field_u ^ -1)) {
+            if (wp.field_v[5].field_u == 0) {
               break L16;
             } else {
               ph.f(var18, var19, var11, var20);

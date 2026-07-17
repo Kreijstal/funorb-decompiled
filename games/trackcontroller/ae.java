@@ -51,7 +51,7 @@ abstract class ae {
         if (param0 != -18316) {
             return false;
         }
-        return -21 >= (((ae) this).a((byte) 105) ^ -1) ? true : false;
+        return ((ae) this).a((byte) 105) >= 20 ? true : false;
     }
 
     abstract void a(byte param0, boolean param1, Object param2);
@@ -81,7 +81,7 @@ abstract class ae {
         int stackOut_2_1 = 0;
         if (!param2) {
           L0: {
-            var6 = (long)param3 + ((long)param0 << -186914720);
+            var6 = (long)param3 + ((long)param0 << 32);
             var8 = new hi();
             var8.field_m = var6;
             stackOut_14_0 = (hi) var8;
@@ -111,7 +111,7 @@ abstract class ae {
               return var8;
             }
           } else {
-            if (-21 >= (((ae) this).a((byte) 105) ^ -1)) {
+            if (((ae) this).a((byte) 105) >= 20) {
               throw new RuntimeException();
             } else {
               ((ae) this).field_f.a((gb) (Object) var8, true);
@@ -121,7 +121,7 @@ abstract class ae {
         } else {
           L1: {
             ((ae) this).field_i = (byte) -39;
-            var6 = (long)param3 + ((long)param0 << -186914720);
+            var6 = (long)param3 + ((long)param0 << 32);
             var8 = new hi();
             var8.field_m = var6;
             stackOut_1_0 = (hi) var8;
@@ -151,7 +151,7 @@ abstract class ae {
               return var8;
             }
           } else {
-            if (-21 >= (((ae) this).a((byte) 105) ^ -1)) {
+            if (((ae) this).a((byte) 105) >= 20) {
               throw new RuntimeException();
             } else {
               ((ae) this).field_f.a((gb) (Object) var8, true);

@@ -26,8 +26,8 @@ final class vf extends hl {
     private final void a(int param0, byte param1, int param2) {
         ((vf) this).field_B = param0;
         ((vf) this).field_i = param2;
-        ((vf) this).field_r = ((vf) this).field_i << 589895856;
-        ((vf) this).field_p = ((vf) this).field_B << 1648814320;
+        ((vf) this).field_r = ((vf) this).field_i << 16;
+        ((vf) this).field_p = ((vf) this).field_B << 16;
         if (param1 != 44) {
           return;
         } else {
@@ -55,7 +55,7 @@ final class vf extends hl {
               break L0;
             } else {
               L1: {
-                if (-7 >= (((vf) this).field_s ^ -1)) {
+                if (((vf) this).field_s >= 6) {
                   stackOut_14_0 = 11 + -((vf) this).field_s;
                   stackIn_15_0 = stackOut_14_0;
                   break L1;
@@ -79,7 +79,7 @@ final class vf extends hl {
               break L2;
             } else {
               L3: {
-                if (-7 >= (((vf) this).field_s ^ -1)) {
+                if (((vf) this).field_s >= 6) {
                   stackOut_6_0 = 11 + -((vf) this).field_s;
                   stackIn_7_0 = stackOut_6_0;
                   break L3;
@@ -109,10 +109,10 @@ final class vf extends hl {
             ((vf) this).field_k = kj.b(2, 4);
             return;
           } else {
-            // wide iinc 2 -640
-            if ((var2 ^ -1) <= -481) {
-              // wide iinc 2 -480
-              if ((var2 ^ -1) <= -641) {
+            var2 -= 640;
+            if (var2 >= 480) {
+              var2 -= 480;
+              if (var2 >= 640) {
                 this.a(640, (byte) 44, var2 - 640);
                 ((vf) this).field_k = kj.b(2, 4);
                 return;
@@ -139,19 +139,21 @@ final class vf extends hl {
         int stackOut_3_0 = 0;
         int stackOut_2_0 = 0;
         var3 = HoldTheLine.field_D;
+        int fieldTemp$8 = ((vf) this).field_A - 1;
         ((vf) this).field_A = ((vf) this).field_A - 1;
-        if (0 <= ((vf) this).field_A - 1) {
+        if (0 <= fieldTemp$8) {
           L0: {
             var2 = ((vf) this).field_m;
             if (0 == var2) {
+              int fieldTemp$9 = ((vf) this).field_z - 1;
               ((vf) this).field_z = ((vf) this).field_z - 1;
-              if (0 < ((vf) this).field_z - 1) {
+              if (0 < fieldTemp$9) {
                 break L0;
               } else {
                 this.a((byte) 50);
-                ((vf) this).field_i = ((vf) this).field_r >> -1444941392;
+                ((vf) this).field_i = ((vf) this).field_r >> 16;
                 if (param0 == -19895) {
-                  ((vf) this).field_B = ((vf) this).field_p >> 1266419312;
+                  ((vf) this).field_B = ((vf) this).field_p >> 16;
                   return;
                 } else {
                   return;
@@ -159,33 +161,34 @@ final class vf extends hl {
               }
             } else {
               L1: {
-                if (-3 == var2) {
+                if (var2 == 2) {
                   break L1;
                 } else {
                   if (1 == var2) {
                     break L1;
                   } else {
-                    if (-4 == var2) {
+                    if (var2 == 3) {
                       ((vf) this).field_r = ((vf) this).field_r + ((vf) this).field_o;
                       ((vf) this).field_p = ((vf) this).field_p + ((vf) this).field_n;
+                      int fieldTemp$10 = ((vf) this).field_z - 1;
                       ((vf) this).field_z = ((vf) this).field_z - 1;
-                      if ((((vf) this).field_z - 1 ^ -1) < -1) {
+                      if (fieldTemp$10 > 0) {
                         break L0;
                       } else {
                         this.a(25500);
                         this.b((byte) -65);
-                        ((vf) this).field_i = ((vf) this).field_r >> -1444941392;
+                        ((vf) this).field_i = ((vf) this).field_r >> 16;
                         if (param0 == -19895) {
-                          ((vf) this).field_B = ((vf) this).field_p >> 1266419312;
+                          ((vf) this).field_B = ((vf) this).field_p >> 16;
                           return;
                         } else {
                           return;
                         }
                       }
                     } else {
-                      ((vf) this).field_i = ((vf) this).field_r >> -1444941392;
+                      ((vf) this).field_i = ((vf) this).field_r >> 16;
                       if (param0 == -19895) {
-                        ((vf) this).field_B = ((vf) this).field_p >> 1266419312;
+                        ((vf) this).field_B = ((vf) this).field_p >> 16;
                         return;
                       } else {
                         return;
@@ -198,9 +201,9 @@ final class vf extends hl {
                 break L0;
               } else {
                 this.a((byte) 62);
-                ((vf) this).field_i = ((vf) this).field_r >> -1444941392;
+                ((vf) this).field_i = ((vf) this).field_r >> 16;
                 if (param0 == -19895) {
-                  ((vf) this).field_B = ((vf) this).field_p >> 1266419312;
+                  ((vf) this).field_B = ((vf) this).field_p >> 16;
                   return;
                 } else {
                   return;
@@ -208,16 +211,16 @@ final class vf extends hl {
               }
             }
           }
-          ((vf) this).field_i = ((vf) this).field_r >> -1444941392;
+          ((vf) this).field_i = ((vf) this).field_r >> 16;
           if (param0 == -19895) {
-            ((vf) this).field_B = ((vf) this).field_p >> 1266419312;
+            ((vf) this).field_B = ((vf) this).field_p >> 16;
             return;
           } else {
             return;
           }
         } else {
           L2: {
-            if ((((vf) this).field_m ^ -1) == -4) {
+            if (((vf) this).field_m == 3) {
               stackOut_3_0 = 7;
               stackIn_4_0 = stackOut_3_0;
               break L2;
@@ -228,42 +231,45 @@ final class vf extends hl {
             }
           }
           var2 = stackIn_4_0;
+          int fieldTemp$11 = ((vf) this).field_s + 1;
           ((vf) this).field_s = ((vf) this).field_s + 1;
-          if (((vf) this).field_s + 1 < var2) {
+          if (~fieldTemp$11 > ~var2) {
             L3: {
               ((vf) this).field_A = this.e(5);
               var2 = ((vf) this).field_m;
               if (0 == var2) {
+                int fieldTemp$12 = ((vf) this).field_z - 1;
                 ((vf) this).field_z = ((vf) this).field_z - 1;
-                if (0 < ((vf) this).field_z - 1) {
+                if (0 < fieldTemp$12) {
                   break L3;
                 } else {
                   this.a((byte) 50);
-                  ((vf) this).field_i = ((vf) this).field_r >> -1444941392;
-                  if (param0 != -19895) {
+                  ((vf) this).field_i = ((vf) this).field_r >> 16;
+                  if (param0 == -19895) {
+                    ((vf) this).field_B = ((vf) this).field_p >> 16;
                     return;
                   } else {
-                    ((vf) this).field_B = ((vf) this).field_p >> 1266419312;
                     return;
                   }
                 }
               } else {
-                if (-3 != (var2 ^ -1)) {
+                if (var2 != 2) {
                   if (1 != var2) {
-                    if (-4 == (var2 ^ -1)) {
+                    if (var2 == 3) {
                       ((vf) this).field_r = ((vf) this).field_r + ((vf) this).field_o;
                       ((vf) this).field_p = ((vf) this).field_p + ((vf) this).field_n;
+                      int fieldTemp$13 = ((vf) this).field_z - 1;
                       ((vf) this).field_z = ((vf) this).field_z - 1;
-                      if ((((vf) this).field_z - 1 ^ -1) < -1) {
+                      if (fieldTemp$13 > 0) {
                         break L3;
                       } else {
                         this.a(25500);
                         this.b((byte) -65);
-                        ((vf) this).field_i = ((vf) this).field_r >> -1444941392;
-                        if (param0 != -19895) {
+                        ((vf) this).field_i = ((vf) this).field_r >> 16;
+                        if (param0 == -19895) {
+                          ((vf) this).field_B = ((vf) this).field_p >> 16;
                           return;
                         } else {
-                          ((vf) this).field_B = ((vf) this).field_p >> 1266419312;
                           return;
                         }
                       }
@@ -279,11 +285,11 @@ final class vf extends hl {
                         break L4;
                       }
                     }
-                    ((vf) this).field_i = ((vf) this).field_r >> -1444941392;
-                    if (param0 != -19895) {
+                    ((vf) this).field_i = ((vf) this).field_r >> 16;
+                    if (param0 == -19895) {
+                      ((vf) this).field_B = ((vf) this).field_p >> 16;
                       return;
                     } else {
-                      ((vf) this).field_B = ((vf) this).field_p >> 1266419312;
                       return;
                     }
                   }
@@ -296,21 +302,21 @@ final class vf extends hl {
                       break L5;
                     }
                   }
-                  ((vf) this).field_i = ((vf) this).field_r >> -1444941392;
-                  if (param0 != -19895) {
+                  ((vf) this).field_i = ((vf) this).field_r >> 16;
+                  if (param0 == -19895) {
+                    ((vf) this).field_B = ((vf) this).field_p >> 16;
                     return;
                   } else {
-                    ((vf) this).field_B = ((vf) this).field_p >> 1266419312;
                     return;
                   }
                 }
               }
             }
-            ((vf) this).field_i = ((vf) this).field_r >> -1444941392;
-            if (param0 != -19895) {
+            ((vf) this).field_i = ((vf) this).field_r >> 16;
+            if (param0 == -19895) {
+              ((vf) this).field_B = ((vf) this).field_p >> 16;
               return;
             } else {
-              ((vf) this).field_B = ((vf) this).field_p >> 1266419312;
               return;
             }
           } else {
@@ -318,41 +324,43 @@ final class vf extends hl {
             ((vf) this).field_A = this.e(5);
             var2 = ((vf) this).field_m;
             if (0 == var2) {
+              int fieldTemp$14 = ((vf) this).field_z - 1;
               ((vf) this).field_z = ((vf) this).field_z - 1;
-              if (0 >= ((vf) this).field_z - 1) {
+              if (0 >= fieldTemp$14) {
                 this.a((byte) 50);
-                ((vf) this).field_i = ((vf) this).field_r >> -1444941392;
-                if (param0 != -19895) {
+                ((vf) this).field_i = ((vf) this).field_r >> 16;
+                if (param0 == -19895) {
+                  ((vf) this).field_B = ((vf) this).field_p >> 16;
                   return;
                 } else {
-                  ((vf) this).field_B = ((vf) this).field_p >> 1266419312;
                   return;
                 }
               } else {
-                ((vf) this).field_i = ((vf) this).field_r >> -1444941392;
-                if (param0 != -19895) {
+                ((vf) this).field_i = ((vf) this).field_r >> 16;
+                if (param0 == -19895) {
+                  ((vf) this).field_B = ((vf) this).field_p >> 16;
                   return;
                 } else {
-                  ((vf) this).field_B = ((vf) this).field_p >> 1266419312;
                   return;
                 }
               }
             } else {
               L6: {
-                if (-3 == var2) {
+                if (var2 == 2) {
                   break L6;
                 } else {
                   if (1 == var2) {
                     break L6;
                   } else {
-                    if (-4 == var2) {
+                    if (var2 == 3) {
                       ((vf) this).field_r = ((vf) this).field_r + ((vf) this).field_o;
                       ((vf) this).field_p = ((vf) this).field_p + ((vf) this).field_n;
+                      int fieldTemp$15 = ((vf) this).field_z - 1;
                       ((vf) this).field_z = ((vf) this).field_z - 1;
-                      if ((((vf) this).field_z - 1 ^ -1) < -1) {
-                        ((vf) this).field_i = ((vf) this).field_r >> -1444941392;
+                      if (fieldTemp$15 > 0) {
+                        ((vf) this).field_i = ((vf) this).field_r >> 16;
                         if (param0 == -19895) {
-                          ((vf) this).field_B = ((vf) this).field_p >> 1266419312;
+                          ((vf) this).field_B = ((vf) this).field_p >> 16;
                           return;
                         } else {
                           return;
@@ -360,20 +368,20 @@ final class vf extends hl {
                       } else {
                         this.a(25500);
                         this.b((byte) -65);
-                        ((vf) this).field_i = ((vf) this).field_r >> -1444941392;
+                        ((vf) this).field_i = ((vf) this).field_r >> 16;
                         if (param0 == -19895) {
-                          ((vf) this).field_B = ((vf) this).field_p >> 1266419312;
+                          ((vf) this).field_B = ((vf) this).field_p >> 16;
                           return;
                         } else {
                           return;
                         }
                       }
                     } else {
-                      ((vf) this).field_i = ((vf) this).field_r >> -1444941392;
-                      if (param0 != -19895) {
+                      ((vf) this).field_i = ((vf) this).field_r >> 16;
+                      if (param0 == -19895) {
+                        ((vf) this).field_B = ((vf) this).field_p >> 16;
                         return;
                       } else {
-                        ((vf) this).field_B = ((vf) this).field_p >> 1266419312;
                         return;
                       }
                     }
@@ -382,17 +390,17 @@ final class vf extends hl {
               }
               if (this.a(false)) {
                 this.a((byte) 62);
-                ((vf) this).field_i = ((vf) this).field_r >> -1444941392;
+                ((vf) this).field_i = ((vf) this).field_r >> 16;
                 if (param0 == -19895) {
-                  ((vf) this).field_B = ((vf) this).field_p >> 1266419312;
+                  ((vf) this).field_B = ((vf) this).field_p >> 16;
                   return;
                 } else {
                   return;
                 }
               } else {
-                ((vf) this).field_i = ((vf) this).field_r >> -1444941392;
+                ((vf) this).field_i = ((vf) this).field_r >> 16;
                 if (param0 == -19895) {
-                  ((vf) this).field_B = ((vf) this).field_p >> 1266419312;
+                  ((vf) this).field_B = ((vf) this).field_p >> 16;
                   return;
                 } else {
                   return;
@@ -446,41 +454,22 @@ final class vf extends hl {
     }
 
     final void a(ja param0, int param1, byte param2, int param3) {
-        if ((((vf) this).field_m ^ -1) == -4) {
-          return;
-        } else {
-          if (param2 >= 6) {
+        if (!(((vf) this).field_m != 3)) {
+            return;
+        }
+        try {
+            if (param2 < 6) {
+                boolean discarded$0 = ((vf) this).c((byte) 80);
+            }
             if (param0 != null) {
-              param0.field_Sb = param0.field_Sb + 1;
-              this.a(true, 3);
-              ((vf) this).field_z = 4 * this.e(5);
-              ((vf) this).field_n = param1;
-              ((vf) this).field_o = param3;
-              return;
-            } else {
-              this.a(true, 3);
-              ((vf) this).field_z = 4 * this.e(5);
-              ((vf) this).field_n = param1;
-              ((vf) this).field_o = param3;
-              return;
+                param0.field_Sb = param0.field_Sb + 1;
             }
-          } else {
-            boolean discarded$1 = ((vf) this).c((byte) 80);
-            if (param0 == null) {
-              this.a(true, 3);
-              ((vf) this).field_z = 4 * this.e(5);
-              ((vf) this).field_n = param1;
-              ((vf) this).field_o = param3;
-              return;
-            } else {
-              param0.field_Sb = param0.field_Sb + 1;
-              this.a(true, 3);
-              ((vf) this).field_z = 4 * this.e(5);
-              ((vf) this).field_n = param1;
-              ((vf) this).field_o = param3;
-              return;
-            }
-          }
+            this.a(true, 3);
+            ((vf) this).field_z = 4 * this.e(5);
+            ((vf) this).field_n = param1;
+            ((vf) this).field_o = param3;
+        } catch (RuntimeException runtimeException) {
+            throw kk.a((Throwable) (Object) runtimeException, "vf.L(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }
     }
 
@@ -531,7 +520,7 @@ final class vf extends hl {
         if (param0 != 5) {
           L0: {
             field_t = -26;
-            if ((((vf) this).field_m ^ -1) != -4) {
+            if (((vf) this).field_m != 3) {
               stackOut_7_0 = 5;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -544,7 +533,7 @@ final class vf extends hl {
           return stackIn_8_0;
         } else {
           L1: {
-            if ((((vf) this).field_m ^ -1) != -4) {
+            if (((vf) this).field_m != 3) {
               stackOut_3_0 = 5;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -559,46 +548,19 @@ final class vf extends hl {
     }
 
     private final boolean a(boolean param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int stackIn_3_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        L0: {
-          if ((((vf) this).field_m ^ -1) == -2) {
-            stackOut_2_0 = 16384;
-            stackIn_3_0 = stackOut_2_0;
-            break L0;
-          } else {
-            stackOut_1_0 = 4096;
-            stackIn_3_0 = stackOut_1_0;
-            break L0;
-          }
+        int var2 = ((vf) this).field_m != 1 ? 4096 : 16384;
+        int var3 = -(((vf) this).field_p >> 8) + (((vf) this).field_q << 8);
+        int var4 = (((vf) this).field_y << 8) + -(((vf) this).field_r >> 8);
+        int var5 = pg.b(var4, 4805, var3);
+        if (!(var5 >= var2 >> 8)) {
+            return true;
         }
-        var2 = stackIn_3_0;
-        var3 = -(((vf) this).field_p >> -2028860408) + (((vf) this).field_q << -853447352);
-        var4 = (((vf) this).field_y << -1970082872) + -(((vf) this).field_r >> 1918326984);
-        var5 = pg.b(var4, 4805, var3);
-        if (var5 < var2 >> -1387433848) {
-          return true;
-        } else {
-          if (param0) {
-            int discarded$1 = this.e(-93);
-            var4 = var4 * var2 / var5;
-            var3 = var3 * var2 / var5;
-            ((vf) this).field_r = ((vf) this).field_r + var4;
-            ((vf) this).field_p = ((vf) this).field_p + var3;
-            return false;
-          } else {
-            var4 = var4 * var2 / var5;
-            var3 = var3 * var2 / var5;
-            ((vf) this).field_r = ((vf) this).field_r + var4;
-            ((vf) this).field_p = ((vf) this).field_p + var3;
-            return false;
-          }
-        }
+        int discarded$0 = this.e(-93);
+        var4 = var4 * var2 / var5;
+        var3 = var3 * var2 / var5;
+        ((vf) this).field_r = ((vf) this).field_r + var4;
+        ((vf) this).field_p = ((vf) this).field_p + var3;
+        return false;
     }
 
     private final void a(byte param0) {

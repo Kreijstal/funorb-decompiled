@@ -27,10 +27,10 @@ final class gl {
     }
 
     final static qh a(int param0, int param1) {
-        eq.field_k = new qh(0, -((4 + kb.field_y.field_o) * param0) + 479 + -28, 200, (kb.field_y.field_o + 4) * param0 - -28, ba.field_a.toUpperCase());
-        fe var2 = new fe(184 + eq.field_k.field_k, 2 + eq.field_k.field_t, 11, 11, param1, (bi) null, "X", 16711680);
+        eq.field_k = new qh(0, -((4 + kb.field_y.field_o) * param0) + 451, 200, (kb.field_y.field_o + 4) * param0 - -28, ba.field_a.toUpperCase());
+        fe var2 = new fe(184 + eq.field_k.field_k, 2 + eq.field_k.field_t, 11, 11, -1, (bi) null, "X", 16711680);
         var2.field_h = (Object) (Object) eq.field_k;
-        eq.field_k.a((vd) (Object) var2, param1 + 9);
+        eq.field_k.a((vd) (Object) var2, 8);
         lp var3 = new lp(9 + eq.field_k.field_k, 20 + eq.field_k.field_t, 182, (4 + kb.field_y.field_o) * param0);
         eq.field_k.a((vd) (Object) var3, 8);
         eq.field_k.field_z = var3;
@@ -38,13 +38,10 @@ final class gl {
     }
 
     final static void a(byte param0) {
+        int fieldTemp$0 = di.field_m + 1;
         di.field_m = di.field_m + 1;
-        if (!(di.field_m + 1 != 350)) {
+        if (!(fieldTemp$0 != 350)) {
             jc.a(-1, (byte) -114);
-        }
-        if (param0 > -29) {
-            gl.a(66);
-            return;
         }
     }
 

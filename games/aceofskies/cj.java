@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import jagdx.IDirect3DVertexBuffer;
+
 final class cj implements tl {
     jagdx.IDirect3DVertexBuffer field_f;
     private int field_b;
@@ -171,7 +173,7 @@ final class cj implements tl {
             if (param1 < -58) {
               return null;
             } else {
-              return (jaclib.memory.Buffer) null;
+              return null;
             }
           } else {
             L0: {
@@ -217,7 +219,7 @@ final class cj implements tl {
               if (param1 < -58) {
                 return null;
               } else {
-                return (jaclib.memory.Buffer) null;
+                return null;
               }
             } else {
               ((cj) this).field_d = true;

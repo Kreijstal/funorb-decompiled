@@ -15,7 +15,7 @@ final class fua implements isa {
         if (param0 <= 88) {
             return true;
         }
-        return (param1 & 32768 ^ -1) != -1 ? true : false;
+        return (param1 & 32768) != 0 ? true : false;
     }
 
     public static void a(int param0) {
@@ -38,53 +38,107 @@ final class fua implements isa {
     }
 
     public final void a(ae param0, int param1, int param2, int param3, boolean param4) {
-        int var6 = 0;
+        RuntimeException var6 = null;
+        int var6_int = 0;
         int var7 = 0;
         Object var8 = null;
         String var9 = null;
         int var10 = 0;
-        if (param2 == 16777215) {
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        try {
           L0: {
-            var6 = param1 + param0.field_i;
-            var7 = param0.field_n + param3;
-            bl.a(param0.field_m, var7, param0.field_p, var6, 1);
-            if (param0.b((byte) -34)) {
-              nn.a(var6 - -2, 2 + var7, -4 + param0.field_p, param0.field_m - 4, false);
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          bea.b(var6, var7, var6 + (param0.field_m + -2), var7 - -param0.field_p);
-          var8 = ((fua) this).field_d.field_z.d(124);
-          if (var8 != null) {
-            var9 = var8.toString();
-            ((fua) this).field_d.field_H.c(var9, var6 + 2, -1 + (param0.field_p + ((fua) this).field_d.field_H.field_w >> 198752417) + var7, 10000536, -1);
-            if (((fua) this).field_d.b((byte) -34)) {
-              if (var9.startsWith(((fua) this).field_d.field_w)) {
-                var10 = ((fua) this).field_d.field_H.b(((fua) this).field_d.field_w);
-                bea.c(2 + var6, var7 - -2, var10, -4 + param0.field_p, 2188450, 100);
-                bea.b();
-                return;
-              } else {
-                bea.b();
-                return;
+            if (param2 == 16777215) {
+              L1: {
+                var6_int = param1 + param0.field_i;
+                var7 = param0.field_n + param3;
+                bl.a(param0.field_m, var7, param0.field_p, var6_int, 1);
+                if (param0.b((byte) -34)) {
+                  nn.a(var6_int - -2, 2 + var7, -4 + param0.field_p, param0.field_m - 4, false);
+                  break L1;
+                } else {
+                  break L1;
+                }
               }
-            } else {
+              L2: {
+                bea.b(var6_int, var7, var6_int + (param0.field_m + -2), var7 - -param0.field_p);
+                var8 = ((fua) this).field_d.field_z.d(124);
+                if (var8 != null) {
+                  var9 = var8.toString();
+                  ((fua) this).field_d.field_H.c(var9, var6_int + 2, -1 + (param0.field_p + ((fua) this).field_d.field_H.field_w >> 1) + var7, 10000536, -1);
+                  if (!((fua) this).field_d.b((byte) -34)) {
+                    break L2;
+                  } else {
+                    if (!var9.startsWith(((fua) this).field_d.field_w)) {
+                      break L2;
+                    } else {
+                      var10 = ((fua) this).field_d.field_H.b(((fua) this).field_d.field_w);
+                      bea.c(2 + var6_int, var7 - -2, var10, -4 + param0.field_p, 2188450, 100);
+                      break L2;
+                    }
+                  }
+                } else {
+                  break L2;
+                }
+              }
               bea.b();
+              break L0;
+            } else {
               return;
             }
-          } else {
-            bea.b();
-            return;
           }
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var6 = decompiledCaughtException;
+            stackOut_12_0 = (RuntimeException) var6;
+            stackOut_12_1 = new StringBuilder().append("fua.B(");
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
+            if (param0 == null) {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L3;
+            } else {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L3;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
     fua(rla param0) {
-        ((fua) this).field_d = param0;
+        try {
+            ((fua) this).field_d = param0;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "fua.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

@@ -102,30 +102,30 @@ final class fe extends km {
           L0: {
             var7_int = 2147483647;
             var8 = -2147483648;
-            var21 = param5[3] >> 1565988866;
-            var22 = param5[4] >> 526723426;
-            var23 = param5[5] >> -2098134398;
-            var24 = param5[6] >> 1195488962;
-            var25 = param5[7] >> -379611870;
-            var26 = param5[8] >> -334535326;
-            var27 = param5[9] >> 316028738;
-            var28 = param5[10] >> 1916798914;
-            var12 = param0[5] * var23 + var21 * param0[3] - -(var22 * param0[4]) >> 219513294;
-            var13 = var25 * param0[4] + (param0[3] * var24 - -(param0[5] * var26)) >> -572013234;
-            var29 = param5[11] >> -240602782;
-            var18 = param0[11] * var23 + param0[9] * var21 + var22 * param0[10] >> -391972274;
-            var16 = var26 * param0[8] + var24 * param0[6] - -(var25 * param0[7]) >> -509145714;
-            var14 = param0[5] * var29 + (param0[4] * var28 + param0[3] * var27) >> -767266066;
+            var21 = param5[3] >> 2;
+            var22 = param5[4] >> 2;
+            var23 = param5[5] >> 2;
+            var24 = param5[6] >> 2;
+            var25 = param5[7] >> 2;
+            var26 = param5[8] >> 2;
+            var27 = param5[9] >> 2;
+            var28 = param5[10] >> 2;
+            var12 = param0[5] * var23 + var21 * param0[3] - -(var22 * param0[4]) >> 14;
+            var13 = var25 * param0[4] + (param0[3] * var24 - -(param0[5] * var26)) >> 14;
+            var29 = param5[11] >> 2;
+            var18 = param0[11] * var23 + param0[9] * var21 + var22 * param0[10] >> 14;
+            var16 = var26 * param0[8] + var24 * param0[6] - -(var25 * param0[7]) >> 14;
+            var14 = param0[5] * var29 + (param0[4] * var28 + param0[3] * var27) >> 14;
             if (param2) {
-              var15 = param0[8] * var23 + (var21 * param0[6] - -(var22 * param0[7])) >> 585747022;
-              var17 = param0[7] * var28 + (param0[6] * var27 + param0[8] * var29) >> -462163250;
-              var20 = param0[9] * var27 - -(var28 * param0[10]) - -(param0[11] * var29) >> 719371182;
-              var19 = var26 * param0[11] + param0[10] * var25 + var24 * param0[9] >> 1236047246;
+              var15 = param0[8] * var23 + (var21 * param0[6] - -(var22 * param0[7])) >> 14;
+              var17 = param0[7] * var28 + (param0[6] * var27 + param0[8] * var29) >> 14;
+              var20 = param0[9] * var27 - -(var28 * param0[10]) - -(param0[11] * var29) >> 14;
+              var19 = var26 * param0[11] + param0[10] * var25 + var24 * param0[9] >> 14;
               var21 = param0[0] + -param5[0];
               var22 = param0[1] - param5[1];
               var23 = -param5[2] + param0[2];
               var9 = param5[5] * var23 + (var21 * param5[3] + param5[4] * var22) >> 16 - gb.field_N;
-              var11 = var23 * param5[11] + param5[9] * var21 - -(var22 * param5[10]) >> -362313424;
+              var11 = var23 * param5[11] + param5[9] * var21 - -(var22 * param5[10]) >> 16;
               var10 = param5[6] * var21 - (-(var22 * param5[7]) + -(var23 * param5[8])) >> 16 + -gb.field_N;
               var21 = fk.field_j;
               var22 = fk.field_k;
@@ -142,7 +142,7 @@ final class fe extends km {
                         var26 = param3.field_H[var23];
                         var27 = var9 - -(var26 * var18 + var12 * var24 - -(var15 * var25) >> -gb.field_N + 16);
                         var28 = (var24 * var13 - -(var25 * var16) + var19 * var26 >> -gb.field_N + 16) + var10;
-                        var29 = var11 + (var26 * var20 + var14 * var24 + var25 * var17 >> 942273552);
+                        var29 = var11 + (var26 * var20 + var14 * var24 + var25 * var17 >> 16);
                         stackOut_5_0 = var29;
                         stackOut_5_1 = 50;
                         stackIn_67_0 = stackOut_5_0;
@@ -161,7 +161,7 @@ final class fe extends km {
                                   en.field_Hb[var23] = var27 / var29 + var21;
                                   ld.field_h[var23] = var22 - -(var28 / var29);
                                   dn.field_a[var23] = var29;
-                                  if ((var29 ^ -1) < (var8 ^ -1)) {
+                                  if (~var29 < ~var8) {
                                     var8 = var29;
                                     break L7;
                                   } else {
@@ -236,21 +236,21 @@ final class fe extends km {
                                             var24 = param3.field_R[var23];
                                             var25 = param3.field_E[var23];
                                             var26 = param3.field_f[var23];
-                                            nm.field_a[var23] = var9 + (var24 * var12 + var15 * var25 - -(var26 * var18) >> -1942332080);
-                                            hf.field_A[var23] = (var19 * var26 + (var16 * var25 + var13 * var24) >> 1541210352) + var10;
-                                            gl.field_b[var23] = var11 - -(var25 * var17 + (var14 * var24 - -(var26 * var20)) >> -354965520);
+                                            nm.field_a[var23] = var9 + (var24 * var12 + var15 * var25 - -(var26 * var18) >> 16);
+                                            hf.field_A[var23] = (var19 * var26 + (var16 * var25 + var13 * var24) >> 16) + var10;
+                                            gl.field_b[var23] = var11 - -(var25 * var17 + (var14 * var24 - -(var26 * var20)) >> 16);
                                             var24 = param3.field_q[var23];
                                             var25 = param3.field_c[var23];
                                             var26 = param3.field_o[var23];
-                                            d.field_Lb[var23] = (var18 * var26 + var25 * var15 + var24 * var12 >> 971420400) + var9;
-                                            qe.field_i[var23] = var10 + (var25 * var16 + (var24 * var13 - -(var26 * var19)) >> 1881032656);
-                                            pg.field_j[var23] = (var26 * var20 + (var25 * var17 + var14 * var24) >> 1318560112) + var11;
+                                            d.field_Lb[var23] = (var18 * var26 + var25 * var15 + var24 * var12 >> 16) + var9;
+                                            qe.field_i[var23] = var10 + (var25 * var16 + (var24 * var13 - -(var26 * var19)) >> 16);
+                                            pg.field_j[var23] = (var26 * var20 + (var25 * var17 + var14 * var24) >> 16) + var11;
                                             var24 = param3.field_n[var23];
                                             var25 = param3.field_P[var23];
                                             var26 = param3.field_M[var23];
-                                            hf.field_z[var23] = (var18 * var26 + var15 * var25 + var24 * var12 >> 464598448) + var9;
-                                            ag.field_i[var23] = var10 - -(var19 * var26 + var24 * var13 - -(var16 * var25) >> -1886333648);
-                                            ul.field_h[var23] = (var25 * var17 + (var24 * var14 - -(var20 * var26)) >> 350562896) + var11;
+                                            hf.field_z[var23] = (var18 * var26 + var15 * var25 + var24 * var12 >> 16) + var9;
+                                            ag.field_i[var23] = var10 - -(var19 * var26 + var24 * var13 - -(var16 * var25) >> 16);
+                                            ul.field_h[var23] = (var25 * var17 + (var24 * var14 - -(var20 * var26)) >> 16) + var11;
                                             var23++;
                                             if (var30 != 0) {
                                               break L2;
@@ -290,7 +290,7 @@ final class fe extends km {
                         var17 = param0[11];
                         var18 = 0;
                         L12: while (true) {
-                          if ((param3.field_i ^ -1) >= (var18 ^ -1)) {
+                          if (~param3.field_i >= ~var18) {
                             break L11;
                           } else {
                             stackOut_61_0 = u.field_q.length;
@@ -308,9 +308,9 @@ final class fe extends km {
                                 var19 = param3.field_A[var18];
                                 var20 = param3.field_G[var18];
                                 var21 = param3.field_D[var18];
-                                u.field_q[var18] = var21 * var15 + var20 * var12 + var19 * var9 >> -657430768;
-                                fb.field_p[var18] = var10 * var19 - (-(var20 * var13) - var16 * var21) >> 869812368;
-                                dc.field_Q[var18] = var11 * var19 + (var14 * var20 + var17 * var21) >> 27446352;
+                                u.field_q[var18] = var21 * var15 + var20 * var12 + var19 * var9 >> 16;
+                                fb.field_p[var18] = var10 * var19 - (-(var20 * var13) - var16 * var21) >> 16;
+                                dc.field_Q[var18] = var11 * var19 + (var14 * var20 + var17 * var21) >> 16;
                                 var18++;
                                 if (var30 == 0) {
                                   continue L12;
@@ -430,7 +430,7 @@ final class fe extends km {
         int stackOut_1_0 = 0;
         try {
           L0: {
-            if ((((fe) this).field_Ib ^ -1) == -1) {
+            if (((fe) this).field_Ib == 0) {
               L1: {
                 if (um.field_Gb != 85) {
                   break L1;
@@ -444,7 +444,7 @@ final class fe extends km {
                 }
               }
               L2: {
-                if (-13 >= (((fe) this).field_Eb.length() ^ -1)) {
+                if (((fe) this).field_Eb.length() >= 12) {
                   break L2;
                 } else {
                   L3: {
@@ -457,7 +457,7 @@ final class fe extends km {
                     }
                   }
                   L4: {
-                    if ((var2_int ^ -1) != -96) {
+                    if (var2_int != 95) {
                       break L4;
                     } else {
                       if (((fe) this).field_Eb.length() <= 0) {
@@ -484,9 +484,9 @@ final class fe extends km {
                 }
               }
               L6: {
-                if (-85 == (um.field_Gb ^ -1)) {
+                if (um.field_Gb == 84) {
                   L7: {
-                    if ((((fe) this).field_Eb.length() ^ -1) >= -1) {
+                    if (((fe) this).field_Eb.length() <= 0) {
                       break L7;
                     } else {
                       ((fe) this).field_V = ((fe) this).field_Eb.toString();
@@ -505,7 +505,7 @@ final class fe extends km {
                 }
               }
               L8: {
-                if ((um.field_Gb ^ -1) == -14) {
+                if (um.field_Gb == 13) {
                   ((fe) this).field_Ib = 1;
                   break L8;
                 } else {
@@ -817,7 +817,7 @@ final class fe extends km {
                 if (0 == dm.field_u) {
                   break L3;
                 } else {
-                  if (-2 == (dm.field_u ^ -1)) {
+                  if (dm.field_u == 1) {
                     var7 = sf.a((byte) 121, var5_ref, pm.field_j, 480, gg.field_I);
                     var8 = var7 + 2;
                     vg.field_F = new String[var8];
@@ -826,7 +826,7 @@ final class fe extends km {
                     L4: while (true) {
                       L5: {
                         L6: {
-                          if ((var8 ^ -1) >= (var9 ^ -1)) {
+                          if (~var8 >= ~var9) {
                             break L6;
                           } else {
                             wf.field_f[var9] = -1;
@@ -949,11 +949,11 @@ final class fe extends km {
             L16: while (true) {
               L17: {
                 L18: {
-                  if ((vg.field_F.length ^ -1) >= (var8 ^ -1)) {
+                  if (~vg.field_F.length >= ~var8) {
                     break L18;
                   } else {
                     stackOut_43_0 = -1;
-                    stackOut_43_1 = wf.field_f[var8] ^ -1;
+                    stackOut_43_1 = ~wf.field_f[var8];
                     stackIn_60_0 = stackOut_43_0;
                     stackIn_60_1 = stackOut_43_1;
                     stackIn_44_0 = stackOut_43_0;
@@ -998,9 +998,9 @@ final class fe extends km {
                     }
                   }
                 }
-                lj.field_g = g.field_b.field_o * (hd.field_e + ng.field_P << -1119344447);
-                sh.field_rb = -(var7 >> -1679552959) + mh.field_g - -var7;
-                dg.field_x = mh.field_g - (var7 >> 164368225);
+                lj.field_g = g.field_b.field_o * (hd.field_e + ng.field_P << 1);
+                sh.field_rb = -(var7 >> 1) + mh.field_g - -var7;
+                dg.field_x = mh.field_g - (var7 >> 1);
                 stackOut_59_0 = param0;
                 stackOut_59_1 = 45;
                 stackIn_60_0 = stackOut_59_0;
@@ -1019,12 +1019,12 @@ final class fe extends km {
               L23: while (true) {
                 L24: {
                   L25: {
-                    if ((var8 ^ -1) <= (vg.field_F.length ^ -1)) {
+                    if (~var8 <= ~vg.field_F.length) {
                       break L25;
                     } else {
                       stackOut_65_0 = lj.field_g;
                       stackOut_65_1 = -1;
-                      stackOut_65_2 = wf.field_f[var8] ^ -1;
+                      stackOut_65_2 = ~wf.field_f[var8];
                       stackIn_74_0 = stackOut_65_0;
                       stackIn_74_1 = stackOut_65_1;
                       stackIn_74_2 = stackOut_65_2;
@@ -1066,7 +1066,7 @@ final class fe extends km {
                   }
                   stackOut_73_0 = kn.field_I;
                   stackOut_73_1 = lj.field_g;
-                  stackOut_73_2 = 1346030241;
+                  stackOut_73_2 = 1;
                   stackIn_74_0 = stackOut_73_0;
                   stackIn_74_1 = stackOut_73_1;
                   stackIn_74_2 = stackOut_73_2;
@@ -1146,7 +1146,7 @@ final class fe extends km {
                       break L3;
                     } else {
                       L5: {
-                        if ((um.field_Gb ^ -1) != -86) {
+                        if (um.field_Gb != 85) {
                           break L5;
                         } else {
                           if (((fe) this).field_Eb.length() <= 0) {
@@ -1174,7 +1174,7 @@ final class fe extends km {
                               }
                             }
                             L9: {
-                              if ((((fe) this).field_Eb.length() ^ -1) != -2) {
+                              if (((fe) this).field_Eb.length() != 1) {
                                 break L9;
                               } else {
                                 if (nm.field_d == 35) {
@@ -1195,7 +1195,7 @@ final class fe extends km {
                         break L6;
                       }
                       if (84 != um.field_Gb) {
-                        if ((um.field_Gb ^ -1) != -14) {
+                        if (um.field_Gb != 13) {
                           continue L4;
                         } else {
                           stackOut_42_0 = 1;
@@ -1210,7 +1210,7 @@ final class fe extends km {
                           }
                         }
                       } else {
-                        if ((((fe) this).field_Eb.length() ^ -1) >= -1) {
+                        if (((fe) this).field_Eb.length() <= 0) {
                           stackOut_39_0 = 1;
                           stackIn_40_0 = stackOut_39_0;
                           return stackIn_40_0;
@@ -1239,7 +1239,7 @@ final class fe extends km {
                 if (0 == oi.field_g) {
                   break L10;
                 } else {
-                  if (-1 == (((fe) this).field_nb ^ -1)) {
+                  if (((fe) this).field_nb == 0) {
                     ((fe) this).field_Ib = 1;
                     break L10;
                   } else {
@@ -1406,7 +1406,7 @@ final class fe extends km {
                         }
                       }
                       L5: {
-                        if (((vg.field_I.field_v | 1 << vg.field_I.field_e) ^ -1) == -4) {
+                        if ((vg.field_I.field_v | 1 << vg.field_I.field_e) == 3) {
                           break L5;
                         } else {
                           de.field_pb[18] = eb.field_g;
@@ -1434,7 +1434,7 @@ final class fe extends km {
                 }
               }
               L6: {
-                if ((vg.field_I.field_C.field_b & 1 << vg.field_I.field_e ^ -1) != -1) {
+                if ((vg.field_I.field_C.field_b & 1 << vg.field_I.field_e) != 0) {
                   break L6;
                 } else {
                   L7: {

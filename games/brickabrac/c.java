@@ -18,7 +18,6 @@ final class c {
     static String field_n;
 
     public static void a(boolean param0) {
-        Object var2 = null;
         field_j = null;
         field_d = null;
         field_m = null;
@@ -27,48 +26,35 @@ final class c {
         field_l = null;
         field_e = null;
         field_c = null;
-        if (param0) {
-          return;
-        } else {
-          var2 = null;
-          c.a(6, -63, 125, -38, (wq) null);
-          return;
-        }
     }
 
     final static void a(int param0, String param1, byte param2, int param3, int param4, String param5) {
-        pi var6 = null;
-        int var7 = 0;
-        int var8 = 0;
         pi var9 = null;
-        L0: {
-          var9 = k.field_h;
-          var6 = var9;
-          var7 = -44 / ((-59 - param2) / 38);
-          var9.e(-13413, param4);
-          var9.field_l = var9.field_l + 1;
-          var8 = var9.field_l;
-          var9.a(86, param3);
-          if (param3 == 2) {
-            var9.a(param1, -1);
-            break L0;
-          } else {
-            break L0;
-          }
-        }
-        if (param5 != null) {
-          int discarded$2 = md.a(26152, param5, (wq) (Object) var9);
-          var9.d((byte) 116, var9.field_l - var8);
-          return;
-        } else {
-          var9.b((byte) 123, param0);
-          var9.d((byte) 116, var9.field_l - var8);
-          return;
+        int var8 = 0;
+        try {
+            var9 = k.field_h;
+            pi var6 = var9;
+            int var7 = -44 / ((-59 - param2) / 38);
+            var9.e(-13413, param4);
+            var9.field_l = var9.field_l + 1;
+            var8 = var9.field_l;
+            var9.a(86, param3);
+            if (!(param3 != 2)) {
+                var9.a(param1, -1);
+            }
+            if (param5 != null) {
+                int discarded$1 = md.a(26152, param5, (wq) (Object) var9);
+            } else {
+                var9.b((byte) 123, param0);
+            }
+            var9.d((byte) 116, var9.field_l - var8);
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) (Object) runtimeException, "c.I(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 41);
         }
     }
 
     final void a(byte param0, int param1) {
-        if ((param1 ^ -1) <= -1) {
+        if (param1 >= 0) {
           if (((c) this).field_h >= param1) {
             if (param1 == ((c) this).field_h) {
               ((c) this).field_h = ((c) this).field_h - 1;
@@ -674,11 +660,15 @@ final class c {
     }
 
     final static void a(int param0, int param1, int param2, int param3, wq param4) {
-        param4.a(33, param1);
-        param4.b((byte) 115, 17);
-        param4.b((byte) 120, param0);
-        param4.b((byte) 107, param2);
-        param4.a(5, param3);
+        try {
+            param4.a(33, param1);
+            param4.b((byte) 115, 17);
+            param4.b((byte) 120, param0);
+            param4.b((byte) 107, param2);
+            param4.a(5, param3);
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) (Object) runtimeException, "c.H(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
+        }
     }
 
     private final int b(int param0, int param1) {

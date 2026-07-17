@@ -11,16 +11,11 @@ final class qr {
     private boolean field_f;
 
     public static void a(byte param0) {
-        if (param0 < 41) {
-            qr.a(123, false);
-            field_a = null;
-            return;
-        }
         field_a = null;
     }
 
     final boolean b(byte param0) {
-        int var2 = 105 / ((param0 - 0) / 60);
+        int var2 = 105 / (param0 / 60);
         return ((qr) this).field_e;
     }
 
@@ -40,9 +35,6 @@ final class qr {
     }
 
     final static void c(int param0) {
-        if (param0 != 640) {
-            field_a = null;
-        }
     }
 
     final void a(boolean param0, byte param1) {
@@ -56,14 +48,18 @@ final class qr {
     qr(String param0) {
         ((qr) this).field_e = false;
         ((qr) this).field_f = false;
-        ((qr) this).field_c = param0;
+        try {
+            ((qr) this).field_c = param0;
+        } catch (RuntimeException runtimeException) {
+            throw wm.a((Throwable) (Object) runtimeException, "qr.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static void a(int param0, boolean param1) {
         int var2 = 0;
         int var3 = 0;
         var3 = Pool.field_O;
-        if ((mp.field_V ^ -1) < -1) {
+        if (mp.field_V > 0) {
           if (fk.field_gb == null) {
             L0: {
               ne.field_u = wp.a(640, lg.field_s, (byte) 0, 480, 0, 0);

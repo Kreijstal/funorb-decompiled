@@ -16,29 +16,25 @@ final class bh extends vj {
     }
 
     final static void c(int param0) {
-        int var1 = -59 / ((-15 - param0) / 40);
+        int var1 = -59;
         if (!(bk.field_r == null)) {
             bk.field_r.a((byte) 87);
         }
     }
 
     final void a(n param0, byte param1) {
-        if (param1 >= -15) {
-          String discarded$2 = bh.a(29, -33L);
-          param0.a((byte) 100, ((bh) this).field_g);
-          param0.a(((bh) this).field_f, (byte) 111);
-          return;
-        } else {
-          param0.a((byte) 100, ((bh) this).field_g);
-          param0.a(((bh) this).field_f, (byte) 111);
-          return;
+        try {
+            if (param1 >= -15) {
+                String discarded$0 = bh.a(29, -33L);
+            }
+            param0.a((byte) 100, ((bh) this).field_g);
+            param0.a(((bh) this).field_f, (byte) 111);
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) (Object) runtimeException, "bh.G(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
     public static void d(int param0) {
-        if (param0 != 11) {
-            return;
-        }
         field_e = null;
     }
 
@@ -74,8 +70,12 @@ final class bh extends vj {
     }
 
     bh(String param0, String param1) {
-        ((bh) this).field_f = param1;
-        ((bh) this).field_g = param0;
+        try {
+            ((bh) this).field_f = param1;
+            ((bh) this).field_g = param0;
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) (Object) runtimeException, "bh.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

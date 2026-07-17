@@ -48,12 +48,6 @@ final class ep {
 
     public static void b(int param0) {
         field_d = null;
-        if (param0 != 640) {
-            field_a = -116;
-            field_c = null;
-            field_b = null;
-            return;
-        }
         field_c = null;
         field_b = null;
     }

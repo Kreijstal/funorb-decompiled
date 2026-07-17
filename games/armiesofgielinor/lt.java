@@ -18,16 +18,16 @@ final class lt extends ev {
         var11 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (param1 > 0L) {
           if (param1 < 6582952005840035281L) {
-            if (-1L == (param1 % 37L ^ -1L)) {
+            if (param1 % 37L == 0L) {
               return null;
             } else {
               var3 = 0;
               var4 = param1;
               L0: while (true) {
-                if (-1L == (var4 ^ -1L)) {
+                if (var4 == 0L) {
                   var6 = new StringBuilder(var3);
                   L1: while (true) {
-                    if ((param1 ^ -1L) == -1L) {
+                    if (param1 == 0L) {
                       StringBuilder discarded$2 = var6.reverse();
                       var6.setCharAt(0, Character.toUpperCase(var6.charAt(param0)));
                       return var6.toString();
@@ -68,7 +68,7 @@ final class lt extends ev {
     }
 
     public final void a(int param0, int param1, int param2) {
-        this.a(param0, param1, param2);
+        super.a(param0, param1, param2);
         if (ir.field_d != null) {
             ir.field_d.j(-128);
         }
@@ -78,11 +78,6 @@ final class lt extends ev {
         field_f = null;
         field_g = null;
         field_i = null;
-        if (param0 >= -8) {
-            field_h = null;
-            field_h = null;
-            return;
-        }
         field_h = null;
     }
 

@@ -57,22 +57,26 @@ final class mp extends je {
 
     mp(long param0, je param1, je param2, ll param3, je param4, String param5, String param6) {
         super(param0, param1);
-        ((mp) this).field_Nb = new je(0L, (je) null);
-        ((mp) this).field_Kb = new dn(0L, ((mp) this).field_Nb, param2, param3);
-        ((mp) this).field_Ib = new je(0L, param4);
-        ((mp) this).field_Rb = new je(0L, param4);
-        ((mp) this).field_Ib.field_X = param5;
-        ((mp) this).field_Rb.field_X = param6;
-        ((mp) this).a((je) (Object) ((mp) this).field_Kb, 41);
-        ((mp) this).a(((mp) this).field_Ib, 80);
-        ((mp) this).a(((mp) this).field_Rb, 111);
+        try {
+            ((mp) this).field_Nb = new je(0L, (je) null);
+            ((mp) this).field_Kb = new dn(0L, ((mp) this).field_Nb, param2, param3);
+            ((mp) this).field_Ib = new je(0L, param4);
+            ((mp) this).field_Rb = new je(0L, param4);
+            ((mp) this).field_Ib.field_X = param5;
+            ((mp) this).field_Rb.field_X = param6;
+            ((mp) this).a((je) (Object) ((mp) this).field_Kb, 41);
+            ((mp) this).a(((mp) this).field_Ib, 80);
+            ((mp) this).a(((mp) this).field_Rb, 111);
+        } catch (RuntimeException runtimeException) {
+            throw ig.a((Throwable) (Object) runtimeException, "mp.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 44 + (param6 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static int k(int param0) {
         if (param0 > -38) {
           return 60;
         } else {
-          return nr.field_e.field_v - nr.field_e.field_L + (-(nr.field_e.field_H >> 1472789153) - -(nr.field_e.field_y >> 738224194) + 3);
+          return nr.field_e.field_v - nr.field_e.field_L + (-(nr.field_e.field_H >> 1) - -(nr.field_e.field_y >> 2) + 3);
         }
     }
 

@@ -9,9 +9,6 @@ abstract class iq {
     public static void b(int param0) {
         field_a = null;
         field_b = null;
-        if (param0 != 0) {
-            int discarded$0 = iq.a((byte) -59, 98, 114, 64, -128);
-        }
     }
 
     final int a(byte param0) {
@@ -80,7 +77,7 @@ abstract class iq {
             if (null == ((iq) this).field_c) {
               break L2;
             } else {
-              if (-1 <= (((iq) this).field_c.length ^ -1)) {
+              if (((iq) this).field_c.length <= 0) {
                 break L2;
               } else {
                 stackOut_4_0 = ((iq) this).field_c[((iq) this).field_c.length - 1].field_d + -((iq) this).field_c[0].field_g;
@@ -111,61 +108,118 @@ abstract class iq {
     }
 
     final int a(int param0, int param1, int param2, String param3) {
-        int var5 = 0;
+        int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        L0: {
-          var10 = Kickabout.field_G;
-          var5 = 0;
-          if (param1 == -61) {
-            break L0;
-          } else {
-            int discarded$2 = ((iq) this).a(75, -37, -61);
-            break L0;
-          }
-        }
-        var6 = 0;
-        var7 = param3.length();
-        var8 = 0;
-        L1: while (true) {
-          if (var8 >= var7) {
-            if (-1 <= (var5 ^ -1)) {
-              return 0;
-            } else {
-              return (-param2 + param0 << -630965016) / var5;
-            }
-          } else {
-            var9 = param3.charAt(var8);
-            if (var9 == 60) {
-              var6 = 1;
-              var8++;
-              continue L1;
-            } else {
-              if (var9 == 62) {
-                var6 = 0;
-                var8++;
-                continue L1;
+        int stackIn_15_0 = 0;
+        int stackIn_17_0 = 0;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        String stackIn_21_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_16_0 = 0;
+        int stackOut_14_0 = 0;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
+        var10 = Kickabout.field_G;
+        try {
+          L0: {
+            L1: {
+              var5_int = 0;
+              if (param1 == -61) {
+                break L1;
               } else {
-                if (var6 == 0) {
-                  if (var9 == 32) {
-                    var5++;
-                    var8++;
-                    continue L1;
-                  } else {
-                    var8++;
-                    continue L1;
-                  }
+                int discarded$2 = ((iq) this).a(75, -37, -61);
+                break L1;
+              }
+            }
+            var6 = 0;
+            var7 = param3.length();
+            var8 = 0;
+            L2: while (true) {
+              if (var8 >= var7) {
+                if (var5_int <= 0) {
+                  stackOut_16_0 = 0;
+                  stackIn_17_0 = stackOut_16_0;
+                  break L0;
                 } else {
-                  var8++;
-                  continue L1;
+                  stackOut_14_0 = (-param2 + param0 << 8) / var5_int;
+                  stackIn_15_0 = stackOut_14_0;
+                  return stackIn_15_0;
                 }
+              } else {
+                L3: {
+                  var9 = param3.charAt(var8);
+                  if (var9 == 60) {
+                    var6 = 1;
+                    break L3;
+                  } else {
+                    if (var9 == 62) {
+                      var6 = 0;
+                      break L3;
+                    } else {
+                      L4: {
+                        if (var6 != 0) {
+                          break L4;
+                        } else {
+                          break L4;
+                        }
+                      }
+                      var8++;
+                      continue L2;
+                    }
+                  }
+                }
+                var8++;
+                continue L2;
               }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L5: {
+            var5 = decompiledCaughtException;
+            stackOut_18_0 = (RuntimeException) var5;
+            stackOut_18_1 = new StringBuilder().append("iq.F(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackIn_20_0 = stackOut_18_0;
+            stackIn_20_1 = stackOut_18_1;
+            stackIn_19_0 = stackOut_18_0;
+            stackIn_19_1 = stackOut_18_1;
+            if (param3 == null) {
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "null";
+              stackIn_21_0 = stackOut_20_0;
+              stackIn_21_1 = stackOut_20_1;
+              stackIn_21_2 = stackOut_20_2;
+              break L5;
+            } else {
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "{...}";
+              stackIn_21_0 = stackOut_19_0;
+              stackIn_21_1 = stackOut_19_1;
+              stackIn_21_2 = stackOut_19_2;
+              break L5;
+            }
+          }
+          throw nb.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 41);
         }
+        return stackIn_17_0;
     }
 
     final int a(int param0, int param1) {
@@ -218,7 +272,7 @@ abstract class iq {
                 if (((iq) this).field_c[-1 + ((iq) this).field_c.length].field_d < param0) {
                   return -1;
                 } else {
-                  if (-2 != (((iq) this).field_c.length ^ -1)) {
+                  if (((iq) this).field_c.length != 1) {
                     L1: {
                       var4 = 0;
                       if (param2 == 29889) {
@@ -240,7 +294,7 @@ abstract class iq {
                           } else {
                             if (var6.field_d >= param0) {
                               var7 = var6.a((byte) 101, param1);
-                              if (0 == (var7 ^ -1)) {
+                              if (var7 == -1) {
                                 return -1;
                               } else {
                                 return var4 + var7;

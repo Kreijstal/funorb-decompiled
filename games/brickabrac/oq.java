@@ -11,9 +11,6 @@ class oq extends lh {
     public static void h(byte param0) {
         field_w = null;
         field_u = null;
-        if (param0 != -34) {
-            return;
-        }
         field_v = null;
     }
 
@@ -46,7 +43,11 @@ class oq extends lh {
 
     oq(int param0, int[] param1, int[] param2) {
         super(param0, 180, 460, 150, 35, param1);
-        ((oq) this).field_y = param2;
+        try {
+            ((oq) this).field_y = param2;
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) (Object) runtimeException, "oq.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     void b(byte param0) {

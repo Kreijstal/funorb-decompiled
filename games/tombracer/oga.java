@@ -58,7 +58,11 @@ abstract class oga extends vg {
     }
 
     oga(cka param0) {
-        ((oga) this).field_g = param0;
+        try {
+            ((oga) this).field_g = param0;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "oga.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

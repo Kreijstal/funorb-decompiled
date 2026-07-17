@@ -9,7 +9,11 @@ final class el extends cm {
 
     el(Object param0, int param1) {
         super(param1);
-        ((el) this).field_A = param0;
+        try {
+            ((el) this).field_A = param0;
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "el.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     final static void a(int param0, int param1) {
@@ -53,7 +57,7 @@ final class el extends cm {
 
     final static void h(int param0) {
         uk.a(false, 4);
-        int var1 = 73 % ((-38 - param0) / 61);
+        int var1 = 0;
     }
 
     static {

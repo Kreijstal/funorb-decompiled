@@ -29,7 +29,7 @@ final class s {
                 }
               }
             }
-            if ((((s) this).field_c ^ -1L) != (lr.field_v ^ -1L)) {
+            if (~((s) this).field_c != ~lr.field_v) {
               if (eo.field_a == 2) {
                 if (vc.a(param0 + -8759, ((s) this).field_g)) {
                   return 1;
@@ -50,7 +50,7 @@ final class s {
           if (!((s) this).field_e) {
             if (2 == ((s) this).field_f) {
               if (((s) this).field_l <= 0) {
-                if ((((s) this).field_c ^ -1L) != (lr.field_v ^ -1L)) {
+                if (~((s) this).field_c != ~lr.field_v) {
                   if (eo.field_a == 2) {
                     if (vc.a(param0 + -8759, ((s) this).field_g)) {
                       return 1;
@@ -67,7 +67,7 @@ final class s {
                 return 2;
               }
             } else {
-              if ((((s) this).field_c ^ -1L) != (lr.field_v ^ -1L)) {
+              if (~((s) this).field_c != ~lr.field_v) {
                 if (eo.field_a == 2) {
                   if (vc.a(param0 + -8759, ((s) this).field_g)) {
                     return 1;
@@ -89,13 +89,14 @@ final class s {
 
     public static void a(byte param0) {
         field_i = null;
-        int var1 = -86 % ((param0 - 49) / 51);
+        int var1 = 0;
         field_h = null;
         field_d = null;
     }
 
     final static void a(byte param0, int param1, int param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int[] var10 = null;
+        RuntimeException var10_ref = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -103,59 +104,92 @@ final class s {
         int var15 = 0;
         int var16 = 0;
         int[] var17 = null;
-        int[] var18 = null;
-        int[] var19 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
         var16 = AceOfSkies.field_G ? 1 : 0;
-        if (param0 != 118) {
-          field_d = (String[]) null;
-          L0: while (true) {
-            param6--;
-            if (0 <= param6) {
-              var19 = param3;
-              var17 = var19;
-              var10 = var17;
-              var11 = param7;
-              var12 = param1;
-              var13 = param9;
-              var14 = param2;
-              var15 = (var19[var11] & 16711422) >> 1559202625;
-              var10[var11] = var15 + (pg.a(33423360, var12) >> 1176971969) + ((pg.a(33423495, var13) >> 2073497577) + pg.a(var14 >> 1114604145, 255));
-              param1 = param1 + param8;
-              param9 = param9 + param5;
-              param2 = param2 + param4;
-              param7++;
-              continue L0;
-            } else {
-              return;
+        try {
+          L0: {
+            L1: {
+              if (param0 == 118) {
+                break L1;
+              } else {
+                field_d = null;
+                break L1;
+              }
+            }
+            L2: while (true) {
+              param6--;
+              if (0 > param6) {
+                break L0;
+              } else {
+                var17 = param3;
+                var10 = var17;
+                var11 = param7;
+                var12 = param1;
+                var13 = param9;
+                var14 = param2;
+                var15 = (var17[var11] & 16711422) >> 1;
+                var10[var11] = var15 + (pg.a(33423360, var12) >> 1) + ((pg.a(33423495, var13) >> 9) + pg.a(var14 >> 17, 255));
+                param1 = param1 + param8;
+                param9 = param9 + param5;
+                param2 = param2 + param4;
+                param7++;
+                continue L2;
+              }
             }
           }
-        } else {
-          L1: while (true) {
-            param6--;
-            if (0 <= param6) {
-              var18 = param3;
-              var17 = var18;
-              var10 = var17;
-              var11 = param7;
-              var12 = param1;
-              var13 = param9;
-              var14 = param2;
-              var15 = (var18[var11] & 16711422) >> 1559202625;
-              var10[var11] = var15 + (pg.a(33423360, var12) >> 1176971969) + ((pg.a(33423495, var13) >> 2073497577) + pg.a(var14 >> 1114604145, 255));
-              param1 = param1 + param8;
-              param9 = param9 + param5;
-              param2 = param2 + param4;
-              param7++;
-              continue L1;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var10_ref = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var10_ref;
+            stackOut_6_1 = new StringBuilder().append("s.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param3 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L3;
             } else {
-              return;
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L3;
             }
           }
+          throw pn.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 41);
         }
     }
 
     final static void a(String param0, boolean param1, String param2) {
-        tn.a(1, param1, param0, param2);
+        try {
+            tn.a(1, param1, param0, param2);
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) (Object) runtimeException, "s.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     s(boolean param0) {

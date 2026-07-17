@@ -11,10 +11,66 @@ class ka extends hm {
     private String field_k;
 
     final void a(int param0, bh param1) {
-        param1.a(-1, ((ka) this).field_j);
-        param1.a((byte) -127, ((ka) this).field_k);
-        if (param0 != -22017) {
-            boolean discarded$0 = ka.a(-61, '￶');
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        try {
+          L0: {
+            L1: {
+              param1.a(-1, ((ka) this).field_j);
+              param1.a((byte) -127, ((ka) this).field_k);
+              if (param0 == -22017) {
+                break L1;
+              } else {
+                boolean discarded$2 = ka.a(-61, '￶');
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_1 = new StringBuilder().append("ka.F(").append(param0).append(44);
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param1 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
+            }
+          }
+          throw oi.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
         }
     }
 
@@ -158,10 +214,10 @@ class ka extends hm {
                   break L0;
                 } else {
                   L1: {
-                    if (-1 == (tm.field_t ^ -1)) {
+                    if (tm.field_t == 0) {
                       break L1;
                     } else {
-                      if ((ed.field_O ^ -1) == -11) {
+                      if (ed.field_O == 10) {
                         bb.a(param0 ^ 4, true);
                         break L1;
                       } else {
@@ -170,13 +226,13 @@ class ka extends hm {
                     }
                   }
                   L2: {
-                    if ((tm.field_t ^ -1) != -1) {
+                    if (tm.field_t != 0) {
                       L3: {
                         dd.field_a = ed.a((byte) 101, ci.field_B, li.field_o);
-                        if (-1 != (dd.field_a ^ -1)) {
+                        if (dd.field_a != 0) {
                           break L3;
                         } else {
-                          if ((wk.field_u ^ -1) != -1) {
+                          if (wk.field_u != 0) {
                             L4: {
                               if (2 > qe.field_g) {
                                 qe.field_g = oi.field_c;
@@ -210,14 +266,14 @@ class ka extends hm {
                   if (param0 == 4) {
                     L5: {
                       dd.field_a = ed.a((byte) 101, aa.field_Nb, a.field_a);
-                      if ((ho.field_X ^ -1) == -1) {
+                      if (ho.field_X == 0) {
                         break L5;
                       } else {
-                        if (-3 != (wk.field_u ^ -1)) {
+                        if (wk.field_u != 2) {
                           break L5;
                         } else {
                           if (1 != dd.field_a) {
-                            if (-3 != (dd.field_a ^ -1)) {
+                            if (dd.field_a != 2) {
                               if (3 != dd.field_a) {
                                 if (dd.field_a == 4) {
                                   ca.a(-8.0f, 0.0f, -2452);
@@ -245,10 +301,10 @@ class ka extends hm {
                         if (ed.field_O != kb.field_t) {
                           break L7;
                         } else {
-                          if ((hm.field_a ^ -1) != (af.field_h ^ -1)) {
+                          if (~hm.field_a != ~af.field_h) {
                             break L7;
                           } else {
-                            if (-11 == (kb.field_t ^ -1)) {
+                            if (kb.field_t == 10) {
                               break L7;
                             } else {
                               if (-1 == dd.field_a) {
@@ -270,7 +326,7 @@ class ka extends hm {
                       var1 = stackIn_44_0;
                       if (wk.field_i.field_c) {
                         L9: {
-                          var2_double = (double)(-(ra.field_f >> 506772353) + aa.field_Nb) / 512.0;
+                          var2_double = (double)(-(ra.field_f >> 1) + aa.field_Nb) / 512.0;
                           var4 = (double)(a.field_a + -ik.field_a) / 512.0;
                           var6 = -field_h[2] / (var2_double * field_h[5] + var4 * field_h[8] + field_h[11]);
                           wh.field_c = (var6 * (field_h[9] + (var4 * field_h[6] + field_h[3] * var2_double)) + field_h[0]) * 4.0;
@@ -282,8 +338,8 @@ class ka extends hm {
                             break L9;
                           }
                         }
-                        ua.field_i = (double)(440 + -(ra.field_e >> -1477497055)) + 4.0 * (field_h[1] + (field_h[10] + (field_h[7] * var4 + field_h[4] * var2_double)) * var6);
-                        if ((oj.field_a.field_z ^ -1) < (a.field_a ^ -1)) {
+                        ua.field_i = (double)(440 + -(ra.field_e >> 1)) + 4.0 * (field_h[1] + (field_h[10] + (field_h[7] * var4 + field_h[4] * var2_double)) * var6);
+                        if (~oj.field_a.field_z < ~a.field_a) {
                           L10: {
                             L11: {
                               if (2 == ho.field_X) {
@@ -299,7 +355,7 @@ class ka extends hm {
                             if (ab.field_T == -1) {
                               break L10;
                             } else {
-                              if (0 == (aa.field_Nb ^ -1)) {
+                              if (aa.field_Nb == -1) {
                                 break L10;
                               } else {
                                 ca.a(0.0f, 0.004999999888241291f * (float)(-ab.field_T + aa.field_Nb), -2452);
@@ -307,7 +363,7 @@ class ka extends hm {
                               }
                             }
                           }
-                          if (-1 != (hc.field_p ^ -1)) {
+                          if (hc.field_p != 0) {
                             ca.a((float)(hc.field_p * 24), 0.0f, -2452);
                             break L8;
                           } else {
@@ -425,10 +481,10 @@ class ka extends hm {
                             if (ab.field_T == -1) {
                               break L18;
                             } else {
-                              if ((aa.field_Nb ^ -1) == 0) {
+                              if (aa.field_Nb == -1) {
                                 break L18;
                               } else {
-                                if ((a.field_a ^ -1) != 0) {
+                                if (a.field_a != -1) {
                                   var3 = Math.abs(aa.field_Nb - ab.field_T) - -Math.abs(a.field_a + -wh.field_i);
                                   var4 = wh.field_c;
                                   var6 = ua.field_i;
@@ -502,8 +558,12 @@ class ka extends hm {
     }
 
     ka(long param0, String param1) {
-        ((ka) this).field_k = param1;
-        ((ka) this).field_j = param0;
+        try {
+            ((ka) this).field_k = param1;
+            ((ka) this).field_j = param0;
+        } catch (RuntimeException runtimeException) {
+            throw oi.a((Throwable) (Object) runtimeException, "ka.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

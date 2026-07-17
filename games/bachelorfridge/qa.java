@@ -63,11 +63,6 @@ final class qa extends k {
     }
 
     public static void b(boolean param0) {
-        if (param0) {
-            qa.d(42);
-            field_k = null;
-            return;
-        }
         field_k = null;
     }
 
@@ -77,7 +72,7 @@ final class qa extends k {
         if (param0) {
           return -81;
         } else {
-          var4 = var4 ^ var4 << -1873430751;
+          var4 = var4 ^ var4 << 1;
           return -((var4 * (789221 + var4 * (var4 * 15731)) - -1376312589 & 2147483647) / 262144) + 4096;
         }
     }

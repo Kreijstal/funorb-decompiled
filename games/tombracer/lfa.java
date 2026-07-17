@@ -12,15 +12,16 @@ final class lfa extends dg {
 
     final void a(int param0, la param1, kh param2) {
         super.a(126, param1, param2);
-        if ((param1.field_E ^ -1) < -18) {
-          if (param0 < 119) {
+        if (param1.field_E <= 17) {
             return;
-          } else {
+        }
+        if (param0 < 119) {
+            return;
+        }
+        try {
             ((lfa) this).field_q = param2.b((byte) 44, 4);
-            return;
-          }
-        } else {
-          return;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "lfa.G(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -43,7 +44,7 @@ final class lfa extends dg {
         super.h(78);
         var2 = ((lfa) this).field_q;
         if (var2 != 0) {
-          if ((var2 ^ -1) == -2) {
+          if (var2 == 1) {
             ((lfa) this).field_q = 0;
             if (param0 > 0) {
               return;
@@ -96,170 +97,125 @@ final class lfa extends dg {
     }
 
     final void a(iq param0, int param1, int param2, int param3, byte param4) {
-        int var6 = 0;
+        RuntimeException var6 = null;
+        int var6_int = 0;
         Object var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        Object var11 = null;
-        ka var12 = null;
-        ka var13 = null;
-        ka var13_ref = null;
-        ka var14 = null;
-        ka var14_ref = null;
-        ka var15 = null;
-        ka var15_ref = null;
-        ka var16 = null;
-        ka var16_ref = null;
-        ka var17 = null;
-        ka var17_ref = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        String stackIn_24_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        String stackOut_23_2 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        String stackOut_22_2 = null;
         var10 = TombRacer.field_G ? 1 : 0;
-        var6 = 0;
-        var11 = null;
-        var7 = var11;
-        var8 = ((lfa) this).field_q;
-        if (var8 != 0) {
-          if (-2 != (var8 ^ -1)) {
-            if ((var8 ^ -1) != -3) {
-              if (var8 != 3) {
-                if (4 != var8) {
-                  if (5 != var8) {
-                    L0: {
-                      var8 = -76 / ((-38 - param4) / 47);
-                      if (var7 == null) {
-                        break L0;
-                      } else {
-                        var9 = dfa.a(4096 + var6 - ((lfa) this).field_h.g(-25787) >> 905716642, 2048, 102);
-                        gqa.a(var9, -83584144, param1, param2, (ka) var11, param3);
-                        break L0;
-                      }
-                    }
-                    return;
+        try {
+          L0: {
+            L1: {
+              var6_int = 0;
+              var7 = null;
+              var8 = ((lfa) this).field_q;
+              if (var8 != 0) {
+                if (var8 != 1) {
+                  if (var8 == 2) {
+                    var7 = (Object) (Object) ta.field_ub[22];
+                    break L1;
                   } else {
-                    L1: {
-                      var17_ref = ta.field_ub[25];
-                      var8 = -76 / ((-38 - param4) / 47);
-                      if (var17_ref == null) {
-                        break L1;
+                    if (var8 != 3) {
+                      if (4 != var8) {
+                        if (5 == var8) {
+                          var7 = (Object) (Object) ta.field_ub[25];
+                          break L1;
+                        } else {
+                          break L1;
+                        }
                       } else {
-                        var9 = dfa.a(4096 + var6 - ((lfa) this).field_h.g(-25787) >> 905716642, 2048, 102);
-                        gqa.a(var9, -83584144, param1, param2, var17_ref, param3);
+                        var7 = (Object) (Object) ta.field_ub[24];
                         break L1;
                       }
-                    }
-                    return;
-                  }
-                } else {
-                  L2: {
-                    var16_ref = ta.field_ub[24];
-                    var17 = var16_ref;
-                    var17 = var16_ref;
-                    var8 = -76 / ((-38 - param4) / 47);
-                    if (var16_ref == null) {
-                      break L2;
                     } else {
-                      var9 = dfa.a(4096 + var6 - ((lfa) this).field_h.g(-25787) >> 905716642, 2048, 102);
-                      gqa.a(var9, -83584144, param1, param2, var16_ref, param3);
-                      break L2;
+                      var7 = (Object) (Object) ta.field_ub[23];
+                      break L1;
                     }
                   }
-                  return;
-                }
-              } else {
-                L3: {
-                  var15_ref = ta.field_ub[23];
-                  var16 = var15_ref;
-                  var17 = var16;
-                  var16 = var15_ref;
-                  var8 = -76 / ((-38 - param4) / 47);
-                  if (var15_ref == null) {
-                    break L3;
-                  } else {
-                    var9 = dfa.a(4096 + var6 - ((lfa) this).field_h.g(-25787) >> 905716642, 2048, 102);
-                    gqa.a(var9, -83584144, param1, param2, var15_ref, param3);
-                    break L3;
-                  }
-                }
-                return;
-              }
-            } else {
-              L4: {
-                var14_ref = ta.field_ub[22];
-                var15 = var14_ref;
-                var16 = var15;
-                var17 = var16;
-                var15 = var14_ref;
-                var8 = -76 / ((-38 - param4) / 47);
-                if (var14_ref == null) {
-                  break L4;
                 } else {
-                  var9 = dfa.a(4096 + var6 - ((lfa) this).field_h.g(-25787) >> 905716642, 2048, 102);
-                  gqa.a(var9, -83584144, param1, param2, var14_ref, param3);
-                  break L4;
+                  var7 = (Object) (Object) ta.field_ub[21];
+                  break L1;
                 }
-              }
-              return;
-            }
-          } else {
-            L5: {
-              var13_ref = ta.field_ub[21];
-              var14 = var13_ref;
-              var15 = var14;
-              var16 = var15;
-              var17 = var16;
-              var14 = var13_ref;
-              var8 = -76 / ((-38 - param4) / 47);
-              if (var13_ref == null) {
-                break L5;
               } else {
-                var9 = dfa.a(4096 + var6 - ((lfa) this).field_h.g(-25787) >> 905716642, 2048, 102);
-                gqa.a(var9, -83584144, param1, param2, var13_ref, param3);
-                break L5;
+                var7 = (Object) (Object) ta.field_ub[20];
+                break L1;
               }
             }
-            return;
+            L2: {
+              var8 = -76 / ((-38 - param4) / 47);
+              if (var7 == null) {
+                break L2;
+              } else {
+                var9 = dfa.a(4096 + var6_int - ((lfa) this).field_h.g(-25787) >> 2, 2048, 102);
+                gqa.a(var9, -83584144, param1, param2, (ka) var7, param3);
+                break L2;
+              }
+            }
+            break L0;
           }
-        } else {
-          L6: {
-            var12 = ta.field_ub[20];
-            var13 = var12;
-            var14 = var13;
-            var15 = var14;
-            var16 = var15;
-            var17 = var16;
-            var13 = var12;
-            var8 = -76 / ((-38 - param4) / 47);
-            if (var12 == null) {
-              break L6;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var6 = decompiledCaughtException;
+            stackOut_21_0 = (RuntimeException) var6;
+            stackOut_21_1 = new StringBuilder().append("lfa.D(");
+            stackIn_23_0 = stackOut_21_0;
+            stackIn_23_1 = stackOut_21_1;
+            stackIn_22_0 = stackOut_21_0;
+            stackIn_22_1 = stackOut_21_1;
+            if (param0 == null) {
+              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_2 = "null";
+              stackIn_24_0 = stackOut_23_0;
+              stackIn_24_1 = stackOut_23_1;
+              stackIn_24_2 = stackOut_23_2;
+              break L3;
             } else {
-              var9 = dfa.a(4096 + var6 - ((lfa) this).field_h.g(-25787) >> 905716642, 2048, 102);
-              gqa.a(var9, -83584144, param1, param2, var12, param3);
-              break L6;
+              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_2 = "{...}";
+              stackIn_24_0 = stackOut_22_0;
+              stackIn_24_1 = stackOut_22_1;
+              stackIn_24_2 = stackOut_22_2;
+              break L3;
             }
           }
-          return;
+          throw tba.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
     final void a(gr param0, gma param1, byte param2) {
-        super.a(param0, param1, param2);
-        ((lfa) this).field_r = param1.d(param2 + -33);
-        ((lfa) this).field_p = param1.e(param2 + 9612);
+        try {
+            super.a(param0, param1, param2);
+            ((lfa) this).field_r = param1.d(param2 + -33);
+            ((lfa) this).field_p = param1.e(param2 + 9612);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "lfa.E(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     public static void i(int param0) {
-        if (param0 != 5353) {
-          field_o = null;
-          field_o = null;
-          field_m = null;
-          field_n = null;
-          return;
-        } else {
-          field_o = null;
-          field_m = null;
-          field_n = null;
-          return;
-        }
+        field_o = null;
+        field_m = null;
+        field_n = null;
     }
 
     final int f(byte param0) {
@@ -267,7 +223,7 @@ final class lfa extends dg {
         int var3 = 0;
         var2 = -36 % ((15 - param0) / 45);
         var3 = ((lfa) this).field_q;
-        if (-3 != (var3 ^ -1)) {
+        if (var3 != 2) {
           if (5 == var3) {
             return 2;
           } else {
@@ -405,9 +361,13 @@ final class lfa extends dg {
     }
 
     final void a(byte param0, kh param1) {
-        int var3 = 94 / ((-8 - param0) / 40);
-        super.a((byte) -88, param1);
-        param1.a((byte) -125, ((lfa) this).field_q, 4);
+        try {
+            int var3_int = 94 / ((-8 - param0) / 40);
+            super.a((byte) -88, param1);
+            param1.a((byte) -125, ((lfa) this).field_q, 4);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "lfa.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     lfa(int param0) {

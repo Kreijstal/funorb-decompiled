@@ -36,7 +36,7 @@ abstract class sf extends be {
             L1: {
               var1 = null;
               var2 = null;
-              if ((pk.field_r ^ -1) != -1) {
+              if (pk.field_r != 0) {
                 break L1;
               } else {
                 if (g.field_N != null) {
@@ -215,7 +215,7 @@ abstract class sf extends be {
                       if (!wj.field_Mb.field_jb) {
                         break L17;
                       } else {
-                        if ((bh.field_g + -wj.field_Mb.field_E ^ -1) > (var9 ^ -1)) {
+                        if (~(bh.field_g + -wj.field_Mb.field_E) > ~var9) {
                           if (wc.field_n) {
                             var1 = (Object) (Object) "Broken!";
                             break L17;
@@ -228,10 +228,10 @@ abstract class sf extends be {
                         }
                       }
                     }
-                    if (-1 == (wj.field_Mb.field_ob ^ -1)) {
+                    if (wj.field_Mb.field_ob == 0) {
                       break L7;
                     } else {
-                      if ((var9 ^ -1) >= (wj.field_Mb.field_xb ^ -1)) {
+                      if (~var9 >= ~wj.field_Mb.field_xb) {
                         break L7;
                       } else {
                         if (!wc.field_n) {

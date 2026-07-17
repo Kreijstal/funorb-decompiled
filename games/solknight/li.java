@@ -51,8 +51,8 @@ final class li extends gg {
           L0: {
             var1_ref = te.field_N;
             var2 = var1_ref.j(255);
-            if ((var2 ^ -1) != -1) {
-              if ((var2 ^ -1) == -2) {
+            if (var2 != 0) {
+              if (var2 == 1) {
                 L1: {
                   if (ok.field_a != null) {
                     break L1;
@@ -160,7 +160,7 @@ final class li extends gg {
                   return;
                 }
               } else {
-                if ((var2 ^ -1) == -3) {
+                if (var2 == 2) {
                   L11: {
                     if (1 == lh.field_p) {
                       lh.field_p = 2;
@@ -181,7 +181,7 @@ final class li extends gg {
                   }
                   if (3 == var2) {
                     L13: {
-                      if (-3 != (lh.field_p ^ -1)) {
+                      if (lh.field_p != 2) {
                         break L13;
                       } else {
                         lh.field_p = 1;
@@ -190,7 +190,7 @@ final class li extends gg {
                     }
                     return;
                   } else {
-                    if ((var2 ^ -1) != -5) {
+                    if (var2 != 4) {
                       hi.a((Throwable) null, "F1: " + oc.a(false), 1);
                       je.a(false);
                       break L0;
@@ -216,7 +216,7 @@ final class li extends gg {
                 }
               }
               L15: {
-                if ((var1_ref.j(255) ^ -1) != -2) {
+                if (var1_ref.j(255) != 1) {
                   stackOut_10_0 = 0;
                   stackIn_11_0 = stackOut_10_0;
                   break L15;

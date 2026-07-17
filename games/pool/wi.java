@@ -20,32 +20,32 @@ final class wi {
         }
         L1: {
           var2 = param1;
-          if ((var2 ^ -1) != -33) {
+          if (var2 != 32) {
             if (160 != var2) {
-              if ((var2 ^ -1) != -96) {
-                if (-46 == (var2 ^ -1)) {
+              if (var2 != 95) {
+                if (var2 == 45) {
                   break L1;
                 } else {
                   L2: {
-                    if (-92 == (var2 ^ -1)) {
+                    if (var2 == 91) {
                       break L2;
                     } else {
                       if (var2 == 93) {
                         break L2;
                       } else {
-                        if (-36 != (var2 ^ -1)) {
+                        if (var2 != 35) {
                           L3: {
-                            if ((var2 ^ -1) == -225) {
+                            if (var2 == 224) {
                               break L3;
                             } else {
-                              if (-226 != (var2 ^ -1)) {
+                              if (var2 != 225) {
                                 if (226 == var2) {
                                   break L3;
                                 } else {
                                   if (228 == var2) {
                                     break L3;
                                   } else {
-                                    if (-228 == (var2 ^ -1)) {
+                                    if (var2 == 227) {
                                       break L3;
                                     } else {
                                       if (var2 == 192) {
@@ -54,11 +54,11 @@ final class wi {
                                         if (193 == var2) {
                                           break L3;
                                         } else {
-                                          if (-195 == (var2 ^ -1)) {
+                                          if (var2 == 194) {
                                             break L3;
                                           } else {
-                                            if (-197 != (var2 ^ -1)) {
-                                              if (-196 == (var2 ^ -1)) {
+                                            if (var2 != 196) {
+                                              if (var2 == 195) {
                                                 break L3;
                                               } else {
                                                 L4: {
@@ -68,15 +68,15 @@ final class wi {
                                                     if (var2 == 233) {
                                                       break L4;
                                                     } else {
-                                                      if ((var2 ^ -1) == -235) {
+                                                      if (var2 == 234) {
                                                         break L4;
                                                       } else {
                                                         if (235 != var2) {
-                                                          if (-201 != (var2 ^ -1)) {
-                                                            if (-202 == (var2 ^ -1)) {
+                                                          if (var2 != 200) {
+                                                            if (var2 == 201) {
                                                               break L4;
                                                             } else {
-                                                              if ((var2 ^ -1) != -203) {
+                                                              if (var2 != 202) {
                                                                 if (203 != var2) {
                                                                   L5: {
                                                                     if (var2 == 237) {
@@ -85,7 +85,7 @@ final class wi {
                                                                       if (238 == var2) {
                                                                         break L5;
                                                                       } else {
-                                                                        if ((var2 ^ -1) != -240) {
+                                                                        if (var2 != 239) {
                                                                           if (205 == var2) {
                                                                             break L5;
                                                                           } else {
@@ -98,14 +98,14 @@ final class wi {
                                                                                     if (var2 == 243) {
                                                                                       break L6;
                                                                                     } else {
-                                                                                      if ((var2 ^ -1) == -245) {
+                                                                                      if (var2 == 244) {
                                                                                         break L6;
                                                                                       } else {
                                                                                         if (246 != var2) {
-                                                                                          if (-246 != (var2 ^ -1)) {
+                                                                                          if (var2 != 245) {
                                                                                             if (var2 != 210) {
                                                                                               if (211 != var2) {
-                                                                                                if (-213 == (var2 ^ -1)) {
+                                                                                                if (var2 == 212) {
                                                                                                   break L6;
                                                                                                 } else {
                                                                                                   if (214 == var2) {
@@ -113,8 +113,8 @@ final class wi {
                                                                                                   } else {
                                                                                                     if (213 != var2) {
                                                                                                       L7: {
-                                                                                                        if ((var2 ^ -1) != -250) {
-                                                                                                          if (-251 != (var2 ^ -1)) {
+                                                                                                        if (var2 != 249) {
+                                                                                                          if (var2 != 250) {
                                                                                                             if (251 == var2) {
                                                                                                               break L7;
                                                                                                             } else {
@@ -123,15 +123,15 @@ final class wi {
                                                                                                                   break L7;
                                                                                                                 } else {
                                                                                                                   if (var2 != 218) {
-                                                                                                                    if ((var2 ^ -1) != -220) {
-                                                                                                                      if ((var2 ^ -1) != -221) {
+                                                                                                                    if (var2 != 219) {
+                                                                                                                      if (var2 != 220) {
                                                                                                                         L8: {
-                                                                                                                          if (-232 == (var2 ^ -1)) {
+                                                                                                                          if (var2 == 231) {
                                                                                                                             break L8;
                                                                                                                           } else {
                                                                                                                             if (var2 != 199) {
                                                                                                                               L9: {
-                                                                                                                                if (-256 != (var2 ^ -1)) {
+                                                                                                                                if (var2 != 255) {
                                                                                                                                   if (376 == var2) {
                                                                                                                                     break L9;
                                                                                                                                   } else {
@@ -298,9 +298,6 @@ final class wi {
     final static void a(boolean param0) {
         oc.d(-97);
         sq.b((byte) 118);
-        if (!param0) {
-            field_e = null;
-        }
     }
 
     public static void b(int param0) {
@@ -317,12 +314,12 @@ final class wi {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        var3 = -1 + (((wi) this).field_d.length >> 1100939905);
+        var3 = -1 + (((wi) this).field_d.length >> 1);
         var4 = param0 & var3;
         var5 = -20 / ((58 - param1) / 55);
         L0: while (true) {
           var6 = ((wi) this).field_d[var4 + (var4 + 1)];
-          if (0 != (var6 ^ -1)) {
+          if (var6 != -1) {
             if (((wi) this).field_d[var4 + var4] != param0) {
               var4 = var3 & var4 + 1;
               continue L0;
@@ -336,27 +333,100 @@ final class wi {
     }
 
     wi(int[] param0) {
+        int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        int var2 = 1;
-        while (var2 <= param0.length + (param0.length >> 1742996097)) {
-            var2 = var2 << 1;
-        }
-        ((wi) this).field_d = new int[var2 + var2];
-        for (var3 = 0; var3 < var2 + var2; var3++) {
-            ((wi) this).field_d[var3] = -1;
-        }
-        for (var3 = 0; param0.length > var3; var3++) {
-            var4 = param0[var3] & var2 - 1;
-            while (0 != (((wi) this).field_d[1 + (var4 + var4)] ^ -1)) {
-                var4 = -1 + var2 & var4 + 1;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        try {
+          L0: {
+            var2_int = 1;
+            L1: while (true) {
+              if (var2_int > param0.length + (param0.length >> 1)) {
+                ((wi) this).field_d = new int[var2_int + var2_int];
+                var3 = 0;
+                L2: while (true) {
+                  if (var3 >= var2_int + var2_int) {
+                    var3 = 0;
+                    L3: while (true) {
+                      if (param0.length <= var3) {
+                        break L0;
+                      } else {
+                        var4 = param0[var3] & var2_int - 1;
+                        L4: while (true) {
+                          if (((wi) this).field_d[1 + (var4 + var4)] == -1) {
+                            ((wi) this).field_d[var4 + var4] = param0[var3];
+                            ((wi) this).field_d[var4 + (var4 - -1)] = var3;
+                            var3++;
+                            continue L3;
+                          } else {
+                            var4 = -1 + var2_int & var4 + 1;
+                            continue L4;
+                          }
+                        }
+                      }
+                    }
+                  } else {
+                    ((wi) this).field_d[var3] = -1;
+                    var3++;
+                    continue L2;
+                  }
+                }
+              } else {
+                var2_int = var2_int << 1;
+                continue L1;
+              }
             }
-            ((wi) this).field_d[var4 + var4] = param0[var3];
-            ((wi) this).field_d[var4 + (var4 - -1)] = var3;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L5: {
+            var2 = decompiledCaughtException;
+            stackOut_14_0 = (RuntimeException) var2;
+            stackOut_14_1 = new StringBuilder().append("wi.<init>(");
+            stackIn_16_0 = stackOut_14_0;
+            stackIn_16_1 = stackOut_14_1;
+            stackIn_15_0 = stackOut_14_0;
+            stackIn_15_1 = stackOut_14_1;
+            if (param0 == null) {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "null";
+              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_1 = stackOut_16_1;
+              stackIn_17_2 = stackOut_16_2;
+              break L5;
+            } else {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "{...}";
+              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_1 = stackOut_15_1;
+              stackIn_17_2 = stackOut_15_2;
+              break L5;
+            }
+          }
+          throw wm.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
         }
     }
 
     final static void a(int param0) {
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         fl var4_ref_fl = null;
@@ -371,89 +441,91 @@ final class wi {
         int[] var11 = null;
         int[] var12 = null;
         int[] var13 = null;
-        L0: {
-          var8 = Pool.field_O;
-          if (param0 == 199) {
-            break L0;
-          } else {
-            field_b = null;
-            break L0;
-          }
-        }
-        L1: {
-          var9 = kn.field_e;
-          var2 = var9.g(-125);
-          var3 = var9.g(param0 ^ -151);
-          if (var2 != 0) {
-            if ((var2 ^ -1) == -2) {
-              var4 = var9.i(param0 + -272);
-              var5 = (oi) (Object) qr.field_a.c((byte) 68);
-              L2: while (true) {
-                L3: {
-                  if (var5 == null) {
-                    break L3;
-                  } else {
-                    L4: {
-                      if (var3 != var5.field_t) {
-                        break L4;
+        RuntimeException decompiledCaughtException = null;
+        var8 = Pool.field_O;
+        try {
+          L0: {
+            L1: {
+              var9 = kn.field_e;
+              var2 = var9.g(-125);
+              var3 = var9.g(-82);
+              if (var2 != 0) {
+                if (var2 == 1) {
+                  var4 = var9.i(-73);
+                  var5 = (oi) (Object) qr.field_a.c((byte) 68);
+                  L2: while (true) {
+                    L3: {
+                      if (var5 == null) {
+                        break L3;
                       } else {
-                        if (var4 != var5.field_l) {
-                          break L4;
-                        } else {
-                          break L3;
+                        L4: {
+                          if (var3 != var5.field_t) {
+                            break L4;
+                          } else {
+                            if (var4 != var5.field_l) {
+                              break L4;
+                            } else {
+                              break L3;
+                            }
+                          }
                         }
+                        var5 = (oi) (Object) qr.field_a.f((byte) -5);
+                        continue L2;
                       }
                     }
-                    var5 = (oi) (Object) qr.field_a.f((byte) -5);
-                    continue L2;
+                    if (var5 == null) {
+                      dn.c(118);
+                      return;
+                    } else {
+                      var5.a((byte) -117);
+                      break L1;
+                    }
                   }
+                } else {
+                  tc.a((Throwable) null, "LR1: " + t.a(88), -8555);
+                  dn.c(125);
+                  break L1;
                 }
-                if (var5 == null) {
-                  dn.c(118);
+              } else {
+                var4_ref_fl = (fl) (Object) cq.field_g.c((byte) -124);
+                if (var4_ref_fl == null) {
+                  dn.c(120);
                   return;
                 } else {
-                  var5.a((byte) -117);
-                  break L1;
-                }
-              }
-            } else {
-              tc.a((Throwable) null, "LR1: " + t.a(param0 ^ 159), param0 + -8754);
-              dn.c(125);
-              break L1;
-            }
-          } else {
-            var4_ref_fl = (fl) (Object) cq.field_g.c((byte) -124);
-            if (var4_ref_fl == null) {
-              dn.c(param0 + -79);
-              return;
-            } else {
-              L5: {
-                var5_int = of.field_Pb - var9.field_v;
-                var13 = var4_ref_fl.field_r;
-                var12 = var13;
-                var11 = var12;
-                var10 = var11;
-                var6 = var10;
-                if (var5_int > var13.length << 790560098) {
-                  var5_int = var13.length << 1314660514;
-                  break L5;
-                } else {
-                  break L5;
-                }
-              }
-              var7 = 0;
-              L6: while (true) {
-                if (var5_int <= var7) {
-                  var4_ref_fl.a((byte) -117);
-                  break L1;
-                } else {
-                  var6[var7 >> 1978344674] = var6[var7 >> 1978344674] + (var9.g(-100) << (rb.b(var7, 3) << -231678840));
-                  var7++;
-                  continue L6;
+                  L5: {
+                    var5_int = of.field_Pb - var9.field_v;
+                    var13 = var4_ref_fl.field_r;
+                    var12 = var13;
+                    var11 = var12;
+                    var10 = var11;
+                    var6 = var10;
+                    if (var5_int > var13.length << 2) {
+                      var5_int = var13.length << 2;
+                      break L5;
+                    } else {
+                      break L5;
+                    }
+                  }
+                  var7 = 0;
+                  L6: while (true) {
+                    if (var5_int <= var7) {
+                      var4_ref_fl.a((byte) -117);
+                      break L1;
+                    } else {
+                      var6[var7 >> 2] = var6[var7 >> 2] + (var9.g(-100) << (rb.b(var7, 3) << 8));
+                      var7++;
+                      continue L6;
+                    }
+                  }
                 }
               }
             }
+            break L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw wm.a((Throwable) (Object) var1, "wi.A(" + 199 + 41);
         }
     }
 

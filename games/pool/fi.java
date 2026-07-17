@@ -14,7 +14,7 @@ final class fi implements dm {
         for (var1 = 0; var1 < 2; var1++) {
             ((fi) this).field_a[var1] = new com.ms.directX.DSBufferDesc();
         }
-        for (var1 = 0; (var1 ^ -1) > -3; var1++) {
+        for (var1 = 0; var1 < 2; var1++) {
             ((fi) this).field_b[var1] = new com.ms.directX.DSCursors();
         }
     }

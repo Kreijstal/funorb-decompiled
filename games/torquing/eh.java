@@ -17,12 +17,6 @@ abstract class eh {
     }
 
     final static void c(byte param0) {
-        if (param0 != 90) {
-            field_b = null;
-            gp.j((byte) -34);
-            od.b(128, 4);
-            return;
-        }
         gp.j((byte) -34);
         od.b(128, 4);
     }
@@ -72,67 +66,13 @@ abstract class eh {
     }
 
     final static void a(int param0, int param1, int param2, boolean param3) {
-        int var4 = 0;
-        if (param2 == 0) {
-          jg.field_t.d(param1, param0);
-          if (param3) {
-            L0: {
-              var4 = ke.field_c % jg.field_t.field_s * 2;
-              if (jg.field_t.field_s > var4) {
-                break L0;
-              } else {
-                var4 = -var4 + jg.field_t.field_s + jg.field_t.field_s;
-                break L0;
-              }
-            }
-            if (var4 < 10) {
-              var4 = 10;
-              eq.a(jg.field_t, 0, 1, var4, param1, param0, 80, 0, 30);
-              return;
-            } else {
-              if (jg.field_t.field_s - 40 >= var4) {
-                eq.a(jg.field_t, 0, 1, var4, param1, param0, 80, 0, 30);
-                return;
-              } else {
-                var4 = jg.field_t.field_s - 40;
-                eq.a(jg.field_t, 0, 1, var4, param1, param0, 80, 0, 30);
-                return;
-              }
-            }
-          } else {
-            return;
-          }
+        if (param2 != 0) {
+            eh.b((byte) -115);
         } else {
-          eh.b((byte) -115);
-          jg.field_t.d(param1, param0);
-          if (param3) {
-            L1: {
-              var4 = ke.field_c % jg.field_t.field_s * 2;
-              if (jg.field_t.field_s > var4) {
-                break L1;
-              } else {
-                var4 = -var4 + jg.field_t.field_s + jg.field_t.field_s;
-                break L1;
-              }
-            }
-            if (var4 < 10) {
-              var4 = 10;
-              eq.a(jg.field_t, 0, 1, var4, param1, param0, 80, 0, 30);
-              return;
-            } else {
-              if (jg.field_t.field_s - 40 >= var4) {
-                eq.a(jg.field_t, 0, 1, var4, param1, param0, 80, 0, 30);
-                return;
-              } else {
-                var4 = jg.field_t.field_s - 40;
-                eq.a(jg.field_t, 0, 1, var4, param1, param0, 80, 0, 30);
-                return;
-              }
-            }
-          } else {
+            jg.field_t.d(param1, param0);
             return;
-          }
         }
+        jg.field_t.d(param1, param0);
     }
 
     eh(double param0, double param1, double param2) {
@@ -145,7 +85,7 @@ abstract class eh {
     }
 
     final void a(int param0) {
-        if ((((eh) this).field_c ^ -1) <= -1) {
+        if (((eh) this).field_c >= 0) {
           if (param0 != 80) {
             ((eh) this).field_a = null;
             ((eh) this).field_h.d(((eh) this).field_c);

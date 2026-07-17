@@ -24,7 +24,7 @@ final class kk {
         int stackOut_2_0 = 0;
         ((kk) this).field_i = ((kk) this).field_i - ((kk) this).field_f;
         ((kk) this).field_c = ((kk) this).field_c - 1;
-        ((kk) this).field_f = ((kk) this).field_f - (((kk) this).field_f - -3 >> -1701764574);
+        ((kk) this).field_f = ((kk) this).field_f - (((kk) this).field_f - -3 >> 2);
         if (param0 >= -35) {
           L0: {
             ((kk) this).field_c = -69;
@@ -68,13 +68,17 @@ final class kk {
     kk(int param0, int param1, String param2) {
         ((kk) this).field_f = 64;
         ((kk) this).field_c = 16;
-        ((kk) this).field_h = param2;
-        ((kk) this).field_i = param1 << 2048818916;
-        ((kk) this).field_d = param0;
+        try {
+            ((kk) this).field_h = param2;
+            ((kk) this).field_i = param1 << 4;
+            ((kk) this).field_d = param0;
+        } catch (RuntimeException runtimeException) {
+            throw dn.a((Throwable) (Object) runtimeException, "kk.<init>(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void a(byte param0) {
-        an.field_q.c(((kk) this).field_h, ((kk) this).field_d, ((kk) this).field_i >> 2062697124, 16760896, -1);
+        an.field_q.c(((kk) this).field_h, ((kk) this).field_d, ((kk) this).field_i >> 4, 16760896, -1);
         if (param0 != 35) {
             boolean discarded$0 = ((kk) this).b(-48);
         }

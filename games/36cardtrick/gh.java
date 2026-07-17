@@ -34,21 +34,17 @@ final class gh extends qb {
 
     final static void a(int param0, int param1) {
         ml.field_a = param0;
-        if (param1 != 31888) {
-            gh.a((byte) -106, false);
-        }
     }
 
     final static void a(li param0, byte param1) {
-        if (param1 > -59) {
-          gh.a(-108);
-          aj.field_s.a((qb) (Object) new gi(param0, (qb) (Object) param0), 27362);
-          bg.field_tb.b((je) (Object) param0);
-          return;
-        } else {
-          aj.field_s.a((qb) (Object) new gi(param0, (qb) (Object) param0), 27362);
-          bg.field_tb.b((je) (Object) param0);
-          return;
+        try {
+            if (param1 > -59) {
+                gh.a(-108);
+            }
+            aj.field_s.a((qb) (Object) new gi(param0, (qb) (Object) param0), 27362);
+            bg.field_tb.b((je) (Object) param0);
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) (Object) runtimeException, "gh.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 

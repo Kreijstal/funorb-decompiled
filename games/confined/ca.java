@@ -12,9 +12,6 @@ final class ca extends rk {
 
     public static void b(int param0) {
         field_r = null;
-        if (param0 != -1635) {
-            return;
-        }
         field_s = null;
         field_q = null;
         field_o = null;
@@ -26,13 +23,10 @@ final class ca extends rk {
     }
 
     final static void c(int param0) {
-        if ((da.field_h ^ -1) < -1) {
+        if (da.field_h > 0) {
             ti.c(nl.field_c, nl.field_c + 64);
             nl.field_c = 64 + nl.field_c & 511;
             da.field_h = da.field_h - 64;
-        }
-        if (param0 != 511) {
-            field_s = null;
         }
     }
 
@@ -48,36 +42,22 @@ final class ca extends rk {
     }
 
     private static void $cfr$clinit() {
-        int var0 = 0;
         int var1 = 0;
+        int var0 = 0;
         int var2 = 0;
         field_q = "CONFINED";
         field_n = new int[256];
-        var1 = 0;
-        L0: while (true) {
-          if (var1 <= -257) {
-            field_s = "Normal Difficulty";
-          } else {
+        for (var1 = 0; var1 < 256; var1++) {
             var0 = var1;
-            var2 = 0;
-            L1: while (true) {
-              if (8 <= var2) {
-                field_n[var1] = var0;
-                var1++;
-                continue L0;
-              } else {
-                if (-2 != (1 & var0)) {
-                  var0 = var0 >>> 1;
-                  var2++;
-                  continue L1;
+            for (var2 = 0; 8 > var2; var2++) {
+                if ((1 & var0) == 1) {
+                    var0 = var0 >>> 1 ^ -306674912;
                 } else {
-                  var0 = var0 >>> -1856653215 ^ -306674912;
-                  var2++;
-                  continue L1;
+                    var0 = var0 >>> 1;
                 }
-              }
             }
-          }
+            field_n[var1] = var0;
         }
+        field_s = "Normal Difficulty";
     }
 }

@@ -3254,7 +3254,7 @@ final class t {
         var2 = param0 * 128;
         var3 = param0;
         L0: while (true) {
-          if (var3 >= param1) {
+          if (var3 >= 512) {
             return;
           } else {
             var4 = (double)(var3 >> 3) / 64.0 + 0.0078125;

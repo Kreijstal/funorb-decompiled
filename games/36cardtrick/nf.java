@@ -15,19 +15,17 @@ final class nf {
     }
 
     final static void a(pb param0, boolean param1, int param2, int param3, int param4) {
-        param0.b(-9469, 12);
-        param0.e(17, 26040);
-        if (param1) {
-          field_d = null;
-          param0.e(param3, 26040);
-          param0.e(param2, 26040);
-          param0.b(-9469, param4);
-          return;
-        } else {
-          param0.e(param3, 26040);
-          param0.e(param2, 26040);
-          param0.b(-9469, param4);
-          return;
+        try {
+            param0.b(-9469, 12);
+            param0.e(17, 26040);
+            if (param1) {
+                field_d = null;
+            }
+            param0.e(param3, 26040);
+            param0.e(param2, 26040);
+            param0.b(-9469, param4);
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) (Object) runtimeException, "nf.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 

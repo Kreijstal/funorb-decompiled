@@ -12,7 +12,7 @@ final class pf {
         long var1 = 0L;
         if (param0 == 0) {
           var1 = System.currentTimeMillis();
-          if ((field_a ^ -1L) < (var1 ^ -1L)) {
+          if (~field_a < ~var1) {
             bb.field_b = bb.field_b + (-var1 + field_a);
             field_a = var1;
             return var1 - -bb.field_b;
@@ -26,9 +26,6 @@ final class pf {
     }
 
     final static int b(int param0) {
-        if (param0 != 1) {
-            return -78;
-        }
         return -sc.field_g + h.field_b;
     }
 
@@ -38,24 +35,30 @@ final class pf {
     }
 
     final static void a(byte param0, vl param1, int param2) {
-        hb var6 = gf.field_c;
-        int var4 = 95 / ((param0 - -41) / 42);
-        var6.b(true, param2);
-        var6.field_h = var6.field_h + 1;
-        int var5 = var6.field_h;
-        var6.b(1, -49152);
-        var6.b(param1.field_m, -49152);
-        var6.b(param1.field_n, -49152);
-        var6.a(-803539344, param1.field_l);
-        var6.a(-803539344, param1.field_i);
-        var6.a(-803539344, param1.field_e);
-        var6.a(-803539344, param1.field_k);
-        int discarded$0 = var6.a((byte) -47, var5);
-        var6.a(-var5 + var6.field_h, (byte) -116);
+        hb var6 = null;
+        int var5 = 0;
+        try {
+            var6 = gf.field_c;
+            int var4 = 95 / ((param0 - -41) / 42);
+            var6.b(true, param2);
+            var6.field_h = var6.field_h + 1;
+            var5 = var6.field_h;
+            var6.b(1, -49152);
+            var6.b(param1.field_m, -49152);
+            var6.b(param1.field_n, -49152);
+            var6.a(-803539344, param1.field_l);
+            var6.a(-803539344, param1.field_i);
+            var6.a(-803539344, param1.field_e);
+            var6.a(-803539344, param1.field_k);
+            int discarded$0 = var6.a((byte) -47, var5);
+            var6.a(-var5 + var6.field_h, (byte) -116);
+        } catch (RuntimeException runtimeException) {
+            throw la.a((Throwable) (Object) runtimeException, "pf.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     public static void a(byte param0) {
-        int var1 = 119 / ((61 - param0) / 54);
+        int var1 = 39;
         field_b = null;
         field_c = null;
     }
@@ -68,36 +71,47 @@ final class pf {
             Runtime var2_ref = null;
             Long var3 = null;
             Object var4 = null;
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
-            L0: {
-              if (param0) {
-                break L0;
-              } else {
-                field_c = null;
-                break L0;
-              }
-            }
             try {
-              L1: {
-                var1_ref = Runtime.class.getMethod("maxMemory", new Class[0]);
-                if (var1_ref == null) {
-                  break L1;
-                } else {
-                  try {
-                    var2_ref = Runtime.getRuntime();
-                    var4 = null;
-                    var3 = (Long) var1_ref.invoke((Object) (Object) var2_ref, (Object[]) null);
-                    gb.field_i = (int)(var3.longValue() / 1048576L) + 1;
-                  } catch (java.lang.Throwable decompiledCaughtParameter) {
-                    decompiledCaughtException = decompiledCaughtParameter;
-                    return;
+              L0: {
+                L1: {
+                  var1_ref = Runtime.class.getMethod("maxMemory", new Class[0]);
+                  if (var1_ref == null) {
+                    break L1;
+                  } else {
+                    try {
+                      L2: {
+                        var2_ref = Runtime.getRuntime();
+                        var4 = null;
+                        var3 = (Long) var1_ref.invoke((Object) (Object) var2_ref, (Object[]) null);
+                        gb.field_i = (int)(var3.longValue() / 1048576L) + 1;
+                        decompiledRegionSelector0 = 0;
+                        break L2;
+                      }
+                    } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                      decompiledCaughtException = decompiledCaughtParameter0;
+                      L3: {
+                        var2 = decompiledCaughtException;
+                        decompiledRegionSelector0 = 1;
+                        break L3;
+                      }
+                    }
+                    if (decompiledRegionSelector0 == 0) {
+                      return;
+                    } else {
+                      break L1;
+                    }
                   }
-                  break L1;
                 }
+                break L0;
               }
-            } catch (java.lang.Exception decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
-              var2 = decompiledCaughtException;
+            } catch (java.lang.Exception decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L4: {
+                var1 = (Exception) (Object) decompiledCaughtException;
+                break L4;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

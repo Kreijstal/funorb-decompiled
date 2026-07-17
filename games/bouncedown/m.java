@@ -16,9 +16,6 @@ final class m implements Iterable {
         field_c = null;
         field_a = null;
         field_e = null;
-        if (param0 != -1) {
-            int discarded$0 = m.a((byte) -27);
-        }
     }
 
     final ai a(byte param0, long param1) {
@@ -32,7 +29,7 @@ final class m implements Iterable {
         ((m) this).field_f = var4.field_c;
         L0: while (true) {
           if (var4 != ((m) this).field_f) {
-            if ((((m) this).field_f.field_d ^ -1L) == (param1 ^ -1L)) {
+            if (~((m) this).field_f.field_d == ~param1) {
               var6 = ((m) this).field_f;
               ((m) this).field_f = ((m) this).field_f.field_c;
               return var6;
@@ -49,39 +46,21 @@ final class m implements Iterable {
 
     final void a(int param0, long param1, ai param2) {
         ai var5 = null;
-        if (param0 > -95) {
-          L0: {
-            Iterator discarded$1 = ((m) this).iterator();
-            if (null != param2.field_f) {
-              param2.c(2);
-              break L0;
-            } else {
-              break L0;
+        try {
+            if (param0 > -95) {
+                Iterator discarded$0 = ((m) this).iterator();
             }
-          }
-          var5 = ((m) this).field_b[(int)((long)(-1 + ((m) this).field_d) & param1)];
-          param2.field_f = var5.field_f;
-          param2.field_c = var5;
-          param2.field_f.field_c = param2;
-          param2.field_d = param1;
-          param2.field_c.field_f = param2;
-          return;
-        } else {
-          L1: {
-            if (null != param2.field_f) {
-              param2.c(2);
-              break L1;
-            } else {
-              break L1;
+            if (!(null == param2.field_f)) {
+                param2.c(2);
             }
-          }
-          var5 = ((m) this).field_b[(int)((long)(-1 + ((m) this).field_d) & param1)];
-          param2.field_f = var5.field_f;
-          param2.field_c = var5;
-          param2.field_f.field_c = param2;
-          param2.field_d = param1;
-          param2.field_c.field_f = param2;
-          return;
+            var5 = ((m) this).field_b[(int)((long)(-1 + ((m) this).field_d) & param1)];
+            param2.field_f = var5.field_f;
+            param2.field_c = var5;
+            param2.field_f.field_c = param2;
+            param2.field_d = param1;
+            param2.field_c.field_f = param2;
+        } catch (RuntimeException runtimeException) {
+            throw ii.a((Throwable) (Object) runtimeException, "m.C(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

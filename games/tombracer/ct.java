@@ -11,9 +11,6 @@ final class ct {
     public static void a(byte param0) {
         field_d = null;
         field_c = null;
-        if (param0 >= -85) {
-            field_c = null;
-        }
     }
 
     static {

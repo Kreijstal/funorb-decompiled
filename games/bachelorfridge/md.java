@@ -13,16 +13,9 @@ final class md extends pu {
         field_m = null;
         field_n = null;
         field_p = null;
-        if (param0 != 28075) {
-            field_m = null;
-        }
     }
 
     final static int d(byte param0) {
-        if (param0 > -64) {
-            field_p = null;
-            return 1;
-        }
         return 1;
     }
 

@@ -9,7 +9,7 @@ final class fk {
 
     public static void a(byte param0) {
         field_c = null;
-        int var1 = 74 % ((param0 - -51) / 55);
+        int var1 = 0;
         field_d = null;
     }
 

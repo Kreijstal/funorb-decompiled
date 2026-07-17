@@ -43,93 +43,88 @@ final class so {
             throw new IllegalArgumentException("");
           } else {
             if (32768 > param0) {
-              if ((param0 ^ -1) > -129) {
-                if (-9 >= param0) {
-                  if (param0 >= 32) {
-                    var2 = 5;
-                    param0 = param0 << (var2 << -1951374751);
+              if (param0 < 128) {
+                if (param0 >= 8) {
+                  if (param0 < 32) {
+                    var2 = 6;
+                    param0 = param0 << (var2 << 1);
                     return jn.field_f[param0 - 32768] >> var2;
                   } else {
-                    var2 = 6;
-                    param0 = param0 << (var2 << -1951374751);
+                    var2 = 5;
+                    param0 = param0 << (var2 << 1);
                     return jn.field_f[param0 - 32768] >> var2;
                   }
                 } else {
-                  if (-3 > param0) {
-                    return 256;
-                  } else {
+                  if (param0 >= 2) {
                     var2 = 7;
-                    param0 = param0 << (var2 << -1951374751);
+                    param0 = param0 << (var2 << 1);
                     return jn.field_f[param0 - 32768] >> var2;
+                  } else {
+                    return 256;
                   }
                 }
               } else {
                 if (param0 >= 2048) {
-                  if (8192 > param0) {
-                    var2 = 2;
-                    param0 = param0 << (var2 << -1951374751);
+                  if (8192 <= param0) {
+                    var2 = 1;
+                    param0 = param0 << (var2 << 1);
                     return jn.field_f[param0 - 32768] >> var2;
                   } else {
-                    var2 = 1;
-                    param0 = param0 << (var2 << -1951374751);
+                    var2 = 2;
+                    param0 = param0 << (var2 << 1);
                     return jn.field_f[param0 - 32768] >> var2;
                   }
                 } else {
                   if (512 <= param0) {
                     var2 = 3;
-                    param0 = param0 << (var2 << -1951374751);
+                    param0 = param0 << (var2 << 1);
                     return jn.field_f[param0 - 32768] >> var2;
                   } else {
                     var2 = 4;
-                    param0 = param0 << (var2 << -1951374751);
+                    param0 = param0 << (var2 << 1);
                     return jn.field_f[param0 - 32768] >> var2;
                   }
                 }
               }
             } else {
-              if ((param0 ^ -1) > -131073) {
-                if (param1 != -129) {
-                  int discarded$1 = so.a(105);
-                  return jn.field_f[-32768 + param0];
-                } else {
-                  return jn.field_f[-32768 + param0];
-                }
+              if (param0 < 131072) {
+                return jn.field_f[-32768 + param0];
               } else {
                 if (33554432 <= param0) {
-                  if ((param0 ^ -1) > -536870913) {
-                    if (-134217729 < (param0 ^ -1)) {
-                      var2 = 5;
-                      param0 = param0 >> (var2 << 2392993);
+                  if (param0 < 536870912) {
+                    if (param0 >= 134217728) {
+                      var2 = 6;
+                      param0 = param0 >> (var2 << 1);
                       return jn.field_f[param0 - 32768] << var2;
                     } else {
-                      var2 = 6;
-                      param0 = param0 >> (var2 << 2392993);
+                      var2 = 5;
+                      param0 = param0 >> (var2 << 1);
                       return jn.field_f[param0 - 32768] << var2;
                     }
                   } else {
                     var2 = 7;
-                    param0 = param0 >> (var2 << 2392993);
+                    param0 = param0 >> (var2 << 1);
                     return jn.field_f[param0 - 32768] << var2;
                   }
                 } else {
                   if (param0 >= 2097152) {
-                    if ((param0 ^ -1) <= -8388609) {
-                      var2 = 4;
-                      param0 = param0 >> (var2 << 2392993);
+                    if (param0 < 8388608) {
+                      var2 = 3;
+                      param0 = param0 >> (var2 << 1);
                       return jn.field_f[param0 - 32768] << var2;
                     } else {
-                      var2 = 3;
-                      param0 = param0 >> (var2 << 2392993);
+                      var2 = 4;
+                      param0 = param0 >> (var2 << 1);
                       return jn.field_f[param0 - 32768] << var2;
                     }
                   } else {
-                    if ((param0 ^ -1) > -524289) {
-                      var2 = 1;
-                      param0 = param0 >> (var2 << 2392993);
+                    if (param0 >= 524288) {
+                      var2 = 2;
+                      param0 = param0 >> (var2 << 1);
                       return jn.field_f[param0 - 32768] << var2;
                     } else {
-                      var2 = 2;
-                      param0 = param0 >> (var2 << 2392993);
+                      var2 = 1;
+                      param0 = param0 >> (var2 << 1);
                       return jn.field_f[param0 - 32768] << var2;
                     }
                   }

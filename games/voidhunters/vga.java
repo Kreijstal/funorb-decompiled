@@ -18,7 +18,7 @@ final class vga {
         int var10 = 0;
         int var11 = 0;
         var11 = VoidHunters.field_G;
-        if (-1L > (param0 ^ -1L)) {
+        if (param0 > 0L) {
           if (6582952005840035281L > param0) {
             if (param1 < -108) {
               if (param0 % 37L == 0L) {
@@ -82,59 +82,20 @@ final class vga {
     }
 
     final static void a(int param0, byte param1, String param2, long param3, int param4, boolean param5) {
-        int var7 = 0;
-        faa stackIn_2_0 = null;
-        int stackIn_2_1 = 0;
-        faa stackIn_3_0 = null;
-        int stackIn_3_1 = 0;
-        faa stackIn_4_0 = null;
-        int stackIn_4_1 = 0;
-        int stackIn_4_2 = 0;
-        faa stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
-        faa stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        int stackOut_3_2 = 0;
-        faa stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        int stackOut_2_2 = 0;
         dpa.field_p.h(24335, param4);
         dpa.field_p.field_e = dpa.field_p.field_e + 1;
-        var7 = dpa.field_p.field_e;
+        int var7_int = dpa.field_p.field_e;
         dpa.field_p.a(param3, 108);
         dpa.field_p.a(true, param2);
         if (param1 >= -94) {
-          return;
-        } else {
-          L0: {
+            return;
+        }
+        try {
             dpa.field_p.c(0, param0);
-            stackOut_1_0 = dpa.field_p;
-            stackOut_1_1 = 0;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
-            stackIn_2_0 = stackOut_1_0;
-            stackIn_2_1 = stackOut_1_1;
-            if (param5) {
-              stackOut_3_0 = (faa) (Object) stackIn_3_0;
-              stackOut_3_1 = stackIn_3_1;
-              stackOut_3_2 = 1;
-              stackIn_4_0 = stackOut_3_0;
-              stackIn_4_1 = stackOut_3_1;
-              stackIn_4_2 = stackOut_3_2;
-              break L0;
-            } else {
-              stackOut_2_0 = (faa) (Object) stackIn_2_0;
-              stackOut_2_1 = stackIn_2_1;
-              stackOut_2_2 = 0;
-              stackIn_4_0 = stackOut_2_0;
-              stackIn_4_1 = stackOut_2_1;
-              stackIn_4_2 = stackOut_2_2;
-              break L0;
-            }
-          }
-          ((faa) (Object) stackIn_4_0).c(stackIn_4_1, stackIn_4_2);
-          dpa.field_p.e(-var7 + dpa.field_p.field_e, -129);
-          return;
+            dpa.field_p.c(0, !param5 ? 0 : 1);
+            dpa.field_p.e(-var7_int + dpa.field_p.field_e, -129);
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "vga.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
     }
 
@@ -157,21 +118,18 @@ final class vga {
 
     final void a(fh param0, byte param1) {
         if (param1 != -22) {
-          return;
-        } else {
-          L0: {
-            if (param0.field_d != null) {
-              param0.d((byte) -35);
-              break L0;
-            } else {
-              break L0;
+            return;
+        }
+        try {
+            if (!(param0.field_d == null)) {
+                param0.d((byte) -35);
             }
-          }
-          param0.field_e = ((vga) this).field_c.field_e;
-          param0.field_d = ((vga) this).field_c;
-          param0.field_d.field_e = param0;
-          param0.field_e.field_d = param0;
-          return;
+            param0.field_e = ((vga) this).field_c.field_e;
+            param0.field_d = ((vga) this).field_c;
+            param0.field_d.field_e = param0;
+            param0.field_e.field_d = param0;
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "vga.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
@@ -193,12 +151,7 @@ final class vga {
     }
 
     final static int a(boolean param0) {
-        if (!param0) {
-          field_d = 59;
-          return 1900 + new Date().getYear();
-        } else {
-          return 1900 + new Date().getYear();
-        }
+        return 1900 + new Date().getYear();
     }
 
     final fh a(int param0) {
@@ -236,22 +189,19 @@ final class vga {
     }
 
     final void a(fh param0, int param1) {
-        L0: {
-          if (param0.field_d != null) {
+        if (!(param0.field_d == null)) {
             param0.d((byte) -35);
-            break L0;
-          } else {
-            break L0;
-          }
         }
         if (param1 >= -64) {
-          return;
-        } else {
-          param0.field_e = ((vga) this).field_c;
-          param0.field_d = ((vga) this).field_c.field_d;
-          param0.field_d.field_e = param0;
-          param0.field_e.field_d = param0;
-          return;
+            return;
+        }
+        try {
+            param0.field_e = ((vga) this).field_c;
+            param0.field_d = ((vga) this).field_c.field_d;
+            param0.field_d.field_e = param0;
+            param0.field_e.field_d = param0;
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "vga.I(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 

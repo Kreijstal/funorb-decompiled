@@ -24,10 +24,10 @@ final class eo {
     private static int[] field_o;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        eo.a(param0, param1, param2, param4, param5);
-        eo.a(param0, param1 + param3 - 1, param2, param4, param5);
-        eo.c(param0 + param2 - 1, param1, param3, param4, param5);
-        eo.c(param0, param1, param3, param4, param5);
+        eo.a(param0, param1, param2, param4, 100);
+        eo.a(param0, param1 + param3 - 1, param2, param4, 100);
+        eo.c(param0 + param2 - 1, param1, param3, param4, 100);
+        eo.c(param0, param1, param3, param4, 100);
     }
 
     private final static void a(int param0, int param1, int param2, boolean param3) {
@@ -521,7 +521,7 @@ final class eo {
         iw.a(-79, var8);
         int discarded$0 = param1.a(param0, 0, 0, param4, param5, param6, -1, 1, 1, 0);
         ta.e(126);
-        var8.c(param2, param3, param7, 4096);
+        var8.c(param2, param3, 8192, 4096);
     }
 
     private final static boolean a(int param0, int param1, int param2) {
@@ -788,7 +788,7 @@ final class eo {
     }
 
     final static hd a(boolean param0, int param1) {
-        ot[] var2 = param0 ? field_c[param1] : field_r[param1];
+        ot[] var2 = param0 ? field_c[0] : field_r[0];
         hd var3 = new hd();
         var3.field_N = (ut) (Object) var2[0].h();
         var3.field_vb = (ut) (Object) var2[1].h();
@@ -1051,73 +1051,68 @@ final class eo {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        if (param3 != 256) {
-          L0: {
-            param1 = param1 + param0.field_s;
-            param2 = param2 + param0.field_n;
-            var4 = param1 + param2 * on.field_g;
-            var5 = 0;
-            var6 = param0.field_w;
-            var7 = param0.field_q;
-            var8 = on.field_g - var7;
-            var9 = 0;
-            if (param2 >= on.field_e) {
-              break L0;
-            } else {
-              var10 = on.field_e - param2;
-              var6 = var6 - var10;
-              param2 = on.field_e;
-              var5 = var5 + var10 * var7;
-              var4 = var4 + var10 * on.field_g;
-              break L0;
-            }
+        L0: {
+          param1 = param1 + param0.field_s;
+          param2 = param2 + param0.field_n;
+          var4 = param1 + param2 * on.field_g;
+          var5 = 0;
+          var6 = param0.field_w;
+          var7 = param0.field_q;
+          var8 = on.field_g - var7;
+          var9 = 0;
+          if (param2 >= on.field_e) {
+            break L0;
+          } else {
+            var10 = on.field_e - param2;
+            var6 = var6 - var10;
+            param2 = on.field_e;
+            var5 = var5 + var10 * var7;
+            var4 = var4 + var10 * on.field_g;
+            break L0;
           }
-          L1: {
-            if (param2 + var6 <= on.field_h) {
-              break L1;
-            } else {
-              var6 = var6 - (param2 + var6 - on.field_h);
-              break L1;
-            }
+        }
+        L1: {
+          if (param2 + var6 <= on.field_h) {
+            break L1;
+          } else {
+            var6 = var6 - (param2 + var6 - on.field_h);
+            break L1;
           }
-          L2: {
-            if (param1 >= on.field_b) {
-              break L2;
-            } else {
-              var10 = on.field_b - param1;
-              var7 = var7 - var10;
-              param1 = on.field_b;
-              var5 = var5 + var10;
-              var4 = var4 + var10;
-              var9 = var9 + var10;
-              var8 = var8 + var10;
-              break L2;
-            }
+        }
+        L2: {
+          if (param1 >= on.field_b) {
+            break L2;
+          } else {
+            var10 = on.field_b - param1;
+            var7 = var7 - var10;
+            param1 = on.field_b;
+            var5 = var5 + var10;
+            var4 = var4 + var10;
+            var9 = var9 + var10;
+            var8 = var8 + var10;
+            break L2;
           }
-          L3: {
-            if (param1 + var7 <= on.field_c) {
-              break L3;
-            } else {
-              var10 = param1 + var7 - on.field_c;
-              var7 = var7 - var10;
-              var9 = var9 + var10;
-              var8 = var8 + var10;
-              break L3;
-            }
+        }
+        L3: {
+          if (param1 + var7 <= on.field_c) {
+            break L3;
+          } else {
+            var10 = param1 + var7 - on.field_c;
+            var7 = var7 - var10;
+            var9 = var9 + var10;
+            var8 = var8 + var10;
+            break L3;
           }
-          if (var7 <= 0) {
+        }
+        if (var7 <= 0) {
+          return;
+        } else {
+          if (var6 > 0) {
+            eo.a(on.field_a, param0.field_y, 0, var5, var4, var7, var6, var8, var9, 230);
             return;
           } else {
-            if (var6 > 0) {
-              eo.a(on.field_a, param0.field_y, 0, var5, var4, var7, var6, var8, var9, param3);
-              return;
-            } else {
-              return;
-            }
+            return;
           }
-        } else {
-          param0.c(param1, param2);
-          return;
         }
     }
 
@@ -2170,7 +2165,7 @@ final class eo {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        var3 = (param2 - param1) * 3000 / param2 + 1092;
+        var3 = (210 - param1) * 3000 / 210 + 1092;
         var4 = var3 * var3 >> 8;
         var5 = var3 * var3 >> 12;
         var6 = new ot(72, 72);
@@ -2193,7 +2188,7 @@ final class eo {
                 var11 = var6.field_y[var8];
                 if (var11 != 0) {
                   L2: {
-                    var12 = uv.b(var9, var10, (byte) 2) + 8192 + 2048 & 8191;
+                    var12 = uv.b(var9, var10, (byte) 2) + 10240 & 8191;
                     if (eo.a(var12, var4, var5)) {
                       break L2;
                     } else {

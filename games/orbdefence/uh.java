@@ -21,7 +21,7 @@ final class uh {
               L1: {
                 var2 += 16;
                 param1 = param1 >>> 16;
-                if (-257 >= param1) {
+                if (param1 >= 256) {
                   param1 = param1 >>> 8;
                   var2 += 8;
                   break L1;
@@ -30,7 +30,7 @@ final class uh {
                 }
               }
               L2: {
-                if (-17 > param1) {
+                if (param1 < 16) {
                   break L2;
                 } else {
                   var2 += 4;
@@ -39,7 +39,7 @@ final class uh {
                 }
               }
               L3: {
-                if (-5 < (param1 ^ -1)) {
+                if (param1 < 4) {
                   break L3;
                 } else {
                   param1 = param1 >>> 2;
@@ -56,16 +56,16 @@ final class uh {
                   break L4;
                 }
               }
-              if (param0 > -47) {
-                return 110;
-              } else {
+              if (param0 <= -47) {
                 return var2 - -param1;
+              } else {
+                return 110;
               }
             }
           }
         }
         L5: {
-          if (-257 >= param1) {
+          if (param1 >= 256) {
             param1 = param1 >>> 8;
             var2 += 8;
             break L5;
@@ -74,7 +74,7 @@ final class uh {
           }
         }
         L6: {
-          if (-17 > param1) {
+          if (param1 < 16) {
             break L6;
           } else {
             var2 += 4;
@@ -83,7 +83,7 @@ final class uh {
           }
         }
         L7: {
-          if (-5 < (param1 ^ -1)) {
+          if (param1 < 4) {
             break L7;
           } else {
             param1 = param1 >>> 2;
@@ -100,10 +100,10 @@ final class uh {
             break L8;
           }
         }
-        if (param0 > -47) {
-          return 110;
-        } else {
+        if (param0 <= -47) {
           return var2 - -param1;
+        } else {
+          return 110;
         }
     }
 
@@ -122,11 +122,6 @@ final class uh {
     }
 
     public static void a(int param0) {
-        if (param0 != -5) {
-            field_b = -19;
-            field_c = null;
-            return;
-        }
         field_c = null;
     }
 

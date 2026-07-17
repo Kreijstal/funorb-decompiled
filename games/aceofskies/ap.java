@@ -27,7 +27,6 @@ final class ap extends wf {
         int var12 = 0;
         int var13 = 0;
         ub var14 = null;
-        ub var14_ref = null;
         ub var15 = null;
         int[] var16 = null;
         int[] var18 = null;
@@ -60,9 +59,9 @@ final class ap extends wf {
             if (var6 >= var5) {
               L1: while (true) {
                 var6 = var4.e();
-                var7 = ((k) var4).field_f[var6];
+                var7 = var4.field_f[var6];
                 L2: while (true) {
-                  if (((k) var4).field_f[var6] != var7) {
+                  if (var4.field_f[var6] != var7) {
                     continue L1;
                   } else {
                     var4.a(var6);
@@ -114,17 +113,17 @@ final class ap extends wf {
                           } else {
                             L7: {
                               var13 = var25[var10];
-                              var14 = (ub) ((ap) this).field_f.a((byte) 106, (long)var13);
+                              var14 = (ub) (Object) ((ap) this).field_f.a((byte) 106, (long)var13);
                               if (var14 != null) {
                                 break L7;
                               } else {
                                 var15 = new ub(new byte[128]);
-                                var14_ref = var15;
+                                var14 = var15;
                                 ((ap) this).field_f.a(109, (long)var13, (wf) (Object) var15);
                                 break L7;
                               }
                             }
-                            ((ub) var14_ref).field_e[var11] = (byte) 1;
+                            var14.field_e[var11] = (byte) 1;
                             break L6;
                           }
                         }
@@ -239,7 +238,7 @@ final class ap extends wf {
         int stackOut_65_1 = 0;
         int stackOut_72_0 = 0;
         int stackOut_71_0 = 0;
-        param0.field_g = ((rb) param0).field_f.length - 3;
+        param0.field_g = param0.field_f.length - 3;
         var2 = param0.g(-77);
         var3 = param0.i((byte) 0);
         var4 = 14 + var2 * 10;
@@ -258,13 +257,13 @@ final class ap extends wf {
             var4 = var4 + 5 * var5;
             var4 = var4 + 2 * (var7 + var8 + var6 + var9 + var11);
             var4 = var4 + (var10 + var12);
-            var13 = ((rb) param0).field_g;
+            var13 = param0.field_g;
             var14 = var2 + var5 + var6 + var7 + var8 + var9 + var10 + var11 + var12;
             var15 = 0;
             L1: while (true) {
               if (var15 >= var14) {
-                var4 = var4 + (((rb) param0).field_g - var13);
-                var15 = ((rb) param0).field_g;
+                var4 = var4 + (param0.field_g - var13);
+                var15 = param0.field_g;
                 var16 = 0;
                 var17 = 0;
                 var18 = 0;
@@ -283,48 +282,48 @@ final class ap extends wf {
                   if (var29 >= var6) {
                     L3: {
                       var29 = 0;
-                      var30 = ((rb) param0).field_g;
-                      ((rb) param0).field_g = ((rb) param0).field_g + var26;
-                      var31 = ((rb) param0).field_g;
-                      ((rb) param0).field_g = ((rb) param0).field_g + var11;
-                      var32 = ((rb) param0).field_g;
-                      ((rb) param0).field_g = ((rb) param0).field_g + var10;
-                      var33 = ((rb) param0).field_g;
-                      ((rb) param0).field_g = ((rb) param0).field_g + var9;
-                      var34 = ((rb) param0).field_g;
-                      ((rb) param0).field_g = ((rb) param0).field_g + var16;
-                      var35 = ((rb) param0).field_g;
-                      ((rb) param0).field_g = ((rb) param0).field_g + var18;
-                      var36 = ((rb) param0).field_g;
-                      ((rb) param0).field_g = ((rb) param0).field_g + var20;
-                      var37 = ((rb) param0).field_g;
-                      ((rb) param0).field_g = ((rb) param0).field_g + (var7 + var8 + var11);
-                      var38 = ((rb) param0).field_g;
-                      ((rb) param0).field_g = ((rb) param0).field_g + var7;
-                      var39 = ((rb) param0).field_g;
-                      ((rb) param0).field_g = ((rb) param0).field_g + var27;
-                      var40 = ((rb) param0).field_g;
-                      ((rb) param0).field_g = ((rb) param0).field_g + var8;
-                      var41 = ((rb) param0).field_g;
-                      ((rb) param0).field_g = ((rb) param0).field_g + var17;
-                      var42 = ((rb) param0).field_g;
-                      ((rb) param0).field_g = ((rb) param0).field_g + var19;
-                      var43 = ((rb) param0).field_g;
-                      ((rb) param0).field_g = ((rb) param0).field_g + var21;
-                      var44 = ((rb) param0).field_g;
-                      ((rb) param0).field_g = ((rb) param0).field_g + var12;
-                      var45 = ((rb) param0).field_g;
-                      ((rb) param0).field_g = ((rb) param0).field_g + var9;
-                      var46 = ((rb) param0).field_g;
-                      ((rb) param0).field_g = ((rb) param0).field_g + var22;
-                      var47 = ((rb) param0).field_g;
-                      ((rb) param0).field_g = ((rb) param0).field_g + var23;
-                      var48 = ((rb) param0).field_g;
-                      ((rb) param0).field_g = ((rb) param0).field_g + var24;
-                      var49 = ((rb) param0).field_g;
-                      ((rb) param0).field_g = ((rb) param0).field_g + var25;
-                      var50 = ((rb) param0).field_g;
-                      ((rb) param0).field_g = ((rb) param0).field_g + var5 * 3;
+                      var30 = param0.field_g;
+                      param0.field_g = param0.field_g + var26;
+                      var31 = param0.field_g;
+                      param0.field_g = param0.field_g + var11;
+                      var32 = param0.field_g;
+                      param0.field_g = param0.field_g + var10;
+                      var33 = param0.field_g;
+                      param0.field_g = param0.field_g + var9;
+                      var34 = param0.field_g;
+                      param0.field_g = param0.field_g + var16;
+                      var35 = param0.field_g;
+                      param0.field_g = param0.field_g + var18;
+                      var36 = param0.field_g;
+                      param0.field_g = param0.field_g + var20;
+                      var37 = param0.field_g;
+                      param0.field_g = param0.field_g + (var7 + var8 + var11);
+                      var38 = param0.field_g;
+                      param0.field_g = param0.field_g + var7;
+                      var39 = param0.field_g;
+                      param0.field_g = param0.field_g + var27;
+                      var40 = param0.field_g;
+                      param0.field_g = param0.field_g + var8;
+                      var41 = param0.field_g;
+                      param0.field_g = param0.field_g + var17;
+                      var42 = param0.field_g;
+                      param0.field_g = param0.field_g + var19;
+                      var43 = param0.field_g;
+                      param0.field_g = param0.field_g + var21;
+                      var44 = param0.field_g;
+                      param0.field_g = param0.field_g + var12;
+                      var45 = param0.field_g;
+                      param0.field_g = param0.field_g + var9;
+                      var46 = param0.field_g;
+                      param0.field_g = param0.field_g + var22;
+                      var47 = param0.field_g;
+                      param0.field_g = param0.field_g + var23;
+                      var48 = param0.field_g;
+                      param0.field_g = param0.field_g + var24;
+                      var49 = param0.field_g;
+                      param0.field_g = param0.field_g + var25;
+                      var50 = param0.field_g;
+                      param0.field_g = param0.field_g + var5 * 3;
                       ((ap) this).field_e = new byte[var4];
                       var51 = new rb(((ap) this).field_e);
                       var51.a((byte) 87, 1297377380);
@@ -362,17 +361,19 @@ final class ap extends wf {
                     var60 = 0;
                     L4: while (true) {
                       if (var60 >= var2) {
+                        return;
                       } else {
                         var51.a((byte) 102, 1297379947);
-                        ((rb) var51).field_g = ((rb) var51).field_g + 4;
-                        var61 = ((rb) var51).field_g;
+                        var51.field_g = var51.field_g + 4;
+                        var61 = var51.field_g;
                         var62 = -1;
                         L5: while (true) {
                           L6: {
                             var63 = param0.a(120);
                             var51.d(93, var63);
+                            int incrementValue$29 = var29;
                             var29++;
-                            var64 = ((rb) param0).field_f[var29] & 255;
+                            var64 = param0.field_f[incrementValue$29] & 255;
                             if (var64 == var62) {
                               stackOut_72_0 = 0;
                               stackIn_73_0 = stackOut_72_0;
@@ -405,8 +406,9 @@ final class ap extends wf {
                                                 break L7;
                                               }
                                             }
+                                            int incrementValue$30 = var44;
                                             var44++;
-                                            var51.b(-1336879960, (int) ((rb) param0).field_f[var44]);
+                                            var51.b(-1336879960, (int) param0.field_f[incrementValue$30]);
                                             continue L5;
                                           }
                                         } else {
@@ -418,10 +420,12 @@ final class ap extends wf {
                                               break L8;
                                             }
                                           }
+                                          int incrementValue$31 = var37;
                                           var37++;
-                                          var53 = var53 + ((rb) param0).field_f[var37];
+                                          var53 = var53 + param0.field_f[incrementValue$31];
+                                          int incrementValue$32 = var31;
                                           var31++;
-                                          var58 = var58 + ((rb) param0).field_f[var31];
+                                          var58 = var58 + param0.field_f[incrementValue$32];
                                           var51.b(-1336879960, var53 & 127);
                                           var51.b(-1336879960, var58 & 127);
                                           continue L5;
@@ -435,8 +439,9 @@ final class ap extends wf {
                                             break L9;
                                           }
                                         }
+                                        int incrementValue$33 = var32;
                                         var32++;
-                                        var57 = var57 + ((rb) param0).field_f[var32];
+                                        var57 = var57 + param0.field_f[incrementValue$33];
                                         var51.b(-1336879960, var57 & 127);
                                         continue L5;
                                       }
@@ -449,10 +454,12 @@ final class ap extends wf {
                                           break L10;
                                         }
                                       }
+                                      int incrementValue$34 = var45;
                                       var45++;
-                                      var56 = var56 + ((rb) param0).field_f[var45];
+                                      var56 = var56 + param0.field_f[incrementValue$34];
+                                      int incrementValue$35 = var33;
                                       var33++;
-                                      var56 = var56 + (((rb) param0).field_f[var33] << 7);
+                                      var56 = var56 + (param0.field_f[incrementValue$35] << 7);
                                       var51.b(-1336879960, var56 & 127);
                                       var51.b(-1336879960, var56 >> 7 & 127);
                                       continue L5;
@@ -468,8 +475,9 @@ final class ap extends wf {
                                     }
                                     L12: {
                                       L13: {
+                                        int incrementValue$36 = var15;
                                         var15++;
-                                        var28 = var28 + ((rb) param0).field_f[var15] & 127;
+                                        var28 = var28 + param0.field_f[incrementValue$36] & 127;
                                         var51.b(-1336879960, var28);
                                         if (var28 == 0) {
                                           break L13;
@@ -499,8 +507,9 @@ final class ap extends wf {
                                                                           break L14;
                                                                         } else {
                                                                           if (var28 != 123) {
+                                                                            int incrementValue$37 = var39;
                                                                             var39++;
-                                                                            var66 = ((rb) param0).field_f[var39];
+                                                                            var66 = param0.field_f[incrementValue$37];
                                                                             break L12;
                                                                           } else {
                                                                             break L14;
@@ -510,57 +519,68 @@ final class ap extends wf {
                                                                     }
                                                                   }
                                                                 }
+                                                                int incrementValue$38 = var30;
                                                                 var30++;
-                                                                var66 = ((rb) param0).field_f[var30];
+                                                                var66 = param0.field_f[incrementValue$38];
                                                                 break L12;
                                                               } else {
+                                                                int incrementValue$39 = var49;
                                                                 var49++;
-                                                                var66 = ((rb) param0).field_f[var49];
+                                                                var66 = param0.field_f[incrementValue$39];
                                                                 break L12;
                                                               }
                                                             } else {
+                                                              int incrementValue$40 = var48;
                                                               var48++;
-                                                              var66 = ((rb) param0).field_f[var48];
+                                                              var66 = param0.field_f[incrementValue$40];
                                                               break L12;
                                                             }
                                                           } else {
+                                                            int incrementValue$41 = var47;
                                                             var47++;
-                                                            var66 = ((rb) param0).field_f[var47];
+                                                            var66 = param0.field_f[incrementValue$41];
                                                             break L12;
                                                           }
                                                         } else {
+                                                          int incrementValue$42 = var46;
                                                           var46++;
-                                                          var66 = ((rb) param0).field_f[var46];
+                                                          var66 = param0.field_f[incrementValue$42];
                                                           break L12;
                                                         }
                                                       } else {
+                                                        int incrementValue$43 = var43;
                                                         var43++;
-                                                        var66 = ((rb) param0).field_f[var43];
+                                                        var66 = param0.field_f[incrementValue$43];
                                                         break L12;
                                                       }
                                                     } else {
+                                                      int incrementValue$44 = var36;
                                                       var36++;
-                                                      var66 = ((rb) param0).field_f[var36];
+                                                      var66 = param0.field_f[incrementValue$44];
                                                       break L12;
                                                     }
                                                   } else {
+                                                    int incrementValue$45 = var42;
                                                     var42++;
-                                                    var66 = ((rb) param0).field_f[var42];
+                                                    var66 = param0.field_f[incrementValue$45];
                                                     break L12;
                                                   }
                                                 } else {
+                                                  int incrementValue$46 = var35;
                                                   var35++;
-                                                  var66 = ((rb) param0).field_f[var35];
+                                                  var66 = param0.field_f[incrementValue$46];
                                                   break L12;
                                                 }
                                               } else {
+                                                int incrementValue$47 = var41;
                                                 var41++;
-                                                var66 = ((rb) param0).field_f[var41];
+                                                var66 = param0.field_f[incrementValue$47];
                                                 break L12;
                                               }
                                             } else {
+                                              int incrementValue$48 = var34;
                                               var34++;
-                                              var66 = ((rb) param0).field_f[var34];
+                                              var66 = param0.field_f[incrementValue$48];
                                               break L12;
                                             }
                                           } else {
@@ -568,8 +588,9 @@ final class ap extends wf {
                                           }
                                         }
                                       }
+                                      int incrementValue$49 = var44;
                                       var44++;
-                                      var66 = ((rb) param0).field_f[var44];
+                                      var66 = param0.field_f[incrementValue$49];
                                       break L12;
                                     }
                                     var66 = var66 + var70[var28];
@@ -586,10 +607,12 @@ final class ap extends wf {
                                       break L15;
                                     }
                                   }
+                                  int incrementValue$50 = var37;
                                   var37++;
-                                  var53 = var53 + ((rb) param0).field_f[var37];
+                                  var53 = var53 + param0.field_f[incrementValue$50];
+                                  int incrementValue$51 = var40;
                                   var40++;
-                                  var55 = var55 + ((rb) param0).field_f[var40];
+                                  var55 = var55 + param0.field_f[incrementValue$51];
                                   var51.b(-1336879960, var53 & 127);
                                   var51.b(-1336879960, var55 & 127);
                                   continue L5;
@@ -603,10 +626,12 @@ final class ap extends wf {
                                     break L16;
                                   }
                                 }
+                                int incrementValue$52 = var37;
                                 var37++;
-                                var53 = var53 + ((rb) param0).field_f[var37];
+                                var53 = var53 + param0.field_f[incrementValue$52];
+                                int incrementValue$53 = var38;
                                 var38++;
-                                var54 = var54 + ((rb) param0).field_f[var38];
+                                var54 = var54 + param0.field_f[incrementValue$53];
                                 var51.b(-1336879960, var53 & 127);
                                 var51.b(-1336879960, var54 & 127);
                                 continue L5;
@@ -622,12 +647,15 @@ final class ap extends wf {
                               }
                               var51.b(-1336879960, 81);
                               var51.b(-1336879960, 3);
+                              int incrementValue$54 = var50;
                               var50++;
-                              var51.b(-1336879960, (int) ((rb) param0).field_f[var50]);
+                              var51.b(-1336879960, (int) param0.field_f[incrementValue$54]);
+                              int incrementValue$55 = var50;
                               var50++;
-                              var51.b(-1336879960, (int) ((rb) param0).field_f[var50]);
+                              var51.b(-1336879960, (int) param0.field_f[incrementValue$55]);
+                              int incrementValue$56 = var50;
                               var50++;
-                              var51.b(-1336879960, (int) ((rb) param0).field_f[var50]);
+                              var51.b(-1336879960, (int) param0.field_f[incrementValue$56]);
                               continue L5;
                             }
                           } else {
@@ -641,7 +669,7 @@ final class ap extends wf {
                             }
                             var51.b(-1336879960, 47);
                             var51.b(-1336879960, 0);
-                            var51.f(((rb) var51).field_g - var61, 28494);
+                            var51.f(var51.field_g - var61, 28494);
                             var60++;
                             continue L4;
                           }
@@ -758,7 +786,7 @@ final class ap extends wf {
                   }
                 }
               } else {
-                int discarded$1 = param0.a(125);
+                int discarded$57 = param0.a(125);
                 var15++;
                 continue L1;
               }

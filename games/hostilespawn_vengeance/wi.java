@@ -22,8 +22,12 @@ final class wi {
     }
 
     final static void a(p param0, int param1, byte param2, int param3) {
-        int var4 = -72 % ((param2 - -34) / 41);
-        om.field_d.a(true, 128, (int)param0.field_c - -128, param1, param3);
+        try {
+            int var4_int = -72 % ((param2 - -34) / 41);
+            om.field_d.a(true, 128, (int)param0.field_c - -128, param1, param3);
+        } catch (RuntimeException runtimeException) {
+            throw wg.a((Throwable) (Object) runtimeException, "wi.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+        }
     }
 
     static {

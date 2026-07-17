@@ -32,7 +32,7 @@ final class qd {
         field_c = null;
         field_d = null;
         field_b = null;
-        int var1 = 57 % ((param0 - 21) / 39);
+        int var1 = 0;
     }
 
     static {

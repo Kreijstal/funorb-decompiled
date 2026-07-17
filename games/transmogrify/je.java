@@ -9,22 +9,13 @@ final class je {
 
     public static void a(byte param0) {
         field_c = null;
-        if (param0 >= -125) {
-          field_a = null;
-          field_a = null;
-          field_d = null;
-          field_b = null;
-          return;
-        } else {
-          field_a = null;
-          field_d = null;
-          field_b = null;
-          return;
-        }
+        field_a = null;
+        field_d = null;
+        field_b = null;
     }
 
     final static void a(int param0) {
-        if ((gl.field_y ^ -1) != param0) {
+        if (gl.field_y != 10) {
           if (Transmogrify.d(false)) {
             g.field_A = true;
             return;

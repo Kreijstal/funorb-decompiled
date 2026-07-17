@@ -301,8 +301,9 @@ final class ni {
             for (var12 = 0; var12 < var8; var12++) {
                 var13 = ((ni) this).field_f[var7][var11 & var10];
                 var11 = var11 >>> var9;
+                int incrementValue$0 = var5;
                 var5++;
-                field_i[var5] = var13 >= 0 ? ai.field_L[var13].a() : 0;
+                field_i[incrementValue$0] = var13 >= 0 ? ai.field_L[var13].a() : 0;
             }
         }
         return true;
@@ -445,6 +446,7 @@ final class ni {
                             field_c = new boolean[var5];
                             break L4;
                           }
+                          return;
                         } else {
                           var7 = ((ni) this).field_d[var6];
                           var8 = 0;
@@ -453,8 +455,9 @@ final class ni {
                               var6++;
                               continue L3;
                             } else {
+                              int incrementValue$2 = var5;
                               var5++;
-                              ((ni) this).field_a[var5] = ai.d(var4);
+                              ((ni) this).field_a[incrementValue$2] = ai.d(var4);
                               var8++;
                               continue L6;
                             }
@@ -470,8 +473,9 @@ final class ni {
                 } else {
                   L7: {
                     ((ni) this).field_e[var4] = ai.d(3) + 1;
-                    ((ni) this).field_j[var4] = ai.d(2);
-                    var5 = ai.d(2);
+                    int dupTemp$3 = ai.d(2);
+                    ((ni) this).field_j[var4] = dupTemp$3;
+                    var5 = dupTemp$3;
                     if (var5 == 0) {
                       break L7;
                     } else {

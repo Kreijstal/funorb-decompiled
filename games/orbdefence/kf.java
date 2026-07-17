@@ -12,11 +12,6 @@ final class kf {
     public static void a(int param0) {
         field_b = null;
         field_a = null;
-        if (param0 != -17218) {
-            field_b = null;
-            field_d = null;
-            return;
-        }
         field_d = null;
     }
 

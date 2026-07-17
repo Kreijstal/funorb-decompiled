@@ -28,39 +28,21 @@ final class li implements Iterable {
 
     final void a(long param0, lh param1, byte param2) {
         lh var5 = null;
-        if (param2 != 43) {
-          L0: {
-            li.a((byte) -31);
-            if (null != param1.field_a) {
-              param1.c(param2 ^ -44);
-              break L0;
-            } else {
-              break L0;
+        try {
+            if (param2 != 43) {
+                li.a((byte) -31);
             }
-          }
-          var5 = ((li) this).field_f[(int)((long)(((li) this).field_g - 1) & param0)];
-          param1.field_a = var5.field_a;
-          param1.field_h = var5;
-          param1.field_a.field_h = param1;
-          param1.field_h.field_a = param1;
-          param1.field_c = param0;
-          return;
-        } else {
-          L1: {
-            if (null != param1.field_a) {
-              param1.c(param2 ^ -44);
-              break L1;
-            } else {
-              break L1;
+            if (!(null == param1.field_a)) {
+                param1.c(param2 ^ -44);
             }
-          }
-          var5 = ((li) this).field_f[(int)((long)(((li) this).field_g - 1) & param0)];
-          param1.field_a = var5.field_a;
-          param1.field_h = var5;
-          param1.field_a.field_h = param1;
-          param1.field_h.field_a = param1;
-          param1.field_c = param0;
-          return;
+            var5 = ((li) this).field_f[(int)((long)(((li) this).field_g - 1) & param0)];
+            param1.field_a = var5.field_a;
+            param1.field_h = var5;
+            param1.field_a.field_h = param1;
+            param1.field_h.field_a = param1;
+            param1.field_c = param0;
+        } catch (RuntimeException runtimeException) {
+            throw pf.a((Throwable) (Object) runtimeException, "li.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
     }
 
@@ -71,15 +53,11 @@ final class li implements Iterable {
         if (wc.field_q <= 0) {
           if (!qh.c((byte) 71)) {
             var2 = 1;
-            if (param1 == -74) {
-              if (null == aa.field_r) {
-                if (!sc.field_a) {
-                  return;
-                } else {
-                  pf.a(var2, 1, param0);
-                  return;
-                }
+            if (null == aa.field_r) {
+              if (!sc.field_a) {
+                return;
               } else {
+                pf.a(var2, 1, param0);
                 return;
               }
             } else {
@@ -87,15 +65,11 @@ final class li implements Iterable {
             }
           } else {
             var2 = 0;
-            if (param1 == -74) {
-              if (null == aa.field_r) {
-                if (!sc.field_a) {
-                  return;
-                } else {
-                  pf.a(var2, 1, param0);
-                  return;
-                }
+            if (null == aa.field_r) {
+              if (!sc.field_a) {
+                return;
               } else {
+                pf.a(var2, 1, param0);
                 return;
               }
             } else {
@@ -107,84 +81,68 @@ final class li implements Iterable {
             rh.field_p = wf.a(0, 640, 0, fg.field_q, 0, 480);
             if (rh.field_p == null) {
               var2 = 3;
-              if (param1 == -74) {
-                if (null != aa.field_r) {
-                  return;
-                } else {
-                  L0: {
-                    if (sc.field_a) {
-                      pf.a(var2, 1, param0);
-                      break L0;
-                    } else {
-                      break L0;
-                    }
-                  }
-                  return;
-                }
+              if (null != aa.field_r) {
+                return;
               } else {
+                L0: {
+                  if (sc.field_a) {
+                    pf.a(var2, 1, param0);
+                    break L0;
+                  } else {
+                    break L0;
+                  }
+                }
                 return;
               }
             } else {
               var2 = 2;
               aj.a(0, (java.awt.Canvas) (Object) rh.field_p);
-              if (param1 == -74) {
-                if (null != aa.field_r) {
-                  return;
-                } else {
-                  L1: {
-                    if (sc.field_a) {
-                      pf.a(var2, 1, param0);
-                      break L1;
-                    } else {
-                      break L1;
-                    }
-                  }
-                  return;
-                }
+              if (null != aa.field_r) {
+                return;
               } else {
+                L1: {
+                  if (sc.field_a) {
+                    pf.a(var2, 1, param0);
+                    break L1;
+                  } else {
+                    break L1;
+                  }
+                }
                 return;
               }
             }
           } else {
-            rh.field_p = aa.field_r.b(param1 + -7862);
+            rh.field_p = aa.field_r.b(-7936);
             qa.a((byte) 116, 2);
             if (rh.field_p == null) {
               var2 = 3;
-              if (param1 == -74) {
-                if (null != aa.field_r) {
-                  return;
-                } else {
-                  L2: {
-                    if (sc.field_a) {
-                      pf.a(var2, 1, param0);
-                      break L2;
-                    } else {
-                      break L2;
-                    }
-                  }
-                  return;
-                }
+              if (null != aa.field_r) {
+                return;
               } else {
+                L2: {
+                  if (sc.field_a) {
+                    pf.a(var2, 1, param0);
+                    break L2;
+                  } else {
+                    break L2;
+                  }
+                }
                 return;
               }
             } else {
               var2 = 2;
               aj.a(0, (java.awt.Canvas) (Object) rh.field_p);
-              if (param1 == -74) {
-                if (null != aa.field_r) {
-                  return;
-                } else {
-                  L3: {
-                    if (sc.field_a) {
-                      pf.a(var2, 1, param0);
-                      break L3;
-                    } else {
-                      break L3;
-                    }
-                  }
-                  return;
-                }
+              if (null != aa.field_r) {
+                return;
               } else {
+                L3: {
+                  if (sc.field_a) {
+                    pf.a(var2, 1, param0);
+                    break L3;
+                  } else {
+                    break L3;
+                  }
+                }
                 return;
               }
             }

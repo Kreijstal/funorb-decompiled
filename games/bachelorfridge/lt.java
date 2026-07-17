@@ -21,38 +21,22 @@ final class lt {
     }
 
     final static boolean a(byte param0) {
-        if (param0 == 99) {
-          if (null != dma.field_b) {
-            if (!eia.field_a.a(23716)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+        if (null == dma.field_b) {
             return false;
-          }
-        } else {
-          field_c = null;
-          if (null != dma.field_b) {
-            if (!eia.field_a.a(23716)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
         }
+        if (!eia.field_a.a(23716)) {
+            return false;
+        }
+        return true;
     }
 
     final static boolean b(int param0, int param1) {
         String var2 = null;
-        String var2_ref = null;
         if (param0 == 28427) {
           var2 = lka.field_E[param1][17];
-          var2_ref = var2.trim();
-          var2_ref = var2_ref.toLowerCase();
-          if (var2_ref.equals((Object) (Object) "yes")) {
+          var2 = var2.trim();
+          var2 = var2.toLowerCase();
+          if (var2.equals((Object) (Object) "yes")) {
             return true;
           } else {
             return false;
@@ -60,9 +44,9 @@ final class lt {
         } else {
           lt.b((byte) -113);
           var2 = lka.field_E[param1][17];
-          var2_ref = var2.trim();
-          var2_ref = var2_ref.toLowerCase();
-          if (var2_ref.equals((Object) (Object) "yes")) {
+          var2 = var2.trim();
+          var2 = var2.toLowerCase();
+          if (var2.equals((Object) (Object) "yes")) {
             return true;
           } else {
             return false;

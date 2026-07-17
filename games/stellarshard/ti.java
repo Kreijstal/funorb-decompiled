@@ -1902,7 +1902,7 @@ final class ti {
           } else {
             var11 = 65536 - var6 >> 8;
             var12 = var6 >> 8;
-            var13 = ((param4 & 16711935) * var11 + (param5 & 16711935) * var12 & -16711936) + ((param4 & 65280) * var11 + (param5 & 65280) * var12 & 16711680) >>> 8;
+            var13 = ((param4 & 16711935) * var11 + 0 * var12 & -16711936) + ((param4 & 65280) * var11 + 0 * var12 & 16711680) >>> 8;
             var14 = -param2;
             L5: while (true) {
               if (var14 >= 0) {
@@ -2552,8 +2552,8 @@ final class ti {
         int var5 = 0;
         for (var6 = 0; var6 < 4; var6++) {
             var5 = 128 - (var6 << 5);
-            ti.g(param0 + var6, param1 + param3 + var6, param2, param4, var5);
-            ti.d(param0 + param2 + var6, param1 + var6, param3 + 1, param4, var5);
+            ti.g(param0 + var6, param1 + param3 + var6, param2, 5592405, var5);
+            ti.d(param0 + param2 + var6, param1 + var6, param3 + 1, 5592405, var5);
         }
     }
 
@@ -2684,10 +2684,10 @@ final class ti {
                                     break L4;
                                   } else {
                                     if (param1 + var8 < field_l) {
-                                      field_a[var4 - var8] = param3;
-                                      field_a[var4 + var8] = param3;
-                                      field_a[var6] = param3;
-                                      field_a[var7] = param3;
+                                      field_a[var4 - var8] = 0;
+                                      field_a[var4 + var8] = 0;
+                                      field_a[var6] = 0;
+                                      field_a[var7] = 0;
                                       L5: while (true) {
                                         L6: {
                                           int incrementValue$2 = var9;
@@ -2706,14 +2706,14 @@ final class ti {
                                           }
                                         }
                                         if (var8 >= var9) {
-                                          field_a[var6 - var9] = param3;
-                                          field_a[var6 + var9] = param3;
-                                          field_a[var4 - var8] = param3;
-                                          field_a[var4 + var8] = param3;
-                                          field_a[var5 - var8] = param3;
-                                          field_a[var5 + var8] = param3;
-                                          field_a[var7 - var9] = param3;
-                                          field_a[var7 + var9] = param3;
+                                          field_a[var6 - var9] = 0;
+                                          field_a[var6 + var9] = 0;
+                                          field_a[var4 - var8] = 0;
+                                          field_a[var4 + var8] = 0;
+                                          field_a[var5 - var8] = 0;
+                                          field_a[var5 + var8] = 0;
+                                          field_a[var7 - var9] = 0;
+                                          field_a[var7 + var9] = 0;
                                           continue L5;
                                         } else {
                                           break L3;
@@ -2736,7 +2736,7 @@ final class ti {
                                   if (param1 >= field_l) {
                                     break L7;
                                   } else {
-                                    field_a[var4 - var8] = param3;
+                                    field_a[var4 - var8] = 0;
                                     break L7;
                                   }
                                 }
@@ -2752,7 +2752,7 @@ final class ti {
                                   if (param1 >= field_l) {
                                     break L8;
                                   } else {
-                                    field_a[var4 + var8] = param3;
+                                    field_a[var4 + var8] = 0;
                                     break L8;
                                   }
                                 }
@@ -2769,7 +2769,7 @@ final class ti {
                                     if (param0 >= field_c) {
                                       break L9;
                                     } else {
-                                      field_a[var7] = param3;
+                                      field_a[var7] = 0;
                                       break L9;
                                     }
                                   }
@@ -2784,7 +2784,7 @@ final class ti {
                                     if (param0 >= field_c) {
                                       break L9;
                                     } else {
-                                      field_a[var7] = param3;
+                                      field_a[var7] = 0;
                                       break L9;
                                     }
                                   }
@@ -2823,7 +2823,7 @@ final class ti {
                                           if (param0 - var9 >= field_c) {
                                             break L13;
                                           } else {
-                                            field_a[var6 - var9] = param3;
+                                            field_a[var6 - var9] = 0;
                                             break L13;
                                           }
                                         }
@@ -2834,7 +2834,7 @@ final class ti {
                                         if (param0 + var9 >= field_c) {
                                           break L12;
                                         } else {
-                                          field_a[var6 + var9] = param3;
+                                          field_a[var6 + var9] = 0;
                                           break L12;
                                         }
                                       }
@@ -2855,7 +2855,7 @@ final class ti {
                                           if (param0 - var8 >= field_c) {
                                             break L15;
                                           } else {
-                                            field_a[var4 - var8] = param3;
+                                            field_a[var4 - var8] = 0;
                                             break L15;
                                           }
                                         }
@@ -2866,7 +2866,7 @@ final class ti {
                                         if (param0 + var8 >= field_c) {
                                           break L14;
                                         } else {
-                                          field_a[var4 + var8] = param3;
+                                          field_a[var4 + var8] = 0;
                                           break L14;
                                         }
                                       }
@@ -2887,7 +2887,7 @@ final class ti {
                                           if (param0 - var8 >= field_c) {
                                             break L17;
                                           } else {
-                                            field_a[var5 - var8] = param3;
+                                            field_a[var5 - var8] = 0;
                                             break L17;
                                           }
                                         }
@@ -2898,7 +2898,7 @@ final class ti {
                                         if (param0 + var8 >= field_c) {
                                           break L16;
                                         } else {
-                                          field_a[var5 + var8] = param3;
+                                          field_a[var5 + var8] = 0;
                                           break L16;
                                         }
                                       }
@@ -2918,7 +2918,7 @@ final class ti {
                                         if (param0 - var9 >= field_c) {
                                           break L18;
                                         } else {
-                                          field_a[var7 - var9] = param3;
+                                          field_a[var7 - var9] = 0;
                                           break L18;
                                         }
                                       }
@@ -2929,7 +2929,7 @@ final class ti {
                                       if (param0 + var9 >= field_c) {
                                         continue L10;
                                       } else {
-                                        field_a[var7 + var9] = param3;
+                                        field_a[var7 + var9] = 0;
                                         continue L10;
                                       }
                                     }
@@ -2956,7 +2956,7 @@ final class ti {
           }
           return;
         } else {
-          ti.a(param0, param1, param3);
+          ti.a(param0, param1, 0);
           return;
         }
     }

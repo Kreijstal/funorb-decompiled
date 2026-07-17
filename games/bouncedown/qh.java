@@ -40,32 +40,24 @@ final class qh {
     }
 
     final static void a(ke param0, int param1, int param2) {
-        int var4 = 0;
         ii var5 = null;
-        var5 = hh.field_p;
-        var5.a(true, param1);
-        var5.field_h = var5.field_h + 1;
-        var4 = var5.field_h;
-        var5.a(1, (byte) 107);
-        var5.a(param0.field_g, (byte) 54);
-        var5.a(param0.field_i, (byte) 48);
-        if (param2 != -22762) {
-          qh.b((byte) 16);
-          var5.b(param0.field_h, (byte) 101);
-          var5.b(param0.field_k, (byte) 97);
-          var5.b(param0.field_j, (byte) 124);
-          var5.b(param0.field_o, (byte) 106);
-          int discarded$2 = var5.b(var4, param2 ^ 22761);
-          var5.b(-var4 + var5.field_h, true);
-          return;
-        } else {
-          var5.b(param0.field_h, (byte) 101);
-          var5.b(param0.field_k, (byte) 97);
-          var5.b(param0.field_j, (byte) 124);
-          var5.b(param0.field_o, (byte) 106);
-          int discarded$3 = var5.b(var4, param2 ^ 22761);
-          var5.b(-var4 + var5.field_h, true);
-          return;
+        int var4 = 0;
+        try {
+            var5 = hh.field_p;
+            var5.a(true, param1);
+            var5.field_h = var5.field_h + 1;
+            var4 = var5.field_h;
+            var5.a(1, (byte) 107);
+            var5.a(param0.field_g, (byte) 54);
+            var5.a(param0.field_i, (byte) 48);
+            var5.b(param0.field_h, (byte) 101);
+            var5.b(param0.field_k, (byte) 97);
+            var5.b(param0.field_j, (byte) 124);
+            var5.b(param0.field_o, (byte) 106);
+            int discarded$0 = var5.b(var4, -1);
+            var5.b(-var4 + var5.field_h, true);
+        } catch (RuntimeException runtimeException) {
+            throw ii.a((Throwable) (Object) runtimeException, "qh.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + -22762 + 41);
         }
     }
 
@@ -91,7 +83,11 @@ final class qh {
     qh(String param0) {
         ((qh) this).field_f = false;
         ((qh) this).field_h = false;
-        ((qh) this).field_a = param0;
+        try {
+            ((qh) this).field_a = param0;
+        } catch (RuntimeException runtimeException) {
+            throw ii.a((Throwable) (Object) runtimeException, "qh.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

@@ -15,7 +15,8 @@ final class ig {
     }
 
     final static void a(String[] args, byte param1) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         String var5 = null;
@@ -24,85 +25,115 @@ final class ig {
         int var8 = 0;
         String var9 = null;
         int var10 = 0;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_19_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
         var10 = DungeonAssault.field_K;
-        var3 = -88 % ((-51 - param1) / 40);
-        var2 = -1;
-        var4 = 0;
-        L0: while (true) {
-          if (args.length <= var4) {
-            return;
-          } else {
-            L1: {
-              var5 = args[var4];
-              if (0 == (var2 ^ -1)) {
-                break L1;
+        try {
+          L0: {
+            var3 = 0;
+            var2_int = -1;
+            var4 = 0;
+            L1: while (true) {
+              if (args.length <= var4) {
+                break L0;
               } else {
-                args[var4] = jk.a(new String[1], "<col=<%0>>", 30496) + var5;
-                break L1;
-              }
-            }
-            var6 = en.a(var5, -8634, "<col=");
-            var7 = en.a(var5, -8634, "</col>");
-            if (var6 > var7) {
-              var8 = var5.indexOf('>', var6);
-              if (var8 != -1) {
-                var9 = var5.substring(5 + var6, var8);
-                var2 = hl.a(-120, (CharSequence) (Object) var9, 16);
+                L2: {
+                  var5 = args[var4];
+                  if (var2_int == -1) {
+                    break L2;
+                  } else {
+                    args[var4] = jk.a(new String[1], "<col=<%0>>", 30496) + var5;
+                    break L2;
+                  }
+                }
+                L3: {
+                  var6 = en.a(var5, -8634, "<col=");
+                  var7 = en.a(var5, -8634, "</col>");
+                  if (var6 > var7) {
+                    var8 = var5.indexOf('>', var6);
+                    if (var8 == -1) {
+                      break L3;
+                    } else {
+                      var9 = var5.substring(5 + var6, var8);
+                      var2_int = hl.a(-120, (CharSequence) (Object) var9, 16);
+                      break L3;
+                    }
+                  } else {
+                    if (var7 != -1) {
+                      var2_int = -1;
+                      var4++;
+                      break L3;
+                    } else {
+                      var4++;
+                      break L3;
+                    }
+                  }
+                }
                 var4++;
-                continue L0;
-              } else {
-                var4++;
-                continue L0;
-              }
-            } else {
-              if ((var7 ^ -1) != 0) {
-                var2 = -1;
-                var4++;
-                var4++;
-                continue L0;
-              } else {
-                var4++;
-                var4++;
-                continue L0;
+                continue L1;
               }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var2 = decompiledCaughtException;
+            stackOut_16_0 = (RuntimeException) var2;
+            stackOut_16_1 = new StringBuilder().append("ig.B(");
+            stackIn_18_0 = stackOut_16_0;
+            stackIn_18_1 = stackOut_16_1;
+            stackIn_17_0 = stackOut_16_0;
+            stackIn_17_1 = stackOut_16_1;
+            if (args == null) {
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "null";
+              stackIn_19_0 = stackOut_18_0;
+              stackIn_19_1 = stackOut_18_1;
+              stackIn_19_2 = stackOut_18_2;
+              break L4;
+            } else {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "{...}";
+              stackIn_19_0 = stackOut_17_0;
+              stackIn_19_1 = stackOut_17_1;
+              stackIn_19_2 = stackOut_17_2;
+              break L4;
+            }
+          }
+          throw vk.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + -121 + 41);
         }
     }
 
     final static void c(int param0) {
         int var1 = 0;
-        if (param0 > -25) {
-          return;
+        if (oo.field_d <= 32) {
+            sf.d(-110, 0);
         } else {
-          L0: {
-            if (oo.field_d < -33) {
-              L1: {
-                var1 = oo.field_d % 32;
-                if (-1 != var1) {
-                  break L1;
-                } else {
-                  var1 = 32;
-                  break L1;
-                }
-              }
-              sf.d(62, -var1 + oo.field_d);
-              break L0;
-            } else {
-              sf.d(-110, 0);
-              break L0;
+            var1 = oo.field_d % 32;
+            if (var1 == 0) {
+                var1 = 32;
             }
-          }
-          return;
+            sf.d(62, -var1 + oo.field_d);
         }
     }
 
     public static void a(int param0) {
-        if (param0 != -2898) {
-            int discarded$0 = ig.b(-47);
-            field_b = null;
-            return;
-        }
         field_b = null;
     }
 

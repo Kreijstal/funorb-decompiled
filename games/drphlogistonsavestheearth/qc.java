@@ -8,11 +8,6 @@ final class qc {
 
     public static void a(int param0) {
         field_a = null;
-        if (param0 != 24937) {
-            field_b = null;
-            field_b = null;
-            return;
-        }
         field_b = null;
     }
 

@@ -9,11 +9,6 @@ final class se extends hl {
     int field_k;
 
     public static void a(boolean param0) {
-        if (!param0) {
-            se.a(true);
-            field_m = null;
-            return;
-        }
         field_m = null;
     }
 

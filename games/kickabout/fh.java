@@ -8,7 +8,7 @@ final class fh {
     private static String field_z;
 
     public static void a(byte param0) {
-        int var1 = 69 / ((-21 - param0) / 57);
+        int var1 = -34;
         field_a = null;
         field_c = null;
     }

@@ -21,77 +21,40 @@ public class nd {
 
     public static void a(String param0, int param1, int param2) {
         Exception exception = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    if (param2 == -7682) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
+        Throwable decompiledCaughtException = null;
+        if (param2 == -7682) {
+          field_e = param1;
+          field_b = param0;
+          try {
+            L0: {
+              L1: {
+                field_a = System.getProperty("user.home");
+                if (field_a == null) {
+                  break L1;
+                } else {
+                  field_a = field_a + "/";
+                  break L1;
                 }
-                case 1: {
-                    return;
-                }
-                case 2: {
-                    field_e = param1;
-                    field_b = param0;
-                    statePc = 3;
-                    continue stateLoop;
-                }
-                case 3: {
-                    try {
-                        field_a = System.getProperty("user.home");
-                        if (field_a == null) {
-                            statePc = 7;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        field_a = field_a + "/";
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    exception = (Exception) (Object) caughtException;
-                    statePc = 7;
-                    continue stateLoop;
-                }
-                case 7: {
-                    if (null == field_a) {
-                        statePc = 9;
-                    } else {
-                        statePc = 8;
-                    }
-                    continue stateLoop;
-                }
-                case 8: {
-                    field_c = true;
-                    return;
-                }
-                case 9: {
-                    field_a = "~/";
-                    field_c = true;
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
+              break L0;
             }
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            L2: {
+              exception = (Exception) (Object) decompiledCaughtException;
+              break L2;
+            }
+          }
+          if (null == field_a) {
+            field_a = "~/";
+            field_c = true;
+            return;
+          } else {
+            field_c = true;
+            return;
+          }
+        } else {
+          return;
         }
     }
 

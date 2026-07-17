@@ -47,13 +47,13 @@ final class bb {
         var2 = param1 ? 1 : 0;
         var3 = pf.field_d;
         if (ed.field_O != 0) {
-          if ((kb.field_t ^ -1) != -3) {
+          if (kb.field_t != 2) {
             L0: {
               L1: {
-                if (-4 == (kb.field_t ^ -1)) {
+                if (kb.field_t == 3) {
                   break L1;
                 } else {
-                  if ((ed.field_O ^ -1) == -5) {
+                  if (ed.field_O == 4) {
                     break L1;
                   } else {
                     if (5 == ed.field_O) {
@@ -69,12 +69,12 @@ final class bb {
             }
             L2: {
               ac.a(param0, param0 + -120, var2 != 0, var3);
-              if ((tc.field_v ^ -1) == -1) {
+              if (tc.field_v == 0) {
                 break L2;
               } else {
                 if (10 > tc.field_v) {
                   L3: {
-                    if ((tc.field_v ^ -1) > -16) {
+                    if (tc.field_v < 15) {
                       stackOut_43_0 = 2;
                       stackIn_44_0 = stackOut_43_0;
                       break L3;
@@ -93,7 +93,7 @@ final class bb {
                     break L2;
                   } else {
                     L4: {
-                      if ((tc.field_v ^ -1) > -16) {
+                      if (tc.field_v < 15) {
                         stackOut_39_0 = 2;
                         stackIn_40_0 = stackOut_39_0;
                         break L4;
@@ -115,10 +115,10 @@ final class bb {
           } else {
             var3 = ed.field_O;
             ac.a(param0, param0 + -120, var2 != 0, var3);
-            if ((tc.field_v ^ -1) != -1) {
+            if (tc.field_v != 0) {
               if (10 > tc.field_v) {
                 L5: {
-                  if ((tc.field_v ^ -1) > -16) {
+                  if (tc.field_v < 15) {
                     stackOut_27_0 = 2;
                     stackIn_28_0 = stackOut_27_0;
                     break L5;
@@ -135,7 +135,7 @@ final class bb {
               } else {
                 if (20 <= tc.field_v) {
                   L6: {
-                    if ((tc.field_v ^ -1) > -16) {
+                    if (tc.field_v < 15) {
                       stackOut_23_0 = 2;
                       stackIn_24_0 = stackOut_23_0;
                       break L6;
@@ -160,10 +160,10 @@ final class bb {
         } else {
           var3 = ed.field_O;
           ac.a(param0, param0 + -120, var2 != 0, var3);
-          if ((tc.field_v ^ -1) != -1) {
+          if (tc.field_v != 0) {
             if (10 > tc.field_v) {
               L7: {
-                if ((tc.field_v ^ -1) > -16) {
+                if (tc.field_v < 15) {
                   stackOut_12_0 = 2;
                   stackIn_13_0 = stackOut_12_0;
                   break L7;
@@ -180,7 +180,7 @@ final class bb {
             } else {
               if (20 <= tc.field_v) {
                 L8: {
-                  if ((tc.field_v ^ -1) > -16) {
+                  if (tc.field_v < 15) {
                     stackOut_8_0 = 2;
                     stackIn_9_0 = stackOut_8_0;
                     break L8;
@@ -211,17 +211,9 @@ final class bb {
         field_c = null;
         field_d = null;
         field_f = null;
-        if (param0 != -578) {
-            int discarded$0 = bb.a(1);
-        }
     }
 
     final static void a(byte param0) {
-        if (param0 != -63) {
-            field_g = null;
-            t.a(17, 0);
-            return;
-        }
         t.a(17, 0);
     }
 

@@ -25,7 +25,7 @@ final class is {
               if (0 != param1 % 100) {
                 return true;
               } else {
-                if (-1 == (param1 % 400 ^ -1)) {
+                if (param1 % 400 == 0) {
                   return true;
                 } else {
                   return false;
@@ -66,18 +66,9 @@ final class is {
         field_a = null;
         field_e = null;
         field_d = null;
-        if (param0 != -5) {
-          field_d = null;
-          field_g = null;
-          field_c = null;
-          field_f = null;
-          return;
-        } else {
-          field_g = null;
-          field_c = null;
-          field_f = null;
-          return;
-        }
+        field_g = null;
+        field_c = null;
+        field_f = null;
     }
 
     static {

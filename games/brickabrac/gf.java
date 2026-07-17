@@ -44,7 +44,6 @@ abstract class gf {
 
     final static cq a(int param0, int param1, int param2, byte param3) {
         cq var4 = null;
-        cq var4_ref = null;
         int var5 = 0;
         cq var6 = null;
         cq var7 = null;
@@ -54,15 +53,15 @@ abstract class gf {
           gf.c((byte) -109);
           L0: while (true) {
             if (var4 != null) {
-              if (param1 != var4_ref.field_m) {
+              if (param1 != var4.field_m) {
                 var4 = (cq) (Object) fk.field_f.a((byte) 116);
                 continue L0;
               } else {
-                return var4_ref;
+                return var4;
               }
             } else {
               var7 = new cq();
-              var4_ref = var7;
+              var4 = var7;
               var7.field_s = param2;
               var7.field_m = param1;
               fk.field_f.a((nm) (Object) var7, (byte) 3);
@@ -73,15 +72,15 @@ abstract class gf {
         } else {
           L1: while (true) {
             if (var4 != null) {
-              if (param1 != var4_ref.field_m) {
+              if (param1 != var4.field_m) {
                 var4 = (cq) (Object) fk.field_f.a((byte) 116);
                 continue L1;
               } else {
-                return var4_ref;
+                return var4;
               }
             } else {
               var6 = new cq();
-              var4_ref = var6;
+              var4 = var6;
               var6.field_s = param2;
               var6.field_m = param1;
               fk.field_f.a((nm) (Object) var6, (byte) 3);

@@ -10,7 +10,11 @@ final class ki extends fb {
 
     private ki(String param0, jm param1, rg param2) {
         super(param0, param1, param2);
-        ((ki) this).field_n = a.field_a.field_k;
+        try {
+            ((ki) this).field_n = a.field_a.field_k;
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "ki.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static void a(int param0, boolean param1) {
@@ -265,46 +269,74 @@ final class ki extends fb {
 
     ki(String param0, rg param1, boolean param2) {
         this(param0, param1);
-        ((ki) this).field_I = param2 ? true : false;
+        try {
+            ((ki) this).field_I = param2 ? true : false;
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "ki.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     final static void a(int param0) {
-        int var4 = Chess.field_G;
-        int[] var5 = ge.field_eb;
-        int[] var1 = var5;
-        int var2 = param0;
-        int var3 = var5.length;
-        while (var2 < var3) {
-            int incrementValue$0 = var2;
-            var2++;
-            var5[incrementValue$0] = 0;
-            int incrementValue$1 = var2;
-            var2++;
-            var5[incrementValue$1] = 0;
-            int incrementValue$2 = var2;
-            var2++;
-            var5[incrementValue$2] = 0;
-            int incrementValue$3 = var2;
-            var2++;
-            var5[incrementValue$3] = 0;
-            int incrementValue$4 = var2;
-            var2++;
-            var5[incrementValue$4] = 0;
-            int incrementValue$5 = var2;
-            var2++;
-            var5[incrementValue$5] = 0;
-            int incrementValue$6 = var2;
-            var2++;
-            var5[incrementValue$6] = 0;
-            int incrementValue$7 = var2;
-            var2++;
-            var5[incrementValue$7] = 0;
+        int[] var1 = null;
+        RuntimeException var1_ref = null;
+        int var2 = 0;
+        int var3 = 0;
+        int var4 = 0;
+        int[] var5 = null;
+        RuntimeException decompiledCaughtException = null;
+        var4 = Chess.field_G;
+        try {
+          L0: {
+            var5 = ge.field_eb;
+            var1 = var5;
+            var2 = 0;
+            var3 = var5.length;
+            L1: while (true) {
+              if (var2 >= var3) {
+                break L0;
+              } else {
+                int incrementValue$40 = var2;
+                var2++;
+                var5[incrementValue$40] = 0;
+                int incrementValue$41 = var2;
+                var2++;
+                var5[incrementValue$41] = 0;
+                int incrementValue$42 = var2;
+                var2++;
+                var5[incrementValue$42] = 0;
+                int incrementValue$43 = var2;
+                var2++;
+                var5[incrementValue$43] = 0;
+                int incrementValue$44 = var2;
+                var2++;
+                var5[incrementValue$44] = 0;
+                int incrementValue$45 = var2;
+                var2++;
+                var5[incrementValue$45] = 0;
+                int incrementValue$46 = var2;
+                var2++;
+                var5[incrementValue$46] = 0;
+                int incrementValue$47 = var2;
+                var2++;
+                var5[incrementValue$47] = 0;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw fk.a((Throwable) (Object) var1_ref, "ki.CA(" + 0 + 41);
         }
     }
 
     private ki(String param0, rg param1) {
         this(param0, a.field_a.field_a, param1);
-        ((ki) this).field_n = a.field_a.field_k;
+        try {
+            ((ki) this).field_n = a.field_a.field_k;
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "ki.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

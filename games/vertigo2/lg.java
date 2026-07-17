@@ -565,8 +565,9 @@ final class lg extends sb {
                 break L1;
               }
             }
+            int fieldTemp$1 = ((lg) this).field_G;
             ((lg) this).field_G = ((lg) this).field_G + 1;
-            return ((lg) this).field_G;
+            return fieldTemp$1;
           } else {
             if (var4 == ((lg) this).field_p[var7]) {
               if (var5 == ((lg) this).field_D[var7]) {
@@ -597,8 +598,9 @@ final class lg extends sb {
             ((lg) this).field_p[((lg) this).field_G] = param0;
             ((lg) this).field_D[((lg) this).field_G] = param1;
             ((lg) this).field_i[((lg) this).field_G] = param2;
+            int fieldTemp$1 = ((lg) this).field_G + 1;
             ((lg) this).field_G = ((lg) this).field_G + 1;
-            ((lg) this).field_O = ((lg) this).field_G + 1;
+            ((lg) this).field_O = fieldTemp$1;
             return ((lg) this).field_G - 1;
           } else {
             if (((lg) this).field_p[var4] == param0) {
@@ -633,8 +635,9 @@ final class lg extends sb {
         ((lg) this).field_M[((lg) this).field_L] = (short)param0;
         ((lg) this).field_P[((lg) this).field_L] = (short)param1;
         ((lg) this).field_F[((lg) this).field_L] = (short)param2;
+        int fieldTemp$0 = ((lg) this).field_L;
         ((lg) this).field_L = ((lg) this).field_L + 1;
-        return (byte)((lg) this).field_L;
+        return (byte)fieldTemp$0;
     }
 
     final void c() {
@@ -728,8 +731,9 @@ final class lg extends sb {
                                           break L6;
                                         }
                                       }
-                                      ((lg) this).field_j[var1] = new g();
-                                      var16 = new g();
+                                      g dupTemp$1 = new g();
+                                      ((lg) this).field_j[var1] = dupTemp$1;
+                                      var16 = dupTemp$1;
                                       var16.field_a = var11;
                                       var16.field_c = var12;
                                       var16.field_d = var13;
@@ -911,8 +915,9 @@ final class lg extends sb {
                 break L2;
               } else {
                 L4: {
-                  ((lg) this).field_E[var28] = var2.g(85);
-                  var29 = var2.g(85);
+                  byte dupTemp$1 = var2.g(85);
+                  ((lg) this).field_E[var28] = dupTemp$1;
+                  var29 = dupTemp$1;
                   if (var29 != 0) {
                     break L4;
                   } else {
@@ -1399,7 +1404,7 @@ final class lg extends sb {
                 }
                 if (((lg) this).field_x != null) {
                   if (((lg) this).field_N[var53] == -1) {
-                    ((lg) this).field_x[var53] = (byte)-1;
+                    ((lg) this).field_x[var53] = (byte) -1;
                     var53++;
                     continue L22;
                   } else {
@@ -1468,8 +1473,9 @@ final class lg extends sb {
         ((lg) this).field_x[((lg) this).field_z] = (byte)param4;
         ((lg) this).field_c[((lg) this).field_z] = (short)param5;
         ((lg) this).field_N[((lg) this).field_z] = (short)param6;
+        int fieldTemp$0 = ((lg) this).field_z;
         ((lg) this).field_z = ((lg) this).field_z + 1;
-        return ((lg) this).field_z;
+        return fieldTemp$0;
     }
 
     final void a(int[] param0) {
@@ -1858,7 +1864,7 @@ final class lg extends sb {
                                         if ((((lg) this).field_F[var44] & 65535) != ((lg) this).field_r[var45]) {
                                           break L17;
                                         } else {
-                                          ((lg) this).field_x[var45] = (byte)-1;
+                                          ((lg) this).field_x[var45] = (byte) -1;
                                           var45++;
                                           continue L16;
                                         }
@@ -2018,13 +2024,13 @@ final class lg extends sb {
                       }
                     }
                     if ((var39 & 2) != 2) {
-                      ((lg) this).field_x[var38] = (byte)-1;
-                      ((lg) this).field_N[var38] = (short)-1;
+                      ((lg) this).field_x[var38] = (byte) -1;
+                      ((lg) this).field_N[var38] = (short) -1;
                       break L25;
                     } else {
                       ((lg) this).field_x[var38] = (byte)(var39 >> 2);
                       ((lg) this).field_N[var38] = ((lg) this).field_c[var38];
-                      ((lg) this).field_c[var38] = (short)127;
+                      ((lg) this).field_c[var38] = (short) 127;
                       if (((lg) this).field_N[var38] == -1) {
                         break L25;
                       } else {
@@ -2108,15 +2114,25 @@ final class lg extends sb {
     }
 
     private lg(byte[] param0) {
-        ((lg) this).field_G = 0;
-        ((lg) this).field_O = 0;
-        ((lg) this).field_A = (byte) 0;
-        ((lg) this).field_z = 0;
-        if (param0[param0.length - 1] == -1) {
-            // if_icmpne L52
-            this.b(param0);
-        } else {
-            this.a(param0);
+        L0: {
+          L1: {
+            ((lg) this).field_G = 0;
+            ((lg) this).field_O = 0;
+            ((lg) this).field_A = (byte) 0;
+            ((lg) this).field_z = 0;
+            if (param0[param0.length - 1] != -1) {
+              break L1;
+            } else {
+              if (param0[param0.length - 2] != -1) {
+                break L1;
+              } else {
+                this.b(param0);
+                break L0;
+              }
+            }
+          }
+          this.a(param0);
+          break L0;
         }
     }
 
@@ -2430,6 +2446,7 @@ final class lg extends sb {
                 var10 = 0;
                 L9: while (true) {
                   if (var10 >= param1) {
+                    return;
                   } else {
                     var16 = param0[var10];
                     var19 = var16;
@@ -2496,9 +2513,10 @@ final class lg extends sb {
                           if (var8 != 0) {
                             L15: {
                               L16: {
+                                int incrementValue$1 = var9;
                                 var9++;
                                 stackOut_74_0 = ((lg) this).field_x;
-                                stackOut_74_1 = var9;
+                                stackOut_74_1 = incrementValue$1;
                                 stackIn_77_0 = stackOut_74_0;
                                 stackIn_77_1 = stackOut_74_1;
                                 stackIn_75_0 = stackOut_74_0;
@@ -2611,7 +2629,7 @@ final class lg extends sb {
                           break L22;
                         } else {
                           if (var18.field_N == null) {
-                            ((lg) this).field_N[((lg) this).field_z] = (short)-1;
+                            ((lg) this).field_N[((lg) this).field_z] = (short) -1;
                             break L22;
                           } else {
                             ((lg) this).field_N[((lg) this).field_z] = var15.field_N[var12];

@@ -44,19 +44,10 @@ abstract class vb {
               break L0;
             }
           }
-          if (!param3) {
-            if (param0) {
-              return null;
-            } else {
-              return rc.field_s[var4];
-            }
+          if (param0) {
+            return null;
           } else {
-            var4++;
-            if (param0) {
-              return null;
-            } else {
-              return rc.field_s[var4];
-            }
+            return rc.field_s[var4];
           }
         } else {
           L1: {
@@ -68,19 +59,10 @@ abstract class vb {
               break L1;
             }
           }
-          if (param3) {
-            var4++;
-            if (param0) {
-              return null;
-            } else {
-              return rc.field_s[var4];
-            }
+          if (param0) {
+            return null;
           } else {
-            if (param0) {
-              return null;
-            } else {
-              return rc.field_s[var4];
-            }
+            return rc.field_s[var4];
           }
         }
     }
@@ -126,7 +108,7 @@ abstract class vb {
         int stackOut_2_1 = 0;
         if (param4 > 30) {
           L0: {
-            var6 = ((long)param1 << 200776032) - -(long)param2;
+            var6 = ((long)param1 << 32) - -(long)param2;
             var8 = new db();
             stackOut_13_0 = (db) var8;
             stackIn_15_0 = stackOut_13_0;
@@ -166,7 +148,7 @@ abstract class vb {
         } else {
           L1: {
             field_r = -38;
-            var6 = ((long)param1 << 200776032) - -(long)param2;
+            var6 = ((long)param1 << 32) - -(long)param2;
             var8 = new db();
             stackOut_1_0 = (db) var8;
             stackIn_3_0 = stackOut_1_0;
@@ -256,11 +238,10 @@ abstract class vb {
 
     final static String a(int param0, byte param1, int param2) {
         String var3 = null;
-        String var3_ref = null;
         String[] var4 = null;
         L0: {
           if (null != aa.field_h[param0][param2]) {
-            var3_ref = aa.field_h[param0][param2];
+            var3 = aa.field_h[param0][param2];
             break L0;
           } else {
             var4 = new String[]{wj.field_d, Integer.toString(param2)};
@@ -270,9 +251,9 @@ abstract class vb {
         }
         if (param1 != 109) {
           field_a = null;
-          return var3_ref;
+          return var3;
         } else {
-          return var3_ref;
+          return var3;
         }
     }
 

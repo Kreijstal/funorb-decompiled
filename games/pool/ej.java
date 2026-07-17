@@ -40,13 +40,13 @@ final class ej implements Runnable {
         int stackOut_53_0 = 0;
         try {
           L0: {
-            if ((((ej) this).field_e ^ -1) <= -3) {
+            if (((ej) this).field_e >= 2) {
               stackOut_3_0 = 1;
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0 != 0;
             } else {
               L1: {
-                if ((((ej) this).field_e ^ -1) != -1) {
+                if (((ej) this).field_e != 0) {
                   break L1;
                 } else {
                   L2: {
@@ -58,7 +58,7 @@ final class ej implements Runnable {
                     }
                   }
                   if (((ej) this).field_a.field_f != 0) {
-                    if ((((ej) this).field_a.field_f ^ -1) != -2) {
+                    if (((ej) this).field_a.field_f != 1) {
                       ((ej) this).field_a = null;
                       ((ej) this).field_e = ((ej) this).field_e + 1;
                       stackOut_17_0 = 0;
@@ -86,8 +86,8 @@ final class ej implements Runnable {
                       break L4;
                     }
                   }
-                  if ((((ej) this).field_k.field_f ^ -1) != -1) {
-                    if ((((ej) this).field_k.field_f ^ -1) == -2) {
+                  if (((ej) this).field_k.field_f != 0) {
+                    if (((ej) this).field_k.field_f == 1) {
                       break L3;
                     } else {
                       ((ej) this).field_e = ((ej) this).field_e + 1;
@@ -289,7 +289,7 @@ final class ej implements Runnable {
                       if (null == param8.field_Q) {
                         break L4;
                       } else {
-                        if ((param8.field_Q.length ^ -1) <= (param8.field_K ^ -1)) {
+                        if (~param8.field_Q.length <= ~param8.field_K) {
                           break L3;
                         } else {
                           break L4;
@@ -304,7 +304,7 @@ final class ej implements Runnable {
                       if (param1.field_Q == null) {
                         break L6;
                       } else {
-                        if ((param1.field_Q.length ^ -1) <= (param1.field_K ^ -1)) {
+                        if (~param1.field_Q.length <= ~param1.field_K) {
                           break L5;
                         } else {
                           break L6;
@@ -339,7 +339,7 @@ final class ej implements Runnable {
                     }
                     L10: while (true) {
                       L11: {
-                        if ((var12 ^ -1) <= (param1.field_K ^ -1)) {
+                        if (~var12 <= ~param1.field_K) {
                           break L11;
                         } else {
                           param1.field_Q[var12] = param9.field_Q[gr.field_B[var12]];
@@ -404,7 +404,7 @@ final class ej implements Runnable {
                           if (param8.field_P == null) {
                             break L20;
                           } else {
-                            if ((param8.field_P.length ^ -1) <= (param8.field_K ^ -1)) {
+                            if (~param8.field_P.length <= ~param8.field_K) {
                               break L19;
                             } else {
                               break L20;
@@ -419,7 +419,7 @@ final class ej implements Runnable {
                           if (null == param1.field_P) {
                             break L22;
                           } else {
-                            if ((param1.field_K ^ -1) >= (param1.field_P.length ^ -1)) {
+                            if (~param1.field_K >= ~param1.field_P.length) {
                               break L21;
                             } else {
                               break L22;
@@ -433,7 +433,7 @@ final class ej implements Runnable {
                       L23: while (true) {
                         L24: {
                           L25: {
-                            if ((var12 ^ -1) <= (param8.field_K ^ -1)) {
+                            if (~var12 <= ~param8.field_K) {
                               break L25;
                             } else {
                               param8.field_P[var12] = param9.field_P[hr.field_n[var12]];
@@ -453,7 +453,7 @@ final class ej implements Runnable {
                           break L24;
                         }
                         L26: while (true) {
-                          if ((param1.field_K ^ -1) >= (var12 ^ -1)) {
+                          if (~param1.field_K >= ~var12) {
                             break L17;
                           } else {
                             param1.field_P[var12] = param9.field_P[gr.field_B[var12]];
@@ -538,7 +538,7 @@ final class ej implements Runnable {
                       break L32;
                     }
                     L34: while (true) {
-                      if ((var12 ^ -1) <= (param1.field_K ^ -1)) {
+                      if (~var12 <= ~param1.field_K) {
                         break L15;
                       } else {
                         param1.field_f[var12] = param9.field_f[gr.field_B[var12]];
@@ -564,7 +564,7 @@ final class ej implements Runnable {
                       if (null == param8.field_k) {
                         break L36;
                       } else {
-                        if ((param8.field_K ^ -1) >= (param8.field_k.length ^ -1)) {
+                        if (~param8.field_K >= ~param8.field_k.length) {
                           break L35;
                         } else {
                           break L36;
@@ -593,7 +593,7 @@ final class ej implements Runnable {
                   L39: while (true) {
                     L40: {
                       L41: {
-                        if ((param8.field_K ^ -1) >= (var12 ^ -1)) {
+                        if (~param8.field_K >= ~var12) {
                           break L41;
                         } else {
                           param8.field_k[var12] = param9.field_k[hr.field_n[var12]];
@@ -614,7 +614,7 @@ final class ej implements Runnable {
                     }
                     L42: while (true) {
                       L43: {
-                        if ((param1.field_K ^ -1) >= (var12 ^ -1)) {
+                        if (~param1.field_K >= ~var12) {
                           break L43;
                         } else {
                           param1.field_k[var12] = param9.field_k[gr.field_B[var12]];
@@ -669,7 +669,7 @@ final class ej implements Runnable {
                       if (param1.field_n == null) {
                         break L49;
                       } else {
-                        if ((param1.field_K ^ -1) >= (param1.field_n.length ^ -1)) {
+                        if (~param1.field_K >= ~param1.field_n.length) {
                           break L48;
                         } else {
                           break L49;
@@ -704,7 +704,7 @@ final class ej implements Runnable {
                     }
                     L53: while (true) {
                       L54: {
-                        if ((param1.field_K ^ -1) >= (var12 ^ -1)) {
+                        if (~param1.field_K >= ~var12) {
                           break L54;
                         } else {
                           param1.field_n[var12] = param9.field_n[gr.field_B[var12]];
@@ -755,7 +755,7 @@ final class ej implements Runnable {
                     if (param8.field_L == null) {
                       break L59;
                     } else {
-                      if ((param8.field_L.length ^ -1) <= (param8.field_K ^ -1)) {
+                      if (~param8.field_L.length <= ~param8.field_K) {
                         break L58;
                       } else {
                         break L59;
@@ -770,7 +770,7 @@ final class ej implements Runnable {
                     if (null == param1.field_L) {
                       break L61;
                     } else {
-                      if ((param1.field_L.length ^ -1) > (param1.field_K ^ -1)) {
+                      if (~param1.field_L.length > ~param1.field_K) {
                         break L61;
                       } else {
                         break L60;
@@ -804,7 +804,7 @@ final class ej implements Runnable {
                     break L63;
                   }
                   L65: while (true) {
-                    if ((param1.field_K ^ -1) >= (var12 ^ -1)) {
+                    if (~param1.field_K >= ~var12) {
                       break L56;
                     } else {
                       param1.field_L[var12] = param9.field_L[gr.field_B[var12]];
@@ -920,7 +920,7 @@ final class ej implements Runnable {
         try {
           L0: {
             if (param0 == -25955) {
-              if ((((ej) this).field_e ^ -1) != -4) {
+              if (((ej) this).field_e != 3) {
                 stackOut_6_0 = null;
                 stackIn_7_0 = stackOut_6_0;
                 break L0;
@@ -970,12 +970,12 @@ final class ej implements Runnable {
                     L2: while (true) {
                       L3: {
                         L4: {
-                          if ((((ej) this).field_d.field_t.length ^ -1) >= (((ej) this).field_d.field_v ^ -1)) {
+                          if (~((ej) this).field_d.field_t.length >= ~((ej) this).field_d.field_v) {
                             break L4;
                           } else {
                             var1_int = ((ej) this).field_h.read(((ej) this).field_d.field_t, ((ej) this).field_d.field_v, ((ej) this).field_d.field_t.length + -((ej) this).field_d.field_v);
                             stackOut_2_0 = -1;
-                            stackOut_2_1 = var1_int ^ -1;
+                            stackOut_2_1 = ~var1_int;
                             stackIn_13_0 = stackOut_2_0;
                             stackIn_13_1 = stackOut_2_1;
                             stackIn_3_0 = stackOut_2_0;
@@ -1003,8 +1003,8 @@ final class ej implements Runnable {
                             }
                           }
                         }
-                        stackOut_12_0 = ((ej) this).field_d.field_t.length ^ -1;
-                        stackOut_12_1 = ((ej) this).field_d.field_v ^ -1;
+                        stackOut_12_0 = ~((ej) this).field_d.field_t.length;
+                        stackOut_12_1 = ~((ej) this).field_d.field_v;
                         stackIn_13_0 = stackOut_12_0;
                         stackIn_13_1 = stackOut_12_1;
                         break L3;
@@ -1149,7 +1149,7 @@ final class ej implements Runnable {
                       var16 = -var13 + ch.field_M[var12];
                       var17 = -var14 + li.field_h[var11];
                       var18 = li.field_h[var12] - var14;
-                      if ((var15 * var18 + -(var16 * var17) ^ -1) > -1) {
+                      if (var15 * var18 + -(var16 * var17) < 0) {
                         break L6;
                       } else {
                         break L5;
@@ -1165,7 +1165,7 @@ final class ej implements Runnable {
                       break L5;
                     } else {
                       var15 = fe.field_L[var12];
-                      if ((var15 ^ -1) != 2147483647) {
+                      if (var15 != -2147483648) {
                         L7: {
                           var16 = -var6 + (var14 + var13 + var15);
                           if (0 > var8) {
@@ -1181,12 +1181,12 @@ final class ej implements Runnable {
                         var17 = -stackIn_25_0 + (lq.field_T.length - 1);
                         var18 = lq.field_T[var17];
                         L8: while (true) {
-                          if ((var18 >> -581151548 ^ -1) == -1) {
+                          if (var18 >> 4 == 0) {
                             L9: {
-                              var19 = var18 + (var17 << -1406096316);
+                              var19 = var18 + (var17 << 4);
                               tl.field_I[var19] = var9;
                               lq.field_T[var17] = 1 + var18;
-                              if (-1 <= (param4.field_I ^ -1)) {
+                              if (param4.field_I <= 0) {
                                 break L9;
                               } else {
                                 if (null == param4.field_K) {

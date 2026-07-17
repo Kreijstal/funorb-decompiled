@@ -229,7 +229,7 @@ public final class Kickabout extends tu {
             }
           } else {
             L14: {
-              var3 = (ce.field_I << 1946523368) / 24;
+              var3 = (ce.field_I << 8) / 24;
               cq.field_h.a(var3, false, -53, ra.field_G);
               ra.field_G.a(var3, true, -100, cq.field_h);
               ra.field_G.a((byte) -51, false);
@@ -241,10 +241,10 @@ public final class Kickabout extends tu {
               }
             }
             var4 = -ce.field_I + 24;
-            var5 = (var4 * var4 << 742170152) / 576;
+            var5 = (var4 * var4 << 8) / 576;
             var6 = -var5 + 256;
-            wr.field_f = var5 * po.a(cq.field_h, -4) - -(po.a(ra.field_G, -4) * var6) >> -714215864;
-            if (-25 == (ce.field_I ^ -1)) {
+            wr.field_f = var5 * po.a(cq.field_h, -4) - -(po.a(ra.field_G, -4) * var6) >> 8;
+            if (ce.field_I == 24) {
               cv.a((byte) 105);
               break L12;
             } else {
@@ -331,7 +331,7 @@ public final class Kickabout extends tu {
               break L0;
             } else {
               if ("" != lf.field_b) {
-                if (-1 == (ak.a(cq.field_h, param0 + 23275) ^ -1)) {
+                if (ak.a(cq.field_h, param0 + 23275) == 0) {
                   return;
                 } else {
                   L1: {
@@ -347,7 +347,7 @@ public final class Kickabout extends tu {
                   }
                   L2: {
                     var2 = (ot) (Object) stackIn_11_0;
-                    var3 = -var2.field_o + 640 >> 807795265;
+                    var3 = -var2.field_o + 640 >> 1;
                     if (el.field_A < var3) {
                       break L2;
                     } else {
@@ -396,7 +396,7 @@ public final class Kickabout extends tu {
         }
         L1: {
           var3 = -37 % ((-39 - param1) / 32);
-          if ((param0 ^ -1) == -2) {
+          if (param0 == 1) {
             an.field_d = true;
             ec.field_e = true;
             break L1;
@@ -467,63 +467,58 @@ public final class Kickabout extends tu {
         int var5 = 0;
         int var6 = 0;
         ot var7 = null;
-        Object stackIn_5_0 = null;
-        ot stackOut_4_0 = null;
-        ut stackOut_3_0 = null;
-        if (param0 >= 95) {
-          L0: {
-            if (null != jm.field_g) {
-              stackOut_4_0 = jm.field_g;
-              stackIn_5_0 = (Object) (Object) stackOut_4_0;
-              break L0;
-            } else {
-              stackOut_3_0 = sf.field_C;
-              stackIn_5_0 = (Object) (Object) stackOut_3_0;
-              break L0;
-            }
+        Object stackIn_3_0 = null;
+        ot stackOut_2_0 = null;
+        ut stackOut_1_0 = null;
+        L0: {
+          if (null != jm.field_g) {
+            stackOut_2_0 = jm.field_g;
+            stackIn_3_0 = (Object) (Object) stackOut_2_0;
+            break L0;
+          } else {
+            stackOut_1_0 = sf.field_C;
+            stackIn_3_0 = (Object) (Object) stackOut_1_0;
+            break L0;
           }
-          L1: {
-            var7 = (ot) (Object) stackIn_5_0;
-            var3 = 640 - var7.field_o >> -546195231;
-            var4 = ak.a(cq.field_h, 4);
-            if (ra.field_G == null) {
+        }
+        L1: {
+          var7 = (ot) (Object) stackIn_3_0;
+          var3 = 640 - var7.field_o >> 1;
+          var4 = ak.a(cq.field_h, 4);
+          if (ra.field_G == null) {
+            break L1;
+          } else {
+            var5 = ak.a(ra.field_G, 4);
+            if (var4 > var5) {
+              var6 = Math.min(256, (ce.field_I << 9) / 24);
+              var4 = var4 + ((-var4 + var5) * var6 >> 8);
               break L1;
             } else {
-              var5 = ak.a(ra.field_G, 4);
-              if (var4 > var5) {
-                var6 = Math.min(256, (ce.field_I << 2124633513) / 24);
-                var4 = var4 + ((-var4 + var5) * var6 >> -1826280728);
+              if (var5 <= var4) {
                 break L1;
               } else {
-                if (var5 <= var4) {
-                  break L1;
-                } else {
-                  var6 = Math.max(0, -256 + 2 * ((ce.field_I << 2140220136) / 24));
-                  var4 = var4 + ((-var4 + var5) * var6 >> 958509256);
-                  break L1;
-                }
+                var6 = Math.max(0, -256 + 2 * ((ce.field_I << 8) / 24));
+                var4 = var4 + ((-var4 + var5) * var6 >> 8);
+                break L1;
               }
             }
           }
-          L2: {
-            if (256 != var4) {
-              break L2;
-            } else {
-              var7.c(var3, 10);
-              break L2;
-            }
+        }
+        L2: {
+          if (256 != var4) {
+            break L2;
+          } else {
+            var7.c(var3, 10);
+            break L2;
           }
-          L3: {
-            if (0 != var4) {
-              var7.b(var3, 10, var4);
-              break L3;
-            } else {
-              break L3;
-            }
+        }
+        L3: {
+          if (0 != var4) {
+            var7.b(var3, 10, var4);
+            break L3;
+          } else {
+            break L3;
           }
-          return;
-        } else {
-          return;
         }
     }
 
@@ -627,7 +622,7 @@ public final class Kickabout extends tu {
           if (param1 != 103) {
             break L1;
           } else {
-            if ((tb.field_v ^ -1) == -2) {
+            if (tb.field_v == 1) {
               tb.field_v = 0;
               break L1;
             } else {
@@ -694,11 +689,11 @@ public final class Kickabout extends tu {
                       oa.a(false, (hc) (Object) r.field_d);
                       return r.field_d.a(11516, param1, param2);
                     } else {
-                      if (-90 != (param1 ^ -1)) {
+                      if (param1 != 89) {
                         if (var4 == 0) {
                           if (var4 != 0) {
                             if (16 != param1) {
-                              if ((param1 ^ -1) == -18) {
+                              if (param1 == 17) {
                                 L10: {
                                   if (hr.field_k) {
                                     stackOut_114_0 = 0;
@@ -713,8 +708,8 @@ public final class Kickabout extends tu {
                                 hr.field_k = stackIn_115_0 != 0;
                                 return true;
                               } else {
-                                if ((param1 ^ -1) != -19) {
-                                  if ((param1 ^ -1) == -20) {
+                                if (param1 != 18) {
+                                  if (param1 == 19) {
                                     L11: {
                                       if (th.field_d) {
                                         stackOut_125_0 = 0;
@@ -729,8 +724,8 @@ public final class Kickabout extends tu {
                                     th.field_d = stackIn_126_0 != 0;
                                     return true;
                                   } else {
-                                    if (-21 != (param1 ^ -1)) {
-                                      if ((param1 ^ -1) != -22) {
+                                    if (param1 != 20) {
+                                      if (param1 != 21) {
                                         break L5;
                                       } else {
                                         var6_int = 0;
@@ -796,7 +791,7 @@ public final class Kickabout extends tu {
                           }
                         } else {
                           if (var5 != 0) {
-                            if ((param1 ^ -1) != -2) {
+                            if (param1 != 1) {
                               if (2 == param1) {
                                 nm.a(rm.field_C, -76, true, ih.field_c);
                                 gs.a(0);
@@ -804,7 +799,7 @@ public final class Kickabout extends tu {
                               } else {
                                 if (var4 != 0) {
                                   if (16 != param1) {
-                                    if ((param1 ^ -1) == -18) {
+                                    if (param1 == 17) {
                                       L16: {
                                         if (hr.field_k) {
                                           stackOut_80_0 = 0;
@@ -819,8 +814,8 @@ public final class Kickabout extends tu {
                                       hr.field_k = stackIn_81_0 != 0;
                                       return true;
                                     } else {
-                                      if ((param1 ^ -1) != -19) {
-                                        if ((param1 ^ -1) == -20) {
+                                      if (param1 != 18) {
+                                        if (param1 == 19) {
                                           L17: {
                                             if (th.field_d) {
                                               stackOut_91_0 = 0;
@@ -835,8 +830,8 @@ public final class Kickabout extends tu {
                                           th.field_d = stackIn_92_0 != 0;
                                           return true;
                                         } else {
-                                          if (-21 != (param1 ^ -1)) {
-                                            if ((param1 ^ -1) != -22) {
+                                          if (param1 != 20) {
+                                            if (param1 != 21) {
                                               break L5;
                                             } else {
                                               var6_int = 0;
@@ -921,7 +916,7 @@ public final class Kickabout extends tu {
                     }
                   }
                   if (16 != param1) {
-                    if ((param1 ^ -1) == -18) {
+                    if (param1 == 17) {
                       L22: {
                         if (hr.field_k) {
                           stackOut_43_0 = 0;
@@ -936,8 +931,8 @@ public final class Kickabout extends tu {
                       hr.field_k = stackIn_44_0 != 0;
                       return true;
                     } else {
-                      if ((param1 ^ -1) != -19) {
-                        if ((param1 ^ -1) == -20) {
+                      if (param1 != 18) {
+                        if (param1 == 19) {
                           L23: {
                             if (th.field_d) {
                               stackOut_54_0 = 0;
@@ -952,8 +947,8 @@ public final class Kickabout extends tu {
                           th.field_d = stackIn_55_0 != 0;
                           return true;
                         } else {
-                          if (-21 != (param1 ^ -1)) {
-                            if ((param1 ^ -1) != -22) {
+                          if (param1 != 20) {
+                            if (param1 != 21) {
                               break L5;
                             } else {
                               var6_int = 0;
@@ -1040,7 +1035,7 @@ public final class Kickabout extends tu {
                   }
                 }
               }
-              if (-23 == (param1 ^ -1)) {
+              if (param1 == 22) {
                 L30: {
                   if (gk.field_e) {
                     stackOut_148_0 = 0;
@@ -1056,7 +1051,7 @@ public final class Kickabout extends tu {
                 return true;
               } else {
                 if (param1 != 23) {
-                  if (-25 != (param1 ^ -1)) {
+                  if (param1 != 24) {
                     if (param1 != 25) {
                       if (26 == param1) {
                         L31: {
@@ -1102,7 +1097,7 @@ public final class Kickabout extends tu {
                                 break L33;
                               }
                             }
-                            if (-40 == (param1 ^ -1)) {
+                            if (param1 == 39) {
                               L34: {
                                 if (pc.field_e) {
                                   stackOut_189_0 = 0;
@@ -1118,7 +1113,7 @@ public final class Kickabout extends tu {
                               return true;
                             } else {
                               L35: {
-                                if ((param1 ^ -1) != -41) {
+                                if (param1 != 40) {
                                   break L35;
                                 } else {
                                   if (!la.a(param0 ^ 11416)) {
@@ -1130,7 +1125,7 @@ public final class Kickabout extends tu {
                                 }
                               }
                               L36: {
-                                if (-42 != (param1 ^ -1)) {
+                                if (param1 != 41) {
                                   break L36;
                                 } else {
                                   if (!la.a(100)) {
@@ -1142,7 +1137,7 @@ public final class Kickabout extends tu {
                                 }
                               }
                               L37: {
-                                if ((param1 ^ -1) != -57) {
+                                if (param1 != 56) {
                                   break L37;
                                 } else {
                                   if (!la.a(100)) {
@@ -1159,22 +1154,22 @@ public final class Kickabout extends tu {
                                   }
                                 }
                               }
-                              if (-2 == (param1 ^ -1)) {
+                              if (param1 == 1) {
                                 nm.a(0, param0 + -11592, vi.field_n, ih.field_c);
                                 gs.a(0);
                                 return true;
                               } else {
-                                if (-3 == (param1 ^ -1)) {
+                                if (param1 == 2) {
                                   nm.a(1, -76, vi.field_n, ih.field_c);
                                   gs.a(param0 + -11516);
                                   return true;
                                 } else {
-                                  if ((param1 ^ -1) == -4) {
+                                  if (param1 == 3) {
                                     nm.a(2, -76, vi.field_n, ih.field_c);
                                     gs.a(0);
                                     return true;
                                   } else {
-                                    if ((param1 ^ -1) == -5) {
+                                    if (param1 == 4) {
                                       nm.a(3, param0 ^ -11448, vi.field_n, ih.field_c);
                                       gs.a(0);
                                       return true;
@@ -1242,7 +1237,7 @@ public final class Kickabout extends tu {
             }
             L41: {
               if (var5 != 0) {
-                if ((param1 ^ -1) == -2) {
+                if (param1 == 1) {
                   nm.a(rm.field_C, -76, vi.field_n, 0);
                   gs.a(param0 ^ 11516);
                   return true;
@@ -1252,7 +1247,7 @@ public final class Kickabout extends tu {
                     gs.a(0);
                     return true;
                   } else {
-                    if ((param1 ^ -1) != -4) {
+                    if (param1 != 3) {
                       break L41;
                     } else {
                       nm.a(rm.field_C, param0 ^ -11448, vi.field_n, 2);
@@ -1269,7 +1264,7 @@ public final class Kickabout extends tu {
               pq.field_J = (pq.field_J + 1) % 10;
               return true;
             } else {
-              if (-89 == (param1 ^ -1)) {
+              if (param1 == 88) {
                 pq.field_J = (9 + pq.field_J) % 10;
                 return true;
               } else {
@@ -1310,36 +1305,31 @@ public final class Kickabout extends tu {
     private final void v(int param0) {
         int var2 = 0;
         int var3 = 0;
-        on.a(0, 300, 640, 87, 0, 190);
-        var2 = (int)(250.0f * ga.field_R / 100.0f);
-        var3 = var2 + 196;
-        un.field_d.d(vo.a((byte) -18, mc.field_e, new String[1]), 320, 332, 16777215, 0);
-        on.f(193, 348, 254, 19, 8, 268435455);
-        if (param0 == 81) {
-          L0: {
-            if ((var2 ^ -1) < -17) {
-              on.i(195, 350, var2, 15, 6, 268435455);
-              break L0;
-            } else {
-              pt.a((var2 >> -826875391) + 195, -22914, 0, 480, 0);
-              on.i(195, 350, 250, 15, 6, 268435455);
-              ta.e(117);
-              pt.a(640, -22914, (var2 >> 537942305) + 195, 480, 0);
-              on.i(-250 + (var2 + 195), 350, 250, 15, 6, 268435455);
-              ta.e(122);
-              break L0;
-            }
+        L0: {
+          on.a(0, 300, 640, 87, 0, 190);
+          var2 = (int)(250.0f * ga.field_R / 100.0f);
+          var3 = var2 + 196;
+          un.field_d.d(vo.a((byte) -18, mc.field_e, new String[1]), 320, 332, 16777215, 0);
+          on.f(193, 348, 254, 19, 8, 268435455);
+          if (var2 > 16) {
+            on.i(195, 350, var2, 15, 6, 268435455);
+            break L0;
+          } else {
+            pt.a((var2 >> 1) + 195, -22914, 0, 480, 0);
+            on.i(195, 350, 250, 15, 6, 268435455);
+            ta.e(117);
+            pt.a(640, -22914, (var2 >> 1) + 195, 480, 0);
+            on.i(-250 + (var2 + 195), 350, 250, 15, 6, 268435455);
+            ta.e(122);
+            break L0;
           }
-          pt.a(640, -22914, var3, 480, 0);
-          q.field_d.d(mf.field_Db, 320, 362, 16777215, -1);
-          ta.e(126);
-          pt.a(var3, -22914, 0, 480, 0);
-          q.field_d.d(mf.field_Db, 320, 362, 65793, -1);
-          ta.e(param0 ^ 39);
-          return;
-        } else {
-          return;
         }
+        pt.a(640, -22914, var3, 480, 0);
+        q.field_d.d(mf.field_Db, 320, 362, 16777215, -1);
+        ta.e(126);
+        pt.a(var3, -22914, 0, 480, 0);
+        q.field_d.d(mf.field_Db, 320, 362, 65793, -1);
+        ta.e(118);
     }
 
     public Kickabout() {
@@ -1349,6 +1339,7 @@ public final class Kickabout extends tu {
     }
 
     final static void t(int param0) {
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3_int = 0;
         ot var3 = null;
@@ -1360,121 +1351,130 @@ public final class Kickabout extends tu {
         int var9 = 0;
         int var10 = 0;
         ot var11 = null;
-        int[] stackIn_17_0 = null;
-        int stackIn_17_1 = 0;
         int[] stackIn_18_0 = null;
         int stackIn_18_1 = 0;
         int[] stackIn_19_0 = null;
         int stackIn_19_1 = 0;
-        int stackIn_19_2 = 0;
-        int[] stackOut_16_0 = null;
-        int stackOut_16_1 = 0;
+        int[] stackIn_20_0 = null;
+        int stackIn_20_1 = 0;
+        int stackIn_20_2 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int[] stackOut_17_0 = null;
+        int stackOut_17_1 = 0;
+        int[] stackOut_19_0 = null;
+        int stackOut_19_1 = 0;
+        int stackOut_19_2 = 0;
         int[] stackOut_18_0 = null;
         int stackOut_18_1 = 0;
         int stackOut_18_2 = 0;
-        int[] stackOut_17_0 = null;
-        int stackOut_17_1 = 0;
-        int stackOut_17_2 = 0;
-        L0: {
-          var9 = field_G;
-          var11 = nn.field_B;
-          if (param0 == -826875391) {
-            break L0;
-          } else {
-            Kickabout.o((byte) -117);
-            break L0;
-          }
-        }
-        var2 = 0;
-        var3_int = 0;
-        L1: while (true) {
-          if (var3_int >= var11.field_v) {
-            var3 = nn.field_B;
-            vq.field_d = new ut(((ut) (Object) var3).field_o, ((ut) (Object) var3).field_v);
-            var10 = 0;
-            var4 = var10;
-            var5 = 0;
-            L2: while (true) {
-              if (((ut) (Object) var3).field_v <= var5) {
-                po.field_h = new ut(((ut) (Object) var3).field_o, ((ut) (Object) var3).field_v);
-                return;
+        var9 = field_G;
+        try {
+          L0: {
+            L1: {
+              var11 = nn.field_B;
+              if (param0 == -826875391) {
+                break L1;
               } else {
-                var6 = 0;
-                var7 = 0;
-                var8 = 0;
+                Kickabout.o((byte) -117);
+                break L1;
+              }
+            }
+            var2 = 0;
+            var3_int = 0;
+            L2: while (true) {
+              if (var3_int >= var11.field_v) {
+                var3 = nn.field_B;
+                vq.field_d = new ut(((ut) (Object) var3).field_o, ((ut) (Object) var3).field_v);
+                var10 = 0;
+                var4 = var10;
+                var5 = 0;
                 L3: while (true) {
-                  if (var8 >= ((ut) (Object) var3).field_o) {
-                    var5++;
-                    continue L2;
+                  if (((ut) (Object) var3).field_v <= var5) {
+                    po.field_h = new ut(((ut) (Object) var3).field_o, ((ut) (Object) var3).field_v);
+                    break L0;
                   } else {
-                    L4: {
-                      if (var6 != 0) {
-                        break L4;
+                    var6 = 0;
+                    var7 = 0;
+                    var8 = 0;
+                    L4: while (true) {
+                      if (var8 >= ((ut) (Object) var3).field_o) {
+                        var5++;
+                        continue L3;
                       } else {
-                        if ((((ut) (Object) var3).field_y[var10] & -16777216) == 0) {
-                          break L4;
-                        } else {
-                          int incrementValue$2 = var7;
-                          var7++;
-                          if (5 >= incrementValue$2) {
-                            break L4;
+                        L5: {
+                          if (var6 != 0) {
+                            break L5;
                           } else {
-                            var6 = 1;
-                            break L4;
+                            if ((((ut) (Object) var3).field_y[var10] & -16777216) == 0) {
+                              break L5;
+                            } else {
+                              int incrementValue$2 = var7;
+                              var7++;
+                              if (5 >= incrementValue$2) {
+                                break L5;
+                              } else {
+                                var6 = 1;
+                                break L5;
+                              }
+                            }
                           }
                         }
+                        L6: {
+                          int incrementValue$3 = var10;
+                          var10++;
+                          stackOut_17_0 = vq.field_d.field_y;
+                          stackOut_17_1 = incrementValue$3;
+                          stackIn_19_0 = stackOut_17_0;
+                          stackIn_19_1 = stackOut_17_1;
+                          stackIn_18_0 = stackOut_17_0;
+                          stackIn_18_1 = stackOut_17_1;
+                          if (var6 != 0) {
+                            stackOut_19_0 = (int[]) (Object) stackIn_19_0;
+                            stackOut_19_1 = stackIn_19_1;
+                            stackOut_19_2 = -1;
+                            stackIn_20_0 = stackOut_19_0;
+                            stackIn_20_1 = stackOut_19_1;
+                            stackIn_20_2 = stackOut_19_2;
+                            break L6;
+                          } else {
+                            stackOut_18_0 = (int[]) (Object) stackIn_18_0;
+                            stackOut_18_1 = stackIn_18_1;
+                            stackOut_18_2 = 0;
+                            stackIn_20_0 = stackOut_18_0;
+                            stackIn_20_1 = stackOut_18_1;
+                            stackIn_20_2 = stackOut_18_2;
+                            break L6;
+                          }
+                        }
+                        stackIn_20_0[stackIn_20_1] = stackIn_20_2;
+                        var8++;
+                        continue L4;
                       }
                     }
-                    L5: {
-                      int incrementValue$3 = var10;
-                      var10++;
-                      stackOut_16_0 = vq.field_d.field_y;
-                      stackOut_16_1 = incrementValue$3;
-                      stackIn_18_0 = stackOut_16_0;
-                      stackIn_18_1 = stackOut_16_1;
-                      stackIn_17_0 = stackOut_16_0;
-                      stackIn_17_1 = stackOut_16_1;
-                      if (var6 != 0) {
-                        stackOut_18_0 = (int[]) (Object) stackIn_18_0;
-                        stackOut_18_1 = stackIn_18_1;
-                        stackOut_18_2 = -1;
-                        stackIn_19_0 = stackOut_18_0;
-                        stackIn_19_1 = stackOut_18_1;
-                        stackIn_19_2 = stackOut_18_2;
-                        break L5;
-                      } else {
-                        stackOut_17_0 = (int[]) (Object) stackIn_17_0;
-                        stackOut_17_1 = stackIn_17_1;
-                        stackOut_17_2 = 0;
-                        stackIn_19_0 = stackOut_17_0;
-                        stackIn_19_1 = stackOut_17_1;
-                        stackIn_19_2 = stackOut_17_2;
-                        break L5;
-                      }
-                    }
-                    stackIn_19_0[stackIn_19_1] = stackIn_19_2;
-                    var8++;
-                    continue L3;
+                  }
+                }
+              } else {
+                var4 = 70 * var3_int / var11.field_v;
+                var5 = 0;
+                L7: while (true) {
+                  if (var11.field_o <= var5) {
+                    var3_int++;
+                    continue L2;
+                  } else {
+                    var11.field_y[var2] = qj.b(var11.field_y[var2], -16777216);
+                    var11.field_y[var2] = hf.a(var11.field_y[var2], hf.a(hf.a(var4 << 16, var4 << 8), var4));
+                    var2++;
+                    var5++;
+                    continue L7;
                   }
                 }
               }
             }
-          } else {
-            var4 = 70 * var3_int / var11.field_v;
-            var5 = 0;
-            L6: while (true) {
-              if (var11.field_o <= var5) {
-                var3_int++;
-                continue L1;
-              } else {
-                var11.field_y[var2] = qj.b(var11.field_y[var2], -16777216);
-                var11.field_y[var2] = hf.a(var11.field_y[var2], hf.a(hf.a(var4 << -1982327632, var4 << -1572213464), var4));
-                var2++;
-                var5++;
-                continue L6;
-              }
-            }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw nb.a((Throwable) (Object) var1, "Kickabout.HA(" + param0 + 41);
         }
     }
 
@@ -1499,7 +1499,7 @@ public final class Kickabout extends tu {
     final void o(int param0) {
         if (2147483647 == op.field_v) {
         } else {
-            if (2 != (op.field_v ^ -1)) {
+            if (op.field_v != -3) {
                 jm.a(op.field_v, false, -2);
             } else {
                 rg.a(-1822);
@@ -1545,9 +1545,9 @@ public final class Kickabout extends tu {
     }
 
     final boolean a(int param0, ml param1, int param2) {
-        int var4 = 0;
-        String[] var4_ref_String__ = null;
-        int[] var4_ref_int__ = null;
+        int var4_int = 0;
+        String[] var4 = null;
+        int[] var4_array = null;
         int var5 = 0;
         vc[] var5_ref_vc__ = null;
         int[] var5_ref_int__ = null;
@@ -1756,17 +1756,17 @@ public final class Kickabout extends tu {
             break L0;
           }
         }
-        if (-91 != (param0 ^ -1)) {
-          if (-87 != (param0 ^ -1)) {
+        if (param0 != 90) {
+          if (param0 != 86) {
             if (85 == param0) {
               ds.field_g = true;
               return true;
             } else {
-              if (-85 == (param0 ^ -1)) {
+              if (param0 == 84) {
                 rr.field_f = true;
                 return true;
               } else {
-                if ((param0 ^ -1) == -82) {
+                if (param0 == 81) {
                   vd.field_a.a((gn) (Object) new pt((iw) (Object) un.field_e), param2 ^ 2);
                   return true;
                 } else {
@@ -1784,7 +1784,7 @@ public final class Kickabout extends tu {
                             stackOut_27_0 = 0;
                             stackIn_29_0 = stackOut_27_0;
                             stackIn_28_0 = stackOut_27_0;
-                            if (-2 != (param1.l(1, 59) ^ -1)) {
+                            if (param1.l(1, 59) != 1) {
                               stackOut_29_0 = stackIn_29_0;
                               stackOut_29_1 = 0;
                               stackIn_30_0 = stackOut_29_0;
@@ -1800,14 +1800,14 @@ public final class Kickabout extends tu {
                           }
                           fj.a(stackIn_30_0 != 0, stackIn_30_1 != 0);
                           param1.l((byte) 103);
-                          var4 = un.field_e.i(param2 ^ -97);
+                          var4_int = un.field_e.i(param2 ^ -97);
                           var5 = un.field_e.b(param2 ^ 65281);
                           var6 = un.field_e.h((byte) -119);
                           var7_ref_vc__ = new vc[var6];
                           var8_int = 0;
                           L3: while (true) {
-                            if ((var8_int ^ -1) <= (var6 ^ -1)) {
-                              ((wf) (Object) rn.a(param2 + -120, 16)).a(true, var7_ref_vc__, var4, var5);
+                            if (~var8_int <= ~var6) {
+                              ((wf) (Object) rn.a(param2 + -120, 16)).a(true, var7_ref_vc__, var4_int, var5);
                               return true;
                             } else {
                               var7_ref_vc__[var8_int] = vc.a(param2 + -21833, (iw) (Object) un.field_e);
@@ -1816,15 +1816,15 @@ public final class Kickabout extends tu {
                             }
                           }
                         } else {
-                          if ((param0 ^ -1) != -77) {
-                            if (-81 == (param0 ^ -1)) {
+                          if (param0 != 76) {
+                            if (param0 == 80) {
                               L4: {
                                 ds.field_g = false;
                                 param1.p(-100);
                                 stackOut_44_0 = 0;
                                 stackIn_46_0 = stackOut_44_0;
                                 stackIn_45_0 = stackOut_44_0;
-                                if (-2 != (param1.l(1, param2 + 58) ^ -1)) {
+                                if (param1.l(1, param2 + 58) != 1) {
                                   stackOut_46_0 = stackIn_46_0;
                                   stackOut_46_1 = 0;
                                   stackIn_47_0 = stackOut_46_0;
@@ -1840,12 +1840,12 @@ public final class Kickabout extends tu {
                               }
                               fj.a(stackIn_47_0 != 0, stackIn_47_1 != 0);
                               param1.l((byte) 112);
-                              var4 = un.field_e.h((byte) -125);
-                              var31 = new vc[var4];
+                              var4_int = un.field_e.h((byte) -125);
+                              var31 = new vc[var4_int];
                               var5_ref_vc__ = var31;
                               var6 = 0;
                               L5: while (true) {
-                                if ((var6 ^ -1) <= (var4 ^ -1)) {
+                                if (~var6 <= ~var4_int) {
                                   ((wf) (Object) rn.a(-53, 16)).a(true, var31);
                                   return true;
                                 } else {
@@ -1858,23 +1858,23 @@ public final class Kickabout extends tu {
                               if (param0 != 77) {
                                 if (param0 == 78) {
                                   var32 = new String[param1.a((byte) 81)];
-                                  var4_ref_String__ = var32;
+                                  var4 = var32;
                                   var5 = 0;
                                   L6: while (true) {
                                     if (var32.length <= var5) {
                                       gg.a(var32, (byte) 88);
                                       return true;
                                     } else {
-                                      var4_ref_String__[var5] = param1.a(ek.b(param2, -112));
+                                      var4[var5] = param1.a(ek.b(param2, -112));
                                       var5++;
                                       continue L6;
                                     }
                                   }
                                 } else {
                                   if (70 != param0) {
-                                    if ((param0 ^ -1) != -75) {
-                                      if ((param0 ^ -1) != -10) {
-                                        if (-15 != (param0 ^ -1)) {
+                                    if (param0 != 74) {
+                                      if (param0 != 9) {
+                                        if (param0 != 14) {
                                           if (param0 == 15) {
                                             L7: {
                                               if (!od.field_n) {
@@ -1907,12 +1907,12 @@ public final class Kickabout extends tu {
                                                 }
                                               }
                                             }
-                                            if ((param0 ^ -1) != -68) {
+                                            if (param0 != 67) {
                                               if (param0 == 75) {
-                                                var4 = param1.h((byte) -114);
+                                                var4_int = param1.h((byte) -114);
                                                 var5 = 0;
                                                 L9: while (true) {
-                                                  if ((var5 ^ -1) <= (var4 ^ -1)) {
+                                                  if (~var5 <= ~var4_int) {
                                                     return true;
                                                   } else {
                                                     var40 = param1.a(80);
@@ -1926,7 +1926,7 @@ public final class Kickabout extends tu {
                                                   if (param0 == 64) {
                                                     break L10;
                                                   } else {
-                                                    if ((param0 ^ -1) == -66) {
+                                                    if (param0 == 65) {
                                                       break L10;
                                                     } else {
                                                       if (param0 != 66) {
@@ -1944,10 +1944,10 @@ public final class Kickabout extends tu {
                                                                   return true;
                                                                 } else {
                                                                   if (68 == param0) {
-                                                                    var4 = param1.h((byte) -105);
+                                                                    var4_int = param1.h((byte) -105);
                                                                     var5 = 0;
                                                                     L12: while (true) {
-                                                                      if ((var5 ^ -1) <= (var4 ^ -1)) {
+                                                                      if (~var5 <= ~var4_int) {
                                                                         L13: {
                                                                           var5 = param1.k(4);
                                                                           um.field_e.field_m.a(param1, -5);
@@ -1955,7 +1955,7 @@ public final class Kickabout extends tu {
                                                                           if (var5 == -1) {
                                                                             break L13;
                                                                           } else {
-                                                                            if ((var6 ^ -1) == (var5 ^ -1)) {
+                                                                            if (~var6 == ~var5) {
                                                                               break L13;
                                                                             } else {
                                                                               if (!um.field_e.field_g) {
@@ -1985,7 +1985,7 @@ public final class Kickabout extends tu {
                                                               }
                                                             }
                                                           }
-                                                          if ((param0 ^ -1) == -88) {
+                                                          if (param0 == 87) {
                                                             L14: {
                                                               if (um.field_e == null) {
                                                                 break L14;
@@ -1998,7 +1998,7 @@ public final class Kickabout extends tu {
                                                               var6 = 0;
                                                               param1.p(-114);
                                                               var5 = 0;
-                                                              var4 = 0;
+                                                              var4_int = 0;
                                                               if (!mu.a(param1, (byte) -39)) {
                                                                 stackOut_213_0 = 0;
                                                                 stackIn_214_0 = stackOut_213_0;
@@ -2010,7 +2010,7 @@ public final class Kickabout extends tu {
                                                               }
                                                             }
                                                             L16: {
-                                                              var4 = stackIn_214_0;
+                                                              var4_int = stackIn_214_0;
                                                               if (!mu.a(param1, (byte) -39)) {
                                                                 stackOut_216_0 = 0;
                                                                 stackIn_217_0 = stackOut_216_0;
@@ -2050,7 +2050,7 @@ public final class Kickabout extends tu {
                                                               stackOut_223_0 = stackIn_223_0;
                                                               stackIn_225_0 = stackOut_223_0;
                                                               stackIn_224_0 = stackOut_223_0;
-                                                              if (var5 == var4) {
+                                                              if (var5 == var4_int) {
                                                                 stackOut_225_0 = stackIn_225_0;
                                                                 stackOut_225_1 = 0;
                                                                 stackIn_226_0 = stackOut_225_0;
@@ -2090,7 +2090,7 @@ public final class Kickabout extends tu {
                                                                     }
                                                                   }
                                                                 }
-                                                                if (1 == (cq.field_h.field_c ^ -1)) {
+                                                                if (cq.field_h.field_c == -2) {
                                                                   cq.field_h = (js) (Object) sr.field_l;
                                                                   break L21;
                                                                 } else {
@@ -2103,20 +2103,20 @@ public final class Kickabout extends tu {
                                                               an.field_d = false;
                                                               return true;
                                                             } else {
-                                                              throw new RuntimeException("Tried to init a lobby without the full state being sent [" + var4 + "," + var5 + "," + var6 + "]");
+                                                              throw new RuntimeException("Tried to init a lobby without the full state being sent [" + var4_int + "," + var5 + "," + var6 + "]");
                                                             }
                                                           } else {
                                                             L23: {
                                                               if (null == sr.field_l) {
                                                                 break L23;
                                                               } else {
-                                                                if ((param0 ^ -1) != -89) {
+                                                                if (param0 != 88) {
                                                                   break L23;
                                                                 } else {
                                                                   L24: {
                                                                     param1.p(-112);
                                                                     var6 = 0;
-                                                                    var4 = 0;
+                                                                    var4_int = 0;
                                                                     var5 = 0;
                                                                     if (!mu.a(param1, (byte) -39)) {
                                                                       stackOut_242_0 = 0;
@@ -2129,7 +2129,7 @@ public final class Kickabout extends tu {
                                                                     }
                                                                   }
                                                                   L25: {
-                                                                    var4 = stackIn_243_0;
+                                                                    var4_int = stackIn_243_0;
                                                                     if (!mu.a(param1, (byte) -39)) {
                                                                       stackOut_245_0 = 0;
                                                                       stackIn_246_0 = stackOut_245_0;
@@ -2155,7 +2155,7 @@ public final class Kickabout extends tu {
                                                                   L27: {
                                                                     var6 = stackIn_249_0;
                                                                     param1.l((byte) 103);
-                                                                    if (var4 == 0) {
+                                                                    if (var4_int == 0) {
                                                                       break L27;
                                                                     } else {
                                                                       sr.field_l.a(param1, false);
@@ -2182,7 +2182,7 @@ public final class Kickabout extends tu {
                                                                 }
                                                               }
                                                             }
-                                                            if (-90 != (param0 ^ -1)) {
+                                                            if (param0 != 89) {
                                                               if (param0 == 91) {
                                                                 L30: {
                                                                   L31: {
@@ -2252,7 +2252,7 @@ public final class Kickabout extends tu {
                                                               al.field_Db = true;
                                                               wi.field_B = true;
                                                               jm.a(-3, false, -2);
-                                                              vr.b(param2 ^ 0);
+                                                              vr.b(param2);
                                                               break L35;
                                                             }
                                                           }
@@ -2273,7 +2273,7 @@ public final class Kickabout extends tu {
                                                   }
                                                 }
                                                 L37: {
-                                                  var4 = param1.field_n;
+                                                  var4_int = param1.field_n;
                                                   cv.a((byte) 72);
                                                   if (0 == param1.h((byte) -106)) {
                                                     stackOut_136_0 = 0;
@@ -2301,7 +2301,7 @@ public final class Kickabout extends tu {
                                                   var6 = stackIn_140_0;
                                                   var7 = param1.h((byte) -117);
                                                   var8_int = param1.h((byte) -126);
-                                                  if ((param1.h((byte) -123) ^ -1) == -1) {
+                                                  if (param1.h((byte) -123) == 0) {
                                                     stackOut_142_0 = 0;
                                                     stackIn_143_0 = stackOut_142_0;
                                                     break L39;
@@ -2335,7 +2335,7 @@ public final class Kickabout extends tu {
                                                       if (var10 == 0) {
                                                         break L42;
                                                       } else {
-                                                        if (-1 >= (var13 ^ -1)) {
+                                                        if (var13 >= 0) {
                                                           var41 = new up[9];
                                                           var14 = (Object) (Object) var41;
                                                           var15 = 0;
@@ -2369,7 +2369,7 @@ public final class Kickabout extends tu {
                                                     }
                                                     L45: {
                                                       var16 = stackIn_158_0;
-                                                      if ((var15 & 2 ^ -1) == -1) {
+                                                      if ((var15 & 2) == 0) {
                                                         stackOut_160_0 = 0;
                                                         stackIn_161_0 = stackOut_160_0;
                                                         break L45;
@@ -2393,7 +2393,7 @@ public final class Kickabout extends tu {
                                                     }
                                                     L47: {
                                                       var18 = stackIn_164_0;
-                                                      if (-1 == (var15 & 8 ^ -1)) {
+                                                      if ((var15 & 8) == 0) {
                                                         stackOut_166_0 = 0;
                                                         stackIn_167_0 = stackOut_166_0;
                                                         break L47;
@@ -2438,7 +2438,7 @@ public final class Kickabout extends tu {
                                                           }
                                                         }
                                                       }
-                                                      if ((cq.field_h.field_c ^ -1) == 0) {
+                                                      if (cq.field_h.field_c == -1) {
                                                         cq.field_h = (js) (Object) um.field_e;
                                                         break L49;
                                                       } else {
@@ -2449,7 +2449,7 @@ public final class Kickabout extends tu {
                                                       }
                                                     }
                                                     an.field_d = false;
-                                                    var21 = param1.field_n + -var4;
+                                                    var21 = param1.field_n + -var4_int;
                                                     if (var21 != ms.field_b) {
                                                       throw new RuntimeException("");
                                                     } else {
@@ -2468,11 +2468,11 @@ public final class Kickabout extends tu {
                                               var55 = var62;
                                               var48 = var55;
                                               var35 = var48;
-                                              var4_ref_int__ = var35;
+                                              var4_array = var35;
                                               var5 = 0;
                                               L51: while (true) {
                                                 if (2 < var5) {
-                                                  var60 = var4_ref_int__;
+                                                  var60 = var4_array;
                                                   var53 = var60;
                                                   var46 = var53;
                                                   var33 = var46;
@@ -2489,14 +2489,14 @@ public final class Kickabout extends tu {
                                                     if (var7 >= 8) {
                                                       var5 = 0;
                                                       L53: while (true) {
-                                                        if ((var5 ^ -1) <= -74) {
+                                                        if (var5 >= 73) {
                                                           var63 = bh.field_f;
                                                           var56 = var63;
                                                           var49 = var56;
                                                           var36 = var49;
                                                           var26 = var36;
                                                           var5_ref_int__ = var26;
-                                                          var64 = var4_ref_int__;
+                                                          var64 = var4_array;
                                                           var57 = var64;
                                                           var50 = var57;
                                                           var37 = var50;
@@ -2504,14 +2504,14 @@ public final class Kickabout extends tu {
                                                           var6_ref_int__ = var27;
                                                           var7 = 0;
                                                           L54: while (true) {
-                                                            if (-9 >= (var7 ^ -1)) {
+                                                            if (var7 >= 8) {
                                                               var65 = ha.field_F;
                                                               var58 = var65;
                                                               var51 = var58;
                                                               var38 = var51;
                                                               var28 = var38;
                                                               var5_ref_int__ = var28;
-                                                              var66 = var4_ref_int__;
+                                                              var66 = var4_array;
                                                               var59 = var66;
                                                               var52 = var59;
                                                               var39 = var52;
@@ -2519,7 +2519,7 @@ public final class Kickabout extends tu {
                                                               var6_ref_int__ = var29;
                                                               var7 = 0;
                                                               L55: while (true) {
-                                                                if ((var7 ^ -1) <= -9) {
+                                                                if (var7 >= 8) {
                                                                   L56: {
                                                                     if (!sj.field_g) {
                                                                       break L56;
@@ -2556,7 +2556,7 @@ public final class Kickabout extends tu {
                                                         }
                                                       }
                                                     } else {
-                                                      var24[var7] = qj.b(var60[var7], var61[var7] ^ -1);
+                                                      var24[var7] = qj.b(var60[var7], ~var61[var7]);
                                                       var7++;
                                                       continue L52;
                                                     }
@@ -2594,7 +2594,7 @@ public final class Kickabout extends tu {
                                       }
                                     } else {
                                       L59: {
-                                        var4 = param1.k(param2 + 3);
+                                        var4_int = param1.k(param2 + 3);
                                         if (um.field_e == null) {
                                           break L59;
                                         } else {
@@ -2603,7 +2603,7 @@ public final class Kickabout extends tu {
                                         }
                                       }
                                       or.field_d.b(57, (byte) -80);
-                                      or.field_d.b(param2 ^ -30, var4);
+                                      or.field_d.b(param2 ^ -30, var4_int);
                                       return true;
                                     }
                                   } else {
@@ -2637,7 +2637,7 @@ public final class Kickabout extends tu {
                                     }
                                     L62: {
                                       param1.p(param2 ^ -105);
-                                      if ((param1.l(1, 59) ^ -1) != -2) {
+                                      if (param1.l(1, 59) != 1) {
                                         stackOut_72_0 = 0;
                                         stackIn_73_0 = stackOut_72_0;
                                         break L62;
@@ -2685,9 +2685,9 @@ public final class Kickabout extends tu {
                                 }
                               } else {
                                 L65: {
-                                  var4 = un.field_e.h((byte) -115);
-                                  k.a(true, var4);
-                                  bh.field_k = var4;
+                                  var4_int = un.field_e.h((byte) -115);
+                                  k.a(true, var4_int);
+                                  bh.field_k = var4_int;
                                   if (!(cq.field_h instanceof qs)) {
                                     break L65;
                                   } else {
@@ -2726,12 +2726,12 @@ public final class Kickabout extends tu {
                             }
                             fj.a(stackIn_38_0 != 0, stackIn_38_1 != 0);
                             param1.l((byte) -84);
-                            var4 = un.field_e.h((byte) -125);
-                            var30 = new vc[var4];
+                            var4_int = un.field_e.h((byte) -125);
+                            var30 = new vc[var4_int];
                             var5_ref_vc__ = var30;
                             var6 = 0;
                             L67: while (true) {
-                              if (var6 >= var4) {
+                              if (var6 >= var4_int) {
                                 wh.a((byte) 99, var30);
                                 return true;
                               } else {
@@ -2781,7 +2781,7 @@ public final class Kickabout extends tu {
               stackOut_5_0 = 0;
               stackIn_7_0 = stackOut_5_0;
               stackIn_6_0 = stackOut_5_0;
-              if (-2 != (param1.h((byte) -122) ^ -1)) {
+              if (param1.h((byte) -122) != 1) {
                 stackOut_7_0 = stackIn_7_0;
                 stackOut_7_1 = 0;
                 stackIn_8_0 = stackOut_7_0;
@@ -2959,7 +2959,7 @@ public final class Kickabout extends tu {
                       if (var5 == 0) {
                         break L6;
                       } else {
-                        var3 = var3 + (ce.field_I << 613431907);
+                        var3 = var3 + (ce.field_I << 3);
                         break L6;
                       }
                     }
@@ -2969,7 +2969,7 @@ public final class Kickabout extends tu {
                       break L7;
                     } else {
                       if (var5 == 0) {
-                        var3 = var3 + (24 + -ce.field_I << -2091134525);
+                        var3 = var3 + (24 + -ce.field_I << 3);
                         break L7;
                       } else {
                         break L7;
@@ -3010,7 +3010,7 @@ public final class Kickabout extends tu {
               var4 = 0;
               var5 = -on.field_a.length;
               L11: while (true) {
-                if (-1 >= (var5 ^ -1)) {
+                if (var5 >= 0) {
                   break L8;
                 } else {
                   int incrementValue$1 = var4;
@@ -3023,7 +3023,7 @@ public final class Kickabout extends tu {
             }
           }
           L12: {
-            if ((wr.field_f ^ -1) > -681) {
+            if (wr.field_f < 680) {
               hr.a((byte) -48);
               break L12;
             } else {
@@ -3037,7 +3037,7 @@ public final class Kickabout extends tu {
               if (cq.field_h.field_c == 0) {
                 break L13;
               } else {
-                if ((cq.field_h.field_c ^ -1) == 0) {
+                if (cq.field_h.field_c == -1) {
                   break L13;
                 } else {
                   if (6 == cq.field_h.field_c) {
@@ -3101,7 +3101,7 @@ public final class Kickabout extends tu {
           if (um.field_e == null) {
             break L8;
           } else {
-            if (-1 == (cq.field_h.field_c ^ -1)) {
+            if (cq.field_h.field_c == 0) {
               break L8;
             } else {
               if (-2 == cq.field_h.field_c) {
@@ -3164,7 +3164,7 @@ public final class Kickabout extends tu {
         L18: {
           pt.a(wr.field_f, -22914, 0, 480, 0);
           var4 = -nn.field_B.field_o + wr.field_f;
-          if ((var3 ^ -1) < -1) {
+          if (var3 > 0) {
             eo.a(po.field_h, vq.field_d, var4);
             eo.a(mk.field_a, 0, 0, wr.field_f, 480, var3, 0);
             cq.field_j.c(-36, 50, 64);
@@ -3228,7 +3228,7 @@ public final class Kickabout extends tu {
           }
         }
         L23: {
-          if (-1 > (wr.field_f ^ -1)) {
+          if (wr.field_f > 0) {
             po.field_h.c(var4, 0);
             nn.field_B.c(var4, 0);
             break L23;
@@ -3334,9 +3334,9 @@ public final class Kickabout extends tu {
         L30: {
           if (ka.field_b) {
             L31: {
-              var5 = -ce.field_I + 24 << -29150844;
-              if (-13 < (ce.field_I ^ -1)) {
-                var5 = ce.field_I << -488357084;
+              var5 = -ce.field_I + 24 << 4;
+              if (ce.field_I < 12) {
+                var5 = ce.field_I << 4;
                 break L31;
               } else {
                 break L31;
@@ -3352,7 +3352,7 @@ public final class Kickabout extends tu {
           if (!wh.field_q) {
             break L32;
           } else {
-            if (3 != (cq.field_h.field_c ^ -1)) {
+            if (cq.field_h.field_c != -4) {
               this.v(81);
               break L32;
             } else {

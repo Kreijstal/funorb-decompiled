@@ -14,7 +14,7 @@ final class sd extends gg {
 
     public static void a(byte param0) {
         field_j = null;
-        int var1 = -16 / ((param0 - 44) / 50);
+        int var1 = 5;
     }
 
     sd() {

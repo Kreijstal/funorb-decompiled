@@ -7,9 +7,6 @@ abstract class r extends wt {
 
     public static void f(int param0) {
         field_o = null;
-        if (param0 != 27354) {
-            r.e(-50);
-        }
     }
 
     protected r() {
@@ -21,7 +18,7 @@ abstract class r extends wt {
           if (32 < gn.field_a) {
             L0: {
               var1 = gn.field_a % 32;
-              if (-1 == (var1 ^ -1)) {
+              if (var1 == 0) {
                 var1 = 32;
                 break L0;
               } else {

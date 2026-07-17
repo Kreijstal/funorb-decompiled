@@ -45,13 +45,13 @@ final class da extends gn {
     }
 
     final static ut b(int param0, int param1) {
-        if (-1 == (param1 ^ -1)) {
+        if (param1 == 0) {
           return mc.field_k[1];
         } else {
           if (param1 == 1) {
             return mc.field_k[0];
           } else {
-            if ((param1 ^ -1) == -26) {
+            if (param1 == 25) {
               return mc.field_k[0];
             } else {
               if (param0 == param1) {
@@ -61,27 +61,27 @@ final class da extends gn {
                   return mc.field_k[1];
                 } else {
                   if (4 != param1) {
-                    if (-6 != (param1 ^ -1)) {
-                      if ((param1 ^ -1) == -7) {
+                    if (param1 != 5) {
+                      if (param1 == 6) {
                         return mc.field_k[1];
                       } else {
                         if (param1 == 7) {
                           return mc.field_k[1];
                         } else {
                           if (param1 != 22) {
-                            if (-9 != (param1 ^ -1)) {
-                              if ((param1 ^ -1) == -29) {
+                            if (param1 != 8) {
+                              if (param1 == 28) {
                                 return mc.field_k[1];
                               } else {
                                 if (9 == param1) {
                                   return kb.field_E[6];
                                 } else {
                                   if (param1 != 35) {
-                                    if ((param1 ^ -1) != -37) {
-                                      if ((param1 ^ -1) == -39) {
+                                    if (param1 != 36) {
+                                      if (param1 == 38) {
                                         return mc.field_k[1];
                                       } else {
-                                        if (-40 != (param1 ^ -1)) {
+                                        if (param1 != 39) {
                                           if (param1 == 40) {
                                             return mc.field_k[1];
                                           } else {
@@ -150,7 +150,7 @@ final class da extends gn {
         field_i = null;
         field_x = null;
         field_k = null;
-        int var1 = -77 % ((param0 - -16) / 40);
+        int var1 = 0;
     }
 
     final static void a(int param0) {
@@ -160,44 +160,48 @@ final class da extends gn {
 
     final static void a(sj param0, boolean param1, sj param2, sj param3, int param4) {
         lc.field_e = su.a(-3505, "");
-        if (param4 >= -118) {
-          return;
-        } else {
-          lc.field_e.a(false, (byte) 108);
-          id.a(param0, param3, false, param2);
-          lf.a(-93);
-          mj.field_a = vj.field_a;
-          wk.field_f = vj.field_a;
-          return;
+        try {
+            lc.field_e.a(false, (byte) 108);
+            id.a(param0, param3, false, param2);
+            lf.a(-93);
+            mj.field_a = vj.field_a;
+            wk.field_f = vj.field_a;
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "da.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + -120 + 41);
         }
     }
 
     final static void a(int param0, int param1) {
-        fa var2 = null;
+        RuntimeException var2 = null;
         int var3 = 0;
+        fa var4 = null;
+        RuntimeException decompiledCaughtException = null;
         var3 = Kickabout.field_G;
-        var2 = (fa) (Object) nl.field_f.g(param0 + 24009);
-        if (param0 != 0) {
-          da.b(79);
-          L0: while (true) {
-            if (var2 != null) {
-              sp.a(param1, var2, -51265247);
-              var2 = (fa) (Object) nl.field_f.c(33);
-              continue L0;
-            } else {
-              return;
+        try {
+          L0: {
+            L1: {
+              var4 = (fa) (Object) nl.field_f.g(param0 + 24009);
+              if (param0 == 0) {
+                break L1;
+              } else {
+                da.b(79);
+                break L1;
+              }
+            }
+            L2: while (true) {
+              if (var4 == null) {
+                break L0;
+              } else {
+                sp.a(2, var4, -51265247);
+                var4 = (fa) (Object) nl.field_f.c(33);
+                continue L2;
+              }
             }
           }
-        } else {
-          L1: while (true) {
-            if (var2 != null) {
-              sp.a(param1, var2, -51265247);
-              var2 = (fa) (Object) nl.field_f.c(33);
-              continue L1;
-            } else {
-              return;
-            }
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw nb.a((Throwable) (Object) var2, "da.D(" + param0 + 44 + 2 + 41);
         }
     }
 

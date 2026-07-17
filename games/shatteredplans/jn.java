@@ -12,16 +12,12 @@ final class jn extends Exception {
 
     final static void a(int param0) {
         int var1 = 0;
-        if (param0 == 11615) {
-          if (wm.field_b < 224) {
-            var1 = wm.field_b % 32;
-            ak.c(124, wm.field_b + (32 + -var1));
-            return;
-          } else {
-            ak.c(-78, 256);
-            return;
-          }
+        if (wm.field_b < 224) {
+          var1 = wm.field_b % 32;
+          ak.c(124, wm.field_b + (32 + -var1));
+          return;
         } else {
+          ak.c(-78, 256);
           return;
         }
     }

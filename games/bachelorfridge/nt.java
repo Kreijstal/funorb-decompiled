@@ -12,9 +12,6 @@ final class nt extends ana {
         field_x = null;
         field_y = null;
         field_z = null;
-        if (param0 != 4) {
-            return;
-        }
         field_w = null;
     }
 
@@ -25,17 +22,14 @@ final class nt extends ana {
         aga var6 = null;
         var5 = BachelorFridge.field_y;
         var6 = ((nt) this).field_v.field_l.a(99, ((nt) this).field_q.field_h);
-        if (!var6.i(-118)) {
+        if (var6.i(-118)) {
+          return;
+        } else {
           var3 = (iv) (Object) ((nt) this).field_v.field_o.b((byte) 90);
-          oha discarded$8 = al.a(-46, ((nt) this).field_v.field_k);
+          oha discarded$1 = al.a(-46, ((nt) this).field_v.field_k);
           L0: while (true) {
             if (var3 == null) {
-              if (param0 != 24831) {
-                this.f(3);
-                return;
-              } else {
-                return;
-              }
+              return;
             } else {
               var3.a(var6, ((nt) this).field_q.field_h, 12);
               var4 = var3.field_h.a(-27449, ((nt) this).field_q);
@@ -46,8 +40,6 @@ final class nt extends ana {
               continue L0;
             }
           }
-        } else {
-          return;
         }
     }
 
@@ -58,9 +50,10 @@ final class nt extends ana {
         int var2 = 12 % ((param0 - 71) / 47);
         if (((nt) this).field_l > 75) {
             if (((nt) this).field_l % 10 != 0) {
+                int fieldTemp$0 = ((nt) this).field_l - 1;
                 ((nt) this).field_l = ((nt) this).field_l - 1;
-                if (!(0 > ((nt) this).field_l - 1)) {
-                    if ((((nt) this).field_l ^ -1) == -76) {
+                if (!(0 > fieldTemp$0)) {
+                    if (((nt) this).field_l == 75) {
                         this.d(24831);
                         return false;
                     }
@@ -71,9 +64,10 @@ final class nt extends ana {
             }
             wf.a(3, (byte) 126);
         }
+        int fieldTemp$1 = ((nt) this).field_l - 1;
         ((nt) this).field_l = ((nt) this).field_l - 1;
-        if (!(0 > ((nt) this).field_l - 1)) {
-            if ((((nt) this).field_l ^ -1) != -76) {
+        if (!(0 > fieldTemp$1)) {
+            if (((nt) this).field_l != 75) {
                 return false;
             }
             this.d(24831);
@@ -85,7 +79,11 @@ final class nt extends ana {
 
     nt(gj param0, lk param1) {
         super(param0, (bca) (Object) param1);
-        ((nt) this).field_v = param1;
+        try {
+            ((nt) this).field_v = param1;
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "nt.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     private final void f(int param0) {

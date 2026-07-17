@@ -12,26 +12,23 @@ final class uga extends ana {
     static int field_x;
 
     final static boolean e(int param0) {
-        if (param0 != 37) {
-            field_B = null;
-            return true;
-        }
         return true;
     }
 
     public static void f(byte param0) {
         field_A = null;
         field_w = null;
-        if (param0 != 21) {
-            return;
-        }
         field_B = null;
         field_C = null;
     }
 
     uga(gj param0, wfa param1) {
         super(param0, (bca) (Object) param1);
-        ((uga) this).field_z = param1;
+        try {
+            ((uga) this).field_z = param1;
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "uga.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     private final void e(byte param0) {
@@ -72,9 +69,6 @@ final class uga extends ana {
     }
 
     private final void d(int param0) {
-        if (param0 > -10) {
-            field_w = null;
-        }
     }
 
     final static String a(long param0, int param1) {
@@ -96,10 +90,10 @@ final class uga extends ana {
                 var3 = 0;
                 var4 = param0;
                 L0: while (true) {
-                  if (-1L == (var4 ^ -1L)) {
+                  if (var4 == 0L) {
                     var13 = new StringBuilder(var3);
                     L1: while (true) {
-                      if (-1L == (param0 ^ -1L)) {
+                      if (param0 == 0L) {
                         StringBuilder discarded$4 = var13.reverse();
                         var13.setCharAt(0, Character.toUpperCase(var13.charAt(0)));
                         return var13.toString();
@@ -144,10 +138,10 @@ final class uga extends ana {
                 var3 = 0;
                 var4 = param0;
                 L3: while (true) {
-                  if (-1L == (var4 ^ -1L)) {
+                  if (var4 == 0L) {
                     var12 = new StringBuilder(var3);
                     L4: while (true) {
-                      if (-1L == (param0 ^ -1L)) {
+                      if (param0 == 0L) {
                         StringBuilder discarded$6 = var12.reverse();
                         var12.setCharAt(0, Character.toUpperCase(var12.charAt(0)));
                         return var12.toString();
@@ -186,9 +180,10 @@ final class uga extends ana {
     }
 
     final boolean c(byte param0) {
+        int fieldTemp$0 = ((uga) this).field_l - 1;
         ((uga) this).field_l = ((uga) this).field_l - 1;
-        if (!(((uga) this).field_l - 1 < 0)) {
-            if (-26 != (((uga) this).field_l ^ -1)) {
+        if (!(fieldTemp$0 < 0)) {
+            if (((uga) this).field_l != 25) {
                 return false;
             }
             wf.a(22, (byte) 126);

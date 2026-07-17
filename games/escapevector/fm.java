@@ -25,7 +25,7 @@ final class fm {
         while (((fm) this).field_e[var1] >= 0) {
             var1 = in.c() != 0 ? ((fm) this).field_e[var1] : var1 + 1;
         }
-        return ((fm) this).field_e[var1] ^ -1;
+        return ~((fm) this).field_e[var1];
     }
 
     fm() {
@@ -283,7 +283,7 @@ final class fm {
                   var7 = 0;
                   L2: while (true) {
                     if (var7 >= var4) {
-                      ((fm) this).field_e[var6] = var3 ^ -1;
+                      ((fm) this).field_e[var6] = ~var3;
                       if (var6 >= var2) {
                         var2 = var6 + 1;
                         var3++;

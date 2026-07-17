@@ -50,51 +50,38 @@ final class si {
         field_c = null;
         field_f = null;
         field_e = null;
-        if (param0 >= -126) {
-            field_f = null;
-        }
     }
 
     final static void a(int param0, int param1) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
+        RuntimeException decompiledCaughtException = null;
         var3 = MinerDisturbance.field_ab;
-        jc.a(0, bd.field_g, fb.field_c, -125, true, he.field_e, param0);
-        if (param1 == -14391) {
-          var2 = 0;
-          L0: while (true) {
-            if (fb.field_c <= var2) {
-              jc.a(param0, v.field_c, param0 + fb.field_c, -2, false, bc.field_d, param0 - -param0);
-              if (fb.field_c > param0) {
-                fb.field_c = param0;
-                return;
+        try {
+          L0: {
+            jc.a(0, bd.field_g, fb.field_c, -125, true, he.field_e, param0);
+            var2_int = 0;
+            L1: while (true) {
+              if (fb.field_c <= var2_int) {
+                jc.a(param0, v.field_c, param0 + fb.field_c, -2, false, bc.field_d, param0 - -param0);
+                if (fb.field_c <= param0) {
+                  break L0;
+                } else {
+                  fb.field_c = param0;
+                  return;
+                }
               } else {
-                return;
+                an.field_a[param0 + var2_int] = var2_int;
+                var2_int++;
+                continue L1;
               }
-            } else {
-              an.field_a[param0 + var2] = var2;
-              var2++;
-              continue L0;
             }
           }
-        } else {
-          si.a(-79);
-          var2 = 0;
-          L1: while (true) {
-            if (fb.field_c <= var2) {
-              jc.a(param0, v.field_c, param0 + fb.field_c, -2, false, bc.field_d, param0 - -param0);
-              if (fb.field_c <= param0) {
-                return;
-              } else {
-                fb.field_c = param0;
-                return;
-              }
-            } else {
-              an.field_a[param0 + var2] = var2;
-              var2++;
-              continue L1;
-            }
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw lj.a((Throwable) (Object) var2, "si.A(" + param0 + 44 + -14391 + 41);
         }
     }
 

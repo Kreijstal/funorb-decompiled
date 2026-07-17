@@ -11,9 +11,6 @@ final class vi {
 
     public static void a(int param0) {
         field_b = null;
-        if (param0 > -36) {
-            vi.a(-25, 18, -17, -128, 92, 64, -103, -44, 123, 104, -108, 74, -55, -102, 34, 61);
-        }
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {

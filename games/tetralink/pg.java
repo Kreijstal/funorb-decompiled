@@ -35,7 +35,7 @@ final class pg implements Runnable {
             } else {
               var1_int = 0;
               L1: while (true) {
-                if (-3 >= (var1_int ^ -1)) {
+                if (var1_int >= 2) {
                   tb.a(false, 10L);
                   var5 = null;
                   li.a(((pg) this).field_j, (Object) null, (byte) -98);

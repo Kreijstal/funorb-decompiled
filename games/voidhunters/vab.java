@@ -12,59 +12,97 @@ final class vab {
     }
 
     final static void a(byte param0, ml param1) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        ml var3 = null;
         int var4 = 0;
-        ml var5 = null;
-        ml var6 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
         var4 = VoidHunters.field_G;
-        if (param0 == -94) {
-          var2 = 0;
-          L0: while (true) {
-            if ((var2 ^ -1) <= -5) {
-              return;
-            } else {
-              var6 = new ml(32);
-              var6.a(1, 1, new ml(24));
-              var6.a(param0 ^ -93, 2, new ml(24));
-              var6.a(1, 3, new ml(24));
-              var6.a(param0 ^ -93, 4, new ml(24));
-              var6.a(1, 5, new ml(24));
-              param1.a(param0 ^ -93, var2, var6);
-              var2++;
-              continue L0;
+        try {
+          L0: {
+            L1: {
+              if (param0 == -94) {
+                break L1;
+              } else {
+                field_a = null;
+                break L1;
+              }
+            }
+            var2_int = 0;
+            L2: while (true) {
+              if (var2_int >= 4) {
+                break L0;
+              } else {
+                var3 = new ml(32);
+                var3.a(1, 1, new ml(24));
+                var3.a(param0 ^ -93, 2, new ml(24));
+                var3.a(1, 3, new ml(24));
+                var3.a(param0 ^ -93, 4, new ml(24));
+                var3.a(1, 5, new ml(24));
+                param1.a(param0 ^ -93, var2_int, var3);
+                var2_int++;
+                continue L2;
+              }
             }
           }
-        } else {
-          field_a = null;
-          var2 = 0;
-          L1: while (true) {
-            if ((var2 ^ -1) <= -5) {
-              return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2 = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var2;
+            stackOut_7_1 = new StringBuilder().append("vab.A(").append(param0).append(44);
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param1 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L3;
             } else {
-              var5 = new ml(32);
-              var5.a(1, 1, new ml(24));
-              var5.a(param0 ^ -93, 2, new ml(24));
-              var5.a(1, 3, new ml(24));
-              var5.a(param0 ^ -93, 4, new ml(24));
-              var5.a(1, 5, new ml(24));
-              param1.a(param0 ^ -93, var2, var5);
-              var2++;
-              continue L1;
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L3;
             }
           }
+          throw rta.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
         }
     }
 
     public static void a(boolean param0) {
         field_a = null;
-        if (param0) {
-            field_a = null;
-        }
     }
 
     vab(qfa param0, int param1, int param2) {
-        ((vab) this).field_b = param2;
-        ((vab) this).field_c = param0;
+        try {
+            ((vab) this).field_b = param2;
+            ((vab) this).field_c = param0;
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "vab.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     static {

@@ -180,7 +180,7 @@ class gj {
         ej var15 = null;
         int var15_int = 0;
         L0: {
-          var3 = param1;
+          var3 = 256;
           if (!field_u) {
             break L0;
           } else {
@@ -190,7 +190,7 @@ class gj {
         }
         L1: {
           fk.a(param0, 0, var3);
-          ((gj) this).field_c = ((gj) this).field_c - param1;
+          ((gj) this).field_c = ((gj) this).field_c - 256;
           if (((gj) this).field_f == null) {
             break L1;
           } else {
@@ -224,7 +224,7 @@ class gj {
                       if (var9 != 0) {
                         L6: {
                           if ((var9 & 1) != 0) {
-                            var5 = var5 & (1 << var7_int ^ -1);
+                            var5 = var5 & ~(1 << var7_int);
                             var10 = null;
                             var11 = ((gj) this).field_r[var7_int];
                             var14 = var11;
@@ -357,7 +357,7 @@ class gj {
           if (((gj) this).field_f == null) {
             break L17;
           } else {
-            ((gj) this).field_f.a(param0, 0, param1);
+            ((gj) this).field_f.a(param0, 0, 256);
             break L17;
           }
         }
@@ -416,12 +416,12 @@ class gj {
     }
 
     private final void a(int param0) {
-        ((gj) this).field_c = ((gj) this).field_c - param0;
+        ((gj) this).field_c = ((gj) this).field_c - 256;
         if (((gj) this).field_c < 0) {
             ((gj) this).field_c = 0;
         }
         if (((gj) this).field_f != null) {
-            ((gj) this).field_f.a(param0);
+            ((gj) this).field_f.a(256);
             return;
         }
     }
@@ -476,7 +476,7 @@ class gj {
                 }
               }
               field_u = stackIn_7_0 != 0;
-              field_d = param2;
+              field_d = 10;
               return;
             } else {
               break L0;

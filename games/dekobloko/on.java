@@ -169,35 +169,35 @@ final class on implements gl {
             var7_int = 2147483647;
             if (param0) {
               var8 = -2147483648;
-              var21 = param1[3] >> -271266366;
-              var22 = param1[4] >> -1473161854;
-              var23 = param1[5] >> -1133877790;
-              var24 = param1[6] >> -142707454;
-              var25 = param1[7] >> 1029153442;
-              var26 = param1[8] >> -2000365214;
-              var27 = param1[9] >> 1213195106;
-              var28 = param1[10] >> 1851497538;
-              var29 = param1[11] >> -1209643166;
-              var13 = var26 * param3[5] + var24 * param3[3] + var25 * param3[4] >> -855007538;
-              var12 = param3[5] * var23 + param3[3] * var21 - -(param3[4] * var22) >> 416957870;
-              var15 = param3[6] * var21 - (-(param3[7] * var22) - var23 * param3[8]) >> 1706468014;
-              var18 = param3[11] * var23 + param3[10] * var22 + param3[9] * var21 >> -896953074;
-              var19 = var26 * param3[11] + (param3[10] * var25 + var24 * param3[9]) >> 699680526;
-              var14 = var29 * param3[5] + (param3[4] * var28 + param3[3] * var27) >> -1719218162;
-              var20 = param3[10] * var28 + (var27 * param3[9] + var29 * param3[11]) >> 323688910;
-              var17 = param3[6] * var27 - -(var28 * param3[7]) + var29 * param3[8] >> 1880148654;
-              var16 = param3[7] * var25 + (var24 * param3[6] - -(var26 * param3[8])) >> -1690955026;
+              var21 = param1[3] >> 2;
+              var22 = param1[4] >> 2;
+              var23 = param1[5] >> 2;
+              var24 = param1[6] >> 2;
+              var25 = param1[7] >> 2;
+              var26 = param1[8] >> 2;
+              var27 = param1[9] >> 2;
+              var28 = param1[10] >> 2;
+              var29 = param1[11] >> 2;
+              var13 = var26 * param3[5] + var24 * param3[3] + var25 * param3[4] >> 14;
+              var12 = param3[5] * var23 + param3[3] * var21 - -(param3[4] * var22) >> 14;
+              var15 = param3[6] * var21 - (-(param3[7] * var22) - var23 * param3[8]) >> 14;
+              var18 = param3[11] * var23 + param3[10] * var22 + param3[9] * var21 >> 14;
+              var19 = var26 * param3[11] + (param3[10] * var25 + var24 * param3[9]) >> 14;
+              var14 = var29 * param3[5] + (param3[4] * var28 + param3[3] * var27) >> 14;
+              var20 = param3[10] * var28 + (var27 * param3[9] + var29 * param3[11]) >> 14;
+              var17 = param3[6] * var27 - -(var28 * param3[7]) + var29 * param3[8] >> 14;
+              var16 = param3[7] * var25 + (var24 * param3[6] - -(var26 * param3[8])) >> 14;
               var21 = param3[0] - param1[0];
               var22 = -param1[1] + param3[1];
               var23 = -param1[2] + param3[2];
               var9 = var21 * param1[3] - (-(param1[4] * var22) - param1[5] * var23) >> -me.field_y + 16;
               var10 = param1[6] * var21 - -(param1[7] * var22) + var23 * param1[8] >> 16 + -me.field_y;
-              var11 = var23 * param1[11] + param1[10] * var22 + var21 * param1[9] >> -1661035472;
+              var11 = var23 * param1[11] + param1[10] * var22 + var21 * param1[9] >> 16;
               var21 = qg.field_g;
               var22 = qg.field_c;
               var23 = 0;
               L1: while (true) {
-                if ((var23 ^ -1) <= (param6.field_l ^ -1)) {
+                if (~var23 <= ~param6.field_l) {
                   L2: {
                     if (null == param6.field_q) {
                       break L2;
@@ -226,27 +226,27 @@ final class on implements gl {
                                     if (param6.field_R != null) {
                                       var23 = 0;
                                       L3: while (true) {
-                                        if ((var23 ^ -1) <= (param6.field_L ^ -1)) {
+                                        if (~var23 <= ~param6.field_L) {
                                           break L2;
                                         } else {
                                           var24 = param6.field_q[var23];
                                           var25 = param6.field_K[var23];
                                           var26 = param6.field_m[var23];
-                                          ec.field_f[var23] = var9 - -(var15 * var25 + (var24 * var12 + var26 * var18) >> -10040400);
-                                          fc.field_d[var23] = var10 - -(var25 * var16 + var24 * var13 + var19 * var26 >> -1882097328);
-                                          jg.field_h[var23] = var11 - -(var17 * var25 + (var24 * var14 - -(var20 * var26)) >> 244466000);
+                                          ec.field_f[var23] = var9 - -(var15 * var25 + (var24 * var12 + var26 * var18) >> 16);
+                                          fc.field_d[var23] = var10 - -(var25 * var16 + var24 * var13 + var19 * var26 >> 16);
+                                          jg.field_h[var23] = var11 - -(var17 * var25 + (var24 * var14 - -(var20 * var26)) >> 16);
                                           var24 = param6.field_T[var23];
                                           var25 = param6.field_w[var23];
                                           var26 = param6.field_S[var23];
-                                          kb.field_a[var23] = (var26 * var18 + var12 * var24 - -(var25 * var15) >> -509058384) + var9;
-                                          cd.field_b[var23] = var10 + (var16 * var25 + var13 * var24 - -(var19 * var26) >> 1942215600);
-                                          be.field_t[var23] = (var26 * var20 + (var17 * var25 + var14 * var24) >> 394422448) + var11;
+                                          kb.field_a[var23] = (var26 * var18 + var12 * var24 - -(var25 * var15) >> 16) + var9;
+                                          cd.field_b[var23] = var10 + (var16 * var25 + var13 * var24 - -(var19 * var26) >> 16);
+                                          be.field_t[var23] = (var26 * var20 + (var17 * var25 + var14 * var24) >> 16) + var11;
                                           var24 = param6.field_g[var23];
                                           var25 = param6.field_v[var23];
                                           var26 = param6.field_R[var23];
-                                          ke.field_h[var23] = var9 + (var18 * var26 + (var12 * var24 + var25 * var15) >> -1054127888);
-                                          b.field_M[var23] = var10 - -(var19 * var26 + var13 * var24 + var25 * var16 >> -580391568);
-                                          d.field_d[var23] = var11 - -(var26 * var20 + var17 * var25 + var14 * var24 >> -222955856);
+                                          ke.field_h[var23] = var9 + (var18 * var26 + (var12 * var24 + var25 * var15) >> 16);
+                                          b.field_M[var23] = var10 - -(var19 * var26 + var13 * var24 + var25 * var16 >> 16);
+                                          d.field_d[var23] = var11 - -(var26 * var20 + var17 * var25 + var14 * var24 >> 16);
                                           var23++;
                                           continue L3;
                                         }
@@ -287,9 +287,9 @@ final class on implements gl {
                             var19 = param6.field_k[var18];
                             var20 = param6.field_u[var18];
                             var21 = param6.field_O[var18];
-                            id.field_M[var18] = var21 * var15 + (var12 * var20 + var19 * var9) >> -1950371088;
-                            bc.field_I[var18] = var16 * var21 + var10 * var19 - -(var20 * var13) >> 1478870704;
-                            sf.field_C[var18] = var20 * var14 + var11 * var19 - -(var21 * var17) >> 862528240;
+                            id.field_M[var18] = var21 * var15 + (var12 * var20 + var19 * var9) >> 16;
+                            bc.field_I[var18] = var16 * var21 + var10 * var19 - -(var20 * var13) >> 16;
+                            sf.field_C[var18] = var20 * var14 + var11 * var19 - -(var21 * var17) >> 16;
                             var18++;
                             continue L5;
                           }
@@ -306,8 +306,8 @@ final class on implements gl {
                     var26 = param6.field_e[var23];
                     var27 = (var25 * var15 + (var24 * var12 - -(var26 * var18)) >> -me.field_y + 16) + var9;
                     var28 = (var19 * var26 + (var24 * var13 + var16 * var25) >> 16 + -me.field_y) + var10;
-                    var29 = var11 + (var20 * var26 + var14 * var24 + var17 * var25 >> -1758160208);
-                    if (-51 < (var29 ^ -1)) {
+                    var29 = var11 + (var20 * var26 + var14 * var24 + var17 * var25 >> 16);
+                    if (var29 < 50) {
                       vg.field_G[var23] = -2147483648;
                       break L6;
                     } else {
@@ -493,24 +493,24 @@ final class on implements gl {
                       var9 = var9 + (-var7 + param4.field_t);
                       break L4;
                     } else {
-                      if (-2 != (((on) this).field_b ^ -1)) {
+                      if (((on) this).field_b != 1) {
                         break L4;
                       } else {
-                        var9 = var9 + (param4.field_t + -var7 >> -1342247295);
+                        var9 = var9 + (param4.field_t + -var7 >> 1);
                         break L4;
                       }
                     }
                   }
                   L5: {
                     var10 = param2 + param4.field_D;
-                    if ((((on) this).field_f ^ -1) == -3) {
+                    if (((on) this).field_f == 2) {
                       var10 = var10 + (param4.field_y + -var8);
                       break L5;
                     } else {
-                      if (-2 != (((on) this).field_f ^ -1)) {
+                      if (((on) this).field_f != 1) {
                         break L5;
                       } else {
-                        var10 = var10 + (param4.field_y - var8 >> -254285407);
+                        var10 = var10 + (param4.field_y - var8 >> 1);
                         break L5;
                       }
                     }
@@ -761,7 +761,7 @@ final class on implements gl {
                 } else {
                   var2_int = 0;
                   L2: while (true) {
-                    if ((var2_int ^ -1) <= (param0.length ^ -1)) {
+                    if (~var2_int <= ~param0.length) {
                       break L1;
                     } else {
                       param0[var2_int].b();

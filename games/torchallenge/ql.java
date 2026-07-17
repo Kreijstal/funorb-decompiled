@@ -12,12 +12,6 @@ final class ql extends da {
     private static String field_z;
 
     public static void a(int param0) {
-        if (param0 != 4707) {
-            field_l = null;
-            field_k = null;
-            field_l = null;
-            return;
-        }
         field_k = null;
         field_l = null;
     }

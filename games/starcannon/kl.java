@@ -10,39 +10,163 @@ final class kl {
 
     public static void a(int param0) {
         field_c = null;
-        if (param0 != 21367) {
-            return;
-        }
         field_a = null;
         field_b = null;
     }
 
     final static void a(String param0, int param1) {
-        lj.field_c = param0;
-        if (param1 != 8192) {
-            field_d = -99;
+        RuntimeException var2 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
+        try {
+          L0: {
+            lj.field_c = param0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var2 = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var2;
+            stackOut_2_1 = new StringBuilder().append("kl.B(");
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
+            if (param0 == null) {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
+            }
+          }
+          throw sd.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 8192 + 41);
         }
     }
 
     final static mj a(java.applet.Applet param0, byte param1) {
+        String var2 = null;
+        RuntimeException var2_ref = null;
+        mj[] var3 = null;
         int var4 = 0;
         mj var5 = null;
-        String var2 = fh.a("jagex-last-login-method", param0, (byte) 120);
-        if (var2 == null) {
-            return ih.field_c;
-        }
-        if (param1 != 84) {
-            Object var6 = null;
-            mj discarded$0 = kl.a((java.applet.Applet) null, (byte) -97);
-        }
-        mj[] var3 = ge.b((byte) 35);
-        for (var4 = 0; var4 < var3.length; var4++) {
-            var5 = var3[var4];
-            if (var5.a(var2, -124)) {
-                return var5;
+        Object var6 = null;
+        mj stackIn_2_0 = null;
+        mj stackIn_9_0 = null;
+        mj stackIn_12_0 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        mj stackOut_11_0 = null;
+        mj stackOut_8_0 = null;
+        mj stackOut_1_0 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        try {
+          L0: {
+            var2 = fh.a("jagex-last-login-method", param0, (byte) 120);
+            if (var2 != null) {
+              L1: {
+                if (param1 == 84) {
+                  break L1;
+                } else {
+                  var6 = null;
+                  mj discarded$2 = kl.a((java.applet.Applet) null, (byte) -97);
+                  break L1;
+                }
+              }
+              var3 = ge.b((byte) 35);
+              var4 = 0;
+              L2: while (true) {
+                if (var4 >= var3.length) {
+                  stackOut_11_0 = ih.field_c;
+                  stackIn_12_0 = stackOut_11_0;
+                  break L0;
+                } else {
+                  var5 = var3[var4];
+                  if (!var5.a(var2, -124)) {
+                    var4++;
+                    continue L2;
+                  } else {
+                    stackOut_8_0 = (mj) var5;
+                    stackIn_9_0 = stackOut_8_0;
+                    return stackIn_9_0;
+                  }
+                }
+              }
+            } else {
+              stackOut_1_0 = ih.field_c;
+              stackIn_2_0 = stackOut_1_0;
+              return stackIn_2_0;
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2_ref = decompiledCaughtException;
+            stackOut_13_0 = (RuntimeException) var2_ref;
+            stackOut_13_1 = new StringBuilder().append("kl.C(");
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
+            if (param0 == null) {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L3;
+            } else {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L3;
+            }
+          }
+          throw sd.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param1 + 41);
         }
-        return ih.field_c;
+        return stackIn_12_0;
     }
 
     static {

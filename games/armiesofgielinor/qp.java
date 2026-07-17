@@ -7,22 +7,79 @@ final class qp extends dr {
     static String field_E;
 
     final nd a(int param0, nd[] param1) {
-        if (param0 != -24872) {
-            qp.g(125);
+        RuntimeException var3 = null;
+        nd stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        nd stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 == -24872) {
+                break L1;
+              } else {
+                qp.g(125);
+                break L1;
+              }
+            }
+            stackOut_2_0 = new nd((Object) (Object) sq.a(param1[2].a(param0 ^ -24870), (byte) -2, param1[0].a(2), param1[1].a(2)));
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_1 = new StringBuilder().append("qp.C(").append(param0).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param1 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw ig.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
         }
-        return new nd((Object) (Object) sq.a(param1[2].a(param0 ^ -24870), (byte) -2, param1[0].a(2), param1[1].a(2)));
+        return stackIn_3_0;
     }
 
     final static int e(byte param0) {
-        if (param0 >= -123) {
-            Object var2 = null;
-            qp.a(-126, -81, -63, -13, -70, -42, (ha) null, -51, (Random) null);
-        }
         return nm.field_z;
     }
 
     final static void a(int param0, boolean param1, int param2, int param3, boolean param4, boolean param5, boolean param6, int param7, boolean param8, wk param9) {
-        int[] var10 = null;
+        RuntimeException var10 = null;
+        int[] var10_array = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -34,110 +91,160 @@ final class qp extends dr {
         int[] var19 = null;
         int[] var20 = null;
         int[] var21 = null;
-        L0: {
-          var16 = ArmiesOfGielinor.field_M ? 1 : 0;
-          no.field_P.field_v = qn.field_g;
-          if (param0 == 1) {
-            break L0;
-          } else {
-            qp.g(111);
-            break L0;
-          }
-        }
-        L1: {
-          no.field_P.field_y = qn.field_l;
-          no.field_P.field_B = qn.field_d;
-          if (!param6) {
-            break L1;
-          } else {
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
+        RuntimeException stackIn_31_0 = null;
+        StringBuilder stackIn_31_1 = null;
+        String stackIn_31_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_28_0 = null;
+        StringBuilder stackOut_28_1 = null;
+        RuntimeException stackOut_30_0 = null;
+        StringBuilder stackOut_30_1 = null;
+        String stackOut_30_2 = null;
+        RuntimeException stackOut_29_0 = null;
+        StringBuilder stackOut_29_1 = null;
+        String stackOut_29_2 = null;
+        var16 = ArmiesOfGielinor.field_M ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              no.field_P.field_v = qn.field_g;
+              if (param0 == 1) {
+                break L1;
+              } else {
+                qp.g(111);
+                break L1;
+              }
+            }
             L2: {
-              L3: {
-                if (dv.field_k == null) {
-                  break L3;
-                } else {
-                  if (t.field_f == param7) {
-                    break L2;
-                  } else {
-                    break L3;
+              no.field_P.field_y = qn.field_l;
+              no.field_P.field_B = qn.field_d;
+              if (!param6) {
+                break L2;
+              } else {
+                L3: {
+                  L4: {
+                    if (dv.field_k == null) {
+                      break L4;
+                    } else {
+                      if (t.field_f == param7) {
+                        break L3;
+                      } else {
+                        break L4;
+                      }
+                    }
+                  }
+                  t.field_f = param7;
+                  dv.field_k = a.field_m[0].g();
+                  var21 = dv.field_k.field_B;
+                  var20 = var21;
+                  var19 = var20;
+                  var18 = var19;
+                  var17 = var18;
+                  var10_array = var17;
+                  var11 = 0;
+                  L5: while (true) {
+                    if (var21.length <= var11) {
+                      break L3;
+                    } else {
+                      var12 = 255 & var21[var11];
+                      var13 = (255 & param7 >> 16) * var12 >> 8;
+                      var14 = ((65280 & param7) >> 8) * var12 >> 8;
+                      var15 = (255 & param7) * var12 >> 8;
+                      var17[var11] = (var14 << 8) + (var13 << 16) - -var15;
+                      var11++;
+                      continue L5;
+                    }
                   }
                 }
-              }
-              t.field_f = param7;
-              dv.field_k = a.field_m[0].g();
-              var21 = dv.field_k.field_B;
-              var20 = var21;
-              var19 = var20;
-              var18 = var19;
-              var17 = var18;
-              var10 = var17;
-              var11 = 0;
-              L4: while (true) {
-                if (var21.length <= var11) {
-                  break L2;
-                } else {
-                  var12 = 255 & var21[var11];
-                  var13 = (255 & param7 >> 770024240) * var12 >> 244453928;
-                  var14 = ((65280 & param7) >> -1541240920) * var12 >> 1533665416;
-                  var15 = (255 & param7) * var12 >> 15505352;
-                  var17[var11] = (var14 << 2068828936) + (var13 << -391340688) - -var15;
-                  var11++;
-                  continue L4;
-                }
+                dv.field_k.d(param3 - 20, -15 + param2, 92, 92, 256);
+                break L2;
               }
             }
-            dv.field_k.d(param3 - 20, -15 + param2, 92, 92, 256);
-            break L1;
-          }
-        }
-        L5: {
-          if (!param5) {
-            param9.g(param3, param2);
-            if (!param1) {
-              if (param8) {
-                fe.a(a.field_m[2], param3, param2, 56, 56);
-                a.field_m[2].d(param3, param2, 56, 56, 228);
-                break L5;
-              } else {
-                if (param4) {
-                  a.field_m[3].e(param3, param2);
-                  break L5;
-                } else {
-                  break L5;
-                }
-              }
-            } else {
-              a.field_m[1].e(param3, param2);
-              break L5;
-            }
-          } else {
             L6: {
-              ku.field_J.b();
-              qn.b();
-              param9.g(0, 0);
-              if (!param1) {
-                if (param8) {
-                  fe.a(a.field_m[2], 0, 0, 56, 56);
-                  a.field_m[2].d(0, 0, 56, 56, 228);
-                  break L6;
-                } else {
-                  if (param4) {
-                    a.field_m[3].e(0, 0);
+              if (!param5) {
+                param9.g(param3, param2);
+                if (!param1) {
+                  if (param8) {
+                    fe.a(a.field_m[2], param3, param2, 56, 56);
+                    a.field_m[2].d(param3, param2, 56, 56, 228);
                     break L6;
                   } else {
-                    no.field_P.b();
-                    ku.field_J.h(param3, param2);
-                    break L5;
+                    if (param4) {
+                      a.field_m[3].e(param3, param2);
+                      break L6;
+                    } else {
+                      break L6;
+                    }
                   }
+                } else {
+                  a.field_m[1].e(param3, param2);
+                  break L6;
                 }
               } else {
-                a.field_m[1].e(0, 0);
+                L7: {
+                  ku.field_J.b();
+                  qn.b();
+                  param9.g(0, 0);
+                  if (!param1) {
+                    if (param8) {
+                      fe.a(a.field_m[2], 0, 0, 56, 56);
+                      a.field_m[2].d(0, 0, 56, 56, 228);
+                      break L7;
+                    } else {
+                      if (param4) {
+                        a.field_m[3].e(0, 0);
+                        break L7;
+                      } else {
+                        no.field_P.b();
+                        ku.field_J.h(param3, param2);
+                        break L6;
+                      }
+                    }
+                  } else {
+                    a.field_m[1].e(0, 0);
+                    break L7;
+                  }
+                }
+                no.field_P.b();
+                ku.field_J.h(param3, param2);
                 break L6;
               }
             }
-            no.field_P.b();
-            ku.field_J.h(param3, param2);
-            break L5;
+            break L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L8: {
+            var10 = decompiledCaughtException;
+            stackOut_28_0 = (RuntimeException) var10;
+            stackOut_28_1 = new StringBuilder().append("qp.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44).append(param7).append(44).append(param8).append(44);
+            stackIn_30_0 = stackOut_28_0;
+            stackIn_30_1 = stackOut_28_1;
+            stackIn_29_0 = stackOut_28_0;
+            stackIn_29_1 = stackOut_28_1;
+            if (param9 == null) {
+              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
+              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
+              stackOut_30_2 = "null";
+              stackIn_31_0 = stackOut_30_0;
+              stackIn_31_1 = stackOut_30_1;
+              stackIn_31_2 = stackOut_30_2;
+              break L8;
+            } else {
+              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
+              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
+              stackOut_29_2 = "{...}";
+              stackIn_31_0 = stackOut_29_0;
+              stackIn_31_1 = stackOut_29_1;
+              stackIn_31_2 = stackOut_29_2;
+              break L8;
+            }
+          }
+          throw ig.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + 41);
         }
     }
 
@@ -154,7 +261,7 @@ final class qp extends dr {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, ha param6, int param7, Random param8) {
-        int var9 = 0;
+        int var9_int = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -278,21 +385,21 @@ final class qp extends dr {
         var15 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (5 != param5) {
           L0: {
-            var9 = -param4 + param1;
+            var9_int = -param4 + param1;
             var10 = param3 + -param0;
             var11 = 0;
             var12 = 0;
             var13 = 0;
             var14 = 0;
-            if ((param1 ^ -1) != (param4 ^ -1)) {
-              if ((param3 ^ -1) != (param0 ^ -1)) {
+            if (~param1 != ~param4) {
+              if (~param3 != ~param0) {
                 L1: {
-                  if (var9 >= 2) {
+                  if (var9_int >= 2) {
                     break L1;
                   } else {
-                    if (var9 > -2) {
+                    if (var9_int > -2) {
                       L2: {
-                        if (-1 > (var10 ^ -1)) {
+                        if (var10 > 0) {
                           stackOut_160_0 = 1;
                           stackIn_161_0 = stackOut_160_0;
                           break L2;
@@ -306,20 +413,20 @@ final class qp extends dr {
                       L3: while (true) {
                         L4: {
                           L5: {
-                            if ((var10 ^ -1) > (var11 ^ -1)) {
+                            if (~var10 > ~var11) {
                               break L5;
                             } else {
-                              if (-1 > (var10 ^ -1)) {
+                              if (var10 > 0) {
                                 break L4;
                               } else {
                                 break L5;
                               }
                             }
                           }
-                          if ((var11 ^ -1) > (var10 ^ -1)) {
+                          if (~var11 > ~var10) {
                             break L0;
                           } else {
-                            if ((var10 ^ -1) < -1) {
+                            if (var10 > 0) {
                               break L0;
                             } else {
                               break L4;
@@ -351,7 +458,7 @@ final class qp extends dr {
                           stackOut_173_0 = var11;
                           stackIn_175_0 = stackOut_173_0;
                           stackIn_174_0 = stackOut_173_0;
-                          if (-1 <= (var10 ^ -1)) {
+                          if (var10 <= 0) {
                             stackOut_175_0 = stackIn_175_0;
                             stackOut_175_1 = -1;
                             stackIn_176_0 = stackOut_175_0;
@@ -374,12 +481,12 @@ final class qp extends dr {
                   }
                 }
                 L9: {
-                  if (-3 >= (var10 ^ -1)) {
+                  if (var10 >= 2) {
                     break L9;
                   } else {
                     if (var10 > -2) {
                       L10: {
-                        if (-1 > (var9 ^ -1)) {
+                        if (var9_int > 0) {
                           stackOut_141_0 = 1;
                           stackIn_142_0 = stackOut_141_0;
                           break L10;
@@ -393,20 +500,20 @@ final class qp extends dr {
                       L11: while (true) {
                         L12: {
                           L13: {
-                            if ((var12 ^ -1) < (var9 ^ -1)) {
+                            if (~var12 < ~var9_int) {
                               break L13;
                             } else {
-                              if (var9 > 0) {
+                              if (var9_int > 0) {
                                 break L12;
                               } else {
                                 break L13;
                               }
                             }
                           }
-                          if (var9 > var12) {
+                          if (var9_int > var12) {
                             break L0;
                           } else {
-                            if (var9 > 0) {
+                            if (var9_int > 0) {
                               break L0;
                             } else {
                               break L12;
@@ -417,7 +524,7 @@ final class qp extends dr {
                           if (null == param6.field_Eb[var12 + param4 + (var11 - -param0) * param6.field_v]) {
                             break L14;
                           } else {
-                            if ((param7 ^ -1) != (param6.field_Eb[var12 + param4 - -((param0 + var11) * param6.field_v)].field_h ^ -1)) {
+                            if (~param7 != ~param6.field_Eb[var12 + param4 - -((param0 + var11) * param6.field_v)].field_h) {
                               break L14;
                             } else {
                               var14 = 1;
@@ -438,7 +545,7 @@ final class qp extends dr {
                           stackOut_154_0 = var12;
                           stackIn_156_0 = stackOut_154_0;
                           stackIn_155_0 = stackOut_154_0;
-                          if (var9 > 0) {
+                          if (var9_int > 0) {
                             stackOut_156_0 = stackIn_156_0;
                             stackOut_156_1 = 1;
                             stackIn_157_0 = stackOut_156_0;
@@ -460,9 +567,9 @@ final class qp extends dr {
                     }
                   }
                 }
-                if ((ns.a(false, 100, param8) ^ -1) < -51) {
+                if (ns.a(false, 100, param8) > 50) {
                   L17: {
-                    if (var9 > 0) {
+                    if (var9_int > 0) {
                       stackOut_96_0 = 1;
                       stackIn_97_0 = stackOut_96_0;
                       break L17;
@@ -476,20 +583,20 @@ final class qp extends dr {
                   L18: while (true) {
                     L19: {
                       L20: {
-                        if (var12 >= var9) {
+                        if (var12 >= var9_int) {
                           break L20;
                         } else {
-                          if (var9 > 0) {
+                          if (var9_int > 0) {
                             break L19;
                           } else {
                             break L20;
                           }
                         }
                       }
-                      if ((var12 ^ -1) >= (var9 ^ -1)) {
+                      if (~var12 >= ~var9_int) {
                         break L0;
                       } else {
-                        if (-1 > (var9 ^ -1)) {
+                        if (var9_int > 0) {
                           break L0;
                         } else {
                           break L19;
@@ -500,7 +607,7 @@ final class qp extends dr {
                       if (param6.field_Eb[param4 + (var12 - -(param6.field_v * (param0 + var11)))] == null) {
                         break L21;
                       } else {
-                        if ((param6.field_Eb[var12 + (param4 - -(param6.field_v * (var11 + param0)))].field_h ^ -1) != (param7 ^ -1)) {
+                        if (~param6.field_Eb[var12 + (param4 - -(param6.field_v * (var11 + param0)))].field_h != ~param7) {
                           break L21;
                         } else {
                           var14 = 1;
@@ -518,9 +625,9 @@ final class qp extends dr {
                     }
                     L23: {
                       var13++;
-                      if (var12 == var9 >> -1080653279) {
+                      if (var12 == var9_int >> 1) {
                         L24: {
-                          if (-1 <= (var10 ^ -1)) {
+                          if (var10 <= 0) {
                             stackOut_113_0 = -1;
                             stackIn_114_0 = stackOut_113_0;
                             break L24;
@@ -538,7 +645,7 @@ final class qp extends dr {
                                 if (var10 < var11) {
                                   break L28;
                                 } else {
-                                  if (-1 > (var10 ^ -1)) {
+                                  if (var10 > 0) {
                                     break L27;
                                   } else {
                                     break L28;
@@ -625,7 +732,7 @@ final class qp extends dr {
                       stackOut_135_0 = var12;
                       stackIn_137_0 = stackOut_135_0;
                       stackIn_136_0 = stackOut_135_0;
-                      if (-1 > (var9 ^ -1)) {
+                      if (var9_int > 0) {
                         stackOut_137_0 = stackIn_137_0;
                         stackOut_137_1 = 1;
                         stackIn_138_0 = stackOut_137_0;
@@ -644,7 +751,7 @@ final class qp extends dr {
                   }
                 } else {
                   L34: {
-                    if (-1 <= (var10 ^ -1)) {
+                    if (var10 <= 0) {
                       stackOut_52_0 = -1;
                       stackIn_53_0 = stackOut_52_0;
                       break L34;
@@ -658,10 +765,10 @@ final class qp extends dr {
                   L35: while (true) {
                     L36: {
                       L37: {
-                        if ((var10 ^ -1) >= (var11 ^ -1)) {
+                        if (~var10 >= ~var11) {
                           break L37;
                         } else {
-                          if (-1 > (var10 ^ -1)) {
+                          if (var10 > 0) {
                             break L36;
                           } else {
                             break L37;
@@ -671,7 +778,7 @@ final class qp extends dr {
                       if (var10 >= var11) {
                         break L0;
                       } else {
-                        if ((var10 ^ -1) < -1) {
+                        if (var10 > 0) {
                           break L0;
                         } else {
                           break L36;
@@ -700,11 +807,11 @@ final class qp extends dr {
                     }
                     L40: {
                       var13++;
-                      if (var11 != var10 >> -1345275039) {
+                      if (var11 != var10 >> 1) {
                         break L40;
                       } else {
                         L41: {
-                          if (-1 > (var9 ^ -1)) {
+                          if (var9_int > 0) {
                             stackOut_69_0 = 1;
                             stackIn_70_0 = stackOut_69_0;
                             break L41;
@@ -719,20 +826,20 @@ final class qp extends dr {
                           L43: {
                             L44: {
                               L45: {
-                                if ((var9 ^ -1) > (var12 ^ -1)) {
+                                if (~var9_int > ~var12) {
                                   break L45;
                                 } else {
-                                  if (0 < var9) {
+                                  if (0 < var9_int) {
                                     break L44;
                                   } else {
                                     break L45;
                                   }
                                 }
                               }
-                              if ((var9 ^ -1) < (var12 ^ -1)) {
+                              if (~var9_int < ~var12) {
                                 break L43;
                               } else {
-                                if (var9 > 0) {
+                                if (var9_int > 0) {
                                   break L43;
                                 } else {
                                   break L44;
@@ -743,7 +850,7 @@ final class qp extends dr {
                               if (param6.field_Eb[(param0 + var11) * param6.field_v + (var12 - -param4)] == null) {
                                 break L46;
                               } else {
-                                if ((param7 ^ -1) != (param6.field_Eb[(var11 - -param0) * param6.field_v + (param4 + var12)].field_h ^ -1)) {
+                                if (~param7 != ~param6.field_Eb[(var11 - -param0) * param6.field_v + (param4 + var12)].field_h) {
                                   break L46;
                                 } else {
                                   break L43;
@@ -763,7 +870,7 @@ final class qp extends dr {
                               stackOut_82_0 = var12;
                               stackIn_84_0 = stackOut_82_0;
                               stackIn_83_0 = stackOut_82_0;
-                              if (var9 > 0) {
+                              if (var9_int > 0) {
                                 stackOut_84_0 = stackIn_84_0;
                                 stackOut_84_1 = 1;
                                 stackIn_85_0 = stackOut_84_0;
@@ -784,7 +891,7 @@ final class qp extends dr {
                             stackOut_86_0 = var12;
                             stackIn_88_0 = stackOut_86_0;
                             stackIn_87_0 = stackOut_86_0;
-                            if ((var9 ^ -1) >= -1) {
+                            if (var9_int <= 0) {
                               stackOut_88_0 = stackIn_88_0;
                               stackOut_88_1 = 1;
                               stackIn_89_0 = stackOut_88_0;
@@ -807,7 +914,7 @@ final class qp extends dr {
                       stackOut_90_0 = var11;
                       stackIn_92_0 = stackOut_90_0;
                       stackIn_91_0 = stackOut_90_0;
-                      if ((var10 ^ -1) < -1) {
+                      if (var10 > 0) {
                         stackOut_92_0 = stackIn_92_0;
                         stackOut_92_1 = 1;
                         stackIn_93_0 = stackOut_92_0;
@@ -827,7 +934,7 @@ final class qp extends dr {
                 }
               } else {
                 L51: {
-                  if (0 < var9) {
+                  if (0 < var9_int) {
                     stackOut_25_0 = 1;
                     stackIn_26_0 = stackOut_25_0;
                     break L51;
@@ -841,20 +948,20 @@ final class qp extends dr {
                 L52: while (true) {
                   L53: {
                     L54: {
-                      if (var9 <= var12) {
+                      if (var9_int <= var12) {
                         break L54;
                       } else {
-                        if ((var9 ^ -1) < -1) {
+                        if (var9_int > 0) {
                           break L53;
                         } else {
                           break L54;
                         }
                       }
                     }
-                    if (var9 >= var12) {
+                    if (var9_int >= var12) {
                       break L0;
                     } else {
-                      if (-1 > (var9 ^ -1)) {
+                      if (var9_int > 0) {
                         break L0;
                       } else {
                         break L53;
@@ -865,7 +972,7 @@ final class qp extends dr {
                     if (null == param6.field_Eb[(var11 + param0) * param6.field_v + (param4 + var12)]) {
                       break L55;
                     } else {
-                      if ((param7 ^ -1) != (param6.field_Eb[(param0 + var11) * param6.field_v + (var12 - -param4)].field_h ^ -1)) {
+                      if (~param7 != ~param6.field_Eb[(param0 + var11) * param6.field_v + (var12 - -param4)].field_h) {
                         break L55;
                       } else {
                         var14 = 1;
@@ -886,7 +993,7 @@ final class qp extends dr {
                     stackOut_39_0 = var12;
                     stackIn_41_0 = stackOut_39_0;
                     stackIn_40_0 = stackOut_39_0;
-                    if (-1 > (var9 ^ -1)) {
+                    if (var9_int > 0) {
                       stackOut_41_0 = stackIn_41_0;
                       stackOut_41_1 = 1;
                       stackIn_42_0 = stackOut_41_0;
@@ -920,7 +1027,7 @@ final class qp extends dr {
               L59: while (true) {
                 L60: {
                   L61: {
-                    if ((var11 ^ -1) <= (var10 ^ -1)) {
+                    if (~var11 <= ~var10) {
                       break L61;
                     } else {
                       if (0 < var10) {
@@ -944,7 +1051,7 @@ final class qp extends dr {
                   if (null == param6.field_Eb[(param0 + var11) * param6.field_v + var12 - -param4]) {
                     break L62;
                   } else {
-                    if ((param6.field_Eb[param6.field_v * (var11 + param0) + (var12 + param4)].field_h ^ -1) != (param7 ^ -1)) {
+                    if (~param6.field_Eb[param6.field_v * (var11 + param0) + (var12 + param4)].field_h != ~param7) {
                       break L62;
                     } else {
                       var14 = 1;
@@ -985,14 +1092,14 @@ final class qp extends dr {
             }
           }
           L65: {
-            if (param2 != (var13 ^ -1)) {
+            if (param2 != ~var13) {
               break L65;
             } else {
               if (var14 != 0) {
                 break L65;
               } else {
                 var13 = 1;
-                qp.a(param0, param1, param2 ^ 0, param3, param4, param5 - -1, param6, param7, param8);
+                qp.a(param0, param1, param2, param3, param4, param5 - -1, param6, param7, param8);
                 break L65;
               }
             }

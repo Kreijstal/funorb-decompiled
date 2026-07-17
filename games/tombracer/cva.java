@@ -9,15 +9,12 @@ final class cva {
     static dk[] field_c;
 
     final static void a(int param0) {
-        int var1 = 0;
         if (wba.field_o == null) {
-          throw new IllegalStateException("NGR");
-        } else {
-          wba.field_o.field_h = true;
-          var1 = 105 % ((param0 - -32) / 62);
-          uu.b(12475, 1);
-          return;
+            throw new IllegalStateException("NGR");
         }
+        wba.field_o.field_h = true;
+        int var1 = 0;
+        uu.b(12475, 1);
     }
 
     public static void b(int param0) {

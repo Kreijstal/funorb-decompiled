@@ -32,16 +32,20 @@ final class tl extends wg {
 
     final void b(int[] param0, int param1, int param2) {
         int var5 = EscapeVector.field_A;
-        while (param2 > ((tl) this).field_m) {
-            ((tl) this).field_k.a(param0, param1, ((tl) this).field_m);
-            ((tl) this).field_q.a(param0, param1, ((tl) this).field_m);
-            param1 = param1 + ((tl) this).field_m;
-            param2 = param2 - ((tl) this).field_m;
-            this.e(117);
+        try {
+            while (param2 > ((tl) this).field_m) {
+                ((tl) this).field_k.a(param0, param1, ((tl) this).field_m);
+                ((tl) this).field_q.a(param0, param1, ((tl) this).field_m);
+                param1 = param1 + ((tl) this).field_m;
+                param2 = param2 - ((tl) this).field_m;
+                this.e(117);
+            }
+            ((tl) this).field_k.a(param0, param1, param2);
+            ((tl) this).field_q.a(param0, param1, param2);
+            ((tl) this).field_m = ((tl) this).field_m - param2;
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) (Object) runtimeException, "tl.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }
-        ((tl) this).field_k.a(param0, param1, param2);
-        ((tl) this).field_q.a(param0, param1, param2);
-        ((tl) this).field_m = ((tl) this).field_m - param2;
     }
 
     private final void e(int param0) {
@@ -71,7 +75,7 @@ final class tl extends wg {
           var3 = stackIn_11_0;
           var4 = ((tl) this).field_n;
           ((tl) this).field_k.a(ie.field_q / 200, var3, var4);
-          ((tl) this).field_q.a(ie.field_q / 200, var3 >> -1534028894, var4);
+          ((tl) this).field_q.a(ie.field_q / 200, var3 >> 2, var4);
           if (param0 < 96) {
             return;
           } else {
@@ -94,7 +98,7 @@ final class tl extends wg {
           var3 = stackIn_4_0;
           var4 = ((tl) this).field_n;
           ((tl) this).field_k.a(ie.field_q / 200, var3, var4);
-          ((tl) this).field_q.a(ie.field_q / 200, var3 >> -1534028894, var4);
+          ((tl) this).field_q.a(ie.field_q / 200, var3 >> 2, var4);
           if (param0 < 96) {
             return;
           } else {

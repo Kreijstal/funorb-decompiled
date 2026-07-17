@@ -34,9 +34,6 @@ abstract class tj extends oe {
             }
             ((tj) this).b(var3, 31936, var2);
         }
-        if (param0 != -20) {
-            ((tj) this).a((byte) 127, -67, -57, -106);
-        }
         return super.g((byte) -20);
     }
 
@@ -59,10 +56,10 @@ abstract class tj extends oe {
             return 0;
         }
         if (0 <= param0) {
-            if (!(-1 != (param1 ^ -1))) {
+            if (!(param1 != 0)) {
                 return 0;
             }
-            if ((param1 ^ -1) > -1) {
+            if (param1 < 0) {
                 return -jd.a(param0, 1164778608, -param1);
             }
             return jd.a(param0, 1164778608, param1);
@@ -70,14 +67,14 @@ abstract class tj extends oe {
         if (0 == param1) {
             return 4096;
         }
-        if (-1 >= (param1 ^ -1)) {
+        if (param1 >= 0) {
             return -jd.a(-param0, 1164778608, param1) + 4096;
         }
         return -4096 + jd.a(-param0, 1164778608, -param1);
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
-        if (!((param3 ^ -1) < -1)) {
+        if (!(param3 > 0)) {
             ((tj) this).b(param1, 31936, param2);
             return;
         }
@@ -181,9 +178,6 @@ abstract class tj extends oe {
     }
 
     public static void h(byte param0) {
-        if (param0 != -16) {
-            int discarded$0 = tj.i(83);
-        }
         field_ab = null;
         field_W = null;
         field_eb = null;
@@ -280,7 +274,7 @@ abstract class tj extends oe {
                       return;
                     } else {
                       var9 = var7 * (var6 + -var5) / var4 + var5;
-                      var9 = var9 | (var9 << 1601749008 | var9 << 1204627624);
+                      var9 = var9 | (var9 << 16 | var9 << 8);
                       qh.f(param0, var8, 6, var9);
                       qh.f(param0 - (-((tj) this).field_l + 6), var8, 6, var9);
                       var8++;
@@ -290,7 +284,7 @@ abstract class tj extends oe {
                   }
                 } else {
                   var9 = (-var5 + var6) * var7 / var4 + var5;
-                  var9 = var9 | (var9 << -696780944 | var9 << 1534393000);
+                  var9 = var9 | (var9 << 16 | var9 << 8);
                   qh.f(param0, var8, 6, var9);
                   qh.f(((tj) this).field_l + param0 - 6, var8, 6, var9);
                   var7++;
@@ -300,17 +294,17 @@ abstract class tj extends oe {
               }
             } else {
               L3: {
-                if ((var8 ^ -1) > (qh.field_c ^ -1)) {
+                if (~var8 > ~qh.field_c) {
                   break L3;
                 } else {
-                  if ((var8 ^ -1) > (qh.field_g ^ -1)) {
+                  if (~var8 > ~qh.field_g) {
                     L4: {
                       var9 = var7 * (var6 - var5) / var4 + var5;
                       var10 = 0;
                       var11 = ((tj) this).field_l;
-                      if ((var7 ^ -1) >= -21) {
+                      if (var7 <= 20) {
                         L5: while (true) {
-                          if ((var10 ^ -1) < -21) {
+                          if (var10 > 20) {
                             break L4;
                           } else {
                             L6: {
@@ -318,11 +312,11 @@ abstract class tj extends oe {
                               if (var12 > 462) {
                                 break L6;
                               } else {
-                                if ((var12 ^ -1) > -421) {
+                                if (var12 < 420) {
                                   break L4;
                                 } else {
                                   var13 = var9 * (-var12 + 462) / 42;
-                                  var13 = var13 | (var13 << 614533872 | var13 << -1346209688);
+                                  var13 = var13 | (var13 << 16 | var13 << 8);
                                   qh.field_d[var10 + qh.field_l * var8 + param0] = var13;
                                   break L6;
                                 }
@@ -337,13 +331,13 @@ abstract class tj extends oe {
                       }
                     }
                     L7: {
-                      if ((var7 ^ -1) >= -21) {
+                      if (var7 <= 20) {
                         var12 = var11;
                         var11 -= 21;
                         var13 = 0;
                         L8: while (true) {
                           L9: {
-                            if (-21 > (var13 ^ -1)) {
+                            if (var13 > 20) {
                               break L9;
                             } else {
                               var14 = var13 * var13 + (-var7 + 20) * (-var7 + 20);
@@ -354,7 +348,7 @@ abstract class tj extends oe {
                                     break L10;
                                   } else {
                                     var15 = var9 * (-var14 + 462) / 42;
-                                    var15 = var15 | (var15 << -2141675960 | var15 << -1200251056);
+                                    var15 = var15 | (var15 << 8 | var15 << 16);
                                     qh.field_d[param0 + (qh.field_l * var8 - -var11)] = var15;
                                     break L10;
                                   }
@@ -374,7 +368,7 @@ abstract class tj extends oe {
                         break L7;
                       }
                     }
-                    var9 = var9 | (var9 << -2102659160 | var9 << 748833968);
+                    var9 = var9 | (var9 << 8 | var9 << 16);
                     qh.f(var10 + param0, var8, -var10 + var11, var9);
                     break L3;
                   } else {

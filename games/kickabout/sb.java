@@ -13,7 +13,7 @@ final class sb {
 
     public static void a(int param0) {
         field_g = null;
-        int var1 = -36 / ((24 - param0) / 54);
+        int var1 = -18;
         field_b = null;
         field_h = null;
         field_e = null;
@@ -50,20 +50,10 @@ final class sb {
     }
 
     final static void a(int param0, int param1, int param2, int param3, byte param4) {
-        if (param4 != 5) {
-          field_h = null;
-          nr.field_j = param1;
-          jl.field_d = param2;
-          lk.field_g = param0;
-          la.field_c = param3;
-          return;
-        } else {
-          nr.field_j = param1;
-          jl.field_d = param2;
-          lk.field_g = param0;
-          la.field_c = param3;
-          return;
-        }
+        nr.field_j = param1;
+        jl.field_d = param2;
+        lk.field_g = param0;
+        la.field_c = param3;
     }
 
     final static void a(boolean param0, byte param1, int param2, int param3) {
@@ -84,10 +74,6 @@ final class sb {
     }
 
     final static int a(int param0, int param1) {
-        if (param1 > -121) {
-            field_g = null;
-            return t.field_o[2047 & param0];
-        }
         return t.field_o[2047 & param0];
     }
 
@@ -138,8 +124,12 @@ final class sb {
 
     sb(String param0) {
         ((sb) this).field_c = 0;
-        ((sb) this).field_f = param0;
-        ((sb) this).field_d = ((sb) this).field_f.length();
+        try {
+            ((sb) this).field_f = param0;
+            ((sb) this).field_d = ((sb) this).field_f.length();
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "sb.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final boolean a(byte param0) {

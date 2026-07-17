@@ -106,7 +106,11 @@ final class ge {
     ge(String param0) {
         ((ge) this).field_e = false;
         ((ge) this).field_d = false;
-        ((ge) this).field_a = param0;
+        try {
+            ((ge) this).field_a = param0;
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "ge.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

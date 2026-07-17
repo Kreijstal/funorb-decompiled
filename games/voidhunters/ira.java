@@ -52,10 +52,6 @@ final class ira extends mfb {
     public static void l(int param0) {
         field_b = null;
         field_c = null;
-        if (param0 != 17036) {
-            Object var2 = null;
-            boolean discarded$0 = ira.a(25L, (String) null, -89);
-        }
     }
 
     final int a(int param0) {
@@ -88,89 +84,105 @@ final class ira extends mfb {
 
     final static boolean a(long param0, String param1, int param2) {
         vu var4 = null;
+        RuntimeException var4_ref = null;
         Object var5 = null;
-        int stackIn_23_0 = 0;
-        int stackIn_30_0 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_29_0 = 0;
-        int stackOut_21_0 = 0;
-        int stackOut_22_0 = 0;
-        var4 = di.a(param1, 0);
-        if (param2 == 41) {
-          if (var4 != null) {
-            if (null == var4.field_Ab) {
-              L0: {
-                L1: {
-                  if (null == lqa.field_o) {
-                    break L1;
-                  } else {
-                    if (null == pjb.a(param0, true)) {
-                      break L1;
-                    } else {
-                      stackOut_28_0 = 1;
-                      stackIn_30_0 = stackOut_28_0;
-                      break L0;
-                    }
-                  }
-                }
-                stackOut_29_0 = 0;
-                stackIn_30_0 = stackOut_29_0;
-                break L0;
+        int stackIn_6_0 = 0;
+        int stackIn_11_0 = 0;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_5_0 = 0;
+        int stackOut_9_0 = 0;
+        int stackOut_10_0 = 0;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        try {
+          L0: {
+            L1: {
+              var4 = di.a(param1, 0);
+              if (param2 == 41) {
+                break L1;
+              } else {
+                var5 = null;
+                boolean discarded$2 = ira.a(1L, (String) null, 31);
+                break L1;
               }
-              return stackIn_30_0 != 0;
-            } else {
-              return true;
             }
-          } else {
             L2: {
-              L3: {
+              if (var4 == null) {
+                break L2;
+              } else {
+                if (null != var4.field_Ab) {
+                  stackOut_5_0 = 1;
+                  stackIn_6_0 = stackOut_5_0;
+                  return stackIn_6_0 != 0;
+                } else {
+                  break L2;
+                }
+              }
+            }
+            L3: {
+              L4: {
                 if (null == lqa.field_o) {
-                  break L3;
+                  break L4;
                 } else {
                   if (null == pjb.a(param0, true)) {
-                    break L3;
+                    break L4;
                   } else {
-                    stackOut_21_0 = 1;
-                    stackIn_23_0 = stackOut_21_0;
-                    break L2;
+                    stackOut_9_0 = 1;
+                    stackIn_11_0 = stackOut_9_0;
+                    break L3;
                   }
                 }
               }
-              stackOut_22_0 = 0;
-              stackIn_23_0 = stackOut_22_0;
-              break L2;
+              stackOut_10_0 = 0;
+              stackIn_11_0 = stackOut_10_0;
+              break L3;
             }
-            return stackIn_23_0 != 0;
+            break L0;
           }
-        } else {
-          var5 = null;
-          boolean discarded$1 = ira.a(1L, (String) null, 31);
-          if (var4 != null) {
-            if (null != var4.field_Ab) {
-              return true;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L5: {
+            var4_ref = decompiledCaughtException;
+            stackOut_12_0 = (RuntimeException) var4_ref;
+            stackOut_12_1 = new StringBuilder().append("ira.G(").append(param0).append(44);
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
+            if (param1 == null) {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L5;
             } else {
-              if (null != lqa.field_o) {
-                if (null == pjb.a(param0, true)) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            }
-          } else {
-            if (null != lqa.field_o) {
-              if (null == pjb.a(param0, true)) {
-                return false;
-              } else {
-                return true;
-              }
-            } else {
-              return false;
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L5;
             }
           }
+          throw rta.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param2 + 41);
         }
+        return stackIn_11_0 != 0;
     }
 
     final int g(int param0) {

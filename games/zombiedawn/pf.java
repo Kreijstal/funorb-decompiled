@@ -98,15 +98,20 @@ final class pf {
     }
 
     final void a(int param0, long param1, nb param2) {
-        if (!(null == param2.field_h)) {
-            param2.c((byte) -53);
+        nb var5 = null;
+        try {
+            if (!(null == param2.field_h)) {
+                param2.c((byte) -53);
+            }
+            var5 = ((pf) this).field_i[(int)((long)(((pf) this).field_a - param0) & param1)];
+            param2.field_h = var5.field_h;
+            param2.field_i = var5;
+            param2.field_h.field_i = param2;
+            param2.field_n = param1;
+            param2.field_i.field_h = param2;
+        } catch (RuntimeException runtimeException) {
+            throw sh.a((Throwable) (Object) runtimeException, "pf.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
-        nb var5 = ((pf) this).field_i[(int)((long)(((pf) this).field_a - param0) & param1)];
-        param2.field_h = var5.field_h;
-        param2.field_i = var5;
-        param2.field_h.field_i = param2;
-        param2.field_n = param1;
-        param2.field_i.field_h = param2;
     }
 
     pf(int param0) {
@@ -129,6 +134,6 @@ final class pf {
 
     private static void $cfr$clinit() {
         field_c = 0;
-        field_h = new char[]{(char)91, (char)93, (char)35};
+        field_h = new char[]{'[', ']', '#'};
     }
 }

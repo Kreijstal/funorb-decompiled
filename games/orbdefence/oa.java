@@ -20,21 +20,95 @@ final class oa implements Runnable {
     }
 
     final static df a(boolean param0, java.applet.Applet param1) {
+        String var2 = null;
+        RuntimeException var2_ref = null;
+        df[] var3 = null;
         int var4 = 0;
         df var5 = null;
-        int var6 = OrbDefence.field_D ? 1 : 0;
-        String var2 = li.a(param1, "jagex-last-login-method", param0);
-        if (var2 == null) {
-            return jc.field_a;
-        }
-        df[] var3 = nd.a(-1);
-        for (var4 = 0; var3.length > var4; var4++) {
-            var5 = var3[var4];
-            if (!(!var5.a(-68, var2))) {
-                return var5;
+        int var6 = 0;
+        df stackIn_3_0 = null;
+        df stackIn_9_0 = null;
+        df stackIn_12_0 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        df stackOut_11_0 = null;
+        df stackOut_8_0 = null;
+        df stackOut_2_0 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        var6 = OrbDefence.field_D ? 1 : 0;
+        try {
+          L0: {
+            var2 = li.a(param1, "jagex-last-login-method", param0);
+            if (var2 != null) {
+              var3 = nd.a(-1);
+              var4 = 0;
+              L1: while (true) {
+                if (var3.length <= var4) {
+                  stackOut_11_0 = jc.field_a;
+                  stackIn_12_0 = stackOut_11_0;
+                  break L0;
+                } else {
+                  var5 = var3[var4];
+                  if (var5.a(-68, var2)) {
+                    stackOut_8_0 = (df) var5;
+                    stackIn_9_0 = stackOut_8_0;
+                    return stackIn_9_0;
+                  } else {
+                    var4++;
+                    continue L1;
+                  }
+                }
+              }
+            } else {
+              stackOut_2_0 = jc.field_a;
+              stackIn_3_0 = stackOut_2_0;
+              return stackIn_3_0;
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2_ref = decompiledCaughtException;
+            stackOut_13_0 = (RuntimeException) var2_ref;
+            stackOut_13_1 = new StringBuilder().append("oa.C(").append(param0).append(44);
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
+            if (param1 == null) {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L2;
+            } else {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L2;
+            }
+          }
+          throw dd.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
         }
-        return jc.field_a;
+        return stackIn_12_0;
     }
 
     public final void run() {
@@ -68,9 +142,6 @@ final class oa implements Runnable {
         field_d = null;
         field_a = null;
         field_f = null;
-        if (param0 != 90) {
-            field_d = null;
-        }
     }
 
     oa() {

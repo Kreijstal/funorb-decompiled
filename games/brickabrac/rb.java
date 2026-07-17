@@ -7,7 +7,7 @@ final class rb {
 
     public static void a(byte param0) {
         field_a = null;
-        int var1 = 68 % ((param0 - 24) / 58);
+        int var1 = 0;
     }
 
     static {

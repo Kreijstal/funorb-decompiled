@@ -18,7 +18,7 @@ final class mf {
         var7 = fleas.field_A ? 1 : 0;
         var6 = -1 + ((mf) this).field_f.length;
         L0: while (true) {
-          if (-1 < (var6 ^ -1)) {
+          if (var6 < 0) {
             if (param3 == -4575) {
               return;
             } else {
@@ -47,9 +47,6 @@ final class mf {
 
     public static void a(byte param0) {
         field_b = null;
-        if (param0 != -9) {
-            return;
-        }
         field_a = null;
         field_g = null;
         field_e = null;
@@ -61,7 +58,7 @@ final class mf {
         var3 = fleas.field_A ? 1 : 0;
         var2 = ((mf) this).field_f.length - param0;
         L0: while (true) {
-          if ((var2 ^ -1) > -1) {
+          if (var2 < 0) {
             return;
           } else {
             if (null != ((mf) this).field_f[var2]) {
@@ -77,14 +74,7 @@ final class mf {
     }
 
     final static Boolean a(boolean param0) {
-        Boolean var1 = null;
-        if (!param0) {
-            field_b = null;
-            var1 = bb.field_A;
-            bb.field_A = null;
-            return var1;
-        }
-        var1 = bb.field_A;
+        Boolean var1 = bb.field_A;
         bb.field_A = null;
         return var1;
     }

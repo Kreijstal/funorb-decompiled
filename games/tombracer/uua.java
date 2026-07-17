@@ -21,14 +21,14 @@ final class uua {
                 if (param5 == 4) {
                   break L1;
                 } else {
-                  if (param5 == -9) {
+                  if (param5 == 8) {
                     break L1;
                   } else {
                     if (9 != param5) {
                       break L0;
                     } else {
                       L2: {
-                        if (-5 != param5) {
+                        if (param5 != 4) {
                           break L2;
                         } else {
                           param1 = param4;
@@ -52,27 +52,27 @@ final class uua {
                         if (param5 == ((uua) this).field_e) {
                           if (0 != ((uua) this).field_e) {
                             ((uua) this).field_c[2147483647 & ((uua) this).field_e].b(param3, 100);
-                            if (((uua) this).field_f == param4) {
-                              if (param1 != ((uua) this).field_g) {
-                                ((uua) this).field_c[2147483647 & ((uua) this).field_e].a(param4, param1, 127);
-                                ((uua) this).field_f = param4;
-                                ((uua) this).field_g = param1;
-                                return;
-                              } else {
-                                return;
-                              }
-                            } else {
+                            if (~((uua) this).field_f != ~param4) {
                               ((uua) this).field_c[2147483647 & ((uua) this).field_e].a(param4, param1, 127);
                               ((uua) this).field_f = param4;
                               ((uua) this).field_g = param1;
                               return;
+                            } else {
+                              if (~param1 == ~((uua) this).field_g) {
+                                break L4;
+                              } else {
+                                ((uua) this).field_c[2147483647 & ((uua) this).field_e].a(param4, param1, 127);
+                                ((uua) this).field_f = param4;
+                                ((uua) this).field_g = param1;
+                                return;
+                              }
                             }
                           } else {
                             break L4;
                           }
                         } else {
                           L5: {
-                            if (-1 != (((uua) this).field_e ^ -1)) {
+                            if (((uua) this).field_e != 0) {
                               ((uua) this).field_c[((uua) this).field_e & 2147483647].a(false);
                               break L5;
                             } else {
@@ -101,7 +101,7 @@ final class uua {
                 }
               }
               L7: {
-                if (-5 != param5) {
+                if (param5 != 4) {
                   break L7;
                 } else {
                   param1 = param4;
@@ -122,27 +122,27 @@ final class uua {
                   if (param5 == ((uua) this).field_e) {
                     if (0 != ((uua) this).field_e) {
                       ((uua) this).field_c[2147483647 & ((uua) this).field_e].b(param3, 100);
-                      if (((uua) this).field_f == param4) {
-                        if (param1 != ((uua) this).field_g) {
-                          ((uua) this).field_c[2147483647 & ((uua) this).field_e].a(param4, param1, 127);
-                          ((uua) this).field_f = param4;
-                          ((uua) this).field_g = param1;
-                          return;
-                        } else {
-                          return;
-                        }
-                      } else {
+                      if (~((uua) this).field_f != ~param4) {
                         ((uua) this).field_c[2147483647 & ((uua) this).field_e].a(param4, param1, 127);
                         ((uua) this).field_f = param4;
                         ((uua) this).field_g = param1;
                         return;
+                      } else {
+                        if (~param1 == ~((uua) this).field_g) {
+                          return;
+                        } else {
+                          ((uua) this).field_c[2147483647 & ((uua) this).field_e].a(param4, param1, 127);
+                          ((uua) this).field_f = param4;
+                          ((uua) this).field_g = param1;
+                          return;
+                        }
                       }
                     } else {
                       return;
                     }
                   } else {
                     L9: {
-                      if (-1 != ((uua) this).field_e) {
+                      if (((uua) this).field_e != 0) {
                         ((uua) this).field_c[((uua) this).field_e & 2147483647].a(false);
                         break L9;
                       } else {
@@ -170,8 +170,13 @@ final class uua {
             if (param5 == ((uua) this).field_e) {
               if (0 != ((uua) this).field_e) {
                 ((uua) this).field_c[2147483647 & ((uua) this).field_e].b(param3, 100);
-                if (((uua) this).field_f == param4) {
-                  if (param1 == ((uua) this).field_g) {
+                if (~((uua) this).field_f != ~param4) {
+                  ((uua) this).field_c[2147483647 & ((uua) this).field_e].a(param4, param1, 127);
+                  ((uua) this).field_f = param4;
+                  ((uua) this).field_g = param1;
+                  return;
+                } else {
+                  if (~param1 == ~((uua) this).field_g) {
                     return;
                   } else {
                     ((uua) this).field_c[2147483647 & ((uua) this).field_e].a(param4, param1, 127);
@@ -179,18 +184,13 @@ final class uua {
                     ((uua) this).field_g = param1;
                     return;
                   }
-                } else {
-                  ((uua) this).field_c[2147483647 & ((uua) this).field_e].a(param4, param1, 127);
-                  ((uua) this).field_f = param4;
-                  ((uua) this).field_g = param1;
-                  return;
                 }
               } else {
                 return;
               }
             } else {
               L11: {
-                if (-1 != (((uua) this).field_e ^ -1)) {
+                if (((uua) this).field_e != 0) {
                   ((uua) this).field_c[((uua) this).field_e & 2147483647].a(false);
                   break L11;
                 } else {
@@ -226,10 +226,10 @@ final class uua {
                       if (0 != ((uua) this).field_e) {
                         L15: {
                           ((uua) this).field_c[2147483647 & ((uua) this).field_e].b(param3, 100);
-                          if (((uua) this).field_f != param4) {
+                          if (~((uua) this).field_f != ~param4) {
                             break L15;
                           } else {
-                            if (param1 == ((uua) this).field_g) {
+                            if (~param1 == ~((uua) this).field_g) {
                               break L14;
                             } else {
                               break L15;
@@ -245,7 +245,7 @@ final class uua {
                       }
                     } else {
                       L16: {
-                        if (-1 != (((uua) this).field_e ^ -1)) {
+                        if (((uua) this).field_e != 0) {
                           ((uua) this).field_c[((uua) this).field_e & 2147483647].a(false);
                           break L16;
                         } else {
@@ -275,27 +275,27 @@ final class uua {
             if (param5 == ((uua) this).field_e) {
               if (0 != ((uua) this).field_e) {
                 ((uua) this).field_c[2147483647 & ((uua) this).field_e].b(param3, 100);
-                if (((uua) this).field_f == param4) {
-                  if (param1 != ((uua) this).field_g) {
-                    ((uua) this).field_c[2147483647 & ((uua) this).field_e].a(param4, param1, 127);
-                    ((uua) this).field_f = param4;
-                    ((uua) this).field_g = param1;
-                    return;
-                  } else {
-                    return;
-                  }
-                } else {
+                if (~((uua) this).field_f != ~param4) {
                   ((uua) this).field_c[2147483647 & ((uua) this).field_e].a(param4, param1, 127);
                   ((uua) this).field_f = param4;
                   ((uua) this).field_g = param1;
                   return;
+                } else {
+                  if (~param1 == ~((uua) this).field_g) {
+                    return;
+                  } else {
+                    ((uua) this).field_c[2147483647 & ((uua) this).field_e].a(param4, param1, 127);
+                    ((uua) this).field_f = param4;
+                    ((uua) this).field_g = param1;
+                    return;
+                  }
                 }
               } else {
                 return;
               }
             } else {
               L18: {
-                if (-1 != (((uua) this).field_e ^ -1)) {
+                if (((uua) this).field_e != 0) {
                   ((uua) this).field_c[((uua) this).field_e & 2147483647].a(false);
                   break L18;
                 } else {
@@ -327,14 +327,14 @@ final class uua {
                 if (param5 == 4) {
                   break L21;
                 } else {
-                  if (param5 == -9) {
+                  if (param5 == 8) {
                     break L21;
                   } else {
                     if (9 != param5) {
                       break L20;
                     } else {
                       L22: {
-                        if (-5 != param5) {
+                        if (param5 != 4) {
                           break L22;
                         } else {
                           param1 = param4;
@@ -359,10 +359,10 @@ final class uua {
                           if (0 != ((uua) this).field_e) {
                             L25: {
                               ((uua) this).field_c[2147483647 & ((uua) this).field_e].b(param3, 100);
-                              if (((uua) this).field_f != param4) {
+                              if (~((uua) this).field_f != ~param4) {
                                 break L25;
                               } else {
-                                if (param1 == ((uua) this).field_g) {
+                                if (~param1 == ~((uua) this).field_g) {
                                   break L24;
                                 } else {
                                   break L25;
@@ -378,7 +378,7 @@ final class uua {
                           }
                         } else {
                           L26: {
-                            if (-1 != (((uua) this).field_e ^ -1)) {
+                            if (((uua) this).field_e != 0) {
                               ((uua) this).field_c[((uua) this).field_e & 2147483647].a(false);
                               break L26;
                             } else {
@@ -407,7 +407,7 @@ final class uua {
                 }
               }
               L28: {
-                if (-5 != param5) {
+                if (param5 != 4) {
                   break L28;
                 } else {
                   param1 = param4;
@@ -431,10 +431,10 @@ final class uua {
                     if (0 != ((uua) this).field_e) {
                       L31: {
                         ((uua) this).field_c[2147483647 & ((uua) this).field_e].b(param3, 100);
-                        if (((uua) this).field_f != param4) {
+                        if (~((uua) this).field_f != ~param4) {
                           break L31;
                         } else {
-                          if (param1 == ((uua) this).field_g) {
+                          if (~param1 == ~((uua) this).field_g) {
                             break L30;
                           } else {
                             break L31;
@@ -450,7 +450,7 @@ final class uua {
                     }
                   } else {
                     L32: {
-                      if (-1 != ((uua) this).field_e) {
+                      if (((uua) this).field_e != 0) {
                         ((uua) this).field_c[((uua) this).field_e & 2147483647].a(false);
                         break L32;
                       } else {
@@ -480,27 +480,27 @@ final class uua {
           if (param5 == ((uua) this).field_e) {
             if (0 != ((uua) this).field_e) {
               ((uua) this).field_c[2147483647 & ((uua) this).field_e].b(param3, 100);
-              if (((uua) this).field_f == param4) {
-                if (param1 != ((uua) this).field_g) {
-                  ((uua) this).field_c[2147483647 & ((uua) this).field_e].a(param4, param1, 127);
-                  ((uua) this).field_f = param4;
-                  ((uua) this).field_g = param1;
-                  return;
-                } else {
-                  return;
-                }
-              } else {
+              if (~((uua) this).field_f != ~param4) {
                 ((uua) this).field_c[2147483647 & ((uua) this).field_e].a(param4, param1, 127);
                 ((uua) this).field_f = param4;
                 ((uua) this).field_g = param1;
                 return;
+              } else {
+                if (~param1 == ~((uua) this).field_g) {
+                  return;
+                } else {
+                  ((uua) this).field_c[2147483647 & ((uua) this).field_e].a(param4, param1, 127);
+                  ((uua) this).field_f = param4;
+                  ((uua) this).field_g = param1;
+                  return;
+                }
               }
             } else {
               return;
             }
           } else {
             L34: {
-              if (-1 != (((uua) this).field_e ^ -1)) {
+              if (((uua) this).field_e != 0) {
                 ((uua) this).field_c[((uua) this).field_e & 2147483647].a(false);
                 break L34;
               } else {
@@ -535,17 +535,76 @@ final class uua {
     }
 
     final boolean a(int param0, int param1, kl param2) {
-        if (((uua) this).field_e != 0) {
-          ((uua) this).field_c[((uua) this).field_e & 2147483647].a(param0, 32221, param2);
-          if (param1 != 9) {
-            boolean discarded$2 = ((uua) this).a(57, 53);
-            return true;
-          } else {
-            return true;
+        RuntimeException var4 = null;
+        int stackIn_2_0 = 0;
+        int stackIn_6_0 = 0;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_5_0 = 0;
+        int stackOut_1_0 = 0;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        try {
+          L0: {
+            if (((uua) this).field_e != 0) {
+              ((uua) this).field_c[((uua) this).field_e & 2147483647].a(param0, 32221, param2);
+              if (param1 == 9) {
+                stackOut_5_0 = 1;
+                stackIn_6_0 = stackOut_5_0;
+                break L0;
+              } else {
+                boolean discarded$2 = ((uua) this).a(57, 53);
+                return true;
+              }
+            } else {
+              stackOut_1_0 = 0;
+              stackIn_2_0 = stackOut_1_0;
+              return stackIn_2_0 != 0;
+            }
           }
-        } else {
-          return false;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var4 = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var4;
+            stackOut_7_1 = new StringBuilder().append("uua.A(").append(param0).append(44).append(param1).append(44);
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param2 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L1;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L1;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
         }
+        return stackIn_6_0 != 0;
     }
 
     public static void a(byte param0) {
@@ -554,37 +613,89 @@ final class uua {
     }
 
     uua(cka param0) {
-        L0: {
-          ((uua) this).field_e = 0;
-          ((uua) this).field_g = 0;
-          ((uua) this).field_f = 0;
-          ((uua) this).field_b = param0;
-          ((uua) this).field_d = new aaa(param0);
-          ((uua) this).field_c = new qe[10];
-          ((uua) this).field_c[1] = (qe) (Object) new cpa(param0);
-          ((uua) this).field_c[2] = (qe) (Object) new ns(param0, ((uua) this).field_d);
-          ((uua) this).field_c[4] = (qe) (Object) new kw(param0, ((uua) this).field_d);
-          ((uua) this).field_c[5] = (qe) (Object) new gl(param0, ((uua) this).field_d);
-          ((uua) this).field_c[6] = (qe) (Object) new tva(param0);
-          ((uua) this).field_c[7] = (qe) (Object) new ma(param0);
-          ((uua) this).field_h = new ku(param0);
-          ((uua) this).field_c[3] = (qe) (Object) new ku(param0);
-          ((uua) this).field_c[8] = (qe) (Object) new rpa(param0, ((uua) this).field_d);
-          ((uua) this).field_c[9] = (qe) (Object) new as(param0, ((uua) this).field_d);
-          if (((uua) this).field_c[8].b(-11921)) {
-            break L0;
-          } else {
-            ((uua) this).field_c[8] = ((uua) this).field_c[4];
+        RuntimeException var2 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        ((uua) this).field_e = 0;
+        ((uua) this).field_g = 0;
+        ((uua) this).field_f = 0;
+        try {
+          L0: {
+            L1: {
+              ((uua) this).field_b = param0;
+              ((uua) this).field_d = new aaa(param0);
+              ((uua) this).field_c = new qe[10];
+              ((uua) this).field_c[1] = (qe) (Object) new cpa(param0);
+              ((uua) this).field_c[2] = (qe) (Object) new ns(param0, ((uua) this).field_d);
+              ((uua) this).field_c[4] = (qe) (Object) new kw(param0, ((uua) this).field_d);
+              ((uua) this).field_c[5] = (qe) (Object) new gl(param0, ((uua) this).field_d);
+              ((uua) this).field_c[6] = (qe) (Object) new tva(param0);
+              ((uua) this).field_c[7] = (qe) (Object) new ma(param0);
+              ku dupTemp$1 = new ku(param0);
+              ((uua) this).field_h = dupTemp$1;
+              ((uua) this).field_c[3] = (qe) (Object) dupTemp$1;
+              ((uua) this).field_c[8] = (qe) (Object) new rpa(param0, ((uua) this).field_d);
+              ((uua) this).field_c[9] = (qe) (Object) new as(param0, ((uua) this).field_d);
+              if (((uua) this).field_c[8].b(-11921)) {
+                break L1;
+              } else {
+                ((uua) this).field_c[8] = ((uua) this).field_c[4];
+                break L1;
+              }
+            }
+            L2: {
+              if (((uua) this).field_c[9].b(-11921)) {
+                break L2;
+              } else {
+                ((uua) this).field_c[9] = ((uua) this).field_c[8];
+                break L2;
+              }
+            }
             break L0;
           }
-        }
-        L1: {
-          if (((uua) this).field_c[9].b(-11921)) {
-            break L1;
-          } else {
-            ((uua) this).field_c[9] = ((uua) this).field_c[8];
-            break L1;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2 = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var2;
+            stackOut_6_1 = new StringBuilder().append("uua.<init>(");
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param0 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L3;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L3;
+            }
           }
+          throw tba.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
         }
     }
 

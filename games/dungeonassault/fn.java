@@ -17,12 +17,9 @@ final class fn extends ne {
     final static cn a(int param0) {
         int var2 = 0;
         int var3 = DungeonAssault.field_K;
-        if (param0 != 2) {
-            return null;
-        }
         cn var1 = new cn(11, 11);
         jh.a(var1);
-        for (var2 = 0; -7 < (var2 ^ -1); var2++) {
+        for (var2 = 0; var2 < 6; var2++) {
             gf.c(var2, -var2 + 5, 2 * var2 + 1, 65793);
         }
         for (var2 = 6; var2 < 11; var2++) {

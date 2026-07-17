@@ -10,7 +10,7 @@ final class cp {
 
     public static void a(int param0) {
         field_a = null;
-        int var1 = 66 % ((param0 - -77) / 33);
+        int var1 = 2;
         field_b = null;
     }
 

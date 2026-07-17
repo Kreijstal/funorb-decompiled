@@ -27,39 +27,13 @@ final class kj implements Iterator {
     }
 
     final static s b(int param0) {
-        String var1 = null;
-        if (param0 > -98) {
-          L0: {
-            kj.a((byte) 44);
-            var1 = qc.d(750938499);
-            if (var1 == null) {
-              break L0;
-            } else {
-              if (var1.indexOf('@') < 0) {
-                break L0;
-              } else {
+        String var1 = qc.d(750938499);
+        if (var1 != null) {
+            if (var1.indexOf('@') >= 0) {
                 var1 = "";
-                break L0;
-              }
             }
-          }
-          return new s(qc.d(750938499), ia.b(32674));
-        } else {
-          L1: {
-            var1 = qc.d(750938499);
-            if (var1 == null) {
-              break L1;
-            } else {
-              if (var1.indexOf('@') < 0) {
-                break L1;
-              } else {
-                var1 = "";
-                break L1;
-              }
-            }
-          }
-          return new s(qc.d(750938499), ia.b(32674));
         }
+        return new s(qc.d(750938499), ia.b(32674));
     }
 
     final static int a(int param0) {
@@ -94,9 +68,13 @@ final class kj implements Iterator {
 
     kj(ui param0) {
         ((kj) this).field_d = null;
-        ((kj) this).field_h = param0;
-        ((kj) this).field_i = ((kj) this).field_h.field_a.field_j;
-        ((kj) this).field_d = null;
+        try {
+            ((kj) this).field_h = param0;
+            ((kj) this).field_i = ((kj) this).field_h.field_a.field_j;
+            ((kj) this).field_d = null;
+        } catch (RuntimeException runtimeException) {
+            throw wg.a((Throwable) (Object) runtimeException, "kj.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

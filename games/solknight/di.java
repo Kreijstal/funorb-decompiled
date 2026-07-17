@@ -17,7 +17,7 @@ final class di extends gg {
 
     final static wg a(boolean param0, boolean param1) {
         wg var2 = new wg(true);
-        var2.field_f = param1 ? true : false;
+        var2.field_f = false;
         if (param0) {
             Object var3 = null;
             di.a((java.applet.Applet) null, 18);
@@ -29,31 +29,93 @@ final class di extends gg {
         field_i = null;
         field_l = null;
         field_n = null;
-        if (param0 != 7) {
-            field_i = null;
-        }
         field_j = null;
     }
 
     final static void a(java.applet.Applet param0, int param1) {
         try {
             String var2 = null;
-            String var4 = null;
+            Exception var2_ref = null;
+            RuntimeException var2_ref2 = null;
             int var3 = 0;
+            String var4 = null;
             java.net.URL var5 = null;
+            RuntimeException stackIn_7_0 = null;
+            StringBuilder stackIn_7_1 = null;
+            RuntimeException stackIn_8_0 = null;
+            StringBuilder stackIn_8_1 = null;
+            RuntimeException stackIn_9_0 = null;
+            StringBuilder stackIn_9_1 = null;
+            String stackIn_9_2 = null;
+            Throwable decompiledCaughtException = null;
+            RuntimeException stackOut_6_0 = null;
+            StringBuilder stackOut_6_1 = null;
+            RuntimeException stackOut_8_0 = null;
+            StringBuilder stackOut_8_1 = null;
+            String stackOut_8_2 = null;
+            RuntimeException stackOut_7_0 = null;
+            StringBuilder stackOut_7_1 = null;
+            String stackOut_7_2 = null;
             try {
-                var2 = param0.getDocumentBase().getFile();
-                var4 = var2;
-                var4 = var2;
-                var3 = var2.indexOf((int) (char)param1);
-                var4 = "reload.ws";
-                if ((var3 ^ -1) <= -1) {
-                    var4 = var4 + var2.substring(var3);
+              L0: {
+                try {
+                  L1: {
+                    L2: {
+                      var2 = param0.getDocumentBase().getFile();
+                      var4 = var2;
+                      var4 = var2;
+                      var3 = var2.indexOf((int) (char)param1);
+                      var4 = "reload.ws";
+                      if (var3 < 0) {
+                        break L2;
+                      } else {
+                        var4 = var4 + var2.substring(var3);
+                        break L2;
+                      }
+                    }
+                    var5 = new java.net.URL(param0.getCodeBase(), var4);
+                    param0.getAppletContext().showDocument(kk.a(109, var5, param0), "_self");
+                    break L1;
+                  }
+                } catch (java.lang.Exception decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  L3: {
+                    var2_ref = (Exception) (Object) decompiledCaughtException;
+                    var2_ref.printStackTrace();
+                    break L3;
+                  }
                 }
-                var5 = new java.net.URL(param0.getCodeBase(), var4);
-                param0.getAppletContext().showDocument(kk.a(109, var5, param0), "_self");
-            } catch (Exception exception) {
-                exception.printStackTrace();
+                break L0;
+              }
+            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L4: {
+                var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_6_0 = (RuntimeException) var2_ref2;
+                stackOut_6_1 = new StringBuilder().append("di.A(");
+                stackIn_8_0 = stackOut_6_0;
+                stackIn_8_1 = stackOut_6_1;
+                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_1 = stackOut_6_1;
+                if (param0 == null) {
+                  stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+                  stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+                  stackOut_8_2 = "null";
+                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_1 = stackOut_8_1;
+                  stackIn_9_2 = stackOut_8_2;
+                  break L4;
+                } else {
+                  stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+                  stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+                  stackOut_7_2 = "{...}";
+                  stackIn_9_0 = stackOut_7_0;
+                  stackIn_9_1 = stackOut_7_1;
+                  stackIn_9_2 = stackOut_7_2;
+                  break L4;
+                }
+              }
+              throw fc.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -85,13 +147,13 @@ final class di extends gg {
             var0 = (long)var2;
             var3 = 0;
             L1: while (true) {
-              if ((var3 ^ -1) <= -9) {
+              if (var3 >= 8) {
                 field_n[var2] = var0;
                 var2++;
                 continue L0;
               } else {
                 if (1L == (var0 & 1L)) {
-                  var0 = var0 >>> -1357534591 ^ -3932672073523589310L;
+                  var0 = var0 >>> 1 ^ -3932672073523589310L;
                   var3++;
                   continue L1;
                 } else {

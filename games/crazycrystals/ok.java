@@ -102,7 +102,7 @@ final class ok implements wo {
             L2: while (true) {
               L3: {
                 L4: {
-                  if ((param0.field_I ^ -1) >= (var9 ^ -1)) {
+                  if (~param0.field_I >= ~var9) {
                     break L4;
                   } else {
                     var10 = param0.field_K[var9];
@@ -137,7 +137,7 @@ final class ok implements wo {
                           }
                         }
                         var13 = cf.field_g[var10];
-                        if (2147483647 == (var13 ^ -1)) {
+                        if (var13 == -2147483648) {
                           break L5;
                         } else {
                           var14 = cf.field_g[var11];
@@ -145,7 +145,7 @@ final class ok implements wo {
                             break L5;
                           } else {
                             var15 = cf.field_g[var12];
-                            if ((var15 ^ -1) == 2147483647) {
+                            if (var15 == -2147483648) {
                               break L5;
                             } else {
                               L7: {
@@ -165,12 +165,12 @@ final class ok implements wo {
                               L8: while (true) {
                                 L9: {
                                   L10: {
-                                    if ((var18 >> 488168516 ^ -1) == -1) {
+                                    if (var18 >> 4 == 0) {
                                       break L10;
                                     } else {
                                       var17--;
                                       stackOut_27_0 = -1;
-                                      stackOut_27_1 = var17 ^ -1;
+                                      stackOut_27_1 = ~var17;
                                       stackIn_36_0 = stackOut_27_0;
                                       stackIn_36_1 = stackOut_27_1;
                                       stackIn_28_0 = stackOut_27_0;
@@ -199,7 +199,7 @@ final class ok implements wo {
                                       }
                                     }
                                   }
-                                  stackOut_35_0 = var17 << 928575492;
+                                  stackOut_35_0 = var17 << 4;
                                   stackOut_35_1 = var18;
                                   stackIn_36_0 = stackOut_35_0;
                                   stackIn_36_1 = stackOut_35_1;
@@ -209,7 +209,7 @@ final class ok implements wo {
                                   var19 = stackIn_36_0 + stackIn_36_1;
                                   gh.field_E[var19] = var9;
                                   ga.field_J[var17] = 1 + var18;
-                                  if (-1 <= (param0.field_s ^ -1)) {
+                                  if (param0.field_s <= 0) {
                                     break L12;
                                   } else {
                                     if (null == param0.field_o) {
@@ -242,7 +242,7 @@ final class ok implements wo {
               }
               L13: {
                 L14: {
-                  if (stackIn_45_0 <= (param0.field_s ^ -1)) {
+                  if (stackIn_45_0 <= ~param0.field_s) {
                     break L14;
                   } else {
                     if (null == param0.field_o) {
@@ -251,7 +251,7 @@ final class ok implements wo {
                       var9 = 0;
                       var10 = 0;
                       L15: while (true) {
-                        if ((to.field_b.length ^ -1) >= (var10 ^ -1)) {
+                        if (~to.field_b.length >= ~var10) {
                           break L14;
                         } else {
                           var11 = to.field_b[var10];
@@ -459,7 +459,7 @@ final class ok implements wo {
                         if (1 != ((ok) this).field_f) {
                           break L4;
                         } else {
-                          var9 = var9 + (-var7 + param3.field_g >> -475426655);
+                          var9 = var9 + (-var7 + param3.field_g >> 1);
                           if (var11 == 0) {
                             break L4;
                           } else {
@@ -473,13 +473,13 @@ final class ok implements wo {
                   }
                   L6: {
                     L7: {
-                      if ((((ok) this).field_d ^ -1) == -3) {
+                      if (((ok) this).field_d == 2) {
                         break L7;
                       } else {
-                        if (-2 != (((ok) this).field_d ^ -1)) {
+                        if (((ok) this).field_d != 1) {
                           break L6;
                         } else {
-                          var10 = var10 + (-var8 + param3.field_f >> 1133987009);
+                          var10 = var10 + (-var8 + param3.field_f >> 1);
                           if (var11 == 0) {
                             break L6;
                           } else {

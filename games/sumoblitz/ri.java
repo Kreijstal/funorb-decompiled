@@ -120,8 +120,9 @@ final class ri {
                                                               continue L11;
                                                             } else {
                                                               L13: {
-                                                                var9.field_a[var13 + var14 * var9.field_h] = var1.d(true);
-                                                                var15 = var1.d(true);
+                                                                byte dupTemp$2 = var1.d(true);
+                                                                var9.field_a[var13 + var14 * var9.field_h] = dupTemp$2;
+                                                                var15 = dupTemp$2;
                                                                 stackOut_61_0 = var12;
                                                                 stackIn_63_0 = stackOut_61_0;
                                                                 stackIn_62_0 = stackOut_61_0;
@@ -170,8 +171,9 @@ final class ri {
                                                           break L9;
                                                         } else {
                                                           L17: {
-                                                            var9.field_a[var13] = var1.d(true);
-                                                            var14 = var1.d(true);
+                                                            byte dupTemp$3 = var1.d(true);
+                                                            var9.field_a[var13] = dupTemp$3;
+                                                            var14 = dupTemp$3;
                                                             stackOut_47_0 = var12;
                                                             stackIn_49_0 = stackOut_47_0;
                                                             stackIn_48_0 = stackOut_47_0;

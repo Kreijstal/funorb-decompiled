@@ -124,8 +124,8 @@ final class ta extends gp {
                   var15 = var13 - 1;
                   var16 = var14 - 1;
                   var17 = var13 * var14;
-                  var12 = 1 * var13;
-                  var11 = 1 * var13;
+                  var12 = var13;
+                  var11 = var13;
                   var18 = 2;
                   if (var18 < 0) {
                     break L1;
@@ -307,8 +307,8 @@ final class ta extends gp {
                 var15 = var13 - 1;
                 var16 = var14 - 1;
                 var17 = var13 * var14;
-                var12 = 1 * var13;
-                var11 = 1 * var13;
+                var12 = var13;
+                var11 = var13;
                 var18 = 2;
                 if (var18 < 0) {
                   break L11;
@@ -464,8 +464,10 @@ final class ta extends gp {
         int discarded$61 = param0.h(-11);
         int discarded$66 = param0.h(-11);
         if (var2 == 1) {
+            return;
         }
         if (var2 == 2) {
+            return;
         }
         if (var2 == 3) {
         }

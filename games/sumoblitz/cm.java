@@ -24,7 +24,7 @@ final class cm extends hr {
         ((cm) this).field_g.a(false, 0);
         ((cm) this).field_j.q(-97);
         ((cm) this).field_j.c(25189, param4);
-        jaggl.OpenGL.glColor4ub((byte)(param3 >> -1229480656), (byte)(param3 >> -1294747768), (byte)param3, (byte)(param3 >> -1113128136));
+        jaggl.OpenGL.glColor4ub((byte)(param3 >> 16), (byte)(param3 >> 8), (byte)param3, (byte)(param3 >> 24));
         param0 = param0 + ((cm) this).field_i;
         param1 = param1 + ((cm) this).field_f;
         if (((cm) this).field_d == null) {
@@ -146,7 +146,7 @@ final class cm extends hr {
           stackOut_0_0 = ((cm) this).field_g;
           stackIn_2_0 = stackOut_0_0;
           stackIn_1_0 = stackOut_0_0;
-          if (-1 == (param7 & 1 ^ -1)) {
+          if ((param7 & 1) == 0) {
             stackOut_2_0 = (f) (Object) stackIn_2_0;
             stackOut_2_1 = 0;
             stackIn_3_0 = stackOut_2_0;
@@ -163,7 +163,7 @@ final class cm extends hr {
         ((f) (Object) stackIn_3_0).a(stackIn_3_1 != 0, 0);
         ((cm) this).field_j.q(-122);
         ((cm) this).field_j.c(25189, param6);
-        jaggl.OpenGL.glColor4ub((byte)(param5 >> 1370758544), (byte)(param5 >> -2077854808), (byte)param5, (byte)(param5 >> 1960969336));
+        jaggl.OpenGL.glColor4ub((byte)(param5 >> 16), (byte)(param5 >> 8), (byte)param5, (byte)(param5 >> 24));
         if (((cm) this).field_e) {
           var9 = (float)param2 / (float)((cm) this).b();
           var10 = (float)param3 / (float)((cm) this).d();
@@ -287,7 +287,7 @@ final class cm extends hr {
               stackOut_8_0 = this;
               stackIn_10_0 = stackOut_8_0;
               stackIn_9_0 = stackOut_8_0;
-              if (-1 != (((cm) this).field_h ^ -1)) {
+              if (((cm) this).field_h != 0) {
                 ((cm) this).field_e = true;
                 return;
               } else {
@@ -315,10 +315,10 @@ final class cm extends hr {
     private final void a(int param0) {
         ((cm) this).field_j.g(1, 119);
         ((cm) this).field_j.a(24, (ht) null);
-        ((cm) this).field_j.a(param0 ^ 20685, 8448, 8448);
+        ((cm) this).field_j.a(20685, 8448, 8448);
         ((cm) this).field_j.b(34168, 768, 1, -128);
         ((cm) this).field_j.a(112, 0, 5890, 770);
-        ((cm) this).field_j.g(param0, 112);
+        ((cm) this).field_j.g(0, 112);
         ((cm) this).field_j.b(34168, 768, 1, 92);
     }
 
@@ -398,7 +398,7 @@ final class cm extends hr {
         ((cm) this).field_j.a(110, (ht) (Object) ((cm) this).field_g);
         ((cm) this).field_j.c(25189, param8);
         ((cm) this).field_j.c(param6, true);
-        jaggl.OpenGL.glColor4ub((byte)(param7 >> -1827763280), (byte)(param7 >> -782156952), (byte)param7, (byte)(param7 >> -1585327592));
+        jaggl.OpenGL.glColor4ub((byte)(param7 >> 16), (byte)(param7 >> 8), (byte)param7, (byte)(param7 >> 24));
         jaggl.OpenGL.glBegin(7);
         jaggl.OpenGL.glTexCoord2f(0.0f, ((cm) this).field_g.field_v);
         jaggl.OpenGL.glVertex2f(param0, param1);
@@ -418,8 +418,12 @@ final class cm extends hr {
         ((cm) this).field_c = 0;
         ((cm) this).field_f = 0;
         ((cm) this).field_i = 0;
-        ((cm) this).field_j = param0;
-        ((cm) this).field_g = js.a(param2, param4, param5, false, param0, (byte) -119, param1, param3);
+        try {
+            ((cm) this).field_j = param0;
+            ((cm) this).field_g = js.a(param2, param4, param5, false, param0, (byte) -119, param1, param3);
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "cm.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 41);
+        }
     }
 
     private final void b(int param0, int param1) {
@@ -436,9 +440,9 @@ final class cm extends hr {
           ((cm) this).field_j.a(20685, 7681, 34479);
           ((cm) this).field_j.b(34166, 768, 1, param0 + -6465);
           if (((cm) this).field_c != 0) {
-            if (-2 != (((cm) this).field_c ^ -1)) {
-              if ((((cm) this).field_c ^ -1) != -3) {
-                if ((((cm) this).field_c ^ -1) != -4) {
+            if (((cm) this).field_c != 1) {
+              if (((cm) this).field_c != 2) {
+                if (((cm) this).field_c != 3) {
                   return;
                 } else {
                   ((cm) this).field_j.a(31322, 128.5f, 128.5f, 128.5f, 0.0f);
@@ -462,9 +466,9 @@ final class cm extends hr {
           ((cm) this).field_j.a(20685, 7681, 34479);
           ((cm) this).field_j.b(34166, 768, 1, param0 + -6465);
           if (((cm) this).field_c != 0) {
-            if (-2 != (((cm) this).field_c ^ -1)) {
-              if ((((cm) this).field_c ^ -1) != -3) {
-                if ((((cm) this).field_c ^ -1) != -4) {
+            if (((cm) this).field_c != 1) {
+              if (((cm) this).field_c != 2) {
+                if (((cm) this).field_c != 3) {
                   return;
                 } else {
                   ((cm) this).field_j.a(31322, 128.5f, 128.5f, 128.5f, 0.0f);
@@ -486,13 +490,13 @@ final class cm extends hr {
     }
 
     private final void a(int param0, int param1, byte param2, int param3, int[] param4, int param5, int param6, int param7) {
-        if (param2 >= -67) {
-          this.b(-99, 125);
-          ((cm) this).field_g.a(param0, param3, param5, param4, param6, param1, param7, true, true);
-          return;
-        } else {
-          ((cm) this).field_g.a(param0, param3, param5, param4, param6, param1, param7, true, true);
-          return;
+        try {
+            if (param2 >= -67) {
+                this.b(-99, 125);
+            }
+            ((cm) this).field_g.a(param0, param3, param5, param4, param6, param1, param7, true, true);
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "cm.I(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 44 + param6 + 44 + param7 + 41);
         }
     }
 

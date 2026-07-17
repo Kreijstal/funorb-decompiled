@@ -16,13 +16,8 @@ final class wc implements Iterator {
 
     private final void a(boolean param0) {
         ((wc) this).field_f = ((wc) this).field_b.field_f[0].field_d;
-        if (!param0) {
-          return;
-        } else {
-          ((wc) this).field_i = null;
-          ((wc) this).field_c = 1;
-          return;
-        }
+        ((wc) this).field_i = null;
+        ((wc) this).field_c = 1;
     }
 
     public final void remove() {
@@ -57,21 +52,63 @@ final class wc implements Iterator {
     }
 
     final static void a(String param0, boolean param1) {
-        hf.field_b = param0;
-        qh.a(12, true);
-        if (!param1) {
-            return;
+        RuntimeException var2 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
+        try {
+          hf.field_b = param0;
+          qh.a(12, true);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L0: {
+            var2 = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var2;
+            stackOut_2_1 = new StringBuilder().append("wc.D(");
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
+            if (param0 == null) {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L0;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L0;
+            }
+          }
+          throw la.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 0 + 41);
         }
-        field_e = null;
     }
 
     public static void b(byte param0) {
         field_d = null;
         field_e = null;
         field_g = null;
-        if (param0 != 67) {
-            return;
-        }
         field_a = null;
         field_h = null;
     }
@@ -82,8 +119,9 @@ final class wc implements Iterator {
         if (((wc) this).field_b.field_f[-1 + ((wc) this).field_c] == ((wc) this).field_f) {
           L0: while (true) {
             if (((wc) this).field_c < ((wc) this).field_b.field_d) {
+              int fieldTemp$1 = ((wc) this).field_c;
               ((wc) this).field_c = ((wc) this).field_c + 1;
-              if (((wc) this).field_b.field_f[((wc) this).field_c].field_d == ((wc) this).field_b.field_f[-1 + ((wc) this).field_c]) {
+              if (((wc) this).field_b.field_f[fieldTemp$1].field_d == ((wc) this).field_b.field_f[-1 + ((wc) this).field_c]) {
                 ((wc) this).field_f = ((wc) this).field_b.field_f[-1 + ((wc) this).field_c];
                 continue L0;
               } else {
@@ -101,20 +139,22 @@ final class wc implements Iterator {
 
     public final Object next() {
         int var2 = 0;
-        ug var3 = null;
+        Object var3 = null;
+        ug var3_ref = null;
         ug var4 = null;
         var2 = MonkeyPuzzle2.field_F ? 1 : 0;
         if (((wc) this).field_f == ((wc) this).field_b.field_f[((wc) this).field_c + -1]) {
           L0: while (true) {
             if (((wc) this).field_c < ((wc) this).field_b.field_d) {
+              int fieldTemp$2 = ((wc) this).field_c;
               ((wc) this).field_c = ((wc) this).field_c + 1;
-              var3 = ((wc) this).field_b.field_f[((wc) this).field_c].field_d;
-              if (var3 == ((wc) this).field_b.field_f[-1 + ((wc) this).field_c]) {
+              var3_ref = ((wc) this).field_b.field_f[fieldTemp$2].field_d;
+              if (var3_ref == ((wc) this).field_b.field_f[-1 + ((wc) this).field_c]) {
                 continue L0;
               } else {
-                ((wc) this).field_f = var3.field_d;
-                ((wc) this).field_i = var3;
-                return (Object) (Object) var3;
+                ((wc) this).field_f = var3_ref.field_d;
+                ((wc) this).field_i = var3_ref;
+                return (Object) (Object) var3_ref;
               }
             } else {
               return null;
@@ -129,29 +169,22 @@ final class wc implements Iterator {
     }
 
     final static void a(int param0) {
-        if (224 <= re.field_e) {
-          qb.a(256, 256);
-          if (param0 == -17076) {
-            return;
-          } else {
-            aj discarded$4 = wc.a((byte) -100);
-            return;
-          }
+        if (224 > re.field_e) {
+            qb.a(256, re.field_e + 32);
         } else {
-          qb.a(param0 + 17332, re.field_e + 32);
-          if (param0 == -17076) {
+            qb.a(256, 256);
             return;
-          } else {
-            aj discarded$5 = wc.a((byte) -100);
-            return;
-          }
         }
     }
 
     wc(dc param0) {
         ((wc) this).field_i = null;
-        ((wc) this).field_b = param0;
-        this.a(true);
+        try {
+            ((wc) this).field_b = param0;
+            this.a(true);
+        } catch (RuntimeException runtimeException) {
+            throw la.a((Throwable) (Object) runtimeException, "wc.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

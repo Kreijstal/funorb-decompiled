@@ -9,9 +9,6 @@ final class of {
     }
 
     final static int a(boolean param0) {
-        if (param0) {
-            return -107;
-        }
         return sd.field_h;
     }
 
@@ -44,10 +41,10 @@ final class of {
         var4 = u.a(-123, param2);
         var5 = tg.a(param0, -4097);
         var6 = u.a(-116, param0);
-        var7 = (int)((long)var5 * (long)var3 >> 1753656656);
-        var8 = (int)((long)var3 * (long)var6 >> -1819464432);
-        var9 = (int)((long)var5 * (long)var4 >> -872753968);
-        var10 = (int)((long)var4 * (long)var6 >> 1685038352);
+        var7 = (int)((long)var5 * (long)var3 >> 16);
+        var8 = (int)((long)var3 * (long)var6 >> 16);
+        var9 = (int)((long)var5 * (long)var4 >> 16);
+        var10 = (int)((long)var4 * (long)var6 >> 16);
         return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
     }
 

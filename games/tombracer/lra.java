@@ -10,19 +10,23 @@ final class lra extends ora implements va {
     private int field_h;
 
     public final void a(int param0, int param1, byte param2, byte[] param3) {
-        ((lra) this).a(param3, param1);
-        if (param2 > -109) {
-          ((lra) this).field_h = param0;
-          return;
-        } else {
-          ((lra) this).field_h = param0;
-          return;
+        try {
+            ((lra) this).a(param3, param1);
+            if (param2 > -109) {
+            }
+            ((lra) this).field_h = param0;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "lra.F(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
     lra(cka param0, int param1, byte[] param2, int param3) {
         super(param0, param2, param3);
-        ((lra) this).field_h = param1;
+        try {
+            ((lra) this).field_h = param1;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "lra.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+        }
     }
 
     public final long b(int param0) {

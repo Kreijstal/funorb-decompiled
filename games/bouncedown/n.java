@@ -12,27 +12,20 @@ final class n extends ai {
     int field_i;
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int[] param7) {
-        Object var10 = null;
-        if (param1 >= -65) {
-          var10 = null;
-          ((n) this).a(-37, 3, 13, 1, -81, 124, 72, (int[]) null);
-          ((n) this).field_i = param0;
-          ((n) this).field_l = param4;
-          ((n) this).field_n = param3;
-          ((n) this).field_h = param2;
-          ((n) this).field_j = param6;
-          ((n) this).field_g = param7;
-          ((n) this).field_k = param5;
-          return;
-        } else {
-          ((n) this).field_i = param0;
-          ((n) this).field_l = param4;
-          ((n) this).field_n = param3;
-          ((n) this).field_h = param2;
-          ((n) this).field_j = param6;
-          ((n) this).field_g = param7;
-          ((n) this).field_k = param5;
-          return;
+        try {
+            if (param1 >= -65) {
+                Object var10 = null;
+                ((n) this).a(-37, 3, 13, 1, -81, 124, 72, (int[]) null);
+            }
+            ((n) this).field_i = param0;
+            ((n) this).field_l = param4;
+            ((n) this).field_n = param3;
+            ((n) this).field_h = param2;
+            ((n) this).field_j = param6;
+            ((n) this).field_g = param7;
+            ((n) this).field_k = param5;
+        } catch (RuntimeException runtimeException) {
+            throw ii.a((Throwable) (Object) runtimeException, "n.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + (param7 != null ? "{...}" : "null") + 41);
         }
     }
 

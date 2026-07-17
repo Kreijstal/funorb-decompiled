@@ -13,46 +13,79 @@ final class ge extends sm {
         int var5 = 0;
         int var6 = 0;
         int var7 = ArmiesOfGielinor.field_M ? 1 : 0;
-        if (param1 != -20849) {
-            field_m = null;
-        }
         js var8 = new js(pd.field_d, true, false, true, true);
         js var2 = var8;
-        int var3 = pe.b(param1 + 20938, param0);
+        int var3 = pe.b(89, param0);
         int var4 = 127;
         for (var5 = 0; var5 < var2.field_i.length; var5++) {
             var6 = (var4 & var8.field_i[var5]) + -16;
-            if ((var6 ^ -1) > -1) {
+            if (var6 < 0) {
                 var6 = 0;
             }
-            var2.field_i[var5] = (short)oe.c(var6, rn.a(var4 ^ -1, var3));
+            var2.field_i[var5] = (short)oe.c(var6, rn.a(~var4, var3));
         }
         return var2.a(be.field_x, fm.field_a, ol.field_A, lf.field_t, ni.field_a);
     }
 
     final static boolean a(int param0, int param1) {
+        fd var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
-        int var4 = ArmiesOfGielinor.field_M ? 1 : 0;
-        if (!(bk.field_e != null)) {
-            return false;
-        }
-        if (param0 == bk.field_e.b(false)) {
-            return false;
-        }
-        fd var2 = (fd) (Object) bk.field_e.e((byte) 111);
-        while (var2 != null) {
-            var3 = var2.field_k;
-            if (!(var3 != param1)) {
-                return true;
+        int var4 = 0;
+        int stackIn_4_0 = 0;
+        int stackIn_7_0 = 0;
+        int stackIn_13_0 = 0;
+        int stackIn_16_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_3_0 = 0;
+        int stackOut_15_0 = 0;
+        int stackOut_12_0 = 0;
+        int stackOut_6_0 = 0;
+        var4 = ArmiesOfGielinor.field_M ? 1 : 0;
+        try {
+          L0: {
+            if (bk.field_e == null) {
+              stackOut_3_0 = 0;
+              stackIn_4_0 = stackOut_3_0;
+              return stackIn_4_0 != 0;
+            } else {
+              if (param0 != bk.field_e.b(false)) {
+                var2 = (fd) (Object) bk.field_e.e((byte) 111);
+                L1: while (true) {
+                  if (var2 == null) {
+                    stackOut_15_0 = 0;
+                    stackIn_16_0 = stackOut_15_0;
+                    break L0;
+                  } else {
+                    var3 = var2.field_k;
+                    if (var3 == param1) {
+                      stackOut_12_0 = 1;
+                      stackIn_13_0 = stackOut_12_0;
+                      return stackIn_13_0 != 0;
+                    } else {
+                      var2 = (fd) (Object) bk.field_e.a((byte) 123);
+                      continue L1;
+                    }
+                  }
+                }
+              } else {
+                stackOut_6_0 = 0;
+                stackIn_7_0 = stackOut_6_0;
+                return stackIn_7_0 != 0;
+              }
             }
-            var2 = (fd) (Object) bk.field_e.a((byte) 123);
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          throw ig.a((Throwable) (Object) var2_ref, "ge.C(" + param0 + 44 + param1 + 41);
         }
-        return false;
+        return stackIn_16_0 != 0;
     }
 
     final void b(byte param0) {
         int var2 = -4 / ((param0 - -67) / 49);
-        this.b((byte) 111);
+        super.b((byte) 111);
         ((ge) this).field_j = 0.0f;
         ((ge) this).field_k = 3.4028234663852886e+38f;
         ((ge) this).field_l = 0;
@@ -130,16 +163,69 @@ final class ge extends sm {
     }
 
     final void a(int param0, jb param1) {
-        this.a(param0, param1);
-        if (!(param1.field_t >= ((ge) this).field_k)) {
-            ((ge) this).field_k = param1.field_t;
+        RuntimeException var3 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              super.a(param0, param1);
+              if (param1.field_t < ((ge) this).field_k) {
+                ((ge) this).field_k = param1.field_t;
+                break L1;
+              } else {
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_1 = new StringBuilder().append("ge.F(").append(param0).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param1 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw ig.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
         }
     }
 
     public static void c(int param0) {
-        if (param0 > -98) {
-            boolean discarded$0 = ge.a(39, 60);
-        }
         field_h = null;
         field_m = null;
         field_i = null;

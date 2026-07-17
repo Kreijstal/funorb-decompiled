@@ -20,55 +20,91 @@ final class ii extends ji {
     }
 
     final void a(byte param0, int param1, ed param2) {
-        int var4 = 0;
+        int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
         var5 = Vertigo2.field_L ? 1 : 0;
-        var4 = param1;
-        if (-1 == (var4 ^ -1)) {
-          ((ii) this).field_y = param2.a((byte) -11);
-          if (param0 == 110) {
-            return;
-          } else {
-            ((ii) this).field_y = -51;
-            return;
-          }
-        } else {
-          if (1 == var4) {
-            ((ii) this).field_D = param2.a((byte) -11);
-            if (param0 != 110) {
-              ((ii) this).field_y = -51;
-              return;
-            } else {
-              return;
-            }
-          } else {
-            if (var4 != 2) {
-              if (3 == var4) {
-                ((ii) this).field_B = param2.a((byte) -11);
-                if (param0 != 110) {
-                  ((ii) this).field_y = -51;
-                  return;
-                } else {
-                  return;
-                }
+        try {
+          L0: {
+            L1: {
+              var4_int = param1;
+              if (var4_int == 0) {
+                ((ii) this).field_y = param2.a((byte) -11);
+                break L1;
               } else {
-                if (param0 == 110) {
-                  return;
+                if (1 == var4_int) {
+                  ((ii) this).field_D = param2.a((byte) -11);
+                  break L1;
                 } else {
-                  ((ii) this).field_y = -51;
-                  return;
+                  if (var4_int != 2) {
+                    if (3 == var4_int) {
+                      ((ii) this).field_B = param2.a((byte) -11);
+                      break L1;
+                    } else {
+                      break L1;
+                    }
+                  } else {
+                    ((ii) this).field_F = param2.a((byte) -11);
+                    break L1;
+                  }
                 }
               }
-            } else {
-              ((ii) this).field_F = param2.a((byte) -11);
-              if (param0 != 110) {
+            }
+            L2: {
+              if (param0 == 110) {
+                break L2;
+              } else {
                 ((ii) this).field_y = -51;
-                return;
-              } else {
-                return;
+                break L2;
               }
             }
+            break L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var4 = decompiledCaughtException;
+            stackOut_14_0 = (RuntimeException) var4;
+            stackOut_14_1 = new StringBuilder().append("ii.C(").append(param0).append(44).append(param1).append(44);
+            stackIn_16_0 = stackOut_14_0;
+            stackIn_16_1 = stackOut_14_1;
+            stackIn_15_0 = stackOut_14_0;
+            stackIn_15_1 = stackOut_14_1;
+            if (param2 == null) {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "null";
+              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_1 = stackOut_16_1;
+              stackIn_17_2 = stackOut_16_2;
+              break L3;
+            } else {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "{...}";
+              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_1 = stackOut_15_1;
+              stackIn_17_2 = stackOut_15_2;
+              break L3;
+            }
+          }
+          throw wn.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
         }
     }
 
@@ -128,27 +164,27 @@ final class ii extends ji {
               if (we.field_M <= var4) {
                 return var15;
               } else {
-                var5 = (rh.field_O[var4] << 21853868) / ((ii) this).field_y + ((ii) this).field_F;
-                var6 = (lf.field_y[param0] << 677724396) / ((ii) this).field_y + ((ii) this).field_B;
+                var5 = (rh.field_O[var4] << 12) / ((ii) this).field_y + ((ii) this).field_F;
+                var6 = (lf.field_y[param0] << 12) / ((ii) this).field_y + ((ii) this).field_B;
                 var7 = var5;
                 var8 = var6;
                 var9 = var5;
                 var10 = var6;
-                var11 = var5 * var5 >> -1854068212;
-                var12 = var6 * var6 >> 69234444;
+                var11 = var5 * var5 >> 12;
+                var12 = var6 * var6 >> 12;
                 var13 = 0;
                 L1: while (true) {
                   L2: {
-                    if ((var12 + var11 ^ -1) <= -16385) {
+                    if (var12 + var11 >= 16384) {
                       break L2;
                     } else {
                       if (((ii) this).field_D <= var13) {
                         break L2;
                       } else {
-                        var10 = 2 * (var10 * var9 >> -1073982676) - -var8;
+                        var10 = 2 * (var10 * var9 >> 12) - -var8;
                         var9 = var7 + var11 + -var12;
-                        var11 = var9 * var9 >> -891831444;
-                        var12 = var10 * var10 >> -1438574356;
+                        var11 = var9 * var9 >> 12;
+                        var12 = var10 * var10 >> 12;
                         var13++;
                         continue L1;
                       }
@@ -164,7 +200,7 @@ final class ii extends ji {
                     if (-1 + ((ii) this).field_D > var13) {
                       stackOut_24_0 = (int[]) (Object) stackIn_24_0;
                       stackOut_24_1 = stackIn_24_1;
-                      stackOut_24_2 = (var13 << -1872970868) / ((ii) this).field_D;
+                      stackOut_24_2 = (var13 << 12) / ((ii) this).field_D;
                       stackIn_25_0 = stackOut_24_0;
                       stackIn_25_1 = stackOut_24_1;
                       stackIn_25_2 = stackOut_24_2;
@@ -198,27 +234,27 @@ final class ii extends ji {
               if (we.field_M <= var4) {
                 return var15;
               } else {
-                var5 = (rh.field_O[var4] << 21853868) / ((ii) this).field_y + ((ii) this).field_F;
-                var6 = (lf.field_y[param0] << 677724396) / ((ii) this).field_y + ((ii) this).field_B;
+                var5 = (rh.field_O[var4] << 12) / ((ii) this).field_y + ((ii) this).field_F;
+                var6 = (lf.field_y[param0] << 12) / ((ii) this).field_y + ((ii) this).field_B;
                 var7 = var5;
                 var8 = var6;
                 var9 = var5;
                 var10 = var6;
-                var11 = var5 * var5 >> -1854068212;
-                var12 = var6 * var6 >> 69234444;
+                var11 = var5 * var5 >> 12;
+                var12 = var6 * var6 >> 12;
                 var13 = 0;
                 L5: while (true) {
                   L6: {
-                    if ((var12 + var11 ^ -1) <= -16385) {
+                    if (var12 + var11 >= 16384) {
                       break L6;
                     } else {
                       if (((ii) this).field_D <= var13) {
                         break L6;
                       } else {
-                        var10 = 2 * (var10 * var9 >> -1073982676) - -var8;
+                        var10 = 2 * (var10 * var9 >> 12) - -var8;
                         var9 = var7 + var11 + -var12;
-                        var11 = var9 * var9 >> -891831444;
-                        var12 = var10 * var10 >> -1438574356;
+                        var11 = var9 * var9 >> 12;
+                        var12 = var10 * var10 >> 12;
                         var13++;
                         continue L5;
                       }
@@ -234,7 +270,7 @@ final class ii extends ji {
                     if (-1 + ((ii) this).field_D > var13) {
                       stackOut_10_0 = (int[]) (Object) stackIn_10_0;
                       stackOut_10_1 = stackIn_10_1;
-                      stackOut_10_2 = (var13 << -1872970868) / ((ii) this).field_D;
+                      stackOut_10_2 = (var13 << 12) / ((ii) this).field_D;
                       stackIn_11_0 = stackOut_10_0;
                       stackIn_11_1 = stackOut_10_1;
                       stackIn_11_2 = stackOut_10_2;

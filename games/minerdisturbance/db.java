@@ -10,12 +10,6 @@ final class db extends RuntimeException {
     static byte[][] field_b;
 
     public static void a(byte param0) {
-        if (param0 <= 61) {
-            field_d = -89;
-            field_b = null;
-            field_f = null;
-            return;
-        }
         field_b = null;
         field_f = null;
     }

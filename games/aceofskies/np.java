@@ -8,11 +8,70 @@ final class np extends hh {
     static float[] field_d;
 
     final static int a(CharSequence param0, int param1, int param2) {
-        if (param1 != 4) {
-            np.b(49);
-            return ro.a(param2, true, -127, param0);
+        RuntimeException var3 = null;
+        int stackIn_3_0 = 0;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_2_0 = 0;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param1 == 4) {
+                break L1;
+              } else {
+                np.b(49);
+                break L1;
+              }
+            }
+            stackOut_2_0 = ro.a(16, true, -127, param0);
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_1 = new StringBuilder().append("np.C(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw pn.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 44 + 16 + 41);
         }
-        return ro.a(param2, true, -127, param0);
+        return stackIn_3_0;
     }
 
     final static void b(int param0) {
@@ -35,8 +94,12 @@ final class np extends hh {
         if (param1 != -1486691000) {
             return;
         }
-        ((np) this).field_a.a(param2, 1);
-        ((np) this).field_a.a(param0, (byte) -39);
+        try {
+            ((np) this).field_a.a(param2, 1);
+            ((np) this).field_a.a(param0, (byte) -39);
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) (Object) runtimeException, "np.J(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void a(byte param0, int param1, int param2) {
@@ -46,29 +109,85 @@ final class np extends hh {
     }
 
     final static int a(nf param0, boolean param1) {
-        if (param0 != ij.field_g) {
-          if (rg.field_A != param0) {
-            if (param0 != gk.field_g) {
-              if (param1) {
-                field_e = (String) null;
+        RuntimeException var2 = null;
+        int stackIn_2_0 = 0;
+        int stackIn_5_0 = 0;
+        int stackIn_8_0 = 0;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_7_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_1_0 = 0;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        try {
+          if (param0 != ij.field_g) {
+            if (rg.field_A != param0) {
+              if (param0 != gk.field_g) {
+                field_e = null;
                 throw new IllegalArgumentException();
               } else {
-                throw new IllegalArgumentException();
+                stackOut_7_0 = 34066;
+                stackIn_8_0 = stackOut_7_0;
+                return stackIn_8_0;
               }
             } else {
-              return 34066;
+              stackOut_4_0 = 34065;
+              stackIn_5_0 = stackOut_4_0;
+              return stackIn_5_0;
             }
           } else {
-            return 34065;
+            stackOut_1_0 = 9216;
+            stackIn_2_0 = stackOut_1_0;
+            return stackIn_2_0;
           }
-        } else {
-          return 9216;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L0: {
+            var2 = decompiledCaughtException;
+            stackOut_10_0 = (RuntimeException) var2;
+            stackOut_10_1 = new StringBuilder().append("np.I(");
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
+            if (param0 == null) {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L0;
+            } else {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L0;
+            }
+          }
+          throw pn.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + 0 + 41);
         }
     }
 
     final void b(byte param0) {
         if (param0 <= 5) {
-            field_e = (String) null;
+            field_e = null;
             ((np) this).field_a.a((byte) -126, false);
             return;
         }
@@ -77,17 +196,13 @@ final class np extends hh {
 
     final void a(int param0, boolean param1) {
         if (param0 != 4096) {
-            field_d = (float[]) null;
+            field_d = null;
         }
     }
 
     public static void c(int param0) {
         field_d = null;
         field_e = null;
-        if (param0 != 9216) {
-            CharSequence var2 = (CharSequence) null;
-            int discarded$0 = np.a((CharSequence) null, 73, 16);
-        }
     }
 
     np(wl param0) {
@@ -96,7 +211,7 @@ final class np extends hh {
 
     final void a(boolean param0, boolean param1) {
         if (param0) {
-            field_d = (float[]) null;
+            field_d = null;
             ((np) this).field_a.a((byte) -126, true);
             return;
         }

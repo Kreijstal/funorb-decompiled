@@ -23,11 +23,6 @@ final class kk extends IOException {
     }
 
     public static void a(byte param0) {
-        if (param0 >= -86) {
-            field_c = -28;
-            field_a = null;
-            return;
-        }
         field_a = null;
     }
 

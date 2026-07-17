@@ -11,14 +11,14 @@ final class fe {
 
     final static Object a(String param0, int param1, Object[] param2, java.applet.Applet param3) throws Throwable {
         if (param1 != -15201) {
-            return (Object) null;
+            return null;
         }
         return netscape.javascript.JSObject.getWindow(param3).call(param0, param2);
     }
 
     final static Object a(String param0, byte param1, java.applet.Applet param2) throws Throwable {
         if (param1 != -108) {
-            return (Object) null;
+            return null;
         }
         return netscape.javascript.JSObject.getWindow(param2).call(param0, (Object[]) null);
     }

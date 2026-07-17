@@ -8,30 +8,15 @@ final class se extends wv {
 
     final static void f(byte param0) {
         tga.field_a.f(8, 16384);
-        if (param0 != -6) {
-            field_r = null;
-        }
     }
 
     final static void d(byte param0) {
-        String var1 = null;
         String var2 = null;
-        L0: {
-          if (null != wra.field_b) {
+        if (!(null == wra.field_b)) {
             var2 = wra.field_b;
-            var1 = var2;
-            wja.a(gl.a((byte) 86, mu.field_Bb, new String[1]), param0 + 15047);
+            String var1 = var2;
+            wja.a(gl.a((byte) 86, mu.field_Bb, new String[1]), 15165);
             wra.field_b = null;
-            break L0;
-          } else {
-            break L0;
-          }
-        }
-        if (param0 != 118) {
-          field_q = null;
-          return;
-        } else {
-          return;
         }
     }
 
@@ -47,7 +32,7 @@ final class se extends wv {
     }
 
     public static void e(byte param0) {
-        int var1 = -61 % ((65 - param0) / 47);
+        int var1 = 0;
         field_q = null;
         field_s = null;
         field_r = null;
@@ -65,9 +50,9 @@ final class se extends wv {
     final int a(byte param0, int param1) {
         if (param0 <= 111) {
           field_r = null;
-          return aaa.a(false) - ((se) this).field_m[param1].e(-163) >> -1739940575;
+          return aaa.a(false) - ((se) this).field_m[param1].e(-163) >> 1;
         } else {
-          return aaa.a(false) - ((se) this).field_m[param1].e(-163) >> -1739940575;
+          return aaa.a(false) - ((se) this).field_m[param1].e(-163) >> 1;
         }
     }
 

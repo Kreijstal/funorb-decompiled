@@ -964,7 +964,7 @@ final class hg {
               if (param4 == null) {
                 break L1;
               } else {
-                if (-1 <= (param2 ^ -1)) {
+                if (param2 <= 0) {
                   break L1;
                 } else {
                   L2: {
@@ -988,7 +988,7 @@ final class hg {
                   L3: while (true) {
                     L4: {
                       L5: {
-                        if ((param1 ^ -1) <= (var9 ^ -1)) {
+                        if (~param1 <= ~var9) {
                           break L5;
                         } else {
                           param4[1].d(param1, param3);

@@ -65,17 +65,16 @@ abstract class ac extends bb {
         var7 = 0;
         var8 = param1;
         L0: while (true) {
-          if (var7 >= var4) {
+          if (~var7 <= ~var4) {
             var5 = 194;
             var6 = 169;
             var4 = 22;
             var7 = 0;
             var8 = param1 - -35;
             L1: while (true) {
-              if (var4 <= var7) {
+              if (~var4 >= ~var7) {
                 jb.field_L.a(((ac) this).field_x + param0 - 90, param1 + 10);
-                if (!param2) {
-                  field_gb = null;
+                if (param2) {
                   uc.a(jj.field_k, ((ac) this).field_x + -10, 35 + param1, (byte) -39, param0 - -5);
                   uc.a(jb.field_J, ((ac) this).field_x, ((ac) this).field_E + (param1 - 22), (byte) -39, param0);
                   var5 = 169;
@@ -88,7 +87,7 @@ abstract class ac extends bb {
                       return;
                     } else {
                       var9 = var5 - -((-var5 + var6) * var7 / var4);
-                      var9 = var9 | (var9 << 3643632 | var9 << -761581528);
+                      var9 = var9 | (var9 << 16 | var9 << 8);
                       pb.g(param0, var8, 6, var9);
                       pb.g(-6 + param0 - -((ac) this).field_x, var8, 6, var9);
                       var8++;
@@ -97,6 +96,7 @@ abstract class ac extends bb {
                     }
                   }
                 } else {
+                  field_gb = null;
                   uc.a(jj.field_k, ((ac) this).field_x + -10, 35 + param1, (byte) -39, param0 - -5);
                   uc.a(jb.field_J, ((ac) this).field_x, ((ac) this).field_E + (param1 - 22), (byte) -39, param0);
                   var5 = 169;
@@ -109,7 +109,7 @@ abstract class ac extends bb {
                       return;
                     } else {
                       var9 = var5 - -((-var5 + var6) * var7 / var4);
-                      var9 = var9 | (var9 << 3643632 | var9 << -761581528);
+                      var9 = var9 | (var9 << 16 | var9 << 8);
                       pb.g(param0, var8, 6, var9);
                       pb.g(-6 + param0 - -((ac) this).field_x, var8, 6, var9);
                       var8++;
@@ -120,7 +120,7 @@ abstract class ac extends bb {
                 }
               } else {
                 var9 = var5 - -((-var5 + var6) * var7 / var4);
-                var9 = var9 | (var9 << 1114537040 | var9 << 864495592);
+                var9 = var9 | (var9 << 16 | var9 << 8);
                 pb.g(param0, var8, 6, var9);
                 pb.g(((ac) this).field_x + (param0 - 6), var8, 6, var9);
                 var7++;
@@ -129,49 +129,55 @@ abstract class ac extends bb {
               }
             }
           } else {
-            if (var8 >= pb.field_l) {
-              if (var8 < pb.field_d) {
+            if (var8 < pb.field_l) {
+              var7++;
+              var8++;
+              continue L0;
+            } else {
+              if (~var8 > ~pb.field_d) {
                 L4: {
                   var9 = (-var5 + var6) * var7 / var4 + var5;
                   var10 = 0;
                   var11 = ((ac) this).field_x;
-                  if (var7 >= -21) {
+                  if (var7 <= 20) {
                     L5: while (true) {
-                      if (-21 < var10) {
+                      if (var10 > 20) {
                         break L4;
                       } else {
-                        var12 = (-var7 + 20) * (20 - var7) + (20 + -var10) * (20 - var10);
-                        if (462 >= var12) {
-                          if (-421 >= (var12 ^ -1)) {
-                            var13 = (462 + -var12) * var9 / 42;
-                            var13 = var13 | (var13 << 160191856 | var13 << -1695924248);
-                            pb.field_g[param0 + (var8 * pb.field_c + var10)] = var13;
-                            var10++;
-                            continue L5;
+                        L6: {
+                          var12 = (-var7 + 20) * (20 - var7) + (20 + -var10) * (20 - var10);
+                          if (462 < var12) {
+                            break L6;
                           } else {
-                            break L4;
+                            if (var12 >= 420) {
+                              var13 = (462 + -var12) * var9 / 42;
+                              var13 = var13 | (var13 << 16 | var13 << 8);
+                              pb.field_g[param0 + (var8 * pb.field_c + var10)] = var13;
+                              break L6;
+                            } else {
+                              break L4;
+                            }
                           }
-                        } else {
-                          var10++;
-                          continue L5;
                         }
+                        var10++;
+                        continue L5;
                       }
                     }
                   } else {
                     break L4;
                   }
                 }
-                L6: {
+                L7: {
                   if (20 < var7) {
-                    break L6;
+                    break L7;
                   } else {
                     var12 = var11;
                     var11 -= 21;
                     var13 = 0;
-                    L7: while (true) {
-                      L8: {
+                    L8: while (true) {
+                      L9: {
                         if (var13 > 20) {
-                          break L8;
+                          break L9;
                         } else {
                           var14 = var13 * var13 + (20 + -var7) * (-var7 + 20);
                           if (462 >= var14) {
@@ -179,26 +185,26 @@ abstract class ac extends bb {
                               var12 = var11 + 1;
                               var13++;
                               var11++;
-                              continue L7;
+                              continue L8;
                             } else {
                               var15 = var9 * (462 + -var14) / 42;
-                              var15 = var15 | (var15 << 1875173288 | var15 << -540212112);
+                              var15 = var15 | (var15 << 8 | var15 << 16);
                               pb.field_g[var8 * pb.field_c - -param0 + var11] = var15;
                               var13++;
                               var11++;
-                              continue L7;
+                              continue L8;
                             }
                           } else {
-                            break L8;
+                            break L9;
                           }
                         }
                       }
                       var11 = var12;
-                      break L6;
+                      break L7;
                     }
                   }
                 }
-                var9 = var9 | (var9 << -2093981456 | var9 << 279216968);
+                var9 = var9 | (var9 << 16 | var9 << 8);
                 pb.g(var10 + param0, var8, -var10 + var11, var9);
                 var7++;
                 var8++;
@@ -208,17 +214,13 @@ abstract class ac extends bb {
                 var8++;
                 continue L0;
               }
-            } else {
-              var7++;
-              var8++;
-              continue L0;
             }
           }
         }
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
-        if (-1 <= (param3 ^ -1)) {
+        if (param3 <= 0) {
           ((ac) this).a((byte) 99, param2, param1);
           return;
         } else {
@@ -253,16 +255,8 @@ abstract class ac extends bb {
     public static void k(byte param0) {
         field_Z = null;
         field_ab = null;
-        if (param0 != 38) {
-          field_ab = null;
-          field_gb = null;
-          field_bb = null;
-          return;
-        } else {
-          field_gb = null;
-          field_bb = null;
-          return;
-        }
+        field_gb = null;
+        field_bb = null;
     }
 
     boolean i(int param0) {
@@ -272,7 +266,7 @@ abstract class ac extends bb {
         int var5 = 0;
         if (0 >= ((ac) this).field_db) {
           if (param0 != -8350) {
-            boolean discarded$3 = ((ac) this).i(-53);
+            boolean discarded$4 = ((ac) this).i(-53);
             return super.i(-8350);
           } else {
             return super.i(-8350);
@@ -280,15 +274,16 @@ abstract class ac extends bb {
         } else {
           var2 = ((ac) this).field_cb;
           var3 = ((ac) this).field_Y;
+          int fieldTemp$5 = ((ac) this).field_eb + 1;
           ((ac) this).field_eb = ((ac) this).field_eb + 1;
-          if (((ac) this).field_eb + 1 >= ((ac) this).field_db) {
+          if (fieldTemp$5 >= ((ac) this).field_db) {
             ((ac) this).field_db = 0;
             ((ac) this).j((byte) 59);
             ((ac) this).a((byte) -70, var2, var3);
             if (param0 == -8350) {
               return super.i(-8350);
             } else {
-              boolean discarded$4 = ((ac) this).i(-53);
+              boolean discarded$6 = ((ac) this).i(-53);
               return super.i(-8350);
             }
           } else {
@@ -300,7 +295,7 @@ abstract class ac extends bb {
             if (param0 == -8350) {
               return super.i(-8350);
             } else {
-              boolean discarded$5 = ((ac) this).i(-53);
+              boolean discarded$7 = ((ac) this).i(-53);
               return super.i(-8350);
             }
           }
@@ -308,50 +303,87 @@ abstract class ac extends bb {
     }
 
     final static void a(int param0, int param1, int param2, String param3, int param4, int param5, int param6, int param7, int param8) {
-        int var9 = 0;
+        RuntimeException var9 = null;
+        int var9_int = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        cc.field_bc.field_S = param3;
-        if (2 == ib.field_b) {
-          qa.field_N.field_S = qh.field_Ub;
-          var9 = 495;
-          var10 = 5;
-          te.field_f.a(0, var10, param0, 5, -10 + var9);
-          vd.field_d.a(0, 0, param0, 0, te.field_f.field_zb + -wh.field_e.field_zb);
-          wh.field_e.a(0, 0, param0, vd.field_d.field_zb, wh.field_e.field_zb);
-          var10 = var10 + (param0 - -param6);
-          var12 = 105 % ((-62 - param8) / 61);
-          vc.field_f.a(0, var10, param2, 5, vc.field_f.g(-2147483648));
-          var11 = qa.field_N.g(-2147483648);
-          qa.field_N.a(0, var10, param2, var9 + (-5 + -var11), var11);
-          cc.field_bc.a(0, 0, param4, 0, var9);
-          var13 = 5 + var10 - -param2;
-          in.field_d.a(0, param4, var13, 0, var9);
-          var13 = var13 + param4;
-          in.field_d.field_I = se.a(3, 2105376, 11579568, in.field_d.field_Lb, 8421504, 13574);
-          hh.field_a.a(0, param7 + -(var13 / 2), var13, param1 + -(var9 / 2), var9);
-          return;
-        } else {
-          qa.field_N.field_S = ql.field_Yb;
-          var9 = 495;
-          var10 = 5;
-          te.field_f.a(0, var10, param0, 5, -10 + var9);
-          vd.field_d.a(0, 0, param0, 0, te.field_f.field_zb + -wh.field_e.field_zb);
-          wh.field_e.a(0, 0, param0, vd.field_d.field_zb, wh.field_e.field_zb);
-          var10 = var10 + (param0 - -param6);
-          var12 = 105 % ((-62 - param8) / 61);
-          vc.field_f.a(0, var10, param2, 5, vc.field_f.g(-2147483648));
-          var11 = qa.field_N.g(-2147483648);
-          qa.field_N.a(0, var10, param2, var9 + (-5 + -var11), var11);
-          cc.field_bc.a(0, 0, param4, 0, var9);
-          var13 = 5 + var10 - -param2;
-          in.field_d.a(0, param4, var13, 0, var9);
-          var13 = var13 + param4;
-          in.field_d.field_I = se.a(3, 2105376, 11579568, in.field_d.field_Lb, 8421504, 13574);
-          hh.field_a.a(0, param7 + -(var13 / 2), var13, param1 + -(var9 / 2), var9);
-          return;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            L1: {
+              cc.field_bc.field_S = param3;
+              if (2 == ib.field_b) {
+                qa.field_N.field_S = qh.field_Ub;
+                break L1;
+              } else {
+                qa.field_N.field_S = ql.field_Yb;
+                break L1;
+              }
+            }
+            var9_int = 495;
+            var10 = 5;
+            te.field_f.a(0, var10, param0, 5, -10 + var9_int);
+            vd.field_d.a(0, 0, param0, 0, te.field_f.field_zb + -wh.field_e.field_zb);
+            wh.field_e.a(0, 0, param0, vd.field_d.field_zb, wh.field_e.field_zb);
+            var10 = var10 + (param0 - -param6);
+            var12 = 0;
+            vc.field_f.a(0, var10, param2, 5, vc.field_f.g(-2147483648));
+            var11 = qa.field_N.g(-2147483648);
+            qa.field_N.a(0, var10, param2, var9_int + (-5 + -var11), var11);
+            cc.field_bc.a(0, 0, param4, 0, var9_int);
+            var13 = 5 + var10 - -param2;
+            in.field_d.a(0, param4, var13, 0, var9_int);
+            var13 = var13 + param4;
+            in.field_d.field_I = se.a(3, 2105376, 11579568, in.field_d.field_Lb, 8421504, 13574);
+            hh.field_a.a(0, param7 + -(var13 / 2), var13, param1 + -(var9_int / 2), var9_int);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var9 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var9;
+            stackOut_5_1 = new StringBuilder().append("ac.DA(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param3 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L2;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L2;
+            }
+          }
+          throw ci.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + -126 + 41);
         }
     }
 

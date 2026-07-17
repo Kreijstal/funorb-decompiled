@@ -66,7 +66,7 @@ final class je {
                   var3 = (Object) (Object) new uh(on.field_e, hd.field_c, gn.field_k[0], gi.field_e[0], qh.field_k[0], bc.field_a[0], var24);
                   break L0;
                 } else {
-                  var5_ref_int__[var6] = lb.a(ae.a(var22[var6] << 93821816, -16777216), qk.field_f[ae.a((int) var23[var6], 255)]);
+                  var5_ref_int__[var6] = lb.a(ae.a(var22[var6] << 24, -16777216), qk.field_f[ae.a((int) var23[var6], 255)]);
                   var6++;
                   continue L2;
                 }
@@ -107,7 +107,7 @@ final class je {
                   var3 = (Object) (Object) new uh(on.field_e, hd.field_c, gn.field_k[0], gi.field_e[0], qh.field_k[0], bc.field_a[0], var28);
                   break L3;
                 } else {
-                  var5_ref_int__[var6] = lb.a(ae.a(var26[var6] << 93821816, -16777216), qk.field_f[ae.a((int) var27[var6], 255)]);
+                  var5_ref_int__[var6] = lb.a(ae.a(var26[var6] << 24, -16777216), qk.field_f[ae.a((int) var27[var6], 255)]);
                   var6++;
                   continue L5;
                 }
@@ -137,22 +137,16 @@ final class je {
     }
 
     final static void a(mf param0, hj param1, int param2, byte param3) {
-        Object var5 = null;
-        hb.field_h = se.a(0) * param2 / 1000;
-        on.a(param0, -58);
-        h.a(param0, (byte) 110);
-        cj.a(0, param0);
-        pa.a(-83);
-        if (param3 < 80) {
-          var5 = null;
-          je.a(false, (String) null);
-          id.c(120);
-          kb.field_d = 0 - hb.field_h;
-          return;
-        } else {
-          id.c(120);
-          kb.field_d = 0 - hb.field_h;
-          return;
+        try {
+            hb.field_h = se.a(0) * param2 / 1000;
+            on.a(param0, -58);
+            h.a(param0, (byte) 110);
+            cj.a(0, param0);
+            pa.a(-83);
+            id.c(120);
+            kb.field_d = 0 - hb.field_h;
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) (Object) runtimeException, "je.A(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + 103 + 41);
         }
     }
 

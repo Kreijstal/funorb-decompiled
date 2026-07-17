@@ -7,7 +7,7 @@ final class mf {
     private static String field_z;
 
     public static void a(int param0) {
-        int var1 = -3 / ((param0 - 67) / 52);
+        int var1 = -3;
         field_a = null;
         field_b = null;
     }

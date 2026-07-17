@@ -9,158 +9,175 @@ final class oe {
     public static void a(byte param0) {
         field_b = null;
         field_c = null;
-        if (param0 < 7) {
-            field_b = null;
-        }
     }
 
     final static void a(byte param0, int param1, int param2) {
-        int var3 = 0;
+        RuntimeException var3 = null;
+        int var3_int = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         char[][] var13 = null;
-        L0: {
-          var9 = fleas.field_A ? 1 : 0;
-          if (param2 < 0) {
-            break L0;
-          } else {
-            if (param1 >= 0) {
-              var3 = param1 * se.field_a.length / ia.field_m[fleas.field_E].length;
-              var13 = ia.field_m[param2][param1].field_c;
-              nl.field_c[param2][param1].d(0, 0);
-              var5 = 39;
-              L1: while (true) {
-                if (var5 < 0) {
-                  L2: {
-                    var5 = 39;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var9 = fleas.field_A ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              if (param2 < 0) {
+                break L1;
+              } else {
+                if (param1 >= 0) {
+                  var3_int = param1 * se.field_a.length / ia.field_m[fleas.field_E].length;
+                  var13 = ia.field_m[param2][param1].field_c;
+                  nl.field_c[param2][param1].d(0, 0);
+                  var5 = 39;
+                  L2: while (true) {
                     if (var5 < 0) {
-                      break L2;
-                    } else {
                       L3: {
-                        var6 = 20;
-                        if ((var6 ^ -1) > -1) {
+                        var5 = 39;
+                        if (var5 < 0) {
                           break L3;
                         } else {
                           L4: {
-                            L5: {
-                              L6: {
-                                var7 = var13[var5][var6];
-                                if (var7 == 2) {
-                                  de.a((byte) 88, var5, var3, var6);
-                                  break L6;
-                                } else {
-                                  if (var7 == 7) {
-                                    de.a((byte) 88, var5, var3, var6);
-                                    break L5;
-                                  } else {
-                                    if (var7 != 0) {
-                                      aj.field_t[36 + var7].d(var5 * 16 + -4, 16 * var6 - 4);
-                                      var6--;
-                                      break L6;
+                            var6 = 20;
+                            if (var6 < 0) {
+                              break L4;
+                            } else {
+                              L5: {
+                                L6: {
+                                  L7: {
+                                    var7 = var13[var5][var6];
+                                    if (var7 == 2) {
+                                      de.a((byte) 88, var5, var3_int, var6);
+                                      break L7;
                                     } else {
-                                      var6--;
-                                      break L4;
+                                      if (var7 == 7) {
+                                        de.a((byte) 88, var5, var3_int, var6);
+                                        break L6;
+                                      } else {
+                                        if (var7 != 0) {
+                                          aj.field_t[36 + var7].d(var5 * 16 + -4, 16 * var6 - 4);
+                                          var6--;
+                                          break L7;
+                                        } else {
+                                          var6--;
+                                          break L5;
+                                        }
+                                      }
                                     }
                                   }
+                                  var6--;
+                                  break L6;
                                 }
+                                var6--;
+                                break L5;
                               }
                               var6--;
-                              break L5;
+                              var6--;
+                              break L4;
                             }
-                            var6--;
-                            break L4;
                           }
-                          var6--;
-                          var6--;
+                          var5--;
                           break L3;
                         }
                       }
-                      var5--;
-                      break L2;
-                    }
-                  }
-                  var5 = 39;
-                  var8 = 77 / ((-51 - param0) / 52);
-                  if (-1 >= var5) {
-                    var6 = 20;
-                    if (-1 <= var6) {
-                      var7 = var13[var5][var6];
-                      if (var7 != 17) {
-                        if (31 == var7) {
-                          aj.field_t[36 + var7].d(-4 + var5 * 16, 16 * var6 + -4);
-                          var6--;
-                          var6--;
-                          var5--;
-                          return;
-                        } else {
-                          var6--;
-                          var6--;
-                          var6--;
-                          var5--;
-                          return;
-                        }
+                      var5 = 39;
+                      var8 = 77 / ((-51 - param0) / 52);
+                      if (var5 < 0) {
+                        decompiledRegionSelector0 = 0;
+                        break L0;
                       } else {
-                        aj.field_t[36 + var7].d(-4 + var5 * 16, 16 * var6 + -4);
-                        var6--;
-                        var6--;
-                        var5--;
-                        return;
-                      }
-                    } else {
-                      var5--;
-                      return;
-                    }
-                  } else {
-                    return;
-                  }
-                } else {
-                  var6 = 20;
-                  L7: while (true) {
-                    if (var6 < 0) {
-                      var5--;
-                      continue L1;
-                    } else {
-                      L8: {
-                        var7 = var13[var5][var6];
-                        if (var7 == 2) {
-                          de.a((byte) 88, var5, var3, var6);
-                          break L8;
-                        } else {
-                          if (var7 == 7) {
-                            de.a((byte) 88, var5, var3, var6);
+                        L8: {
+                          var6 = 20;
+                          if (var6 < 0) {
                             break L8;
                           } else {
-                            if (var7 == 18) {
-                              lg.a(-4, var6, var3, var5);
-                              break L8;
-                            } else {
-                              break L8;
+                            L9: {
+                              L10: {
+                                var7 = var13[var5][var6];
+                                if (var7 == 17) {
+                                  break L10;
+                                } else {
+                                  if (31 != var7) {
+                                    var6--;
+                                    break L9;
+                                  } else {
+                                    break L10;
+                                  }
+                                }
+                              }
+                              aj.field_t[36 + var7].d(-4 + var5 * 16, 16 * var6 + -4);
+                              break L9;
                             }
+                            var6--;
+                            var6--;
+                            break L8;
+                          }
+                        }
+                        var5--;
+                        decompiledRegionSelector0 = 1;
+                        break L0;
+                      }
+                    } else {
+                      var6 = 20;
+                      L11: while (true) {
+                        if (var6 < 0) {
+                          var5--;
+                          continue L2;
+                        } else {
+                          L12: {
+                            var7 = var13[var5][var6];
+                            if (var7 == 2) {
+                              de.a((byte) 88, var5, var3_int, var6);
+                              break L12;
+                            } else {
+                              if (var7 == 7) {
+                                de.a((byte) 88, var5, var3_int, var6);
+                                break L12;
+                              } else {
+                                if (var7 == 18) {
+                                  lg.a(-4, var6, var3_int, var5);
+                                  break L12;
+                                } else {
+                                  break L12;
+                                }
+                              }
+                            }
+                          }
+                          if (var7 == 0) {
+                            var6--;
+                            var6--;
+                            var6--;
+                            continue L11;
+                          } else {
+                            aj.field_t[var7].d(-4 + var5 * 16, -4 + 16 * var6);
+                            var6--;
+                            var6--;
+                            continue L11;
                           }
                         }
                       }
-                      if (var7 == 0) {
-                        var6--;
-                        var6--;
-                        var6--;
-                        continue L7;
-                      } else {
-                        aj.field_t[var7].d(-4 + var5 * 16, -4 + 16 * var6);
-                        var6--;
-                        var6--;
-                        continue L7;
-                      }
                     }
                   }
+                } else {
+                  break L1;
                 }
               }
-            } else {
-              break L0;
             }
+            return;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw pf.a((Throwable) (Object) var3, "oe.A(" + param0 + 44 + param1 + 44 + param2 + 41);
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 

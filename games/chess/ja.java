@@ -269,7 +269,7 @@ final class ja extends f {
               var6 = 3 * param3;
               ki.a(0);
               var7 = var5_int + -10;
-              if ((param0.field_j ^ -1) >= -1) {
+              if (param0.field_j <= 0) {
                 break L1;
               } else {
                 if (null != param0.field_y) {
@@ -293,7 +293,7 @@ final class ja extends f {
             L3: while (true) {
               L4: {
                 L5: {
-                  if ((param0.field_e ^ -1) >= (var8 ^ -1)) {
+                  if (~param0.field_e >= ~var8) {
                     break L5;
                   } else {
                     var9 = param0.field_g[var8];
@@ -316,7 +316,7 @@ final class ja extends f {
                             var15 = -var12 + qm.field_c[var11];
                             var16 = tc.field_w[var10] - var13;
                             var17 = -var13 + tc.field_w[var11];
-                            if ((-(var16 * var15) + var14 * var17 ^ -1) > -1) {
+                            if (-(var16 * var15) + var14 * var17 < 0) {
                               break L7;
                             } else {
                               if (var19 == 0) {
@@ -333,7 +333,7 @@ final class ja extends f {
                         } else {
                           L8: {
                             var13 = jd.field_i[var10];
-                            if (2147483647 != (var13 ^ -1)) {
+                            if (var13 != -2147483648) {
                               break L8;
                             } else {
                               if (var19 == 0) {
@@ -372,7 +372,7 @@ final class ja extends f {
                           L11: while (true) {
                             L12: {
                               L13: {
-                                if (-1 == (var17 >> -936290236 ^ -1)) {
+                                if (var17 >> 4 == 0) {
                                   break L13;
                                 } else {
                                   var16--;
@@ -407,7 +407,7 @@ final class ja extends f {
                                 }
                               }
                               stackOut_44_0 = var17;
-                              stackOut_44_1 = var16 << 375334340;
+                              stackOut_44_1 = var16 << 4;
                               stackIn_45_0 = stackOut_44_0;
                               stackIn_45_1 = stackOut_44_1;
                               break L12;
@@ -416,7 +416,7 @@ final class ja extends f {
                               var18 = stackIn_45_0 + stackIn_45_1;
                               ve.field_Hb[var18] = var8;
                               ge.field_eb[var16] = var17 + 1;
-                              if ((param0.field_j ^ -1) >= -1) {
+                              if (param0.field_j <= 0) {
                                 break L15;
                               } else {
                                 if (null != param0.field_y) {
@@ -454,7 +454,7 @@ final class ja extends f {
                       var8 = 0;
                       var9 = 0;
                       L18: while (true) {
-                        if ((lc.field_n.length ^ -1) >= (var9 ^ -1)) {
+                        if (~lc.field_n.length >= ~var9) {
                           break L17;
                         } else {
                           var10 = lc.field_n[var9];
@@ -563,7 +563,7 @@ final class ja extends f {
               L2: while (true) {
                 L3: {
                   L4: {
-                    if ((var4 ^ -1) <= (var3.length ^ -1)) {
+                    if (~var4 <= ~var3.length) {
                       break L4;
                     } else {
                       var5 = var3[var4];

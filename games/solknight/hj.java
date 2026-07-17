@@ -41,45 +41,89 @@ final class hj {
     byte[] field_i;
 
     final static byte[] a(byte param0, String param1) {
-        if (param0 != -2) {
-            return null;
+        RuntimeException var2 = null;
+        Object stackIn_2_0 = null;
+        byte[] stackIn_4_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        byte[] stackOut_3_0 = null;
+        Object stackOut_1_0 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            if (param0 == -2) {
+              stackOut_3_0 = ch.field_a.a(4, "", param1);
+              stackIn_4_0 = stackOut_3_0;
+              break L0;
+            } else {
+              stackOut_1_0 = null;
+              stackIn_2_0 = stackOut_1_0;
+              return (byte[]) (Object) stackIn_2_0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var2 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var2;
+            stackOut_5_1 = new StringBuilder().append("hj.B(").append(param0).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param1 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L1;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L1;
+            }
+          }
+          throw fc.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
         }
-        return ch.field_a.a(4, "", param1);
+        return stackIn_4_0;
     }
 
     final static boolean a(boolean param0) {
-        if (!param0) {
-            return false;
-        }
-        return gf.field_Z == gb.field_i ? true : false;
+        return gf.field_Z == gb.field_i;
     }
 
     public static void b(byte param0) {
         field_n = null;
         field_o = null;
-        if (param0 != -37) {
-            return;
-        }
         field_p = null;
         field_e = null;
     }
 
     final static af a(byte param0) {
-        if (null != la.field_i) {
-          if (param0 >= -58) {
-            field_e = null;
-            return la.field_i;
-          } else {
-            return la.field_i;
-          }
-        } else {
+        if (null == la.field_i) {
           la.field_i = new af(jh.field_g, 20, 0, 0, 0, 11579568, -1, 0, 0, jh.field_g.field_F, -1, 2147483647, true);
-          if (param0 < -58) {
-            return la.field_i;
-          } else {
-            field_e = null;
-            return la.field_i;
-          }
+          return la.field_i;
+        } else {
+          return la.field_i;
         }
     }
 

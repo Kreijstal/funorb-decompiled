@@ -11,18 +11,9 @@ final class iw {
     }
 
     public static void a(boolean param0) {
-        if (param0) {
-          field_b = null;
-          field_a = null;
-          field_c = null;
-          field_b = null;
-          return;
-        } else {
-          field_a = null;
-          field_c = null;
-          field_b = null;
-          return;
-        }
+        field_a = null;
+        field_c = null;
+        field_b = null;
     }
 
     final static void a(byte param0, boolean param1) {

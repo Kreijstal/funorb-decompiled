@@ -10,7 +10,7 @@ final class gd extends pu {
     static volatile long field_l;
 
     final static int a(int param0, boolean param1, int param2) {
-        int var3 = param2 >>> 185376735;
+        int var3 = param2 >>> 31;
         if (param1) {
             return -13;
         }
@@ -18,28 +18,26 @@ final class gd extends pu {
     }
 
     final static void a(int param0, int param1, int param2, byte param3, kv param4, int param5, int param6, int param7, po param8, int param9, int param10) {
-        ou.field_b = param1;
-        cga.field_p = param7;
-        vc.field_c = param0;
-        rs.field_c = param2;
-        od.field_B = param4;
-        kt.field_j = param9;
-        sha.field_m = param10;
-        if (param3 > -57) {
-            field_l = -90L;
-        } else {
+        try {
+            ou.field_b = param1;
+            cga.field_p = param7;
+            vc.field_c = param0;
+            rs.field_c = param2;
+            od.field_B = param4;
+            kt.field_j = param9;
+            sha.field_m = 15;
+            if (param3 > -57) {
+                field_l = -90L;
+            }
             ima.field_r = param6;
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "gd.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 44 + param6 + 44 + param7 + 44 + (param8 != null ? "{...}" : "null") + 44 + param9 + 44 + 15 + 41);
         }
-        ima.field_r = param6;
     }
 
     public static void d(byte param0) {
         field_n = null;
         field_o = null;
-        if (param0 != -49) {
-            field_m = 109;
-        }
     }
 
     static {

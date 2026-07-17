@@ -18,7 +18,7 @@ final class ha {
               var3 = 1;
               L0: while (true) {
                 if (((ha) this).field_b.length > var3) {
-                  if (param1 >= ((ha) this).field_b[var3] + ((ha) this).field_b[-1 + var3] >> -838636703) {
+                  if (param1 >= ((ha) this).field_b[var3] + ((ha) this).field_b[-1 + var3] >> 1) {
                     var3++;
                     continue L0;
                   } else {

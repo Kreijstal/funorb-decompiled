@@ -23,7 +23,7 @@ class g extends rj implements f {
         try {
           L0: {
             L1: {
-              if (-1 != (param0 ^ -1)) {
+              if (param0 != 0) {
                 break L1;
               } else {
                 if (((g) this).field_u != null) {
@@ -7827,7 +7827,7 @@ class g extends rj implements f {
     }
 
     final void b(int param0, int param1, int param2, int param3, int param4) {
-        super.b(param0, param1, param2, param3, param4 ^ 0);
+        super.b(param0, param1, param2, param3, param4);
         if (param4 != 23987) {
             return;
         }
@@ -8084,7 +8084,7 @@ class g extends rj implements f {
                   if (var3 == null) {
                     break L4;
                   } else {
-                    var4 = var3.d(param0 ^ 0);
+                    var4 = var3.d(param0);
                     stackOut_6_0 = null;
                     stackIn_14_0 = stackOut_6_0;
                     stackIn_7_0 = stackOut_6_0;
@@ -8399,14 +8399,14 @@ class g extends rj implements f {
                       break L3;
                     } else {
                       var5 = var4.a(false);
-                      stackOut_6_0 = var2_int ^ -1;
+                      stackOut_6_0 = ~var2_int;
                       stackIn_17_0 = stackOut_6_0;
                       stackIn_7_0 = stackOut_6_0;
                       if (var6 != 0) {
                         break L2;
                       } else {
                         L4: {
-                          if (stackIn_7_0 <= (var5 ^ -1)) {
+                          if (stackIn_7_0 <= ~var5) {
                             break L4;
                           } else {
                             var2_int = var5;

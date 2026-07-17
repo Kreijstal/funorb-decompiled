@@ -12,41 +12,29 @@ final class kn {
     private int field_g;
 
     private final void a(int param0, int param1, boolean param2) {
-        if (param0 <= ((kn) this).field_g) {
+        if (param0 > ((kn) this).field_g) {
           L0: {
-            if (((kn) this).field_a.length <= param0) {
-              this.b(0, param0);
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          if (param2) {
-            int discarded$4 = ((kn) this).a(-30, 101);
-            ((kn) this).field_a[param0] = param1;
-            return;
-          } else {
-            ((kn) this).field_a[param0] = param1;
-            return;
-          }
-        } else {
-          L1: {
             ((kn) this).field_g = param0;
             if (((kn) this).field_a.length <= param0) {
               this.b(0, param0);
+              break L0;
+            } else {
+              break L0;
+            }
+          }
+          ((kn) this).field_a[param0] = param1;
+          return;
+        } else {
+          L1: {
+            if (((kn) this).field_a.length <= param0) {
+              this.b(0, param0);
               break L1;
             } else {
               break L1;
             }
           }
-          if (!param2) {
-            ((kn) this).field_a[param0] = param1;
-            return;
-          } else {
-            int discarded$5 = ((kn) this).a(-30, 101);
-            ((kn) this).field_a[param0] = param1;
-            return;
-          }
+          ((kn) this).field_a[param0] = param1;
+          return;
         }
     }
 
@@ -54,9 +42,6 @@ final class kn {
         field_f = null;
         field_c = null;
         field_h = null;
-        if (!param0) {
-            kn.a((byte) 76);
-        }
     }
 
     final void c(int param0, int param1) {

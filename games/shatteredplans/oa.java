@@ -8,176 +8,157 @@ final class oa {
     static fr field_b;
 
     final static void a(int param0, int param1, int param2, byte param3, int param4) {
+        RuntimeException var5 = null;
+        int var5_int = 0;
+        int var6 = 0;
+        int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        int var11 = ShatteredPlansClient.field_F ? 1 : 0;
-        if (-1 < (param1 ^ -1)) {
-            param2 = param2 + param1;
-            param1 = 0;
-        }
-        if (!((param4 ^ -1) <= -1)) {
-            param0 = param0 + param4;
-            param4 = 0;
-        }
-        if (gf.field_k < param0 + param4) {
-            param0 = gf.field_k + -param4;
-        }
-        if (gf.field_b < param2 + param1) {
-            param2 = gf.field_b - param1;
-        }
-        param1--;
-        int var5 = param0 + param4;
-        int var6 = param4;
-        int var7 = -15 % ((6 - param3) / 48);
-        while (var5 > var6) {
-            var8 = param1 + gf.field_b * var6;
-            for (var9 = param2; (var9 ^ -1) < -1; var9--) {
-                var8++;
-                var10 = gf.field_h[var8];
-                var10 = (var10 >> -1233052606 & 4144959) + (8355711 & var10 >> -80429087);
-                gf.field_h[var8] = var10;
+        int var11 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var11 = ShatteredPlansClient.field_F ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              if (param1 >= 0) {
+                break L1;
+              } else {
+                param2 = param2 + param1;
+                param1 = 0;
+                break L1;
+              }
             }
-            var6++;
+            L2: {
+              if (param4 < 0) {
+                param0 = param0 + param4;
+                param4 = 0;
+                break L2;
+              } else {
+                break L2;
+              }
+            }
+            L3: {
+              if (gf.field_k >= param0 + param4) {
+                break L3;
+              } else {
+                param0 = gf.field_k + -param4;
+                break L3;
+              }
+            }
+            L4: {
+              if (gf.field_b >= param2 + param1) {
+                break L4;
+              } else {
+                param2 = gf.field_b - param1;
+                break L4;
+              }
+            }
+            param1--;
+            var5_int = param0 + param4;
+            var6 = param4;
+            var7 = -15 % ((6 - param3) / 48);
+            L5: while (true) {
+              if (var5_int <= var6) {
+                break L0;
+              } else {
+                var8 = param1 + gf.field_b * var6;
+                var9 = param2;
+                L6: while (true) {
+                  if (var9 <= 0) {
+                    var6++;
+                    continue L5;
+                  } else {
+                    var8++;
+                    var10 = gf.field_h[var8];
+                    var10 = (var10 >> 2 & 4144959) + (8355711 & var10 >> 1);
+                    gf.field_h[var8] = var10;
+                    var9--;
+                    continue L6;
+                  }
+                }
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          throw r.a((Throwable) (Object) var5, "oa.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
     final static void a(int param0) {
         try {
-            IOException iOException = null;
-            int var1 = 0;
-            IOException var2 = null;
+            int var1_int = 0;
+            RuntimeException var1 = null;
             int var3 = 0;
             Throwable decompiledCaughtException = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        var3 = ShatteredPlansClient.field_F ? 1 : 0;
-                        if (param0 == 0) {
-                            statePc = 2;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        oa.b(-14);
-                        statePc = 2;
-                        continue stateLoop;
-                    }
-                    case 2: {
-                        if (vp.field_o == null) {
-                            statePc = 4;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    }
-                    case 3: {
-                        vp.field_o.e(param0 + -16363);
-                        statePc = 4;
-                        continue stateLoop;
-                    }
-                    case 4: {
-                        if (vn.field_w == null) {
-                            statePc = 6;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    }
-                    case 5: {
-                        vn.field_w.a((byte) -122);
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                    case 6: {
-                        if (null == oq.field_g) {
-                            statePc = 10;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    }
-                    case 7: {
-                        try {
-                            oq.field_g.b((byte) 127);
-                            statePc = 10;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_7) {
-                            caughtException = stateCaught_7;
-                            statePc = 9;
-                            continue stateLoop;
-                        }
-                    }
-                    case 9: {
-                        iOException = (IOException) (Object) caughtException;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                    case 10: {
-                        if (null == tr.field_Eb) {
-                            statePc = 18;
-                        } else {
-                            statePc = 11;
-                        }
-                        continue stateLoop;
-                    }
-                    case 11: {
-                        var1 = 0;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                    case 12: {
-                        if (var1 >= tr.field_Eb.length) {
-                            statePc = 18;
-                        } else {
-                            statePc = 13;
-                        }
-                        continue stateLoop;
-                    }
-                    case 13: {
-                        if (tr.field_Eb[var1] != null) {
-                            statePc = 15;
-                        } else {
-                            statePc = 14;
-                        }
-                        continue stateLoop;
-                    }
-                    case 14: {
-                        var1++;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                    case 15: {
-                        try {
-                            tr.field_Eb[var1].b((byte) -65);
-                            statePc = 16;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_15) {
-                            caughtException = stateCaught_15;
-                            statePc = 17;
-                            continue stateLoop;
-                        }
-                    }
-                    case 16: {
-                        var1++;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                    case 17: {
-                        var2 = (IOException) (Object) caughtException;
-                        var1++;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                    case 18: {
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            var3 = ShatteredPlansClient.field_F ? 1 : 0;
+            try {
+              L0: {
+                L1: {
+                  if (vp.field_o == null) {
+                    break L1;
+                  } else {
+                    vp.field_o.e(-16363);
+                    break L1;
+                  }
                 }
+                L2: {
+                  if (vn.field_w == null) {
+                    break L2;
+                  } else {
+                    vn.field_w.a((byte) -122);
+                    break L2;
+                  }
+                }
+                L3: {
+                  if (null == oq.field_g) {
+                    break L3;
+                  } else {
+                    {
+                      L4: {
+                        oq.field_g.b((byte) 127);
+                        break L4;
+                      }
+                    }
+                    break L3;
+                  }
+                }
+                L6: {
+                  if (null == tr.field_Eb) {
+                    break L6;
+                  } else {
+                    var1_int = 0;
+                    L7: while (true) {
+                      if (var1_int >= tr.field_Eb.length) {
+                        break L6;
+                      } else {
+                        L8: {
+                          if (tr.field_Eb[var1_int] != null) {
+                            {
+                              L9: {
+                                tr.field_Eb[var1_int].b((byte) -65);
+                                break L9;
+                              }
+                            }
+                            break L8;
+                          } else {
+                            break L8;
+                          }
+                        }
+                        var1_int++;
+                        continue L7;
+                      }
+                    }
+                  }
+                }
+                break L0;
+              }
+            } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
+              decompiledCaughtException = decompiledCaughtParameter2;
+              var1 = (RuntimeException) (Object) decompiledCaughtException;
+              throw r.a((Throwable) (Object) var1, "oa.C(" + 0 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -196,8 +177,8 @@ final class oa {
         if (var2 == 0) {
             throw new IllegalArgumentException("" + Integer.toString(var2, 16));
         }
-        if ((var2 ^ -1) <= -129) {
-            if (!((var2 ^ -1) <= -161)) {
+        if (var2 >= 128) {
+            if (!(var2 >= 160)) {
                 var3 = tl.field_p[-128 + var2];
                 if (var3 == 0) {
                     var3 = 63;

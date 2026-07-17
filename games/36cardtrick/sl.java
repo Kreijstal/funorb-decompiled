@@ -8,17 +8,14 @@ final class sl {
 
     public static void a(int param0) {
         field_b = null;
-        if (param0 != -3) {
-            return;
-        }
         field_c = null;
     }
 
     final static void a(byte param0, int param1) {
-        ia.field_a = (59 & param1) >> -993232476;
+        ia.field_a = (59 & param1) >> 4;
         if (param0 > 77) {
           L0: {
-            qd.field_c = param1 >> -1884794366 & 3;
+            qd.field_c = param1 >> 2 & 3;
             if (2 < ia.field_a) {
               ia.field_a = 2;
               break L0;
@@ -28,14 +25,14 @@ final class sl {
           }
           L1: {
             n.field_E = param1 & 3;
-            if (-3 > (qd.field_c ^ -1)) {
+            if (qd.field_c > 2) {
               qd.field_c = 2;
               break L1;
             } else {
               break L1;
             }
           }
-          if ((n.field_E ^ -1) < -3) {
+          if (n.field_E > 2) {
             n.field_E = 2;
             return;
           } else {
@@ -44,7 +41,7 @@ final class sl {
         } else {
           L2: {
             field_c = null;
-            qd.field_c = param1 >> -1884794366 & 3;
+            qd.field_c = param1 >> 2 & 3;
             if (2 < ia.field_a) {
               ia.field_a = 2;
               break L2;
@@ -54,14 +51,14 @@ final class sl {
           }
           L3: {
             n.field_E = param1 & 3;
-            if (-3 > (qd.field_c ^ -1)) {
+            if (qd.field_c > 2) {
               qd.field_c = 2;
               break L3;
             } else {
               break L3;
             }
           }
-          if ((n.field_E ^ -1) >= -3) {
+          if (n.field_E <= 2) {
             return;
           } else {
             n.field_E = 2;

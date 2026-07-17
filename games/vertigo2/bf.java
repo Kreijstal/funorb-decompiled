@@ -8,12 +8,6 @@ final class bf {
     private static String field_z;
 
     public static void a(int param0) {
-        if (param0 < 103) {
-            field_a = false;
-            field_c = null;
-            field_b = null;
-            return;
-        }
         field_c = null;
         field_b = null;
     }

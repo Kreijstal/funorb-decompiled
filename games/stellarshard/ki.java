@@ -20,14 +20,7 @@ abstract class ki extends ah {
         gk.field_a = true;
         ie.field_r = true;
         na.field_d.e((byte) 67);
-        if (param0 < 57) {
-          ki.a(117, 22, -7);
-          we.a(false, 12757, ak.field_b);
-          return;
-        } else {
-          we.a(false, 12757, ak.field_b);
-          return;
-        }
+        we.a(false, 12757, ak.field_b);
     }
 
     abstract byte[] g(int param0);

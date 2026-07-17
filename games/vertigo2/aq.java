@@ -67,9 +67,7 @@ final class aq {
     final int[] a(int param0, byte param1) {
         int var3 = 0;
         fd var4 = null;
-        fd var4_ref = null;
         fd var5 = null;
-        fd var5_ref = null;
         int var6 = 0;
         Object stackIn_2_0 = null;
         Object stackIn_3_0 = null;
@@ -92,7 +90,7 @@ final class aq {
         var6 = Vertigo2.field_L ? 1 : 0;
         var3 = 28 % ((param1 - 6) / 48);
         if (((aq) this).field_h != ((aq) this).field_g) {
-          if (-2 == (((aq) this).field_h ^ -1)) {
+          if (((aq) this).field_h == 1) {
             L0: {
               stackOut_13_0 = this;
               stackIn_15_0 = stackOut_13_0;
@@ -126,23 +124,23 @@ final class aq {
                 L2: {
                   ((aq) this).field_i = true;
                   if (((aq) this).field_h <= ((aq) this).field_e) {
-                    var5_ref = (fd) (Object) ((aq) this).field_j.c((byte) -127);
-                    var4_ref = new fd(param0, var5_ref.field_n);
-                    ((aq) this).field_c[var5_ref.field_r] = null;
-                    var5_ref.c(2);
+                    var5 = (fd) (Object) ((aq) this).field_j.c((byte) -127);
+                    var4 = new fd(param0, var5.field_n);
+                    ((aq) this).field_c[var5.field_r] = null;
+                    var5.c(2);
                     break L2;
                   } else {
-                    var4_ref = new fd(param0, ((aq) this).field_e);
+                    var4 = new fd(param0, ((aq) this).field_e);
                     ((aq) this).field_e = ((aq) this).field_e + 1;
                     break L2;
                   }
                 }
-                ((aq) this).field_c[param0] = var4_ref;
+                ((aq) this).field_c[param0] = var4;
                 break L1;
               }
             }
-            ((aq) this).field_j.a((li) (Object) var4_ref, (byte) 27);
-            return ((aq) this).field_k[var4_ref.field_n];
+            ((aq) this).field_j.a((li) (Object) var4, (byte) 27);
+            return ((aq) this).field_k[var4.field_n];
           }
         } else {
           L3: {
@@ -179,7 +177,11 @@ final class aq {
     }
 
     final static void a(mp param0, byte param1, int param2, int param3) {
-        int var4 = 57 / ((param1 - -27) / 53);
+        try {
+            int var4_int = 57 / ((param1 - -27) / 53);
+        } catch (RuntimeException runtimeException) {
+            throw wn.a((Throwable) (Object) runtimeException, "aq.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+        }
     }
 
     final int[][] a(int param0) {

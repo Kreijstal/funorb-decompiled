@@ -47,7 +47,7 @@ final class ob extends ql {
               break L1;
             } else {
               if (mm.field_m[var3] != null) {
-                if ((mm.field_m[var3].field_i ^ -1) == -28) {
+                if (mm.field_m[var3].field_i == 27) {
                   var2 = 1;
                   break L1;
                 } else {
@@ -83,7 +83,7 @@ final class ob extends ql {
               ((ob) this).field_D.field_a = 2;
               break L0;
             } else {
-              if ((ih.a(var4, (byte) -97, ((ob) this).field_l) ^ -1) > -3) {
+              if (ih.a(var4, (byte) -97, ((ob) this).field_l) < 2) {
                 ((ob) this).field_D.field_a = 1;
                 break L0;
               } else {
@@ -98,7 +98,7 @@ final class ob extends ql {
           if (null == ((ob) this).field_x) {
             break L1;
           } else {
-            if ((((ob) this).field_x.field_I ^ -1) >= -1) {
+            if (((ob) this).field_x.field_I <= 0) {
               ((ob) this).field_D.field_a = 2;
               ((ob) this).field_x = null;
               ((ob) this).field_H.field_a = 2;
@@ -122,7 +122,7 @@ final class ob extends ql {
         }
         L3: {
           if (-1 == ((ob) this).field_q.field_a) {
-            if ((ih.a(var4, (byte) -117, ((ob) this).field_F) ^ -1) > -3) {
+            if (ih.a(var4, (byte) -117, ((ob) this).field_F) < 2) {
               ((ob) this).field_q.field_a = 1;
               break L3;
             } else {
@@ -136,7 +136,7 @@ final class ob extends ql {
           if (((ob) this).field_v.field_a != 0) {
             break L4;
           } else {
-            if ((ih.a(var4, (byte) -76, ((ob) this).field_j) ^ -1) <= -3) {
+            if (ih.a(var4, (byte) -76, ((ob) this).field_j) >= 2) {
               break L4;
             } else {
               ((ob) this).field_v.field_a = 1;
@@ -146,7 +146,7 @@ final class ob extends ql {
         }
         L5: {
           if (((ob) this).field_m.field_a == 0) {
-            if ((ih.a(var4, (byte) -97, ((ob) this).field_z) ^ -1) > -3) {
+            if (ih.a(var4, (byte) -97, ((ob) this).field_z) < 2) {
               ((ob) this).field_m.field_a = 1;
               break L5;
             } else {
@@ -216,7 +216,7 @@ final class ob extends ql {
           }
         }
         L10: {
-          if (-1 != (((ob) this).field_i.field_a ^ -1)) {
+          if (((ob) this).field_i.field_a != 0) {
             break L10;
           } else {
             if (2 > ih.a(var4, (byte) -110, ((ob) this).field_G)) {
@@ -229,7 +229,7 @@ final class ob extends ql {
         }
         L11: {
           if (((ob) this).field_y.field_a == 0) {
-            if ((ih.a(var4, (byte) -88, ((ob) this).field_h) ^ -1) > -3) {
+            if (ih.a(var4, (byte) -88, ((ob) this).field_h) < 2) {
               ((ob) this).field_y.field_a = 1;
               break L11;
             } else {
@@ -251,60 +251,107 @@ final class ob extends ql {
             }
           }
         }
-        super.d(param0 ^ 0);
+        super.d(param0);
     }
 
     final static int c(byte param0) {
-        if (param0 > -19) {
-            field_s = null;
-            return 1;
-        }
         return 1;
     }
 
     final void a(int param0, oj param1) {
-        int var3 = 0;
+        RuntimeException var3 = null;
+        int var3_int = 0;
         int var4 = 0;
         oc var5 = null;
-        L0: {
-          var4 = HostileSpawn.field_I ? 1 : 0;
-          ((ob) this).field_f = ((ob) this).field_f - 1;
-          if (-2 == (((ob) this).field_f ^ -1)) {
-            var5 = mm.field_m[0].field_j;
-            ((ob) this).field_d.field_a = 1;
-            if ((var5.field_g ^ -1) > -41) {
-              ((ob) this).field_d.field_l = 1968;
-              ((ob) this).field_d.field_d = 552;
-              break L0;
-            } else {
-              if (var5.field_e < 48) {
-                ((ob) this).field_d.field_l = 360;
-                ((ob) this).field_d.field_d = 1536;
-                break L0;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        var4 = HostileSpawn.field_I ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              ((ob) this).field_f = ((ob) this).field_f - 1;
+              if (((ob) this).field_f == 1) {
+                var5 = mm.field_m[0].field_j;
+                ((ob) this).field_d.field_a = 1;
+                if (var5.field_g < 40) {
+                  ((ob) this).field_d.field_l = 1968;
+                  ((ob) this).field_d.field_d = 552;
+                  break L1;
+                } else {
+                  if (var5.field_e < 48) {
+                    ((ob) this).field_d.field_l = 360;
+                    ((ob) this).field_d.field_d = 1536;
+                    break L1;
+                  } else {
+                    ((ob) this).field_d.field_l = 1776;
+                    ((ob) this).field_d.field_d = 2136;
+                    break L1;
+                  }
+                }
               } else {
-                ((ob) this).field_d.field_l = 1776;
-                ((ob) this).field_d.field_d = 2136;
-                break L0;
+                break L1;
               }
             }
-          } else {
+            L2: {
+              if (((ob) this).field_f == 0) {
+                r.field_a = 0;
+                le.field_D = 500;
+                tb.field_N = le.field_D;
+                break L2;
+              } else {
+                r.field_a = 1;
+                pm.field_d = pm.field_d - 7;
+                tb.field_N = 150;
+                break L2;
+              }
+            }
+            var3_int = -76 % ((23 - param0) / 32);
             break L0;
           }
-        }
-        L1: {
-          if (-1 == (((ob) this).field_f ^ -1)) {
-            r.field_a = 0;
-            le.field_D = 500;
-            tb.field_N = le.field_D;
-            break L1;
-          } else {
-            r.field_a = 1;
-            pm.field_d = pm.field_d - 7;
-            tb.field_N = 150;
-            break L1;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var3 = decompiledCaughtException;
+            stackOut_13_0 = (RuntimeException) var3;
+            stackOut_13_1 = new StringBuilder().append("ob.J(").append(param0).append(44);
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
+            if (param1 == null) {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L3;
+            } else {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L3;
+            }
           }
+          throw wg.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
         }
-        var3 = -76 % ((23 - param0) / 32);
     }
 
     final void e(int param0) {
@@ -429,9 +476,9 @@ final class ob extends ql {
           var4 = mm.field_m[0].field_j;
           ((ob) this).field_D.e(-115);
           ((ob) this).field_H.e(-114);
-          if (-2 != (((ob) this).field_H.field_a ^ -1)) {
+          if (((ob) this).field_H.field_a != 1) {
             ((ob) this).field_q.e(-126);
-            if ((((ob) this).field_q.field_a ^ -1) != -2) {
+            if (((ob) this).field_q.field_a != 1) {
               break L0;
             } else {
               if (((ob) this).field_q.field_l + ((ob) this).field_q.field_m <= 24 * var4.field_e) {
@@ -443,7 +490,7 @@ final class ob extends ql {
             }
           } else {
             ((ob) this).field_q.e(-126);
-            if ((((ob) this).field_q.field_a ^ -1) != -2) {
+            if (((ob) this).field_q.field_a != 1) {
               break L0;
             } else {
               if (((ob) this).field_q.field_l + ((ob) this).field_q.field_m <= 24 * var4.field_e) {
@@ -470,9 +517,6 @@ final class ob extends ql {
         field_s = null;
         field_C = null;
         field_e = null;
-        if (param0 > -80) {
-            field_B = null;
-        }
         field_B = null;
         field_E = null;
     }

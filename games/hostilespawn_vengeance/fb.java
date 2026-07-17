@@ -22,20 +22,27 @@ final class fb extends ql {
     private v field_m;
 
     final boolean a(byte param0) {
-        if (!((fb) this).field_s) {
-            // if_icmpne L20
-        } else {
-            return false;
+        int var2 = 0;
+        L0: {
+          if (((fb) this).field_s) {
+            break L0;
+          } else {
+            if (ha.field_t != 3) {
+              break L0;
+            } else {
+              var2 = -24 % ((57 - param0) / 47);
+              return true;
+            }
+          }
         }
-        int var2 = -24 % ((57 - param0) / 47);
-        return true;
+        return false;
     }
 
     final void d(int param0) {
         oc var3 = null;
         int var4 = 0;
         int var5 = 0;
-        oj var5_ref = null;
+        oj var5_ref_oj = null;
         int var6 = 0;
         oj var7 = null;
         int var8 = 0;
@@ -107,7 +114,7 @@ final class fb extends ql {
           }
         }
         L3: {
-          if ((ha.field_t ^ -1) != -4) {
+          if (ha.field_t != 3) {
             break L3;
           } else {
             if (((fb) this).field_s) {
@@ -120,10 +127,10 @@ final class fb extends ql {
                 if (var4 <= -2) {
                   break L4;
                 } else {
-                  if ((var4 ^ -1) <= -3) {
+                  if (var4 >= 2) {
                     break L4;
                   } else {
-                    if ((var5 ^ -1) > -1) {
+                    if (var5 < 0) {
                       ((fb) this).field_s = true;
                       ((fb) this).field_i.field_n = true;
                       nh.field_E.a(-1, 8360, -1);
@@ -132,8 +139,9 @@ final class fb extends ql {
                       ln.field_a.field_c[var6] = 4;
                       ln.field_a.field_c[var6 + -1] = 4;
                       ln.field_a.field_c[var6 - -1] = 4;
+                      int fieldTemp$4 = dk.field_o;
                       dk.field_o = dk.field_o + 1;
-                      vj.field_w[dk.field_o] = new qm(ln.field_a, ((fb) this).field_k, 145, rl.field_c, 0, false);
+                      vj.field_w[fieldTemp$4] = new qm(ln.field_a, ((fb) this).field_k, 145, rl.field_c, 0, false);
                       tb.field_N = 150;
                       tk.a(1, jc.field_c, 31, true);
                       break L3;
@@ -164,17 +172,18 @@ final class fb extends ql {
                     break L6;
                   } else {
                     var9 = new oj(((fb) this).field_d[var4], 18, rl.field_c);
-                    var5_ref = var9;
-                    var5_ref.field_M = 0;
+                    var5_ref_oj = var9;
+                    var5_ref_oj.field_M = 0;
+                    int fieldTemp$5 = el.field_j;
                     el.field_j = el.field_j + 1;
-                    mm.field_m[el.field_j] = var9;
+                    mm.field_m[fieldTemp$5] = var9;
                     break L6;
                   }
                 }
               }
             }
             L7: {
-              if (-1 <= (((fb) this).field_i.field_I ^ -1)) {
+              if (((fb) this).field_i.field_I <= 0) {
                 break L7;
               } else {
                 if (((fb) this).field_i.field_i != 8) {
@@ -211,7 +220,7 @@ final class fb extends ql {
               if (((fb) this).field_j == null) {
                 break L5;
               } else {
-                if ((((fb) this).field_j.field_e ^ -1) < -19) {
+                if (((fb) this).field_j.field_e > 18) {
                   L9: {
                     var5 = ((fb) this).field_j.b(-4);
                     ln.field_a.field_c[var5] = 0;
@@ -257,7 +266,7 @@ final class fb extends ql {
           }
         }
         L10: {
-          if ((ha.field_t ^ -1) != -17) {
+          if (ha.field_t != 16) {
             break L10;
           } else {
             if (null != ((fb) this).field_o) {
@@ -271,8 +280,9 @@ final class fb extends ql {
                   ca.a((double)(((fb) this).field_p.field_e - -1), 0, (double)(((fb) this).field_p.field_g - -3), true, 0);
                   ((fb) this).field_o = new qm(ln.field_a, var3, 230, rl.field_c, 0, false);
                   ((fb) this).field_o.field_c = var11.field_c;
+                  int fieldTemp$6 = dk.field_o;
                   dk.field_o = dk.field_o + 1;
-                  vj.field_w[dk.field_o] = ((fb) this).field_o;
+                  vj.field_w[fieldTemp$6] = ((fb) this).field_o;
                   break L10;
                 } else {
                   break L10;
@@ -302,7 +312,7 @@ final class fb extends ql {
             break L12;
           } else {
             ((fb) this).field_g = ((fb) this).field_g - 1;
-            if (-1 == (((fb) this).field_g ^ -1)) {
+            if (((fb) this).field_g == 0) {
               L13: {
                 cm.a(((fb) this).field_p, false);
                 ((fb) this).field_n.field_u = null;
@@ -314,7 +324,7 @@ final class fb extends ql {
                 ln.field_a.field_c[var4 + 1] = 0;
                 ln.field_a.field_c[var4 - ln.field_a.field_d] = 0;
                 ln.field_a.field_c[-ln.field_a.field_d + var4 + 1] = 0;
-                if (-2 != (uj.field_l ^ -1)) {
+                if (uj.field_l != 1) {
                   break L13;
                 } else {
                   if (ej.d((byte) 86)) {
@@ -327,7 +337,7 @@ final class fb extends ql {
               }
               var5 = 1;
               L14: while (true) {
-                if ((var5 ^ -1) <= -6) {
+                if (var5 >= 5) {
                   break L12;
                 } else {
                   var6 = 0;
@@ -359,7 +369,7 @@ final class fb extends ql {
         }
         if (param0 == -1) {
           L16: {
-            if ((ha.field_t ^ -1) == -18) {
+            if (ha.field_t == 17) {
               if (var3.field_e < ((fb) this).field_r.field_e + -7) {
                 break L16;
               } else {
@@ -390,7 +400,7 @@ final class fb extends ql {
                     }
                   }
                   L19: {
-                    if (-10 + ((fb) this).field_r.field_g > var3.field_g) {
+                    if (~(-10 + ((fb) this).field_r.field_g) < ~var3.field_g) {
                       var3.field_g = ((fb) this).field_r.field_g + -10;
                       break L19;
                     } else {
@@ -402,7 +412,7 @@ final class fb extends ql {
                       if (!dl.field_l) {
                         break L21;
                       } else {
-                        if (var3.field_e >= ((fb) this).field_r.field_e) {
+                        if (~var3.field_e <= ~((fb) this).field_r.field_e) {
                           break L21;
                         } else {
                           var11.field_l.field_f = var11.field_l.field_f + 0.2;
@@ -413,7 +423,7 @@ final class fb extends ql {
                     if (!dl.field_l) {
                       break L20;
                     } else {
-                      if (((fb) this).field_r.field_e < var3.field_e) {
+                      if (~((fb) this).field_r.field_e > ~var3.field_e) {
                         var11.field_l.field_f = var11.field_l.field_f - 0.2;
                         break L20;
                       } else {
@@ -423,7 +433,7 @@ final class fb extends ql {
                   }
                   L22: {
                     if (dl.field_l) {
-                      if ((((fb) this).field_e ^ -1) >= -1) {
+                      if (((fb) this).field_e <= 0) {
                         mf.a(false, 3);
                         break L22;
                       } else {
@@ -443,7 +453,7 @@ final class fb extends ql {
                         var13.field_e = var13.field_e + ((int)(4.0 * Math.random()) + -1);
                         var13.field_g = var13.field_g + (-2 + (int)(4.0 * Math.random()));
                         var6 = 18;
-                        if ((((fb) this).field_e ^ -1) != -301) {
+                        if (((fb) this).field_e != 300) {
                           if (Math.random() < 0.4) {
                             var6 = 1;
                             break L23;
@@ -460,15 +470,16 @@ final class fb extends ql {
                       L24: {
                         var10 = new oj(var13, var6, rl.field_c);
                         var7 = var10;
-                        if (-2 != var6) {
+                        if (var6 != 1) {
                           break L24;
                         } else {
                           var7.field_B = 100;
                           break L24;
                         }
                       }
+                      int fieldTemp$7 = el.field_j;
                       el.field_j = el.field_j + 1;
-                      mm.field_m[el.field_j] = var10;
+                      mm.field_m[fieldTemp$7] = var10;
                       break L16;
                     } else {
                       break L16;
@@ -481,7 +492,7 @@ final class fb extends ql {
             }
           }
           L25: {
-            if (-15 != ha.field_t) {
+            if (ha.field_t != 14) {
               break L25;
             } else {
               L26: {
@@ -490,7 +501,7 @@ final class fb extends ql {
                 } else {
                   if (((fb) this).field_q.field_e + 10 > var3.field_e) {
                     var4 = -640 + 24 * (((fb) this).field_q.field_e + 10);
-                    if (uj.field_p.field_e <= var4) {
+                    if (~uj.field_p.field_e >= ~var4) {
                       break L26;
                     } else {
                       uj.field_p.field_e = var4;
@@ -502,7 +513,7 @@ final class fb extends ql {
                 }
               }
               var4 = ih.a(((fb) this).field_q, (byte) -127, var3);
-              if ((var4 ^ -1) > -4) {
+              if (var4 < 3) {
                 ng.field_k = true;
                 mf.a(false, 3);
                 ti.a(225, (byte) -110, 30);
@@ -528,7 +539,7 @@ final class fb extends ql {
                 break L28;
               } else {
                 if (((fb) this).field_j != null) {
-                  if (-3 != (ln.field_a.field_g[var3.b(-4)] ^ -1)) {
+                  if (ln.field_a.field_g[var3.b(-4)] != 2) {
                     break L28;
                   } else {
                     ti.a(((fb) this).field_j.field_g, (byte) -111, ((fb) this).field_j.field_e);
@@ -556,7 +567,7 @@ final class fb extends ql {
                 boolean discarded$0 = ((fb) this).field_m.a((byte) -76);
             }
         }
-        if ((((fb) this).field_u.field_a ^ -1) == -2) {
+        if (((fb) this).field_u.field_a == 1) {
             boolean discarded$1 = ((fb) this).field_u.a((byte) -127);
         }
         int var2 = 76 % ((-48 - param0) / 38);
@@ -589,7 +600,7 @@ final class fb extends ql {
           var8 = var10;
           var2 = var8;
           ((fb) this).field_i = vi.field_p[param0];
-          if ((var13.length ^ -1) > -13) {
+          if (var13.length < 12) {
             ((fb) this).field_k = new oc();
             ((fb) this).field_p = new oc();
             ((fb) this).field_r = new oc();
@@ -606,7 +617,7 @@ final class fb extends ql {
           }
         }
         L1: {
-          if ((var14.length ^ -1) > -21) {
+          if (var14.length < 20) {
             ((fb) this).field_d = null;
             break L1;
           } else {
@@ -630,7 +641,7 @@ final class fb extends ql {
           if (!pm.field_h) {
             break L3;
           } else {
-            if (-21 > (var14.length ^ -1)) {
+            if (var14.length > 20) {
               ((fb) this).field_j = new oc(var14[20], var14[21]);
               break L3;
             } else {
@@ -682,14 +693,38 @@ final class fb extends ql {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
+        int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
-        int var7 = HostileSpawn.field_I ? 1 : 0;
-        int var5 = param1 + param0;
-        for (var6 = (param0 & 1) + param0; var6 < var5; var6 += 2) {
-            si.e(param3, var6, param4, 65793, 96);
-        }
-        if (param2 != 11992) {
-            boolean discarded$0 = fb.a(0.5819263259193922, (byte) 31, 0.515826981495636, 0.17239172967428718, 0.7326247205058647, 1.0288611625496324, -0.6530990291171533, 1.5894862770774536, 1.0324946007427929);
+        int var7 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var7 = HostileSpawn.field_I ? 1 : 0;
+        try {
+          L0: {
+            var5_int = param1 + param0;
+            var6 = (param0 & 1) + param0;
+            L1: while (true) {
+              if (var6 >= var5_int) {
+                L2: {
+                  if (param2 == 11992) {
+                    break L2;
+                  } else {
+                    boolean discarded$2 = fb.a(0.5819263259193922, (byte) 31, 0.515826981495636, 0.17239172967428718, 0.7326247205058647, 1.0288611625496324, -0.6530990291171533, 1.5894862770774536, 1.0324946007427929);
+                    break L2;
+                  }
+                }
+                break L0;
+              } else {
+                si.e(param3, var6, 576, 65793, 96);
+                var6 += 2;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          throw wg.a((Throwable) (Object) var5, "fb.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + 576 + 41);
         }
     }
 
@@ -718,10 +753,70 @@ final class fb extends ql {
     }
 
     final boolean a(oc param0, boolean param1, byte param2) {
-        if (param2 != 109) {
-            return true;
+        RuntimeException var4 = null;
+        int stackIn_2_0 = 0;
+        int stackIn_4_0 = 0;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_3_0 = 0;
+        int stackOut_1_0 = 0;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            if (param2 == 109) {
+              stackOut_3_0 = 1;
+              stackIn_4_0 = stackOut_3_0;
+              break L0;
+            } else {
+              stackOut_1_0 = 1;
+              stackIn_2_0 = stackOut_1_0;
+              return stackIn_2_0 != 0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var4 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var4;
+            stackOut_5_1 = new StringBuilder().append("fb.BA(");
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param0 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L1;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L1;
+            }
+          }
+          throw wg.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 44 + param2 + 41);
         }
-        return true;
+        return stackIn_4_0 != 0;
     }
 
     final static boolean a(double param0, byte param1, double param2, double param3, double param4, double param5, double param6, double param7, double param8) {

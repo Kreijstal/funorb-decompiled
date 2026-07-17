@@ -30,7 +30,7 @@ abstract class ou {
         for (var2 = 0; var2 < ((ou) this).field_a; var2++) {
             ((ou) this).field_d[var2] = ((ou) this).field_c.b(95);
         }
-        var2 = -123 % ((-62 - param0) / 49);
+        var2 = 0;
     }
 
     abstract wea a(byte param0);

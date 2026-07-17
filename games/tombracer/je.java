@@ -22,7 +22,7 @@ final class je extends haa {
         int var6 = param1 + ((je) this).field_n;
         bea.e(var5, var6, ((je) this).field_m, ((je) this).field_p, param2);
         int var7 = ((je) this).field_G;
-        if (0 != (((je) this).field_H ^ -1)) {
+        if (((je) this).field_H != -1) {
             var7 = ((je) this).field_H;
         }
         if (!(((je) this).field_I == null)) {
@@ -135,30 +135,91 @@ final class je extends haa {
 
     public static void g(byte param0) {
         field_E = null;
-        if (param0 > -117) {
-            iu discarded$0 = je.a((byte) 41);
-        }
     }
 
     final int c(int param0) {
         if (param0 != 23112) {
             ((je) this).field_I[10] = ((je) this).field_I[0];
         }
-        return null != ((je) this).field_I ? ((je) this).field_K * (1 + ((je) this).field_I.length * 2) >> 1266672129 : 200;
+        return null != ((je) this).field_I ? ((je) this).field_K * (1 + ((je) this).field_I.length * 2) >> 1 : 200;
     }
 
     private final void a(Object[] param0, int param1, int param2) {
-        ((je) this).field_H = -1;
-        if (param1 != 0) {
-            return;
-        }
-        ((je) this).field_I = param0;
-        ((je) this).field_G = param2;
-        if (param0 != null) {
-            if ((((je) this).field_G ^ -1) <= 0) {
-                // if_icmplt L56
+        RuntimeException var4 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        try {
+          L0: {
+            ((je) this).field_H = -1;
+            if (param1 == 0) {
+              L1: {
+                ((je) this).field_I = param0;
+                ((je) this).field_G = param2;
+                if (param0 == null) {
+                  break L1;
+                } else {
+                  L2: {
+                    if (((je) this).field_G < -1) {
+                      break L2;
+                    } else {
+                      if (((je) this).field_G < ((je) this).field_I.length) {
+                        break L1;
+                      } else {
+                        break L2;
+                      }
+                    }
+                  }
+                  throw new IllegalStateException();
+                }
+              }
+              break L0;
+            } else {
+              return;
             }
-            throw new IllegalStateException();
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var4 = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var4;
+            stackOut_8_1 = new StringBuilder().append("je.F(");
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param0 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L3;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L3;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 44 + param2 + 41);
         }
     }
 
@@ -183,10 +244,14 @@ final class je extends haa {
 
     je(rla param0, il param1, Object[] param2, int param3) {
         super((ae) (Object) param0);
-        ((je) this).field_F = param1;
-        ((je) this).field_J = param0;
-        ((je) this).field_K = ((je) this).field_F.field_w + ((je) this).field_F.field_k;
-        this.a(param2, 0, param3);
+        try {
+            ((je) this).field_F = param1;
+            ((je) this).field_J = param0;
+            ((je) this).field_K = ((je) this).field_F.field_w + ((je) this).field_F.field_k;
+            this.a(param2, 0, param3);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "je.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+        }
     }
 
     static {

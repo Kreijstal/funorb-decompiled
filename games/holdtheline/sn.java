@@ -41,6 +41,7 @@ final class sn extends hl {
 
     final static sn a(gn param0, String param1, String param2) {
         try {
+            sn var4_ref = null;
             if (!sn.a(param0)) {
                 boolean discarded$0 = param0.b(param1, param2, 92);
                 return null;
@@ -49,13 +50,11 @@ final class sn extends hl {
             if (var3 == null) {
                 return null;
             }
-            sn var4 = null;
-            try {
-                var4 = new sn(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
+            Object var4 = null;
+            {
+                var4_ref = new sn(var3);
             }
-            return var4;
+            return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -65,6 +64,7 @@ final class sn extends hl {
 
     final static sn a(gn param0, int param1, int param2) {
         try {
+            sn var4_ref = null;
             if (!sn.a(param0)) {
                 boolean discarded$0 = param0.b(param1, param2, -1);
                 return null;
@@ -73,13 +73,11 @@ final class sn extends hl {
             if (var3 == null) {
                 return null;
             }
-            sn var4 = null;
-            try {
-                var4 = new sn(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
+            Object var4 = null;
+            {
+                var4_ref = new sn(var3);
             }
-            return var4;
+            return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -173,12 +171,13 @@ final class sn extends hl {
                       if ((var6 & -256) == 0) {
                         break L8;
                       } else {
-                        var6 = (var6 ^ -1) >> 31;
+                        var6 = ~var6 >> 31;
                         break L8;
                       }
                     }
+                    int incrementValue$1 = var3;
                     var3++;
-                    ((sn) this).field_I[var3] = (byte)(var6 - 128);
+                    ((sn) this).field_I[incrementValue$1] = (byte)(var6 - 128);
                     var5++;
                     continue L6;
                   }
@@ -209,7 +208,6 @@ final class sn extends hl {
         int var16 = 0;
         int var17_int = 0;
         Object var17 = null;
-        float[] var17_array = null;
         int var18_int = 0;
         float[] var18 = null;
         int var19 = 0;
@@ -725,7 +723,7 @@ final class sn extends hl {
                   var50 = var54;
                   var46 = var50;
                   var40 = var46;
-                  var17_array = var40;
+                  var17 = (Object) (Object) var40;
                   if (((sn) this).field_G) {
                     break L36;
                   } else {
@@ -783,7 +781,7 @@ final class sn extends hl {
               }
             }
             ((sn) this).field_G = stackIn_111_1 != 0;
-            return var17_array;
+            return (float[]) var17;
           } else {
             var42 = field_w[var14.field_c[var17_int]];
             var55 = field_v;
@@ -861,12 +859,13 @@ final class sn extends hl {
                     if ((var7 & -256) == 0) {
                       break L3;
                     } else {
-                      var7 = (var7 ^ -1) >> 31;
+                      var7 = ~var7 >> 31;
                       break L3;
                     }
                   }
+                  int incrementValue$1 = var2;
                   var2++;
-                  var1[var2] = (byte)(var7 - 128);
+                  var1[incrementValue$1] = (byte)(var7 - 128);
                   var6++;
                   continue L2;
                 } else {
@@ -915,7 +914,7 @@ final class sn extends hl {
         ((sn) this).field_J = var2.a(-88);
         ((sn) this).field_u = var2.a(113);
         if (((sn) this).field_u < 0) {
-            ((sn) this).field_u = ((sn) this).field_u ^ -1;
+            ((sn) this).field_u = ~((sn) this).field_u;
             ((sn) this).field_E = true;
         }
         int var3 = var2.a(47);
@@ -937,7 +936,7 @@ final class sn extends hl {
 
     private final static void a(byte[] param0, int param1) {
         field_i = param0;
-        field_N = param1;
+        field_N = 0;
         field_A = 0;
     }
 

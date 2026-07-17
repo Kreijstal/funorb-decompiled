@@ -29,7 +29,7 @@ final class cg {
               var2 = var4;
               if (var6.field_b.b((byte) 99)) {
                 L1: {
-                  if ((var6.field_j ^ -1) > -1) {
+                  if (var6.field_j < 0) {
                     break L1;
                   } else {
                     if (!var6.field_b.c(var6.field_j, -31)) {
@@ -90,7 +90,7 @@ final class cg {
               var2 = var4;
               if (var5.field_b.b((byte) 99)) {
                 L5: {
-                  if ((var5.field_j ^ -1) > -1) {
+                  if (var5.field_j < 0) {
                     break L5;
                   } else {
                     if (!var5.field_b.c(var5.field_j, -31)) {
@@ -148,19 +148,75 @@ final class cg {
 
     public static void a(int param0) {
         field_j = null;
-        int var1 = 117 / ((param0 - 14) / 53);
+        int var1 = 117;
         field_g = null;
     }
 
     private final void a(byte param0, ah param1, int param2) {
-        float var4 = (float)param2 / 100.0f + (float)(1 + ((cg) this).field_c);
-        int var5 = 68 % ((-74 - param0) / 45);
-        ((cg) this).field_i = var4 * (float)((cg) this).field_a / (float)(1 + ((cg) this).field_f);
-        if (param2 == 0) {
-            ((cg) this).field_h = param1.field_h;
-        } else {
-            ((cg) this).field_h = param1.field_k + " - " + param2 + "%";
-            return;
+        float var4_float = 0.0f;
+        RuntimeException var4 = null;
+        int var5 = 0;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              var4_float = (float)param2 / 100.0f + (float)(1 + ((cg) this).field_c);
+              var5 = 68 % ((-74 - param0) / 45);
+              ((cg) this).field_i = var4_float * (float)((cg) this).field_a / (float)(1 + ((cg) this).field_f);
+              if (param2 != 0) {
+                ((cg) this).field_h = param1.field_k + " - " + param2 + "%";
+                break L1;
+              } else {
+                ((cg) this).field_h = param1.field_h;
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var4 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var4;
+            stackOut_4_1 = new StringBuilder().append("cg.C(").append(param0).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param1 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw sd.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param2 + 41);
         }
     }
 

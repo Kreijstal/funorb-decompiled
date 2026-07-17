@@ -135,22 +135,80 @@ final class ud extends qt {
     }
 
     final static int a(int param0, String param1, boolean param2) {
+        RuntimeException var3 = null;
         Object var4 = null;
-        if (param0 == 10) {
-          if (param2) {
-            return sf.field_F.a(param1);
-          } else {
-            return cv.field_f.a(param1);
+        int stackIn_4_0 = 0;
+        int stackIn_6_0 = 0;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_5_0 = 0;
+        int stackOut_3_0 = 0;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 == 10) {
+                break L1;
+              } else {
+                var4 = null;
+                int discarded$2 = ud.a(-31, (String) null, true);
+                break L1;
+              }
+            }
+            if (!param2) {
+              stackOut_5_0 = cv.field_f.a(param1);
+              stackIn_6_0 = stackOut_5_0;
+              break L0;
+            } else {
+              stackOut_3_0 = sf.field_F.a(param1);
+              stackIn_4_0 = stackOut_3_0;
+              return stackIn_4_0;
+            }
           }
-        } else {
-          var4 = null;
-          int discarded$5 = ud.a(-31, (String) null, true);
-          if (param2) {
-            return sf.field_F.a(param1);
-          } else {
-            return cv.field_f.a(param1);
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var3;
+            stackOut_7_1 = new StringBuilder().append("ud.K(").append(param0).append(44);
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param1 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L2;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L2;
+            }
           }
+          throw nb.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param2 + 41);
         }
+        return stackIn_6_0;
     }
 
     final static boolean c(int param0, int param1) {
@@ -188,18 +246,18 @@ final class ud extends qt {
                 if (32 > param0) {
                   L0: {
                     L1: {
-                      if (-49 < (param0 ^ -1)) {
-                        if ((param0 ^ -1) > -65) {
-                          if (-81 == (param0 ^ -1)) {
+                      if (param0 < 48) {
+                        if (param0 < 64) {
+                          if (param0 == 80) {
                             break L1;
                           } else {
-                            if ((param0 ^ -1) == -84) {
+                            if (param0 == 83) {
                               break L1;
                             } else {
                               if (param0 == 84) {
                                 break L1;
                               } else {
-                                if (-86 == (param0 ^ -1)) {
+                                if (param0 == 85) {
                                   break L1;
                                 } else {
                                   if (59 == param0) {
@@ -222,21 +280,21 @@ final class ud extends qt {
                             }
                           }
                         } else {
-                          if (-74 <= (param0 ^ -1)) {
+                          if (param0 <= 73) {
                             break L1;
                           } else {
                             L2: {
                               L3: {
-                                if (-81 == (param0 ^ -1)) {
+                                if (param0 == 80) {
                                   break L3;
                                 } else {
-                                  if ((param0 ^ -1) == -84) {
+                                  if (param0 == 83) {
                                     break L3;
                                   } else {
                                     if (param0 == 84) {
                                       break L3;
                                     } else {
-                                      if (-86 == (param0 ^ -1)) {
+                                      if (param0 == 85) {
                                         break L3;
                                       } else {
                                         if (59 == param0) {
@@ -267,22 +325,22 @@ final class ud extends qt {
                           }
                         }
                       } else {
-                        if ((param0 ^ -1) >= -59) {
+                        if (param0 <= 58) {
                           break L1;
                         } else {
                           L4: {
                             L5: {
-                              if ((param0 ^ -1) > -65) {
-                                if (-81 == (param0 ^ -1)) {
+                              if (param0 < 64) {
+                                if (param0 == 80) {
                                   break L5;
                                 } else {
-                                  if ((param0 ^ -1) == -84) {
+                                  if (param0 == 83) {
                                     break L5;
                                   } else {
                                     if (param0 == 84) {
                                       break L5;
                                     } else {
-                                      if (-86 == (param0 ^ -1)) {
+                                      if (param0 == 85) {
                                         break L5;
                                       } else {
                                         if (59 == param0) {
@@ -305,21 +363,21 @@ final class ud extends qt {
                                   }
                                 }
                               } else {
-                                if (-74 <= (param0 ^ -1)) {
+                                if (param0 <= 73) {
                                   break L5;
                                 } else {
                                   L6: {
                                     L7: {
-                                      if (-81 == (param0 ^ -1)) {
+                                      if (param0 == 80) {
                                         break L7;
                                       } else {
-                                        if ((param0 ^ -1) == -84) {
+                                        if (param0 == 83) {
                                           break L7;
                                         } else {
                                           if (param0 == 84) {
                                             break L7;
                                           } else {
-                                            if (-86 == (param0 ^ -1)) {
+                                            if (param0 == 85) {
                                               break L7;
                                             } else {
                                               if (59 == param0) {
@@ -364,21 +422,21 @@ final class ud extends qt {
                   }
                   return stackIn_138_0 != 0;
                 } else {
-                  if (-44 > (param0 ^ -1)) {
-                    if (-49 < (param0 ^ -1)) {
+                  if (param0 > 43) {
+                    if (param0 < 48) {
                       L8: {
                         L9: {
-                          if ((param0 ^ -1) > -65) {
-                            if (-81 == (param0 ^ -1)) {
+                          if (param0 < 64) {
+                            if (param0 == 80) {
                               break L9;
                             } else {
-                              if ((param0 ^ -1) == -84) {
+                              if (param0 == 83) {
                                 break L9;
                               } else {
                                 if (param0 == 84) {
                                   break L9;
                                 } else {
-                                  if (-86 == (param0 ^ -1)) {
+                                  if (param0 == 85) {
                                     break L9;
                                   } else {
                                     if (59 == param0) {
@@ -401,21 +459,21 @@ final class ud extends qt {
                               }
                             }
                           } else {
-                            if (-74 <= (param0 ^ -1)) {
+                            if (param0 <= 73) {
                               break L9;
                             } else {
                               L10: {
                                 L11: {
-                                  if (-81 == (param0 ^ -1)) {
+                                  if (param0 == 80) {
                                     break L11;
                                   } else {
-                                    if ((param0 ^ -1) == -84) {
+                                    if (param0 == 83) {
                                       break L11;
                                     } else {
                                       if (param0 == 84) {
                                         break L11;
                                       } else {
-                                        if (-86 == (param0 ^ -1)) {
+                                        if (param0 == 85) {
                                           break L11;
                                         } else {
                                           if (59 == param0) {
@@ -452,30 +510,30 @@ final class ud extends qt {
                       }
                       return stackIn_88_0 != 0;
                     } else {
-                      if ((param0 ^ -1) < -59) {
+                      if (param0 > 58) {
                         L12: {
                           L13: {
                             L14: {
-                              if ((param0 ^ -1) > -65) {
+                              if (param0 < 64) {
                                 break L14;
                               } else {
-                                if (-74 <= (param0 ^ -1)) {
+                                if (param0 <= 73) {
                                   break L13;
                                 } else {
                                   break L14;
                                 }
                               }
                             }
-                            if (-81 == (param0 ^ -1)) {
+                            if (param0 == 80) {
                               break L13;
                             } else {
-                              if ((param0 ^ -1) == -84) {
+                              if (param0 == 83) {
                                 break L13;
                               } else {
                                 if (param0 == 84) {
                                   break L13;
                                 } else {
-                                  if (-86 == (param0 ^ -1)) {
+                                  if (param0 == 85) {
                                     break L13;
                                   } else {
                                     if (59 == param0) {
@@ -512,18 +570,18 @@ final class ud extends qt {
                   }
                 }
               } else {
-                if (-28 > (param0 ^ -1)) {
+                if (param0 > 27) {
                   if (32 <= param0) {
                     L15: {
                       L16: {
-                        if (-44 <= (param0 ^ -1)) {
+                        if (param0 <= 43) {
                           break L16;
                         } else {
                           L17: {
-                            if (-49 < (param0 ^ -1)) {
+                            if (param0 < 48) {
                               break L17;
                             } else {
-                              if ((param0 ^ -1) >= -59) {
+                              if (param0 <= 58) {
                                 break L16;
                               } else {
                                 break L17;
@@ -531,26 +589,26 @@ final class ud extends qt {
                             }
                           }
                           L18: {
-                            if ((param0 ^ -1) > -65) {
+                            if (param0 < 64) {
                               break L18;
                             } else {
-                              if (-74 <= (param0 ^ -1)) {
+                              if (param0 <= 73) {
                                 break L16;
                               } else {
                                 break L18;
                               }
                             }
                           }
-                          if (-81 == (param0 ^ -1)) {
+                          if (param0 == 80) {
                             break L16;
                           } else {
-                            if ((param0 ^ -1) == -84) {
+                            if (param0 == 83) {
                               break L16;
                             } else {
                               if (param0 == 84) {
                                 break L16;
                               } else {
-                                if (-86 == (param0 ^ -1)) {
+                                if (param0 == 85) {
                                   break L16;
                                 } else {
                                   if (59 == param0) {
@@ -583,10 +641,10 @@ final class ud extends qt {
                     L19: {
                       L20: {
                         L21: {
-                          if (-49 < (param0 ^ -1)) {
+                          if (param0 < 48) {
                             break L21;
                           } else {
-                            if ((param0 ^ -1) >= -59) {
+                            if (param0 <= 58) {
                               break L20;
                             } else {
                               break L21;
@@ -594,26 +652,26 @@ final class ud extends qt {
                           }
                         }
                         L22: {
-                          if ((param0 ^ -1) > -65) {
+                          if (param0 < 64) {
                             break L22;
                           } else {
-                            if (-74 <= (param0 ^ -1)) {
+                            if (param0 <= 73) {
                               break L20;
                             } else {
                               break L22;
                             }
                           }
                         }
-                        if (-81 == (param0 ^ -1)) {
+                        if (param0 == 80) {
                           break L20;
                         } else {
-                          if ((param0 ^ -1) == -84) {
+                          if (param0 == 83) {
                             break L20;
                           } else {
                             if (param0 == 84) {
                               break L20;
                             } else {
-                              if (-86 == (param0 ^ -1)) {
+                              if (param0 == 85) {
                                 break L20;
                               } else {
                                 if (59 == param0) {
@@ -660,9 +718,6 @@ final class ud extends qt {
     public static void e(int param0) {
         field_A = null;
         field_B = null;
-        if (param0 != 14513) {
-            field_B = null;
-        }
     }
 
     final static void a(boolean param0, int param1, boolean param2, int param3, boolean param4, boolean param5, int param6, boolean param7, int param8, boolean param9) {
@@ -694,7 +749,7 @@ final class ud extends qt {
                         }
                         L2: {
                           gt.a(param4, 1);
-                          if ((ns.field_a ^ -1) < -1) {
+                          if (ns.field_a > 0) {
                             we.a(param7, param4, (byte) -119, param6);
                             break L2;
                           } else {
@@ -759,7 +814,7 @@ final class ud extends qt {
               L7: {
                 df.field_H = ub.field_B;
                 gt.a(param4, 1);
-                if ((ns.field_a ^ -1) < -1) {
+                if (ns.field_a > 0) {
                   we.a(param7, param4, (byte) -119, param6);
                   break L7;
                 } else {
@@ -843,7 +898,7 @@ final class ud extends qt {
               L12: {
                 df.field_H = (ea.field_a - 640) / 2;
                 gt.a(param4, 1);
-                if ((ns.field_a ^ -1) < -1) {
+                if (ns.field_a > 0) {
                   we.a(param7, param4, (byte) -119, param6);
                   break L12;
                 } else {
@@ -915,7 +970,7 @@ final class ud extends qt {
                       }
                       L18: {
                         gt.a(param4, 1);
-                        if ((ns.field_a ^ -1) < -1) {
+                        if (ns.field_a > 0) {
                           we.a(param7, param4, (byte) -119, param6);
                           break L18;
                         } else {
@@ -979,7 +1034,7 @@ final class ud extends qt {
               L23: {
                 df.field_H = (ea.field_a - 640) / 2;
                 gt.a(param4, 1);
-                if ((ns.field_a ^ -1) < -1) {
+                if (ns.field_a > 0) {
                   we.a(param7, param4, (byte) -119, param6);
                   break L23;
                 } else {
@@ -1032,7 +1087,7 @@ final class ud extends qt {
               L28: {
                 df.field_H = ub.field_B;
                 gt.a(param4, 1);
-                if ((ns.field_a ^ -1) < -1) {
+                if (ns.field_a > 0) {
                   we.a(param7, param4, (byte) -119, param6);
                   break L28;
                 } else {
@@ -1087,7 +1142,7 @@ final class ud extends qt {
           L33: {
             df.field_H = ub.field_B;
             gt.a(param4, 1);
-            if ((ns.field_a ^ -1) < -1) {
+            if (ns.field_a > 0) {
               we.a(param7, param4, (byte) -119, param6);
               break L33;
             } else {
@@ -1165,7 +1220,7 @@ final class ud extends qt {
                 if (9 != cc.field_e) {
                   if (cc.field_e != 10) {
                     if (11 != cc.field_e) {
-                      if ((cc.field_e ^ -1) == -81) {
+                      if (cc.field_e == 80) {
                         if (!ph.a(true)) {
                           return false;
                         } else {
@@ -1176,16 +1231,16 @@ final class ud extends qt {
                         return false;
                       }
                     } else {
-                      return ov.a(param3, param2 ^ -17866, param0);
+                      return ov.a(15, param2 ^ -17866, param0);
                     }
                   } else {
-                    return ov.a(param3, param2 ^ -17866, param0);
+                    return ov.a(15, param2 ^ -17866, param0);
                   }
                 } else {
-                  return ov.a(param3, param2 ^ -17866, param0);
+                  return ov.a(15, param2 ^ -17866, param0);
                 }
               } else {
-                return ov.a(param3, param2 ^ -17866, param0);
+                return ov.a(15, param2 ^ -17866, param0);
               }
             } else {
               if (ph.a(true)) {
@@ -1239,7 +1294,7 @@ final class ud extends qt {
                   if (9 != cc.field_e) {
                     if (cc.field_e != 10) {
                       if (11 != cc.field_e) {
-                        if ((cc.field_e ^ -1) == -81) {
+                        if (cc.field_e == 80) {
                           if (ph.a(true)) {
                             vg.field_Wb = true;
                             return true;
@@ -1250,16 +1305,16 @@ final class ud extends qt {
                           return false;
                         }
                       } else {
-                        return ov.a(param3, param2 ^ -17866, param0);
+                        return ov.a(15, param2 ^ -17866, param0);
                       }
                     } else {
-                      return ov.a(param3, param2 ^ -17866, param0);
+                      return ov.a(15, param2 ^ -17866, param0);
                     }
                   } else {
-                    return ov.a(param3, param2 ^ -17866, param0);
+                    return ov.a(15, param2 ^ -17866, param0);
                   }
                 } else {
-                  return ov.a(param3, param2 ^ -17866, param0);
+                  return ov.a(15, param2 ^ -17866, param0);
                 }
               } else {
                 if (ph.a(true)) {

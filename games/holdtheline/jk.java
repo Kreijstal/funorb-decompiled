@@ -31,156 +31,86 @@ final class jk extends hl {
 
     final static void a(int param0) {
         try {
-            IOException iOException = null;
-            int var1 = 0;
+            IOException var1 = null;
+            RuntimeException var1_ref = null;
+            int var1_int = 0;
             IOException var2 = null;
             int var3 = 0;
             Throwable decompiledCaughtException = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        var3 = HoldTheLine.field_D;
-                        if (ce.field_n == null) {
-                            statePc = 2;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        ce.field_n.e(param0 ^ 27371);
-                        statePc = 2;
-                        continue stateLoop;
-                    }
-                    case 2: {
-                        if (null == lk.field_d) {
-                            statePc = 4;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    }
-                    case 3: {
-                        lk.field_d.a(true);
-                        statePc = 4;
-                        continue stateLoop;
-                    }
-                    case 4: {
-                        if (null != td.field_g) {
-                            statePc = 6;
-                        } else {
-                            statePc = 9;
-                        }
-                        continue stateLoop;
-                    }
-                    case 6: {
-                        try {
-                            td.field_g.d(param0 ^ -27371);
-                            statePc = 9;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_6) {
-                            caughtException = stateCaught_6;
-                            statePc = 8;
-                            continue stateLoop;
-                        }
-                    }
-                    case 8: {
-                        iOException = (IOException) (Object) caughtException;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                    case 9: {
-                        if (vb.field_a != null) {
-                            statePc = 13;
-                        } else {
-                            statePc = 10;
-                        }
-                        continue stateLoop;
-                    }
-                    case 10: {
-                        if (param0 == 27370) {
-                            statePc = 12;
-                        } else {
-                            statePc = 11;
-                        }
-                        continue stateLoop;
-                    }
-                    case 11: {
-                        jk.a((gn) null, -66);
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                    case 12: {
-                        return;
-                    }
-                    case 13: {
-                        var1 = 0;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                    case 14: {
-                        if (vb.field_a.length <= var1) {
-                            statePc = 22;
-                        } else {
-                            statePc = 15;
-                        }
-                        continue stateLoop;
-                    }
-                    case 15: {
-                        if (null != vb.field_a[var1]) {
-                            statePc = 18;
-                        } else {
-                            statePc = 16;
-                        }
-                        continue stateLoop;
-                    }
-                    case 16: {
-                        var1++;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                    case 18: {
-                        try {
-                            vb.field_a[var1].d(-1);
-                            statePc = 19;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_18) {
-                            caughtException = stateCaught_18;
-                            statePc = 20;
-                            continue stateLoop;
-                        }
-                    }
-                    case 19: {
-                        var1++;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                    case 20: {
-                        var2 = (IOException) (Object) caughtException;
-                        var1++;
-                        statePc = 14;
-                        continue stateLoop;
-                    }
-                    case 22: {
-                        if (param0 == 27370) {
-                            statePc = 24;
-                        } else {
-                            statePc = 23;
-                        }
-                        continue stateLoop;
-                    }
-                    case 23: {
-                        jk.a((gn) null, -66);
-                        statePc = 24;
-                        continue stateLoop;
-                    }
-                    case 24: {
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            var3 = HoldTheLine.field_D;
+            try {
+              L0: {
+                L1: {
+                  if (ce.field_n == null) {
+                    break L1;
+                  } else {
+                    ce.field_n.e(param0 ^ 27371);
+                    break L1;
+                  }
                 }
+                L2: {
+                  if (null == lk.field_d) {
+                    break L2;
+                  } else {
+                    lk.field_d.a(true);
+                    break L2;
+                  }
+                }
+                L3: {
+                  if (null != td.field_g) {
+                    {
+                      L4: {
+                        td.field_g.d(param0 ^ -27371);
+                        break L4;
+                      }
+                    }
+                    break L3;
+                  } else {
+                    break L3;
+                  }
+                }
+                L6: {
+                  if (vb.field_a != null) {
+                    var1_int = 0;
+                    L7: while (true) {
+                      if (vb.field_a.length <= var1_int) {
+                        break L6;
+                      } else {
+                        L8: {
+                          if (null == vb.field_a[var1_int]) {
+                            break L8;
+                          } else {
+                            {
+                              L9: {
+                                vb.field_a[var1_int].d(-1);
+                                break L9;
+                              }
+                            }
+                            break L8;
+                          }
+                        }
+                        var1_int++;
+                        continue L7;
+                      }
+                    }
+                  } else {
+                    break L6;
+                  }
+                }
+                L11: {
+                  if (param0 == 27370) {
+                    break L11;
+                  } else {
+                    jk.a((gn) null, -66);
+                    break L11;
+                  }
+                }
+                break L0;
+              }
+            } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
+              decompiledCaughtException = decompiledCaughtParameter2;
+              var1_ref = (RuntimeException) (Object) decompiledCaughtException;
+              throw kk.a((Throwable) (Object) var1_ref, "jk.C(" + param0 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -203,15 +133,11 @@ final class jk extends hl {
     public static void e(int param0) {
         field_p = null;
         field_r = null;
-        if (param0 != 1288) {
-            jk.a(27);
-            field_l = null;
-            return;
-        }
         field_l = null;
     }
 
     final static void a(gn param0, int param1) {
+        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5_int = 0;
@@ -221,55 +147,104 @@ final class jk extends hl {
         da var8 = null;
         int var9 = 0;
         da var10 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
         var7 = HoldTheLine.field_D;
-        var8 = new da(param0.a("", false, "logo.fo3d"));
-        var10 = var8;
-        var3 = var10.f((byte) -16);
-        var10.e(true);
-        kl.field_s = va.a(11658, var10);
-        ej.field_c = new qk[var3];
-        gd.field_e = new int[var3][];
-        var4 = 0;
-        var5_int = -65 / ((58 - param1) / 41);
-        L0: while (true) {
-          if (var3 <= var4) {
-            var10.l(-71);
-            var9 = 0;
-            var4 = var9;
+        try {
+          L0: {
+            var8 = new da(param0.a("", false, "logo.fo3d"));
+            var10 = var8;
+            var3 = var10.f((byte) -16);
+            var10.e(true);
+            kl.field_s = va.a(11658, var10);
+            ej.field_c = new qk[var3];
+            gd.field_e = new int[var3][];
+            var4 = 0;
+            var5_int = -65 / ((58 - param1) / 41);
             L1: while (true) {
-              if (var9 >= var3) {
-                return;
+              if (var3 <= var4) {
+                var10.l(-71);
+                var9 = 0;
+                var4 = var9;
+                L2: while (true) {
+                  if (var9 >= var3) {
+                    break L0;
+                  } else {
+                    var5 = ej.field_c[var9];
+                    var5.a(6, 6, 6, 2, 1);
+                    var5.c(0);
+                    var6 = new int[]{var5.field_F + var5.field_L >> 1, var5.field_H - -var5.field_d >> 1, var5.field_p + var5.field_n >> 1};
+                    gd.field_e[var9] = var6;
+                    var5.a(-var6[1], -var6[0], -26608, -var6[2]);
+                    var9++;
+                    continue L2;
+                  }
+                }
               } else {
-                var5 = ej.field_c[var9];
-                var5.a(6, 6, 6, 2, 1);
-                var5.c(0);
-                var6 = new int[]{var5.field_F + var5.field_L >> 1229712865, var5.field_H - -var5.field_d >> -1728352799, var5.field_p + var5.field_n >> -800904959};
-                gd.field_e[var9] = var6;
-                var5.a(-var6[1], -var6[0], -26608, -var6[2]);
-                var9++;
+                ej.field_c[var4] = wg.a(6, var8);
+                var4++;
                 continue L1;
               }
             }
-          } else {
-            ej.field_c[var4] = wg.a(6, var8);
-            var4++;
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2 = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var2;
+            stackOut_8_1 = new StringBuilder().append("jk.F(");
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param0 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L3;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L3;
+            }
+          }
+          throw kk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 41);
         }
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6, int param7, int param8, int param9, int param10) {
-        ((jk) this).field_k = param2 << 638043178;
-        ((jk) this).field_u = param8 << 1415346954;
+        ((jk) this).field_k = param2 << 10;
+        ((jk) this).field_u = param8 << 10;
         ((jk) this).field_m = param0;
         int var12 = 105 / ((-81 - param5) / 39);
-        ((jk) this).field_t = param6 << -359791062;
+        ((jk) this).field_t = param6 << 10;
         ((jk) this).field_i = param1;
         ((jk) this).field_s = param10;
         ((jk) this).field_o = param7;
         ((jk) this).field_n = param3;
         ((jk) this).field_j = param4;
-        ((jk) this).field_q = param9 << -1348675710;
+        ((jk) this).field_q = param9 << 2;
     }
 
     jk(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {

@@ -9,7 +9,7 @@ final class nn extends le {
     final static boolean a(int param0) {
         if (param0 != -2887) {
             field_j = null;
-            if (0 == (jd.field_b ^ -1)) {
+            if (jd.field_b == -1) {
                 if (!ck.a((byte) -128, 1)) {
                     return false;
                 }
@@ -25,7 +25,7 @@ final class nn extends le {
             }
             return ck.a((byte) 103, jd.field_b);
         }
-        if (0 == (jd.field_b ^ -1)) {
+        if (jd.field_b == -1) {
             if (!ck.a((byte) -128, 1)) {
                 return false;
             }
@@ -48,9 +48,6 @@ final class nn extends le {
 
     public static void c(int param0) {
         field_j = null;
-        if (param0 != 2) {
-            boolean discarded$0 = nn.a(52);
-        }
     }
 
     static {

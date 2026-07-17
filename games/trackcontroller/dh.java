@@ -28,41 +28,170 @@ final class dh extends fc {
     final static void a(String param0, long param1, java.applet.Applet param2, String param3, int param4) {
         try {
             Throwable var6 = null;
+            RuntimeException var6_ref = null;
             String var7 = null;
             String var8 = null;
             String var9 = null;
+            RuntimeException stackIn_10_0 = null;
+            StringBuilder stackIn_10_1 = null;
+            RuntimeException stackIn_11_0 = null;
+            StringBuilder stackIn_11_1 = null;
+            RuntimeException stackIn_12_0 = null;
+            StringBuilder stackIn_12_1 = null;
+            String stackIn_12_2 = null;
+            RuntimeException stackIn_13_0 = null;
+            StringBuilder stackIn_13_1 = null;
+            RuntimeException stackIn_14_0 = null;
+            StringBuilder stackIn_14_1 = null;
+            RuntimeException stackIn_15_0 = null;
+            StringBuilder stackIn_15_1 = null;
+            String stackIn_15_2 = null;
+            RuntimeException stackIn_16_0 = null;
+            StringBuilder stackIn_16_1 = null;
+            RuntimeException stackIn_17_0 = null;
+            StringBuilder stackIn_17_1 = null;
+            RuntimeException stackIn_18_0 = null;
+            StringBuilder stackIn_18_1 = null;
+            String stackIn_18_2 = null;
             Throwable decompiledCaughtException = null;
-            if (param4 == 1000) {
-              try {
-                L0: {
-                  L1: {
-                    var8 = param2.getParameter("cookiehost");
-                    var7 = var8;
-                    var7 = var8;
-                    var9 = param3 + "=" + param0 + "; version=1; path=/; domain=" + var8;
-                    var7 = var9;
-                    var7 = var9;
-                    if (param1 < 0L) {
-                      var7 = var9 + "; Discard;";
-                      break L1;
-                    } else {
-                      var7 = var9 + "; Expires=" + rb.a(qg.a(false) - -(1000L * param1), (byte) -101) + "; Max-Age=" + param1;
+            RuntimeException stackOut_9_0 = null;
+            StringBuilder stackOut_9_1 = null;
+            RuntimeException stackOut_11_0 = null;
+            StringBuilder stackOut_11_1 = null;
+            String stackOut_11_2 = null;
+            RuntimeException stackOut_10_0 = null;
+            StringBuilder stackOut_10_1 = null;
+            String stackOut_10_2 = null;
+            RuntimeException stackOut_12_0 = null;
+            StringBuilder stackOut_12_1 = null;
+            RuntimeException stackOut_14_0 = null;
+            StringBuilder stackOut_14_1 = null;
+            String stackOut_14_2 = null;
+            RuntimeException stackOut_13_0 = null;
+            StringBuilder stackOut_13_1 = null;
+            String stackOut_13_2 = null;
+            RuntimeException stackOut_15_0 = null;
+            StringBuilder stackOut_15_1 = null;
+            RuntimeException stackOut_17_0 = null;
+            StringBuilder stackOut_17_1 = null;
+            String stackOut_17_2 = null;
+            RuntimeException stackOut_16_0 = null;
+            StringBuilder stackOut_16_1 = null;
+            String stackOut_16_2 = null;
+            try {
+              L0: {
+                if (param4 == 1000) {
+                  try {
+                    L1: {
+                      L2: {
+                        var8 = param2.getParameter("cookiehost");
+                        var7 = var8;
+                        var7 = var8;
+                        var9 = param3 + "=" + param0 + "; version=1; path=/; domain=" + var8;
+                        var7 = var9;
+                        var7 = var9;
+                        if (param1 < 0L) {
+                          var7 = var9 + "; Discard;";
+                          break L2;
+                        } else {
+                          var7 = var9 + "; Expires=" + rb.a(qg.a(false) - -(1000L * param1), (byte) -101) + "; Max-Age=" + param1;
+                          break L2;
+                        }
+                      }
+                      sj.a(param2, "document.cookie=\"" + var7 + "\"", param4 ^ -23611);
                       break L1;
                     }
+                  } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                    decompiledCaughtException = decompiledCaughtParameter0;
+                    L3: {
+                      var6 = decompiledCaughtException;
+                      break L3;
+                    }
                   }
-                  sj.a(param2, "document.cookie=\"" + var7 + "\"", param4 ^ -23611);
                   break L0;
-                }
-              } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                L2: {
-                  var6 = decompiledCaughtException;
-                  break L2;
+                } else {
+                  return;
                 }
               }
-              return;
-            } else {
-              return;
+            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L4: {
+                var6_ref = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_9_0 = (RuntimeException) var6_ref;
+                stackOut_9_1 = new StringBuilder().append("dh.F(");
+                stackIn_11_0 = stackOut_9_0;
+                stackIn_11_1 = stackOut_9_1;
+                stackIn_10_0 = stackOut_9_0;
+                stackIn_10_1 = stackOut_9_1;
+                if (param0 == null) {
+                  stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+                  stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+                  stackOut_11_2 = "null";
+                  stackIn_12_0 = stackOut_11_0;
+                  stackIn_12_1 = stackOut_11_1;
+                  stackIn_12_2 = stackOut_11_2;
+                  break L4;
+                } else {
+                  stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+                  stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+                  stackOut_10_2 = "{...}";
+                  stackIn_12_0 = stackOut_10_0;
+                  stackIn_12_1 = stackOut_10_1;
+                  stackIn_12_2 = stackOut_10_2;
+                  break L4;
+                }
+              }
+              L5: {
+                stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+                stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(44).append(param1).append(44);
+                stackIn_14_0 = stackOut_12_0;
+                stackIn_14_1 = stackOut_12_1;
+                stackIn_13_0 = stackOut_12_0;
+                stackIn_13_1 = stackOut_12_1;
+                if (param2 == null) {
+                  stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+                  stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+                  stackOut_14_2 = "null";
+                  stackIn_15_0 = stackOut_14_0;
+                  stackIn_15_1 = stackOut_14_1;
+                  stackIn_15_2 = stackOut_14_2;
+                  break L5;
+                } else {
+                  stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+                  stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+                  stackOut_13_2 = "{...}";
+                  stackIn_15_0 = stackOut_13_0;
+                  stackIn_15_1 = stackOut_13_1;
+                  stackIn_15_2 = stackOut_13_2;
+                  break L5;
+                }
+              }
+              L6: {
+                stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+                stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44);
+                stackIn_17_0 = stackOut_15_0;
+                stackIn_17_1 = stackOut_15_1;
+                stackIn_16_0 = stackOut_15_0;
+                stackIn_16_1 = stackOut_15_1;
+                if (param3 == null) {
+                  stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+                  stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+                  stackOut_17_2 = "null";
+                  stackIn_18_0 = stackOut_17_0;
+                  stackIn_18_1 = stackOut_17_1;
+                  stackIn_18_2 = stackOut_17_2;
+                  break L6;
+                } else {
+                  stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+                  stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+                  stackOut_16_2 = "{...}";
+                  stackIn_18_0 = stackOut_16_0;
+                  stackIn_18_1 = stackOut_16_1;
+                  stackIn_18_2 = stackOut_16_2;
+                  break L6;
+                }
+              }
+              throw sl.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + param4 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -74,9 +203,6 @@ final class dh extends fc {
     public static void d(int param0) {
         field_r = null;
         field_i = null;
-        if (param0 > -5) {
-            nk discarded$0 = dh.a(95, -52, 22, 106);
-        }
     }
 
     final static qj[] e(int param0) {
@@ -127,7 +253,7 @@ final class dh extends fc {
                   var2++;
                   continue L1;
                 } else {
-                  var6[var7] = ok.a(tc.a(var23[var7] << -1369907464, -16777216), qe.field_z[tc.a(255, (int) var21[var7])]);
+                  var6[var7] = ok.a(tc.a(var23[var7] << 24, -16777216), qe.field_z[tc.a(255, (int) var21[var7])]);
                   var7++;
                   continue L2;
                 }
@@ -154,33 +280,138 @@ final class dh extends fc {
 
     final static void a(int param0, String param1, java.applet.Applet param2) {
         try {
-            String var6 = null;
-            String var5 = null;
+            Throwable var3 = null;
+            RuntimeException var3_ref = null;
             String var4 = null;
+            String var5 = null;
+            String var6 = null;
             String var7 = null;
-            of.field_g = param1;
-            if (param0 != -19136) {
-                return;
-            }
+            RuntimeException stackIn_12_0 = null;
+            StringBuilder stackIn_12_1 = null;
+            RuntimeException stackIn_13_0 = null;
+            StringBuilder stackIn_13_1 = null;
+            RuntimeException stackIn_14_0 = null;
+            StringBuilder stackIn_14_1 = null;
+            String stackIn_14_2 = null;
+            RuntimeException stackIn_15_0 = null;
+            StringBuilder stackIn_15_1 = null;
+            RuntimeException stackIn_16_0 = null;
+            StringBuilder stackIn_16_1 = null;
+            RuntimeException stackIn_17_0 = null;
+            StringBuilder stackIn_17_1 = null;
+            String stackIn_17_2 = null;
+            Throwable decompiledCaughtException = null;
+            RuntimeException stackOut_11_0 = null;
+            StringBuilder stackOut_11_1 = null;
+            RuntimeException stackOut_13_0 = null;
+            StringBuilder stackOut_13_1 = null;
+            String stackOut_13_2 = null;
+            RuntimeException stackOut_12_0 = null;
+            StringBuilder stackOut_12_1 = null;
+            String stackOut_12_2 = null;
+            RuntimeException stackOut_14_0 = null;
+            StringBuilder stackOut_14_1 = null;
+            RuntimeException stackOut_16_0 = null;
+            StringBuilder stackOut_16_1 = null;
+            String stackOut_16_2 = null;
+            RuntimeException stackOut_15_0 = null;
+            StringBuilder stackOut_15_1 = null;
+            String stackOut_15_2 = null;
             try {
-                var6 = param2.getParameter("cookieprefix");
-                var5 = var6;
-                var5 = var6;
-                var4 = param2.getParameter("cookiehost");
-                var5 = var4;
-                var5 = var4;
-                var7 = var6 + "settings=" + param1 + "; version=1; path=/; domain=" + var4;
-                var5 = var7;
-                var5 = var7;
-                if (-1 == (param1.length() ^ -1)) {
-                    var5 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
-                } else {
-                    var5 = var7 + "; Expires=" + rb.a(94608000000L + qg.a(false), (byte) -111) + "; Max-Age=" + 94608000L;
+              L0: {
+                of.field_g = param1;
+                try {
+                  L1: {
+                    if (param0 == -19136) {
+                      L2: {
+                        var6 = param2.getParameter("cookieprefix");
+                        var5 = var6;
+                        var5 = var6;
+                        var4 = param2.getParameter("cookiehost");
+                        var5 = var4;
+                        var5 = var4;
+                        var7 = var6 + "settings=" + param1 + "; version=1; path=/; domain=" + var4;
+                        var5 = var7;
+                        var5 = var7;
+                        if (param1.length() != 0) {
+                          var5 = var7 + "; Expires=" + rb.a(94608000000L + qg.a(false), (byte) -111) + "; Max-Age=" + 94608000L;
+                          break L2;
+                        } else {
+                          var5 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
+                          break L2;
+                        }
+                      }
+                      sj.a(param2, "document.cookie=\"" + var5 + "\"", -24531);
+                      break L1;
+                    } else {
+                      return;
+                    }
+                  }
+                } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  L3: {
+                    var3 = decompiledCaughtException;
+                    break L3;
+                  }
                 }
-                sj.a(param2, "document.cookie=\"" + var5 + "\"", -24531);
-            } catch (Throwable throwable) {
+                rj.a(param2, (byte) -99);
+                break L0;
+              }
+            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L4: {
+                var3_ref = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_11_0 = (RuntimeException) var3_ref;
+                stackOut_11_1 = new StringBuilder().append("dh.C(").append(param0).append(44);
+                stackIn_13_0 = stackOut_11_0;
+                stackIn_13_1 = stackOut_11_1;
+                stackIn_12_0 = stackOut_11_0;
+                stackIn_12_1 = stackOut_11_1;
+                if (param1 == null) {
+                  stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+                  stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+                  stackOut_13_2 = "null";
+                  stackIn_14_0 = stackOut_13_0;
+                  stackIn_14_1 = stackOut_13_1;
+                  stackIn_14_2 = stackOut_13_2;
+                  break L4;
+                } else {
+                  stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+                  stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+                  stackOut_12_2 = "{...}";
+                  stackIn_14_0 = stackOut_12_0;
+                  stackIn_14_1 = stackOut_12_1;
+                  stackIn_14_2 = stackOut_12_2;
+                  break L4;
+                }
+              }
+              L5: {
+                stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+                stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(44);
+                stackIn_16_0 = stackOut_14_0;
+                stackIn_16_1 = stackOut_14_1;
+                stackIn_15_0 = stackOut_14_0;
+                stackIn_15_1 = stackOut_14_1;
+                if (param2 == null) {
+                  stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+                  stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+                  stackOut_16_2 = "null";
+                  stackIn_17_0 = stackOut_16_0;
+                  stackIn_17_1 = stackOut_16_1;
+                  stackIn_17_2 = stackOut_16_2;
+                  break L5;
+                } else {
+                  stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+                  stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+                  stackOut_15_2 = "{...}";
+                  stackIn_17_0 = stackOut_15_0;
+                  stackIn_17_1 = stackOut_15_1;
+                  stackIn_17_2 = stackOut_15_2;
+                  break L5;
+                }
+              }
+              throw sl.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
             }
-            rj.a(param2, (byte) -99);
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -189,7 +420,8 @@ final class dh extends fc {
     }
 
     final static String a(byte param0, String[] param1, String param2) {
-        int var3 = 0;
+        RuntimeException var3 = null;
+        int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
         int var6_int = 0;
@@ -200,101 +432,195 @@ final class dh extends fc {
         String var9 = null;
         int var10 = 0;
         int var11 = 0;
+        String stackIn_25_0 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        RuntimeException stackIn_28_0 = null;
+        StringBuilder stackIn_28_1 = null;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
+        String stackIn_29_2 = null;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
+        RuntimeException stackIn_31_0 = null;
+        StringBuilder stackIn_31_1 = null;
+        RuntimeException stackIn_32_0 = null;
+        StringBuilder stackIn_32_1 = null;
+        String stackIn_32_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        String stackOut_24_0 = null;
+        RuntimeException stackOut_26_0 = null;
+        StringBuilder stackOut_26_1 = null;
+        RuntimeException stackOut_28_0 = null;
+        StringBuilder stackOut_28_1 = null;
+        String stackOut_28_2 = null;
+        RuntimeException stackOut_27_0 = null;
+        StringBuilder stackOut_27_1 = null;
+        String stackOut_27_2 = null;
+        RuntimeException stackOut_29_0 = null;
+        StringBuilder stackOut_29_1 = null;
+        RuntimeException stackOut_31_0 = null;
+        StringBuilder stackOut_31_1 = null;
+        String stackOut_31_2 = null;
+        RuntimeException stackOut_30_0 = null;
+        StringBuilder stackOut_30_1 = null;
+        String stackOut_30_2 = null;
         var11 = TrackController.field_F ? 1 : 0;
-        var3 = param2.length();
-        var4 = var3;
-        var5 = 0;
-        L0: while (true) {
-          var6_int = param2.indexOf("<%", var5);
-          if (var6_int < 0) {
-            L1: {
-              var6 = new StringBuilder(var4);
-              var5 = 0;
-              var7 = 0;
-              if (param0 <= -40) {
-                break L1;
-              } else {
-                field_r = null;
-                break L1;
-              }
-            }
-            L2: while (true) {
-              var8 = param2.indexOf("<%", var5);
-              if (-1 >= (var8 ^ -1)) {
-                var5 = 2 + var8;
+        try {
+          L0: {
+            var3_int = param2.length();
+            var4 = var3_int;
+            var5 = 0;
+            L1: while (true) {
+              var6_int = param2.indexOf("<%", var5);
+              if (var6_int < 0) {
+                L2: {
+                  var6 = new StringBuilder(var4);
+                  var5 = 0;
+                  var7 = 0;
+                  if (param0 <= -40) {
+                    break L2;
+                  } else {
+                    field_r = null;
+                    break L2;
+                  }
+                }
                 L3: while (true) {
-                  L4: {
-                    if (var5 >= var3) {
-                      break L4;
-                    } else {
-                      if (!hd.a(-114, param2.charAt(var5))) {
-                        break L4;
+                  var8 = param2.indexOf("<%", var5);
+                  if (var8 >= 0) {
+                    var5 = 2 + var8;
+                    L4: while (true) {
+                      L5: {
+                        if (var5 >= var3_int) {
+                          break L5;
+                        } else {
+                          if (!hd.a(-114, param2.charAt(var5))) {
+                            break L5;
+                          } else {
+                            var5++;
+                            continue L4;
+                          }
+                        }
+                      }
+                      var9 = param2.substring(2 + var8, var5);
+                      if (ej.a(false, (CharSequence) (Object) var9)) {
+                        if (var5 >= var3_int) {
+                          continue L3;
+                        } else {
+                          if (param2.charAt(var5) != 62) {
+                            continue L3;
+                          } else {
+                            var5++;
+                            var10 = uk.a((CharSequence) (Object) var9, 10);
+                            StringBuilder discarded$3 = var6.append(param2.substring(var7, var8));
+                            StringBuilder discarded$4 = var6.append(param1[var10]);
+                            var7 = var5;
+                            continue L3;
+                          }
+                        }
                       } else {
-                        var5++;
                         continue L3;
                       }
                     }
+                  } else {
+                    StringBuilder discarded$5 = var6.append(param2.substring(var7));
+                    stackOut_24_0 = var6.toString();
+                    stackIn_25_0 = stackOut_24_0;
+                    break L0;
                   }
-                  var9 = param2.substring(2 + var8, var5);
-                  if (ej.a(false, (CharSequence) (Object) var9)) {
-                    if (var5 >= var3) {
-                      continue L2;
+                }
+              } else {
+                var5 = 2 + var6_int;
+                L6: while (true) {
+                  L7: {
+                    if (var3_int <= var5) {
+                      break L7;
                     } else {
-                      if (param2.charAt(var5) != 62) {
-                        continue L2;
+                      if (!hd.a(-124, param2.charAt(var5))) {
+                        break L7;
                       } else {
                         var5++;
-                        var10 = uk.a((CharSequence) (Object) var9, 10);
-                        StringBuilder discarded$3 = var6.append(param2.substring(var7, var8));
-                        StringBuilder discarded$4 = var6.append(param1[var10]);
-                        var7 = var5;
-                        continue L2;
+                        continue L6;
                       }
                     }
-                  } else {
-                    continue L2;
                   }
-                }
-              } else {
-                StringBuilder discarded$5 = var6.append(param2.substring(var7));
-                return var6.toString();
-              }
-            }
-          } else {
-            var5 = 2 + var6_int;
-            L5: while (true) {
-              L6: {
-                if (var3 <= var5) {
-                  break L6;
-                } else {
-                  if (!hd.a(-124, param2.charAt(var5))) {
-                    break L6;
+                  var7_ref_String = param2.substring(2 + var6_int, var5);
+                  if (!ej.a(false, (CharSequence) (Object) var7_ref_String)) {
+                    continue L1;
                   } else {
-                    var5++;
-                    continue L5;
-                  }
-                }
-              }
-              var7_ref_String = param2.substring(2 + var6_int, var5);
-              if (!ej.a(false, (CharSequence) (Object) var7_ref_String)) {
-                continue L0;
-              } else {
-                if (var3 <= var5) {
-                  continue L0;
-                } else {
-                  if (param2.charAt(var5) != 62) {
-                    continue L0;
-                  } else {
-                    var5++;
-                    var8 = uk.a((CharSequence) (Object) var7_ref_String, 10);
-                    var4 = var4 + (param1[var8].length() - var5 + var6_int);
-                    continue L0;
+                    if (var3_int <= var5) {
+                      continue L1;
+                    } else {
+                      if (param2.charAt(var5) != 62) {
+                        continue L1;
+                      } else {
+                        var5++;
+                        var8 = uk.a((CharSequence) (Object) var7_ref_String, 10);
+                        var4 = var4 + (param1[var8].length() - var5 + var6_int);
+                        continue L1;
+                      }
+                    }
                   }
                 }
               }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L8: {
+            var3 = decompiledCaughtException;
+            stackOut_26_0 = (RuntimeException) var3;
+            stackOut_26_1 = new StringBuilder().append("dh.E(").append(param0).append(44);
+            stackIn_28_0 = stackOut_26_0;
+            stackIn_28_1 = stackOut_26_1;
+            stackIn_27_0 = stackOut_26_0;
+            stackIn_27_1 = stackOut_26_1;
+            if (param1 == null) {
+              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
+              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_2 = "null";
+              stackIn_29_0 = stackOut_28_0;
+              stackIn_29_1 = stackOut_28_1;
+              stackIn_29_2 = stackOut_28_2;
+              break L8;
+            } else {
+              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
+              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_2 = "{...}";
+              stackIn_29_0 = stackOut_27_0;
+              stackIn_29_1 = stackOut_27_1;
+              stackIn_29_2 = stackOut_27_2;
+              break L8;
+            }
+          }
+          L9: {
+            stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
+            stackOut_29_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_29_2).append(44);
+            stackIn_31_0 = stackOut_29_0;
+            stackIn_31_1 = stackOut_29_1;
+            stackIn_30_0 = stackOut_29_0;
+            stackIn_30_1 = stackOut_29_1;
+            if (param2 == null) {
+              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
+              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
+              stackOut_31_2 = "null";
+              stackIn_32_0 = stackOut_31_0;
+              stackIn_32_1 = stackOut_31_1;
+              stackIn_32_2 = stackOut_31_2;
+              break L9;
+            } else {
+              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
+              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
+              stackOut_30_2 = "{...}";
+              stackIn_32_0 = stackOut_30_0;
+              stackIn_32_1 = stackOut_30_1;
+              stackIn_32_2 = stackOut_30_2;
+              break L9;
+            }
+          }
+          throw sl.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + 41);
         }
+        return stackIn_25_0;
     }
 
     dh(int param0, int param1, int param2, int param3, int param4, int param5) {

@@ -16,7 +16,7 @@ final class pe {
         field_c = null;
         field_b = null;
         field_e = null;
-        int var1 = 106 / ((param0 - -63) / 55);
+        int var1 = 53;
         field_d = null;
     }
 

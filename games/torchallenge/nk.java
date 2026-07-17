@@ -15,9 +15,6 @@ final class nk {
     public static void a(int param0) {
         field_b = null;
         field_f = null;
-        if (param0 != 250) {
-            return;
-        }
         field_g = null;
         field_d = null;
         field_a = null;

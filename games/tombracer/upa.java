@@ -211,8 +211,8 @@ final class upa extends vg {
         jea stackOut_23_0 = null;
         int stackOut_23_1 = 0;
         int stackOut_23_2 = 0;
-        tga.a(-21953, -640 + bea.field_g >> 788615969, 640 + bea.field_g >> -1247157215, 0, bea.field_a);
-        if ((mla.field_a ^ -1) >= -1) {
+        tga.a(-21953, -640 + bea.field_g >> 1, 640 + bea.field_g >> 1, 0, bea.field_a);
+        if (mla.field_a <= 0) {
           if (gt.field_a <= param1) {
             if (0 < fp.field_e) {
               L0: {

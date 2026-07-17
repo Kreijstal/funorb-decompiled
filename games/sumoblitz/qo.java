@@ -8,32 +8,20 @@ final class qo {
     private static String field_z;
 
     final static su a(Throwable param0, String param1) {
-        su var2_ref = null;
         su var2 = null;
         if (param0 instanceof su) {
             var2 = (su) (Object) param0;
             var2.field_a = var2.field_a + 32 + param1;
         } else {
-            var2_ref = new su(param0, param1);
+            var2 = new su(param0, param1);
         }
-        return var2_ref;
+        return var2;
     }
 
     public static void a(boolean param0) {
-        Object var2 = null;
-        if (param0) {
-          var2 = null;
-          su discarded$2 = qo.a((Throwable) null, (String) null);
-          field_a = null;
-          field_b = null;
-          field_c = null;
-          return;
-        } else {
-          field_a = null;
-          field_b = null;
-          field_c = null;
-          return;
-        }
+        field_a = null;
+        field_b = null;
+        field_c = null;
     }
 
     static {

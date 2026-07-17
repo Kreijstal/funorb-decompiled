@@ -22,20 +22,9 @@ final class sh {
     static int[] field_r;
 
     private final void a(byte param0) {
-        int var2 = 0;
-        wp var3 = null;
-        if (param0 < 20) {
-          field_m = null;
-          var2 = ((sh) this).field_n.field_i >> -286506128;
-          var3 = we.a(var2, true);
-          io.a(var3, (byte) -34);
-          return;
-        } else {
-          var2 = ((sh) this).field_n.field_i >> -286506128;
-          var3 = we.a(var2, true);
-          io.a(var3, (byte) -34);
-          return;
-        }
+        int var2 = ((sh) this).field_n.field_i >> 16;
+        wp var3 = we.a(var2, true);
+        io.a(var3, (byte) -34);
     }
 
     final void b(int param0) {
@@ -312,10 +301,10 @@ final class sh {
           ((sh) this).field_n.a(-1, var4);
           this.a((byte) 122);
           var6 = ((sh) this).field_o;
-          if (-2 != (var6 ^ -1)) {
+          if (var6 != 1) {
             if (2 != var6) {
               if (var6 != 3) {
-                if ((var6 ^ -1) != -6) {
+                if (var6 != 5) {
                   if (var6 != 6) {
                     if (var6 == 7) {
                       dh.a(((sh) this).field_c, 5, 32);
@@ -372,17 +361,10 @@ final class sh {
     }
 
     final static je d(byte param0) {
-        if (param0 < 69) {
-            sh.b((byte) 50);
-            return ne.field_f.field_Jb;
-        }
         return ne.field_f.field_Jb;
     }
 
     private final void c(byte param0) {
-        if (param0 != -79) {
-            return;
-        }
         ((sh) this).field_d = true;
     }
 
@@ -406,7 +388,7 @@ final class sh {
         ((sh) this).a(0, 0);
         ((sh) this).a(-28);
         ((sh) this).a(0, 0, (byte) 115);
-        ((sh) this).a(0, 1, so.field_b.field_g >> -1399586783, -29001, 0, so.field_b.field_a >> -230587967);
+        ((sh) this).a(0, 1, so.field_b.field_g >> 1, -29001, 0, so.field_b.field_a >> 1);
         this.c((byte) -79);
     }
 

@@ -13,9 +13,6 @@ final class di {
 
     final static void a(byte param0) {
         ln.field_a = 0;
-        if (param0 != -128) {
-            di.a(112);
-        }
     }
 
     public static void a(int param0) {

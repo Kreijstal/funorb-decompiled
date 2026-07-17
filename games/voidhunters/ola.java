@@ -13,9 +13,10 @@ final class ola extends gna {
           return;
         } else {
           var4 = 2 * param1;
-          param2 = (byte)((127 & param2 >> -32962879) + 127);
+          param2 = (byte)((127 & param2 >> 1) + 127);
+          int incrementValue$2 = var4;
           var4++;
-          ((ola) this).field_n[var4] = (byte)param2;
+          ((ola) this).field_n[incrementValue$2] = (byte)param2;
           ((ola) this).field_n[var4] = (byte)param2;
           return;
         }
@@ -59,11 +60,6 @@ final class ola extends gna {
     public static void b(int param0) {
         field_q = null;
         field_o = null;
-        if (param0 != 2) {
-            caa[] discarded$0 = ola.d((byte) -116);
-            field_p = null;
-            return;
-        }
         field_p = null;
     }
 

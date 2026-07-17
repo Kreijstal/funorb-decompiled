@@ -10,11 +10,6 @@ final class hh extends sh {
 
     public static void b(int param0) {
         field_d = null;
-        if (param0 >= -24) {
-            field_c = true;
-            field_e = null;
-            return;
-        }
         field_e = null;
     }
 
@@ -27,8 +22,12 @@ final class hh extends sh {
     }
 
     hh(String param0, String param1) {
-        ((hh) this).field_a = param1;
-        ((hh) this).field_b = param0;
+        try {
+            ((hh) this).field_a = param1;
+            ((hh) this).field_b = param0;
+        } catch (RuntimeException runtimeException) {
+            throw dd.a((Throwable) (Object) runtimeException, "hh.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static void c(int param0) {
@@ -42,16 +41,15 @@ final class hh extends sh {
     }
 
     final void a(mg param0, int param1) {
-        Object var4 = null;
-        param0.a(false, ((hh) this).field_b);
-        if (param1 != 27557) {
-          var4 = null;
-          ((hh) this).a((mg) null, 15);
-          param0.a((byte) -127, ((hh) this).field_a);
-          return;
-        } else {
-          param0.a((byte) -127, ((hh) this).field_a);
-          return;
+        try {
+            param0.a(false, ((hh) this).field_b);
+            if (param1 != 27557) {
+                Object var4 = null;
+                ((hh) this).a((mg) null, 15);
+            }
+            param0.a((byte) -127, ((hh) this).field_a);
+        } catch (RuntimeException runtimeException) {
+            throw dd.a((Throwable) (Object) runtimeException, "hh.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 

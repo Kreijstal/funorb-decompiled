@@ -8,7 +8,7 @@ final class cb extends IOException {
     static String field_b;
 
     public static void a(int param0) {
-        int var1 = -3 % ((-38 - param0) / 59);
+        int var1 = 0;
         field_b = null;
     }
 
@@ -24,24 +24,8 @@ final class cb extends IOException {
               break L0;
             }
           }
-          L1: {
-            if (param0 == -15) {
-              break L1;
-            } else {
-              field_b = null;
-              break L1;
-            }
-          }
           return;
         } else {
-          L2: {
-            if (param0 == -15) {
-              break L2;
-            } else {
-              field_b = null;
-              break L2;
-            }
-          }
           return;
         }
     }
@@ -60,23 +44,13 @@ final class cb extends IOException {
 
     final static void b(byte param0) {
         int var1 = 0;
-        if (wc.field_a >= 224) {
-          ah.a((byte) -103, 256);
-          if (param0 == -39) {
-            return;
-          } else {
-            cb.b(-18);
-            return;
-          }
-        } else {
+        if (wc.field_a < 224) {
           var1 = wc.field_a % 32;
           ah.a((byte) -69, 32 + (wc.field_a - var1));
-          if (param0 == -39) {
-            return;
-          } else {
-            cb.b(-18);
-            return;
-          }
+          return;
+        } else {
+          ah.a((byte) -103, 256);
+          return;
         }
     }
 

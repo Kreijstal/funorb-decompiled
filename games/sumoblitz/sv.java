@@ -9,9 +9,6 @@ final class sv {
 
     public static void a(int param0) {
         field_c = null;
-        if (param0 != 1284) {
-            return;
-        }
         field_a = null;
     }
 

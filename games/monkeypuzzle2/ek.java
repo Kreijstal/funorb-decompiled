@@ -9,7 +9,7 @@ final class ek {
     static String field_e;
 
     final static boolean a(byte param0) {
-        int var1 = -32 / ((-77 - param0) / 44);
+        int var1 = -32;
         return kg.a((byte) 104);
     }
 
@@ -17,7 +17,7 @@ final class ek {
         field_c = null;
         field_e = null;
         field_d = null;
-        int var1 = 114 / ((0 - param0) / 44);
+        int var1 = 57;
     }
 
     static {

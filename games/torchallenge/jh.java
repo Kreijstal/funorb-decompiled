@@ -11,30 +11,88 @@ final class jh {
     }
 
     final static boolean a(byte param0, uf param1) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
         int stackIn_3_0 = 0;
+        int stackIn_6_0 = 0;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int stackOut_2_0 = 0;
         int stackOut_1_0 = 0;
-        L0: {
-          var2 = param1.j(-88);
-          if (-2 == (var2 ^ -1)) {
-            stackOut_2_0 = 1;
-            stackIn_3_0 = stackOut_2_0;
-            break L0;
-          } else {
-            stackOut_1_0 = 0;
-            stackIn_3_0 = stackOut_1_0;
+        int stackOut_5_0 = 0;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        try {
+          L0: {
+            L1: {
+              var2_int = param1.j(-88);
+              if (var2_int == 1) {
+                stackOut_2_0 = 1;
+                stackIn_3_0 = stackOut_2_0;
+                break L1;
+              } else {
+                stackOut_1_0 = 0;
+                stackIn_3_0 = stackOut_1_0;
+                break L1;
+              }
+            }
+            L2: {
+              var3 = stackIn_3_0;
+              if (param0 >= 39) {
+                break L2;
+              } else {
+                field_b = null;
+                break L2;
+              }
+            }
+            stackOut_5_0 = var3;
+            stackIn_6_0 = stackOut_5_0;
             break L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2 = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var2;
+            stackOut_7_1 = new StringBuilder().append("jh.C(").append(param0).append(44);
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param1 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L3;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L3;
+            }
+          }
+          throw oj.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
         }
-        var3 = stackIn_3_0;
-        if (param0 < 39) {
-          field_b = null;
-          return var3 != 0;
-        } else {
-          return var3 != 0;
-        }
+        return stackIn_6_0 != 0;
     }
 
     final static boolean a(byte param0) {
@@ -73,9 +131,6 @@ final class jh {
         field_a = null;
         field_c = null;
         field_b = null;
-        if (param0 != -14282) {
-            boolean discarded$0 = jh.a((byte) -122);
-        }
     }
 
     static {

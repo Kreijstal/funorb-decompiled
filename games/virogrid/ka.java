@@ -17,11 +17,12 @@ final class ka extends l {
         }
         pg.field_h = true;
         j.a(false, -125);
-        j.field_l = param0;
+        j.field_l = 0;
     }
 
     final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
-        int var7 = 0;
+        RuntimeException var7 = null;
+        int var7_int = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -30,115 +31,123 @@ final class ka extends l {
         int var13 = 0;
         int var14 = 0;
         int stackIn_24_0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int stackOut_23_0 = 0;
         int stackOut_22_0 = 0;
         var14 = Virogrid.field_F ? 1 : 0;
-        if (param1 <= param6) {
-          return;
-        } else {
-          if (param6 - -1 >= param3) {
-            return;
-          } else {
-            L0: {
-              if (5 + param6 >= param3) {
-                break L0;
+        try {
+          L0: {
+            if (param1 <= param6) {
+              return;
+            } else {
+              if (param6 - -1 >= param3) {
+                return;
               } else {
-                if (param4 == param0) {
-                  break L0;
-                } else {
-                  var7 = (1 & (param4 & param0)) + ((param4 >> 1074050177) + (param0 >> 1894736513));
-                  var8 = param6;
-                  var9 = param0;
-                  var10 = param4;
-                  var11 = param6;
-                  L1: while (true) {
-                    if (var11 >= param3) {
-                      ka.a(param0, param1, param2, var8, var9, param5 + param5, param6);
-                      ka.a(var10, param1, param2, param3, param4, 0, var8);
-                      return;
+                L1: {
+                  if (5 + param6 >= param3) {
+                    break L1;
+                  } else {
+                    if (param4 == param0) {
+                      break L1;
                     } else {
-                      L2: {
-                        var12 = lk.field_Tb[var11];
-                        if (!param2) {
-                          stackOut_23_0 = vl.field_i[var12];
-                          stackIn_24_0 = stackOut_23_0;
-                          break L2;
+                      var7_int = (1 & (param4 & param0)) + ((param4 >> 1) + (param0 >> 1));
+                      var8 = param6;
+                      var9 = param0;
+                      var10 = param4;
+                      var11 = param6;
+                      L2: while (true) {
+                        if (var11 >= param3) {
+                          ka.a(param0, param1, param2, var8, var9, param5 + param5, param6);
+                          ka.a(var10, param1, param2, param3, param4, 0, var8);
+                          break L0;
                         } else {
-                          stackOut_22_0 = wh.field_c[var12];
-                          stackIn_24_0 = stackOut_22_0;
-                          break L2;
-                        }
-                      }
-                      var13 = stackIn_24_0;
-                      if (var7 < var13) {
-                        lk.field_Tb[var11] = lk.field_Tb[var8];
-                        int incrementValue$1 = var8;
-                        var8++;
-                        lk.field_Tb[incrementValue$1] = var12;
-                        if (var13 < var9) {
-                          var9 = var13;
+                          L3: {
+                            var12 = lk.field_Tb[var11];
+                            if (!param2) {
+                              stackOut_23_0 = vl.field_i[var12];
+                              stackIn_24_0 = stackOut_23_0;
+                              break L3;
+                            } else {
+                              stackOut_22_0 = wh.field_c[var12];
+                              stackIn_24_0 = stackOut_22_0;
+                              break L3;
+                            }
+                          }
+                          L4: {
+                            var13 = stackIn_24_0;
+                            if (var7_int < var13) {
+                              lk.field_Tb[var11] = lk.field_Tb[var8];
+                              int incrementValue$1 = var8;
+                              var8++;
+                              lk.field_Tb[incrementValue$1] = var12;
+                              if (var13 < var9) {
+                                var9 = var13;
+                                break L4;
+                              } else {
+                                break L4;
+                              }
+                            } else {
+                              if (var13 > var10) {
+                                var10 = var13;
+                                break L4;
+                              } else {
+                                break L4;
+                              }
+                            }
+                          }
                           var11++;
-                          continue L1;
-                        } else {
-                          var11++;
-                          continue L1;
-                        }
-                      } else {
-                        if (var13 > var10) {
-                          var10 = var13;
-                          var11++;
-                          continue L1;
-                        } else {
-                          var11++;
-                          continue L1;
+                          continue L2;
                         }
                       }
                     }
                   }
                 }
-              }
-            }
-            var7 = -1 + param3;
-            L3: while (true) {
-              if (param6 >= var7) {
-                return;
-              } else {
-                var8 = param6;
-                L4: while (true) {
-                  if (var8 >= var7) {
-                    var7--;
-                    continue L3;
+                var7_int = -1 + param3;
+                L5: while (true) {
+                  if (param6 >= var7_int) {
+                    return;
                   } else {
-                    var9 = lk.field_Tb[var8];
-                    var10 = lk.field_Tb[1 + var8];
-                    if (bd.a(param5 ^ 3005, param2, var9, var10)) {
-                      lk.field_Tb[var8] = var10;
-                      lk.field_Tb[1 + var8] = var9;
-                      var8++;
-                      continue L4;
-                    } else {
-                      var8++;
-                      continue L4;
+                    var8 = param6;
+                    L6: while (true) {
+                      if (var8 >= var7_int) {
+                        var7_int--;
+                        continue L5;
+                      } else {
+                        L7: {
+                          var9 = lk.field_Tb[var8];
+                          var10 = lk.field_Tb[1 + var8];
+                          if (!bd.a(param5 ^ 3005, param2, var9, var10)) {
+                            break L7;
+                          } else {
+                            lk.field_Tb[var8] = var10;
+                            lk.field_Tb[1 + var8] = var9;
+                            break L7;
+                          }
+                        }
+                        var8++;
+                        continue L6;
+                      }
                     }
                   }
                 }
               }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var7 = decompiledCaughtException;
+          throw kg.a((Throwable) (Object) var7, "ka.D(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
         }
     }
 
     final static void a(boolean param0, byte param1) {
         gb.field_H = new jf(bc.field_c);
-        if (param1 != 87) {
-            return;
-        }
         ln.field_g = -1;
         gb.field_H.field_d = gb.field_H.field_d | param0;
     }
 
     public static void c(int param0) {
-        int var1 = 19 / ((55 - param0) / 49);
+        int var1 = 9;
         field_n = null;
     }
 

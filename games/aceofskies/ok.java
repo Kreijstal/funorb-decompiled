@@ -20,7 +20,7 @@ final class ok {
     int field_n;
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        this.a(param0, 0, np.a(-param2 << 723543425, param2 >> -1588713311, (byte) -50), param5, 0, np.a(-param2, param2, (byte) -56), param1, 0, param4, param3, 0, 0, 255);
+        this.a(param0, 0, np.a(-param2 << 1, param2 >> 1, (byte) -50), param5, 0, np.a(-param2, param2, (byte) -56), param1, 0, param4, param3, 0, 0, 255);
         if (param6 != -1588713311) {
             ((ok) this).field_a = -84;
         } else {
@@ -49,7 +49,7 @@ final class ok {
     }
 
     final void a(int param0, boolean param1, int param2, int param3, int param4, int param5, int param6) {
-        this.a(0, 0, -param3 << 597769635, param4, param3, 0, param0, 1, param6, param2, 0, 0, param5);
+        this.a(0, 0, -param3 << 3, param4, param3, 0, param0, 1, param6, param2, 0, 0, param5);
         ((ok) this).field_h = -((ok) this).field_d;
         if (param1) {
             ((ok) this).a(-38, -34, 83, 10, 51, 37, 91);

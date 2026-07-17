@@ -10,35 +10,58 @@ final class fd extends si {
     String field_pb;
 
     final static int a(byte param0, int param1, int param2) {
-        int var3 = 0;
-        int var4 = stellarshard.field_B;
-        if (param0 < 75) {
-            field_mb = false;
-            var3 = 1;
-            while ((param1 ^ -1) < -2) {
-                if (!(-1 == (1 & param1 ^ -1))) {
-                    var3 = var3 * param2;
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        int stackIn_11_0 = 0;
+        int stackIn_13_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_12_0 = 0;
+        int stackOut_10_0 = 0;
+        var4 = stellarshard.field_B;
+        try {
+          L0: {
+            L1: {
+              if (param0 >= 75) {
+                break L1;
+              } else {
+                field_mb = false;
+                break L1;
+              }
+            }
+            var3_int = 1;
+            L2: while (true) {
+              if (param1 <= 1) {
+                if (1 != param1) {
+                  stackOut_12_0 = var3_int;
+                  stackIn_13_0 = stackOut_12_0;
+                  break L0;
+                } else {
+                  stackOut_10_0 = var3_int * param2;
+                  stackIn_11_0 = stackOut_10_0;
+                  return stackIn_11_0;
+                }
+              } else {
+                L3: {
+                  if ((1 & param1) != 0) {
+                    var3_int = var3_int * param2;
+                    break L3;
+                  } else {
+                    break L3;
+                  }
                 }
                 param1 = param1 >> 1;
                 param2 = param2 * param2;
+                continue L2;
+              }
             }
-            if (1 == param1) {
-                return var3 * param2;
-            }
-            return var3;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw ma.a((Throwable) (Object) var3, "fd.E(" + param0 + 44 + param1 + 44 + param2 + 41);
         }
-        var3 = 1;
-        while ((param1 ^ -1) < -2) {
-            if (!(-1 == (1 & param1 ^ -1))) {
-                var3 = var3 * param2;
-            }
-            param1 = param1 >> 1;
-            param2 = param2 * param2;
-        }
-        if (1 == param1) {
-            return var3 * param2;
-        }
-        return var3;
+        return stackIn_13_0;
     }
 
     fd() {
@@ -47,16 +70,9 @@ final class fd extends si {
 
     public static void g(int param0) {
         field_qb = null;
-        if (param0 != -30900) {
-            field_qb = null;
-        }
     }
 
     final static boolean d(byte param0) {
-        if (param0 != -21) {
-            field_mb = false;
-            return qh.field_g;
-        }
         return qh.field_g;
     }
 

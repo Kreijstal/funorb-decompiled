@@ -37,24 +37,88 @@ final class tqa implements fo {
     }
 
     private final void a(int param0, la param1, int param2, int param3, int param4) {
-        int var6 = 0;
+        int var6_int = 0;
+        RuntimeException var6 = null;
         int var7 = 0;
-        int var8 = TombRacer.field_G ? 1 : 0;
-        ((tqa) this).field_c = 0;
-        ((tqa) this).field_l = 0;
-        ((tqa) this).field_a = param3 / param0;
-        ((tqa) this).field_h = param2 / param0;
-        ((tqa) this).field_n = ((tqa) this).field_a + param4;
-        ((tqa) this).field_d = 0 + ((tqa) this).field_h;
-        ((tqa) this).field_m = param0;
-        ((tqa) this).field_f = param1;
-        ((tqa) this).field_b = -((tqa) this).field_l + ((tqa) this).field_n;
-        ((tqa) this).field_i = -((tqa) this).field_c + ((tqa) this).field_d;
-        ((tqa) this).field_j = new pca[((tqa) this).field_b * ((tqa) this).field_i];
-        for (var6 = ((tqa) this).field_c; var6 < ((tqa) this).field_d; var6++) {
-            for (var7 = ((tqa) this).field_l; var7 < ((tqa) this).field_n; var7++) {
-                this.a(var6, new pca(), var7, 10);
+        int var8 = 0;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        var8 = TombRacer.field_G ? 1 : 0;
+        try {
+          L0: {
+            ((tqa) this).field_c = 0;
+            ((tqa) this).field_l = 0;
+            ((tqa) this).field_a = param3 / param0;
+            ((tqa) this).field_h = param2 / param0;
+            ((tqa) this).field_n = ((tqa) this).field_a;
+            ((tqa) this).field_d = ((tqa) this).field_h;
+            ((tqa) this).field_m = param0;
+            ((tqa) this).field_f = param1;
+            ((tqa) this).field_b = -((tqa) this).field_l + ((tqa) this).field_n;
+            ((tqa) this).field_i = -((tqa) this).field_c + ((tqa) this).field_d;
+            ((tqa) this).field_j = new pca[((tqa) this).field_b * ((tqa) this).field_i];
+            var6_int = ((tqa) this).field_c;
+            L1: while (true) {
+              if (var6_int >= ((tqa) this).field_d) {
+                break L0;
+              } else {
+                var7 = ((tqa) this).field_l;
+                L2: while (true) {
+                  if (var7 >= ((tqa) this).field_n) {
+                    var6_int++;
+                    continue L1;
+                  } else {
+                    this.a(var6_int, new pca(), var7, 10);
+                    var7++;
+                    continue L2;
+                  }
+                }
+              }
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var6 = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var6;
+            stackOut_8_1 = new StringBuilder().append("tqa.C(").append(param0).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param1 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L3;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L3;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param2 + 44 + param3 + 44 + 0 + 41);
         }
     }
 
@@ -70,31 +134,161 @@ final class tqa implements fo {
     }
 
     final void a(byte param0, kh param1, la param2) {
-        int var4 = 0;
+        RuntimeException var4 = null;
+        int var4_int = 0;
         int var5 = 0;
         lk var6 = null;
-        int var7 = TombRacer.field_G ? 1 : 0;
-        if (param0 != 25) {
-            ((tqa) this).field_f = null;
-        }
-        ((tqa) this).field_p.d(8);
-        if (!(param2.field_E >= -9)) {
-            if (!(-10 < param2.field_E)) {
-                int discarded$0 = param1.b((byte) 44, 8);
-                int discarded$1 = param1.b((byte) 44, 8);
+        int var7 = 0;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        String stackIn_22_2 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        String stackIn_25_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        String stackOut_24_2 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        String stackOut_23_2 = null;
+        var7 = TombRacer.field_G ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              if (param0 == 25) {
+                break L1;
+              } else {
+                ((tqa) this).field_f = null;
+                break L1;
+              }
             }
-            for (var4 = 0; var4 < ((tqa) this).field_a; var4++) {
-                for (var5 = 0; ((tqa) this).field_h > var5; var5++) {
-                    ((tqa) this).a(param0 + -133, var5, var4).a((byte) 29, param2, param1);
+            L2: {
+              ((tqa) this).field_p.d(8);
+              if (param2.field_E > 8) {
+                L3: {
+                  if (param2.field_E <= 9) {
+                    int discarded$2 = param1.b((byte) 44, 8);
+                    int discarded$3 = param1.b((byte) 44, 8);
+                    break L3;
+                  } else {
+                    break L3;
+                  }
                 }
-            }
-            if (10 <= param2.field_E) {
-                var4 = param1.b((byte) 44, 8);
-                for (var5 = 0; var5 < var4; var5++) {
-                    var6 = new lk(param2, param1);
-                    ((tqa) this).field_p.b((byte) -77, (vg) (Object) var6);
+                var4_int = 0;
+                L4: while (true) {
+                  if (~var4_int <= ~((tqa) this).field_a) {
+                    L5: {
+                      if (10 > param2.field_E) {
+                        break L5;
+                      } else {
+                        var4_int = param1.b((byte) 44, 8);
+                        var5 = 0;
+                        L6: while (true) {
+                          if (~var5 <= ~var4_int) {
+                            break L5;
+                          } else {
+                            var6 = new lk(param2, param1);
+                            ((tqa) this).field_p.b((byte) -77, (vg) (Object) var6);
+                            var5++;
+                            continue L6;
+                          }
+                        }
+                      }
+                    }
+                    break L2;
+                  } else {
+                    var5 = 0;
+                    L7: while (true) {
+                      if (~((tqa) this).field_h >= ~var5) {
+                        var4_int++;
+                        continue L4;
+                      } else {
+                        ((tqa) this).a(param0 + -133, var5, var4_int).a((byte) 29, param2, param1);
+                        var5++;
+                        continue L7;
+                      }
+                    }
+                  }
                 }
+              } else {
+                break L2;
+              }
             }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L8: {
+            var4 = decompiledCaughtException;
+            stackOut_19_0 = (RuntimeException) var4;
+            stackOut_19_1 = new StringBuilder().append("tqa.D(").append(param0).append(44);
+            stackIn_21_0 = stackOut_19_0;
+            stackIn_21_1 = stackOut_19_1;
+            stackIn_20_0 = stackOut_19_0;
+            stackIn_20_1 = stackOut_19_1;
+            if (param1 == null) {
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "null";
+              stackIn_22_0 = stackOut_21_0;
+              stackIn_22_1 = stackOut_21_1;
+              stackIn_22_2 = stackOut_21_2;
+              break L8;
+            } else {
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "{...}";
+              stackIn_22_0 = stackOut_20_0;
+              stackIn_22_1 = stackOut_20_1;
+              stackIn_22_2 = stackOut_20_2;
+              break L8;
+            }
+          }
+          L9: {
+            stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+            stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(44);
+            stackIn_24_0 = stackOut_22_0;
+            stackIn_24_1 = stackOut_22_1;
+            stackIn_23_0 = stackOut_22_0;
+            stackIn_23_1 = stackOut_22_1;
+            if (param2 == null) {
+              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
+              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_2 = "null";
+              stackIn_25_0 = stackOut_24_0;
+              stackIn_25_1 = stackOut_24_1;
+              stackIn_25_2 = stackOut_24_2;
+              break L9;
+            } else {
+              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_2 = "{...}";
+              stackIn_25_0 = stackOut_23_0;
+              stackIn_25_1 = stackOut_23_1;
+              stackIn_25_2 = stackOut_23_2;
+              break L9;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
         }
     }
 
@@ -136,7 +330,7 @@ final class tqa implements fo {
         if (param1 == 48) {
           L0: {
             L1: {
-              if ((param2 ^ -1) > -1) {
+              if (param2 < 0) {
                 break L1;
               } else {
                 if (0 > param0) {
@@ -167,9 +361,6 @@ final class tqa implements fo {
     }
 
     public static void a(byte param0) {
-        if (param0 < 24) {
-            return;
-        }
         field_k = null;
         field_e = null;
     }
@@ -182,21 +373,91 @@ final class tqa implements fo {
     }
 
     public final void a(int param0, iq param1) {
-        int var3 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
-        int var5 = TombRacer.field_G ? 1 : 0;
-        if (param0 <= 103) {
-            return;
-        }
-        for (var3 = 0; var3 < ((tqa) this).field_i; var3++) {
-            for (var4 = 0; ((tqa) this).field_b > var4; var4++) {
-                ((tqa) this).a(-118, var3, var4).a((byte) 117, param1);
+        int var5 = 0;
+        lk var6 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        var5 = TombRacer.field_G ? 1 : 0;
+        try {
+          L0: {
+            if (param0 > 103) {
+              var3_int = 0;
+              L1: while (true) {
+                if (var3_int >= ((tqa) this).field_i) {
+                  var6 = (lk) (Object) ((tqa) this).field_p.f(-80);
+                  L2: while (true) {
+                    if (var6 == null) {
+                      break L0;
+                    } else {
+                      var6.a(119, param1);
+                      var6 = (lk) (Object) ((tqa) this).field_p.e(107);
+                      continue L2;
+                    }
+                  }
+                } else {
+                  var4 = 0;
+                  L3: while (true) {
+                    if (((tqa) this).field_b <= var4) {
+                      var3_int++;
+                      continue L1;
+                    } else {
+                      ((tqa) this).a(-118, var3_int, var4).a((byte) 117, param1);
+                      var4++;
+                      continue L3;
+                    }
+                  }
+                }
+              }
+            } else {
+              return;
             }
-        }
-        lk var6 = (lk) (Object) ((tqa) this).field_p.f(-80);
-        while (var6 != null) {
-            var6.a(119, param1);
-            var6 = (lk) (Object) ((tqa) this).field_p.e(107);
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var3 = decompiledCaughtException;
+            stackOut_13_0 = (RuntimeException) var3;
+            stackOut_13_1 = new StringBuilder().append("tqa.DB(").append(param0).append(44);
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
+            if (param1 == null) {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L4;
+            } else {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L4;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
         }
     }
 
@@ -209,12 +470,14 @@ final class tqa implements fo {
     }
 
     private final void a(int param0, pca param1, int param2, int param3) {
-        if (param3 != 10) {
-            field_g = -103;
+        int var5_int = 0;
+        try {
+            var5_int = this.a((byte) 113, param2, param0);
+            ((tqa) this).field_j[var5_int] = param1;
+            ((tqa) this).field_j[var5_int].a(param0, 125, param2, (tqa) this);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "tqa.S(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + 10 + 41);
         }
-        int var5 = this.a((byte) 113, param2, param0);
-        ((tqa) this).field_j[var5] = param1;
-        ((tqa) this).field_j[var5].a(param0, 125, param2, (tqa) this);
     }
 
     final int a(int param0) {
@@ -318,10 +581,68 @@ final class tqa implements fo {
     }
 
     final void a(uw param0, int param1) {
-        int var3 = 0;
-        int var4 = TombRacer.field_G ? 1 : 0;
-        for (var3 = param1; var3 < ((tqa) this).field_j.length; var3++) {
-            ((tqa) this).field_j[var3].a(param0, (byte) 84);
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        var4 = TombRacer.field_G ? 1 : 0;
+        try {
+          L0: {
+            var3_int = param1;
+            L1: while (true) {
+              if (var3_int >= ((tqa) this).field_j.length) {
+                break L0;
+              } else {
+                ((tqa) this).field_j[var3_int].a(param0, (byte) 84);
+                var3_int++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_1 = new StringBuilder().append("tqa.H(");
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param0 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L2;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L2;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
         }
     }
 
@@ -373,7 +694,7 @@ final class tqa implements fo {
           var9 = -1 + ((tqa) this).field_m;
           var10 = param6 / 2;
           var11 = param4 / 2;
-          if ((param1 ^ -1) != -2) {
+          if (param1 != 1) {
             break L0;
           } else {
             var10 = var10 + ((tqa) this).field_m;
@@ -408,7 +729,7 @@ final class tqa implements fo {
                 if (((tqa) this).a(var17, (byte) 48, var16)) {
                   L4: {
                     var18 = ((tqa) this).a(127, var16, var17);
-                    if ((param5 ^ -1) != 0) {
+                    if (param5 != -1) {
                       var18.a(param7, param5, true);
                       break L4;
                     } else {
@@ -441,8 +762,12 @@ final class tqa implements fo {
     }
 
     final void a(int param0, la param1, int param2) {
-        this.a(param0, param1, param1.m((byte) -86), param1.s(-125), 0);
-        int var4 = 17 / ((-78 - param2) / 43);
+        try {
+            this.a(param0, param1, param1.m((byte) -86), param1.s(-125), 0);
+            int var4_int = 17 / ((-78 - param2) / 43);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "tqa.U(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     final pca a(int param0, int param1, byte param2) {
@@ -472,19 +797,88 @@ final class tqa implements fo {
     }
 
     final void a(int param0, kh param1) {
-        int var3 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
-        int var5 = TombRacer.field_G ? 1 : 0;
-        for (var3 = 0; ((tqa) this).field_a > var3; var3++) {
-            for (var4 = 0; ((tqa) this).field_h > var4; var4++) {
-                ((tqa) this).a(-98, var4, var3).a(param1, -78);
+        int var5 = 0;
+        lk var6 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        var5 = TombRacer.field_G ? 1 : 0;
+        try {
+          L0: {
+            var3_int = 0;
+            L1: while (true) {
+              if (((tqa) this).field_a <= var3_int) {
+                param1.a((byte) -128, ((tqa) this).field_p.a((byte) -16), param0);
+                var6 = (lk) (Object) ((tqa) this).field_p.f(-80);
+                L2: while (true) {
+                  if (var6 == null) {
+                    break L0;
+                  } else {
+                    var6.a((byte) -128, param1);
+                    var6 = (lk) (Object) ((tqa) this).field_p.e(123);
+                    continue L2;
+                  }
+                }
+              } else {
+                var4 = 0;
+                L3: while (true) {
+                  if (((tqa) this).field_h <= var4) {
+                    var3_int++;
+                    continue L1;
+                  } else {
+                    ((tqa) this).a(-98, var4, var3_int).a(param1, -78);
+                    var4++;
+                    continue L3;
+                  }
+                }
+              }
             }
-        }
-        param1.a((byte) -128, ((tqa) this).field_p.a((byte) -16), param0);
-        lk var6 = (lk) (Object) ((tqa) this).field_p.f(-80);
-        while (var6 != null) {
-            var6.a((byte) -128, param1);
-            var6 = (lk) (Object) ((tqa) this).field_p.e(123);
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var3 = decompiledCaughtException;
+            stackOut_11_0 = (RuntimeException) var3;
+            stackOut_11_1 = new StringBuilder().append("tqa.I(").append(param0).append(44);
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
+            if (param1 == null) {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L4;
+            } else {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L4;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
         }
     }
 
@@ -495,7 +889,11 @@ final class tqa implements fo {
 
     tqa(la param0, int param1) {
         ((tqa) this).field_p = new vna();
-        ((tqa) this).a(param1, param0, 107);
+        try {
+            ((tqa) this).a(param1, param0, 107);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "tqa.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     static {

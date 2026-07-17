@@ -9,16 +9,8 @@ final class tq extends tm {
     static char[] field_B;
 
     final static void g(byte param0) {
-        if (param0 != -47) {
-          ut[] discarded$2 = tq.a(83, false, -82, 24, true, (byte) 68);
-          eq.a(0);
-          qn.a(param0 + -24776, il.field_d[0].field_o, el.field_I, eb.field_b, sh.field_c, oe.field_f);
-          return;
-        } else {
-          eq.a(0);
-          qn.a(param0 + -24776, il.field_d[0].field_o, el.field_I, eb.field_b, sh.field_c, oe.field_f);
-          return;
-        }
+        eq.a(0);
+        qn.a(-24823, il.field_d[0].field_o, el.field_I, eb.field_b, sh.field_c, oe.field_f);
     }
 
     final static ut[] a(int param0, boolean param1, int param2, int param3, boolean param4, byte param5) {
@@ -124,12 +116,70 @@ final class tq extends tm {
     }
 
     final li a(byte param0, li[] param1) {
-        if (param0 != 84) {
-          int discarded$2 = tq.h(5);
-          return new li(ha.a(param1[0].c(param0 + -84), (byte) -48));
-        } else {
-          return new li(ha.a(param1[0].c(param0 + -84), (byte) -48));
+        RuntimeException var3 = null;
+        li stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        li stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 == 84) {
+                break L1;
+              } else {
+                int discarded$2 = tq.h(5);
+                break L1;
+              }
+            }
+            stackOut_2_0 = new li(ha.a(param1[0].c(param0 + -84), (byte) -48));
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_1 = new StringBuilder().append("tq.C(").append(param0).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param1 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw nb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
         }
+        return stackIn_3_0;
     }
 
     tq(String param0, Class[] param1, String param2) {
@@ -177,7 +227,7 @@ final class tq extends tm {
     private static void $cfr$clinit() {
         field_E = "Click 'My Results' to view these rewards.";
         field_C = "achievements";
-        field_B = new char[]{(char)91, (char)93, (char)35};
+        field_B = new char[]{'[', ']', '#'};
         field_D = "This password contains repeated characters, and would be easy to guess";
     }
 }

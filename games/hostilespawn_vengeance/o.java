@@ -19,23 +19,24 @@ final class o extends ql {
         field_l = null;
         field_g = null;
         field_j = null;
-        int var1 = -82 / ((-63 - param0) / 43);
+        int var1 = 41;
     }
 
     final static void a(byte param0, java.applet.Applet param1) {
         try {
+            int var2_int = 0;
             String var3 = null;
             String var5 = null;
             int var4 = 0;
             java.net.URL var6 = null;
-            int var2 = 67 / ((param0 - 27) / 42);
+            var2_int = 67 / ((param0 - 27) / 42);
             try {
                 var3 = param1.getDocumentBase().getFile();
                 var5 = var3;
                 var5 = var3;
                 var4 = var3.indexOf('?');
                 var5 = "reload.ws";
-                if (-1 >= (var4 ^ -1)) {
+                if (var4 >= 0) {
                     var5 = var5 + var3.substring(var4);
                 }
                 var6 = new java.net.URL(param1.getCodeBase(), var5);
@@ -116,9 +117,9 @@ final class o extends ql {
               break L1;
             } else {
               if (mm.field_m[var3] != null) {
-                if ((mm.field_m[var3].field_I ^ -1) < -1) {
+                if (mm.field_m[var3].field_I > 0) {
                   L2: {
-                    if ((mm.field_m[var3].field_i ^ -1) == -5) {
+                    if (mm.field_m[var3].field_i == 4) {
                       break L2;
                     } else {
                       if (24 == mm.field_m[var3].field_i) {
@@ -156,13 +157,13 @@ final class o extends ql {
     final void d(int param0) {
         int var2 = 0;
         oc var3 = mm.field_m[0].field_j;
-        if (!(param0 != (((o) this).field_d.field_a ^ -1))) {
+        if (!(param0 != ~((o) this).field_d.field_a)) {
             var2 = ih.a(var3, (byte) -126, ((o) this).field_i);
             if (var2 < 2) {
                 ((o) this).field_d.field_a = 1;
             }
         }
-        if (-1 == (((o) this).field_k.field_a ^ -1)) {
+        if (((o) this).field_k.field_a == 0) {
             var2 = ih.a(var3, (byte) -101, ((o) this).field_m);
             if (var2 < 2) {
                 ((o) this).field_h[1].field_e = -1;
@@ -184,7 +185,7 @@ final class o extends ql {
         int var3 = 0;
         int var4 = HostileSpawn.field_I ? 1 : 0;
         oc var2 = mm.field_m[0].field_j;
-        if (-2 == (((o) this).field_d.field_a ^ -1)) {
+        if (((o) this).field_d.field_a == 1) {
             if (4 + ((o) this).field_i.field_e <= var2.field_e) {
                 ((o) this).field_d.field_a = 2;
             } else {

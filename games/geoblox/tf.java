@@ -53,9 +53,9 @@ final class tf {
             if (!ag.field_j[param1]) {
               L1: {
                 var2 = param1;
-                if (-5 != var2) {
+                if (var2 != 4) {
                   if (3 != var2) {
-                    if (-1 != var2) {
+                    if (var2 != 0) {
                       if (6 != var2) {
                         if (5 == var2) {
                           k.field_f = rf.a(kf.field_c, "", "sport");
@@ -109,32 +109,7 @@ final class tf {
     }
 
     final static boolean a(byte param0) {
-        int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
-        if (param0 > 65) {
-          L0: {
-            L1: {
-              if (oh.field_b == null) {
-                break L1;
-              } else {
-                if (oh.field_b.j(75) == null) {
-                  break L1;
-                } else {
-                  stackOut_4_0 = 1;
-                  stackIn_6_0 = stackOut_4_0;
-                  break L0;
-                }
-              }
-            }
-            stackOut_5_0 = 0;
-            stackIn_6_0 = stackOut_5_0;
-            break L0;
-          }
-          return stackIn_6_0 != 0;
-        } else {
-          return false;
-        }
+        return oh.field_b != null && oh.field_b.j(75) != null;
     }
 
     public static void f(int param0) {
@@ -172,23 +147,84 @@ final class tf {
     }
 
     final void a(hf param0, boolean param1) {
-        if (param0.field_c != null) {
-            param0.a(false);
+        try {
+            if (param0.field_c != null) {
+                param0.a(false);
+            }
+            param0.field_b = ((tf) this).field_a.field_b;
+            param0.field_c = ((tf) this).field_a;
+            param0.field_c.field_b = param0;
+            if (param1) {
+                field_b = null;
+            }
+            param0.field_b.field_c = param0;
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) (Object) runtimeException, "tf.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
-        param0.field_b = ((tf) this).field_a.field_b;
-        param0.field_c = ((tf) this).field_a;
-        param0.field_c.field_b = param0;
-        if (param1) {
-            field_b = null;
-        }
-        param0.field_b.field_c = param0;
     }
 
     final void a(tf param0, byte param1) {
-        this.a(param0, 2541, ((tf) this).field_a.field_b);
-        if (param1 != -70) {
-            Object var4 = null;
-            ((tf) this).a(52, (hf) null);
+        RuntimeException runtimeException = null;
+        Object var4 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        try {
+          L0: {
+            L1: {
+              this.a(param0, 2541, ((tf) this).field_a.field_b);
+              if (param1 == -70) {
+                break L1;
+              } else {
+                var4 = null;
+                ((tf) this).a(52, (hf) null);
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_1 = new StringBuilder().append("tf.I(");
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param0 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
+            }
+          }
+          throw t.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
         }
     }
 
@@ -253,17 +289,119 @@ final class tf {
     }
 
     private final void a(tf param0, int param1, hf param2) {
-        hf var4 = ((tf) this).field_a.field_c;
-        ((tf) this).field_a.field_c = param2.field_c;
-        param2.field_c.field_b = ((tf) this).field_a;
-        if (((tf) this).field_a != param2) {
-            param2.field_c = param0.field_a.field_c;
-            param2.field_c.field_b = param2;
-            param0.field_a.field_c = var4;
-            var4.field_b = param0.field_a;
-        }
-        if (param1 != 2541) {
-            hf discarded$0 = ((tf) this).e(-82);
+        hf var4 = null;
+        RuntimeException var4_ref = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        try {
+          L0: {
+            L1: {
+              var4 = ((tf) this).field_a.field_c;
+              ((tf) this).field_a.field_c = param2.field_c;
+              param2.field_c.field_b = ((tf) this).field_a;
+              if (((tf) this).field_a == param2) {
+                break L1;
+              } else {
+                param2.field_c = param0.field_a.field_c;
+                param2.field_c.field_b = param2;
+                param0.field_a.field_c = var4;
+                var4.field_b = param0.field_a;
+                break L1;
+              }
+            }
+            L2: {
+              if (param1 == 2541) {
+                break L2;
+              } else {
+                hf discarded$2 = ((tf) this).e(-82);
+                break L2;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var4_ref = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var4_ref;
+            stackOut_5_1 = new StringBuilder().append("tf.J(");
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param0 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L3;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L3;
+            }
+          }
+          L4: {
+            stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(param1).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param2 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L4;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L4;
+            }
+          }
+          throw t.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
         }
     }
 
@@ -274,16 +412,20 @@ final class tf {
     }
 
     final void a(int param0, hf param1) {
-        if (null != param1.field_c) {
-            param1.a(false);
+        try {
+            if (null != param1.field_c) {
+                param1.a(false);
+            }
+            param1.field_c = ((tf) this).field_a.field_c;
+            if (param0 >= -33) {
+                ((tf) this).field_a = null;
+            }
+            param1.field_b = ((tf) this).field_a;
+            param1.field_c.field_b = param1;
+            param1.field_b.field_c = param1;
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) (Object) runtimeException, "tf.P(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        param1.field_c = ((tf) this).field_a.field_c;
-        if (param0 >= -33) {
-            ((tf) this).field_a = null;
-        }
-        param1.field_b = ((tf) this).field_a;
-        param1.field_c.field_b = param1;
-        param1.field_b.field_c = param1;
     }
 
     static {
@@ -300,18 +442,19 @@ final class tf {
         L0: while (true) {
           if (var0 >= field_b.length) {
             tf discarded$1 = new tf();
+            return;
           } else {
             L1: {
               if (var0 == 0) {
-                field_b[var0] = (1 + var0) * 20 << -1110765784;
+                field_b[var0] = (1 + var0) * 20 << 8;
                 break L1;
               } else {
-                field_b[var0] = (1 + var0) * 51 << 1294033512;
+                field_b[var0] = (1 + var0) * 51 << 8;
                 break L1;
               }
             }
             if (var0 > 2) {
-              field_b[var0] = lb.a(field_b[var0], (-2 + var0) * 22 << 316724240);
+              field_b[var0] = lb.a(field_b[var0], (-2 + var0) * 22 << 16);
               var0++;
               continue L0;
             } else {

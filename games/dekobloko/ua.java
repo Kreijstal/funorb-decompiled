@@ -12,20 +12,71 @@ final class ua extends vi {
 
     final static String a(CharSequence param0, boolean param1) {
         String var2 = null;
-        var2 = cf.a(0, ab.a(117, param0));
-        if (!param1) {
-          return null;
-        } else {
+        RuntimeException var2_ref = null;
+        String stackIn_6_0 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        String stackOut_5_0 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        try {
           L0: {
-            if (var2 == null) {
-              var2 = "";
-              break L0;
+            var2 = cf.a(0, ab.a(117, param0));
+            L1: {
+              if (var2 == null) {
+                var2 = "";
+                break L1;
+              } else {
+                break L1;
+              }
+            }
+            stackOut_5_0 = (String) var2;
+            stackIn_6_0 = stackOut_5_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2_ref = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var2_ref;
+            stackOut_7_1 = new StringBuilder().append("ua.A(");
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param0 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L2;
             } else {
-              break L0;
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L2;
             }
           }
-          return var2;
+          throw dh.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + 1 + 41);
         }
+        return stackIn_6_0;
     }
 
     final Object c(int param0) {
@@ -37,47 +88,32 @@ final class ua extends vi {
     }
 
     final static void h(byte param0) {
-        Object var2 = null;
         if (gd.field_e != 0 - sh.field_i) {
-          if (gd.field_e == -sh.field_i + 250) {
+          if (gd.field_e != -sh.field_i + 250) {
             gd.field_e = gd.field_e + 1;
-            if (param0 != -70) {
-              var2 = null;
-              ua.a(-119, (ji) null, false, (ji) null);
-              return;
-            } else {
-              return;
-            }
+            return;
           } else {
             gd.field_e = gd.field_e + 1;
-            if (param0 != -70) {
-              var2 = null;
-              ua.a(-119, (ji) null, false, (ji) null);
-              return;
-            } else {
-              return;
-            }
+            return;
           }
         } else {
           gd.field_e = gd.field_e + 1;
-          if (param0 != -70) {
-            var2 = null;
-            ua.a(-119, (ji) null, false, (ji) null);
-            return;
-          } else {
-            return;
-          }
+          return;
         }
     }
 
     final static void a(int param0, ji param1, boolean param2, ji param3) {
-        re.a(fc.field_c, df.field_ab, field_H, rd.field_a, sg.field_e, param2, wa.field_a, db.field_c, (mm) (Object) nf.field_d, oh.field_i, (byte) 103, tm.field_b);
-        ef.field_O = bj.a(112, param1, "lobby", "chatfilter");
-        sg.field_a[2] = mc.field_d;
-        sg.field_a[0] = qj.field_g;
-        sg.field_a[1] = al.field_a;
-        jh.a((byte) 116, (mm) (Object) tg.field_a, param3);
-        int var4 = 74 / ((-31 - param0) / 46);
+        try {
+            re.a(fc.field_c, df.field_ab, field_H, rd.field_a, sg.field_e, param2, wa.field_a, db.field_c, (mm) (Object) nf.field_d, oh.field_i, (byte) 103, tm.field_b);
+            ef.field_O = bj.a(112, param1, "lobby", "chatfilter");
+            sg.field_a[2] = mc.field_d;
+            sg.field_a[0] = qj.field_g;
+            sg.field_a[1] = al.field_a;
+            jh.a((byte) 116, (mm) (Object) tg.field_a, param3);
+            int var4_int = 74 / ((-31 - param0) / 46);
+        } catch (RuntimeException runtimeException) {
+            throw dh.a((Throwable) (Object) runtimeException, "ua.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static void a(long param0, int param1) {
@@ -112,18 +148,20 @@ final class ua extends vi {
     }
 
     final static void i(byte param0) {
-        ug var1 = (ug) (Object) qi.field_Q.c((byte) -121);
-        int var2 = -11 % ((param0 - 19) / 35);
-        if (!(var1 != null)) {
+        ug dupTemp$0 = (ug) (Object) qi.field_Q.c((byte) -121);
+        ug var4 = dupTemp$0;
+        ug var1 = dupTemp$0;
+        int var2 = 0;
+        if (!(var4 != null)) {
             si.a(66);
             return;
         }
         uf var3 = de.field_V;
-        int discarded$0 = var3.i(7553);
         int discarded$1 = var3.i(7553);
         int discarded$2 = var3.i(7553);
         int discarded$3 = var3.i(7553);
-        var1.b((byte) 124);
+        int discarded$4 = var3.i(7553);
+        var4.b((byte) 124);
     }
 
     final boolean g(byte param0) {
@@ -136,26 +174,19 @@ final class ua extends vi {
 
     ua(Object param0, int param1) {
         super(param1);
-        ((ua) this).field_F = param0;
+        try {
+            ((ua) this).field_F = param0;
+        } catch (RuntimeException runtimeException) {
+            throw dh.a((Throwable) (Object) runtimeException, "ua.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     public static void e(int param0) {
-        if (param0 != 8) {
-          field_C = null;
-          field_G = null;
-          field_H = null;
-          field_D = null;
-          field_C = null;
-          field_E = null;
-          return;
-        } else {
-          field_G = null;
-          field_H = null;
-          field_D = null;
-          field_C = null;
-          field_E = null;
-          return;
-        }
+        field_G = null;
+        field_H = null;
+        field_D = null;
+        field_C = null;
+        field_E = null;
     }
 
     static {

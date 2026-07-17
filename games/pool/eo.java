@@ -20,11 +20,6 @@ final class eo extends vh {
 
     public static void f(byte param0) {
         field_Rb = null;
-        if (param0 != -105) {
-            field_Vb = 60;
-            field_Xb = null;
-            return;
-        }
         field_Xb = null;
     }
 

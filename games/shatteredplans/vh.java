@@ -9,9 +9,6 @@ final class vh {
 
     public static void a(byte param0) {
         field_a = null;
-        if (param0 < 83) {
-            field_a = null;
-        }
     }
 
     static {

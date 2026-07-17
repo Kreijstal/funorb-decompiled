@@ -19,7 +19,7 @@ abstract class wd extends hl {
         int var3 = 0;
         int var5 = 0;
         int var4 = 0;
-        if (-1 <= (((wd) this).field_N ^ -1)) {
+        if (((wd) this).field_N <= 0) {
         } else {
             var2 = ((wd) this).field_M;
             var3 = ((wd) this).field_L;
@@ -36,28 +36,85 @@ abstract class wd extends hl {
             }
             ((wd) this).a(var2, (byte) -78, var3);
         }
-        if (param0 >= -18) {
-            return false;
-        }
         return super.j(-87);
     }
 
     final static StringBuilder a(StringBuilder param0, char param1, int param2, int param3) {
+        int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
-        int var6 = TrackController.field_F ? 1 : 0;
-        int var4 = param0.length();
-        param0.setLength(param2);
-        if (param3 != 1) {
-            return null;
+        int var6 = 0;
+        StringBuilder stackIn_7_0 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        StringBuilder stackOut_6_0 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        var6 = TrackController.field_F ? 1 : 0;
+        try {
+          L0: {
+            var4_int = param0.length();
+            param0.setLength(param2);
+            var5 = var4_int;
+            L1: while (true) {
+              if (param2 <= var5) {
+                stackOut_6_0 = (StringBuilder) param0;
+                stackIn_7_0 = stackOut_6_0;
+                break L0;
+              } else {
+                param0.setCharAt(var5, param1);
+                var5++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var4 = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var4;
+            stackOut_8_1 = new StringBuilder().append("wd.F(");
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param0 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L2;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L2;
+            }
+          }
+          throw sl.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 44 + param2 + 44 + 1 + 41);
         }
-        for (var5 = var4; param2 > var5; var5++) {
-            param0.setCharAt(var5, param1);
-        }
-        return param0;
+        return stackIn_7_0;
     }
 
     boolean k(int param0) {
-        ((wd) this).o(param0);
+        ((wd) this).o(0);
         return super.k(0);
     }
 
@@ -78,18 +135,12 @@ abstract class wd extends hl {
     }
 
     final static k q(int param0) {
-        if (param0 != 11782) {
-            field_O = null;
-        }
         return qc.field_e;
     }
 
     public static void p(int param0) {
         field_J = null;
         field_I = null;
-        if (param0 != 35) {
-            return;
-        }
         field_H = null;
         field_O = null;
     }
@@ -131,7 +182,7 @@ abstract class wd extends hl {
         var7 = 0;
         var8 = param2;
         L0: while (true) {
-          if ((var7 ^ -1) <= (var4 ^ -1)) {
+          if (~var7 <= ~var4) {
             L1: {
               var4 = 22;
               if (param1 == 20) {
@@ -160,7 +211,7 @@ abstract class wd extends hl {
                     return;
                   } else {
                     var9 = var7 * (-var5 + var6) / var4 + var5;
-                    var9 = var9 | (var9 << -511622200 | var9 << -901961008);
+                    var9 = var9 | (var9 << 8 | var9 << 16);
                     ll.a(param0, var8, 6, var9);
                     ll.a(param0 - (-((wd) this).field_x - -6), var8, 6, var9);
                     var7++;
@@ -170,7 +221,7 @@ abstract class wd extends hl {
                 }
               } else {
                 var9 = var7 * (-var5 + var6) / var4 + var5;
-                var9 = var9 | (var9 << 591375816 | var9 << -632273232);
+                var9 = var9 | (var9 << 8 | var9 << 16);
                 ll.a(param0, var8, 6, var9);
                 ll.a(-6 + param0 - -((wd) this).field_x, var8, 6, var9);
                 var7++;
@@ -180,7 +231,7 @@ abstract class wd extends hl {
             }
           } else {
             L4: {
-              if ((ll.field_b ^ -1) < (var8 ^ -1)) {
+              if (~ll.field_b < ~var8) {
                 break L4;
               } else {
                 if (ll.field_g <= var8) {
@@ -190,7 +241,7 @@ abstract class wd extends hl {
                     var9 = var5 - -((-var5 + var6) * var7 / var4);
                     var10 = 0;
                     var11 = ((wd) this).field_x;
-                    if (-21 > (var7 ^ -1)) {
+                    if (var7 > 20) {
                       break L5;
                     } else {
                       L6: while (true) {
@@ -199,12 +250,12 @@ abstract class wd extends hl {
                         } else {
                           L7: {
                             var12 = (-var10 + 20) * (-var10 + 20) + (20 - var7) * (20 + -var7);
-                            if (-463 <= (var12 ^ -1)) {
+                            if (var12 <= 462) {
                               if (var12 < 420) {
                                 break L5;
                               } else {
                                 var13 = (462 - var12) * var9 / 42;
-                                var13 = var13 | (var13 << -830627736 | var13 << 951180592);
+                                var13 = var13 | (var13 << 8 | var13 << 16);
                                 ll.field_i[param0 + (var8 * ll.field_d - -var10)] = var13;
                                 break L7;
                               }
@@ -225,18 +276,18 @@ abstract class wd extends hl {
                       var13 = 0;
                       L9: while (true) {
                         L10: {
-                          if ((var13 ^ -1) < -21) {
+                          if (var13 > 20) {
                             break L10;
                           } else {
                             var14 = var13 * var13 + (-var7 + 20) * (20 + -var7);
-                            if (-463 <= (var14 ^ -1)) {
+                            if (var14 <= 462) {
                               L11: {
-                                if (-421 < (var14 ^ -1)) {
+                                if (var14 < 420) {
                                   var12 = var11 + 1;
                                   break L11;
                                 } else {
                                   var15 = var9 * (-var14 + 462) / 42;
-                                  var15 = var15 | (var15 << -856429744 | var15 << -1851687672);
+                                  var15 = var15 | (var15 << 16 | var15 << 8);
                                   ll.field_i[param0 + var8 * ll.field_d - -var11] = var15;
                                   break L11;
                                 }
@@ -256,7 +307,7 @@ abstract class wd extends hl {
                       break L8;
                     }
                   }
-                  var9 = var9 | (var9 << -1539662704 | var9 << 599800904);
+                  var9 = var9 | (var9 << 16 | var9 << 8);
                   ll.a(param0 + var10, var8, var11 - var10, var9);
                   break L4;
                 }

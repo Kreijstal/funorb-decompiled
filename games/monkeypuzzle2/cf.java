@@ -7,22 +7,35 @@ final class cf {
     static boolean field_c;
 
     public static void b(byte param0) {
-        if (param0 < 120) {
-            field_b = null;
-        }
         field_b = null;
         field_a = null;
     }
 
     final static void a(byte param0) {
-        if (k.field_g != 10) {
-            // ifne L33
+        L0: {
+          L1: {
+            if (k.field_g == 10) {
+              break L1;
+            } else {
+              if (ej.a(12931)) {
+                break L0;
+              } else {
+                break L1;
+              }
+            }
+          }
+          rh.d((byte) -117);
+          k.field_g = 11;
+          break L0;
         }
-        rh.d((byte) -117);
-        k.field_g = 11;
-        lh.field_e = true;
-        if (param0 < 1) {
+        L2: {
+          lh.field_e = true;
+          if (param0 >= 1) {
+            break L2;
+          } else {
             field_b = null;
+            break L2;
+          }
         }
     }
 
@@ -47,18 +60,10 @@ final class cf {
         byte[] var24 = null;
         int[] var25 = null;
         int[] var26 = null;
-        L0: {
-          var8 = MonkeyPuzzle2.field_F ? 1 : 0;
-          if (param0 == 16) {
-            break L0;
-          } else {
-            cf.a((byte) 37);
-            break L0;
-          }
-        }
+        var8 = MonkeyPuzzle2.field_F ? 1 : 0;
         var1 = new le[eg.field_c];
         var2 = 0;
-        L1: while (true) {
+        L0: while (true) {
           if (var2 >= eg.field_c) {
             gb.a(-54);
             return var1;
@@ -69,15 +74,15 @@ final class cf {
               var10 = new int[var3];
               var26 = var10;
               var6 = 0;
-              L2: while (true) {
+              L1: while (true) {
                 if (var3 <= var6) {
                   var1[var2] = new le(nj.field_d, qk.field_a, qc.field_P[var2], mb.field_b[var2], da.field_c[var2], ra.field_ab[var2], var26);
                   var2++;
-                  continue L1;
+                  continue L0;
                 } else {
                   var10[var6] = fk.field_d[ch.a(255, (int) var23[var6])];
                   var6++;
-                  continue L2;
+                  continue L1;
                 }
               }
             } else {
@@ -93,15 +98,15 @@ final class cf {
               var13 = var17;
               var6_ref_int__ = var13;
               var7 = 0;
-              L3: while (true) {
+              L2: while (true) {
                 if (var7 >= var3) {
                   var1[var2] = (le) (Object) new ae(nj.field_d, qk.field_a, qc.field_P[var2], mb.field_b[var2], da.field_c[var2], ra.field_ab[var2], var25);
                   var2++;
-                  continue L1;
+                  continue L0;
                 } else {
-                  var6_ref_int__[var7] = bd.a(fk.field_d[ch.a(255, (int) var23[var7])], ch.a(var24[var7] << -1472808104, -16777216));
+                  var6_ref_int__[var7] = bd.a(fk.field_d[ch.a(255, (int) var23[var7])], ch.a(var24[var7] << 24, -16777216));
                   var7++;
-                  continue L3;
+                  continue L2;
                 }
               }
             }
@@ -117,25 +122,29 @@ final class cf {
             cc stackOut_2_0 = null;
             try {
               L0: {
-                if (param0 == 255) {
-                  break L0;
-                } else {
-                  le[] discarded$2 = cf.c((byte) 16);
-                  break L0;
+                L1: {
+                  if (param0 == 255) {
+                    break L1;
+                  } else {
+                    le[] discarded$2 = cf.c((byte) 16);
+                    break L1;
+                  }
                 }
+                stackOut_2_0 = (cc) Class.forName("nb").newInstance();
+                stackIn_3_0 = stackOut_2_0;
+                break L0;
               }
-              stackOut_2_0 = (cc) Class.forName("nb").newInstance();
-              stackIn_3_0 = stackOut_2_0;
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
-              return stackIn_3_0;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var1 = decompiledCaughtException;
+              return null;
             }
+            return stackIn_3_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
             throw new RuntimeException(decompiledCheckedException);
         }
-        return null;
     }
 
     static {
@@ -152,8 +161,8 @@ final class cf {
             if (!(255 >= var1)) {
                 var1 = 255;
             }
-            field_a[var0] = ch.a(16746712, var1 << 138009392);
-            field_a[var0] = bd.a(field_a[var0], ch.a(var0 * var0 >> -1260120827, 1962934527) << -1808416344);
+            field_a[var0] = ch.a(16746712, var1 << 16);
+            field_a[var0] = bd.a(field_a[var0], ch.a(var0 * var0 >> 5, 1962934527) << 8);
         }
     }
 }

@@ -16,13 +16,15 @@ final class pk extends wl {
     int[] field_j;
 
     final static void a(o param0, boolean param1) {
-        if (param1) {
-            Object var3 = null;
-            pk.a((o) null, true);
+        try {
+            if (param1) {
+                Object var3 = null;
+                pk.a((o) null, true);
+            }
             ag.field_v = param0;
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw bd.a((Throwable) (Object) runtimeException, "pk.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
-        ag.field_v = param0;
     }
 
     final static boolean a(byte param0) {

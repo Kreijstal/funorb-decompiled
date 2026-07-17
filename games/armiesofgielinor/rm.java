@@ -101,6 +101,7 @@ final class rm {
           if (var2 >= 10) {
             ((rm) this).field_c = param0.e((byte) -104);
             ((rm) this).field_b = param0.e((byte) -104);
+            return;
           } else {
             var3 = param0.k(0);
             if (var3 != 0) {

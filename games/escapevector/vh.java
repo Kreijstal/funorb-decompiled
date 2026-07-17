@@ -211,14 +211,14 @@ final class vh extends hg {
               L1: {
                 L2: {
                   var4_int = ma.field_a.field_n;
-                  var5 = (((vh) this).field_l >> -1734269104) + -param2;
-                  if (0 < (var5 ^ -1)) {
+                  var5 = (((vh) this).field_l >> 16) + -param2;
+                  if (var5 < -1) {
                     break L2;
                   } else {
                     if (481 <= var5) {
                       break L2;
                     } else {
-                      var6 = -param0 + (((vh) this).field_j >> 1770255984);
+                      var6 = -param0 + (((vh) this).field_j >> 16);
                       L3: while (true) {
                         L4: {
                           L5: {
@@ -249,7 +249,7 @@ final class vh extends hg {
                             } else {
                               L7: {
                                 L8: {
-                                  if (-2 != (((vh) this).field_k ^ -1)) {
+                                  if (((vh) this).field_k != 1) {
                                     break L8;
                                   } else {
                                     var9 = 4198404;
@@ -268,13 +268,13 @@ final class vh extends hg {
                                 break L7;
                               }
                               L9: {
-                                var10 = ((vh) this).field_m << -851000862;
-                                if ((var10 ^ -1) <= -257) {
+                                var10 = ((vh) this).field_m << 2;
+                                if (var10 >= 256) {
                                   break L9;
                                 } else {
-                                  var8 = (-16711936 & (var8 & 16711935) * var10 | (var8 & 65280) * var10 & 16711680) >>> -1533579064;
-                                  var7 = (-16711936 & var10 * (16711935 & var7) | 16711680 & (65280 & var7) * var10) >>> 800565512;
-                                  var9 = (-16711936 & var10 * (var9 & 16711935) | 16711680 & var10 * (65280 & var9)) >>> -2128720664;
+                                  var8 = (-16711936 & (var8 & 16711935) * var10 | (var8 & 65280) * var10 & 16711680) >>> 8;
+                                  var7 = (-16711936 & var10 * (16711935 & var7) | 16711680 & (65280 & var7) * var10) >>> 8;
+                                  var9 = (-16711936 & var10 * (var9 & 16711935) | 16711680 & var10 * (65280 & var9)) >>> 8;
                                   break L9;
                                 }
                               }
@@ -417,7 +417,7 @@ final class vh extends hg {
               var6 = 3 * param1;
               var7 = -10 + var5_int;
               g.h(-115);
-              if (-1 <= (param0.field_I ^ -1)) {
+              if (param0.field_I <= 0) {
                 break L2;
               } else {
                 if (null != param0.field_n) {
@@ -465,7 +465,7 @@ final class vh extends hg {
                         }
                         L8: {
                           var12 = km.field_j[var9];
-                          if ((var12 ^ -1) != 2147483647) {
+                          if (var12 != -2147483648) {
                             break L8;
                           } else {
                             if (var19 == 0) {
@@ -493,7 +493,7 @@ final class vh extends hg {
                         } else {
                           L10: {
                             var15 = -var6 + var14 + (var12 + var13);
-                            if (-1 >= (var7 ^ -1)) {
+                            if (var7 >= 0) {
                               stackOut_31_0 = var15 >> var7;
                               stackIn_32_0 = stackOut_31_0;
                               break L10;
@@ -508,7 +508,7 @@ final class vh extends hg {
                           L11: while (true) {
                             L12: {
                               L13: {
-                                if (-1 == (var17 >> 1471650948 ^ -1)) {
+                                if (var17 >> 4 == 0) {
                                   break L13;
                                 } else {
                                   var16--;
@@ -539,7 +539,7 @@ final class vh extends hg {
                                   }
                                 }
                               }
-                              stackOut_42_0 = var17 + (var16 << 437141540);
+                              stackOut_42_0 = var17 + (var16 << 4);
                               stackIn_43_0 = stackOut_42_0;
                               break L12;
                             }
@@ -547,7 +547,7 @@ final class vh extends hg {
                               var18 = stackIn_43_0;
                               bc.field_f[var18] = var8;
                               al.field_f[var16] = 1 + var17;
-                              if (-1 <= (param0.field_I ^ -1)) {
+                              if (param0.field_I <= 0) {
                                 break L15;
                               } else {
                                 if (param0.field_n == null) {
@@ -572,7 +572,7 @@ final class vh extends hg {
                     }
                   }
                 }
-                stackOut_51_0 = param0.field_I ^ -1;
+                stackOut_51_0 = ~param0.field_I;
                 stackIn_52_0 = stackOut_51_0;
                 break L4;
               }
@@ -585,7 +585,7 @@ final class vh extends hg {
                       var8 = 0;
                       var9 = 0;
                       L18: while (true) {
-                        if ((ul.field_I.length ^ -1) >= (var9 ^ -1)) {
+                        if (~ul.field_I.length >= ~var9) {
                           break L17;
                         } else {
                           var10 = ul.field_I[var9];

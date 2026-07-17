@@ -11,9 +11,6 @@ final class vc {
     private static String field_z;
 
     public static void a(boolean param0) {
-        if (!param0) {
-            return;
-        }
         field_c = null;
         field_f = null;
         field_a = null;

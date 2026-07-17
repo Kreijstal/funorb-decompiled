@@ -11,9 +11,6 @@ final class ic {
     public static void a(int param0) {
         field_b = null;
         field_d = null;
-        if (param0 != -18551) {
-            field_b = null;
-        }
     }
 
     static {

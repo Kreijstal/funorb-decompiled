@@ -8,12 +8,6 @@ abstract class sg {
 
     public static void a(byte param0) {
         field_c = null;
-        if (param0 > -106) {
-            field_c = null;
-            field_a = null;
-            field_b = null;
-            return;
-        }
         field_a = null;
         field_b = null;
     }

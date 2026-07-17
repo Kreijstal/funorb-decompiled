@@ -16,15 +16,19 @@ abstract class kh extends gb {
     abstract void a(int param0, int param1, byte param2);
 
     kh(d param0, int param1, int param2) {
-        super(-param1 + vk.field_c >> -825511007, -param2 + be.field_v >> -1203194719, param1, param2, (cj) null);
-        ((kh) this).field_J = false;
-        ((kh) this).field_G = 0;
-        ((kh) this).field_N = param0;
+        super(-param1 + vk.field_c >> 1, -param2 + be.field_v >> 1, param1, param2, (cj) null);
+        try {
+            ((kh) this).field_J = false;
+            ((kh) this).field_G = 0;
+            ((kh) this).field_N = param0;
+        } catch (RuntimeException runtimeException) {
+            throw qk.a((Throwable) (Object) runtimeException, "kh.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     final void a(int param0, int param1, int param2, int param3) {
         if (((kh) this).field_G != 0) {
-          if (-257 < (((kh) this).field_G ^ -1)) {
+          if (((kh) this).field_G < 256) {
             if (hf.field_y != null) {
               if (((kh) this).field_p <= hf.field_y.field_r) {
                 if (((kh) this).field_n <= hf.field_y.field_t) {
@@ -124,54 +128,7 @@ abstract class kh extends gb {
     }
 
     private final int h(int param0) {
-        int stackIn_6_0 = 0;
-        int stackIn_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_2_0 = 0;
-        if (param0 != 0) {
-          L0: {
-            ((kh) this).field_N = null;
-            if (((kh) this).field_J) {
-              if ((Object) (Object) ((kh) this).field_N.c(true) == this) {
-                stackOut_11_0 = 256;
-                stackIn_12_0 = stackOut_11_0;
-                break L0;
-              } else {
-                stackOut_10_0 = 0;
-                stackIn_12_0 = stackOut_10_0;
-                break L0;
-              }
-            } else {
-              stackOut_8_0 = 0;
-              stackIn_12_0 = stackOut_8_0;
-              break L0;
-            }
-          }
-          return stackIn_12_0;
-        } else {
-          L1: {
-            if (((kh) this).field_J) {
-              if ((Object) (Object) ((kh) this).field_N.c(true) == this) {
-                stackOut_5_0 = 256;
-                stackIn_6_0 = stackOut_5_0;
-                break L1;
-              } else {
-                stackOut_4_0 = 0;
-                stackIn_6_0 = stackOut_4_0;
-                break L1;
-              }
-            } else {
-              stackOut_2_0 = 0;
-              stackIn_6_0 = stackOut_2_0;
-              break L1;
-            }
-          }
-          return stackIn_6_0;
-        }
+        return !((kh) this).field_J ? 0 : (Object) (Object) ((kh) this).field_N.c(true) != this ? 0 : 256;
     }
 
     boolean i(int param0) {
@@ -197,29 +154,29 @@ abstract class kh extends gb {
           L0: {
             char discarded$1 = kh.a('￥', (byte) -127);
             var2 = param0;
-            if (-33 != var2) {
+            if (var2 != 32) {
               if (160 != var2) {
-                if (var2 != -96) {
-                  if (-46 != var2) {
+                if (var2 != 95) {
+                  if (var2 != 45) {
                     L1: {
-                      if (-92 != var2) {
+                      if (var2 != 91) {
                         if (93 != var2) {
-                          if (-36 != var2) {
+                          if (var2 != 35) {
                             L2: {
-                              if (-225 == var2) {
+                              if (var2 == 224) {
                                 break L2;
                               } else {
-                                if (var2 != -226) {
+                                if (var2 != 225) {
                                   if (var2 == 226) {
                                     break L2;
                                   } else {
                                     if (var2 != 228) {
-                                      if (-228 != var2) {
+                                      if (var2 != 227) {
                                         if (var2 == 192) {
                                           break L2;
                                         } else {
-                                          if (var2 != -194) {
-                                            if (-195 != var2) {
+                                          if (var2 != 193) {
+                                            if (var2 != 194) {
                                               if (196 == var2) {
                                                 break L2;
                                               } else {
@@ -227,17 +184,17 @@ abstract class kh extends gb {
                                                   break L2;
                                                 } else {
                                                   L3: {
-                                                    if (var2 != -233) {
+                                                    if (var2 != 232) {
                                                       if (233 == var2) {
                                                         break L3;
                                                       } else {
-                                                        if (var2 != -235) {
-                                                          if (-236 == var2) {
+                                                        if (var2 != 234) {
+                                                          if (var2 == 235) {
                                                             break L3;
                                                           } else {
-                                                            if (-201 != var2) {
+                                                            if (var2 != 200) {
                                                               if (201 != var2) {
-                                                                if ((var2 ^ -1) != -203) {
+                                                                if (var2 != 202) {
                                                                   if (203 != var2) {
                                                                     if (237 != var2) {
                                                                       L4: {
@@ -247,13 +204,13 @@ abstract class kh extends gb {
                                                                           if (var2 == 239) {
                                                                             break L4;
                                                                           } else {
-                                                                            if (-206 == (var2 ^ -1)) {
+                                                                            if (var2 == 205) {
                                                                               break L4;
                                                                             } else {
                                                                               if (var2 == 206) {
                                                                                 break L4;
                                                                               } else {
-                                                                                if (var2 != -208) {
+                                                                                if (var2 != 207) {
                                                                                   if (242 != var2) {
                                                                                     L5: {
                                                                                       if (243 == var2) {
@@ -262,7 +219,7 @@ abstract class kh extends gb {
                                                                                         if (var2 == 244) {
                                                                                           break L5;
                                                                                         } else {
-                                                                                          if (-247 == var2) {
+                                                                                          if (var2 == 246) {
                                                                                             break L5;
                                                                                           } else {
                                                                                             if (245 != var2) {
@@ -270,15 +227,15 @@ abstract class kh extends gb {
                                                                                                 if (var2 == 211) {
                                                                                                   break L5;
                                                                                                 } else {
-                                                                                                  if (var2 == -213) {
+                                                                                                  if (var2 == 212) {
                                                                                                     break L5;
                                                                                                   } else {
-                                                                                                    if (-215 != var2) {
-                                                                                                      if (var2 == -214) {
+                                                                                                    if (var2 != 214) {
+                                                                                                      if (var2 == 213) {
                                                                                                         break L5;
                                                                                                       } else {
                                                                                                         L6: {
-                                                                                                          if (-250 == var2) {
+                                                                                                          if (var2 == 249) {
                                                                                                             break L6;
                                                                                                           } else {
                                                                                                             if (250 == var2) {
@@ -289,24 +246,24 @@ abstract class kh extends gb {
                                                                                                               } else {
                                                                                                                 if (var2 != 252) {
                                                                                                                   if (217 != var2) {
-                                                                                                                    if (-219 == var2) {
+                                                                                                                    if (var2 == 218) {
                                                                                                                       break L6;
                                                                                                                     } else {
-                                                                                                                      if (var2 == -220) {
+                                                                                                                      if (var2 == 219) {
                                                                                                                         break L6;
                                                                                                                       } else {
-                                                                                                                        if (-221 == var2) {
+                                                                                                                        if (var2 == 220) {
                                                                                                                           break L6;
                                                                                                                         } else {
                                                                                                                           if (231 == var2) {
                                                                                                                             return 'c';
                                                                                                                           } else {
-                                                                                                                            if (-200 != var2) {
-                                                                                                                              if ((var2 ^ -1) != -256) {
+                                                                                                                            if (var2 != 199) {
+                                                                                                                              if (var2 != 255) {
                                                                                                                                 if (376 != var2) {
                                                                                                                                   if (var2 != 241) {
                                                                                                                                     if (209 != var2) {
-                                                                                                                                      if (-224 == (var2 ^ -1)) {
+                                                                                                                                      if (var2 == 223) {
                                                                                                                                         return 'b';
                                                                                                                                       } else {
                                                                                                                                         return Character.toLowerCase(param0);
@@ -445,23 +402,23 @@ abstract class kh extends gb {
         } else {
           L7: {
             var2 = param0;
-            if (-33 != (var2 ^ -1)) {
+            if (var2 != 32) {
               if (160 != var2) {
-                if (var2 != -96) {
-                  if (-46 != var2) {
+                if (var2 != 95) {
+                  if (var2 != 45) {
                     L8: {
-                      if (-92 != var2) {
+                      if (var2 != 91) {
                         if (93 != var2) {
-                          if (-36 != var2) {
-                            if (-225 != var2) {
+                          if (var2 != 35) {
+                            if (var2 != 224) {
                               L9: {
-                                if ((var2 ^ -1) != -226) {
+                                if (var2 != 225) {
                                   if (var2 != 226) {
                                     if (var2 != 228) {
-                                      if (-228 != (var2 ^ -1)) {
+                                      if (var2 != 227) {
                                         if (var2 != 192) {
-                                          if (var2 != -194) {
-                                            if (-195 != var2) {
+                                          if (var2 != 193) {
+                                            if (var2 != 194) {
                                               if (196 == var2) {
                                                 break L9;
                                               } else {
@@ -469,17 +426,17 @@ abstract class kh extends gb {
                                                   break L9;
                                                 } else {
                                                   L10: {
-                                                    if (var2 != -233) {
+                                                    if (var2 != 232) {
                                                       if (233 == var2) {
                                                         break L10;
                                                       } else {
-                                                        if (var2 != -235) {
-                                                          if (-236 == var2) {
+                                                        if (var2 != 234) {
+                                                          if (var2 == 235) {
                                                             break L10;
                                                           } else {
-                                                            if (-201 != var2) {
+                                                            if (var2 != 200) {
                                                               if (201 != var2) {
-                                                                if ((var2 ^ -1) != -203) {
+                                                                if (var2 != 202) {
                                                                   if (203 != var2) {
                                                                     L11: {
                                                                       if (237 != var2) {
@@ -489,13 +446,13 @@ abstract class kh extends gb {
                                                                           if (var2 == 239) {
                                                                             break L11;
                                                                           } else {
-                                                                            if (-206 == (var2 ^ -1)) {
+                                                                            if (var2 == 205) {
                                                                               break L11;
                                                                             } else {
                                                                               if (var2 == 206) {
                                                                                 break L11;
                                                                               } else {
-                                                                                if (var2 != -208) {
+                                                                                if (var2 != 207) {
                                                                                   L12: {
                                                                                     if (242 != var2) {
                                                                                       if (243 == var2) {
@@ -504,7 +461,7 @@ abstract class kh extends gb {
                                                                                         if (var2 == 244) {
                                                                                           break L12;
                                                                                         } else {
-                                                                                          if (-247 == var2) {
+                                                                                          if (var2 == 246) {
                                                                                             break L12;
                                                                                           } else {
                                                                                             if (245 != var2) {
@@ -512,15 +469,15 @@ abstract class kh extends gb {
                                                                                                 if (var2 == 211) {
                                                                                                   break L12;
                                                                                                 } else {
-                                                                                                  if (var2 == -213) {
+                                                                                                  if (var2 == 212) {
                                                                                                     break L12;
                                                                                                   } else {
-                                                                                                    if (-215 != var2) {
-                                                                                                      if (var2 == -214) {
+                                                                                                    if (var2 != 214) {
+                                                                                                      if (var2 == 213) {
                                                                                                         break L12;
                                                                                                       } else {
                                                                                                         L13: {
-                                                                                                          if (-250 == var2) {
+                                                                                                          if (var2 == 249) {
                                                                                                             break L13;
                                                                                                           } else {
                                                                                                             if (250 == var2) {
@@ -531,24 +488,24 @@ abstract class kh extends gb {
                                                                                                               } else {
                                                                                                                 if (var2 != 252) {
                                                                                                                   if (217 != var2) {
-                                                                                                                    if (-219 == var2) {
+                                                                                                                    if (var2 == 218) {
                                                                                                                       break L13;
                                                                                                                     } else {
-                                                                                                                      if (var2 == -220) {
+                                                                                                                      if (var2 == 219) {
                                                                                                                         break L13;
                                                                                                                       } else {
-                                                                                                                        if (-221 == var2) {
+                                                                                                                        if (var2 == 220) {
                                                                                                                           break L13;
                                                                                                                         } else {
                                                                                                                           if (231 == var2) {
                                                                                                                             return 'c';
                                                                                                                           } else {
-                                                                                                                            if (-200 != var2) {
-                                                                                                                              if ((var2 ^ -1) != -256) {
+                                                                                                                            if (var2 != 199) {
+                                                                                                                              if (var2 != 255) {
                                                                                                                                 if (376 != var2) {
                                                                                                                                   if (var2 != 241) {
                                                                                                                                     if (209 != var2) {
-                                                                                                                                      if (-224 == (var2 ^ -1)) {
+                                                                                                                                      if (var2 == 223) {
                                                                                                                                         return 'b';
                                                                                                                                       } else {
                                                                                                                                         return Character.toLowerCase(param0);
@@ -734,7 +691,7 @@ abstract class kh extends gb {
                 if (((kh) this).field_G != 0) {
                   break L2;
                 } else {
-                  if (-1 != (var2 ^ -1)) {
+                  if (var2 != 0) {
                     break L2;
                   } else {
                     if (((kh) this).field_J) {
@@ -766,7 +723,7 @@ abstract class kh extends gb {
                 if (((kh) this).field_G != 0) {
                   break L5;
                 } else {
-                  if (-1 != (var2 ^ -1)) {
+                  if (var2 != 0) {
                     break L5;
                   } else {
                     if (((kh) this).field_J) {
@@ -798,7 +755,7 @@ abstract class kh extends gb {
               }
             }
             if (((kh) this).field_G == 0) {
-              if (-1 != (var2 ^ -1)) {
+              if (var2 != 0) {
                 return false;
               } else {
                 L7: {
@@ -832,7 +789,7 @@ abstract class kh extends gb {
                 if (((kh) this).field_G != 0) {
                   break L10;
                 } else {
-                  if (-1 != (var2 ^ -1)) {
+                  if (var2 != 0) {
                     break L10;
                   } else {
                     if (((kh) this).field_J) {
@@ -857,20 +814,15 @@ abstract class kh extends gb {
     public static void a(int param0) {
         field_H = null;
         field_L = null;
-        if (param0 != -195) {
-          return;
-        } else {
-          field_F = null;
-          field_I = null;
-          field_O = null;
-          field_M = null;
-          field_K = null;
-          return;
-        }
+        field_F = null;
+        field_I = null;
+        field_O = null;
+        field_M = null;
+        field_K = null;
     }
 
     final void b(int param0, int param1, int param2) {
-        ((kh) this).a(be.field_v + -param1 >> -1113573023, (byte) 80, param2, vk.field_c - param2 >> -1947164479, param1);
+        ((kh) this).a(be.field_v + -param1 >> 1, (byte) 80, param2, vk.field_c - param2 >> 1, param1);
         if (param0 != 98) {
             ((kh) this).a(-2, -19, (byte) -5);
         }

@@ -109,6 +109,7 @@ final class pl {
           if (var2 >= 10) {
             ((pl) this).field_a = param0.n(-98);
             ((pl) this).field_c = param0.n(-98);
+            return;
           } else {
             var3 = param0.e((byte) 110);
             if (var3 != 0) {

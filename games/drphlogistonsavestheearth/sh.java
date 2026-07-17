@@ -11,18 +11,9 @@ final class sh {
 
     public static void a(byte param0) {
         field_c = null;
-        if (param0 != 119) {
-          field_b = null;
-          field_b = null;
-          field_d = null;
-          field_a = null;
-          return;
-        } else {
-          field_b = null;
-          field_d = null;
-          field_a = null;
-          return;
-        }
+        field_b = null;
+        field_d = null;
+        field_a = null;
     }
 
     static {

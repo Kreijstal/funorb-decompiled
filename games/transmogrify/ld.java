@@ -31,8 +31,9 @@ final class ld {
                 if (var4 == null) {
                   break L1;
                 } else {
+                  int fieldTemp$19 = ((ld) this).field_g;
                   ((ld) this).field_g = ((ld) this).field_g + 1;
-                  if ((((ld) this).field_a ^ -1L) == (var3[((ld) this).field_g] ^ -1L)) {
+                  if (~((ld) this).field_a == ~var3[fieldTemp$19]) {
                     return var4;
                   } else {
                     continue L0;
@@ -60,13 +61,11 @@ final class ld {
     public static void a(int param0) {
         field_e = null;
         field_f = null;
-        if (param0 < 75) {
-            field_f = null;
-        }
     }
 
     final void a(Object param0, byte param1, long param2) {
-        Object[] var5 = null;
+        RuntimeException var5 = null;
+        Object[] var5_array = null;
         long[] var6 = null;
         int var7_int = 0;
         Object[] var7 = null;
@@ -74,43 +73,92 @@ final class ld {
         int var9 = 0;
         Object[] var10 = null;
         long[] var11 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_18_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
         var9 = Transmogrify.field_A ? 1 : 0;
-        if (param0 == null) {
-          throw new IllegalArgumentException();
-        } else {
-          var10 = ((ld) this).field_d[(int)((long)(-1 + ((ld) this).field_b) & param2)];
-          var5 = var10;
-          var11 = ((ld) this).field_c[(int)((long)(((ld) this).field_b + -1) & param2)];
-          var6 = var11;
-          var7_int = 0;
-          L0: while (true) {
-            if (var7_int >= var10.length) {
-              if (param1 == 26) {
-                var7 = var5;
-                var8 = var6;
-                var5 = new Object[var7.length + ((ld) this).field_h];
-                ((ld) this).field_d[(int)ej.a((long)(((ld) this).field_b + -1), param2)] = new Object[var7.length + ((ld) this).field_h];
-                var6 = new long[var8.length + ((ld) this).field_h];
-                ((ld) this).field_c[(int)ej.a(param2, (long)(-1 + ((ld) this).field_b))] = new long[var8.length + ((ld) this).field_h];
-                ji.a(var7, 0, var5, 0, var7.length);
-                ji.a(var8, 0, var6, 0, var8.length);
-                var5[var7.length] = param0;
-                var6[var8.length] = param2;
-                return;
-              } else {
-                return;
-              }
+        try {
+          L0: {
+            if (param0 == null) {
+              throw new IllegalArgumentException();
             } else {
-              if (var10[var7_int] == null) {
-                var5[var7_int] = param0;
-                var11[var7_int] = param2;
-                return;
-              } else {
-                var7_int++;
-                continue L0;
+              var10 = ((ld) this).field_d[(int)((long)(-1 + ((ld) this).field_b) & param2)];
+              var5_array = var10;
+              var11 = ((ld) this).field_c[(int)((long)(((ld) this).field_b + -1) & param2)];
+              var6 = var11;
+              var7_int = 0;
+              L1: while (true) {
+                if (var7_int >= var10.length) {
+                  if (param1 == 26) {
+                    var7 = var5_array;
+                    var8 = var6;
+                    var5_array = new Object[var7.length + ((ld) this).field_h];
+                    ((ld) this).field_d[(int)ej.a((long)(((ld) this).field_b + -1), param2)] = new Object[var7.length + ((ld) this).field_h];
+                    var6 = new long[var8.length + ((ld) this).field_h];
+                    ((ld) this).field_c[(int)ej.a(param2, (long)(-1 + ((ld) this).field_b))] = new long[var8.length + ((ld) this).field_h];
+                    ji.a(var7, 0, var5_array, 0, var7.length);
+                    ji.a(var8, 0, var6, 0, var8.length);
+                    var5_array[var7.length] = param0;
+                    var6[var8.length] = param2;
+                    break L0;
+                  } else {
+                    return;
+                  }
+                } else {
+                  if (var10[var7_int] == null) {
+                    var5_array[var7_int] = param0;
+                    var11[var7_int] = param2;
+                    return;
+                  } else {
+                    var7_int++;
+                    continue L1;
+                  }
+                }
               }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var5 = decompiledCaughtException;
+            stackOut_15_0 = (RuntimeException) var5;
+            stackOut_15_1 = new StringBuilder().append("ld.D(");
+            stackIn_17_0 = stackOut_15_0;
+            stackIn_17_1 = stackOut_15_1;
+            stackIn_16_0 = stackOut_15_0;
+            stackIn_16_1 = stackOut_15_1;
+            if (param0 == null) {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "null";
+              stackIn_18_0 = stackOut_17_0;
+              stackIn_18_1 = stackOut_17_1;
+              stackIn_18_2 = stackOut_17_2;
+              break L2;
+            } else {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "{...}";
+              stackIn_18_0 = stackOut_16_0;
+              stackIn_18_1 = stackOut_16_1;
+              stackIn_18_2 = stackOut_16_2;
+              break L2;
+            }
+          }
+          throw ch.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + param1 + 44 + param2 + 41);
         }
     }
 

@@ -30,38 +30,89 @@ final class mf extends tm {
     }
 
     final void a(di param0, byte param1) {
-        int var3 = 0;
+        RuntimeException var3 = null;
+        int var3_int = 0;
         int var4 = 0;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
         var4 = Pool.field_O;
-        ((mf) this).field_a = new eg[]{((mf) this).g(-930305852), eg.a(param0, "", "balls/CLASSIC/ball1"), eg.a(param0, "", "balls/CLASSIC/ball2"), eg.a(param0, "", "balls/CLASSIC/ball3"), eg.a(param0, "", "balls/CLASSIC/ball4"), eg.a(param0, "", "balls/CLASSIC/ball5"), eg.a(param0, "", "balls/CLASSIC/ball6"), eg.a(param0, "", "balls/CLASSIC/ball7"), eg.a(param0, "", "balls/CLASSIC/ball8"), eg.a(param0, "", "balls/CLASSIC/ball9"), eg.a(param0, "", "balls/CLASSIC/ball10"), eg.a(param0, "", "balls/CLASSIC/ball11"), eg.a(param0, "", "balls/CLASSIC/ball12"), eg.a(param0, "", "balls/CLASSIC/ball13"), eg.a(param0, "", "balls/CLASSIC/ball14"), eg.a(param0, "", "balls/CLASSIC/ball15")};
-        if (param1 != 117) {
-          return;
-        } else {
-          var3 = 1;
-          L0: while (true) {
-            if (((mf) this).field_a.length <= var3) {
-              return;
+        try {
+          L0: {
+            ((mf) this).field_a = new eg[]{((mf) this).g(-930305852), eg.a(param0, "", "balls/CLASSIC/ball1"), eg.a(param0, "", "balls/CLASSIC/ball2"), eg.a(param0, "", "balls/CLASSIC/ball3"), eg.a(param0, "", "balls/CLASSIC/ball4"), eg.a(param0, "", "balls/CLASSIC/ball5"), eg.a(param0, "", "balls/CLASSIC/ball6"), eg.a(param0, "", "balls/CLASSIC/ball7"), eg.a(param0, "", "balls/CLASSIC/ball8"), eg.a(param0, "", "balls/CLASSIC/ball9"), eg.a(param0, "", "balls/CLASSIC/ball10"), eg.a(param0, "", "balls/CLASSIC/ball11"), eg.a(param0, "", "balls/CLASSIC/ball12"), eg.a(param0, "", "balls/CLASSIC/ball13"), eg.a(param0, "", "balls/CLASSIC/ball14"), eg.a(param0, "", "balls/CLASSIC/ball15")};
+            if (param1 == 117) {
+              var3_int = 1;
+              L1: while (true) {
+                if (((mf) this).field_a.length <= var3_int) {
+                  break L0;
+                } else {
+                  ((mf) this).field_a[var3_int].a(8, 8, 8, 4);
+                  li.a(((mf) this).field_a[var3_int], 0);
+                  var3_int++;
+                  continue L1;
+                }
+              }
             } else {
-              ((mf) this).field_a[var3].a(8, 8, 8, 4);
-              li.a(((mf) this).field_a[var3], 0);
-              var3++;
-              continue L0;
+              return;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var3;
+            stackOut_7_1 = new StringBuilder().append("mf.C(");
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param0 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L2;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L2;
+            }
+          }
+          throw wm.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 41);
         }
     }
 
     final void a(int param0, di param1) {
-        dd[] dupTemp$0 = aj.a(param0 ^ param0, "", param1, "top_bar_balls_modern");
-        ((mf) this).field_e = dupTemp$0;
-        d.field_a = dupTemp$0;
+        try {
+            dd[] dupTemp$0 = aj.a(param0 ^ param0, "", param1, "top_bar_balls_modern");
+            ((mf) this).field_e = dupTemp$0;
+            d.field_a = dupTemp$0;
+        } catch (RuntimeException runtimeException) {
+            throw wm.a((Throwable) (Object) runtimeException, "mf.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void i(int param0) {
         field_n = null;
-        if (param0 != 1) {
-            mf.j(26);
-        }
     }
 
     final static void j(int param0) {
@@ -92,8 +143,12 @@ final class mf extends tm {
         if (param0 > -24) {
             return;
         }
-        rm.field_b = param4;
-        bk.field_m = param3;
+        try {
+            rm.field_b = param4;
+            bk.field_m = param3;
+        } catch (RuntimeException runtimeException) {
+            throw wm.a((Throwable) (Object) runtimeException, "mf.F(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 41);
+        }
     }
 
     static {

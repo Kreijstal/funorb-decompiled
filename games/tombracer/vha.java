@@ -29,7 +29,7 @@ final class vha {
                       var5 = kga.field_n.g(param1 + 22419) - -kga.field_n.field_q;
                       if (640 >= var5) {
                         if (var5 < 635) {
-                          if ((wv.field_j ^ -1) >= -1) {
+                          if (wv.field_j <= 0) {
                             return;
                           } else {
                             wv.field_j = wv.field_j - 5;
@@ -46,7 +46,7 @@ final class vha {
                       var5 = kga.field_n.g(param1 + 22419) - -kga.field_n.field_q;
                       if (640 >= var5) {
                         if (var5 < 635) {
-                          if ((wv.field_j ^ -1) >= -1) {
+                          if (wv.field_j <= 0) {
                             return;
                           } else {
                             wv.field_j = wv.field_j - 5;
@@ -71,7 +71,7 @@ final class vha {
                         if (var5 >= 635) {
                           break L1;
                         } else {
-                          if ((wv.field_j ^ -1) < -1) {
+                          if (wv.field_j > 0) {
                             wv.field_j = wv.field_j - 5;
                             break L1;
                           } else {
@@ -95,7 +95,7 @@ final class vha {
                   if (var5 >= 635) {
                     return;
                   } else {
-                    if ((wv.field_j ^ -1) < -1) {
+                    if (wv.field_j > 0) {
                       wv.field_j = wv.field_j - 5;
                       return;
                     } else {
@@ -108,7 +108,7 @@ final class vha {
                 var5 = kga.field_n.g(param1 + 22419) - -kga.field_n.field_q;
                 if (640 >= var5) {
                   if (var5 < 635) {
-                    if ((wv.field_j ^ -1) >= -1) {
+                    if (wv.field_j <= 0) {
                       return;
                     } else {
                       wv.field_j = wv.field_j - 5;
@@ -128,7 +128,7 @@ final class vha {
                 var5 = kga.field_n.g(param1 + 22419) - -kga.field_n.field_q;
                 if (640 >= var5) {
                   if (var5 < 635) {
-                    if ((wv.field_j ^ -1) >= -1) {
+                    if (wv.field_j <= 0) {
                       return;
                     } else {
                       wv.field_j = wv.field_j - 5;
@@ -146,7 +146,7 @@ final class vha {
                 var5 = kga.field_n.g(param1 + 22419) - -kga.field_n.field_q;
                 if (640 >= var5) {
                   if (var5 < 635) {
-                    if ((wv.field_j ^ -1) < -1) {
+                    if (wv.field_j > 0) {
                       wv.field_j = wv.field_j - 5;
                       return;
                     } else {
@@ -179,9 +179,6 @@ final class vha {
     public static void a(int param0) {
         field_c = null;
         field_a = null;
-        if (param0 != 640) {
-            vha.a(6, (byte) -89, false, 63);
-        }
     }
 
     static {

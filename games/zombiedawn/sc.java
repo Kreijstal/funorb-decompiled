@@ -16,9 +16,6 @@ final class sc {
     }
 
     public static void a(int param0) {
-        if (param0 < 63) {
-            return;
-        }
         field_c = null;
         field_d = null;
     }

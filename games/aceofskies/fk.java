@@ -10,32 +10,24 @@ final class fk {
     }
 
     public static void a(byte param0) {
-        if (param0 != 28) {
-          int discarded$2 = fk.a(-27, -84);
-          field_b = null;
-          field_a = (byte[][]) null;
-          return;
-        } else {
-          field_b = null;
-          field_a = (byte[][]) null;
-          return;
-        }
+        field_b = null;
+        field_a = null;
     }
 
     final static int a(int param0, int param1) {
         param0--;
-        param0 = param0 | param0 >>> 922163841;
-        param0 = param0 | param0 >>> -2125692414;
+        param0 = param0 | param0 >>> 1;
+        param0 = param0 | param0 >>> 2;
         if (param1 <= 19) {
-          field_a = (byte[][]) (byte[][]) null;
-          param0 = param0 | param0 >>> 490007556;
-          param0 = param0 | param0 >>> 1996053256;
-          param0 = param0 | param0 >>> 633756304;
+          field_a = null;
+          param0 = param0 | param0 >>> 4;
+          param0 = param0 | param0 >>> 8;
+          param0 = param0 | param0 >>> 16;
           return param0 - -1;
         } else {
-          param0 = param0 | param0 >>> 490007556;
-          param0 = param0 | param0 >>> 1996053256;
-          param0 = param0 | param0 >>> 633756304;
+          param0 = param0 | param0 >>> 4;
+          param0 = param0 | param0 >>> 8;
+          param0 = param0 | param0 >>> 16;
           return param0 - -1;
         }
     }

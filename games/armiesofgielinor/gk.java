@@ -100,22 +100,24 @@ final class gk extends nl {
     }
 
     final static void a(int param0, String param1, long param2) {
-        rs.field_t = 2;
-        qd.field_G = param1;
-        CharSequence var5 = (CharSequence) (Object) param1;
-        wm.field_b = k.a(var5, false);
-        hf.field_c = true;
-        if (param0 != -23503) {
-            gk.a(120, (String) null, 75L);
+        CharSequence var5 = null;
+        try {
+            rs.field_t = 2;
+            qd.field_G = param1;
+            var5 = (CharSequence) (Object) param1;
+            wm.field_b = k.a(var5, false);
+            hf.field_c = true;
+            if (param0 != -23503) {
+                gk.a(120, (String) null, 75L);
+            }
+            dj.field_e = param2;
+        } catch (RuntimeException runtimeException) {
+            throw ig.a((Throwable) (Object) runtimeException, "gk.H(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
-        dj.field_e = param2;
     }
 
     public static void l(int param0) {
         field_O = null;
-        if (param0 < 14) {
-            field_L = null;
-        }
         field_P = null;
         field_L = null;
         field_N = null;
@@ -151,15 +153,73 @@ final class gk extends nl {
     }
 
     final void a(kb param0, int param1) {
-        if (!(param0 instanceof wl)) {
-            throw new IllegalArgumentException();
-        }
-        wl var3 = (wl) (Object) param0;
-        ((gk) this).field_M.a(750, (tc) (Object) var3);
-        var3.field_L = true;
-        boolean discarded$6 = var3.a(11, (kb) this);
-        if (param1 != 0) {
-            ((gk) this).field_M = null;
+        wl var3 = null;
+        RuntimeException var3_ref = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            if (param0 instanceof wl) {
+              L1: {
+                var3 = (wl) (Object) param0;
+                ((gk) this).field_M.a(750, (tc) (Object) var3);
+                var3.field_L = true;
+                boolean discarded$8 = var3.a(11, (kb) this);
+                if (param1 == 0) {
+                  break L1;
+                } else {
+                  ((gk) this).field_M = null;
+                  break L1;
+                }
+              }
+              break L0;
+            } else {
+              throw new IllegalArgumentException();
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3_ref = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var3_ref;
+            stackOut_5_1 = new StringBuilder().append("gk.A(");
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param0 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L2;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L2;
+            }
+          }
+          throw ig.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
         }
     }
 

@@ -30,9 +30,6 @@ final class uja {
             var1[var2] = new phb(fbb.field_i, sg.field_H, iib.field_e[var2], so.field_f[var2], nhb.field_o[var2], hla.field_a[var2], var5);
         }
         qqb.a(84);
-        if (param0) {
-            phb[] discarded$0 = uja.a(false);
-        }
         return var1;
     }
 

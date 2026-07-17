@@ -9,24 +9,22 @@ final class sl {
 
     public static void a(int param0) {
         field_a = null;
-        if (param0 < 103) {
-            field_c = null;
-            field_b = null;
-            field_c = null;
-            return;
-        }
         field_b = null;
         field_c = null;
     }
 
     final static void a(byte param0, java.applet.Applet param1) {
-        ne.field_c = ah.a(gh.field_c, 200, "", "roman20", uc.field_I);
-        la.field_b = ah.a(gh.field_c, 200, "", "roman12", uc.field_I);
-        f.field_a = oh.a(uc.field_I, "basic", 11091, "unachieved");
-        int var2 = -24 % ((param0 - -15) / 54);
-        lb.field_o = oh.a(uc.field_I, "basic", 11091, "orbcoin");
-        nj.a(gh.field_c, uc.field_I, -6332);
-        cp.a(0, param1, (byte) -36, 0, qk.field_b, 16777215);
+        try {
+            ne.field_c = ah.a(gh.field_c, 200, "", "roman20", uc.field_I);
+            la.field_b = ah.a(gh.field_c, 200, "", "roman12", uc.field_I);
+            f.field_a = oh.a(uc.field_I, "basic", 11091, "unachieved");
+            int var2_int = -24 % ((param0 - -15) / 54);
+            lb.field_o = oh.a(uc.field_I, "basic", 11091, "orbcoin");
+            nj.a(gh.field_c, uc.field_I, -6332);
+            cp.a(0, param1, (byte) -36, 0, qk.field_b, 16777215);
+        } catch (RuntimeException runtimeException) {
+            throw vk.a((Throwable) (Object) runtimeException, "sl.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static boolean b(int param0) {

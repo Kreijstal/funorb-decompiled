@@ -30,7 +30,7 @@ final class pc extends hf {
 
     final static void a(byte param0) {
         int var1 = 0;
-        var1 = -125 / ((param0 - 56) / 54);
+        var1 = -125;
         jk.a((byte) -90);
         if (null == f.field_kb) {
           kj.c(-11099);

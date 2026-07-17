@@ -8,7 +8,7 @@ final class og extends fa {
     static String field_n;
 
     final static boolean a(byte param0) {
-        int var1 = 82 % ((-28 - param0) / 42);
+        int var1 = 0;
         return ck.a(true, ao.a(13867));
     }
 
@@ -23,11 +23,15 @@ final class og extends fa {
 
     public static void a(int param0) {
         field_n = null;
-        int var1 = 25 / ((param0 - -44) / 41);
+        int var1 = 25;
     }
 
     og(byte[] param0) {
-        ((og) this).field_k = param0;
+        try {
+            ((og) this).field_k = param0;
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "og.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

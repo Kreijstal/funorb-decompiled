@@ -27,8 +27,9 @@ final class fb extends jp {
                 var10++;
                 continue L0;
               } else {
+                int incrementValue$66 = param3;
                 param3--;
-                param2 = param1[param3];
+                param2 = param1[incrementValue$66];
                 var12 = param2 >>> 24;
                 if (var12 == 0) {
                   param4++;
@@ -37,8 +38,9 @@ final class fb extends jp {
                 } else {
                   var13 = 256 - var12;
                   var14 = param0[param4];
+                  int incrementValue$67 = param4;
                   param4++;
-                  param0[param4] = ((param2 & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((param2 & 65280) * var12 + (var14 & 65280) * var13 & 16711680) >>> 8;
+                  param0[incrementValue$67] = ((param2 & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((param2 & 65280) * var12 + (var14 & 65280) * var13 & 16711680) >>> 8;
                   var11++;
                   continue L1;
                 }
@@ -69,8 +71,9 @@ final class fb extends jp {
                 var10++;
                 continue L0;
               } else {
+                int incrementValue$66 = param3;
                 param3++;
-                param2 = param1[param3];
+                param2 = param1[incrementValue$66];
                 var12 = param2 >>> 24;
                 if (var12 == 0) {
                   param4++;
@@ -82,8 +85,9 @@ final class fb extends jp {
                   var15 = (param2 & 16711935) * param9 & -16711936;
                   var16 = (param2 & 65280) * param9 & 16711680;
                   param2 = (var15 | var16) >>> 8;
+                  int incrementValue$67 = param4;
                   param4++;
-                  param0[param4] = ((param2 & 16711935) * var12 + (var13 & 16711935) * var14 & -16711936) + ((param2 & 65280) * var12 + (var13 & 65280) * var14 & 16711680) >>> 8;
+                  param0[incrementValue$67] = ((param2 & 16711935) * var12 + (var13 & 16711935) * var14 & -16711936) + ((param2 & 65280) * var12 + (var13 & 65280) * var14 & 16711680) >>> 8;
                   var11++;
                   continue L1;
                 }
@@ -190,8 +194,9 @@ final class fb extends jp {
                 param6++;
                 continue L0;
               } else {
+                int incrementValue$66 = param3;
                 param3++;
-                param2 = param1[param3];
+                param2 = param1[incrementValue$66];
                 var14 = param2 >>> 24;
                 param2 = param2 & 16777215;
                 if (var14 == 0) {
@@ -212,8 +217,9 @@ final class fb extends jp {
                   }
                   var16 = 256 - var14;
                   var17 = param0[param4];
+                  int incrementValue$67 = param4;
                   param4++;
-                  param0[param4] = ((var15 & 16711935) * var14 + (var17 & 16711935) * var16 & -16711936) + ((var15 & 65280) * var14 + (var17 & 65280) * var16 & 16711680) >>> 8;
+                  param0[incrementValue$67] = ((var15 & 16711935) * var14 + (var17 & 16711935) * var16 & -16711936) + ((var15 & 65280) * var14 + (var17 & 65280) * var16 & 16711680) >>> 8;
                   param5++;
                   continue L1;
                 }
@@ -314,8 +320,9 @@ final class fb extends jp {
                 var18 = param0[param5];
                 var19 = (var17 >>> 24) * param12 >> 8;
                 var20 = 256 - var19;
+                int incrementValue$0 = param5;
                 param5++;
-                param0[param5] = ((var17 & 16711935) * var19 + (var18 & 16711935) * var20 & -16711936) + ((var17 & 65280) * var19 + (var18 & 65280) * var20 & 16711680) >>> 8;
+                param0[incrementValue$0] = ((var17 & 16711935) * var19 + (var18 & 16711935) * var20 & -16711936) + ((var17 & 65280) * var19 + (var18 & 65280) * var20 & 16711680) >>> 8;
                 param3 = param3 + param9;
             }
             param4 = param4 + param10;
@@ -433,8 +440,9 @@ final class fb extends jp {
                 var15++;
                 continue L0;
               } else {
+                int incrementValue$2 = param3;
                 param3++;
-                param2 = param1[param3];
+                param2 = param1[incrementValue$2];
                 var17 = param2 >>> 24;
                 if (var17 == 0) {
                   param4++;
@@ -467,8 +475,9 @@ final class fb extends jp {
                   }
                   var22 = 256 - var17;
                   var23 = param0[param4];
+                  int incrementValue$3 = param4;
                   param4++;
-                  param0[param4] = ((var18 & 16711935) * var17 + (var23 & 16711935) * var22 & -16711936) + ((var18 & 65280) * var17 + (var23 & 65280) * var22 & 16711680) >>> 8;
+                  param0[incrementValue$3] = ((var18 & 16711935) * var17 + (var23 & 16711935) * var22 & -16711936) + ((var18 & 65280) * var17 + (var23 & 65280) * var22 & 16711680) >>> 8;
                   var16++;
                   continue L1;
                 }
@@ -509,22 +518,22 @@ final class fb extends jp {
         int[] stackIn_21_0 = null;
         int stackIn_21_1 = 0;
         int stackIn_21_2 = 0;
-        int stackOut_2_0;
-        int stackOut_1_0;
-        int stackOut_5_0;
-        int stackOut_4_0;
-        int stackOut_8_0;
-        int stackOut_7_0;
-        int stackOut_11_0;
-        int stackOut_10_0;
-        int[] stackOut_18_0;
-        int stackOut_18_1;
-        int[] stackOut_20_0;
-        int stackOut_20_1;
-        int stackOut_20_2;
-        int[] stackOut_19_0;
-        int stackOut_19_1;
-        int stackOut_19_2;
+        int stackOut_2_0 = 0;
+        int stackOut_1_0 = 0;
+        int stackOut_5_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_8_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_11_0 = 0;
+        int stackOut_10_0 = 0;
+        int[] stackOut_18_0 = null;
+        int stackOut_18_1 = 0;
+        int[] stackOut_20_0 = null;
+        int stackOut_20_1 = 0;
+        int stackOut_20_2 = 0;
+        int[] stackOut_19_0 = null;
+        int stackOut_19_1 = 0;
+        int stackOut_19_2 = 0;
         L0: {
           var3 = ((fb) this).field_D >> 1;
           var4 = ((fb) this).field_C >> 1;
@@ -686,14 +695,14 @@ final class fb extends jp {
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
-        int stackOut_2_0;
-        int stackOut_1_0;
-        int stackOut_5_0;
-        int stackOut_4_0;
-        int stackOut_8_0;
-        int stackOut_7_0;
-        int stackOut_11_0;
-        int stackOut_10_0;
+        int stackOut_2_0 = 0;
+        int stackOut_1_0 = 0;
+        int stackOut_5_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_8_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_11_0 = 0;
+        int stackOut_10_0 = 0;
         L0: {
           var3 = ((fb) this).field_D >> 2;
           var4 = ((fb) this).field_C >> 2;
@@ -1296,8 +1305,9 @@ final class fb extends jp {
                 if (var16 != 0) {
                     var17 = 256 - var16;
                     var18 = param0[param5];
+                    int incrementValue$0 = param5;
                     param5++;
-                    param0[param5] = ((param2 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((param2 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >>> 8;
+                    param0[incrementValue$0] = ((param2 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((param2 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >>> 8;
                 } else {
                     param5++;
                 }
@@ -1330,8 +1340,9 @@ final class fb extends jp {
                 var10++;
                 continue L0;
               } else {
+                int incrementValue$66 = param3;
                 param3++;
-                param2 = param1[param3];
+                param2 = param1[incrementValue$66];
                 var12 = param2 >>> 24;
                 if (var12 == 0) {
                   param4++;
@@ -1340,8 +1351,9 @@ final class fb extends jp {
                 } else {
                   var13 = 256 - var12;
                   var14 = param0[param4];
+                  int incrementValue$67 = param4;
                   param4++;
-                  param0[param4] = ((param2 & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((param2 & 65280) * var12 + (var14 & 65280) * var13 & 16711680) >>> 8;
+                  param0[incrementValue$67] = ((param2 & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((param2 & 65280) * var12 + (var14 & 65280) * var13 & 16711680) >>> 8;
                   var11++;
                   continue L1;
                 }
@@ -1654,11 +1666,13 @@ final class fb extends jp {
                   } else {
                     var14 = (((fb) this).field_G[var9] >>> 24) * var13 >> 8;
                     var15 = 256 - var14;
+                    int incrementValue$2 = var9;
                     var9++;
-                    var16 = ((fb) this).field_G[var9];
+                    var16 = ((fb) this).field_G[incrementValue$2];
                     var17 = lb.field_l[var12];
+                    int incrementValue$3 = var12;
                     var12++;
-                    lb.field_l[var12] = ((var16 & 16711935) * var14 + (var17 & 16711935) * var15 & -16711936) + ((var16 & 65280) * var14 + (var17 & 65280) * var15 & 16711680) >>> 8;
+                    lb.field_l[incrementValue$3] = ((var16 & 16711935) * var14 + (var17 & 16711935) * var15 & -16711936) + ((var16 & 65280) * var14 + (var17 & 65280) * var15 & 16711680) >>> 8;
                     param0++;
                     continue L5;
                   }
@@ -1689,8 +1703,9 @@ final class fb extends jp {
                 param8++;
                 continue L0;
               } else {
+                int incrementValue$66 = param5;
                 param5++;
-                param0 = param4[param5];
+                param0 = param4[incrementValue$66];
                 if (param0 == 0) {
                   param7++;
                   param6++;
@@ -1703,8 +1718,9 @@ final class fb extends jp {
                   param2 = param0 + param1;
                   param0 = (param0 & 16711935) + (param1 & 16711935);
                   param1 = (param0 & 16777472) + (param2 - param0 & 65536);
+                  int incrementValue$67 = param7;
                   param7++;
-                  param3[param7] = param2 - param1 | param1 - (param1 >>> 8);
+                  param3[incrementValue$67] = param2 - param1 | param1 - (param1 >>> 8);
                   param6++;
                   continue L1;
                 }
@@ -1725,11 +1741,13 @@ final class fb extends jp {
             for (var11 = -param5; var11 < 0; var11++) {
                 var12 = (param1[param3] >>> 24) * param9 >> 8;
                 var13 = 256 - var12;
+                int incrementValue$0 = param3;
                 param3++;
-                var14 = param1[param3];
+                var14 = param1[incrementValue$0];
                 var15 = param0[param4];
+                int incrementValue$1 = param4;
                 param4++;
-                param0[param4] = ((var14 & 16711935) * var12 + (var15 & 16711935) * var13 & -16711936) + ((var14 & 65280) * var12 + (var15 & 65280) * var13 & 16711680) >>> 8;
+                param0[incrementValue$1] = ((var14 & 16711935) * var12 + (var15 & 16711935) * var13 & -16711936) + ((var14 & 65280) * var12 + (var15 & 65280) * var13 & 16711680) >>> 8;
             }
             param4 = param4 + param7;
             param3 = param3 + param8;

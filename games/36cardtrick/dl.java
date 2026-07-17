@@ -8,9 +8,13 @@ final class dl extends qb {
     static String field_j;
 
     final static void a(int param0, kc param1) {
-        ji.a(true);
-        vj.a(param1.field_r, param1.field_l, param1.field_k);
-        int var2 = -40 % ((param0 - 27) / 52);
+        try {
+            ji.a(true);
+            vj.a(param1.field_r, param1.field_l, param1.field_k);
+            int var2_int = -40 % ((param0 - 27) / 52);
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) (Object) runtimeException, "dl.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static boolean d(int param0) {

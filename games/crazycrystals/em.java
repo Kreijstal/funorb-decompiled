@@ -22,15 +22,14 @@ final class em extends fb {
     }
 
     final static void a(byte param0, dl param1) {
-        if (param0 != 38) {
-          em.b(5);
-          hd.a(false);
-          kh.a(param1.field_w, param1.field_n, param1.field_o);
-          return;
-        } else {
-          hd.a(false);
-          kh.a(param1.field_w, param1.field_n, param1.field_o);
-          return;
+        try {
+            if (param0 != 38) {
+                em.b(5);
+            }
+            hd.a(false);
+            kh.a(param1.field_w, param1.field_n, param1.field_o);
+        } catch (RuntimeException runtimeException) {
+            throw dn.a((Throwable) (Object) runtimeException, "em.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -39,16 +38,16 @@ final class em extends fb {
         int var9 = 0;
         var9 = CrazyCrystals.field_B;
         var8 = ((em) this).field_k[((em) this).field_j];
-        if (-3 != (((em) this).field_j ^ -1)) {
+        if (((em) this).field_j != 2) {
           L0: {
-            if ((((em) this).field_h ^ -1) > -5) {
+            if (((em) this).field_h < 4) {
               var8 = 0;
               break L0;
             } else {
               break L0;
             }
           }
-          if ((param1 ^ -1) == -25) {
+          if (param1 == 24) {
             if (24 != param2) {
               if (!((em) this).field_n) {
                 ro.field_u[var8].b(param5, param6 - param2 * 2, param1 * 2, 4 * param2, 8421631);
@@ -162,7 +161,7 @@ final class em extends fb {
           }
         } else {
           L6: {
-            if ((param1 ^ -1) != -25) {
+            if (param1 != 24) {
               break L6;
             } else {
               if (24 != param2) {
@@ -267,21 +266,77 @@ final class em extends fb {
 
     em(fq param0) {
         super(param0);
+        RuntimeException var2 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
         ((em) this).field_o = new int[3];
         ((em) this).field_j = 0;
         ((em) this).field_k = new int[3];
         ((em) this).field_n = false;
         ((em) this).field_l = false;
-        ((em) this).field_k[0] = (int)(Math.random() * 2.99) + 1;
-        ((em) this).field_k[1] = (int)(Math.random() * 1.99) + 1;
-        if (((em) this).field_k[0] <= ((em) this).field_k[1]) {
-            ((em) this).field_k[1] = ((em) this).field_k[1] + 1;
+        try {
+          L0: {
+            L1: {
+              ((em) this).field_k[0] = (int)(Math.random() * 2.99) + 1;
+              ((em) this).field_k[1] = (int)(Math.random() * 1.99) + 1;
+              if (((em) this).field_k[0] > ((em) this).field_k[1]) {
+                break L1;
+              } else {
+                ((em) this).field_k[1] = ((em) this).field_k[1] + 1;
+                break L1;
+              }
+            }
+            ((em) this).field_k[2] = ((em) this).field_k[0];
+            ((em) this).field_o[0] = (int)(30.0 * Math.random()) + 10;
+            ((em) this).field_o[1] = 10 - -(int)(Math.random() * (double)(-((em) this).field_o[0] + 30));
+            ((em) this).field_h = ((em) this).field_o[0];
+            ((em) this).field_o[2] = -((em) this).field_o[1] + (60 + -((em) this).field_o[0]);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var2;
+            stackOut_5_1 = new StringBuilder().append("em.<init>(");
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param0 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L2;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L2;
+            }
+          }
+          throw dn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
         }
-        ((em) this).field_k[2] = ((em) this).field_k[0];
-        ((em) this).field_o[0] = (int)(30.0 * Math.random()) + 10;
-        ((em) this).field_o[1] = 10 - -(int)(Math.random() * (double)(-((em) this).field_o[0] + 30));
-        ((em) this).field_h = ((em) this).field_o[0];
-        ((em) this).field_o[2] = -((em) this).field_o[1] + (60 + -((em) this).field_o[0]);
     }
 
     static {

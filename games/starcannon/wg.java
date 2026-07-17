@@ -21,7 +21,7 @@ final class wg {
         if (0 == param1) {
           return 0;
         } else {
-          if (-1 > (param1 ^ -1)) {
+          if (param1 > 0) {
             L0: {
               var2 = 1;
               if (param1 > 65535) {
@@ -51,7 +51,7 @@ final class wg {
               }
             }
             L3: {
-              if ((param1 ^ -1) < -4) {
+              if (param1 > 3) {
                 param1 = param1 >> 2;
                 var2 += 2;
                 break L3;
@@ -70,9 +70,8 @@ final class wg {
             }
             return var2;
           } else {
-            if (param0) {
+            if (!param0) {
               L5: {
-                int discarded$1 = wg.a(false, -64);
                 var2 = 2;
                 if (-65536 <= param1) {
                   break L5;
@@ -83,7 +82,7 @@ final class wg {
                 }
               }
               L6: {
-                if (255 >= param1) {
+                if (param1 >= -256) {
                   break L6;
                 } else {
                   var2 += 8;
@@ -92,7 +91,7 @@ final class wg {
                 }
               }
               L7: {
-                if (15 > param1) {
+                if (param1 < -16) {
                   var2 += 4;
                   param1 = param1 >> 4;
                   break L7;
@@ -101,7 +100,7 @@ final class wg {
                 }
               }
               L8: {
-                if ((param1 ^ -1) > 3) {
+                if (param1 < -4) {
                   param1 = param1 >> 2;
                   var2 += 2;
                   break L8;
@@ -121,6 +120,7 @@ final class wg {
               return var2;
             } else {
               L10: {
+                int discarded$1 = wg.a(false, -64);
                 var2 = 2;
                 if (-65536 <= param1) {
                   break L10;
@@ -131,7 +131,7 @@ final class wg {
                 }
               }
               L11: {
-                if (255 >= param1) {
+                if (param1 >= -256) {
                   break L11;
                 } else {
                   var2 += 8;
@@ -140,7 +140,7 @@ final class wg {
                 }
               }
               L12: {
-                if (15 > param1) {
+                if (param1 < -16) {
                   var2 += 4;
                   param1 = param1 >> 4;
                   break L12;
@@ -149,7 +149,7 @@ final class wg {
                 }
               }
               L13: {
-                if ((param1 ^ -1) > 3) {
+                if (param1 < -4) {
                   param1 = param1 >> 2;
                   var2 += 2;
                   break L13;
@@ -174,90 +174,172 @@ final class wg {
 
     final static void a(byte param0, String param1, java.applet.Applet param2, String param3, long param4) {
         try {
-            Throwable throwable = null;
+            Throwable var6 = null;
+            RuntimeException var6_ref = null;
             String var7 = null;
             String var8 = null;
             String var9 = null;
+            RuntimeException stackIn_10_0 = null;
+            StringBuilder stackIn_10_1 = null;
+            RuntimeException stackIn_11_0 = null;
+            StringBuilder stackIn_11_1 = null;
+            RuntimeException stackIn_12_0 = null;
+            StringBuilder stackIn_12_1 = null;
+            String stackIn_12_2 = null;
+            RuntimeException stackIn_13_0 = null;
+            StringBuilder stackIn_13_1 = null;
+            RuntimeException stackIn_14_0 = null;
+            StringBuilder stackIn_14_1 = null;
+            RuntimeException stackIn_15_0 = null;
+            StringBuilder stackIn_15_1 = null;
+            String stackIn_15_2 = null;
+            RuntimeException stackIn_16_0 = null;
+            StringBuilder stackIn_16_1 = null;
+            RuntimeException stackIn_17_0 = null;
+            StringBuilder stackIn_17_1 = null;
+            RuntimeException stackIn_18_0 = null;
+            StringBuilder stackIn_18_1 = null;
+            String stackIn_18_2 = null;
             Throwable decompiledCaughtException = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        try {
-                            var8 = param2.getParameter("cookiehost");
-                            var7 = var8;
-                            var7 = var8;
-                            var9 = param3 + "=" + param1 + "; version=1; path=/; domain=" + var8;
-                            var7 = var9;
-                            var7 = var9;
-                            if (0L > param4) {
-                                statePc = 2;
-                            } else {
-                                statePc = 1;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_0) {
-                            caughtException = stateCaught_0;
-                            statePc = 5;
-                            continue stateLoop;
-                        }
+            RuntimeException stackOut_9_0 = null;
+            StringBuilder stackOut_9_1 = null;
+            RuntimeException stackOut_11_0 = null;
+            StringBuilder stackOut_11_1 = null;
+            String stackOut_11_2 = null;
+            RuntimeException stackOut_10_0 = null;
+            StringBuilder stackOut_10_1 = null;
+            String stackOut_10_2 = null;
+            RuntimeException stackOut_12_0 = null;
+            StringBuilder stackOut_12_1 = null;
+            RuntimeException stackOut_14_0 = null;
+            StringBuilder stackOut_14_1 = null;
+            String stackOut_14_2 = null;
+            RuntimeException stackOut_13_0 = null;
+            StringBuilder stackOut_13_1 = null;
+            String stackOut_13_2 = null;
+            RuntimeException stackOut_15_0 = null;
+            StringBuilder stackOut_15_1 = null;
+            RuntimeException stackOut_17_0 = null;
+            StringBuilder stackOut_17_1 = null;
+            String stackOut_17_2 = null;
+            RuntimeException stackOut_16_0 = null;
+            StringBuilder stackOut_16_1 = null;
+            String stackOut_16_2 = null;
+            try {
+              L0: {
+                try {
+                  L1: {
+                    L2: {
+                      var8 = param2.getParameter("cookiehost");
+                      var7 = var8;
+                      var7 = var8;
+                      var9 = param3 + "=" + param1 + "; version=1; path=/; domain=" + var8;
+                      var7 = var9;
+                      var7 = var9;
+                      if (0L > param4) {
+                        var7 = var9 + "; Discard;";
+                        break L2;
+                      } else {
+                        var7 = var9 + "; Expires=" + ge.a((byte) -36, dd.b(84) + 1000L * param4) + "; Max-Age=" + param4;
+                        break L2;
+                      }
                     }
-                    case 1: {
-                        try {
-                            var7 = var9 + "; Expires=" + ge.a((byte) -36, dd.b(84) + 1000L * param4) + "; Max-Age=" + param4;
-                            statePc = 3;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_1) {
-                            caughtException = stateCaught_1;
-                            statePc = 5;
-                            continue stateLoop;
-                        }
-                    }
-                    case 2: {
-                        try {
-                            var7 = var9 + "; Discard;";
-                            statePc = 3;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_2) {
-                            caughtException = stateCaught_2;
-                            statePc = 5;
-                            continue stateLoop;
-                        }
-                    }
-                    case 3: {
-                        try {
-                            mb.a("document.cookie=\"" + var7 + "\"", param2, 790);
-                            statePc = 6;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_3) {
-                            caughtException = stateCaught_3;
-                            statePc = 5;
-                            continue stateLoop;
-                        }
-                    }
-                    case 5: {
-                        throwable = caughtException;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                    case 6: {
-                        if (param0 < 82) {
-                            statePc = 8;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    }
-                    case 7: {
-                        return;
-                    }
-                    case 8: {
-                        int discarded$2 = wg.a(true, -125);
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+                    mb.a("document.cookie=\"" + var7 + "\"", param2, 790);
+                    break L1;
+                  }
+                } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  L3: {
+                    var6 = decompiledCaughtException;
+                    break L3;
+                  }
                 }
+                if (param0 >= 82) {
+                  break L0;
+                } else {
+                  int discarded$1 = wg.a(true, -125);
+                  return;
+                }
+              }
+            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L4: {
+                var6_ref = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_9_0 = (RuntimeException) var6_ref;
+                stackOut_9_1 = new StringBuilder().append("wg.C(").append(param0).append(44);
+                stackIn_11_0 = stackOut_9_0;
+                stackIn_11_1 = stackOut_9_1;
+                stackIn_10_0 = stackOut_9_0;
+                stackIn_10_1 = stackOut_9_1;
+                if (param1 == null) {
+                  stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+                  stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+                  stackOut_11_2 = "null";
+                  stackIn_12_0 = stackOut_11_0;
+                  stackIn_12_1 = stackOut_11_1;
+                  stackIn_12_2 = stackOut_11_2;
+                  break L4;
+                } else {
+                  stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+                  stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+                  stackOut_10_2 = "{...}";
+                  stackIn_12_0 = stackOut_10_0;
+                  stackIn_12_1 = stackOut_10_1;
+                  stackIn_12_2 = stackOut_10_2;
+                  break L4;
+                }
+              }
+              L5: {
+                stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+                stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(44);
+                stackIn_14_0 = stackOut_12_0;
+                stackIn_14_1 = stackOut_12_1;
+                stackIn_13_0 = stackOut_12_0;
+                stackIn_13_1 = stackOut_12_1;
+                if (param2 == null) {
+                  stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+                  stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+                  stackOut_14_2 = "null";
+                  stackIn_15_0 = stackOut_14_0;
+                  stackIn_15_1 = stackOut_14_1;
+                  stackIn_15_2 = stackOut_14_2;
+                  break L5;
+                } else {
+                  stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+                  stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+                  stackOut_13_2 = "{...}";
+                  stackIn_15_0 = stackOut_13_0;
+                  stackIn_15_1 = stackOut_13_1;
+                  stackIn_15_2 = stackOut_13_2;
+                  break L5;
+                }
+              }
+              L6: {
+                stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+                stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44);
+                stackIn_17_0 = stackOut_15_0;
+                stackIn_17_1 = stackOut_15_1;
+                stackIn_16_0 = stackOut_15_0;
+                stackIn_16_1 = stackOut_15_1;
+                if (param3 == null) {
+                  stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+                  stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+                  stackOut_17_2 = "null";
+                  stackIn_18_0 = stackOut_17_0;
+                  stackIn_18_1 = stackOut_17_1;
+                  stackIn_18_2 = stackOut_17_2;
+                  break L6;
+                } else {
+                  stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+                  stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+                  stackOut_16_2 = "{...}";
+                  stackIn_18_0 = stackOut_16_0;
+                  stackIn_18_1 = stackOut_16_1;
+                  stackIn_18_2 = stackOut_16_2;
+                  break L6;
+                }
+              }
+              throw sd.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + param4 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

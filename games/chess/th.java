@@ -12,11 +12,6 @@ final class th implements ui {
     public static void a(int param0) {
         field_c = null;
         field_f = null;
-        if (param0 != 0) {
-            th.c(-92);
-            field_e = null;
-            return;
-        }
         field_e = null;
     }
 

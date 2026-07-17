@@ -12,9 +12,6 @@ final class ge {
     static dd field_f;
 
     final static void a(int param0) {
-        if (param0 <= 118) {
-            return;
-        }
         jk.field_m = new vc();
     }
 
@@ -25,7 +22,7 @@ final class ge {
         field_c = null;
         field_a = null;
         field_b = null;
-        int var1 = -110 % ((-11 - param0) / 39);
+        int var1 = 0;
     }
 
     static {

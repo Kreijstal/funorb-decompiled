@@ -24,7 +24,11 @@ final class wo extends vo implements va {
 
     wo(cka param0, int param1, byte[] param2, int param3, boolean param4) {
         super(param0, 34962, param2, param3, param4);
-        ((wo) this).field_j = param1;
+        try {
+            ((wo) this).field_j = param1;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "wo.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 41);
+        }
     }
 
     final void d(int param0) {
@@ -36,14 +40,14 @@ final class wo extends vo implements va {
     }
 
     public final void a(int param0, int param1, byte param2, byte[] param3) {
-        ((wo) this).a(-114, param3, param1);
-        if (param2 > -109) {
-          int discarded$2 = ((wo) this).a(-43);
-          ((wo) this).field_j = param0;
-          return;
-        } else {
-          ((wo) this).field_j = param0;
-          return;
+        try {
+            ((wo) this).a(-114, param3, param1);
+            if (param2 > -109) {
+                int discarded$0 = ((wo) this).a(-43);
+            }
+            ((wo) this).field_j = param0;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "wo.F(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 

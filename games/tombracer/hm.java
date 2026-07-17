@@ -16,17 +16,25 @@ final class hm extends tfa implements gf {
 
     hm(kda param0, ft param1, una param2, int param3, int param4) {
         super(param0, 3553, param1, param2, param4 * param3, false);
-        ((hm) this).field_k = param3;
-        ((hm) this).field_l = param4;
-        ((hm) this).field_j.a(true, (iva) this);
-        jaggl.OpenGL.glTexImage2Dub(((hm) this).field_i, 0, ((hm) this).d(108), param3, param4, 0, waa.a(((hm) this).field_f, 1383), lr.a(((hm) this).field_a, 5126), (byte[]) null, 0);
+        try {
+            ((hm) this).field_k = param3;
+            ((hm) this).field_l = param4;
+            ((hm) this).field_j.a(true, (iva) this);
+            jaggl.OpenGL.glTexImage2Dub(((hm) this).field_i, 0, ((hm) this).d(108), param3, param4, 0, waa.a(((hm) this).field_f, 1383), lr.a(((hm) this).field_a, 5126), (byte[]) null, 0);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "hm.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 41);
+        }
     }
 
     final void a(int param0, float[] param1, int param2, int param3, int param4, int param5, int param6, ft param7, boolean param8) {
-        ((hm) this).field_j.a(param8, (iva) this);
-        jaggl.OpenGL.glPixelStorei(3314, param6);
-        jaggl.OpenGL.glTexSubImage2Df(((hm) this).field_i, 0, param0, param2, param3, param4, waa.a(param7, 1383), 5121, param1, param5);
-        jaggl.OpenGL.glPixelStorei(3314, 0);
+        try {
+            ((hm) this).field_j.a(param8, (iva) this);
+            jaggl.OpenGL.glPixelStorei(3314, param6);
+            jaggl.OpenGL.glTexSubImage2Df(((hm) this).field_i, 0, param0, param2, param3, param4, waa.a(param7, 1383), 5121, param1, param5);
+            jaggl.OpenGL.glPixelStorei(3314, 0);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "hm.K(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + (param7 != null ? "{...}" : "null") + 44 + param8 + 41);
+        }
     }
 
     public static void g(byte param0) {
@@ -57,30 +65,164 @@ final class hm extends tfa implements gf {
 
     hm(kda param0, ft param1, int param2, int param3, boolean param4, byte[] param5, int param6, int param7) {
         super(param0, 3553, param1, una.field_g, param3 * param2, param4);
-        L0: {
-          ((hm) this).field_l = param3;
-          ((hm) this).field_k = param2;
-          ((hm) this).field_j.a(true, (iva) this);
-          jaggl.OpenGL.glPixelStorei(3317, 1);
-          if (!param4) {
-            break L0;
-          } else {
-            if (param7 != 0) {
-              break L0;
-            } else {
-              if (0 == param6) {
-                ((hm) this).a(((hm) this).field_i, param2, param5, -118, param3);
-                jaggl.OpenGL.glPixelStorei(3317, 4);
-              } else {
-                break L0;
+        RuntimeException var9 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        try {
+          L0: {
+            L1: {
+              L2: {
+                ((hm) this).field_l = param3;
+                ((hm) this).field_k = param2;
+                ((hm) this).field_j.a(true, (iva) this);
+                jaggl.OpenGL.glPixelStorei(3317, 1);
+                if (!param4) {
+                  break L2;
+                } else {
+                  if (param7 != 0) {
+                    break L2;
+                  } else {
+                    if (0 == param6) {
+                      ((hm) this).a(((hm) this).field_i, param2, param5, -118, param3);
+                      break L1;
+                    } else {
+                      break L2;
+                    }
+                  }
+                }
               }
+              jaggl.OpenGL.glPixelStorei(3314, param7);
+              jaggl.OpenGL.glTexImage2Dub(((hm) this).field_i, 0, ((hm) this).d(110), param2, param3, 0, waa.a(((hm) this).field_f, 1383), 5121, param5, param6);
+              jaggl.OpenGL.glPixelStorei(3314, 0);
+              break L1;
+            }
+            jaggl.OpenGL.glPixelStorei(3317, 4);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var9 = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var9;
+            stackOut_8_1 = new StringBuilder().append("hm.<init>(");
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param0 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L3;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L3;
             }
           }
+          L4: {
+            stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+            stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44);
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
+            if (param1 == null) {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L4;
+            } else {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L4;
+            }
+          }
+          L5: {
+            stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+            stackIn_16_0 = stackOut_14_0;
+            stackIn_16_1 = stackOut_14_1;
+            stackIn_15_0 = stackOut_14_0;
+            stackIn_15_1 = stackOut_14_1;
+            if (param5 == null) {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "null";
+              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_1 = stackOut_16_1;
+              stackIn_17_2 = stackOut_16_2;
+              break L5;
+            } else {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "{...}";
+              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_1 = stackOut_15_1;
+              stackIn_17_2 = stackOut_15_2;
+              break L5;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param6 + 44 + param7 + 41);
         }
-        jaggl.OpenGL.glPixelStorei(3314, param7);
-        jaggl.OpenGL.glTexImage2Dub(((hm) this).field_i, 0, ((hm) this).d(110), param2, param3, 0, waa.a(((hm) this).field_f, 1383), 5121, param5, param6);
-        jaggl.OpenGL.glPixelStorei(3314, 0);
-        jaggl.OpenGL.glPixelStorei(3317, 4);
     }
 
     public final boolean a(int param0) {
@@ -96,7 +238,7 @@ final class hm extends tfa implements gf {
         uua.field_a = null;
         nm.field_l = null;
         ep.field_n = null;
-        int var1 = 60 / ((-20 - param0) / 45);
+        int var1 = -60;
         mc.field_r = null;
         cb.field_i = null;
         dp.field_d = null;
@@ -143,30 +285,121 @@ final class hm extends tfa implements gf {
 
     hm(kda param0, int param1, int param2, boolean param3, int[] param4, int param5, int param6) {
         super(param0, 3553, gpa.field_a, una.field_g, param1 * param2, param3);
-        L0: {
-          L1: {
-            ((hm) this).field_k = param1;
-            ((hm) this).field_l = param2;
-            ((hm) this).field_j.a(true, (iva) this);
-            if (!param3) {
-              break L1;
-            } else {
-              if (param6 != 0) {
-                break L1;
-              } else {
-                if (-1 == (param5 ^ -1)) {
-                  ((hm) this).a((byte) 99, ((hm) this).field_i, param2, param4, param1);
-                  break L0;
+        RuntimeException var8 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        try {
+          L0: {
+            L1: {
+              L2: {
+                ((hm) this).field_k = param1;
+                ((hm) this).field_l = param2;
+                ((hm) this).field_j.a(true, (iva) this);
+                if (!param3) {
+                  break L2;
                 } else {
-                  break L1;
+                  if (param6 != 0) {
+                    break L2;
+                  } else {
+                    if (param5 == 0) {
+                      ((hm) this).a((byte) 99, ((hm) this).field_i, param2, param4, param1);
+                      break L1;
+                    } else {
+                      break L2;
+                    }
+                  }
                 }
               }
+              jaggl.OpenGL.glPixelStorei(3314, param6);
+              jaggl.OpenGL.glTexImage2Di(((hm) this).field_i, 0, 6408, ((hm) this).field_k, ((hm) this).field_l, 0, 32993, ((hm) this).field_j.field_od, param4, param5 * 4);
+              jaggl.OpenGL.glPixelStorei(3314, 0);
+              break L1;
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var8 = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var8;
+            stackOut_7_1 = new StringBuilder().append("hm.<init>(");
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param0 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L3;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L3;
             }
           }
-          jaggl.OpenGL.glPixelStorei(3314, param6);
-          jaggl.OpenGL.glTexImage2Di(((hm) this).field_i, 0, 6408, ((hm) this).field_k, ((hm) this).field_l, 0, 32993, ((hm) this).field_j.field_od, param4, param5 * 4);
-          jaggl.OpenGL.glPixelStorei(3314, 0);
-          break L0;
+          L4: {
+            stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
+            if (param4 == null) {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L4;
+            } else {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L4;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param5 + 44 + param6 + 41);
         }
     }
 
@@ -266,33 +499,161 @@ final class hm extends tfa implements gf {
 
     hm(kda param0, ft param1, int param2, int param3, boolean param4, float[] param5, int param6, int param7) {
         super(param0, 3553, param1, una.field_h, param2 * param3, param4);
-        L0: {
-          ((hm) this).field_l = param3;
-          ((hm) this).field_k = param2;
-          ((hm) this).field_j.a(true, (iva) this);
-          if (param4) {
-            jaggl.OpenGL.glPixelStorei(3314, param7);
-            jaggl.OpenGL.glTexImage2Df(((hm) this).field_i, 0, ((hm) this).d(44), param2, param3, 0, waa.a(((hm) this).field_f, 1383), 5126, param5, param6 * 4);
-            jaggl.OpenGL.glPixelStorei(3314, 0);
-            break L0;
-          } else {
-            if (param7 != 0) {
+        RuntimeException var9 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        try {
+          L0: {
+            L1: {
+              L2: {
+                ((hm) this).field_l = param3;
+                ((hm) this).field_k = param2;
+                ((hm) this).field_j.a(true, (iva) this);
+                if (param4) {
+                  break L2;
+                } else {
+                  if (param7 != 0) {
+                    break L2;
+                  } else {
+                    if (0 != param6) {
+                      break L2;
+                    } else {
+                      ((hm) this).a(-1, param5, param3, ((hm) this).field_i, param2);
+                      break L1;
+                    }
+                  }
+                }
+              }
               jaggl.OpenGL.glPixelStorei(3314, param7);
               jaggl.OpenGL.glTexImage2Df(((hm) this).field_i, 0, ((hm) this).d(44), param2, param3, 0, waa.a(((hm) this).field_f, 1383), 5126, param5, param6 * 4);
               jaggl.OpenGL.glPixelStorei(3314, 0);
-              break L0;
+              break L1;
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var9 = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var9;
+            stackOut_7_1 = new StringBuilder().append("hm.<init>(");
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param0 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L3;
             } else {
-              if (0 != param6) {
-                jaggl.OpenGL.glPixelStorei(3314, param7);
-                jaggl.OpenGL.glTexImage2Df(((hm) this).field_i, 0, ((hm) this).d(44), param2, param3, 0, waa.a(((hm) this).field_f, 1383), 5126, param5, param6 * 4);
-                jaggl.OpenGL.glPixelStorei(3314, 0);
-                break L0;
-              } else {
-                ((hm) this).a(-1, param5, param3, ((hm) this).field_i, param2);
-                break L0;
-              }
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L3;
             }
           }
+          L4: {
+            stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(44);
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
+            if (param1 == null) {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L4;
+            } else {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L4;
+            }
+          }
+          L5: {
+            stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
+            if (param5 == null) {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L5;
+            } else {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L5;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param6 + 44 + param7 + 41);
         }
     }
 
@@ -344,7 +705,7 @@ final class hm extends tfa implements gf {
                                   }
                                   L2: {
                                     var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
-                                    if ((var10 ^ -1) >= -1) {
+                                    if (var10 <= 0) {
                                       break L2;
                                     } else {
                                       param7 = param7 >> var10;
@@ -365,7 +726,7 @@ final class hm extends tfa implements gf {
                                     }
                                   }
                                   L4: {
-                                    if (-1 != (var10 ^ -1)) {
+                                    if (var10 != 0) {
                                       var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
                                       break L4;
                                     } else {
@@ -378,7 +739,7 @@ final class hm extends tfa implements gf {
                                   if (param1 == -15) {
                                     L5: {
                                       param6 = param6 - param3;
-                                      if (-1 != (var11 ^ -1)) {
+                                      if (var11 != 0) {
                                         var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
                                         break L5;
                                       } else {
@@ -398,7 +759,7 @@ final class hm extends tfa implements gf {
                                     L7: {
                                       hm.g((byte) 96);
                                       param6 = param6 - param3;
-                                      if (-1 != (var11 ^ -1)) {
+                                      if (var11 != 0) {
                                         var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
                                         break L7;
                                       } else {
@@ -441,7 +802,7 @@ final class hm extends tfa implements gf {
                     }
                     L10: {
                       var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
-                      if ((var10 ^ -1) >= -1) {
+                      if (var10 <= 0) {
                         break L10;
                       } else {
                         param7 = param7 >> var10;
@@ -462,7 +823,7 @@ final class hm extends tfa implements gf {
                       }
                     }
                     L12: {
-                      if (-1 != (var10 ^ -1)) {
+                      if (var10 != 0) {
                         var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
                         break L12;
                       } else {
@@ -475,7 +836,7 @@ final class hm extends tfa implements gf {
                     if (param1 == -15) {
                       L13: {
                         param6 = param6 - param3;
-                        if (-1 != (var11 ^ -1)) {
+                        if (var11 != 0) {
                           var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
                           break L13;
                         } else {
@@ -495,7 +856,7 @@ final class hm extends tfa implements gf {
                       L15: {
                         hm.g((byte) 96);
                         param6 = param6 - param3;
-                        if (-1 != (var11 ^ -1)) {
+                        if (var11 != 0) {
                           var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
                           break L15;
                         } else {
@@ -532,7 +893,7 @@ final class hm extends tfa implements gf {
                     }
                     L18: {
                       var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
-                      if ((var10 ^ -1) >= -1) {
+                      if (var10 <= 0) {
                         break L18;
                       } else {
                         param7 = param7 >> var10;
@@ -553,7 +914,7 @@ final class hm extends tfa implements gf {
                       }
                     }
                     L20: {
-                      if (-1 != (var10 ^ -1)) {
+                      if (var10 != 0) {
                         var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
                         break L20;
                       } else {
@@ -566,7 +927,7 @@ final class hm extends tfa implements gf {
                     if (param1 == -15) {
                       L21: {
                         param6 = param6 - param3;
-                        if (-1 != (var11 ^ -1)) {
+                        if (var11 != 0) {
                           var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
                           break L21;
                         } else {
@@ -586,7 +947,7 @@ final class hm extends tfa implements gf {
                       L23: {
                         hm.g((byte) 96);
                         param6 = param6 - param3;
-                        if (-1 != (var11 ^ -1)) {
+                        if (var11 != 0) {
                           var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
                           break L23;
                         } else {
@@ -624,7 +985,7 @@ final class hm extends tfa implements gf {
                   }
                   L26: {
                     var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
-                    if ((var10 ^ -1) >= -1) {
+                    if (var10 <= 0) {
                       break L26;
                     } else {
                       param7 = param7 >> var10;
@@ -645,7 +1006,7 @@ final class hm extends tfa implements gf {
                     }
                   }
                   L28: {
-                    if (-1 != (var10 ^ -1)) {
+                    if (var10 != 0) {
                       var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
                       break L28;
                     } else {
@@ -658,7 +1019,7 @@ final class hm extends tfa implements gf {
                   if (param1 == -15) {
                     L29: {
                       param6 = param6 - param3;
-                      if (-1 != (var11 ^ -1)) {
+                      if (var11 != 0) {
                         var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
                         break L29;
                       } else {
@@ -678,7 +1039,7 @@ final class hm extends tfa implements gf {
                     L31: {
                       hm.g((byte) 96);
                       param6 = param6 - param3;
-                      if (-1 != (var11 ^ -1)) {
+                      if (var11 != 0) {
                         var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
                         break L31;
                       } else {
@@ -749,7 +1110,7 @@ final class hm extends tfa implements gf {
                     }
                     L35: {
                       var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
-                      if ((var10 ^ -1) >= -1) {
+                      if (var10 <= 0) {
                         break L35;
                       } else {
                         param7 = param7 >> var10;
@@ -770,7 +1131,7 @@ final class hm extends tfa implements gf {
                       }
                     }
                     L37: {
-                      if (-1 != (var10 ^ -1)) {
+                      if (var10 != 0) {
                         var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
                         break L37;
                       } else {
@@ -790,7 +1151,7 @@ final class hm extends tfa implements gf {
                     }
                     L39: {
                       param6 = param6 - param3;
-                      if (-1 != (var11 ^ -1)) {
+                      if (var11 != 0) {
                         var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
                         break L39;
                       } else {
@@ -826,7 +1187,7 @@ final class hm extends tfa implements gf {
                     }
                     L42: {
                       var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
-                      if ((var10 ^ -1) >= -1) {
+                      if (var10 <= 0) {
                         break L42;
                       } else {
                         param7 = param7 >> var10;
@@ -847,7 +1208,7 @@ final class hm extends tfa implements gf {
                       }
                     }
                     L44: {
-                      if (-1 != (var10 ^ -1)) {
+                      if (var10 != 0) {
                         var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
                         break L44;
                       } else {
@@ -867,7 +1228,7 @@ final class hm extends tfa implements gf {
                     }
                     L46: {
                       param6 = param6 - param3;
-                      if (-1 != (var11 ^ -1)) {
+                      if (var11 != 0) {
                         var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
                         break L46;
                       } else {
@@ -930,7 +1291,7 @@ final class hm extends tfa implements gf {
                                 }
                                 L50: {
                                   var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
-                                  if ((var10 ^ -1) >= -1) {
+                                  if (var10 <= 0) {
                                     break L50;
                                   } else {
                                     param7 = param7 >> var10;
@@ -951,7 +1312,7 @@ final class hm extends tfa implements gf {
                                   }
                                 }
                                 L52: {
-                                  if (-1 != (var10 ^ -1)) {
+                                  if (var10 != 0) {
                                     var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
                                     break L52;
                                   } else {
@@ -971,7 +1332,7 @@ final class hm extends tfa implements gf {
                                 }
                                 L54: {
                                   param6 = param6 - param3;
-                                  if (-1 != (var11 ^ -1)) {
+                                  if (var11 != 0) {
                                     var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
                                     break L54;
                                   } else {
@@ -1008,7 +1369,7 @@ final class hm extends tfa implements gf {
                               }
                               L57: {
                                 var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
-                                if ((var10 ^ -1) >= -1) {
+                                if (var10 <= 0) {
                                   break L57;
                                 } else {
                                   param7 = param7 >> var10;
@@ -1029,7 +1390,7 @@ final class hm extends tfa implements gf {
                                 }
                               }
                               L59: {
-                                if (-1 != (var10 ^ -1)) {
+                                if (var10 != 0) {
                                   var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
                                   break L59;
                                 } else {
@@ -1049,7 +1410,7 @@ final class hm extends tfa implements gf {
                               }
                               L61: {
                                 param6 = param6 - param3;
-                                if (-1 != (var11 ^ -1)) {
+                                if (var11 != 0) {
                                   var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
                                   break L61;
                                 } else {
@@ -1086,7 +1447,7 @@ final class hm extends tfa implements gf {
                             }
                             L64: {
                               var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
-                              if ((var10 ^ -1) >= -1) {
+                              if (var10 <= 0) {
                                 break L64;
                               } else {
                                 param7 = param7 >> var10;
@@ -1107,7 +1468,7 @@ final class hm extends tfa implements gf {
                               }
                             }
                             L66: {
-                              if (-1 != (var10 ^ -1)) {
+                              if (var10 != 0) {
                                 var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
                                 break L66;
                               } else {
@@ -1127,7 +1488,7 @@ final class hm extends tfa implements gf {
                             }
                             L68: {
                               param6 = param6 - param3;
-                              if (-1 != (var11 ^ -1)) {
+                              if (var11 != 0) {
                                 var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
                                 break L68;
                               } else {
@@ -1164,7 +1525,7 @@ final class hm extends tfa implements gf {
                           }
                           L71: {
                             var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
-                            if ((var10 ^ -1) >= -1) {
+                            if (var10 <= 0) {
                               break L71;
                             } else {
                               param7 = param7 >> var10;
@@ -1185,7 +1546,7 @@ final class hm extends tfa implements gf {
                             }
                           }
                           L73: {
-                            if (-1 != (var10 ^ -1)) {
+                            if (var10 != 0) {
                               var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
                               break L73;
                             } else {
@@ -1205,7 +1566,7 @@ final class hm extends tfa implements gf {
                           }
                           L75: {
                             param6 = param6 - param3;
-                            if (-1 != (var11 ^ -1)) {
+                            if (var11 != 0) {
                               var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
                               break L75;
                             } else {
@@ -1242,7 +1603,7 @@ final class hm extends tfa implements gf {
                         }
                         L78: {
                           var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
-                          if ((var10 ^ -1) >= -1) {
+                          if (var10 <= 0) {
                             break L78;
                           } else {
                             param7 = param7 >> var10;
@@ -1263,7 +1624,7 @@ final class hm extends tfa implements gf {
                           }
                         }
                         L80: {
-                          if (-1 != (var10 ^ -1)) {
+                          if (var10 != 0) {
                             var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
                             break L80;
                           } else {
@@ -1283,7 +1644,7 @@ final class hm extends tfa implements gf {
                         }
                         L82: {
                           param6 = param6 - param3;
-                          if (-1 != (var11 ^ -1)) {
+                          if (var11 != 0) {
                             var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
                             break L82;
                           } else {
@@ -1320,7 +1681,7 @@ final class hm extends tfa implements gf {
                       }
                       L85: {
                         var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
-                        if ((var10 ^ -1) >= -1) {
+                        if (var10 <= 0) {
                           break L85;
                         } else {
                           param7 = param7 >> var10;
@@ -1341,7 +1702,7 @@ final class hm extends tfa implements gf {
                         }
                       }
                       L87: {
-                        if (-1 != (var10 ^ -1)) {
+                        if (var10 != 0) {
                           var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
                           break L87;
                         } else {
@@ -1361,7 +1722,7 @@ final class hm extends tfa implements gf {
                       }
                       L89: {
                         param6 = param6 - param3;
-                        if (-1 != (var11 ^ -1)) {
+                        if (var11 != 0) {
                           var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
                           break L89;
                         } else {
@@ -1398,7 +1759,7 @@ final class hm extends tfa implements gf {
                     }
                     L92: {
                       var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
-                      if ((var10 ^ -1) >= -1) {
+                      if (var10 <= 0) {
                         break L92;
                       } else {
                         param7 = param7 >> var10;
@@ -1419,7 +1780,7 @@ final class hm extends tfa implements gf {
                       }
                     }
                     L94: {
-                      if (-1 != (var10 ^ -1)) {
+                      if (var10 != 0) {
                         var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
                         break L94;
                       } else {
@@ -1439,7 +1800,7 @@ final class hm extends tfa implements gf {
                     }
                     L96: {
                       param6 = param6 - param3;
-                      if (-1 != (var11 ^ -1)) {
+                      if (var11 != 0) {
                         var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
                         break L96;
                       } else {
@@ -1476,7 +1837,7 @@ final class hm extends tfa implements gf {
                   }
                   L99: {
                     var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
-                    if ((var10 ^ -1) >= -1) {
+                    if (var10 <= 0) {
                       break L99;
                     } else {
                       param7 = param7 >> var10;
@@ -1497,7 +1858,7 @@ final class hm extends tfa implements gf {
                     }
                   }
                   L101: {
-                    if (-1 != (var10 ^ -1)) {
+                    if (var10 != 0) {
                       var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
                       break L101;
                     } else {
@@ -1517,7 +1878,7 @@ final class hm extends tfa implements gf {
                   }
                   L103: {
                     param6 = param6 - param3;
-                    if (-1 != (var11 ^ -1)) {
+                    if (var11 != 0) {
                       var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
                       break L103;
                     } else {
@@ -1592,7 +1953,7 @@ final class hm extends tfa implements gf {
                                 }
                                 L109: {
                                   var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
-                                  if ((var10 ^ -1) >= -1) {
+                                  if (var10 <= 0) {
                                     break L109;
                                   } else {
                                     param7 = param7 >> var10;
@@ -1613,7 +1974,7 @@ final class hm extends tfa implements gf {
                                   }
                                 }
                                 L111: {
-                                  if (-1 != (var10 ^ -1)) {
+                                  if (var10 != 0) {
                                     var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
                                     break L111;
                                   } else {
@@ -1633,7 +1994,7 @@ final class hm extends tfa implements gf {
                                 }
                                 L113: {
                                   param6 = param6 - param3;
-                                  if (-1 != (var11 ^ -1)) {
+                                  if (var11 != 0) {
                                     var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
                                     break L113;
                                   } else {
@@ -1670,7 +2031,7 @@ final class hm extends tfa implements gf {
                               }
                               L116: {
                                 var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
-                                if ((var10 ^ -1) >= -1) {
+                                if (var10 <= 0) {
                                   break L116;
                                 } else {
                                   param7 = param7 >> var10;
@@ -1691,7 +2052,7 @@ final class hm extends tfa implements gf {
                                 }
                               }
                               L118: {
-                                if (-1 != (var10 ^ -1)) {
+                                if (var10 != 0) {
                                   var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
                                   break L118;
                                 } else {
@@ -1711,7 +2072,7 @@ final class hm extends tfa implements gf {
                               }
                               L120: {
                                 param6 = param6 - param3;
-                                if (-1 != (var11 ^ -1)) {
+                                if (var11 != 0) {
                                   var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
                                   break L120;
                                 } else {
@@ -1748,7 +2109,7 @@ final class hm extends tfa implements gf {
                             }
                             L123: {
                               var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
-                              if ((var10 ^ -1) >= -1) {
+                              if (var10 <= 0) {
                                 break L123;
                               } else {
                                 param7 = param7 >> var10;
@@ -1769,7 +2130,7 @@ final class hm extends tfa implements gf {
                               }
                             }
                             L125: {
-                              if (-1 != (var10 ^ -1)) {
+                              if (var10 != 0) {
                                 var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
                                 break L125;
                               } else {
@@ -1789,7 +2150,7 @@ final class hm extends tfa implements gf {
                             }
                             L127: {
                               param6 = param6 - param3;
-                              if (-1 != (var11 ^ -1)) {
+                              if (var11 != 0) {
                                 var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
                                 break L127;
                               } else {
@@ -1826,7 +2187,7 @@ final class hm extends tfa implements gf {
                           }
                           L130: {
                             var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
-                            if ((var10 ^ -1) >= -1) {
+                            if (var10 <= 0) {
                               break L130;
                             } else {
                               param7 = param7 >> var10;
@@ -1847,7 +2208,7 @@ final class hm extends tfa implements gf {
                             }
                           }
                           L132: {
-                            if (-1 != (var10 ^ -1)) {
+                            if (var10 != 0) {
                               var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
                               break L132;
                             } else {
@@ -1867,7 +2228,7 @@ final class hm extends tfa implements gf {
                           }
                           L134: {
                             param6 = param6 - param3;
-                            if (-1 != (var11 ^ -1)) {
+                            if (var11 != 0) {
                               var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
                               break L134;
                             } else {
@@ -1904,7 +2265,7 @@ final class hm extends tfa implements gf {
                         }
                         L137: {
                           var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
-                          if ((var10 ^ -1) >= -1) {
+                          if (var10 <= 0) {
                             break L137;
                           } else {
                             param7 = param7 >> var10;
@@ -1925,7 +2286,7 @@ final class hm extends tfa implements gf {
                           }
                         }
                         L139: {
-                          if (-1 != (var10 ^ -1)) {
+                          if (var10 != 0) {
                             var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
                             break L139;
                           } else {
@@ -1945,7 +2306,7 @@ final class hm extends tfa implements gf {
                         }
                         L141: {
                           param6 = param6 - param3;
-                          if (-1 != (var11 ^ -1)) {
+                          if (var11 != 0) {
                             var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
                             break L141;
                           } else {
@@ -1982,7 +2343,7 @@ final class hm extends tfa implements gf {
                       }
                       L144: {
                         var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
-                        if ((var10 ^ -1) >= -1) {
+                        if (var10 <= 0) {
                           break L144;
                         } else {
                           param7 = param7 >> var10;
@@ -2003,7 +2364,7 @@ final class hm extends tfa implements gf {
                         }
                       }
                       L146: {
-                        if (-1 != (var10 ^ -1)) {
+                        if (var10 != 0) {
                           var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
                           break L146;
                         } else {
@@ -2023,7 +2384,7 @@ final class hm extends tfa implements gf {
                       }
                       L148: {
                         param6 = param6 - param3;
-                        if (-1 != (var11 ^ -1)) {
+                        if (var11 != 0) {
                           var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
                           break L148;
                         } else {
@@ -2060,7 +2421,7 @@ final class hm extends tfa implements gf {
                     }
                     L151: {
                       var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
-                      if ((var10 ^ -1) >= -1) {
+                      if (var10 <= 0) {
                         break L151;
                       } else {
                         param7 = param7 >> var10;
@@ -2081,7 +2442,7 @@ final class hm extends tfa implements gf {
                       }
                     }
                     L153: {
-                      if (-1 != (var10 ^ -1)) {
+                      if (var10 != 0) {
                         var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
                         break L153;
                       } else {
@@ -2101,7 +2462,7 @@ final class hm extends tfa implements gf {
                     }
                     L155: {
                       param6 = param6 - param3;
-                      if (-1 != (var11 ^ -1)) {
+                      if (var11 != 0) {
                         var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
                         break L155;
                       } else {
@@ -2138,7 +2499,7 @@ final class hm extends tfa implements gf {
                   }
                   L158: {
                     var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
-                    if ((var10 ^ -1) >= -1) {
+                    if (var10 <= 0) {
                       break L158;
                     } else {
                       param7 = param7 >> var10;
@@ -2159,7 +2520,7 @@ final class hm extends tfa implements gf {
                     }
                   }
                   L160: {
-                    if (-1 != (var10 ^ -1)) {
+                    if (var10 != 0) {
                       var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
                       break L160;
                     } else {
@@ -2179,7 +2540,7 @@ final class hm extends tfa implements gf {
                   }
                   L162: {
                     param6 = param6 - param3;
-                    if (-1 != (var11 ^ -1)) {
+                    if (var11 != 0) {
                       var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
                       break L162;
                     } else {
@@ -2267,7 +2628,7 @@ final class hm extends tfa implements gf {
                               }
                               L169: {
                                 var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
-                                if ((var10 ^ -1) >= -1) {
+                                if (var10 <= 0) {
                                   break L169;
                                 } else {
                                   param7 = param7 >> var10;
@@ -2288,7 +2649,7 @@ final class hm extends tfa implements gf {
                                 }
                               }
                               L171: {
-                                if (-1 != (var10 ^ -1)) {
+                                if (var10 != 0) {
                                   var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
                                   break L171;
                                 } else {
@@ -2308,7 +2669,7 @@ final class hm extends tfa implements gf {
                               }
                               L173: {
                                 param6 = param6 - param3;
-                                if (-1 != (var11 ^ -1)) {
+                                if (var11 != 0) {
                                   var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
                                   break L173;
                                 } else {
@@ -2345,7 +2706,7 @@ final class hm extends tfa implements gf {
                             }
                             L176: {
                               var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
-                              if ((var10 ^ -1) >= -1) {
+                              if (var10 <= 0) {
                                 break L176;
                               } else {
                                 param7 = param7 >> var10;
@@ -2366,7 +2727,7 @@ final class hm extends tfa implements gf {
                               }
                             }
                             L178: {
-                              if (-1 != (var10 ^ -1)) {
+                              if (var10 != 0) {
                                 var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
                                 break L178;
                               } else {
@@ -2386,7 +2747,7 @@ final class hm extends tfa implements gf {
                             }
                             L180: {
                               param6 = param6 - param3;
-                              if (-1 != (var11 ^ -1)) {
+                              if (var11 != 0) {
                                 var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
                                 break L180;
                               } else {
@@ -2423,7 +2784,7 @@ final class hm extends tfa implements gf {
                           }
                           L183: {
                             var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
-                            if ((var10 ^ -1) >= -1) {
+                            if (var10 <= 0) {
                               break L183;
                             } else {
                               param7 = param7 >> var10;
@@ -2444,7 +2805,7 @@ final class hm extends tfa implements gf {
                             }
                           }
                           L185: {
-                            if (-1 != (var10 ^ -1)) {
+                            if (var10 != 0) {
                               var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
                               break L185;
                             } else {
@@ -2464,7 +2825,7 @@ final class hm extends tfa implements gf {
                           }
                           L187: {
                             param6 = param6 - param3;
-                            if (-1 != (var11 ^ -1)) {
+                            if (var11 != 0) {
                               var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
                               break L187;
                             } else {
@@ -2501,7 +2862,7 @@ final class hm extends tfa implements gf {
                         }
                         L190: {
                           var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
-                          if ((var10 ^ -1) >= -1) {
+                          if (var10 <= 0) {
                             break L190;
                           } else {
                             param7 = param7 >> var10;
@@ -2522,7 +2883,7 @@ final class hm extends tfa implements gf {
                           }
                         }
                         L192: {
-                          if (-1 != (var10 ^ -1)) {
+                          if (var10 != 0) {
                             var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
                             break L192;
                           } else {
@@ -2542,7 +2903,7 @@ final class hm extends tfa implements gf {
                         }
                         L194: {
                           param6 = param6 - param3;
-                          if (-1 != (var11 ^ -1)) {
+                          if (var11 != 0) {
                             var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
                             break L194;
                           } else {
@@ -2579,7 +2940,7 @@ final class hm extends tfa implements gf {
                       }
                       L197: {
                         var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
-                        if ((var10 ^ -1) >= -1) {
+                        if (var10 <= 0) {
                           break L197;
                         } else {
                           param7 = param7 >> var10;
@@ -2600,7 +2961,7 @@ final class hm extends tfa implements gf {
                         }
                       }
                       L199: {
-                        if (-1 != (var10 ^ -1)) {
+                        if (var10 != 0) {
                           var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
                           break L199;
                         } else {
@@ -2620,7 +2981,7 @@ final class hm extends tfa implements gf {
                       }
                       L201: {
                         param6 = param6 - param3;
-                        if (-1 != (var11 ^ -1)) {
+                        if (var11 != 0) {
                           var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
                           break L201;
                         } else {
@@ -2657,7 +3018,7 @@ final class hm extends tfa implements gf {
                     }
                     L204: {
                       var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
-                      if ((var10 ^ -1) >= -1) {
+                      if (var10 <= 0) {
                         break L204;
                       } else {
                         param7 = param7 >> var10;
@@ -2678,7 +3039,7 @@ final class hm extends tfa implements gf {
                       }
                     }
                     L206: {
-                      if (-1 != (var10 ^ -1)) {
+                      if (var10 != 0) {
                         var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
                         break L206;
                       } else {
@@ -2698,7 +3059,7 @@ final class hm extends tfa implements gf {
                     }
                     L208: {
                       param6 = param6 - param3;
-                      if (-1 != (var11 ^ -1)) {
+                      if (var11 != 0) {
                         var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
                         break L208;
                       } else {
@@ -2735,7 +3096,7 @@ final class hm extends tfa implements gf {
                   }
                   L211: {
                     var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
-                    if ((var10 ^ -1) >= -1) {
+                    if (var10 <= 0) {
                       break L211;
                     } else {
                       param7 = param7 >> var10;
@@ -2756,7 +3117,7 @@ final class hm extends tfa implements gf {
                     }
                   }
                   L213: {
-                    if (-1 != (var10 ^ -1)) {
+                    if (var10 != 0) {
                       var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
                       break L213;
                     } else {
@@ -2776,7 +3137,7 @@ final class hm extends tfa implements gf {
                   }
                   L215: {
                     param6 = param6 - param3;
-                    if (-1 != (var11 ^ -1)) {
+                    if (var11 != 0) {
                       var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
                       break L215;
                     } else {
@@ -2813,7 +3174,7 @@ final class hm extends tfa implements gf {
                 }
                 L218: {
                   var10 = -14 + Math.max(Math.max(vd.b(param1 ^ -16, param7), vd.b(1, param0)), vd.b(1, param4));
-                  if ((var10 ^ -1) >= -1) {
+                  if (var10 <= 0) {
                     break L218;
                   } else {
                     param7 = param7 >> var10;
@@ -2834,7 +3195,7 @@ final class hm extends tfa implements gf {
                   }
                 }
                 L220: {
-                  if (-1 != (var10 ^ -1)) {
+                  if (var10 != 0) {
                     var12 = gv.a(0, param5, param7, param6, var12, 0, param8, var11, var10, param3);
                     break L220;
                   } else {
@@ -2854,7 +3215,7 @@ final class hm extends tfa implements gf {
                 }
                 L222: {
                   param6 = param6 - param3;
-                  if (-1 != (var11 ^ -1)) {
+                  if (var11 != 0) {
                     var12 = gv.a(-param4, param5, param8, param0, var12, 0, param7, var10, var11, 0);
                     break L222;
                   } else {
@@ -2880,18 +3241,16 @@ final class hm extends tfa implements gf {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int[] param5, int param6, int param7) {
-        ((hm) this).field_j.a(true, (iva) this);
-        if (param3 < 101) {
-          field_n = null;
-          jaggl.OpenGL.glPixelStorei(3314, param2);
-          jaggl.OpenGL.glTexSubImage2Di(((hm) this).field_i, 0, param7, param4, param6, param1, 32993, ((hm) this).field_j.field_od, param5, param0);
-          jaggl.OpenGL.glPixelStorei(3314, 0);
-          return;
-        } else {
-          jaggl.OpenGL.glPixelStorei(3314, param2);
-          jaggl.OpenGL.glTexSubImage2Di(((hm) this).field_i, 0, param7, param4, param6, param1, 32993, ((hm) this).field_j.field_od, param5, param0);
-          jaggl.OpenGL.glPixelStorei(3314, 0);
-          return;
+        try {
+            ((hm) this).field_j.a(true, (iva) this);
+            if (param3 < 101) {
+                field_n = null;
+            }
+            jaggl.OpenGL.glPixelStorei(3314, param2);
+            jaggl.OpenGL.glTexSubImage2Di(((hm) this).field_i, 0, param7, param4, param6, param1, 32993, ((hm) this).field_j.field_od, param5, param0);
+            jaggl.OpenGL.glPixelStorei(3314, 0);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "hm.J(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 44 + param6 + 44 + param7 + 41);
         }
     }
 
@@ -2904,17 +3263,25 @@ final class hm extends tfa implements gf {
     }
 
     final void a(int param0, byte param1, int param2, byte[] param3, int param4, int param5, ft param6, int param7, int param8) {
-        ((hm) this).field_j.a(true, (iva) this);
-        jaggl.OpenGL.glPixelStorei(3317, 1);
-        jaggl.OpenGL.glPixelStorei(3314, param4);
-        jaggl.OpenGL.glTexSubImage2Dub(((hm) this).field_i, 0, param0, param8, param7, param2, waa.a(param6, 1383), 5121, param3, param5);
-        jaggl.OpenGL.glPixelStorei(3314, 0);
-        jaggl.OpenGL.glPixelStorei(3317, 4);
-        int var10 = -48 % ((-62 - param1) / 60);
+        try {
+            ((hm) this).field_j.a(true, (iva) this);
+            jaggl.OpenGL.glPixelStorei(3317, 1);
+            jaggl.OpenGL.glPixelStorei(3314, param4);
+            jaggl.OpenGL.glTexSubImage2Dub(((hm) this).field_i, 0, param0, param8, param7, param2, waa.a(param6, 1383), 5121, param3, param5);
+            jaggl.OpenGL.glPixelStorei(3314, 0);
+            jaggl.OpenGL.glPixelStorei(3317, 4);
+            int var10_int = -48 % ((-62 - param1) / 60);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "hm.C(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 44 + param7 + 44 + param8 + 41);
+        }
     }
 
     public final void a(int param0, hs param1) {
-        super.a(param0, param1);
+        try {
+            super.a(param0, param1);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "hm.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public final int b(int param0) {

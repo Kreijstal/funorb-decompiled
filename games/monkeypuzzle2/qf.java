@@ -62,6 +62,7 @@ final class qf extends og {
 
     private final void e() {
         int var1 = 0;
+        int var2 = 0;
         ((qf) this).field_T = 0;
         ((qf) this).field_K = 0;
         ((qf) this).field_B = 0;
@@ -82,15 +83,16 @@ final class qf extends og {
             ((qf) this).field_u = 0;
             ((qf) this).field_l = -1;
             ((qf) this).field_ib = 0;
-            var1 = 0;
+            var2 = 0;
+            var1 = var2;
             L1: while (true) {
-              if (var1 >= ((qf) this).field_X.field_j) {
+              if (var2 >= ((qf) this).field_X.field_j) {
                 ((qf) this).field_K = 1;
                 return;
               } else {
-                ((qf) this).field_R[var1] = null;
-                ((qf) this).field_x[var1] = false;
-                var1++;
+                ((qf) this).field_R[var2] = null;
+                ((qf) this).field_x[var2] = false;
+                var2++;
                 continue L1;
               }
             }
@@ -1737,8 +1739,7 @@ final class qf extends og {
     }
 
     final int a(mj param0) {
-        int var2 = this.d() ? 1 : 0;
-        if (var2 != 0) {
+        if (this.d()) {
             if (!((qf) this).field_P) {
                 return -1;
             }
@@ -1749,7 +1750,7 @@ final class qf extends og {
     }
 
     final synchronized void a(boolean param0) {
-        ((qf) this).field_P = param0;
+        ((qf) this).field_P = param0 ? true : false;
     }
 
     private final void a(int param0, int param1, int param2) {
@@ -1790,7 +1791,6 @@ final class qf extends og {
     private final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         li var7 = null;
         Object var8 = null;
-        Object var8_ref = null;
         Throwable var9 = null;
         td stackIn_12_0 = null;
         int stackIn_12_1 = 0;
@@ -1807,253 +1807,151 @@ final class qf extends og {
         li stackIn_19_0 = null;
         li stackIn_20_0 = null;
         int stackIn_20_1 = 0;
+        Throwable decompiledCaughtException = null;
         td stackOut_11_0 = null;
         int stackOut_11_1 = 0;
-        td stackOut_12_0 = null;
-        int stackOut_12_1 = 0;
-        int stackOut_12_2 = 0;
         td stackOut_13_0 = null;
         int stackOut_13_1 = 0;
         int stackOut_13_2 = 0;
+        td stackOut_12_0 = null;
+        int stackOut_12_1 = 0;
+        int stackOut_12_2 = 0;
         li stackOut_14_0 = null;
-        li stackOut_15_0 = null;
-        int stackOut_15_1 = 0;
         li stackOut_16_0 = null;
         int stackOut_16_1 = 0;
+        li stackOut_15_0 = null;
+        int stackOut_15_1 = 0;
         li stackOut_17_0 = null;
-        li stackOut_18_0 = null;
-        int stackOut_18_1 = 0;
         li stackOut_19_0 = null;
         int stackOut_19_1 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    this.e(param0);
-                    if (param3 <= field_v[7999]) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    if (param3 < field_v[0]) {
-                        statePc = 3;
-                    } else {
-                        statePc = 2;
-                    }
-                    continue stateLoop;
-                }
-                case 2: {
-                    return;
-                }
-                case 3: {
-                    if (param4 >= 0) {
-                        statePc = 5;
-                    } else {
-                        statePc = 4;
-                    }
-                    continue stateLoop;
-                }
-                case 4: {
-                    param4 = 0;
-                    statePc = 7;
-                    continue stateLoop;
-                }
-                case 5: {
-                    if (param4 <= 64) {
-                        statePc = 7;
-                    } else {
-                        statePc = 6;
-                    }
-                    continue stateLoop;
-                }
-                case 6: {
+        li stackOut_18_0 = null;
+        int stackOut_18_1 = 0;
+        L0: {
+          this.e(param0);
+          if (param3 <= field_v[7999]) {
+            break L0;
+          } else {
+            if (param3 < field_v[0]) {
+              L1: {
+                if (param4 >= 0) {
+                  if (param4 <= 64) {
+                    break L1;
+                  } else {
                     param4 = 64;
-                    statePc = 7;
-                    continue stateLoop;
+                    break L1;
+                  }
+                } else {
+                  param4 = 0;
+                  break L1;
                 }
-                case 7: {
-                    if (param5 >= 0) {
-                        statePc = 9;
-                    } else {
-                        statePc = 8;
-                    }
-                    continue stateLoop;
-                }
-                case 8: {
-                    param5 = 0;
-                    statePc = 11;
-                    continue stateLoop;
-                }
-                case 9: {
-                    if (param5 <= 255) {
-                        statePc = 11;
-                    } else {
-                        statePc = 10;
-                    }
-                    continue stateLoop;
-                }
-                case 10: {
+              }
+              L2: {
+                if (param5 >= 0) {
+                  if (param5 <= 255) {
+                    break L2;
+                  } else {
                     param5 = 255;
-                    statePc = 11;
-                    continue stateLoop;
+                    break L2;
+                  }
+                } else {
+                  param5 = 0;
+                  break L2;
                 }
-                case 11: {
-                    stackOut_11_0 = ((qf) this).field_X.field_h[param1];
-                    stackOut_11_1 = param3 * 256 / va.field_i;
-                    stackIn_13_0 = stackOut_11_0;
-                    stackIn_13_1 = stackOut_11_1;
-                    stackIn_12_0 = stackOut_11_0;
-                    stackIn_12_1 = stackOut_11_1;
-                    if (param2 == 0) {
-                        statePc = 13;
-                    } else {
-                        statePc = 12;
+              }
+              L3: {
+                stackOut_11_0 = ((qf) this).field_X.field_h[param1];
+                stackOut_11_1 = param3 * 256 / va.field_i;
+                stackIn_13_0 = stackOut_11_0;
+                stackIn_13_1 = stackOut_11_1;
+                stackIn_12_0 = stackOut_11_0;
+                stackIn_12_1 = stackOut_11_1;
+                if (param2 == 0) {
+                  stackOut_13_0 = (td) (Object) stackIn_13_0;
+                  stackOut_13_1 = stackIn_13_1;
+                  stackOut_13_2 = param4 * ((qf) this).field_r * ((qf) this).field_M >> 12;
+                  stackIn_14_0 = stackOut_13_0;
+                  stackIn_14_1 = stackOut_13_1;
+                  stackIn_14_2 = stackOut_13_2;
+                  break L3;
+                } else {
+                  stackOut_12_0 = (td) (Object) stackIn_12_0;
+                  stackOut_12_1 = stackIn_12_1;
+                  stackOut_12_2 = 0;
+                  stackIn_14_0 = stackOut_12_0;
+                  stackIn_14_1 = stackOut_12_1;
+                  stackIn_14_2 = stackOut_12_2;
+                  break L3;
+                }
+              }
+              L4: {
+                var7 = li.a(stackIn_14_0, stackIn_14_1, stackIn_14_2, param5);
+                var7.c(((qf) this).field_X.field_B[param1], ((qf) this).field_X.field_A[param1]);
+                stackOut_14_0 = (li) var7;
+                stackIn_16_0 = stackOut_14_0;
+                stackIn_15_0 = stackOut_14_0;
+                if (((qf) this).field_X.field_c[param1] == 0) {
+                  stackOut_16_0 = (li) (Object) stackIn_16_0;
+                  stackOut_16_1 = 0;
+                  stackIn_17_0 = stackOut_16_0;
+                  stackIn_17_1 = stackOut_16_1;
+                  break L4;
+                } else {
+                  stackOut_15_0 = (li) (Object) stackIn_15_0;
+                  stackOut_15_1 = -1;
+                  stackIn_17_0 = stackOut_15_0;
+                  stackIn_17_1 = stackOut_15_1;
+                  break L4;
+                }
+              }
+              L5: {
+                ((li) (Object) stackIn_17_0).h(stackIn_17_1);
+                stackOut_17_0 = (li) var7;
+                stackIn_19_0 = stackOut_17_0;
+                stackIn_18_0 = stackOut_17_0;
+                if (((qf) this).field_X.field_c[param1] != 2) {
+                  stackOut_19_0 = (li) (Object) stackIn_19_0;
+                  stackOut_19_1 = 0;
+                  stackIn_20_0 = stackOut_19_0;
+                  stackIn_20_1 = stackOut_19_1;
+                  break L5;
+                } else {
+                  stackOut_18_0 = (li) (Object) stackIn_18_0;
+                  stackOut_18_1 = 1;
+                  stackIn_20_0 = stackOut_18_0;
+                  stackIn_20_1 = stackOut_18_1;
+                  break L5;
+                }
+              }
+              L6: {
+                ((li) (Object) stackIn_20_0).a(stackIn_20_1 != 0);
+                if (param2 == 0) {
+                  break L6;
+                } else {
+                  var7.e(param2);
+                  var7.b(va.field_i >> 7, param4 * ((qf) this).field_r * ((qf) this).field_M >> 12, param5);
+                  break L6;
+                }
+              }
+              L7: {
+                ((qf) this).field_R[param0] = var7;
+                if (((qf) this).field_f == null) {
+                  break L7;
+                } else {
+                  var8 = (Object) (Object) ((qf) this).field_f;
+                  synchronized (var8) {
+                    L8: {
+                      ((qf) this).field_f.a((fh) (Object) var7);
+                      break L8;
                     }
-                    continue stateLoop;
+                  }
+                  break L7;
                 }
-                case 12: {
-                    stackOut_12_0 = (td) (Object) stackIn_12_0;
-                    stackOut_12_1 = stackIn_12_1;
-                    stackOut_12_2 = 0;
-                    stackIn_14_0 = stackOut_12_0;
-                    stackIn_14_1 = stackOut_12_1;
-                    stackIn_14_2 = stackOut_12_2;
-                    statePc = 14;
-                    continue stateLoop;
-                }
-                case 13: {
-                    stackOut_13_0 = (td) (Object) stackIn_13_0;
-                    stackOut_13_1 = stackIn_13_1;
-                    stackOut_13_2 = param4 * ((qf) this).field_r * ((qf) this).field_M >> 12;
-                    stackIn_14_0 = stackOut_13_0;
-                    stackIn_14_1 = stackOut_13_1;
-                    stackIn_14_2 = stackOut_13_2;
-                    statePc = 14;
-                    continue stateLoop;
-                }
-                case 14: {
-                    var7 = li.a(stackIn_14_0, stackIn_14_1, stackIn_14_2, param5);
-                    var7.c(((qf) this).field_X.field_B[param1], ((qf) this).field_X.field_A[param1]);
-                    stackOut_14_0 = (li) var7;
-                    stackIn_16_0 = stackOut_14_0;
-                    stackIn_15_0 = stackOut_14_0;
-                    if (((qf) this).field_X.field_c[param1] == 0) {
-                        statePc = 16;
-                    } else {
-                        statePc = 15;
-                    }
-                    continue stateLoop;
-                }
-                case 15: {
-                    stackOut_15_0 = (li) (Object) stackIn_15_0;
-                    stackOut_15_1 = -1;
-                    stackIn_17_0 = stackOut_15_0;
-                    stackIn_17_1 = stackOut_15_1;
-                    statePc = 17;
-                    continue stateLoop;
-                }
-                case 16: {
-                    stackOut_16_0 = (li) (Object) stackIn_16_0;
-                    stackOut_16_1 = 0;
-                    stackIn_17_0 = stackOut_16_0;
-                    stackIn_17_1 = stackOut_16_1;
-                    statePc = 17;
-                    continue stateLoop;
-                }
-                case 17: {
-                    ((li) (Object) stackIn_17_0).h(stackIn_17_1);
-                    stackOut_17_0 = (li) var7;
-                    stackIn_19_0 = stackOut_17_0;
-                    stackIn_18_0 = stackOut_17_0;
-                    if (((qf) this).field_X.field_c[param1] != 2) {
-                        statePc = 19;
-                    } else {
-                        statePc = 18;
-                    }
-                    continue stateLoop;
-                }
-                case 18: {
-                    stackOut_18_0 = (li) (Object) stackIn_18_0;
-                    stackOut_18_1 = 1;
-                    stackIn_20_0 = stackOut_18_0;
-                    stackIn_20_1 = stackOut_18_1;
-                    statePc = 20;
-                    continue stateLoop;
-                }
-                case 19: {
-                    stackOut_19_0 = (li) (Object) stackIn_19_0;
-                    stackOut_19_1 = 0;
-                    stackIn_20_0 = stackOut_19_0;
-                    stackIn_20_1 = stackOut_19_1;
-                    statePc = 20;
-                    continue stateLoop;
-                }
-                case 20: {
-                    ((li) (Object) stackIn_20_0).a(stackIn_20_1 != 0);
-                    if (param2 == 0) {
-                        statePc = 22;
-                    } else {
-                        statePc = 21;
-                    }
-                    continue stateLoop;
-                }
-                case 21: {
-                    var7.e(param2);
-                    var7.b(va.field_i >> 7, param4 * ((qf) this).field_r * ((qf) this).field_M >> 12, param5);
-                    statePc = 22;
-                    continue stateLoop;
-                }
-                case 22: {
-                    ((qf) this).field_R[param0] = var7;
-                    if (((qf) this).field_f == null) {
-                        statePc = 28;
-                    } else {
-                        statePc = 23;
-                    }
-                    continue stateLoop;
-                }
-                case 23: {
-                    var8_ref = (Object) (Object) ((qf) this).field_f;
-                    // monitorenter ((qf) this).field_f
-                    statePc = 24;
-                    continue stateLoop;
-                }
-                case 24: {
-                    try {
-                        ((qf) this).field_f.a((fh) (Object) var7);
-                        // monitorexit var8_ref
-                        statePc = 28;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_24) {
-                        caughtException = stateCaught_24;
-                        statePc = 26;
-                        continue stateLoop;
-                    }
-                }
-                case 26: {
-                    try {
-                        var9 = caughtException;
-                        // monitorexit var8_ref
-                        statePc = 27;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_26) {
-                        caughtException = stateCaught_26;
-                        statePc = 26;
-                        continue stateLoop;
-                    }
-                }
-                case 27: {
-                    throw (RuntimeException) (Object) var9;
-                }
-                case 28: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
+              return;
+            } else {
+              break L0;
             }
+          }
         }
     }
 

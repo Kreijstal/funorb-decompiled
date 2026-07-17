@@ -11,9 +11,6 @@ abstract class kj {
     abstract void a(int param0, boolean param1, int param2);
 
     public static void a(byte param0) {
-        if (param0 != -110) {
-            return;
-        }
         field_a = null;
     }
 
@@ -43,7 +40,6 @@ abstract class kj {
 
     void a(int param0) {
         kj var2 = null;
-        kj var2_ref = null;
         int var3 = 0;
         L0: {
           var3 = BachelorFridge.field_y;
@@ -58,10 +54,10 @@ abstract class kj {
         if (var2 != null) {
           L1: while (true) {
             if (null == var2.field_b) {
-              var2_ref.field_b = (kj) this;
+              var2.field_b = (kj) this;
               return;
             } else {
-              var2_ref = var2.field_b;
+              var2 = var2.field_b;
               continue L1;
             }
           }
@@ -79,9 +75,13 @@ abstract class kj {
     }
 
     kj(gj param0, int param1, int param2) {
-        ((kj) this).field_e = param0;
-        ((kj) this).field_d = param1;
-        ((kj) this).field_c = param2;
+        try {
+            ((kj) this).field_e = param0;
+            ((kj) this).field_d = param1;
+            ((kj) this).field_c = param2;
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "kj.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     static {

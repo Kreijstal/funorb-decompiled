@@ -11,9 +11,6 @@ final class he {
 
     public static void a(byte param0) {
         field_a = null;
-        if (param0 < 75) {
-            return;
-        }
         field_d = null;
     }
 

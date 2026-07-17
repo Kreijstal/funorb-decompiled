@@ -29,20 +29,10 @@ final class fkb extends ksa {
     int field_s;
 
     final static int a(int param0, byte param1) {
-        if (param1 == -121) {
-          if (li.field_i) {
+        if (li.field_i) {
             return de.a(param0, 300).field_e;
-          } else {
-            return ita.a(param0, param1 ^ -8013).field_A;
-          }
-        } else {
-          field_z = null;
-          if (li.field_i) {
-            return de.a(param0, 300).field_e;
-          } else {
-            return ita.a(param0, param1 ^ -8013).field_A;
-          }
         }
+        return ita.a(param0, 7988).field_A;
     }
 
     final void c(int param0) {
@@ -73,44 +63,22 @@ final class fkb extends ksa {
     }
 
     final static void a(int param0) {
-        int var1 = 0;
-        int var2 = 0;
-        var2 = VoidHunters.field_G;
-        omb.field_p.a(-103);
-        var1 = 0;
-        L0: while (true) {
-          if (-33 >= var1) {
-            if (param0 != 2096) {
-              field_m = null;
-              var1 = 0;
-              L1: while (true) {
-                if (-33 <= var1) {
-                  dn.field_p = 0;
-                  return;
-                } else {
-                  fm.field_b[var1] = 0L;
-                  var1++;
-                  continue L1;
-                }
-              }
-            } else {
-              var1 = 0;
-              L2: while (true) {
-                if (-33 >= (var1 ^ -1)) {
-                  dn.field_p = 0;
-                  return;
-                } else {
-                  fm.field_b[var1] = 0L;
-                  var1++;
-                  continue L2;
-                }
-              }
+        int var1_int = 0;
+        int var2 = VoidHunters.field_G;
+        try {
+            omb.field_p.a(-103);
+            for (var1_int = 0; var1_int < 32; var1_int++) {
+                sga.field_o[var1_int] = 0L;
             }
-          } else {
-            sga.field_o[var1] = 0L;
-            var1++;
-            continue L0;
-          }
+            if (param0 != 2096) {
+                field_m = null;
+            }
+            for (var1_int = 0; var1_int < 32; var1_int++) {
+                fm.field_b[var1_int] = 0L;
+            }
+            dn.field_p = 0;
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "fkb.D(" + param0 + 41);
         }
     }
 
@@ -118,74 +86,127 @@ final class fkb extends ksa {
     }
 
     final static void a(int param0, Object param1, File param2) {
-        FileOutputStream var3 = null;
-        IOException var3_ref = null;
-        ObjectOutputStream var4 = null;
-        SecurityException var4_ref = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    try {
-                        var3 = new FileOutputStream(param2);
-                        var4 = new ObjectOutputStream((OutputStream) (Object) var3);
-                        if (param0 > 36) {
-                            statePc = 2;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_0) {
-                        caughtException = stateCaught_0;
-                        statePc = 4;
-                        continue stateLoop;
-                    }
+        try {
+            FileOutputStream var3 = null;
+            IOException var3_ref = null;
+            RuntimeException var3_ref2 = null;
+            ObjectOutputStream var4 = null;
+            SecurityException var4_ref = null;
+            RuntimeException stackIn_10_0 = null;
+            StringBuilder stackIn_10_1 = null;
+            RuntimeException stackIn_11_0 = null;
+            StringBuilder stackIn_11_1 = null;
+            RuntimeException stackIn_12_0 = null;
+            StringBuilder stackIn_12_1 = null;
+            String stackIn_12_2 = null;
+            RuntimeException stackIn_13_0 = null;
+            StringBuilder stackIn_13_1 = null;
+            RuntimeException stackIn_14_0 = null;
+            StringBuilder stackIn_14_1 = null;
+            RuntimeException stackIn_15_0 = null;
+            StringBuilder stackIn_15_1 = null;
+            String stackIn_15_2 = null;
+            Throwable decompiledCaughtException = null;
+            RuntimeException stackOut_9_0 = null;
+            StringBuilder stackOut_9_1 = null;
+            RuntimeException stackOut_11_0 = null;
+            StringBuilder stackOut_11_1 = null;
+            String stackOut_11_2 = null;
+            RuntimeException stackOut_10_0 = null;
+            StringBuilder stackOut_10_1 = null;
+            String stackOut_10_2 = null;
+            RuntimeException stackOut_12_0 = null;
+            StringBuilder stackOut_12_1 = null;
+            RuntimeException stackOut_14_0 = null;
+            StringBuilder stackOut_14_1 = null;
+            String stackOut_14_2 = null;
+            RuntimeException stackOut_13_0 = null;
+            StringBuilder stackOut_13_1 = null;
+            String stackOut_13_2 = null;
+            try {
+              var3 = new FileOutputStream(param2);
+              var4 = new ObjectOutputStream((OutputStream) (Object) var3);
+              if (param0 > 36) {
+                var4.writeObject(param1);
+                var4.close();
+                var3.close();
+                return;
+              } else {
+                return;
+              }
+            } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
+              decompiledCaughtException = decompiledCaughtParameter2;
+              L1: {
+                var3_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_9_0 = (RuntimeException) var3_ref2;
+                stackOut_9_1 = new StringBuilder().append("fkb.A(").append(param0).append(44);
+                stackIn_11_0 = stackOut_9_0;
+                stackIn_11_1 = stackOut_9_1;
+                stackIn_10_0 = stackOut_9_0;
+                stackIn_10_1 = stackOut_9_1;
+                if (param1 == null) {
+                  stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+                  stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+                  stackOut_11_2 = "null";
+                  stackIn_12_0 = stackOut_11_0;
+                  stackIn_12_1 = stackOut_11_1;
+                  stackIn_12_2 = stackOut_11_2;
+                  break L1;
+                } else {
+                  stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+                  stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+                  stackOut_10_2 = "{...}";
+                  stackIn_12_0 = stackOut_10_0;
+                  stackIn_12_1 = stackOut_10_1;
+                  stackIn_12_2 = stackOut_10_2;
+                  break L1;
                 }
-                case 1: {
-                    return;
+              }
+              L2: {
+                stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+                stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(44);
+                stackIn_14_0 = stackOut_12_0;
+                stackIn_14_1 = stackOut_12_1;
+                stackIn_13_0 = stackOut_12_0;
+                stackIn_13_1 = stackOut_12_1;
+                if (param2 == null) {
+                  stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+                  stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+                  stackOut_14_2 = "null";
+                  stackIn_15_0 = stackOut_14_0;
+                  stackIn_15_1 = stackOut_14_1;
+                  stackIn_15_2 = stackOut_14_2;
+                  break L2;
+                } else {
+                  stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+                  stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+                  stackOut_13_2 = "{...}";
+                  stackIn_15_0 = stackOut_13_0;
+                  stackIn_15_1 = stackOut_13_1;
+                  stackIn_15_2 = stackOut_13_2;
+                  break L2;
                 }
-                case 2: {
-                    try {
-                        var4.writeObject(param1);
-                        var4.close();
-                        var3.close();
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 4;
-                        continue stateLoop;
-                    }
+              }
+              throw rta.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var3_ref = (IOException) (Object) decompiledCaughtException;
+              try {
+                L0: {
+                  boolean discarded$1 = param2.delete();
+                  break L0;
                 }
-                case 3: {
-                    return;
-                }
-                case 4: {
-                    var3_ref = (IOException) (Object) caughtException;
-                    statePc = 5;
-                    continue stateLoop;
-                }
-                case 5: {
-                    try {
-                        boolean discarded$1 = param2.delete();
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    return;
-                }
-                case 7: {
-                    var4_ref = (SecurityException) (Object) caughtException;
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              } catch (java.lang.Exception decompiledCaughtParameter1) {
+                decompiledCaughtException = decompiledCaughtParameter1;
+                var4_ref = (SecurityException) (Object) decompiledCaughtException;
+                return;
+              }
+              return;
             }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+            throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+            throw new RuntimeException(decompiledCheckedException);
         }
     }
 

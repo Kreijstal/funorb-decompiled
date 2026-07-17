@@ -20,18 +20,82 @@ final class oi {
     }
 
     final static void a(byte param0, bc param1) {
-        int var2 = 0;
-        int var3 = ShatteredPlansClient.field_F ? 1 : 0;
-        ln.field_K = mf.a(param1, "", "starfield", false);
-        mp.field_e = new bi[6];
-        for (var2 = 0; var2 < 6; var2++) {
-            mp.field_e[var2] = vr.a(param1, var2 - -1, 1);
-        }
-        ce.field_v = mf.a(param1, "", "win", false);
-        dp.field_s = mf.a(param1, "", "lose", false);
-        if (param0 != -126) {
-            Object var4 = null;
-            oi.a((byte) -117, (bc) null);
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        Object var4 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        var3 = ShatteredPlansClient.field_F ? 1 : 0;
+        try {
+          L0: {
+            ln.field_K = mf.a(param1, "", "starfield", false);
+            mp.field_e = new bi[6];
+            var2_int = 0;
+            L1: while (true) {
+              if (var2_int >= 6) {
+                L2: {
+                  ce.field_v = mf.a(param1, "", "win", false);
+                  dp.field_s = mf.a(param1, "", "lose", false);
+                  if (param0 == -126) {
+                    break L2;
+                  } else {
+                    var4 = null;
+                    oi.a((byte) -117, (bc) null);
+                    break L2;
+                  }
+                }
+                break L0;
+              } else {
+                mp.field_e[var2_int] = vr.a(param1, var2_int - -1, 1);
+                var2_int++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2 = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var2;
+            stackOut_7_1 = new StringBuilder().append("oi.C(").append(param0).append(44);
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param1 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L3;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L3;
+            }
+          }
+          throw r.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
         }
     }
 
@@ -49,12 +113,12 @@ final class oi {
 
     final static bi a(int param0, byte param1) {
         bi var3 = null;
-        bi var2_ref = null;
         bi var2 = bd.field_C[param0];
         if (!(var2 != null)) {
-            var3 = new bi(32, 32);
-            var2_ref = var3;
-            bd.field_C[param0] = new bi(32, 32);
+            bi dupTemp$0 = new bi(32, 32);
+            var3 = dupTemp$0;
+            var2 = var3;
+            bd.field_C[param0] = dupTemp$0;
             bs.a(var3, 77);
             jd.field_j[param0].g(0, 0);
             cg.i(0);
@@ -62,7 +126,7 @@ final class oi {
         if (param1 != 66) {
             oi.a(-57);
         }
-        return var2_ref;
+        return var2;
     }
 
     static {

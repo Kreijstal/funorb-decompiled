@@ -14,16 +14,16 @@ final class um implements Iterable {
         if (!(null == vv.field_b)) {
             vv.field_b.field_g = false;
         }
-        jl.a(25, param0);
+        jl.a(25, 0);
     }
 
     final ms c(int param0) {
         ((um) this).field_e = 0;
         if (param0 != -1) {
             ((um) this).field_c = null;
-            return ((um) this).a(param0 + 0);
+            return ((um) this).a(param0);
         }
-        return ((um) this).a(param0 + 0);
+        return ((um) this).a(param0);
     }
 
     public final Iterator iterator() {
@@ -36,7 +36,7 @@ final class um implements Iterable {
         ms var4 = ((um) this).field_c[(int)(param1 & (long)(-1 + ((um) this).field_d))];
         ((um) this).field_a = var4.field_b;
         while (var4 != ((um) this).field_a) {
-            if (!((param1 ^ -1L) != (((um) this).field_a.field_h ^ -1L))) {
+            if (!(~param1 != ~((um) this).field_a.field_h)) {
                 var5 = ((um) this).field_a;
                 ((um) this).field_a = ((um) this).field_a.field_b;
                 return var5;
@@ -53,25 +53,22 @@ final class um implements Iterable {
 
     final void a(int param0, ms param1, long param2) {
         ms var5 = null;
-        if (!(param1.field_g == null)) {
-            param1.b(false);
-        }
-        if (param0 != -20657) {
-            ((um) this).field_d = -114;
+        try {
+            if (!(param1.field_g == null)) {
+                param1.b(false);
+            }
+            if (param0 != -20657) {
+                ((um) this).field_d = -114;
+            }
             var5 = ((um) this).field_c[(int)((long)(((um) this).field_d - 1) & param2)];
             param1.field_g = var5.field_g;
             param1.field_b = var5;
             param1.field_g.field_b = param1;
             param1.field_h = param2;
             param1.field_b.field_g = param1;
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "um.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
-        var5 = ((um) this).field_c[(int)((long)(((um) this).field_d - 1) & param2)];
-        param1.field_g = var5.field_g;
-        param1.field_b = var5;
-        param1.field_g.field_b = param1;
-        param1.field_h = param2;
-        param1.field_b.field_g = param1;
     }
 
     final ms a(int param0) {
@@ -90,8 +87,9 @@ final class um implements Iterable {
             } else {
               L0: while (true) {
                 if (((um) this).field_d > ((um) this).field_e) {
+                  int fieldTemp$2 = ((um) this).field_e;
                   ((um) this).field_e = ((um) this).field_e + 1;
-                  var4 = ((um) this).field_c[((um) this).field_e].field_b;
+                  var4 = ((um) this).field_c[fieldTemp$2].field_b;
                   var6 = var4;
                   if (var4 == ((um) this).field_c[-1 + ((um) this).field_e]) {
                     continue L0;
@@ -107,8 +105,9 @@ final class um implements Iterable {
           } else {
             L1: while (true) {
               if (((um) this).field_d > ((um) this).field_e) {
+                int fieldTemp$3 = ((um) this).field_e;
                 ((um) this).field_e = ((um) this).field_e + 1;
-                var4 = ((um) this).field_c[((um) this).field_e].field_b;
+                var4 = ((um) this).field_c[fieldTemp$3].field_b;
                 var5 = var4;
                 if (var4 == ((um) this).field_c[-1 + ((um) this).field_e]) {
                   continue L1;
@@ -127,9 +126,10 @@ final class um implements Iterable {
     }
 
     final static void a(int param0, int param1, java.awt.Canvas param2, byte param3) {
+        Object var5 = null;
         java.awt.Graphics var4 = null;
         if (param3 <= 123) {
-            Object var5 = null;
+            var5 = null;
             um.a(-16, -25, (java.awt.Canvas) null, (byte) 50);
         }
         try {
@@ -150,13 +150,15 @@ final class um implements Iterable {
         var2 = 0;
         L0: while (true) {
           if (var2 < param0) {
-            var3 = new ms();
-            ((um) this).field_c[var2] = new ms();
+            ms dupTemp$2 = new ms();
+            var3 = dupTemp$2;
+            ((um) this).field_c[var2] = dupTemp$2;
             var3.field_g = var3;
             var3.field_b = var3;
             var2++;
             continue L0;
           } else {
+            return;
           }
         }
     }

@@ -16,9 +16,6 @@ final class ga {
     }
 
     public static void a(int param0) {
-        if (param0 != -3217) {
-            return;
-        }
         field_d = null;
         field_b = null;
     }

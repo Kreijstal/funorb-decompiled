@@ -15,9 +15,6 @@ final class vj {
         field_g = null;
         field_a = null;
         field_e = null;
-        if (param0 != 111) {
-            field_g = null;
-        }
         field_f = null;
     }
 
@@ -26,19 +23,23 @@ final class vj {
         int var6 = 0;
         int var7 = 0;
         int var8 = Kickabout.field_G;
-        while (true) {
-            param2--;
-            if (0 > param2) {
-                break;
+        try {
+            while (true) {
+                param2--;
+                if (0 > param2) {
+                    break;
+                }
+                var9 = param0;
+                int[] var5 = var9;
+                var6 = param1;
+                var7 = param3;
+                var9[var6] = var7 + (qj.b(var9[var6], 16711422) >> 1);
+                param1++;
             }
-            var9 = param0;
-            int[] var5_ref_int__ = var9;
-            var6 = param1;
-            var7 = param3;
-            var9[var6] = var7 + (qj.b(var9[var6], 16711422) >> 338678817);
-            param1++;
+            int var5_int = -26 / ((42 - param4) / 56);
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "vj.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
-        int var5 = -26 / ((42 - param4) / 56);
     }
 
     final static void a(int param0, boolean param1) {

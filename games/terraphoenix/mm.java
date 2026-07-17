@@ -23,9 +23,6 @@ final class mm {
         field_d = null;
         field_a = null;
         field_h = null;
-        if (param0 != 12797) {
-            return;
-        }
         field_g = null;
     }
 

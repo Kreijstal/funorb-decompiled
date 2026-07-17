@@ -16,66 +16,114 @@ final class vj {
     private int field_f;
 
     final static bo a(String param0, int param1) {
-        String var2 = null;
+        Object var2 = null;
         bo var3 = null;
         String var4 = null;
         int var5 = 0;
         Object var6 = null;
         CharSequence var7 = null;
         CharSequence var8 = null;
+        bo stackIn_18_0 = null;
+        Object stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        Object stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        Object stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        String stackIn_24_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        bo stackOut_17_0 = null;
+        Object stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        Object stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        String stackOut_23_2 = null;
+        Object stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        String stackOut_22_2 = null;
         var5 = DungeonAssault.field_K;
-        if (lh.field_p != null) {
-          L0: {
-            if (param1 >= 41) {
-              break L0;
-            } else {
-              var6 = null;
-              bo discarded$2 = vj.a((String) null, -65);
-              break L0;
-            }
-          }
-          L1: {
-            var7 = (CharSequence) (Object) param0;
-            var2 = jm.a((byte) 59, var7);
-            if (var2 == null) {
-              var2 = (String) (Object) var7;
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          var3 = (bo) (Object) lh.field_p.a((byte) 26, (long)var2.hashCode());
-          L2: while (true) {
-            if (var3 != null) {
-              L3: {
-                var8 = (CharSequence) (Object) var3.field_Hb;
-                var4 = jm.a((byte) 59, var8);
-                if (var4 == null) {
-                  var4 = var3.field_Hb;
-                  break L3;
-                } else {
-                  break L3;
-                }
-              }
-              if (var4.equals((Object) (Object) var2)) {
-                return var3;
+        try {
+          if (lh.field_p != null) {
+            L0: {
+              if (param1 >= 41) {
+                break L0;
               } else {
-                var3 = (bo) (Object) lh.field_p.c((byte) 72);
-                continue L2;
+                var6 = null;
+                bo discarded$2 = vj.a((String) null, -65);
+                break L0;
               }
+            }
+            L1: {
+              var7 = (CharSequence) (Object) param0;
+              var2 = (Object) (Object) jm.a((byte) 59, var7);
+              if (var2 == null) {
+                var2 = (Object) (Object) var7;
+                break L1;
+              } else {
+                break L1;
+              }
+            }
+            var3 = (bo) (Object) lh.field_p.a((byte) 26, (long)((String) var2).hashCode());
+            L2: while (true) {
+              if (var3 != null) {
+                L3: {
+                  var8 = (CharSequence) (Object) var3.field_Hb;
+                  var4 = jm.a((byte) 59, var8);
+                  if (var4 == null) {
+                    var4 = var3.field_Hb;
+                    break L3;
+                  } else {
+                    break L3;
+                  }
+                }
+                if (var4.equals(var2)) {
+                  stackOut_17_0 = (bo) var3;
+                  stackIn_18_0 = stackOut_17_0;
+                  return stackIn_18_0;
+                } else {
+                  var3 = (bo) (Object) lh.field_p.c((byte) 72);
+                  continue L2;
+                }
+              } else {
+                return null;
+              }
+            }
+          } else {
+            return null;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var2 = (Object) (Object) decompiledCaughtException;
+            stackOut_21_0 = var2;
+            stackOut_21_1 = new StringBuilder().append("vj.B(");
+            stackIn_23_0 = stackOut_21_0;
+            stackIn_23_1 = stackOut_21_1;
+            stackIn_22_0 = stackOut_21_0;
+            stackIn_22_1 = stackOut_21_1;
+            if (param0 == null) {
+              stackOut_23_0 = stackIn_23_0;
+              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_2 = "null";
+              stackIn_24_0 = stackOut_23_0;
+              stackIn_24_1 = stackOut_23_1;
+              stackIn_24_2 = stackOut_23_2;
+              break L4;
             } else {
-              return null;
+              stackOut_22_0 = stackIn_22_0;
+              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_2 = "{...}";
+              stackIn_24_0 = stackOut_22_0;
+              stackIn_24_1 = stackOut_22_1;
+              stackIn_24_2 = stackOut_22_2;
+              break L4;
             }
           }
-        } else {
-          return null;
+          throw vk.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + param1 + 41);
         }
     }
 
     public static void a(int param0) {
-        if (param0 != 24243) {
-            return;
-        }
         field_i = null;
         field_c = null;
         field_d = null;
@@ -210,6 +258,7 @@ final class vj {
                 var12 = 0;
                 L2: while (true) {
                   if (var12 >= ((vj) this).field_b) {
+                    return;
                   } else {
                     var13 = 0;
                     L3: while (true) {

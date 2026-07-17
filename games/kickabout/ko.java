@@ -15,9 +15,6 @@ final class ko {
     static int field_c;
 
     public static void a(byte param0) {
-        if (param0 != -22) {
-            ko.a(-29, -114, 127L);
-        }
         field_k = null;
         field_j = null;
         field_f = null;
@@ -62,7 +59,7 @@ final class ko {
               }
             }
             L2: {
-              if ((((ko) this).field_i ^ -1) == -1) {
+              if (((ko) this).field_i == 0) {
                 break L2;
               } else {
                 if (nl.field_p != 0) {
@@ -82,10 +79,10 @@ final class ko {
               }
             }
             L4: {
-              if ((wj.field_A ^ -1) != -1) {
+              if (wj.field_A != 0) {
                 break L4;
               } else {
-                if ((nl.field_p ^ -1) != -1) {
+                if (nl.field_p != 0) {
                   break L4;
                 } else {
                   ((ko) this).field_i = 0;
@@ -94,7 +91,7 @@ final class ko {
               }
             }
             L5: {
-              if (-1 != (((ko) this).field_i ^ -1)) {
+              if (((ko) this).field_i != 0) {
                 break L5;
               } else {
                 L6: {
@@ -108,7 +105,7 @@ final class ko {
                     }
                   }
                 }
-                if (-1 < (param1 ^ -1)) {
+                if (param1 < 0) {
                   if (!((ko) this).field_g) {
                     break L5;
                   } else {
@@ -117,7 +114,7 @@ final class ko {
                   }
                 } else {
                   L7: {
-                    if ((param1 ^ -1) != (((ko) this).field_e ^ -1)) {
+                    if (~param1 != ~((ko) this).field_e) {
                       break L7;
                     } else {
                       break L7;
@@ -162,7 +159,7 @@ final class ko {
           if (0 != ((ko) this).field_i) {
             break L0;
           } else {
-            if (-97 == (cc.field_e ^ -1)) {
+            if (cc.field_e == 96) {
               L1: {
                 if (0 < ((ko) this).field_e) {
                   break L1;
@@ -232,7 +229,7 @@ final class ko {
               }
             }
             L8: {
-              if (-1 < (((ko) this).field_e ^ -1)) {
+              if (((ko) this).field_e < 0) {
                 ((ko) this).field_e = param0;
                 break L8;
               } else {
@@ -249,7 +246,7 @@ final class ko {
         if (param0 != 68) {
             return;
         }
-        if (-1 == (((ko) this).field_i ^ -1)) {
+        if (((ko) this).field_i == 0) {
             ((ko) this).field_g = false;
             ((ko) this).field_e = param1;
         }
@@ -268,7 +265,7 @@ final class ko {
                 if (((ko) this).field_b == 84) {
                   break L1;
                 } else {
-                  if (-84 != (((ko) this).field_b ^ -1)) {
+                  if (((ko) this).field_b != 83) {
                     stackOut_7_0 = 0;
                     stackIn_8_0 = stackOut_7_0;
                     break L0;
@@ -295,8 +292,8 @@ final class ko {
             ((ko) this).field_b = cc.field_e;
         }
         if (0 == ((ko) this).field_i) {
-            if ((cc.field_e ^ -1) == -99) {
-                if (!((((ko) this).field_e ^ -1) < -1)) {
+            if (cc.field_e == 98) {
+                if (!(((ko) this).field_e > 0)) {
                     ((ko) this).field_e = ((ko) this).field_a;
                 }
                 ((ko) this).field_e = ((ko) this).field_e - 1;
@@ -360,10 +357,10 @@ final class ko {
         field_k = "Search Results";
         field_f = new int[98304];
         for (var0 = 92682; 46341 <= var0; var0--) {
-            var4 = (long)((var0 << 1956012577) + -1);
-            var6 = (long)(1 + (var0 << 196922625));
-            var2 = (int)((var4 * var4 >> 455570002) + -32768L);
-            var3 = (int)(-32768L + (var6 * var6 >> -971970990));
+            var4 = (long)((var0 << 1) + -1);
+            var6 = (long)(1 + (var0 << 1));
+            var2 = (int)((var4 * var4 >> 18) + -32768L);
+            var3 = (int)(-32768L + (var6 * var6 >> 18));
             if (var3 >= field_f.length) {
                 var3 = field_f.length + -1;
             }

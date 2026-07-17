@@ -14,9 +14,6 @@ final class wh {
     }
 
     public static void a(byte param0) {
-        if (param0 != 19) {
-            return;
-        }
         field_a = null;
     }
 

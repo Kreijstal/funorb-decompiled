@@ -16,7 +16,7 @@ final class uf {
         field_c = null;
         field_f = null;
         field_g = null;
-        int var1 = 76 / ((-15 - param0) / 37);
+        int var1 = -76;
     }
 
     static {

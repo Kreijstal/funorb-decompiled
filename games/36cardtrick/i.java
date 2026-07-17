@@ -7,66 +7,66 @@ final class i {
 
     final static void a(int param0) {
         Object var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
         Throwable var3 = null;
         int var4 = 0;
         Throwable decompiledCaughtException = null;
         var4 = Main.field_T;
-        var1 = (Object) (Object) sj.field_d;
-        synchronized (var1) {
+        try {
           L0: {
-            L1: {
-              ab.field_t = ce.field_b;
-              mh.field_b = mh.field_b + 1;
-              if (-1 >= (bg.field_rb ^ -1)) {
-                L2: while (true) {
-                  if (bg.field_rb == be.field_b) {
-                    break L1;
+            var1 = (Object) (Object) sj.field_d;
+            synchronized (var1) {
+              L1: {
+                L2: {
+                  ab.field_t = ce.field_b;
+                  mh.field_b = mh.field_b + 1;
+                  if (bg.field_rb >= 0) {
+                    L3: while (true) {
+                      if (bg.field_rb == be.field_b) {
+                        break L2;
+                      } else {
+                        var2 = oc.field_h[be.field_b];
+                        be.field_b = 127 & be.field_b - -1;
+                        if (0 <= var2) {
+                          ge.field_c[var2] = true;
+                          continue L3;
+                        } else {
+                          ge.field_c[~var2] = false;
+                          continue L3;
+                        }
+                      }
+                    }
                   } else {
-                    var2 = oc.field_h[be.field_b];
-                    be.field_b = 127 & be.field_b - -1;
-                    if (0 <= var2) {
-                      ge.field_c[var2] = true;
-                      continue L2;
-                    } else {
-                      ge.field_c[var2 ^ -1] = false;
-                      continue L2;
+                    var2 = 0;
+                    L4: while (true) {
+                      if (112 <= var2) {
+                        bg.field_rb = be.field_b;
+                        break L2;
+                      } else {
+                        ge.field_c[var2] = false;
+                        var2++;
+                        continue L4;
+                      }
                     }
                   }
                 }
-              } else {
-                var2 = 0;
-                L3: while (true) {
-                  if (112 <= var2) {
-                    bg.field_rb = be.field_b;
-                    break L1;
-                  } else {
-                    ge.field_c[var2] = false;
-                    var2++;
-                    continue L3;
-                  }
-                }
+                ce.field_b = sa.field_b;
+                break L1;
               }
             }
-            ce.field_b = sa.field_b;
             break L0;
           }
-        }
-        if (param0 >= -123) {
-          field_a = null;
-          return;
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = (RuntimeException) (Object) decompiledCaughtException;
+          throw ma.a((Throwable) (Object) var1_ref, "i.A(" + -125 + 41);
         }
     }
 
     public static void b(int param0) {
         field_a = null;
         field_b = null;
-        if (param0 >= 40) {
-            return;
-        }
-        field_a = null;
     }
 
     static {

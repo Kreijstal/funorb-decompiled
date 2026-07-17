@@ -105,8 +105,9 @@ final class eh {
               } else {
                 var9 = var8 >> 16;
                 var10 = si.field_i[var13];
+                int incrementValue$1 = var13;
                 var13++;
-                si.field_i[var13] = ((var10 & 16711935) * var9 & -16711936 | (var10 & 65280) * var9 & 16711680) >> 8;
+                si.field_i[incrementValue$1] = ((var10 & 16711935) * var9 & -16711936 | (var10 & 65280) * var9 & 16711680) >> 8;
                 var8 = var8 + param3;
                 var16++;
                 continue L5;
@@ -117,9 +118,6 @@ final class eh {
     }
 
     final static void b(boolean param0) {
-        if (param0) {
-            eh.a(false);
-        }
         hk var1 = (hk) (Object) ak.field_i.b(-27493);
         if (var1 == null) {
             throw new IllegalStateException();

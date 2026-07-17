@@ -25,11 +25,6 @@ abstract class hd extends nb {
     public static void d(byte param0) {
         field_p = null;
         field_s = null;
-        if (param0 != -77) {
-            field_p = null;
-            field_u = null;
-            return;
-        }
         field_u = null;
     }
 

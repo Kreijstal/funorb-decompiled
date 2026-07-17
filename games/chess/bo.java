@@ -22,9 +22,6 @@ final class bo {
     public static void a(int param0) {
         field_e = null;
         field_a = null;
-        if (param0 >= -29) {
-            return;
-        }
         field_b = null;
         field_d = null;
     }
@@ -33,15 +30,14 @@ final class bo {
         String var2 = null;
         String var3 = null;
         long var4 = 0L;
-        if (param1 != -12) {
-          return;
-        } else {
-          ih.field_U = true;
-          var2 = "tuhstatbut";
-          var3 = "rvnadlm";
-          var4 = -1L;
-          vm.a(var3, 11440, param0, var4, var2);
-          return;
+        try {
+            ih.field_U = true;
+            var2 = "tuhstatbut";
+            var3 = "rvnadlm";
+            var4 = -1L;
+            vm.a(var3, 11440, param0, var4, var2);
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "bo.A(" + (param0 != null ? "{...}" : "null") + 44 + -12 + 41);
         }
     }
 

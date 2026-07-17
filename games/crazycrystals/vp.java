@@ -36,18 +36,23 @@ final class vp {
     }
 
     final void a(ij param0, long param1, byte param2) {
-        if (param2 <= 33) {
-            ((vp) this).a((ij) null, 115L, (byte) -90);
+        ij var5 = null;
+        try {
+            if (param2 <= 33) {
+                ((vp) this).a((ij) null, 115L, (byte) -90);
+            }
+            if (null != param0.field_g) {
+                param0.a(1);
+            }
+            var5 = ((vp) this).field_e[(int)(param1 & (long)(((vp) this).field_h - 1))];
+            param0.field_j = var5;
+            param0.field_g = var5.field_g;
+            param0.field_g.field_j = param0;
+            param0.field_k = param1;
+            param0.field_j.field_g = param0;
+        } catch (RuntimeException runtimeException) {
+            throw dn.a((Throwable) (Object) runtimeException, "vp.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }
-        if (null != param0.field_g) {
-            param0.a(1);
-        }
-        ij var5 = ((vp) this).field_e[(int)(param1 & (long)(((vp) this).field_h - 1))];
-        param0.field_j = var5;
-        param0.field_g = var5.field_g;
-        param0.field_g.field_j = param0;
-        param0.field_k = param1;
-        param0.field_j.field_g = param0;
     }
 
     final ij a(long param0, boolean param1) {
@@ -76,25 +81,26 @@ final class vp {
         field_i = null;
         field_a = null;
         field_d = null;
-        if (param0 != -14) {
-            field_a = null;
-        }
     }
 
     final static void a(int param0) {
-        int var1 = 0;
+        int var1_int = 0;
         int var2 = CrazyCrystals.field_B;
         jm.field_h.a(15834);
-        for (var1 = 0; var1 < 32; var1++) {
-            mc.field_p[var1] = 0L;
+        for (var1_int = 0; var1_int < 32; var1_int++) {
+            mc.field_p[var1_int] = 0L;
         }
-        for (var1 = 0; (var1 ^ -1) > -33; var1++) {
-            v.field_a[var1] = 0L;
+        for (var1_int = 0; var1_int < 32; var1_int++) {
+            v.field_a[var1_int] = 0L;
         }
         if (param0 <= 101) {
             return;
         }
-        hf.field_a = 0;
+        try {
+            hf.field_a = 0;
+        } catch (RuntimeException runtimeException) {
+            throw dn.a((Throwable) (Object) runtimeException, "vp.C(" + param0 + 41);
+        }
     }
 
     vp(int param0) {

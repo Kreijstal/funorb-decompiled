@@ -15,7 +15,7 @@ final class mb {
           if (0 == var2) {
             throw new IllegalArgumentException("" + Integer.toString(var2, 16));
           } else {
-            if (-129 >= (var2 ^ -1)) {
+            if (var2 >= 128) {
               if (160 <= var2) {
                 return (char)var2;
               } else {
@@ -41,7 +41,7 @@ final class mb {
           if (0 == var2) {
             throw new IllegalArgumentException("" + Integer.toString(var2, 16));
           } else {
-            if (-129 < (var2 ^ -1)) {
+            if (var2 < 128) {
               return (char)var2;
             } else {
               L1: {
@@ -68,9 +68,6 @@ final class mb {
     }
 
     final static int b(byte param0) {
-        if (param0 > -65) {
-            return 51;
-        }
         return me.field_j;
     }
 
@@ -127,11 +124,6 @@ final class mb {
         field_c = null;
         field_d = null;
         field_a = null;
-        if (param0 != 30520) {
-            field_d = null;
-            field_b = null;
-            return;
-        }
         field_b = null;
     }
 

@@ -14,95 +14,60 @@ final class gea extends bw {
     static String field_n;
 
     final static void a(int param0) {
-        int var1 = 0;
+        int var1_int = 0;
+        RuntimeException var1 = null;
         double var2 = 0.0;
         int var4 = 0;
+        RuntimeException decompiledCaughtException = null;
         var4 = BachelorFridge.field_y;
-        if (param0 == 4231) {
-          if (null == baa.field_z) {
-            baa.field_z = new int[256];
-            am.field_R = new int[256];
-            var1 = 0;
-            L0: while (true) {
-              if (256 <= var1) {
-                return;
+        try {
+          L0: {
+            L1: {
+              if (param0 == 4231) {
+                break L1;
               } else {
-                var2 = 6.283185307179586 * ((double)var1 / 255.0);
-                baa.field_z[var1] = (int)(Math.sin(var2) * 4096.0);
-                am.field_R[var1] = (int)(4096.0 * Math.cos(var2));
-                var1++;
-                continue L0;
+                field_f = null;
+                break L1;
               }
             }
-          } else {
-            if (am.field_R == null) {
-              baa.field_z = new int[256];
-              am.field_R = new int[256];
-              var1 = 0;
-              L1: while (true) {
-                if (256 <= var1) {
-                  return;
+            L2: {
+              L3: {
+                if (null == baa.field_z) {
+                  break L3;
                 } else {
-                  var2 = 6.283185307179586 * ((double)var1 / 255.0);
-                  baa.field_z[var1] = (int)(Math.sin(var2) * 4096.0);
-                  am.field_R[var1] = (int)(4096.0 * Math.cos(var2));
-                  var1++;
-                  continue L1;
+                  if (am.field_R != null) {
+                    break L2;
+                  } else {
+                    break L3;
+                  }
                 }
               }
-            } else {
-              return;
-            }
-          }
-        } else {
-          field_f = null;
-          if (null == baa.field_z) {
-            baa.field_z = new int[256];
-            am.field_R = new int[256];
-            var1 = 0;
-            L2: while (true) {
-              if (256 > var1) {
-                var2 = 6.283185307179586 * ((double)var1 / 255.0);
-                baa.field_z[var1] = (int)(Math.sin(var2) * 4096.0);
-                am.field_R[var1] = (int)(4096.0 * Math.cos(var2));
-                var1++;
-                continue L2;
-              } else {
-                return;
-              }
-            }
-          } else {
-            if (am.field_R == null) {
               baa.field_z = new int[256];
               am.field_R = new int[256];
-              var1 = 0;
-              L3: while (true) {
-                if (256 > var1) {
-                  var2 = 6.283185307179586 * ((double)var1 / 255.0);
-                  baa.field_z[var1] = (int)(Math.sin(var2) * 4096.0);
-                  am.field_R[var1] = (int)(4096.0 * Math.cos(var2));
-                  var1++;
-                  continue L3;
+              var1_int = 0;
+              L4: while (true) {
+                if (256 <= var1_int) {
+                  break L2;
                 } else {
-                  return;
+                  var2 = 6.283185307179586 * ((double)var1_int / 255.0);
+                  baa.field_z[var1_int] = (int)(Math.sin(var2) * 4096.0);
+                  am.field_R[var1_int] = (int)(4096.0 * Math.cos(var2));
+                  var1_int++;
+                  continue L4;
                 }
               }
-            } else {
-              return;
             }
+            break L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw pe.a((Throwable) (Object) var1, "gea.B(" + param0 + 41);
         }
     }
 
     public static void b(int param0) {
         field_l = null;
-        if (param0 != 4096) {
-            field_g = null;
-            field_n = null;
-            field_f = null;
-            field_g = null;
-            return;
-        }
         field_n = null;
         field_f = null;
         field_g = null;

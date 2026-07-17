@@ -41,7 +41,7 @@ final class pd extends hb {
                   var7 = -67 / ((param0 - 32) / 63);
                   var6 = new StringBuilder(var3);
                   L1: while (true) {
-                    if ((param1 ^ -1L) == -1L) {
+                    if (param1 == 0L) {
                       StringBuilder discarded$2 = var6.reverse();
                       var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
                       return var6.toString();
@@ -87,7 +87,11 @@ final class pd extends hb {
     }
 
     pd(el param0) {
-        ((pd) this).field_i = param0;
+        try {
+            ((pd) this).field_i = param0;
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "pd.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final oh a(boolean param0) {

@@ -8,13 +8,17 @@ final class sm {
     static String field_c;
 
     final static void a(float param0, boolean param1, boolean param2, String param3) {
-        if (!(null != md.field_i)) {
-            md.field_i = new vc(tm.field_l, vd.field_X);
-            tm.field_l.a(0, (fi) (Object) md.field_i);
+        try {
+            if (!(null != md.field_i)) {
+                md.field_i = new vc(tm.field_l, vd.field_X);
+                tm.field_l.a(0, (fi) (Object) md.field_i);
+            }
+            md.field_i.a(param0, false, param2, param3);
+            df.c();
+            ci.b(param1, -127);
+        } catch (RuntimeException runtimeException) {
+            throw kg.a((Throwable) (Object) runtimeException, "sm.B(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
-        md.field_i.a(param0, false, param2, param3);
-        df.c();
-        ci.b(param1, -127);
     }
 
     public static void a(int param0) {

@@ -27,9 +27,6 @@ final class lk extends fu implements fq {
 
     public static void c(int param0) {
         field_g = null;
-        if (param0 != 34962) {
-            field_g = (String) null;
-        }
     }
 
     static {

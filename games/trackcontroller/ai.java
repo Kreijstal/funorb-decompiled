@@ -16,9 +16,6 @@ final class ai {
     public static void a(byte param0) {
         field_a = null;
         field_c = null;
-        if (param0 <= 85) {
-            return;
-        }
         field_g = null;
         field_i = null;
         field_e = null;

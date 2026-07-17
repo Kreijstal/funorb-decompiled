@@ -10,9 +10,6 @@ final class id {
         field_c = null;
         field_b = null;
         field_a = null;
-        if (!param0) {
-            field_a = null;
-        }
     }
 
     final static void a(boolean param0) {

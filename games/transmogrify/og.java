@@ -12,9 +12,6 @@ final class og {
         field_d = null;
         field_c = null;
         field_a = null;
-        if (param0) {
-            return;
-        }
         field_b = null;
     }
 
@@ -27,12 +24,12 @@ final class og {
         wj.field_j = null;
         var2 = c.field_b;
         c.field_b = ne.field_b;
-        if (-52 != param1) {
-          if (-51 != param1) {
+        if (param1 != 51) {
+          if (param1 != 50) {
             oh.field_h.field_k = 1;
             ne.field_b = var2;
             oh.field_h.field_p = oh.field_h.field_p + 1;
-            if (-3 < (oh.field_h.field_p ^ -1)) {
+            if (oh.field_h.field_p < 2) {
               L0: {
                 if (oh.field_h.field_p < param0) {
                   break L0;
@@ -50,7 +47,7 @@ final class og {
                 return 1;
               }
             } else {
-              if ((param1 ^ -1) == -52) {
+              if (param1 == 51) {
                 return 2;
               } else {
                 L1: {
@@ -75,7 +72,7 @@ final class og {
             oh.field_h.field_k = 5;
             ne.field_b = var2;
             oh.field_h.field_p = oh.field_h.field_p + 1;
-            if (-3 > oh.field_h.field_p) {
+            if (oh.field_h.field_p < 2) {
               L2: {
                 if (oh.field_h.field_p < param0) {
                   break L2;
@@ -93,7 +90,7 @@ final class og {
                 return 1;
               }
             } else {
-              if ((param1 ^ -1) == -52) {
+              if (param1 == 51) {
                 return 2;
               } else {
                 L3: {
@@ -119,8 +116,8 @@ final class og {
           oh.field_h.field_k = 2;
           ne.field_b = var2;
           oh.field_h.field_p = oh.field_h.field_p + 1;
-          if (-3 <= oh.field_h.field_p) {
-            if ((param1 ^ -1) == -52) {
+          if (oh.field_h.field_p >= 2) {
+            if (param1 == 51) {
               return 2;
             } else {
               if (oh.field_h.field_p >= param0) {
@@ -153,10 +150,10 @@ final class og {
                 }
               }
             } else {
-              if (4 <= oh.field_h.field_p) {
-                return 1;
-              } else {
+              if (4 > oh.field_h.field_p) {
                 return -1;
+              } else {
+                return 1;
               }
             }
           }
@@ -165,21 +162,20 @@ final class og {
 
     final static void a(byte param0) {
         ia var1 = null;
-        ia var1_ref = null;
         if (param0 <= 3) {
           return;
         } else {
           L0: {
             var1 = (ia) (Object) kk.field_f.a(-9424);
             if (var1 == null) {
-              var1_ref = new ia();
+              var1 = new ia();
               break L0;
             } else {
               break L0;
             }
           }
-          var1_ref.a(sb.field_g, sb.field_b, sb.field_f, sb.field_d, sb.field_c, sb.field_e, 6, sb.field_h);
-          uj.field_c.a((wf) (Object) var1_ref, -109);
+          var1.a(sb.field_g, sb.field_b, sb.field_f, sb.field_d, sb.field_c, sb.field_e, 6, sb.field_h);
+          uj.field_c.a((wf) (Object) var1, -109);
           return;
         }
     }
@@ -189,7 +185,7 @@ final class og {
         int var2 = 0;
         var1 = jk.l(-889);
         var2 = ba.a((byte) 101);
-        kf.field_i.a(var1 - -(tj.field_y << -1335042783), qa.field_u - dg.field_b, -tj.field_y + ic.field_b, (byte) 110, (dg.field_b << -1731931423) + var2);
+        kf.field_i.a(var1 - -(tj.field_y << 1), qa.field_u - dg.field_b, -tj.field_y + ic.field_b, (byte) 110, (dg.field_b << 1) + var2);
         hd.a((byte) 8);
         if (param0) {
           field_e = 33;

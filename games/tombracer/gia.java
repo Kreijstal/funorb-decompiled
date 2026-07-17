@@ -12,7 +12,7 @@ final class gia extends ci {
     final void b(int param0, int param1, int param2) {
         int var4 = 0;
         super.b(param0, param1, param2);
-        if ((((gia) this).field_n ^ -1) <= -1) {
+        if (((gia) this).field_n >= 0) {
             if (null != qw.field_j) {
                 var4 = !qw.field_j.a((byte) -122, ((gia) this).field_n).field_g ? 128 : 64;
                 ((gia) this).field_m = qw.field_j.a(14907, ((gia) this).field_n, false, var4, 1.0f, var4);
@@ -51,11 +51,68 @@ final class gia extends ci {
     }
 
     final void a(byte param0, uia param1, int param2) {
-        if (param0 != 107) {
-            return;
-        }
-        if (!(0 != param2)) {
-            ((gia) this).field_n = param1.d(122);
+        RuntimeException var4 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        try {
+          L0: {
+            if (param0 == 107) {
+              L1: {
+                if (0 == param2) {
+                  ((gia) this).field_n = param1.d(122);
+                  break L1;
+                } else {
+                  break L1;
+                }
+              }
+              break L0;
+            } else {
+              return;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var4 = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var4;
+            stackOut_6_1 = new StringBuilder().append("gia.A(").append(param0).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param1 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L2;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L2;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param2 + 41);
         }
     }
 
@@ -112,9 +169,9 @@ final class gia extends ci {
                   } else {
                     var9 = var8 * ((gia) this).field_r / ns.field_g;
                     var10 = ((gia) this).field_m[var4 - -var9];
-                    var7[var8] = sea.c(var10, 255) << -713475132;
-                    var6[var8] = sea.c(var10, 65280) >> -1564428764;
-                    var5[var8] = sea.c(16711680, var10) >> -1466471540;
+                    var7[var8] = sea.c(var10, 255) << 4;
+                    var6[var8] = sea.c(var10, 65280) >> 4;
+                    var5[var8] = sea.c(16711680, var10) >> 12;
                     var8++;
                     continue L2;
                   }
@@ -125,11 +182,12 @@ final class gia extends ci {
                   if (var8 >= ns.field_g) {
                     break L0;
                   } else {
+                    int incrementValue$1 = var4;
                     var4++;
-                    var9 = ((gia) this).field_m[var4];
-                    var7[var8] = sea.c(4080, var9 << 92946724);
-                    var6[var8] = sea.c(4080, var9 >> -598928700);
-                    var5[var8] = sea.c(4080, var9 >> 880153548);
+                    var9 = ((gia) this).field_m[incrementValue$1];
+                    var7[var8] = sea.c(4080, var9 << 4);
+                    var6[var8] = sea.c(4080, var9 >> 4);
+                    var5[var8] = sea.c(4080, var9 >> 12);
                     var8++;
                     continue L3;
                   }

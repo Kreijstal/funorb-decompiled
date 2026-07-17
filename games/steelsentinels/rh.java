@@ -17,68 +17,64 @@ final class rh extends ck {
         int var4 = 0;
         int var5 = 0;
         if (vb.field_e) {
-          if (param3 == 635) {
-            L0: {
-              qf.field_c.a((byte) -80, param1);
-              var4 = jk.field_i.m(109) ? 1 : 0;
-              if (lb.field_gc == 0) {
+          L0: {
+            qf.field_c.a((byte) -80, param1);
+            var4 = jk.field_i.m(109) ? 1 : 0;
+            if (lb.field_gc == 0) {
+              break L0;
+            } else {
+              if (var4 != 0) {
                 break L0;
               } else {
-                if (var4 != 0) {
-                  break L0;
-                } else {
-                  pm.a((byte) 48);
-                  param1 = false;
-                  break L0;
-                }
+                pm.a((byte) 48);
+                param1 = false;
+                break L0;
               }
             }
-            L1: {
-              if (param1) {
-                jk.field_i.a((byte) 68, param2, param0);
-                break L1;
-              } else {
-                break L1;
-              }
+          }
+          L1: {
+            if (param1) {
+              jk.field_i.a((byte) 68, param2, param0);
+              break L1;
+            } else {
+              break L1;
             }
-            if (var4 == 0) {
-              var5 = jk.field_i.j(0) + jk.field_i.field_Rb;
-              if (-641 <= (var5 ^ -1)) {
-                if (var5 < 635) {
-                  if (0 >= ed.field_i) {
-                    return;
-                  } else {
-                    ed.field_i = ed.field_i - 5;
-                    return;
-                  }
+          }
+          if (var4 == 0) {
+            var5 = jk.field_i.j(0) + jk.field_i.field_Rb;
+            if (var5 <= 640) {
+              if (var5 < 635) {
+                if (0 >= ed.field_i) {
+                  return;
                 } else {
+                  ed.field_i = ed.field_i - 5;
                   return;
                 }
               } else {
-                ed.field_i = ed.field_i + 5;
                 return;
               }
             } else {
-              qf.field_c.a((byte) -37, param1);
-              var5 = jk.field_i.j(0) + jk.field_i.field_Rb;
-              if (-641 <= (var5 ^ -1)) {
-                if (var5 < 635) {
-                  if (0 >= ed.field_i) {
-                    return;
-                  } else {
-                    ed.field_i = ed.field_i - 5;
-                    return;
-                  }
+              ed.field_i = ed.field_i + 5;
+              return;
+            }
+          } else {
+            qf.field_c.a((byte) -37, param1);
+            var5 = jk.field_i.j(0) + jk.field_i.field_Rb;
+            if (var5 <= 640) {
+              if (var5 < 635) {
+                if (0 >= ed.field_i) {
+                  return;
                 } else {
+                  ed.field_i = ed.field_i - 5;
                   return;
                 }
               } else {
-                ed.field_i = ed.field_i + 5;
                 return;
               }
+            } else {
+              ed.field_i = ed.field_i + 5;
+              return;
             }
-          } else {
-            return;
           }
         } else {
           return;
@@ -120,37 +116,33 @@ final class rh extends ck {
         field_q = null;
         field_u = null;
         field_t = null;
-        if (param0) {
-          rh.a(true);
-          field_p = null;
-          field_w = null;
-          field_o = null;
-          field_v = null;
-          return;
-        } else {
-          field_p = null;
-          field_w = null;
-          field_o = null;
-          field_v = null;
-          return;
-        }
+        field_p = null;
+        field_w = null;
+        field_o = null;
+        field_v = null;
     }
 
     final static void a(int param0, int param1, jm param2) {
         kj var3 = null;
         if (param1 != 0) {
-          return;
-        } else {
-          var3 = mm.field_g;
-          var3.a(param0, (byte) -117);
-          var3.a((byte) 123, param2.field_q);
-          var3.d(param2.field_s, 77);
-          return;
+            return;
+        }
+        try {
+            var3 = mm.field_g;
+            var3.a(param0, (byte) -117);
+            var3.a((byte) 123, param2.field_q);
+            var3.d(param2.field_s, 77);
+        } catch (RuntimeException runtimeException) {
+            throw ci.a((Throwable) (Object) runtimeException, "rh.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
     rh(byte[] param0) {
-        ((rh) this).field_r = param0;
+        try {
+            ((rh) this).field_r = param0;
+        } catch (RuntimeException runtimeException) {
+            throw ci.a((Throwable) (Object) runtimeException, "rh.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

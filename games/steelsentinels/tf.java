@@ -11,67 +11,125 @@ final class tf {
     static String[] field_d;
 
     final static void a(na param0, byte param1) {
-        int var2 = 0;
+        RuntimeException var2 = null;
+        int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        String stackIn_25_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        String stackOut_24_2 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        String stackOut_23_2 = null;
         var5 = SteelSentinels.field_G;
-        var2 = 0;
-        L0: while (true) {
-          if (var2 >= 3) {
-            var2 = 0;
+        try {
+          L0: {
+            var2_int = 0;
             L1: while (true) {
-              if (var2 >= uc.field_a) {
-                uf.field_a[param0.a((byte) 58)] = uf.field_a[param0.a((byte) 58)] + 1;
-                if (param1 < -103) {
-                  var2 = 0;
-                  var3 = 0;
-                  L2: while (true) {
-                    if (uc.field_a <= var3) {
-                      uc.field_a = var2;
-                      uc.field_a = uc.field_a + 1;
-                      ph.field_e[uc.field_a] = param0;
-                      return;
-                    } else {
-                      L3: {
-                        if (ph.field_e[var3].field_k == param0.field_k) {
-                          var4 = ph.field_e[var3].a((byte) 58);
-                          if (cj.field_h >= uf.field_a[var4]) {
-                            break L3;
-                          } else {
-                            uf.field_a[var4] = uf.field_a[var4] - 1;
-                            var3++;
-                            continue L2;
-                          }
+              if (var2_int >= 3) {
+                var2_int = 0;
+                L2: while (true) {
+                  if (var2_int >= uc.field_a) {
+                    int dupTemp$4 = param0.a((byte) 58);
+                    uf.field_a[dupTemp$4] = uf.field_a[dupTemp$4] + 1;
+                    if (param1 < -103) {
+                      var2_int = 0;
+                      var3 = 0;
+                      L3: while (true) {
+                        if (uc.field_a <= var3) {
+                          uc.field_a = var2_int;
+                          int fieldTemp$5 = uc.field_a;
+                          uc.field_a = uc.field_a + 1;
+                          ph.field_e[fieldTemp$5] = param0;
+                          break L0;
                         } else {
-                          break L3;
+                          L4: {
+                            L5: {
+                              if (ph.field_e[var3].field_k == param0.field_k) {
+                                var4 = ph.field_e[var3].a((byte) 58);
+                                if (cj.field_h >= uf.field_a[var4]) {
+                                  break L5;
+                                } else {
+                                  uf.field_a[var4] = uf.field_a[var4] - 1;
+                                  break L4;
+                                }
+                              } else {
+                                break L5;
+                              }
+                            }
+                            int incrementValue$6 = var2_int;
+                            var2_int++;
+                            ph.field_e[incrementValue$6] = ph.field_e[var3];
+                            break L4;
+                          }
+                          var3++;
+                          continue L3;
                         }
                       }
-                      var2++;
-                      ph.field_e[var2] = ph.field_e[var3];
-                      var3++;
-                      continue L2;
+                    } else {
+                      return;
                     }
+                  } else {
+                    L6: {
+                      if (param0.field_k == ph.field_e[var2_int].field_k) {
+                        int dupTemp$7 = ph.field_e[var2_int].a((byte) 58);
+                        uf.field_a[dupTemp$7] = uf.field_a[dupTemp$7] + 1;
+                        break L6;
+                      } else {
+                        break L6;
+                      }
+                    }
+                    var2_int++;
+                    continue L2;
                   }
-                } else {
-                  return;
                 }
               } else {
-                if (param0.field_k == ph.field_e[var2].field_k) {
-                  uf.field_a[ph.field_e[var2].a((byte) 58)] = uf.field_a[ph.field_e[var2].a((byte) 58)] + 1;
-                  var2++;
-                  continue L1;
-                } else {
-                  var2++;
-                  continue L1;
-                }
+                uf.field_a[var2_int] = 0;
+                var2_int++;
+                continue L1;
               }
             }
-          } else {
-            uf.field_a[var2] = 0;
-            var2++;
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L7: {
+            var2 = decompiledCaughtException;
+            stackOut_22_0 = (RuntimeException) var2;
+            stackOut_22_1 = new StringBuilder().append("tf.C(");
+            stackIn_24_0 = stackOut_22_0;
+            stackIn_24_1 = stackOut_22_1;
+            stackIn_23_0 = stackOut_22_0;
+            stackIn_23_1 = stackOut_22_1;
+            if (param0 == null) {
+              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
+              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_2 = "null";
+              stackIn_25_0 = stackOut_24_0;
+              stackIn_25_1 = stackOut_24_1;
+              stackIn_25_2 = stackOut_24_2;
+              break L7;
+            } else {
+              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_2 = "{...}";
+              stackIn_25_0 = stackOut_23_0;
+              stackIn_25_1 = stackOut_23_1;
+              stackIn_25_2 = stackOut_23_2;
+              break L7;
+            }
+          }
+          throw ci.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + param1 + 41);
         }
     }
 
@@ -88,9 +146,6 @@ final class tf {
     public static void a(byte param0) {
         field_e = null;
         field_g = null;
-        if (param0 != 26) {
-            return;
-        }
         field_a = null;
         field_f = null;
         field_d = null;

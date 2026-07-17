@@ -14,7 +14,7 @@ final class rn {
         field_e = null;
         field_d = null;
         field_a = null;
-        int var1 = -55 % ((param0 - 49) / 56);
+        int var1 = 0;
         field_f = null;
         field_b = null;
     }

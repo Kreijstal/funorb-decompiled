@@ -8,46 +8,36 @@ final class cka extends ana {
     static String field_w;
 
     private final void f(byte param0) {
-        Object var3 = null;
-        pp var3_ref = null;
+        pp var3 = null;
+        ad var4 = null;
         int var5 = 0;
         aga var6 = null;
-        ad var7 = null;
-        L0: {
-          var3 = null;
-          var5 = BachelorFridge.field_y;
-          var6 = ((cka) this).field_v.field_l.a(9, ((cka) this).field_q.field_h);
-          if (param0 < -47) {
-            break L0;
-          } else {
-            cka.d(-41);
-            break L0;
-          }
-        }
+        var5 = BachelorFridge.field_y;
+        var6 = ((cka) this).field_v.field_l.a(9, ((cka) this).field_q.field_h);
         if (var6.i(89)) {
           return;
         } else {
-          var3_ref = (pp) (Object) ((cka) this).field_v.field_o.b((byte) 90);
+          var3 = (pp) (Object) ((cka) this).field_v.field_o.b((byte) 90);
           oha discarded$1 = al.a(-121, ((cka) this).field_v.field_k);
-          L1: while (true) {
-            if (var3_ref == null) {
+          L0: while (true) {
+            if (var3 == null) {
               return;
             } else {
-              L2: {
-                var3_ref.a(var6, ((cka) this).field_q.field_h, 12);
-                if (!(var3_ref instanceof iv)) {
-                  break L2;
+              L1: {
+                var3.a(var6, ((cka) this).field_q.field_h, 12);
+                if (!(var3 instanceof iv)) {
+                  break L1;
                 } else {
-                  var7 = var3_ref.field_h.a(-27449, ((cka) this).field_q);
-                  ((cka) this).a(27799, (at) (Object) new taa(((cka) this).field_q, var7));
+                  var4 = var3.field_h.a(-27449, ((cka) this).field_q);
+                  ((cka) this).a(27799, (at) (Object) new taa(((cka) this).field_q, var4));
                   ((cka) this).a(27799, (at) (Object) new iu(67, 256));
-                  ((cka) this).a(27799, (at) (Object) new cb(var7, 19));
-                  ((cka) this).a(27799, (at) (Object) new wn(var7, kna.field_g[35], 24831));
-                  break L2;
+                  ((cka) this).a(27799, (at) (Object) new cb(var4, 19));
+                  ((cka) this).a(27799, (at) (Object) new wn(var4, kna.field_g[35], 24831));
+                  break L1;
                 }
               }
-              var3_ref = (pp) (Object) ((cka) this).field_v.field_o.c(0);
-              continue L1;
+              var3 = (pp) (Object) ((cka) this).field_v.field_o.c(0);
+              continue L0;
             }
           }
         }
@@ -55,7 +45,11 @@ final class cka extends ana {
 
     cka(gj param0, ps param1) {
         super(param0, (bca) (Object) param1);
-        ((cka) this).field_v = param1;
+        try {
+            ((cka) this).field_v = param1;
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "cka.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void d(int param0) {
@@ -68,14 +62,12 @@ final class cka extends ana {
     }
 
     private final void e(byte param0) {
-        if (param0 < 83) {
-            boolean discarded$0 = ((cka) this).c((byte) 86);
-        }
     }
 
     final boolean c(byte param0) {
+        int fieldTemp$0 = ((cka) this).field_l - 1;
         ((cka) this).field_l = ((cka) this).field_l - 1;
-        if (!(-1 < ((cka) this).field_l - 1)) {
+        if (!(-1 < fieldTemp$0)) {
             if (-26 == ((cka) this).field_l) {
                 this.f((byte) -109);
                 return false;

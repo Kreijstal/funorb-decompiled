@@ -17,18 +17,9 @@ final class oj {
         field_d = null;
         field_e = null;
         field_c = null;
-        if (param0) {
-          oj.a(false);
-          field_g = null;
-          field_b = null;
-          field_f = null;
-          return;
-        } else {
-          field_g = null;
-          field_b = null;
-          field_f = null;
-          return;
-        }
+        field_g = null;
+        field_b = null;
+        field_f = null;
     }
 
     final static byte a(byte param0, char param1) {
@@ -792,15 +783,106 @@ final class oj {
     }
 
     final static jb a(int param0, int param1, vj param2, vj param3, int param4) {
-        if (fl.a(param1, param2, param0, (byte) -98)) {
-          if (param4 != 15619) {
-            return null;
-          } else {
-            return sl.a((byte) -83, param3.a(param0, param1, (byte) 35));
+        RuntimeException var5 = null;
+        jb stackIn_4_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        jb stackOut_3_0 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        try {
+          L0: {
+            if (fl.a(param1, param2, param0, (byte) -98)) {
+              stackOut_3_0 = sl.a((byte) -83, param3.a(param0, param1, (byte) 35));
+              stackIn_4_0 = stackOut_3_0;
+              break L0;
+            } else {
+              return null;
+            }
           }
-        } else {
-          return null;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var5 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var5;
+            stackOut_5_1 = new StringBuilder().append("oj.C(").append(param0).append(44).append(param1).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param2 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L1;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L1;
+            }
+          }
+          L2: {
+            stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param3 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L2;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L2;
+            }
+          }
+          throw ie.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + 15619 + 41);
         }
+        return stackIn_4_0;
     }
 
     static {
@@ -812,19 +894,20 @@ final class oj {
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
-        field_h = new char[]{(char)32, (char)160, (char)95, (char)45, (char)224, (char)225, (char)226, (char)228, (char)227, (char)192, (char)193, (char)194, (char)196, (char)195, (char)232, (char)233, (char)234, (char)235, (char)200, (char)201, (char)202, (char)203, (char)237, (char)238, (char)239, (char)205, (char)206, (char)207, (char)242, (char)243, (char)244, (char)246, (char)245, (char)210, (char)211, (char)212, (char)214, (char)213, (char)249, (char)250, (char)251, (char)252, (char)217, (char)218, (char)219, (char)220, (char)231, (char)199, (char)255, (char)376, (char)241, (char)209, (char)223};
+        field_h = new char[]{' ', ' ', '_', '-', 'à', 'á', 'â', 'ä', 'ã', 'À', 'Á', 'Â', 'Ä', 'Ã', 'è', 'é', 'ê', 'ë', 'È', 'É', 'Ê', 'Ë', 'í', 'î', 'ï', 'Í', 'Î', 'Ï', 'ò', 'ó', 'ô', 'ö', 'õ', 'Ò', 'Ó', 'Ô', 'Ö', 'Õ', 'ù', 'ú', 'û', 'ü', 'Ù', 'Ú', 'Û', 'Ü', 'ç', 'Ç', 'ÿ', 'Ÿ', 'ñ', 'Ñ', 'ß'};
         field_e = new int[256];
         var0 = 0;
         L0: while (true) {
-          if (-129 >= (var0 ^ -1)) {
+          if (var0 >= 128) {
             var0 = 128;
             L1: while (true) {
-              if (-257 >= (var0 ^ -1)) {
+              if (var0 >= 256) {
                 field_b = new double[65536];
                 field_a = new double[65536];
                 var0 = 0;
                 L2: while (true) {
                   if (65536 <= var0) {
+                    return;
                   } else {
                     field_a[var0] = Math.sin((double)var0 * 3.141592653589793 / 32768.0);
                     field_b[var0] = Math.cos(3.141592653589793 * (double)var0 / 32768.0);
@@ -836,7 +919,7 @@ final class oj {
                 var1 = 0;
                 var2 = (-127 + var0) * 2;
                 var3 = 255;
-                field_e[var0] = 65536 * var1 - (-(var2 * 256) + -(1 * var3));
+                field_e[var0] = 65536 * var1 - (-(var2 * 256) + -var3);
                 var0++;
                 continue L1;
               }
@@ -845,7 +928,7 @@ final class oj {
             var2 = 0;
             var1 = 2 * (-var0 + 127);
             var3 = 2 * var0;
-            field_e[var0] = 256 * var2 + 65536 * var1 + 1 * var3;
+            field_e[var0] = 256 * var2 + 65536 * var1 + var3;
             var0++;
             continue L0;
           }

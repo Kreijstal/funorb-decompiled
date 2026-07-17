@@ -9,14 +9,72 @@ final class fg extends pd {
     private int field_k;
 
     final f a(boolean param0, int param1, int param2, int param3, ta param4) {
-        ((fg) this).field_k = ((fg) this).field_k + 1;
-        ((fg) this).field_h = ((fg) this).field_h + param3;
-        if (param0) {
-          ((fg) this).a((byte) 104);
-          return (f) (Object) new gi(3 & q.field_a[ma.field_n[param1]].field_c[param2], bm.field_g);
-        } else {
-          return (f) (Object) new gi(3 & q.field_a[ma.field_n[param1]].field_c[param2], bm.field_g);
+        RuntimeException var6 = null;
+        gi stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        gi stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              ((fg) this).field_k = ((fg) this).field_k + 1;
+              ((fg) this).field_h = ((fg) this).field_h + param3;
+              if (!param0) {
+                break L1;
+              } else {
+                ((fg) this).a((byte) 104);
+                break L1;
+              }
+            }
+            stackOut_2_0 = new gi(3 & q.field_a[ma.field_n[param1]].field_c[param2], bm.field_g);
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var6 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var6;
+            stackOut_4_1 = new StringBuilder().append("fg.H(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param4 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw dn.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
         }
+        return (f) (Object) stackIn_3_0;
     }
 
     final pb b(byte param0) {
@@ -27,9 +85,6 @@ final class fg extends pd {
     }
 
     final static void c(byte param0) {
-        if (param0 != 95) {
-            fg.c(-20);
-        }
     }
 
     final void a(byte param0) {

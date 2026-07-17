@@ -11,15 +11,12 @@ final class uc {
     static int[] field_e;
 
     final static ci b(int param0) {
-        if (param0 != -17260) {
-            return null;
-        }
         return ib.field_c.field_Kb;
     }
 
     public static void a(int param0) {
         field_c = null;
-        int var1 = -95 % ((-52 - param0) / 46);
+        int var1 = 0;
         field_e = null;
         field_g = null;
         field_b = null;
@@ -30,22 +27,14 @@ final class uc {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
-        L0: {
-          if (param0 <= -33) {
-            break L0;
-          } else {
-            field_g = null;
-            break L0;
-          }
-        }
         if (bj.field_cb == null) {
           return;
         } else {
           var1 = (Object) (Object) bj.field_cb;
           synchronized (var1) {
-            L1: {
+            L0: {
               bj.field_cb = null;
-              break L1;
+              break L0;
             }
           }
           return;

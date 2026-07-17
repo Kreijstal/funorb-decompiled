@@ -5,9 +5,6 @@ final class nl {
     static String field_a;
 
     public static void a(int param0) {
-        if (param0 != 16558) {
-            return;
-        }
         field_a = null;
     }
 
@@ -17,12 +14,12 @@ final class nl {
         }
         if (param0 < 95) {
             field_a = null;
-            if (-2 != (param1 ^ -1)) {
+            if (param1 != 1) {
                 return false;
             }
             return true;
         }
-        return -2 != (param1 ^ -1) ? false : true;
+        return param1 != 1 ? false : true;
     }
 
     static {

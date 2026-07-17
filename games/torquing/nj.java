@@ -650,7 +650,7 @@ final class nj extends lf {
     }
 
     private final synchronized void g(int param0) {
-        this.a(param0, this.j());
+        this.a(0, this.j());
     }
 
     final lf c() {

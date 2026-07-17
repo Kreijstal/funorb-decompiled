@@ -28,13 +28,11 @@ final class pi {
 
     final static void a(byte param0) {
         rd.a(4, -66);
-        if (param0 > -86) {
-            field_e = -49;
-        }
     }
 
     final static vl a(fs param0, boolean param1, int param2) {
-        int var3 = 0;
+        RuntimeException var3 = null;
+        int var3_int = 0;
         int var4 = 0;
         jn var5 = null;
         int var6 = 0;
@@ -46,189 +44,116 @@ final class pi {
         int var12 = 0;
         nm var13 = null;
         int var14 = 0;
-        jn var15 = null;
-        jn var16 = null;
+        vl stackIn_15_0 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_19_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        vl stackOut_14_0 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
         var14 = Sumoblitz.field_L ? 1 : 0;
-        if (param1) {
+        try {
           L0: {
-            var3 = param0.e(-31302);
-            var4 = 0;
-            if (1 >= var3) {
-              break L0;
-            } else {
-              var4 = param0.e(-31302);
-              break L0;
+            L1: {
+              if (param1) {
+                break L1;
+              } else {
+                param0.field_p = 0;
+                break L1;
+              }
             }
-          }
-          var16 = new jn();
-          var5 = var16;
-          if (param2 > 50) {
+            L2: {
+              var3_int = param0.e(-31302);
+              var4 = 0;
+              if (1 >= var3_int) {
+                break L2;
+              } else {
+                var4 = param0.e(-31302);
+                break L2;
+              }
+            }
+            var5 = new jn();
             var6 = param0.e(-31302);
             var7 = 1;
             var8 = 0;
-            L1: while (true) {
+            L3: while (true) {
               if (var6 <= var8) {
-                return new vl(var16, var4);
+                stackOut_14_0 = new vl(var5, var4);
+                stackIn_15_0 = stackOut_14_0;
+                break L0;
               } else {
-                L2: {
+                L4: {
                   var9 = param0.e(-31302);
                   var10 = param0.c(true);
                   var11 = param0.c(true);
-                  int discarded$8 = param0.c(true);
-                  int discarded$9 = param0.c(true);
+                  int discarded$2 = param0.c(true);
+                  int discarded$3 = param0.c(true);
                   var12 = 0;
-                  if ((var3 ^ -1) < -3) {
+                  if (var3_int > 2) {
                     var12 = param0.c(true);
-                    break L2;
+                    break L4;
                   } else {
-                    break L2;
+                    break L4;
                   }
                 }
-                L3: {
-                  var13 = cq.a(var12, var10 >> 102900680, var11 >> 1328233288, var9, (byte) -113);
-                  if (-3 != (var9 ^ -1)) {
-                    break L3;
-                  } else {
-                    var13.field_s = var7;
-                    var7++;
-                    break L3;
-                  }
-                }
-                var16.a((ms) (Object) var13, (byte) 39);
-                var8++;
-                continue L1;
-              }
-            }
-          } else {
-            pi.a(116);
-            var6 = param0.e(-31302);
-            var7 = 1;
-            var8 = 0;
-            L4: while (true) {
-              if (var6 <= var8) {
-                return new vl(var16, var4);
-              } else {
                 L5: {
-                  var9 = param0.e(-31302);
-                  var10 = param0.c(true);
-                  var11 = param0.c(true);
-                  int discarded$10 = param0.c(true);
-                  int discarded$11 = param0.c(true);
-                  var12 = 0;
-                  if ((var3 ^ -1) < -3) {
-                    var12 = param0.c(true);
+                  var13 = cq.a(var12, var10 >> 8, var11 >> 8, var9, (byte) -113);
+                  if (var9 != 2) {
                     break L5;
-                  } else {
-                    break L5;
-                  }
-                }
-                L6: {
-                  var13 = cq.a(var12, var10 >> 102900680, var11 >> 1328233288, var9, (byte) -113);
-                  if (-3 != (var9 ^ -1)) {
-                    break L6;
                   } else {
                     var13.field_s = var7;
                     var7++;
-                    break L6;
+                    break L5;
                   }
                 }
-                var16.a((ms) (Object) var13, (byte) 39);
+                var5.a((ms) (Object) var13, (byte) 39);
                 var8++;
-                continue L4;
+                continue L3;
               }
             }
           }
-        } else {
-          L7: {
-            param0.field_p = 0;
-            var3 = param0.e(-31302);
-            var4 = 0;
-            if (1 >= var3) {
-              break L7;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L6: {
+            var3 = decompiledCaughtException;
+            stackOut_16_0 = (RuntimeException) var3;
+            stackOut_16_1 = new StringBuilder().append("pi.B(");
+            stackIn_18_0 = stackOut_16_0;
+            stackIn_18_1 = stackOut_16_1;
+            stackIn_17_0 = stackOut_16_0;
+            stackIn_17_1 = stackOut_16_1;
+            if (param0 == null) {
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "null";
+              stackIn_19_0 = stackOut_18_0;
+              stackIn_19_1 = stackOut_18_1;
+              stackIn_19_2 = stackOut_18_2;
+              break L6;
             } else {
-              var4 = param0.e(-31302);
-              break L7;
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "{...}";
+              stackIn_19_0 = stackOut_17_0;
+              stackIn_19_1 = stackOut_17_1;
+              stackIn_19_2 = stackOut_17_2;
+              break L6;
             }
           }
-          var15 = new jn();
-          var5 = var15;
-          if (param2 > 50) {
-            var6 = param0.e(-31302);
-            var7 = 1;
-            var8 = 0;
-            L8: while (true) {
-              if (var6 <= var8) {
-                return new vl(var15, var4);
-              } else {
-                L9: {
-                  var9 = param0.e(-31302);
-                  var10 = param0.c(true);
-                  var11 = param0.c(true);
-                  int discarded$12 = param0.c(true);
-                  int discarded$13 = param0.c(true);
-                  var12 = 0;
-                  if ((var3 ^ -1) < -3) {
-                    var12 = param0.c(true);
-                    break L9;
-                  } else {
-                    break L9;
-                  }
-                }
-                L10: {
-                  var13 = cq.a(var12, var10 >> 102900680, var11 >> 1328233288, var9, (byte) -113);
-                  if (-3 != (var9 ^ -1)) {
-                    break L10;
-                  } else {
-                    var13.field_s = var7;
-                    var7++;
-                    break L10;
-                  }
-                }
-                var15.a((ms) (Object) var13, (byte) 39);
-                var8++;
-                continue L8;
-              }
-            }
-          } else {
-            pi.a(116);
-            var6 = param0.e(-31302);
-            var7 = 1;
-            var8 = 0;
-            L11: while (true) {
-              if (var6 <= var8) {
-                return new vl(var15, var4);
-              } else {
-                L12: {
-                  var9 = param0.e(-31302);
-                  var10 = param0.c(true);
-                  var11 = param0.c(true);
-                  int discarded$14 = param0.c(true);
-                  int discarded$15 = param0.c(true);
-                  var12 = 0;
-                  if ((var3 ^ -1) < -3) {
-                    var12 = param0.c(true);
-                    break L12;
-                  } else {
-                    break L12;
-                  }
-                }
-                L13: {
-                  var13 = cq.a(var12, var10 >> 102900680, var11 >> 1328233288, var9, (byte) -113);
-                  if (-3 != (var9 ^ -1)) {
-                    break L13;
-                  } else {
-                    var13.field_s = var7;
-                    var7++;
-                    break L13;
-                  }
-                }
-                var15.a((ms) (Object) var13, (byte) 39);
-                var8++;
-                continue L11;
-              }
-            }
-          }
+          throw qo.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param1 + 44 + 102 + 41);
         }
+        return stackIn_15_0;
     }
 
     static {

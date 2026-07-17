@@ -109,6 +109,7 @@ final class hp {
           if (var2 >= 10) {
             ((hp) this).field_b = param0.a((byte) -11);
             ((hp) this).field_c = param0.a((byte) -11);
+            return;
           } else {
             var3 = param0.h(-11);
             if (var3 != 0) {

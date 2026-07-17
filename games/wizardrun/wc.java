@@ -60,7 +60,7 @@ final class wc {
               if (((wc) this).field_i != 2) {
                 break L1;
               } else {
-                if (-1 > (((wc) this).field_g ^ -1)) {
+                if (((wc) this).field_g > 0) {
                   break L0;
                 } else {
                   break L1;
@@ -75,7 +75,7 @@ final class wc {
                 break L2;
               }
             }
-            if ((tg.field_e ^ -1L) == (((wc) this).field_e ^ -1L)) {
+            if (~tg.field_e == ~((wc) this).field_e) {
               return 1;
             } else {
               L3: {

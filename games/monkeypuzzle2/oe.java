@@ -30,13 +30,15 @@ final class oe {
     }
 
     final static void a(m param0, int param1, byte param2) {
-        if (param2 > -90) {
-            return;
+        hb var3 = null;
+        try {
+            var3 = gf.field_c;
+            var3.b(true, param1);
+            var3.b(param0.field_g, -49152);
+            var3.b(param0.field_j, -49152);
+        } catch (RuntimeException runtimeException) {
+            throw la.a((Throwable) (Object) runtimeException, "oe.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + -95 + 41);
         }
-        hb var3 = gf.field_c;
-        var3.b(true, param1);
-        var3.b(param0.field_g, -49152);
-        var3.b(param0.field_j, -49152);
     }
 
     final void a(int param0, int param1, int param2) {
@@ -50,7 +52,7 @@ final class oe {
     final void b(int param0) {
         if (null == ba.field_f) {
           L0: {
-            if ((af.field_c ^ -1) < -1) {
+            if (af.field_c > 0) {
               break L0;
             } else {
               ((oe) this).field_n = false;
@@ -60,7 +62,7 @@ final class oe {
           if (!((oe) this).field_n) {
             L1: {
               if (((oe) this).field_j <= ub.field_b) {
-                if ((((oe) this).field_j ^ -1) < -1) {
+                if (((oe) this).field_j > 0) {
                   ue.field_D = 0;
                   break L1;
                 } else {
@@ -87,8 +89,9 @@ final class oe {
             return;
           } else {
             if (param0 < -40) {
+              int fieldTemp$1 = ((oe) this).field_k - 1;
               ((oe) this).field_k = ((oe) this).field_k - 1;
-              if (((oe) this).field_k - 1 <= 0) {
+              if (fieldTemp$1 <= 0) {
                 ((oe) this).field_k = ((oe) this).field_c;
                 if (((oe) this).field_h > gb.field_i) {
                   ((oe) this).field_n = false;
@@ -119,7 +122,7 @@ final class oe {
               if (((oe) this).field_h > gb.field_i) {
                 break L1;
               } else {
-                if (-1 <= (af.field_c ^ -1)) {
+                if (af.field_c <= 0) {
                   break L1;
                 } else {
                   stackOut_4_0 = 1;
@@ -139,19 +142,23 @@ final class oe {
     }
 
     final static void a(byte param0) {
-        int var1 = 0;
+        int var1_int = 0;
         int var2 = MonkeyPuzzle2.field_F ? 1 : 0;
-        ne.field_c.a(true);
-        for (var1 = 0; (var1 ^ -1) > -33; var1++) {
-            dl.field_a[var1] = 0L;
+        try {
+            ne.field_c.a(true);
+            for (var1_int = 0; var1_int < 32; var1_int++) {
+                dl.field_a[var1_int] = 0L;
+            }
+            if (param0 <= 100) {
+                oe.d(-61);
+            }
+            for (var1_int = 0; var1_int < 32; var1_int++) {
+                ve.field_w[var1_int] = 0L;
+            }
+            bg.field_E = 0;
+        } catch (RuntimeException runtimeException) {
+            throw la.a((Throwable) (Object) runtimeException, "oe.F(" + param0 + 41);
         }
-        if (param0 <= 100) {
-            oe.d(-61);
-        }
-        for (var1 = 0; var1 < 32; var1++) {
-            ve.field_w[var1] = 0L;
-        }
-        bg.field_E = 0;
     }
 
     public static void d(int param0) {
@@ -167,83 +174,75 @@ final class oe {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        L0: {
-          var5 = MonkeyPuzzle2.field_F ? 1 : 0;
-          var2 = ((oe) this).field_j;
-          var3 = ((oe) this).field_f;
-          if (param0 == 363) {
-            break L0;
-          } else {
-            ((oe) this).field_r = null;
-            break L0;
-          }
-        }
+        var5 = MonkeyPuzzle2.field_F ? 1 : 0;
+        var2 = ((oe) this).field_j;
+        var3 = ((oe) this).field_f;
         if (((oe) this).c(-1)) {
-          L1: {
+          L0: {
             if (var3 > ((oe) this).field_e) {
               var3 = ((oe) this).field_e;
-              break L1;
+              break L0;
             } else {
               if (var3 < ((oe) this).field_s) {
                 var3 = ((oe) this).field_s;
+                break L0;
+              } else {
+                break L0;
+              }
+            }
+          }
+          L1: {
+            if (((oe) this).field_g < var2) {
+              var2 = ((oe) this).field_g;
+              break L1;
+            } else {
+              if (var2 >= ((oe) this).field_a) {
                 break L1;
               } else {
+                var2 = ((oe) this).field_a;
                 break L1;
               }
             }
           }
           L2: {
-            if (((oe) this).field_g < var2) {
-              var2 = ((oe) this).field_g;
-              break L2;
-            } else {
-              if (var2 >= ((oe) this).field_a) {
-                break L2;
-              } else {
-                var2 = ((oe) this).field_a;
-                break L2;
-              }
-            }
-          }
-          L3: {
             if (((oe) this).field_m > 0.0f) {
               var4 = (int)(0.5f + (float)var3 * ((oe) this).field_m);
               if (var4 > var2) {
                 var3 = (int)((float)var2 / ((oe) this).field_m);
-                break L3;
+                break L2;
               } else {
                 if (var2 > var4) {
                   var2 = var4;
-                  break L3;
+                  break L2;
                 } else {
-                  break L3;
+                  break L2;
                 }
               }
             } else {
-              break L3;
+              break L2;
             }
           }
-          L4: {
-            L5: {
+          L3: {
+            L4: {
               if (ub.field_b != var2) {
-                break L5;
+                break L4;
               } else {
                 if (var3 != lb.field_z) {
-                  break L5;
-                } else {
                   break L4;
+                } else {
+                  break L3;
                 }
               }
             }
             ((oe) this).field_r.a(var3, var2, -121);
-            break L4;
+            break L3;
           }
-          L6: {
-            if ((((oe) this).field_j ^ -1) >= -1) {
-              break L6;
+          L5: {
+            if (((oe) this).field_j <= 0) {
+              break L5;
             } else {
               ue.field_D = (-ub.field_b + ((oe) this).field_j) / 2;
-              break L6;
+              break L5;
             }
           }
           return;

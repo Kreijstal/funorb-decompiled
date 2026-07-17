@@ -84,9 +84,9 @@ class fl extends hg {
         ed var7 = null;
         fn var8 = null;
         int var9 = EscapeVector.field_A;
-        int var2 = 4 == param1 ? 1 : 0;
+        int var2_int = 4 == param1 ? 1 : 0;
         ed[] var3 = mb.field_f;
-        if (var2 != 0) {
+        if (var2_int != 0) {
             var3 = ob.field_b;
         }
         if (!(var3 != null)) {
@@ -99,16 +99,20 @@ class fl extends hg {
         if (!(var4 != null)) {
             return;
         }
-        if (!(null != bf.field_M)) {
-            bf.field_M = new rk[var3.length];
+        try {
+            if (!(null != bf.field_M)) {
+                bf.field_M = new rk[var3.length];
+            }
+            for (var5 = 0; var5 < var3.length; var5++) {
+                var6 = var3[var5];
+                var7 = var4[var5];
+                var8 = new fn(rn.field_b[var5], rn.field_f[var5]);
+                bf.field_M[var5] = new rk(var6, var7, var8);
+            }
+            ka.a(105);
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) (Object) runtimeException, "fl.CA(" + param0 + 44 + param1 + 41);
         }
-        for (var5 = 0; var5 < var3.length; var5++) {
-            var6 = var3[var5];
-            var7 = var4[var5];
-            var8 = new fn(rn.field_b[var5], rn.field_f[var5]);
-            bf.field_M[var5] = new rk(var6, var7, var8);
-        }
-        ka.a(105);
     }
 
     final static void a(String param0, lk param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
@@ -118,14 +122,18 @@ class fl extends hg {
         if (param3 != -22183) {
             return;
         }
-        rh.field_N = param2;
-        he.field_y = param4;
-        ce.field_j = param5;
-        mn.field_n = param6;
-        kh.field_c = param0;
-        od.field_j = (sb) (Object) new bk();
-        uk.field_b = new kk(param1);
-        af.field_e = new sk(od.field_j, uk.field_b);
+        try {
+            rh.field_N = param2;
+            he.field_y = param4;
+            ce.field_j = param5;
+            mn.field_n = param6;
+            kh.field_c = param0;
+            od.field_j = (sb) (Object) new bk();
+            uk.field_b = new kk(param1);
+            af.field_e = new sk(od.field_j, uk.field_b);
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) (Object) runtimeException, "fl.W(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 41);
+        }
     }
 
     protected fl() {
@@ -133,7 +141,7 @@ class fl extends hg {
 
     public static void a(byte param0) {
         field_h = null;
-        int var1 = 126 % ((param0 - 50) / 35);
+        int var1 = 0;
         field_n = null;
         field_m = null;
         field_k = null;

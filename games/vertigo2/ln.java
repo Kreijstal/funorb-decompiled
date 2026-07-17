@@ -17,27 +17,40 @@ final class ln {
         field_b = null;
         field_e = null;
         field_d = null;
-        if (param0 >= -33) {
-            field_b = null;
-        }
     }
 
     final static boolean c(int param0) {
-        if (param0 != 132199140) {
-            return true;
-        }
-        return !cl.field_c.a((byte) -105) ? true : false;
+        return !cl.field_c.a((byte) -105);
     }
 
     final static void b(int param0) {
+        int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        int var4 = Vertigo2.field_L ? 1 : 0;
-        int var1 = eb.field_g[param0];
-        for (var2 = 1; eb.field_g.length > var2; var2++) {
-            var3 = eb.field_g[var2];
-            qq.a(ac.field_K, var2 << 132199140, ac.field_K, var1, var3);
-            var1 = var1 + var3;
+        int var4 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var4 = Vertigo2.field_L ? 1 : 0;
+        try {
+          L0: {
+            var1_int = eb.field_g[0];
+            var2 = 1;
+            L1: while (true) {
+              if (eb.field_g.length <= var2) {
+                break L0;
+              } else {
+                var3 = eb.field_g[var2];
+                qq.a(ac.field_K, var2 << 4, ac.field_K, var1_int, var3);
+                var1_int = var1_int + var3;
+                var2++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw wn.a((Throwable) (Object) var1, "ln.E(" + 0 + 41);
         }
     }
 

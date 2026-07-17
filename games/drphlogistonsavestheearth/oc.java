@@ -43,14 +43,7 @@ final class oc {
         gf.field_o = null;
         vi.field_b = null;
         aj.field_a = null;
-        if (param0 != -21) {
-          field_B = -28;
-          a.field_e = null;
-          return;
-        } else {
-          a.field_e = null;
-          return;
-        }
+        a.field_e = null;
     }
 
     oc() {

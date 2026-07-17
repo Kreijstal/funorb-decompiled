@@ -11,68 +11,112 @@ final class tf extends tc {
 
     final static void a(int param0, int param1, int param2, int[] param3, int param4) {
         int[] var5 = null;
+        RuntimeException var5_ref = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int[] var9 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
         var8 = ArmiesOfGielinor.field_M ? 1 : 0;
-        if (param1 == -1432128863) {
-          L0: while (true) {
-            param2--;
-            if (0 <= param2) {
-              var9 = param3;
-              var5 = var9;
-              var6 = param0;
-              var7 = param4;
-              var9[var6] = var7 - -rn.a(var9[var6] >> -1432128863, 8355711);
-              param0++;
-              continue L0;
+        try {
+          L0: {
+            if (param1 == -1432128863) {
+              L1: while (true) {
+                param2--;
+                if (0 > param2) {
+                  break L0;
+                } else {
+                  var9 = param3;
+                  var5 = var9;
+                  var6 = param0;
+                  var7 = param4;
+                  var9[var6] = var7 - -rn.a(var9[var6] >> 1, 8355711);
+                  param0++;
+                  continue L1;
+                }
+              }
             } else {
               return;
             }
           }
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var5_ref = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var5_ref;
+            stackOut_6_1 = new StringBuilder().append("tf.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param3 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L2;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L2;
+            }
+          }
+          throw ig.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param4 + 41);
         }
     }
 
     public static void a(boolean param0) {
         field_m = null;
         field_p = null;
-        if (!param0) {
-            return;
-        }
-        field_m = null;
     }
 
     final static void a(int param0, nt param1, byte param2) {
         bv var3 = null;
-        var3 = vl.field_n;
-        var3.h(32161, param0);
-        var3.b(1, param1.field_o);
-        if (param2 != -64) {
-          field_m = null;
-          var3.b(1, param1.field_q);
-          return;
-        } else {
-          var3.b(1, param1.field_q);
-          return;
+        try {
+            var3 = vl.field_n;
+            var3.h(32161, param0);
+            var3.b(1, param1.field_o);
+            var3.b(1, param1.field_q);
+        } catch (RuntimeException runtimeException) {
+            throw ig.a((Throwable) (Object) runtimeException, "tf.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + -64 + 41);
         }
     }
 
     final static void a(byte param0, java.applet.Applet param1) {
-        String var2 = null;
         String var3 = null;
         long var4 = 0L;
         at.field_a = true;
-        var2 = "tuhstatbut";
+        String var2 = "tuhstatbut";
         if (param0 != -99) {
-          return;
-        } else {
-          var3 = "rvnadlm";
-          var4 = -1L;
-          tc.a(param1, var3, (byte) 120, var2, var4);
-          return;
+            return;
+        }
+        try {
+            var3 = "rvnadlm";
+            var4 = -1L;
+            tc.a(param1, var3, (byte) 120, var2, var4);
+        } catch (RuntimeException runtimeException) {
+            throw ig.a((Throwable) (Object) runtimeException, "tf.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

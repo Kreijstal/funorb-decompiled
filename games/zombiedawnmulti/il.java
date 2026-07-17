@@ -21,22 +21,19 @@ final class il extends br {
         ((il) this).field_o = param4;
         ((il) this).field_h = param0;
         if (param3 != -120) {
-          return;
-        } else {
-          ((il) this).field_p = param2;
-          ((il) this).field_m = param5;
-          return;
+            return;
+        }
+        try {
+            ((il) this).field_p = param2;
+            ((il) this).field_m = param5;
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) (Object) runtimeException, "il.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 44 + param6 + 44 + param7 + 41);
         }
     }
 
     public static void a(int param0) {
         field_j = null;
         field_n = null;
-        if (param0 != 27467) {
-            field_k = 4;
-            field_l = null;
-            return;
-        }
         field_l = null;
     }
 

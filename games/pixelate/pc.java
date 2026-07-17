@@ -226,14 +226,14 @@ final class pc extends we {
                 var3_int = ((gp) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_5_2 != 0, 2, param0 * (3 * fq.field_q + 6), 0, 2 + fq.field_q) ? 1 : 0;
                 var4 = ma.field_z.field_Fb.field_L;
                 var5 = null;
-                if ((gk.field_db ^ -1) == -3) {
+                if (gk.field_db == 2) {
                   break L3;
                 } else {
                   L4: {
                     L5: {
                       wa.field_f.field_rb = false;
                       ak.field_E.field_cb = wd.field_b;
-                      if ((gk.field_db ^ -1) == -2) {
+                      if (gk.field_db == 1) {
                         break L5;
                       } else {
                         ma.field_z.field_Gb.field_Ib.field_cb = mk.field_c;
@@ -508,7 +508,7 @@ final class pc extends we {
                   break L7;
                 }
                 L24: {
-                  if ((((ak) (Object) stackIn_95_0).field_P ^ -1) == -1) {
+                  if (((ak) (Object) stackIn_95_0).field_P == 0) {
                     break L24;
                   } else {
                     he.field_f = new ve(ma.field_z.field_Ib.field_tb, ma.field_z.field_Ib.field_gb, ma.field_z.field_Ib.field_K, ma.field_z.field_Ib.field_nb, jj.field_j, po.field_c, mg.field_h, mg.field_h);
@@ -516,7 +516,7 @@ final class pc extends we {
                     break L24;
                   }
                 }
-                if ((ma.field_z.field_Hb.field_P ^ -1) == -1) {
+                if (ma.field_z.field_Hb.field_P == 0) {
                   break L2;
                 } else {
                   he.field_f = new ve(ma.field_z.field_Hb.field_tb, ma.field_z.field_Hb.field_gb, ma.field_z.field_Hb.field_K, ma.field_z.field_Hb.field_nb, hp.field_Fb, po.field_c, mg.field_h, mg.field_h);
@@ -669,7 +669,7 @@ final class pc extends we {
               L3: {
                 param2 = ub.a(param2, param1 ^ -47, "", '_');
                 var3 = bc.b(0, param0);
-                if (0 != (param2.indexOf(param0) ^ -1)) {
+                if (param2.indexOf(param0) != -1) {
                   break L3;
                 } else {
                   if (param2.indexOf(var3) == -1) {
@@ -811,7 +811,7 @@ final class pc extends we {
         var6 = Pixelate.field_H ? 1 : 0;
         try {
           L0: {
-            var3_int = ((pc) this).field_r >> 2128391779;
+            var3_int = ((pc) this).field_r >> 3;
             if (param1 == -34) {
               var4 = 8 + -(7 & ((pc) this).field_r);
               var5 = 0;
@@ -820,7 +820,7 @@ final class pc extends we {
                 L2: {
                   L3: {
                     L4: {
-                      if ((var4 ^ -1) <= (param0 ^ -1)) {
+                      if (~var4 <= ~param0) {
                         break L4;
                       } else {
                         int incrementValue$2 = var3_int;
@@ -839,7 +839,7 @@ final class pc extends we {
                         }
                       }
                     }
-                    if ((param0 ^ -1) == (var4 ^ -1)) {
+                    if (~param0 == ~var4) {
                       break L3;
                     } else {
                       var5 = var5 + (((pc) this).field_k[var3_int] >> -param0 + var4 & pk.field_a[param0]);

@@ -13,9 +13,6 @@ final class rn {
         field_b = null;
         field_c = null;
         field_e = null;
-        if (param0 >= -116) {
-            return;
-        }
         field_a = null;
     }
 

@@ -11,7 +11,7 @@ final class bc {
         int var2 = 0;
         byte[] var3 = null;
         L0: {
-          if ((param1 ^ -1) != -101) {
+          if (param1 != 100) {
             break L0;
           } else {
             if (hk.field_Hb <= 0) {
@@ -29,7 +29,7 @@ final class bc {
           if (param1 != 5000) {
             break L1;
           } else {
-            if (-1 > (te.field_i ^ -1)) {
+            if (te.field_i > 0) {
               int fieldTemp$7 = te.field_i - 1;
               te.field_i = te.field_i - 1;
               var2_ref_byte__ = sm.field_b[fieldTemp$7];
@@ -478,9 +478,6 @@ final class bc {
     public static void a(byte param0) {
         field_a = null;
         field_b = null;
-        if (param0 != -101) {
-            bc.a(true, (byte) -43);
-        }
     }
 
     static {

@@ -6789,7 +6789,7 @@ final class gi {
               L2: while (true) {
                 L3: {
                   L4: {
-                    if ((param1.length() ^ -1) >= (var2_int ^ -1)) {
+                    if (~param1.length() >= ~var2_int) {
                       break L4;
                     } else {
                       stackOut_11_0 = sj.a(3010, param1.charAt(var2_int));

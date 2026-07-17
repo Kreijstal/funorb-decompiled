@@ -13,9 +13,6 @@ final class j extends mi {
     final static void e(int param0) {
         wg.field_i.field_b = 0;
         wg.field_i.field_q = 0;
-        if (param0 != -21754) {
-            field_lb = null;
-        }
     }
 
     j() {

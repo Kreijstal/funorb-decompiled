@@ -9,11 +9,6 @@ final class tq {
 
     final static void a(boolean param0, boolean param1) {
         al.a(-47, param0);
-        if (param1) {
-            tq.a((byte) 89);
-            wc.a(param0, true);
-            return;
-        }
         wc.a(param0, true);
     }
 
@@ -40,8 +35,8 @@ final class tq {
     final static void a(int param0, int param1) {
         bv var2 = vl.field_n;
         var2.h(32161, param0);
-        var2.b(param1 ^ 1, 1);
-        var2.b(1, param1);
+        var2.b(1, 1);
+        var2.b(1, 0);
     }
 
     final static wk[] a(int param0, boolean param1, int param2, int param3, int param4, int param5) {
@@ -53,7 +48,7 @@ final class tq {
         wk var11 = null;
         wk var12 = null;
         wk var13 = null;
-        wk var14 = null;
+        Object var14 = null;
         int[] var15 = null;
         wk var16 = null;
         int[] var17 = null;
@@ -88,18 +83,18 @@ final class tq {
             var13.b();
             qn.f(0, 0, 16, param4, param5);
             var14 = null;
-            if ((param3 ^ -1) >= -1) {
+            if (param3 <= 0) {
               break L0;
             } else {
               var16 = new wk(16, 16);
-              var14 = var16;
+              var14 = (Object) (Object) var16;
               var16.b();
               qn.f(0, 0, 16, 16, param3);
               break L0;
             }
           }
           qn.a(var20, var7, var8);
-          return new wk[]{var10, var11, var10, var9, var14, var9, var12, var13, var12};
+          return new wk[]{var10, var11, var10, var9, (wk) var14, var9, var12, var13, var12};
         }
     }
 

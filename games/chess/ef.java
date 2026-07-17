@@ -9,21 +9,19 @@ final class ef extends o {
     static String field_m;
 
     final static void a(pf param0, int param1) {
-        int var2 = 0;
-        if (wf.field_R == param0) {
-          return;
-        } else {
-          fk.field_q.e(-3435);
-          mh.field_d.g();
-          wf.field_R = param0;
-          if (wf.field_R != null) {
-            fk.field_q.a(false, wf.field_R, 59);
-            var2 = 0 % ((-35 - param1) / 36);
+        if (!(wf.field_R != param0)) {
             return;
-          } else {
-            var2 = 0 % ((-35 - param1) / 36);
-            return;
-          }
+        }
+        try {
+            fk.field_q.e(-3435);
+            mh.field_d.g();
+            wf.field_R = param0;
+            if (wf.field_R != null) {
+                fk.field_q.a(false, wf.field_R, 59);
+            }
+            int var2_int = 0 % ((-35 - param1) / 36);
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "ef.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
@@ -32,20 +30,10 @@ final class ef extends o {
     }
 
     public static void a(int param0) {
-        Object var2 = null;
         field_n = null;
         field_j = null;
-        if (param0 != 27706) {
-          var2 = null;
-          ef.a((pf) null, -119);
-          field_l = null;
-          field_m = null;
-          return;
-        } else {
-          field_l = null;
-          field_m = null;
-          return;
-        }
+        field_l = null;
+        field_m = null;
     }
 
     static {

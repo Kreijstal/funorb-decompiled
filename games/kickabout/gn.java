@@ -96,17 +96,10 @@ class gn {
     }
 
     final static int d(byte param0) {
-        if (param0 <= 44) {
-            field_c = null;
-            return bh.field_j;
-        }
         return bh.field_j;
     }
 
     public static void d(int param0) {
-        if (param0 <= 114) {
-            return;
-        }
         field_c = null;
     }
 
@@ -130,25 +123,19 @@ class gn {
     }
 
     final static void a(int param0, int param1, int param2, StringBuilder param3) {
-        String var4 = null;
         int var5 = 0;
-        int var6 = 0;
-        var6 = Kickabout.field_G;
-        var4 = Integer.toBinaryString(param0);
+        int var6 = Kickabout.field_G;
+        String var4 = Integer.toBinaryString(param0);
         if (param1 != -28745) {
-          return;
-        } else {
-          var5 = 0;
-          L0: while (true) {
-            if (param2 - var4.length() <= var5) {
-              StringBuilder discarded$4 = param3.append(var4);
-              return;
-            } else {
-              StringBuilder discarded$5 = param3.append(48);
-              var5++;
-              continue L0;
+            return;
+        }
+        try {
+            for (var5 = 0; param2 - var4.length() > var5; var5++) {
+                StringBuilder discarded$0 = param3.append(48);
             }
-          }
+            StringBuilder discarded$1 = param3.append(var4);
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "gn.QB(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 

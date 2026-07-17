@@ -47,12 +47,12 @@ abstract class ar {
 
     final boolean c(byte param0) {
         int var2 = -70 % ((47 - param0) / 56);
-        return -21 >= (((ar) this).b(-5205) ^ -1) ? true : false;
+        return ((ar) this).b(-5205) >= 20 ? true : false;
     }
 
     final static void a(int param0, int param1, int param2, byte param3, int param4, int param5) {
         int var6 = 0;
-        if ((Math.abs(param1) | Math.abs(param4) | Math.abs(param0) | Math.abs(param2)) >>> -1998687981 == 0) {
+        if ((Math.abs(param1) | Math.abs(param4) | Math.abs(param0) | Math.abs(param2)) >>> 19 == 0) {
           var6 = -104 % ((-50 - param3) / 36);
           if (Math.abs(param0 - param1) < Math.abs(param2 + -param4)) {
             in.a(param5, param4, 80, param2, param1, param0);
@@ -67,7 +67,7 @@ abstract class ar {
     }
 
     final tk a(boolean param0, int param1, byte param2, int param3, int param4) {
-        long var6 = ((long)param1 << -2057056416) - -(long)param4;
+        long var6 = ((long)param1 << 32) - -(long)param4;
         tk var8 = new tk();
         var8.field_w = param2;
         var8.field_q = param0 ? true : false;
@@ -80,7 +80,7 @@ abstract class ar {
                 }
                 ((ar) this).field_h.a((df) (Object) var8, 32);
             } else {
-                if (!(-21 < (((ar) this).b(-5205) ^ -1))) {
+                if (!(((ar) this).b(-5205) < 20)) {
                     throw new RuntimeException();
                 }
                 ((ar) this).field_m.a((df) (Object) var8, 32);
@@ -93,7 +93,7 @@ abstract class ar {
             }
             ((ar) this).field_h.a((df) (Object) var8, 32);
         } else {
-            if (!(-21 < (((ar) this).b(-5205) ^ -1))) {
+            if (!(((ar) this).b(-5205) < 20)) {
                 throw new RuntimeException();
             }
             ((ar) this).field_m.a((df) (Object) var8, 32);
@@ -105,7 +105,7 @@ abstract class ar {
         if (param0 != 27356) {
             return false;
         }
-        return (((ar) this).a((byte) 0) ^ -1) <= -21 ? true : false;
+        return ((ar) this).a((byte) 0) >= 20 ? true : false;
     }
 
     public static void a(int param0) {

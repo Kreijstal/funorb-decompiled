@@ -11,60 +11,58 @@ class gh extends uc {
     static int field_v;
 
     public final void a(ng param0, byte param1, int param2, int param3, boolean param4) {
-        if (param4) {
-          kk.a(param3 - -param0.field_z, param0.field_C, param0.field_p + param2, param0.field_E, (byte) -51);
-          super.a(param0, param1, param2, param3, param4);
-          return;
-        } else {
-          super.a(param0, param1, param2, param3, param4);
-          return;
+        try {
+            if (param4) {
+                kk.a(param3 - -param0.field_z, param0.field_C, param0.field_p + param2, param0.field_E, (byte) -51);
+            }
+            super.a(param0, param1, param2, param3, param4);
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "gh.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
     final static void d(int param0) {
         pc var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
+        RuntimeException decompiledCaughtException = null;
         var3 = Pixelate.field_H ? 1 : 0;
-        var1 = aa.field_f;
-        if (param0 != 8) {
-          gh.d(110);
-          L0: while (true) {
-            if (lf.a((byte) -91)) {
-              var1.g(8, 15514);
-              int fieldTemp$2 = var1.field_m + 1;
-              var1.field_m = var1.field_m + 1;
-              var2 = fieldTemp$2;
-              ao.a(var1, -20);
-              aa.field_f.f(var1.field_m + -var2, param0 ^ -9);
-              continue L0;
-            } else {
-              return;
+        try {
+          L0: {
+            L1: {
+              var1 = aa.field_f;
+              if (param0 == 8) {
+                break L1;
+              } else {
+                gh.d(110);
+                break L1;
+              }
+            }
+            L2: while (true) {
+              if (!lf.a((byte) -91)) {
+                break L0;
+              } else {
+                var1.g(8, 15514);
+                int fieldTemp$5 = var1.field_m + 1;
+                var1.field_m = var1.field_m + 1;
+                var2 = fieldTemp$5;
+                ao.a(var1, -20);
+                aa.field_f.f(var1.field_m + -var2, param0 ^ -9);
+                continue L2;
+              }
             }
           }
-        } else {
-          L1: while (true) {
-            if (lf.a((byte) -91)) {
-              var1.g(8, 15514);
-              int fieldTemp$3 = var1.field_m + 1;
-              var1.field_m = var1.field_m + 1;
-              var2 = fieldTemp$3;
-              ao.a(var1, -20);
-              aa.field_f.f(var1.field_m + -var2, param0 ^ -9);
-              continue L1;
-            } else {
-              return;
-            }
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw aa.a((Throwable) (Object) var1_ref, "gh.B(" + param0 + 41);
         }
     }
 
     public static void c(int param0) {
         field_q = null;
         field_s = null;
-        if (param0 >= -72) {
-            return;
-        }
         field_w = null;
         field_u = null;
         field_r = null;
@@ -105,12 +103,7 @@ class gh extends uc {
                       }
                     }
                     if (decompiledRegionSelector0 == 0) {
-                      if (param0 != 90) {
-                        gh.d(-108);
-                        return;
-                      } else {
-                        return;
-                      }
+                      return;
                     } else {
                       break L1;
                     }
@@ -124,12 +117,6 @@ class gh extends uc {
                 var1_ref = (Exception) (Object) decompiledCaughtException;
                 break L4;
               }
-            }
-            if (param0 == 90) {
-              return;
-            } else {
-              gh.d(-108);
-              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

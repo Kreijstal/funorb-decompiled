@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.net.URL;
+
 final class ag {
     static String[] field_b;
     static kh field_a;
@@ -37,91 +39,134 @@ final class ag {
     final static java.net.URL a(java.applet.Applet param0, java.net.URL param1, boolean param2) {
         Object var3 = null;
         Object var4 = null;
-        Object var5 = null;
-        L0: {
-          var5 = null;
-          var3 = var5;
-          var4 = null;
-          if (null == jg.field_B) {
-            break L0;
-          } else {
-            if (!jg.field_B.equals((Object) (Object) param0.getParameter("settings"))) {
-              var3 = (Object) (Object) jg.field_B;
-              var4 = var3;
-              var4 = var3;
-              break L0;
-            } else {
-              if (!param2) {
-                L1: {
-                  if (null == bl.field_b) {
-                    break L1;
-                  } else {
-                    if (bl.field_b.equals((Object) (Object) param0.getParameter("session"))) {
-                      break L1;
-                    } else {
-                      var4 = (Object) (Object) bl.field_b;
-                      break L1;
-                    }
-                  }
-                }
-                return bi.a(param1, (byte) -107, -1, (String) var5, (String) var4);
+        java.net.URL stackIn_8_0 = null;
+        Object stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        Object stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        Object stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_12_2 = null;
+        Object stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        Object stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        Object stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        java.net.URL stackOut_7_0 = null;
+        Object stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        Object stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        Object stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        Object stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        Object stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        Object stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        try {
+          L0: {
+            L1: {
+              var3 = null;
+              var4 = null;
+              if (null == jg.field_B) {
+                break L1;
               } else {
-                L2: {
-                  field_c = 112;
-                  if (null == bl.field_b) {
-                    break L2;
-                  } else {
-                    if (bl.field_b.equals((Object) (Object) param0.getParameter("session"))) {
-                      break L2;
-                    } else {
-                      var4 = (Object) (Object) bl.field_b;
-                      break L2;
-                    }
-                  }
+                if (!jg.field_B.equals((Object) (Object) param0.getParameter("settings"))) {
+                  var3 = (Object) (Object) jg.field_B;
+                  var4 = var3;
+                  var4 = var3;
+                  break L1;
+                } else {
+                  break L1;
                 }
-                return bi.a(param1, (byte) -107, -1, (String) var5, (String) var4);
               }
             }
+            L2: {
+              if (null == bl.field_b) {
+                break L2;
+              } else {
+                if (bl.field_b.equals((Object) (Object) param0.getParameter("session"))) {
+                  break L2;
+                } else {
+                  var4 = (Object) (Object) bl.field_b;
+                  break L2;
+                }
+              }
+            }
+            stackOut_7_0 = bi.a(param1, (byte) -107, -1, (String) var3, (String) var4);
+            stackIn_8_0 = stackOut_7_0;
+            break L0;
           }
-        }
-        if (param2) {
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
           L3: {
-            field_c = 112;
-            if (null == bl.field_b) {
+            var3 = (Object) (Object) decompiledCaughtException;
+            stackOut_9_0 = var3;
+            stackOut_9_1 = new StringBuilder().append("ag.C(");
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
+            if (param0 == null) {
+              stackOut_11_0 = stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
               break L3;
             } else {
-              if (bl.field_b.equals((Object) (Object) param0.getParameter("session"))) {
-                break L3;
-              } else {
-                var4 = (Object) (Object) bl.field_b;
-                break L3;
-              }
+              stackOut_10_0 = stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
+              break L3;
             }
           }
-          return bi.a(param1, (byte) -107, -1, (String) var3, (String) var4);
-        } else {
           L4: {
-            if (null == bl.field_b) {
+            stackOut_12_0 = stackIn_12_0;
+            stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(44);
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
+            if (param1 == null) {
+              stackOut_14_0 = stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
               break L4;
             } else {
-              if (bl.field_b.equals((Object) (Object) param0.getParameter("session"))) {
-                break L4;
-              } else {
-                var4 = (Object) (Object) bl.field_b;
-                break L4;
-              }
+              stackOut_13_0 = stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L4;
             }
           }
-          return bi.a(param1, (byte) -107, -1, (String) var3, (String) var4);
+          throw ii.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + 0 + 41);
         }
+        return stackIn_8_0;
     }
 
     public static void a(int param0) {
         field_b = null;
         field_a = null;
-        if (param0 != -1) {
-            String discarded$0 = ag.b(8);
-        }
     }
 
     static {

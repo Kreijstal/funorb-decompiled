@@ -10,7 +10,7 @@ abstract class wk extends se implements kh {
     static int field_G;
 
     public final j a(byte param0) {
-        int var2 = 108 / ((param0 - 0) / 43);
+        int var2 = 108 / (param0 / 43);
         return (j) (Object) ((wk) this).field_H;
     }
 
@@ -27,25 +27,23 @@ abstract class wk extends se implements kh {
     abstract boolean a(int param0);
 
     void a(int param0, dj param1) {
-        if (param0 != 3) {
-          int discarded$2 = ((wk) this).j(-11);
-          ((wk) this).field_H = param1;
-          ((wk) this).field_H.field_n = (wk) this;
-          return;
-        } else {
-          ((wk) this).field_H = param1;
-          ((wk) this).field_H.field_n = (wk) this;
-          return;
+        try {
+            if (param0 != 3) {
+                int discarded$0 = ((wk) this).j(-11);
+            }
+            ((wk) this).field_H = param1;
+            ((wk) this).field_H.field_n = (wk) this;
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) (Object) runtimeException, "wk.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
     final static void a(String param0, byte param1) {
-        if (param1 <= 27) {
-            wk.h(-110);
+        try {
             oe.field_f = param0;
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) (Object) runtimeException, "wk.C(" + (param0 != null ? "{...}" : "null") + 44 + 48 + 41);
         }
-        oe.field_f = param0;
     }
 
     public static void h(int param0) {

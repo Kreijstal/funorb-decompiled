@@ -67,7 +67,7 @@ final class ea extends ve {
                 break L0;
               } else {
                 L2: {
-                  if ((param3 ^ -1) != -2) {
+                  if (param3 != 1) {
                     break L2;
                   } else {
                     if (ra.field_m == param1) {
@@ -113,7 +113,7 @@ final class ea extends ve {
             }
           }
           L5: {
-            if ((param3 ^ -1) != -2) {
+            if (param3 != 1) {
               break L5;
             } else {
               if (ra.field_m == param1) {
@@ -185,7 +185,7 @@ final class ea extends ve {
                 ub.a(stackIn_27_0, stackIn_27_1 != 0);
                 break L8;
               } else {
-                if ((param3 ^ -1) == -2) {
+                if (param3 == 1) {
                   if (ra.field_m != param1) {
                     ui.field_s = true;
                     ra.field_m = param1;
@@ -234,7 +234,7 @@ final class ea extends ve {
             }
           }
           L10: {
-            if ((param3 ^ -1) != -2) {
+            if (param3 != 1) {
               break L10;
             } else {
               if (ra.field_m == param1) {

@@ -14,122 +14,64 @@ final class fp extends wf {
             IOException var3 = null;
             dl var4 = null;
             int stackIn_11_0 = 0;
-            int stackOut_9_0 = 0;
+            Throwable decompiledCaughtException = null;
             int stackOut_10_0 = 0;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        if (null == gr.field_b) {
-                            statePc = 2;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
+            int stackOut_9_0 = 0;
+            L0: {
+              if (null == gr.field_b) {
+                gr.field_b = ii.field_j.a(2, ca.field_g, sg.field_b);
+                break L0;
+              } else {
+                break L0;
+              }
+            }
+            if (gr.field_b.field_a == 0) {
+              return false;
+            } else {
+              var2 = 72 / ((-10 - param0) / 56);
+              long dupTemp$2 = kh.a(-114);
+              co.field_e = dupTemp$2;
+              ff.field_b = dupTemp$2;
+              if (gr.field_b.field_a == 1) {
+                try {
+                  L1: {
+                    L2: {
+                      ft.field_l = new vf((java.net.Socket) gr.field_b.field_f, ii.field_j);
+                      var4 = nm.field_c;
+                      q.field_p.field_g = 0;
+                      var4.field_g = 0;
+                      if (!param1) {
+                        stackOut_10_0 = -1;
+                        stackIn_11_0 = stackOut_10_0;
+                        break L2;
+                      } else {
+                        stackOut_9_0 = -2;
+                        stackIn_11_0 = stackOut_9_0;
+                        break L2;
+                      }
                     }
-                    case 2: {
-                        gr.field_b = ii.field_j.a(2, ca.field_g, sg.field_b);
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                    case 3: {
-                        if (-1 == (gr.field_b.field_a ^ -1)) {
-                            statePc = 5;
-                        } else {
-                            statePc = 6;
-                        }
-                        continue stateLoop;
-                    }
-                    case 5: {
-                        return false;
-                    }
-                    case 6: {
-                        var2 = 72 / ((-10 - param0) / 56);
-                        co.field_e = kh.a(-114);
-                        ff.field_b = kh.a(-114);
-                        if ((gr.field_b.field_a ^ -1) == -2) {
-                            statePc = 8;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    }
-                    case 7: {
-                        ca.field_f = pj.field_f;
-                        gr.field_b = null;
-                        return true;
-                    }
-                    case 8: {
-                        try {
-                            ft.field_l = new vf((java.net.Socket) gr.field_b.field_f, ii.field_j);
-                            var4 = nm.field_c;
-                            q.field_p.field_g = 0;
-                            var4.field_g = 0;
-                            if (!param1) {
-                                statePc = 10;
-                            } else {
-                                statePc = 9;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_8) {
-                            caughtException = stateCaught_8;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 9: {
-                        try {
-                            stackOut_9_0 = -2;
-                            stackIn_11_0 = stackOut_9_0;
-                            statePc = 11;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_9) {
-                            caughtException = stateCaught_9;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 10: {
-                        try {
-                            stackOut_10_0 = -1;
-                            stackIn_11_0 = stackOut_10_0;
-                            statePc = 11;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_10) {
-                            caughtException = stateCaught_10;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 11: {
-                        try {
-                            ga.field_l = stackIn_11_0;
-                            kg.field_b = stackIn_11_0;
-                            hi.field_w = stackIn_11_0;
-                            ca.field_f = qa.field_b;
-                            tr.a((rb) (Object) q.field_p, ut.field_a, id.field_d, ko.field_f, 0);
-                            fr.a(-34, -1);
-                            statePc = 12;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_11) {
-                            caughtException = stateCaught_11;
-                            statePc = 13;
-                            continue stateLoop;
-                        }
-                    }
-                    case 12: {
-                        gr.field_b = null;
-                        return true;
-                    }
-                    case 13: {
-                        var3 = (IOException) (Object) caughtException;
-                        ca.field_f = pj.field_f;
-                        gr.field_b = null;
-                        return true;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+                    ga.field_l = stackIn_11_0;
+                    kg.field_b = stackIn_11_0;
+                    hi.field_w = stackIn_11_0;
+                    ca.field_f = qa.field_b;
+                    tr.a((rb) (Object) q.field_p, ut.field_a, id.field_d, ko.field_f, 0);
+                    fr.a(-34, -1);
+                    break L1;
+                  }
+                } catch (java.io.IOException decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  var3 = (IOException) (Object) decompiledCaughtException;
+                  ca.field_f = pj.field_f;
+                  gr.field_b = null;
+                  return true;
                 }
+                gr.field_b = null;
+                return true;
+              } else {
+                ca.field_f = pj.field_f;
+                gr.field_b = null;
+                return true;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

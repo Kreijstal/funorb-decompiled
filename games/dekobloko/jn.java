@@ -52,19 +52,12 @@ final class jn extends en {
 
     final void a(int param0) throws javax.sound.sampled.LineUnavailableException {
         javax.sound.sampled.DataLine.Info var2 = null;
-        try {
+        {
             var2 = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, ((jn) this).field_v, param0 << (field_u ? 2 : 1));
             ((jn) this).field_w = (javax.sound.sampled.SourceDataLine) (Object) javax.sound.sampled.AudioSystem.getLine((javax.sound.sampled.Line.Info) (Object) var2);
             ((jn) this).field_w.open();
             ((jn) this).field_w.start();
             ((jn) this).field_z = param0;
-        } catch (javax.sound.sampled.LineUnavailableException lineUnavailableException) {
-            if (h.a(param0, 101) != 1) {
-                ((jn) this).a(oe.b(-10498, param0));
-                return;
-            }
-            ((jn) this).field_w = null;
-            throw lineUnavailableException;
         }
     }
 

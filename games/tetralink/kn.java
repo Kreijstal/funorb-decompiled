@@ -18,16 +18,8 @@ final class kn {
     public static void a(boolean param0) {
         field_b = null;
         field_d = null;
-        if (!param0) {
-          kn.a(62);
-          field_c = null;
-          field_f = null;
-          return;
-        } else {
-          field_c = null;
-          field_f = null;
-          return;
-        }
+        field_c = null;
+        field_f = null;
     }
 
     static {

@@ -16,16 +16,6 @@ abstract class ca {
     static String field_d;
 
     final static boolean c(int param0) {
-        if (param0 != -25945) {
-            field_b = null;
-            if (fn.field_R < 10) {
-                return false;
-            }
-            if (bh.field_r) {
-                return false;
-            }
-            return !r.d(0) ? true : false;
-        }
         if (fn.field_R < 10) {
             return false;
         }
@@ -49,7 +39,7 @@ abstract class ca {
     final static void b(int param0) {
         int var1 = nn.f((byte) -102);
         int var2 = ed.h(32768);
-        nm.field_o.a(ab.field_Q - fl.field_b, ja.field_j + -ng.field_D, (byte) -21, (ng.field_D << -2027189439) + var1, var2 + (fl.field_b << 2017412225));
+        nm.field_o.a(ab.field_Q - fl.field_b, ja.field_j + -ng.field_D, (byte) -21, (ng.field_D << 1) + var1, var2 + (fl.field_b << 1));
         if (param0 >= -2) {
             ca.a(false, (byte) 121);
             na.c(true);
@@ -63,7 +53,7 @@ abstract class ca {
             return;
         }
         rn.field_d = rn.field_d + param0;
-        if (!((cl.field_g ^ -1) != -2)) {
+        if (!(cl.field_g != 1)) {
             cl.field_g = 0;
         }
         if (!(rn.field_d >= 64.0f)) {
@@ -109,8 +99,8 @@ abstract class ca {
           lg.field_S = false;
           if (param0) {
             if (0 >= qd.field_ab) {
-              if (-1 <= (ng.field_t ^ -1)) {
-                if (-1 > (am.field_f ^ -1)) {
+              if (ng.field_t <= 0) {
+                if (am.field_f > 0) {
                   am.field_f = am.field_f - 1;
                   if (param1 == 16) {
                     return;
@@ -147,11 +137,11 @@ abstract class ca {
           } else {
             if (qb.field_N == null) {
               if (qe.field_a != null) {
-                if ((qd.field_ab ^ -1) >= -1) {
-                  if ((am.field_f ^ -1) >= -1) {
+                if (qd.field_ab <= 0) {
+                  if (am.field_f <= 0) {
                     if (ma.field_f > ng.field_t) {
                       L0: {
-                        if ((ng.field_t ^ -1) == -1) {
+                        if (ng.field_t == 0) {
                           ic.a(true, (byte) -128);
                           break L0;
                         } else {
@@ -202,7 +192,7 @@ abstract class ca {
                     return;
                   }
                 } else {
-                  if ((am.field_f ^ -1) < -1) {
+                  if (am.field_f > 0) {
                     am.field_f = am.field_f - 1;
                     if (param1 == 16) {
                       return;
@@ -211,7 +201,7 @@ abstract class ca {
                       return;
                     }
                   } else {
-                    if ((qd.field_ab ^ -1) > (ma.field_f ^ -1)) {
+                    if (~qd.field_ab > ~ma.field_f) {
                       if (0 == qd.field_ab) {
                         pd.b(false);
                         qd.field_ab = qd.field_ab + 1;
@@ -252,10 +242,10 @@ abstract class ca {
                 }
               } else {
                 L1: {
-                  if (-1 <= (ng.field_t ^ -1)) {
+                  if (ng.field_t <= 0) {
                     if (am.field_f < ma.field_f) {
                       L2: {
-                        if (-1 == (am.field_f ^ -1)) {
+                        if (am.field_f == 0) {
                           ic.a(false, (byte) -128);
                           break L2;
                         } else {
@@ -291,8 +281,8 @@ abstract class ca {
             lg.field_S = false;
             if (param0) {
               if (0 >= qd.field_ab) {
-                if (-1 <= (ng.field_t ^ -1)) {
-                  if (-1 > (am.field_f ^ -1)) {
+                if (ng.field_t <= 0) {
+                  if (am.field_f > 0) {
                     am.field_f = am.field_f - 1;
                     if (param1 == 16) {
                       return;
@@ -329,11 +319,11 @@ abstract class ca {
             } else {
               if (qb.field_N == null) {
                 if (qe.field_a != null) {
-                  if ((qd.field_ab ^ -1) >= -1) {
-                    if ((am.field_f ^ -1) >= -1) {
+                  if (qd.field_ab <= 0) {
+                    if (am.field_f <= 0) {
                       if (ma.field_f > ng.field_t) {
                         L3: {
-                          if ((ng.field_t ^ -1) == -1) {
+                          if (ng.field_t == 0) {
                             ic.a(true, (byte) -128);
                             break L3;
                           } else {
@@ -384,7 +374,7 @@ abstract class ca {
                       return;
                     }
                   } else {
-                    if ((am.field_f ^ -1) < -1) {
+                    if (am.field_f > 0) {
                       am.field_f = am.field_f - 1;
                       if (param1 == 16) {
                         return;
@@ -393,7 +383,7 @@ abstract class ca {
                         return;
                       }
                     } else {
-                      if ((qd.field_ab ^ -1) > (ma.field_f ^ -1)) {
+                      if (~qd.field_ab > ~ma.field_f) {
                         if (0 == qd.field_ab) {
                           pd.b(false);
                           qd.field_ab = qd.field_ab + 1;
@@ -433,10 +423,10 @@ abstract class ca {
                     return;
                   }
                 } else {
-                  if (-1 <= (ng.field_t ^ -1)) {
+                  if (ng.field_t <= 0) {
                     if (am.field_f < ma.field_f) {
                       L4: {
-                        if (-1 == (am.field_f ^ -1)) {
+                        if (am.field_f == 0) {
                           ic.a(false, (byte) -128);
                           break L4;
                         } else {
@@ -473,8 +463,8 @@ abstract class ca {
           } else {
             if (param0) {
               if (0 >= qd.field_ab) {
-                if (-1 <= (ng.field_t ^ -1)) {
-                  if (-1 > (am.field_f ^ -1)) {
+                if (ng.field_t <= 0) {
+                  if (am.field_f > 0) {
                     am.field_f = am.field_f - 1;
                     if (param1 == 16) {
                       return;
@@ -511,11 +501,11 @@ abstract class ca {
             } else {
               if (qb.field_N == null) {
                 if (qe.field_a != null) {
-                  if ((qd.field_ab ^ -1) >= -1) {
-                    if ((am.field_f ^ -1) >= -1) {
+                  if (qd.field_ab <= 0) {
+                    if (am.field_f <= 0) {
                       if (ma.field_f > ng.field_t) {
                         L5: {
-                          if ((ng.field_t ^ -1) == -1) {
+                          if (ng.field_t == 0) {
                             ic.a(true, (byte) -128);
                             break L5;
                           } else {
@@ -566,7 +556,7 @@ abstract class ca {
                       return;
                     }
                   } else {
-                    if ((am.field_f ^ -1) < -1) {
+                    if (am.field_f > 0) {
                       am.field_f = am.field_f - 1;
                       if (param1 == 16) {
                         return;
@@ -575,7 +565,7 @@ abstract class ca {
                         return;
                       }
                     } else {
-                      if ((qd.field_ab ^ -1) > (ma.field_f ^ -1)) {
+                      if (~qd.field_ab > ~ma.field_f) {
                         if (0 == qd.field_ab) {
                           pd.b(false);
                           qd.field_ab = qd.field_ab + 1;
@@ -615,10 +605,10 @@ abstract class ca {
                     return;
                   }
                 } else {
-                  if (-1 <= (ng.field_t ^ -1)) {
+                  if (ng.field_t <= 0) {
                     if (am.field_f < ma.field_f) {
                       L6: {
-                        if (-1 == (am.field_f ^ -1)) {
+                        if (am.field_f == 0) {
                           ic.a(false, (byte) -128);
                           break L6;
                         } else {

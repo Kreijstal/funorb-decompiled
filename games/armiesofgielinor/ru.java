@@ -28,8 +28,9 @@ final class ru extends si {
                 var15++;
                 continue L0;
               } else {
+                int incrementValue$66 = param4;
                 param4++;
-                param3 = param2[param1[param4] & 255];
+                param3 = param2[param1[incrementValue$66] & 255];
                 if (param3 == 0) {
                   param5++;
                   var16++;
@@ -37,8 +38,9 @@ final class ru extends si {
                 } else {
                   var13 = (param3 & 16711935) * param10 & -16711936;
                   var14 = (param3 & 65280) * param10 & 16711680;
+                  int incrementValue$67 = param5;
                   param5++;
-                  param0[param5] = ((var13 | var14) >>> 8) + param11;
+                  param0[incrementValue$67] = ((var13 | var14) >>> 8) + param11;
                   var16++;
                   continue L1;
                 }
@@ -358,23 +360,33 @@ final class ru extends si {
         param5 = -(param5 & 3);
         for (var10 = -param6; var10 < 0; var10++) {
             for (var11 = var9; var11 < 0; var11++) {
+                int incrementValue$0 = param4;
                 param4++;
+                int incrementValue$1 = param3;
                 param3++;
-                param0[param4] = param2[param1[param3] & 255];
+                param0[incrementValue$0] = param2[param1[incrementValue$1] & 255];
+                int incrementValue$2 = param4;
                 param4++;
+                int incrementValue$3 = param3;
                 param3++;
-                param0[param4] = param2[param1[param3] & 255];
+                param0[incrementValue$2] = param2[param1[incrementValue$3] & 255];
+                int incrementValue$4 = param4;
                 param4++;
+                int incrementValue$5 = param3;
                 param3++;
-                param0[param4] = param2[param1[param3] & 255];
+                param0[incrementValue$4] = param2[param1[incrementValue$5] & 255];
+                int incrementValue$6 = param4;
                 param4++;
+                int incrementValue$7 = param3;
                 param3++;
-                param0[param4] = param2[param1[param3] & 255];
+                param0[incrementValue$6] = param2[param1[incrementValue$7] & 255];
             }
             for (var11 = param5; var11 < 0; var11++) {
+                int incrementValue$8 = param4;
                 param4++;
+                int incrementValue$9 = param3;
                 param3++;
-                param0[param4] = param2[param1[param3] & 255];
+                param0[incrementValue$8] = param2[param1[incrementValue$9] & 255];
             }
             param4 = param4 + param7;
             param3 = param3 + param8;
@@ -467,8 +479,9 @@ final class ru extends si {
             for (var15 = -param7; var15 < 0; var15++) {
                 var16 = param1[(param3 >> 16) + var14];
                 if (var16 != 0) {
+                    int incrementValue$1 = param5;
                     param5++;
-                    param0[param5] = param2[var16 & 255];
+                    param0[incrementValue$1] = param2[var16 & 255];
                 } else {
                     param5++;
                 }
@@ -760,8 +773,9 @@ final class ru extends si {
                 var11++;
                 continue L0;
               } else {
+                int incrementValue$66 = param3;
                 param3++;
-                var13 = param1[param3];
+                var13 = param1[incrementValue$66];
                 if (var13 == 0) {
                   param4++;
                   var12++;
@@ -769,8 +783,9 @@ final class ru extends si {
                 } else {
                   var13 = param2[var13 & 255];
                   var14 = param0[param4];
+                  int incrementValue$67 = param4;
                   param4++;
-                  param0[param4] = ((var13 & 16711935) * param9 + (var14 & 16711935) * var10 & -16711936) + ((var13 & 65280) * param9 + (var14 & 65280) * var10 & 16711680) >> 8;
+                  param0[incrementValue$67] = ((var13 & 16711935) * param9 + (var14 & 16711935) * var10 & -16711936) + ((var13 & 65280) * param9 + (var14 & 65280) * var10 & 16711680) >> 8;
                   var12++;
                   continue L1;
                 }
@@ -802,15 +817,17 @@ final class ru extends si {
                     var11++;
                     continue L0;
                   } else {
+                    int incrementValue$10 = param4;
                     param4++;
-                    param3 = param1[param4];
+                    param3 = param1[incrementValue$10];
                     if (param3 == 0) {
                       param5++;
                       var12++;
                       continue L2;
                     } else {
+                      int incrementValue$11 = param5;
                       param5++;
-                      param0[param5] = param2[param3 & 255];
+                      param0[incrementValue$11] = param2[param3 & 255];
                       var12++;
                       continue L2;
                     }
@@ -818,50 +835,58 @@ final class ru extends si {
                 }
               } else {
                 L3: {
+                  int incrementValue$12 = param4;
                   param4++;
-                  param3 = param1[param4];
+                  param3 = param1[incrementValue$12];
                   if (param3 == 0) {
                     param5++;
                     break L3;
                   } else {
+                    int incrementValue$13 = param5;
                     param5++;
-                    param0[param5] = param2[param3 & 255];
+                    param0[incrementValue$13] = param2[param3 & 255];
                     break L3;
                   }
                 }
                 L4: {
+                  int incrementValue$14 = param4;
                   param4++;
-                  param3 = param1[param4];
+                  param3 = param1[incrementValue$14];
                   if (param3 == 0) {
                     param5++;
                     break L4;
                   } else {
+                    int incrementValue$15 = param5;
                     param5++;
-                    param0[param5] = param2[param3 & 255];
+                    param0[incrementValue$15] = param2[param3 & 255];
                     break L4;
                   }
                 }
                 L5: {
+                  int incrementValue$16 = param4;
                   param4++;
-                  param3 = param1[param4];
+                  param3 = param1[incrementValue$16];
                   if (param3 == 0) {
                     param5++;
                     break L5;
                   } else {
+                    int incrementValue$17 = param5;
                     param5++;
-                    param0[param5] = param2[param3 & 255];
+                    param0[incrementValue$17] = param2[param3 & 255];
                     break L5;
                   }
                 }
+                int incrementValue$18 = param4;
                 param4++;
-                param3 = param1[param4];
+                param3 = param1[incrementValue$18];
                 if (param3 == 0) {
                   param5++;
                   var12++;
                   continue L1;
                 } else {
+                  int incrementValue$19 = param5;
                   param5++;
-                  param0[param5] = param2[param3 & 255];
+                  param0[incrementValue$19] = param2[param3 & 255];
                   var12++;
                   continue L1;
                 }

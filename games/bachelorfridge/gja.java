@@ -11,8 +11,9 @@ final class gja extends tia {
     static rp field_m;
 
     final boolean a(int param0) {
+        int fieldTemp$0 = ((gja) this).field_g - 2;
         ((gja) this).field_g = ((gja) this).field_g - 2;
-        if (((gja) this).field_g - 2 <= 0) {
+        if (fieldTemp$0 <= 0) {
             return false;
         }
         if (param0 >= 0) {
@@ -23,61 +24,44 @@ final class gja extends tia {
     }
 
     public static void c(int param0) {
-        Object var2 = null;
         field_k = null;
         field_i = null;
-        if (param0 != 4177) {
-          var2 = null;
-          gja.a(false, (java.applet.Applet) null, (String) null, -36);
-          field_m = null;
-          return;
-        } else {
-          field_m = null;
-          return;
-        }
+        field_m = null;
     }
 
     final void a(int param0, int param1, int param2) {
         int var5 = 0;
         Object var6 = null;
         var5 = BachelorFridge.field_y;
-        if (-4 != (((gja) this).field_o ^ -1)) {
-          if (((gja) this).field_o == -2) {
-            dg.a(-8 + param2, -96 + param0, -(((gja) this).field_g << 1471389379) - (-1024 - param2) - 16, un.field_m.field_p + param0 + -96);
-            un.field_m.a(param2 + -8, -32 + param0 + -64, ((gja) this).field_g << 619566017);
+        if (((gja) this).field_o != 3) {
+          if (((gja) this).field_o == 1) {
+            dg.a(-8 + param2, -96 + param0, -(((gja) this).field_g << 3) - (-1024 - param2) - 16, un.field_m.field_p + param0 + -96);
+            un.field_m.a(param2 + -8, -32 + param0 + -64, ((gja) this).field_g << 1);
             dg.c();
-            if (param1 != 25415) {
-              var6 = null;
-              gja.a(false, (java.applet.Applet) null, (String) null, 115);
+            if (param1 == 25415) {
               return;
             } else {
+              var6 = null;
+              gja.a(false, (java.applet.Applet) null, (String) null, 115);
               return;
             }
           } else {
             if (((gja) this).field_o == 4) {
-              dg.a(qga.field_r.field_q + param2 - (1056 - (((gja) this).field_g << -2026566269)), param0 - 32, qga.field_r.field_q + (-128 + param2) + 96, -32 + (param0 - -qga.field_r.field_p));
-              qga.field_r.a(param2 - 128 + 96, param0 - 32, ((gja) this).field_g << -843618527);
+              dg.a(qga.field_r.field_q + param2 - (1056 - (((gja) this).field_g << 3)), param0 - 32, qga.field_r.field_q + (-128 + param2) + 96, -32 + (param0 - -qga.field_r.field_p));
+              qga.field_r.a(param2 - 32, param0 - 32, ((gja) this).field_g << 1);
               dg.c();
-              if (param1 != 25415) {
+              if (param1 == 25415) {
+                return;
+              } else {
                 var6 = null;
                 gja.a(false, (java.applet.Applet) null, (String) null, 115);
                 return;
-              } else {
-                return;
               }
             } else {
-              if (-3 == ((gja) this).field_o) {
-                dg.a(qga.field_r.field_q + (-128 + (-8 + param2) - 1024 + (((gja) this).field_g << 101984643)), -32 + param0 - 64, qga.field_r.field_q + 16 + param2 - 128, qga.field_r.field_p + -32 + (param0 + -64));
-                qga.field_r.a(-8 + (param2 + -128), -96 + param0, ((gja) this).field_g << -1375057439);
+              if (((gja) this).field_o == 2) {
+                dg.a(qga.field_r.field_q + (-128 + (-8 + param2) - 1024 + (((gja) this).field_g << 3)), -32 + param0 - 64, qga.field_r.field_q + 16 + param2 - 128, qga.field_r.field_p + -32 + (param0 + -64));
+                qga.field_r.a(-8 + (param2 + -128), -96 + param0, ((gja) this).field_g << 1);
                 dg.c();
-                if (param1 != 25415) {
-                  var6 = null;
-                  gja.a(false, (java.applet.Applet) null, (String) null, 115);
-                  return;
-                } else {
-                  return;
-                }
-              } else {
                 if (param1 == 25415) {
                   return;
                 } else {
@@ -85,18 +69,26 @@ final class gja extends tia {
                   gja.a(false, (java.applet.Applet) null, (String) null, 115);
                   return;
                 }
+              } else {
+                if (param1 != 25415) {
+                  var6 = null;
+                  gja.a(false, (java.applet.Applet) null, (String) null, 115);
+                  return;
+                } else {
+                  return;
+                }
               }
             }
           }
         } else {
-          dg.a(-128 + (param2 + -8), param0 - 32, 1024 - ((((gja) this).field_g << -277109949) - -16) + (param2 + -128), un.field_m.field_p + (param0 + -32));
-          un.field_m.a(param2 + -128 + -8, -32 + param0, ((gja) this).field_g << 1204239649);
+          dg.a(-128 + (param2 + -8), param0 - 32, 1024 - ((((gja) this).field_g << 3) - -16) + (param2 + -128), un.field_m.field_p + (param0 + -32));
+          un.field_m.a(param2 - 136, -32 + param0, ((gja) this).field_g << 1);
           dg.c();
-          if (param1 == 25415) {
-            return;
-          } else {
+          if (param1 != 25415) {
             var6 = null;
             gja.a(false, (java.applet.Applet) null, (String) null, 115);
+            return;
+          } else {
             return;
           }
         }
@@ -104,15 +96,20 @@ final class gja extends tia {
 
     gja(gj param0, ad param1, int param2) {
         super(param0, param1);
-        ((gja) this).field_g = 128;
-        ((gja) this).field_o = param2;
+        try {
+            ((gja) this).field_g = 128;
+            ((gja) this).field_o = param2;
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "gja.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     final static void a(String param0, byte param1) {
-        if (param1 < 51) {
-            return;
+        try {
+            ij.field_m = param0;
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "gja.B(" + (param0 != null ? "{...}" : "null") + 44 + 92 + 41);
         }
-        ij.field_m = param0;
     }
 
     final static boolean b(int param0) {
@@ -124,18 +121,125 @@ final class gja extends tia {
 
     final static void a(boolean param0, java.applet.Applet param1, String param2, int param3) {
         try {
-            if (ht.field_i.startsWith("win")) {
-                if (qd.a(param2, -126)) {
-                    return;
-                }
-            }
+            java.net.MalformedURLException var4 = null;
+            RuntimeException var4_ref = null;
+            RuntimeException stackIn_10_0 = null;
+            StringBuilder stackIn_10_1 = null;
+            RuntimeException stackIn_11_0 = null;
+            StringBuilder stackIn_11_1 = null;
+            RuntimeException stackIn_12_0 = null;
+            StringBuilder stackIn_12_1 = null;
+            String stackIn_12_2 = null;
+            RuntimeException stackIn_13_0 = null;
+            StringBuilder stackIn_13_1 = null;
+            RuntimeException stackIn_14_0 = null;
+            StringBuilder stackIn_14_1 = null;
+            RuntimeException stackIn_15_0 = null;
+            StringBuilder stackIn_15_1 = null;
+            String stackIn_15_2 = null;
+            Throwable decompiledCaughtException = null;
+            RuntimeException stackOut_9_0 = null;
+            StringBuilder stackOut_9_1 = null;
+            RuntimeException stackOut_11_0 = null;
+            StringBuilder stackOut_11_1 = null;
+            String stackOut_11_2 = null;
+            RuntimeException stackOut_10_0 = null;
+            StringBuilder stackOut_10_1 = null;
+            String stackOut_10_2 = null;
+            RuntimeException stackOut_12_0 = null;
+            StringBuilder stackOut_12_1 = null;
+            RuntimeException stackOut_14_0 = null;
+            StringBuilder stackOut_14_1 = null;
+            String stackOut_14_2 = null;
+            RuntimeException stackOut_13_0 = null;
+            StringBuilder stackOut_13_1 = null;
+            String stackOut_13_2 = null;
             try {
-                if (param3 != 38) {
-                    boolean discarded$0 = gja.b(10);
+              L0: {
+                if (!ht.field_i.startsWith("win")) {
+                  break L0;
+                } else {
+                  if (!qd.a(param2, -126)) {
+                    break L0;
+                  } else {
+                    return;
+                  }
                 }
-                param1.getAppletContext().showDocument(new java.net.URL(param2), "_blank");
-            } catch (java.net.MalformedURLException malformedURLException) {
+              }
+              try {
+                L1: {
+                  L2: {
+                    if (param3 == 38) {
+                      break L2;
+                    } else {
+                      boolean discarded$2 = gja.b(10);
+                      break L2;
+                    }
+                  }
+                  param1.getAppletContext().showDocument(new java.net.URL(param2), "_blank");
+                  break L1;
+                }
+              } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var4 = (java.net.MalformedURLException) (Object) decompiledCaughtException;
                 cv.a(1, "MGR1: " + param2, (Throwable) null);
+                return;
+              }
+              return;
+            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L3: {
+                var4_ref = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_9_0 = (RuntimeException) var4_ref;
+                stackOut_9_1 = new StringBuilder().append("gja.F(").append(param0).append(44);
+                stackIn_11_0 = stackOut_9_0;
+                stackIn_11_1 = stackOut_9_1;
+                stackIn_10_0 = stackOut_9_0;
+                stackIn_10_1 = stackOut_9_1;
+                if (param1 == null) {
+                  stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+                  stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+                  stackOut_11_2 = "null";
+                  stackIn_12_0 = stackOut_11_0;
+                  stackIn_12_1 = stackOut_11_1;
+                  stackIn_12_2 = stackOut_11_2;
+                  break L3;
+                } else {
+                  stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+                  stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+                  stackOut_10_2 = "{...}";
+                  stackIn_12_0 = stackOut_10_0;
+                  stackIn_12_1 = stackOut_10_1;
+                  stackIn_12_2 = stackOut_10_2;
+                  break L3;
+                }
+              }
+              L4: {
+                stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+                stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(44);
+                stackIn_14_0 = stackOut_12_0;
+                stackIn_14_1 = stackOut_12_1;
+                stackIn_13_0 = stackOut_12_0;
+                stackIn_13_1 = stackOut_12_1;
+                if (param2 == null) {
+                  stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+                  stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+                  stackOut_14_2 = "null";
+                  stackIn_15_0 = stackOut_14_0;
+                  stackIn_15_1 = stackOut_14_1;
+                  stackIn_15_2 = stackOut_14_2;
+                  break L4;
+                } else {
+                  stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+                  stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+                  stackOut_13_2 = "{...}";
+                  stackIn_15_0 = stackOut_13_0;
+                  stackIn_15_1 = stackOut_13_1;
+                  stackIn_15_2 = stackOut_13_2;
+                  break L4;
+                }
+              }
+              throw pe.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param3 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

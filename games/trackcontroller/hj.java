@@ -20,12 +20,12 @@ final class hj implements Runnable {
     }
 
     final static void a(byte param0, int param1) {
-        hd.field_s = 3 & param1 >> -169374172;
-        he.field_d = param1 >> -652271166 & 3;
+        hd.field_s = 3 & param1 >> 4;
+        he.field_d = param1 >> 2 & 3;
         if (param0 == 100) {
-          if ((hd.field_s ^ -1) >= -3) {
+          if (hd.field_s <= 2) {
             fj.field_S = 3 & param1;
-            if ((he.field_d ^ -1) >= -3) {
+            if (he.field_d <= 2) {
               if (2 < fj.field_S) {
                 fj.field_S = 2;
                 return;
@@ -44,7 +44,7 @@ final class hj implements Runnable {
           } else {
             hd.field_s = 2;
             fj.field_S = 3 & param1;
-            if ((he.field_d ^ -1) >= -3) {
+            if (he.field_d <= 2) {
               if (2 < fj.field_S) {
                 fj.field_S = 2;
                 return;
@@ -63,10 +63,10 @@ final class hj implements Runnable {
           }
         } else {
           field_c = null;
-          if ((hd.field_s ^ -1) < -3) {
+          if (hd.field_s > 2) {
             hd.field_s = 2;
             fj.field_S = 3 & param1;
-            if ((he.field_d ^ -1) < -3) {
+            if (he.field_d > 2) {
               he.field_d = 2;
               if (2 < fj.field_S) {
                 fj.field_S = 2;
@@ -87,7 +87,7 @@ final class hj implements Runnable {
             }
           } else {
             fj.field_S = 3 & param1;
-            if ((he.field_d ^ -1) < -3) {
+            if (he.field_d > 2) {
               he.field_d = 2;
               if (2 >= fj.field_S) {
                 return;
@@ -793,20 +793,16 @@ final class hj implements Runnable {
         var5 = (ti) (Object) ea.field_s.b(2);
         L0: while (true) {
           if (var5 == null) {
-            if (param4 != -102) {
-              return null;
-            } else {
-              var5 = new ti();
-              var5.field_l = param3;
-              var5.field_k = param2;
-              var5.field_i = param1;
-              ea.field_s.a((byte) -105, (fc) (Object) var5);
-              mc.a(false, param0, var5);
-              return var5;
-            }
+            var5 = new ti();
+            var5.field_l = param3;
+            var5.field_k = param2;
+            var5.field_i = param1;
+            ea.field_s.a((byte) -105, (fc) (Object) var5);
+            mc.a(false, param0, var5);
+            return var5;
           } else {
             if (var5.field_i != param1) {
-              var5 = (ti) (Object) ea.field_s.a(param4 + 112);
+              var5 = (ti) (Object) ea.field_s.a(10);
               continue L0;
             } else {
               return var5;
@@ -827,7 +823,7 @@ final class hj implements Runnable {
 
     private static void $cfr$clinit() {
         field_c = new String[]{"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
-        field_f = new char[]{(char)91, (char)93, (char)35};
+        field_f = new char[]{'[', ']', '#'};
     }
 
     @SuppressWarnings("unchecked")

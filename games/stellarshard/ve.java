@@ -8,11 +8,6 @@ final class ve {
 
     public static void a(int param0) {
         field_b = null;
-        if (param0 != -9746) {
-            field_a = null;
-            field_a = null;
-            return;
-        }
         field_a = null;
     }
 

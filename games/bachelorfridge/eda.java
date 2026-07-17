@@ -11,16 +11,18 @@ final class eda extends kj {
 
     final boolean b(int param0) {
         if (param0 >= 21) {
+          int fieldTemp$4 = ((eda) this).field_f + 12;
           ((eda) this).field_f = ((eda) this).field_f + 12;
-          if (((eda) this).field_f + 12 >= bd.field_i.field_p) {
+          if (fieldTemp$4 >= bd.field_i.field_p) {
             return true;
           } else {
             return false;
           }
         } else {
           eda.c(-107);
+          int fieldTemp$5 = ((eda) this).field_f + 12;
           ((eda) this).field_f = ((eda) this).field_f + 12;
-          if (((eda) this).field_f + 12 >= bd.field_i.field_p) {
+          if (fieldTemp$5 >= bd.field_i.field_p) {
             return true;
           } else {
             return false;
@@ -38,14 +40,18 @@ final class eda extends kj {
 
     eda(gj param0, int param1, int param2, lna param3, ee param4) {
         super(param0, param1, param2);
-        ((eda) this).field_g = param4;
-        ((eda) this).field_h = param3;
+        try {
+            ((eda) this).field_g = param4;
+            ((eda) this).field_h = param3;
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "eda.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void a(int param0, int param1, int param2) {
         kv discarded$0 = ((eda) this).field_h.e(66);
-        kv var4 = lq.a(((eda) this).field_g, 8533, bd.field_i, (bd.field_i.field_p >> -348265471) - (((eda) this).field_f + 60), param1);
-        var4.c(param2 + 16, -64 + (param0 - (40 - (((eda) this).field_f >> -73361215))), var4.field_q >> -116269183, var4.field_p >> 304584033);
+        kv var4 = lq.a(((eda) this).field_g, 8533, bd.field_i, (bd.field_i.field_p >> 1) - (((eda) this).field_f + 60), param1);
+        var4.c(param2 + 16, -64 + (param0 - (40 - (((eda) this).field_f >> 1))), var4.field_q >> 1, var4.field_p >> 1);
         ((eda) this).field_g.a(param2, param0);
     }
 

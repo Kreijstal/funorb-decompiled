@@ -44,9 +44,13 @@ final class ia extends mg {
 
     ia(w param0) {
         super(param0.field_t, param0.field_o, param0.field_j, param0.field_v, (rd) null, (vd) null);
-        param0.a(((ia) this).field_v, ((ia) this).field_j, true, 0, 0);
-        ((ia) this).field_A = param0;
-        ((ia) this).field_E = 256;
+        try {
+            param0.a(((ia) this).field_v, ((ia) this).field_j, true, 0, 0);
+            ((ia) this).field_A = param0;
+            ((ia) this).field_E = 256;
+        } catch (RuntimeException runtimeException) {
+            throw ld.a((Throwable) (Object) runtimeException, "ia.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
@@ -58,7 +62,7 @@ final class ia extends mg {
             if (((ia) this).field_E == 0) {
               return;
             } else {
-              if ((((ia) this).field_E ^ -1) == -257) {
+              if (((ia) this).field_E == 256) {
                 ((ia) this).field_A.a((byte) -115, ((ia) this).field_o + param1, param2 + ((ia) this).field_t, param3);
                 return;
               } else {

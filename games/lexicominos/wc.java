@@ -7,23 +7,18 @@ final class wc {
     static db[] field_c;
 
     final static void a(java.math.BigInteger param0, wf param1, java.math.BigInteger param2, byte param3, wf param4) {
-        if (param3 != 111) {
-          field_b = null;
-          tg.a(param0, param4.field_h, param2, (byte) 84, param1, 0, param4.field_j);
-          return;
-        } else {
-          tg.a(param0, param4.field_h, param2, (byte) 84, param1, 0, param4.field_j);
-          return;
+        try {
+            if (param3 != 111) {
+                field_b = null;
+            }
+            tg.a(param0, param4.field_h, param2, (byte) 84, param1, 0, param4.field_j);
+        } catch (RuntimeException runtimeException) {
+            throw ld.a((Throwable) (Object) runtimeException, "wc.B(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
         }
     }
 
     public static void a(byte param0) {
         field_b = null;
-        if (param0 != -50) {
-            field_a = -89;
-            field_c = null;
-            return;
-        }
         field_c = null;
     }
 

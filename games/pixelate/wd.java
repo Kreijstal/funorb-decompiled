@@ -14,27 +14,63 @@ final class wd {
     private boolean field_c;
 
     final static int a(int param0, int param1, int param2) {
-        int var4 = Pixelate.field_H ? 1 : 0;
-        int var3 = 1;
-        if (param0 <= 102) {
-            return 73;
-        }
-        while (-2 > (param1 ^ -1)) {
-            if (-1 != (param1 & 1 ^ -1)) {
-                var3 = var3 * param2;
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        int stackIn_3_0 = 0;
+        int stackIn_11_0 = 0;
+        int stackIn_13_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_10_0 = 0;
+        int stackOut_12_0 = 0;
+        int stackOut_2_0 = 0;
+        var4 = Pixelate.field_H ? 1 : 0;
+        try {
+          L0: {
+            var3_int = 1;
+            if (param0 > 102) {
+              L1: while (true) {
+                if (param1 <= 1) {
+                  if (1 == param1) {
+                    stackOut_10_0 = param2 * var3_int;
+                    stackIn_11_0 = stackOut_10_0;
+                    return stackIn_11_0;
+                  } else {
+                    stackOut_12_0 = var3_int;
+                    stackIn_13_0 = stackOut_12_0;
+                    break L0;
+                  }
+                } else {
+                  L2: {
+                    if ((param1 & 1) == 0) {
+                      break L2;
+                    } else {
+                      var3_int = var3_int * param2;
+                      break L2;
+                    }
+                  }
+                  param2 = param2 * param2;
+                  param1 = param1 >> 1;
+                  continue L1;
+                }
+              }
+            } else {
+              stackOut_2_0 = 73;
+              stackIn_3_0 = stackOut_2_0;
+              return stackIn_3_0;
             }
-            param2 = param2 * param2;
-            param1 = param1 >> 1;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw aa.a((Throwable) (Object) var3, "wd.I(" + param0 + 44 + param1 + 44 + param2 + 41);
         }
-        if (!(1 != param1)) {
-            return param2 * var3;
-        }
-        return var3;
+        return stackIn_13_0;
     }
 
     final void a(byte param0, int param1) {
         L0: {
-          if ((param1 ^ -1) > -1) {
+          if (param1 < 0) {
             break L0;
           } else {
             if (param1 > ((wd) this).field_a) {
@@ -82,78 +118,167 @@ final class wd {
     }
 
     final static int b(int param0, int param1) {
-        if (param1 != 0) {
-            return -64;
-        }
         return ja.field_h[param0 & 2047];
     }
 
     final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int[] param9) {
-        int var10 = 0;
+        RuntimeException var10 = null;
+        int var10_int = 0;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        L0: {
-          var13 = Pixelate.field_H ? 1 : 0;
-          if (param1 < -108) {
-            break L0;
-          } else {
-            field_i = null;
-            break L0;
-          }
-        }
-        var11 = -param3;
-        L1: while (true) {
-          if (var11 >= 0) {
-            return;
-          } else {
-            var12 = param7 + param5;
-            L2: while (true) {
-              if (var12 <= param5) {
-                param5 = param5 + param8;
-                param6 = param6 + param4;
-                var11++;
-                continue L1;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_18_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        var13 = Pixelate.field_H ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              if (param1 < -108) {
+                break L1;
               } else {
-                if (param0[param5] == 16711935) {
-                  int incrementValue$2 = param6;
-                  param6++;
-                  var10 = param9[incrementValue$2] & 255;
-                  int incrementValue$3 = param5;
-                  param5++;
-                  param0[incrementValue$3] = bq.a(cm.a(var10 * cm.a(param2, 16711935) >> 2001675816, 16711935), cm.a(16711802, var10 * cm.a(param2, 65280)) >> -369981912);
-                  continue L2;
-                } else {
-                  param6++;
-                  param5++;
-                  continue L2;
+                field_i = null;
+                break L1;
+              }
+            }
+            var11 = -param3;
+            L2: while (true) {
+              if (var11 >= 0) {
+                break L0;
+              } else {
+                var12 = param7 + param5;
+                L3: while (true) {
+                  if (var12 <= param5) {
+                    param5 = param5 + param8;
+                    param6 = param6 + param4;
+                    var11++;
+                    continue L2;
+                  } else {
+                    if (param0[param5] == 16711935) {
+                      int incrementValue$2 = param6;
+                      param6++;
+                      var10_int = param9[incrementValue$2] & 255;
+                      int incrementValue$3 = param5;
+                      param5++;
+                      param0[incrementValue$3] = bq.a(cm.a(var10_int * cm.a(param2, 16711935) >> 8, 16711935), cm.a(16711802, var10_int * cm.a(param2, 65280)) >> 8);
+                      continue L3;
+                    } else {
+                      param6++;
+                      param5++;
+                      continue L3;
+                    }
+                  }
                 }
               }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var10 = decompiledCaughtException;
+            stackOut_12_0 = (RuntimeException) var10;
+            stackOut_12_1 = new StringBuilder().append("wd.G(");
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
+            if (param0 == null) {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L4;
+            } else {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L4;
+            }
+          }
+          L5: {
+            stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+            stackOut_15_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_15_2).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44).append(param7).append(44).append(param8).append(44);
+            stackIn_17_0 = stackOut_15_0;
+            stackIn_17_1 = stackOut_15_1;
+            stackIn_16_0 = stackOut_15_0;
+            stackIn_16_1 = stackOut_15_1;
+            if (param9 == null) {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "null";
+              stackIn_18_0 = stackOut_17_0;
+              stackIn_18_1 = stackOut_17_1;
+              stackIn_18_2 = stackOut_17_2;
+              break L5;
+            } else {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "{...}";
+              stackIn_18_0 = stackOut_16_0;
+              stackIn_18_1 = stackOut_16_1;
+              stackIn_18_2 = stackOut_16_2;
+              break L5;
+            }
+          }
+          throw aa.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
         }
     }
 
     final static void a(ak param0, boolean param1) {
+        ak var4 = null;
         ak var5 = null;
         int var3 = Pixelate.field_H ? 1 : 0;
-        ak var4 = (ak) (Object) param0.field_L.c(1504642273);
-        ak var2 = var4;
-        while (var4 != null) {
-            var4.field_Z = 0;
-            var4.field_wb = 0;
-            var4.field_nb = 0;
-            var4.field_S = 0;
-            var5 = (ak) (Object) param0.field_L.f(1504642273);
-            var5 = var5;
+        try {
+            var4 = (ak) (Object) param0.field_L.c(1504642273);
+            ak var2 = var4;
+            while (var4 != null) {
+                var4.field_Z = 0;
+                var4.field_wb = 0;
+                var4.field_nb = 0;
+                var4.field_S = 0;
+                var5 = (ak) (Object) param0.field_L.f(1504642273);
+                var5 = var5;
+            }
+            param0.field_wb = 0;
+            param0.field_nb = 0;
+            param0.field_S = 0;
+            param0.field_Z = 0;
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "wd.K(" + (param0 != null ? "{...}" : "null") + 44 + 0 + 41);
         }
-        param0.field_wb = 0;
-        if (param1) {
-            field_d = null;
-        }
-        param0.field_nb = 0;
-        param0.field_S = 0;
-        param0.field_Z = 0;
     }
 
     public static void a(int param0) {
@@ -182,11 +307,7 @@ final class wd {
         var3 = ((wd) this).field_j.length;
         L0: while (true) {
           if (param0 < var3) {
-            if (param1 > 119) {
-              return var3;
-            } else {
-              return -50;
-            }
+            return var3;
           } else {
             if (!((wd) this).field_c) {
               var3 = var3 + ((wd) this).field_f;

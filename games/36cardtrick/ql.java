@@ -14,7 +14,7 @@ final class ql {
         while (((ql) this).field_a[var1] >= 0) {
             var1 = ig.a() != 0 ? ((ql) this).field_a[var1] : var1 + 1;
         }
-        return ((ql) this).field_a[var1] ^ -1;
+        return ~((ql) this).field_a[var1];
     }
 
     final float[] c() {
@@ -62,7 +62,7 @@ final class ql {
                   var7 = 0;
                   L2: while (true) {
                     if (var7 >= var4) {
-                      ((ql) this).field_a[var6] = var3 ^ -1;
+                      ((ql) this).field_a[var6] = ~var3;
                       if (var6 >= var2) {
                         var2 = var6 + 1;
                         var3++;

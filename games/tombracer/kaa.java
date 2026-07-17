@@ -7,19 +7,72 @@ final class kaa implements isa {
     private int field_b;
 
     final static byte[] a(int param0, byte[] param1, int param2) {
-        byte[] var4 = new byte[param2];
-        byte[] var3 = var4;
-        lua.a(param1, param0, var4, 0, param2);
-        return var4;
+        byte[] var3 = null;
+        RuntimeException var3_ref = null;
+        byte[] var4 = null;
+        byte[] stackIn_1_0 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        byte[] stackOut_0_0 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
+        try {
+          L0: {
+            var4 = new byte[param2];
+            var3 = var4;
+            lua.a(param1, param0, var4, 0, param2);
+            stackOut_0_0 = (byte[]) var4;
+            stackIn_1_0 = stackOut_0_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var3_ref = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var3_ref;
+            stackOut_2_1 = new StringBuilder().append("kaa.D(").append(param0).append(44);
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
+            if (param1 == null) {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param2 + 41);
+        }
+        return stackIn_1_0;
     }
 
     final static void a(byte param0) {
         bta.field_q = 0;
         ni.field_c = true;
-        if (param0 <= 31) {
-            Object var2 = null;
-            byte[] discarded$0 = kaa.a(-119, (byte[]) null, -9);
-        }
     }
 
     final static boolean a(int param0, int param1, boolean param2) {
@@ -39,7 +92,7 @@ final class kaa implements isa {
           return false;
         } else {
           L0: {
-            if (-1 == (24 & param1 ^ -1)) {
+            if ((24 & param1) == 0) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L0;
@@ -72,214 +125,131 @@ final class kaa implements isa {
     }
 
     public final void a(ae param0, int param1, int param2, int param3, boolean param4) {
-        int var6 = 0;
+        RuntimeException var6 = null;
+        int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         Object var12 = null;
-        int stackIn_24_0 = 0;
-        int stackOut_22_0 = 0;
-        int stackOut_23_0 = 0;
-        L0: {
-          var11 = TombRacer.field_G ? 1 : 0;
-          if (param0.field_f) {
-            stackOut_22_0 = 3249872;
-            stackIn_24_0 = stackOut_22_0;
-            break L0;
-          } else {
-            if (!param0.b((byte) -34)) {
-              stackOut_23_0 = 2188450;
-              stackIn_24_0 = stackOut_23_0;
-              break L0;
-            } else {
-              L1: {
-                var6 = 3249872;
-                if (param2 == 16777215) {
-                  break L1;
+        int stackIn_6_0 = 0;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        String stackIn_24_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_5_0 = 0;
+        int stackOut_4_0 = 0;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        String stackOut_23_2 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        String stackOut_22_2 = null;
+        var11 = TombRacer.field_G ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              L2: {
+                if (param0.field_f) {
+                  break L2;
                 } else {
-                  var12 = null;
-                  byte[] discarded$5 = kaa.a(91, (byte[]) null, 83);
-                  break L1;
-                }
-              }
-              int discarded$6 = ((kaa) this).field_c.a("<u=" + Integer.toString(var6, 16) + ">" + param0.field_o + "</u>", param0.field_i + param1, param0.field_n + param3, param0.field_m, param0.field_p, var6, -1, ((kaa) this).field_a, ((kaa) this).field_b, ((kaa) this).field_c.field_k + ((kaa) this).field_c.field_w);
-              if (param0.b((byte) -34)) {
-                L2: {
-                  var7 = ((kaa) this).field_c.b(param0.field_o);
-                  var8 = ((kaa) this).field_c.field_k + ((kaa) this).field_c.field_w;
-                  var9 = param1 + param0.field_i;
-                  var10 = param3 + param0.field_n;
-                  if (-3 != (((kaa) this).field_a ^ -1)) {
-                    if (((kaa) this).field_a == 1) {
-                      var9 = var9 + (param0.field_m - var7 >> -955317823);
-                      break L2;
-                    } else {
-                      L3: {
-                        if (-3 == ((kaa) this).field_b) {
-                          var10 = var10 + (-var8 + param0.field_p);
-                          break L3;
-                        } else {
-                          if (-2 != ((kaa) this).field_b) {
-                            break L3;
-                          } else {
-                            var10 = var10 + (param0.field_p - var8 >> -1746807167);
-                            break L3;
-                          }
-                        }
-                      }
-                      nn.a(var9 - 2, 2 + var10, var8, var7 + 4, false);
-                      return;
-                    }
+                  if (!param0.b((byte) -34)) {
+                    stackOut_5_0 = 2188450;
+                    stackIn_6_0 = stackOut_5_0;
+                    break L1;
                   } else {
-                    var9 = var9 + (-var7 + param0.field_m);
                     break L2;
                   }
                 }
-                if (-3 != ((kaa) this).field_b) {
-                  if (-2 == ((kaa) this).field_b) {
-                    var10 = var10 + (param0.field_p - var8 >> -1746807167);
-                    nn.a(var9 - 2, 2 + var10, var8, var7 + 4, false);
-                    return;
-                  } else {
-                    nn.a(var9 - 2, 2 + var10, var8, var7 + 4, false);
-                    return;
-                  }
-                } else {
-                  var10 = var10 + (-var8 + param0.field_p);
-                  nn.a(var9 - 2, 2 + var10, var8, var7 + 4, false);
-                  return;
-                }
+              }
+              stackOut_4_0 = 3249872;
+              stackIn_6_0 = stackOut_4_0;
+              break L1;
+            }
+            L3: {
+              var6_int = stackIn_6_0;
+              if (param2 == 16777215) {
+                break L3;
               } else {
-                return;
+                var12 = null;
+                byte[] discarded$2 = kaa.a(91, (byte[]) null, 83);
+                break L3;
               }
             }
-          }
-        }
-        var6 = stackIn_24_0;
-        if (param2 == 16777215) {
-          int discarded$7 = ((kaa) this).field_c.a("<u=" + Integer.toString(var6, 16) + ">" + param0.field_o + "</u>", param0.field_i + param1, param0.field_n + param3, param0.field_m, param0.field_p, var6, -1, ((kaa) this).field_a, ((kaa) this).field_b, ((kaa) this).field_c.field_k + ((kaa) this).field_c.field_w);
-          if (param0.b((byte) -34)) {
-            var7 = ((kaa) this).field_c.b(param0.field_o);
-            var8 = ((kaa) this).field_c.field_k + ((kaa) this).field_c.field_w;
-            var9 = param1 + param0.field_i;
-            var10 = param3 + param0.field_n;
-            if (-3 != ((kaa) this).field_a) {
-              if (((kaa) this).field_a == 1) {
-                var9 = var9 + (param0.field_m - var7 >> -955317823);
-                if (-3 != ((kaa) this).field_b) {
-                  if (-2 == ((kaa) this).field_b) {
-                    var10 = var10 + (param0.field_p - var8 >> -1746807167);
-                    nn.a(var9 - 2, 2 + var10, var8, var7 + 4, false);
-                    return;
+            int discarded$3 = ((kaa) this).field_c.a("<u=" + Integer.toString(var6_int, 16) + ">" + param0.field_o + "</u>", param0.field_i + param1, param0.field_n + param3, param0.field_m, param0.field_p, var6_int, -1, ((kaa) this).field_a, ((kaa) this).field_b, ((kaa) this).field_c.field_k + ((kaa) this).field_c.field_w);
+            if (param0.b((byte) -34)) {
+              L4: {
+                var7 = ((kaa) this).field_c.b(param0.field_o);
+                var8 = ((kaa) this).field_c.field_k + ((kaa) this).field_c.field_w;
+                var9 = param1 + param0.field_i;
+                var10 = param3 + param0.field_n;
+                if (((kaa) this).field_a != 2) {
+                  if (((kaa) this).field_a == 1) {
+                    var9 = var9 + (param0.field_m - var7 >> 1);
+                    break L4;
                   } else {
-                    nn.a(var9 - 2, 2 + var10, var8, var7 + 4, false);
-                    return;
+                    break L4;
                   }
                 } else {
-                  var10 = var10 + (-var8 + param0.field_p);
-                  nn.a(var9 - 2, 2 + var10, var8, var7 + 4, false);
-                  return;
-                }
-              } else {
-                if (-3 != ((kaa) this).field_b) {
-                  if (-2 != ((kaa) this).field_b) {
-                    nn.a(var9 - 2, 2 + var10, var8, var7 + 4, false);
-                    return;
-                  } else {
-                    var10 = var10 + (param0.field_p - var8 >> -1746807167);
-                    nn.a(var9 - 2, 2 + var10, var8, var7 + 4, false);
-                    return;
-                  }
-                } else {
-                  var10 = var10 + (-var8 + param0.field_p);
-                  nn.a(var9 - 2, 2 + var10, var8, var7 + 4, false);
-                  return;
+                  var9 = var9 + (-var7 + param0.field_m);
+                  break L4;
                 }
               }
+              L5: {
+                if (-3 == ((kaa) this).field_b) {
+                  var10 = var10 + (-var8 + param0.field_p);
+                  break L5;
+                } else {
+                  if (-2 != ((kaa) this).field_b) {
+                    break L5;
+                  } else {
+                    var10 = var10 + (param0.field_p - var8 >> 1);
+                    break L5;
+                  }
+                }
+              }
+              nn.a(var9 - 2, 2 + var10, var8, var7 + 4, false);
+              break L0;
             } else {
-              var9 = var9 + (-var7 + param0.field_m);
-              if (-3 != ((kaa) this).field_b) {
-                if (-2 != (((kaa) this).field_b ^ -1)) {
-                  nn.a(var9 - 2, 2 + var10, var8, var7 + 4, false);
-                  return;
-                } else {
-                  var10 = var10 + (param0.field_p - var8 >> -1746807167);
-                  nn.a(var9 - 2, 2 + var10, var8, var7 + 4, false);
-                  return;
-                }
-              } else {
-                var10 = var10 + (-var8 + param0.field_p);
-                nn.a(var9 - 2, 2 + var10, var8, var7 + 4, false);
-                return;
-              }
+              return;
             }
-          } else {
-            return;
           }
-        } else {
-          var12 = null;
-          byte[] discarded$8 = kaa.a(91, (byte[]) null, 83);
-          int discarded$9 = ((kaa) this).field_c.a("<u=" + Integer.toString(var6, 16) + ">" + param0.field_o + "</u>", param0.field_i + param1, param0.field_n + param3, param0.field_m, param0.field_p, var6, -1, ((kaa) this).field_a, ((kaa) this).field_b, ((kaa) this).field_c.field_k + ((kaa) this).field_c.field_w);
-          if (param0.b((byte) -34)) {
-            var7 = ((kaa) this).field_c.b(param0.field_o);
-            var8 = ((kaa) this).field_c.field_k + ((kaa) this).field_c.field_w;
-            var9 = param1 + param0.field_i;
-            var10 = param3 + param0.field_n;
-            if (-3 != ((kaa) this).field_a) {
-              if (((kaa) this).field_a == 1) {
-                var9 = var9 + (param0.field_m - var7 >> -955317823);
-                if (-3 != ((kaa) this).field_b) {
-                  if (-2 != ((kaa) this).field_b) {
-                    nn.a(var9 - 2, 2 + var10, var8, var7 + 4, false);
-                    return;
-                  } else {
-                    var10 = var10 + (param0.field_p - var8 >> -1746807167);
-                    nn.a(var9 - 2, 2 + var10, var8, var7 + 4, false);
-                    return;
-                  }
-                } else {
-                  var10 = var10 + (-var8 + param0.field_p);
-                  nn.a(var9 - 2, 2 + var10, var8, var7 + 4, false);
-                  return;
-                }
-              } else {
-                if (-3 != ((kaa) this).field_b) {
-                  if (-2 != ((kaa) this).field_b) {
-                    nn.a(var9 - 2, 2 + var10, var8, var7 + 4, false);
-                    return;
-                  } else {
-                    var10 = var10 + (param0.field_p - var8 >> -1746807167);
-                    nn.a(var9 - 2, 2 + var10, var8, var7 + 4, false);
-                    return;
-                  }
-                } else {
-                  var10 = var10 + (-var8 + param0.field_p);
-                  nn.a(var9 - 2, 2 + var10, var8, var7 + 4, false);
-                  return;
-                }
-              }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L6: {
+            var6 = decompiledCaughtException;
+            stackOut_21_0 = (RuntimeException) var6;
+            stackOut_21_1 = new StringBuilder().append("kaa.B(");
+            stackIn_23_0 = stackOut_21_0;
+            stackIn_23_1 = stackOut_21_1;
+            stackIn_22_0 = stackOut_21_0;
+            stackIn_22_1 = stackOut_21_1;
+            if (param0 == null) {
+              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_2 = "null";
+              stackIn_24_0 = stackOut_23_0;
+              stackIn_24_1 = stackOut_23_1;
+              stackIn_24_2 = stackOut_23_2;
+              break L6;
             } else {
-              var9 = var9 + (-var7 + param0.field_m);
-              if (-3 != ((kaa) this).field_b) {
-                if (-2 != (((kaa) this).field_b ^ -1)) {
-                  nn.a(var9 - 2, 2 + var10, var8, var7 + 4, false);
-                  return;
-                } else {
-                  var10 = var10 + (param0.field_p - var8 >> -1746807167);
-                  nn.a(var9 - 2, 2 + var10, var8, var7 + 4, false);
-                  return;
-                }
-              } else {
-                var10 = var10 + (-var8 + param0.field_p);
-                nn.a(var9 - 2, 2 + var10, var8, var7 + 4, false);
-                return;
-              }
+              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_2 = "{...}";
+              stackIn_24_0 = stackOut_22_0;
+              stackIn_24_1 = stackOut_22_1;
+              stackIn_24_2 = stackOut_22_2;
+              break L6;
             }
-          } else {
-            return;
           }
+          throw tba.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
@@ -290,9 +260,13 @@ final class kaa implements isa {
     }
 
     kaa(il param0, int param1, int param2) {
-        ((kaa) this).field_c = param0;
-        ((kaa) this).field_a = param1;
-        ((kaa) this).field_b = param2;
+        try {
+            ((kaa) this).field_c = param0;
+            ((kaa) this).field_a = param1;
+            ((kaa) this).field_b = param2;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "kaa.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     static {

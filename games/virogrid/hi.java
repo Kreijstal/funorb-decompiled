@@ -57,7 +57,7 @@ final class hi {
                   var7 = 0;
                   L2: while (true) {
                     if (var7 >= var4) {
-                      ((hi) this).field_c[var6] = var3 ^ -1;
+                      ((hi) this).field_c[var6] = ~var3;
                       if (var6 >= var2) {
                         var2 = var6 + 1;
                         var3++;
@@ -181,7 +181,7 @@ final class hi {
         while (((hi) this).field_c[var1] >= 0) {
             var1 = gj.b() != 0 ? ((hi) this).field_c[var1] : var1 + 1;
         }
-        return ((hi) this).field_c[var1] ^ -1;
+        return ~((hi) this).field_c[var1];
     }
 
     final float[] b() {

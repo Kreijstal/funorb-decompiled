@@ -11,39 +11,55 @@ final class ml {
     static String field_d;
 
     final static void a(int param0, int param1) {
+        RuntimeException var2 = null;
         int var3 = 0;
         ud var4 = null;
+        RuntimeException decompiledCaughtException = null;
         var3 = SteelSentinels.field_G;
-        if (param0 > -29) {
-          return;
-        } else {
-          var4 = (ud) (Object) uf.field_f.e(13058);
-          L0: while (true) {
-            if (var4 == null) {
-              return;
+        try {
+          L0: {
+            if (param0 <= -29) {
+              var4 = (ud) (Object) uf.field_f.e(13058);
+              L1: while (true) {
+                if (var4 == null) {
+                  break L0;
+                } else {
+                  r.a(27153, var4, 7);
+                  var4 = (ud) (Object) uf.field_f.a((byte) -36);
+                  continue L1;
+                }
+              }
             } else {
-              r.a(27153, var4, param1);
-              var4 = (ud) (Object) uf.field_f.a((byte) -36);
-              continue L0;
+              return;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw ci.a((Throwable) (Object) var2, "ml.D(" + param0 + 44 + 7 + 41);
         }
     }
 
     final static void a(int param0, cf param1, int param2) {
-        kj var3 = mm.field_g;
-        var3.a(param2, (byte) -117);
-        var3.field_p = var3.field_p + 1;
-        int var4 = var3.field_p;
-        var3.a((byte) 117, param0);
-        var3.a((byte) 114, param1.field_r);
-        var3.a((byte) 121, param1.field_B);
-        var3.b(true, param1.field_C);
-        var3.b(true, param1.field_E);
-        var3.b(true, param1.field_z);
-        var3.b(true, param1.field_y);
-        int discarded$0 = var3.f(-72, var4);
-        var3.b((byte) -115, var3.field_p - var4);
+        kj var3 = null;
+        int var4 = 0;
+        try {
+            var3 = mm.field_g;
+            var3.a(param2, (byte) -117);
+            var3.field_p = var3.field_p + 1;
+            var4 = var3.field_p;
+            var3.a((byte) 117, param0);
+            var3.a((byte) 114, param1.field_r);
+            var3.a((byte) 121, param1.field_B);
+            var3.b(true, param1.field_C);
+            var3.b(true, param1.field_E);
+            var3.b(true, param1.field_z);
+            var3.b(true, param1.field_y);
+            int discarded$0 = var3.f(-72, var4);
+            var3.b((byte) -115, var3.field_p - var4);
+        } catch (RuntimeException runtimeException) {
+            throw ci.a((Throwable) (Object) runtimeException, "ml.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     public final String toString() {
@@ -51,22 +67,11 @@ final class ml {
     }
 
     public static void a(int param0) {
-        if (param0 <= 12) {
-          ml.a((byte) 119, -100);
-          field_c = null;
-          field_f = null;
-          field_g = null;
-          field_b = null;
-          field_d = null;
-          return;
-        } else {
-          field_c = null;
-          field_f = null;
-          field_g = null;
-          field_b = null;
-          field_d = null;
-          return;
-        }
+        field_c = null;
+        field_f = null;
+        field_g = null;
+        field_b = null;
+        field_d = null;
     }
 
     final static void a(byte param0, int param1) {

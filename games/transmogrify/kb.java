@@ -17,31 +17,86 @@ class kb extends ri {
         var4 = Transmogrify.field_A ? 1 : 0;
         var5 = rh.d(-26481);
         var2 = var5;
-        if (param1) {
-          var3 = 0;
-          L0: while (true) {
-            if (var5.length > var3) {
-              if (var5[var3].field_c != param0) {
-                var3++;
-                continue L0;
-              } else {
-                return var5[var3];
-              }
+        var3 = 0;
+        L0: while (true) {
+          if (var5.length > var3) {
+            if (var5[var3].field_c != param0) {
+              var3++;
+              continue L0;
             } else {
-              return null;
+              return var5[var3];
             }
+          } else {
+            return null;
           }
-        } else {
-          return null;
         }
     }
 
     final static byte[] a(String param0, byte param1) {
-        if (param1 <= 104) {
-            kb.b(true);
-            return pi.field_g.a(param0, (byte) 118, "");
+        RuntimeException var2 = null;
+        byte[] stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        byte[] stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param1 > 104) {
+                break L1;
+              } else {
+                kb.b(true);
+                break L1;
+              }
+            }
+            stackOut_2_0 = pi.field_g.a(param0, (byte) 118, "");
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_1 = new StringBuilder().append("kb.B(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw ch.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
         }
-        return pi.field_g.a(param0, (byte) 118, "");
+        return stackIn_3_0;
     }
 
     public static void b(boolean param0) {

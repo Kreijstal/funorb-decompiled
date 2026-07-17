@@ -18,16 +18,17 @@ final class ic {
         if (param3 != 19362) {
             return;
         }
-        na.field_p = param1;
-        vf.field_w = param4;
-        dc.field_bb = param0;
+        try {
+            na.field_p = param1;
+            vf.field_w = param4;
+            dc.field_bb = param0;
+        } catch (RuntimeException runtimeException) {
+            throw kk.a((Throwable) (Object) runtimeException, "ic.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+        }
     }
 
     final static void b(byte param0) {
         kc.field_e = null;
-        if (param0 != 10) {
-            field_d = null;
-        }
         i.field_i = null;
     }
 
@@ -36,88 +37,147 @@ final class ic {
         field_f = null;
         field_d = null;
         field_h = null;
-        if (param0 != 114) {
-            field_i = null;
-        }
     }
 
     final static void a(int param0, ij param1) {
-        int var2 = 0;
+        RuntimeException var2 = null;
+        int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        String stackIn_24_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        String stackOut_23_2 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        String stackOut_22_2 = null;
         var5 = HoldTheLine.field_D;
-        var2 = 0;
-        L0: while (true) {
-          if ((var2 ^ -1) <= -4) {
-            var2 = 0;
+        try {
+          L0: {
+            var2_int = 0;
             L1: while (true) {
-              if (var2 >= in.field_e) {
-                ek.field_n[param1.a(-65)] = ek.field_n[param1.a(-65)] + 1;
-                var2 = 0;
-                var3 = 0;
+              if (var2_int >= 3) {
+                var2_int = 0;
                 L2: while (true) {
-                  if (in.field_e <= var3) {
-                    L3: {
-                      in.field_e = var2;
-                      in.field_e = in.field_e + 1;
-                      lj.field_a[in.field_e] = param1;
-                      if (param0 == 21325) {
-                        break L3;
-                      } else {
-                        field_d = null;
-                        break L3;
-                      }
-                    }
-                    return;
-                  } else {
-                    L4: {
-                      if (lj.field_a[var3].field_h != param1.field_h) {
-                        break L4;
-                      } else {
-                        var4 = lj.field_a[var3].a(param0 ^ -21258);
-                        if (se.field_i < ek.field_n[var4]) {
-                          ek.field_n[var4] = ek.field_n[var4] - 1;
-                          var3++;
-                          continue L2;
-                        } else {
-                          break L4;
+                  if (var2_int >= in.field_e) {
+                    int dupTemp$4 = param1.a(-65);
+                    ek.field_n[dupTemp$4] = ek.field_n[dupTemp$4] + 1;
+                    var2_int = 0;
+                    var3 = 0;
+                    L3: while (true) {
+                      if (in.field_e <= var3) {
+                        L4: {
+                          in.field_e = var2_int;
+                          int fieldTemp$5 = in.field_e;
+                          in.field_e = in.field_e + 1;
+                          lj.field_a[fieldTemp$5] = param1;
+                          if (param0 == 21325) {
+                            break L4;
+                          } else {
+                            field_d = null;
+                            break L4;
+                          }
                         }
+                        break L0;
+                      } else {
+                        L5: {
+                          L6: {
+                            if (lj.field_a[var3].field_h != param1.field_h) {
+                              break L6;
+                            } else {
+                              var4 = lj.field_a[var3].a(param0 ^ -21258);
+                              if (se.field_i < ek.field_n[var4]) {
+                                ek.field_n[var4] = ek.field_n[var4] - 1;
+                                break L5;
+                              } else {
+                                break L6;
+                              }
+                            }
+                          }
+                          int incrementValue$6 = var2_int;
+                          var2_int++;
+                          lj.field_a[incrementValue$6] = lj.field_a[var3];
+                          break L5;
+                        }
+                        var3++;
+                        continue L3;
                       }
                     }
-                    var2++;
-                    lj.field_a[var2] = lj.field_a[var3];
-                    var3++;
+                  } else {
+                    L7: {
+                      if (param1.field_h == lj.field_a[var2_int].field_h) {
+                        int dupTemp$7 = lj.field_a[var2_int].a(-90);
+                        ek.field_n[dupTemp$7] = ek.field_n[dupTemp$7] + 1;
+                        break L7;
+                      } else {
+                        break L7;
+                      }
+                    }
+                    var2_int++;
                     continue L2;
                   }
                 }
               } else {
-                if (param1.field_h == lj.field_a[var2].field_h) {
-                  ek.field_n[lj.field_a[var2].a(-90)] = ek.field_n[lj.field_a[var2].a(-90)] + 1;
-                  var2++;
-                  continue L1;
-                } else {
-                  var2++;
-                  continue L1;
-                }
+                ek.field_n[var2_int] = 0;
+                var2_int++;
+                continue L1;
               }
             }
-          } else {
-            ek.field_n[var2] = 0;
-            var2++;
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L8: {
+            var2 = decompiledCaughtException;
+            stackOut_21_0 = (RuntimeException) var2;
+            stackOut_21_1 = new StringBuilder().append("ic.C(").append(param0).append(44);
+            stackIn_23_0 = stackOut_21_0;
+            stackIn_23_1 = stackOut_21_1;
+            stackIn_22_0 = stackOut_21_0;
+            stackIn_22_1 = stackOut_21_1;
+            if (param1 == null) {
+              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_2 = "null";
+              stackIn_24_0 = stackOut_23_0;
+              stackIn_24_1 = stackOut_23_1;
+              stackIn_24_2 = stackOut_23_2;
+              break L8;
+            } else {
+              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_2 = "{...}";
+              stackIn_24_0 = stackOut_22_0;
+              stackIn_24_1 = stackOut_22_1;
+              stackIn_24_2 = stackOut_22_2;
+              break L8;
+            }
+          }
+          throw kk.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 41);
         }
     }
 
     final static void a(int param0, java.awt.Component param1) {
-        param1.removeMouseListener((java.awt.event.MouseListener) (Object) field_d);
-        if (param0 != 23147) {
-            field_d = null;
+        try {
+            param1.removeMouseListener((java.awt.event.MouseListener) (Object) field_d);
+            if (param0 != 23147) {
+                field_d = null;
+            }
+            param1.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) field_d);
+            param1.removeFocusListener((java.awt.event.FocusListener) (Object) field_d);
+            u.field_R = 0;
+        } catch (RuntimeException runtimeException) {
+            throw kk.a((Throwable) (Object) runtimeException, "ic.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        param1.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) field_d);
-        param1.removeFocusListener((java.awt.event.FocusListener) (Object) field_d);
-        u.field_R = 0;
     }
 
     private ic() throws Throwable {

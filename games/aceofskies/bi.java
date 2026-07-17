@@ -6,15 +6,14 @@ final class bi extends wt {
     static String field_o;
 
     bi(byte[] param0) {
-        ((bi) this).field_n = param0;
+        try {
+            ((bi) this).field_n = param0;
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) (Object) runtimeException, "bi.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void a(boolean param0) {
-        if (param0) {
-            field_o = (String) null;
-            field_o = null;
-            return;
-        }
         field_o = null;
     }
 

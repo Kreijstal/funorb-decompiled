@@ -33,6 +33,7 @@ final class ki {
     }
 
     final static void a(int param0) {
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -44,47 +45,64 @@ final class ki {
         pc var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
+        byte[] var13 = null;
+        byte[] var14 = null;
+        RuntimeException decompiledCaughtException = null;
         var6 = Pixelate.field_H ? 1 : 0;
-        if (param0 >= 14) {
-          var10 = vi.field_o;
-          var2 = var10.f(255);
-          if (var2 == 0) {
-            var9 = (um) (Object) bq.field_a.c(1504642273);
-            if (var9 != null) {
-              L0: {
-                var4 = var10.f(255);
-                if (var4 != 0) {
-                  var12 = new byte[var4];
-                  var11 = var12;
-                  var8 = var11;
-                  var5 = var8;
-                  var10.a(var12, 0, -89, var4);
-                  break L0;
+        try {
+          L0: {
+            var10 = vi.field_o;
+            var2 = var10.f(255);
+            if (var2 == 0) {
+              var9 = (um) (Object) bq.field_a.c(1504642273);
+              if (var9 != null) {
+                L1: {
+                  var4 = var10.f(255);
+                  if (var4 != 0) {
+                    var14 = new byte[var4];
+                    var13 = var14;
+                    var12 = var13;
+                    var11 = var12;
+                    var8 = var11;
+                    var5 = var8;
+                    var10.a(var14, 0, -89, var4);
+                    break L1;
+                  } else {
+                    var5 = null;
+                    break L1;
+                  }
+                }
+                var10.field_m = var10.field_m + 4;
+                if (!var10.d((byte) 124)) {
+                  na.a(true);
+                  return;
                 } else {
-                  var5 = null;
+                  var9.field_p = true;
+                  var9.field_n = var5;
+                  var9.c(2779);
                   break L0;
                 }
-              }
-              var10.field_m = var10.field_m + 4;
-              if (!var10.d((byte) 124)) {
-                na.a(true);
-                return;
               } else {
-                var9.field_p = true;
-                var9.field_n = var5;
-                var9.c(2779);
+                na.a(true);
                 return;
               }
             } else {
-              na.a(true);
-              return;
-            }
-          } else {
-            if (1 == var2) {
-              var3 = var10.k(0);
-              var4_ref_og = (og) (Object) wk.field_g.c(1504642273);
-              L1: while (true) {
-                if (var4_ref_og == null) {
+              if (1 == var2) {
+                var3 = var10.k(0);
+                var4_ref_og = (og) (Object) wk.field_g.c(1504642273);
+                L2: while (true) {
+                  L3: {
+                    if (var4_ref_og == null) {
+                      break L3;
+                    } else {
+                      if (var4_ref_og.field_m != var3) {
+                        var4_ref_og = (og) (Object) wk.field_g.f(1504642273);
+                        continue L2;
+                      } else {
+                        break L3;
+                      }
+                    }
+                  }
                   if (var4_ref_og != null) {
                     var4_ref_og.c(2779);
                     return;
@@ -92,96 +110,18 @@ final class ki {
                     na.a(true);
                     return;
                   }
-                } else {
-                  if (var4_ref_og.field_m != var3) {
-                    var4_ref_og = (og) (Object) wk.field_g.f(1504642273);
-                    continue L1;
-                  } else {
-                    if (var4_ref_og != null) {
-                      var4_ref_og.c(2779);
-                      return;
-                    } else {
-                      na.a(true);
-                      return;
-                    }
-                  }
                 }
-              }
-            } else {
-              jo.a(1, "A1: " + jm.b(-26), (Throwable) null);
-              na.a(true);
-              return;
-            }
-          }
-        } else {
-          field_a = null;
-          var10 = vi.field_o;
-          var2 = var10.f(255);
-          if (var2 == 0) {
-            var9 = (um) (Object) bq.field_a.c(1504642273);
-            if (var9 != null) {
-              L2: {
-                var4 = var10.f(255);
-                if (var4 != 0) {
-                  var12 = new byte[var4];
-                  var11 = var12;
-                  var8 = var11;
-                  var5 = var8;
-                  var10.a(var12, 0, -89, var4);
-                  break L2;
-                } else {
-                  var5 = null;
-                  break L2;
-                }
-              }
-              var10.field_m = var10.field_m + 4;
-              if (!var10.d((byte) 124)) {
+              } else {
+                jo.a(1, "A1: " + jm.b(-26), (Throwable) null);
                 na.a(true);
                 return;
-              } else {
-                var9.field_p = true;
-                var9.field_n = var5;
-                var9.c(2779);
-                return;
               }
-            } else {
-              na.a(true);
-              return;
-            }
-          } else {
-            if (1 == var2) {
-              var3 = var10.k(0);
-              var4_ref_og = (og) (Object) wk.field_g.c(1504642273);
-              L3: while (true) {
-                if (var4_ref_og != null) {
-                  if (var4_ref_og.field_m != var3) {
-                    var4_ref_og = (og) (Object) wk.field_g.f(1504642273);
-                    continue L3;
-                  } else {
-                    if (var4_ref_og == null) {
-                      na.a(true);
-                      return;
-                    } else {
-                      var4_ref_og.c(2779);
-                      return;
-                    }
-                  }
-                } else {
-                  if (var4_ref_og == null) {
-                    na.a(true);
-                    return;
-                  } else {
-                    var4_ref_og.c(2779);
-                    return;
-                  }
-                }
-              }
-            } else {
-              jo.a(1, "A1: " + jm.b(-26), (Throwable) null);
-              na.a(true);
-              return;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw aa.a((Throwable) (Object) var1, "ki.E(" + 107 + 41);
         }
     }
 
@@ -196,7 +136,7 @@ final class ki {
         double stackOut_1_0 = 0.0;
         L0: {
           var10 = Pixelate.field_H ? 1 : 0;
-          var4 = 2 + ((-((ki) this).field_n + 4096) * 4 >> 1453569708);
+          var4 = 2 + ((-((ki) this).field_n + 4096) * 4 >> 12);
           var5 = var4 * (((ki) this).field_i - param2);
           ((ki) this).field_i = param2;
           var6 = (double)var5 / 300.0;
@@ -423,11 +363,11 @@ final class ki {
         if (param0 != 3887) {
           ((ki) this).b(19);
           var2 = (int)(((ki) this).field_l * 32768.0 / 3.141592653589793);
-          hb.field_hb.b(672, 160, ((ki) this).field_g << 1872364164, ((ki) this).field_h << 130198596, var2, ((ki) this).field_n);
+          hb.field_hb.b(672, 160, ((ki) this).field_g << 4, ((ki) this).field_h << 4, var2, ((ki) this).field_n);
           return;
         } else {
           var2 = (int)(((ki) this).field_l * 32768.0 / 3.141592653589793);
-          hb.field_hb.b(672, 160, ((ki) this).field_g << 1872364164, ((ki) this).field_h << 130198596, var2, ((ki) this).field_n);
+          hb.field_hb.b(672, 160, ((ki) this).field_g << 4, ((ki) this).field_h << 4, var2, ((ki) this).field_n);
           return;
         }
     }

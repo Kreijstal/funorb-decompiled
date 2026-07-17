@@ -14,7 +14,7 @@ final class k {
         while (((k) this).field_f[var1] >= 0) {
             var1 = bl.b() != 0 ? ((k) this).field_f[var1] : var1 + 1;
         }
-        return ((k) this).field_f[var1] ^ -1;
+        return ~((k) this).field_f[var1];
     }
 
     private final void c() {
@@ -58,7 +58,7 @@ final class k {
                   var7 = 0;
                   L2: while (true) {
                     if (var7 >= var4) {
-                      ((k) this).field_f[var6] = var3 ^ -1;
+                      ((k) this).field_f[var6] = ~var3;
                       if (var6 >= var2) {
                         var2 = var6 + 1;
                         var3++;

@@ -21,7 +21,7 @@ final class ch extends fh {
         java.awt.image.DirectColorModel var6 = new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
         java.awt.image.WritableRaster var7 = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) (Object) var6).createCompatibleSampleModel(((ch) this).field_e, ((ch) this).field_f), (java.awt.image.DataBuffer) (Object) var5, (java.awt.Point) null);
         ((ch) this).field_a = (java.awt.Image) (Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) (Object) var6, var7, false, new Hashtable());
-        int var8 = -36 % ((param0 - 0) / 52);
+        int var8 = -36 % (param0 / 52);
         ((ch) this).field_g = param3;
         ((ch) this).a(-40);
     }

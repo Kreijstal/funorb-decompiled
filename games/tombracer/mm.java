@@ -7,15 +7,10 @@ final class mm extends vg {
 
     final static boolean a(int param0, int param1, int param2) {
         int var3 = 125 / ((param0 - -64) / 32);
-        return -1 != (2048 & param1 ^ -1) ? true : false;
+        return (2048 & param1) != 0 ? true : false;
     }
 
     public static void a(byte param0) {
-        if (param0 != -44) {
-            boolean discarded$0 = mm.a(-1, -14, 26);
-            field_f = null;
-            return;
-        }
         field_f = null;
     }
 

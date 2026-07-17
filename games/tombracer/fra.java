@@ -18,19 +18,83 @@ final class fra extends nv {
     fra(la param0, boolean param1) {
         super(param0, param1);
         ((fra) this).field_o = 0;
-        ((fra) this).field_r = new up(1, 50);
+        try {
+            ((fra) this).field_r = new up(1, 50);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "fra.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     fra(la param0, kh param1, boolean param2) {
         super(param0, param1, param2);
         ((fra) this).field_o = 0;
-        ((fra) this).field_r = ad.a((byte) 87, param1);
+        try {
+            ((fra) this).field_r = ad.a((byte) 87, param1);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "fra.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     final void a(boolean param0, up param1) {
-        ((fra) this).field_r = param1;
-        if (!param0) {
-            field_q = null;
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        try {
+          L0: {
+            L1: {
+              ((fra) this).field_r = param1;
+              if (param0) {
+                break L1;
+              } else {
+                field_q = null;
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_1 = new StringBuilder().append("fra.L(").append(param0).append(44);
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param1 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
         }
     }
 
@@ -44,20 +108,25 @@ final class fra extends nv {
     public static void b(int param0) {
         field_q = null;
         field_n = null;
-        if (param0 != -27203) {
-            field_q = null;
-        }
     }
 
     final void a(boolean param0, kh param1) {
-        super.a(param0, param1);
-        ((fra) this).field_r.a(param1, (byte) 125);
+        try {
+            super.a(param0, param1);
+            ((fra) this).field_r.a(param1, (byte) 125);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "fra.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void a(boolean param0, fsa param1) {
-        super.a(param0, param1);
-        ((fra) this).field_r.a((gma) (Object) ((fra) this).e(6), 2348);
-        param1.b((byte) -103, 8);
+        try {
+            super.a(param0, param1);
+            ((fra) this).field_r.a((gma) (Object) ((fra) this).e(6), 2348);
+            param1.b((byte) -103, 8);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "fra.Q(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final int a(boolean param0) {
@@ -74,6 +143,6 @@ final class fra extends nv {
 
     private static void $cfr$clinit() {
         field_p = 1.0f;
-        field_n = new char[]{(char)95, (char)97, (char)98, (char)99, (char)100, (char)101, (char)102, (char)103, (char)104, (char)105, (char)106, (char)107, (char)108, (char)109, (char)110, (char)111, (char)112, (char)113, (char)114, (char)115, (char)116, (char)117, (char)118, (char)119, (char)120, (char)121, (char)122, (char)48, (char)49, (char)50, (char)51, (char)52, (char)53, (char)54, (char)55, (char)56, (char)57};
+        field_n = new char[]{'_', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
     }
 }

@@ -64,8 +64,8 @@ final class df {
         int var5 = 0;
         for (var6 = 0; var6 < 4; var6++) {
             var5 = 128 - (var6 << 5);
-            df.d(param0 + var6, param1 + param3 + var6, param2, param4, var5);
-            df.c(param0 + param2 + var6, param1 + var6, param3 + 1, param4, var5);
+            df.d(param0 + var6, param1 + param3 + var6, param2, 5592405, var5);
+            df.c(param0 + param2 + var6, param1 + var6, param3 + 1, 5592405, var5);
         }
     }
 
@@ -1675,10 +1675,10 @@ final class df {
                                     break L4;
                                   } else {
                                     if (param1 + var8 < field_h) {
-                                      field_d[var4 - var8] = param3;
-                                      field_d[var4 + var8] = param3;
-                                      field_d[var6] = param3;
-                                      field_d[var7] = param3;
+                                      field_d[var4 - var8] = 16776964;
+                                      field_d[var4 + var8] = 16776964;
+                                      field_d[var6] = 16776964;
+                                      field_d[var7] = 16776964;
                                       L5: while (true) {
                                         L6: {
                                           int incrementValue$2 = var9;
@@ -1697,14 +1697,14 @@ final class df {
                                           }
                                         }
                                         if (var8 >= var9) {
-                                          field_d[var6 - var9] = param3;
-                                          field_d[var6 + var9] = param3;
-                                          field_d[var4 - var8] = param3;
-                                          field_d[var4 + var8] = param3;
-                                          field_d[var5 - var8] = param3;
-                                          field_d[var5 + var8] = param3;
-                                          field_d[var7 - var9] = param3;
-                                          field_d[var7 + var9] = param3;
+                                          field_d[var6 - var9] = 16776964;
+                                          field_d[var6 + var9] = 16776964;
+                                          field_d[var4 - var8] = 16776964;
+                                          field_d[var4 + var8] = 16776964;
+                                          field_d[var5 - var8] = 16776964;
+                                          field_d[var5 + var8] = 16776964;
+                                          field_d[var7 - var9] = 16776964;
+                                          field_d[var7 + var9] = 16776964;
                                           continue L5;
                                         } else {
                                           break L3;
@@ -1727,7 +1727,7 @@ final class df {
                                   if (param1 >= field_h) {
                                     break L7;
                                   } else {
-                                    field_d[var4 - var8] = param3;
+                                    field_d[var4 - var8] = 16776964;
                                     break L7;
                                   }
                                 }
@@ -1743,7 +1743,7 @@ final class df {
                                   if (param1 >= field_h) {
                                     break L8;
                                   } else {
-                                    field_d[var4 + var8] = param3;
+                                    field_d[var4 + var8] = 16776964;
                                     break L8;
                                   }
                                 }
@@ -1760,7 +1760,7 @@ final class df {
                                     if (param0 >= field_k) {
                                       break L9;
                                     } else {
-                                      field_d[var7] = param3;
+                                      field_d[var7] = 16776964;
                                       break L9;
                                     }
                                   }
@@ -1775,7 +1775,7 @@ final class df {
                                     if (param0 >= field_k) {
                                       break L9;
                                     } else {
-                                      field_d[var7] = param3;
+                                      field_d[var7] = 16776964;
                                       break L9;
                                     }
                                   }
@@ -1814,7 +1814,7 @@ final class df {
                                           if (param0 - var9 >= field_k) {
                                             break L13;
                                           } else {
-                                            field_d[var6 - var9] = param3;
+                                            field_d[var6 - var9] = 16776964;
                                             break L13;
                                           }
                                         }
@@ -1825,7 +1825,7 @@ final class df {
                                         if (param0 + var9 >= field_k) {
                                           break L12;
                                         } else {
-                                          field_d[var6 + var9] = param3;
+                                          field_d[var6 + var9] = 16776964;
                                           break L12;
                                         }
                                       }
@@ -1846,7 +1846,7 @@ final class df {
                                           if (param0 - var8 >= field_k) {
                                             break L15;
                                           } else {
-                                            field_d[var4 - var8] = param3;
+                                            field_d[var4 - var8] = 16776964;
                                             break L15;
                                           }
                                         }
@@ -1857,7 +1857,7 @@ final class df {
                                         if (param0 + var8 >= field_k) {
                                           break L14;
                                         } else {
-                                          field_d[var4 + var8] = param3;
+                                          field_d[var4 + var8] = 16776964;
                                           break L14;
                                         }
                                       }
@@ -1878,7 +1878,7 @@ final class df {
                                           if (param0 - var8 >= field_k) {
                                             break L17;
                                           } else {
-                                            field_d[var5 - var8] = param3;
+                                            field_d[var5 - var8] = 16776964;
                                             break L17;
                                           }
                                         }
@@ -1889,7 +1889,7 @@ final class df {
                                         if (param0 + var8 >= field_k) {
                                           break L16;
                                         } else {
-                                          field_d[var5 + var8] = param3;
+                                          field_d[var5 + var8] = 16776964;
                                           break L16;
                                         }
                                       }
@@ -1909,7 +1909,7 @@ final class df {
                                         if (param0 - var9 >= field_k) {
                                           break L18;
                                         } else {
-                                          field_d[var7 - var9] = param3;
+                                          field_d[var7 - var9] = 16776964;
                                           break L18;
                                         }
                                       }
@@ -1920,7 +1920,7 @@ final class df {
                                       if (param0 + var9 >= field_k) {
                                         continue L10;
                                       } else {
-                                        field_d[var7 + var9] = param3;
+                                        field_d[var7 + var9] = 16776964;
                                         continue L10;
                                       }
                                     }
@@ -1947,7 +1947,7 @@ final class df {
           }
           return;
         } else {
-          df.a(param0, param1, param3);
+          df.a(param0, param1, 16776964);
           return;
         }
     }
@@ -2066,39 +2066,39 @@ final class df {
                                                           }
                                                         }
                                                         if (var18 >= var19) {
-                                                          field_d[var10 - var19] = param5;
-                                                          field_d[var11 + var19] = param5;
-                                                          field_d[var12 - var18] = param5;
-                                                          field_d[var13 + var18] = param5;
-                                                          field_d[var14 - var18] = param5;
-                                                          field_d[var15 + var18] = param5;
-                                                          field_d[var16 - var19] = param5;
-                                                          field_d[var17 + var19] = param5;
+                                                          field_d[var10 - var19] = 1141646;
+                                                          field_d[var11 + var19] = 1141646;
+                                                          field_d[var12 - var18] = 1141646;
+                                                          field_d[var13 + var18] = 1141646;
+                                                          field_d[var14 - var18] = 1141646;
+                                                          field_d[var15 + var18] = 1141646;
+                                                          field_d[var16 - var19] = 1141646;
+                                                          field_d[var17 + var19] = 1141646;
                                                           continue L9;
                                                         } else {
                                                           break L3;
                                                         }
                                                       }
                                                     } else {
-                                                      field_d[var22] = param5;
+                                                      field_d[var22] = 1141646;
                                                       var22++;
                                                       continue L8;
                                                     }
                                                   }
                                                 } else {
-                                                  field_d[var22] = param5;
+                                                  field_d[var22] = 1141646;
                                                   var22++;
                                                   continue L7;
                                                 }
                                               }
                                             } else {
-                                              field_d[var22 + var18] = param5;
+                                              field_d[var22 + var18] = 1141646;
                                               var22 = var22 + field_e;
                                               continue L6;
                                             }
                                           }
                                         } else {
-                                          field_d[var22 - var18] = param5;
+                                          field_d[var22 - var18] = 1141646;
                                           var22 = var22 + field_e;
                                           continue L5;
                                         }
@@ -2110,10 +2110,10 @@ final class df {
                                 }
                               }
                             }
-                            df.d(param0, param1 + var18, param3 - var18 - var18, param5);
-                            df.d(param0 + param2 - 1, param1 + var18, param3 - var18 - var18, param5);
-                            df.b(param0 + var18, param1, param2 - var18 - var18, param5);
-                            df.b(param0 + var18, param1 + param3 - 1, param2 - var18 - var18, param5);
+                            df.d(param0, param1 + var18, param3 - var18 - var18, 1141646);
+                            df.d(param0 + param2 - 1, param1 + var18, param3 - var18 - var18, 1141646);
+                            df.b(param0 + var18, param1, param2 - var18 - var18, 1141646);
+                            df.b(param0 + var18, param1 + param3 - 1, param2 - var18 - var18, 1141646);
                             L11: while (true) {
                               L12: {
                                 int incrementValue$3 = var19;
@@ -2150,7 +2150,7 @@ final class df {
                                           if (var6 - var19 >= field_k) {
                                             break L14;
                                           } else {
-                                            field_d[var10 - var19] = param5;
+                                            field_d[var10 - var19] = 1141646;
                                             break L14;
                                           }
                                         }
@@ -2161,7 +2161,7 @@ final class df {
                                         if (var8 + var19 >= field_k) {
                                           break L13;
                                         } else {
-                                          field_d[var11 + var19] = param5;
+                                          field_d[var11 + var19] = 1141646;
                                           break L13;
                                         }
                                       }
@@ -2182,7 +2182,7 @@ final class df {
                                           if (var6 - var18 >= field_k) {
                                             break L16;
                                           } else {
-                                            field_d[var12 - var18] = param5;
+                                            field_d[var12 - var18] = 1141646;
                                             break L16;
                                           }
                                         }
@@ -2193,7 +2193,7 @@ final class df {
                                         if (var8 + var18 >= field_k) {
                                           break L15;
                                         } else {
-                                          field_d[var13 + var18] = param5;
+                                          field_d[var13 + var18] = 1141646;
                                           break L15;
                                         }
                                       }
@@ -2214,7 +2214,7 @@ final class df {
                                           if (var6 - var18 >= field_k) {
                                             break L18;
                                           } else {
-                                            field_d[var14 - var18] = param5;
+                                            field_d[var14 - var18] = 1141646;
                                             break L18;
                                           }
                                         }
@@ -2225,7 +2225,7 @@ final class df {
                                         if (var8 + var18 >= field_k) {
                                           break L17;
                                         } else {
-                                          field_d[var15 + var18] = param5;
+                                          field_d[var15 + var18] = 1141646;
                                           break L17;
                                         }
                                       }
@@ -2245,7 +2245,7 @@ final class df {
                                         if (var6 - var19 >= field_k) {
                                           break L19;
                                         } else {
-                                          field_d[var16 - var19] = param5;
+                                          field_d[var16 - var19] = 1141646;
                                           break L19;
                                         }
                                       }
@@ -2256,7 +2256,7 @@ final class df {
                                       if (var8 + var19 >= field_k) {
                                         continue L11;
                                       } else {
-                                        field_d[var17 + var19] = param5;
+                                        field_d[var17 + var19] = 1141646;
                                         continue L11;
                                       }
                                     }
@@ -2283,7 +2283,7 @@ final class df {
           }
           return;
         } else {
-          df.e(param0, param1, param2, param3, param5);
+          df.e(param0, param1, param2, param3, 1141646);
           return;
         }
     }
@@ -2779,8 +2779,8 @@ final class df {
     }
 
     final static void d(int param0, int param1, int param2, int param3, int param4, int param5) {
-        df.a(field_d, 0, param2 + param3 * field_e, param0, param2, param4, field_e - param4, param5);
-        df.a(field_d, 0, param2 + param3 * field_e, param1, param3, param5, field_e - param4, param2, param4);
+        df.a(field_d, 0, param2 + param3 * field_e, param0, param2, param4, field_e - param4, 140);
+        df.a(field_d, 0, param2 + param3 * field_e, param1, param3, 140, field_e - param4, param2, param4);
     }
 
     final static void b(int param0, int param1, int param2, int param3, int param4) {

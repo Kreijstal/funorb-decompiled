@@ -13,12 +13,12 @@ final class em {
         int var4 = 0;
         var4 = Terraphoenix.field_V;
         if (((em) this).field_d != null) {
-          if (-1 != (((em) this).field_d.length ^ -1)) {
+          if (((em) this).field_d.length != 0) {
             if (param1 <= -115) {
               var3 = 1;
               L0: while (true) {
                 if (((em) this).field_d.length > var3) {
-                  if (param0 >= ((em) this).field_d[var3] + ((em) this).field_d[var3 + -1] >> -1679860287) {
+                  if (param0 >= ((em) this).field_d[var3] + ((em) this).field_d[var3 + -1] >> 1) {
                     var3++;
                     continue L0;
                   } else {
@@ -33,7 +33,7 @@ final class em {
               var3 = 1;
               L1: while (true) {
                 if (((em) this).field_d.length > var3) {
-                  if (param0 >= ((em) this).field_d[var3] + ((em) this).field_d[var3 + -1] >> -1679860287) {
+                  if (param0 >= ((em) this).field_d[var3] + ((em) this).field_d[var3 + -1] >> 1) {
                     var3++;
                     continue L1;
                   } else {
@@ -55,7 +55,7 @@ final class em {
     final int b(int param0) {
         if (param0 == -1) {
           if (null != ((em) this).field_d) {
-            if (-1 == (((em) this).field_d.length ^ -1)) {
+            if (((em) this).field_d.length == 0) {
               return 0;
             } else {
               return ((em) this).field_d[((em) this).field_d.length + -1];
@@ -66,7 +66,7 @@ final class em {
         } else {
           field_c = null;
           if (null != ((em) this).field_d) {
-            if (-1 == (((em) this).field_d.length ^ -1)) {
+            if (((em) this).field_d.length == 0) {
               return 0;
             } else {
               return ((em) this).field_d[((em) this).field_d.length + -1];
@@ -80,9 +80,6 @@ final class em {
     public static void a(int param0) {
         field_c = null;
         field_b = null;
-        if (param0 >= -118) {
-            field_c = null;
-        }
     }
 
     em(int param0, int param1, int param2) {

@@ -62,7 +62,7 @@ final class sm extends nv implements ut {
             stackOut_16_0 = this;
             stackIn_18_0 = stackOut_16_0;
             stackIn_17_0 = stackOut_16_0;
-            if (-2 != (var8.u((byte) 127) ^ -1)) {
+            if (var8.u((byte) 127) != 1) {
               stackOut_18_0 = this;
               stackOut_18_1 = 0;
               stackIn_19_0 = stackOut_18_0;
@@ -110,7 +110,7 @@ final class sm extends nv implements ut {
               stackOut_3_0 = this;
               stackIn_5_0 = stackOut_3_0;
               stackIn_4_0 = stackOut_3_0;
-              if (-2 != (var7.u((byte) 127) ^ -1)) {
+              if (var7.u((byte) 127) != 1) {
                 stackOut_5_0 = this;
                 stackOut_5_1 = 0;
                 stackIn_6_0 = stackOut_5_0;
@@ -158,7 +158,11 @@ final class sm extends nv implements ut {
         if (!param0) {
             return;
         }
-        super.a(param0, param1);
+        try {
+            super.a(param0, param1);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "sm.Q(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public final int j(byte param0) {
@@ -172,9 +176,6 @@ final class sm extends nv implements ut {
     public static void l(int param0) {
         field_o = null;
         field_r = null;
-        if (param0 != 11162931) {
-            boolean discarded$0 = sm.a(-113, -37, -83);
-        }
     }
 
     public final int c(int param0) {
@@ -235,7 +236,11 @@ final class sm extends nv implements ut {
         super(param0, param1);
         ((sm) this).field_s = true;
         ((sm) this).field_p = 1;
-        ((sm) this).field_q = new jma(15);
+        try {
+            ((sm) this).field_q = new jma(15);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "sm.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     public final int b(int param0) {
@@ -266,13 +271,17 @@ final class sm extends nv implements ut {
         super(param0, param1, param2);
         ((sm) this).field_s = true;
         ((sm) this).field_p = 1;
-        if (16 < param0.field_E) {
-            ((sm) this).field_p = 1;
-        } else {
-            ((sm) this).field_p = param1.b((byte) 44, 3);
+        try {
+            if (16 < param0.field_E) {
+                ((sm) this).field_p = 1;
+            } else {
+                ((sm) this).field_p = param1.b((byte) 44, 3);
+            }
+            ((sm) this).field_q = new jma(15, param0, param1);
+            ((sm) this).field_s = 1 == param1.b((byte) 44, 1) ? true : false;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "sm.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
-        ((sm) this).field_q = new jma(15, param0, param1);
-        ((sm) this).field_s = 1 == param1.b((byte) 44, 1) ? true : false;
     }
 
     final int a(boolean param0) {
@@ -284,9 +293,13 @@ final class sm extends nv implements ut {
     }
 
     final void a(boolean param0, kh param1) {
-        super.a(param0, param1);
-        ((sm) this).field_q.a(((sm) this).h((byte) 111), (byte) 108, param1);
-        param1.a((byte) -127, ((sm) this).field_s ? 1 : 0, 1);
+        try {
+            super.a(param0, param1);
+            ((sm) this).field_q.a(((sm) this).h((byte) 111), (byte) 108, param1);
+            param1.a((byte) -127, ((sm) this).field_s ? 1 : 0, 1);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "sm.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public final int g(byte param0) {

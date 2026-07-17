@@ -33,10 +33,8 @@ class vg {
     }
 
     final static void q(int param0) {
-        pr.a(param0 + -30497, faa.field_g, (String) null);
-        if (param0 != 30497) {
-            field_c = null;
-        }
+        Object var2 = null;
+        pr.a(0, faa.field_g, (String) null);
     }
 
     final boolean l(byte param0) {

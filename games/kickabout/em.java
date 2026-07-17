@@ -14,11 +14,6 @@ final class em {
 
     public static void c(byte param0) {
         field_d = null;
-        if (param0 != 36) {
-            field_d = null;
-            field_c = null;
-            return;
-        }
         field_c = null;
     }
 
@@ -74,24 +69,21 @@ final class em {
 
     final void a(am param0, byte param1, long param2) {
         am var5 = null;
-        L0: {
-          if (param0.field_e != null) {
+        if (!(param0.field_e == null)) {
             param0.f(param1 ^ 74);
-            break L0;
-          } else {
-            break L0;
-          }
         }
         if (param1 != -4) {
-          return;
-        } else {
-          var5 = ((em) this).field_b[(int)((long)(-1 + ((em) this).field_a) & param2)];
-          param0.field_e = var5.field_e;
-          param0.field_f = var5;
-          param0.field_e.field_f = param0;
-          param0.field_l = param2;
-          param0.field_f.field_e = param0;
-          return;
+            return;
+        }
+        try {
+            var5 = ((em) this).field_b[(int)((long)(-1 + ((em) this).field_a) & param2)];
+            param0.field_e = var5.field_e;
+            param0.field_f = var5;
+            param0.field_e.field_f = param0;
+            param0.field_l = param2;
+            param0.field_f.field_e = param0;
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "em.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }
     }
 
@@ -113,7 +105,7 @@ final class em {
             var2 = ((em) this).field_b[(int)((long)(-1 + ((em) this).field_a) & ((em) this).field_f)];
             L0: while (true) {
               if (var2 != ((em) this).field_h) {
-                if ((((em) this).field_f ^ -1L) != (((em) this).field_h.field_l ^ -1L)) {
+                if (~((em) this).field_f != ~((em) this).field_h.field_l) {
                   ((em) this).field_h = ((em) this).field_h.field_f;
                   continue L0;
                 } else {
@@ -131,7 +123,7 @@ final class em {
             var2 = ((em) this).field_b[(int)((long)(-1 + ((em) this).field_a) & ((em) this).field_f)];
             L1: while (true) {
               if (var2 != ((em) this).field_h) {
-                if ((((em) this).field_f ^ -1L) != (((em) this).field_h.field_l ^ -1L)) {
+                if (~((em) this).field_f != ~((em) this).field_h.field_l) {
                   ((em) this).field_h = ((em) this).field_h.field_f;
                   continue L1;
                 } else {
@@ -183,7 +175,7 @@ final class em {
           ((em) this).field_h = var4.field_f;
           L0: while (true) {
             if (var4 != ((em) this).field_h) {
-              if ((param1 ^ -1L) != (((em) this).field_h.field_l ^ -1L)) {
+              if (~param1 != ~((em) this).field_h.field_l) {
                 ((em) this).field_h = ((em) this).field_h.field_f;
                 continue L0;
               } else {
@@ -201,7 +193,7 @@ final class em {
           ((em) this).field_h = var4.field_f;
           L1: while (true) {
             if (var4 != ((em) this).field_h) {
-              if ((param1 ^ -1L) != (((em) this).field_h.field_l ^ -1L)) {
+              if (~param1 != ~((em) this).field_h.field_l) {
                 ((em) this).field_h = ((em) this).field_h.field_f;
                 continue L1;
               } else {

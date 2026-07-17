@@ -12,16 +12,17 @@ final class jv extends tia {
 
     jv(gj param0, ad param1, int param2) {
         super(param0, param1);
-        ((jv) this).field_k = param2;
-        ((jv) this).field_g = 128;
-        ((jv) this).field_l = new eaa();
+        try {
+            ((jv) this).field_k = param2;
+            ((jv) this).field_g = 128;
+            ((jv) this).field_l = new eaa();
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "jv.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     public static void c(byte param0) {
         field_i = null;
-        if (param0 != 79) {
-            return;
-        }
         field_m = null;
     }
 
@@ -46,29 +47,30 @@ final class jv extends tia {
           if (param0 <= 0) {
             break L0;
           } else {
-            boolean discarded$2 = ((jv) this).a(20);
+            boolean discarded$3 = ((jv) this).a(20);
             break L0;
           }
         }
+        int fieldTemp$4 = ((jv) this).field_g - 2;
         ((jv) this).field_g = ((jv) this).field_g - 2;
-        if (((jv) this).field_g - 2 >= 0) {
+        if (fieldTemp$4 >= 0) {
           L1: {
-            if (-31 <= (((jv) this).field_g ^ -1)) {
+            if (((jv) this).field_g <= 30) {
               break L1;
             } else {
               var2 = ((jv) this).field_g;
               var2 += 16;
               var3 = 0;
               L2: while (true) {
-                if ((var3 ^ -1) <= -17) {
+                if (var3 >= 16) {
                   break L1;
                 } else {
                   var4 = -(3.141592653589793 * (double)(2 * (kla.a(50, ((jv) this).field_f, -2147483648) + (((jv) this).field_k + -1) * 50)) / 200.0 - 1.5707963267948966);
-                  var6 = (int)((double)(-1600 + (((jv) this).field_g << 1868921603)) * Math.sin(var4)) << 1711787556;
-                  var7 = (int)((double)(-1600 + (((jv) this).field_g << 504146915)) * Math.cos(var4)) << 2129711204;
+                  var6 = (int)((double)(-1600 + (((jv) this).field_g << 3)) * Math.sin(var4)) << 4;
+                  var7 = (int)((double)(-1600 + (((jv) this).field_g << 3)) * Math.cos(var4)) << 4;
                   var8 = (int)(100.0 * Math.sin((double)var2 * 300.0));
                   var9 = new lh(var6, var8, var7);
-                  int discarded$3 = kla.a(20, ((jv) this).field_f, -2147483648);
+                  int discarded$5 = kla.a(20, ((jv) this).field_f, -2147483648);
                   var9.field_p = -kla.a(5000, ((jv) this).field_f, -2147483648);
                   var9.field_k = -kla.a(5000, ((jv) this).field_f, -2147483648);
                   var9.field_g = -kla.a(5000, ((jv) this).field_f, -2147483648);

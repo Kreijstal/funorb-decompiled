@@ -12,7 +12,7 @@ final class wg {
     private static String field_z;
 
     public static void a(byte param0) {
-        int var1 = 29 / ((param0 - -37) / 35);
+        int var1 = -14;
         field_e = null;
         field_g = null;
         field_c = null;

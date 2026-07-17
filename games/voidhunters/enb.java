@@ -9,7 +9,7 @@ final class enb {
 
     public static void a(byte param0) {
         field_a = null;
-        int var1 = 21 / ((-8 - param0) / 43);
+        int var1 = -21;
     }
 
     static {

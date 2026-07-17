@@ -130,7 +130,7 @@ final class ol extends nc {
             }
           }
           L4: {
-            if (-97 == (sj.field_p ^ -1)) {
+            if (sj.field_p == 96) {
               break L4;
             } else {
               if (97 != sj.field_p) {
@@ -146,7 +146,7 @@ final class ol extends nc {
               if (var2 == 0) {
                 break L6;
               } else {
-                if (-1 != (((ol) this).field_g.field_d ^ -1)) {
+                if (((ol) this).field_g.field_d != 0) {
                   break L6;
                 } else {
                   ((ol) this).field_g.a(1, false);
@@ -157,7 +157,7 @@ final class ol extends nc {
             if (var3 == 0) {
               break L5;
             } else {
-              if ((((ol) this).field_g.field_d ^ -1) != -3) {
+              if (((ol) this).field_g.field_d != 2) {
                 break L5;
               } else {
                 ((ol) this).field_g.a(1, false);
@@ -177,7 +177,7 @@ final class ol extends nc {
             ol.c((byte) 94);
         }
         if (!param1) {
-            if ((cp.field_S.length ^ -1) == (((ol) this).field_m ^ -1)) {
+            if (cp.field_S.length == ((ol) this).field_m) {
                 var3 = sj.field_p;
                 sj.field_p = 96;
                 ((ol) this).field_g.a(1, false);
@@ -304,7 +304,7 @@ final class ol extends nc {
           var2 = 3 + (pb.field_e.field_C + pb.field_e.field_r);
           var3 = 600;
           var6 = 200;
-          if (-2 != (p.field_e ^ -1)) {
+          if (p.field_e != 1) {
             stackOut_2_0 = 0;
             stackIn_3_0 = stackOut_2_0;
             break L0;
@@ -319,7 +319,7 @@ final class ol extends nc {
             var7 = stackIn_3_0;
             var14 = ((ol) this).field_m;
             if (0 != var14) {
-              if (-2 == (var14 ^ -1)) {
+              if (var14 == 1) {
                 L3: {
                   var10 = 30;
                   var9 = 155;
@@ -357,7 +357,7 @@ final class ol extends nc {
                 oo.f(5 + var11, var12 + 16, 73, 43, 3355647, 32);
                 break L2;
               } else {
-                if ((var14 ^ -1) == -3) {
+                if (var14 == 2) {
                   var9 = 175;
                   var2 -= 4;
                   var10 = 35;
@@ -375,7 +375,7 @@ final class ol extends nc {
                   var9 = var9 + (var10 + var2 * pb.field_e.a(cp.field_S[2][3], var6, var9, 340, 50, 16777215, 0, 0, 0, var2));
                   break L2;
                 } else {
-                  if ((var14 ^ -1) == -4) {
+                  if (var14 == 3) {
                     ah.field_e.c(cp.field_J[3][0], 20, 135, 2, 0);
                     rb.field_e[0].g(18, 148);
                     rb.field_e[1].g(8, 235);
@@ -412,7 +412,7 @@ final class ol extends nc {
                             }
                           }
                           L7: {
-                            if ((var14 ^ -1) == -3) {
+                            if (var14 == 2) {
                               var15 = 1;
                               break L7;
                             } else {
@@ -428,7 +428,7 @@ final class ol extends nc {
                             }
                           }
                           L9: {
-                            if (-4 != (var14 ^ -1)) {
+                            if (var14 != 3) {
                               break L9;
                             } else {
                               var15 = 8;
@@ -467,7 +467,7 @@ final class ol extends nc {
                                   stackOut_71_0 = ch.field_b;
                                   stackIn_73_0 = stackOut_71_0;
                                   stackIn_72_0 = stackOut_71_0;
-                                  if (-1 == (var14 ^ -1)) {
+                                  if (var14 == 0) {
                                     stackOut_73_0 = (ja[]) (Object) stackIn_73_0;
                                     stackOut_73_1 = 0;
                                     stackIn_74_0 = stackOut_73_0;
@@ -496,7 +496,7 @@ final class ol extends nc {
                         ah.field_e.c(cp.field_J[5][0], 20, 135, 2, 0);
                         var14 = 0;
                         L13: while (true) {
-                          if ((var14 ^ -1) <= (cp.field_Q.length ^ -1)) {
+                          if (~var14 <= ~cp.field_Q.length) {
                             break L2;
                           } else {
                             L14: {
@@ -525,7 +525,7 @@ final class ol extends nc {
                               }
                             }
                             L17: {
-                              if ((var14 ^ -1) == -5) {
+                              if (var14 == 4) {
                                 var15 = 35;
                                 break L17;
                               } else {
@@ -533,7 +533,7 @@ final class ol extends nc {
                               }
                             }
                             L18: {
-                              if ((var15 ^ -1) == 0) {
+                              if (var15 == -1) {
                                 break L18;
                               } else {
                                 wa.field_b[var15].g(20, var5 + 2);
@@ -588,7 +588,7 @@ final class ol extends nc {
                               stackIn_65_2 = stackOut_64_2;
                               stackIn_65_3 = stackOut_64_3;
                               stackIn_65_4 = stackOut_64_4;
-                              if ((var14 ^ -1) != -1) {
+                              if (var14 != 0) {
                                 stackOut_66_0 = stackIn_66_0;
                                 stackOut_66_1 = (ef) (Object) stackIn_66_1;
                                 stackOut_66_2 = (String) (Object) stackIn_66_2;
@@ -700,7 +700,7 @@ final class ol extends nc {
         int var3 = 0;
         ((ol) this).field_m = ((ol) this).field_m - 1;
         if (!param0) {
-            if (!(-1 != (((ol) this).field_m ^ -1))) {
+            if (!(((ol) this).field_m != 0)) {
                 var3 = sj.field_p;
                 sj.field_p = 97;
                 ((ol) this).field_g.a(1, false);
@@ -713,21 +713,90 @@ final class ol extends nc {
     }
 
     final static boolean a(String param0, boolean param1) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
-        int var4 = ZombieDawnMulti.field_E ? 1 : 0;
-        if (param1) {
-            field_p = 29;
-        }
-        for (var2 = 0; var2 < param0.length(); var2++) {
-            var3 = param0.charAt(var2);
-            if (!hd.a(-24315, (char) var3)) {
-                if (!(vh.a((char) var3, (byte) 85))) {
-                    return true;
+        int var4 = 0;
+        int stackIn_7_0 = 0;
+        int stackIn_10_0 = 0;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_9_0 = 0;
+        int stackOut_6_0 = 0;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        var4 = ZombieDawnMulti.field_E ? 1 : 0;
+        try {
+          L0: {
+            var2_int = 0;
+            L1: while (true) {
+              if (var2_int >= param0.length()) {
+                stackOut_9_0 = 0;
+                stackIn_10_0 = stackOut_9_0;
+                break L0;
+              } else {
+                L2: {
+                  var3 = param0.charAt(var2_int);
+                  if (hd.a(-24315, (char) var3)) {
+                    break L2;
+                  } else {
+                    if (!vh.a((char) var3, (byte) 85)) {
+                      stackOut_6_0 = 1;
+                      stackIn_7_0 = stackOut_6_0;
+                      return stackIn_7_0 != 0;
+                    } else {
+                      break L2;
+                    }
+                  }
                 }
+                var2_int++;
+                continue L1;
+              }
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2 = decompiledCaughtException;
+            stackOut_11_0 = (RuntimeException) var2;
+            stackOut_11_1 = new StringBuilder().append("ol.JA(");
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
+            if (param0 == null) {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L3;
+            } else {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L3;
+            }
+          }
+          throw fa.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + 0 + 41);
         }
-        return false;
+        return stackIn_10_0 != 0;
     }
 
     static {

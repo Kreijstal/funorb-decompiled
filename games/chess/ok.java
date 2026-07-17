@@ -16,15 +16,19 @@ final class ok extends ci {
 
     ok(long param0, ci param1, ci param2, pd param3, ci param4, String param5, String param6) {
         super(param0, param1);
-        ((ok) this).field_Fb = new ci(0L, (ci) null);
-        ((ok) this).field_Kb = new nb(0L, ((ok) this).field_Fb, param2, param3);
-        ((ok) this).field_Hb = new ci(0L, param4);
-        ((ok) this).field_Mb = new ci(0L, param4);
-        ((ok) this).field_Hb.field_db = param5;
-        ((ok) this).field_Mb.field_db = param6;
-        ((ok) this).a((byte) 127, (ci) (Object) ((ok) this).field_Kb);
-        ((ok) this).a((byte) 123, ((ok) this).field_Hb);
-        ((ok) this).a((byte) 127, ((ok) this).field_Mb);
+        try {
+            ((ok) this).field_Fb = new ci(0L, (ci) null);
+            ((ok) this).field_Kb = new nb(0L, ((ok) this).field_Fb, param2, param3);
+            ((ok) this).field_Hb = new ci(0L, param4);
+            ((ok) this).field_Mb = new ci(0L, param4);
+            ((ok) this).field_Hb.field_db = param5;
+            ((ok) this).field_Mb.field_db = param6;
+            ((ok) this).a((byte) 127, (ci) (Object) ((ok) this).field_Kb);
+            ((ok) this).a((byte) 123, ((ok) this).field_Hb);
+            ((ok) this).a((byte) 127, ((ok) this).field_Mb);
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "ok.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 44 + (param6 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void f(byte param0) {
@@ -33,16 +37,8 @@ final class ok extends ci {
         field_Eb = null;
         field_Jb = null;
         field_Nb = null;
-        if (param0 != 3) {
-          field_Ob = null;
-          field_Ob = null;
-          field_Gb = null;
-          return;
-        } else {
-          field_Ob = null;
-          field_Gb = null;
-          return;
-        }
+        field_Ob = null;
+        field_Gb = null;
     }
 
     ok(long param0, ok param1, String param2, String param3) {

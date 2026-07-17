@@ -22,16 +22,15 @@ final class t {
         int var11 = 0;
         nc var12 = null;
         int var12_int = 0;
-        nc var12_ref = null;
         int var13_int = 0;
-        nc var13 = null;
+        Object var13 = null;
         int var14 = 0;
         int var15_int = 0;
         dm var15 = null;
         Object var16 = null;
         int var16_int = 0;
         nc var16_ref = null;
-        nc var17_ref = null;
+        nc var17_ref_nc = null;
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
@@ -143,9 +142,9 @@ final class t {
                           var13 = null;
                           var14 = 0;
                           L6: while (true) {
-                            if ((var14 ^ -1) <= -13) {
-                              var12_ref.field_k = var13;
-                              var13.field_r = var12_ref;
+                            if (var14 >= 12) {
+                              var12.field_k = (nc) var13;
+                              ((nc) var13).field_r = var12;
                               var14 = var6.e(param1 + -1);
                               var26 = new nc[var14];
                               var10 = var26;
@@ -172,7 +171,7 @@ final class t {
                                             var7 = var5.field_r[var19].field_c;
                                             var5.field_r[var19].field_g = (int)(0.05 * Math.sqrt((double)((var8 - var18) * (var8 - var18) + (var7 - var17) * (var7 - var17))) + 0.5);
                                             var17 = var7;
-                                            if ((var5.field_r[var19].field_g ^ -1) <= -3) {
+                                            if (var5.field_r[var19].field_g >= 2) {
                                               break L10;
                                             } else {
                                               var5.field_r[var19].field_g = 2;
@@ -310,8 +309,7 @@ final class t {
                                           break L17;
                                         }
                                       }
-                                      new jd(stackIn_60_4, stackIn_60_5, stackIn_60_6, (int)(var16_ref.field_h + var16_ref.field_i * var16_ref.field_o), (int)(var16_ref.field_l + var16_ref.field_o * var16_ref.field_s), var17);
-                                      ((dm) (Object) stackIn_60_0).a(stackIn_60_1 != 0, (Object) (Object) stackIn_60_2);
+                                      ((dm) (Object) stackIn_60_0).a(stackIn_60_1 != 0, (Object) (Object) new jd(stackIn_60_4, stackIn_60_5, stackIn_60_6, (int)(var16_ref.field_h + var16_ref.field_i * var16_ref.field_o), (int)(var16_ref.field_l + var16_ref.field_o * var16_ref.field_s), var17));
                                       var16_ref = (nc) (Object) var6.a((byte) -71);
                                       continue L8;
                                     }
@@ -335,19 +333,19 @@ final class t {
                               L19: {
                                 var15_int = var5.field_A + (int)(200.0 * Math.cos(3.141592653589793 * (double)(2 * var14 + 1) / 12.0));
                                 var16_int = var5.field_S - (int)(Math.sin((double)(var14 * 2 - -1) * 3.141592653589793 / 12.0) * 200.0);
-                                var17_ref = new nc(var5, var12, (nc) null, var7, var8, var15_int, var16_int);
+                                var17_ref_nc = new nc(var5, var12, (nc) null, var7, var8, var15_int, var16_int);
                                 if (var12 != null) {
-                                  var12.field_k = var17_ref;
+                                  var12.field_k = var17_ref_nc;
                                   break L19;
                                 } else {
-                                  var13 = var17_ref;
+                                  var13 = (Object) (Object) var17_ref_nc;
                                   break L19;
                                 }
                               }
                               var7 = var15_int;
-                              var12_ref = var17_ref;
+                              var12 = var17_ref_nc;
                               var8 = var16_int;
-                              var6.a((byte) -113, (oh) (Object) var17_ref);
+                              var6.a((byte) -113, (oh) (Object) var17_ref_nc);
                               var14++;
                               continue L6;
                             }
@@ -411,7 +409,11 @@ final class t {
     }
 
     t(ln[] param0) {
-        ((t) this).field_d = param0;
+        try {
+            ((t) this).field_d = param0;
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "t.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

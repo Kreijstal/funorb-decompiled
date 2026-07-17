@@ -42,7 +42,7 @@ abstract class gm {
                 var2 = td.field_l;
                 var3 = 0;
                 L2: while (true) {
-                  if ((var3 ^ -1) <= (var2.length ^ -1)) {
+                  if (~var3 <= ~var2.length) {
                     var2 = vl.field_I;
                     var3 = 0;
                     L3: while (true) {
@@ -52,7 +52,7 @@ abstract class gm {
                         break L0;
                       } else {
                         var4 = var2[var3];
-                        if ((var4 ^ -1) == (param0 ^ -1)) {
+                        if (~var4 == ~param0) {
                           stackOut_25_0 = 1;
                           stackIn_26_0 = stackOut_25_0;
                           return stackIn_26_0 != 0;

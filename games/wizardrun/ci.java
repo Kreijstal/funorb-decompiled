@@ -10,44 +10,29 @@ final class ci {
         field_c = null;
         field_a = null;
         field_b = null;
-        if (param0) {
-            ci.a((byte) 31);
-        }
     }
 
     final static void a(int param0, va param1) {
-        int var2 = 0;
-        if (param0 != 2026380485) {
-          ci.a(false);
-          ki.field_M = param1.j(-14477) << 2026380485;
-          var2 = param1.f(255);
-          ki.field_M = ki.field_M + (var2 >> 508716803);
-          lj.field_a = 1835008 & var2 << -1329807918;
-          lj.field_a = lj.field_a + (param1.j(-14477) << -1794847134);
-          var2 = param1.f(255);
-          lj.field_a = lj.field_a + (var2 >> 1484079942);
-          bi.field_a = (var2 & 63) << -367736145;
-          bi.field_a = bi.field_a + (param1.f(255) << -1586968409);
-          var2 = param1.f(param0 ^ 2026380346);
-          ia.field_j = var2 << -1915604368 & 65536;
-          bi.field_a = bi.field_a + (var2 >> 966965537);
-          ia.field_j = ia.field_j + param1.j(-14477);
-          return;
-        } else {
-          ki.field_M = param1.j(-14477) << 2026380485;
-          var2 = param1.f(255);
-          ki.field_M = ki.field_M + (var2 >> 508716803);
-          lj.field_a = 1835008 & var2 << -1329807918;
-          lj.field_a = lj.field_a + (param1.j(-14477) << -1794847134);
-          var2 = param1.f(255);
-          lj.field_a = lj.field_a + (var2 >> 1484079942);
-          bi.field_a = (var2 & 63) << -367736145;
-          bi.field_a = bi.field_a + (param1.f(255) << -1586968409);
-          var2 = param1.f(param0 ^ 2026380346);
-          ia.field_j = var2 << -1915604368 & 65536;
-          bi.field_a = bi.field_a + (var2 >> 966965537);
-          ia.field_j = ia.field_j + param1.j(-14477);
-          return;
+        int var2_int = 0;
+        try {
+            if (param0 != 2026380485) {
+                ci.a(false);
+            }
+            ki.field_M = param1.j(-14477) << 5;
+            var2_int = param1.f(255);
+            ki.field_M = ki.field_M + (var2_int >> 3);
+            lj.field_a = 1835008 & var2_int << 18;
+            lj.field_a = lj.field_a + (param1.j(-14477) << 2);
+            var2_int = param1.f(255);
+            lj.field_a = lj.field_a + (var2_int >> 6);
+            bi.field_a = (var2_int & 63) << 15;
+            bi.field_a = bi.field_a + (param1.f(255) << 7);
+            var2_int = param1.f(param0 ^ 2026380346);
+            ia.field_j = var2_int << 16 & 65536;
+            bi.field_a = bi.field_a + (var2_int >> 1);
+            ia.field_j = ia.field_j + param1.j(-14477);
+        } catch (RuntimeException runtimeException) {
+            throw bd.a((Throwable) (Object) runtimeException, "ci.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

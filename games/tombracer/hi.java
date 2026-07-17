@@ -58,8 +58,8 @@ final class hi extends nv {
     }
 
     private final void b(int param0) {
-        int var2 = hua.a((byte) 111, ((hi) this).field_g.g(-25787) >> 1303228386);
-        int var3 = bua.a(param0, ((hi) this).field_g.g(-25787) >> -1936018174);
+        int var2 = hua.a((byte) 111, ((hi) this).field_g.g(-25787) >> 2);
+        int var3 = bua.a(0, ((hi) this).field_g.g(-25787) >> 2);
         ((hi) this).field_n = -gqa.a(((hi) this).field_r, (byte) 24, var2) - -gqa.a(((hi) this).field_s, (byte) 24, var3);
         ((hi) this).field_o = -gqa.a(((hi) this).field_s, (byte) 24, var2) + gqa.a(((hi) this).field_r, (byte) 24, var3);
     }
@@ -121,7 +121,7 @@ final class hi extends nv {
                       if (var11 >= param6) {
                         var11 = 0;
                         L5: while (true) {
-                          if (var11 >= param6 >> -125971551) {
+                          if (var11 >= param6 >> 1) {
                             return var10;
                           } else {
                             var12 = 0;
@@ -217,14 +217,18 @@ final class hi extends nv {
         if (param0 != 28701) {
             return;
         }
-        super.h(param0 + 0);
+        super.h(param0);
         ((hi) this).field_s = -((hi) this).field_s;
     }
 
     hi(la param0, kh param1, boolean param2) {
         super(param0, param1, param2);
-        ((hi) this).field_s = bla.a(true, 4, param1.b((byte) 44, 4)) << 1174170448;
-        ((hi) this).field_r = bla.a(true, 4, param1.b((byte) 44, 4)) << 1509249904;
+        try {
+            ((hi) this).field_s = bla.a(true, 4, param1.b((byte) 44, 4)) << 16;
+            ((hi) this).field_r = bla.a(true, 4, param1.b((byte) 44, 4)) << 16;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "hi.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     final boolean p(byte param0) {
@@ -236,15 +240,23 @@ final class hi extends nv {
     }
 
     final void a(boolean param0, fsa param1) {
-        super.a(param0, param1);
-        param1.b((byte) 60, 3);
-        this.b(0);
+        try {
+            super.a(param0, param1);
+            param1.b((byte) 60, 3);
+            this.b(0);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "hi.Q(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void a(boolean param0, kh param1) {
-        super.a(param0, param1);
-        param1.a((byte) -125, dqa.a(true, ((hi) this).field_s >> -1206818288, 4), 4);
-        param1.a((byte) -127, dqa.a(true, ((hi) this).field_r >> -1420745040, 4), 4);
+        try {
+            super.a(param0, param1);
+            param1.a((byte) -125, dqa.a(true, ((hi) this).field_s >> 16, 4), 4);
+            param1.a((byte) -127, dqa.a(true, ((hi) this).field_r >> 16, 4), 4);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "hi.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

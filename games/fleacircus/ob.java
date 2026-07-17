@@ -143,12 +143,16 @@ final class ob {
     }
 
     final static void a(int param0, int param1, byte param2, int param3, ni param4) {
-        param4.a(-11, 12);
-        param4.b((byte) -103, 17);
-        int var5 = 104 % ((-72 - param2) / 52);
-        param4.b((byte) 119, param1);
-        param4.b((byte) -122, param0);
-        param4.a(-11, param3);
+        try {
+            param4.a(-11, 12);
+            param4.b((byte) -103, 17);
+            int var5_int = 104 % ((-72 - param2) / 52);
+            param4.b((byte) 119, param1);
+            param4.b((byte) -122, param0);
+            param4.a(-11, param3);
+        } catch (RuntimeException runtimeException) {
+            throw pf.a((Throwable) (Object) runtimeException, "ob.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public final String toString() {

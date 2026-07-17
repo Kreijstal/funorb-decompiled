@@ -16,70 +16,57 @@ abstract class of {
 
     public static void a(byte param0) {
         field_b = null;
-        if (param0 <= 88) {
-          field_g = null;
-          field_f = null;
-          field_g = null;
-          field_a = null;
-          return;
-        } else {
-          field_f = null;
-          field_g = null;
-          field_a = null;
-          return;
-        }
+        field_f = null;
+        field_g = null;
+        field_a = null;
     }
 
     abstract int a(int param0, int param1);
 
     final static void a(int param0) {
         bb.field_f = bb.field_f + 1;
-        if (param0 == 0) {
-          jg.field_g = jg.field_g + 1;
-          if (bb.field_f < 131072) {
-            if (jg.field_g > 255) {
-              if (-21 > (sl.field_f ^ -1)) {
-                jm.field_p = jm.field_p + 1;
-                jg.field_g = 0;
-                sl.field_f = 0;
-                if (mc.field_b.length > jm.field_p) {
-                  return;
-                } else {
-                  jm.field_p = 0;
-                  return;
-                }
+        jg.field_g = jg.field_g + 1;
+        if (bb.field_f < 131072) {
+          if (jg.field_g > 255) {
+            if (sl.field_f > 20) {
+              jm.field_p = jm.field_p + 1;
+              jg.field_g = 0;
+              sl.field_f = 0;
+              if (mc.field_b.length > jm.field_p) {
+                return;
               } else {
-                sl.field_f = sl.field_f + 1;
-                jg.field_g = 255;
+                jm.field_p = 0;
                 return;
               }
             } else {
+              sl.field_f = sl.field_f + 1;
+              jg.field_g = 255;
               return;
             }
           } else {
-            bb.field_f = 0;
-            if (jg.field_g > 255) {
-              if (-21 > (sl.field_f ^ -1)) {
-                jm.field_p = jm.field_p + 1;
-                jg.field_g = 0;
-                sl.field_f = 0;
-                if (mc.field_b.length > jm.field_p) {
-                  return;
-                } else {
-                  jm.field_p = 0;
-                  return;
-                }
+            return;
+          }
+        } else {
+          bb.field_f = 0;
+          if (jg.field_g > 255) {
+            if (sl.field_f > 20) {
+              jm.field_p = jm.field_p + 1;
+              jg.field_g = 0;
+              sl.field_f = 0;
+              if (mc.field_b.length > jm.field_p) {
+                return;
               } else {
-                sl.field_f = sl.field_f + 1;
-                jg.field_g = 255;
+                jm.field_p = 0;
                 return;
               }
             } else {
+              sl.field_f = sl.field_f + 1;
+              jg.field_g = 255;
               return;
             }
+          } else {
+            return;
           }
-        } else {
-          return;
         }
     }
 
@@ -87,41 +74,45 @@ abstract class of {
 
     final static void a(boolean param0, int param1) {
         bh var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
         ki var4 = null;
+        RuntimeException decompiledCaughtException = null;
         var3 = client.field_A ? 1 : 0;
-        var4 = (ki) (Object) cg.field_c.c((byte) -112);
-        L0: while (true) {
-          if (var4 == null) {
-            if (!param0) {
-              var2 = rc.field_e.c((byte) 109);
-              L1: while (true) {
-                if (var2 == null) {
-                  return;
-                } else {
-                  gm.b(param1, 47);
-                  var2 = rc.field_e.d(true);
-                  continue L1;
+        try {
+          L0: {
+            var4 = (ki) (Object) cg.field_c.c((byte) -112);
+            L1: while (true) {
+              if (var4 == null) {
+                L2: {
+                  if (!param0) {
+                    break L2;
+                  } else {
+                    of.a(true, -48);
+                    break L2;
+                  }
                 }
-              }
-            } else {
-              of.a(true, -48);
-              var2 = rc.field_e.c((byte) 109);
-              L2: while (true) {
-                if (var2 == null) {
-                  return;
-                } else {
-                  gm.b(param1, 47);
-                  var2 = rc.field_e.d(true);
-                  continue L2;
+                var2 = rc.field_e.c((byte) 109);
+                L3: while (true) {
+                  if (var2 == null) {
+                    break L0;
+                  } else {
+                    gm.b(param1, 47);
+                    var2 = rc.field_e.d(true);
+                    continue L3;
+                  }
                 }
+              } else {
+                kk.a(param1, -15016, var4);
+                var4 = (ki) (Object) cg.field_c.d(true);
+                continue L1;
               }
             }
-          } else {
-            kk.a(param1, -15016, var4);
-            var4 = (ki) (Object) cg.field_c.d(true);
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          throw dh.a((Throwable) (Object) var2_ref, "of.C(" + param0 + 44 + param1 + 41);
         }
     }
 

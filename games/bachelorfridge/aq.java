@@ -26,34 +26,13 @@ final class aq {
     final static void a(int param0, int param1) {
         int var3 = 0;
         var3 = BachelorFridge.field_y;
-        tla.d(param1 ^ 92);
-        if (0 == param0) {
-          cr.field_c = je.a(wt.field_m[0], 256, 96);
-          cr.field_c.d(-1);
-          ofa.a(0, cr.field_c);
-          if (param1 != -1) {
-            aq.a(-13, (byte) 0);
-            return;
-          } else {
-            return;
-          }
-        } else {
-          if ((param0 ^ -1) != -2) {
-            if (2 == param0) {
-              cr.field_c = je.a(wt.field_m[1], 256, 96);
-              sla.field_a = je.a(wt.field_m[3], 256, 96);
-              cr.field_c.d(-1);
-              sla.field_a.d(-1);
-              ofa.a(param1 + 1, cr.field_c);
-              ofa.a(0, sla.field_a);
-              if (param1 != -1) {
-                aq.a(-13, (byte) 0);
+        tla.d(-93);
+        if (0 != param0) {
+          if (param0 != 1) {
+            if (2 != param0) {
+              if (3 != param0) {
                 return;
               } else {
-                return;
-              }
-            } else {
-              if (3 == param0) {
                 cr.field_c = je.a(wt.field_m[1], 256, 96);
                 sla.field_a = je.a(wt.field_m[5], 256, 96);
                 m.field_b = je.a(wt.field_m[4], 256, 96);
@@ -61,22 +40,18 @@ final class aq {
                 sla.field_a.d(-1);
                 m.field_b.d(-1);
                 ofa.a(0, cr.field_c);
-                ofa.a(param1 ^ -1, sla.field_a);
+                ofa.a(0, sla.field_a);
                 ofa.a(0, m.field_b);
-                if (param1 != -1) {
-                  aq.a(-13, (byte) 0);
-                  return;
-                } else {
-                  return;
-                }
-              } else {
-                if (param1 == -1) {
-                  return;
-                } else {
-                  aq.a(-13, (byte) 0);
-                  return;
-                }
+                return;
               }
+            } else {
+              cr.field_c = je.a(wt.field_m[1], 256, 96);
+              sla.field_a = je.a(wt.field_m[3], 256, 96);
+              cr.field_c.d(-1);
+              sla.field_a.d(-1);
+              ofa.a(0, cr.field_c);
+              ofa.a(0, sla.field_a);
+              return;
             }
           } else {
             cr.field_c = je.a(wt.field_m[1], 256, 96);
@@ -85,22 +60,19 @@ final class aq {
             sla.field_a.d(-1);
             ofa.a(0, cr.field_c);
             ofa.a(0, sla.field_a);
-            if (param1 == -1) {
-              return;
-            } else {
-              aq.a(-13, (byte) 0);
-              return;
-            }
+            return;
           }
+        } else {
+          cr.field_c = je.a(wt.field_m[0], 256, 96);
+          cr.field_c.d(-1);
+          ofa.a(0, cr.field_c);
+          return;
         }
     }
 
     public static void a(byte param0) {
         field_b = null;
         field_a = null;
-        if (param0 >= -123) {
-            field_b = null;
-        }
     }
 
     static {

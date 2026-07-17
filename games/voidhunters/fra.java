@@ -14,7 +14,8 @@ final class fra {
     }
 
     final static boolean a(int[] param0, int param1, int param2, int param3) {
-        int var4 = 0;
+        RuntimeException var4 = null;
+        int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -28,248 +29,188 @@ final class fra {
         int var15 = 0;
         int var16 = 0;
         int var17 = 0;
-        int stackIn_28_0 = 0;
-        int stackIn_37_0 = 0;
-        int stackIn_48_0 = 0;
-        int stackIn_57_0 = 0;
-        int stackOut_56_0 = 0;
-        int stackOut_55_0 = 0;
-        int stackOut_47_0 = 0;
-        int stackOut_46_0 = 0;
+        int stackIn_22_0 = 0;
+        int stackIn_38_0 = 0;
+        RuntimeException stackIn_40_0 = null;
+        StringBuilder stackIn_40_1 = null;
+        RuntimeException stackIn_41_0 = null;
+        StringBuilder stackIn_41_1 = null;
+        RuntimeException stackIn_42_0 = null;
+        StringBuilder stackIn_42_1 = null;
+        String stackIn_42_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_37_0 = 0;
         int stackOut_36_0 = 0;
-        int stackOut_35_0 = 0;
-        int stackOut_27_0 = 0;
-        int stackOut_26_0 = 0;
+        int stackOut_21_0 = 0;
+        RuntimeException stackOut_39_0 = null;
+        StringBuilder stackOut_39_1 = null;
+        RuntimeException stackOut_41_0 = null;
+        StringBuilder stackOut_41_1 = null;
+        String stackOut_41_2 = null;
+        RuntimeException stackOut_40_0 = null;
+        StringBuilder stackOut_40_1 = null;
+        String stackOut_40_2 = null;
         var16 = VoidHunters.field_G;
-        var4 = 2147483647;
-        var5 = -2147483648;
-        var6 = 2147483647;
-        var7 = -2147483648;
-        var8 = 0;
-        L0: while (true) {
-          if (var8 >= param0.length) {
-            L1: {
-              if (param2 == 2) {
-                break L1;
-              } else {
-                fra.a(25);
-                break L1;
-              }
-            }
-            if (em.a(5220, var5, param1, var7, param3, var4, var6)) {
-              var8 = param3;
-              var9 = param1;
-              var10 = param3 + -(var4 - -var5 >> -1474575423);
-              var11 = -(var6 + var7 >> -694688287) + param1;
-              if (Math.abs(var10) < Math.abs(var11)) {
-                if (0 >= var10) {
-                  L2: {
-                    var8 = var8 - (var5 + -var4);
-                    var10 = 0;
-                    var17 = 0;
-                    var11 = var17;
-                    if (var17 >= param0.length) {
-                      break L2;
-                    } else {
-                      L3: {
-                        var12 = param0[var17];
-                        var13 = param0[1 + var17];
-                        var14 = param0[(2 + var17) % param0.length];
-                        var15 = param0[(var17 - -3) % param0.length];
-                        if (-1 == ng.a(8, param1, (byte) 93, param3, var14, var8, var13, var12, var15, var9)) {
-                          var17 += 2;
-                          break L3;
-                        } else {
-                          var10++;
-                          break L3;
-                        }
+        try {
+          L0: {
+            var4_int = 2147483647;
+            var5 = -2147483648;
+            var6 = 2147483647;
+            var7 = -2147483648;
+            var8 = 0;
+            L1: while (true) {
+              if (var8 >= param0.length) {
+                L2: {
+                  if (param2 == 2) {
+                    break L2;
+                  } else {
+                    fra.a(25);
+                    break L2;
+                  }
+                }
+                if (em.a(5220, var5, param1, var7, param3, var4_int, var6)) {
+                  L3: {
+                    var8 = param3;
+                    var9 = param1;
+                    var10 = param3 + -(var4_int - -var5 >> 1);
+                    var11 = -(var6 + var7 >> 1) + param1;
+                    if (Math.abs(var10) < Math.abs(var11)) {
+                      if (0 < var10) {
+                        var8 = var8 + (var5 - var4_int);
+                        break L3;
+                      } else {
+                        var8 = var8 - (var5 + -var4_int);
+                        break L3;
                       }
-                      var17 += 2;
-                      var17 += 2;
-                      var17 += 2;
-                      break L2;
+                    } else {
+                      if (var11 > 0) {
+                        var9 = var9 + (-var6 + var7);
+                        break L3;
+                      } else {
+                        var9 = var9 - (var7 - var6);
+                        break L3;
+                      }
                     }
                   }
                   L4: {
-                    if (var10 % 2 != 1) {
-                      stackOut_56_0 = 0;
-                      stackIn_57_0 = stackOut_56_0;
+                    var10 = 0;
+                    var17 = 0;
+                    var11 = var17;
+                    if (var17 >= param0.length) {
                       break L4;
                     } else {
-                      stackOut_55_0 = 1;
-                      stackIn_57_0 = stackOut_55_0;
+                      L5: {
+                        var12 = param0[var17];
+                        var13 = param0[1 + var17];
+                        var14 = param0[(2 + var17) % param0.length];
+                        var15 = param0[(var17 - -3) % param0.length];
+                        if (-1 == ng.a(8, param1, (byte) 93, param3, var14, var8, var13, var12, var15, var9)) {
+                          var17 += 2;
+                          break L5;
+                        } else {
+                          var10++;
+                          break L5;
+                        }
+                      }
+                      var17 += 2;
+                      var17 += 2;
                       break L4;
                     }
                   }
-                  return stackIn_57_0 != 0;
-                } else {
-                  L5: {
-                    var8 = var8 + (var5 - var4);
-                    var10 = 0;
-                    var17 = 0;
-                    var11 = var17;
-                    if (var17 >= param0.length) {
-                      break L5;
-                    } else {
-                      L6: {
-                        var12 = param0[var17];
-                        var13 = param0[1 + var17];
-                        var14 = param0[(2 + var17) % param0.length];
-                        var15 = param0[(var17 - -3) % param0.length];
-                        if (-1 == ng.a(8, param1, (byte) 93, param3, var14, var8, var13, var12, var15, var9)) {
-                          var17 += 2;
-                          break L6;
-                        } else {
-                          var10++;
-                          break L6;
-                        }
-                      }
-                      var17 += 2;
-                      var17 += 2;
-                      var17 += 2;
-                      break L5;
-                    }
-                  }
-                  L7: {
+                  L6: {
                     if (var10 % 2 != 1) {
-                      stackOut_47_0 = 0;
-                      stackIn_48_0 = stackOut_47_0;
-                      break L7;
+                      stackOut_37_0 = 0;
+                      stackIn_38_0 = stackOut_37_0;
+                      break L6;
                     } else {
-                      stackOut_46_0 = 1;
-                      stackIn_48_0 = stackOut_46_0;
-                      break L7;
+                      stackOut_36_0 = 1;
+                      stackIn_38_0 = stackOut_36_0;
+                      break L6;
                     }
                   }
-                  return stackIn_48_0 != 0;
+                  break L0;
+                } else {
+                  stackOut_21_0 = 0;
+                  stackIn_22_0 = stackOut_21_0;
+                  return stackIn_22_0 != 0;
                 }
               } else {
-                if ((var11 ^ -1) >= -1) {
-                  L8: {
-                    var9 = var9 - (var7 - var6);
-                    var10 = 0;
-                    var17 = 0;
-                    var11 = var17;
-                    if (var17 >= param0.length) {
-                      break L8;
-                    } else {
-                      L9: {
-                        var12 = param0[var17];
-                        var13 = param0[1 + var17];
-                        var14 = param0[(2 + var17) % param0.length];
-                        var15 = param0[(var17 - -3) % param0.length];
-                        if (-1 == ng.a(8, param1, (byte) 93, param3, var14, var8, var13, var12, var15, var9)) {
-                          var17 += 2;
-                          break L9;
-                        } else {
-                          var10++;
-                          break L9;
-                        }
-                      }
-                      var17 += 2;
-                      var17 += 2;
-                      var17 += 2;
-                      break L8;
-                    }
+                L7: {
+                  var9 = param0[var8];
+                  if (var5 < var9) {
+                    var5 = var9;
+                    break L7;
+                  } else {
+                    break L7;
                   }
-                  L10: {
-                    if (var10 % 2 != 1) {
-                      stackOut_36_0 = 0;
-                      stackIn_37_0 = stackOut_36_0;
-                      break L10;
-                    } else {
-                      stackOut_35_0 = 1;
-                      stackIn_37_0 = stackOut_35_0;
-                      break L10;
-                    }
-                  }
-                  return stackIn_37_0 != 0;
-                } else {
-                  L11: {
-                    var9 = var9 + (-var6 + var7);
-                    var10 = 0;
-                    var17 = 0;
-                    var11 = var17;
-                    if (var17 >= param0.length) {
-                      break L11;
-                    } else {
-                      L12: {
-                        var12 = param0[var17];
-                        var13 = param0[1 + var17];
-                        var14 = param0[(2 + var17) % param0.length];
-                        var15 = param0[(var17 - -3) % param0.length];
-                        if (-1 == ng.a(8, param1, (byte) 93, param3, var14, var8, var13, var12, var15, var9)) {
-                          var17 += 2;
-                          break L12;
-                        } else {
-                          var10++;
-                          break L12;
-                        }
-                      }
-                      var17 += 2;
-                      var17 += 2;
-                      var17 += 2;
-                      break L11;
-                    }
-                  }
-                  L13: {
-                    if (var10 % 2 != 1) {
-                      stackOut_27_0 = 0;
-                      stackIn_28_0 = stackOut_27_0;
-                      break L13;
-                    } else {
-                      stackOut_26_0 = 1;
-                      stackIn_28_0 = stackOut_26_0;
-                      break L13;
-                    }
-                  }
-                  return stackIn_28_0 != 0;
                 }
+                L8: {
+                  var10 = param0[1 + var8];
+                  if (var9 >= var4_int) {
+                    break L8;
+                  } else {
+                    var4_int = var9;
+                    break L8;
+                  }
+                }
+                L9: {
+                  if (var10 > var7) {
+                    var7 = var10;
+                    break L9;
+                  } else {
+                    break L9;
+                  }
+                }
+                L10: {
+                  if (var6 > var10) {
+                    var6 = var10;
+                    var8 += 2;
+                    break L10;
+                  } else {
+                    var8 += 2;
+                    break L10;
+                  }
+                }
+                var8 += 2;
+                continue L1;
               }
-            } else {
-              return false;
-            }
-          } else {
-            L14: {
-              var9 = param0[var8];
-              if (var5 < var9) {
-                var5 = var9;
-                break L14;
-              } else {
-                break L14;
-              }
-            }
-            L15: {
-              var10 = param0[1 + var8];
-              if (var9 >= var4) {
-                break L15;
-              } else {
-                var4 = var9;
-                break L15;
-              }
-            }
-            L16: {
-              if (var10 > var7) {
-                var7 = var10;
-                break L16;
-              } else {
-                break L16;
-              }
-            }
-            if (var6 > var10) {
-              var6 = var10;
-              var8 += 2;
-              continue L0;
-            } else {
-              var8 += 2;
-              continue L0;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L11: {
+            var4 = decompiledCaughtException;
+            stackOut_39_0 = (RuntimeException) var4;
+            stackOut_39_1 = new StringBuilder().append("fra.C(");
+            stackIn_41_0 = stackOut_39_0;
+            stackIn_41_1 = stackOut_39_1;
+            stackIn_40_0 = stackOut_39_0;
+            stackIn_40_1 = stackOut_39_1;
+            if (param0 == null) {
+              stackOut_41_0 = (RuntimeException) (Object) stackIn_41_0;
+              stackOut_41_1 = (StringBuilder) (Object) stackIn_41_1;
+              stackOut_41_2 = "null";
+              stackIn_42_0 = stackOut_41_0;
+              stackIn_42_1 = stackOut_41_1;
+              stackIn_42_2 = stackOut_41_2;
+              break L11;
+            } else {
+              stackOut_40_0 = (RuntimeException) (Object) stackIn_40_0;
+              stackOut_40_1 = (StringBuilder) (Object) stackIn_40_1;
+              stackOut_40_2 = "{...}";
+              stackIn_42_0 = stackOut_40_0;
+              stackIn_42_1 = stackOut_40_1;
+              stackIn_42_2 = stackOut_40_2;
+              break L11;
+            }
+          }
+          throw rta.a((Throwable) (Object) stackIn_42_0, stackIn_42_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }
+        return stackIn_38_0 != 0;
     }
 
     final static int a(byte param0) {
-        int var1 = -17 / ((-44 - param0) / 49);
+        int var1 = 5;
         return sea.a(-19) - seb.a(27546) / 2;
     }
 

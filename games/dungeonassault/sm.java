@@ -2,6 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 import java.io.*;
+import java.net.URL;
+import java.lang.String;
 
 final class sm {
     static String field_f;
@@ -42,19 +44,13 @@ final class sm {
             java.net.URL stackIn_15_4 = null;
             StringBuilder stackIn_15_5 = null;
             String stackIn_15_6 = null;
+            Throwable decompiledCaughtException = null;
             qg stackOut_12_0 = null;
             int stackOut_12_1 = 0;
             java.net.URL stackOut_12_2 = null;
             java.net.URL stackOut_12_3 = null;
             java.net.URL stackOut_12_4 = null;
             StringBuilder stackOut_12_5 = null;
-            qg stackOut_13_0 = null;
-            int stackOut_13_1 = 0;
-            java.net.URL stackOut_13_2 = null;
-            java.net.URL stackOut_13_3 = null;
-            java.net.URL stackOut_13_4 = null;
-            StringBuilder stackOut_13_5 = null;
-            String stackOut_13_6 = null;
             qg stackOut_14_0 = null;
             int stackOut_14_1 = 0;
             java.net.URL stackOut_14_2 = null;
@@ -62,297 +58,129 @@ final class sm {
             java.net.URL stackOut_14_4 = null;
             StringBuilder stackOut_14_5 = null;
             String stackOut_14_6 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        var6 = DungeonAssault.field_K;
-                        statePc = 1;
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        try {
-                            var3_ref = "";
-                            if (param0 != null) {
-                                statePc = 3;
-                            } else {
-                                statePc = 2;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_1) {
-                            caughtException = stateCaught_1;
-                            statePc = 21;
-                            continue stateLoop;
-                        }
-                    }
-                    case 2: {
-                        try {
-                            statePc = 4;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_2) {
-                            caughtException = stateCaught_2;
-                            statePc = 21;
-                            continue stateLoop;
-                        }
-                    }
-                    case 3: {
-                        try {
-                            var3_ref = hc.a(9, param0);
-                            statePc = 4;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_3) {
-                            caughtException = stateCaught_3;
-                            statePc = 21;
-                            continue stateLoop;
-                        }
-                    }
-                    case 4: {
-                        try {
-                            if (param2 == null) {
-                                statePc = 9;
-                            } else {
-                                statePc = 5;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_4) {
-                            caughtException = stateCaught_4;
-                            statePc = 21;
-                            continue stateLoop;
-                        }
-                    }
-                    case 5: {
-                        try {
-                            if (param0 != null) {
-                                statePc = 7;
-                            } else {
-                                statePc = 6;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_5) {
-                            caughtException = stateCaught_5;
-                            statePc = 21;
-                            continue stateLoop;
-                        }
-                    }
-                    case 6: {
-                        try {
-                            statePc = 8;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_6) {
-                            caughtException = stateCaught_6;
-                            statePc = 21;
-                            continue stateLoop;
-                        }
-                    }
-                    case 7: {
-                        try {
-                            var3_ref = var3_ref + " | ";
-                            statePc = 8;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_7) {
-                            caughtException = stateCaught_7;
-                            statePc = 21;
-                            continue stateLoop;
-                        }
-                    }
-                    case 8: {
-                        try {
-                            var3_ref = var3_ref + param2;
-                            statePc = 9;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_8) {
-                            caughtException = stateCaught_8;
-                            statePc = 21;
-                            continue stateLoop;
-                        }
-                    }
-                    case 9: {
-                        try {
-                            sn.a(11580, var3_ref);
-                            var7 = eg.a(var3_ref, ":", "%3a", true);
-                            var8 = eg.a(var7, "@", "%40", true);
-                            var9 = eg.a(var8, "&", "%26", true);
-                            var10 = eg.a(var9, "#", "%23", true);
-                            if (null == ci.field_q) {
-                                statePc = 11;
-                            } else {
-                                statePc = 10;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_9) {
-                            caughtException = stateCaught_9;
-                            statePc = 21;
-                            continue stateLoop;
-                        }
-                    }
-                    case 10: {
-                        try {
-                            statePc = 12;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_10) {
-                            caughtException = stateCaught_10;
-                            statePc = 21;
-                            continue stateLoop;
-                        }
-                    }
-                    case 11: {
-                        return;
-                    }
-                    case 12: {
-                        try {
-                            stackOut_12_0 = kf.field_o;
-                            stackOut_12_1 = param1 ^ -17;
-                            stackOut_12_2 = null;
-                            stackOut_12_3 = null;
-                            stackOut_12_4 = ci.field_q.getCodeBase();
-                            stackOut_12_5 = new StringBuilder().append("clienterror.ws?c=").append(wj.field_s).append("&u=");
-                            stackIn_14_0 = stackOut_12_0;
-                            stackIn_14_1 = stackOut_12_1;
-                            stackIn_14_2 = stackOut_12_2;
-                            stackIn_14_3 = stackOut_12_3;
-                            stackIn_14_4 = stackOut_12_4;
-                            stackIn_14_5 = stackOut_12_5;
-                            stackIn_13_0 = stackOut_12_0;
-                            stackIn_13_1 = stackOut_12_1;
-                            stackIn_13_2 = stackOut_12_2;
-                            stackIn_13_3 = stackOut_12_3;
-                            stackIn_13_4 = stackOut_12_4;
-                            stackIn_13_5 = stackOut_12_5;
-                            if (pe.field_o != null) {
-                                statePc = 14;
-                            } else {
-                                statePc = 13;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_12) {
-                            caughtException = stateCaught_12;
-                            statePc = 21;
-                            continue stateLoop;
-                        }
-                    }
-                    case 13: {
-                        try {
-                            stackOut_13_0 = (qg) (Object) stackIn_13_0;
-                            stackOut_13_1 = stackIn_13_1;
-                            stackOut_13_2 = null;
-                            stackOut_13_3 = null;
-                            stackOut_13_4 = (java.net.URL) (Object) stackIn_13_4;
-                            stackOut_13_5 = (StringBuilder) (Object) stackIn_13_5;
-                            stackOut_13_6 = "" + ne.field_g;
-                            stackIn_15_0 = stackOut_13_0;
-                            stackIn_15_1 = stackOut_13_1;
-                            stackIn_15_2 = stackOut_13_2;
-                            stackIn_15_3 = stackOut_13_3;
-                            stackIn_15_4 = stackOut_13_4;
-                            stackIn_15_5 = stackOut_13_5;
-                            stackIn_15_6 = stackOut_13_6;
-                            statePc = 15;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_13) {
-                            caughtException = stateCaught_13;
-                            statePc = 21;
-                            continue stateLoop;
-                        }
-                    }
-                    case 14: {
-                        try {
-                            stackOut_14_0 = (qg) (Object) stackIn_14_0;
-                            stackOut_14_1 = stackIn_14_1;
-                            stackOut_14_2 = null;
-                            stackOut_14_3 = null;
-                            stackOut_14_4 = (java.net.URL) (Object) stackIn_14_4;
-                            stackOut_14_5 = (StringBuilder) (Object) stackIn_14_5;
-                            stackOut_14_6 = pe.field_o;
-                            stackIn_15_0 = stackOut_14_0;
-                            stackIn_15_1 = stackOut_14_1;
-                            stackIn_15_2 = stackOut_14_2;
-                            stackIn_15_3 = stackOut_14_3;
-                            stackIn_15_4 = stackOut_14_4;
-                            stackIn_15_5 = stackOut_14_5;
-                            stackIn_15_6 = stackOut_14_6;
-                            statePc = 15;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_14) {
-                            caughtException = stateCaught_14;
-                            statePc = 21;
-                            continue stateLoop;
-                        }
-                    }
-                    case 15: {
-                        try {
-                            new java.net.URL(stackIn_15_4, stackIn_15_6 + "&v1=" + qg.field_c + "&v2=" + qg.field_p + "&e=" + var10);
-                            var4 = ((qg) (Object) stackIn_15_0).a(stackIn_15_1, stackIn_15_2);
-                            statePc = 16;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_15) {
-                            caughtException = stateCaught_15;
-                            statePc = 21;
-                            continue stateLoop;
-                        }
-                    }
-                    case 16: {
-                        try {
-                            if (var4.field_c != 0) {
-                                statePc = 18;
-                            } else {
-                                statePc = 17;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_16) {
-                            caughtException = stateCaught_16;
-                            statePc = 21;
-                            continue stateLoop;
-                        }
-                    }
-                    case 17: {
-                        try {
-                            pj.a(0, 1L);
-                            statePc = 16;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_17) {
-                            caughtException = stateCaught_17;
-                            statePc = 21;
-                            continue stateLoop;
-                        }
-                    }
-                    case 18: {
-                        try {
-                            if (param1 != var4.field_c) {
-                                statePc = 22;
-                            } else {
-                                statePc = 19;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_18) {
-                            caughtException = stateCaught_18;
-                            statePc = 21;
-                            continue stateLoop;
-                        }
-                    }
-                    case 19: {
-                        try {
-                            var5 = (DataInputStream) var4.field_f;
-                            int discarded$1 = var5.read();
-                            var5.close();
-                            statePc = 22;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_19) {
-                            caughtException = stateCaught_19;
-                            statePc = 21;
-                            continue stateLoop;
-                        }
-                    }
-                    case 21: {
-                        var3 = (Exception) (Object) caughtException;
-                        statePc = 22;
-                        continue stateLoop;
-                    }
-                    case 22: {
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            qg stackOut_13_0 = null;
+            int stackOut_13_1 = 0;
+            java.net.URL stackOut_13_2 = null;
+            java.net.URL stackOut_13_3 = null;
+            java.net.URL stackOut_13_4 = null;
+            StringBuilder stackOut_13_5 = null;
+            String stackOut_13_6 = null;
+            var6 = DungeonAssault.field_K;
+            try {
+              L0: {
+                L1: {
+                  var3_ref = "";
+                  if (param0 != null) {
+                    var3_ref = hc.a(9, param0);
+                    break L1;
+                  } else {
+                    break L1;
+                  }
                 }
+                L2: {
+                  if (param2 == null) {
+                    break L2;
+                  } else {
+                    L3: {
+                      if (param0 != null) {
+                        var3_ref = var3_ref + " | ";
+                        break L3;
+                      } else {
+                        break L3;
+                      }
+                    }
+                    var3_ref = var3_ref + param2;
+                    break L2;
+                  }
+                }
+                sn.a(11580, var3_ref);
+                var7 = eg.a(var3_ref, ":", "%3a", true);
+                var8 = eg.a(var7, "@", "%40", true);
+                var9 = eg.a(var8, "&", "%26", true);
+                var10 = eg.a(var9, "#", "%23", true);
+                if (null == ci.field_q) {
+                  return;
+                } else {
+                  L4: {
+                    stackOut_12_0 = kf.field_o;
+                    stackOut_12_1 = param1 ^ -17;
+                    stackOut_12_2 = null;
+                    stackOut_12_3 = null;
+                    stackOut_12_4 = ci.field_q.getCodeBase();
+                    stackOut_12_5 = new StringBuilder().append("clienterror.ws?c=").append(wj.field_s).append("&u=");
+                    stackIn_14_0 = stackOut_12_0;
+                    stackIn_14_1 = stackOut_12_1;
+                    stackIn_14_2 = stackOut_12_2;
+                    stackIn_14_3 = stackOut_12_3;
+                    stackIn_14_4 = stackOut_12_4;
+                    stackIn_14_5 = stackOut_12_5;
+                    stackIn_13_0 = stackOut_12_0;
+                    stackIn_13_1 = stackOut_12_1;
+                    stackIn_13_2 = stackOut_12_2;
+                    stackIn_13_3 = stackOut_12_3;
+                    stackIn_13_4 = stackOut_12_4;
+                    stackIn_13_5 = stackOut_12_5;
+                    if (pe.field_o != null) {
+                      stackOut_14_0 = (qg) (Object) stackIn_14_0;
+                      stackOut_14_1 = stackIn_14_1;
+                      stackOut_14_2 = null;
+                      stackOut_14_3 = null;
+                      stackOut_14_4 = (java.net.URL) (Object) stackIn_14_4;
+                      stackOut_14_5 = (StringBuilder) (Object) stackIn_14_5;
+                      stackOut_14_6 = pe.field_o;
+                      stackIn_15_0 = stackOut_14_0;
+                      stackIn_15_1 = stackOut_14_1;
+                      stackIn_15_2 = stackOut_14_2;
+                      stackIn_15_3 = stackOut_14_3;
+                      stackIn_15_4 = stackOut_14_4;
+                      stackIn_15_5 = stackOut_14_5;
+                      stackIn_15_6 = stackOut_14_6;
+                      break L4;
+                    } else {
+                      stackOut_13_0 = (qg) (Object) stackIn_13_0;
+                      stackOut_13_1 = stackIn_13_1;
+                      stackOut_13_2 = null;
+                      stackOut_13_3 = null;
+                      stackOut_13_4 = (java.net.URL) (Object) stackIn_13_4;
+                      stackOut_13_5 = (StringBuilder) (Object) stackIn_13_5;
+                      stackOut_13_6 = "" + ne.field_g;
+                      stackIn_15_0 = stackOut_13_0;
+                      stackIn_15_1 = stackOut_13_1;
+                      stackIn_15_2 = stackOut_13_2;
+                      stackIn_15_3 = stackOut_13_3;
+                      stackIn_15_4 = stackOut_13_4;
+                      stackIn_15_5 = stackOut_13_5;
+                      stackIn_15_6 = stackOut_13_6;
+                      break L4;
+                    }
+                  }
+                  var4 = ((qg) (Object) stackIn_15_0).a(stackIn_15_1, new java.net.URL(stackIn_15_4, stackIn_15_6 + "&v1=" + qg.field_c + "&v2=" + qg.field_p + "&e=" + var10));
+                  L5: while (true) {
+                    if (var4.field_c != 0) {
+                      L6: {
+                        if (param1 != var4.field_c) {
+                          break L6;
+                        } else {
+                          var5 = (DataInputStream) var4.field_f;
+                          int discarded$1 = var5.read();
+                          var5.close();
+                          break L6;
+                        }
+                      }
+                      break L0;
+                    } else {
+                      pj.a(0, 1L);
+                      continue L5;
+                    }
+                  }
+                }
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L7: {
+                var3 = (Exception) (Object) decompiledCaughtException;
+                break L7;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -362,23 +190,89 @@ final class sm {
     }
 
     final static boolean a(int param0, String param1) {
-        if (param0 == 1) {
-          if (param1 != null) {
-            if (param1.length() >= wa.field_k) {
-              if (param1.length() > md.field_b) {
-                return true;
-              } else {
-                return false;
+        RuntimeException var2 = null;
+        int stackIn_2_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackIn_10_0 = 0;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_9_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_1_0 = 0;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        try {
+          L0: {
+            if (param0 == 1) {
+              L1: {
+                if (param1 == null) {
+                  break L1;
+                } else {
+                  if (param1.length() < wa.field_k) {
+                    break L1;
+                  } else {
+                    if (param1.length() <= md.field_b) {
+                      stackOut_9_0 = 0;
+                      stackIn_10_0 = stackOut_9_0;
+                      break L0;
+                    } else {
+                      return true;
+                    }
+                  }
+                }
               }
+              stackOut_7_0 = 1;
+              stackIn_8_0 = stackOut_7_0;
+              return stackIn_8_0 != 0;
             } else {
-              return true;
+              stackOut_1_0 = 0;
+              stackIn_2_0 = stackOut_1_0;
+              return stackIn_2_0 != 0;
             }
-          } else {
-            return true;
           }
-        } else {
-          return false;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_11_0 = (RuntimeException) var2;
+            stackOut_11_1 = new StringBuilder().append("sm.D(").append(param0).append(44);
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
+            if (param1 == null) {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L2;
+            } else {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L2;
+            }
+          }
+          throw vk.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
         }
+        return stackIn_10_0 != 0;
     }
 
     public static void a(byte param0) {
@@ -404,28 +298,32 @@ final class sm {
             String var5 = null;
             String var4 = null;
             String var8 = null;
-            pa.field_b = param2;
             try {
-                var7 = param0.getParameter("cookieprefix");
-                var5 = var7;
-                var5 = var7;
-                var4 = param0.getParameter("cookiehost");
-                var5 = var4;
-                var5 = var4;
-                if (param1 != 31500) {
-                    Object var6 = null;
-                    sm.a((Throwable) null, 45, (String) null);
+                pa.field_b = param2;
+                try {
+                    var7 = param0.getParameter("cookieprefix");
+                    var5 = var7;
+                    var5 = var7;
+                    var4 = param0.getParameter("cookiehost");
+                    var5 = var4;
+                    var5 = var4;
+                    if (param1 != 31500) {
+                        Object var6 = null;
+                        sm.a((Throwable) null, 45, (String) null);
+                    }
+                    var8 = var7 + "session=" + param2 + "; version=1; path=/; domain=" + var4;
+                    var5 = var8;
+                    var5 = var8;
+                    if (param2.length() == 0) {
+                        var5 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
+                    }
+                    ee.a("document.cookie=\"" + var5 + "\"", (byte) -46, param0);
+                } catch (Throwable throwable) {
                 }
-                var8 = var7 + "session=" + param2 + "; version=1; path=/; domain=" + var4;
-                var5 = var8;
-                var5 = var8;
-                if (param2.length() == 0) {
-                    var5 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
-                }
-                ee.a("document.cookie=\"" + var5 + "\"", (byte) -46, param0);
-            } catch (Throwable throwable) {
+                lm.a((byte) -106, param0);
+            } catch (RuntimeException runtimeException) {
+                throw vk.a((Throwable) (Object) runtimeException, "sm.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
             }
-            lm.a((byte) -106, param0);
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

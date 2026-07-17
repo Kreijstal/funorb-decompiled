@@ -11,10 +11,10 @@ final class nh {
         byte[] var4 = null;
         L0: {
           var2 = 100 % ((10 - param0) / 54);
-          if (-101 != (param1 ^ -1)) {
+          if (param1 != 100) {
             break L0;
           } else {
-            if ((ll.field_c ^ -1) < -1) {
+            if (ll.field_c > 0) {
               int fieldTemp$8 = ll.field_c - 1;
               ll.field_c = ll.field_c - 1;
               var3_ref_byte__ = al.field_b[fieldTemp$8];
@@ -66,7 +66,7 @@ final class nh {
                 break L3;
               } else {
                 if (param1 == fd.field_q[var3]) {
-                  if (-1 > (sg.field_f[var3] ^ -1)) {
+                  if (sg.field_f[var3] > 0) {
                     sg.field_f[var3] = sg.field_f[var3] - 1;
                     var4 = ui.field_H[var3][sg.field_f[var3] - 1];
                     ui.field_H[var3][sg.field_f[var3]] = null;

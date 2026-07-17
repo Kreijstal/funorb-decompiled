@@ -6,12 +6,14 @@ final class dc extends ur {
     static String field_bb;
 
     final void b(byte param0, pk param1) {
-        if (param0 >= -87) {
-            field_ab = null;
+        try {
+            if (param0 >= -87) {
+                field_ab = null;
+            }
             super.b((byte) -96, param1);
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "dc.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        super.b((byte) -96, param1);
     }
 
     dc(dg param0, pk param1) {
@@ -19,12 +21,6 @@ final class dc extends ur {
     }
 
     public static void m(int param0) {
-        if (param0 < 89) {
-            field_bb = null;
-            field_ab = null;
-            field_bb = null;
-            return;
-        }
         field_ab = null;
         field_bb = null;
     }

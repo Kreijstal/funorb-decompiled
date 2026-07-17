@@ -26,22 +26,17 @@ class vo {
     }
 
     final void a(le param0, int param1) {
-        int var3 = 0;
-        if (param0.field_d != null) {
-          param0.b(-27598);
-          param0.field_b = ((vo) this).field_b.field_b;
-          param0.field_d = ((vo) this).field_b;
-          var3 = -120 / ((-52 - param1) / 59);
-          param0.field_d.field_b = param0;
-          param0.field_b.field_d = param0;
-          return;
-        } else {
-          param0.field_b = ((vo) this).field_b.field_b;
-          param0.field_d = ((vo) this).field_b;
-          var3 = -120 / ((-52 - param1) / 59);
-          param0.field_d.field_b = param0;
-          param0.field_b.field_d = param0;
-          return;
+        try {
+            if (param0.field_d != null) {
+                param0.b(-27598);
+            }
+            param0.field_b = ((vo) this).field_b.field_b;
+            param0.field_d = ((vo) this).field_b;
+            int var3_int = -120 / ((-52 - param1) / 59);
+            param0.field_d.field_b = param0;
+            param0.field_b.field_d = param0;
+        } catch (RuntimeException runtimeException) {
+            throw sh.a((Throwable) (Object) runtimeException, "vo.L(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
@@ -132,35 +127,19 @@ class vo {
     }
 
     final void a(int param0, le param1) {
-        if (param1.field_d == null) {
-          param1.field_b = ((vo) this).field_b;
-          if (param0 != 0) {
-            field_d = null;
+        try {
+            if (param1.field_d != null) {
+                param1.b(-27598);
+            }
+            param1.field_b = ((vo) this).field_b;
+            if (param0 != 0) {
+                field_d = null;
+            }
             param1.field_d = ((vo) this).field_b.field_d;
             param1.field_d.field_b = param1;
             param1.field_b.field_d = param1;
-            return;
-          } else {
-            param1.field_d = ((vo) this).field_b.field_d;
-            param1.field_d.field_b = param1;
-            param1.field_b.field_d = param1;
-            return;
-          }
-        } else {
-          param1.b(-27598);
-          param1.field_b = ((vo) this).field_b;
-          if (param0 == 0) {
-            param1.field_d = ((vo) this).field_b.field_d;
-            param1.field_d.field_b = param1;
-            param1.field_b.field_d = param1;
-            return;
-          } else {
-            field_d = null;
-            param1.field_d = ((vo) this).field_b.field_d;
-            param1.field_d.field_b = param1;
-            param1.field_b.field_d = param1;
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw sh.a((Throwable) (Object) runtimeException, "vo.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -209,9 +188,6 @@ class vo {
 
     public static void c(byte param0) {
         field_a = null;
-        if (param0 > -20) {
-            return;
-        }
         field_d = null;
     }
 

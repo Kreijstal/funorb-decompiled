@@ -20,9 +20,6 @@ final class bj {
 
     public static void a(int param0) {
         field_c = null;
-        if (param0 > -69) {
-            return;
-        }
         field_b = null;
         field_g = null;
     }
@@ -77,7 +74,11 @@ final class bj {
     bj(String param0) {
         ((bj) this).field_e = false;
         ((bj) this).field_d = false;
-        ((bj) this).field_f = param0;
+        try {
+            ((bj) this).field_f = param0;
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "bj.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

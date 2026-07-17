@@ -11,11 +11,72 @@ class coa extends ci {
     static int[] field_q;
 
     final void a(byte param0, uia param1, int param2) {
-        if (param0 != 107) {
-            ((coa) this).field_r = -60;
-        }
-        if (0 == param2) {
-            ((coa) this).field_o = param1.d(122);
+        RuntimeException var4 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 == 107) {
+                break L1;
+              } else {
+                ((coa) this).field_r = -60;
+                break L1;
+              }
+            }
+            L2: {
+              if (0 != param2) {
+                break L2;
+              } else {
+                ((coa) this).field_o = param1.d(122);
+                break L2;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var4 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var4;
+            stackOut_5_1 = new StringBuilder().append("coa.A(").append(param0).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param1 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L3;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L3;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param2 + 41);
         }
     }
 
@@ -108,9 +169,9 @@ class coa extends ci {
                     } else {
                       var9 = ((coa) this).field_m * var8 / ns.field_g;
                       var10 = ((coa) this).field_p[var7 - -var9];
-                      var6[var8] = sea.c(4080, var10 << -2003868700);
-                      var5[var8] = sea.c(var10, 65280) >> -1311564892;
-                      var4[var8] = sea.c(16711680, var10) >> 943686380;
+                      var6[var8] = sea.c(4080, var10 << 4);
+                      var5[var8] = sea.c(var10, 65280) >> 4;
+                      var4[var8] = sea.c(16711680, var10) >> 12;
                       var8++;
                       continue L2;
                     }
@@ -121,11 +182,12 @@ class coa extends ci {
                     if (ns.field_g <= var8) {
                       break L0;
                     } else {
+                      int incrementValue$1 = var7;
                       var7++;
-                      var9 = ((coa) this).field_p[var7];
-                      var6[var8] = sea.c(4080, var9 << 768834820);
-                      var5[var8] = sea.c(4080, var9 >> -521245468);
-                      var4[var8] = sea.c(var9, 16711680) >> -939575860;
+                      var9 = ((coa) this).field_p[incrementValue$1];
+                      var6[var8] = sea.c(4080, var9 << 4);
+                      var5[var8] = sea.c(4080, var9 >> 4);
+                      var4[var8] = sea.c(var9, 16711680) >> 12;
                       var8++;
                       continue L3;
                     }
@@ -147,10 +209,10 @@ class coa extends ci {
         if (param0) {
             return true;
         }
-        if (((coa) this).field_o > -1) {
+        if (((coa) this).field_o < 0) {
             return false;
         }
-        jpa var2 = -1 <= gla.field_m ? jpa.a(np.field_m, gla.field_m, ((coa) this).field_o) : jpa.a(np.field_m, ((coa) this).field_o);
+        jpa var2 = gla.field_m >= 0 ? jpa.a(np.field_m, gla.field_m, ((coa) this).field_o) : jpa.a(np.field_m, ((coa) this).field_o);
         var2.d();
         ((coa) this).field_p = var2.e();
         ((coa) this).field_r = var2.field_a;
@@ -172,36 +234,22 @@ class coa extends ci {
     }
 
     private static void $cfr$clinit() {
-        int var0 = 0;
         int var1 = 0;
+        int var0 = 0;
         int var2 = 0;
         field_n = "<%0> chose character: <%1>";
         field_s = new mla();
         field_q = new int[256];
-        var1 = 0;
-        L0: while (true) {
-          if (-257 >= var1) {
-          } else {
+        for (var1 = 0; var1 < 256; var1++) {
             var0 = var1;
-            var2 = 0;
-            L1: while (true) {
-              if (var2 >= 8) {
-                field_q[var1] = var0;
-                var1++;
-                continue L0;
-              } else {
-                if (-2 == (var0 & 1)) {
-                  var0 = var0 >>> -743502079 ^ -306674912;
-                  var2++;
-                  continue L1;
+            for (var2 = 0; var2 < 8; var2++) {
+                if ((var0 & 1) != 1) {
+                    var0 = var0 >>> 1;
                 } else {
-                  var0 = var0 >>> 1;
-                  var2++;
-                  continue L1;
+                    var0 = var0 >>> 1 ^ -306674912;
                 }
-              }
             }
-          }
+            field_q[var1] = var0;
         }
     }
 }

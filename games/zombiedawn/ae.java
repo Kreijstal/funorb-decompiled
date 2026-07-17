@@ -11,6 +11,7 @@ final class ae {
     static String[] field_b;
 
     final static void a(dj param0, byte param1) {
+        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         gd var5 = null;
@@ -19,91 +20,187 @@ final class ae {
         am var8 = null;
         int var9 = 0;
         am var10 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
         var7 = ZombieDawn.field_J;
-        var8 = new am(param0.a("", -119, "logo.fo3d"));
-        var10 = var8;
-        var3 = var10.d((byte) -119);
-        var10.h((byte) 75);
-        if (param1 < -109) {
-          ag.field_a = pi.a(12, var10);
-          ic.field_W = new gd[var3];
-          eg.field_o = new int[var3][];
-          var4 = 0;
-          L0: while (true) {
-            if (var4 >= var3) {
-              var10.i(8);
-              var9 = 0;
-              var4 = var9;
-              L1: while (true) {
-                if (var9 >= var3) {
-                  return;
-                } else {
-                  var5 = ic.field_W[var9];
-                  var5.a((byte) 0, 6, 6, 1, 6);
-                  var5.b(32767);
-                  var6 = new int[]{var5.field_s + var5.field_o >> 2109026625, var5.field_E - -var5.field_L >> -488456511, var5.field_b + var5.field_a >> -233943231};
-                  eg.field_o[var9] = var6;
-                  var5.a(-var6[2], 112, -var6[1], -var6[0]);
-                  var9++;
-                  continue L1;
+        try {
+          L0: {
+            var8 = new am(param0.a("", -119, "logo.fo3d"));
+            var10 = var8;
+            var3 = var10.d((byte) -119);
+            var10.h((byte) 75);
+            ag.field_a = pi.a(12, var10);
+            ic.field_W = new gd[var3];
+            eg.field_o = new int[var3][];
+            var4 = 0;
+            L1: while (true) {
+              if (var4 >= var3) {
+                var10.i(8);
+                var9 = 0;
+                var4 = var9;
+                L2: while (true) {
+                  if (var9 >= var3) {
+                    break L0;
+                  } else {
+                    var5 = ic.field_W[var9];
+                    var5.a((byte) 0, 6, 6, 1, 6);
+                    var5.b(32767);
+                    var6 = new int[]{var5.field_s + var5.field_o >> 1, var5.field_E - -var5.field_L >> 1, var5.field_b + var5.field_a >> 1};
+                    eg.field_o[var9] = var6;
+                    var5.a(-var6[2], 112, -var6[1], -var6[0]);
+                    var9++;
+                    continue L2;
+                  }
                 }
+              } else {
+                ic.field_W[var4] = bj.a(var8, (byte) -128);
+                var4++;
+                continue L1;
               }
-            } else {
-              ic.field_W[var4] = bj.a(var8, (byte) -128);
-              var4++;
-              continue L0;
             }
           }
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2 = decompiledCaughtException;
+            stackOut_10_0 = (RuntimeException) var2;
+            stackOut_10_1 = new StringBuilder().append("ae.C(");
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
+            if (param0 == null) {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L3;
+            } else {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L3;
+            }
+          }
+          throw sh.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + -128 + 41);
         }
     }
 
     public static void a(boolean param0) {
-        if (param0) {
-            field_b = null;
-        }
         field_b = null;
         field_c = null;
     }
 
     final static int a(byte param0, char param1, CharSequence param2) {
-        int var3 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        L0: {
-          var6 = ZombieDawn.field_J;
-          var3 = 0;
-          var4 = param2.length();
-          if (param0 == -49) {
-            break L0;
-          } else {
-            field_c = null;
-            break L0;
-          }
-        }
-        var5 = 0;
-        L1: while (true) {
-          if (var4 <= var5) {
-            return var3;
-          } else {
-            if (param1 == param2.charAt(var5)) {
-              var3++;
-              var5++;
-              continue L1;
-            } else {
-              var5++;
-              continue L1;
+        int stackIn_10_0 = 0;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_9_0 = 0;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        var6 = ZombieDawn.field_J;
+        try {
+          L0: {
+            L1: {
+              var3_int = 0;
+              var4 = param2.length();
+              if (param0 == -49) {
+                break L1;
+              } else {
+                field_c = null;
+                break L1;
+              }
+            }
+            var5 = 0;
+            L2: while (true) {
+              if (var4 <= var5) {
+                stackOut_9_0 = var3_int;
+                stackIn_10_0 = stackOut_9_0;
+                break L0;
+              } else {
+                L3: {
+                  if (param1 == param2.charAt(var5)) {
+                    var3_int++;
+                    break L3;
+                  } else {
+                    break L3;
+                  }
+                }
+                var5++;
+                continue L2;
+              }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var3 = decompiledCaughtException;
+            stackOut_11_0 = (RuntimeException) var3;
+            stackOut_11_1 = new StringBuilder().append("ae.A(").append(param0).append(44).append(param1).append(44);
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
+            if (param2 == null) {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L4;
+            } else {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L4;
+            }
+          }
+          throw sh.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
         }
+        return stackIn_10_0;
     }
 
     final static int[] a(int param0) {
-        if (param0 != 14821) {
-            field_c = null;
-        }
         return new int[8];
     }
 

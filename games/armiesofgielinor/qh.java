@@ -27,7 +27,7 @@ final class qh {
                   L2: {
                     pi.field_N.field_O = ke.field_e.field_O;
                     pi.field_N.field_Eb = 1;
-                    if (param7 > (bd.field_r ^ -1)) {
+                    if (param7 > ~bd.field_r) {
                       j.a(1, param9, param0, param5);
                       break L2;
                     } else {
@@ -80,7 +80,7 @@ final class qh {
                   L7: {
                     pi.field_N.field_O = ke.field_e.field_O;
                     pi.field_N.field_Eb = 1;
-                    if (param7 > (bd.field_r ^ -1)) {
+                    if (param7 > ~bd.field_r) {
                       j.a(1, param9, param0, param5);
                       break L7;
                     } else {
@@ -153,7 +153,7 @@ final class qh {
                   L14: {
                     pi.field_N.field_O = ke.field_e.field_O;
                     pi.field_N.field_Eb = 1;
-                    if (param7 > (bd.field_r ^ -1)) {
+                    if (param7 > ~bd.field_r) {
                       j.a(1, param9, param0, param5);
                       break L14;
                     } else {
@@ -211,7 +211,7 @@ final class qh {
               L18: {
                 pi.field_N.field_O = ke.field_e.field_O;
                 pi.field_N.field_Eb = 1;
-                if (param7 > (bd.field_r ^ -1)) {
+                if (param7 > ~bd.field_r) {
                   j.a(1, param9, param0, param5);
                   break L18;
                 } else {
@@ -258,7 +258,7 @@ final class qh {
                 bn.a(param0, param9, 117, param5);
                 pi.field_N.field_O = ke.field_e.field_O;
                 pi.field_N.field_Eb = 1;
-                if (param7 > (bd.field_r ^ -1)) {
+                if (param7 > ~bd.field_r) {
                   j.a(1, param9, param0, param5);
                   break L20;
                 } else {
@@ -312,7 +312,7 @@ final class qh {
             L25: {
               pi.field_N.field_O = ke.field_e.field_O;
               pi.field_N.field_Eb = 1;
-              if (param7 > (bd.field_r ^ -1)) {
+              if (param7 > ~bd.field_r) {
                 j.a(1, param9, param0, param5);
                 break L25;
               } else {
@@ -366,7 +366,7 @@ final class qh {
           L29: {
             pi.field_N.field_O = ke.field_e.field_O;
             pi.field_N.field_Eb = 1;
-            if (param7 > (bd.field_r ^ -1)) {
+            if (param7 > ~bd.field_r) {
               j.a(1, param9, param0, param5);
               break L29;
             } else {
@@ -409,36 +409,13 @@ final class qh {
     }
 
     final static void a(boolean param0, int param1) {
-        if (param1 != 0) {
-          L0: {
-            qh.a((byte) -15);
-            if (null != ik.field_d) {
-              qn.d(qn.field_j, qn.field_a, -qn.field_j + qn.field_e, -qn.field_a + qn.field_f);
-              ik.field_d.b(param0, 20);
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          return;
-        } else {
-          L1: {
-            if (null != ik.field_d) {
-              qn.d(qn.field_j, qn.field_a, -qn.field_j + qn.field_e, -qn.field_a + qn.field_f);
-              ik.field_d.b(param0, 20);
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          return;
+        if (!(null == ik.field_d)) {
+            qn.d(qn.field_j, qn.field_a, -qn.field_j + qn.field_e, -qn.field_a + qn.field_f);
+            ik.field_d.b(param0, 20);
         }
     }
 
     final static void b(byte param0) {
-        if (param0 != 27) {
-            return;
-        }
         if (!nw.g(81)) {
             vl.field_n.h(32161, 81);
             bu.field_b = null;

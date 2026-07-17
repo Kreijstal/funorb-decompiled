@@ -15,101 +15,30 @@ final class cg {
     public static void b(byte param0) {
         field_c = null;
         field_d = null;
-        if (param0 != -13) {
-          return;
-        } else {
-          field_b = null;
-          field_i = null;
-          field_g = null;
-          field_e = null;
-          field_h = null;
-          field_a = null;
-          field_f = null;
-          return;
-        }
+        field_b = null;
+        field_i = null;
+        field_g = null;
+        field_e = null;
+        field_h = null;
+        field_a = null;
+        field_f = null;
     }
 
     final static void a(byte param0) {
         Object var1 = null;
         Throwable var2 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    if (null == hl.field_d) {
-                        statePc = 8;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    var1 = (Object) (Object) hl.field_d;
-                    // monitorenter hl.field_d
-                    statePc = 2;
-                    continue stateLoop;
-                }
-                case 2: {
-                    try {
-                        hl.field_d = null;
-                        // monitorexit var1
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    if (param0 == -102) {
-                        statePc = 5;
-                    } else {
-                        statePc = 4;
-                    }
-                    continue stateLoop;
-                }
-                case 4: {
-                    field_f = null;
-                    statePc = 5;
-                    continue stateLoop;
-                }
-                case 5: {
-                    return;
-                }
-                case 6: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                case 8: {
-                    if (param0 != -102) {
-                        statePc = 10;
-                    } else {
-                        statePc = 9;
-                    }
-                    continue stateLoop;
-                }
-                case 9: {
-                    return;
-                }
-                case 10: {
-                    field_f = null;
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        if (null == hl.field_d) {
+          return;
+        } else {
+          var1 = (Object) (Object) hl.field_d;
+          synchronized (var1) {
+            L0: {
+              hl.field_d = null;
+              break L0;
             }
+          }
+          return;
         }
     }
 

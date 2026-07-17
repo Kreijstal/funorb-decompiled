@@ -14,55 +14,104 @@ final class wh implements wa {
     }
 
     final static void a(byte param0) {
-        int var1 = 0;
+        int var1_int = 0;
         int var2 = 0;
-        int var3 = 0;
-        var3 = ZombieDawn.field_J;
-        vm.field_u = dj.field_e.field_H.a(8728);
-        var1 = 0;
-        L0: while (true) {
-          if (var1 >= vm.field_u.length) {
-            var2 = 3 / ((27 - param0) / 47);
-            return;
-          } else {
-            var2 = 0;
-            L1: while (true) {
-              if (var2 >= vm.field_u[0].length) {
-                var1++;
-                continue L0;
-              } else {
-                if (vm.field_u[var1][var2] != 0) {
-                  vm.field_u[var1][var2] = -1;
-                  var2++;
-                  continue L1;
-                } else {
-                  var2++;
-                  continue L1;
+        int var3 = ZombieDawn.field_J;
+        try {
+            vm.field_u = dj.field_e.field_H.a(8728);
+            for (var1_int = 0; var1_int < vm.field_u.length; var1_int++) {
+                for (var2 = 0; var2 < vm.field_u[0].length; var2++) {
+                    if (!(vm.field_u[var1_int][var2] == 0)) {
+                        vm.field_u[var1_int][var2] = -1;
+                    }
                 }
-              }
             }
-          }
+            var2 = 3 / ((27 - param0) / 47);
+        } catch (RuntimeException runtimeException) {
+            throw sh.a((Throwable) (Object) runtimeException, "wh.B(" + param0 + 41);
         }
     }
 
     final static vk a(String param0, boolean param1) {
+        int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        int var5 = ZombieDawn.field_J;
-        int var2 = param0.length();
-        for (var3 = 0; var2 > var3; var3++) {
-            var4 = param0.charAt(var3);
-            if (var4 < 48) {
-                return null;
+        int var5 = 0;
+        vk stackIn_12_0 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        vk stackOut_11_0 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        var5 = ZombieDawn.field_J;
+        try {
+          L0: {
+            var2_int = param0.length();
+            var3 = 0;
+            L1: while (true) {
+              if (var2_int <= var3) {
+                stackOut_11_0 = vl.field_m;
+                stackIn_12_0 = stackOut_11_0;
+                break L0;
+              } else {
+                var4 = param0.charAt(var3);
+                if (var4 >= 48) {
+                  if (var4 <= 57) {
+                    var3++;
+                    continue L1;
+                  } else {
+                    return null;
+                  }
+                } else {
+                  return null;
+                }
+              }
             }
-            if (var4 > 57) {
-                return null;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_13_0 = (RuntimeException) var2;
+            stackOut_13_1 = new StringBuilder().append("wh.C(");
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
+            if (param0 == null) {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L2;
+            } else {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L2;
             }
+          }
+          throw sh.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + 0 + 41);
         }
-        if (param1) {
-            wh.a(-70);
-        }
-        return vl.field_m;
+        return stackIn_12_0;
     }
 
     public static void a(int param0) {

@@ -27,22 +27,23 @@ final class uu extends sna {
 
     public static void f(byte param0) {
         field_vb = null;
-        if (param0 < 9) {
-            String discarded$0 = uu.a(127, 25, 'ﾍ');
-        }
         field_zb = null;
     }
 
     uu(kv param0, int param1, String param2, int param3) {
-        ((uu) this).field_Bb = param2;
-        ((uu) this).field_p = 102;
-        ((uu) this).field_wb = param3;
-        ((uu) this).field_sb = 402;
-        ((uu) this).field_Ab = param0;
-        ((uu) this).field_Cb = param1;
-        ((uu) this).field_xb = fw.field_h[((uu) this).field_Cb].field_c;
-        ((uu) this).field_v = this.b(true);
-        ((uu) this).a(-1, new sna("buy", (sna) null, 294, 70, 80, 20, qd.field_l));
+        try {
+            ((uu) this).field_Bb = param2;
+            ((uu) this).field_p = 102;
+            ((uu) this).field_wb = param3;
+            ((uu) this).field_sb = 402;
+            ((uu) this).field_Ab = param0;
+            ((uu) this).field_Cb = param1;
+            ((uu) this).field_xb = fw.field_h[((uu) this).field_Cb].field_c;
+            ((uu) this).field_v = this.b(true);
+            ((uu) this).a(-1, new sna("buy", (sna) null, 294, 70, 80, 20, qd.field_l));
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "uu.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+        }
     }
 
     private final kv b(boolean param0) {
@@ -62,13 +63,13 @@ final class uu extends sna {
           jha.field_g.c(((uu) this).field_Bb, 102, 26, 11796224, -1);
           hfa.field_z.c(((uu) this).field_Bb, 102, 26, 65793, -1);
           int discarded$1 = g.field_g.a(((uu) this).field_xb, 102, 36, 240, 70, 8553090, -1, 0, 0, 14);
-          var3 = lga.a(param0, new String[1], vla.field_u);
+          var3 = lga.a(true, new String[1], vla.field_u);
           jha.field_g.a(var3, 43, 86, 16699649, -1);
           hfa.field_z.a(var3, 43, 86, 65793, -1);
           dg.e(294, 70, 80, 20, 9, 8698113);
           jha.field_g.a(qd.field_l, 334, 84, 16777215, -1);
           hfa.field_z.a(qd.field_l, 334, 84, 16204, -1);
-          if (-1 > (dm.field_f ^ -1)) {
+          if (dm.field_f > 0) {
             break L0;
           } else {
             if (!fw.field_h[((uu) this).field_Cb].field_e) {

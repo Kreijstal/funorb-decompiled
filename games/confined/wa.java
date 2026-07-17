@@ -11,51 +11,46 @@ final class wa {
 
     public static void a(byte param0) {
         field_d = null;
-        if (param0 >= -59) {
-            wa.a(38, (byte) 118);
-        }
     }
 
     final static void a(int param0, byte param1) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
+        RuntimeException decompiledCaughtException = null;
         var3 = Confined.field_J ? 1 : 0;
-        sb.a(0, cg.field_f, hj.field_j, mc.field_c, (byte) 92, param0, true);
-        if (param1 == 117) {
-          var2 = 0;
-          L0: while (true) {
-            if (mc.field_c <= var2) {
-              sb.a(param0, mi.field_f, ka.field_P, mc.field_c + param0, (byte) 92, param0 + param0, false);
-              if (mc.field_c > param0) {
-                mc.field_c = param0;
-                return;
+        try {
+          L0: {
+            L1: {
+              sb.a(0, cg.field_f, hj.field_j, mc.field_c, (byte) 92, param0, true);
+              if (param1 == 117) {
+                break L1;
               } else {
-                return;
+                wa.a(-119);
+                break L1;
               }
-            } else {
-              sj.field_rb[param0 + var2] = var2;
-              var2++;
-              continue L0;
+            }
+            var2_int = 0;
+            L2: while (true) {
+              if (mc.field_c <= var2_int) {
+                sb.a(param0, mi.field_f, ka.field_P, mc.field_c + param0, (byte) 92, param0 + param0, false);
+                if (mc.field_c <= param0) {
+                  break L0;
+                } else {
+                  mc.field_c = param0;
+                  return;
+                }
+              } else {
+                sj.field_rb[param0 + var2_int] = var2_int;
+                var2_int++;
+                continue L2;
+              }
             }
           }
-        } else {
-          wa.a(-119);
-          var2 = 0;
-          L1: while (true) {
-            if (mc.field_c <= var2) {
-              sb.a(param0, mi.field_f, ka.field_P, mc.field_c + param0, (byte) 92, param0 + param0, false);
-              if (mc.field_c <= param0) {
-                return;
-              } else {
-                mc.field_c = param0;
-                return;
-              }
-            } else {
-              sj.field_rb[param0 + var2] = var2;
-              var2++;
-              continue L1;
-            }
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw sd.a((Throwable) (Object) var2, "wa.C(" + param0 + 44 + param1 + 41);
         }
     }
 

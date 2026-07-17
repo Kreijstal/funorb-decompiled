@@ -38,12 +38,6 @@ final class ql extends rw {
     }
 
     public static void d(byte param0) {
-        if (param0 < 32) {
-            field_B = 49;
-            field_z = null;
-            field_A = null;
-            return;
-        }
         field_z = null;
         field_A = null;
     }

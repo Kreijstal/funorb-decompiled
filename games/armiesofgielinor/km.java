@@ -24,9 +24,6 @@ final class km {
     }
 
     final static je c(int param0) {
-        if (param0 != 0) {
-            return null;
-        }
         return mw.field_E.field_Nb;
     }
 
@@ -36,40 +33,32 @@ final class km {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        L0: {
-          var9 = ArmiesOfGielinor.field_M ? 1 : 0;
-          if (param3 == -44) {
-            break L0;
-          } else {
-            ((km) this).field_i = null;
-            break L0;
-          }
-        }
+        var9 = ArmiesOfGielinor.field_M ? 1 : 0;
         var8 = 0;
-        L1: while (true) {
-          L2: {
-            if (-7 >= (var8 ^ -1)) {
-              break L2;
+        L0: while (true) {
+          L1: {
+            if (var8 >= 6) {
+              break L1;
             } else {
               if (var8 * 8 >= ((km) this).field_f) {
-                break L2;
+                break L1;
               } else {
-                L3: {
+                L2: {
                   if (param2) {
                     var7 = -((((km) this).field_f + -(var8 * 4)) * 2) + (((km) this).field_k + ns.a(false, var8 - -1, li.field_n));
                     var5 = -(((km) this).field_g + -(5 * (-(4 * var8) + ((km) this).field_f))) - -ns.a(false, var8 - -1, li.field_n);
                     var6 = ((km) this).field_d;
-                    break L3;
+                    break L2;
                   } else {
                     var7 = ((km) this).field_k + -(2 * (-24 + var8 * 4 + ((km) this).field_f)) - -ns.a(false, 1 + var8, li.field_n);
                     var5 = -((var8 * 4 + (-24 + ((km) this).field_f)) * 5) + (((km) this).field_g + ns.a(false, var8 - -1, li.field_n));
                     var6 = ((km) this).field_d;
-                    break L3;
+                    break L2;
                   }
                 }
                 fh.a(var7, -(var8 * 40) + 400, (byte) 56, fe.field_o[param0 + 1], -(5 * var8) + 63, var5, var6);
                 var8++;
-                continue L1;
+                continue L0;
               }
             }
           }
@@ -89,12 +78,12 @@ final class km {
         if (param1 < 65) {
             field_j = null;
         }
-        nt var4_ref = new nt();
-        var4_ref.field_o = param0;
-        var4_ref.field_q = param2;
-        s.field_a.a((byte) -119, (tc) (Object) var4_ref);
-        tf.a(param3, var4_ref, (byte) -64);
-        return var4_ref;
+        var4 = new nt();
+        var4.field_o = param0;
+        var4.field_q = param2;
+        s.field_a.a((byte) -119, (tc) (Object) var4);
+        tf.a(7, var4, (byte) -64);
+        return var4;
     }
 
     final boolean b(int param0) {
@@ -102,7 +91,7 @@ final class km {
             boolean discarded$0 = ((km) this).field_i.a(-94);
         }
         int var2 = 36 % ((10 - param0) / 61);
-        if (0 > (((km) this).field_f ^ -1)) {
+        if (((km) this).field_f > -1) {
             ((km) this).field_f = ((km) this).field_f - 5;
             if (((km) this).field_f < 0) {
                 ((km) this).field_b = false;
@@ -177,7 +166,7 @@ final class km {
         int stackOut_21_6 = 0;
         var4 = null;
         var12 = ArmiesOfGielinor.field_M ? 1 : 0;
-        if (param2 <= (((km) this).field_f ^ -1)) {
+        if (param2 <= ~((km) this).field_f) {
           L0: {
             if (((km) this).field_i != null) {
               var4_ref = (gd) (Object) ((km) this).field_i.a(false, true, false, cs.field_db[((km) this).field_e]);
@@ -314,7 +303,7 @@ final class km {
           if (!((km) this).field_b) {
             break L1;
           } else {
-            if ((((km) this).field_e ^ -1) != -8) {
+            if (((km) this).field_e != 7) {
               if (((km) this).field_e < 8) {
                 this.a(param0, param2, param1 ^ 299);
                 break L1;
@@ -339,26 +328,49 @@ final class km {
     }
 
     private final void a(int param0, int param1, boolean param2) {
-        int var7 = 0;
-        int var6 = 0;
-        int var5 = 0;
         int var4 = 0;
-        int var8 = ArmiesOfGielinor.field_M ? 1 : 0;
-        if (param0 != 6) {
-            int discarded$0 = km.a(52);
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        L0: {
+          var8 = ArmiesOfGielinor.field_M ? 1 : 0;
+          if (param0 == 6) {
+            break L0;
+          } else {
+            int discarded$2 = km.a(52);
+            break L0;
+          }
         }
-        for (var7 = 0; var7 < 6; var7++) {
-            // if_icmpge L203
-            if (param2) {
-                var4 = -(((km) this).field_g + -(5 * (((km) this).field_f + -(var7 * 10))));
-                var6 = -(2 * (((km) this).field_f + -(10 * var7))) + ((km) this).field_k;
-                var5 = ((km) this).field_d;
+        var7 = 0;
+        L1: while (true) {
+          L2: {
+            if (var7 >= 6) {
+              break L2;
             } else {
-                var6 = -(2 * (((km) this).field_f - (-(var7 * 10) + 60))) + ((km) this).field_k;
-                var5 = ((km) this).field_d;
-                var4 = ((km) this).field_g + -(5 * (-((-var7 + 6) * 10) + ((km) this).field_f));
+              if (20 * var7 >= ((km) this).field_f) {
+                break L2;
+              } else {
+                L3: {
+                  if (!param2) {
+                    var6 = -(2 * (((km) this).field_f - (-(var7 * 10) + 60))) + ((km) this).field_k;
+                    var5 = ((km) this).field_d;
+                    var4 = ((km) this).field_g + -(5 * (-((-var7 + 6) * 10) + ((km) this).field_f));
+                    break L3;
+                  } else {
+                    var4 = -(((km) this).field_g + -(5 * (((km) this).field_f + -(var7 * 10))));
+                    var6 = -(2 * (((km) this).field_f + -(10 * var7))) + ((km) this).field_k;
+                    var5 = ((km) this).field_d;
+                    break L3;
+                  }
+                }
+                cb.a(var5, hs.field_F[(-var7 + ((km) this).field_f / 20) % hs.field_F.length], (-var7 + 6) * 256 / 6, -110, var4, var6);
+                var7++;
+                continue L1;
+              }
             }
-            cb.a(var5, hs.field_F[(-var7 + ((km) this).field_f / 20) % hs.field_F.length], (-var7 + 6) * 256 / 6, -110, var4, var6);
+          }
+          return;
         }
     }
 
@@ -379,7 +391,7 @@ final class km {
         ((km) this).field_e = param4;
         ((km) this).field_k = param1;
         ((km) this).field_d = param2;
-        if (-1 == (((km) this).field_e ^ -1)) {
+        if (((km) this).field_e == 0) {
             ((km) this).field_i = new vj(1);
             ((km) this).field_i.a(-1, pv.field_a[0][0]);
         }

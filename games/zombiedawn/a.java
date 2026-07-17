@@ -29,32 +29,30 @@ final class a {
     }
 
     final void a(wk param0, int param1) {
-        int var3 = 0;
+        int var3_int = 0;
         int var4 = 0;
-        if (((a) this).field_a) {
-          var3 = param0.a(((a) this).field_i >> -814362992, (byte) -60);
-          if (param1 != 8192) {
-            a.a((byte) 123);
-            var4 = param0.a(((a) this).field_o >> 20424336, 0) - (((a) this).field_k >> -1039249968);
-            tf.field_b[((a) this).field_b].b(-3 + var3, -3 + var4);
+        if (!((a) this).field_a) {
             return;
-          } else {
-            var4 = param0.a(((a) this).field_o >> 20424336, 0) - (((a) this).field_k >> -1039249968);
-            tf.field_b[((a) this).field_b].b(-3 + var3, -3 + var4);
-            return;
-          }
-        } else {
-          return;
+        }
+        try {
+            var3_int = param0.a(((a) this).field_i >> 16, (byte) -60);
+            if (param1 != 8192) {
+                a.a((byte) 123);
+            }
+            var4 = param0.a(((a) this).field_o >> 16, 0) - (((a) this).field_k >> 16);
+            tf.field_b[((a) this).field_b].b(-3 + var3_int, -3 + var4);
+        } catch (RuntimeException runtimeException) {
+            throw sh.a((Throwable) (Object) runtimeException, "a.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
     final void a(int param0, int param1, int param2, int param3) {
         ((a) this).field_i = param2;
-        ((a) this).field_o = param0 + (-(so.c(8) << -2067900720) + 262144);
-        ((a) this).field_k = param1 << 1383290256;
+        ((a) this).field_o = param0 + (-(so.c(8) << 16) + 262144);
+        ((a) this).field_k = param1 << 16;
         if (param3 <= 57) {
           a.b((byte) -23);
-          ((a) this).field_j = (so.c(1) << -1903033520) + 65536;
+          ((a) this).field_j = (so.c(1) << 16) + 65536;
           ((a) this).field_e = so.c(32768) + -114688;
           ((a) this).field_a = true;
           ((a) this).field_d = 12 + so.c(3);
@@ -63,7 +61,7 @@ final class a {
           int discarded$2 = so.a(sg.field_fb);
           return;
         } else {
-          ((a) this).field_j = (so.c(1) << -1903033520) + 65536;
+          ((a) this).field_j = (so.c(1) << 16) + 65536;
           ((a) this).field_e = so.c(32768) + -114688;
           ((a) this).field_a = true;
           ((a) this).field_d = 12 + so.c(3);
@@ -86,7 +84,7 @@ final class a {
     final void a(int param0) {
         int var2 = 0;
         if (((a) this).field_a) {
-          if (-1 <= (((a) this).field_k ^ -1)) {
+          if (((a) this).field_k <= 0) {
             return;
           } else {
             ((a) this).field_k = ((a) this).field_k + ((a) this).field_j;
@@ -101,7 +99,7 @@ final class a {
                 if (((a) this).field_d < fieldTemp$4) {
                   ((a) this).field_n = 0;
                   ((a) this).field_b = ((a) this).field_b + 1;
-                  if ((((a) this).field_b ^ -1) == -3) {
+                  if (((a) this).field_b == 2) {
                     fn discarded$5 = kh.a(so.c(1) + 153, false);
                     return;
                   } else {
@@ -122,7 +120,7 @@ final class a {
                 if (((a) this).field_d < fieldTemp$6) {
                   ((a) this).field_n = 0;
                   ((a) this).field_b = ((a) this).field_b + 1;
-                  if ((((a) this).field_b ^ -1) != -3) {
+                  if (((a) this).field_b != 2) {
                     return;
                   } else {
                     fn discarded$7 = kh.a(so.c(1) + 153, false);

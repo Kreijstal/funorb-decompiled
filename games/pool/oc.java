@@ -46,9 +46,6 @@ final class oc {
     short[] field_z;
 
     private final void b(int param0) {
-        if (param0 != 32767) {
-            return;
-        }
         ((oc) this).field_G = false;
     }
 
@@ -91,9 +88,6 @@ final class oc {
         nn.field_b[1] = (oo) (Object) new fk();
         nn.field_b[2] = (oo) (Object) new cj();
         nn.field_b[3] = (oo) (Object) new vf();
-        if (param0 >= -75) {
-            return;
-        }
         nn.field_b[4] = (oo) (Object) new gh();
     }
 
@@ -112,9 +106,6 @@ final class oc {
     }
 
     public static void c(int param0) {
-        if (param0 >= -11) {
-            boolean discarded$0 = oc.b((byte) 45);
-        }
         field_t = null;
         field_h = null;
     }

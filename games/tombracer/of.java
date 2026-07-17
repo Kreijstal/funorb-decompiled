@@ -9,7 +9,7 @@ class of {
         cn stackOut_3_0 = null;
         if (!param0) {
           if (ck.field_a == null) {
-            if ((param1 ^ -1) == 0) {
+            if (param1 == -1) {
               return ck.field_a;
             } else {
               return nt.a(param1, 1, 5200, false, true, true);

@@ -12,15 +12,9 @@ abstract class uh {
     final static boolean a(int param0, int param1, boolean param2, byte param3) {
         int var4 = 0;
         int var5 = 0;
-        int stackIn_21_0 = 0;
-        int stackIn_49_0 = 0;
-        int stackIn_58_0 = 0;
-        int stackOut_57_0 = 0;
-        int stackOut_56_0 = 0;
-        int stackOut_48_0 = 0;
-        int stackOut_47_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_19_0 = 0;
+        int stackIn_38_0 = 0;
+        int stackOut_37_0 = 0;
+        int stackOut_36_0 = 0;
         if (!param2) {
           if (td.field_c[param1] >= td.field_c[param0]) {
             if (td.field_c[param1] > td.field_c[param0]) {
@@ -29,51 +23,26 @@ abstract class uh {
               if (ug.field_I[param0] <= ug.field_I[param1]) {
                 if (ug.field_I[param0] >= ug.field_I[param1]) {
                   var4 = sk.field_B[param1] + tf.field_c[param1] + mk.field_c[param1];
-                  if (param3 == -54) {
-                    var5 = tf.field_c[param0] + (sk.field_B[param0] - -mk.field_c[param0]);
-                    if (var5 <= var4) {
-                      if (var4 > var5) {
-                        return false;
-                      } else {
-                        L0: {
-                          if (param0 <= param1) {
-                            stackOut_57_0 = 0;
-                            stackIn_58_0 = stackOut_57_0;
-                            break L0;
-                          } else {
-                            stackOut_56_0 = 1;
-                            stackIn_58_0 = stackOut_56_0;
-                            break L0;
-                          }
-                        }
-                        return stackIn_58_0 != 0;
-                      }
+                  var5 = tf.field_c[param0] + (sk.field_B[param0] - -mk.field_c[param0]);
+                  if (var5 <= var4) {
+                    if (var4 > var5) {
+                      return false;
                     } else {
-                      return true;
+                      L0: {
+                        if (param0 <= param1) {
+                          stackOut_37_0 = 0;
+                          stackIn_38_0 = stackOut_37_0;
+                          break L0;
+                        } else {
+                          stackOut_36_0 = 1;
+                          stackIn_38_0 = stackOut_36_0;
+                          break L0;
+                        }
+                      }
+                      return stackIn_38_0 != 0;
                     }
                   } else {
-                    uh.a(-121);
-                    var5 = tf.field_c[param0] + (sk.field_B[param0] - -mk.field_c[param0]);
-                    if (var5 <= var4) {
-                      if (var4 > var5) {
-                        return false;
-                      } else {
-                        L1: {
-                          if (param0 <= param1) {
-                            stackOut_48_0 = 0;
-                            stackIn_49_0 = stackOut_48_0;
-                            break L1;
-                          } else {
-                            stackOut_47_0 = 1;
-                            stackIn_49_0 = stackOut_47_0;
-                            break L1;
-                          }
-                        }
-                        return stackIn_49_0 != 0;
-                      }
-                    } else {
-                      return true;
-                    }
+                    return true;
                   }
                 } else {
                   return false;
@@ -95,44 +64,19 @@ abstract class uh {
               } else {
                 if (td.field_c[param0] >= td.field_c[param1]) {
                   var4 = sk.field_B[param1] + tf.field_c[param1] + mk.field_c[param1];
-                  if (param3 == -54) {
-                    var5 = tf.field_c[param0] + (sk.field_B[param0] - -mk.field_c[param0]);
-                    if (var5 <= var4) {
-                      if (var4 > var5) {
+                  var5 = tf.field_c[param0] + (sk.field_B[param0] - -mk.field_c[param0]);
+                  if (var5 <= var4) {
+                    if (var4 > var5) {
+                      return false;
+                    } else {
+                      if (param0 <= param1) {
                         return false;
                       } else {
-                        if (param0 <= param1) {
-                          return false;
-                        } else {
-                          return true;
-                        }
+                        return true;
                       }
-                    } else {
-                      return true;
                     }
                   } else {
-                    uh.a(-121);
-                    var5 = tf.field_c[param0] + (sk.field_B[param0] - -mk.field_c[param0]);
-                    if (var5 <= var4) {
-                      if (var4 > var5) {
-                        return false;
-                      } else {
-                        L2: {
-                          if (param0 <= param1) {
-                            stackOut_20_0 = 0;
-                            stackIn_21_0 = stackOut_20_0;
-                            break L2;
-                          } else {
-                            stackOut_19_0 = 1;
-                            stackIn_21_0 = stackOut_19_0;
-                            break L2;
-                          }
-                        }
-                        return stackIn_21_0 != 0;
-                      }
-                    } else {
-                      return true;
-                    }
+                    return true;
                   }
                 } else {
                   return false;

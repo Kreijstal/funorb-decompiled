@@ -417,7 +417,7 @@ final class oa {
     final boolean b(boolean param0) {
         if (param0) {
           if (((oa) this).field_l <= jk.field_f) {
-            if ((mo.field_l ^ -1) >= -1) {
+            if (mo.field_l <= 0) {
               return false;
             } else {
               return true;
@@ -428,7 +428,7 @@ final class oa {
         } else {
           ((oa) this).a(true);
           if (((oa) this).field_l <= jk.field_f) {
-            if ((mo.field_l ^ -1) >= -1) {
+            if (mo.field_l <= 0) {
               return false;
             } else {
               return true;
@@ -490,7 +490,7 @@ final class oa {
               } else {
                 int fieldTemp$2 = ((oa) this).field_i - 1;
                 ((oa) this).field_i = ((oa) this).field_i - 1;
-                if (-1 <= (fieldTemp$2 ^ -1)) {
+                if (fieldTemp$2 <= 0) {
                   ((oa) this).field_i = ((oa) this).field_o;
                   if (jk.field_f < ((oa) this).field_l) {
                     ((oa) this).field_c = false;
@@ -533,7 +533,7 @@ final class oa {
               } else {
                 int fieldTemp$3 = ((oa) this).field_i - 1;
                 ((oa) this).field_i = ((oa) this).field_i - 1;
-                if (-1 <= (fieldTemp$3 ^ -1)) {
+                if (fieldTemp$3 <= 0) {
                   ((oa) this).field_i = ((oa) this).field_o;
                   if (jk.field_f < ((oa) this).field_l) {
                     ((oa) this).field_c = false;

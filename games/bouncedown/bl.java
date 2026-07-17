@@ -32,7 +32,7 @@ final class bl {
             break L0;
           } else {
             L1: {
-              if (-3 != (((bl) this).field_h ^ -1)) {
+              if (((bl) this).field_h != 2) {
                 break L1;
               } else {
                 if (((bl) this).field_j > 0) {
@@ -61,7 +61,7 @@ final class bl {
     }
 
     public static void a(int param0) {
-        int var1 = 3 / ((param0 - -51) / 53);
+        int var1 = 3;
         field_e = null;
         field_b = null;
     }

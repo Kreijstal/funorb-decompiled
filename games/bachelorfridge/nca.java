@@ -6,33 +6,24 @@ final class nca {
     static ee[] field_a;
 
     public static void a(byte param0) {
-        if (param0 != 87) {
-            field_b = null;
-            field_a = null;
-            field_b = null;
-            return;
-        }
         field_a = null;
         field_b = null;
     }
 
     final static void a(int param0, lu param1, cj param2) {
-        Object var4 = null;
-        if (param2 == null) {
-          param1.d(-1, 0);
-          return;
-        } else {
-          if (param0 < 82) {
-            var4 = null;
-            nca.a(-125, (lu) null, (cj) null);
+        if (!(param2 != null)) {
+            param1.d(-1, 0);
+            return;
+        }
+        try {
+            if (param0 < 82) {
+                Object var4 = null;
+                nca.a(-125, (lu) null, (cj) null);
+            }
             param1.d(param2.field_h, 0);
             param2.a(param1, -9);
-            return;
-          } else {
-            param1.d(param2.field_h, 0);
-            param2.a(param1, -9);
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "nca.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

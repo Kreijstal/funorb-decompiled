@@ -29,7 +29,7 @@ final class pda {
 
     public static void a(byte param0) {
         field_a = null;
-        int var1 = 42 % ((param0 - -68) / 42);
+        int var1 = 0;
         field_d = null;
         field_b = null;
     }
@@ -45,8 +45,9 @@ final class pda {
         int var0 = 0;
         for (var1 = 0; var1 < 256; var1++) {
             for (var2 = 0; var1 >= var2; var2++) {
+                int incrementValue$0 = var0;
                 var0++;
-                field_b[var0] = (byte)(int)(255.0 / Math.sqrt((double)((float)(65535 + var1 * var1 + var2 * var2) / 65535.0f)));
+                field_b[incrementValue$0] = (byte)(int)(255.0 / Math.sqrt((double)((float)(65535 + var1 * var1 + var2 * var2) / 65535.0f)));
             }
         }
         field_a = "Show all game chat";

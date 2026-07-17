@@ -592,7 +592,7 @@ class ub extends wl {
             var5_int = 0;
             L2: while (true) {
               L3: {
-                if ((var4_int ^ -1) > (var5_int ^ -1)) {
+                if (~var4_int > ~var5_int) {
                   break L3;
                 } else {
                   ((ub) this).a(param1, 0, var5_int, param2);
@@ -930,7 +930,7 @@ class ub extends wl {
             if (param0 == 0) {
               L0: {
                 var2_long = d.a((byte) 35);
-                if ((ge.field_j ^ -1) == -1) {
+                if (ge.field_j == 0) {
                   break L0;
                 } else {
                   if (p.field_W >= 0) {
@@ -940,7 +940,7 @@ class ub extends wl {
                     if (var4_ref_hb == null) {
                       break L0;
                     } else {
-                      if ((var2_long ^ -1L) < (var4_ref_hb.field_p ^ -1L)) {
+                      if (~var2_long < ~var4_ref_hb.field_p) {
                         var4_ref_hb.a(false);
                         gd.field_c = var4_ref_hb.field_l.length;
                         nk.field_N.field_m = 0;
@@ -948,7 +948,7 @@ class ub extends wl {
                         L1: while (true) {
                           L2: {
                             L3: {
-                              if ((gd.field_c ^ -1) >= (var5_int ^ -1)) {
+                              if (~gd.field_c >= ~var5_int) {
                                 break L3;
                               } else {
                                 nk.field_N.field_k[var5_int] = var4_ref_hb.field_l[var5_int];
@@ -984,7 +984,7 @@ class ub extends wl {
               L4: while (true) {
                 L5: {
                   L6: {
-                    if (-1 >= (p.field_W ^ -1)) {
+                    if (p.field_W >= 0) {
                       break L6;
                     } else {
                       nk.field_N.field_m = 0;
@@ -1034,7 +1034,7 @@ class ub extends wl {
                     L8: while (true) {
                       L9: {
                         L10: {
-                          if ((var6 ^ -1) <= (gd.field_c ^ -1)) {
+                          if (~var6 <= ~gd.field_c) {
                             break L10;
                           } else {
                             var5.field_l[var6] = nk.field_N.field_k[var6];
@@ -1141,7 +1141,7 @@ class ub extends wl {
                     if (((ub) this).field_r + param3 - -((ub) this).field_o <= param1) {
                       break L3;
                     } else {
-                      if ((((ub) this).field_n + (param4 + ((ub) this).field_l) ^ -1) >= (param0 ^ -1)) {
+                      if (~(((ub) this).field_n + (param4 + ((ub) this).field_l)) >= ~param0) {
                         break L3;
                       } else {
                         stackOut_13_0 = 1;
@@ -1377,7 +1377,7 @@ class ub extends wl {
                   }
                 }
                 L3: {
-                  if ((gi.field_c ^ -1) == -1) {
+                  if (gi.field_c == 0) {
                     break L3;
                   } else {
                     if (var5_int != 0) {
@@ -1389,7 +1389,7 @@ class ub extends wl {
                   }
                 }
                 L4: {
-                  if ((w.field_c ^ -1) == -1) {
+                  if (w.field_c == 0) {
                     break L4;
                   } else {
                     L5: {

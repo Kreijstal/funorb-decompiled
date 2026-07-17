@@ -46,8 +46,9 @@ final class rq extends kj {
         if (param0 <= 21) {
             return true;
         }
+        int fieldTemp$0 = ((rq) this).field_h + 1;
         ((rq) this).field_h = ((rq) this).field_h + 1;
-        if (((rq) this).field_h + 1 >= 75) {
+        if (fieldTemp$0 >= 75) {
             return true;
         }
         return false;

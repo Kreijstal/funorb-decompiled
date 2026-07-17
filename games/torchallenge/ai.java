@@ -24,7 +24,7 @@ final class ai {
           param1 = param1 & 8191;
           if (4096 <= param1) {
             L0: {
-              if (-6145 < (param1 ^ -1)) {
+              if (param1 < 6144) {
                 stackOut_18_0 = -k.field_d[-4096 + param1];
                 stackIn_19_0 = stackOut_18_0;
                 break L0;
@@ -54,7 +54,7 @@ final class ai {
           param1 = param1 & 8191;
           if (4096 <= param1) {
             L2: {
-              if (-6145 < (param1 ^ -1)) {
+              if (param1 < 6144) {
                 stackOut_8_0 = -k.field_d[-4096 + param1];
                 stackIn_9_0 = stackOut_8_0;
                 break L2;
@@ -83,61 +83,63 @@ final class ai {
     }
 
     final static void b(int param0) {
-        int var1 = 0;
+        int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
+        RuntimeException decompiledCaughtException = null;
         var3 = TorChallenge.field_F ? 1 : 0;
-        if (null != ef.field_h) {
-          var1 = 0;
-          L0: while (true) {
-            if (ef.field_h.length > var1) {
-              if (ef.field_h[var1] != null) {
-                var2 = 0;
-                L1: while (true) {
-                  if (ef.field_h[var1].length <= var2) {
-                    ef.field_h[var1] = null;
-                    var1++;
-                    var1++;
-                    continue L0;
+        try {
+          L0: {
+            L1: {
+              if (null == ef.field_h) {
+                break L1;
+              } else {
+                var1_int = 0;
+                L2: while (true) {
+                  if (ef.field_h.length <= var1_int) {
+                    break L1;
                   } else {
-                    L2: {
-                      if (ef.field_h[var1][var2] != null) {
-                        ef.field_h[var1][var2].field_y = null;
-                        break L2;
+                    L3: {
+                      if (ef.field_h[var1_int] == null) {
+                        var1_int++;
+                        break L3;
                       } else {
-                        break L2;
+                        var2 = 0;
+                        L4: while (true) {
+                          if (ef.field_h[var1_int].length <= var2) {
+                            ef.field_h[var1_int] = null;
+                            var1_int++;
+                            break L3;
+                          } else {
+                            L5: {
+                              if (ef.field_h[var1_int][var2] != null) {
+                                ef.field_h[var1_int][var2].field_y = null;
+                                break L5;
+                              } else {
+                                break L5;
+                              }
+                            }
+                            ef.field_h[var1_int][var2] = null;
+                            var2++;
+                            continue L4;
+                          }
+                        }
                       }
                     }
-                    ef.field_h[var1][var2] = null;
-                    var2++;
-                    continue L1;
+                    var1_int++;
+                    continue L2;
                   }
                 }
-              } else {
-                var1++;
-                var1++;
-                continue L0;
-              }
-            } else {
-              if (param0 != 0) {
-                ai.a(68);
-                ef.field_h = null;
-                return;
-              } else {
-                ef.field_h = null;
-                return;
               }
             }
-          }
-        } else {
-          if (param0 != 0) {
-            ai.a(68);
             ef.field_h = null;
-            return;
-          } else {
-            ef.field_h = null;
-            return;
+            break L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw oj.a((Throwable) (Object) var1, "ai.C(" + 0 + 41);
         }
     }
 

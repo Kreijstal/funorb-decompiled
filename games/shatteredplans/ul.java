@@ -115,23 +115,20 @@ final class ul extends qr {
     }
 
     final void a(boolean param0, bi param1, String param2, int param3) {
-        ((ul) this).field_Gb[((ul) this).field_Pb] = new sg(0L, (qr) null, (qr) null, ((ul) this).field_Mb, param1, param2);
-        if (param0) {
-            field_Ab = null;
+        try {
+            ((ul) this).field_Gb[((ul) this).field_Pb] = new sg(0L, (qr) null, (qr) null, ((ul) this).field_Mb, param1, param2);
+            if (param0) {
+                field_Ab = null;
+            }
             ((ul) this).field_Gb[((ul) this).field_Pb].field_lb = ((ul) this).field_Lb;
             ((ul) this).field_Gb[((ul) this).field_Pb].field_r = true;
             ((ul) this).field_Gb[((ul) this).field_Pb].field_G = 1;
             ((ul) this).a(4, (qr) (Object) ((ul) this).field_Gb[((ul) this).field_Pb]);
             ((ul) this).field_Ib[((ul) this).field_Pb] = param3;
             ((ul) this).field_Pb = ((ul) this).field_Pb + 1;
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "ul.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
         }
-        ((ul) this).field_Gb[((ul) this).field_Pb].field_lb = ((ul) this).field_Lb;
-        ((ul) this).field_Gb[((ul) this).field_Pb].field_r = true;
-        ((ul) this).field_Gb[((ul) this).field_Pb].field_G = 1;
-        ((ul) this).a(4, (qr) (Object) ((ul) this).field_Gb[((ul) this).field_Pb]);
-        ((ul) this).field_Ib[((ul) this).field_Pb] = param3;
-        ((ul) this).field_Pb = ((ul) this).field_Pb + 1;
     }
 
     public static void g(int param0) {
@@ -152,13 +149,17 @@ final class ul extends qr {
     }
 
     final void a(int param0, int param1, String param2) {
-        ((ul) this).field_Gb[((ul) this).field_Pb] = new sg(0L, (qr) null, (qr) null, ((ul) this).field_Mb, (bi) null, param2);
-        ((ul) this).field_Gb[((ul) this).field_Pb].field_lb = ((ul) this).field_Lb;
-        ((ul) this).field_Gb[((ul) this).field_Pb].field_r = true;
-        ((ul) this).field_Gb[((ul) this).field_Pb].field_G = param0;
-        ((ul) this).a(4, (qr) (Object) ((ul) this).field_Gb[((ul) this).field_Pb]);
-        ((ul) this).field_Ib[((ul) this).field_Pb] = param1;
-        ((ul) this).field_Pb = ((ul) this).field_Pb + 1;
+        try {
+            ((ul) this).field_Gb[((ul) this).field_Pb] = new sg(0L, (qr) null, (qr) null, ((ul) this).field_Mb, (bi) null, param2);
+            ((ul) this).field_Gb[((ul) this).field_Pb].field_lb = ((ul) this).field_Lb;
+            ((ul) this).field_Gb[((ul) this).field_Pb].field_r = true;
+            ((ul) this).field_Gb[((ul) this).field_Pb].field_G = param0;
+            ((ul) this).a(4, (qr) (Object) ((ul) this).field_Gb[((ul) this).field_Pb]);
+            ((ul) this).field_Ib[((ul) this).field_Pb] = param1;
+            ((ul) this).field_Pb = ((ul) this).field_Pb + 1;
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "ul.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static boolean a(int param0, int param1, int param2, int param3, int param4) {
@@ -178,13 +179,13 @@ final class ul extends qr {
         int stackOut_8_0 = 0;
         L0: {
           var5 = Math.atan2((double)param4, (double)param3);
-          if (39 <= (param4 ^ -1)) {
+          if (param4 <= -40) {
             break L0;
           } else {
             if (param4 >= 0) {
               break L0;
             } else {
-              if ((param3 ^ -1) <= -1) {
+              if (param3 >= 0) {
                 break L0;
               } else {
                 var5 = var5 + 6.283185307179586;
@@ -195,7 +196,7 @@ final class ul extends qr {
         }
         if (param2 == 0) {
           var7 = Math.atan2((double)param1, (double)param0);
-          if ((param1 ^ -1) < 39) {
+          if (param1 > -40) {
             if (0 > param1) {
               if (0 <= param0) {
                 L1: {
@@ -297,7 +298,7 @@ final class ul extends qr {
           var6 = var6 + 2 * ((ul) this).field_Kb;
           var7 = ((ul) this).field_yb + ((ul) this).field_yb - -(((ul) this).field_Pb * ((ul) this).field_zb);
           var8 = uh.a(param2 + -60, param3, var6, param0);
-          var9 = uq.a(param1, param2 + 0, var7, param4);
+          var9 = uq.a(param1, param2, var7, param4);
           ((ul) this).a(var6, var7, (byte) 46, var9, var8);
           var10 = 0;
           L2: while (true) {
@@ -317,7 +318,7 @@ final class ul extends qr {
               var6 = var6 + 2 * ((ul) this).field_Kb;
               var7 = ((ul) this).field_yb + ((ul) this).field_yb - -(((ul) this).field_Pb * ((ul) this).field_zb);
               var8 = uh.a(param2 + -60, param3, var6, param0);
-              var9 = uq.a(param1, param2 + 0, var7, param4);
+              var9 = uq.a(param1, param2, var7, param4);
               ((ul) this).a(var6, var7, (byte) 46, var9, var8);
               var10 = 0;
               L4: while (true) {
@@ -374,14 +375,18 @@ final class ul extends qr {
         ((ul) this).field_Ib = new int[256];
         ((ul) this).field_Gb = new sg[256];
         ((ul) this).field_Bb = -2;
-        ((ul) this).field_Kb = param4;
-        ((ul) this).field_Lb = param1;
-        ((ul) this).field_zb = param8;
-        ((ul) this).field_Mb = param3;
-        ((ul) this).field_Jb = param6;
-        ((ul) this).field_Nb = param2;
-        ((ul) this).field_Eb = param5;
-        ((ul) this).field_yb = param7;
+        try {
+            ((ul) this).field_Kb = param4;
+            ((ul) this).field_Lb = param1;
+            ((ul) this).field_zb = param8;
+            ((ul) this).field_Mb = param3;
+            ((ul) this).field_Jb = param6;
+            ((ul) this).field_Nb = param2;
+            ((ul) this).field_Eb = param5;
+            ((ul) this).field_yb = param7;
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "ul.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 41);
+        }
     }
 
     static {

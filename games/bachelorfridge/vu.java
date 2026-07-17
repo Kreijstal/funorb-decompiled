@@ -13,9 +13,6 @@ final class vu extends pv {
     static String field_l;
 
     private final int c(boolean param0) {
-        if (param0) {
-            return 86;
-        }
         return 100;
     }
 
@@ -27,12 +24,13 @@ final class vu extends pv {
           if (param0) {
             break L0;
           } else {
-            boolean discarded$2 = ((vu) this).b(false);
+            boolean discarded$4 = ((vu) this).b(false);
             break L0;
           }
         }
+        int fieldTemp$5 = ((vu) this).field_g + 1;
         ((vu) this).field_g = ((vu) this).field_g + 1;
-        if (((vu) this).field_g + 1 > this.c(false)) {
+        if (fieldTemp$5 > this.c(false)) {
           this.d((byte) -125);
           return true;
         } else {
@@ -69,7 +67,7 @@ final class vu extends pv {
           var2 = 0;
           L3: while (true) {
             if (((vu) this).field_m.length <= var2) {
-              if ((((vu) this).field_g ^ -1) <= -41) {
+              if (((vu) this).field_g >= 40) {
                 return false;
               } else {
                 ((vu) this).field_f.field_k = ((vu) this).field_f.field_k + (((vu) this).field_g % 3 + -1);
@@ -77,11 +75,11 @@ final class vu extends pv {
               }
             } else {
               if (((vu) this).field_j >= var2) {
-                if (-1 != (((vu) this).field_g % 2 ^ -1)) {
+                if (((vu) this).field_g % 2 != 0) {
                   ((vu) this).field_m[var2][0] = ((vu) this).field_m[var2][0] + 1;
                   ((vu) this).field_m[var2][1] = ((vu) this).field_m[var2][1] + 1;
                   ((vu) this).field_m[var2][2] = ((vu) this).field_m[var2][2] - 1;
-                  if ((((vu) this).field_m[var2][3] ^ -1) > -7) {
+                  if (((vu) this).field_m[var2][3] < 6) {
                     ((vu) this).field_m[var2][3] = ((vu) this).field_m[var2][3] + 1;
                     var2++;
                     continue L3;
@@ -137,22 +135,18 @@ final class vu extends pv {
     }
 
     private final void d(byte param0) {
-        if (param0 > -3) {
-          boolean discarded$2 = vu.a((byte) 18, '￨');
-          ((vu) this).field_f.field_n = ((vu) this).field_f.c((byte) -115);
-          ((vu) this).field_f.field_k = ((vu) this).field_f.b(true);
-          return;
-        } else {
-          ((vu) this).field_f.field_n = ((vu) this).field_f.c((byte) -115);
-          ((vu) this).field_f.field_k = ((vu) this).field_f.b(true);
-          return;
-        }
+        ((vu) this).field_f.field_n = ((vu) this).field_f.c((byte) -115);
+        ((vu) this).field_f.field_k = ((vu) this).field_f.b(true);
     }
 
     vu(jfa param0, boolean param1) {
-        ((vu) this).field_f = param0;
-        ((vu) this).field_n = param1 ? true : false;
-        ((vu) this).field_m = new int[5][4];
+        try {
+            ((vu) this).field_f = param0;
+            ((vu) this).field_n = param1 ? true : false;
+            ((vu) this).field_m = new int[5][4];
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "vu.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     public static void c(byte param0) {

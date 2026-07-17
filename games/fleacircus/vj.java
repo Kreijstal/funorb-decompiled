@@ -9,7 +9,7 @@ final class vj {
     static String field_a;
 
     final void a(int param0) {
-        if (param0 > (wi.field_b ^ -1)) {
+        if (param0 > ~wi.field_b) {
           if (null != cm.field_b) {
             return;
           } else {
@@ -55,19 +55,13 @@ final class vj {
     }
 
     public static void b(boolean param0) {
-        if (!param0) {
-            field_a = null;
-            field_a = null;
-            field_c = null;
-            return;
-        }
         field_a = null;
         field_c = null;
     }
 
     vj() {
         fleas.field_L = 0;
-        ((vj) this).field_b = db.a((byte) -115, qe.field_j, 65536) << 1207155856;
+        ((vj) this).field_b = db.a((byte) -115, qe.field_j, 65536) << 16;
         ((vj) this).field_b = ((vj) this).field_b + db.a((byte) -115, qe.field_j, 65536);
         mc.field_b = 0;
         wi.field_b = 0;

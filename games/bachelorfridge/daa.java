@@ -13,12 +13,16 @@ final class daa extends sna {
 
     private daa(long param0, sna param1, sna param2, String param3) {
         super(param0, (sna) null);
-        ((daa) this).field_wb = new sna(0L, param1);
-        ((daa) this).field_xb = new sna(0L, param2);
-        ((daa) this).field_xb.field_Z = param3;
-        ((daa) this).a(-1, ((daa) this).field_wb);
-        ((daa) this).a(-1, ((daa) this).field_xb);
-        ((daa) this).d((byte) 116);
+        try {
+            ((daa) this).field_wb = new sna(0L, param1);
+            ((daa) this).field_xb = new sna(0L, param2);
+            ((daa) this).field_xb.field_Z = param3;
+            ((daa) this).a(-1, ((daa) this).field_wb);
+            ((daa) this).a(-1, ((daa) this).field_xb);
+            ((daa) this).d((byte) 116);
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "daa.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void a(byte param0, int param1, int param2, int param3, int param4, int param5) {
@@ -44,24 +48,19 @@ final class daa extends sna {
 
     daa(long param0, kv param1, kv param2, int param3, sna param4, String param5) {
         this(param0, (sna) null, param4, param5);
-        ((daa) this).field_wb.field_v = param2;
-        ((daa) this).field_wb.field_Y = param3;
-        ((daa) this).field_wb.field_J = param1;
+        try {
+            ((daa) this).field_wb.field_v = param2;
+            ((daa) this).field_wb.field_Y = param3;
+            ((daa) this).field_wb.field_J = param1;
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "daa.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 41);
+        }
     }
 
     private final void a(int param0, byte param1) {
-        int var3 = 0;
         ((daa) this).field_wb.a(((daa) this).field_p, 31407, ((daa) this).field_wb.e(-1), 0, 0);
-        if (param1 > -9) {
-          ((daa) this).a((byte) -67, -74, -46, -17, -10, -3);
-          var3 = param0 + ((daa) this).field_wb.field_sb;
-          ((daa) this).field_xb.a(((daa) this).field_p, 31407, -var3 + ((daa) this).field_sb, var3, 0);
-          return;
-        } else {
-          var3 = param0 + ((daa) this).field_wb.field_sb;
-          ((daa) this).field_xb.a(((daa) this).field_p, 31407, -var3 + ((daa) this).field_sb, var3, 0);
-          return;
-        }
+        int var3 = param0 + ((daa) this).field_wb.field_sb;
+        ((daa) this).field_xb.a(((daa) this).field_p, 31407, -var3 + ((daa) this).field_sb, var3, 0);
     }
 
     static {

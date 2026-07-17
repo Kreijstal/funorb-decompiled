@@ -8,18 +8,71 @@ final class t {
     static String field_c;
 
     final static void a(int param0, wh param1, boolean param2, boolean param3) {
+        RuntimeException var4 = null;
         Object var5 = null;
-        if (param1 == null) {
-          var5 = null;
-          lo.a(86, param2, (vh) null, param0, 0);
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        try {
+          L0: {
+            if (param1 == null) {
+              var5 = null;
+              lo.a(86, param2, (vh) null, param0, 0);
+              decompiledRegionSelector0 = 1;
+              break L0;
+            } else {
+              decompiledRegionSelector0 = 0;
+              break L0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var4 = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var4;
+            stackOut_6_1 = new StringBuilder().append("t.A(").append(param0).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param1 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L1;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L1;
+            }
+          }
+          throw vk.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param2 + 44 + 1 + 41);
+        }
+        if (decompiledRegionSelector0 == 0) {
           return;
         } else {
-          if (!param3) {
-            return;
-          } else {
-            lo.a(86, param2, param1.field_b, param0, param1.field_f);
-            return;
-          }
+          return;
         }
     }
 
@@ -35,19 +88,9 @@ final class t {
     }
 
     public static void a(int param0) {
-        Object var2 = null;
         field_d = null;
-        if (param0 != -11353) {
-          var2 = null;
-          t.a(56, (wh) null, false, true);
-          field_c = null;
-          field_b = null;
-          return;
-        } else {
-          field_c = null;
-          field_b = null;
-          return;
-        }
+        field_c = null;
+        field_b = null;
     }
 
     static {

@@ -21,36 +21,31 @@ final class pr {
     }
 
     final static void a(int param0, String param1, String param2) {
-        L0: {
-          if (ci.field_l != null) {
-            ci.field_l.i((byte) 20);
-            break L0;
-          } else {
-            break L0;
-          }
-        }
-        if (param0 != 0) {
-          field_b = null;
-          vn.field_b = new jw(param1, param2, false, true, true);
-          um.field_l.a(101, (ae) (Object) vn.field_b);
-          return;
-        } else {
-          vn.field_b = new jw(param1, param2, false, true, true);
-          um.field_l.a(101, (ae) (Object) vn.field_b);
-          return;
+        try {
+            if (!(ci.field_l == null)) {
+                ci.field_l.i((byte) 20);
+            }
+            if (param0 != 0) {
+                field_b = null;
+            }
+            vn.field_b = new jw(param1, param2, false, true, true);
+            um.field_l.a(101, (ae) (Object) vn.field_b);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "pr.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
     public static void a(int param0) {
         field_b = null;
-        if (param0 != 28122) {
-            boolean discarded$0 = pr.a(-61, 4, -35);
-        }
     }
 
     pr(kda param0, long param1, int param2) {
-        ((pr) this).field_a = param0;
-        ((pr) this).field_c = param1;
+        try {
+            ((pr) this).field_a = param0;
+            ((pr) this).field_c = param1;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "pr.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     static {

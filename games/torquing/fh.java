@@ -56,8 +56,8 @@ final class fh extends jp {
                 var12 = param1;
                 var13 = param4;
                 var14 = param3;
-                var15 = (var10_array[var11] & 16711422) >> -63993663;
-                var10_array[var11] = var15 + ie.a(var12 >> -272404191, 16711680) - -(ie.a(33423600, var13) >> 1640580809) - -(ie.a(var14, 33511660) >> -1709787119);
+                var15 = (var10_array[var11] & 16711422) >> 1;
+                var10_array[var11] = var15 + ie.a(var12 >> 1, 16711680) - -(ie.a(33423600, var13) >> 9) - -(ie.a(var14, 33511660) >> 17);
                 param3 = param3 + param6;
                 param4 = param4 + param5;
                 param1 = param1 + param8;
@@ -226,7 +226,7 @@ final class fh extends jp {
                                     if (var4 > 0) {
                                       L11: {
                                         var5 = var4 + -((fh) this).field_c.field_n;
-                                        if ((var5 ^ -1) >= (var3_int ^ -1)) {
+                                        if (~var5 >= ~var3_int) {
                                           break L11;
                                         } else {
                                           var5 = var3_int;
@@ -235,7 +235,7 @@ final class fh extends jp {
                                       }
                                       L12: {
                                         ((fh) this).field_q.a(var5, ((fh) this).field_c.field_n, ((fh) this).field_c.field_j, (byte) -74);
-                                        if ((((fh) this).field_f ^ -1) == -1) {
+                                        if (((fh) this).field_f == 0) {
                                           break L12;
                                         } else {
                                           var6 = 0;
@@ -253,7 +253,7 @@ final class fh extends jp {
                                       ((fh) this).field_c.field_n = ((fh) this).field_c.field_n + var5;
                                       if (var4 <= ((fh) this).field_c.field_n) {
                                         if (null != ((fh) this).field_j) {
-                                          if ((((fh) this).field_j.field_x ^ -1) != -1) {
+                                          if (((fh) this).field_j.field_x != 0) {
                                             throw new IOException();
                                           } else {
                                             if (((fh) this).field_c.field_j[0] != -1) {
@@ -285,7 +285,7 @@ final class fh extends jp {
                                           }
                                           L15: {
                                             var11 = stackIn_91_0;
-                                            var12 = (long)var7 + ((long)var6 << -346644640);
+                                            var12 = (long)var7 + ((long)var6 << 32);
                                             var14 = null;
                                             if (var11 == 0) {
                                               var14_ref = (ac) (Object) ((fh) this).field_h.a((byte) -63);
@@ -323,7 +323,7 @@ final class fh extends jp {
                                             throw new IOException();
                                           } else {
                                             L18: {
-                                              if (-1 != (var10 ^ -1)) {
+                                              if (var10 != 0) {
                                                 stackOut_119_0 = 9;
                                                 stackIn_120_0 = stackOut_119_0;
                                                 break L18;
@@ -350,7 +350,7 @@ final class fh extends jp {
                                       L19: {
                                         var5 = ((fh) this).field_j.field_z.field_j.length - ((fh) this).field_j.field_y;
                                         var6 = 512 - ((fh) this).field_j.field_x;
-                                        if ((var5 + -((fh) this).field_j.field_z.field_n ^ -1) <= (var6 ^ -1)) {
+                                        if (~(var5 + -((fh) this).field_j.field_z.field_n) <= ~var6) {
                                           break L19;
                                         } else {
                                           var6 = var5 + -((fh) this).field_j.field_z.field_n;
@@ -367,10 +367,10 @@ final class fh extends jp {
                                       }
                                       L21: {
                                         ((fh) this).field_q.a(var6, ((fh) this).field_j.field_z.field_n, ((fh) this).field_j.field_z.field_j, (byte) -74);
-                                        if ((((fh) this).field_f ^ -1) != -1) {
+                                        if (((fh) this).field_f != 0) {
                                           var7 = 0;
                                           L22: while (true) {
-                                            if ((var6 ^ -1) >= (var7 ^ -1)) {
+                                            if (~var6 >= ~var7) {
                                               break L21;
                                             } else {
                                               ((fh) this).field_j.field_z.field_j[var7 + ((fh) this).field_j.field_z.field_n] = (byte)i.c((int) ((fh) this).field_j.field_z.field_j[var7 + ((fh) this).field_j.field_z.field_n], (int) ((fh) this).field_f);
@@ -384,8 +384,8 @@ final class fh extends jp {
                                       }
                                       ((fh) this).field_j.field_x = ((fh) this).field_j.field_x + var6;
                                       ((fh) this).field_j.field_z.field_n = ((fh) this).field_j.field_z.field_n + var6;
-                                      if ((var5 ^ -1) != (((fh) this).field_j.field_z.field_n ^ -1)) {
-                                        if (-513 != (((fh) this).field_j.field_x ^ -1)) {
+                                      if (~var5 != ~((fh) this).field_j.field_z.field_n) {
+                                        if (((fh) this).field_j.field_x != 512) {
                                           break L10;
                                         } else {
                                           ((fh) this).field_j.field_x = 0;
@@ -431,10 +431,10 @@ final class fh extends jp {
                 }
               } else {
                 L23: {
-                  if (-1 != (((fh) this).c((byte) 0) ^ -1)) {
+                  if (((fh) this).c((byte) 0) != 0) {
                     break L23;
                   } else {
-                    if (-1 != (((fh) this).c(param0 ^ -6280) ^ -1)) {
+                    if (((fh) this).c(param0 ^ -6280) != 0) {
                       break L23;
                     } else {
                       stackOut_16_0 = 1;
@@ -466,7 +466,7 @@ final class fh extends jp {
                 ((fh) this).field_g = ((fh) this).field_g + 1;
                 ((fh) this).field_q = null;
                 ((fh) this).field_k = -2;
-                if ((((fh) this).c((byte) 0) ^ -1) != -1) {
+                if (((fh) this).c((byte) 0) != 0) {
                   break L26;
                 } else {
                   if (((fh) this).c(param0 ^ -6280) == 0) {
@@ -596,8 +596,8 @@ final class fh extends jp {
                       } else {
                         L6: {
                           var4_int = 55 / ((87 - param2) / 35);
-                          if (-1 != (((fh) this).field_f ^ -1)) {
-                            try {
+                          if (((fh) this).field_f != 0) {
+                            {
                               L7: {
                                 ((fh) this).field_d.field_n = 0;
                                 ((fh) this).field_d.b(90, 4);
@@ -605,27 +605,6 @@ final class fh extends jp {
                                 ((fh) this).field_d.b((byte) 60, 0);
                                 ((fh) this).field_q.a(0, ((fh) this).field_d.field_j, (byte) 54, ((fh) this).field_d.field_j.length);
                                 break L7;
-                              }
-                            } catch (java.io.IOException decompiledCaughtParameter1) {
-                              decompiledCaughtException = decompiledCaughtParameter1;
-                              L8: {
-                                var5 = (IOException) (Object) decompiledCaughtException;
-                                try {
-                                  L9: {
-                                    ((fh) this).field_q.a(true);
-                                    break L9;
-                                  }
-                                } catch (java.lang.Exception decompiledCaughtParameter2) {
-                                  decompiledCaughtException = decompiledCaughtParameter2;
-                                  L10: {
-                                    var6 = (Exception) (Object) decompiledCaughtException;
-                                    break L10;
-                                  }
-                                }
-                                ((fh) this).field_g = ((fh) this).field_g + 1;
-                                ((fh) this).field_q = null;
-                                ((fh) this).field_k = -2;
-                                break L8;
                               }
                             }
                             break L6;
@@ -7450,7 +7429,7 @@ final class fh extends jp {
             try {
               L0: {
                 if (null != ((fh) this).field_q) {
-                  try {
+                  {
                     L1: {
                       ((fh) this).field_d.field_n = 0;
                       ((fh) this).field_d.b(90, 6);
@@ -7458,27 +7437,6 @@ final class fh extends jp {
                       ((fh) this).field_d.a(0, 114);
                       ((fh) this).field_q.a(0, ((fh) this).field_d.field_j, (byte) -110, ((fh) this).field_d.field_j.length);
                       break L1;
-                    }
-                  } catch (java.io.IOException decompiledCaughtParameter0) {
-                    decompiledCaughtException = decompiledCaughtParameter0;
-                    L2: {
-                      var2 = (IOException) (Object) decompiledCaughtException;
-                      try {
-                        L3: {
-                          ((fh) this).field_q.a(true);
-                          break L3;
-                        }
-                      } catch (java.lang.Exception decompiledCaughtParameter1) {
-                        decompiledCaughtException = decompiledCaughtParameter1;
-                        L4: {
-                          var3 = (Exception) (Object) decompiledCaughtException;
-                          break L4;
-                        }
-                      }
-                      ((fh) this).field_k = -2;
-                      ((fh) this).field_g = ((fh) this).field_g + 1;
-                      ((fh) this).field_q = null;
-                      break L2;
                     }
                   }
                   L5: {
@@ -7650,7 +7608,7 @@ final class fh extends jp {
         try {
           L0: {
             var4_int = param0.e(param3, 57);
-            if (-1 == (var4_int ^ -1)) {
+            if (var4_int == 0) {
               stackOut_4_0 = null;
               stackIn_5_0 = stackOut_4_0;
               return (short[]) (Object) stackIn_5_0;
@@ -7660,7 +7618,7 @@ final class fh extends jp {
                   if (null == param2) {
                     break L2;
                   } else {
-                    if ((var4_int ^ -1) == (param2.length ^ -1)) {
+                    if (~var4_int == ~param2.length) {
                       break L1;
                     } else {
                       break L2;
@@ -7676,7 +7634,7 @@ final class fh extends jp {
                 if (param1 < var5) {
                   var7 = 0;
                   L4: while (true) {
-                    if ((var4_int ^ -1) >= (var7 ^ -1)) {
+                    if (~var4_int >= ~var7) {
                       break L3;
                     } else {
                       param2[var7] = (short)(var6 + param0.e(var5, i.c(param1, -110)));
@@ -7687,7 +7645,7 @@ final class fh extends jp {
                 } else {
                   var7 = 0;
                   L5: while (true) {
-                    if ((var4_int ^ -1) >= (var7 ^ -1)) {
+                    if (~var4_int >= ~var7) {
                       break L3;
                     } else {
                       param2[var7] = (short) var6;

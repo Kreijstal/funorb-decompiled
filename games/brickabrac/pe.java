@@ -20,22 +20,13 @@ final class pe extends nm {
 
     public static void a(int param0) {
         field_l = null;
-        if (param0 != 112) {
-          int discarded$2 = pe.a((byte) 91);
-          field_p = null;
-          field_o = null;
-          field_k = null;
-          return;
-        } else {
-          field_p = null;
-          field_o = null;
-          field_k = null;
-          return;
-        }
+        field_p = null;
+        field_o = null;
+        field_k = null;
     }
 
     final static void c(int param0) {
-        int var1 = -95 / ((param0 - 64) / 58);
+        int var1 = -95;
         ta.a(true, false);
     }
 

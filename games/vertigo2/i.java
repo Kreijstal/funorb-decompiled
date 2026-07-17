@@ -53,16 +53,19 @@ final class i {
                     var3++;
                     continue L1;
                   } else {
+                    int incrementValue$12 = var4;
                     var4++;
-                    var7 = ((i) this).field_f[((i) this).field_c[var4] & 255];
+                    var7 = ((i) this).field_f[((i) this).field_c[incrementValue$12] & 255];
                     if (var7 == 0) {
+                      int incrementValue$13 = var5;
                       var5++;
-                      var2[var5] = 0;
+                      var2[incrementValue$13] = 0;
                       var6++;
                       continue L2;
                     } else {
+                      int incrementValue$14 = var5;
                       var5++;
-                      var2[var5] = -16777216 | var7;
+                      var2[incrementValue$14] = -16777216 | var7;
                       var6++;
                       continue L2;
                     }
@@ -84,8 +87,9 @@ final class i {
                     var3++;
                     continue L3;
                   } else {
+                    int incrementValue$15 = var5;
                     var5++;
-                    var2[var5] = ((i) this).field_e[var4] << 24 | ((i) this).field_f[((i) this).field_c[var4] & 255];
+                    var2[incrementValue$15] = ((i) this).field_e[var4] << 24 | ((i) this).field_f[((i) this).field_c[var4] & 255];
                     var4++;
                     var6++;
                     continue L4;
@@ -137,9 +141,11 @@ final class i {
                     var4++;
                     continue L2;
                   } else {
+                    int incrementValue$4 = var6;
                     var6++;
+                    int incrementValue$5 = var5;
                     var5++;
-                    var3[var6] = ((i) this).field_c[var5];
+                    var3[incrementValue$4] = ((i) this).field_c[incrementValue$5];
                     var7++;
                     continue L3;
                   }
@@ -163,9 +169,11 @@ final class i {
                     continue L4;
                   } else {
                     var3[var7] = ((i) this).field_c[var6];
+                    int incrementValue$6 = var7;
                     var7++;
+                    int incrementValue$7 = var6;
                     var6++;
-                    var4_ref_byte__[var7] = ((i) this).field_e[var6];
+                    var4_ref_byte__[incrementValue$6] = ((i) this).field_e[incrementValue$7];
                     var8++;
                     continue L5;
                   }
@@ -291,8 +299,9 @@ final class i {
                                                               continue L11;
                                                             } else {
                                                               L13: {
-                                                                var9.field_e[var13 + var14 * var9.field_h] = var1.g(82);
-                                                                var15 = var1.g(82);
+                                                                byte dupTemp$2 = var1.g(82);
+                                                                var9.field_e[var13 + var14 * var9.field_h] = dupTemp$2;
+                                                                var15 = dupTemp$2;
                                                                 stackOut_61_0 = var12;
                                                                 stackIn_63_0 = stackOut_61_0;
                                                                 stackIn_62_0 = stackOut_61_0;
@@ -341,8 +350,9 @@ final class i {
                                                           break L9;
                                                         } else {
                                                           L17: {
-                                                            var9.field_e[var13] = var1.g(109);
-                                                            var14 = var1.g(109);
+                                                            byte dupTemp$3 = var1.g(109);
+                                                            var9.field_e[var13] = dupTemp$3;
+                                                            var14 = dupTemp$3;
                                                             stackOut_47_0 = var12;
                                                             stackIn_49_0 = stackOut_47_0;
                                                             stackIn_48_0 = stackOut_47_0;

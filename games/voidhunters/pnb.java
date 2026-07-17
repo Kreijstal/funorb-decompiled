@@ -15,8 +15,9 @@ final class pnb implements Iterator {
         if (((pnb) this).field_d == ((pnb) this).field_b.field_h[-1 + ((pnb) this).field_c]) {
           L0: while (true) {
             if (((pnb) this).field_c < ((pnb) this).field_b.field_f) {
+              int fieldTemp$1 = ((pnb) this).field_c;
               ((pnb) this).field_c = ((pnb) this).field_c + 1;
-              if (((pnb) this).field_b.field_h[((pnb) this).field_c].field_c != ((pnb) this).field_b.field_h[-1 + ((pnb) this).field_c]) {
+              if (((pnb) this).field_b.field_h[fieldTemp$1].field_c != ((pnb) this).field_b.field_h[-1 + ((pnb) this).field_c]) {
                 ((pnb) this).field_d = ((pnb) this).field_b.field_h[((pnb) this).field_c - 1].field_c;
                 return true;
               } else {
@@ -39,8 +40,9 @@ final class pnb implements Iterator {
         if (((pnb) this).field_b.field_h[((pnb) this).field_c - 1] == ((pnb) this).field_d) {
           L0: while (true) {
             if (((pnb) this).field_c < ((pnb) this).field_b.field_f) {
+              int fieldTemp$2 = ((pnb) this).field_c;
               ((pnb) this).field_c = ((pnb) this).field_c + 1;
-              var1 = ((pnb) this).field_b.field_h[((pnb) this).field_c].field_c;
+              var1 = ((pnb) this).field_b.field_h[fieldTemp$2].field_c;
               if (((pnb) this).field_b.field_h[((pnb) this).field_c + -1] != var1) {
                 ((pnb) this).field_d = var1.field_c;
                 ((pnb) this).field_a = var1;
@@ -61,24 +63,19 @@ final class pnb implements Iterator {
     }
 
     private final void a(int param0) {
-        if (param0 != 1) {
-          ((pnb) this).field_a = null;
-          ((pnb) this).field_d = ((pnb) this).field_b.field_h[0].field_c;
-          ((pnb) this).field_a = null;
-          ((pnb) this).field_c = 1;
-          return;
-        } else {
-          ((pnb) this).field_d = ((pnb) this).field_b.field_h[0].field_c;
-          ((pnb) this).field_a = null;
-          ((pnb) this).field_c = 1;
-          return;
-        }
+        ((pnb) this).field_d = ((pnb) this).field_b.field_h[0].field_c;
+        ((pnb) this).field_a = null;
+        ((pnb) this).field_c = 1;
     }
 
     pnb(nga param0) {
         ((pnb) this).field_a = null;
-        ((pnb) this).field_b = param0;
-        this.a(1);
+        try {
+            ((pnb) this).field_b = param0;
+            this.a(1);
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "pnb.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public final void remove() {

@@ -18,7 +18,7 @@ class tf extends eo {
         var6 = 0;
         var7 = 0;
         L0: while (true) {
-          if (param4 >> -2138270239 <= var7) {
+          if (param4 >> 1 <= var7) {
             L1: {
               if (param0 == 119) {
                 break L1;
@@ -29,13 +29,13 @@ class tf extends eo {
             }
             var7 = 0;
             L2: while (true) {
-              if (param4 >> 377729473 <= var7) {
+              if (param4 >> 1 <= var7) {
                 return var13;
               } else {
                 var8 = (-(var7 * 32 / param4) + 128) * 65793;
-                var9 = var8 >>> 1416038945 & 8355711;
+                var9 = var8 >>> 1 & 8355711;
                 var10 = var7 * 2;
-                if (-1 > (-((param2 + var10) * 2) + param3 + -1 ^ -1)) {
+                if (-((param2 + var10) * 2) + param3 + -1 > 0) {
                   var11 = 0;
                   L3: while (true) {
                     if (param2 <= var11) {
@@ -80,8 +80,8 @@ class tf extends eo {
             }
           } else {
             var8 = -(65793 * (32 * var7 / param4)) + 9474192;
-            var9 = ((16711422 & var8) >>> -2126415967) + 5263440;
-            var10 = 2 * ((param4 >> 918035553) - 1 - var7);
+            var9 = ((16711422 & var8) >>> 1) + 5263440;
+            var10 = 2 * ((param4 >> 1) - 1 - var7);
             if (0 >= -1 + param3 - 2 * (var10 + param1)) {
               var6 = var6 + var10;
               var11 = 0;
@@ -129,7 +129,7 @@ class tf extends eo {
 
     final static int a(int param0, int param1) {
         int var2 = -13 % ((-60 - param0) / 39);
-        return param1 >> 1505873032 & 255;
+        return param1 >> 8 & 255;
     }
 
     tf() {

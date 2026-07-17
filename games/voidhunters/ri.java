@@ -7,7 +7,7 @@ final class ri {
     int field_c;
 
     public static void a(int param0) {
-        int var1 = 24 / ((param0 - -53) / 32);
+        int var1 = 12;
         field_b = null;
     }
 

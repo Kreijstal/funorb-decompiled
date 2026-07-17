@@ -20,29 +20,23 @@ abstract class jj extends db {
     static td field_M;
 
     public static void c(boolean param0) {
-        if (!param0) {
-          return;
-        } else {
-          field_R = null;
-          field_Y = null;
-          field_V = null;
-          field_P = null;
-          field_S = null;
-          field_Z = null;
-          field_M = null;
-          field_X = null;
-          return;
-        }
+        field_R = null;
+        field_Y = null;
+        field_V = null;
+        field_P = null;
+        field_S = null;
+        field_Z = null;
+        field_M = null;
+        field_X = null;
     }
 
     final static void a(float param0, String param1, boolean param2) {
-        qj.field_I = param1;
-        if (!param2) {
-            jj.c(true);
+        try {
+            qj.field_I = param1;
             wa.field_l = param0;
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw pf.a((Throwable) (Object) runtimeException, "jj.GB(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + 1 + 41);
         }
-        wa.field_l = param0;
     }
 
     jj(f param0, int param1, int param2) {
@@ -52,9 +46,6 @@ abstract class jj extends db {
     }
 
     boolean j(int param0) {
-        if (param0 < 70) {
-            return false;
-        }
         ((jj) this).l(-1);
         return super.j(122);
     }
@@ -65,7 +56,7 @@ abstract class jj extends db {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        var2 = 35 % ((param0 - 38) / 49);
+        var2 = 0;
         if (((jj) this).field_U > 0) {
           var3 = ((jj) this).field_O;
           var4 = ((jj) this).field_W;
@@ -129,11 +120,11 @@ abstract class jj extends db {
                   var7 = 0;
                   var8 = 57 + param0;
                   L2: while (true) {
-                    if ((var7 ^ -1) <= (var4 ^ -1)) {
+                    if (~var7 <= ~var4) {
                       return;
                     } else {
                       var9 = (var6 + -var5) * var7 / var4 + var5;
-                      var9 = var9 | (var9 << 1311612688 | var9 << 437811944);
+                      var9 = var9 | (var9 << 16 | var9 << 8);
                       gb.b(param1, var8, 6, var9);
                       gb.b(param1 + (((jj) this).field_u - 6), var8, 6, var9);
                       var7++;
@@ -143,7 +134,7 @@ abstract class jj extends db {
                   }
                 } else {
                   var9 = var5 - -(var7 * (var6 + -var5) / var4);
-                  var9 = var9 | (var9 << 122295632 | var9 << 414913448);
+                  var9 = var9 | (var9 << 16 | var9 << 8);
                   gb.b(param1, var8, 6, var9);
                   gb.b(-6 + ((jj) this).field_u + param1, var8, 6, var9);
                   var7++;
@@ -152,12 +143,12 @@ abstract class jj extends db {
                 }
               }
             } else {
-              if ((var8 ^ -1) > (gb.field_b ^ -1)) {
+              if (~var8 > ~gb.field_b) {
                 var8++;
                 var7++;
                 continue L0;
               } else {
-                if ((var8 ^ -1) > (gb.field_i ^ -1)) {
+                if (~var8 > ~gb.field_i) {
                   L3: {
                     var9 = (-var5 + var6) * var7 / var4 + var5;
                     var10 = 0;
@@ -171,12 +162,12 @@ abstract class jj extends db {
                         } else {
                           L5: {
                             var12 = (20 + -var10) * (20 + -var10) + (20 + -var7) * (20 - var7);
-                            if (-463 <= (var12 ^ -1)) {
-                              if (-421 < (var12 ^ -1)) {
+                            if (var12 <= 462) {
+                              if (var12 < 420) {
                                 break L3;
                               } else {
                                 var13 = var9 * (462 - var12) / 42;
-                                var13 = var13 | (var13 << -1899106384 | var13 << 450895624);
+                                var13 = var13 | (var13 << 16 | var13 << 8);
                                 gb.field_a[var8 * gb.field_d + param1 - -var10] = var13;
                                 break L5;
                               }
@@ -191,7 +182,7 @@ abstract class jj extends db {
                     }
                   }
                   L6: {
-                    if (-21 > (var7 ^ -1)) {
+                    if (var7 > 20) {
                       break L6;
                     } else {
                       var12 = var11;
@@ -199,7 +190,7 @@ abstract class jj extends db {
                       var13 = 0;
                       L7: while (true) {
                         L8: {
-                          if ((var13 ^ -1) < -21) {
+                          if (var13 > 20) {
                             break L8;
                           } else {
                             var14 = var13 * var13 + (-var7 + 20) * (-var7 + 20);
@@ -213,7 +204,7 @@ abstract class jj extends db {
                                 continue L7;
                               } else {
                                 var15 = var9 * (-var14 + 462) / 42;
-                                var15 = var15 | (var15 << -1666281584 | var15 << 1139222856);
+                                var15 = var15 | (var15 << 16 | var15 << 8);
                                 gb.field_a[var8 * gb.field_d + param1 - -var11] = var15;
                                 var13++;
                                 var11++;
@@ -227,7 +218,7 @@ abstract class jj extends db {
                       }
                     }
                   }
-                  var9 = var9 | (var9 << 1956503792 | var9 << -703197336);
+                  var9 = var9 | (var9 << 16 | var9 << 8);
                   gb.b(var10 - -param1, var8, var11 + -var10, var9);
                   var8++;
                   var7++;
@@ -250,7 +241,7 @@ abstract class jj extends db {
     }
 
     void l(int param0) {
-        if (!((((jj) this).field_U ^ -1) < param0)) {
+        if (!(~((jj) this).field_U < param0)) {
             return;
         }
         ((jj) this).a(((jj) this).field_W, (byte) -128, ((jj) this).field_O);
@@ -261,7 +252,7 @@ abstract class jj extends db {
     final void a(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         var5 = -119 / ((25 - param3) / 42);
-        if ((param0 ^ -1) >= -1) {
+        if (param0 <= 0) {
           ((jj) this).a(param2, (byte) -127, param1);
           return;
         } else {

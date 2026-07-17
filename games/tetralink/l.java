@@ -19,24 +19,92 @@ final class l {
     static int field_j;
 
     final static int a(Random param0, byte param1, int param2) {
+        int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
-        if (param2 <= 0) {
-            throw new IllegalArgumentException();
-        }
-        if (re.a((byte) -127, param2)) {
-            return (int)(((long)param0.nextInt() & 4294967295L) * (long)param2 >> -36980832);
-        }
-        int var3 = -2147483648 - (int)(4294967296L % (long)param2);
-        if (param1 <= 71) {
-            l.a(-15, -7);
-        }
-        while (true) {
-            var4 = param0.nextInt();
-            if (var3 > var4) {
-                break;
+        int stackIn_4_0 = 0;
+        int stackIn_10_0 = 0;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_9_0 = 0;
+        int stackOut_3_0 = 0;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        try {
+          L0: {
+            if (param2 > 0) {
+              if (!re.a((byte) -127, param2)) {
+                L1: {
+                  var3_int = -2147483648 - (int)(4294967296L % (long)param2);
+                  if (param1 > 71) {
+                    break L1;
+                  } else {
+                    l.a(-15, -7);
+                    break L1;
+                  }
+                }
+                L2: while (true) {
+                  var4 = param0.nextInt();
+                  if (var3_int > var4) {
+                    stackOut_9_0 = oa.a(var4, 13309, param2);
+                    stackIn_10_0 = stackOut_9_0;
+                    break L0;
+                  } else {
+                    continue L2;
+                  }
+                }
+              } else {
+                stackOut_3_0 = (int)(((long)param0.nextInt() & 4294967295L) * (long)param2 >> 32);
+                stackIn_4_0 = stackOut_3_0;
+                return stackIn_4_0;
+              }
+            } else {
+              throw new IllegalArgumentException();
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var3 = decompiledCaughtException;
+            stackOut_11_0 = (RuntimeException) var3;
+            stackOut_11_1 = new StringBuilder().append("l.G(");
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
+            if (param0 == null) {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L3;
+            } else {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L3;
+            }
+          }
+          throw oi.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param1 + 44 + param2 + 41);
         }
-        return oa.a(var4, 13309, param2);
+        return stackIn_10_0;
     }
 
     private final void d(int param0) {
@@ -52,16 +120,16 @@ final class l {
         ((l) this).field_f = new byte[6];
         var3 = 0;
         L0: while (true) {
-          if (-5 >= (var3 ^ -1)) {
+          if (var3 >= 4) {
             var3 = 0;
             L1: while (true) {
-              if (-8 >= (var3 ^ -1)) {
+              if (var3 >= 7) {
                 var3 = 0;
                 L2: while (true) {
-                  if ((var3 ^ -1) <= -5) {
+                  if (var3 >= 4) {
                     L3: {
                       var8 = -98 % ((32 - param0) / 39);
-                      if (0 != (((l) this).field_h ^ -1)) {
+                      if (((l) this).field_h != -1) {
                         break L3;
                       } else {
                         ((l) this).field_f = null;
@@ -76,7 +144,7 @@ final class l {
                     var7 = (byte)(8 << var3);
                     var2 = 0;
                     L4: while (true) {
-                      if (-4 >= (var2 ^ -1)) {
+                      if (var2 >= 3) {
                         var3++;
                         continue L2;
                       } else {
@@ -304,7 +372,7 @@ final class l {
             if (!va.field_u) {
                 return false;
             }
-            if ((kd.field_h ^ -1) == -3) {
+            if (kd.field_h == 2) {
                 if (!(nl.a((byte) 127, qf.field_j, rc.field_N))) {
                     return false;
                 }
@@ -324,13 +392,17 @@ final class l {
     }
 
     final static void a(java.awt.Component param0, int param1, g param2, int param3, boolean param4, ie param5) {
-        ll.a(param4, param0, param1, param5, param2, param3, (byte) 127, param1);
+        try {
+            ll.a(param4, param0, param1, param5, param2, param3, (byte) 127, param1);
+        } catch (RuntimeException runtimeException) {
+            throw oi.a((Throwable) (Object) runtimeException, "l.L(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void c(int param0) {
         int var2 = 0;
         int var3 = TetraLink.field_J;
-        for (var2 = 0; (var2 ^ -1) > -7; var2++) {
+        for (var2 = 0; var2 < 6; var2++) {
             ((l) this).field_e[var2] = ((l) this).field_b.field_p[var2];
             ((l) this).field_k[var2] = ((l) this).field_b.field_e[var2];
         }
@@ -409,7 +481,7 @@ final class l {
                         break L5;
                       }
                     }
-                    if (-1 < (var2.field_s ^ -1)) {
+                    if (var2.field_s < 0) {
                       var2.field_s = 0;
                       break L2;
                     } else {
@@ -466,7 +538,7 @@ final class l {
         var7 = TetraLink.field_J;
         var2 = 0;
         L0: while (true) {
-          if ((var2 ^ -1) <= -7) {
+          if (var2 >= 6) {
             if (param0 == 56) {
               ((l) this).a(((l) this).field_l, (byte) -96);
               return;
@@ -528,7 +600,7 @@ final class l {
               if (0 == (((l) this).field_k[var2] & var4)) {
                 var5 = 0;
                 L4: while (true) {
-                  if (-8 < (var5 ^ -1)) {
+                  if (var5 < 7) {
                     var6 = 1 << var5;
                     if ((var6 & var4) != -1) {
                       if (!this.a(false, var5, var2, param0 ^ -14957)) {
@@ -595,7 +667,7 @@ final class l {
 
     public static void b(int param0) {
         field_i = null;
-        int var1 = 118 % ((param0 - -38) / 43);
+        int var1 = 0;
         field_c = null;
     }
 
@@ -645,20 +717,24 @@ final class l {
         ((l) this).field_l = param0;
         int dupTemp$0 = ((l) this).field_b.a(param0, (byte) 101);
         ((l) this).field_m = dupTemp$0;
-        if ((dupTemp$0 ^ -1) == 0) {
+        if (dupTemp$0 == -1) {
             ((l) this).field_l = -1;
         }
     }
 
     l(em param0, int param1) {
-        ((l) this).field_a = param1;
-        ((l) this).field_l = -1;
-        ((l) this).field_b = param0;
-        ((l) this).field_g = new je();
-        ((l) this).field_k = new byte[6];
-        ((l) this).field_h = -1;
-        ((l) this).field_f = null;
-        ((l) this).field_e = new byte[6];
+        try {
+            ((l) this).field_a = param1;
+            ((l) this).field_l = -1;
+            ((l) this).field_b = param0;
+            ((l) this).field_g = new je();
+            ((l) this).field_k = new byte[6];
+            ((l) this).field_h = -1;
+            ((l) this).field_f = null;
+            ((l) this).field_e = new byte[6];
+        } catch (RuntimeException runtimeException) {
+            throw oi.a((Throwable) (Object) runtimeException, "l.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     static {

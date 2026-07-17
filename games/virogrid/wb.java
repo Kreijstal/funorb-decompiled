@@ -90,16 +90,8 @@ class wb extends l {
         field_n = null;
         field_g = null;
         field_m = null;
-        if (!param0) {
-          field_i = null;
-          field_i = null;
-          field_l = null;
-          return;
-        } else {
-          field_i = null;
-          field_l = null;
-          return;
-        }
+        field_i = null;
+        field_l = null;
     }
 
     final long a(byte param0) {

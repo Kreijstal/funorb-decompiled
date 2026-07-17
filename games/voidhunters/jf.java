@@ -132,6 +132,7 @@ final class jf extends ora implements hdb {
         var6 = 0;
         L3: while (true) {
           if (var6 >= 6) {
+            return;
           } else {
             var7 = ((jf) this).field_g.LockRect(var6, 0, 0, 0, ((jf) this).field_f, ((jf) this).field_f, 0, var11);
             if (jagdx.hea.b(var7, (byte) 114)) {

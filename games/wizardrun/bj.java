@@ -127,25 +127,17 @@ final class bj {
         int var3 = 0;
         java.awt.DisplayMode[] var4 = ((bj) this).field_a.getDisplayModes();
         java.awt.DisplayMode[] var1 = var4;
-        int[] var2 = new int[var4.length << -2129624254];
+        int[] var2 = new int[var4.length << 2];
         for (var3 = 0; var3 < var4.length; var3++) {
-            var2[var3 << 860986530] = var4[var3].getWidth();
-            var2[1 + (var3 << 414194018)] = var4[var3].getHeight();
-            var2[(var3 << -75188062) - -2] = var4[var3].getBitDepth();
-            var2[3 + (var3 << 45738786)] = var4[var3].getRefreshRate();
+            var2[var3 << 2] = var4[var3].getWidth();
+            var2[1 + (var3 << 2)] = var4[var3].getHeight();
+            var2[(var3 << 2) - -2] = var4[var3].getBitDepth();
+            var2[3 + (var3 << 2)] = var4[var3].getRefreshRate();
         }
         return var2;
     }
 
     private final void a(java.awt.Frame param0, int param1) {
-        L0: {
-          if (param1 == 1) {
-            break L0;
-          } else {
-            ((bj) this).field_a = null;
-            break L0;
-          }
-        }
         ((bj) this).field_a.setFullScreenWindow((java.awt.Window) (Object) param0);
     }
 

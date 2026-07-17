@@ -49,7 +49,7 @@ final class eq extends rl {
               }
               if (param1 == 100) {
                 L2: {
-                  if ((param0 ^ -1) > -17) {
+                  if (param0 < 16) {
                     break L2;
                   } else {
                     param0 = param0 >>> 4;
@@ -58,7 +58,7 @@ final class eq extends rl {
                   }
                 }
                 L3: {
-                  if ((param0 ^ -1) <= -5) {
+                  if (param0 >= 4) {
                     param0 = param0 >>> 2;
                     var2 += 2;
                     break L3;
@@ -79,7 +79,7 @@ final class eq extends rl {
               } else {
                 L5: {
                   eq.f(80);
-                  if ((param0 ^ -1) > -17) {
+                  if (param0 < 16) {
                     break L5;
                   } else {
                     param0 = param0 >>> 4;
@@ -88,7 +88,7 @@ final class eq extends rl {
                   }
                 }
                 L6: {
-                  if ((param0 ^ -1) <= -5) {
+                  if (param0 >= 4) {
                     param0 = param0 >>> 2;
                     var2 += 2;
                     break L6;
@@ -122,7 +122,7 @@ final class eq extends rl {
         if (param1 != 100) {
           L9: {
             eq.f(80);
-            if ((param0 ^ -1) > -17) {
+            if (param0 < 16) {
               break L9;
             } else {
               param0 = param0 >>> 4;
@@ -131,7 +131,7 @@ final class eq extends rl {
             }
           }
           L10: {
-            if ((param0 ^ -1) <= -5) {
+            if (param0 >= 4) {
               param0 = param0 >>> 2;
               var2 += 2;
               break L10;
@@ -151,7 +151,7 @@ final class eq extends rl {
           return param0 + var2;
         } else {
           L12: {
-            if ((param0 ^ -1) > -17) {
+            if (param0 < 16) {
               break L12;
             } else {
               param0 = param0 >>> 4;
@@ -160,7 +160,7 @@ final class eq extends rl {
             }
           }
           L13: {
-            if ((param0 ^ -1) <= -5) {
+            if (param0 >= 4) {
               param0 = param0 >>> 2;
               var2 += 2;
               break L13;
@@ -196,17 +196,76 @@ final class eq extends rl {
     }
 
     final f a(boolean param0, int param1, int param2, int param3, ta param4) {
-        int var6 = 0;
+        int var6_int = 0;
+        RuntimeException var6 = null;
         int var7 = 0;
-        var6 = -6 + (int)(Math.random() * 12.99);
-        if (param0) {
-          return null;
-        } else {
-          var7 = (int)(100.0 * Math.pow(2.0, (double)var6 / 12.0));
-          tb.field_d.a(qp.field_i, var7, 48 * gi.field_m, param3);
-          ph.a(10, (byte) 107, param1, param4);
-          return bm.field_g;
+        Object stackIn_2_0 = null;
+        f stackIn_4_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        f stackOut_3_0 = null;
+        Object stackOut_1_0 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            var6_int = -6 + (int)(Math.random() * 12.99);
+            if (!param0) {
+              var7 = (int)(100.0 * Math.pow(2.0, (double)var6_int / 12.0));
+              tb.field_d.a(qp.field_i, var7, 48 * gi.field_m, param3);
+              ph.a(10, (byte) 107, param1, param4);
+              stackOut_3_0 = bm.field_g;
+              stackIn_4_0 = stackOut_3_0;
+              break L0;
+            } else {
+              stackOut_1_0 = null;
+              stackIn_2_0 = stackOut_1_0;
+              return (f) (Object) stackIn_2_0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var6 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var6;
+            stackOut_5_1 = new StringBuilder().append("eq.H(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param4 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L1;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L1;
+            }
+          }
+          throw dn.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
         }
+        return stackIn_4_0;
     }
 
     eq() {

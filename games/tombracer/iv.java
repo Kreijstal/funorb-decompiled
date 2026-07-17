@@ -8,12 +8,13 @@ final class iv extends jea {
     oj field_wb;
 
     final static void f(int param0) {
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        int var4_int = 0;
         ik var4 = null;
-        toa var5_ref_toa = null;
+        int var4_int = 0;
         int var5 = 0;
+        toa var5_ref_toa = null;
         int[] var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -22,82 +23,91 @@ final class iv extends jea {
         int[] var12 = null;
         int[] var13 = null;
         int[] var14 = null;
+        RuntimeException decompiledCaughtException = null;
         var8 = TombRacer.field_G ? 1 : 0;
-        var10 = vc.field_q;
-        var2 = var10.h(255);
-        var3 = var10.h(param0 + 255);
-        if (var2 == param0) {
-          var4 = (ik) (Object) hca.field_I.f(param0 ^ -80);
-          if (var4 == null) {
-            dea.a(60);
-            return;
-          } else {
-            L0: {
-              var5 = -var10.field_h + uca.field_d;
-              var14 = var4.field_i;
-              var13 = var14;
-              var12 = var13;
-              var11 = var12;
-              var6 = var11;
-              if (var14.length << -252696222 < var5) {
-                var5 = var14.length << -1623616606;
-                break L0;
-              } else {
-                break L0;
-              }
-            }
-            var7 = 0;
-            L1: while (true) {
-              if (var5 <= var7) {
-                var4.p(param0 + 79);
-                return;
-              } else {
-                var6[var7 >> 1081665090] = var6[var7 >> 1081665090] + (var10.h(255) << sea.c(768, var7 << -1545692536));
-                var7++;
-                continue L1;
-              }
-            }
-          }
-        } else {
-          if (-2 == (var2 ^ -1)) {
-            var4_int = var10.f((byte) -128);
-            var5_ref_toa = (toa) (Object) vsa.field_m.f(-80);
-            L2: while (true) {
-              if (var5_ref_toa == null) {
-                if (var5_ref_toa == null) {
-                  dea.a(60);
-                  return;
-                } else {
-                  var5_ref_toa.p(103);
-                  return;
-                }
-              } else {
-                L3: {
-                  if (var5_ref_toa.field_i != var3) {
-                    break L3;
-                  } else {
-                    if (var4_int != var5_ref_toa.field_k) {
-                      break L3;
+        try {
+          L0: {
+            L1: {
+              var10 = vc.field_q;
+              var2 = var10.h(255);
+              var3 = var10.h(255);
+              if (var2 == 0) {
+                var4 = (ik) (Object) hca.field_I.f(-80);
+                if (var4 != null) {
+                  L2: {
+                    var5 = -var10.field_h + uca.field_d;
+                    var14 = var4.field_i;
+                    var13 = var14;
+                    var12 = var13;
+                    var11 = var12;
+                    var6 = var11;
+                    if (var14.length << 2 < var5) {
+                      var5 = var14.length << 2;
+                      break L2;
                     } else {
-                      if (var5_ref_toa == null) {
-                        dea.a(60);
-                        return;
-                      } else {
-                        var5_ref_toa.p(103);
-                        return;
-                      }
+                      break L2;
                     }
                   }
+                  var7 = 0;
+                  L3: while (true) {
+                    if (var5 <= var7) {
+                      var4.p(79);
+                      break L1;
+                    } else {
+                      var6[var7 >> 2] = var6[var7 >> 2] + (var10.h(255) << sea.c(768, var7 << 8));
+                      var7++;
+                      continue L3;
+                    }
+                  }
+                } else {
+                  dea.a(60);
+                  return;
                 }
-                var5_ref_toa = (toa) (Object) vsa.field_m.e(param0 + 123);
-                continue L2;
+              } else {
+                if (var2 == 1) {
+                  var4_int = var10.f((byte) -128);
+                  var5_ref_toa = (toa) (Object) vsa.field_m.f(-80);
+                  L4: while (true) {
+                    L5: {
+                      if (var5_ref_toa == null) {
+                        break L5;
+                      } else {
+                        L6: {
+                          if (var5_ref_toa.field_i != var3) {
+                            break L6;
+                          } else {
+                            if (var4_int != var5_ref_toa.field_k) {
+                              break L6;
+                            } else {
+                              break L5;
+                            }
+                          }
+                        }
+                        var5_ref_toa = (toa) (Object) vsa.field_m.e(123);
+                        continue L4;
+                      }
+                    }
+                    if (var5_ref_toa != null) {
+                      var5_ref_toa.p(103);
+                      break L1;
+                    } else {
+                      dea.a(60);
+                      return;
+                    }
+                  }
+                } else {
+                  ssa.a("LR1: " + kk.a(32), (byte) 122, (Throwable) null);
+                  dea.a(60);
+                  break L1;
+                }
               }
             }
-          } else {
-            ssa.a("LR1: " + kk.a(32), (byte) 122, (Throwable) null);
-            dea.a(60);
-            return;
+            break L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw tba.a((Throwable) (Object) var1, "iv.F(" + 0 + 41);
         }
     }
 
@@ -106,18 +116,22 @@ final class iv extends jea {
         ((iv) this).field_tb.field_qb = 0;
         ((iv) this).field_vb.field_t = ((iv) this).field_t;
         ((iv) this).field_tb.field_G = -param1 + ((iv) this).field_G - param0;
-        int var4 = 127 % ((84 - param2) / 41);
+        int var4 = 0;
         ((iv) this).field_wb.a(((iv) this).field_tb.field_t, -((iv) this).field_tb.field_T, param0, false, ((iv) this).field_G + -param0, ((iv) this).field_t, ((iv) this).field_vb.field_t, 0);
     }
 
     iv(long param0, jea param1, jea param2, oj param3) {
         super(param0, (jea) null);
-        ((iv) this).field_vb = new jea(0L, param2);
-        ((iv) this).field_wb = new oj(0L, param3);
-        ((iv) this).b(-123, ((iv) this).field_vb);
-        ((iv) this).b(-128, (jea) (Object) ((iv) this).field_wb);
-        ((iv) this).field_tb = param1;
-        ((iv) this).field_vb.b(-122, param1);
+        try {
+            ((iv) this).field_vb = new jea(0L, param2);
+            ((iv) this).field_wb = new oj(0L, param3);
+            ((iv) this).b(-123, ((iv) this).field_vb);
+            ((iv) this).b(-128, (jea) (Object) ((iv) this).field_wb);
+            ((iv) this).field_tb = param1;
+            ((iv) this).field_vb.b(-122, param1);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "iv.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
+        }
     }
 
     private final void a(int param0, boolean param1, int param2, int param3, byte param4) {
@@ -159,7 +173,7 @@ final class iv extends jea {
           L4: {
             if (param1) {
               L5: {
-                if ((-(((iv) this).field_tb.field_K + ((iv) this).field_tb.field_T) ^ -1) > -1) {
+                if (-(((iv) this).field_tb.field_K + ((iv) this).field_tb.field_T) < 0) {
                   ((iv) this).field_tb.field_K = -((iv) this).field_tb.field_T;
                   break L5;
                 } else {
@@ -182,7 +196,7 @@ final class iv extends jea {
               }
             } else {
               if (((iv) this).field_tb.field_O + ((iv) this).field_tb.field_t - ((iv) this).field_vb.field_t >= -(((iv) this).field_tb.field_K + ((iv) this).field_tb.field_T)) {
-                if ((-(((iv) this).field_tb.field_K + ((iv) this).field_tb.field_T) ^ -1) <= -1) {
+                if (-(((iv) this).field_tb.field_K + ((iv) this).field_tb.field_T) >= 0) {
                   break L4;
                 } else {
                   ((iv) this).field_tb.field_K = -((iv) this).field_tb.field_T;
@@ -198,7 +212,7 @@ final class iv extends jea {
                 }
               } else {
                 ((iv) this).field_tb.field_K = -(-((iv) this).field_vb.field_t + (((iv) this).field_tb.field_t - -((iv) this).field_tb.field_O)) + -((iv) this).field_tb.field_T;
-                if ((-(((iv) this).field_tb.field_K + ((iv) this).field_tb.field_T) ^ -1) <= -1) {
+                if (-(((iv) this).field_tb.field_K + ((iv) this).field_tb.field_T) >= 0) {
                   if (((iv) this).field_wb.h(-1)) {
                     ((iv) this).field_tb.field_T = -((iv) this).field_wb.a(param1, (byte) 108, ((iv) this).field_vb.field_t, ((iv) this).field_tb.field_t);
                     ((iv) this).field_tb.field_K = 0;
@@ -264,7 +278,7 @@ final class iv extends jea {
           L10: {
             if (param1) {
               L11: {
-                if ((-(((iv) this).field_tb.field_K + ((iv) this).field_tb.field_T) ^ -1) > -1) {
+                if (-(((iv) this).field_tb.field_K + ((iv) this).field_tb.field_T) < 0) {
                   ((iv) this).field_tb.field_K = -((iv) this).field_tb.field_T;
                   break L11;
                 } else {
@@ -296,7 +310,7 @@ final class iv extends jea {
                   break L13;
                 }
               }
-              if ((-(((iv) this).field_tb.field_K + ((iv) this).field_tb.field_T) ^ -1) > -1) {
+              if (-(((iv) this).field_tb.field_K + ((iv) this).field_tb.field_T) < 0) {
                 ((iv) this).field_tb.field_K = -((iv) this).field_tb.field_T;
                 break L10;
               } else {
@@ -328,46 +342,30 @@ final class iv extends jea {
 
     private final boolean a(boolean param0, int param1, int param2, int param3, int param4, boolean param5, boolean param6) {
         int var8 = 0;
-        if (param0) {
-          var8 = 1;
-          ((iv) this).field_tb.a(var8 != 0, param2, 120, ((iv) this).field_vb.field_t);
-          this.a(param1, false, param3, param4, (byte) 114);
-          if (!param6) {
-            return false;
-          } else {
-            return var8 != 0;
-          }
-        } else {
+        if (!param0) {
           if (((iv) this).field_o) {
-            if (!param5) {
-              var8 = 1;
-              ((iv) this).field_tb.a(var8 != 0, param2, 120, ((iv) this).field_vb.field_t);
-              this.a(param1, false, param3, param4, (byte) 114);
-              if (!param6) {
-                return false;
-              } else {
-                return var8 != 0;
-              }
-            } else {
+            if (param5) {
               var8 = 0;
               ((iv) this).field_tb.a(var8 != 0, param2, 120, ((iv) this).field_vb.field_t);
               this.a(param1, false, param3, param4, (byte) 114);
-              if (!param6) {
-                return false;
-              } else {
-                return var8 != 0;
-              }
+              return var8 != 0;
+            } else {
+              var8 = 1;
+              ((iv) this).field_tb.a(var8 != 0, param2, 120, ((iv) this).field_vb.field_t);
+              this.a(param1, false, param3, param4, (byte) 114);
+              return var8 != 0;
             }
           } else {
             var8 = 0;
             ((iv) this).field_tb.a(var8 != 0, param2, 120, ((iv) this).field_vb.field_t);
             this.a(param1, false, param3, param4, (byte) 114);
-            if (!param6) {
-              return false;
-            } else {
-              return var8 != 0;
-            }
+            return var8 != 0;
           }
+        } else {
+          var8 = 1;
+          ((iv) this).field_tb.a(var8 != 0, param2, 120, ((iv) this).field_vb.field_t);
+          this.a(param1, false, param3, param4, (byte) 114);
+          return var8 != 0;
         }
     }
 

@@ -13,9 +13,6 @@ final class jga implements dja {
     }
 
     public static void a(int param0) {
-        if (param0 >= -31) {
-            return;
-        }
         field_b = null;
     }
 

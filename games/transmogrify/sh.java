@@ -17,9 +17,6 @@ final class sh {
     public static void a(boolean param0) {
         field_a = null;
         field_c = null;
-        if (param0) {
-            sh.a(false);
-        }
     }
 
     public final String toString() {

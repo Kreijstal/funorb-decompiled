@@ -24,9 +24,6 @@ final class vc {
     }
 
     final static boolean a(int param0) {
-        if (param0 != 0) {
-            return true;
-        }
         return gi.field_c;
     }
 
@@ -41,11 +38,12 @@ final class vc {
         field_g = new long[256];
         var2 = 0;
         L0: while (true) {
-          if (-257 >= (var2 ^ -1)) {
+          if (var2 >= 256) {
             field_c = new java.util.zip.CRC32();
             field_a = 0;
             field_b = new int[][]{new int[2], new int[2]};
             field_d = new boolean[][][]{new boolean[7][], new boolean[7][], new boolean[7][]};
+            return;
           } else {
             var0 = (long)var2;
             var3 = 0;
@@ -56,7 +54,7 @@ final class vc {
                 continue L0;
               } else {
                 if (1L == (var0 & 1L)) {
-                  var0 = -3932672073523589310L ^ var0 >>> -1530602751;
+                  var0 = -3932672073523589310L ^ var0 >>> 1;
                   var3++;
                   continue L1;
                 } else {

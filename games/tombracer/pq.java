@@ -25,20 +25,27 @@ final class pq implements os {
     }
 
     final static void a(byte[] param0, boolean param1, int param2, int param3, int param4, int param5) {
-        kh var10 = ql.field_k;
-        var10.k(param5, -2988);
-        var10.field_h = var10.field_h + 1;
-        int var7 = var10.field_h;
-        var10.i(4, 0);
-        var10.i(param4, 0);
-        int var8 = param2;
-        if (!(!param1)) {
-            // wide iinc 8 128
+        kh var10 = null;
+        int var7 = 0;
+        int var8 = 0;
+        try {
+            var10 = ql.field_k;
+            var10.k(param5, -2988);
+            var10.field_h = var10.field_h + 1;
+            var7 = var10.field_h;
+            var10.i(4, 0);
+            var10.i(param4, 0);
+            var8 = param2;
+            if (!(!param1)) {
+                var8 += 128;
+            }
+            int var9 = -69 / ((-65 - param3) / 34);
+            var10.i(var8, 0);
+            var10.a(0, param0, param0.length, 91);
+            var10.d(-var7 + var10.field_h, (byte) -1);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "pq.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
-        int var9 = -69 / ((-65 - param3) / 34);
-        var10.i(var8, 0);
-        var10.a(0, param0, param0.length, 91);
-        var10.d(-var7 + var10.field_h, (byte) -1);
     }
 
     public static void a(int param0) {
@@ -54,22 +61,69 @@ final class pq implements os {
     }
 
     final static void a(java.awt.Canvas param0, boolean param1) {
-        ki.a(-18520, (java.awt.Component) (Object) param0);
-        tia.a(0, (java.awt.Component) (Object) param0);
-        if (param1) {
-            return;
-        }
-        if (!(tja.field_q == null)) {
-            tja.field_q.b(116, (java.awt.Component) (Object) param0);
+        RuntimeException var2 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        try {
+          L0: {
+            ki.a(-18520, (java.awt.Component) (Object) param0);
+            tia.a(0, (java.awt.Component) (Object) param0);
+            if (tja.field_q != null) {
+              tja.field_q.b(116, (java.awt.Component) (Object) param0);
+              break L0;
+            } else {
+              return;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var2 = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var2;
+            stackOut_6_1 = new StringBuilder().append("pq.F(");
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param0 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L1;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L1;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 0 + 41);
         }
     }
 
     final static void b(int param0) {
         afa.field_c = qk.h(-57);
         ej.field_a = new jta();
-        if (param0 <= 112) {
-            return;
-        }
         gl.a(true, true, (byte) 97);
     }
 

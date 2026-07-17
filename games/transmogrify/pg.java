@@ -12,65 +12,37 @@ final class pg {
     }
 
     final static void a(int param0) {
-        if (param0 == 0) {
-          if (null != ci.field_f) {
-            L0: {
-              ci.field_f.j(param0 + 127);
-              if (gh.field_m != null) {
-                gh.field_m.r(-96);
-                break L0;
-              } else {
-                break L0;
-              }
+        if (null != ci.field_f) {
+          L0: {
+            ci.field_f.j(127);
+            if (gh.field_m != null) {
+              gh.field_m.r(-96);
+              break L0;
+            } else {
+              break L0;
             }
-            dg.c(-1);
-            return;
-          } else {
-            L1: {
-              if (gh.field_m != null) {
-                gh.field_m.r(-96);
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            dg.c(-1);
-            return;
           }
+          dg.c(-1);
+          return;
         } else {
-          pg.a((byte) -65);
-          if (null == ci.field_f) {
-            L2: {
-              if (gh.field_m != null) {
-                gh.field_m.r(-96);
-                break L2;
-              } else {
-                break L2;
-              }
+          L1: {
+            if (gh.field_m != null) {
+              gh.field_m.r(-96);
+              break L1;
+            } else {
+              break L1;
             }
-            dg.c(-1);
-            return;
-          } else {
-            L3: {
-              ci.field_f.j(param0 + 127);
-              if (gh.field_m != null) {
-                gh.field_m.r(-96);
-                break L3;
-              } else {
-                break L3;
-              }
-            }
-            dg.c(-1);
-            return;
           }
+          dg.c(-1);
+          return;
         }
     }
 
     final static void a(long param0, int param1) {
-        if ((param0 ^ -1L) >= -1L) {
+        if (param0 <= 0L) {
           return;
         } else {
-          if ((param0 % 10L ^ -1L) != -1L) {
+          if (param0 % 10L != 0L) {
             bc.a(param0, -23850);
             if (param1 <= -76) {
               return;
@@ -101,7 +73,11 @@ final class pg {
     }
 
     pg(ti[] param0) {
-        ((pg) this).field_c = param0;
+        try {
+            ((pg) this).field_c = param0;
+        } catch (RuntimeException runtimeException) {
+            throw ch.a((Throwable) (Object) runtimeException, "pg.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

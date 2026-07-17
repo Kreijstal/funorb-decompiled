@@ -18,9 +18,6 @@ abstract class sr {
 
     final static void a(boolean param0, byte param1) {
         cq.a(param0, 0);
-        if (param1 >= -20) {
-            field_a = null;
-        }
         vu.a(true, param0);
     }
 
@@ -147,7 +144,7 @@ abstract class sr {
               }
               var13 = stackIn_26_0;
               if (vi.field_n) {
-                var22 = new nr[var13][param5 + 2];
+                var22 = new nr[var13][13];
                 var24 = var22;
                 var15 = 0;
                 L7: while (true) {
@@ -158,7 +155,7 @@ abstract class sr {
                         return var6;
                       } else {
                         jm.a(100, 9863, (-param0 + param4) * var15 / 6 + param0);
-                        var16 = oa.a(param2, param5, (byte) 95);
+                        var16 = oa.a(param2, 11, (byte) 95);
                         iw.a(-101, var16);
                         var17 = 0;
                         L9: while (true) {
@@ -189,7 +186,7 @@ abstract class sr {
                                 var18 = var18 + var8[0][var17].field_o;
                                 var19 = 0;
                                 L12: while (true) {
-                                  if (param5 <= var19) {
+                                  if (var19 >= 11) {
                                     var8[2][var17].c(var18, 0);
                                     var17++;
                                     continue L9;
@@ -232,14 +229,14 @@ abstract class sr {
                               var18 = var18 + p.a((byte) -24, 5);
                               break L14;
                             } else {
-                              if (-1 != (var15 ^ -1)) {
+                              if (var15 != 0) {
                                 break L14;
                               } else {
                                 L15: {
                                   if (0 == var19) {
                                     break L15;
                                   } else {
-                                    if ((var19 ^ -1) == -3) {
+                                    if (var19 == 2) {
                                       break L15;
                                     } else {
                                       var22[var15][var16_int] = new nr(var17, var18, var12, var19);
@@ -265,7 +262,7 @@ abstract class sr {
                   }
                 }
               } else {
-                var23 = oa.a(param2, param5, (byte) 95);
+                var23 = oa.a(param2, 11, (byte) 95);
                 iw.a(121, var23);
                 var15 = 0;
                 L16: while (true) {
@@ -274,7 +271,7 @@ abstract class sr {
                     var15_ref_kg = eo.a(var23);
                     var16_int = 0;
                     L17: while (true) {
-                      if ((var16_int ^ -1) <= -7) {
+                      if (var16_int >= 6) {
                         return var6;
                       } else {
                         var6[var16_int] = var15_ref_kg;
@@ -287,7 +284,7 @@ abstract class sr {
                       if (!param2) {
                         break L18;
                       } else {
-                        if (-3 < (var15 ^ -1)) {
+                        if (var15 < 2) {
                           break L18;
                         } else {
                           var15++;
@@ -300,7 +297,7 @@ abstract class sr {
                     var16_int = var16_int + var8[0][var15].field_o;
                     var17 = 0;
                     L19: while (true) {
-                      if (var17 >= param5) {
+                      if (var17 >= 11) {
                         var8[2][var15].c(var16_int, 0);
                         var15++;
                         continue L16;

@@ -41,11 +41,6 @@ final class pb extends nm {
         field_o = null;
         field_n = null;
         field_l = null;
-        if (param0 < 22) {
-            field_l = null;
-            field_j = null;
-            return;
-        }
         field_j = null;
     }
 

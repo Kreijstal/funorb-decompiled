@@ -62,7 +62,7 @@ final class nj extends wf {
                       if (var11 >= param3) {
                         var11 = 0;
                         L5: while (true) {
-                          if (var11 >= param3 >> 80973185) {
+                          if (var11 >= param3 >> 1) {
                             return var10;
                           } else {
                             var12 = 0;

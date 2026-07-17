@@ -9,9 +9,6 @@ final class u {
     static String field_e;
 
     public static void b(int param0) {
-        if (param0 != 2) {
-            return;
-        }
         field_c = null;
         field_a = null;
         field_b = null;

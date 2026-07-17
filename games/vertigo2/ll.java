@@ -11,16 +11,8 @@ final class ll {
     public static void a(int param0) {
         field_e = null;
         field_c = null;
-        if (param0 != 3) {
-          field_c = null;
-          field_a = null;
-          field_d = null;
-          return;
-        } else {
-          field_a = null;
-          field_d = null;
-          return;
-        }
+        field_a = null;
+        field_d = null;
     }
 
     public final String toString() {

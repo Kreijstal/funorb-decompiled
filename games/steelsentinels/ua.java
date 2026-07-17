@@ -36,10 +36,10 @@ final class ua extends ck {
         cf.field_D = 100 * param1 / 150;
         if (param0 != -10931) {
           ua.a(-70, -65);
-          cf.field_x = (param1 << 358871152) / 150;
+          cf.field_x = (param1 << 16) / 150;
           return;
         } else {
-          cf.field_x = (param1 << 358871152) / 150;
+          cf.field_x = (param1 << 16) / 150;
           return;
         }
     }
@@ -51,7 +51,7 @@ final class ua extends ck {
         field_M = null;
         field_H = null;
         field_E = null;
-        int var1 = 125 / ((42 - param0) / 57);
+        int var1 = -125;
         field_N = null;
         field_L = null;
         field_u = null;
@@ -120,6 +120,6 @@ final class ua extends ck {
         field_M = new String[255];
         field_r = 1;
         field_G = 15;
-        field_H = new char[]{(char)91, (char)93, (char)35};
+        field_H = new char[]{'[', ']', '#'};
     }
 }

@@ -44,35 +44,16 @@ abstract class wi {
     }
 
     final static void b(int param0) {
-        ci var1 = null;
-        if (param0 != -14277) {
-          wi.a(true);
-          var1 = new ci(22050, la.field_a);
-          jd.field_q = hk.a(ib.field_f, "", "laura_woohoo").b().a(var1);
-          return;
-        } else {
-          var1 = new ci(22050, la.field_a);
-          jd.field_q = hk.a(ib.field_f, "", "laura_woohoo").b().a(var1);
-          return;
-        }
+        ci var1 = new ci(22050, la.field_a);
+        jd.field_q = hk.a(ib.field_f, "", "laura_woohoo").b().a(var1);
     }
 
     final static e a(int param0) {
-        if (param0 == 17641) {
-          if (tg.field_e == null) {
-            tg.field_e = new e(nb.field_c, 20, 0, 0, 0, 11579568, -1, 0, 0, nb.field_c.field_H, -1, 2147483647, true);
-            return tg.field_e;
-          } else {
-            return tg.field_e;
-          }
+        if (tg.field_e == null) {
+          tg.field_e = new e(nb.field_c, 20, 0, 0, 0, 11579568, -1, 0, 0, nb.field_c.field_H, -1, 2147483647, true);
+          return tg.field_e;
         } else {
-          wi.a(false);
-          if (tg.field_e != null) {
-            return tg.field_e;
-          } else {
-            tg.field_e = new e(nb.field_c, 20, 0, 0, 0, 11579568, -1, 0, 0, nb.field_c.field_H, -1, 2147483647, true);
-            return tg.field_e;
-          }
+          return tg.field_e;
         }
     }
 

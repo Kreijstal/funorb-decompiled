@@ -16,7 +16,7 @@ final class gs extends fp {
 
     final void b(int param0) {
         if (param0 == -1432175600) {
-          if ((((gs) this).field_n ^ -1L) < (((gs) this).field_l ^ -1L)) {
+          if (~((gs) this).field_n < ~((gs) this).field_l) {
             ((gs) this).field_l = ((gs) this).field_l + (-((gs) this).field_l + ((gs) this).field_n);
             ((gs) this).field_h = 0L;
             return;
@@ -26,7 +26,7 @@ final class gs extends fp {
           }
         } else {
           ((gs) this).field_n = 67L;
-          if ((((gs) this).field_n ^ -1L) >= (((gs) this).field_l ^ -1L)) {
+          if (~((gs) this).field_n >= ~((gs) this).field_l) {
             ((gs) this).field_h = 0L;
             return;
           } else {
@@ -41,12 +41,12 @@ final class gs extends fp {
         ((gs) this).field_l = ((gs) this).field_l + this.c(1);
         if (param0 != 0) {
             int discarded$10 = ((gs) this).a(-15, -125L);
-            if (!((((gs) this).field_l ^ -1L) <= (((gs) this).field_n ^ -1L))) {
+            if (!(~((gs) this).field_l <= ~((gs) this).field_n)) {
                 return (-((gs) this).field_l + ((gs) this).field_n) / 1000000L;
             }
             return 0L;
         }
-        if (!((((gs) this).field_l ^ -1L) <= (((gs) this).field_n ^ -1L))) {
+        if (!(~((gs) this).field_l <= ~((gs) this).field_n)) {
             return (-((gs) this).field_l + ((gs) this).field_n) / 1000000L;
         }
         return 0L;
@@ -55,11 +55,6 @@ final class gs extends fp {
     public static void b(byte param0) {
         field_m = null;
         field_j = null;
-        if (param0 < 53) {
-            field_i = null;
-            field_i = null;
-            return;
-        }
         field_i = null;
     }
 
@@ -73,13 +68,13 @@ final class gs extends fp {
         var2 = System.nanoTime();
         var4 = -((gs) this).field_h + var2;
         ((gs) this).field_h = var2;
-        if (4999999999L > (var4 ^ -1L)) {
+        if (var4 > -5000000000L) {
           if (5000000000L > var4) {
             ((gs) this).field_e[((gs) this).field_f] = var4;
             if (1 <= ((gs) this).field_g) {
               ((gs) this).field_f = (1 + ((gs) this).field_f) % 10;
               var6 = 0L;
-              var8 = param0;
+              var8 = 1;
               L0: while (true) {
                 if (((gs) this).field_g < var8) {
                   return var6 / (long)((gs) this).field_g;
@@ -93,7 +88,7 @@ final class gs extends fp {
               ((gs) this).field_g = ((gs) this).field_g + 1;
               ((gs) this).field_f = (1 + ((gs) this).field_f) % 10;
               var6 = 0L;
-              var8 = param0;
+              var8 = 1;
               L1: while (true) {
                 if (((gs) this).field_g < var8) {
                   return var6 / (long)((gs) this).field_g;
@@ -106,7 +101,7 @@ final class gs extends fp {
             }
           } else {
             var6 = 0L;
-            var8 = param0;
+            var8 = 1;
             L2: while (true) {
               if (((gs) this).field_g < var8) {
                 return var6 / (long)((gs) this).field_g;
@@ -119,7 +114,7 @@ final class gs extends fp {
           }
         } else {
           var6 = 0L;
-          var8 = param0;
+          var8 = 1;
           L3: while (true) {
             if (((gs) this).field_g < var8) {
               return var6 / (long)((gs) this).field_g;
@@ -153,7 +148,7 @@ final class gs extends fp {
                   }
                 }
               }
-              if ((((gs) this).field_l ^ -1L) < (((gs) this).field_n ^ -1L)) {
+              if (~((gs) this).field_l < ~((gs) this).field_n) {
                 ((gs) this).field_n = ((gs) this).field_l;
                 return var4;
               } else {
@@ -184,7 +179,7 @@ final class gs extends fp {
                   }
                 }
               }
-              if ((((gs) this).field_l ^ -1L) >= (((gs) this).field_n ^ -1L)) {
+              if (~((gs) this).field_l >= ~((gs) this).field_n) {
                 return var4;
               } else {
                 ((gs) this).field_n = ((gs) this).field_l;
@@ -204,7 +199,7 @@ final class gs extends fp {
         String var7 = null;
         Object var8 = null;
         L0: {
-          if ((em.field_h ^ -1) != -3) {
+          if (em.field_h != 2) {
             var7 = qk.field_z;
             break L0;
           } else {
@@ -224,24 +219,20 @@ final class gs extends fp {
     }
 
     final static void a(tm param0, boolean param1) {
-        int var2 = 0;
-        int var3 = 0;
-        var3 = ShatteredPlansClient.field_F ? 1 : 0;
-        var2 = hj.field_l.length + -1;
-        if (param1) {
-          L0: while (true) {
-            if (-2 < (var2 ^ -1)) {
-              qd.field_a = 0;
-              hj.field_l[0] = param0;
-              return;
-            } else {
-              hj.field_l[var2] = hj.field_l[-1 + var2];
-              var2--;
-              continue L0;
+        int var3 = ShatteredPlansClient.field_F ? 1 : 0;
+        int var2_int = hj.field_l.length + -1;
+        if (!param1) {
+            return;
+        }
+        try {
+            while (var2_int >= 1) {
+                hj.field_l[var2_int] = hj.field_l[-1 + var2_int];
+                var2_int--;
             }
-          }
-        } else {
-          return;
+            qd.field_a = 0;
+            hj.field_l[0] = param0;
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "gs.I(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 

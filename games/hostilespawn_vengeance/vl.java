@@ -112,33 +112,19 @@ final class vl {
     }
 
     final void a(am param0, int param1) {
-        if (param0.field_f == null) {
-          param0.field_g = ((vl) this).field_b;
-          param0.field_f = ((vl) this).field_b.field_f;
-          if (param1 <= 79) {
-            ((vl) this).field_b = null;
+        try {
+            if (param0.field_f != null) {
+                param0.b(123);
+            }
+            param0.field_g = ((vl) this).field_b;
+            param0.field_f = ((vl) this).field_b.field_f;
+            if (param1 <= 79) {
+                ((vl) this).field_b = null;
+            }
             param0.field_f.field_g = param0;
             param0.field_g.field_f = param0;
-            return;
-          } else {
-            param0.field_f.field_g = param0;
-            param0.field_g.field_f = param0;
-            return;
-          }
-        } else {
-          param0.b(123);
-          param0.field_g = ((vl) this).field_b;
-          param0.field_f = ((vl) this).field_b.field_f;
-          if (param1 > 79) {
-            param0.field_f.field_g = param0;
-            param0.field_g.field_f = param0;
-            return;
-          } else {
-            ((vl) this).field_b = null;
-            param0.field_f.field_g = param0;
-            param0.field_g.field_f = param0;
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw wg.a((Throwable) (Object) runtimeException, "vl.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
@@ -203,37 +189,19 @@ final class vl {
     }
 
     final void a(byte param0, am param1) {
-        if (param1.field_f == null) {
-          if (param0 > -45) {
-            ((vl) this).field_b = null;
+        try {
+            if (param1.field_f != null) {
+                param1.b(116);
+            }
+            if (param0 > -45) {
+                ((vl) this).field_b = null;
+            }
             param1.field_f = ((vl) this).field_b;
             param1.field_g = ((vl) this).field_b.field_g;
             param1.field_f.field_g = param1;
             param1.field_g.field_f = param1;
-            return;
-          } else {
-            param1.field_f = ((vl) this).field_b;
-            param1.field_g = ((vl) this).field_b.field_g;
-            param1.field_f.field_g = param1;
-            param1.field_g.field_f = param1;
-            return;
-          }
-        } else {
-          param1.b(116);
-          if (param0 <= -45) {
-            param1.field_f = ((vl) this).field_b;
-            param1.field_g = ((vl) this).field_b.field_g;
-            param1.field_f.field_g = param1;
-            param1.field_g.field_f = param1;
-            return;
-          } else {
-            ((vl) this).field_b = null;
-            param1.field_f = ((vl) this).field_b;
-            param1.field_g = ((vl) this).field_b.field_g;
-            param1.field_f.field_g = param1;
-            param1.field_g.field_f = param1;
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw wg.a((Throwable) (Object) runtimeException, "vl.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

@@ -7,12 +7,17 @@ final class hl {
     private ec field_c;
 
     final static void a(boolean param0, int param1, boolean param2) {
+        Object var4 = null;
         if (param1 != 24574) {
-            field_a = null;
-            hf.a(param2, 17072, param0, (String) null);
-            return;
+          field_a = null;
+          var4 = null;
+          hf.a(param2, 17072, param0, (String) null);
+          return;
+        } else {
+          var4 = null;
+          hf.a(param2, 17072, param0, (String) null);
+          return;
         }
-        hf.a(param2, 17072, param0, (String) null);
     }
 
     final int a(int param0) {
@@ -63,71 +68,34 @@ final class hl {
     }
 
     final void a(ec param0, int param1) {
-        if (param0.field_k == null) {
-          param0.field_i = ((hl) this).field_b;
-          param0.field_k = ((hl) this).field_b.field_k;
-          param0.field_k.field_i = param0;
-          if (param1 != 0) {
-            field_a = null;
+        try {
+            if (param0.field_k != null) {
+                param0.a(97);
+            }
+            param0.field_i = ((hl) this).field_b;
+            param0.field_k = ((hl) this).field_b.field_k;
+            param0.field_k.field_i = param0;
+            if (param1 != 0) {
+                field_a = null;
+            }
             param0.field_i.field_k = param0;
-            return;
-          } else {
-            param0.field_i.field_k = param0;
-            return;
-          }
-        } else {
-          param0.a(97);
-          param0.field_i = ((hl) this).field_b;
-          param0.field_k = ((hl) this).field_b.field_k;
-          param0.field_k.field_i = param0;
-          if (param1 == 0) {
-            param0.field_i.field_k = param0;
-            return;
-          } else {
-            field_a = null;
-            param0.field_i.field_k = param0;
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw fc.a((Throwable) (Object) runtimeException, "hl.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
     public static void a(byte param0) {
-        if (param0 != -113) {
-            hl.a(true, -54, false);
-            field_a = null;
-            return;
-        }
         field_a = null;
     }
 
     final static String a(String param0, String param1, String param2, boolean param3) {
-        int var4 = 0;
-        int var5 = 0;
-        var5 = SolKnight.field_L ? 1 : 0;
-        if (param3) {
-          var4 = param0.indexOf(param2);
-          L0: while (true) {
-            if (-1 == var4) {
-              return param0;
-            } else {
-              param0 = param0.substring(0, var4) + param1 + param0.substring(var4 + param2.length());
-              var4 = param0.indexOf(param2, var4 + param1.length());
-              continue L0;
-            }
-          }
-        } else {
-          field_a = null;
-          var4 = param0.indexOf(param2);
-          L1: while (true) {
-            if (-1 == var4) {
-              return param0;
-            } else {
-              param0 = param0.substring(0, var4) + param1 + param0.substring(var4 + param2.length());
-              var4 = param0.indexOf(param2, var4 + param1.length());
-              continue L1;
-            }
-          }
+        int var5 = SolKnight.field_L ? 1 : 0;
+        int var4 = param0.indexOf(param2);
+        while (-1 != var4) {
+            param0 = param0.substring(0, var4) + param1 + param0.substring(var4 + param2.length());
+            var4 = param0.indexOf(param2, var4 + param1.length());
         }
+        return param0;
     }
 
     final ec d(int param0) {

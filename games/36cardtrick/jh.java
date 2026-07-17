@@ -9,9 +9,6 @@ final class jh {
     private static String field_z;
 
     public static void a(byte param0) {
-        if (param0 != 51) {
-            return;
-        }
         field_a = null;
         field_d = null;
     }

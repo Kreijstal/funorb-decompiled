@@ -13,10 +13,6 @@ final class dg extends rf {
     static String field_j;
 
     final static int b(byte param0) {
-        if (param0 != -18) {
-            dg.a(-106);
-            return qb.field_a;
-        }
         return qb.field_a;
     }
 
@@ -32,7 +28,7 @@ final class dg extends rf {
     }
 
     public static void d(int param0) {
-        int var1 = 57 / ((69 - param0) / 54);
+        int var1 = -57;
         field_j = null;
     }
 

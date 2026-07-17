@@ -53,11 +53,6 @@ final class hj {
     public static void a(boolean param0) {
         field_e = null;
         field_d = null;
-        if (param0) {
-            hj.a(false);
-            field_b = null;
-            return;
-        }
         field_b = null;
     }
 
@@ -97,12 +92,11 @@ final class hj {
     }
 
     final static void a(eua param0, byte param1) {
-        if (param1 < 120) {
-            field_d = null;
+        try {
             rua.field_gb.b(-127, (jea) (Object) param0);
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "hj.D(" + (param0 != null ? "{...}" : "null") + 44 + 122 + 41);
         }
-        rua.field_gb.b(-127, (jea) (Object) param0);
     }
 
     static {

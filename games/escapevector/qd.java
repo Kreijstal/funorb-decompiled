@@ -19,7 +19,7 @@ final class qd extends hg {
           if (0 <= param0) {
             if (var2 > param0) {
               var3 = dh.field_e[param0];
-              if ((var3 ^ -1) == -3) {
+              if (var3 == 2) {
                 if (bj.e((byte) -56)) {
                   return true;
                 } else {
@@ -40,7 +40,7 @@ final class qd extends hg {
           if (0 <= param0) {
             if (var2 > param0) {
               var3 = dh.field_e[param0];
-              if ((var3 ^ -1) == -3) {
+              if (var3 == 2) {
                 if (!bj.e((byte) -56)) {
                   return false;
                 } else {
@@ -59,14 +59,15 @@ final class qd extends hg {
     }
 
     final static void a(int param0, String param1) {
-        ca.field_d = param1;
-        lj.a(param0, 39);
+        try {
+            ca.field_d = param1;
+            lj.a(param0, 39);
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) (Object) runtimeException, "qd.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void b(boolean param0) {
-        if (param0) {
-            return;
-        }
         field_n = null;
     }
 
@@ -82,21 +83,11 @@ final class qd extends hg {
               break L0;
             }
           }
-          if (!param3) {
-            if (param1) {
-              var4++;
-              return fd.field_f[var4];
-            } else {
-              return fd.field_f[var4];
-            }
+          if (param1) {
+            var4++;
+            return fd.field_f[var4];
           } else {
-            var4 += 2;
-            if (param1) {
-              var4++;
-              return fd.field_f[var4];
-            } else {
-              return fd.field_f[var4];
-            }
+            return fd.field_f[var4];
           }
         } else {
           L1: {
@@ -108,21 +99,11 @@ final class qd extends hg {
               break L1;
             }
           }
-          if (param3) {
-            var4 += 2;
-            if (!param1) {
-              return fd.field_f[var4];
-            } else {
-              var4++;
-              return fd.field_f[var4];
-            }
+          if (!param1) {
+            return fd.field_f[var4];
           } else {
-            if (param1) {
-              var4++;
-              return fd.field_f[var4];
-            } else {
-              return fd.field_f[var4];
-            }
+            var4++;
+            return fd.field_f[var4];
           }
         }
     }
@@ -132,61 +113,31 @@ final class qd extends hg {
         int var2 = 0;
         var2 = EscapeVector.field_A;
         dj.field_b = null;
-        if (param0) {
-          ei.field_i = false;
-          if (!eb.field_H) {
-            var1 = am.field_g;
-            if (-1 > (var1 ^ -1)) {
-              if ((var1 ^ -1) == -2) {
-                dj.field_b = cf.field_a;
-                dj.field_b = s.a((byte) -31, new CharSequence[3]);
-                be.field_b.o(-18861);
-                cg.d(32);
-                return;
-              } else {
-                dj.field_b = r.a(mi.field_j, -63, new String[1]);
-                dj.field_b = s.a((byte) -31, new CharSequence[3]);
-                be.field_b.o(-18861);
-                cg.d(32);
-                return;
-              }
+        ei.field_i = false;
+        if (!eb.field_H) {
+          var1 = am.field_g;
+          if (var1 > 0) {
+            if (var1 == 1) {
+              dj.field_b = cf.field_a;
+              dj.field_b = s.a((byte) -31, new CharSequence[3]);
+              be.field_b.o(-18861);
+              cg.d(32);
+              return;
             } else {
+              dj.field_b = r.a(mi.field_j, -63, new String[1]);
+              dj.field_b = s.a((byte) -31, new CharSequence[3]);
               be.field_b.o(-18861);
               cg.d(32);
               return;
             }
           } else {
-            be.field_b.r(94);
+            be.field_b.o(-18861);
+            cg.d(32);
             return;
           }
         } else {
-          field_n = null;
-          ei.field_i = false;
-          if (!eb.field_H) {
-            var1 = am.field_g;
-            if (-1 > (var1 ^ -1)) {
-              if ((var1 ^ -1) == -2) {
-                dj.field_b = cf.field_a;
-                dj.field_b = s.a((byte) -31, new CharSequence[3]);
-                be.field_b.o(-18861);
-                cg.d(32);
-                return;
-              } else {
-                dj.field_b = r.a(mi.field_j, -63, new String[1]);
-                dj.field_b = s.a((byte) -31, new CharSequence[3]);
-                be.field_b.o(-18861);
-                cg.d(32);
-                return;
-              }
-            } else {
-              be.field_b.o(-18861);
-              cg.d(32);
-              return;
-            }
-          } else {
-            be.field_b.r(94);
-            return;
-          }
+          be.field_b.r(94);
+          return;
         }
     }
 

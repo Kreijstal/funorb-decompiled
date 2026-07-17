@@ -12,23 +12,19 @@ final class ec {
     static String field_h;
 
     final static void a(kl param0, byte param1, int param2, vi param3) {
-        pe.field_B = ih.a((byte) -109) * param2 / 1000;
-        hd.a(param0, -125);
-        if (param1 > -61) {
-          ec.a(-127);
-          uk.a(125, param0);
-          ab.a(param0, (byte) 1);
-          vf.a(256);
-          r.c(350);
-          jd.field_f = 0 - pe.field_B;
-          return;
-        } else {
-          uk.a(125, param0);
-          ab.a(param0, (byte) 1);
-          vf.a(256);
-          r.c(350);
-          jd.field_f = 0 - pe.field_B;
-          return;
+        try {
+            pe.field_B = ih.a((byte) -109) * param2 / 1000;
+            hd.a(param0, -125);
+            if (param1 > -61) {
+                ec.a(-127);
+            }
+            uk.a(125, param0);
+            ab.a(param0, (byte) 1);
+            vf.a(256);
+            r.c(350);
+            jd.field_f = 0 - pe.field_B;
+        } catch (RuntimeException runtimeException) {
+            throw bd.a((Throwable) (Object) runtimeException, "ec.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 

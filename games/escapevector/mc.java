@@ -13,9 +13,6 @@ final class mc {
         field_c = null;
         field_b = null;
         field_a = null;
-        if (param0 != 8123) {
-            field_d = null;
-        }
     }
 
     static {

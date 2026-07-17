@@ -13,70 +13,111 @@ final class ii extends q {
 
     final static void a(int param0, int param1, qk param2) {
         int var4 = 0;
-        df var5 = null;
-        var5 = wa.field_d;
+        df var5 = wa.field_d;
         var5.f(95, param1);
         if (param0 != 32) {
-          return;
-        } else {
-          var5.field_n = var5.field_n + 1;
-          var4 = var5.field_n;
-          var5.b(90, 1);
-          var5.b(90, param2.field_k);
-          var5.a(param2.field_o, (byte) 106);
-          var5.b((byte) 60, param2.field_n);
-          var5.b((byte) 60, param2.field_m);
-          var5.b((byte) 60, param2.field_s);
-          var5.b((byte) 60, param2.field_j);
-          int discarded$1 = var5.a(var4, true);
-          var5.c((byte) 48, var5.field_n + -var4);
-          return;
+            return;
+        }
+        try {
+            var5.field_n = var5.field_n + 1;
+            var4 = var5.field_n;
+            var5.b(90, 1);
+            var5.b(90, param2.field_k);
+            var5.a(param2.field_o, (byte) 106);
+            var5.b((byte) 60, param2.field_n);
+            var5.b((byte) 60, param2.field_m);
+            var5.b((byte) 60, param2.field_s);
+            var5.b((byte) 60, param2.field_j);
+            int discarded$0 = var5.a(var4, true);
+            var5.c((byte) 48, var5.field_n + -var4);
+        } catch (RuntimeException runtimeException) {
+            throw rb.a((Throwable) (Object) runtimeException, "ii.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
     final static void a(java.awt.Canvas param0, boolean param1, byte param2) {
-        int var3 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
-        L0: {
-          var4 = Torquing.field_u;
-          if (param2 == -19) {
-            break L0;
-          } else {
-            ii.a(125);
-            break L0;
-          }
-        }
-        if (10 <= b.field_x) {
-          if (pl.b(-109)) {
-            if (-1 == (op.field_i ^ -1)) {
-              re.a(true, false, param1);
-              ni.a(param0, 0, 0, param2 + -50);
-              return;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        var4 = Torquing.field_u;
+        try {
+          L0: {
+            if (10 > b.field_x) {
+              L1: {
+                var3_int = 0;
+                if (!cf.field_c) {
+                  break L1;
+                } else {
+                  var3_int = 1;
+                  cf.field_c = false;
+                  break L1;
+                }
+              }
+              sc.a(kg.a((byte) 49), rd.field_A, var3_int != 0, (byte) 21, ro.b(-126));
+              break L0;
             } else {
-              ji.a((byte) -99, param0);
-              return;
+              if (!pl.b(-109)) {
+                ph.b();
+                jf.a(540, 320, 240);
+                ni.a(param0, 0, 0, -109);
+                return;
+              } else {
+                if (op.field_i != 0) {
+                  ji.a((byte) -99, param0);
+                  return;
+                } else {
+                  re.a(true, false, param1);
+                  ni.a(param0, 0, 0, -69);
+                  return;
+                }
+              }
             }
-          } else {
-            ph.b();
-            ph.b();
-            ph.b();
-            jf.a(param2 ^ -527, 320, 240);
-            ni.a(param0, 0, 0, -109);
-            return;
           }
-        } else {
-          L1: {
-            var3 = 0;
-            if (!cf.field_c) {
-              break L1;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_11_0 = (RuntimeException) var3;
+            stackOut_11_1 = new StringBuilder().append("ii.E(");
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
+            if (param0 == null) {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L2;
             } else {
-              var3 = 1;
-              cf.field_c = false;
-              break L1;
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L2;
             }
           }
-          sc.a(kg.a((byte) 49), rd.field_A, var3 != 0, (byte) 21, ro.b(-126));
-          return;
+          throw rb.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param1 + 44 + -19 + 41);
         }
     }
 
@@ -170,11 +211,11 @@ final class ii extends q {
                 if (var9 == -1) {
                   break L3;
                 } else {
-                  if ((var10 ^ -1) == 0) {
+                  if (var10 == -1) {
                     break L3;
                   } else {
                     var12 = var8.indexOf(".java:", var9);
-                    if ((var12 ^ -1) <= -1) {
+                    if (var12 >= 0) {
                       var2 = var19 + var8.substring(5 + var12, var10);
                       break L3;
                     } else {

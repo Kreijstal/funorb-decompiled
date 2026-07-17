@@ -18,7 +18,7 @@ final class rn {
         field_f = null;
         field_b = null;
         field_d = null;
-        int var1 = 40 % ((21 - param0) / 39);
+        int var1 = 0;
     }
 
     final static void a(int param0) {
@@ -54,9 +54,6 @@ final class rn {
     }
 
     final static cj b(int param0) {
-        if (param0 != 28579) {
-            return null;
-        }
         return gl.field_L.field_Ib;
     }
 

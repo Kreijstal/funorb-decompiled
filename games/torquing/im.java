@@ -26,29 +26,21 @@ abstract class im extends bb {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        L0: {
-          var16 = Torquing.field_u;
-          ph.a(param1 + 6, 35 + param0, ((im) this).field_p - 12, ((im) this).field_o - 40, 2105376, 0);
-          var5 = 211;
-          var4 = 35;
-          var6 = 194;
-          if (param2 < -16) {
-            break L0;
-          } else {
-            boolean discarded$1 = im.l(98);
-            break L0;
-          }
-        }
+        var16 = Torquing.field_u;
+        ph.a(param1 + 6, 35 + param0, ((im) this).field_p - 12, ((im) this).field_o - 40, 2105376, 0);
+        var5 = 211;
+        var4 = 35;
+        var6 = 194;
         var7 = 0;
         var8 = param0;
-        L1: while (true) {
+        L0: while (true) {
           if (var4 <= var7) {
             var4 = 22;
             var5 = 194;
             var6 = 169;
             var7 = 0;
             var8 = 35 + param0;
-            L2: while (true) {
+            L1: while (true) {
               if (var4 <= var7) {
                 rp.field_h.d(param1 + ((im) this).field_p - 90, 10 + param0);
                 hg.a(false, param1 - -5, ((im) this).field_p - 10, 35 + param0, hh.field_b);
@@ -58,116 +50,116 @@ abstract class im extends bb {
                 var6 = 127;
                 var7 = 0;
                 var8 = 57 + param0;
-                L3: while (true) {
+                L2: while (true) {
                   if (var4 <= var7) {
                     return;
                   } else {
                     var9 = var5 + var7 * (var6 - var5) / var4;
-                    var9 = var9 | (var9 << 77043664 | var9 << 47779400);
+                    var9 = var9 | (var9 << 16 | var9 << 8);
                     ph.b(param1, var8, 6, var9);
                     ph.b(param1 + ((im) this).field_p + -6, var8, 6, var9);
                     var7++;
                     var8++;
-                    continue L3;
+                    continue L2;
                   }
                 }
               } else {
                 var9 = (-var5 + var6) * var7 / var4 + var5;
-                var9 = var9 | (var9 << 587289232 | var9 << -799136984);
+                var9 = var9 | (var9 << 16 | var9 << 8);
                 ph.b(param1, var8, 6, var9);
                 ph.b(param1 + ((im) this).field_p + -6, var8, 6, var9);
                 var7++;
                 var8++;
-                continue L2;
+                continue L1;
               }
             }
           } else {
-            L4: {
+            L3: {
               if (var8 < ph.field_c) {
-                break L4;
+                break L3;
               } else {
-                if ((ph.field_h ^ -1) >= (var8 ^ -1)) {
-                  break L4;
+                if (~ph.field_h >= ~var8) {
+                  break L3;
                 } else {
-                  L5: {
+                  L4: {
                     var9 = var5 - -((-var5 + var6) * var7 / var4);
                     var10 = 0;
                     var11 = ((im) this).field_p;
-                    if (-21 > (var7 ^ -1)) {
-                      break L5;
+                    if (var7 > 20) {
+                      break L4;
                     } else {
-                      L6: while (true) {
+                      L5: while (true) {
                         if (var10 > 20) {
-                          break L5;
+                          break L4;
                         } else {
-                          L7: {
+                          L6: {
                             var12 = (-var7 + 20) * (-var7 + 20) + (20 + -var10) * (20 + -var10);
-                            if ((var12 ^ -1) < -463) {
-                              break L7;
+                            if (var12 > 462) {
+                              break L6;
                             } else {
-                              if (-421 < (var12 ^ -1)) {
-                                break L5;
+                              if (var12 < 420) {
+                                break L4;
                               } else {
                                 var13 = (462 + -var12) * var9 / 42;
-                                var13 = var13 | (var13 << 1670508872 | var13 << 129677552);
+                                var13 = var13 | (var13 << 8 | var13 << 16);
                                 ph.field_e[var10 + (param1 + var8 * ph.field_j)] = var13;
-                                break L7;
+                                break L6;
                               }
                             }
                           }
                           var10++;
-                          continue L6;
+                          continue L5;
                         }
                       }
                     }
                   }
-                  L8: {
-                    if ((var7 ^ -1) >= -21) {
+                  L7: {
+                    if (var7 <= 20) {
                       var12 = var11;
                       var11 -= 21;
                       var13 = 0;
-                      L9: while (true) {
-                        L10: {
-                          if (-21 > (var13 ^ -1)) {
-                            break L10;
+                      L8: while (true) {
+                        L9: {
+                          if (var13 > 20) {
+                            break L9;
                           } else {
                             var14 = (-var7 + 20) * (-var7 + 20) + var13 * var13;
                             if (var14 <= 462) {
-                              L11: {
+                              L10: {
                                 if (420 <= var14) {
                                   var15 = (462 - var14) * var9 / 42;
-                                  var15 = var15 | (var15 << -432517272 | var15 << 678802064);
+                                  var15 = var15 | (var15 << 8 | var15 << 16);
                                   ph.field_e[param1 + (var8 * ph.field_j - -var11)] = var15;
-                                  break L11;
+                                  break L10;
                                 } else {
                                   var12 = 1 + var11;
-                                  break L11;
+                                  break L10;
                                 }
                               }
                               var11++;
                               var13++;
-                              continue L9;
+                              continue L8;
                             } else {
-                              break L10;
+                              break L9;
                             }
                           }
                         }
                         var11 = var12;
-                        break L8;
+                        break L7;
                       }
                     } else {
-                      break L8;
+                      break L7;
                     }
                   }
-                  var9 = var9 | (var9 << 1399942928 | var9 << 904071048);
+                  var9 = var9 | (var9 << 16 | var9 << 8);
                   ph.b(var10 + param1, var8, -var10 + var11, var9);
-                  break L4;
+                  break L3;
                 }
               }
             }
             var7++;
             var8++;
-            continue L1;
+            continue L0;
           }
         }
     }
@@ -189,9 +181,6 @@ abstract class im extends bb {
     }
 
     boolean a(byte param0) {
-        if (param0 < 114) {
-            im.k(81);
-        }
         ((im) this).j(0);
         return super.a((byte) 122);
     }
@@ -226,7 +215,7 @@ abstract class im extends bb {
     }
 
     void j(int param0) {
-        if (!((((im) this).field_K ^ -1) < -1)) {
+        if (!(((im) this).field_K > 0)) {
             return;
         }
         ((im) this).a(((im) this).field_G, (byte) -25, ((im) this).field_H);
@@ -270,7 +259,7 @@ abstract class im extends bb {
         if (param0 != -7) {
             ((im) this).field_H = -80;
         }
-        return super.h(param0 ^ 0);
+        return super.h(param0);
     }
 
     public static void k(int param0) {

@@ -13,7 +13,7 @@ abstract class ns {
         field_a = null;
         field_b = null;
         field_c = null;
-        int var1 = -53 / ((14 - param0) / 51);
+        int var1 = -53;
     }
 
     abstract int a(int param0);

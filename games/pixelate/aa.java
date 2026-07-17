@@ -64,19 +64,9 @@ final class aa {
     }
 
     public static void a(int param0) {
-        Object var2 = null;
         field_c = null;
-        if (param0 >= -126) {
-          var2 = null;
-          qa discarded$2 = aa.a((Throwable) null, (String) null);
-          field_p = null;
-          field_f = null;
-          return;
-        } else {
-          field_p = null;
-          field_f = null;
-          return;
-        }
+        field_p = null;
+        field_f = null;
     }
 
     final static qa a(Throwable param0, String param1) {
@@ -110,18 +100,22 @@ final class aa {
     }
 
     aa(int param0, String param1, int param2, String param3, String param4) {
-        ((aa) this).field_i = 0;
-        ((aa) this).field_d = 0;
-        ((aa) this).field_j = param0;
-        ((aa) this).field_g = param4;
-        ((aa) this).field_e = 0;
-        ((aa) this).field_a = true;
-        ((aa) this).field_k = 0L;
-        ((aa) this).field_h = param3;
-        ((aa) this).field_m = param1;
-        ((aa) this).field_b = param2;
-        ((aa) this).field_n = param1;
-        ((aa) this).field_l = null;
+        try {
+            ((aa) this).field_i = 0;
+            ((aa) this).field_d = 0;
+            ((aa) this).field_j = param0;
+            ((aa) this).field_g = param4;
+            ((aa) this).field_e = 0;
+            ((aa) this).field_a = true;
+            ((aa) this).field_k = 0L;
+            ((aa) this).field_h = param3;
+            ((aa) this).field_m = param1;
+            ((aa) this).field_b = param2;
+            ((aa) this).field_n = param1;
+            ((aa) this).field_l = null;
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "aa.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

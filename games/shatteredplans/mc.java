@@ -18,9 +18,6 @@ abstract class mc extends df {
         field_u = null;
         field_s = null;
         field_q = null;
-        if (param0) {
-            return;
-        }
         field_o = null;
     }
 
@@ -31,49 +28,78 @@ abstract class mc extends df {
     abstract Object e(byte param0);
 
     final static void a(int param0, int param1, java.awt.Canvas param2, int param3) {
-        Exception exception = null;
         java.awt.Graphics var4 = null;
+        RuntimeException var4_ref = null;
+        Exception var4_ref2 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
         Throwable decompiledCaughtException = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    try {
-                        var4 = param2.getGraphics();
-                        so.field_q.a(var4, param3, (byte) -92, param1);
-                        var4.dispose();
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_0) {
-                        caughtException = stateCaught_0;
-                        statePc = 2;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    exception = (Exception) (Object) caughtException;
-                    param2.repaint();
-                    statePc = 3;
-                    continue stateLoop;
-                }
-                case 3: {
-                    if (param0 < 21) {
-                        statePc = 5;
-                    } else {
-                        statePc = 4;
-                    }
-                    continue stateLoop;
-                }
-                case 4: {
-                    return;
-                }
-                case 5: {
-                    field_o = null;
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        try {
+          L0: {
+            try {
+              L1: {
+                var4 = param2.getGraphics();
+                so.field_q.a(var4, 0, (byte) -92, param1);
+                var4.dispose();
+                break L1;
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L2: {
+                var4_ref2 = (Exception) (Object) decompiledCaughtException;
+                param2.repaint();
+                break L2;
+              }
             }
+            if (param0 >= 21) {
+              break L0;
+            } else {
+              field_o = null;
+              return;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+          decompiledCaughtException = decompiledCaughtParameter1;
+          L3: {
+            var4_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var4_ref;
+            stackOut_6_1 = new StringBuilder().append("mc.I(").append(param0).append(44).append(param1).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param2 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L3;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L3;
+            }
+          }
+          throw r.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 0 + 41);
         }
     }
 

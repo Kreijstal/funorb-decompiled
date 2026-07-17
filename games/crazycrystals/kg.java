@@ -492,7 +492,7 @@ final class kg extends od {
           if (param0.field_k.length == 0) {
             return null;
           } else {
-            return new kg(param0, (int)((long)param0.field_j * 256L * (long)param1 / (long)(100 * id.field_m)), param2 << 6);
+            return new kg(param0, (int)((long)param0.field_j * 256L * (long)param1 / (long)(100 * id.field_m)), 0);
           }
         } else {
           return null;
@@ -1493,7 +1493,7 @@ final class kg extends od {
     }
 
     private final synchronized void e(int param0) {
-        ((kg) this).c(param0, ((kg) this).k());
+        ((kg) this).c(0, ((kg) this).k());
     }
 
     private final void i() {

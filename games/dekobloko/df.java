@@ -14,64 +14,187 @@ final class df extends kf implements vn {
     static String field_S;
 
     public final void a(byte param0, int param1, ek param2, int param3, int param4) {
-        int var6 = 0;
+        int var6_int = 0;
+        RuntimeException var6 = null;
         int var7 = 0;
-        L0: {
-          var7 = client.field_A ? 1 : 0;
-          var6 = 0;
-          if (param0 == 67) {
-            break L0;
-          } else {
-            ck[] discarded$2 = df.a(123, -2, -15);
-            break L0;
-          }
-        }
-        L1: while (true) {
-          if (var6 >= ((df) this).field_V.length) {
-            L2: {
-              if (param2 == ((df) this).field_bb[((df) this).field_V.length]) {
-                ((df) this).field_W.a(25);
-                break L2;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        var7 = client.field_A ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              var6_int = 0;
+              if (param0 == 67) {
+                break L1;
               } else {
-                break L2;
+                ck[] discarded$3 = df.a(123, -2, -15);
+                break L1;
               }
             }
-            return;
-          } else {
-            if (((df) this).field_bb[var6] == param2) {
-              ((df) this).field_W.a(((df) this).field_V[var6], param0 + -28531);
-              var6++;
-              continue L1;
-            } else {
-              var6++;
-              continue L1;
+            L2: while (true) {
+              if (var6_int >= ((df) this).field_V.length) {
+                L3: {
+                  if (param2 == ((df) this).field_bb[((df) this).field_V.length]) {
+                    ((df) this).field_W.a(25);
+                    break L3;
+                  } else {
+                    break L3;
+                  }
+                }
+                break L0;
+              } else {
+                L4: {
+                  if (((df) this).field_bb[var6_int] != param2) {
+                    break L4;
+                  } else {
+                    ((df) this).field_W.a(((df) this).field_V[var6_int], param0 + -28531);
+                    break L4;
+                  }
+                }
+                var6_int++;
+                continue L2;
+              }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L5: {
+            var6 = decompiledCaughtException;
+            stackOut_11_0 = (RuntimeException) var6;
+            stackOut_11_1 = new StringBuilder().append("df.H(").append(param0).append(44).append(param1).append(44);
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
+            if (param2 == null) {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L5;
+            } else {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L5;
+            }
+          }
+          throw dh.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
     final boolean a(int param0, int param1, ce param2, char param3) {
-        if (!(!super.a(86, param1, param2, param3))) {
-            return true;
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int stackIn_3_0 = 0;
+        boolean stackIn_7_0 = false;
+        boolean stackIn_11_0 = false;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_2_0 = 0;
+        boolean stackOut_6_0 = false;
+        boolean stackOut_10_0 = false;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        try {
+          L0: {
+            if (super.a(86, param1, param2, param3)) {
+              stackOut_2_0 = 1;
+              stackIn_3_0 = stackOut_2_0;
+              return stackIn_3_0 != 0;
+            } else {
+              var5_int = 11 / ((-22 - param0) / 49);
+              if (param1 == 98) {
+                stackOut_6_0 = ((df) this).a(param2, (byte) -121);
+                stackIn_7_0 = stackOut_6_0;
+                return stackIn_7_0;
+              } else {
+                if (param1 == 99) {
+                  stackOut_10_0 = ((df) this).a(32, param2);
+                  stackIn_11_0 = stackOut_10_0;
+                  break L0;
+                } else {
+                  return false;
+                }
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var5 = decompiledCaughtException;
+            stackOut_12_0 = (RuntimeException) var5;
+            stackOut_12_1 = new StringBuilder().append("df.QA(").append(param0).append(44).append(param1).append(44);
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
+            if (param2 == null) {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L1;
+            } else {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L1;
+            }
+          }
+          throw dh.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param3 + 41);
         }
-        int var5 = 11 / ((-22 - param0) / 49);
-        if (!((param1 ^ -1) != -99)) {
-            return ((df) this).a(param2, (byte) -121);
-        }
-        if (param1 != 99) {
-            return false;
-        }
-        return ((df) this).a(32, param2);
+        return stackIn_11_0;
     }
 
     df(fi param0) {
         super(0, 0, 0, 0, (gl) null);
-        ((df) this).field_W = param0;
+        try {
+            ((df) this).field_W = param0;
+        } catch (RuntimeException runtimeException) {
+            throw dh.a((Throwable) (Object) runtimeException, "df.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void a(int param0, int param1, int param2, int param3) {
         super.a(param0, -124, param2, param3);
-        if (!(-1 == (param2 ^ -1))) {
+        if (!(param2 == 0)) {
             return;
         }
         if (param1 > -103) {
@@ -97,7 +220,7 @@ final class df extends kf implements vn {
     }
 
     final static w i(int param0) {
-        int var1 = -96 / ((45 - param0) / 63);
+        int var1 = 96;
         return ec.field_k.field_Ob;
     }
 
@@ -109,63 +232,114 @@ final class df extends kf implements vn {
     }
 
     final void a(int param0, String[] param1) {
-        int var3 = 0;
+        RuntimeException var3 = null;
+        int var3_int = 0;
         int var4_int = 0;
         on var4 = null;
         int var5 = 0;
         int var6 = 0;
-        L0: {
-          var6 = client.field_A ? 1 : 0;
-          ((df) this).field_H.c(126);
-          if (param1 == null) {
-            break L0;
-          } else {
-            if (param1.length != 0) {
-              L1: {
-                if (param0 == 32) {
-                  break L1;
-                } else {
-                  ck[] discarded$1 = df.a(-125, -89, -29);
-                  break L1;
-                }
-              }
-              var3 = param1.length;
-              ((df) this).field_V = new String[var3];
-              var4_int = 0;
-              L2: while (true) {
-                if (var3 <= var4_int) {
-                  var4 = new on(hh.field_e, 0, 1);
-                  ((df) this).field_bb = new ek[1 + var3];
-                  var5 = 0;
-                  L3: while (true) {
-                    if (var3 <= var5) {
-                      ((df) this).field_bb[var3] = new ek(cc.field_e, (kg) this);
-                      ((df) this).field_bb[var3].field_p = (gl) (Object) var4;
-                      ((df) this).field_bb[var3].b(15, 100, 0, 20 + 16 * (1 + var3), -16555);
-                      ((df) this).b((ce) (Object) ((df) this).field_bb[var3], (byte) -55);
-                      return;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_19_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        var6 = client.field_A ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              ((df) this).field_H.c(126);
+              if (param1 == null) {
+                break L1;
+              } else {
+                if (param1.length != 0) {
+                  L2: {
+                    if (param0 == 32) {
+                      break L2;
                     } else {
-                      ((df) this).field_bb[var5] = new ek(((df) this).field_V[var5], (kg) this);
-                      ((df) this).field_bb[var5].field_p = (gl) (Object) var4;
-                      ((df) this).field_bb[var5].field_B = client.field_B;
-                      ((df) this).field_bb[var5].b(15, 80, 0, var5 * 16 + 20, -16555);
-                      ((df) this).b((ce) (Object) ((df) this).field_bb[var5], (byte) -55);
-                      var5++;
+                      ck[] discarded$1 = df.a(-125, -89, -29);
+                      break L2;
+                    }
+                  }
+                  var3_int = param1.length;
+                  ((df) this).field_V = new String[var3_int];
+                  var4_int = 0;
+                  L3: while (true) {
+                    if (var3_int <= var4_int) {
+                      var4 = new on(hh.field_e, 0, 1);
+                      ((df) this).field_bb = new ek[1 + var3_int];
+                      var5 = 0;
+                      L4: while (true) {
+                        if (var3_int <= var5) {
+                          ((df) this).field_bb[var3_int] = new ek(cc.field_e, (kg) this);
+                          ((df) this).field_bb[var3_int].field_p = (gl) (Object) var4;
+                          ((df) this).field_bb[var3_int].b(15, 100, 0, 20 + 16 * (1 + var3_int), -16555);
+                          ((df) this).b((ce) (Object) ((df) this).field_bb[var3_int], (byte) -55);
+                          break L0;
+                        } else {
+                          ((df) this).field_bb[var5] = new ek(((df) this).field_V[var5], (kg) this);
+                          ((df) this).field_bb[var5].field_p = (gl) (Object) var4;
+                          ((df) this).field_bb[var5].field_B = client.field_B;
+                          ((df) this).field_bb[var5].b(15, 80, 0, var5 * 16 + 20, -16555);
+                          ((df) this).b((ce) (Object) ((df) this).field_bb[var5], (byte) -55);
+                          var5++;
+                          continue L4;
+                        }
+                      }
+                    } else {
+                      ((df) this).field_V[var4_int] = ua.a((CharSequence) (Object) param1[var4_int], true).replace(' ', ' ');
+                      var4_int++;
                       continue L3;
                     }
                   }
                 } else {
-                  ((df) this).field_V[var4_int] = ua.a((CharSequence) (Object) param1[var4_int], true).replace(' ', ' ');
-                  var4_int++;
-                  continue L2;
+                  break L1;
                 }
               }
+            }
+            ((df) this).field_V = null;
+            return;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L5: {
+            var3 = decompiledCaughtException;
+            stackOut_16_0 = (RuntimeException) var3;
+            stackOut_16_1 = new StringBuilder().append("df.B(").append(param0).append(44);
+            stackIn_18_0 = stackOut_16_0;
+            stackIn_18_1 = stackOut_16_1;
+            stackIn_17_0 = stackOut_16_0;
+            stackIn_17_1 = stackOut_16_1;
+            if (param1 == null) {
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "null";
+              stackIn_19_0 = stackOut_18_0;
+              stackIn_19_1 = stackOut_18_1;
+              stackIn_19_2 = stackOut_18_2;
+              break L5;
             } else {
-              break L0;
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "{...}";
+              stackIn_19_0 = stackOut_17_0;
+              stackIn_19_1 = stackOut_17_1;
+              stackIn_19_2 = stackOut_17_2;
+              break L5;
             }
           }
+          throw dh.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 41);
         }
-        ((df) this).field_V = null;
     }
 
     static {

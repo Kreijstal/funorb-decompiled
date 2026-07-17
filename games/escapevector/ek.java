@@ -10,16 +10,8 @@ final class ek {
         ch.field_b = true;
         mj.field_d = 0;
         di.field_d = null;
-        if (param1) {
-          ek.a(-110);
-          gi.a((byte) -58);
-          qk.field_e = new dn(param0);
-          return;
-        } else {
-          gi.a((byte) -58);
-          qk.field_e = new dn(param0);
-          return;
-        }
+        gi.a((byte) -58);
+        qk.field_e = new dn(param0);
     }
 
     public static void a(int param0) {

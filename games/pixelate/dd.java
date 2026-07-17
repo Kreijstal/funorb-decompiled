@@ -22,51 +22,61 @@ final class dd {
     static String field_f;
 
     final static wm[] b(byte param0) {
-        if (param0 != 62) {
-            boolean discarded$0 = dd.a('￑', (byte) 81);
-        }
         return new wm[]{rn.field_f, ej.field_b, w.field_w, gj.field_T, lb.field_r, lm.field_l, lb.field_C, gn.field_u, pf.field_f, of.field_e, kn.field_M, u.field_d, gh.field_s, ad.field_u};
     }
 
     final void a(byte param0, Random param1) {
+        int var3_int = 0;
+        int[] var14 = null;
+        int[] var13 = null;
+        int[] var12 = null;
+        int[] var11 = null;
+        int[] var4 = null;
         int var5_int = 0;
+        int var9 = 0;
         int var6 = 0;
         int var7 = 0;
-        int var8 = Pixelate.field_H ? 1 : 0;
-        int var3 = ((dd) this).field_l.length;
-        int[] var14 = new int[var3];
-        int[] var13 = var14;
-        int[] var12 = var13;
-        int[] var11 = var12;
-        int[] var4 = var11;
-        for (var5_int = 0; var3 > var5_int; var5_int++) {
-            var14[var5_int] = var5_int;
-        }
-        int var9 = 0;
-        var5_int = var9;
-        while (var9 < var3) {
-            var6 = var9 - -ok.a(param1, -120, var3 - var9);
-            var7 = var14[var9];
-            var4[var9] = var14[var6];
-            var14[var6] = var7;
-            var9++;
-        }
-        var6 = -119 % ((param0 - -53) / 60);
-        hh[] var5 = new hh[var3];
+        hh[] var5 = null;
         int var10 = 0;
-        var7 = var10;
-        while (var3 > var10) {
-            var5[var10] = ((dd) this).field_l[var14[var10]];
-            var10++;
+        int var8 = Pixelate.field_H ? 1 : 0;
+        try {
+            var3_int = ((dd) this).field_l.length;
+            var14 = new int[var3_int];
+            var13 = var14;
+            var12 = var13;
+            var11 = var12;
+            var4 = var11;
+            for (var5_int = 0; var3_int > var5_int; var5_int++) {
+                var14[var5_int] = var5_int;
+            }
+            var9 = 0;
+            var5_int = var9;
+            while (var9 < var3_int) {
+                var6 = var9 - -ok.a(param1, -120, var3_int - var9);
+                var7 = var14[var9];
+                var4[var9] = var14[var6];
+                var14[var6] = var7;
+                var9++;
+            }
+            var6 = -119 % ((param0 - -53) / 60);
+            var5 = new hh[var3_int];
+            var10 = 0;
+            var7 = var10;
+            while (var3_int > var10) {
+                var5[var10] = ((dd) this).field_l[var14[var10]];
+                var10++;
+            }
+            ((dd) this).field_l = var5;
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "dd.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        ((dd) this).field_l = var5;
     }
 
     public static void b(int param0) {
         field_m = null;
         field_a = null;
         field_c = null;
-        int var1 = -83 / ((-64 - param0) / 47);
+        int var1 = 27;
         field_f = null;
     }
 
@@ -80,28 +90,107 @@ final class dd {
     }
 
     final static String[] a(String param0, byte param1, char param2) {
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = Pixelate.field_H ? 1 : 0;
-        CharSequence var11 = (CharSequence) (Object) param0;
-        int var3 = al.a(0, param2, var11);
-        String[] var4 = new String[var3 + 1];
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        String[] var4 = null;
         int var5 = 0;
         int var6 = 0;
-        for (var7 = 0; var3 > var7; var7++) {
-            for (var8 = var6; param2 != param0.charAt(var8); var8++) {
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        Object var10 = null;
+        CharSequence var11 = null;
+        String[] stackIn_10_0 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        String[] stackOut_9_0 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        var9 = Pixelate.field_H ? 1 : 0;
+        try {
+          L0: {
+            var11 = (CharSequence) (Object) param0;
+            var3_int = al.a(0, param2, var11);
+            var4 = new String[var3_int + 1];
+            var5 = 0;
+            var6 = 0;
+            var7 = 0;
+            L1: while (true) {
+              if (var3_int <= var7) {
+                L2: {
+                  var4[var3_int] = param0.substring(var6);
+                  if (param1 <= -28) {
+                    break L2;
+                  } else {
+                    var10 = null;
+                    String[] discarded$4 = dd.a((String) null, (byte) -32, 'k');
+                    break L2;
+                  }
+                }
+                stackOut_9_0 = (String[]) var4;
+                stackIn_10_0 = stackOut_9_0;
+                break L0;
+              } else {
+                var8 = var6;
+                L3: while (true) {
+                  if (param2 == param0.charAt(var8)) {
+                    int incrementValue$5 = var5;
+                    var5++;
+                    var4[incrementValue$5] = param0.substring(var6, var8);
+                    var6 = 1 + var8;
+                    var7++;
+                    continue L1;
+                  } else {
+                    var8++;
+                    continue L3;
+                  }
+                }
+              }
             }
-            int incrementValue$0 = var5;
-            var5++;
-            var4[incrementValue$0] = param0.substring(var6, var8);
-            var6 = 1 + var8;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var3 = decompiledCaughtException;
+            stackOut_11_0 = (RuntimeException) var3;
+            stackOut_11_1 = new StringBuilder().append("dd.G(");
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
+            if (param0 == null) {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L4;
+            } else {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L4;
+            }
+          }
+          throw aa.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param1 + 44 + param2 + 41);
         }
-        var4[var3] = param0.substring(var6);
-        if (param1 > -28) {
-            Object var10 = null;
-            String[] discarded$1 = dd.a((String) null, (byte) -32, 'k');
-        }
-        return var4;
+        return stackIn_10_0;
     }
 
     final static boolean a(char param0, byte param1) {
@@ -167,7 +256,7 @@ final class dd {
         if (!(nf.field_b == null)) {
             var1 = nf.field_b.l(-24832);
         }
-        if (param0 == var1.length()) {
+        if (0 == var1.length()) {
             var1 = cg.b(false);
         }
         if (var1.length() == 0) {
@@ -177,19 +266,23 @@ final class dd {
     }
 
     dd(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, hh[] param8) {
-        ((dd) this).field_l = param8;
-        if ((30 & param2 ^ -1) == -31) {
-            ((dd) this).field_i = true;
+        try {
+            ((dd) this).field_l = param8;
+            if ((30 & param2) == 30) {
+                ((dd) this).field_i = true;
+            }
+            ((dd) this).field_e = 10 * param7;
+            ((dd) this).field_b = param6;
+            ((dd) this).field_p = param2;
+            ((dd) this).field_h = param3;
+            ((dd) this).field_k = param1;
+            ((dd) this).field_n = param4;
+            ((dd) this).field_j = param5;
+            ((dd) this).field_g = param1 * param0;
+            ((dd) this).field_o = param0;
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "dd.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + (param8 != null ? "{...}" : "null") + 41);
         }
-        ((dd) this).field_e = 10 * param7;
-        ((dd) this).field_b = param6;
-        ((dd) this).field_p = param2;
-        ((dd) this).field_h = param3;
-        ((dd) this).field_k = param1;
-        ((dd) this).field_n = param4;
-        ((dd) this).field_j = param5;
-        ((dd) this).field_g = param1 * param0;
-        ((dd) this).field_o = param0;
     }
 
     static {
@@ -211,17 +304,17 @@ final class dd {
             var0 = (long)var2;
             var3 = 0;
             L1: while (true) {
-              if ((var3 ^ -1) <= -9) {
+              if (var3 >= 8) {
                 field_c[var2] = var0;
                 var2++;
                 continue L0;
               } else {
-                if (-2L != (var0 & 1L ^ -1L)) {
+                if ((var0 & 1L) != 1L) {
                   var0 = var0 >>> 1;
                   var3++;
                   continue L1;
                 } else {
-                  var0 = var0 >>> -1897492479 ^ -3932672073523589310L;
+                  var0 = var0 >>> 1 ^ -3932672073523589310L;
                   var3++;
                   continue L1;
                 }

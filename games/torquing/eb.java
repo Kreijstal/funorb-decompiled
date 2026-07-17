@@ -12,9 +12,6 @@ final class eb {
     private q[] field_b;
 
     final static void a(int param0) {
-        if (param0 > -57) {
-            return;
-        }
         if (!kb.field_h) {
             throw new IllegalStateException();
         }
@@ -33,30 +30,21 @@ final class eb {
 
     final void a(boolean param0, long param1, q param2) {
         q var5 = null;
-        L0: {
-          if (param2.field_h != null) {
-            param2.f(0);
-            break L0;
-          } else {
-            break L0;
-          }
-        }
-        var5 = ((eb) this).field_b[(int)(param1 & (long)(((eb) this).field_d + -1))];
-        if (param0) {
-          q discarded$1 = ((eb) this).b((byte) -2);
-          param2.field_e = var5;
-          param2.field_h = var5.field_h;
-          param2.field_h.field_e = param2;
-          param2.field_e.field_h = param2;
-          param2.field_f = param1;
-          return;
-        } else {
-          param2.field_e = var5;
-          param2.field_h = var5.field_h;
-          param2.field_h.field_e = param2;
-          param2.field_e.field_h = param2;
-          param2.field_f = param1;
-          return;
+        try {
+            if (!(param2.field_h == null)) {
+                param2.f(0);
+            }
+            var5 = ((eb) this).field_b[(int)(param1 & (long)(((eb) this).field_d + -1))];
+            if (param0) {
+                q discarded$0 = ((eb) this).b((byte) -2);
+            }
+            param2.field_e = var5;
+            param2.field_h = var5.field_h;
+            param2.field_h.field_e = param2;
+            param2.field_e.field_h = param2;
+            param2.field_f = param1;
+        } catch (RuntimeException runtimeException) {
+            throw rb.a((Throwable) (Object) runtimeException, "eb.E(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

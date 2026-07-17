@@ -39,24 +39,11 @@ final class fk {
     int field_h;
 
     final static int a(int param0, int param1, byte param2) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        if (param2 > -38) {
-          fk.a(-8);
-          var3 = param0 >> 1121386704;
-          var4 = param0 & 65535;
-          var5 = param1 >> -1059976816;
-          var6 = 65535 & param1;
-          return (var4 * var6 >> 558731376) + (var4 * var5 + param1 * var3);
-        } else {
-          var3 = param0 >> 1121386704;
-          var4 = param0 & 65535;
-          var5 = param1 >> -1059976816;
-          var6 = 65535 & param1;
-          return (var4 * var6 >> 558731376) + (var4 * var5 + param1 * var3);
-        }
+        int var3 = param0 >> 16;
+        int var4 = param0 & 65535;
+        int var5 = param1 >> 16;
+        int var6 = 65535 & param1;
+        return (var4 * var6 >> 16) + (var4 * var5 + param1 * var3);
     }
 
     public static void a(int param0) {
@@ -68,33 +55,29 @@ final class fk {
     }
 
     final static boolean a(boolean param0) {
-        if (!param0) {
-          L0: {
-            if (il.field_g != -1) {
-              break L0;
-            } else {
-              if (!ag.a(126, 1)) {
-                return false;
-              } else {
-                il.field_g = se.field_p.j(7909);
-                se.field_p.field_g = 0;
-                break L0;
-              }
-            }
-          }
-          if (-2 == il.field_g) {
-            if (!ag.a(125, 2)) {
+        L0: {
+          if (il.field_g != -1) {
+            break L0;
+          } else {
+            if (!ag.a(126, 1)) {
               return false;
             } else {
-              il.field_g = se.field_p.i(-1174051992);
+              il.field_g = se.field_p.j(7909);
               se.field_p.field_g = 0;
-              return ag.a(125, il.field_g);
+              break L0;
             }
+          }
+        }
+        if (-2 == il.field_g) {
+          if (!ag.a(125, 2)) {
+            return false;
           } else {
+            il.field_g = se.field_p.i(-1174051992);
+            se.field_p.field_g = 0;
             return ag.a(125, il.field_g);
           }
         } else {
-          return true;
+          return ag.a(125, il.field_g);
         }
     }
 

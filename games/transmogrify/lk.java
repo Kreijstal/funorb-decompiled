@@ -13,7 +13,7 @@ final class lk {
             field_b = null;
         }
         long var1 = System.currentTimeMillis();
-        if ((var1 ^ -1L) > (cl.field_y ^ -1L)) {
+        if (~var1 > ~cl.field_y) {
             vl.field_B = vl.field_B + (cl.field_y - var1);
         }
         cl.field_y = var1;
@@ -25,86 +25,36 @@ final class lk {
         field_a = null;
         field_d = null;
         field_e = null;
-        if (param0 >= -15) {
-            field_c = false;
-        }
     }
 
     final static void b(boolean param0) {
         Object var1 = null;
         Throwable var2 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    if (null == hi.field_e) {
-                        statePc = 6;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    var1 = (Object) (Object) hi.field_e;
-                    // monitorenter hi.field_e
-                    statePc = 2;
-                    continue stateLoop;
-                }
-                case 2: {
-                    try {
-                        hi.field_e = null;
-                        // monitorexit var1
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 4;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 4;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                case 6: {
-                    if (!param0) {
-                        statePc = 8;
-                    } else {
-                        statePc = 7;
-                    }
-                    continue stateLoop;
-                }
-                case 7: {
-                    field_d = null;
-                    statePc = 8;
-                    continue stateLoop;
-                }
-                case 8: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        L0: {
+          if (null == hi.field_e) {
+            break L0;
+          } else {
+            var1 = (Object) (Object) hi.field_e;
+            synchronized (var1) {
+              L1: {
+                hi.field_e = null;
+                break L1;
+              }
             }
+            break L0;
+          }
         }
+        field_d = null;
     }
 
     final static byte[] a(int param0, byte[] param1) {
+        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        byte[] var6_ref_byte__ = null;
         int var6 = 0;
+        byte[] var6_ref_byte__ = null;
         byte[] var7 = null;
         Object var8 = null;
         Throwable var9 = null;
@@ -117,143 +67,136 @@ final class lk {
         byte[] var16 = null;
         byte[] var17 = null;
         byte[] var18 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var3 = -27 % ((param0 - 13) / 43);
-                    var10 = new oa(param1);
-                    var4 = var10.d((byte) 57);
-                    var5 = var10.c((byte) -126);
-                    if (var5 > -1) {
-                        statePc = 4;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    if (ll.field_R == 0) {
-                        statePc = 5;
-                    } else {
-                        statePc = 2;
-                    }
-                    continue stateLoop;
-                }
-                case 2: {
+        byte[] stackIn_7_0 = null;
+        byte[] stackIn_21_0 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        String stackIn_25_2 = null;
+        Throwable decompiledCaughtException = null;
+        byte[] stackOut_20_0 = null;
+        byte[] stackOut_6_0 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        String stackOut_24_2 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        String stackOut_23_2 = null;
+        try {
+          L0: {
+            L1: {
+              var3 = -27 % ((param0 - 13) / 43);
+              var10 = new oa(param1);
+              var4 = var10.d((byte) 57);
+              var5 = var10.c((byte) -126);
+              if (var5 < 0) {
+                break L1;
+              } else {
+                L2: {
+                  if (ll.field_R == 0) {
+                    break L2;
+                  } else {
                     if (ll.field_R < var5) {
-                        statePc = 4;
+                      break L1;
                     } else {
-                        statePc = 5;
+                      break L2;
                     }
-                    continue stateLoop;
+                  }
                 }
-                case 4: {
-                    throw new RuntimeException();
-                }
-                case 5: {
-                    if (-1 != var4) {
-                        statePc = 7;
-                    } else {
-                        statePc = 6;
-                    }
-                    continue stateLoop;
-                }
-                case 6: {
-                    var17 = new byte[var5];
-                    var15 = var17;
-                    var13 = var15;
-                    var11 = var13;
-                    var6_ref_byte__ = var11;
-                    var10.a(var5, 2, var17, 0);
-                    return var6_ref_byte__;
-                }
-                case 7: {
+                if (var4 != 0) {
+                  L3: {
                     var6 = var10.c((byte) -116);
                     if (var6 < 0) {
-                        statePc = 11;
+                      break L3;
                     } else {
-                        statePc = 8;
+                      L4: {
+                        if (ll.field_R == 0) {
+                          break L4;
+                        } else {
+                          if (~ll.field_R <= ~var6) {
+                            break L4;
+                          } else {
+                            break L3;
+                          }
+                        }
+                      }
+                      L5: {
+                        var18 = new byte[var6];
+                        var16 = var18;
+                        var14 = var16;
+                        var12 = var14;
+                        var7 = var12;
+                        if (var4 == 1) {
+                          int discarded$1 = gf.a(var18, var6, param1, var5, 9);
+                          break L5;
+                        } else {
+                          var8 = (Object) (Object) je.field_d;
+                          synchronized (var8) {
+                            L6: {
+                              je.field_d.a(var10, -115, var18);
+                              break L6;
+                            }
+                          }
+                          break L5;
+                        }
+                      }
+                      stackOut_20_0 = (byte[]) var7;
+                      stackIn_21_0 = stackOut_20_0;
+                      break L0;
                     }
-                    continue stateLoop;
+                  }
+                  throw new RuntimeException();
+                } else {
+                  var17 = new byte[var5];
+                  var15 = var17;
+                  var13 = var15;
+                  var11 = var13;
+                  var6_ref_byte__ = var11;
+                  var10.a(var5, 2, var17, 0);
+                  stackOut_6_0 = (byte[]) var6_ref_byte__;
+                  stackIn_7_0 = stackOut_6_0;
+                  return stackIn_7_0;
                 }
-                case 8: {
-                    if (ll.field_R == 0) {
-                        statePc = 12;
-                    } else {
-                        statePc = 9;
-                    }
-                    continue stateLoop;
-                }
-                case 9: {
-                    if (ll.field_R >= var6) {
-                        statePc = 12;
-                    } else {
-                        statePc = 11;
-                    }
-                    continue stateLoop;
-                }
-                case 11: {
-                    throw new RuntimeException();
-                }
-                case 12: {
-                    var18 = new byte[var6];
-                    var16 = var18;
-                    var14 = var16;
-                    var12 = var14;
-                    var7 = var12;
-                    if (-2 == (var4 ^ -1)) {
-                        statePc = 18;
-                    } else {
-                        statePc = 13;
-                    }
-                    continue stateLoop;
-                }
-                case 13: {
-                    var8 = (Object) (Object) je.field_d;
-                    // monitorenter je.field_d
-                    statePc = 14;
-                    continue stateLoop;
-                }
-                case 14: {
-                    try {
-                        je.field_d.a(var10, -115, var18);
-                        // monitorexit var8
-                        statePc = 19;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_14) {
-                        caughtException = stateCaught_14;
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                }
-                case 16: {
-                    try {
-                        var9 = caughtException;
-                        // monitorexit var8
-                        statePc = 17;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_16) {
-                        caughtException = stateCaught_16;
-                        statePc = 16;
-                        continue stateLoop;
-                    }
-                }
-                case 17: {
-                    throw (RuntimeException) (Object) var9;
-                }
-                case 18: {
-                    int discarded$1 = gf.a(var18, var6, param1, var5, 9);
-                    statePc = 19;
-                    continue stateLoop;
-                }
-                case 19: {
-                    return var7;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
             }
+            throw new RuntimeException();
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L7: {
+            var2 = (RuntimeException) (Object) decompiledCaughtException;
+            stackOut_22_0 = (RuntimeException) var2;
+            stackOut_22_1 = new StringBuilder().append("lk.E(").append(param0).append(44);
+            stackIn_24_0 = stackOut_22_0;
+            stackIn_24_1 = stackOut_22_1;
+            stackIn_23_0 = stackOut_22_0;
+            stackIn_23_1 = stackOut_22_1;
+            if (param1 == null) {
+              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
+              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_2 = "null";
+              stackIn_25_0 = stackOut_24_0;
+              stackIn_25_1 = stackOut_24_1;
+              stackIn_25_2 = stackOut_24_2;
+              break L7;
+            } else {
+              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_2 = "{...}";
+              stackIn_25_0 = stackOut_23_0;
+              stackIn_25_1 = stackOut_23_1;
+              stackIn_25_2 = stackOut_23_2;
+              break L7;
+            }
+          }
+          throw ch.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
         }
+        return stackIn_21_0;
     }
 
     final static ti a(boolean param0) {
@@ -262,9 +205,6 @@ final class lk {
         int var1 = wk.field_b[0] * ql.field_b[0];
         byte[] var2 = re.field_K[0];
         int[] var3 = new int[var1];
-        if (!param0) {
-            return null;
-        }
         for (var4_int = 0; var4_int < var1; var4_int++) {
             var3[var4_int] = rg.field_D[vg.c(255, (int) var2[var4_int])];
         }

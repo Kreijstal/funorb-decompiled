@@ -24,19 +24,23 @@ abstract class wf extends cc {
     }
 
     final static void p(int param0) {
-        int var1 = 0;
+        int var1_int = 0;
         int var2 = MinerDisturbance.field_ab;
-        if (param0 != 4462) {
-            field_Q = null;
+        try {
+            if (param0 != 4462) {
+                field_Q = null;
+            }
+            eb.field_d.a(true);
+            for (var1_int = 0; var1_int < 32; var1_int++) {
+                fb.field_e[var1_int] = 0L;
+            }
+            for (var1_int = 0; var1_int < 32; var1_int++) {
+                si.field_f[var1_int] = 0L;
+            }
+            ig.field_b = 0;
+        } catch (RuntimeException runtimeException) {
+            throw lj.a((Throwable) (Object) runtimeException, "wf.T(" + param0 + 41);
         }
-        eb.field_d.a(true);
-        for (var1 = 0; -33 < (var1 ^ -1); var1++) {
-            fb.field_e[var1] = 0L;
-        }
-        for (var1 = 0; var1 < 32; var1++) {
-            si.field_f[var1] = 0L;
-        }
-        ig.field_b = 0;
     }
 
     void b(int param0, int param1, int param2) {
@@ -83,7 +87,7 @@ abstract class wf extends cc {
                       return;
                     } else {
                       var9 = var5 + (-var5 + var6) * var7 / var4;
-                      var9 = var9 | (var9 << -422812656 | var9 << -1081432);
+                      var9 = var9 | (var9 << 16 | var9 << 8);
                       eh.e(param2, var8, 6, var9);
                       eh.e(-6 + ((wf) this).field_v + param2, var8, 6, var9);
                       var7++;
@@ -96,7 +100,7 @@ abstract class wf extends cc {
                 }
               } else {
                 var9 = (var6 + -var5) * var7 / var4 + var5;
-                var9 = var9 | (var9 << -2080841168 | var9 << 228424168);
+                var9 = var9 | (var9 << 16 | var9 << 8);
                 eh.e(param2, var8, 6, var9);
                 eh.e(param2 - -((wf) this).field_v - 6, var8, 6, var9);
                 var8++;
@@ -119,12 +123,12 @@ abstract class wf extends cc {
                         break L3;
                       } else {
                         var12 = (-var7 + 20) * (20 + -var7) + (20 + -var10) * (20 - var10);
-                        if (-463 <= (var12 ^ -1)) {
-                          if ((var12 ^ -1) > -421) {
+                        if (var12 <= 462) {
+                          if (var12 < 420) {
                             break L3;
                           } else {
                             var13 = (462 - var12) * var9 / 42;
-                            var13 = var13 | (var13 << -1100115760 | var13 << -1553717048);
+                            var13 = var13 | (var13 << 16 | var13 << 8);
                             eh.field_f[var10 + eh.field_g * var8 + param2] = var13;
                             var10++;
                             continue L4;
@@ -138,7 +142,7 @@ abstract class wf extends cc {
                   }
                 }
                 L5: {
-                  if ((var7 ^ -1) >= -21) {
+                  if (var7 <= 20) {
                     var12 = var11;
                     var11 -= 21;
                     var13 = 0;
@@ -151,7 +155,7 @@ abstract class wf extends cc {
                           if (var14 <= 462) {
                             if (var14 >= 420) {
                               var15 = (-var14 + 462) * var9 / 42;
-                              var15 = var15 | (var15 << 859787016 | var15 << -293095120);
+                              var15 = var15 | (var15 << 8 | var15 << 16);
                               eh.field_f[var11 + (var8 * eh.field_g - -param2)] = var15;
                               var13++;
                               var11++;
@@ -174,7 +178,7 @@ abstract class wf extends cc {
                     break L5;
                   }
                 }
-                var9 = var9 | (var9 << 438933360 | var9 << -736330104);
+                var9 = var9 | (var9 << 16 | var9 << 8);
                 eh.e(param2 + var10, var8, -var10 + var11, var9);
                 var8++;
                 var7++;
@@ -194,7 +198,7 @@ abstract class wf extends cc {
     }
 
     final void a(int param0, boolean param1, int param2, int param3) {
-        if (!(-1 > (param0 ^ -1))) {
+        if (!(param0 > 0)) {
             ((wf) this).a(param3, param2, (byte) 55);
             return;
         }
@@ -231,7 +235,7 @@ abstract class wf extends cc {
     }
 
     void o(int param0) {
-        if (!((((wf) this).field_O ^ -1) < -1)) {
+        if (!(((wf) this).field_O > 0)) {
             return;
         }
         ((wf) this).a(((wf) this).field_X, ((wf) this).field_S, (byte) 55);
@@ -254,9 +258,6 @@ abstract class wf extends cc {
         field_V = null;
         field_N = null;
         field_Q = null;
-        if (param0 != 87) {
-            boolean discarded$0 = wf.q(-90);
-        }
         field_U = null;
     }
 
@@ -268,7 +269,7 @@ abstract class wf extends cc {
         if (param0 != -4) {
             ((wf) this).b(true);
         }
-        if ((((wf) this).field_O ^ -1) < -1) {
+        if (((wf) this).field_O > 0) {
             var2 = ((wf) this).field_S;
             var3 = ((wf) this).field_X;
             int fieldTemp$0 = ((wf) this).field_W + 1;
@@ -284,7 +285,7 @@ abstract class wf extends cc {
             }
             ((wf) this).a(var3, var2, (byte) 55);
         }
-        return super.n(param0 + 0);
+        return super.n(param0);
     }
 
     static {

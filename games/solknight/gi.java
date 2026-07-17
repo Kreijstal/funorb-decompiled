@@ -246,7 +246,7 @@ final class gi {
                                                                                 }
                                                                               } else {
                                                                                 param0.field_h[var31] = param0.field_h[var31] - 1;
-                                                                                param0.field_k[param0.field_h[var31]] = param0.field_k[param0.field_h[var31 - 1] + 16 - 1];
+                                                                                param0.field_k[param0.field_h[var31]] = param0.field_k[param0.field_h[var31 - 1] + 15];
                                                                                 var31--;
                                                                                 continue L19;
                                                                               }
@@ -332,7 +332,7 @@ final class gi {
                                                                       break L27;
                                                                     }
                                                                   } else {
-                                                                    var15 = var15 + 1 * var16;
+                                                                    var15 = var15 + var16;
                                                                     break L27;
                                                                   }
                                                                 }
@@ -626,7 +626,7 @@ final class gi {
         synchronized (var5) {
           L0: {
             field_a.field_v = param2;
-            field_a.field_w = param4;
+            field_a.field_w = 9;
             field_a.field_d = param0;
             field_a.field_F = 0;
             field_a.field_K = param1;

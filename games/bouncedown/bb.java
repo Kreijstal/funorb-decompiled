@@ -22,11 +22,6 @@ final class bb {
     }
 
     public static void a(byte param0) {
-        if (param0 != 25) {
-            field_a = null;
-            field_a = null;
-            return;
-        }
         field_a = null;
     }
 

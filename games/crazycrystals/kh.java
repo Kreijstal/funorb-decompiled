@@ -358,8 +358,8 @@ final class kh {
     }
 
     final static void c(int param0, int param1, int param2, int param3, int param4, int param5) {
-        kh.a(field_i, 0, param2 + param3 * field_l, param0, param2, param4, field_l - param4, param5);
-        kh.a(field_i, 0, param2 + param3 * field_l, param1, param3, param5, field_l - param4, param2, param4);
+        kh.a(field_i, 0, param2 + param3 * field_l, param0, param2, param4, field_l - param4, 140);
+        kh.a(field_i, 0, param2 + param3 * field_l, param1, param3, 140, field_l - param4, param2, param4);
     }
 
     private final static void b() {
@@ -724,7 +724,7 @@ final class kh {
           } else {
             var11 = 65536 - var6 >> 8;
             var12 = var6 >> 8;
-            var13 = ((param4 & 16711935) * var11 + (param5 & 16711935) * var12 & -16711936) + ((param4 & 65280) * var11 + (param5 & 65280) * var12 & 16711680) >>> 8;
+            var13 = ((param4 & 16711935) * var11 + 0 * var12 & -16711936) + ((param4 & 65280) * var11 + 0 * var12 & 16711680) >>> 8;
             var14 = -param2;
             L5: while (true) {
               if (var14 >= 0) {
@@ -1903,8 +1903,8 @@ final class kh {
         int var5 = 0;
         for (var6 = 0; var6 < 4; var6++) {
             var5 = 128 - (var6 << 5);
-            kh.a(param0 + var6, param1 + param3 + var6, param2, param4, var5);
-            kh.d(param0 + param2 + var6, param1 + var6, param3 + 1, param4, var5);
+            kh.a(param0 + var6, param1 + param3 + var6, param2, 5592405, var5);
+            kh.d(param0 + param2 + var6, param1 + var6, param3 + 1, 5592405, var5);
         }
     }
 

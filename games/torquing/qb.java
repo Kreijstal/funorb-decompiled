@@ -14,7 +14,7 @@ final class qb {
         while (((qb) this).field_b[var1] >= 0) {
             var1 = ho.a() != 0 ? ((qb) this).field_b[var1] : var1 + 1;
         }
-        return ((qb) this).field_b[var1] ^ -1;
+        return ~((qb) this).field_b[var1];
     }
 
     final float[] a() {
@@ -62,7 +62,7 @@ final class qb {
                   var7 = 0;
                   L2: while (true) {
                     if (var7 >= var4) {
-                      ((qb) this).field_b[var6] = var3 ^ -1;
+                      ((qb) this).field_b[var6] = ~var3;
                       if (var6 >= var2) {
                         var2 = var6 + 1;
                         var3++;

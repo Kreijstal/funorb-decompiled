@@ -22,63 +22,121 @@ final class fpb extends mfb {
     }
 
     final static void a(pgb param0, int param1) {
-        int var2 = 0;
+        RuntimeException var2 = null;
+        int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        String stackIn_23_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        String stackOut_22_2 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
         var5 = VoidHunters.field_G;
-        var2 = param1;
-        L0: while (true) {
-          if (-4 >= (var2 ^ -1)) {
-            var2 = 0;
+        try {
+          L0: {
+            var2_int = 0;
             L1: while (true) {
-              if (var2 >= ou.field_q) {
-                dca.field_q[param0.a(1)] = dca.field_q[param0.a(1)] + 1;
-                var2 = 0;
-                var3 = 0;
+              if (var2_int >= 3) {
+                var2_int = 0;
                 L2: while (true) {
-                  if (ou.field_q <= var3) {
-                    ou.field_q = var2;
-                    ou.field_q = ou.field_q + 1;
-                    nrb.field_b[ou.field_q] = param0;
-                    return;
-                  } else {
-                    L3: {
-                      if (nrb.field_b[var3].field_a == param0.field_a) {
-                        var4 = nrb.field_b[var3].a(1);
-                        if (dca.field_q[var4] <= hab.field_k) {
-                          break L3;
-                        } else {
-                          dca.field_q[var4] = dca.field_q[var4] - 1;
-                          var3++;
-                          continue L2;
-                        }
+                  if (var2_int >= ou.field_q) {
+                    int dupTemp$4 = param0.a(1);
+                    dca.field_q[dupTemp$4] = dca.field_q[dupTemp$4] + 1;
+                    var2_int = 0;
+                    var3 = 0;
+                    L3: while (true) {
+                      if (ou.field_q <= var3) {
+                        ou.field_q = var2_int;
+                        int fieldTemp$5 = ou.field_q;
+                        ou.field_q = ou.field_q + 1;
+                        nrb.field_b[fieldTemp$5] = param0;
+                        break L0;
                       } else {
-                        break L3;
+                        L4: {
+                          L5: {
+                            if (nrb.field_b[var3].field_a == param0.field_a) {
+                              var4 = nrb.field_b[var3].a(1);
+                              if (dca.field_q[var4] <= hab.field_k) {
+                                break L5;
+                              } else {
+                                dca.field_q[var4] = dca.field_q[var4] - 1;
+                                break L4;
+                              }
+                            } else {
+                              break L5;
+                            }
+                          }
+                          int incrementValue$6 = var2_int;
+                          var2_int++;
+                          nrb.field_b[incrementValue$6] = nrb.field_b[var3];
+                          break L4;
+                        }
+                        var3++;
+                        continue L3;
                       }
                     }
-                    var2++;
-                    nrb.field_b[var2] = nrb.field_b[var3];
-                    var3++;
+                  } else {
+                    L6: {
+                      if (param0.field_a == nrb.field_b[var2_int].field_a) {
+                        int dupTemp$7 = nrb.field_b[var2_int].a(1);
+                        dca.field_q[dupTemp$7] = dca.field_q[dupTemp$7] + 1;
+                        break L6;
+                      } else {
+                        break L6;
+                      }
+                    }
+                    var2_int++;
                     continue L2;
                   }
                 }
               } else {
-                if (param0.field_a == nrb.field_b[var2].field_a) {
-                  dca.field_q[nrb.field_b[var2].a(param1 ^ 1)] = dca.field_q[nrb.field_b[var2].a(param1 ^ 1)] + 1;
-                  var2++;
-                  continue L1;
-                } else {
-                  var2++;
-                  continue L1;
-                }
+                dca.field_q[var2_int] = 0;
+                var2_int++;
+                continue L1;
               }
             }
-          } else {
-            dca.field_q[var2] = 0;
-            var2++;
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L7: {
+            var2 = decompiledCaughtException;
+            stackOut_20_0 = (RuntimeException) var2;
+            stackOut_20_1 = new StringBuilder().append("fpb.P(");
+            stackIn_22_0 = stackOut_20_0;
+            stackIn_22_1 = stackOut_20_1;
+            stackIn_21_0 = stackOut_20_0;
+            stackIn_21_1 = stackOut_20_1;
+            if (param0 == null) {
+              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_2 = "null";
+              stackIn_23_0 = stackOut_22_0;
+              stackIn_23_1 = stackOut_22_1;
+              stackIn_23_2 = stackOut_22_2;
+              break L7;
+            } else {
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "{...}";
+              stackIn_23_0 = stackOut_21_0;
+              stackIn_23_1 = stackOut_21_1;
+              stackIn_23_2 = stackOut_21_2;
+              break L7;
+            }
+          }
+          throw rta.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + 0 + 41);
         }
     }
 
@@ -86,9 +144,6 @@ final class fpb extends mfb {
         field_c = null;
         field_b = null;
         field_d = null;
-        if (param0 <= 21) {
-            field_d = null;
-        }
     }
 
     final int b(int param0) {
@@ -97,9 +152,6 @@ final class fpb extends mfb {
     }
 
     final static String d(boolean param0) {
-        if (!param0) {
-            field_d = null;
-        }
         if (!(dw.field_c != dn.field_r)) {
             return mqb.field_x;
         }

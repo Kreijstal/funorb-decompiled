@@ -20,95 +20,199 @@ final class tn extends vg {
     }
 
     final boolean a(int param0, byte[] param1, nda param2, int[] param3) {
-        int var5 = 0;
+        RuntimeException var5 = null;
+        int var5_int = 0;
         int var6 = 0;
-        u var7 = null;
+        Object var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        L0: {
-          var10 = TombRacer.field_G ? 1 : 0;
-          var5 = 1;
-          if (param0 == -5853) {
-            break L0;
-          } else {
-            ((tn) this).field_f = null;
-            break L0;
-          }
-        }
-        var6 = 0;
-        var7 = null;
-        var8 = 0;
-        L1: while (true) {
-          if (128 <= var8) {
-            return var5 != 0;
-          } else {
-            L2: {
-              if (param1 == null) {
-                break L2;
+        int stackIn_13_0 = 0;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        String stackIn_20_2 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        String stackIn_23_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_12_0 = 0;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        String stackOut_22_2 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
+        var10 = TombRacer.field_G ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              var5_int = 1;
+              if (param0 == -5853) {
+                break L1;
               } else {
-                if (0 != param1[var8]) {
-                  break L2;
-                } else {
-                  var8++;
-                  continue L1;
-                }
+                ((tn) this).field_f = null;
+                break L1;
               }
             }
-            var9 = ((tn) this).field_k[var8];
-            if (-1 != (var9 ^ -1)) {
-              L3: {
-                if (var6 == var9) {
-                  break L3;
-                } else {
-                  L4: {
-                    var6 = var9;
-                    var9--;
-                    if (0 != (var9 & 1)) {
-                      var7 = param2.a((byte) -32, param3, var9 >> -197324734);
-                      break L4;
-                    } else {
-                      var7 = param2.a(var9 >> 1581606882, param3, 0);
-                      break L4;
-                    }
-                  }
-                  if (var7 != null) {
+            var6 = 0;
+            var7 = null;
+            var8 = 0;
+            L2: while (true) {
+              if (128 <= var8) {
+                stackOut_12_0 = var5_int;
+                stackIn_13_0 = stackOut_12_0;
+                break L0;
+              } else {
+                L3: {
+                  if (param1 == null) {
                     break L3;
                   } else {
-                    var5 = 0;
-                    break L3;
+                    if (0 != param1[var8]) {
+                      break L3;
+                    } else {
+                      var8++;
+                      continue L2;
+                    }
                   }
                 }
-              }
-              if (var7 != null) {
-                ((tn) this).field_h[var8] = var7;
-                ((tn) this).field_k[var8] = 0;
+                L4: {
+                  var9 = ((tn) this).field_k[var8];
+                  if (var9 == 0) {
+                    break L4;
+                  } else {
+                    break L4;
+                  }
+                }
                 var8++;
-                continue L1;
-              } else {
-                var8++;
-                continue L1;
+                continue L2;
               }
-            } else {
-              var8++;
-              continue L1;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L5: {
+            var5 = decompiledCaughtException;
+            stackOut_14_0 = (RuntimeException) var5;
+            stackOut_14_1 = new StringBuilder().append("tn.C(").append(param0).append(44);
+            stackIn_16_0 = stackOut_14_0;
+            stackIn_16_1 = stackOut_14_1;
+            stackIn_15_0 = stackOut_14_0;
+            stackIn_15_1 = stackOut_14_1;
+            if (param1 == null) {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "null";
+              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_1 = stackOut_16_1;
+              stackIn_17_2 = stackOut_16_2;
+              break L5;
+            } else {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "{...}";
+              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_1 = stackOut_15_1;
+              stackIn_17_2 = stackOut_15_2;
+              break L5;
+            }
+          }
+          L6: {
+            stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+            stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(44);
+            stackIn_19_0 = stackOut_17_0;
+            stackIn_19_1 = stackOut_17_1;
+            stackIn_18_0 = stackOut_17_0;
+            stackIn_18_1 = stackOut_17_1;
+            if (param2 == null) {
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "null";
+              stackIn_20_0 = stackOut_19_0;
+              stackIn_20_1 = stackOut_19_1;
+              stackIn_20_2 = stackOut_19_2;
+              break L6;
+            } else {
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "{...}";
+              stackIn_20_0 = stackOut_18_0;
+              stackIn_20_1 = stackOut_18_1;
+              stackIn_20_2 = stackOut_18_2;
+              break L6;
+            }
+          }
+          L7: {
+            stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+            stackOut_20_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_20_2).append(44);
+            stackIn_22_0 = stackOut_20_0;
+            stackIn_22_1 = stackOut_20_1;
+            stackIn_21_0 = stackOut_20_0;
+            stackIn_21_1 = stackOut_20_1;
+            if (param3 == null) {
+              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_2 = "null";
+              stackIn_23_0 = stackOut_22_0;
+              stackIn_23_1 = stackOut_22_1;
+              stackIn_23_2 = stackOut_22_2;
+              break L7;
+            } else {
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "{...}";
+              stackIn_23_0 = stackOut_21_0;
+              stackIn_23_1 = stackOut_21_1;
+              stackIn_23_2 = stackOut_21_2;
+              break L7;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 41);
         }
+        return stackIn_13_0 != 0;
     }
 
     public static void a(byte param0) {
         field_n = null;
-        if (param0 != 94) {
-            field_n = null;
-        }
     }
 
     final static String a(int param0) {
         if (param0 != -10918) {
             String discarded$0 = tn.a(120);
         }
-        if ((cga.field_f ^ -1) > -3) {
+        if (cga.field_f < 2) {
             return ub.field_b;
         }
         if (nja.field_J != null) {
@@ -168,7 +272,6 @@ final class tn extends vg {
         int var24 = 0;
         int var25_int = 0;
         Object var25 = null;
-        bq var25_ref = null;
         int var26 = 0;
         int var27 = 0;
         int var28 = 0;
@@ -229,7 +332,7 @@ final class tn extends vg {
         var38 = new uia(param0);
         var3 = 0;
         L0: while (true) {
-          if (-1 == (var38.field_g[var3 + var38.field_h] ^ -1)) {
+          if (var38.field_g[var3 + var38.field_h] == 0) {
             var67 = new byte[var3];
             var61 = var67;
             var55 = var61;
@@ -237,7 +340,7 @@ final class tn extends vg {
             var4 = var42;
             var5 = 0;
             L1: while (true) {
-              if (var5 >= var3) {
+              if (~var5 <= ~var3) {
                 var38.field_h = var38.field_h + 1;
                 var3++;
                 var5 = var38.field_h;
@@ -290,7 +393,7 @@ final class tn extends vg {
                                       } else {
                                         L8: {
                                           var15_int = var38.h(255);
-                                          if (-1 != (var15_int ^ -1)) {
+                                          if (var15_int != 0) {
                                             L9: {
                                               if (var13_int < var15_int) {
                                                 break L9;
@@ -302,8 +405,9 @@ final class tn extends vg {
                                             var13_int = var15_int;
                                             break L8;
                                           } else {
+                                            int incrementValue$9 = var12;
                                             var12++;
-                                            var13_int = var12;
+                                            var13_int = incrementValue$9;
                                             break L8;
                                           }
                                         }
@@ -320,7 +424,7 @@ final class tn extends vg {
                                   if (var13.length <= var14) {
                                     L11: {
                                       var14 = var38.h(255);
-                                      if ((var14 ^ -1) >= -1) {
+                                      if (var14 <= 0) {
                                         stackOut_37_0 = null;
                                         stackIn_38_0 = (byte[]) (Object) stackOut_37_0;
                                         break L11;
@@ -334,7 +438,7 @@ final class tn extends vg {
                                       var46 = stackIn_38_0;
                                       var15_array = var46;
                                       var14 = var38.h(255);
-                                      if ((var14 ^ -1) < -1) {
+                                      if (var14 > 0) {
                                         stackOut_40_0 = new byte[2 * var14];
                                         stackIn_41_0 = stackOut_40_0;
                                         break L12;
@@ -359,17 +463,17 @@ final class tn extends vg {
                                         var18 = var41;
                                         var19 = 0;
                                         L14: while (true) {
-                                          if (var19 >= var17) {
+                                          if (~var19 <= ~var17) {
                                             var38.field_h = var38.field_h + 1;
                                             var17++;
                                             var19 = 0;
                                             var20 = 0;
                                             L15: while (true) {
-                                              if ((var20 ^ -1) <= -129) {
+                                              if (var20 >= 128) {
                                                 var19 = 0;
                                                 var20 = 0;
                                                 L16: while (true) {
-                                                  if (-129 >= (var20 ^ -1)) {
+                                                  if (var20 >= 128) {
                                                     var20 = 0;
                                                     var21 = 0;
                                                     var22 = 0;
@@ -381,13 +485,13 @@ final class tn extends vg {
                                                         var23 = 0;
                                                         var24 = 0;
                                                         L18: while (true) {
-                                                          if (var24 <= -129) {
+                                                          if (var24 >= 128) {
                                                             var20 = 0;
                                                             var21 = 0;
                                                             var24 = 0;
                                                             var25_int = 0;
                                                             L19: while (true) {
-                                                              if (-129 >= var25_int) {
+                                                              if (var25_int >= 128) {
                                                                 var21 = 0;
                                                                 var20 = 0;
                                                                 var25 = null;
@@ -426,7 +530,7 @@ final class tn extends vg {
                                                                               } else {
                                                                                 var27 = 1;
                                                                                 L26: while (true) {
-                                                                                  if (var70.length <= var27) {
+                                                                                  if (~var70.length >= ~var27) {
                                                                                     break L25;
                                                                                   } else {
                                                                                     var16[var27] = var38.c((byte) 44);
@@ -441,7 +545,7 @@ final class tn extends vg {
                                                                               if (var12 <= var27) {
                                                                                 var27 = 0;
                                                                                 L28: while (true) {
-                                                                                  if (var12 <= var27) {
+                                                                                  if (~var12 >= ~var27) {
                                                                                     L29: {
                                                                                       if (var15_array == null) {
                                                                                         break L29;
@@ -450,7 +554,7 @@ final class tn extends vg {
                                                                                         var15_array[0] = (byte)var19;
                                                                                         var27 = 2;
                                                                                         L30: while (true) {
-                                                                                          if (var27 >= var46.length) {
+                                                                                          if (~var27 <= ~var46.length) {
                                                                                             var27 = var46[0];
                                                                                             var28 = var46[1];
                                                                                             var29 = 0;
@@ -465,7 +569,7 @@ final class tn extends vg {
                                                                                                       if (var30 >= 128) {
                                                                                                         break L29;
                                                                                                       } else {
-                                                                                                        ((tn) this).field_j[var30] = (byte)(32 + ((tn) this).field_j[var30] * var28 >> 1447188390);
+                                                                                                        ((tn) this).field_j[var30] = (byte)(32 + ((tn) this).field_j[var30] * var28 >> 6);
                                                                                                         var30++;
                                                                                                         continue L33;
                                                                                                       }
@@ -483,7 +587,7 @@ final class tn extends vg {
                                                                                                         continue L32;
                                                                                                       } else {
                                                                                                         var34 = go.e(-1, var32, -var27 + var30);
-                                                                                                        ((tn) this).field_j[var33] = (byte)(var34 * ((tn) this).field_j[var33] - -32 >> -555708954);
+                                                                                                        ((tn) this).field_j[var33] = (byte)(var34 * ((tn) this).field_j[var33] - -32 >> 6);
                                                                                                         var32 = var32 + (-var28 + var31);
                                                                                                         var33++;
                                                                                                         continue L34;
@@ -492,7 +596,7 @@ final class tn extends vg {
                                                                                                   }
                                                                                                 }
                                                                                               } else {
-                                                                                                ((tn) this).field_j[var29] = (byte)(32 + ((tn) this).field_j[var29] * var28 >> -516278554);
+                                                                                                ((tn) this).field_j[var29] = (byte)(32 + ((tn) this).field_j[var29] * var28 >> 6);
                                                                                                 var29++;
                                                                                                 continue L31;
                                                                                               }
@@ -514,13 +618,13 @@ final class tn extends vg {
                                                                                         L36: while (true) {
                                                                                           if (var27 >= var70.length) {
                                                                                             var27 = var70[0];
-                                                                                            var28 = var70[1] << -221185055;
+                                                                                            var28 = var70[1] << 1;
                                                                                             var29 = 0;
                                                                                             L37: while (true) {
-                                                                                              if (var27 <= var29) {
+                                                                                              if (~var27 >= ~var29) {
                                                                                                 var29 = 2;
                                                                                                 L38: while (true) {
-                                                                                                  if (var70.length <= var29) {
+                                                                                                  if (~var70.length >= ~var29) {
                                                                                                     var16 = null;
                                                                                                     var30 = var27;
                                                                                                     L39: while (true) {
@@ -560,12 +664,12 @@ final class tn extends vg {
                                                                                                     }
                                                                                                   } else {
                                                                                                     var30 = var70[var29];
-                                                                                                    var31 = var16[var29 - -1] << 137960641;
+                                                                                                    var31 = var16[var29 - -1] << 1;
                                                                                                     var32 = var28 * (-var27 + var30) + (-var27 + var30) / 2;
                                                                                                     var37 = var27;
                                                                                                     var33 = var37;
                                                                                                     L43: while (true) {
-                                                                                                      if (var30 <= var37) {
+                                                                                                      if (~var30 >= ~var37) {
                                                                                                         var28 = var31;
                                                                                                         var29 += 2;
                                                                                                         var27 = var30;
@@ -574,7 +678,7 @@ final class tn extends vg {
                                                                                                         L44: {
                                                                                                           var34 = go.e(-1, var32, -var27 + var30);
                                                                                                           var35 = var34 + (255 & ((tn) this).field_l[var37]);
-                                                                                                          if (var35 <= -1) {
+                                                                                                          if (var35 >= 0) {
                                                                                                             break L44;
                                                                                                           } else {
                                                                                                             var35 = 0;
@@ -582,7 +686,7 @@ final class tn extends vg {
                                                                                                           }
                                                                                                         }
                                                                                                         L45: {
-                                                                                                          if (-129 >= var35) {
+                                                                                                          if (var35 <= 128) {
                                                                                                             break L45;
                                                                                                           } else {
                                                                                                             var35 = 128;
@@ -600,7 +704,7 @@ final class tn extends vg {
                                                                                               } else {
                                                                                                 L46: {
                                                                                                   var30 = (((tn) this).field_l[var29] & 255) - -var28;
-                                                                                                  if (var30 <= -1) {
+                                                                                                  if (var30 >= 0) {
                                                                                                     break L46;
                                                                                                   } else {
                                                                                                     var30 = 0;
@@ -608,7 +712,7 @@ final class tn extends vg {
                                                                                                   }
                                                                                                 }
                                                                                                 L47: {
-                                                                                                  if (-129 >= var30) {
+                                                                                                  if (var30 <= 128) {
                                                                                                     break L47;
                                                                                                   } else {
                                                                                                     var30 = 128;
@@ -642,38 +746,43 @@ final class tn extends vg {
                                                                                     }
                                                                                     var27 = 0;
                                                                                     L49: while (true) {
-                                                                                      if (var27 >= var12) {
+                                                                                      if (~var27 <= ~var12) {
                                                                                         var27 = 0;
                                                                                         L50: while (true) {
                                                                                           if (var27 >= var12) {
                                                                                             var27 = 0;
                                                                                             L51: while (true) {
-                                                                                              if (var12 <= var27) {
+                                                                                              if (~var12 >= ~var27) {
                                                                                                 var27 = 0;
                                                                                                 L52: while (true) {
-                                                                                                  if (var27 >= var12) {
+                                                                                                  if (~var27 <= ~var12) {
+                                                                                                    return;
                                                                                                   } else {
-                                                                                                    var52 = var13[var27];
-                                                                                                    if ((var52.field_l ^ -1) < -1) {
-                                                                                                      var52.field_j = var38.h(255);
-                                                                                                      var27++;
-                                                                                                      continue L52;
-                                                                                                    } else {
-                                                                                                      var27++;
-                                                                                                      continue L52;
+                                                                                                    L53: {
+                                                                                                      var52 = var13[var27];
+                                                                                                      if (var52.field_l <= 0) {
+                                                                                                        break L53;
+                                                                                                      } else {
+                                                                                                        var52.field_j = var38.h(255);
+                                                                                                        break L53;
+                                                                                                      }
                                                                                                     }
+                                                                                                    var27++;
+                                                                                                    continue L52;
                                                                                                   }
                                                                                                 }
                                                                                               } else {
-                                                                                                var51 = var13[var27];
-                                                                                                if (var51.field_d > 0) {
-                                                                                                  var51.field_l = var38.h(255);
-                                                                                                  var27++;
-                                                                                                  continue L51;
-                                                                                                } else {
-                                                                                                  var27++;
-                                                                                                  continue L51;
+                                                                                                L54: {
+                                                                                                  var51 = var13[var27];
+                                                                                                  if (var51.field_d <= 0) {
+                                                                                                    break L54;
+                                                                                                  } else {
+                                                                                                    var51.field_l = var38.h(255);
+                                                                                                    break L54;
+                                                                                                  }
                                                                                                 }
+                                                                                                var27++;
+                                                                                                continue L51;
                                                                                               }
                                                                                             }
                                                                                           } else {
@@ -683,133 +792,142 @@ final class tn extends vg {
                                                                                           }
                                                                                         }
                                                                                       } else {
-                                                                                        L53: {
+                                                                                        L55: {
                                                                                           var50 = var13[var27];
                                                                                           if (var50.field_m == null) {
-                                                                                            break L53;
+                                                                                            break L55;
                                                                                           } else {
                                                                                             var50.field_i = var38.h(255);
-                                                                                            break L53;
+                                                                                            break L55;
                                                                                           }
                                                                                         }
-                                                                                        L54: {
+                                                                                        L56: {
                                                                                           if (null == var50.field_g) {
-                                                                                            break L54;
+                                                                                            break L56;
                                                                                           } else {
                                                                                             var50.field_f = var38.h(255);
-                                                                                            break L54;
+                                                                                            break L56;
                                                                                           }
                                                                                         }
-                                                                                        if (0 < var50.field_n) {
-                                                                                          var50.field_c = var38.h(255);
-                                                                                          var27++;
-                                                                                          continue L49;
-                                                                                        } else {
-                                                                                          var27++;
-                                                                                          continue L49;
+                                                                                        L57: {
+                                                                                          if (0 >= var50.field_n) {
+                                                                                            break L57;
+                                                                                          } else {
+                                                                                            var50.field_c = var38.h(255);
+                                                                                            break L57;
+                                                                                          }
                                                                                         }
+                                                                                        var27++;
+                                                                                        continue L49;
                                                                                       }
                                                                                     }
                                                                                   } else {
-                                                                                    var49 = var13[var27];
-                                                                                    if (var49.field_m != null) {
-                                                                                      var19 = 0;
-                                                                                      var29 = 2;
-                                                                                      L55: while (true) {
-                                                                                        if (var49.field_m.length > var29) {
-                                                                                          var19 = var38.h(255) + (1 + var19);
-                                                                                          var49.field_m[var29] = (byte)var19;
-                                                                                          var29 += 2;
-                                                                                          continue L55;
-                                                                                        } else {
-                                                                                          var27++;
-                                                                                          continue L28;
+                                                                                    L58: {
+                                                                                      var49 = var13[var27];
+                                                                                      if (var49.field_m == null) {
+                                                                                        break L58;
+                                                                                      } else {
+                                                                                        var19 = 0;
+                                                                                        var29 = 2;
+                                                                                        L59: while (true) {
+                                                                                          if (var49.field_m.length <= var29) {
+                                                                                            break L58;
+                                                                                          } else {
+                                                                                            var19 = var38.h(255) + (1 + var19);
+                                                                                            var49.field_m[var29] = (byte)var19;
+                                                                                            var29 += 2;
+                                                                                            continue L59;
+                                                                                          }
                                                                                         }
                                                                                       }
-                                                                                    } else {
-                                                                                      var27++;
-                                                                                      continue L28;
                                                                                     }
+                                                                                    var27++;
+                                                                                    continue L28;
                                                                                   }
                                                                                 }
                                                                               } else {
-                                                                                var48 = var13[var27];
-                                                                                if (null != var48.field_g) {
-                                                                                  var19 = 0;
-                                                                                  var29 = 2;
-                                                                                  L56: while (true) {
-                                                                                    if (var29 < var48.field_g.length) {
-                                                                                      var19 = 1 + (var19 + var38.h(255));
-                                                                                      var48.field_g[var29] = (byte)var19;
-                                                                                      var29 += 2;
-                                                                                      continue L56;
-                                                                                    } else {
-                                                                                      var27++;
-                                                                                      continue L27;
+                                                                                L60: {
+                                                                                  var48 = var13[var27];
+                                                                                  if (null == var48.field_g) {
+                                                                                    break L60;
+                                                                                  } else {
+                                                                                    var19 = 0;
+                                                                                    var29 = 2;
+                                                                                    L61: while (true) {
+                                                                                      if (var29 >= var48.field_g.length) {
+                                                                                        break L60;
+                                                                                      } else {
+                                                                                        var19 = 1 + (var19 + var38.h(255));
+                                                                                        var48.field_g[var29] = (byte)var19;
+                                                                                        var29 += 2;
+                                                                                        continue L61;
+                                                                                      }
                                                                                     }
                                                                                   }
-                                                                                } else {
-                                                                                  var27++;
-                                                                                  continue L27;
                                                                                 }
+                                                                                var27++;
+                                                                                continue L27;
                                                                               }
                                                                             }
                                                                           } else {
-                                                                            L57: {
+                                                                            L62: {
                                                                               var45 = var13[var27];
                                                                               if (null == var45.field_m) {
-                                                                                break L57;
+                                                                                break L62;
                                                                               } else {
                                                                                 var29 = 1;
-                                                                                L58: while (true) {
+                                                                                L63: while (true) {
                                                                                   if (var29 >= var45.field_m.length) {
-                                                                                    break L57;
+                                                                                    break L62;
                                                                                   } else {
                                                                                     var45.field_m[var29] = var38.c((byte) 124);
                                                                                     var29 += 2;
-                                                                                    continue L58;
+                                                                                    continue L63;
                                                                                   }
                                                                                 }
                                                                               }
                                                                             }
-                                                                            if (null != var45.field_g) {
-                                                                              var29 = 3;
-                                                                              L59: while (true) {
-                                                                                if (-2 + var45.field_g.length > var29) {
-                                                                                  var45.field_g[var29] = var38.c((byte) 81);
-                                                                                  var29 += 2;
-                                                                                  continue L59;
-                                                                                } else {
-                                                                                  var27++;
-                                                                                  continue L22;
+                                                                            L64: {
+                                                                              if (null == var45.field_g) {
+                                                                                break L64;
+                                                                              } else {
+                                                                                var29 = 3;
+                                                                                L65: while (true) {
+                                                                                  if (~(-2 + var45.field_g.length) >= ~var29) {
+                                                                                    break L64;
+                                                                                  } else {
+                                                                                    var45.field_g[var29] = var38.c((byte) 81);
+                                                                                    var29 += 2;
+                                                                                    continue L65;
+                                                                                  }
                                                                                 }
                                                                               }
-                                                                            } else {
-                                                                              var27++;
-                                                                              continue L22;
                                                                             }
+                                                                            var27++;
+                                                                            continue L22;
                                                                           }
                                                                         }
                                                                       } else {
-                                                                        L60: {
+                                                                        L66: {
                                                                           if (0 != var20) {
-                                                                            break L60;
+                                                                            break L66;
                                                                           } else {
-                                                                            L61: {
-                                                                              if (var66.length <= var21) {
+                                                                            L67: {
+                                                                              if (~var66.length >= ~var21) {
                                                                                 var20 = -1;
-                                                                                break L61;
+                                                                                break L67;
                                                                               } else {
+                                                                                int incrementValue$10 = var21;
                                                                                 var21++;
-                                                                                var20 = var18[var21];
-                                                                                break L61;
+                                                                                var20 = var18[incrementValue$10];
+                                                                                break L67;
                                                                               }
                                                                             }
-                                                                            if (-1 <= (((tn) this).field_k[var27] ^ -1)) {
-                                                                              break L60;
+                                                                            if (((tn) this).field_k[var27] <= 0) {
+                                                                              break L66;
                                                                             } else {
                                                                               var26 = var38.h(255) - -1;
-                                                                              break L60;
+                                                                              break L66;
                                                                             }
                                                                           }
                                                                         }
@@ -820,108 +938,120 @@ final class tn extends vg {
                                                                       }
                                                                     }
                                                                   } else {
-                                                                    if (0 != ((tn) this).field_k[var26]) {
-                                                                      L62: {
-                                                                        if (var20 != 0) {
-                                                                          break L62;
-                                                                        } else {
-                                                                          var25_ref = var13[var65[var21]];
-                                                                          if (var21 < var69.length) {
-                                                                            var21++;
-                                                                            var20 = var10[var21];
-                                                                            break L62;
+                                                                    L68: {
+                                                                      if (0 == ((tn) this).field_k[var26]) {
+                                                                        break L68;
+                                                                      } else {
+                                                                        L69: {
+                                                                          if (var20 != 0) {
+                                                                            break L69;
                                                                           } else {
-                                                                            var20 = -1;
-                                                                            break L62;
+                                                                            var25 = (Object) (Object) var13[var65[var21]];
+                                                                            if (~var21 > ~var69.length) {
+                                                                              int incrementValue$11 = var21;
+                                                                              var21++;
+                                                                              var20 = var10[incrementValue$11];
+                                                                              break L69;
+                                                                            } else {
+                                                                              var20 = -1;
+                                                                              break L69;
+                                                                            }
                                                                           }
                                                                         }
+                                                                        var20--;
+                                                                        ((tn) this).field_m[var26] = (bq) var25;
+                                                                        break L68;
                                                                       }
-                                                                      var20--;
-                                                                      ((tn) this).field_m[var26] = var25_ref;
-                                                                      var26++;
-                                                                      continue L20;
-                                                                    } else {
-                                                                      var26++;
-                                                                      continue L20;
                                                                     }
+                                                                    var26++;
+                                                                    continue L20;
                                                                   }
                                                                 }
                                                               } else {
-                                                                if (((tn) this).field_k[var25_int] != 0) {
-                                                                  L63: {
-                                                                    if (-1 != var20) {
-                                                                      break L63;
-                                                                    } else {
-                                                                      var8++;
-                                                                      var24 = var38.field_g[var8] + 16 << -679212414;
-                                                                      if (var21 >= var68.length) {
-                                                                        var20 = -1;
-                                                                        break L63;
+                                                                L70: {
+                                                                  if (((tn) this).field_k[var25_int] == 0) {
+                                                                    break L70;
+                                                                  } else {
+                                                                    L71: {
+                                                                      if (var20 != 0) {
+                                                                        break L71;
                                                                       } else {
-                                                                        var21++;
-                                                                        var20 = var7[var21];
-                                                                        break L63;
+                                                                        int incrementValue$12 = var8;
+                                                                        var8++;
+                                                                        var24 = var38.field_g[incrementValue$12] + 16 << 2;
+                                                                        if (~var21 <= ~var68.length) {
+                                                                          var20 = -1;
+                                                                          break L71;
+                                                                        } else {
+                                                                          int incrementValue$13 = var21;
+                                                                          var21++;
+                                                                          var20 = var7[incrementValue$13];
+                                                                          break L71;
+                                                                        }
                                                                       }
                                                                     }
+                                                                    ((tn) this).field_l[var25_int] = (byte)var24;
+                                                                    var20--;
+                                                                    break L70;
                                                                   }
-                                                                  ((tn) this).field_l[var25_int] = (byte)var24;
-                                                                  var20--;
-                                                                  var25_int++;
-                                                                  continue L19;
-                                                                } else {
-                                                                  var25_int++;
-                                                                  continue L19;
                                                                 }
+                                                                var25_int++;
+                                                                continue L19;
                                                               }
                                                             }
                                                           } else {
-                                                            if (((tn) this).field_k[var24] != 0) {
-                                                              L64: {
-                                                                if (-1 != var20) {
-                                                                  break L64;
-                                                                } else {
-                                                                  var5++;
-                                                                  var23 = -1 + var38.field_g[var5];
-                                                                  if (var21 >= var67.length) {
-                                                                    var20 = -1;
-                                                                    break L64;
+                                                            L72: {
+                                                              if (((tn) this).field_k[var24] == 0) {
+                                                                break L72;
+                                                              } else {
+                                                                L73: {
+                                                                  if (var20 != 0) {
+                                                                    break L73;
                                                                   } else {
-                                                                    var21++;
-                                                                    var20 = var4[var21];
-                                                                    break L64;
+                                                                    int incrementValue$14 = var5;
+                                                                    var5++;
+                                                                    var23 = -1 + var38.field_g[incrementValue$14];
+                                                                    if (~var21 <= ~var67.length) {
+                                                                      var20 = -1;
+                                                                      break L73;
+                                                                    } else {
+                                                                      int incrementValue$15 = var21;
+                                                                      var21++;
+                                                                      var20 = var4[incrementValue$15];
+                                                                      break L73;
+                                                                    }
                                                                   }
                                                                 }
+                                                                var20--;
+                                                                ((tn) this).field_f[var24] = (byte)var23;
+                                                                break L72;
                                                               }
-                                                              var20--;
-                                                              ((tn) this).field_f[var24] = (byte)var23;
-                                                              var24++;
-                                                              continue L18;
-                                                            } else {
-                                                              var24++;
-                                                              continue L18;
                                                             }
+                                                            var24++;
+                                                            continue L18;
                                                           }
                                                         }
                                                       } else {
-                                                        L65: {
-                                                          if (-1 != (var20 ^ -1)) {
-                                                            break L65;
+                                                        L74: {
+                                                          if (var20 != 0) {
+                                                            break L74;
                                                           } else {
-                                                            L66: {
+                                                            L75: {
                                                               if (var66.length > var21) {
+                                                                int incrementValue$16 = var21;
                                                                 var21++;
-                                                                var20 = var18[var21];
-                                                                break L66;
+                                                                var20 = var18[incrementValue$16];
+                                                                break L75;
                                                               } else {
                                                                 var20 = -1;
-                                                                break L66;
+                                                                break L75;
                                                               }
                                                             }
                                                             var22 = var38.b((byte) -123);
-                                                            break L65;
+                                                            break L74;
                                                           }
                                                         }
-                                                        ((tn) this).field_g[var23] = (short)(((tn) this).field_g[var23] + (sea.c(-1 + var22, 2) << 9434510));
+                                                        ((tn) this).field_g[var23] = (short)(((tn) this).field_g[var23] + (sea.c(-1 + var22, 2) << 14));
                                                         var20--;
                                                         ((tn) this).field_k[var23] = var22;
                                                         var23++;
@@ -930,7 +1060,7 @@ final class tn extends vg {
                                                     }
                                                   } else {
                                                     var19 = var19 + var38.h(255);
-                                                    ((tn) this).field_g[var20] = (short)(((tn) this).field_g[var20] + (var19 << -2073954968));
+                                                    ((tn) this).field_g[var20] = (short)(((tn) this).field_g[var20] + (var19 << 8));
                                                     var20++;
                                                     continue L16;
                                                   }
@@ -954,28 +1084,31 @@ final class tn extends vg {
                                       }
                                     }
                                   } else {
-                                    L67: {
-                                      var13[var14] = new bq();
-                                      var40 = new bq();
+                                    L76: {
+                                      bq dupTemp$17 = new bq();
+                                      var13[var14] = dupTemp$17;
+                                      var40 = dupTemp$17;
                                       var15 = var40;
                                       var16_int = var38.h(255);
-                                      if ((var16_int ^ -1) >= -1) {
-                                        break L67;
+                                      if (var16_int <= 0) {
+                                        break L76;
                                       } else {
                                         var15.field_m = new byte[2 * var16_int];
-                                        break L67;
+                                        break L76;
                                       }
                                     }
-                                    var16_int = var38.h(255);
-                                    if (0 < var16_int) {
-                                      var15.field_g = new byte[2 + 2 * var16_int];
-                                      var40.field_g[1] = (byte)64;
-                                      var14++;
-                                      continue L10;
-                                    } else {
-                                      var14++;
-                                      continue L10;
+                                    L77: {
+                                      var16_int = var38.h(255);
+                                      if (0 >= var16_int) {
+                                        break L77;
+                                      } else {
+                                        var15.field_g = new byte[2 + 2 * var16_int];
+                                        var40.field_g[1] = (byte) 64;
+                                        break L77;
+                                      }
                                     }
+                                    var14++;
+                                    continue L10;
                                   }
                                 }
                               } else {

@@ -48,11 +48,11 @@ final class m {
                 var4 = var3.field_j;
                 if (var4 != 0) {
                   if (1 != var4) {
-                    if ((var4 ^ -1) == -3) {
+                    if (var4 == 2) {
                       L3: {
                         var3.field_n = var3.field_n - 3;
                         var3.field_h = var3.field_h - 40;
-                        if (-1 >= (var3.field_n ^ -1)) {
+                        if (var3.field_n >= 0) {
                           break L3;
                         } else {
                           if (var3.field_h >= 0) {
@@ -91,7 +91,7 @@ final class m {
                         }
                       }
                       L5: {
-                        if ((var3.field_n ^ -1) > -1) {
+                        if (var3.field_n < 0) {
                           var3.field_n = 0;
                           break L5;
                         } else {
@@ -119,7 +119,7 @@ final class m {
                   }
                 } else {
                   var3.field_h = var3.field_h + 40;
-                  if ((var3.field_h ^ -1) >= -241) {
+                  if (var3.field_h <= 240) {
                     break L2;
                   } else {
                     var3.field_h = 240;
@@ -132,7 +132,7 @@ final class m {
                 if (!((m) this).field_l.field_g) {
                   break L6;
                 } else {
-                  if ((var3.field_j ^ -1) > -2) {
+                  if (var3.field_j < 1) {
                     break L1;
                   } else {
                     break L6;
@@ -196,9 +196,6 @@ final class m {
 
     final static int b(boolean param0) {
         ql.field_q.b((byte) -116);
-        if (!param0) {
-            ka discarded$0 = m.a((byte) -1, 53);
-        }
         if (!ji.field_e.d(-57)) {
             return dk.b((byte) 108);
         }
@@ -208,9 +205,6 @@ final class m {
     public static void b(int param0) {
         field_a = null;
         field_i = null;
-        if (param0 != -314) {
-            field_f = null;
-        }
         field_f = null;
     }
 
@@ -347,7 +341,7 @@ final class m {
               }
               L3: {
                 var3 = -1 + ((m) this).field_l.field_m;
-                if (-1 >= (var3 ^ -1)) {
+                if (var3 >= 0) {
                   break L3;
                 } else {
                   var3 = 0;
@@ -374,7 +368,7 @@ final class m {
               }
               L6: {
                 var6 = ((m) this).field_l.field_w - 1;
-                if (-1 >= (var6 ^ -1)) {
+                if (var6 >= 0) {
                   break L6;
                 } else {
                   var6 = 0;
@@ -403,7 +397,7 @@ final class m {
                           stackIn_26_0 = stackOut_25_0;
                           stackIn_26_1 = stackOut_25_1;
                           stackIn_26_2 = stackOut_25_2;
-                          if (-1 != (((m) this).field_l.field_C[var7][var8] ^ -1)) {
+                          if (((m) this).field_l.field_C[var7][var8] != 0) {
                             stackOut_27_0 = this;
                             stackOut_27_1 = stackIn_27_1;
                             stackOut_27_2 = stackIn_27_2;
@@ -476,7 +470,7 @@ final class m {
               } else {
                 var5 = ((m) this).field_d[var3][var4] ^ ((m) this).field_l.field_C[var3][var4];
                 if (var5 != 0) {
-                  if (0 == (((m) this).field_l.field_C[var3][var4] ^ -1)) {
+                  if (((m) this).field_l.field_C[var3][var4] == -1) {
                     ((m) this).field_d[var3][var4] = ((m) this).field_l.field_C[var3][var4];
                     var4++;
                     continue L13;
@@ -539,9 +533,6 @@ final class m {
 
     private final boolean a(int param0, int param1, boolean param2, int param3) {
         int var6 = Virogrid.field_F ? 1 : 0;
-        if (param3 != 16238) {
-            return true;
-        }
         fb var5 = (fb) (Object) ((m) this).field_g.a((byte) -68);
         while (var5 != null) {
             if (param2 == var5.field_q) {
@@ -582,7 +573,7 @@ final class m {
           } else {
             if (((m) this).field_l.field_C[param0][param2] == 1) {
               L2: {
-                if (-2 != (((m) this).field_b ^ -1)) {
+                if (((m) this).field_b != 1) {
                   break L2;
                 } else {
                   if (this.a(param2, param0, -111)) {
@@ -605,22 +596,26 @@ final class m {
     }
 
     m(uf param0, int param1) {
-        int var3 = 0;
+        int var3_int = 0;
         int var4 = 0;
         ((m) this).field_k = -1;
         ((m) this).field_c = -1;
-        ((m) this).field_b = param1;
-        ((m) this).field_l = param0;
-        ((m) this).field_g = new p();
-        ((m) this).field_d = new byte[((m) this).field_l.field_C.length][((m) this).field_l.field_C[0].length];
-        for (var3 = 0; var3 < ((m) this).field_d.length; var3++) {
-            for (var4 = 0; ((m) this).field_d[0].length > var4; var4++) {
-                ((m) this).field_d[var3][var4] = ((m) this).field_l.field_C[var3][var4];
+        try {
+            ((m) this).field_b = param1;
+            ((m) this).field_l = param0;
+            ((m) this).field_g = new p();
+            ((m) this).field_d = new byte[((m) this).field_l.field_C.length][((m) this).field_l.field_C[0].length];
+            for (var3_int = 0; var3_int < ((m) this).field_d.length; var3_int++) {
+                for (var4 = 0; ((m) this).field_d[0].length > var4; var4++) {
+                    ((m) this).field_d[var3_int][var4] = ((m) this).field_l.field_C[var3_int][var4];
+                }
             }
+            ((m) this).field_h = new boolean[((m) this).field_d.length][((m) this).field_d[0].length];
+            ((m) this).field_e = -1;
+            ((m) this).field_l.a(((m) this).field_h, ((m) this).field_l.field_A, (byte) 14);
+        } catch (RuntimeException runtimeException) {
+            throw kg.a((Throwable) (Object) runtimeException, "m.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
-        ((m) this).field_h = new boolean[((m) this).field_d.length][((m) this).field_d[0].length];
-        ((m) this).field_e = -1;
-        ((m) this).field_l.a(((m) this).field_h, ((m) this).field_l.field_A, (byte) 14);
     }
 
     static {
@@ -629,6 +624,6 @@ final class m {
 
     private static void $cfr$clinit() {
         field_i = new int[4];
-        field_a = new byte[]{(byte)2, (byte) 1};
+        field_a = new byte[]{(byte) 2, (byte) 1};
     }
 }

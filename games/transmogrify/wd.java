@@ -13,18 +13,17 @@ final class wd extends wf {
         field_i = null;
         field_k = null;
         field_l = null;
-        if (param0 < 117) {
-            field_j = -94;
-        }
     }
 
     final static void a(int param0, boolean param1, pl param2) {
-        if (param0 != 17099) {
-            field_j = -73;
+        try {
+            if (param0 != 17099) {
+                field_j = -73;
+            }
             am.a(param1, 256, param2, (byte) 125);
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw ch.a((Throwable) (Object) runtimeException, "wd.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
-        am.a(param1, 256, param2, (byte) 125);
     }
 
     final static void d(int param0) {
@@ -38,7 +37,11 @@ final class wd extends wf {
     }
 
     wd(byte[] param0) {
-        ((wd) this).field_h = param0;
+        try {
+            ((wd) this).field_h = param0;
+        } catch (RuntimeException runtimeException) {
+            throw ch.a((Throwable) (Object) runtimeException, "wd.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

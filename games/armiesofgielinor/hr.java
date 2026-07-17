@@ -68,7 +68,7 @@ final class hr {
 
     final void a(byte param0, int param1) {
         ((hr) this).field_c = param1;
-        if (-1 >= (((hr) this).field_c ^ -1)) {
+        if (((hr) this).field_c >= 0) {
           if (mn.field_k.length > ((hr) this).field_c) {
             if (mn.field_k[((hr) this).field_c] != null) {
               if (param0 < 42) {
@@ -161,7 +161,7 @@ final class hr {
 
     final void a(boolean param0, int param1) {
         L0: {
-          if ((param1 ^ -1) >= 0) {
+          if (param1 <= -1) {
             break L0;
           } else {
             if (2048 > param1) {
@@ -186,27 +186,17 @@ final class hr {
     }
 
     private final void b(int param0, int param1, byte param2) {
-        L0: {
-          if (param0 == -1) {
+        if (!(param0 != -1)) {
             ro.field_ob.field_b = param1;
             ro.field_ob.b((byte) 36);
-            ro.field_ob.c(param2 ^ -9470376);
+            ro.field_ob.c(9470337);
             param0 = ro.field_ob.field_e[1];
             param1 = ro.field_ob.field_e[0];
             param0 += 16;
-            break L0;
-          } else {
-            break L0;
-          }
         }
         param1 += 32;
-        if (param2 != -39) {
-          return;
-        } else {
-          ((hr) this).field_e[1] = 7 + param0;
-          ((hr) this).field_e[0] = 7 + param1;
-          return;
-        }
+        ((hr) this).field_e[1] = 7 + param0;
+        ((hr) this).field_e[0] = 7 + param1;
     }
 
     final boolean a(int param0, boolean param1, int param2, int param3, int param4, boolean param5) {
@@ -221,7 +211,7 @@ final class hr {
             L0: {
               boolean discarded$1 = ((hr) this).a(85, true, -47, -102, 19, false);
               this.b(param0, param2, (byte) -39);
-              if (0 != (param3 ^ -1)) {
+              if (param3 != -1) {
                 ((hr) this).field_j = param3;
                 break L0;
               } else {
@@ -239,7 +229,7 @@ final class hr {
           } else {
             L2: {
               this.b(param0, param2, (byte) -39);
-              if (0 != (param3 ^ -1)) {
+              if (param3 != -1) {
                 ((hr) this).field_j = param3;
                 break L2;
               } else {
@@ -259,26 +249,18 @@ final class hr {
     }
 
     private final void a(byte param0) {
-        qb var2 = null;
         ((hr) this).field_l = true;
-        var2 = pg.a(((hr) this).field_f, 176, false, ((hr) this).field_c);
-        if (var2 != null) {
-          if (var2 == null) {
+        qb var2 = pg.a(((hr) this).field_f, 176, false, ((hr) this).field_c);
+        if (var2 == null) {
             ((hr) this).field_l = false;
             return;
-          } else {
-            ((hr) this).field_g.a(-1, var2);
-            this.a(-298276720);
-            if (param0 != 72) {
-              return;
-            } else {
-              return;
-            }
-          }
-        } else {
-          ((hr) this).field_l = false;
-          return;
         }
+        if (!(var2 != null)) {
+            ((hr) this).field_l = false;
+            return;
+        }
+        ((hr) this).field_g.a(-1, var2);
+        this.a(-298276720);
     }
 
     final static of a(long param0, int param1) {
@@ -293,14 +275,14 @@ final class hr {
         L0: {
           var3 = 0;
           if (((hr) this).field_f != param1) {
-            if ((param1 ^ -1) != 0) {
-              if (-1 >= (param1 ^ -1)) {
+            if (param1 != -1) {
+              if (param1 >= 0) {
                 if (param1 < 9) {
                   ((hr) this).field_f = param1;
                   var3 = 1;
                   break L0;
                 } else {
-                  if ((((hr) this).field_f ^ -1) == 0) {
+                  if (((hr) this).field_f == -1) {
                     var3 = 1;
                     ((hr) this).field_f = 0;
                     if (var3 == 0) {
@@ -390,7 +372,7 @@ final class hr {
                   }
                 }
               } else {
-                if ((((hr) this).field_f ^ -1) != 0) {
+                if (((hr) this).field_f != -1) {
                   if (0 <= ((hr) this).field_f) {
                     if (9 > ((hr) this).field_f) {
                       if (var3 == 0) {
@@ -477,7 +459,7 @@ final class hr {
                 }
               }
             } else {
-              if ((((hr) this).field_f ^ -1) == 0) {
+              if (((hr) this).field_f == -1) {
                 var3 = 1;
                 ((hr) this).field_f = 0;
                 if (var3 != 0) {
@@ -569,7 +551,7 @@ final class hr {
             break L0;
           }
         }
-        if ((((hr) this).field_f ^ -1) == 0) {
+        if (((hr) this).field_f == -1) {
           var3 = 1;
           ((hr) this).field_f = 0;
           if (var3 == 0) {
@@ -756,7 +738,58 @@ final class hr {
     }
 
     hr(int[] param0, int param1, int param2) {
-        this.a(true, param2, param1);
+        RuntimeException var4 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        try {
+          L0: {
+            this.a(true, param2, param1);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var4 = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) var4;
+            stackOut_3_1 = new StringBuilder().append("hr.<init>(");
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param0 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L1;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L1;
+            }
+          }
+          throw ig.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     hr(int param0) {
@@ -764,18 +797,9 @@ final class hr {
     }
 
     private final void a(int param0) {
-        int var2 = 0;
-        wp var3 = null;
-        var2 = ((hr) this).field_g.field_i >> -298276720;
-        var3 = we.a(var2, true);
-        if (param0 != -298276720) {
-          ((hr) this).field_a = null;
-          io.a(var3, (byte) -34);
-          return;
-        } else {
-          io.a(var3, (byte) -34);
-          return;
-        }
+        int var2 = ((hr) this).field_g.field_i >> 16;
+        wp var3 = we.a(var2, true);
+        io.a(var3, (byte) -34);
     }
 
     final void a(int param0, int param1, byte param2) {

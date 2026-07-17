@@ -14,17 +14,16 @@ final class tm {
 
     final static void a(boolean param0, pg param1, int param2) {
         nk var3 = null;
-        var3 = qn.field_U;
-        var3.f(param2, -114);
-        if (param0) {
-          field_d = -61;
-          var3.c(param1.field_q, (byte) -91);
-          var3.c(param1.field_u, (byte) -60);
-          return;
-        } else {
-          var3.c(param1.field_q, (byte) -91);
-          var3.c(param1.field_u, (byte) -60);
-          return;
+        try {
+            var3 = qn.field_U;
+            var3.f(param2, -114);
+            if (param0) {
+                field_d = -61;
+            }
+            var3.c(param1.field_q, (byte) -91);
+            var3.c(param1.field_u, (byte) -60);
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "tm.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
     }
 
@@ -61,9 +60,9 @@ final class tm {
             if (sb.field_sb > var2) {
               var7 = var1 + 32;
               var3 = 255 & tk.field_h.field_o[var2];
-              var4 = var3 >> -1927438172;
+              var4 = var3 >> 4;
               var3 = var3 & 15;
-              stackOut_11_0 = var4 ^ -1;
+              stackOut_11_0 = ~var4;
               stackOut_11_1 = -11;
               stackIn_14_0 = stackOut_11_0;
               stackIn_14_1 = stackOut_11_1;

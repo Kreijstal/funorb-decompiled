@@ -15,15 +15,10 @@ final class ja {
           return lh.field_c;
         } else {
           if (wh.field_a.a(640)) {
-            if (hh.field_g != ei.field_d) {
-              if (param0 != -7705) {
-                ja.a((byte) -105);
-                return ng.field_y;
-              } else {
-                return ng.field_y;
-              }
-            } else {
+            if (hh.field_g == ei.field_d) {
               return wh.field_a.d(640);
+            } else {
+              return ng.field_y;
             }
           } else {
             return wh.field_a.d(640);
@@ -49,7 +44,7 @@ final class ja {
           return var3;
         } else {
           L0: {
-            if (param1 < (param0 ^ -1)) {
+            if (param1 < ~param0) {
               var4 = ((ja) this).field_g.a(param0, (byte) -115, 1);
               break L0;
             } else {
@@ -66,7 +61,7 @@ final class ja {
               break L1;
             }
           }
-          if (-32769 >= (param0 ^ -1)) {
+          if (param0 >= 32768) {
             var3.c((byte) -43);
             ((ja) this).field_f.a(param1 ^ -32889, (Object) (Object) var3, (long)param0);
             return var3;

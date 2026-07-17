@@ -101,6 +101,7 @@ final class mh {
           if (var2 >= 10) {
             ((mh) this).field_c = param0.c((byte) -60);
             ((mh) this).field_b = param0.c((byte) -60);
+            return;
           } else {
             var3 = param0.f((byte) -114);
             if (var3 != 0) {

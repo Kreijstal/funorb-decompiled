@@ -11,23 +11,14 @@ final class id {
 
     public static void a(boolean param0) {
         field_c = null;
-        if (!param0) {
-          field_e = null;
-          field_a = null;
-          field_f = null;
-          field_d = null;
-          return;
-        } else {
-          field_e = null;
-          field_a = null;
-          field_f = null;
-          field_d = null;
-          return;
-        }
+        field_e = null;
+        field_a = null;
+        field_f = null;
+        field_d = null;
     }
 
     final static void a(byte param0) {
-        if ((mf.field_i ^ -1) < -11) {
+        if (mf.field_i > 10) {
           wf.a(-10 + mf.field_i, -22);
           if (param0 > 96) {
             return;

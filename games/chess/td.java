@@ -13,17 +13,15 @@ final class td extends o {
     static String field_m;
 
     final static void a(le param0, int param1, int param2, int param3) {
-        if (param3 != 200) {
-          td.a(40);
-          tm.field_d = param2;
-          tn.field_m = param1;
-          bl.field_d = param0;
-          return;
-        } else {
-          tm.field_d = param2;
-          tn.field_m = param1;
-          bl.field_d = param0;
-          return;
+        try {
+            if (param3 != 200) {
+                td.a(40);
+            }
+            tm.field_d = param2;
+            tn.field_m = param1;
+            bl.field_d = param0;
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "td.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }
     }
 
@@ -45,7 +43,11 @@ final class td extends o {
     }
 
     td(byte[] param0) {
-        ((td) this).field_q = param0;
+        try {
+            ((td) this).field_q = param0;
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "td.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void a(int param0) {
@@ -76,7 +78,7 @@ final class td extends o {
         field_j = "Unable to add name - system busy";
         field_k = 20;
         field_r = "Invalid password.";
-        field_l = new char[]{(char)32, (char)160, (char)95, (char)45, (char)224, (char)225, (char)226, (char)228, (char)227, (char)192, (char)193, (char)194, (char)196, (char)195, (char)232, (char)233, (char)234, (char)235, (char)200, (char)201, (char)202, (char)203, (char)237, (char)238, (char)239, (char)205, (char)206, (char)207, (char)242, (char)243, (char)244, (char)246, (char)245, (char)210, (char)211, (char)212, (char)214, (char)213, (char)249, (char)250, (char)251, (char)252, (char)217, (char)218, (char)219, (char)220, (char)231, (char)199, (char)255, (char)376, (char)241, (char)209, (char)223};
+        field_l = new char[]{' ', ' ', '_', '-', 'à', 'á', 'â', 'ä', 'ã', 'À', 'Á', 'Â', 'Ä', 'Ã', 'è', 'é', 'ê', 'ë', 'È', 'É', 'Ê', 'Ë', 'í', 'î', 'ï', 'Í', 'Î', 'Ï', 'ò', 'ó', 'ô', 'ö', 'õ', 'Ò', 'Ó', 'Ô', 'Ö', 'Õ', 'ù', 'ú', 'û', 'ü', 'Ù', 'Ú', 'Û', 'Ü', 'ç', 'Ç', 'ÿ', 'Ÿ', 'ñ', 'Ñ', 'ß'};
         field_m = "A detailed explanation of each rule can be found through the link on our website.<br>(in the Help Section)";
     }
 }

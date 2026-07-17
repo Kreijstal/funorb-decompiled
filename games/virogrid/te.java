@@ -18,15 +18,10 @@ final class te extends IOException {
         field_f = null;
         field_b = null;
         field_a = null;
-        if (param0 <= 122) {
-          return;
-        } else {
-          field_g = null;
-          field_d = null;
-          field_c = null;
-          field_e = null;
-          return;
-        }
+        field_g = null;
+        field_d = null;
+        field_c = null;
+        field_e = null;
     }
 
     te(String param0) {
@@ -34,19 +29,25 @@ final class te extends IOException {
     }
 
     final static void a(int param0, sa param1, int param2) {
-        hg var5 = gk.field_g;
-        var5.g(param2, 8);
-        var5.field_l = var5.field_l + 1;
-        int var4 = var5.field_l;
-        var5.a(param0, 98);
-        var5.a(param1.field_i, 88);
-        var5.a(param1.field_k, param0 + -124);
-        var5.a(param1.field_j, (byte) -42);
-        var5.a(param1.field_h, (byte) -42);
-        var5.a(param1.field_g, (byte) -42);
-        var5.a(param1.field_n, (byte) -42);
-        int discarded$0 = var5.b((byte) -111, var4);
-        var5.b(-var4 + var5.field_l, -1);
+        hg var5 = null;
+        int var4 = 0;
+        try {
+            var5 = gk.field_g;
+            var5.g(param2, 8);
+            var5.field_l = var5.field_l + 1;
+            var4 = var5.field_l;
+            var5.a(param0, 98);
+            var5.a(param1.field_i, 88);
+            var5.a(param1.field_k, param0 + -124);
+            var5.a(param1.field_j, (byte) -42);
+            var5.a(param1.field_h, (byte) -42);
+            var5.a(param1.field_g, (byte) -42);
+            var5.a(param1.field_n, (byte) -42);
+            int discarded$0 = var5.b((byte) -111, var4);
+            var5.b(-var4 + var5.field_l, -1);
+        } catch (RuntimeException runtimeException) {
+            throw kg.a((Throwable) (Object) runtimeException, "te.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     final static void a(boolean param0, int param1, int param2) {
@@ -57,7 +58,7 @@ final class te extends IOException {
             break L0;
           } else {
             var3 = km.field_yb.a(2105376, param0);
-            if ((var3 ^ -1) != 1) {
+            if (var3 != -2) {
               L1: {
                 if (var3 != -1) {
                   var4 = km.field_yb.h(140) ? 1 : 0;

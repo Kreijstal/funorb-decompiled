@@ -15,7 +15,7 @@ abstract class md {
         } else {
           L0: {
             var4 = ((md) this).b((byte) 66);
-            if ((var4 ^ -1L) < -1L) {
+            if (var4 > 0L) {
               tg.a(var4, false);
               break L0;
             } else {
@@ -29,27 +29,14 @@ abstract class md {
     public static void a(byte param0) {
         field_e = null;
         field_a = null;
-        if (param0 >= -93) {
-          field_c = null;
-          field_c = null;
-          field_b = null;
-          return;
-        } else {
-          field_c = null;
-          field_b = null;
-          return;
-        }
+        field_c = null;
+        field_b = null;
     }
 
     final static db c(byte param0) {
-        db var1 = null;
-        var1 = new db(hk.field_bb, eg.field_v, ph.field_q[0], ne.field_h[0], cg.field_k[0], tf.field_b[0], mf.field_j[0], ic.field_b);
-        if (param0 != -92) {
-          return null;
-        } else {
-          eb.a(0);
-          return var1;
-        }
+        db var1 = new db(hk.field_bb, eg.field_v, ph.field_q[0], ne.field_h[0], cg.field_k[0], tf.field_b[0], mf.field_j[0], ic.field_b);
+        eb.a(0);
+        return var1;
     }
 
     abstract int a(long param0, boolean param1);
@@ -62,7 +49,7 @@ abstract class md {
         var5 = wizardrun.field_H;
         var4 = param1.indexOf(param0);
         L0: while (true) {
-          if (0 == (var4 ^ -1)) {
+          if (var4 == -1) {
             if (param2 != 28834) {
               field_b = null;
               return param1;

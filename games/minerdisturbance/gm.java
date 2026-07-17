@@ -9,62 +9,53 @@ final class gm {
     public static void a(int param0) {
         field_b = null;
         field_c = null;
-        int var1 = 77 % ((58 - param0) / 41);
+        int var1 = 0;
     }
 
     final static void b(int param0) {
-        int var1 = 0;
+        int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
+        RuntimeException decompiledCaughtException = null;
         var2 = MinerDisturbance.field_ab;
-        if (param0 == 100) {
-          var1 = 0;
-          L0: while (true) {
-            if (-4 >= (var1 ^ -1)) {
-              return;
-            } else {
-              L1: {
-                if (null == pa.field_a[var1]) {
-                  break L1;
-                } else {
-                  if (!pa.field_a[var1].k()) {
-                    var1++;
-                    var1++;
-                    continue L0;
-                  } else {
-                    break L1;
-                  }
-                }
+        try {
+          L0: {
+            L1: {
+              if (param0 == 100) {
+                break L1;
+              } else {
+                gm.b(26);
+                break L1;
               }
-              pa.field_a[var1] = rc.a(re.field_a[ll.a((byte) -73, 5) + 25], 100, oc.field_f);
-              sa discarded$2 = mg.a(1963987425, pa.field_a[var1]);
-              return;
             }
-          }
-        } else {
-          gm.b(26);
-          var1 = 0;
-          L2: while (true) {
-            if (-4 < (var1 ^ -1)) {
-              L3: {
-                if (null == pa.field_a[var1]) {
-                  break L3;
-                } else {
-                  if (!pa.field_a[var1].k()) {
-                    var1++;
-                    var1++;
-                    continue L2;
-                  } else {
+            var1_int = 0;
+            L2: while (true) {
+              if (var1_int >= 3) {
+                break L0;
+              } else {
+                L3: {
+                  if (null == pa.field_a[var1_int]) {
                     break L3;
+                  } else {
+                    if (!pa.field_a[var1_int].k()) {
+                      var1_int++;
+                      var1_int++;
+                      continue L2;
+                    } else {
+                      break L3;
+                    }
                   }
                 }
+                pa.field_a[var1_int] = rc.a(re.field_a[ll.a((byte) -73, 5) + 25], 100, oc.field_f);
+                sa discarded$7 = mg.a(1963987425, pa.field_a[var1_int]);
+                return;
               }
-              pa.field_a[var1] = rc.a(re.field_a[ll.a((byte) -73, 5) + 25], 100, oc.field_f);
-              sa discarded$3 = mg.a(1963987425, pa.field_a[var1]);
-              return;
-            } else {
-              return;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw lj.a((Throwable) (Object) var1, "gm.B(" + param0 + 41);
         }
     }
 

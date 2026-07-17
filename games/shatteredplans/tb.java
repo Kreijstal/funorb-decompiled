@@ -14,7 +14,6 @@ final class tb {
         qr var17 = null;
         int var18 = 0;
         Object var19_ref = null;
-        bi var19_ref_bi = null;
         int var19 = 0;
         Object var20 = null;
         String var20_ref = null;
@@ -144,8 +143,7 @@ final class tb {
           }
         }
         L2: {
-          new qr(stackIn_6_2, stackIn_6_3, ((String) (Object) stackIn_6_4).toUpperCase());
-          rq.field_b = stackIn_6_0;
+          rq.field_b = new qr(stackIn_6_2, stackIn_6_3, ((String) (Object) stackIn_6_4).toUpperCase());
           se.field_i = new qr(0L, (qr) null);
           se.field_i.a(param13 ^ -7962, sg.field_zb);
           se.field_i.a(4, qf.field_e);
@@ -210,272 +208,217 @@ final class tb {
         fk.field_p[0] = new sg[6];
         var17_int = 0;
         L5: while (true) {
-          L6: {
-            if (var17_int >= 5) {
-              break L6;
-            } else {
-              fk.field_p[0][1 + var17_int] = new sg(0L, an.field_d, (qr) null, gn.field_w, uk.field_b[var17_int], mk.field_e[var17_int]);
-              var17_int++;
-              if (0 == 0) {
-                continue L5;
+          if (var17_int >= 5) {
+            L6: {
+              if (param13 == -7966) {
+                break L6;
               } else {
+                tb.a(-52);
                 break L6;
               }
             }
-          }
-          L7: {
-            if (param13 == -7966) {
-              break L7;
-            } else {
-              tb.a(-52);
-              break L7;
-            }
-          }
-          L8: {
-            if (nl.field_a.length >= 2) {
-              re.field_g[1] = new qr(0L, dm.field_h, wl.field_b);
-              fk.field_p[1] = new sg[1 + nl.field_a.length];
-              fk.field_p[1][0] = new sg(0L, an.field_d, (qr) null, gn.field_w, (bi) null, ac.field_r);
-              var17_int = 0;
-              L9: while (true) {
-                if (nl.field_a.length <= var17_int) {
-                  break L8;
-                } else {
-                  fk.field_p[1][1 + var17_int] = new sg(0L, an.field_d, (qr) null, gn.field_w, (bi) null, Integer.toString(nl.field_a[var17_int]));
-                  var17_int++;
-                  if (0 == 0) {
-                    continue L9;
+            L7: {
+              if (nl.field_a.length >= 2) {
+                re.field_g[1] = new qr(0L, dm.field_h, wl.field_b);
+                fk.field_p[1] = new sg[1 + nl.field_a.length];
+                fk.field_p[1][0] = new sg(0L, an.field_d, (qr) null, gn.field_w, (bi) null, ac.field_r);
+                var17_int = 0;
+                L8: while (true) {
+                  if (~nl.field_a.length >= ~var17_int) {
+                    break L7;
                   } else {
-                    break L8;
+                    fk.field_p[1][1 + var17_int] = new sg(0L, an.field_d, (qr) null, gn.field_w, (bi) null, Integer.toString(nl.field_a[var17_int]));
+                    var17_int++;
+                    continue L8;
                   }
                 }
+              } else {
+                break L7;
               }
-            } else {
-              break L8;
             }
-          }
-          L10: {
-            re.field_g[2] = new qr(0L, dm.field_h, sq.field_s);
-            fk.field_p[2] = new sg[3];
-            if (mg.field_A > 1) {
-              re.field_g[3] = new qr(0L, dm.field_h, jo.field_e);
-              fk.field_p[3] = new sg[1 + mg.field_A];
-              fk.field_p[3][0] = new sg(0L, an.field_d, (qr) null, gn.field_w, (bi) null, ac.field_r);
-              var17_int = 0;
-              L11: while (true) {
-                if (var17_int >= mg.field_A) {
-                  break L10;
-                } else {
-                  fk.field_p[3][var17_int + 1] = new sg(0L, an.field_d, (qr) null, gn.field_w, (bi) null, si.field_o[var17_int]);
-                  var17_int++;
-                  if (0 == 0) {
-                    continue L11;
+            L9: {
+              re.field_g[2] = new qr(0L, dm.field_h, sq.field_s);
+              fk.field_p[2] = new sg[3];
+              if (mg.field_A > 1) {
+                re.field_g[3] = new qr(0L, dm.field_h, jo.field_e);
+                fk.field_p[3] = new sg[1 + mg.field_A];
+                fk.field_p[3][0] = new sg(0L, an.field_d, (qr) null, gn.field_w, (bi) null, ac.field_r);
+                var17_int = 0;
+                L10: while (true) {
+                  if (~var17_int <= ~mg.field_A) {
+                    break L9;
                   } else {
-                    break L10;
+                    fk.field_p[3][var17_int + 1] = new sg(0L, an.field_d, (qr) null, gn.field_w, (bi) null, si.field_o[var17_int]);
+                    var17_int++;
+                    continue L10;
                   }
                 }
+              } else {
+                break L9;
               }
-            } else {
-              break L10;
             }
-          }
-          var17_int = 0;
-          L12: while (true) {
-            L13: {
-              if (param0 <= var17_int) {
-                break L13;
+            var17_int = 0;
+            L11: while (true) {
+              if (~param0 >= ~var17_int) {
+                var17_int = 0;
+                L12: while (true) {
+                  if (~var17_int <= ~(4 + param0)) {
+                    go.field_I = new qr(0L, ea.field_a);
+                    aq.field_j = new qr(0L, ea.field_a);
+                    dn.field_f = new qr(0L, fg.field_b);
+                    dn.field_f.a(ii.field_u, false);
+                    var17 = dn.field_f;
+                    dn.field_f.field_G = 1;
+                    var17.field_y = 1;
+                    pf.field_g = new qr(0L, (qr) null);
+                    pf.field_g.a(param13 + 7970, tj.field_f);
+                    pf.field_g.a(4, bj.field_D);
+                    bj.field_D.a(4, es.field_l);
+                    var18 = 0;
+                    L13: while (true) {
+                      if (~(4 + param0) >= ~var18) {
+                        pf.field_g.a(4, go.field_I);
+                        pf.field_g.a(param13 + 7970, aq.field_j);
+                        pf.field_g.a(4, dn.field_f);
+                        hl.field_K = new qr(0L, un.field_g, ph.field_c.toUpperCase());
+                        oo.field_c = new qr(0L, af.field_f, uq.field_n.toUpperCase());
+                        return;
+                      } else {
+                        L14: {
+                          L15: {
+                            if (var18 != 1) {
+                              break L15;
+                            } else {
+                              if (nl.field_a.length < 2) {
+                                break L14;
+                              } else {
+                                break L15;
+                              }
+                            }
+                          }
+                          L16: {
+                            if (var18 != 3) {
+                              break L16;
+                            } else {
+                              if (mg.field_A > 1) {
+                                break L16;
+                              } else {
+                                break L14;
+                              }
+                            }
+                          }
+                          bj.field_D.a(4, re.field_g[var18]);
+                          var19 = 0;
+                          L17: while (true) {
+                            if (~var19 <= ~fk.field_p[var18].length) {
+                              break L14;
+                            } else {
+                              L18: {
+                                if (null == fk.field_p[var18][var19]) {
+                                  break L18;
+                                } else {
+                                  bj.field_D.a(4, (qr) (Object) fk.field_p[var18][var19]);
+                                  break L18;
+                                }
+                              }
+                              var19++;
+                              continue L17;
+                            }
+                          }
+                        }
+                        var18++;
+                        continue L13;
+                      }
+                    }
+                  } else {
+                    L19: {
+                      if (re.field_g[var17_int] == null) {
+                        break L19;
+                      } else {
+                        re.field_g[var17_int].field_Y = 11;
+                        break L19;
+                      }
+                    }
+                    L20: {
+                      if (null != fk.field_p[var17_int]) {
+                        var18 = 0;
+                        L21: while (true) {
+                          if (var18 >= fk.field_p[var17_int].length) {
+                            break L20;
+                          } else {
+                            L22: {
+                              if (fk.field_p[var17_int][var18] == null) {
+                                break L22;
+                              } else {
+                                if (null != fk.field_p[var17_int][var18].field_Bb) {
+                                  fk.field_p[var17_int][var18].field_Bb.field_Y = 11;
+                                  break L22;
+                                } else {
+                                  break L22;
+                                }
+                              }
+                            }
+                            var18++;
+                            continue L21;
+                          }
+                        }
+                      } else {
+                        break L20;
+                      }
+                    }
+                    var17_int++;
+                    continue L12;
+                  }
+                }
               } else {
                 re.field_g[4 - -var17_int] = new qr(0L, dm.field_h, gm.field_l[var17_int]);
                 fk.field_p[var17_int + 4] = new sg[1 + we.a(255, (int) so.field_r[var17_int])];
                 fk.field_p[4 + var17_int][0] = new sg(0L, an.field_d, (qr) null, gn.field_w, (bi) null, ac.field_r);
                 var18 = 0;
-                L14: while (true) {
-                  L15: {
-                    if (var18 >= (255 & so.field_r[var17_int])) {
-                      break L15;
-                    } else {
-                      L16: {
-                        if (null == nb.field_d) {
+                L23: while (true) {
+                  if (var18 >= (255 & so.field_r[var17_int])) {
+                    var17_int++;
+                    continue L11;
+                  } else {
+                    L24: {
+                      if (null == nb.field_d) {
+                        var19_ref = null;
+                        break L24;
+                      } else {
+                        if (null == nb.field_d[var17_int]) {
                           var19_ref = null;
-                          break L16;
+                          break L24;
                         } else {
-                          if (null == nb.field_d[var17_int]) {
-                            var19_ref = null;
-                            break L16;
-                          } else {
-                            var19_ref_bi = nb.field_d[var17_int][var18];
-                            break L16;
-                          }
+                          var19_ref = (Object) (Object) nb.field_d[var17_int][var18];
+                          break L24;
                         }
                       }
-                      L17: {
-                        if (null != wa.field_d) {
-                          if (wa.field_d[var17_int] != null) {
-                            var20_ref = wa.field_d[var17_int][var18];
-                            break L17;
-                          } else {
-                            var20_ref = null;
-                            break L17;
-                          }
+                    }
+                    L25: {
+                      if (null != wa.field_d) {
+                        if (wa.field_d[var17_int] != null) {
+                          var20_ref = wa.field_d[var17_int][var18];
+                          break L25;
                         } else {
                           var20_ref = null;
-                          break L17;
+                          break L25;
                         }
-                      }
-                      fk.field_p[4 + var17_int][var18 - -1] = new sg(0L, an.field_d, (qr) null, gn.field_w, (bi) var19_ref, var20_ref);
-                      var18++;
-                      if (0 == 0) {
-                        continue L14;
                       } else {
-                        break L15;
+                        var20_ref = null;
+                        break L25;
                       }
                     }
-                  }
-                  var17_int++;
-                  if (0 == 0) {
-                    continue L12;
-                  } else {
-                    break L13;
-                  }
-                }
-              }
-            }
-            var17_int = 0;
-            L18: while (true) {
-              L19: {
-                if (var17_int >= 4 + param0) {
-                  break L19;
-                } else {
-                  L20: {
-                    if (re.field_g[var17_int] == null) {
-                      break L20;
-                    } else {
-                      re.field_g[var17_int].field_Y = 11;
-                      break L20;
-                    }
-                  }
-                  L21: {
-                    if (null != fk.field_p[var17_int]) {
-                      var18 = 0;
-                      L22: while (true) {
-                        if (var18 >= fk.field_p[var17_int].length) {
-                          break L21;
-                        } else {
-                          L23: {
-                            if (fk.field_p[var17_int][var18] == null) {
-                              break L23;
-                            } else {
-                              if (null != fk.field_p[var17_int][var18].field_Bb) {
-                                fk.field_p[var17_int][var18].field_Bb.field_Y = 11;
-                                break L23;
-                              } else {
-                                break L23;
-                              }
-                            }
-                          }
-                          var18++;
-                          if (0 == 0) {
-                            continue L22;
-                          } else {
-                            break L21;
-                          }
-                        }
-                      }
-                    } else {
-                      break L21;
-                    }
-                  }
-                  var17_int++;
-                  if (0 == 0) {
-                    continue L18;
-                  } else {
-                    break L19;
-                  }
-                }
-              }
-              go.field_I = new qr(0L, ea.field_a);
-              aq.field_j = new qr(0L, ea.field_a);
-              dn.field_f = new qr(0L, fg.field_b);
-              dn.field_f.a(ii.field_u, false);
-              var17 = dn.field_f;
-              dn.field_f.field_G = 1;
-              var17.field_y = 1;
-              pf.field_g = new qr(0L, (qr) null);
-              pf.field_g.a(param13 + 7970, tj.field_f);
-              pf.field_g.a(4, bj.field_D);
-              bj.field_D.a(4, es.field_l);
-              var18 = 0;
-              L24: while (true) {
-                L25: {
-                  if (4 + param0 <= var18) {
-                    break L25;
-                  } else {
-                    L26: {
-                      L27: {
-                        if (var18 != 1) {
-                          break L27;
-                        } else {
-                          if ((nl.field_a.length ^ -1) > -3) {
-                            break L26;
-                          } else {
-                            break L27;
-                          }
-                        }
-                      }
-                      L28: {
-                        if (var18 != 3) {
-                          break L28;
-                        } else {
-                          if (mg.field_A > 1) {
-                            break L28;
-                          } else {
-                            if (0 == 0) {
-                              break L26;
-                            } else {
-                              break L28;
-                            }
-                          }
-                        }
-                      }
-                      bj.field_D.a(4, re.field_g[var18]);
-                      var19 = 0;
-                      L29: while (true) {
-                        if (var19 >= fk.field_p[var18].length) {
-                          break L26;
-                        } else {
-                          L30: {
-                            if (null == fk.field_p[var18][var19]) {
-                              break L30;
-                            } else {
-                              bj.field_D.a(4, (qr) (Object) fk.field_p[var18][var19]);
-                              break L30;
-                            }
-                          }
-                          var19++;
-                          if (0 == 0) {
-                            continue L29;
-                          } else {
-                            break L26;
-                          }
-                        }
-                      }
-                    }
+                    fk.field_p[4 + var17_int][var18 - -1] = new sg(0L, an.field_d, (qr) null, gn.field_w, (bi) var19_ref, var20_ref);
                     var18++;
-                    if (0 == 0) {
-                      continue L24;
-                    } else {
-                      break L25;
-                    }
+                    continue L23;
                   }
                 }
-                pf.field_g.a(4, go.field_I);
-                pf.field_g.a(param13 + 7970, aq.field_j);
-                pf.field_g.a(4, dn.field_f);
-                hl.field_K = new qr(0L, un.field_g, ph.field_c.toUpperCase());
-                oo.field_c = new qr(0L, af.field_f, uq.field_n.toUpperCase());
-                return;
               }
             }
+          } else {
+            fk.field_p[0][1 + var17_int] = new sg(0L, an.field_d, (qr) null, gn.field_w, uk.field_b[var17_int], mk.field_e[var17_int]);
+            var17_int++;
+            continue L5;
           }
         }
     }

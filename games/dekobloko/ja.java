@@ -57,7 +57,7 @@ final class ja {
                   var7 = 0;
                   L2: while (true) {
                     if (var7 >= var4) {
-                      ((ja) this).field_b[var6] = var3 ^ -1;
+                      ((ja) this).field_b[var6] = ~var3;
                       if (var6 >= var2) {
                         var2 = var6 + 1;
                         var3++;
@@ -399,6 +399,6 @@ final class ja {
         while (((ja) this).field_b[var1] >= 0) {
             var1 = va.b() != 0 ? ((ja) this).field_b[var1] : var1 + 1;
         }
-        return ((ja) this).field_b[var1] ^ -1;
+        return ~((ja) this).field_b[var1];
     }
 }

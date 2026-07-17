@@ -10,21 +10,22 @@ final class rma {
         if (param3 < 66) {
             return;
         }
-        jo.field_E = param1;
-        vn.a(108, gja.field_bb, param0);
+        try {
+            jo.field_E = param1;
+            vn.a(108, gja.field_bb, param0);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "rma.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+        }
     }
 
     final static String a(int param0) {
-        int var1 = 9 / ((param0 - 74) / 41);
+        int var1 = -3;
         return qla.a(true, "\\\\contentfs\\mgcontent_v4\\WIP\\tombracer\\src\\freelevels\\banner.trlev");
     }
 
     public static void b(int param0) {
         field_b = null;
         field_a = null;
-        if (param0 != 13902) {
-            field_b = null;
-        }
     }
 
     static {

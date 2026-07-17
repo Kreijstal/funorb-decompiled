@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.lang.String;
+
 class iu {
     static int field_t;
     int field_g;
@@ -29,30 +31,98 @@ class iu {
 
     private final boolean c(byte param0) {
         if (((iu) this).field_q.field_xb.field_t[1].b(false) == 0) {
-            if (!((((iu) this).field_q.field_xb.field_Eb[pl.field_s[0]].field_a ^ -1) != -1)) {
-                return true;
-            }
+          if (((iu) this).field_q.field_xb.field_Eb[pl.field_s[0]].field_a != 0) {
+            return false;
+          } else {
+            return true;
+          }
+        } else {
+          return false;
         }
-        if (param0 != -62) {
-            ((iu) this).h((byte) -125);
-        }
-        return false;
     }
 
     final void a(String param0, byte param1) {
-        ((iu) this).field_e = param0;
-        if (((iu) this).field_e != null) {
-            // ifeq L50
-            ((iu) this).field_a = 50 + rs.field_n.a(((iu) this).field_e, 220, 0);
-            ((iu) this).field_f = 240;
-        } else {
-            ((iu) this).field_a = 40;
-            if ((((iu) this).field_k ^ -1) == -35) {
+        RuntimeException var3 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        try {
+          L0: {
+            L1: {
+              L2: {
+                ((iu) this).field_e = param0;
+                if (((iu) this).field_e == null) {
+                  break L2;
+                } else {
+                  if (!((iu) this).field_c) {
+                    break L2;
+                  } else {
+                    ((iu) this).field_a = 50 + rs.field_n.a(((iu) this).field_e, 220, 0);
+                    ((iu) this).field_f = 240;
+                    break L1;
+                  }
+                }
+              }
+              ((iu) this).field_a = 40;
+              if (((iu) this).field_k != 34) {
+                break L1;
+              } else {
                 ((iu) this).field_f = 100;
+                break L1;
+              }
             }
-        }
-        if (param1 <= 108) {
-            this.j((byte) 81);
+            L3: {
+              if (param1 > 108) {
+                break L3;
+              } else {
+                this.j((byte) 81);
+                break L3;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var3 = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var3;
+            stackOut_8_1 = new StringBuilder().append("iu.FA(");
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param0 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L4;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L4;
+            }
+          }
+          throw ig.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 41);
         }
     }
 
@@ -83,8 +153,8 @@ class iu {
           }
           L2: {
             var4 = ((iu) this).field_k;
-            if ((var4 ^ -1) == -1) {
-              if (-2 == (param2 ^ -1)) {
+            if (var4 == 0) {
+              if (param2 == 1) {
                 this.b(1, -30659);
                 break L2;
               } else {
@@ -92,7 +162,7 @@ class iu {
               }
             } else {
               if (var4 == 1) {
-                if ((param2 ^ -1) == -3) {
+                if (param2 == 2) {
                   this.b(2, -30659);
                   break L2;
                 } else {
@@ -107,12 +177,12 @@ class iu {
                     break L2;
                   }
                 } else {
-                  if (-4 == (var4 ^ -1)) {
+                  if (var4 == 3) {
                     if (2 == param2) {
                       this.b(4, -30659);
                       break L2;
                     } else {
-                      if ((param2 ^ -1) != -5) {
+                      if (param2 != 4) {
                         break L2;
                       } else {
                         this.b(5, param1 + -30656);
@@ -120,9 +190,9 @@ class iu {
                       }
                     }
                   } else {
-                    if ((var4 ^ -1) != -5) {
-                      if (-6 == (var4 ^ -1)) {
-                        if (-3 != (param2 ^ -1)) {
+                    if (var4 != 4) {
+                      if (var4 == 5) {
+                        if (param2 != 2) {
                           if (param2 != 6) {
                             if (7 != param2) {
                               if (param2 == 9) {
@@ -152,7 +222,7 @@ class iu {
                               if (5 == param2) {
                                 break L3;
                               } else {
-                                if (-10 == (param2 ^ -1)) {
+                                if (param2 == 9) {
                                   break L3;
                                 } else {
                                   break L2;
@@ -163,10 +233,10 @@ class iu {
                           this.b(7, param1 ^ 30656);
                           break L2;
                         } else {
-                          if (-8 != (var4 ^ -1)) {
+                          if (var4 != 7) {
                             if (var4 == 8) {
-                              if (-3 != (param2 ^ -1)) {
-                                if ((param2 ^ -1) != -15) {
+                              if (param2 != 2) {
+                                if (param2 != 14) {
                                   break L2;
                                 } else {
                                   this.b(12, -30659);
@@ -177,7 +247,7 @@ class iu {
                                 break L2;
                               }
                             } else {
-                              if (-10 != (var4 ^ -1)) {
+                              if (var4 != 9) {
                                 if (30 != var4) {
                                   if (var4 == 10) {
                                     if (param2 != 14) {
@@ -188,19 +258,19 @@ class iu {
                                     }
                                   } else {
                                     if (11 == var4) {
-                                      if (-15 == (param2 ^ -1)) {
+                                      if (param2 == 14) {
                                         this.b(12, -30659);
                                         break L2;
                                       } else {
                                         break L2;
                                       }
                                     } else {
-                                      if ((var4 ^ -1) == -13) {
+                                      if (var4 == 12) {
                                         L4: {
                                           if (((iu) this).field_s) {
                                             break L4;
                                           } else {
-                                            if (-7 == (param2 ^ -1)) {
+                                            if (param2 == 6) {
                                               this.b(14, param1 ^ 30656);
                                               break L2;
                                             } else {
@@ -220,7 +290,7 @@ class iu {
                                             }
                                           }
                                         }
-                                        if ((param2 ^ -1) == -3) {
+                                        if (param2 == 2) {
                                           if (((iu) this).field_s) {
                                             if (!((iu) this).field_o) {
                                               this.b(16, param1 + -30656);
@@ -237,7 +307,7 @@ class iu {
                                           break L2;
                                         }
                                       } else {
-                                        if ((var4 ^ -1) == -14) {
+                                        if (var4 == 13) {
                                           if (6 == param2) {
                                             this.b(14, -30659);
                                             break L2;
@@ -260,7 +330,7 @@ class iu {
                                                   }
                                                 }
                                               } else {
-                                                if (-17 != (var4 ^ -1)) {
+                                                if (var4 != 16) {
                                                   if (var4 != 17) {
                                                     L7: {
                                                       if (18 == var4) {
@@ -280,7 +350,7 @@ class iu {
                                                           break L7;
                                                         } else {
                                                           if (32 == var4) {
-                                                            if ((param2 ^ -1) == -3) {
+                                                            if (param2 == 2) {
                                                               this.b(19, -30659);
                                                               break L2;
                                                             } else {
@@ -297,14 +367,14 @@ class iu {
                                                                     break L8;
                                                                   }
                                                                 }
-                                                                if (-17 != (param2 ^ -1)) {
+                                                                if (param2 != 16) {
                                                                   break L2;
                                                                 } else {
                                                                   this.b(29, param1 + -30656);
                                                                   break L2;
                                                                 }
                                                               } else {
-                                                                if (-22 != (var4 ^ -1)) {
+                                                                if (var4 != 21) {
                                                                   if (var4 == 29) {
                                                                     if (param2 != 17) {
                                                                       break L2;
@@ -313,7 +383,7 @@ class iu {
                                                                       break L2;
                                                                     }
                                                                   } else {
-                                                                    if ((var4 ^ -1) == -23) {
+                                                                    if (var4 == 22) {
                                                                       if (10 != param2) {
                                                                         break L2;
                                                                       } else {
@@ -321,18 +391,18 @@ class iu {
                                                                         break L2;
                                                                       }
                                                                     } else {
-                                                                      if ((var4 ^ -1) != -24) {
-                                                                        if (-25 == (var4 ^ -1)) {
-                                                                          if ((param2 ^ -1) == -13) {
+                                                                      if (var4 != 23) {
+                                                                        if (var4 == 24) {
+                                                                          if (param2 == 12) {
                                                                             this.b(25, -30659);
                                                                             break L2;
                                                                           } else {
                                                                             break L2;
                                                                           }
                                                                         } else {
-                                                                          if (-26 != (var4 ^ -1)) {
-                                                                            if ((var4 ^ -1) == -27) {
-                                                                              if ((param2 ^ -1) != -3) {
+                                                                          if (var4 != 25) {
+                                                                            if (var4 == 26) {
+                                                                              if (param2 != 2) {
                                                                                 break L2;
                                                                               } else {
                                                                                 this.b(27, -30659);
@@ -341,7 +411,7 @@ class iu {
                                                                             } else {
                                                                               if (27 != var4) {
                                                                                 if (var4 == 34) {
-                                                                                  if (-3 != (param2 ^ -1)) {
+                                                                                  if (param2 != 2) {
                                                                                     break L2;
                                                                                   } else {
                                                                                     ((iu) this).field_j = 0;
@@ -352,7 +422,7 @@ class iu {
                                                                                 }
                                                                               } else {
                                                                                 L9: {
-                                                                                  if (-14 == (param2 ^ -1)) {
+                                                                                  if (param2 == 13) {
                                                                                     break L9;
                                                                                   } else {
                                                                                     if (param2 != 15) {
@@ -371,7 +441,7 @@ class iu {
                                                                               }
                                                                             }
                                                                           } else {
-                                                                            if (-3 != (param2 ^ -1)) {
+                                                                            if (param2 != 2) {
                                                                               break L2;
                                                                             } else {
                                                                               this.b(26, param1 + -30656);
@@ -390,7 +460,7 @@ class iu {
                                                                     }
                                                                   }
                                                                 } else {
-                                                                  if (-17 == (param2 ^ -1)) {
+                                                                  if (param2 == 16) {
                                                                     this.b(29, -30659);
                                                                     break L2;
                                                                   } else {
@@ -410,7 +480,7 @@ class iu {
                                                         }
                                                       }
                                                     }
-                                                    if ((param2 ^ -1) != -3) {
+                                                    if (param2 != 2) {
                                                       break L2;
                                                     } else {
                                                       this.b(32, -30659);
@@ -418,7 +488,7 @@ class iu {
                                                     }
                                                   } else {
                                                     L10: {
-                                                      if (-15 != (param2 ^ -1)) {
+                                                      if (param2 != 14) {
                                                         break L10;
                                                       } else {
                                                         if (((iu) this).field_s) {
@@ -430,7 +500,7 @@ class iu {
                                                         }
                                                       }
                                                     }
-                                                    if ((param2 ^ -1) != -3) {
+                                                    if (param2 != 2) {
                                                       break L2;
                                                     } else {
                                                       this.b(18, -30659);
@@ -474,7 +544,7 @@ class iu {
                                     }
                                   }
                                 } else {
-                                  if (-3 != (param2 ^ -1)) {
+                                  if (param2 != 2) {
                                     if (param2 != 14) {
                                       break L2;
                                     } else {
@@ -487,7 +557,7 @@ class iu {
                                   }
                                 }
                               } else {
-                                if ((param2 ^ -1) != -3) {
+                                if (param2 != 2) {
                                   if (14 == param2) {
                                     this.b(12, -30659);
                                     break L2;
@@ -505,8 +575,8 @@ class iu {
                               this.b(8, -30659);
                               break L2;
                             } else {
-                              if (-8 != (param2 ^ -1)) {
-                                if (-10 != (param2 ^ -1)) {
+                              if (param2 != 7) {
+                                if (param2 != 9) {
                                   break L2;
                                 } else {
                                   this.b(10, param1 + -30656);
@@ -521,7 +591,7 @@ class iu {
                         }
                       }
                     } else {
-                      if ((param2 ^ -1) != -5) {
+                      if (param2 != 4) {
                         break L2;
                       } else {
                         this.b(5, -30659);
@@ -605,7 +675,7 @@ class iu {
         int stackOut_27_2 = 0;
         L0: {
           var2 = 40;
-          if ((((iu) this).field_k ^ -1) == -34) {
+          if (((iu) this).field_k == 33) {
             var2 = 0;
             break L0;
           } else {
@@ -620,7 +690,7 @@ class iu {
         L1: {
           if (0 < ((iu) this).field_m) {
             ((iu) this).field_m = ((iu) this).field_m - 1;
-            if ((((iu) this).field_m ^ -1) != -1) {
+            if (((iu) this).field_m != 0) {
               break L1;
             } else {
               ((iu) this).b(-1, -3, 1);
@@ -641,7 +711,7 @@ class iu {
               stackIn_13_1 = stackOut_11_1;
               stackIn_12_0 = stackOut_11_0;
               stackIn_12_1 = stackOut_11_1;
-              if ((var4 ^ -1) < -6) {
+              if (var4 > 5) {
                 stackOut_13_0 = this;
                 stackOut_13_1 = stackIn_13_1;
                 stackOut_13_2 = 5;
@@ -666,7 +736,7 @@ class iu {
           }
         }
         L4: {
-          if ((var2 ^ -1) >= (((iu) this).field_j ^ -1)) {
+          if (var2 <= ((iu) this).field_j) {
             break L4;
           } else {
             L5: {
@@ -700,7 +770,7 @@ class iu {
           }
         }
         L6: {
-          if ((((iu) this).field_g ^ -1) >= (((iu) this).field_f ^ -1)) {
+          if (((iu) this).field_g <= ((iu) this).field_f) {
             break L6;
           } else {
             L7: {
@@ -711,7 +781,7 @@ class iu {
               stackIn_23_1 = stackOut_21_1;
               stackIn_22_0 = stackOut_21_0;
               stackIn_22_1 = stackOut_21_1;
-              if ((var4 ^ -1) < -6) {
+              if (var4 > 5) {
                 stackOut_23_0 = this;
                 stackOut_23_1 = stackIn_23_1;
                 stackOut_23_2 = 5;
@@ -745,7 +815,7 @@ class iu {
               stackIn_28_1 = stackOut_26_1;
               stackIn_27_0 = stackOut_26_0;
               stackIn_27_1 = stackOut_26_1;
-              if (-6 > (var4 ^ -1)) {
+              if (var4 > 5) {
                 stackOut_28_0 = this;
                 stackOut_28_1 = stackIn_28_1;
                 stackOut_28_2 = 5;
@@ -777,12 +847,12 @@ class iu {
     }
 
     private final void g(int param0) {
-        int var2 = 103 / ((param0 - -42) / 55);
+        int var2 = 103;
         uh.a(sb.field_g, 125);
     }
 
     private final void g(byte param0) {
-        int var2 = -88 % ((param0 - 8) / 48);
+        int var2 = 0;
         ((iu) this).field_q.field_Ab = true;
     }
 
@@ -807,7 +877,7 @@ class iu {
             if (var3 != 0) {
               if (var3 != 1) {
                 if (2 != var3) {
-                  if (-4 != (var3 ^ -1)) {
+                  if (var3 != 3) {
                     if (4 == var3) {
                       ((iu) this).field_e = ci.field_f[3];
                       ((iu) this).field_w = 1;
@@ -815,21 +885,21 @@ class iu {
                       break L2;
                     } else {
                       if (var3 != 5) {
-                        if ((var3 ^ -1) == -7) {
+                        if (var3 == 6) {
                           ((iu) this).field_w = 1;
                           ((iu) this).field_e = ci.field_f[5];
                           break L2;
                         } else {
                           if (7 != var3) {
                             if (8 != var3) {
-                              if ((var3 ^ -1) == -10) {
+                              if (var3 == 9) {
                                 ((iu) this).field_o = true;
                                 ((iu) this).field_w = 0;
                                 ((iu) this).field_e = ci.field_f[7];
                                 break L2;
                               } else {
-                                if (-31 != (var3 ^ -1)) {
-                                  if ((var3 ^ -1) == -11) {
+                                if (var3 != 30) {
+                                  if (var3 == 10) {
                                     this.b((byte) 113);
                                     ((iu) this).field_w = 1;
                                     ((iu) this).field_e = ci.field_f[9];
@@ -844,7 +914,7 @@ class iu {
                                       } else {
                                         if (13 != var3) {
                                           if (var3 != 14) {
-                                            if ((var3 ^ -1) == -16) {
+                                            if (var3 == 15) {
                                               ((iu) this).field_e = ci.field_f[14];
                                               this.f((byte) -34);
                                               this.b((byte) 120);
@@ -872,7 +942,7 @@ class iu {
                                                         this.k((byte) -120);
                                                         break L2;
                                                       } else {
-                                                        if (-20 == (var3 ^ -1)) {
+                                                        if (var3 == 19) {
                                                           ((iu) this).field_w = 2;
                                                           ((iu) this).field_e = null;
                                                           this.c(param1 ^ -30659);
@@ -880,23 +950,23 @@ class iu {
                                                           break L2;
                                                         } else {
                                                           if (var3 != 20) {
-                                                            if ((var3 ^ -1) == -22) {
+                                                            if (var3 == 21) {
                                                               ((iu) this).field_e = ci.field_f[16];
                                                               ((iu) this).field_w = 1;
                                                               break L2;
                                                             } else {
-                                                              if ((var3 ^ -1) == -23) {
+                                                              if (var3 == 22) {
                                                                 ((iu) this).field_e = ci.field_f[17];
                                                                 ((iu) this).field_w = 1;
                                                                 break L2;
                                                               } else {
-                                                                if ((var3 ^ -1) == -24) {
+                                                                if (var3 == 23) {
                                                                   ((iu) this).field_e = ci.field_f[18];
                                                                   ((iu) this).field_w = 1;
                                                                   break L2;
                                                                 } else {
                                                                   if (var3 != 24) {
-                                                                    if ((var3 ^ -1) == -26) {
+                                                                    if (var3 == 25) {
                                                                       ((iu) this).field_e = ci.field_f[20];
                                                                       ((iu) this).field_w = 0;
                                                                       this.g((byte) 59);
@@ -908,8 +978,8 @@ class iu {
                                                                         this.e((byte) 115);
                                                                         break L2;
                                                                       } else {
-                                                                        if ((var3 ^ -1) != -28) {
-                                                                          if (-29 == (var3 ^ -1)) {
+                                                                        if (var3 != 27) {
+                                                                          if (var3 == 28) {
                                                                             ((iu) this).field_e = ci.field_f[23];
                                                                             ((iu) this).field_w = 3;
                                                                             this.i((byte) 44);
@@ -1046,9 +1116,6 @@ class iu {
 
     private final void a(int param0) {
         uh.a(m.field_a, 124);
-        if (param0 != 5) {
-            ((iu) this).field_a = 30;
-        }
     }
 
     private final void c(int param0) {
@@ -1134,8 +1201,8 @@ class iu {
           }
         }
         L1: {
-          if (-1 == (((iu) this).field_k ^ -1)) {
-            ol.field_y.g(db.a(true, 320) + -(ol.field_y.field_y >> -1526469727), u.a(100, (byte) 94));
+          if (((iu) this).field_k == 0) {
+            ol.field_y.g(db.a(true, 320) + -(ol.field_y.field_y >> 1), u.a(100, (byte) 94));
             fe.b(((iu) this).field_e, db.a(true, 320), u.a(130, (byte) 94));
             fe.c(((iu) this).field_e, db.a(true, 320), u.a(130, (byte) 94), nd.field_b, false);
             ((iu) this).field_j = 40;
@@ -1173,7 +1240,7 @@ class iu {
                   stackIn_10_2 = stackOut_9_2;
                   stackIn_10_3 = stackOut_9_3;
                   stackIn_10_4 = stackOut_9_4;
-                  if (-3 == (((iu) this).field_w ^ -1)) {
+                  if (((iu) this).field_w == 2) {
                     break L4;
                   } else {
                     stackOut_10_0 = stackIn_10_0;
@@ -1224,12 +1291,12 @@ class iu {
                 stackIn_13_5 = stackOut_12_5;
                 break L3;
               }
-              fe.a(stackIn_13_0, stackIn_13_1, stackIn_13_2, stackIn_13_3, (wk[]) (Object) stackIn_13_4, (int[]) (Object) stackIn_13_5, 0, 192, true);
-              if ((((iu) this).field_w ^ -1) != -1) {
-                if (-2 != (((iu) this).field_w ^ -1)) {
-                  if (-3 != (((iu) this).field_w ^ -1)) {
-                    if (-4 != (((iu) this).field_w ^ -1)) {
-                      if ((((iu) this).field_w ^ -1) == -6) {
+              fe.a(stackIn_13_0, stackIn_13_1, stackIn_13_2, stackIn_13_3, stackIn_13_4, stackIn_13_5, 0, 192, true);
+              if (((iu) this).field_w != 0) {
+                if (-2 != ((iu) this).field_w) {
+                  if (-3 != ((iu) this).field_w) {
+                    if (-4 != ((iu) this).field_w) {
+                      if (((iu) this).field_w == 5) {
                         fe.c(al.field_m, -120 + var2 + -10, var3 - 16, 0, true);
                         break L2;
                       } else {
@@ -1245,7 +1312,7 @@ class iu {
                   }
                 } else {
                   L5: {
-                    if (-35 != (((iu) this).field_k ^ -1)) {
+                    if (-35 != ((iu) this).field_k) {
                       stackOut_18_0 = 0;
                       stackIn_19_0 = stackOut_18_0;
                       break L5;
@@ -1268,7 +1335,7 @@ class iu {
                         break L6;
                       }
                     }
-                    fe.c((String) (Object) stackIn_27_0, -10 + (var2 - ((iu) this).field_g / 2), var3 - 16, 0, true);
+                    fe.c(stackIn_27_0, -10 + (var2 - ((iu) this).field_g / 2), var3 - 16, 0, true);
                     break L2;
                   } else {
                     L7: {
@@ -1282,7 +1349,7 @@ class iu {
                         break L7;
                       }
                     }
-                    fe.c((String) (Object) stackIn_23_0, var2 + -(((iu) this).field_g / 2) - 10, var3 + -16, 0, true);
+                    fe.c(stackIn_23_0, var2 + -(((iu) this).field_g / 2) - 10, var3 + -16, 0, true);
                     break L2;
                   }
                 }
@@ -1324,23 +1391,17 @@ class iu {
     }
 
     private final void a(int param0, int param1) {
-        if (param1 != 13567) {
-            return;
-        }
         ((iu) this).field_p = param0;
         this.b(34, -30659);
     }
 
     private final void e(byte param0) {
-        if (param0 <= 90) {
-            return;
-        }
         uh.a(pl.field_s, -91);
     }
 
     private final void i(byte param0) {
         rt.d((byte) 113);
-        int var2 = 47 / ((param0 - -75) / 34);
+        int var2 = 15;
         ((iu) this).field_q.a(0, (byte) 30, 255);
     }
 
@@ -1367,8 +1428,6 @@ class iu {
         int stackOut_16_1 = 0;
         Object stackOut_15_0 = null;
         int stackOut_15_1 = 0;
-        Object stackOut_13_0 = null;
-        int stackOut_13_1 = 0;
         L0: {
           var3 = ArmiesOfGielinor.field_M ? 1 : 0;
           if (!param0) {
@@ -1379,7 +1438,7 @@ class iu {
           }
         }
         L1: {
-          if ((((iu) this).field_w ^ -1) == -1) {
+          if (((iu) this).field_w == 0) {
             ((iu) this).b(-1, -3, 2);
             break L1;
           } else {
@@ -1402,16 +1461,16 @@ class iu {
                   break L2;
                 }
               }
-              L3: {
-                ((iu) this).field_c = stackIn_12_1 != 0;
-                stackOut_12_0 = this;
-                stackIn_14_0 = stackOut_12_0;
-                stackIn_13_0 = stackOut_12_0;
-                if (!((iu) this).field_c) {
+              ((iu) this).field_c = stackIn_12_1 != 0;
+              stackOut_12_0 = this;
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_13_0 = stackOut_12_0;
+              if (!((iu) this).field_c) {
+                L3: {
                   stackOut_14_0 = this;
                   stackIn_16_0 = stackOut_14_0;
                   stackIn_15_0 = stackOut_14_0;
-                  if ((((iu) this).field_k ^ -1) != -35) {
+                  if (((iu) this).field_k != 34) {
                     stackOut_16_0 = this;
                     stackOut_16_1 = 240;
                     stackIn_17_0 = stackOut_16_0;
@@ -1424,18 +1483,15 @@ class iu {
                     stackIn_17_1 = stackOut_15_1;
                     break L3;
                   }
-                } else {
-                  stackOut_13_0 = this;
-                  stackOut_13_1 = 240;
-                  stackIn_17_0 = stackOut_13_0;
-                  stackIn_17_1 = stackOut_13_1;
-                  break L3;
                 }
+                ((iu) this).field_f = stackIn_17_1;
+                break L1;
+              } else {
+                ((iu) this).field_f = 240;
+                break L1;
               }
-              ((iu) this).field_f = stackIn_17_1;
-              break L1;
             } else {
-              if ((((iu) this).field_w ^ -1) != -4) {
+              if (((iu) this).field_w != 3) {
                 if (((iu) this).field_w == 5) {
                   ((iu) this).field_k = 33;
                   break L1;
@@ -1460,37 +1516,30 @@ class iu {
 
     private final void d(int param0) {
         ((iu) this).field_q.field_xb.field_l.a((byte) -119, (tc) (Object) new mb(0, 3, 4, 5, 0, true));
-        int var2 = -44 % ((-70 - param0) / 43);
+        int var2 = 0;
     }
 
     private final int a(int param0, byte param1) {
         int var3 = 0;
         int var4 = 0;
-        if (param1 <= -108) {
-          var3 = ((iu) this).field_q.field_xb.field_Eb[param0].field_h;
-          var4 = var3;
-          if (-8 == (var4 ^ -1)) {
-            return 6;
-          } else {
-            if ((var4 ^ -1) == -9) {
-              return 7;
+        var3 = ((iu) this).field_q.field_xb.field_Eb[param0].field_h;
+        var4 = var3;
+        if (var4 != 7) {
+          if (var4 != 8) {
+            if (9 != var4) {
+              return 9;
             } else {
-              if (9 == var4) {
-                return 8;
-              } else {
-                return 9;
-              }
+              return 8;
             }
+          } else {
+            return 7;
           }
         } else {
-          return -34;
+          return 6;
         }
     }
 
     private final void k(byte param0) {
-        if (param0 > -55) {
-            return;
-        }
         ((iu) this).field_q.field_Mb = true;
     }
 
@@ -1502,7 +1551,8 @@ class iu {
     }
 
     final static int a(int param0, String param1, int param2, ka param3, String[] param4) {
-        int var5 = 0;
+        RuntimeException var5 = null;
+        int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -1511,96 +1561,226 @@ class iu {
         String var11 = null;
         int var12 = 0;
         int var13 = 0;
-        L0: {
-          var13 = ArmiesOfGielinor.field_M ? 1 : 0;
-          var5 = param3.a(param1);
-          if (param0 < var5) {
-            break L0;
-          } else {
-            if ((param1.indexOf("<br>") ^ -1) != 0) {
-              break L0;
-            } else {
-              param4[0] = (String) (Object) param4;
-              return 1;
-            }
-          }
-        }
-        L1: {
-          if (param2 == 7502) {
-            break L1;
-          } else {
-            iu.b(6);
-            break L1;
-          }
-        }
-        var6 = (-1 + var5 - -param0) / param0;
-        param0 = var5 / var6;
-        var6 = 0;
-        var7 = 0;
-        var8 = param1.length();
-        var9 = 0;
-        L2: while (true) {
-          if ((var8 ^ -1) >= (var9 ^ -1)) {
-            L3: {
-              if (var8 > var7) {
-                var6++;
-                param4[var6] = param1.substring(var7, var8).trim();
-                break L3;
+        int stackIn_4_0 = 0;
+        int stackIn_21_0 = 0;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        String stackIn_25_2 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        RuntimeException stackIn_28_0 = null;
+        StringBuilder stackIn_28_1 = null;
+        String stackIn_28_2 = null;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
+        RuntimeException stackIn_31_0 = null;
+        StringBuilder stackIn_31_1 = null;
+        String stackIn_31_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_3_0 = 0;
+        int stackOut_20_0 = 0;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        String stackOut_24_2 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        String stackOut_23_2 = null;
+        RuntimeException stackOut_25_0 = null;
+        StringBuilder stackOut_25_1 = null;
+        RuntimeException stackOut_27_0 = null;
+        StringBuilder stackOut_27_1 = null;
+        String stackOut_27_2 = null;
+        RuntimeException stackOut_26_0 = null;
+        StringBuilder stackOut_26_1 = null;
+        String stackOut_26_2 = null;
+        RuntimeException stackOut_28_0 = null;
+        StringBuilder stackOut_28_1 = null;
+        RuntimeException stackOut_30_0 = null;
+        StringBuilder stackOut_30_1 = null;
+        String stackOut_30_2 = null;
+        RuntimeException stackOut_29_0 = null;
+        StringBuilder stackOut_29_1 = null;
+        String stackOut_29_2 = null;
+        var13 = ArmiesOfGielinor.field_M ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              var5_int = param3.a(param1);
+              if (param0 < var5_int) {
+                break L1;
               } else {
-                break L3;
+                if (param1.indexOf("<br>") != -1) {
+                  break L1;
+                } else {
+                  param4[0] = (String) (Object) param4;
+                  stackOut_3_0 = 1;
+                  stackIn_4_0 = stackOut_3_0;
+                  return stackIn_4_0;
+                }
               }
             }
-            return var6;
-          } else {
-            L4: {
-              L5: {
-                var10 = param1.charAt(var9);
-                if (var10 == 32) {
-                  break L5;
-                } else {
-                  if (45 == var10) {
-                    break L5;
+            L2: {
+              if (param2 == 7502) {
+                break L2;
+              } else {
+                iu.b(6);
+                break L2;
+              }
+            }
+            var6 = (-1 + var5_int - -param0) / param0;
+            param0 = var5_int / var6;
+            var6 = 0;
+            var7 = 0;
+            var8 = param1.length();
+            var9 = 0;
+            L3: while (true) {
+              if (var8 <= var9) {
+                L4: {
+                  if (var8 > var7) {
+                    int incrementValue$2 = var6;
+                    var6++;
+                    param4[incrementValue$2] = param1.substring(var7, var8).trim();
+                    break L4;
                   } else {
                     break L4;
                   }
                 }
-              }
-              var11 = param1.substring(var7, var9 + 1).trim();
-              var12 = param3.a(var11);
-              if (var12 < param0) {
-                break L4;
+                stackOut_20_0 = var6;
+                stackIn_21_0 = stackOut_20_0;
+                break L0;
               } else {
-                var6++;
-                param4[var6] = var11;
-                var7 = 1 + var9;
-                break L4;
-              }
-            }
-            L6: {
-              if (var10 != 62) {
-                break L6;
-              } else {
-                if (param1.regionMatches(-3 + var9, "<br>", 0, 4)) {
-                  var6++;
-                  param4[var6] = param1.substring(var7, -3 + var9).trim();
-                  var7 = var9 + 1;
-                  break L6;
-                } else {
-                  break L6;
+                L5: {
+                  L6: {
+                    var10 = param1.charAt(var9);
+                    if (var10 == 32) {
+                      break L6;
+                    } else {
+                      if (45 == var10) {
+                        break L6;
+                      } else {
+                        break L5;
+                      }
+                    }
+                  }
+                  var11 = param1.substring(var7, var9 + 1).trim();
+                  var12 = param3.a(var11);
+                  if (var12 < param0) {
+                    break L5;
+                  } else {
+                    int incrementValue$3 = var6;
+                    var6++;
+                    param4[incrementValue$3] = var11;
+                    var7 = 1 + var9;
+                    break L5;
+                  }
                 }
+                L7: {
+                  if (var10 != 62) {
+                    break L7;
+                  } else {
+                    break L7;
+                  }
+                }
+                var9++;
+                continue L3;
               }
             }
-            var9++;
-            continue L2;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L8: {
+            var5 = decompiledCaughtException;
+            stackOut_22_0 = (RuntimeException) var5;
+            stackOut_22_1 = new StringBuilder().append("iu.MA(").append(param0).append(44);
+            stackIn_24_0 = stackOut_22_0;
+            stackIn_24_1 = stackOut_22_1;
+            stackIn_23_0 = stackOut_22_0;
+            stackIn_23_1 = stackOut_22_1;
+            if (param1 == null) {
+              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
+              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_2 = "null";
+              stackIn_25_0 = stackOut_24_0;
+              stackIn_25_1 = stackOut_24_1;
+              stackIn_25_2 = stackOut_24_2;
+              break L8;
+            } else {
+              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_2 = "{...}";
+              stackIn_25_0 = stackOut_23_0;
+              stackIn_25_1 = stackOut_23_1;
+              stackIn_25_2 = stackOut_23_2;
+              break L8;
+            }
+          }
+          L9: {
+            stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
+            stackOut_25_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(44).append(param2).append(44);
+            stackIn_27_0 = stackOut_25_0;
+            stackIn_27_1 = stackOut_25_1;
+            stackIn_26_0 = stackOut_25_0;
+            stackIn_26_1 = stackOut_25_1;
+            if (param3 == null) {
+              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
+              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_2 = "null";
+              stackIn_28_0 = stackOut_27_0;
+              stackIn_28_1 = stackOut_27_1;
+              stackIn_28_2 = stackOut_27_2;
+              break L9;
+            } else {
+              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
+              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_2 = "{...}";
+              stackIn_28_0 = stackOut_26_0;
+              stackIn_28_1 = stackOut_26_1;
+              stackIn_28_2 = stackOut_26_2;
+              break L9;
+            }
+          }
+          L10: {
+            stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
+            stackOut_28_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_28_2).append(44);
+            stackIn_30_0 = stackOut_28_0;
+            stackIn_30_1 = stackOut_28_1;
+            stackIn_29_0 = stackOut_28_0;
+            stackIn_29_1 = stackOut_28_1;
+            if (param4 == null) {
+              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
+              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
+              stackOut_30_2 = "null";
+              stackIn_31_0 = stackOut_30_0;
+              stackIn_31_1 = stackOut_30_1;
+              stackIn_31_2 = stackOut_30_2;
+              break L10;
+            } else {
+              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
+              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
+              stackOut_29_2 = "{...}";
+              stackIn_31_0 = stackOut_29_0;
+              stackIn_31_1 = stackOut_29_1;
+              stackIn_31_2 = stackOut_29_2;
+              break L10;
+            }
+          }
+          throw ig.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + 41);
         }
+        return stackIn_21_0;
     }
 
     private final void e(int param0) {
         ((iu) this).field_q.field_ac = true;
-        if (param0 != 31) {
-            ((iu) this).field_e = null;
-        }
     }
 
     public static void b(int param0) {
@@ -1621,9 +1801,13 @@ class iu {
         ((iu) this).field_m = 0;
         ((iu) this).field_k = 0;
         ((iu) this).field_j = 40;
-        ((iu) this).field_a = 40;
-        ((iu) this).field_q = param0;
-        this.a(param1, 13567);
+        try {
+            ((iu) this).field_a = 40;
+            ((iu) this).field_q = param0;
+            this.a(param1, 13567);
+        } catch (RuntimeException runtimeException) {
+            throw ig.a((Throwable) (Object) runtimeException, "iu.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     iu(ic param0) {
@@ -1632,15 +1816,19 @@ class iu {
         ((iu) this).field_m = 0;
         ((iu) this).field_k = 0;
         ((iu) this).field_j = 40;
-        ((iu) this).field_a = 40;
-        ((iu) this).field_q = param0;
-        ((iu) this).field_s = false;
-        ((iu) this).field_v = false;
-        ((iu) this).field_o = false;
-        this.b(0, -30659);
-        ((iu) this).field_q.field_xb.field_Eb[pl.field_s[0]].field_a = 1;
-        ((iu) this).field_q.field_xb.field_f = true;
-        ((iu) this).field_q.field_xb.field_z[1][1] = 1;
+        try {
+            ((iu) this).field_a = 40;
+            ((iu) this).field_q = param0;
+            ((iu) this).field_s = false;
+            ((iu) this).field_v = false;
+            ((iu) this).field_o = false;
+            this.b(0, -30659);
+            ((iu) this).field_q.field_xb.field_Eb[pl.field_s[0]].field_a = 1;
+            ((iu) this).field_q.field_xb.field_f = true;
+            ((iu) this).field_q.field_xb.field_z[1][1] = 1;
+        } catch (RuntimeException runtimeException) {
+            throw ig.a((Throwable) (Object) runtimeException, "iu.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

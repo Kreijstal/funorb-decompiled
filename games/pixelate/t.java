@@ -627,10 +627,10 @@ final class t {
                 break L0;
               }
             }
-            var6 = 256 - param5;
-            var7 = (param4 >> 16 & 255) * param5;
-            var8 = (param4 >> 8 & 255) * param5;
-            var9 = (param4 & 255) * param5;
+            var6 = 156;
+            var7 = (param4 >> 16 & 255) * 100;
+            var8 = (param4 >> 8 & 255) * 100;
+            var9 = (param4 & 255) * 100;
             if (param2 <= param3) {
               L1: {
                 param0 = param0 << 16;
@@ -735,10 +735,10 @@ final class t {
           } else {
             L9: {
               if (param3 < 0) {
-                t.f(param0, param1 + param3, -param3 + 1, param4, param5);
+                t.f(param0, param1 + param3, -param3 + 1, param4, 100);
                 break L9;
               } else {
-                t.f(param0, param1, param3 + 1, param4, param5);
+                t.f(param0, param1, param3 + 1, param4, 100);
                 break L9;
               }
             }
@@ -747,10 +747,10 @@ final class t {
         } else {
           L10: {
             if (param2 < 0) {
-              t.e(param0 + param2, param1, -param2 + 1, param4, param5);
+              t.e(param0 + param2, param1, -param2 + 1, param4, 100);
               break L10;
             } else {
-              t.e(param0, param1, param2 + 1, param4, param5);
+              t.e(param0, param1, param2 + 1, param4, 100);
               break L10;
             }
           }
@@ -893,11 +893,11 @@ final class t {
     }
 
     final static void b(int param0, int param1, int param2, int param3, int param4, int param5) {
-        t.e(param0, param1, param2, param4, param5);
-        t.e(param0, param1 + param3 - 1, param2, param4, param5);
+        t.e(param0, param1, param2, param4, 192);
+        t.e(param0, param1 + param3 - 1, param2, param4, 192);
         if (param3 >= 3) {
-            t.f(param0, param1 + 1, param3 - 2, param4, param5);
-            t.f(param0 + param2 - 1, param1 + 1, param3 - 2, param4, param5);
+            t.f(param0, param1 + 1, param3 - 2, param4, 192);
+            t.f(param0 + param2 - 1, param1 + 1, param3 - 2, param4, 192);
             return;
         }
     }
@@ -1060,8 +1060,8 @@ final class t {
         int var5 = 0;
         for (var6 = 0; var6 < 4; var6++) {
             var5 = 128 - (var6 << 5);
-            t.e(param0 + var6, param1 + param3 + var6, param2, param4, var5);
-            t.f(param0 + param2 + var6, param1 + var6, param3 + 1, param4, var5);
+            t.e(param0 + var6, param1 + param3 + var6, param2, 5592405, var5);
+            t.f(param0 + param2 + var6, param1 + var6, param3 + 1, 5592405, var5);
         }
     }
 

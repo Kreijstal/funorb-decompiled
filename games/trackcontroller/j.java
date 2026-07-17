@@ -130,7 +130,7 @@ final class j {
                 var26 = var2 + var25;
                 var2 = var26;
                 var2 = var26;
-                if (0 == (var9 ^ -1)) {
+                if (var9 == -1) {
                   break L3;
                 } else {
                   if (var10 != -1) {
@@ -205,7 +205,7 @@ final class j {
                 var34 = var2 + var33;
                 var2 = var34;
                 var2 = var34;
-                if (0 == (var9 ^ -1)) {
+                if (var9 == -1) {
                   break L6;
                 } else {
                   if (var10 != -1) {
@@ -235,34 +235,77 @@ final class j {
     }
 
     final static void a(java.awt.Component param0, int param1) {
-        param0.removeKeyListener((java.awt.event.KeyListener) (Object) cj.field_o);
-        param0.removeFocusListener((java.awt.event.FocusListener) (Object) cj.field_o);
-        mg.field_f = -1;
-        if (param1 <= 55) {
-            field_c = -8;
+        RuntimeException var2 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
+        try {
+          L0: {
+            param0.removeKeyListener((java.awt.event.KeyListener) (Object) cj.field_o);
+            param0.removeFocusListener((java.awt.event.FocusListener) (Object) cj.field_o);
+            mg.field_f = -1;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var2 = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var2;
+            stackOut_2_1 = new StringBuilder().append("j.E(");
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
+            if (param0 == null) {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
+            }
+          }
+          throw sl.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 103 + 41);
         }
     }
 
     public static void a(int param0) {
         field_b = null;
-        if (param0 > -71) {
-          field_b = null;
-          field_f = null;
-          field_d = null;
-          field_h = null;
-          return;
-        } else {
-          field_f = null;
-          field_d = null;
-          field_h = null;
-          return;
-        }
+        field_f = null;
+        field_d = null;
+        field_h = null;
     }
 
     j(String param0) {
         ((j) this).field_g = false;
         ((j) this).field_i = false;
-        ((j) this).field_e = param0;
+        try {
+            ((j) this).field_e = param0;
+        } catch (RuntimeException runtimeException) {
+            throw sl.a((Throwable) (Object) runtimeException, "j.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

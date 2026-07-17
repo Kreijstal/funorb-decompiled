@@ -40,7 +40,11 @@ final class ad extends vh {
 
     ad(Object param0, int param1) {
         super(param1);
-        ((ad) this).field_r = param0;
+        try {
+            ((ad) this).field_r = param0;
+        } catch (RuntimeException runtimeException) {
+            throw sl.a((Throwable) (Object) runtimeException, "ad.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     static {

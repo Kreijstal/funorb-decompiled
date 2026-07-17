@@ -22,10 +22,10 @@ abstract class cm extends ub {
         L0: {
           L1: {
             var2 = 0;
-            if (-1 < (param1 ^ -1)) {
+            if (param1 < 0) {
               break L1;
             } else {
-              if (-65537 >= (param1 ^ -1)) {
+              if (param1 >= 65536) {
                 break L1;
               } else {
                 break L0;
@@ -54,7 +54,7 @@ abstract class cm extends ub {
           }
         }
         L4: {
-          if (-17 < (param1 ^ -1)) {
+          if (param1 < 16) {
             break L4;
           } else {
             var2 += 4;
@@ -63,7 +63,7 @@ abstract class cm extends ub {
           }
         }
         L5: {
-          if (-5 >= (param1 ^ -1)) {
+          if (param1 >= 4) {
             param1 = param1 >>> 2;
             var2 += 2;
             break L5;
@@ -84,7 +84,7 @@ abstract class cm extends ub {
     }
 
     void m(int param0) {
-        if ((((cm) this).field_O ^ -1) >= -1) {
+        if (((cm) this).field_O <= 0) {
             return;
         }
         ((cm) this).a((byte) 117, ((cm) this).field_K, ((cm) this).field_P);
@@ -96,17 +96,11 @@ abstract class cm extends ub {
     }
 
     public static void o(int param0) {
-        if (param0 != 1) {
-            return;
-        }
         field_M = null;
     }
 
     boolean a(int param0) {
         ((cm) this).m(4000);
-        if (param0 >= -11) {
-            return true;
-        }
         return super.a(-89);
     }
 
@@ -133,26 +127,47 @@ abstract class cm extends ub {
     }
 
     final static void a(int param0, int param1) {
-        no.field_H = 1000000000L / (long)param1;
+        no.field_H = 20000000L;
         if (param0 != 922104624) {
             field_M = null;
         }
     }
 
     final static void l(int param0) {
+        int var1_int = 0;
+        RuntimeException var1 = null;
+        int var2 = 0;
+        int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        int var6 = Kickabout.field_G;
-        int var1 = -19 % ((param0 - -57) / 45);
-        lt.field_c = new ut[100];
-        int var2 = wt.field_y.field_o;
-        int var3 = wt.field_y.field_v;
-        for (var4 = 0; (var4 ^ -1) > -101; var4++) {
-            lt.field_c[var4] = new ut(var2, var3);
-            iw.a(123, lt.field_c[var4]);
-            var5 = (var4 << -391386032) / 100;
-            wt.field_y.b(wt.field_y.field_o << 1020129891, wt.field_y.field_v << -1771681725, on.field_g << 662483523, on.field_f << 1044820227, -var5, 4096);
-            ta.e(127);
+        int var6 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var6 = Kickabout.field_G;
+        try {
+          L0: {
+            var1_int = -1;
+            lt.field_c = new ut[100];
+            var2 = wt.field_y.field_o;
+            var3 = wt.field_y.field_v;
+            var4 = 0;
+            L1: while (true) {
+              if (var4 >= 100) {
+                break L0;
+              } else {
+                lt.field_c[var4] = new ut(var2, var3);
+                iw.a(123, lt.field_c[var4]);
+                var5 = (var4 << 16) / 100;
+                wt.field_y.b(wt.field_y.field_o << 3, wt.field_y.field_v << 3, on.field_g << 3, on.field_f << 3, -var5, 4096);
+                ta.e(127);
+                var4++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw nb.a((Throwable) (Object) var1, "cm.FB(" + 96 + 41);
         }
     }
 
@@ -180,14 +195,14 @@ abstract class cm extends ub {
         var8 = 0;
         var9 = param2;
         L0: while (true) {
-          if ((var4 ^ -1) >= (var8 ^ -1)) {
+          if (~var4 >= ~var8) {
             var4 = 22;
             var5 = 194;
             var6 = 169;
             var8 = 0;
             var9 = 35 + param2;
             L1: while (true) {
-              if ((var4 ^ -1) >= (var8 ^ -1)) {
+              if (~var4 >= ~var8) {
                 aa.field_f.c(-90 + ((cm) this).field_n + param0, param2 - -10);
                 ju.a(5 + param0, -127, 35 + param2, sk.field_a, -10 + ((cm) this).field_n);
                 ju.a(param0, -125, -22 + (((cm) this).field_i + param2), vb.field_a, ((cm) this).field_n);
@@ -201,7 +216,7 @@ abstract class cm extends ub {
                     return;
                   } else {
                     var10 = var8 * (var6 + -var5) / var4 + var5;
-                    var10 = var10 | (var10 << -841155824 | var10 << -551136184);
+                    var10 = var10 | (var10 << 16 | var10 << 8);
                     on.f(param0, var9, 6, var10);
                     on.f(-6 + ((cm) this).field_n + param0, var9, 6, var10);
                     var9++;
@@ -211,7 +226,7 @@ abstract class cm extends ub {
                 }
               } else {
                 var10 = (var6 - var5) * var8 / var4 + var5;
-                var10 = var10 | (var10 << 1599739696 | var10 << -926119768);
+                var10 = var10 | (var10 << 16 | var10 << 8);
                 on.f(param0, var9, 6, var10);
                 on.f(-6 + ((cm) this).field_n + param0, var9, 6, var10);
                 var9++;
@@ -221,7 +236,7 @@ abstract class cm extends ub {
             }
           } else {
             L3: {
-              if ((var9 ^ -1) > (on.field_e ^ -1)) {
+              if (~var9 > ~on.field_e) {
                 break L3;
               } else {
                 if (var9 >= on.field_h) {
@@ -240,12 +255,12 @@ abstract class cm extends ub {
                         } else {
                           L6: {
                             var13 = (-var11 + 20) * (20 + -var11) + (20 + -var8) * (20 - var8);
-                            if ((var13 ^ -1) < -463) {
+                            if (var13 > 462) {
                               break L6;
                             } else {
                               if (var13 >= 420) {
                                 var14 = var10 * (462 + -var13) / 42;
-                                var14 = var14 | (var14 << 116560272 | var14 << 97598152);
+                                var14 = var14 | (var14 << 16 | var14 << 8);
                                 on.field_a[var9 * on.field_g + param0 - -var11] = var14;
                                 break L6;
                               } else {
@@ -260,13 +275,13 @@ abstract class cm extends ub {
                     }
                   }
                   L7: {
-                    if (-21 <= (var8 ^ -1)) {
+                    if (var8 <= 20) {
                       var13 = var12;
                       var12 -= 21;
                       var14 = 0;
                       L8: while (true) {
                         L9: {
-                          if (-21 > (var14 ^ -1)) {
+                          if (var14 > 20) {
                             break L9;
                           } else {
                             var15 = var14 * var14 + (-var8 + 20) * (20 - var8);
@@ -274,12 +289,12 @@ abstract class cm extends ub {
                               break L9;
                             } else {
                               L10: {
-                                if ((var15 ^ -1) > -421) {
+                                if (var15 < 420) {
                                   var13 = var12 - -1;
                                   break L10;
                                 } else {
                                   var16 = (462 - var15) * var10 / 42;
-                                  var16 = var16 | (var16 << 922104624 | var16 << -492282904);
+                                  var16 = var16 | (var16 << 16 | var16 << 8);
                                   on.field_a[var12 + param0 + on.field_g * var9] = var16;
                                   break L10;
                                 }
@@ -297,7 +312,7 @@ abstract class cm extends ub {
                       break L7;
                     }
                   }
-                  var10 = var10 | (var10 << 1281368080 | var10 << 215254696);
+                  var10 = var10 | (var10 << 16 | var10 << 8);
                   on.f(var11 + param0, var9, var12 + -var11, var10);
                   break L3;
                 }
@@ -322,7 +337,7 @@ abstract class cm extends ub {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        if (param0 <= (((cm) this).field_O ^ -1)) {
+        if (param0 <= ~((cm) this).field_O) {
         } else {
             var2 = ((cm) this).field_P;
             var3 = ((cm) this).field_K;

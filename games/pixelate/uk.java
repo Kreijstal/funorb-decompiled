@@ -6763,10 +6763,10 @@ final class uk extends de {
             }
             L2: {
               L3: {
-                if ((ke.field_a ^ -1) == -97) {
+                if (ke.field_a == 96) {
                   break L3;
                 } else {
-                  if ((ke.field_a ^ -1) == -98) {
+                  if (ke.field_a == 97) {
                     break L3;
                   } else {
                     if (ke.field_a == 98) {
@@ -6782,7 +6782,7 @@ final class uk extends de {
                   }
                 }
               }
-              if (0 == (var2_int ^ -1)) {
+              if (var2_int == -1) {
                 ((uk) this).field_g.a(false, 2);
                 break L2;
               } else {
@@ -6822,7 +6822,7 @@ final class uk extends de {
                     }
                   }
                 }
-                if ((ke.field_a ^ -1) != -100) {
+                if (ke.field_a != 99) {
                   break L2;
                 } else {
                   if (2 <= var2_int) {
@@ -6965,10 +6965,10 @@ final class uk extends de {
             var12 = wn.field_q;
             var13 = 0;
             L4: while (true) {
-              if ((param1.field_a ^ -1) >= (var13 ^ -1)) {
+              if (~param1.field_a >= ~var13) {
                 var13 = 0;
                 L5: while (true) {
-                  if ((var13 ^ -1) <= (mp.field_b ^ -1)) {
+                  if (~var13 <= ~mp.field_b) {
                     break L0;
                   } else {
                     L6: {
@@ -6976,7 +6976,7 @@ final class uk extends de {
                       var15 = param1.field_h[var14];
                       var16 = param1.field_I[var14];
                       var17 = param1.field_o[var14];
-                      if ((param1.field_J[var14] ^ -1) > (wd.field_i.length ^ -1)) {
+                      if (~param1.field_J[var14] > ~wd.field_i.length) {
                         stackOut_37_0 = param1.field_J[var14];
                         stackIn_38_0 = stackOut_37_0;
                         break L6;
@@ -6988,7 +6988,7 @@ final class uk extends de {
                     }
                     L7: {
                       var18 = stackIn_38_0;
-                      if ((param1.field_s[var14] ^ -1) <= (wd.field_i.length ^ -1)) {
+                      if (~param1.field_s[var14] <= ~wd.field_i.length) {
                         stackOut_41_0 = -1;
                         stackIn_42_0 = stackOut_41_0;
                         break L7;
@@ -7022,10 +7022,10 @@ final class uk extends de {
                             if (param1.field_l.length <= var14) {
                               break L10;
                             } else {
-                              if (0 == (param1.field_l[var14] ^ -1)) {
+                              if (param1.field_l[var14] == -1) {
                                 break L10;
                               } else {
-                                if ((qn.field_q.length ^ -1) < (param1.field_l[var14] ^ -1)) {
+                                if (~qn.field_q.length < ~param1.field_l[var14]) {
                                   stackOut_61_0 = qn.field_q[param1.field_l[var14]];
                                   stackIn_62_0 = stackOut_61_0;
                                   break L9;
@@ -7050,10 +7050,10 @@ final class uk extends de {
                         var25 = al.field_m[var16];
                         var26 = jp.field_a[var17];
                         var27 = al.field_m[var17];
-                        if ((var19 ^ -1) != (var18 ^ -1)) {
+                        if (~var19 != ~var18) {
                           break L12;
                         } else {
-                          if ((var20 ^ -1) != (var19 ^ -1)) {
+                          if (~var20 != ~var19) {
                             break L12;
                           } else {
                             L13: {
@@ -7072,9 +7072,9 @@ final class uk extends de {
                             var30 = stackIn_70_0;
                             var31 = 16711935 & var30;
                             var32 = 65280 & var30;
-                            var33 = (var28 * var31 & -16711857) >>> -1723439544 | (16711885 & var28 * var32) >>> -597964632;
+                            var33 = (var28 * var31 & -16711857) >>> 8 | (16711885 & var28 * var32) >>> 8;
                             var33 = var33 + 65793 * var29;
-                            ln.a(var26, var25, var24, var23, var27, 8355711 & var33 >> -706633983, 100, var22);
+                            ln.a(var26, var25, var24, var23, var27, 8355711 & var33 >> 1, 100, var22);
                             break L11;
                           }
                         }
@@ -7099,13 +7099,13 @@ final class uk extends de {
                       var34 = stackIn_75_0;
                       var35 = var34 & 16711935;
                       var36 = var34 & 65280;
-                      var37 = (var28 * var36 & 16711765) >>> 1633962056 | (-16711730 & var35 * var28) >>> -2073037400;
-                      var38 = -755040001 & var29 * var35 >>> -1028548952 | (16711829 & var29 * var36) >>> -990838008;
-                      var39 = (var35 * var30 & -16711856) >>> 666630408 | var36 * var30 >>> -2074576472 & -620691712;
+                      var37 = (var28 * var36 & 16711765) >>> 8 | (-16711730 & var35 * var28) >>> 8;
+                      var38 = -755040001 & var29 * var35 >>> 8 | (16711829 & var29 * var36) >>> 8;
+                      var39 = (var35 * var30 & -16711856) >>> 8 | var36 * var30 >>> 8 & -620691712;
                       var38 = var38 + var32 * 65793;
                       var37 = var37 + var31 * 65793;
                       var39 = var39 + 65793 * var33;
-                      wa.a(var27, var25, var24, var39 >> 415547120, var37 >> 1015886832, var23, 255 & var38, 255 & var38 >> 740937320, var26, var37 & 255, var22, -128, 255 & var39, 255 & var39 >> -937307864, (65289 & var37) >> 476463944, var38 >> -1695617808);
+                      wa.a(var27, var25, var24, var39 >> 16, var37 >> 16, var23, 255 & var38, 255 & var38 >> 8, var26, var37 & 255, var22, -128, 255 & var39, 255 & var39 >> 8, (65289 & var37) >> 8, var38 >> 16);
                       break L11;
                     }
                     var13++;
@@ -7114,8 +7114,8 @@ final class uk extends de {
                 }
               } else {
                 L15: {
-                  var14 = var11[var13] * param4 + param7 * var10[var13] + param3 * var12[var13] >> 490529960;
-                  if ((var14 ^ -1) > -1) {
+                  var14 = var11[var13] * param4 + param7 * var10[var13] + param3 * var12[var13] >> 8;
+                  if (var14 < 0) {
                     var14 = -var14;
                     break L15;
                   } else {
@@ -7123,7 +7123,7 @@ final class uk extends de {
                   }
                 }
                 L16: {
-                  if (-1 >= (var14 ^ -1)) {
+                  if (var14 >= 0) {
                     if (var14 >= 128) {
                       stackOut_24_0 = 256;
                       stackIn_25_0 = stackOut_24_0;
@@ -7141,11 +7141,11 @@ final class uk extends de {
                 }
                 L17: {
                   var14 = stackIn_25_0;
-                  var15 = var12[var13] * param0 + var10[var13] * param2 + param5 * var11[var13] >> -1304510392;
+                  var15 = var12[var13] * param0 + var10[var13] * param2 + param5 * var11[var13] >> 8;
                   stackOut_25_0 = nk.field_d;
                   stackIn_28_0 = stackOut_25_0;
                   stackIn_26_0 = stackOut_25_0;
-                  if ((var15 ^ -1) > -1) {
+                  if (var15 < 0) {
                     stackOut_28_0 = (int[]) (Object) stackIn_28_0;
                     stackOut_28_1 = -var15;
                     stackIn_29_0 = stackOut_28_0;
@@ -7160,7 +7160,7 @@ final class uk extends de {
                   }
                 }
                 var15 = stackIn_29_0[stackIn_29_1];
-                var14 = var14 * (256 - var15) >>> -333999032;
+                var14 = var14 * (256 - var15) >>> 8;
                 var8_array[var13] = var14;
                 var9[var13] = var15;
                 var13++;
@@ -7265,7 +7265,7 @@ final class uk extends de {
               stackIn_3_1 = stackOut_0_1;
               stackIn_1_0 = stackOut_0_0;
               stackIn_1_1 = stackOut_0_1;
-              if (-1 != (((uk) this).field_g.field_j ^ -1)) {
+              if (((uk) this).field_g.field_j != 0) {
                 stackOut_3_0 = (ga) (Object) stackIn_3_0;
                 stackOut_3_1 = stackIn_3_1;
                 stackOut_3_2 = 0;
@@ -7354,7 +7354,7 @@ final class uk extends de {
             var9 = 16742912;
             var10 = 0;
             L1: while (true) {
-              if ((var7_array.length ^ -1) >= (var10 ^ -1)) {
+              if (~var7_array.length >= ~var10) {
                 var9 = 39168;
                 var10 = 0;
                 L2: while (true) {
@@ -7363,13 +7363,13 @@ final class uk extends de {
                     ((uk) this).field_o = new ga(1, 370, var8);
                     break L0;
                   } else {
-                    var8[var10] = cm.a(cm.a(var9, 16711935) * var10, -16711936) - -cm.a(cm.a(var9, 65280) * var10, 16711680) >> -1308063992;
+                    var8[var10] = cm.a(cm.a(var9, 16711935) * var10, -16711936) - -cm.a(cm.a(var9, 65280) * var10, 16711680) >> 8;
                     var10++;
                     continue L2;
                   }
                 }
               } else {
-                var7_array[var10] = cm.a(var10 * cm.a(var9, 65280), 16711680) + cm.a(-16711936, cm.a(16711935, var9) * var10) >> 1374501032;
+                var7_array[var10] = cm.a(var10 * cm.a(var9, 65280), 16711680) + cm.a(-16711936, cm.a(16711935, var9) * var10) >> 8;
                 var10++;
                 continue L1;
               }
@@ -7429,7 +7429,7 @@ final class uk extends de {
                   if (0 < ((uk) this).field_p.field_c) {
                     break L2;
                   } else {
-                    if (-1 <= (((uk) this).field_o.field_c ^ -1)) {
+                    if (((uk) this).field_o.field_c <= 0) {
                       break L1;
                     } else {
                       break L2;
@@ -7491,7 +7491,7 @@ final class uk extends de {
               }
             }
             L2: {
-              if (-1 != (param2 ^ -1)) {
+              if (param2 != 0) {
                 if (1 != param2) {
                   if (param2 != 2) {
                     break L2;
@@ -7535,7 +7535,7 @@ final class uk extends de {
             if (!((uk) this).field_p.a(param0, param1, -119)) {
               if (!((uk) this).field_o.a(param0, param1, -115)) {
                 if (param2 < -110) {
-                  if (-3 == (super.a(param0, param1, -128) ^ -1)) {
+                  if (super.a(param0, param1, -128) == 2) {
                     stackOut_12_0 = 2;
                     stackIn_13_0 = stackOut_12_0;
                     return stackIn_13_0;

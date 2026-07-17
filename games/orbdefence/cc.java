@@ -19,7 +19,7 @@ final class cc extends ca {
     static String field_i;
 
     final static void a(boolean param0, int param1) {
-        vc.field_j = 1000000000L / (long)param1;
+        vc.field_j = 20000000L;
         if (param0) {
             field_j = null;
         }
@@ -33,14 +33,7 @@ final class cc extends ca {
         field_h = null;
         field_m = null;
         field_k = null;
-        if (param0 < 3) {
-          field_f = null;
-          field_j = null;
-          return;
-        } else {
-          field_j = null;
-          return;
-        }
+        field_j = null;
     }
 
     cc(int param0, int param1, int param2, int param3, int param4) {

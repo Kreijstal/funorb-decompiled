@@ -109,6 +109,7 @@ final class jc {
           if (var2 >= 10) {
             ((jc) this).field_b = param0.d((byte) 69);
             ((jc) this).field_c = param0.d((byte) 69);
+            return;
           } else {
             var3 = param0.g(31365);
             if (var3 != 0) {

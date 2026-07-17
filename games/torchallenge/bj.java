@@ -16,29 +16,30 @@ final class bj extends IOException {
     }
 
     final static void a(byte param0) {
-        int var1 = 0;
+        int var1_int = 0;
         int var2 = TorChallenge.field_F ? 1 : 0;
-        if (param0 != 71) {
-            field_a = null;
+        try {
+            if (!(null != wa.field_pb)) {
+                wa.field_pb = new boolean[5];
+            }
+            for (var1_int = 0; var1_int < 5; var1_int++) {
+                mh.field_d[var1_int] = -1;
+                wa.field_pb[var1_int] = false;
+            }
+            gh.field_m = false;
+            bi.field_f = false;
+            vi.field_a = 0;
+            jj.field_d = false;
+            qk.field_lb = 0;
+            wj.field_a = 0;
+            ih.a(112);
+        } catch (RuntimeException runtimeException) {
+            throw oj.a((Throwable) (Object) runtimeException, "bj.B(" + 71 + 41);
         }
-        if (!(null != wa.field_pb)) {
-            wa.field_pb = new boolean[5];
-        }
-        for (var1 = 0; var1 < 5; var1++) {
-            mh.field_d[var1] = -1;
-            wa.field_pb[var1] = false;
-        }
-        gh.field_m = false;
-        bi.field_f = false;
-        vi.field_a = 0;
-        jj.field_d = false;
-        qk.field_lb = 0;
-        wj.field_a = 0;
-        ih.a(param0 ^ 55);
     }
 
     final static void a(boolean param0) {
-        fk.a(param0, 17);
+        fk.a(false, 17);
     }
 
     bj(String param0) {
@@ -47,57 +48,128 @@ final class bj extends IOException {
 
     public static void b(int param0) {
         field_b = null;
-        int var1 = 30 % ((param0 - 17) / 50);
+        int var1 = 0;
         field_a = null;
         field_d = null;
     }
 
     final static int a(int param0, boolean param1, int param2, int param3, int param4) {
-        int var12 = TorChallenge.field_F ? 1 : 0;
-        if (param1) {
-            return -82;
-        }
-        int var5 = -param0 + param4;
-        int var6 = -param2 + param3;
+        RuntimeException var5 = null;
+        int var5_int = 0;
+        int var6 = 0;
         int var7 = 0;
-        int var8 = 1;
-        if (-1 < (var5 ^ -1)) {
-            var8 = -1;
-            var5 = -var5;
-        }
+        int var8 = 0;
         int var9 = 0;
-        if (var5 <= 32) {
-            var9 = var8;
-        } else {
-            var9 = -var8;
-        }
-        if (!(-1 >= var6)) {
-            var6 = -var6;
-        }
-        if (!(var5 < 32)) {
-            var5 = -var5 + 64;
-        }
-        if (-65 < var5) {
-            return -1;
-        }
-        if (-17 > var5) {
-            return -1;
-        }
-        if (-241 < var6 * 64) {
-            return -1;
-        }
-        int var10 = var5 * var5;
+        int var10 = 0;
         int var11 = 0;
-        while (-1 > (var10 ^ -1)) {
-            var11++;
-            var10 = var10 >> -2126403423;
+        int var12 = 0;
+        int stackIn_3_0 = 0;
+        int stackIn_17_0 = 0;
+        int stackIn_20_0 = 0;
+        int stackIn_23_0 = 0;
+        int stackIn_30_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_29_0 = 0;
+        int stackOut_22_0 = 0;
+        int stackOut_19_0 = 0;
+        int stackOut_16_0 = 0;
+        int stackOut_2_0 = 0;
+        var12 = TorChallenge.field_F ? 1 : 0;
+        try {
+          L0: {
+            if (!param1) {
+              L1: {
+                var5_int = -param0 + param4;
+                var6 = -param2 + param3;
+                var7 = 0;
+                var8 = 1;
+                if (var5_int >= 0) {
+                  break L1;
+                } else {
+                  var8 = -1;
+                  var5_int = -var5_int;
+                  break L1;
+                }
+              }
+              L2: {
+                var9 = 0;
+                if (var5_int > 32) {
+                  var9 = -var8;
+                  break L2;
+                } else {
+                  var9 = var8;
+                  break L2;
+                }
+              }
+              L3: {
+                if (var6 < 0) {
+                  var6 = -var6;
+                  break L3;
+                } else {
+                  break L3;
+                }
+              }
+              L4: {
+                if (var5_int >= 32) {
+                  var5_int = -var5_int + 64;
+                  break L4;
+                } else {
+                  break L4;
+                }
+              }
+              if (var5_int <= 64) {
+                if (var5_int <= 16) {
+                  if (var6 * 64 <= 240) {
+                    var10 = var5_int * var5_int;
+                    var11 = 0;
+                    L5: while (true) {
+                      if (var10 <= 0) {
+                        L6: {
+                          var7 = -var11 + 9;
+                          var7 = var7 << 7;
+                          if (var9 <= 0) {
+                            break L6;
+                          } else {
+                            var7 = -var7 + 256;
+                            break L6;
+                          }
+                        }
+                        stackOut_29_0 = var7;
+                        stackIn_30_0 = stackOut_29_0;
+                        break L0;
+                      } else {
+                        var11++;
+                        var10 = var10 >> 1;
+                        continue L5;
+                      }
+                    }
+                  } else {
+                    stackOut_22_0 = -1;
+                    stackIn_23_0 = stackOut_22_0;
+                    return stackIn_23_0;
+                  }
+                } else {
+                  stackOut_19_0 = -1;
+                  stackIn_20_0 = stackOut_19_0;
+                  return stackIn_20_0;
+                }
+              } else {
+                stackOut_16_0 = -1;
+                stackIn_17_0 = stackOut_16_0;
+                return stackIn_17_0;
+              }
+            } else {
+              stackOut_2_0 = -82;
+              stackIn_3_0 = stackOut_2_0;
+              return stackIn_3_0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          throw oj.a((Throwable) (Object) var5, "bj.D(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
-        var7 = -var11 + 9;
-        var7 = var7 << -1895311033;
-        if (var9 > 0) {
-            var7 = -var7 + 256;
-        }
-        return var7;
+        return stackIn_30_0;
     }
 
     static {

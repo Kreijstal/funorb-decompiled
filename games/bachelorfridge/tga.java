@@ -8,47 +8,44 @@ class tga extends jm {
     static sna field_m;
 
     final void b(lu param0, byte param1) {
-        param0.d(((tga) this).field_n, 0);
-        int var3 = -77 % ((param1 - 37) / 38);
-        param0.d(((tga) this).field_o, 0);
+        try {
+            param0.d(((tga) this).field_n, 0);
+            int var3_int = -77 % ((param1 - 37) / 38);
+            param0.d(((tga) this).field_o, 0);
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "tga.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     void a(ub param0, int param1) {
-        gj var3 = null;
-        var3 = param0.field_o;
+        gj var3 = param0.field_o;
         param0.a(27799, (at) (Object) new fha((kj) (Object) new uea(var3, ((tga) this).field_n, ((tga) this).field_o, 16777215)));
         if (param1 >= -2) {
-          return;
-        } else {
-          ((tga) this).a(false, var3.field_h);
-          var3.field_s.d(73);
-          return;
+            return;
+        }
+        try {
+            ((tga) this).a(false, var3.field_h);
+            var3.field_s.d(73);
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "tga.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
     void a(boolean param0, op param1) {
-        int var3 = 0;
-        L0: {
-          if (!param0) {
-            break L0;
-          } else {
-            tga.a(-106);
-            break L0;
-          }
-        }
-        var3 = param1.field_L.field_o[((tga) this).field_n][((tga) this).field_o].field_n;
-        if (0 != param1.field_L.field_o[((tga) this).field_n][((tga) this).field_o].field_a) {
-          if (-10 > param1.field_L.field_o[((tga) this).field_n][((tga) this).field_o].field_a) {
-            var3 = param1.field_L.field_o[((tga) this).field_n][((tga) this).field_o].field_a + 6;
-            param1.b((byte) 76, var3, ((tga) this).field_n, ((tga) this).field_o);
-            return;
-          } else {
-            param1.b((byte) 76, var3, ((tga) this).field_n, ((tga) this).field_o);
-            return;
-          }
-        } else {
-          param1.b((byte) 76, var3, ((tga) this).field_n, ((tga) this).field_o);
-          return;
+        int var3_int = 0;
+        try {
+            if (param0) {
+                tga.a(-106);
+            }
+            var3_int = param1.field_L.field_o[((tga) this).field_n][((tga) this).field_o].field_n;
+            if (0 != param1.field_L.field_o[((tga) this).field_n][((tga) this).field_o].field_a) {
+                if (-10 > param1.field_L.field_o[((tga) this).field_n][((tga) this).field_o].field_a) {
+                    var3_int = param1.field_L.field_o[((tga) this).field_n][((tga) this).field_o].field_a + 6;
+                }
+            }
+            param1.b((byte) 76, var3_int, ((tga) this).field_n, ((tga) this).field_o);
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "tga.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -70,9 +67,13 @@ class tga extends jm {
     }
 
     tga(lu param0) {
-        ((tga) this).field_j = 2;
-        ((tga) this).field_n = param0.b(16711935);
-        ((tga) this).field_o = param0.b(16711935);
+        try {
+            ((tga) this).field_j = 2;
+            ((tga) this).field_n = param0.b(16711935);
+            ((tga) this).field_o = param0.b(16711935);
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "tga.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

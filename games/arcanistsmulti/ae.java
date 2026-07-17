@@ -11,11 +11,6 @@ final class ae {
         field_d = null;
         field_a = null;
         field_b = null;
-        if (param0 != -125) {
-            field_c = null;
-            field_c = null;
-            return;
-        }
         field_c = null;
     }
 
@@ -253,7 +248,7 @@ final class ae {
                     stackIn_67_2 = stackOut_66_2;
                     stackIn_67_3 = stackOut_66_3;
                     stackIn_67_4 = stackOut_66_4;
-                    if ((hk.field_o ^ -1) >= -51) {
+                    if (hk.field_o <= 50) {
                       stackOut_68_0 = stackIn_68_0;
                       stackOut_68_1 = stackIn_68_1;
                       stackOut_68_2 = stackIn_68_2;
@@ -284,7 +279,7 @@ final class ae {
                     }
                   }
                   L2: {
-                    fe.a(stackIn_69_0 != 0, stackIn_69_1, stackIn_69_2, stackIn_69_3, stackIn_69_4, stackIn_69_5 != 0, param1, var2 != 0, var3 != 0, true, 14, param0);
+                    fe.a(stackIn_69_0 != 0, stackIn_69_1, stackIn_69_2, stackIn_69_3, stackIn_69_4, stackIn_69_5 != 0, 13, var2 != 0, var3 != 0, true, 14, param0);
                     if (bj.field_ub) {
                       he.field_e.b((byte) -22, 57);
                       bj.field_ub = false;
@@ -337,7 +332,7 @@ final class ae {
               stackIn_80_2 = stackOut_79_2;
               stackIn_80_3 = stackOut_79_3;
               stackIn_80_4 = stackOut_79_4;
-              if ((hk.field_o ^ -1) >= -51) {
+              if (hk.field_o <= 50) {
                 stackOut_81_0 = stackIn_81_0;
                 stackOut_81_1 = stackIn_81_1;
                 stackOut_81_2 = stackIn_81_2;
@@ -368,7 +363,7 @@ final class ae {
               }
             }
             L5: {
-              fe.a(stackIn_82_0 != 0, stackIn_82_1, stackIn_82_2, stackIn_82_3, stackIn_82_4, stackIn_82_5 != 0, param1, var2 != 0, var3 != 0, true, 14, param0);
+              fe.a(stackIn_82_0 != 0, stackIn_82_1, stackIn_82_2, stackIn_82_3, stackIn_82_4, stackIn_82_5 != 0, 13, var2 != 0, var3 != 0, true, 14, param0);
               if (bj.field_ub) {
                 he.field_e.b((byte) -22, 57);
                 bj.field_ub = false;
@@ -415,7 +410,7 @@ final class ae {
                     stackIn_37_2 = stackOut_36_2;
                     stackIn_37_3 = stackOut_36_3;
                     stackIn_37_4 = stackOut_36_4;
-                    if ((hk.field_o ^ -1) >= -51) {
+                    if (hk.field_o <= 50) {
                       stackOut_38_0 = stackIn_38_0;
                       stackOut_38_1 = stackIn_38_1;
                       stackOut_38_2 = stackIn_38_2;
@@ -446,7 +441,7 @@ final class ae {
                     }
                   }
                   L9: {
-                    fe.a(stackIn_39_0 != 0, stackIn_39_1, stackIn_39_2, stackIn_39_3, stackIn_39_4, stackIn_39_5 != 0, param1, var2 != 0, var3 != 0, true, 14, param0);
+                    fe.a(stackIn_39_0 != 0, stackIn_39_1, stackIn_39_2, stackIn_39_3, stackIn_39_4, stackIn_39_5 != 0, 13, var2 != 0, var3 != 0, true, 14, param0);
                     if (bj.field_ub) {
                       he.field_e.b((byte) -22, 57);
                       bj.field_ub = false;
@@ -499,7 +494,7 @@ final class ae {
               stackIn_50_2 = stackOut_49_2;
               stackIn_50_3 = stackOut_49_3;
               stackIn_50_4 = stackOut_49_4;
-              if ((hk.field_o ^ -1) >= -51) {
+              if (hk.field_o <= 50) {
                 stackOut_51_0 = stackIn_51_0;
                 stackOut_51_1 = stackIn_51_1;
                 stackOut_51_2 = stackIn_51_2;
@@ -530,7 +525,7 @@ final class ae {
               }
             }
             L12: {
-              fe.a(stackIn_52_0 != 0, stackIn_52_1, stackIn_52_2, stackIn_52_3, stackIn_52_4, stackIn_52_5 != 0, param1, var2 != 0, var3 != 0, true, 14, param0);
+              fe.a(stackIn_52_0 != 0, stackIn_52_1, stackIn_52_2, stackIn_52_3, stackIn_52_4, stackIn_52_5 != 0, 13, var2 != 0, var3 != 0, true, 14, param0);
               if (bj.field_ub) {
                 he.field_e.b((byte) -22, 57);
                 bj.field_ub = false;
@@ -578,7 +573,7 @@ final class ae {
                   stackIn_6_2 = stackOut_5_2;
                   stackIn_6_3 = stackOut_5_3;
                   stackIn_6_4 = stackOut_5_4;
-                  if ((hk.field_o ^ -1) >= -51) {
+                  if (hk.field_o <= 50) {
                     stackOut_7_0 = stackIn_7_0;
                     stackOut_7_1 = stackIn_7_1;
                     stackOut_7_2 = stackIn_7_2;
@@ -609,7 +604,7 @@ final class ae {
                   }
                 }
                 L16: {
-                  fe.a(stackIn_8_0 != 0, stackIn_8_1, stackIn_8_2, stackIn_8_3, stackIn_8_4, stackIn_8_5 != 0, param1, var2 != 0, var3 != 0, true, 14, param0);
+                  fe.a(stackIn_8_0 != 0, stackIn_8_1, stackIn_8_2, stackIn_8_3, stackIn_8_4, stackIn_8_5 != 0, 13, var2 != 0, var3 != 0, true, 14, param0);
                   if (bj.field_ub) {
                     he.field_e.b((byte) -22, 57);
                     bj.field_ub = false;
@@ -662,7 +657,7 @@ final class ae {
             stackIn_19_2 = stackOut_18_2;
             stackIn_19_3 = stackOut_18_3;
             stackIn_19_4 = stackOut_18_4;
-            if ((hk.field_o ^ -1) >= -51) {
+            if (hk.field_o <= 50) {
               stackOut_20_0 = stackIn_20_0;
               stackOut_20_1 = stackIn_20_1;
               stackOut_20_2 = stackIn_20_2;
@@ -693,7 +688,7 @@ final class ae {
             }
           }
           L19: {
-            fe.a(stackIn_21_0 != 0, stackIn_21_1, stackIn_21_2, stackIn_21_3, stackIn_21_4, stackIn_21_5 != 0, param1, var2 != 0, var3 != 0, true, 14, param0);
+            fe.a(stackIn_21_0 != 0, stackIn_21_1, stackIn_21_2, stackIn_21_3, stackIn_21_4, stackIn_21_5 != 0, 13, var2 != 0, var3 != 0, true, 14, param0);
             if (bj.field_ub) {
               he.field_e.b((byte) -22, 57);
               bj.field_ub = false;

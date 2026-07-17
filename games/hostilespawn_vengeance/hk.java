@@ -15,23 +15,19 @@ final class hk extends am {
     int field_m;
 
     final void a(int param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        ((hk) this).field_n = param2;
-        ((hk) this).field_p = param7;
-        if (param3 != -12131) {
-          hk.c(39);
-          ((hk) this).field_o = param4;
-          ((hk) this).field_r = param5;
-          ((hk) this).field_j = param0;
-          ((hk) this).field_i = param1;
-          ((hk) this).field_m = param6;
-          return;
-        } else {
-          ((hk) this).field_o = param4;
-          ((hk) this).field_r = param5;
-          ((hk) this).field_j = param0;
-          ((hk) this).field_i = param1;
-          ((hk) this).field_m = param6;
-          return;
+        try {
+            ((hk) this).field_n = param2;
+            ((hk) this).field_p = param7;
+            if (param3 != -12131) {
+                hk.c(39);
+            }
+            ((hk) this).field_o = param4;
+            ((hk) this).field_r = param5;
+            ((hk) this).field_j = param0;
+            ((hk) this).field_i = param1;
+            ((hk) this).field_m = param6;
+        } catch (RuntimeException runtimeException) {
+            throw wg.a((Throwable) (Object) runtimeException, "hk.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
         }
     }
 

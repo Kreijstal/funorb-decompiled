@@ -21,23 +21,19 @@ final class dh implements Iterable {
     }
 
     final void a(ll param0, boolean param1) {
-        if (!param1) {
-          if (null != param0.field_l) {
-            param0.b((byte) -2);
+        if (param1) {
+            return;
+        }
+        try {
+            if (null != param0.field_l) {
+                param0.b((byte) -2);
+            }
             param0.field_n = ((dh) this).field_d;
             param0.field_l = ((dh) this).field_d.field_l;
             param0.field_l.field_n = param0;
             param0.field_n.field_l = param0;
-            return;
-          } else {
-            param0.field_n = ((dh) this).field_d;
-            param0.field_l = ((dh) this).field_d.field_l;
-            param0.field_l.field_n = param0;
-            param0.field_n.field_l = param0;
-            return;
-          }
-        } else {
-          return;
+        } catch (RuntimeException runtimeException) {
+            throw vk.a((Throwable) (Object) runtimeException, "dh.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
@@ -46,53 +42,62 @@ final class dh implements Iterable {
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        int var7 = DungeonAssault.field_K;
-        int[] var15 = new int[4];
-        int[] var13 = var15;
-        int[] var11 = var13;
-        int[] var9 = var11;
-        int[] var8 = var9;
-        int[] var16 = var8;
-        gf.a(var15);
-        gf.e(0, param3 - 16, 640, param2 + (param0 + param3));
-        int var5 = (200 - bl.field_s.field_E >> 1264614561) + param1;
-        int var6 = -16 + param3;
-        while (32 + param2 + param3 > var6) {
-            bl.field_s.h(var5, var6);
-            var6 = var6 + bl.field_s.field_G;
+        RuntimeException var4 = null;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int[] var8 = null;
+        int[] var9 = null;
+        int[] var11 = null;
+        int[] var13 = null;
+        int[] var15 = null;
+        int[] var16 = null;
+        RuntimeException decompiledCaughtException = null;
+        var7 = DungeonAssault.field_K;
+        try {
+          L0: {
+            var15 = new int[4];
+            var13 = var15;
+            var11 = var13;
+            var9 = var11;
+            var8 = var9;
+            var16 = var8;
+            gf.a(var15);
+            gf.e(0, param3 - 16, 640, param2 + (param0 + param3));
+            var5 = (200 - bl.field_s.field_E >> 1) + param1;
+            var6 = -16 + param3;
+            L1: while (true) {
+              if (32 + param2 + param3 <= var6) {
+                gf.b(var16);
+                ao.field_n.d(param1 + (-ao.field_n.field_E + 200 >> 1), -(ao.field_n.field_G >> 1) + -16 + param3, 500, 0);
+                rn.field_c.d((200 - rn.field_c.field_E >> 1) + param1, param2 + param3 + (20 - (rn.field_c.field_G >> 1)), 0, 500);
+                break L0;
+              } else {
+                bl.field_s.h(var5, var6);
+                var6 = var6 + bl.field_s.field_G;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = decompiledCaughtException;
+          throw vk.a((Throwable) (Object) var4, "dh.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }
-        gf.b(var16);
-        ao.field_n.d(param1 + (-ao.field_n.field_E + 200 >> -1468978431), -(ao.field_n.field_G >> -1404703775) + -16 + param3, 500, 0);
-        rn.field_c.d((200 - rn.field_c.field_E >> 1616180033) + param1, param2 + param3 + (20 - (rn.field_c.field_G >> -1914646463)), 0, 500);
     }
 
     final static void b(int param0) {
         if (0 - hh.field_b != nl.field_d) {
-          if (nl.field_d == -hh.field_b + 250) {
+          if (nl.field_d != -hh.field_b + 250) {
             nl.field_d = nl.field_d + 1;
-            if (param0 > -123) {
-              boolean discarded$6 = dh.a(true);
-              return;
-            } else {
-              return;
-            }
+            return;
           } else {
             nl.field_d = nl.field_d + 1;
-            if (param0 > -123) {
-              boolean discarded$7 = dh.a(true);
-              return;
-            } else {
-              return;
-            }
+            return;
           }
         } else {
           nl.field_d = nl.field_d + 1;
-          if (param0 > -123) {
-            boolean discarded$8 = dh.a(true);
-            return;
-          } else {
-            return;
-          }
+          return;
         }
     }
 

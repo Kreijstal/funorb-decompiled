@@ -9,38 +9,44 @@ final class fh extends ln {
     static int[] field_k;
 
     final static void a(boolean param0) {
-        int var1 = 0;
+        int var1_int = 0;
+        RuntimeException var1 = null;
         double var2 = 0.0;
         int var4 = 0;
         int var5 = 0;
+        RuntimeException decompiledCaughtException = null;
         var4 = CrazyCrystals.field_B;
-        nb.b();
-        if (param0) {
-          li.field_c = 11;
-          s.field_h = new int[260];
-          var1 = 0;
-          L0: while (true) {
-            if (256 <= var1) {
-              var5 = 256;
-              var1 = var5;
-              L1: while (true) {
-                if (var5 < s.field_h.length) {
-                  s.field_h[var5] = 255;
-                  var5++;
-                  continue L1;
-                } else {
-                  return;
+        try {
+          L0: {
+            nb.b();
+            li.field_c = 11;
+            s.field_h = new int[260];
+            var1_int = 0;
+            L1: while (true) {
+              if (256 <= var1_int) {
+                var5 = 256;
+                var1_int = var5;
+                L2: while (true) {
+                  if (var5 >= s.field_h.length) {
+                    break L0;
+                  } else {
+                    s.field_h[var5] = 255;
+                    var5++;
+                    continue L2;
+                  }
                 }
+              } else {
+                var2 = 15.0;
+                s.field_h[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
+                var1_int++;
+                continue L1;
               }
-            } else {
-              var2 = 15.0;
-              s.field_h[var1] = (int)(Math.pow((double)((float)var1 / 256.0f), var2) * 255.0);
-              var1++;
-              continue L0;
             }
           }
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw dn.a((Throwable) (Object) var1, "fh.D(" + 1 + 41);
         }
     }
 
@@ -74,7 +80,7 @@ final class fh extends ln {
 
     public static void a(int param0) {
         field_k = null;
-        int var1 = -112 / ((70 - param0) / 52);
+        int var1 = 112;
         field_i = null;
         field_g = null;
         field_h = null;

@@ -10,11 +10,13 @@ final class iw {
         fp.field_f = param2;
         jk.field_o = param3;
         if (param1) {
-          return;
-        } else {
-          iea.a(dg.field_c / 2, dg.field_i / 2, (byte) -98);
-          mja.a(param3.field_v, param2.field_v, 3, param3.field_B + param3.field_v, param2.field_v - -param2.field_B);
-          return;
+            return;
+        }
+        try {
+            iea.a(dg.field_c / 2, dg.field_i / 2, (byte) -98);
+            mja.a(param3.field_v, param2.field_v, 3, param3.field_B + param3.field_v, param2.field_v - -param2.field_B);
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "iw.D(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -1027,35 +1029,18 @@ final class iw {
     }
 
     final static void a(int param0, byte param1) {
-        if (param1 >= -8) {
-          field_a = null;
-          on.field_t = param0;
-          kw.field_k = new gs[15 * param0];
-          oma.field_a = new int[3];
-          qs.field_n = 0;
-          return;
-        } else {
-          on.field_t = param0;
-          kw.field_k = new gs[15 * param0];
-          oma.field_a = new int[3];
-          qs.field_n = 0;
-          return;
-        }
+        on.field_t = param0;
+        kw.field_k = new gs[15 * param0];
+        oma.field_a = new int[3];
+        qs.field_n = 0;
     }
 
     public static void a(int param0) {
         field_a = null;
-        if (param0 >= -101) {
-            return;
-        }
         field_b = null;
     }
 
     final static int a(int param0, int param1) {
-        if (param1 != 2047) {
-            field_b = null;
-            return jb.field_p[2047 & param0];
-        }
         return jb.field_p[2047 & param0];
     }
 

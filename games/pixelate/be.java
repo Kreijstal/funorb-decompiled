@@ -462,7 +462,7 @@ final class be extends ch implements hi, vo {
                   stackOut_30_0 = hc.field_L[0][var6 - -1];
                   stackIn_32_0 = stackOut_30_0;
                   stackIn_31_0 = stackOut_30_0;
-                  if ((var6 ^ -1) != (param1.field_Ib ^ -1)) {
+                  if (~var6 != ~param1.field_Ib) {
                     stackOut_32_0 = (lo) (Object) stackIn_32_0;
                     stackOut_32_1 = 0;
                     stackIn_33_0 = stackOut_32_0;
@@ -561,7 +561,7 @@ final class be extends ch implements hi, vo {
                   if (var4_int == 0) {
                     break L19;
                   } else {
-                    if ((hc.field_L[1][var7 + 1].field_P ^ -1) != -1) {
+                    if (hc.field_L[1][var7 + 1].field_P != 0) {
                       if (!param0) {
                         var9 = ia.field_a[var7];
                         if (var9 == param1.field_ec) {
@@ -581,7 +581,7 @@ final class be extends ch implements hi, vo {
                           } else {
                             var9 = 0;
                             L20: while (true) {
-                              if ((qm.field_J.length ^ -1) >= (var9 ^ -1)) {
+                              if (~qm.field_J.length >= ~var9) {
                                 break L19;
                               } else {
                                 qm.field_J[var9] = (byte) 0;
@@ -632,7 +632,7 @@ final class be extends ch implements hi, vo {
                       hc.field_L[1][1 + var7].field_U = true;
                       var9 = 0;
                       L23: while (true) {
-                        if ((ia.field_a.length ^ -1) >= (var9 ^ -1)) {
+                        if (~ia.field_a.length >= ~var9) {
                           break L21;
                         } else {
                           L24: {
@@ -754,7 +754,7 @@ final class be extends ch implements hi, vo {
                 if (1 < ff.field_i) {
                   var6 = 0;
                   L31: while (true) {
-                    if ((var6 ^ -1) <= (1 + ff.field_i ^ -1)) {
+                    if (~var6 <= ~(1 + ff.field_i)) {
                       break L30;
                     } else {
                       L32: {
@@ -762,7 +762,7 @@ final class be extends ch implements hi, vo {
                         if (var4_int == 0) {
                           break L32;
                         } else {
-                          if (-1 != (var7_ref_lo.field_P ^ -1)) {
+                          if (var7_ref_lo.field_P != 0) {
                             ib.field_a = var6;
                             break L32;
                           } else {
@@ -774,7 +774,7 @@ final class be extends ch implements hi, vo {
                         if (!var7_ref_lo.field_R) {
                           break L33;
                         } else {
-                          if ((var6 ^ -1) < -1) {
+                          if (var6 > 0) {
                             L34: {
                               if (vm.field_c != null) {
                                 stackOut_161_0 = vm.field_c[-1 + var6];
@@ -803,7 +803,7 @@ final class be extends ch implements hi, vo {
                         stackOut_164_0 = (lo) var7_ref_lo;
                         stackIn_166_0 = stackOut_164_0;
                         stackIn_165_0 = stackOut_164_0;
-                        if ((ib.field_a ^ -1) != (var6 ^ -1)) {
+                        if (~ib.field_a != ~var6) {
                           stackOut_166_0 = (lo) (Object) stackIn_166_0;
                           stackOut_166_1 = 0;
                           stackIn_167_0 = stackOut_166_0;
@@ -874,7 +874,7 @@ final class be extends ch implements hi, vo {
                       if (var4_int == 0) {
                         break L40;
                       } else {
-                        if (-1 >= (var9 ^ -1)) {
+                        if (var9 >= 0) {
                           L41: {
                             if (oo.field_e == null) {
                               break L41;
@@ -882,10 +882,10 @@ final class be extends ch implements hi, vo {
                               if (null == oo.field_e[var7]) {
                                 break L41;
                               } else {
-                                if (0 >= (oo.field_e[var7][var9] & (ii.field_t ^ -1))) {
+                                if (0 >= (oo.field_e[var7][var9] & ~ii.field_t)) {
                                   break L41;
                                 } else {
-                                  var15 = cl.a((byte) -99, (ii.field_t ^ -1) & oo.field_e[var7][var9]);
+                                  var15 = cl.a((byte) -99, ~ii.field_t & oo.field_e[var7][var9]);
                                   var14 = 1;
                                   break L41;
                                 }
@@ -897,7 +897,7 @@ final class be extends ch implements hi, vo {
                               break L42;
                             } else {
                               if (null != jm.field_r[var7]) {
-                                if ((uo.field_j ^ -1) < -1) {
+                                if (uo.field_j > 0) {
                                   break L42;
                                 } else {
                                   if (!jm.field_r[var7][var9]) {
@@ -938,7 +938,7 @@ final class be extends ch implements hi, vo {
                                   if (fe.field_a) {
                                     break L43;
                                   } else {
-                                    if ((uo.field_j ^ -1) >= -1) {
+                                    if (uo.field_j <= 0) {
                                       var10 = 1;
                                       break L43;
                                     } else {
@@ -971,7 +971,7 @@ final class be extends ch implements hi, vo {
                                     }
                                   }
                                 }
-                                if ((var16 ^ -1) >= -1) {
+                                if (var16 <= 0) {
                                   break L45;
                                 } else {
                                   if (var16 <= ui.field_e) {
@@ -1071,7 +1071,7 @@ final class be extends ch implements hi, vo {
                       if (var16 != 0) {
                         break L52;
                       } else {
-                        if ((var9 ^ -1) > -1) {
+                        if (var9 < 0) {
                           break L52;
                         } else {
                           if (null == h.field_Z) {
@@ -1101,7 +1101,7 @@ final class be extends ch implements hi, vo {
                             }
                             var17_int = 0;
                             L55: while (true) {
-                              if ((var7 ^ -1) >= (var17_int ^ -1)) {
+                              if (~var7 >= ~var17_int) {
                                 L56: {
                                   no.a(var7, 0, (byte) 91, param0, -1, var9, param1, -1);
                                   if (wo.field_h < 2) {
@@ -1141,10 +1141,10 @@ final class be extends ch implements hi, vo {
                             if (var9 == -1) {
                               var18 = var6;
                               L58: while (true) {
-                                if ((var8.length + (var6 + -1) ^ -1) >= (var18 ^ -1)) {
+                                if (~(var8.length + (var6 + -1)) >= ~var18) {
                                   break L57;
                                 } else {
-                                  k.field_k[var18 / 8] = (byte)cm.a((int) k.field_k[var18 / 8], 1 << cm.a(7, var18) ^ -1);
+                                  k.field_k[var18 / 8] = (byte)cm.a((int) k.field_k[var18 / 8], ~(1 << cm.a(7, var18)));
                                   var18++;
                                   continue L58;
                                 }
@@ -1176,7 +1176,7 @@ final class be extends ch implements hi, vo {
                         break L59;
                       } else {
                         if (var16 != 0) {
-                          k.field_k[(var9 - -var6) / 8] = (byte)cm.a((int) k.field_k[(var9 + var6) / 8], 1 << cm.a(var6 + var9, 7) ^ -1);
+                          k.field_k[(var9 - -var6) / 8] = (byte)cm.a((int) k.field_k[(var9 + var6) / 8], ~(1 << cm.a(var6 + var9, 7)));
                           break L59;
                         } else {
                           break L59;
@@ -1275,7 +1275,7 @@ final class be extends ch implements hi, vo {
                                 if (var14 != 0) {
                                   L67: {
                                     var22_ref = qi.field_o;
-                                    if ((var15 ^ -1) >= -1) {
+                                    if (var15 <= 0) {
                                       break L67;
                                     } else {
                                       if (null == lc.field_l) {
@@ -1332,7 +1332,7 @@ final class be extends ch implements hi, vo {
                                 }
                                 var24 = 0;
                                 L71: while (true) {
-                                  if ((var7 ^ -1) >= (var24 ^ -1)) {
+                                  if (~var7 >= ~var24) {
                                     if (var23 == 0) {
                                       var21 = (Object) (Object) sd.a(ki.field_a, 41, new String[1]);
                                       break L69;
@@ -1402,7 +1402,7 @@ final class be extends ch implements hi, vo {
                               stackOut_378_0 = (lo) (Object) stackIn_378_0;
                               stackIn_379_0 = stackOut_378_0;
                               stackOut_379_0 = (lo) (Object) stackIn_379_0;
-                              stackOut_379_1 = param1.field_Eb[var7] ^ -1;
+                              stackOut_379_1 = ~param1.field_Eb[var7];
                               stackOut_379_2 = (byte)var9;
                               stackOut_379_3 = -1;
                               stackIn_380_0 = stackOut_379_0;
@@ -1432,11 +1432,11 @@ final class be extends ch implements hi, vo {
                         stackIn_383_0.field_U = stackIn_383_1 != 0;
                         break L74;
                       } else {
-                        if ((var9 ^ -1) == 0) {
+                        if (var9 == -1) {
                           var17.field_U = true;
                           var18 = var6;
                           L77: while (true) {
-                            if ((var8.length + (var6 - 1) ^ -1) >= (var18 ^ -1)) {
+                            if (~(var8.length + (var6 - 1)) >= ~var18) {
                               break L74;
                             } else {
                               L78: {
@@ -1544,7 +1544,7 @@ final class be extends ch implements hi, vo {
               } else {
                 if (var7_ref_lo.field_P != 0) {
                   if (param0) {
-                    if ((var6 ^ -1) == -1) {
+                    if (var6 == 0) {
                       mg.field_i = 0;
                       break L82;
                     } else {
@@ -1596,7 +1596,7 @@ final class be extends ch implements hi, vo {
                     stackOut_132_0 = (lo) var7_ref_lo;
                     stackIn_135_0 = stackOut_132_0;
                     stackIn_133_0 = stackOut_132_0;
-                    if ((mg.field_i ^ -1) != -1) {
+                    if (mg.field_i != 0) {
                       stackOut_135_0 = (lo) (Object) stackIn_135_0;
                       stackOut_135_1 = 0;
                       stackIn_136_0 = stackOut_135_0;
@@ -3290,8 +3290,8 @@ final class be extends ch implements hi, vo {
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0 != 0;
             } else {
-              if ((param0 ^ -1) != -99) {
-                if ((param0 ^ -1) != -100) {
+              if (param0 != 98) {
+                if (param0 != 99) {
                   stackOut_11_0 = 0;
                   stackIn_12_0 = stackOut_11_0;
                   break L0;

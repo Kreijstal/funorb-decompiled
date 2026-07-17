@@ -18,11 +18,15 @@ final class hk {
     }
 
     final static void a(kg param0, int param1, int param2, kg param3) {
-        gd.field_m = param2;
-        tb.field_c = param3;
-        ce.field_b = param0;
-        me.a(false, sb.field_c / param1, sb.field_g / 2);
-        dc.a(param0.field_D, param3.field_D, -47, param0.field_D + param0.field_t, param3.field_D + param3.field_t);
+        try {
+            gd.field_m = param2;
+            tb.field_c = param3;
+            ce.field_b = param0;
+            me.a(false, sb.field_c / param1, sb.field_g / 2);
+            dc.a(param0.field_D, param3.field_D, -47, param0.field_D + param0.field_t, param3.field_D + param3.field_t);
+        } catch (RuntimeException runtimeException) {
+            throw ch.a((Throwable) (Object) runtimeException, "hk.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static String a(int param0, int param1, char param2) {
@@ -31,7 +35,7 @@ final class hk {
         char[] var6 = new char[param1];
         char[] var3 = var6;
         for (var4 = param0; param1 > var4; var4++) {
-            var6[var4] = param2;
+            var6[var4] = '*';
         }
         return new String(var6);
     }

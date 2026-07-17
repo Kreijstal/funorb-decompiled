@@ -106,35 +106,135 @@ final class gu extends ka {
     }
 
     gu(aw param0, int param1, int param2, boolean param3, boolean param4) {
-        ((gu) this).field_c = param2;
-        ((gu) this).field_e = param1;
-        if (!param3) {
-            // ifeq L58
+        RuntimeException var6 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        String stackIn_21_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
+        try {
+          L0: {
+            L1: {
+              L2: {
+                ((gu) this).field_c = param2;
+                ((gu) this).field_e = param1;
+                if (param3) {
+                  break L2;
+                } else {
+                  if (!jf.a(((gu) this).field_e, (byte) -97, ((gu) this).field_c)) {
+                    break L1;
+                  } else {
+                    break L2;
+                  }
+                }
+              }
+              ((gu) this).field_i = new lr(te.a(false, ((gu) this).field_e, ((gu) this).field_c));
+              break L1;
+            }
+            L3: {
+              L4: {
+                if (param3) {
+                  break L4;
+                } else {
+                  if (!sg.a(((gu) this).field_c, ((gu) this).field_e, 37)) {
+                    break L3;
+                  } else {
+                    break L4;
+                  }
+                }
+              }
+              ((gu) this).field_k = new lr(om.a(((gu) this).field_c, ((gu) this).field_e, (byte) -50));
+              break L3;
+            }
+            L5: {
+              L6: {
+                if (param3) {
+                  break L6;
+                } else {
+                  if (!oj.a(((gu) this).field_e, 13836, ((gu) this).field_c)) {
+                    break L5;
+                  } else {
+                    break L6;
+                  }
+                }
+              }
+              ((gu) this).field_l = new lr(se.a(31, ((gu) this).field_e, ((gu) this).field_c));
+              break L5;
+            }
+            L7: {
+              L8: {
+                if (param3) {
+                  break L8;
+                } else {
+                  if (!bj.a(((gu) this).field_e, (byte) -113, ((gu) this).field_c)) {
+                    break L7;
+                  } else {
+                    break L8;
+                  }
+                }
+              }
+              ((gu) this).field_f = new lr(mo.a(((gu) this).field_c, ((gu) this).field_e, 30643));
+              break L7;
+            }
+            L9: {
+              if (param3) {
+                break L9;
+              } else {
+                if (tf.a(((gu) this).field_c, -2626, ((gu) this).field_e)) {
+                  break L9;
+                } else {
+                  return;
+                }
+              }
+            }
+            ((gu) this).field_g = new lm(qq.b(((gu) this).field_e, ((gu) this).field_c, -126));
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L10: {
+            var6 = decompiledCaughtException;
+            stackOut_18_0 = (RuntimeException) var6;
+            stackOut_18_1 = new StringBuilder().append("gu.<init>(");
+            stackIn_20_0 = stackOut_18_0;
+            stackIn_20_1 = stackOut_18_1;
+            stackIn_19_0 = stackOut_18_0;
+            stackIn_19_1 = stackOut_18_1;
+            if (param0 == null) {
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "null";
+              stackIn_21_0 = stackOut_20_0;
+              stackIn_21_1 = stackOut_20_1;
+              stackIn_21_2 = stackOut_20_2;
+              break L10;
+            } else {
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "{...}";
+              stackIn_21_0 = stackOut_19_0;
+              stackIn_21_1 = stackOut_19_1;
+              stackIn_21_2 = stackOut_19_2;
+              break L10;
+            }
+          }
+          throw qo.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
-        ((gu) this).field_i = new lr(te.a(false, ((gu) this).field_e, ((gu) this).field_c));
-        if (!param3) {
-            // ifeq L103
-        }
-        ((gu) this).field_k = new lr(om.a(((gu) this).field_c, ((gu) this).field_e, (byte) -50));
-        if (!param3) {
-            // ifeq L149
-        }
-        ((gu) this).field_l = new lr(se.a(31, ((gu) this).field_e, ((gu) this).field_c));
-        if (!param3) {
-            // ifeq L195
-        }
-        ((gu) this).field_f = new lr(mo.a(((gu) this).field_c, ((gu) this).field_e, 30643));
-        if (!param3) {
-            // ifeq L241
-        }
-        ((gu) this).field_g = new lm(qq.b(((gu) this).field_e, ((gu) this).field_c, -126));
     }
 
     public static void a(boolean param0) {
         field_h = null;
-        if (!param0) {
-            gu.a(true);
-        }
     }
 
     static {

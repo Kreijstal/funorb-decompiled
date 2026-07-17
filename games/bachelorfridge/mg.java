@@ -11,15 +11,13 @@ final class mg extends at {
     static String field_o;
 
     final static String d(int param0) {
-        if (param0 != 320) {
-            return null;
-        }
         return re.field_D;
     }
 
     final boolean c(byte param0) {
+        int fieldTemp$0 = ((mg) this).field_n - 1;
         ((mg) this).field_n = ((mg) this).field_n - 1;
-        if (!((((mg) this).field_n - 1 ^ -1) < -1)) {
+        if (!(fieldTemp$0 > 0)) {
             this.d((byte) -56);
             return true;
         }
@@ -30,18 +28,13 @@ final class mg extends at {
     }
 
     private final void d(byte param0) {
-        if (param0 != -56) {
-            field_o = null;
-            ((mg) this).field_j.field_k = 0;
-            return;
-        }
         ((mg) this).field_j.field_k = 0;
     }
 
     final static be a(byte param0, int param1) {
         be var2 = null;
         if (param0 <= -114) {
-          if (0 == (param1 ^ -1)) {
+          if (param1 == -1) {
             return null;
           } else {
             var2 = jga.field_y[param1];
@@ -54,15 +47,19 @@ final class mg extends at {
 
     public static void e(int param0) {
         field_p = null;
-        int var1 = 107 / ((param0 - 24) / 42);
+        int var1 = -53;
         field_o = null;
         field_l = null;
         field_m = null;
     }
 
     mg(ad param0) {
-        ((mg) this).field_n = 50;
-        ((mg) this).field_j = param0;
+        try {
+            ((mg) this).field_n = 50;
+            ((mg) this).field_j = param0;
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "mg.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

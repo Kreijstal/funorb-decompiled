@@ -21,21 +21,17 @@ final class bd {
     }
 
     final static void a(boolean param0, byte param1, boolean param2, String param3) {
-        if (param1 != 98) {
-          bd.a((byte) 46);
-          cd.a(param1 ^ -99);
-          wg.field_j.k(param1 ^ 25);
-          j.field_e = new qi(bh.field_b, (String) null, fk.field_a, param0, param2);
-          jh.field_C = new ra(wg.field_j, (we) (Object) j.field_e);
-          wg.field_j.b((byte) -101, (we) (Object) jh.field_C);
-          return;
-        } else {
-          cd.a(param1 ^ -99);
-          wg.field_j.k(param1 ^ 25);
-          j.field_e = new qi(bh.field_b, (String) null, fk.field_a, param0, param2);
-          jh.field_C = new ra(wg.field_j, (we) (Object) j.field_e);
-          wg.field_j.b((byte) -101, (we) (Object) jh.field_C);
-          return;
+        try {
+            if (param1 != 98) {
+                bd.a((byte) 46);
+            }
+            cd.a(param1 ^ -99);
+            wg.field_j.k(param1 ^ 25);
+            j.field_e = new qi(bh.field_b, (String) null, fk.field_a, param0, param2);
+            jh.field_C = new ra(wg.field_j, (we) (Object) j.field_e);
+            wg.field_j.b((byte) -101, (we) (Object) jh.field_C);
+        } catch (RuntimeException runtimeException) {
+            throw la.a((Throwable) (Object) runtimeException, "bd.A(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 

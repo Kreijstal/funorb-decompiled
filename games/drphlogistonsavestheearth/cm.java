@@ -88,7 +88,7 @@ final class cm extends lb {
         field_M = new Random();
         field_P = new sa(12, 0, 1, 0);
         field_J = true;
-        field_S = new char[]{(char)91, (char)93, (char)35};
+        field_S = new char[]{'[', ']', '#'};
         field_G = 0.0;
     }
 }

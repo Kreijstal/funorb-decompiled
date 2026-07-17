@@ -24,29 +24,15 @@ final class od extends RuntimeException {
         field_b = null;
         field_j = null;
         field_d = null;
-        if (param0) {
-          return;
-        } else {
-          field_f = null;
-          field_g = null;
-          return;
-        }
+        field_f = null;
+        field_g = null;
     }
 
     final static c a(int param0, boolean param1) {
-        c var2 = null;
-        if (!param1) {
-          field_m = 46;
-          var2 = new c();
-          fg.field_Ub.a(3, (ck) (Object) var2);
-          tc.a(87, param0);
-          return var2;
-        } else {
-          var2 = new c();
-          fg.field_Ub.a(3, (ck) (Object) var2);
-          tc.a(87, param0);
-          return var2;
-        }
+        c var2 = new c();
+        fg.field_Ub.a(3, (ck) (Object) var2);
+        tc.a(87, param0);
+        return var2;
     }
 
     od(Throwable param0, String param1) {

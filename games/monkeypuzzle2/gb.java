@@ -19,10 +19,6 @@ final class gb extends ug {
     }
 
     final static int a(byte param0) {
-        if (param0 != 57) {
-            field_h = null;
-            return 1;
-        }
         return 1;
     }
 
@@ -39,38 +35,22 @@ final class gb extends ug {
     }
 
     final static boolean a(boolean param0) {
-        L0: {
-          if (0 != (rc.field_f ^ -1)) {
-            break L0;
-          } else {
-            if (hj.a(1, true)) {
-              rc.field_f = MonkeyPuzzle2.field_D.a((byte) 114);
-              MonkeyPuzzle2.field_D.field_h = 0;
-              break L0;
-            } else {
-              return false;
+        if (rc.field_f == -1) {
+            if (!hj.a(1, true)) {
+                return false;
             }
-          }
+            rc.field_f = MonkeyPuzzle2.field_D.a((byte) 114);
+            MonkeyPuzzle2.field_D.field_h = 0;
         }
-        L1: {
-          if (-2 != rc.field_f) {
-            break L1;
-          } else {
-            if (!hj.a(2, true)) {
-              return false;
-            } else {
-              rc.field_f = MonkeyPuzzle2.field_D.j(17277);
-              MonkeyPuzzle2.field_D.field_h = 0;
-              break L1;
-            }
-          }
+        if (-2 != rc.field_f) {
+            return hj.a(rc.field_f, true);
         }
-        if (!param0) {
-          field_i = 83;
-          return hj.a(rc.field_f, param0);
-        } else {
-          return hj.a(rc.field_f, param0);
+        if (!(hj.a(2, true))) {
+            return false;
         }
+        rc.field_f = MonkeyPuzzle2.field_D.j(17277);
+        MonkeyPuzzle2.field_D.field_h = 0;
+        return hj.a(rc.field_f, true);
     }
 
     final void c(byte param0) {
@@ -152,27 +132,32 @@ final class gb extends ug {
 
     gb(wg param0, wg param1, float param2) {
         ((gb) this).field_g = new float[2];
-        ((gb) this).field_e = param1;
-        ((gb) this).field_l = param2 * param2;
-        ((gb) this).field_m = false;
-        ((gb) this).field_k = param0;
+        try {
+            ((gb) this).field_e = param1;
+            ((gb) this).field_l = param2 * param2;
+            ((gb) this).field_m = false;
+            ((gb) this).field_k = param0;
+        } catch (RuntimeException runtimeException) {
+            throw la.a((Throwable) (Object) runtimeException, "gb.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     gb(wg param0, float param1, float param2, float param3) {
         ((gb) this).field_g = new float[2];
-        ((gb) this).field_m = true;
-        ((gb) this).field_g[0] = param1;
-        ((gb) this).field_l = param3 * param3;
-        ((gb) this).field_k = param0;
-        ((gb) this).field_g[1] = param2;
+        try {
+            ((gb) this).field_m = true;
+            ((gb) this).field_g[0] = param1;
+            ((gb) this).field_l = param3 * param3;
+            ((gb) this).field_k = param0;
+            ((gb) this).field_g[1] = param2;
+        } catch (RuntimeException runtimeException) {
+            throw la.a((Throwable) (Object) runtimeException, "gb.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+        }
     }
 
     public static void b(byte param0) {
         field_h = null;
         field_n = null;
-        if (param0 > -79) {
-            gb.a(33);
-        }
     }
 
     static {

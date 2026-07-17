@@ -16,107 +16,263 @@ final class rj extends ai {
     static int field_j;
 
     final static void a(int param0) {
-        int var1 = 0;
+        int var1_int = 0;
+        RuntimeException var1 = null;
         double var2 = 0.0;
-        int var4 = Bounce.field_N;
-        qk.c();
-        kk.field_s = 11;
-        if (param0 != 255) {
-            field_g = 35;
-        }
-        jl.field_b = new int[260];
-        for (var1 = 0; var1 < 256; var1++) {
-            var2 = 15.0;
-            jl.field_b[var1] = (int)(Math.pow((double)((float)var1 / 256.0f), var2) * 255.0);
-        }
-        int var5 = 256;
-        var1 = var5;
-        while (jl.field_b.length > var5) {
-            jl.field_b[var5] = 255;
-            var5++;
+        int var4 = 0;
+        int var5 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var4 = Bounce.field_N;
+        try {
+          L0: {
+            qk.c();
+            kk.field_s = 11;
+            jl.field_b = new int[260];
+            var1_int = 0;
+            L1: while (true) {
+              if (var1_int >= 256) {
+                var5 = 256;
+                var1_int = var5;
+                L2: while (true) {
+                  if (jl.field_b.length <= var5) {
+                    break L0;
+                  } else {
+                    jl.field_b[var5] = 255;
+                    var5++;
+                    continue L2;
+                  }
+                }
+              } else {
+                var2 = 15.0;
+                jl.field_b[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
+                var1_int++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw ii.a((Throwable) (Object) var1, "rj.D(" + 255 + 41);
         }
     }
 
     public static void d(int param0) {
         field_q = null;
         field_h = null;
-        if (param0 != 0) {
-            field_h = null;
-        }
     }
 
     final boolean a(byte param0, byte[] param1, int[] param2, i param3) {
-        int var5 = 0;
+        int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         Object var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
+        int stackIn_3_0 = 0;
+        int stackIn_21_0 = 0;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        String stackIn_25_2 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        RuntimeException stackIn_28_0 = null;
+        StringBuilder stackIn_28_1 = null;
+        String stackIn_28_2 = null;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
+        RuntimeException stackIn_31_0 = null;
+        StringBuilder stackIn_31_1 = null;
+        String stackIn_31_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_20_0 = 0;
+        int stackOut_2_0 = 0;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        String stackOut_24_2 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        String stackOut_23_2 = null;
+        RuntimeException stackOut_25_0 = null;
+        StringBuilder stackOut_25_1 = null;
+        RuntimeException stackOut_27_0 = null;
+        StringBuilder stackOut_27_1 = null;
+        String stackOut_27_2 = null;
+        RuntimeException stackOut_26_0 = null;
+        StringBuilder stackOut_26_1 = null;
+        String stackOut_26_2 = null;
+        RuntimeException stackOut_28_0 = null;
+        StringBuilder stackOut_28_1 = null;
+        RuntimeException stackOut_30_0 = null;
+        StringBuilder stackOut_30_1 = null;
+        String stackOut_30_2 = null;
+        RuntimeException stackOut_29_0 = null;
+        StringBuilder stackOut_29_1 = null;
+        String stackOut_29_2 = null;
         var10 = Bounce.field_N;
-        if (param0 >= 84) {
-          var5 = 1;
-          var6 = 0;
-          var7 = null;
-          var8 = 0;
-          L0: while (true) {
-            if (128 <= var8) {
-              return var5 != 0;
-            } else {
-              L1: {
-                if (param1 == null) {
-                  break L1;
+        try {
+          L0: {
+            if (param0 >= 84) {
+              var5_int = 1;
+              var6 = 0;
+              var7 = null;
+              var8 = 0;
+              L1: while (true) {
+                if (128 <= var8) {
+                  stackOut_20_0 = var5_int;
+                  stackIn_21_0 = stackOut_20_0;
+                  break L0;
                 } else {
-                  if (-1 != (param1[var8] ^ -1)) {
-                    break L1;
-                  } else {
-                    var8++;
-                    continue L0;
-                  }
-                }
-              }
-              var9 = ((rj) this).field_p[var8];
-              if (var9 != 0) {
-                L2: {
-                  if (var9 != var6) {
+                  L2: {
                     L3: {
-                      var6 = var9;
-                      var9--;
-                      if ((1 & var9) != 0) {
-                        var7 = (Object) (Object) param3.a(param2, 0, var9 >> 1116621186);
+                      if (param1 == null) {
                         break L3;
                       } else {
-                        var7 = (Object) (Object) param3.a(25910, var9 >> 1388745410, param2);
-                        break L3;
+                        if (param1[var8] == 0) {
+                          break L2;
+                        } else {
+                          break L3;
+                        }
                       }
                     }
-                    if (var7 != null) {
+                    var9 = ((rj) this).field_p[var8];
+                    if (var9 == 0) {
                       break L2;
                     } else {
-                      var5 = 0;
-                      break L2;
+                      L4: {
+                        if (var9 != var6) {
+                          L5: {
+                            var6 = var9;
+                            var9--;
+                            if ((1 & var9) != 0) {
+                              var7 = (Object) (Object) param3.a(param2, 0, var9 >> 2);
+                              break L5;
+                            } else {
+                              var7 = (Object) (Object) param3.a(25910, var9 >> 2, param2);
+                              break L5;
+                            }
+                          }
+                          if (var7 != null) {
+                            break L4;
+                          } else {
+                            var5_int = 0;
+                            break L4;
+                          }
+                        } else {
+                          break L4;
+                        }
+                      }
+                      if (var7 == null) {
+                        break L2;
+                      } else {
+                        ((rj) this).field_k[var8] = (ue) var7;
+                        ((rj) this).field_p[var8] = 0;
+                        break L2;
+                      }
                     }
-                  } else {
-                    break L2;
                   }
-                }
-                if (var7 != null) {
-                  ((rj) this).field_k[var8] = (ue) var7;
-                  ((rj) this).field_p[var8] = 0;
                   var8++;
-                  continue L0;
-                } else {
-                  var8++;
-                  continue L0;
+                  continue L1;
                 }
-              } else {
-                var8++;
-                continue L0;
               }
+            } else {
+              stackOut_2_0 = 1;
+              stackIn_3_0 = stackOut_2_0;
+              return stackIn_3_0 != 0;
             }
           }
-        } else {
-          return true;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L6: {
+            var5 = decompiledCaughtException;
+            stackOut_22_0 = (RuntimeException) var5;
+            stackOut_22_1 = new StringBuilder().append("rj.C(").append(param0).append(44);
+            stackIn_24_0 = stackOut_22_0;
+            stackIn_24_1 = stackOut_22_1;
+            stackIn_23_0 = stackOut_22_0;
+            stackIn_23_1 = stackOut_22_1;
+            if (param1 == null) {
+              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
+              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_2 = "null";
+              stackIn_25_0 = stackOut_24_0;
+              stackIn_25_1 = stackOut_24_1;
+              stackIn_25_2 = stackOut_24_2;
+              break L6;
+            } else {
+              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_2 = "{...}";
+              stackIn_25_0 = stackOut_23_0;
+              stackIn_25_1 = stackOut_23_1;
+              stackIn_25_2 = stackOut_23_2;
+              break L6;
+            }
+          }
+          L7: {
+            stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
+            stackOut_25_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(44);
+            stackIn_27_0 = stackOut_25_0;
+            stackIn_27_1 = stackOut_25_1;
+            stackIn_26_0 = stackOut_25_0;
+            stackIn_26_1 = stackOut_25_1;
+            if (param2 == null) {
+              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
+              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_2 = "null";
+              stackIn_28_0 = stackOut_27_0;
+              stackIn_28_1 = stackOut_27_1;
+              stackIn_28_2 = stackOut_27_2;
+              break L7;
+            } else {
+              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
+              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_2 = "{...}";
+              stackIn_28_0 = stackOut_26_0;
+              stackIn_28_1 = stackOut_26_1;
+              stackIn_28_2 = stackOut_26_2;
+              break L7;
+            }
+          }
+          L8: {
+            stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
+            stackOut_28_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_28_2).append(44);
+            stackIn_30_0 = stackOut_28_0;
+            stackIn_30_1 = stackOut_28_1;
+            stackIn_29_0 = stackOut_28_0;
+            stackIn_29_1 = stackOut_28_1;
+            if (param3 == null) {
+              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
+              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
+              stackOut_30_2 = "null";
+              stackIn_31_0 = stackOut_30_0;
+              stackIn_31_1 = stackOut_30_1;
+              stackIn_31_2 = stackOut_30_2;
+              break L8;
+            } else {
+              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
+              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
+              stackOut_29_2 = "{...}";
+              stackIn_31_0 = stackOut_29_0;
+              stackIn_31_1 = stackOut_29_1;
+              stackIn_31_2 = stackOut_29_2;
+              break L8;
+            }
+          }
+          throw ii.a((Throwable) (Object) stackIn_31_0, stackIn_31_2 + 41);
         }
+        return stackIn_21_0 != 0;
     }
 
     final void e(int param0) {
@@ -216,7 +372,7 @@ final class rj extends ai {
         var38 = new wi(param0);
         var3 = 0;
         L0: while (true) {
-          if (-1 == (var38.field_i[var3 + var38.field_h] ^ -1)) {
+          if (var38.field_i[var3 + var38.field_h] == 0) {
             var67 = new byte[var3];
             var61 = var67;
             var55 = var61;
@@ -246,7 +402,7 @@ final class rj extends ai {
                         var38.field_h = var38.field_h + var6;
                         var9 = 0;
                         L4: while (true) {
-                          if ((var38.field_i[var9 + var38.field_h] ^ -1) == -1) {
+                          if (var38.field_i[var9 + var38.field_h] == 0) {
                             var69 = new byte[var9];
                             var63 = var69;
                             var57 = var63;
@@ -254,7 +410,7 @@ final class rj extends ai {
                             var10 = var44;
                             var11_int = 0;
                             L5: while (true) {
-                              if ((var11_int ^ -1) <= (var9 ^ -1)) {
+                              if (~var11_int <= ~var9) {
                                 L6: {
                                   var38.field_h = var38.field_h + 1;
                                   var9++;
@@ -263,7 +419,7 @@ final class rj extends ai {
                                   var53 = var59;
                                   var39 = var53;
                                   var11 = var39;
-                                  if (-2 > (var9 ^ -1)) {
+                                  if (var9 > 1) {
                                     var65[1] = (byte) 1;
                                     var12 = 2;
                                     var13_int = 1;
@@ -308,7 +464,7 @@ final class rj extends ai {
                                   if (var14 >= var13.length) {
                                     L11: {
                                       var14 = var38.d((byte) -81);
-                                      if ((var14 ^ -1) < -1) {
+                                      if (var14 > 0) {
                                         stackOut_37_0 = new byte[2 * var14];
                                         stackIn_38_0 = stackOut_37_0;
                                         break L11;
@@ -325,7 +481,7 @@ final class rj extends ai {
                                       var46 = var58;
                                       var15_array = var46;
                                       var14 = var38.d((byte) -100);
-                                      if ((var14 ^ -1) >= -1) {
+                                      if (var14 <= 0) {
                                         stackOut_40_0 = null;
                                         stackIn_41_0 = (byte[]) (Object) stackOut_40_0;
                                         break L12;
@@ -339,7 +495,7 @@ final class rj extends ai {
                                     var16 = var47;
                                     var17 = 0;
                                     L13: while (true) {
-                                      if ((var38.field_i[var38.field_h + var17] ^ -1) == -1) {
+                                      if (var38.field_i[var38.field_h + var17] == 0) {
                                         var66 = new byte[var17];
                                         var60 = var66;
                                         var54 = var60;
@@ -369,7 +525,7 @@ final class rj extends ai {
                                                         var23 = 0;
                                                         var24 = 0;
                                                         L18: while (true) {
-                                                          if (-129 >= (var24 ^ -1)) {
+                                                          if (var24 >= 128) {
                                                             var21 = 0;
                                                             var20 = 0;
                                                             var24 = 0;
@@ -381,7 +537,7 @@ final class rj extends ai {
                                                                 var25 = null;
                                                                 var26 = 0;
                                                                 L20: while (true) {
-                                                                  if (-129 >= (var26 ^ -1)) {
+                                                                  if (var26 >= 128) {
                                                                     var21 = 0;
                                                                     var20 = 0;
                                                                     var26 = 0;
@@ -426,10 +582,10 @@ final class rj extends ai {
                                                                             }
                                                                             var27 = 0;
                                                                             L27: while (true) {
-                                                                              if ((var27 ^ -1) <= (var12 ^ -1)) {
+                                                                              if (~var27 <= ~var12) {
                                                                                 var27 = 0;
                                                                                 L28: while (true) {
-                                                                                  if ((var27 ^ -1) <= (var12 ^ -1)) {
+                                                                                  if (~var27 <= ~var12) {
                                                                                     L29: {
                                                                                       if (var15_array == null) {
                                                                                         break L29;
@@ -446,14 +602,14 @@ final class rj extends ai {
                                                                                               if (var29 >= var27) {
                                                                                                 var29 = 2;
                                                                                                 L32: while (true) {
-                                                                                                  if ((var70.length ^ -1) >= (var29 ^ -1)) {
+                                                                                                  if (~var70.length >= ~var29) {
                                                                                                     var30 = var27;
                                                                                                     L33: while (true) {
                                                                                                       if (var30 >= 128) {
                                                                                                         var15_array = null;
                                                                                                         break L29;
                                                                                                       } else {
-                                                                                                        ((rj) this).field_o[var30] = (byte)(((rj) this).field_o[var30] * var28 - -32 >> 991980614);
+                                                                                                        ((rj) this).field_o[var30] = (byte)(((rj) this).field_o[var30] * var28 - -32 >> 6);
                                                                                                         var30++;
                                                                                                         continue L33;
                                                                                                       }
@@ -471,7 +627,7 @@ final class rj extends ai {
                                                                                                         continue L32;
                                                                                                       } else {
                                                                                                         var34 = mf.a(0, var30 + -var27, var32);
-                                                                                                        ((rj) this).field_o[var33] = (byte)(32 + ((rj) this).field_o[var33] * var34 >> 179045414);
+                                                                                                        ((rj) this).field_o[var33] = (byte)(32 + ((rj) this).field_o[var33] * var34 >> 6);
                                                                                                         var32 = var32 + (var31 - var28);
                                                                                                         var33++;
                                                                                                         continue L34;
@@ -480,7 +636,7 @@ final class rj extends ai {
                                                                                                   }
                                                                                                 }
                                                                                               } else {
-                                                                                                ((rj) this).field_o[var29] = (byte)(32 + var28 * ((rj) this).field_o[var29] >> 1711120422);
+                                                                                                ((rj) this).field_o[var29] = (byte)(32 + var28 * ((rj) this).field_o[var29] >> 6);
                                                                                                 var29++;
                                                                                                 continue L31;
                                                                                               }
@@ -502,13 +658,13 @@ final class rj extends ai {
                                                                                         L36: while (true) {
                                                                                           if (var27 >= var47.length) {
                                                                                             var27 = var47[0];
-                                                                                            var28 = var47[1] << 588346721;
+                                                                                            var28 = var47[1] << 1;
                                                                                             var29 = 0;
                                                                                             L37: while (true) {
-                                                                                              if ((var27 ^ -1) >= (var29 ^ -1)) {
+                                                                                              if (~var27 >= ~var29) {
                                                                                                 var29 = 2;
                                                                                                 L38: while (true) {
-                                                                                                  if ((var29 ^ -1) <= (var47.length ^ -1)) {
+                                                                                                  if (~var29 <= ~var47.length) {
                                                                                                     var16 = null;
                                                                                                     var30 = var27;
                                                                                                     L39: while (true) {
@@ -526,7 +682,7 @@ final class rj extends ai {
                                                                                                       } else {
                                                                                                         L41: {
                                                                                                           var31 = var28 + (255 & ((rj) this).field_r[var30]);
-                                                                                                          if (-1 >= (var31 ^ -1)) {
+                                                                                                          if (var31 >= 0) {
                                                                                                             break L41;
                                                                                                           } else {
                                                                                                             var31 = 0;
@@ -548,12 +704,12 @@ final class rj extends ai {
                                                                                                     }
                                                                                                   } else {
                                                                                                     var30 = var47[var29];
-                                                                                                    var31 = var16[1 + var29] << -1687688511;
+                                                                                                    var31 = var16[1 + var29] << 1;
                                                                                                     var32 = (var30 + -var27) * var28 + (-var27 + var30) / 2;
                                                                                                     var37 = var27;
                                                                                                     var33 = var37;
                                                                                                     L43: while (true) {
-                                                                                                      if ((var37 ^ -1) <= (var30 ^ -1)) {
+                                                                                                      if (~var37 <= ~var30) {
                                                                                                         var28 = var31;
                                                                                                         var27 = var30;
                                                                                                         var29 += 2;
@@ -570,7 +726,7 @@ final class rj extends ai {
                                                                                                           }
                                                                                                         }
                                                                                                         L45: {
-                                                                                                          if ((var35 ^ -1) >= -129) {
+                                                                                                          if (var35 <= 128) {
                                                                                                             break L45;
                                                                                                           } else {
                                                                                                             var35 = 128;
@@ -630,10 +786,10 @@ final class rj extends ai {
                                                                                     }
                                                                                     var27 = 0;
                                                                                     L49: while (true) {
-                                                                                      if ((var27 ^ -1) <= (var12 ^ -1)) {
+                                                                                      if (~var27 <= ~var12) {
                                                                                         var27 = 0;
                                                                                         L50: while (true) {
-                                                                                          if ((var27 ^ -1) <= (var12 ^ -1)) {
+                                                                                          if (~var27 <= ~var12) {
                                                                                             var27 = 0;
                                                                                             L51: while (true) {
                                                                                               if (var12 <= var27) {
@@ -658,7 +814,7 @@ final class rj extends ai {
                                                                                               } else {
                                                                                                 L54: {
                                                                                                   var51 = var13[var27];
-                                                                                                  if ((var51.field_c ^ -1) >= -1) {
+                                                                                                  if (var51.field_c <= 0) {
                                                                                                     break L54;
                                                                                                   } else {
                                                                                                     var51.field_f = var38.d((byte) -99);
@@ -714,7 +870,7 @@ final class rj extends ai {
                                                                                         var19 = 0;
                                                                                         var29 = 2;
                                                                                         L59: while (true) {
-                                                                                          if ((var49.field_e.length ^ -1) >= (var29 ^ -1)) {
+                                                                                          if (~var49.field_e.length >= ~var29) {
                                                                                             break L58;
                                                                                           } else {
                                                                                             var19 = var38.d((byte) -69) + var19 - -1;
@@ -738,7 +894,7 @@ final class rj extends ai {
                                                                                     var19 = 0;
                                                                                     var29 = 2;
                                                                                     L61: while (true) {
-                                                                                      if ((var29 ^ -1) <= (var48.field_i.length ^ -1)) {
+                                                                                      if (~var29 <= ~var48.field_i.length) {
                                                                                         break L60;
                                                                                       } else {
                                                                                         var19 = var19 - -1 - -var38.d((byte) -115);
@@ -761,7 +917,7 @@ final class rj extends ai {
                                                                               } else {
                                                                                 var29 = 1;
                                                                                 L63: while (true) {
-                                                                                  if ((var45.field_e.length ^ -1) >= (var29 ^ -1)) {
+                                                                                  if (~var45.field_e.length >= ~var29) {
                                                                                     break L62;
                                                                                   } else {
                                                                                     var45.field_e[var29] = var38.k(-84);
@@ -777,7 +933,7 @@ final class rj extends ai {
                                                                               } else {
                                                                                 var29 = 3;
                                                                                 L65: while (true) {
-                                                                                  if ((var45.field_i.length - 2 ^ -1) >= (var29 ^ -1)) {
+                                                                                  if (~(var45.field_i.length - 2) >= ~var29) {
                                                                                     break L64;
                                                                                   } else {
                                                                                     var45.field_i[var29] = var38.k(51);
@@ -793,11 +949,11 @@ final class rj extends ai {
                                                                         }
                                                                       } else {
                                                                         L66: {
-                                                                          if ((var20 ^ -1) != -1) {
+                                                                          if (var20 != 0) {
                                                                             break L66;
                                                                           } else {
                                                                             L67: {
-                                                                              if ((var66.length ^ -1) >= (var21 ^ -1)) {
+                                                                              if (~var66.length >= ~var21) {
                                                                                 var20 = -1;
                                                                                 break L67;
                                                                               } else {
@@ -807,7 +963,7 @@ final class rj extends ai {
                                                                                 break L67;
                                                                               }
                                                                             }
-                                                                            if (-1 <= (((rj) this).field_p[var27] ^ -1)) {
+                                                                            if (((rj) this).field_p[var27] <= 0) {
                                                                               break L66;
                                                                             } else {
                                                                               var26 = var38.d((byte) -87) + 1;
@@ -827,11 +983,11 @@ final class rj extends ai {
                                                                         break L68;
                                                                       } else {
                                                                         L69: {
-                                                                          if (-1 != (var20 ^ -1)) {
+                                                                          if (var20 != 0) {
                                                                             break L69;
                                                                           } else {
                                                                             var25 = (Object) (Object) var13[var65[var21]];
-                                                                            if ((var21 ^ -1) > (var69.length ^ -1)) {
+                                                                            if (~var21 > ~var69.length) {
                                                                               int incrementValue$11 = var21;
                                                                               var21++;
                                                                               var20 = var10[incrementValue$11];
@@ -862,8 +1018,8 @@ final class rj extends ai {
                                                                       } else {
                                                                         int incrementValue$12 = var8;
                                                                         var8++;
-                                                                        var24 = var38.field_i[incrementValue$12] + 16 << -2004360766;
-                                                                        if ((var68.length ^ -1) >= (var21 ^ -1)) {
+                                                                        var24 = var38.field_i[incrementValue$12] + 16 << 2;
+                                                                        if (~var68.length >= ~var21) {
                                                                           var20 = -1;
                                                                           break L71;
                                                                         } else {
@@ -885,7 +1041,7 @@ final class rj extends ai {
                                                             }
                                                           } else {
                                                             L72: {
-                                                              if (-1 == (((rj) this).field_p[var24] ^ -1)) {
+                                                              if (((rj) this).field_p[var24] == 0) {
                                                                 break L72;
                                                               } else {
                                                                 L73: {
@@ -938,7 +1094,7 @@ final class rj extends ai {
                                                             break L75;
                                                           }
                                                         }
-                                                        ((rj) this).field_n[var23] = (short)(((rj) this).field_n[var23] + (da.b(-1 + var22, 2) << -448011410));
+                                                        ((rj) this).field_n[var23] = (short)(((rj) this).field_n[var23] + (da.b(-1 + var22, 2) << 14));
                                                         ((rj) this).field_p[var23] = var22;
                                                         var20--;
                                                         var23++;
@@ -947,7 +1103,7 @@ final class rj extends ai {
                                                     }
                                                   } else {
                                                     var19 = var19 + var38.d((byte) -90);
-                                                    ((rj) this).field_n[var20] = (short)(((rj) this).field_n[var20] + (var19 << -1030815928));
+                                                    ((rj) this).field_n[var20] = (short)(((rj) this).field_n[var20] + (var19 << 8));
                                                     var20++;
                                                     continue L16;
                                                   }
@@ -986,11 +1142,11 @@ final class rj extends ai {
                                     }
                                     L78: {
                                       var16_int = var38.d((byte) -102);
-                                      if ((var16_int ^ -1) >= -1) {
+                                      if (var16_int <= 0) {
                                         break L78;
                                       } else {
                                         var15.field_i = new byte[2 + 2 * var16_int];
-                                        var40.field_i[1] = (byte)64;
+                                        var40.field_i[1] = (byte) 64;
                                         break L78;
                                       }
                                     }

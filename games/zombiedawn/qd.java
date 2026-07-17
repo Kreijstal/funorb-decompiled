@@ -12,18 +12,9 @@ final class qd {
     public static void a(int param0) {
         field_c = null;
         field_d = null;
-        if (param0 > -40) {
-          field_f = null;
-          field_b = null;
-          field_f = null;
-          field_a = null;
-          return;
-        } else {
-          field_b = null;
-          field_f = null;
-          field_a = null;
-          return;
-        }
+        field_b = null;
+        field_f = null;
+        field_a = null;
     }
 
     final static void a(boolean param0, int param1) {

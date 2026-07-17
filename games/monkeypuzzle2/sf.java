@@ -41,7 +41,7 @@ final class sf extends ug {
 
     private final static void a(byte[] param0, int param1) {
         field_H = param0;
-        field_I = param1;
+        field_I = 0;
         field_r = 0;
     }
 
@@ -78,7 +78,7 @@ final class sf extends ug {
         ((sf) this).field_i = var2.e(-3);
         ((sf) this).field_J = var2.e(-81);
         if (((sf) this).field_J < 0) {
-            ((sf) this).field_J = ((sf) this).field_J ^ -1;
+            ((sf) this).field_J = ~((sf) this).field_J;
             ((sf) this).field_L = true;
         }
         int var3 = var2.e(-121);
@@ -100,6 +100,7 @@ final class sf extends ug {
 
     final static sf a(ad param0, String param1, String param2) {
         try {
+            sf var4_ref = null;
             if (!sf.a(param0)) {
                 boolean discarded$0 = param0.a(param2, true, param1);
                 return null;
@@ -108,13 +109,11 @@ final class sf extends ug {
             if (var3 == null) {
                 return null;
             }
-            sf var4 = null;
-            try {
-                var4 = new sf(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
+            Object var4 = null;
+            {
+                var4_ref = new sf(var3);
             }
-            return var4;
+            return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -152,7 +151,6 @@ final class sf extends ug {
         int var16 = 0;
         int var17_int = 0;
         Object var17 = null;
-        float[] var17_array = null;
         int var18_int = 0;
         float[] var18 = null;
         int var19 = 0;
@@ -668,7 +666,7 @@ final class sf extends ug {
                   var50 = var54;
                   var46 = var50;
                   var40 = var46;
-                  var17_array = var40;
+                  var17 = (Object) (Object) var40;
                   if (((sf) this).field_y) {
                     break L36;
                   } else {
@@ -726,7 +724,7 @@ final class sf extends ug {
               }
             }
             ((sf) this).field_y = stackIn_111_1 != 0;
-            return var17_array;
+            return (float[]) var17;
           } else {
             var42 = field_n[var14.field_b[var17_int]];
             var55 = field_w;
@@ -823,12 +821,13 @@ final class sf extends ug {
                       if ((var6 & -256) == 0) {
                         break L8;
                       } else {
-                        var6 = (var6 ^ -1) >> 31;
+                        var6 = ~var6 >> 31;
                         break L8;
                       }
                     }
+                    int incrementValue$1 = var3;
                     var3++;
-                    ((sf) this).field_v[var3] = (byte)(var6 - 128);
+                    ((sf) this).field_v[incrementValue$1] = (byte)(var6 - 128);
                     var5++;
                     continue L6;
                   }
@@ -862,6 +861,7 @@ final class sf extends ug {
 
     final static sf a(ad param0, int param1, int param2) {
         try {
+            sf var4_ref = null;
             if (!sf.a(param0)) {
                 boolean discarded$0 = param0.c(param1, param2, -125);
                 return null;
@@ -870,13 +870,11 @@ final class sf extends ug {
             if (var3 == null) {
                 return null;
             }
-            sf var4 = null;
-            try {
-                var4 = new sf(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
+            Object var4 = null;
+            {
+                var4_ref = new sf(var3);
             }
-            return var4;
+            return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -929,12 +927,13 @@ final class sf extends ug {
                     if ((var7 & -256) == 0) {
                       break L3;
                     } else {
-                      var7 = (var7 ^ -1) >> 31;
+                      var7 = ~var7 >> 31;
                       break L3;
                     }
                   }
+                  int incrementValue$1 = var2;
                   var2++;
-                  var1[var2] = (byte)(var7 - 128);
+                  var1[incrementValue$1] = (byte)(var7 - 128);
                   var6++;
                   continue L2;
                 } else {

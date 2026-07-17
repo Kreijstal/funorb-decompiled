@@ -31,7 +31,7 @@ final class tp {
                 ((tp) this).field_g = null;
                 return null;
               } else {
-                if ((((tp) this).field_d ^ -1L) != (((tp) this).field_g.field_q ^ -1L)) {
+                if (~((tp) this).field_d != ~((tp) this).field_g.field_q) {
                   ((tp) this).field_g = ((tp) this).field_g.field_s;
                   continue L0;
                 } else {
@@ -51,7 +51,7 @@ final class tp {
         field_c = null;
         field_f = null;
         field_e = null;
-        int var1 = 20 / ((11 - param0) / 56);
+        int var1 = 10;
     }
 
     final ms a(byte param0, long param1) {
@@ -61,7 +61,7 @@ final class tp {
         ms var4 = ((tp) this).field_h[(int)((long)(((tp) this).field_b + -1) & param1)];
         ((tp) this).field_g = var4.field_s;
         while (var4 != ((tp) this).field_g) {
-            if ((((tp) this).field_g.field_q ^ -1L) == (param1 ^ -1L)) {
+            if (~((tp) this).field_g.field_q == ~param1) {
                 var5 = ((tp) this).field_g;
                 ((tp) this).field_g = ((tp) this).field_g.field_s;
                 return var5;
@@ -97,22 +97,19 @@ final class tp {
 
     final void a(int param0, long param1, ms param2) {
         ms var5 = null;
-        if (param2.field_l != null) {
-            param2.c((byte) -76);
+        try {
+            if (param2.field_l != null) {
+                param2.c((byte) -76);
+            }
             var5 = ((tp) this).field_h[(int)(param1 & (long)(param0 + ((tp) this).field_b))];
             param2.field_l = var5.field_l;
             param2.field_s = var5;
             param2.field_l.field_s = param2;
             param2.field_q = param1;
             param2.field_s.field_l = param2;
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw ig.a((Throwable) (Object) runtimeException, "tp.G(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
-        var5 = ((tp) this).field_h[(int)(param1 & (long)(param0 + ((tp) this).field_b))];
-        param2.field_l = var5.field_l;
-        param2.field_s = var5;
-        param2.field_l.field_s = param2;
-        param2.field_q = param1;
-        param2.field_s.field_l = param2;
     }
 
     final ms c(int param0) {
@@ -122,7 +119,7 @@ final class tp {
         ms var6 = null;
         ms var9 = null;
         var3 = ArmiesOfGielinor.field_M ? 1 : 0;
-        if ((((tp) this).field_i ^ -1) < -1) {
+        if (((tp) this).field_i > 0) {
           if (((tp) this).field_h[((tp) this).field_i - 1] != ((tp) this).field_a) {
             var9 = ((tp) this).field_a;
             ((tp) this).field_a = var9.field_s;
@@ -136,8 +133,9 @@ final class tp {
                   return null;
                 }
               } else {
+                int fieldTemp$2 = ((tp) this).field_i;
                 ((tp) this).field_i = ((tp) this).field_i + 1;
-                var4 = ((tp) this).field_h[((tp) this).field_i].field_s;
+                var4 = ((tp) this).field_h[fieldTemp$2].field_s;
                 var6 = var4;
                 if (var4 != ((tp) this).field_h[-1 + ((tp) this).field_i]) {
                   ((tp) this).field_a = var6.field_s;
@@ -157,8 +155,9 @@ final class tp {
                 return null;
               }
             } else {
+              int fieldTemp$3 = ((tp) this).field_i;
               ((tp) this).field_i = ((tp) this).field_i + 1;
-              var4 = ((tp) this).field_h[((tp) this).field_i].field_s;
+              var4 = ((tp) this).field_h[fieldTemp$3].field_s;
               var5 = var4;
               if (var4 != ((tp) this).field_h[-1 + ((tp) this).field_i]) {
                 ((tp) this).field_a = var5.field_s;
@@ -180,13 +179,15 @@ final class tp {
         var2 = 0;
         L0: while (true) {
           if (var2 < param0) {
-            var3 = new ms();
-            ((tp) this).field_h[var2] = new ms();
+            ms dupTemp$2 = new ms();
+            var3 = dupTemp$2;
+            ((tp) this).field_h[var2] = dupTemp$2;
             var3.field_l = var3;
             var3.field_s = var3;
             var2++;
             continue L0;
           } else {
+            return;
           }
         }
     }

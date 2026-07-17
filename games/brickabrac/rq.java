@@ -9,20 +9,10 @@ final class rq {
     private static String field_z;
 
     public static void a(byte param0) {
-        if (param0 != -118) {
-          field_d = null;
-          field_d = null;
-          field_a = null;
-          field_b = null;
-          field_c = null;
-          return;
-        } else {
-          field_d = null;
-          field_a = null;
-          field_b = null;
-          field_c = null;
-          return;
-        }
+        field_d = null;
+        field_a = null;
+        field_b = null;
+        field_c = null;
     }
 
     static {

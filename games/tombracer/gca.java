@@ -42,22 +42,18 @@ final class gca {
     }
 
     final void a(byte param0, gca param1) {
-        ((gca) this).field_b = param1.field_b;
-        if (param0 >= -58) {
-          ((gca) this).field_h = 8;
-          ((gca) this).field_e = param1.field_e;
-          ((gca) this).field_h = param1.field_h;
-          ((gca) this).field_k = param1.field_k;
-          ((gca) this).field_c = param1.field_c;
-          ((gca) this).field_m = param1.field_m;
-          return;
-        } else {
-          ((gca) this).field_e = param1.field_e;
-          ((gca) this).field_h = param1.field_h;
-          ((gca) this).field_k = param1.field_k;
-          ((gca) this).field_c = param1.field_c;
-          ((gca) this).field_m = param1.field_m;
-          return;
+        try {
+            ((gca) this).field_b = param1.field_b;
+            if (param0 >= -58) {
+                ((gca) this).field_h = 8;
+            }
+            ((gca) this).field_e = param1.field_e;
+            ((gca) this).field_h = param1.field_h;
+            ((gca) this).field_k = param1.field_k;
+            ((gca) this).field_c = param1.field_c;
+            ((gca) this).field_m = param1.field_m;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "gca.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

@@ -13,9 +13,6 @@ final class oa {
     public static void a(int param0) {
         field_c = null;
         field_a = null;
-        if (param0 != 7463) {
-            return;
-        }
         field_b = null;
     }
 
@@ -28,29 +25,48 @@ final class oa {
             Runtime var3_ref = null;
             Long var4 = null;
             Object var5 = null;
+            int decompiledRegionSelector0 = 0;
             Throwable decompiledCaughtException = null;
             try {
               L0: {
-                var1 = Runtime.class.getMethod("maxMemory", new Class[0]);
-                var2 = -16 / ((33 - param0) / 62);
-                if (var1 == null) {
-                  break L0;
-                } else {
-                  try {
-                    var3_ref = Runtime.getRuntime();
-                    var5 = null;
-                    var4 = (Long) var1.invoke((Object) (Object) var3_ref, (Object[]) null);
-                    qb.field_g = (int)(var4.longValue() / 1048576L) + 1;
-                  } catch (java.lang.Throwable decompiledCaughtParameter) {
-                    decompiledCaughtException = decompiledCaughtParameter;
-                    return;
+                L1: {
+                  var1 = Runtime.class.getMethod("maxMemory", new Class[0]);
+                  var2 = -8;
+                  if (var1 == null) {
+                    break L1;
+                  } else {
+                    try {
+                      L2: {
+                        var3_ref = Runtime.getRuntime();
+                        var5 = null;
+                        var4 = (Long) var1.invoke((Object) (Object) var3_ref, (Object[]) null);
+                        qb.field_g = (int)(var4.longValue() / 1048576L) + 1;
+                        decompiledRegionSelector0 = 0;
+                        break L2;
+                      }
+                    } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                      decompiledCaughtException = decompiledCaughtParameter0;
+                      L3: {
+                        var3 = decompiledCaughtException;
+                        decompiledRegionSelector0 = 1;
+                        break L3;
+                      }
+                    }
+                    if (decompiledRegionSelector0 == 0) {
+                      return;
+                    } else {
+                      break L1;
+                    }
                   }
-                  break L0;
                 }
+                break L0;
               }
-            } catch (java.lang.Exception decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
-              var3 = decompiledCaughtException;
+            } catch (java.lang.Exception decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L4: {
+                var1_ref = (Exception) (Object) decompiledCaughtException;
+                break L4;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

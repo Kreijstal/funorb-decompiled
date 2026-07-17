@@ -15,15 +15,17 @@ final class dca extends or {
         var4 = param0 * 2;
         if (param1) {
           dca.g(-128);
-          param2 = (byte)(127 + (param2 >> 17049473 & 127));
+          param2 = (byte)(127 + (param2 >> 1 & 127));
+          int incrementValue$4 = var4;
           var4++;
-          ((dca) this).field_p[var4] = (byte)param2;
+          ((dca) this).field_p[incrementValue$4] = (byte)param2;
           ((dca) this).field_p[var4] = (byte)param2;
           return;
         } else {
-          param2 = (byte)(127 + (param2 >> 17049473 & 127));
+          param2 = (byte)(127 + (param2 >> 1 & 127));
+          int incrementValue$5 = var4;
           var4++;
-          ((dca) this).field_p[var4] = (byte)param2;
+          ((dca) this).field_p[incrementValue$5] = (byte)param2;
           ((dca) this).field_p[var4] = (byte)param2;
           return;
         }

@@ -7,7 +7,7 @@ final class bna extends is {
 
     final static void e(int param0) {
         ff.field_o.field_g = 0;
-        ff.field_o.field_k = param0;
+        ff.field_o.field_k = 0;
     }
 
     final Object a(int param0) {
@@ -20,7 +20,17 @@ final class bna extends is {
 
     bna(Object param0, int param1) {
         super(param1);
-        ((bna) this).field_l = new java.lang.ref.SoftReference(param0);
+        try {
+            try {
+                ((bna) this).field_l = new java.lang.ref.SoftReference(param0);
+            } catch (RuntimeException runtimeException) {
+                throw rta.a((Throwable) (Object) runtimeException, "bna.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+            throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+            throw new RuntimeException(decompiledCheckedException);
+        }
     }
 
     final boolean e(byte param0) {
@@ -32,11 +42,7 @@ final class bna extends is {
     }
 
     public static void a(boolean param0) {
-        if (!param0) {
-            bna.a(false);
-            field_m = null;
-            return;
-        }
+        bna.a(false);
         field_m = null;
     }
 

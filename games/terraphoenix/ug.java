@@ -10,9 +10,6 @@ final class ug {
     public static void a(int param0) {
         field_a = null;
         field_c = null;
-        if (param0 != -11978) {
-            field_a = null;
-        }
     }
 
     static {

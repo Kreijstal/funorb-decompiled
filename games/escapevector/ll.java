@@ -21,7 +21,7 @@ final class ll extends hg {
     final static void b(boolean param0) {
         ll var1 = null;
         c var2 = null;
-        var1 = (ll) (Object) jl.field_n.a(param0);
+        var1 = (ll) (Object) jl.field_n.a(false);
         if (var1 == null) {
           nm.a(16);
           return;
@@ -39,7 +39,7 @@ final class ll extends hg {
           var5 = EscapeVector.field_A;
           if (param3 > 0) {
             if (30 <= param3) {
-              if ((param3 ^ -1) >= -81) {
+              if (param3 <= 80) {
                 ea.field_f.e(8, param1);
                 if (param2 == 8) {
                   if (param3 > 50) {
@@ -47,7 +47,7 @@ final class ll extends hg {
                       mf.a(param0, -f.field_o.field_A + 632, 2 * (-param3 + 80), f.field_o, param2 ^ -112);
                       return;
                     } else {
-                      if ((param3 ^ -1) >= -81) {
+                      if (param3 <= 80) {
                         f.field_o.e(632 + -f.field_o.field_A, param0);
                         return;
                       } else {
@@ -69,7 +69,7 @@ final class ll extends hg {
                       mf.a(param0, -f.field_o.field_A + 632, 2 * (-param3 + 80), f.field_o, param2 ^ -112);
                       return;
                     } else {
-                      if ((param3 ^ -1) >= -81) {
+                      if (param3 <= 80) {
                         f.field_o.e(632 + -f.field_o.field_A, param0);
                         return;
                       } else {
@@ -86,7 +86,7 @@ final class ll extends hg {
                   }
                 }
               } else {
-                if (-96 < (param3 ^ -1)) {
+                if (param3 < 95) {
                   mf.a(param1, 8, (param3 - 80) * 4, ea.field_f, param2 + -115);
                   if (param2 == 8) {
                     if (param3 > 50) {
@@ -94,7 +94,7 @@ final class ll extends hg {
                         mf.a(param0, -f.field_o.field_A + 632, 2 * (-param3 + 80), f.field_o, param2 ^ -112);
                         return;
                       } else {
-                        if ((param3 ^ -1) >= -81) {
+                        if (param3 <= 80) {
                           f.field_o.e(632 + -f.field_o.field_A, param0);
                           return;
                         } else {
@@ -116,7 +116,7 @@ final class ll extends hg {
                         mf.a(param0, -f.field_o.field_A + 632, 2 * (-param3 + 80), f.field_o, param2 ^ -112);
                         return;
                       } else {
-                        if ((param3 ^ -1) >= -81) {
+                        if (param3 <= 80) {
                           f.field_o.e(632 + -f.field_o.field_A, param0);
                           return;
                         } else {
@@ -150,7 +150,7 @@ final class ll extends hg {
               mf.a(param0, -f.field_o.field_A + 632, 2 * (-param3 + 80), f.field_o, param2 ^ -112);
               return;
             } else {
-              if ((param3 ^ -1) >= -81) {
+              if (param3 <= 80) {
                 f.field_o.e(632 + -f.field_o.field_A, param0);
                 return;
               } else {
@@ -172,7 +172,7 @@ final class ll extends hg {
               mf.a(param0, -f.field_o.field_A + 632, 2 * (-param3 + 80), f.field_o, param2 ^ -112);
               return;
             } else {
-              if ((param3 ^ -1) >= -81) {
+              if (param3 <= 80) {
                 f.field_o.e(632 + -f.field_o.field_A, param0);
                 return;
               } else {
@@ -192,60 +192,20 @@ final class ll extends hg {
 
     public static void a(byte param0) {
         field_h = null;
-        if (param0 != -77) {
-            field_h = null;
-        }
     }
 
     ll() {
     }
 
     final static void a(boolean param0) {
-        CharSequence var2 = null;
-        CharSequence var3 = null;
-        c stackIn_1_0 = null;
-        c stackIn_2_0 = null;
-        c stackIn_3_0 = null;
-        int stackIn_3_1 = 0;
-        c stackOut_0_0 = null;
-        c stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        c stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
-        L0: {
-          stackOut_0_0 = om.field_g;
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_1_0 = stackOut_0_0;
-          if (param0) {
-            stackOut_2_0 = (c) (Object) stackIn_2_0;
-            stackOut_2_1 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
-            break L0;
-          } else {
-            stackOut_1_0 = (c) (Object) stackIn_1_0;
-            stackOut_1_1 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
-            break L0;
-          }
-        }
-        ck.field_r = ((c) (Object) stackIn_3_0).c(stackIn_3_1 != 0);
-        if (!param0) {
-          field_h = null;
-          var2 = (CharSequence) (Object) ck.field_r;
-          cc.field_k = sf.a(-101, var2);
-          return;
-        } else {
-          var3 = (CharSequence) (Object) ck.field_r;
-          cc.field_k = sf.a(-101, var3);
-          return;
-        }
+        ck.field_r = om.field_g.c(false);
+        CharSequence var2 = (CharSequence) (Object) ck.field_r;
+        cc.field_k = sf.a(-101, var2);
     }
 
     final static boolean d(int param0) {
         L0: {
-          if (0 == (hi.field_r ^ -1)) {
+          if (hi.field_r == -1) {
             if (bo.a(30000, 1)) {
               hi.field_r = om.field_g.e(param0 ^ 10550);
               om.field_g.field_m = 0;
@@ -258,7 +218,7 @@ final class ll extends hg {
           }
         }
         L1: {
-          if (1 == (hi.field_r ^ -1)) {
+          if (hi.field_r == -2) {
             if (!bo.a(30000, 2)) {
               return false;
             } else {

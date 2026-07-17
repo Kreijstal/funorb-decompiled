@@ -7,71 +7,112 @@ final class gl {
     static String field_a;
 
     public static void a(byte param0) {
-        if (param0 < 42) {
-            field_a = null;
-            field_c = null;
-            field_a = null;
-            return;
-        }
         field_c = null;
         field_a = null;
     }
 
     gl(int[] param0) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        var2 = 1;
-        L0: while (true) {
-          if ((param0.length - -(param0.length >> -1578390015) ^ -1) > (var2 ^ -1)) {
-            ((gl) this).field_b = new int[var2 + var2];
-            var3 = 0;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        try {
+          L0: {
+            var2_int = 1;
             L1: while (true) {
-              if (var2 + var2 <= var3) {
+              if (param0.length - -(param0.length >> 1) < var2_int) {
+                ((gl) this).field_b = new int[var2_int + var2_int];
                 var3 = 0;
                 L2: while (true) {
-                  if ((param0.length ^ -1) < (var3 ^ -1)) {
-                    var4 = param0[var3] & -1 + var2;
+                  if (var2_int + var2_int <= var3) {
+                    var3 = 0;
                     L3: while (true) {
-                      if (((gl) this).field_b[var4 + var4 + 1] == -1) {
-                        ((gl) this).field_b[var4 + var4] = param0[var3];
-                        ((gl) this).field_b[1 + var4 + var4] = var3;
-                        var3++;
-                        continue L2;
+                      if (param0.length <= var3) {
+                        break L0;
                       } else {
-                        var4 = -1 + var2 & var4 - -1;
-                        continue L3;
+                        var4 = param0[var3] & -1 + var2_int;
+                        L4: while (true) {
+                          if (((gl) this).field_b[var4 + var4 + 1] == -1) {
+                            ((gl) this).field_b[var4 + var4] = param0[var3];
+                            ((gl) this).field_b[1 + var4 + var4] = var3;
+                            var3++;
+                            continue L3;
+                          } else {
+                            var4 = -1 + var2_int & var4 - -1;
+                            continue L4;
+                          }
+                        }
                       }
                     }
                   } else {
+                    ((gl) this).field_b[var3] = -1;
+                    var3++;
+                    continue L2;
                   }
                 }
               } else {
-                ((gl) this).field_b[var3] = -1;
-                var3++;
+                var2_int = var2_int << 1;
                 continue L1;
               }
             }
-          } else {
-            var2 = var2 << 1;
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L5: {
+            var2 = decompiledCaughtException;
+            stackOut_14_0 = (RuntimeException) var2;
+            stackOut_14_1 = new StringBuilder().append("gl.<init>(");
+            stackIn_16_0 = stackOut_14_0;
+            stackIn_16_1 = stackOut_14_1;
+            stackIn_15_0 = stackOut_14_0;
+            stackIn_15_1 = stackOut_14_1;
+            if (param0 == null) {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "null";
+              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_1 = stackOut_16_1;
+              stackIn_17_2 = stackOut_16_2;
+              break L5;
+            } else {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "{...}";
+              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_1 = stackOut_15_1;
+              stackIn_17_2 = stackOut_15_2;
+              break L5;
+            }
+          }
+          throw kk.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
         }
     }
 
     final static boolean a(da param0, byte param1) {
-        if (param1 != -37) {
-            field_a = null;
-            return param0.h(1, param1 + 44) == 1 ? true : false;
-        }
-        return param0.h(1, param1 + 44) == 1 ? true : false;
+        return param0.h(1, 7) == 1;
     }
 
     final int a(int param0, byte param1) {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        var3 = -1 + (((gl) this).field_b.length >> 1563688769);
+        var3 = -1 + (((gl) this).field_b.length >> 1);
         if (param1 == 24) {
           var4 = param0 & var3;
           L0: while (true) {
@@ -93,7 +134,8 @@ final class gl {
     }
 
     final static int a(boolean param0, int param1, byte param2, CharSequence param3) {
-        int var4 = 0;
+        RuntimeException var4 = null;
+        int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -101,116 +143,174 @@ final class gl {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
+        int stackIn_43_0 = 0;
+        RuntimeException stackIn_45_0 = null;
+        StringBuilder stackIn_45_1 = null;
+        RuntimeException stackIn_46_0 = null;
+        StringBuilder stackIn_46_1 = null;
+        RuntimeException stackIn_47_0 = null;
+        StringBuilder stackIn_47_1 = null;
+        String stackIn_47_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_42_0 = 0;
+        RuntimeException stackOut_44_0 = null;
+        StringBuilder stackOut_44_1 = null;
+        RuntimeException stackOut_46_0 = null;
+        StringBuilder stackOut_46_1 = null;
+        String stackOut_46_2 = null;
+        RuntimeException stackOut_45_0 = null;
+        StringBuilder stackOut_45_1 = null;
+        String stackOut_45_2 = null;
         var11 = HoldTheLine.field_D;
-        if (-3 < (param1 ^ -1)) {
-          throw new IllegalArgumentException("" + param1);
-        } else {
-          if ((param1 ^ -1) >= -37) {
-            var4 = 0;
-            var5 = 0;
-            var6 = 0;
-            var7 = param3.length();
-            var8 = 0;
-            L0: while (true) {
-              if (var7 <= var8) {
-                if (var5 == 0) {
-                  throw new NumberFormatException();
-                } else {
-                  var8 = -117 % ((-42 - param2) / 58);
-                  return var6;
-                }
+        try {
+          L0: {
+            L1: {
+              if (param1 < 2) {
+                break L1;
               } else {
-                L1: {
-                  L2: {
-                    var9 = param3.charAt(var8);
-                    if (var8 != 0) {
-                      break L2;
-                    } else {
-                      if (var9 == 45) {
-                        var4 = 1;
-                        var8++;
-                        break L1;
+                if (param1 <= 36) {
+                  var4_int = 0;
+                  var5 = 0;
+                  var6 = 0;
+                  var7 = param3.length();
+                  var8 = 0;
+                  L2: while (true) {
+                    if (var7 <= var8) {
+                      if (var5 == 0) {
+                        throw new NumberFormatException();
                       } else {
-                        if (var9 != 43) {
-                          break L2;
-                        } else {
-                          if (!param0) {
-                            break L2;
+                        var8 = -117 % ((-42 - param2) / 58);
+                        stackOut_42_0 = var6;
+                        stackIn_43_0 = stackOut_42_0;
+                        break L0;
+                      }
+                    } else {
+                      L3: {
+                        L4: {
+                          var9 = param3.charAt(var8);
+                          if (var8 != 0) {
+                            break L4;
                           } else {
-                            break L1;
+                            if (var9 == 45) {
+                              var4_int = 1;
+                              var8++;
+                              break L3;
+                            } else {
+                              if (var9 != 43) {
+                                break L4;
+                              } else {
+                                if (!param0) {
+                                  break L4;
+                                } else {
+                                  var8++;
+                                  break L3;
+                                }
+                              }
+                            }
+                          }
+                        }
+                        L5: {
+                          L6: {
+                            if (var9 < 48) {
+                              break L6;
+                            } else {
+                              if (var9 > 57) {
+                                break L6;
+                              } else {
+                                var9 -= 48;
+                                break L5;
+                              }
+                            }
+                          }
+                          L7: {
+                            if (var9 < 65) {
+                              break L7;
+                            } else {
+                              if (90 >= var9) {
+                                var9 -= 55;
+                                break L5;
+                              } else {
+                                break L7;
+                              }
+                            }
+                          }
+                          L8: {
+                            if (var9 < 97) {
+                              break L8;
+                            } else {
+                              if (122 >= var9) {
+                                var9 -= 87;
+                                break L5;
+                              } else {
+                                break L8;
+                              }
+                            }
+                          }
+                          throw new NumberFormatException();
+                        }
+                        if (param1 <= var9) {
+                          throw new NumberFormatException();
+                        } else {
+                          L9: {
+                            if (var4_int == 0) {
+                              break L9;
+                            } else {
+                              var9 = -var9;
+                              break L9;
+                            }
+                          }
+                          var10 = var6 * param1 - -var9;
+                          if (var10 / param1 != var6) {
+                            throw new NumberFormatException();
+                          } else {
+                            var6 = var10;
+                            var5 = 1;
+                            break L3;
                           }
                         }
                       }
+                      var8++;
+                      continue L2;
                     }
                   }
-                  L3: {
-                    L4: {
-                      if (var9 < 48) {
-                        break L4;
-                      } else {
-                        if (var9 > 57) {
-                          break L4;
-                        } else {
-                          var9 -= 48;
-                          break L3;
-                        }
-                      }
-                    }
-                    L5: {
-                      if (var9 < 65) {
-                        break L5;
-                      } else {
-                        if (90 >= var9) {
-                          var9 -= 55;
-                          break L3;
-                        } else {
-                          break L5;
-                        }
-                      }
-                    }
-                    L6: {
-                      if (var9 < 97) {
-                        break L6;
-                      } else {
-                        if (122 >= var9) {
-                          var9 -= 87;
-                          break L3;
-                        } else {
-                          break L6;
-                        }
-                      }
-                    }
-                    throw new NumberFormatException();
-                  }
-                  if ((param1 ^ -1) >= (var9 ^ -1)) {
-                    throw new NumberFormatException();
-                  } else {
-                    L7: {
-                      if (var4 == 0) {
-                        break L7;
-                      } else {
-                        var9 = -var9;
-                        break L7;
-                      }
-                    }
-                    var10 = var6 * param1 - -var9;
-                    if ((var10 / param1 ^ -1) != (var6 ^ -1)) {
-                      throw new NumberFormatException();
-                    } else {
-                      var6 = var10;
-                      var5 = 1;
-                      break L1;
-                    }
-                  }
+                } else {
+                  break L1;
                 }
-                var8++;
-                continue L0;
               }
             }
-          } else {
             throw new IllegalArgumentException("" + param1);
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L10: {
+            var4 = decompiledCaughtException;
+            stackOut_44_0 = (RuntimeException) var4;
+            stackOut_44_1 = new StringBuilder().append("gl.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackIn_46_0 = stackOut_44_0;
+            stackIn_46_1 = stackOut_44_1;
+            stackIn_45_0 = stackOut_44_0;
+            stackIn_45_1 = stackOut_44_1;
+            if (param3 == null) {
+              stackOut_46_0 = (RuntimeException) (Object) stackIn_46_0;
+              stackOut_46_1 = (StringBuilder) (Object) stackIn_46_1;
+              stackOut_46_2 = "null";
+              stackIn_47_0 = stackOut_46_0;
+              stackIn_47_1 = stackOut_46_1;
+              stackIn_47_2 = stackOut_46_2;
+              break L10;
+            } else {
+              stackOut_45_0 = (RuntimeException) (Object) stackIn_45_0;
+              stackOut_45_1 = (StringBuilder) (Object) stackIn_45_1;
+              stackOut_45_2 = "{...}";
+              stackIn_47_0 = stackOut_45_0;
+              stackIn_47_1 = stackOut_45_1;
+              stackIn_47_2 = stackOut_45_2;
+              break L10;
+            }
+          }
+          throw kk.a((Throwable) (Object) stackIn_47_0, stackIn_47_2 + 41);
         }
+        return stackIn_43_0;
     }
 
     static {

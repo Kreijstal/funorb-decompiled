@@ -11,12 +11,14 @@ final class rg extends pa {
     static int field_F;
 
     final static void a(String param0, int param1, String param2) {
-        if (param1 >= -10) {
-            field_F = 94;
+        try {
+            if (param1 >= -10) {
+                field_F = 94;
+            }
             r.a(param2, 126, false, param0);
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw sh.a((Throwable) (Object) runtimeException, "rg.DA(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
-        r.a(param2, 126, false, param0);
     }
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -98,7 +100,11 @@ final class rg extends pa {
 
     rg(int param0, int param1, int param2, int param3, io param4, ga param5) {
         super(param0, param1, param2, param3, param4, (sk) null);
-        ((rg) this).field_z = param5;
+        try {
+            ((rg) this).field_z = param5;
+        } catch (RuntimeException runtimeException) {
+            throw sh.a((Throwable) (Object) runtimeException, "rg.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void g(int param0) {
@@ -117,28 +123,87 @@ final class rg extends pa {
     }
 
     final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, ga param6) {
-        if (param1 == 1) {
-          if (((rg) this).b(param3, 21224, param2, param4, param0)) {
-            if (!super.a(param0, 1, param2, param3, param4, param5, param6)) {
-              return false;
-            } else {
-              return true;
+        RuntimeException var8 = null;
+        int stackIn_6_0 = 0;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_4_0 = 0;
+        int stackOut_5_0 = 0;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param1 == 1) {
+                break L1;
+              } else {
+                field_H = 43;
+                break L1;
+              }
             }
-          } else {
-            return false;
-          }
-        } else {
-          field_H = 43;
-          if (((rg) this).b(param3, 21224, param2, param4, param0)) {
-            if (!super.a(param0, 1, param2, param3, param4, param5, param6)) {
-              return false;
-            } else {
-              return true;
+            L2: {
+              L3: {
+                if (!((rg) this).b(param3, 21224, param2, param4, param0)) {
+                  break L3;
+                } else {
+                  if (!super.a(param0, 1, param2, param3, param4, param5, param6)) {
+                    break L3;
+                  } else {
+                    stackOut_4_0 = 1;
+                    stackIn_6_0 = stackOut_4_0;
+                    break L2;
+                  }
+                }
+              }
+              stackOut_5_0 = 0;
+              stackIn_6_0 = stackOut_5_0;
+              break L2;
             }
-          } else {
-            return false;
+            break L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var8 = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var8;
+            stackOut_7_1 = new StringBuilder().append("rg.AA(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44);
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param6 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L4;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L4;
+            }
+          }
+          throw sh.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
         }
+        return stackIn_6_0 != 0;
     }
 
     final void b(boolean param0) {
@@ -146,28 +211,20 @@ final class rg extends pa {
     }
 
     final static void a(oi param0, boolean param1) {
-        int var2 = 0;
+        int var2_int = 0;
         vn var3 = null;
-        if (hm.field_E != null) {
-          var2 = param0.field_I - -param0.field_x;
-          if (param1) {
-            field_H = 9;
-            var3 = new vn(var2, var2);
+        if (hm.field_E == null) {
+            return;
+        }
+        try {
+            var2_int = param0.field_I - -param0.field_x;
+            var3 = new vn(var2_int, var2_int);
             var3.a();
-            hm.field_E.d(0, 0, var2, var2);
+            hm.field_E.d(0, 0, var2_int, var2_int);
             cn.field_f.b(44);
             hm.field_E = var3;
-            return;
-          } else {
-            var3 = new vn(var2, var2);
-            var3.a();
-            hm.field_E.d(0, 0, var2, var2);
-            cn.field_f.b(44);
-            hm.field_E = var3;
-            return;
-          }
-        } else {
-          return;
+        } catch (RuntimeException runtimeException) {
+            throw sh.a((Throwable) (Object) runtimeException, "rg.BA(" + (param0 != null ? "{...}" : "null") + 44 + 0 + 41);
         }
     }
 

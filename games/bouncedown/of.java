@@ -21,12 +21,6 @@ final class of {
 
     public static void a(boolean param0) {
         field_d = null;
-        if (!param0) {
-            field_b = null;
-            field_b = null;
-            field_a = null;
-            return;
-        }
         field_b = null;
         field_a = null;
     }

@@ -21,35 +21,87 @@ final class id {
         field_i = null;
         field_b = null;
         field_c = null;
-        if (param0 != 8192) {
-            field_i = null;
-        }
     }
 
     final static jh a(byte param0, String param1, int param2) {
         ic var3 = null;
-        if (param0 != -34) {
-          field_b = null;
-          var3 = new ic();
-          ((jh) (Object) var3).field_f = param1;
-          ((jh) (Object) var3).field_e = param2;
-          return (jh) (Object) var3;
-        } else {
-          var3 = new ic();
-          ((jh) (Object) var3).field_f = param1;
-          ((jh) (Object) var3).field_e = param2;
-          return (jh) (Object) var3;
+        RuntimeException var3_ref = null;
+        ic stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        ic stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 == -34) {
+                break L1;
+              } else {
+                field_b = null;
+                break L1;
+              }
+            }
+            var3 = new ic();
+            ((jh) (Object) var3).field_f = param1;
+            ((jh) (Object) var3).field_e = param2;
+            stackOut_2_0 = (ic) var3;
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3_ref = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var3_ref;
+            stackOut_4_1 = new StringBuilder().append("id.B(").append(param0).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param1 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw lj.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param2 + 41);
         }
+        return (jh) (Object) stackIn_3_0;
     }
 
     final int a(int param0) {
         if (!((id) this).field_j) {
-          if (-3 != (((id) this).field_g ^ -1)) {
+          if (((id) this).field_g != 2) {
             if (param0 >= 25) {
               if (kf.field_f == ((id) this).field_k) {
                 return 1;
               } else {
-                if (-3 == (ha.field_g ^ -1)) {
+                if (ha.field_g == 2) {
                   if (!fa.a(((id) this).field_m, (byte) 66)) {
                     return 0;
                   } else {
@@ -68,7 +120,7 @@ final class id {
                 if (kf.field_f == ((id) this).field_k) {
                   return 1;
                 } else {
-                  if (-3 == (ha.field_g ^ -1)) {
+                  if (ha.field_g == 2) {
                     if (!fa.a(((id) this).field_m, (byte) 66)) {
                       return 0;
                     } else {

@@ -9,11 +9,7 @@ class rf {
     static int field_c;
 
     final static String c(int param0) {
-        if (param0 != 1) {
-            rf.b(false);
-            return se.field_p.a(param0 ^ -14);
-        }
-        return se.field_p.a(param0 ^ -14);
+        return se.field_p.a(-13);
     }
 
     final boolean a(byte param0) {
@@ -45,11 +41,6 @@ class rf {
     }
 
     public static void b(boolean param0) {
-        if (param0) {
-            rf.b(false);
-            field_e = null;
-            return;
-        }
         field_e = null;
     }
 

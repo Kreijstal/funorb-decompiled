@@ -2231,7 +2231,7 @@ final class hl extends wg {
           if (param0.field_h.length == 0) {
             return null;
           } else {
-            return new hl(param0, param1, param2, param3);
+            return new hl(param0, param1, param2, 8192);
           }
         } else {
           return null;

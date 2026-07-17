@@ -115,26 +115,16 @@ final class jk extends ki {
     }
 
     final static void a(int param0, byte param1) {
-        pi var2 = null;
-        int var3 = 0;
-        var2 = k.field_h;
-        var2.e(param1 ^ -13319, param0);
+        pi var2 = k.field_h;
+        var2.e(-13413, param0);
         var2.field_l = var2.field_l + 1;
-        var3 = var2.field_l;
+        int var3 = var2.field_l;
         var2.a(6, 2);
-        var2.a(rh.field_d, param1 + -99, 0, rh.field_d.length);
+        var2.a(rh.field_d, -1, 0, rh.field_d.length);
         var2.a(-125, bb.field_e);
-        var2.a(param1 ^ -12, mf.field_c);
-        if (param1 != 98) {
-          jk.d((byte) 3);
-          var2.a(lj.field_p, -1, 0, lj.field_p.length);
-          var2.d((byte) 126, -var3 + var2.field_l);
-          return;
-        } else {
-          var2.a(lj.field_p, -1, 0, lj.field_p.length);
-          var2.d((byte) 126, -var3 + var2.field_l);
-          return;
-        }
+        var2.a(-106, mf.field_c);
+        var2.a(lj.field_p, -1, 0, lj.field_p.length);
+        var2.d((byte) 126, -var3 + var2.field_l);
     }
 
     final void a(int param0, byte param1, int param2, int param3, int param4) {

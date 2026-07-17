@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.lang.String;
+
 final class vq {
     static lg field_i;
     int[] field_D;
@@ -42,84 +44,62 @@ final class vq {
 
     final static void a(int param0) {
         int[] var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        Object var5 = null;
-        int[] var6 = null;
-        int[] var7 = null;
-        int[] var8 = null;
-        int[] var9 = null;
-        int[] var10 = null;
+        int[] var5 = null;
+        RuntimeException decompiledCaughtException = null;
         var4 = Vertigo2.field_L ? 1 : 0;
-        if (param0 != 256) {
-          var5 = null;
-          String discarded$2 = vq.a((java.applet.Applet) null, (byte) 54);
-          var9 = eb.field_g;
-          var7 = var9;
-          var6 = var7;
-          var1 = var6;
-          var2 = 0;
-          var3 = var9.length;
-          L0: while (true) {
-            if (var2 >= var3) {
-              return;
-            } else {
-              var2++;
-              var6[var2] = 0;
-              var2++;
-              var6[var2] = 0;
-              var2++;
-              var6[var2] = 0;
-              var2++;
-              var6[var2] = 0;
-              var2++;
-              var6[var2] = 0;
-              var2++;
-              var6[var2] = 0;
-              var2++;
-              var6[var2] = 0;
-              var2++;
-              var6[var2] = 0;
-              continue L0;
+        try {
+          L0: {
+            var5 = eb.field_g;
+            var1 = var5;
+            var2 = 0;
+            var3 = var5.length;
+            L1: while (true) {
+              if (var2 >= var3) {
+                break L0;
+              } else {
+                int incrementValue$40 = var2;
+                var2++;
+                var5[incrementValue$40] = 0;
+                int incrementValue$41 = var2;
+                var2++;
+                var5[incrementValue$41] = 0;
+                int incrementValue$42 = var2;
+                var2++;
+                var5[incrementValue$42] = 0;
+                int incrementValue$43 = var2;
+                var2++;
+                var5[incrementValue$43] = 0;
+                int incrementValue$44 = var2;
+                var2++;
+                var5[incrementValue$44] = 0;
+                int incrementValue$45 = var2;
+                var2++;
+                var5[incrementValue$45] = 0;
+                int incrementValue$46 = var2;
+                var2++;
+                var5[incrementValue$46] = 0;
+                int incrementValue$47 = var2;
+                var2++;
+                var5[incrementValue$47] = 0;
+                continue L1;
+              }
             }
           }
-        } else {
-          var10 = eb.field_g;
-          var8 = var10;
-          var6 = var8;
-          var1 = var6;
-          var2 = 0;
-          var3 = var10.length;
-          L1: while (true) {
-            if (var2 >= var3) {
-              return;
-            } else {
-              var2++;
-              var6[var2] = 0;
-              var2++;
-              var6[var2] = 0;
-              var2++;
-              var6[var2] = 0;
-              var2++;
-              var6[var2] = 0;
-              var2++;
-              var6[var2] = 0;
-              var2++;
-              var6[var2] = 0;
-              var2++;
-              var6[var2] = 0;
-              var2++;
-              var6[var2] = 0;
-              continue L1;
-            }
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw wn.a((Throwable) (Object) var1_ref, "vq.B(" + 256 + 41);
         }
     }
 
     final static String a(java.applet.Applet param0, byte param1) {
         try {
             Throwable var2 = null;
+            RuntimeException var2_ref = null;
             String var3 = null;
             String var4 = null;
             String[] var5 = null;
@@ -128,7 +108,24 @@ final class vq {
             int var8 = 0;
             String var9 = null;
             String stackIn_9_0 = null;
+            String stackIn_16_0 = null;
+            RuntimeException stackIn_18_0 = null;
+            StringBuilder stackIn_18_1 = null;
+            RuntimeException stackIn_19_0 = null;
+            StringBuilder stackIn_19_1 = null;
+            RuntimeException stackIn_20_0 = null;
+            StringBuilder stackIn_20_1 = null;
+            String stackIn_20_2 = null;
             String stackOut_8_0 = null;
+            String stackOut_15_0 = null;
+            RuntimeException stackOut_17_0 = null;
+            StringBuilder stackOut_17_1 = null;
+            RuntimeException stackOut_18_0 = null;
+            StringBuilder stackOut_18_1 = null;
+            String stackOut_18_2 = null;
+            RuntimeException stackOut_19_0 = null;
+            StringBuilder stackOut_19_1 = null;
+            String stackOut_19_2 = null;
             int statePc = 0;
             Throwable caughtException = null;
             stateLoop: while (true) {
@@ -195,7 +192,7 @@ final class vq {
                     case 5: {
                         try {
                             var7 = var5[var6].indexOf('=');
-                            if ((var7 ^ -1) > -1) {
+                            if (var7 < 0) {
                                 statePc = 10;
                             } else {
                                 statePc = 6;
@@ -258,23 +255,91 @@ final class vq {
                         }
                     }
                     case 12: {
-                        var2 = caughtException;
-                        statePc = 13;
-                        continue stateLoop;
+                        try {
+                            var2 = caughtException;
+                            statePc = 13;
+                            continue stateLoop;
+                        } catch (Throwable stateCaught_12) {
+                            caughtException = stateCaught_12;
+                            statePc = 17;
+                            continue stateLoop;
+                        }
                     }
                     case 13: {
-                        if (null != v.field_b) {
-                            statePc = 15;
-                        } else {
+                        try {
+                            if (null != v.field_b) {
+                                statePc = 15;
+                            } else {
+                                statePc = 14;
+                            }
+                            continue stateLoop;
+                        } catch (Throwable stateCaught_13) {
+                            caughtException = stateCaught_13;
+                            statePc = 17;
+                            continue stateLoop;
+                        }
+                    }
+                    case 14: {
+                        try {
+                            return param0.getParameter("settings");
+                        } catch (Throwable stateCaught_14) {
+                            caughtException = stateCaught_14;
+                            statePc = 17;
+                            continue stateLoop;
+                        }
+                    }
+                    case 15: {
+                        try {
+                            stackOut_15_0 = v.field_b;
+                            stackIn_16_0 = stackOut_15_0;
                             statePc = 16;
+                            continue stateLoop;
+                        } catch (Throwable stateCaught_15) {
+                            caughtException = stateCaught_15;
+                            statePc = 17;
+                            continue stateLoop;
+                        }
+                    }
+                    case 16: {
+                        return stackIn_16_0;
+                    }
+                    case 17: {
+                        var2_ref = (RuntimeException) (Object) caughtException;
+                        stackOut_17_0 = (RuntimeException) var2_ref;
+                        stackOut_17_1 = new StringBuilder().append("vq.A(");
+                        stackIn_19_0 = stackOut_17_0;
+                        stackIn_19_1 = stackOut_17_1;
+                        stackIn_18_0 = stackOut_17_0;
+                        stackIn_18_1 = stackOut_17_1;
+                        if (param0 == null) {
+                            statePc = 19;
+                        } else {
+                            statePc = 18;
                         }
                         continue stateLoop;
                     }
-                    case 15: {
-                        return v.field_b;
+                    case 18: {
+                        stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+                        stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+                        stackOut_18_2 = "{...}";
+                        stackIn_20_0 = stackOut_18_0;
+                        stackIn_20_1 = stackOut_18_1;
+                        stackIn_20_2 = stackOut_18_2;
+                        statePc = 20;
+                        continue stateLoop;
                     }
-                    case 16: {
-                        return param0.getParameter("settings");
+                    case 19: {
+                        stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+                        stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+                        stackOut_19_2 = "null";
+                        stackIn_20_0 = stackOut_19_0;
+                        stackIn_20_1 = stackOut_19_1;
+                        stackIn_20_2 = stackOut_19_2;
+                        statePc = 20;
+                        continue stateLoop;
+                    }
+                    case 20: {
+                        throw wn.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + param1 + 41);
                     }
                     default: throw new IllegalStateException("invalid CFG state " + statePc);
                 }
@@ -289,7 +354,7 @@ final class vq {
     public static void a(byte param0) {
         field_k = null;
         field_i = null;
-        int var1 = 26 % ((47 - param0) / 63);
+        int var1 = 0;
         field_p = null;
         field_q = null;
     }

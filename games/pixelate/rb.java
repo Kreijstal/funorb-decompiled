@@ -16,9 +16,6 @@ final class rb extends de {
     }
 
     private final String d(int param0, int param1) {
-        if (param1 != 7698) {
-            ((rb) this).a(-110, 30, true);
-        }
         if (param0 == 0) {
             return ge.field_b;
         }
@@ -50,7 +47,7 @@ final class rb extends de {
               if (8 != ((rb) this).field_l) {
                 break L3;
               } else {
-                if ((param0 ^ -1) > -17) {
+                if (param0 < 16) {
                   break L2;
                 } else {
                   break L3;
@@ -90,7 +87,7 @@ final class rb extends de {
         int var4 = 0;
         var4 = Pixelate.field_H ? 1 : 0;
         var2 = 0;
-        var3 = param0;
+        var3 = 16;
         L0: while (true) {
           if (var3 >= tn.field_n.length) {
             return var2;
@@ -158,7 +155,7 @@ final class rb extends de {
         L2: while (true) {
           if (var5 >= tn.field_n.length) {
             L3: {
-              if ((jm.field_j ^ -1) == 0) {
+              if (jm.field_j == -1) {
                 stackOut_21_0 = jn.field_v;
                 stackIn_22_0 = stackOut_21_0;
                 break L3;
@@ -197,7 +194,7 @@ final class rb extends de {
                   if (var14 >= ri.field_e[var5]) {
                     break L4;
                   } else {
-                    vn.field_c.b((vn.field_c.field_A >> -1663174463) * var14 + var12, -vn.field_c.field_B + (var13 + 4));
+                    vn.field_c.b((vn.field_c.field_A >> 1) * var14 + var12, -vn.field_c.field_B + (var13 + 4));
                     var14++;
                     continue L6;
                   }
@@ -207,7 +204,7 @@ final class rb extends de {
                 if (!jg.a((byte) 109)) {
                   break L4;
                 } else {
-                  var6 = 280 + ((rb) this).field_d >> -269366303;
+                  var6 = 280 + ((rb) this).field_d >> 1;
                   var4.b(mj.field_h, 320, var6, 16777215, 0);
                   break L4;
                 }
@@ -317,7 +314,7 @@ final class rb extends de {
             var3 = var3 + (40 + this.e(param1 + -207, var4));
             var4++;
         }
-        var4 = 640 + -var3 >> 1091059201;
+        var4 = 640 + -var3 >> 1;
         for (var5 = 0; param0 > var5; var5++) {
             var4 = var4 + (this.e(-118, var5) + 40);
         }
@@ -327,7 +324,7 @@ final class rb extends de {
     private final String a(boolean param0, int param1) {
         if (param0) {
           L0: {
-            if (-11 != (param1 ^ -1)) {
+            if (param1 != 10) {
               break L0;
             } else {
               if (!this.a((byte) 66, param1)) {
@@ -417,7 +414,7 @@ final class rb extends de {
 
     private final int f(int param0, int param1) {
         int var4 = -118 / ((param0 - 91) / 33);
-        int var3 = -1 != (this.e(16) ^ -1) ? 130 : 150;
+        int var3 = this.e(16) != 0 ? 130 : 150;
         return var3 - -(param1 / 8 * 40);
     }
 
@@ -428,7 +425,7 @@ final class rb extends de {
         }
         jn.field_v = this.b(4, uf.field_d, bg.field_k);
         if (jn.field_v != -1) {
-            if (-2 == (nm.field_c ^ -1)) {
+            if (nm.field_c == 1) {
                 pp discarded$8 = mc.a(128, -126);
                 if (jn.field_v == jm.field_j) {
                     jm.field_j = -1;
@@ -457,9 +454,6 @@ final class rb extends de {
     }
 
     public static void b(boolean param0) {
-        if (!param0) {
-            rk discarded$0 = rb.b(3, (byte) 57);
-        }
         field_p = null;
         field_r = null;
     }
@@ -483,7 +477,7 @@ final class rb extends de {
             if (param2 != 1) {
               break L1;
             } else {
-              if ((((rb) this).field_k[param2] ^ -1) == -24) {
+              if (((rb) this).field_k[param2] == 23) {
                 stackOut_4_0 = oc.field_S;
                 stackIn_5_0 = stackOut_4_0;
                 break L0;
@@ -499,7 +493,7 @@ final class rb extends de {
         L2: {
           var5 = stackIn_5_0;
           if (param2 == 0) {
-            ((rb) this).a(param1, var4, var5, -6, ((rb) this).a(0, (byte) 90) - -((rb) this).a(0, false) >> -1505320223);
+            ((rb) this).a(param1, var4, var5, -6, ((rb) this).a(0, (byte) 90) - -((rb) this).a(0, false) >> 1);
             break L2;
           } else {
             super.a(var4, param1, param2, var5, (byte) 124);

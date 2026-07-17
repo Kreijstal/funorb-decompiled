@@ -22,15 +22,15 @@ final class tg {
         if (param0 > -101) {
           L0: {
             short discarded$1 = tg.a((byte) 57, -105);
-            var2 = (param1 & 65427) >> -661641430;
-            var3 = 112 & param1 >> 544040515;
+            var2 = (param1 & 65427) >> 10;
+            var3 = 112 & param1 >> 3;
             var4 = 127 & param1;
-            if (-65 <= (var4 ^ -1)) {
-              stackOut_10_0 = var3 * var4 >> 1831731847;
+            if (var4 <= 64) {
+              stackOut_10_0 = var3 * var4 >> 7;
               stackIn_11_0 = stackOut_10_0;
               break L0;
             } else {
-              stackOut_9_0 = (127 - var4) * var3 >> 351895655;
+              stackOut_9_0 = (127 - var4) * var3 >> 7;
               stackIn_11_0 = stackOut_9_0;
               break L0;
             }
@@ -39,26 +39,26 @@ final class tg {
             var3 = stackIn_11_0;
             var5 = var4 + var3;
             if (0 != var5) {
-              var6 = (var3 << -11469624) / var5;
+              var6 = (var3 << 8) / var5;
               break L1;
             } else {
-              var6 = var3 << -1968037311;
+              var6 = var3 << 1;
               break L1;
             }
           }
           var7 = var5;
-          return (short)(var7 | (var2 << 1364890954 | var6 >> -1804241148 << -446385465));
+          return (short)(var7 | (var2 << 10 | var6 >> 4 << 7));
         } else {
           L2: {
-            var2 = (param1 & 65427) >> -661641430;
-            var3 = 112 & param1 >> 544040515;
+            var2 = (param1 & 65427) >> 10;
+            var3 = 112 & param1 >> 3;
             var4 = 127 & param1;
-            if (-65 <= (var4 ^ -1)) {
-              stackOut_3_0 = var3 * var4 >> 1831731847;
+            if (var4 <= 64) {
+              stackOut_3_0 = var3 * var4 >> 7;
               stackIn_4_0 = stackOut_3_0;
               break L2;
             } else {
-              stackOut_2_0 = (127 - var4) * var3 >> 351895655;
+              stackOut_2_0 = (127 - var4) * var3 >> 7;
               stackIn_4_0 = stackOut_2_0;
               break L2;
             }
@@ -67,22 +67,22 @@ final class tg {
             var3 = stackIn_4_0;
             var5 = var4 + var3;
             if (0 != var5) {
-              var6 = (var3 << -11469624) / var5;
+              var6 = (var3 << 8) / var5;
               break L3;
             } else {
-              var6 = var3 << -1968037311;
+              var6 = var3 << 1;
               break L3;
             }
           }
           var7 = var5;
-          return (short)(var7 | (var2 << 1364890954 | var6 >> -1804241148 << -446385465));
+          return (short)(var7 | (var2 << 10 | var6 >> 4 << 7));
         }
     }
 
     public static void a(byte param0) {
         field_a = null;
         field_b = null;
-        int var1 = -53 % ((param0 - -67) / 34);
+        int var1 = -1;
         field_c = null;
     }
 

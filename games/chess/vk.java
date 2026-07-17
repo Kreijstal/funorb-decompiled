@@ -30,9 +30,6 @@ final class vk {
     }
 
     public static void a(byte param0) {
-        if (param0 != -14) {
-            return;
-        }
         field_f = null;
         field_h = null;
         field_c = null;

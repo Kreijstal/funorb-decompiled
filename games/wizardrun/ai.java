@@ -18,32 +18,37 @@ final class ai extends wl {
     public static void a(int param0) {
         field_j = null;
         field_s = null;
-        if (param0 != 65535) {
-            return;
-        }
         field_r = null;
     }
 
     final static void a(boolean param0, byte param1, String param2, boolean param3) {
-        ki.h((byte) 98);
-        u.field_A.d(false);
-        r.field_b = new qc(rg.field_S, (String) null, wi.field_J, param0, param3);
-        int var4 = -71 % ((param1 - 89) / 37);
-        td.field_f = new kb(u.field_A, (ub) (Object) r.field_b);
-        u.field_A.b((ub) (Object) td.field_f, (byte) 117);
+        try {
+            ki.h((byte) 98);
+            u.field_A.d(false);
+            r.field_b = new qc(rg.field_S, (String) null, wi.field_J, param0, param3);
+            int var4_int = -71 % ((param1 - 89) / 37);
+            td.field_f = new kb(u.field_A, (ub) (Object) r.field_b);
+            u.field_A.b((ub) (Object) td.field_f, (byte) 117);
+        } catch (RuntimeException runtimeException) {
+            throw bd.a((Throwable) (Object) runtimeException, "ai.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+        }
     }
 
     ai(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
-        ((ai) this).field_l = param3;
-        ((ai) this).field_o = param1;
-        ((ai) this).field_m = param4;
-        ((ai) this).field_q = param6;
-        int fieldTemp$0 = dg.field_c;
-        dg.field_c = dg.field_c + 1;
-        ((ai) this).field_i = fieldTemp$0 & 65535;
-        ((ai) this).field_k = param2;
-        ((ai) this).field_p = param5;
-        ((ai) this).field_t = param0;
+        try {
+            ((ai) this).field_l = param3;
+            ((ai) this).field_o = param1;
+            ((ai) this).field_m = param4;
+            ((ai) this).field_q = param6;
+            int fieldTemp$0 = dg.field_c;
+            dg.field_c = dg.field_c + 1;
+            ((ai) this).field_i = fieldTemp$0 & 65535;
+            ((ai) this).field_k = param2;
+            ((ai) this).field_p = param5;
+            ((ai) this).field_t = param0;
+        } catch (RuntimeException runtimeException) {
+            throw bd.a((Throwable) (Object) runtimeException, "ai.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

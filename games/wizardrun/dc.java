@@ -16,12 +16,73 @@ final class dc extends wl {
     int field_p;
 
     final static gb a(byte[] param0, int param1) {
-        if (param0 == null) {
-            return null;
+        gb var2 = null;
+        RuntimeException var2_ref = null;
+        Object stackIn_2_0 = null;
+        gb stackIn_4_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        gb stackOut_3_0 = null;
+        Object stackOut_1_0 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            if (param0 != null) {
+              var2 = new gb(param0, ph.field_q, ne.field_h, cg.field_k, tf.field_b, mf.field_j);
+              eb.a(param1);
+              stackOut_3_0 = (gb) var2;
+              stackIn_4_0 = stackOut_3_0;
+              break L0;
+            } else {
+              stackOut_1_0 = null;
+              stackIn_2_0 = stackOut_1_0;
+              return (gb) (Object) stackIn_2_0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var2_ref = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var2_ref;
+            stackOut_5_1 = new StringBuilder().append("dc.A(");
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param0 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L1;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L1;
+            }
+          }
+          throw bd.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
         }
-        gb var2 = new gb(param0, ph.field_q, ne.field_h, cg.field_k, tf.field_b, mf.field_j);
-        eb.a(param1);
-        return var2;
+        return stackIn_4_0;
     }
 
     final static o[] a(int param0) {
@@ -32,7 +93,6 @@ final class dc extends wl {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
-        Object var9 = null;
         int[] var10 = null;
         int[] var14 = null;
         int[] var17 = null;
@@ -47,13 +107,7 @@ final class dc extends wl {
         L0: while (true) {
           if (wb.field_f <= var2) {
             eb.a(0);
-            if (param0 != 19999) {
-              var9 = null;
-              gb discarded$1 = dc.a((byte[]) null, 37);
-              return var1;
-            } else {
-              return var1;
-            }
+            return var1;
           } else {
             var3 = cg.field_k[var2] * tf.field_b[var2];
             var22 = mf.field_j[var2];
@@ -72,7 +126,7 @@ final class dc extends wl {
                   var2++;
                   continue L0;
                 } else {
-                  var6[var7] = sd.a(ic.field_b[kl.b((int) var22[var7], 255)], kl.b(255, (int) var24[var7]) << 2138757784);
+                  var6[var7] = sd.a(ic.field_b[kl.b((int) var22[var7], 255)], kl.b(255, (int) var24[var7]) << 24);
                   var7++;
                   continue L1;
                 }
@@ -102,7 +156,7 @@ final class dc extends wl {
         te var2 = null;
         var2 = new te();
         bk.field_d.a((wl) (Object) var2, false);
-        hg.a(param1, (byte) 106);
+        hg.a(4, (byte) 106);
         if (param0 != 103) {
           return null;
         } else {

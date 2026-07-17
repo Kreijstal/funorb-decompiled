@@ -8,9 +8,6 @@ final class jl {
     private pv field_c;
 
     public static void c(int param0) {
-        if (param0 != 786336) {
-            field_a = null;
-        }
         field_a = null;
     }
 
@@ -107,27 +104,104 @@ final class jl {
     }
 
     final static void a(int param0, boolean param1) {
-        int var3 = Sumoblitz.field_L ? 1 : 0;
-        km var2 = (km) (Object) dk.field_a.b(111);
-        if (!param1) {
-            field_a = null;
-        }
-        while (var2 != null) {
-            iu.a(-1, var2, param0);
-            var2 = (km) (Object) dk.field_a.d((byte) 18);
+        RuntimeException var2 = null;
+        int var3 = 0;
+        km var4 = null;
+        RuntimeException decompiledCaughtException = null;
+        var3 = Sumoblitz.field_L ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              var4 = (km) (Object) dk.field_a.b(111);
+              if (param1) {
+                break L1;
+              } else {
+                field_a = null;
+                break L1;
+              }
+            }
+            L2: while (true) {
+              if (var4 == null) {
+                break L0;
+              } else {
+                iu.a(-1, var4, param0);
+                var4 = (km) (Object) dk.field_a.d((byte) 18);
+                continue L2;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw qo.a((Throwable) (Object) var2, "jl.B(" + param0 + 44 + param1 + 41);
         }
     }
 
     final static void a(java.applet.Applet param0, boolean param1) {
         try {
-            java.net.URL var2 = new java.net.URL(param0.getCodeBase(), "quit.ws");
-            if (param1) {
-                return;
-            }
+            java.net.URL var2 = null;
+            Exception var2_ref = null;
+            RuntimeException var2_ref2 = null;
+            RuntimeException stackIn_7_0 = null;
+            StringBuilder stackIn_7_1 = null;
+            RuntimeException stackIn_8_0 = null;
+            StringBuilder stackIn_8_1 = null;
+            RuntimeException stackIn_9_0 = null;
+            StringBuilder stackIn_9_1 = null;
+            String stackIn_9_2 = null;
+            Throwable decompiledCaughtException = null;
+            RuntimeException stackOut_6_0 = null;
+            StringBuilder stackOut_6_1 = null;
+            RuntimeException stackOut_8_0 = null;
+            StringBuilder stackOut_8_1 = null;
+            String stackOut_8_2 = null;
+            RuntimeException stackOut_7_0 = null;
+            StringBuilder stackOut_7_1 = null;
+            String stackOut_7_2 = null;
             try {
-                param0.getAppletContext().showDocument(td.a((byte) 125, param0, var2), "_top");
-            } catch (Exception exception) {
-                exception.printStackTrace();
+              try {
+                L0: {
+                  var2 = new java.net.URL(param0.getCodeBase(), "quit.ws");
+                  param0.getAppletContext().showDocument(td.a((byte) 125, param0, var2), "_top");
+                  break L0;
+                }
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                L1: {
+                  var2_ref = (Exception) (Object) decompiledCaughtException;
+                  var2_ref.printStackTrace();
+                  break L1;
+                }
+              }
+            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L2: {
+                var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_6_0 = (RuntimeException) var2_ref2;
+                stackOut_6_1 = new StringBuilder().append("jl.A(");
+                stackIn_8_0 = stackOut_6_0;
+                stackIn_8_1 = stackOut_6_1;
+                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_1 = stackOut_6_1;
+                if (param0 == null) {
+                  stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+                  stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+                  stackOut_8_2 = "null";
+                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_1 = stackOut_8_1;
+                  stackIn_9_2 = stackOut_8_2;
+                  break L2;
+                } else {
+                  stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+                  stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+                  stackOut_7_2 = "{...}";
+                  stackIn_9_0 = stackOut_7_0;
+                  stackIn_9_1 = stackOut_7_1;
+                  stackIn_9_2 = stackOut_7_2;
+                  break L2;
+                }
+              }
+              throw qo.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + 0 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -217,129 +291,184 @@ final class jl {
     }
 
     jl(aw param0) {
+        RuntimeException var2 = null;
         jaclib.memory.Stream var4 = null;
         int var4_int = 0;
         int var5 = 0;
         jaclib.memory.Buffer var7 = null;
         jaclib.memory.Stream var8 = null;
         jaclib.memory.Buffer var9 = null;
-        L0: {
-          hq discarded$4 = param0.a(new hu[2], (byte) 53);
-          ((jl) this).field_c = param0.a((byte) 51, true);
-          ((jl) this).field_d = param0.a((byte) 51, false);
-          boolean discarded$5 = ((jl) this).field_d.a(12, (byte) -35, 393168);
-          ((jl) this).field_b = param0.e(3, false);
-          ((jl) this).field_b.a((byte) -116, 49146);
-          var7 = ((jl) this).field_b.a(true, 10081);
-          if (var7 == null) {
-            break L0;
-          } else {
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        String stackIn_23_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        String stackOut_22_2 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
+        try {
+          L0: {
             L1: {
-              var8 = param0.a(true, var7);
-              if (!jaclib.memory.Stream.b()) {
-                var4_int = 0;
-                L2: while (true) {
-                  if (-8192 >= (var4_int ^ -1)) {
-                    break L1;
-                  } else {
-                    var5 = 4 * var4_int;
-                    var8.a(var5);
-                    var8.a(var5 + 1);
-                    var8.a(2 + var5);
-                    var8.a(var5 - -2);
-                    var8.a(var5 + 3);
-                    var8.a(var5);
-                    var4_int++;
-                    continue L2;
-                  }
-                }
+              hq discarded$4 = param0.a(new hu[2], (byte) 53);
+              ((jl) this).field_c = param0.a((byte) 51, true);
+              ((jl) this).field_d = param0.a((byte) 51, false);
+              boolean discarded$5 = ((jl) this).field_d.a(12, (byte) -35, 393168);
+              ((jl) this).field_b = param0.e(3, false);
+              ((jl) this).field_b.a((byte) -116, 49146);
+              var7 = ((jl) this).field_b.a(true, 10081);
+              if (var7 == null) {
+                break L1;
               } else {
-                var4_int = 0;
-                L3: while (true) {
-                  if ((var4_int ^ -1) <= -8192) {
-                    break L1;
+                L2: {
+                  var8 = param0.a(true, var7);
+                  if (!jaclib.memory.Stream.b()) {
+                    var4_int = 0;
+                    L3: while (true) {
+                      if (var4_int >= 8191) {
+                        break L2;
+                      } else {
+                        var5 = 4 * var4_int;
+                        var8.a(var5);
+                        var8.a(var5 + 1);
+                        var8.a(2 + var5);
+                        var8.a(var5 - -2);
+                        var8.a(var5 + 3);
+                        var8.a(var5);
+                        var4_int++;
+                        continue L3;
+                      }
+                    }
                   } else {
-                    var5 = 4 * var4_int;
-                    var8.b(var5);
-                    var8.b(1 + var5);
-                    var8.b(var5 - -2);
-                    var8.b(2 + var5);
-                    var8.b(var5 + 3);
-                    var8.b(var5);
-                    var4_int++;
-                    continue L3;
+                    var4_int = 0;
+                    L4: while (true) {
+                      if (var4_int >= 8191) {
+                        break L2;
+                      } else {
+                        var5 = 4 * var4_int;
+                        var8.b(var5);
+                        var8.b(1 + var5);
+                        var8.b(var5 - -2);
+                        var8.b(2 + var5);
+                        var8.b(var5 + 3);
+                        var8.b(var5);
+                        var4_int++;
+                        continue L4;
+                      }
+                    }
                   }
                 }
+                var8.a();
+                boolean discarded$6 = ((jl) this).field_b.a(-28833);
+                break L1;
               }
             }
-            var8.a();
-            boolean discarded$6 = ((jl) this).field_b.a(-28833);
+            L5: {
+              var9 = ((jl) this).field_d.a(7454, true);
+              if (var9 == null) {
+                break L5;
+              } else {
+                L6: {
+                  var4 = param0.a(true, var9);
+                  if (!jaclib.memory.Stream.b()) {
+                    var5 = 0;
+                    L7: while (true) {
+                      if (8191 <= var5) {
+                        break L6;
+                      } else {
+                        var4.b(0.0f);
+                        var4.b(-1.0f);
+                        var4.b(0.0f);
+                        var4.b(0.0f);
+                        var4.b(-1.0f);
+                        var4.b(0.0f);
+                        var4.b(0.0f);
+                        var4.b(-1.0f);
+                        var4.b(0.0f);
+                        var4.b(0.0f);
+                        var4.b(-1.0f);
+                        var4.b(0.0f);
+                        var5++;
+                        continue L7;
+                      }
+                    }
+                  } else {
+                    var5 = 0;
+                    L8: while (true) {
+                      if (8191 <= var5) {
+                        break L6;
+                      } else {
+                        var4.a(0.0f);
+                        var4.a(-1.0f);
+                        var4.a(0.0f);
+                        var4.a(0.0f);
+                        var4.a(-1.0f);
+                        var4.a(0.0f);
+                        var4.a(0.0f);
+                        var4.a(-1.0f);
+                        var4.a(0.0f);
+                        var4.a(0.0f);
+                        var4.a(-1.0f);
+                        var4.a(0.0f);
+                        var5++;
+                        continue L8;
+                      }
+                    }
+                  }
+                }
+                var4.a();
+                boolean discarded$7 = ((jl) this).field_d.a(22957);
+                break L5;
+              }
+            }
             break L0;
           }
-        }
-        L4: {
-          var9 = ((jl) this).field_d.a(7454, true);
-          if (var9 == null) {
-            break L4;
-          } else {
-            L5: {
-              var4 = param0.a(true, var9);
-              if (!jaclib.memory.Stream.b()) {
-                var5 = 0;
-                L6: while (true) {
-                  if (8191 <= var5) {
-                    break L5;
-                  } else {
-                    var4.b(0.0f);
-                    var4.b(-1.0f);
-                    var4.b(0.0f);
-                    var4.b(0.0f);
-                    var4.b(-1.0f);
-                    var4.b(0.0f);
-                    var4.b(0.0f);
-                    var4.b(-1.0f);
-                    var4.b(0.0f);
-                    var4.b(0.0f);
-                    var4.b(-1.0f);
-                    var4.b(0.0f);
-                    var5++;
-                    continue L6;
-                  }
-                }
-              } else {
-                var5 = 0;
-                L7: while (true) {
-                  if (8191 <= var5) {
-                    break L5;
-                  } else {
-                    var4.a(0.0f);
-                    var4.a(-1.0f);
-                    var4.a(0.0f);
-                    var4.a(0.0f);
-                    var4.a(-1.0f);
-                    var4.a(0.0f);
-                    var4.a(0.0f);
-                    var4.a(-1.0f);
-                    var4.a(0.0f);
-                    var4.a(0.0f);
-                    var4.a(-1.0f);
-                    var4.a(0.0f);
-                    var5++;
-                    continue L7;
-                  }
-                }
-              }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L9: {
+            var2 = decompiledCaughtException;
+            stackOut_20_0 = (RuntimeException) var2;
+            stackOut_20_1 = new StringBuilder().append("jl.<init>(");
+            stackIn_22_0 = stackOut_20_0;
+            stackIn_22_1 = stackOut_20_1;
+            stackIn_21_0 = stackOut_20_0;
+            stackIn_21_1 = stackOut_20_1;
+            if (param0 == null) {
+              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_2 = "null";
+              stackIn_23_0 = stackOut_22_0;
+              stackIn_23_1 = stackOut_22_1;
+              stackIn_23_2 = stackOut_22_2;
+              break L9;
+            } else {
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "{...}";
+              stackIn_23_0 = stackOut_21_0;
+              stackIn_23_1 = stackOut_21_1;
+              stackIn_23_2 = stackOut_21_2;
+              break L9;
             }
-            var4.a();
-            boolean discarded$7 = ((jl) this).field_d.a(22957);
-            break L4;
           }
+          throw qo.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 41);
         }
     }
 
     final void a(int param0, aw param1) {
-        int var3 = -4 % ((param0 - 65) / 32);
-        boolean discarded$0 = ((jl) this).field_c.a(24, (byte) -35, 786336);
+        try {
+            int var3_int = -4 % ((param0 - 65) / 32);
+            boolean discarded$0 = ((jl) this).field_c.a(24, (byte) -35, 786336);
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "jl.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

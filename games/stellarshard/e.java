@@ -45,9 +45,6 @@ final class e {
 
     public static void a(int param0) {
         field_b = null;
-        if (param0 != 186) {
-            return;
-        }
         field_g = null;
         field_a = null;
         field_f = null;

@@ -11,23 +11,81 @@ final class gbb extends rqa {
     }
 
     final nc a(nc[] param0, int param1) {
-        si.a(159, 62, param0[0].a(106));
-        if (param1 > -119) {
-          field_q = 105;
-          return new nc((Object) (Object) "void");
-        } else {
-          return new nc((Object) (Object) "void");
+        RuntimeException var3 = null;
+        nc stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        nc stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              si.a(159, 62, param0[0].a(106));
+              if (param1 <= -119) {
+                break L1;
+              } else {
+                field_q = 105;
+                break L1;
+              }
+            }
+            stackOut_2_0 = new nc((Object) (Object) "void");
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_1 = new StringBuilder().append("gbb.A(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
         }
+        return stackIn_3_0;
     }
 
     final static boolean a(int param0, int param1, int param2, byte param3) {
         int var4 = 0;
-        int stackIn_11_0 = 0;
-        int stackIn_46_0 = 0;
-        int stackOut_45_0 = 0;
-        int stackOut_44_0 = 0;
-        int stackOut_10_0 = 0;
+        int stackIn_10_0 = 0;
+        int stackIn_44_0 = 0;
+        int stackOut_43_0 = 0;
+        int stackOut_42_0 = 0;
         int stackOut_9_0 = 0;
+        int stackOut_8_0 = 0;
         if (param3 == 23) {
           if (wga.field_a == null) {
             if (!fva.field_p) {
@@ -38,13 +96,13 @@ final class gbb extends rqa {
                   if (9 == pma.field_o) {
                     break L0;
                   } else {
-                    if ((pma.field_o ^ -1) == -11) {
+                    if (pma.field_o == 10) {
                       break L0;
                     } else {
-                      if (pma.field_o == -12) {
+                      if (pma.field_o == 11) {
                         break L0;
                       } else {
-                        if (-81 != pma.field_o) {
+                        if (pma.field_o != 80) {
                           return false;
                         } else {
                           if (lmb.a(118)) {
@@ -64,18 +122,18 @@ final class gbb extends rqa {
               if (lmb.a(-115)) {
                 L1: {
                   if (!tl.b(param2, param0, -85)) {
-                    stackOut_45_0 = 0;
-                    stackIn_46_0 = stackOut_45_0;
+                    stackOut_43_0 = 0;
+                    stackIn_44_0 = stackOut_43_0;
                     break L1;
                   } else {
-                    stackOut_44_0 = 1;
-                    stackIn_46_0 = stackOut_44_0;
+                    stackOut_42_0 = 1;
+                    stackIn_44_0 = stackOut_42_0;
                     break L1;
                   }
                 }
                 L2: {
                   L3: {
-                    var4 = stackIn_46_0;
+                    var4 = stackIn_44_0;
                     if (pma.field_o == 80) {
                       break L3;
                     } else {
@@ -91,7 +149,7 @@ final class gbb extends rqa {
                   break L2;
                 }
                 L4: {
-                  if ((pma.field_o ^ -1) == -14) {
+                  if (pma.field_o == 13) {
                     dr.a(26718);
                     var4 = 1;
                     fva.field_p = false;
@@ -106,18 +164,21 @@ final class gbb extends rqa {
               }
             }
           } else {
-            if (-14 != (pma.field_o ^ -1)) {
+            if (pma.field_o == 13) {
+              wga.field_a = null;
+              return true;
+            } else {
               if (!fva.field_p) {
                 if (!uga.field_d) {
                   if (9 != pma.field_o) {
                     L5: {
-                      if ((pma.field_o ^ -1) == -11) {
+                      if (pma.field_o == 10) {
                         break L5;
                       } else {
-                        if (pma.field_o == -12) {
+                        if (pma.field_o == 11) {
                           break L5;
                         } else {
-                          if (-81 != pma.field_o) {
+                          if (pma.field_o != 80) {
                             return false;
                           } else {
                             if (lmb.a(118)) {
@@ -141,66 +202,63 @@ final class gbb extends rqa {
                 if (lmb.a(-115)) {
                   L6: {
                     if (!tl.b(param2, param0, -85)) {
-                      stackOut_10_0 = 0;
-                      stackIn_11_0 = stackOut_10_0;
+                      stackOut_9_0 = 0;
+                      stackIn_10_0 = stackOut_9_0;
                       break L6;
                     } else {
-                      stackOut_9_0 = 1;
-                      stackIn_11_0 = stackOut_9_0;
+                      stackOut_8_0 = 1;
+                      stackIn_10_0 = stackOut_8_0;
                       break L6;
                     }
                   }
-                  var4 = stackIn_11_0;
-                  if (pma.field_o != 80) {
-                    if (84 != pma.field_o) {
-                      L7: {
-                        if ((pma.field_o ^ -1) == -14) {
+                  var4 = stackIn_10_0;
+                  if (pma.field_o == 80) {
+                    L7: {
+                      var4 = 1;
+                      fva.field_p = false;
+                      if (pma.field_o == 13) {
+                        dr.a(26718);
+                        var4 = 1;
+                        fva.field_p = false;
+                        break L7;
+                      } else {
+                        break L7;
+                      }
+                    }
+                    return var4 != 0;
+                  } else {
+                    if (84 == pma.field_o) {
+                      L8: {
+                        var4 = 1;
+                        fva.field_p = false;
+                        if (pma.field_o == 13) {
                           dr.a(26718);
                           var4 = 1;
                           fva.field_p = false;
-                          break L7;
+                          break L8;
                         } else {
-                          break L7;
+                          break L8;
                         }
                       }
                       return var4 != 0;
                     } else {
-                      L8: {
-                        var4 = 1;
-                        fva.field_p = false;
-                        if ((pma.field_o ^ -1) == -14) {
+                      L9: {
+                        if (pma.field_o == 13) {
                           dr.a(26718);
                           var4 = 1;
                           fva.field_p = false;
-                          break L8;
+                          break L9;
                         } else {
-                          break L8;
+                          break L9;
                         }
                       }
                       return var4 != 0;
                     }
-                  } else {
-                    L9: {
-                      var4 = 1;
-                      fva.field_p = false;
-                      if ((pma.field_o ^ -1) == -14) {
-                        dr.a(26718);
-                        var4 = 1;
-                        fva.field_p = false;
-                        break L9;
-                      } else {
-                        break L9;
-                      }
-                    }
-                    return var4 != 0;
                   }
                 } else {
                   return false;
                 }
               }
-            } else {
-              wga.field_a = null;
-              return true;
             }
           }
         } else {
@@ -209,32 +267,22 @@ final class gbb extends rqa {
     }
 
     final static void a(fh param0, fh param1, byte param2) {
-        L0: {
-          if (null != param0.field_d) {
-            param0.d((byte) -35);
-            break L0;
-          } else {
-            break L0;
-          }
-        }
-        param0.field_e = param1.field_e;
-        param0.field_d = param1;
-        param0.field_d.field_e = param0;
-        if (param2 != -68) {
-          boolean discarded$2 = gbb.a(12, 69, 48, (byte) 94);
-          param0.field_e.field_d = param0;
-          return;
-        } else {
-          param0.field_e.field_d = param0;
-          return;
+        try {
+            if (!(null == param0.field_d)) {
+                param0.d((byte) -35);
+            }
+            param0.field_e = param1.field_e;
+            param0.field_d = param1;
+            param0.field_d.field_e = param0;
+            param0.field_e.field_d = param0;
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "gbb.D(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + -68 + 41);
         }
     }
 
     public static void b(boolean param0) {
         field_p = null;
-        if (!param0) {
-            field_o = 71;
-        }
+        field_o = 71;
     }
 
     static {

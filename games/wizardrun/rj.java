@@ -55,18 +55,19 @@ final class rj {
     }
 
     public static void c(int param0) {
-        if (param0 < 20) {
-            return;
-        }
         field_f = null;
     }
 
     final static void a(String param0, String param1, boolean param2) {
-        if (!(null == aa.field_lb)) {
-            aa.field_lb.l(-27697);
+        try {
+            if (!(null == aa.field_lb)) {
+                aa.field_lb.l(-27697);
+            }
+            r.field_b = new qc(param1, param0, false, true, true);
+            td.field_f.c((ub) (Object) r.field_b, -111);
+        } catch (RuntimeException runtimeException) {
+            throw bd.a((Throwable) (Object) runtimeException, "rj.C(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + 1 + 41);
         }
-        r.field_b = new qc(param1, param0, false, true, param2);
-        td.field_f.c((ub) (Object) r.field_b, -111);
     }
 
     final void a(int param0, int param1, int param2) {
@@ -74,16 +75,16 @@ final class rj {
         if (param0 >= ((rj) this).field_c) {
           throw new IllegalArgumentException();
         } else {
-          if ((((rj) this).field_c ^ -1) < (param2 ^ -1)) {
+          if (~((rj) this).field_c < ~param2) {
             ((rj) this).field_e = 0;
             ((rj) this).field_b = 0;
-            if (-1 == (w.field_c ^ -1)) {
+            if (w.field_c == 0) {
               L0: {
                 var4 = -3 % ((-4 - param1) / 32);
-                if (-1 == (((rj) this).field_h ^ -1)) {
+                if (((rj) this).field_h == 0) {
                   break L0;
                 } else {
-                  if (-1 == (sh.field_c ^ -1)) {
+                  if (sh.field_c == 0) {
                     break L0;
                   } else {
                     L1: {
@@ -103,11 +104,11 @@ final class rj {
                 if (w.field_c != 0) {
                   break L2;
                 } else {
-                  if ((sh.field_c ^ -1) != -1) {
+                  if (sh.field_c != 0) {
                     break L2;
                   } else {
                     ((rj) this).field_h = 0;
-                    if ((((rj) this).field_h ^ -1) != -1) {
+                    if (((rj) this).field_h != 0) {
                       return;
                     } else {
                       L3: {
@@ -121,7 +122,7 @@ final class rj {
                           }
                         }
                       }
-                      if (-1 >= (param0 ^ -1)) {
+                      if (param0 >= 0) {
                         if (((rj) this).field_g != param0) {
                           ((rj) this).field_g = param0;
                           ((rj) this).field_d = true;
@@ -143,7 +144,7 @@ final class rj {
                   }
                 }
               }
-              if ((((rj) this).field_h ^ -1) != -1) {
+              if (((rj) this).field_h != 0) {
                 return;
               } else {
                 L4: {
@@ -157,7 +158,7 @@ final class rj {
                     }
                   }
                 }
-                if (-1 >= (param0 ^ -1)) {
+                if (param0 >= 0) {
                   if (((rj) this).field_g != param0) {
                     ((rj) this).field_g = param0;
                     ((rj) this).field_d = true;
@@ -183,8 +184,8 @@ final class rj {
               ((rj) this).field_h = w.field_c;
               ((rj) this).field_g = param2;
               var4 = -3 % ((-4 - param1) / 32);
-              if (-1 != (((rj) this).field_h ^ -1)) {
-                if (-1 != (sh.field_c ^ -1)) {
+              if (((rj) this).field_h != 0) {
+                if (sh.field_c != 0) {
                   L5: {
                     if (0 >= ((rj) this).field_a) {
                       ((rj) this).field_a = vc.field_G;
@@ -198,7 +199,7 @@ final class rj {
                     if (w.field_c != 0) {
                       break L6;
                     } else {
-                      if ((sh.field_c ^ -1) != -1) {
+                      if (sh.field_c != 0) {
                         break L6;
                       } else {
                         ((rj) this).field_h = 0;
@@ -206,7 +207,7 @@ final class rj {
                       }
                     }
                   }
-                  if ((((rj) this).field_h ^ -1) != -1) {
+                  if (((rj) this).field_h != 0) {
                     return;
                   } else {
                     L7: {
@@ -220,7 +221,7 @@ final class rj {
                         }
                       }
                     }
-                    if (-1 >= (param0 ^ -1)) {
+                    if (param0 >= 0) {
                       if (((rj) this).field_g != param0) {
                         ((rj) this).field_g = param0;
                         ((rj) this).field_d = true;
@@ -244,7 +245,7 @@ final class rj {
                     if (w.field_c != 0) {
                       break L8;
                     } else {
-                      if ((sh.field_c ^ -1) != -1) {
+                      if (sh.field_c != 0) {
                         break L8;
                       } else {
                         ((rj) this).field_h = 0;
@@ -253,7 +254,7 @@ final class rj {
                     }
                   }
                   L9: {
-                    if ((((rj) this).field_h ^ -1) != -1) {
+                    if (((rj) this).field_h != 0) {
                       break L9;
                     } else {
                       L10: {
@@ -267,7 +268,7 @@ final class rj {
                           }
                         }
                       }
-                      if (-1 >= (param0 ^ -1)) {
+                      if (param0 >= 0) {
                         if (((rj) this).field_g != param0) {
                           ((rj) this).field_g = param0;
                           ((rj) this).field_d = true;
@@ -294,7 +295,7 @@ final class rj {
                   if (w.field_c != 0) {
                     break L11;
                   } else {
-                    if ((sh.field_c ^ -1) != -1) {
+                    if (sh.field_c != 0) {
                       break L11;
                     } else {
                       ((rj) this).field_h = 0;
@@ -303,7 +304,7 @@ final class rj {
                   }
                 }
                 L12: {
-                  if ((((rj) this).field_h ^ -1) != -1) {
+                  if (((rj) this).field_h != 0) {
                     break L12;
                   } else {
                     L13: {
@@ -317,7 +318,7 @@ final class rj {
                         }
                       }
                     }
-                    if (-1 >= (param0 ^ -1)) {
+                    if (param0 >= 0) {
                       if (((rj) this).field_g != param0) {
                         ((rj) this).field_g = param0;
                         ((rj) this).field_d = true;
@@ -406,17 +407,17 @@ final class rj {
             if (0 != ((rj) this).field_h) {
               break L1;
             } else {
-              if (-99 != (vk.field_r ^ -1)) {
+              if (vk.field_r != 98) {
                 break L1;
               } else {
-                if ((((rj) this).field_g ^ -1) < -1) {
+                if (((rj) this).field_g > 0) {
                   L2: {
                     ((rj) this).field_d = false;
                     ((rj) this).field_g = ((rj) this).field_g - 1;
-                    if (-1 != (((rj) this).field_h ^ -1)) {
+                    if (((rj) this).field_h != 0) {
                       break L2;
                     } else {
-                      if (-100 == (vk.field_r ^ -1)) {
+                      if (vk.field_r == 99) {
                         ((rj) this).field_g = ((rj) this).field_g + 1;
                         ((rj) this).field_d = false;
                         if (((rj) this).field_c > ((rj) this).field_g) {
@@ -436,10 +437,10 @@ final class rj {
                   L3: {
                     ((rj) this).field_d = false;
                     ((rj) this).field_g = ((rj) this).field_g - 1;
-                    if (-1 != (((rj) this).field_h ^ -1)) {
+                    if (((rj) this).field_h != 0) {
                       break L3;
                     } else {
-                      if (-100 == (vk.field_r ^ -1)) {
+                      if (vk.field_r == 99) {
                         ((rj) this).field_g = ((rj) this).field_g + 1;
                         ((rj) this).field_d = false;
                         if (((rj) this).field_c > ((rj) this).field_g) {
@@ -459,10 +460,10 @@ final class rj {
             }
           }
           L4: {
-            if (-1 != (((rj) this).field_h ^ -1)) {
+            if (((rj) this).field_h != 0) {
               break L4;
             } else {
-              if (-100 == (vk.field_r ^ -1)) {
+              if (vk.field_r == 99) {
                 ((rj) this).field_g = ((rj) this).field_g + 1;
                 ((rj) this).field_d = false;
                 if (((rj) this).field_c > ((rj) this).field_g) {
@@ -481,9 +482,9 @@ final class rj {
           var3 = null;
           rj.a((String) null, (String) null, true);
           if (0 == ((rj) this).field_h) {
-            if (-99 == (vk.field_r ^ -1)) {
+            if (vk.field_r == 98) {
               L5: {
-                if ((((rj) this).field_g ^ -1) < -1) {
+                if (((rj) this).field_g > 0) {
                   ((rj) this).field_d = false;
                   ((rj) this).field_g = ((rj) this).field_g - 1;
                   break L5;
@@ -494,8 +495,8 @@ final class rj {
                   break L5;
                 }
               }
-              if (-1 == (((rj) this).field_h ^ -1)) {
-                if (-100 == (vk.field_r ^ -1)) {
+              if (((rj) this).field_h == 0) {
+                if (vk.field_r == 99) {
                   ((rj) this).field_g = ((rj) this).field_g + 1;
                   ((rj) this).field_d = false;
                   if (((rj) this).field_c > ((rj) this).field_g) {
@@ -512,10 +513,10 @@ final class rj {
               }
             } else {
               L6: {
-                if (-1 != (((rj) this).field_h ^ -1)) {
+                if (((rj) this).field_h != 0) {
                   break L6;
                 } else {
-                  if (-100 == (vk.field_r ^ -1)) {
+                  if (vk.field_r == 99) {
                     ((rj) this).field_g = ((rj) this).field_g + 1;
                     ((rj) this).field_d = false;
                     if (((rj) this).field_c > ((rj) this).field_g) {
@@ -533,10 +534,10 @@ final class rj {
             }
           } else {
             L7: {
-              if (-1 != (((rj) this).field_h ^ -1)) {
+              if (((rj) this).field_h != 0) {
                 break L7;
               } else {
-                if (-100 == (vk.field_r ^ -1)) {
+                if (vk.field_r == 99) {
                   ((rj) this).field_g = ((rj) this).field_g + 1;
                   ((rj) this).field_d = false;
                   if (((rj) this).field_c > ((rj) this).field_g) {
@@ -560,12 +561,12 @@ final class rj {
         ((rj) this).field_e = 0;
         ((rj) this).field_b = 0;
         if (0 == ((rj) this).field_h) {
-          if (-97 == (vk.field_r ^ -1)) {
-            if (-1 > (((rj) this).field_g ^ -1)) {
+          if (vk.field_r == 96) {
+            if (((rj) this).field_g > 0) {
               L0: {
                 ((rj) this).field_d = false;
                 ((rj) this).field_g = ((rj) this).field_g - 1;
-                if (-1 == (((rj) this).field_h ^ -1)) {
+                if (((rj) this).field_h == 0) {
                   ((rj) this).field_e = vk.field_r;
                   break L0;
                 } else {
@@ -574,7 +575,7 @@ final class rj {
               }
               L1: {
                 var3 = -13 % ((param0 - 62) / 33);
-                if ((((rj) this).field_h ^ -1) != -1) {
+                if (((rj) this).field_h != 0) {
                   break L1;
                 } else {
                   if (vk.field_r != 97) {
@@ -587,11 +588,11 @@ final class rj {
                     } else {
                       L2: {
                         ((rj) this).field_g = 0;
-                        if ((((rj) this).field_h ^ -1) != -1) {
+                        if (((rj) this).field_h != 0) {
                           break L2;
                         } else {
                           L3: {
-                            if ((vk.field_r ^ -1) == -99) {
+                            if (vk.field_r == 98) {
                               break L3;
                             } else {
                               if (vk.field_r != 99) {
@@ -601,7 +602,7 @@ final class rj {
                               }
                             }
                           }
-                          if ((((rj) this).field_g ^ -1) <= -1) {
+                          if (((rj) this).field_g >= 0) {
                             ((rj) this).field_d = false;
                             return;
                           } else {
@@ -617,11 +618,11 @@ final class rj {
                 }
               }
               L4: {
-                if ((((rj) this).field_h ^ -1) != -1) {
+                if (((rj) this).field_h != 0) {
                   break L4;
                 } else {
-                  if ((vk.field_r ^ -1) == -99) {
-                    if ((((rj) this).field_g ^ -1) <= -1) {
+                  if (vk.field_r == 98) {
+                    if (((rj) this).field_g >= 0) {
                       ((rj) this).field_d = false;
                       return;
                     } else {
@@ -633,7 +634,7 @@ final class rj {
                     if (vk.field_r != 99) {
                       break L4;
                     } else {
-                      if ((((rj) this).field_g ^ -1) <= -1) {
+                      if (((rj) this).field_g >= 0) {
                         ((rj) this).field_d = false;
                         return;
                       } else {
@@ -651,7 +652,7 @@ final class rj {
               L5: {
                 ((rj) this).field_d = false;
                 ((rj) this).field_g = ((rj) this).field_g - 1;
-                if (-1 == (((rj) this).field_h ^ -1)) {
+                if (((rj) this).field_h == 0) {
                   ((rj) this).field_e = vk.field_r;
                   break L5;
                 } else {
@@ -659,17 +660,17 @@ final class rj {
                 }
               }
               var3 = -13 % ((param0 - 62) / 33);
-              if ((((rj) this).field_h ^ -1) == -1) {
+              if (((rj) this).field_h == 0) {
                 if (vk.field_r == 97) {
                   ((rj) this).field_g = ((rj) this).field_g + 1;
                   ((rj) this).field_d = false;
                   if (((rj) this).field_c > ((rj) this).field_g) {
                     L6: {
-                      if ((((rj) this).field_h ^ -1) != -1) {
+                      if (((rj) this).field_h != 0) {
                         break L6;
                       } else {
-                        if ((vk.field_r ^ -1) == -99) {
-                          if ((((rj) this).field_g ^ -1) <= -1) {
+                        if (vk.field_r == 98) {
+                          if (((rj) this).field_g >= 0) {
                             ((rj) this).field_d = false;
                             return;
                           } else {
@@ -681,7 +682,7 @@ final class rj {
                           if (vk.field_r != 99) {
                             break L6;
                           } else {
-                            if ((((rj) this).field_g ^ -1) <= -1) {
+                            if (((rj) this).field_g >= 0) {
                               ((rj) this).field_d = false;
                               return;
                             } else {
@@ -696,9 +697,9 @@ final class rj {
                     return;
                   } else {
                     ((rj) this).field_g = 0;
-                    if ((((rj) this).field_h ^ -1) == -1) {
-                      if ((vk.field_r ^ -1) == -99) {
-                        if ((((rj) this).field_g ^ -1) <= -1) {
+                    if (((rj) this).field_h == 0) {
+                      if (vk.field_r == 98) {
+                        if (((rj) this).field_g >= 0) {
                           ((rj) this).field_d = false;
                           return;
                         } else {
@@ -708,7 +709,7 @@ final class rj {
                         }
                       } else {
                         if (vk.field_r == 99) {
-                          if ((((rj) this).field_g ^ -1) <= -1) {
+                          if (((rj) this).field_g >= 0) {
                             ((rj) this).field_d = false;
                             return;
                           } else {
@@ -726,11 +727,11 @@ final class rj {
                   }
                 } else {
                   L7: {
-                    if ((((rj) this).field_h ^ -1) != -1) {
+                    if (((rj) this).field_h != 0) {
                       break L7;
                     } else {
-                      if ((vk.field_r ^ -1) == -99) {
-                        if ((((rj) this).field_g ^ -1) <= -1) {
+                      if (vk.field_r == 98) {
+                        if (((rj) this).field_g >= 0) {
                           ((rj) this).field_d = false;
                           return;
                         } else {
@@ -742,7 +743,7 @@ final class rj {
                         if (vk.field_r != 99) {
                           break L7;
                         } else {
-                          if ((((rj) this).field_g ^ -1) <= -1) {
+                          if (((rj) this).field_g >= 0) {
                             ((rj) this).field_d = false;
                             return;
                           } else {
@@ -758,11 +759,11 @@ final class rj {
                 }
               } else {
                 L8: {
-                  if ((((rj) this).field_h ^ -1) != -1) {
+                  if (((rj) this).field_h != 0) {
                     break L8;
                   } else {
-                    if ((vk.field_r ^ -1) == -99) {
-                      if ((((rj) this).field_g ^ -1) <= -1) {
+                    if (vk.field_r == 98) {
+                      if (((rj) this).field_g >= 0) {
                         ((rj) this).field_d = false;
                         return;
                       } else {
@@ -774,7 +775,7 @@ final class rj {
                       if (vk.field_r != 99) {
                         break L8;
                       } else {
-                        if ((((rj) this).field_g ^ -1) <= -1) {
+                        if (((rj) this).field_g >= 0) {
                           ((rj) this).field_d = false;
                           return;
                         } else {
@@ -791,7 +792,7 @@ final class rj {
             }
           } else {
             L9: {
-              if (-1 == (((rj) this).field_h ^ -1)) {
+              if (((rj) this).field_h == 0) {
                 ((rj) this).field_e = vk.field_r;
                 break L9;
               } else {
@@ -800,7 +801,7 @@ final class rj {
             }
             L10: {
               var3 = -13 % ((param0 - 62) / 33);
-              if ((((rj) this).field_h ^ -1) != -1) {
+              if (((rj) this).field_h != 0) {
                 break L10;
               } else {
                 if (vk.field_r != 97) {
@@ -813,11 +814,11 @@ final class rj {
                   } else {
                     L11: {
                       ((rj) this).field_g = 0;
-                      if ((((rj) this).field_h ^ -1) != -1) {
+                      if (((rj) this).field_h != 0) {
                         break L11;
                       } else {
-                        if ((vk.field_r ^ -1) == -99) {
-                          if ((((rj) this).field_g ^ -1) <= -1) {
+                        if (vk.field_r == 98) {
+                          if (((rj) this).field_g >= 0) {
                             ((rj) this).field_d = false;
                             return;
                           } else {
@@ -829,7 +830,7 @@ final class rj {
                           if (vk.field_r != 99) {
                             break L11;
                           } else {
-                            if ((((rj) this).field_g ^ -1) <= -1) {
+                            if (((rj) this).field_g >= 0) {
                               ((rj) this).field_d = false;
                               return;
                             } else {
@@ -847,11 +848,11 @@ final class rj {
               }
             }
             L12: {
-              if ((((rj) this).field_h ^ -1) != -1) {
+              if (((rj) this).field_h != 0) {
                 break L12;
               } else {
-                if ((vk.field_r ^ -1) == -99) {
-                  if ((((rj) this).field_g ^ -1) <= -1) {
+                if (vk.field_r == 98) {
+                  if (((rj) this).field_g >= 0) {
                     ((rj) this).field_d = false;
                     return;
                   } else {
@@ -863,7 +864,7 @@ final class rj {
                   if (vk.field_r != 99) {
                     break L12;
                   } else {
-                    if ((((rj) this).field_g ^ -1) <= -1) {
+                    if (((rj) this).field_g >= 0) {
                       ((rj) this).field_d = false;
                       return;
                     } else {
@@ -879,7 +880,7 @@ final class rj {
           }
         } else {
           L13: {
-            if (-1 == (((rj) this).field_h ^ -1)) {
+            if (((rj) this).field_h == 0) {
               ((rj) this).field_e = vk.field_r;
               break L13;
             } else {
@@ -888,7 +889,7 @@ final class rj {
           }
           L14: {
             var3 = -13 % ((param0 - 62) / 33);
-            if ((((rj) this).field_h ^ -1) != -1) {
+            if (((rj) this).field_h != 0) {
               break L14;
             } else {
               if (vk.field_r != 97) {
@@ -901,11 +902,11 @@ final class rj {
                 } else {
                   L15: {
                     ((rj) this).field_g = 0;
-                    if ((((rj) this).field_h ^ -1) != -1) {
+                    if (((rj) this).field_h != 0) {
                       break L15;
                     } else {
                       L16: {
-                        if ((vk.field_r ^ -1) == -99) {
+                        if (vk.field_r == 98) {
                           break L16;
                         } else {
                           if (vk.field_r != 99) {
@@ -915,7 +916,7 @@ final class rj {
                           }
                         }
                       }
-                      if ((((rj) this).field_g ^ -1) <= -1) {
+                      if (((rj) this).field_g >= 0) {
                         ((rj) this).field_d = false;
                         return;
                       } else {
@@ -931,11 +932,11 @@ final class rj {
             }
           }
           L17: {
-            if ((((rj) this).field_h ^ -1) != -1) {
+            if (((rj) this).field_h != 0) {
               break L17;
             } else {
-              if ((vk.field_r ^ -1) == -99) {
-                if ((((rj) this).field_g ^ -1) <= -1) {
+              if (vk.field_r == 98) {
+                if (((rj) this).field_g >= 0) {
                   ((rj) this).field_d = false;
                   return;
                 } else {
@@ -947,7 +948,7 @@ final class rj {
                 if (vk.field_r != 99) {
                   break L17;
                 } else {
-                  if ((((rj) this).field_g ^ -1) <= -1) {
+                  if (((rj) this).field_g >= 0) {
                     ((rj) this).field_d = false;
                     return;
                   } else {

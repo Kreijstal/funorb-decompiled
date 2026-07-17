@@ -50,9 +50,9 @@ final class vm {
     final static fm a(boolean param0, byte param1, boolean param2, int param3, int param4) {
         if (param1 != 22) {
           eq discarded$2 = vm.a(-98, (byte) 84);
-          return el.a(-107, param0, false, param3, param4, param2);
+          return el.a(-107, param0, false, param3, 1, param2);
         } else {
-          return el.a(-107, param0, false, param3, param4, param2);
+          return el.a(-107, param0, false, param3, 1, param2);
         }
     }
 
@@ -60,11 +60,11 @@ final class vm {
         if (param1 > -62) {
             return;
         }
-        io.field_e = 3 & param0 >> -964132796;
-        if ((io.field_e ^ -1) < -3) {
+        io.field_e = 3 & param0 >> 4;
+        if (io.field_e > 2) {
             io.field_e = 2;
-            gh.field_v = (14 & param0) >> 923892994;
-            if (!(-3 <= (gh.field_v ^ -1))) {
+            gh.field_v = (14 & param0) >> 2;
+            if (!(gh.field_v <= 2)) {
                 gh.field_v = 2;
             }
             ib.field_e = param0 & 3;
@@ -74,8 +74,8 @@ final class vm {
             ib.field_e = 2;
             return;
         }
-        gh.field_v = (14 & param0) >> 923892994;
-        if (!(-3 <= (gh.field_v ^ -1))) {
+        gh.field_v = (14 & param0) >> 2;
+        if (!(gh.field_v <= 2)) {
             gh.field_v = 2;
         }
         ib.field_e = param0 & 3;

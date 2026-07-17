@@ -139,7 +139,7 @@ final class ec extends fj implements ru {
             break L4;
           } else {
             L5: {
-              if (-1 != (param7 ^ -1)) {
+              if (param7 != 0) {
                 break L5;
               } else {
                 param7 = param2;

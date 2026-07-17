@@ -35,9 +35,6 @@ class l {
 
     public static void b(int param0) {
         field_b = null;
-        if (param0 != -6325) {
-            return;
-        }
         field_e = null;
         field_c = null;
     }

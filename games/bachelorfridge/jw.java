@@ -61,15 +61,12 @@ final class jw extends ana {
     }
 
     private final void f(int param0) {
-        if (param0 == 7) {
-            return;
-        }
-        this.e(48);
     }
 
     final boolean c(byte param0) {
+        int fieldTemp$0 = ((jw) this).field_l - 1;
         ((jw) this).field_l = ((jw) this).field_l - 1;
-        if (!(((jw) this).field_l - 1 > -1)) {
+        if (!(fieldTemp$0 > -1)) {
             if (-26 == ((jw) this).field_l) {
                 jja.a(256, -1, 33);
                 this.e(-23403);
@@ -84,7 +81,11 @@ final class jw extends ana {
 
     jw(gj param0, fia param1) {
         super(param0, (bca) (Object) param1);
-        ((jw) this).field_w = param1;
+        try {
+            ((jw) this).field_w = param1;
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "jw.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

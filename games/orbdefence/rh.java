@@ -13,7 +13,7 @@ final class rh {
         var3 = 99 / ((param0 - 75) / 33);
         te.field_O = 0;
         kk.field_S = param1;
-        if ((kk.field_S ^ -1) <= -1) {
+        if (kk.field_S >= 0) {
           nc.field_cb[kk.field_S].a(param2, (byte) 53);
           return;
         } else {

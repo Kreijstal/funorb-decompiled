@@ -12,9 +12,6 @@ final class fm extends bw {
     public static void a(int param0) {
         field_f = null;
         field_g = null;
-        if (param0 < 78) {
-            field_g = null;
-        }
     }
 
     static {

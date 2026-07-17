@@ -147,7 +147,7 @@ final class b extends pi {
                       if ((var6 & -256) == 0) {
                         break L8;
                       } else {
-                        var6 = (var6 ^ -1) >> 31;
+                        var6 = ~var6 >> 31;
                         break L8;
                       }
                     }
@@ -215,7 +215,7 @@ final class b extends pi {
                     if ((var7 & -256) == 0) {
                       break L3;
                     } else {
-                      var7 = (var7 ^ -1) >> 31;
+                      var7 = ~var7 >> 31;
                       break L3;
                     }
                   }
@@ -502,10 +502,8 @@ final class b extends pi {
                 return null;
             }
             Object var4 = null;
-            try {
+            {
                 var4_ref = new b(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
             }
             return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -527,10 +525,8 @@ final class b extends pi {
                 return null;
             }
             Object var4 = null;
-            try {
+            {
                 var4_ref = new b(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
             }
             return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -542,7 +538,7 @@ final class b extends pi {
 
     private final static void a(byte[] param0, int param1) {
         field_p = param0;
-        field_y = param1;
+        field_y = 0;
         field_J = 0;
     }
 
@@ -1159,7 +1155,7 @@ final class b extends pi {
         ((b) this).field_u = var2.b((byte) 88);
         ((b) this).field_H = var2.b((byte) 51);
         if (((b) this).field_H < 0) {
-            ((b) this).field_H = ((b) this).field_H ^ -1;
+            ((b) this).field_H = ~((b) this).field_H;
             ((b) this).field_w = true;
         }
         int var3 = var2.b((byte) 65);

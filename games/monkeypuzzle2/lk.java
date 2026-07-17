@@ -67,9 +67,6 @@ final class lk {
 
     public static void a(boolean param0) {
         field_b = null;
-        if (!param0) {
-            field_b = null;
-        }
     }
 
     public final String toString() {

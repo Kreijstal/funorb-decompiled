@@ -7,7 +7,7 @@ final class wm {
 
     final static int a(int param0, int param1, int param2) {
         int var3 = 19 / ((param2 - 70) / 33);
-        if (!(-1 >= (param1 ^ -1))) {
+        if (!(param1 >= 0)) {
             return 0;
         }
         if (!(param1 <= param0)) {

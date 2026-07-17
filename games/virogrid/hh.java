@@ -17,7 +17,7 @@ final class hh {
         var6 = Virogrid.field_F ? 1 : 0;
         var2 = 0;
         var3 = kf.field_e;
-        if ((var3 ^ -1) > -6) {
+        if (var3 < 5) {
           L0: {
             var2 = 8192 * var3 * var3 / 1100;
             var4 = 1;
@@ -30,7 +30,7 @@ final class hh {
             }
           }
           L1: {
-            if ((param1 ^ -1) != -4) {
+            if (param1 != 3) {
               break L1;
             } else {
               var4 = -1;
@@ -47,7 +47,7 @@ final class hh {
             }
           }
           L3: {
-            if (-6 == (param1 ^ -1)) {
+            if (param1 == 5) {
               var4 = -1;
               var5 = 1;
               break L3;
@@ -56,7 +56,7 @@ final class hh {
             }
           }
           L4: {
-            if (-7 != (param1 ^ -1)) {
+            if (param1 != 6) {
               break L4;
             } else {
               var4 = 1;
@@ -65,7 +65,7 @@ final class hh {
             }
           }
           L5: {
-            if (-8 == (param1 ^ -1)) {
+            if (param1 == 7) {
               var4 = -1;
               var5 = -1;
               break L5;
@@ -77,7 +77,7 @@ final class hh {
                 var5 = -1;
                 if (param0 >= 75) {
                   L6: {
-                    if (-12 == (param1 ^ -1)) {
+                    if (param1 == 11) {
                       var4 = -1;
                       break L6;
                     } else {
@@ -85,7 +85,7 @@ final class hh {
                     }
                   }
                   L7: {
-                    if (-13 != (param1 ^ -1)) {
+                    if (param1 != 12) {
                       break L7;
                     } else {
                       var5 = -1;
@@ -94,7 +94,7 @@ final class hh {
                     }
                   }
                   L8: {
-                    if (-14 != (param1 ^ -1)) {
+                    if (param1 != 13) {
                       break L8;
                     } else {
                       var4 = 1;
@@ -103,7 +103,7 @@ final class hh {
                     }
                   }
                   L9: {
-                    if ((param1 ^ -1) == -15) {
+                    if (param1 == 14) {
                       var5 = 1;
                       var4 = -1;
                       break L9;
@@ -112,7 +112,7 @@ final class hh {
                     }
                   }
                   L10: {
-                    if ((param1 ^ -1) != -16) {
+                    if (param1 != 15) {
                       break L10;
                     } else {
                       var4 = 1;
@@ -125,7 +125,7 @@ final class hh {
                 } else {
                   L11: {
                     uh discarded$7 = hh.a(105);
-                    if (-12 == (param1 ^ -1)) {
+                    if (param1 == 11) {
                       var4 = -1;
                       break L11;
                     } else {
@@ -133,7 +133,7 @@ final class hh {
                     }
                   }
                   L12: {
-                    if (-13 != (param1 ^ -1)) {
+                    if (param1 != 12) {
                       break L12;
                     } else {
                       var5 = -1;
@@ -142,7 +142,7 @@ final class hh {
                     }
                   }
                   L13: {
-                    if (-14 != (param1 ^ -1)) {
+                    if (param1 != 13) {
                       break L13;
                     } else {
                       var4 = 1;
@@ -151,7 +151,7 @@ final class hh {
                     }
                   }
                   L14: {
-                    if ((param1 ^ -1) == -15) {
+                    if (param1 == 14) {
                       var5 = 1;
                       var4 = -1;
                       break L14;
@@ -160,7 +160,7 @@ final class hh {
                     }
                   }
                   L15: {
-                    if ((param1 ^ -1) != -16) {
+                    if (param1 != 15) {
                       break L15;
                     } else {
                       var4 = 1;
@@ -176,7 +176,7 @@ final class hh {
           }
           if (param0 >= 75) {
             L16: {
-              if (-12 == (param1 ^ -1)) {
+              if (param1 == 11) {
                 var4 = -1;
                 break L16;
               } else {
@@ -184,7 +184,7 @@ final class hh {
               }
             }
             L17: {
-              if (-13 != (param1 ^ -1)) {
+              if (param1 != 12) {
                 break L17;
               } else {
                 var5 = -1;
@@ -193,7 +193,7 @@ final class hh {
               }
             }
             L18: {
-              if (-14 != (param1 ^ -1)) {
+              if (param1 != 13) {
                 break L18;
               } else {
                 var4 = 1;
@@ -202,7 +202,7 @@ final class hh {
               }
             }
             L19: {
-              if ((param1 ^ -1) == -15) {
+              if (param1 == 14) {
                 var5 = 1;
                 var4 = -1;
                 break L19;
@@ -211,7 +211,7 @@ final class hh {
               }
             }
             L20: {
-              if ((param1 ^ -1) != -16) {
+              if (param1 != 15) {
                 break L20;
               } else {
                 var4 = 1;
@@ -224,7 +224,7 @@ final class hh {
           } else {
             L21: {
               uh discarded$8 = hh.a(105);
-              if (-12 == (param1 ^ -1)) {
+              if (param1 == 11) {
                 var4 = -1;
                 break L21;
               } else {
@@ -232,7 +232,7 @@ final class hh {
               }
             }
             L22: {
-              if (-13 != (param1 ^ -1)) {
+              if (param1 != 12) {
                 break L22;
               } else {
                 var5 = -1;
@@ -241,7 +241,7 @@ final class hh {
               }
             }
             L23: {
-              if (-14 != (param1 ^ -1)) {
+              if (param1 != 13) {
                 break L23;
               } else {
                 var4 = 1;
@@ -250,7 +250,7 @@ final class hh {
               }
             }
             L24: {
-              if ((param1 ^ -1) == -15) {
+              if (param1 == 14) {
                 var5 = 1;
                 var4 = -1;
                 break L24;
@@ -259,7 +259,7 @@ final class hh {
               }
             }
             L25: {
-              if ((param1 ^ -1) != -16) {
+              if (param1 != 15) {
                 break L25;
               } else {
                 var4 = 1;
@@ -271,7 +271,7 @@ final class hh {
             return;
           }
         } else {
-          if (-106 >= (var3 ^ -1)) {
+          if (var3 >= 105) {
             if (var3 < 120) {
               L26: {
                 var3 = -var3 + 120;
@@ -286,7 +286,7 @@ final class hh {
                 }
               }
               L27: {
-                if ((param1 ^ -1) != -4) {
+                if (param1 != 3) {
                   break L27;
                 } else {
                   var4 = -1;
@@ -303,7 +303,7 @@ final class hh {
                 }
               }
               L29: {
-                if (-6 == (param1 ^ -1)) {
+                if (param1 == 5) {
                   var4 = -1;
                   var5 = 1;
                   break L29;
@@ -312,7 +312,7 @@ final class hh {
                 }
               }
               L30: {
-                if (-7 != (param1 ^ -1)) {
+                if (param1 != 6) {
                   break L30;
                 } else {
                   var4 = 1;
@@ -321,7 +321,7 @@ final class hh {
                 }
               }
               L31: {
-                if (-8 == (param1 ^ -1)) {
+                if (param1 == 7) {
                   var4 = -1;
                   var5 = -1;
                   break L31;
@@ -340,7 +340,7 @@ final class hh {
                       }
                     }
                     L33: {
-                      if (-12 == (param1 ^ -1)) {
+                      if (param1 == 11) {
                         var4 = -1;
                         break L33;
                       } else {
@@ -348,7 +348,7 @@ final class hh {
                       }
                     }
                     L34: {
-                      if (-13 != (param1 ^ -1)) {
+                      if (param1 != 12) {
                         break L34;
                       } else {
                         var5 = -1;
@@ -357,7 +357,7 @@ final class hh {
                       }
                     }
                     L35: {
-                      if (-14 != (param1 ^ -1)) {
+                      if (param1 != 13) {
                         break L35;
                       } else {
                         var4 = 1;
@@ -366,7 +366,7 @@ final class hh {
                       }
                     }
                     L36: {
-                      if ((param1 ^ -1) == -15) {
+                      if (param1 == 14) {
                         var5 = 1;
                         var4 = -1;
                         break L36;
@@ -375,7 +375,7 @@ final class hh {
                       }
                     }
                     L37: {
-                      if ((param1 ^ -1) != -16) {
+                      if (param1 != 15) {
                         break L37;
                       } else {
                         var4 = 1;
@@ -390,7 +390,7 @@ final class hh {
               }
               if (param0 >= 75) {
                 L38: {
-                  if (-12 == (param1 ^ -1)) {
+                  if (param1 == 11) {
                     var4 = -1;
                     break L38;
                   } else {
@@ -398,7 +398,7 @@ final class hh {
                   }
                 }
                 L39: {
-                  if (-13 != (param1 ^ -1)) {
+                  if (param1 != 12) {
                     break L39;
                   } else {
                     var5 = -1;
@@ -407,7 +407,7 @@ final class hh {
                   }
                 }
                 L40: {
-                  if (-14 != (param1 ^ -1)) {
+                  if (param1 != 13) {
                     break L40;
                   } else {
                     var4 = 1;
@@ -416,7 +416,7 @@ final class hh {
                   }
                 }
                 L41: {
-                  if ((param1 ^ -1) == -15) {
+                  if (param1 == 14) {
                     var5 = 1;
                     var4 = -1;
                     break L41;
@@ -425,7 +425,7 @@ final class hh {
                   }
                 }
                 L42: {
-                  if ((param1 ^ -1) != -16) {
+                  if (param1 != 15) {
                     break L42;
                   } else {
                     var4 = 1;
@@ -438,7 +438,7 @@ final class hh {
               } else {
                 L43: {
                   uh discarded$10 = hh.a(105);
-                  if (-12 == (param1 ^ -1)) {
+                  if (param1 == 11) {
                     var4 = -1;
                     break L43;
                   } else {
@@ -446,7 +446,7 @@ final class hh {
                   }
                 }
                 L44: {
-                  if (-13 != (param1 ^ -1)) {
+                  if (param1 != 12) {
                     break L44;
                   } else {
                     var5 = -1;
@@ -455,7 +455,7 @@ final class hh {
                   }
                 }
                 L45: {
-                  if (-14 != (param1 ^ -1)) {
+                  if (param1 != 13) {
                     break L45;
                   } else {
                     var4 = 1;
@@ -464,7 +464,7 @@ final class hh {
                   }
                 }
                 L46: {
-                  if ((param1 ^ -1) == -15) {
+                  if (param1 == 14) {
                     var5 = 1;
                     var4 = -1;
                     break L46;
@@ -473,7 +473,7 @@ final class hh {
                   }
                 }
                 L47: {
-                  if ((param1 ^ -1) != -16) {
+                  if (param1 != 15) {
                     break L47;
                   } else {
                     var4 = 1;
@@ -496,7 +496,7 @@ final class hh {
                 }
               }
               L49: {
-                if ((param1 ^ -1) != -4) {
+                if (param1 != 3) {
                   break L49;
                 } else {
                   var4 = -1;
@@ -513,7 +513,7 @@ final class hh {
                 }
               }
               L51: {
-                if (-6 == (param1 ^ -1)) {
+                if (param1 == 5) {
                   var4 = -1;
                   var5 = 1;
                   break L51;
@@ -522,7 +522,7 @@ final class hh {
                 }
               }
               L52: {
-                if (-7 != (param1 ^ -1)) {
+                if (param1 != 6) {
                   break L52;
                 } else {
                   var4 = 1;
@@ -530,7 +530,7 @@ final class hh {
                   break L52;
                 }
               }
-              if (-8 != (param1 ^ -1)) {
+              if (param1 != 7) {
                 L53: {
                   if (8 != param1) {
                     break L53;
@@ -543,7 +543,7 @@ final class hh {
                 if (param0 < 75) {
                   L54: {
                     uh discarded$11 = hh.a(105);
-                    if (-12 == (param1 ^ -1)) {
+                    if (param1 == 11) {
                       var4 = -1;
                       break L54;
                     } else {
@@ -551,7 +551,7 @@ final class hh {
                     }
                   }
                   L55: {
-                    if (-13 != (param1 ^ -1)) {
+                    if (param1 != 12) {
                       break L55;
                     } else {
                       var5 = -1;
@@ -560,7 +560,7 @@ final class hh {
                     }
                   }
                   L56: {
-                    if (-14 != (param1 ^ -1)) {
+                    if (param1 != 13) {
                       break L56;
                     } else {
                       var4 = 1;
@@ -569,7 +569,7 @@ final class hh {
                     }
                   }
                   L57: {
-                    if ((param1 ^ -1) == -15) {
+                    if (param1 == 14) {
                       var5 = 1;
                       var4 = -1;
                       break L57;
@@ -578,7 +578,7 @@ final class hh {
                     }
                   }
                   L58: {
-                    if ((param1 ^ -1) != -16) {
+                    if (param1 != 15) {
                       break L58;
                     } else {
                       var4 = 1;
@@ -590,7 +590,7 @@ final class hh {
                   return;
                 } else {
                   L59: {
-                    if (-12 == (param1 ^ -1)) {
+                    if (param1 == 11) {
                       var4 = -1;
                       break L59;
                     } else {
@@ -598,7 +598,7 @@ final class hh {
                     }
                   }
                   L60: {
-                    if (-13 != (param1 ^ -1)) {
+                    if (param1 != 12) {
                       break L60;
                     } else {
                       var5 = -1;
@@ -607,7 +607,7 @@ final class hh {
                     }
                   }
                   L61: {
-                    if (-14 != (param1 ^ -1)) {
+                    if (param1 != 13) {
                       break L61;
                     } else {
                       var4 = 1;
@@ -616,7 +616,7 @@ final class hh {
                     }
                   }
                   L62: {
-                    if ((param1 ^ -1) == -15) {
+                    if (param1 == 14) {
                       var5 = 1;
                       var4 = -1;
                       break L62;
@@ -625,7 +625,7 @@ final class hh {
                     }
                   }
                   L63: {
-                    if ((param1 ^ -1) != -16) {
+                    if (param1 != 15) {
                       break L63;
                     } else {
                       var4 = 1;
@@ -648,7 +648,7 @@ final class hh {
                   }
                 }
                 L65: {
-                  if (-12 == (param1 ^ -1)) {
+                  if (param1 == 11) {
                     var4 = -1;
                     break L65;
                   } else {
@@ -656,7 +656,7 @@ final class hh {
                   }
                 }
                 L66: {
-                  if (-13 != (param1 ^ -1)) {
+                  if (param1 != 12) {
                     break L66;
                   } else {
                     var5 = -1;
@@ -665,7 +665,7 @@ final class hh {
                   }
                 }
                 L67: {
-                  if (-14 != (param1 ^ -1)) {
+                  if (param1 != 13) {
                     break L67;
                   } else {
                     var4 = 1;
@@ -674,7 +674,7 @@ final class hh {
                   }
                 }
                 L68: {
-                  if ((param1 ^ -1) == -15) {
+                  if (param1 == 14) {
                     var5 = 1;
                     var4 = -1;
                     break L68;
@@ -683,7 +683,7 @@ final class hh {
                   }
                 }
                 L69: {
-                  if ((param1 ^ -1) != -16) {
+                  if (param1 != 15) {
                     break L69;
                   } else {
                     var4 = 1;
@@ -708,7 +708,7 @@ final class hh {
               }
             }
             L71: {
-              if ((param1 ^ -1) != -4) {
+              if (param1 != 3) {
                 break L71;
               } else {
                 var4 = -1;
@@ -725,7 +725,7 @@ final class hh {
               }
             }
             L73: {
-              if (-6 == (param1 ^ -1)) {
+              if (param1 == 5) {
                 var4 = -1;
                 var5 = 1;
                 break L73;
@@ -734,7 +734,7 @@ final class hh {
               }
             }
             L74: {
-              if (-7 != (param1 ^ -1)) {
+              if (param1 != 6) {
                 break L74;
               } else {
                 var4 = 1;
@@ -744,7 +744,7 @@ final class hh {
             }
             L75: {
               L76: {
-                if (-8 == (param1 ^ -1)) {
+                if (param1 == 7) {
                   break L76;
                 } else {
                   if (8 != param1) {
@@ -767,7 +767,7 @@ final class hh {
               }
             }
             L78: {
-              if (-12 == (param1 ^ -1)) {
+              if (param1 == 11) {
                 var4 = -1;
                 break L78;
               } else {
@@ -775,7 +775,7 @@ final class hh {
               }
             }
             L79: {
-              if (-13 != (param1 ^ -1)) {
+              if (param1 != 12) {
                 break L79;
               } else {
                 var5 = -1;
@@ -784,7 +784,7 @@ final class hh {
               }
             }
             L80: {
-              if (-14 != (param1 ^ -1)) {
+              if (param1 != 13) {
                 break L80;
               } else {
                 var4 = 1;
@@ -793,7 +793,7 @@ final class hh {
               }
             }
             L81: {
-              if ((param1 ^ -1) == -15) {
+              if (param1 == 14) {
                 var5 = 1;
                 var4 = -1;
                 break L81;
@@ -802,7 +802,7 @@ final class hh {
               }
             }
             L82: {
-              if ((param1 ^ -1) != -16) {
+              if (param1 != 15) {
                 break L82;
               } else {
                 var4 = 1;
@@ -831,9 +831,6 @@ final class hh {
 
     public static void a(byte param0) {
         field_a = null;
-        if (param0 > -122) {
-            return;
-        }
         field_b = null;
     }
 

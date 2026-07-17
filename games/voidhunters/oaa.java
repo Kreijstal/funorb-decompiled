@@ -16,9 +16,6 @@ final class oaa extends mnb implements uq {
 
     public static void c(int param0) {
         field_k = null;
-        if (param0 < 78) {
-            return;
-        }
         field_j = null;
         field_h = null;
     }
@@ -39,10 +36,6 @@ final class oaa extends mnb implements uq {
     }
 
     final static double b(byte param0) {
-        if (param0 >= -43) {
-            boolean discarded$0 = oaa.a((byte) 83);
-            return npa.field_c;
-        }
         return npa.field_c;
     }
 

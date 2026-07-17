@@ -52,7 +52,7 @@ final class kj {
                       }
                     }
                     if (decompiledRegionSelector0 == 0) {
-                      var1 = -100 / ((param0 - -31) / 50);
+                      var1 = -100;
                       return;
                     } else {
                       break L1;
@@ -68,7 +68,7 @@ final class kj {
                 break L4;
               }
             }
-            var1 = -100 / ((param0 - -31) / 50);
+            var1 = -100;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -77,20 +77,10 @@ final class kj {
     }
 
     public static void a(byte param0) {
-        if (param0 <= 63) {
-          field_b = null;
-          field_b = null;
-          field_c = null;
-          field_e = null;
-          field_d = null;
-          return;
-        } else {
-          field_b = null;
-          field_c = null;
-          field_e = null;
-          field_d = null;
-          return;
-        }
+        field_b = null;
+        field_c = null;
+        field_e = null;
+        field_d = null;
     }
 
     static {

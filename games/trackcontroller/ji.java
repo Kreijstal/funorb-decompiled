@@ -23,42 +23,92 @@ final class ji {
     }
 
     final static void a(byte param0, boolean param1, java.awt.Canvas param2) {
-        int var3 = 0;
+        RuntimeException var3 = null;
+        int var3_int = 0;
         int var4 = 0;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
         var4 = TrackController.field_F ? 1 : 0;
-        if (10 <= gl.field_I) {
-          if (ic.a(false)) {
-            if (rl.field_N != 0) {
-              l.a((byte) 85, param2);
-              var3 = -98 / ((7 - param0) / 51);
-              return;
-            } else {
-              ki.a(false, 0, param1);
-              qd.a(param2, 0, 0, 2901);
-              var3 = -98 / ((7 - param0) / 51);
-              return;
-            }
-          } else {
-            ll.a();
-            hi.b(320, -122, 240);
-            qd.a(param2, 0, 0, 2901);
-            var3 = -98 / ((7 - param0) / 51);
-            return;
-          }
-        } else {
+        try {
           L0: {
-            var3 = 0;
-            if (vh.field_q) {
-              vh.field_q = false;
-              var3 = 1;
-              break L0;
+            L1: {
+              if (10 > gl.field_I) {
+                L2: {
+                  var3_int = 0;
+                  if (vh.field_q) {
+                    vh.field_q = false;
+                    var3_int = 1;
+                    break L2;
+                  } else {
+                    break L2;
+                  }
+                }
+                fb.a(var3_int != 0, ie.a(122), dg.field_E, ei.a((byte) 116), (byte) -103);
+                break L1;
+              } else {
+                if (!ic.a(false)) {
+                  ll.a();
+                  hi.b(320, -122, 240);
+                  qd.a(param2, 0, 0, 2901);
+                  break L1;
+                } else {
+                  if (rl.field_N == 0) {
+                    ki.a(false, 0, param1);
+                    qd.a(param2, 0, 0, 2901);
+                    break L1;
+                  } else {
+                    l.a((byte) 85, param2);
+                    break L1;
+                  }
+                }
+              }
+            }
+            var3_int = -98 / ((7 - param0) / 51);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var3 = decompiledCaughtException;
+            stackOut_13_0 = (RuntimeException) var3;
+            stackOut_13_1 = new StringBuilder().append("ji.B(").append(param0).append(44).append(param1).append(44);
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
+            if (param2 == null) {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L3;
             } else {
-              break L0;
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L3;
             }
           }
-          fb.a(var3 != 0, ie.a(122), dg.field_E, ei.a((byte) 116), (byte) -103);
-          var3 = -98 / ((7 - param0) / 51);
-          return;
+          throw sl.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
         }
     }
 

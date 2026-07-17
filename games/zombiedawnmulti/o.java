@@ -16,19 +16,20 @@ final class o {
     static String field_d;
 
     final static void d(int param0) {
-        int var1 = 0;
+        int var1_int = 0;
         int var2 = ZombieDawnMulti.field_E ? 1 : 0;
-        kj.field_r.b(-102);
-        for (var1 = 0; -33 < var1; var1++) {
-            dc.field_Ib[var1] = 0L;
+        try {
+            kj.field_r.b(-102);
+            for (var1_int = 0; var1_int < 32; var1_int++) {
+                dc.field_Ib[var1_int] = 0L;
+            }
+            for (var1_int = 0; var1_int < 32; var1_int++) {
+                pj.field_K[var1_int] = 0L;
+            }
+            ic.field_a = 0;
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) (Object) runtimeException, "o.F(" + 26673 + 41);
         }
-        if (param0 != 26673) {
-            o.b(-5);
-        }
-        for (var1 = 0; -33 > var1; var1++) {
-            pj.field_K[var1] = 0L;
-        }
-        ic.field_a = 0;
     }
 
     private final void c(int param0) {
@@ -37,39 +38,42 @@ final class o {
         int var4 = 0;
         int var5 = 0;
         var5 = ZombieDawnMulti.field_E ? 1 : 0;
+        int fieldTemp$3 = ((o) this).field_f + 1;
         ((o) this).field_f = ((o) this).field_f + 1;
-        ((o) this).field_e = ((o) this).field_e + (((o) this).field_f + 1);
+        ((o) this).field_e = ((o) this).field_e + fieldTemp$3;
         var2 = 0;
         if (param0 == 2) {
           L0: while (true) {
-            if (-257 >= (var2 ^ -1)) {
+            if (var2 >= 256) {
               return;
             } else {
               L1: {
                 var3 = ((o) this).field_c[var2];
                 if ((2 & var2) != 0) {
-                  if (-1 == (var2 & 1 ^ -1)) {
-                    ((o) this).field_a = ((o) this).field_a ^ ((o) this).field_a << 1147010754;
+                  if ((var2 & 1) == 0) {
+                    ((o) this).field_a = ((o) this).field_a ^ ((o) this).field_a << 2;
                     break L1;
                   } else {
-                    ((o) this).field_a = ((o) this).field_a ^ ((o) this).field_a >>> -465059280;
+                    ((o) this).field_a = ((o) this).field_a ^ ((o) this).field_a >>> 16;
                     break L1;
                   }
                 } else {
                   if ((1 & var2) == 0) {
-                    ((o) this).field_a = ((o) this).field_a ^ ((o) this).field_a << 30377645;
+                    ((o) this).field_a = ((o) this).field_a ^ ((o) this).field_a << 13;
                     break L1;
                   } else {
-                    ((o) this).field_a = ((o) this).field_a ^ ((o) this).field_a >>> 143456070;
+                    ((o) this).field_a = ((o) this).field_a ^ ((o) this).field_a >>> 6;
                     break L1;
                   }
                 }
               }
               ((o) this).field_a = ((o) this).field_a + ((o) this).field_c[255 & var2 + 128];
-              var4 = ((o) this).field_c[tq.b(var3 >> 2130026562, 255)] - (-((o) this).field_a + -((o) this).field_e);
-              ((o) this).field_c[var2] = ((o) this).field_c[tq.b(var3 >> 2130026562, 255)] - (-((o) this).field_a + -((o) this).field_e);
-              ((o) this).field_e = var3 + ((o) this).field_c[tq.b(var4 >> 2054902344, 1020) >> -2036713214];
-              ((o) this).field_g[var2] = var3 + ((o) this).field_c[tq.b(var4 >> 2054902344, 1020) >> -2036713214];
+              int dupTemp$4 = ((o) this).field_c[tq.b(var3 >> 2, 255)] - (-((o) this).field_a + -((o) this).field_e);
+              var4 = dupTemp$4;
+              ((o) this).field_c[var2] = dupTemp$4;
+              int dupTemp$5 = var3 + ((o) this).field_c[tq.b(var4 >> 8, 1020) >> 2];
+              ((o) this).field_e = dupTemp$5;
+              ((o) this).field_g[var2] = dupTemp$5;
               var2++;
               continue L0;
             }
@@ -87,8 +91,9 @@ final class o {
             this.c(2);
             ((o) this).field_k = 256;
         }
+        int fieldTemp$0 = ((o) this).field_k - 1;
         ((o) this).field_k = ((o) this).field_k - 1;
-        return ((o) this).field_g[((o) this).field_k - 1];
+        return ((o) this).field_g[fieldTemp$0];
     }
 
     public static void b(int param0) {
@@ -125,18 +130,11 @@ final class o {
           if (4 <= var2) {
             var2 = 0;
             L1: while (true) {
-              if (-257 >= (var2 ^ -1)) {
+              if (var2 >= 256) {
                 var2 = 0;
                 L2: while (true) {
                   if (var2 >= 256) {
-                    L3: {
-                      if (!param0) {
-                        break L3;
-                      } else {
-                        this.c(104);
-                        break L3;
-                      }
-                    }
+                    this.c(104);
                     this.c(2);
                     ((o) this).field_k = 256;
                     return;
@@ -149,28 +147,28 @@ final class o {
                     var8 = var8 + ((o) this).field_c[5 + var2];
                     var10 = var10 + ((o) this).field_c[7 + var2];
                     var7 = var7 + ((o) this).field_c[4 + var2];
-                    var3 = var3 ^ var4 << 912764459;
+                    var3 = var3 ^ var4 << 11;
                     var4 = var4 + var5;
                     var6 = var6 + var3;
-                    var4 = var4 ^ var5 >>> -1922193342;
+                    var4 = var4 ^ var5 >>> 2;
                     var5 = var5 + var6;
                     var7 = var7 + var4;
-                    var5 = var5 ^ var6 << 689781704;
+                    var5 = var5 ^ var6 << 8;
                     var8 = var8 + var5;
                     var6 = var6 + var7;
-                    var6 = var6 ^ var7 >>> 136627088;
+                    var6 = var6 ^ var7 >>> 16;
                     var9 = var9 + var6;
                     var7 = var7 + var8;
-                    var7 = var7 ^ var8 << -215086742;
+                    var7 = var7 ^ var8 << 10;
                     var8 = var8 + var9;
                     var10 = var10 + var7;
-                    var8 = var8 ^ var9 >>> -1417220188;
+                    var8 = var8 ^ var9 >>> 4;
                     var9 = var9 + var10;
                     var3 = var3 + var8;
-                    var9 = var9 ^ var10 << -1419521080;
+                    var9 = var9 ^ var10 << 8;
                     var4 = var4 + var9;
                     var10 = var10 + var3;
-                    var10 = var10 ^ var3 >>> -2047021143;
+                    var10 = var10 ^ var3 >>> 9;
                     var3 = var3 + var4;
                     var5 = var5 + var10;
                     ((o) this).field_c[var2] = var3;
@@ -194,28 +192,28 @@ final class o {
                 var8 = var8 + ((o) this).field_g[5 + var2];
                 var4 = var4 + ((o) this).field_g[1 + var2];
                 var6 = var6 + ((o) this).field_g[3 + var2];
-                var3 = var3 ^ var4 << 1979023147;
+                var3 = var3 ^ var4 << 11;
                 var4 = var4 + var5;
                 var6 = var6 + var3;
-                var4 = var4 ^ var5 >>> -1830220158;
+                var4 = var4 ^ var5 >>> 2;
                 var5 = var5 + var6;
                 var7 = var7 + var4;
-                var5 = var5 ^ var6 << 664497352;
+                var5 = var5 ^ var6 << 8;
                 var6 = var6 + var7;
                 var8 = var8 + var5;
-                var6 = var6 ^ var7 >>> -1421901168;
+                var6 = var6 ^ var7 >>> 16;
                 var7 = var7 + var8;
                 var9 = var9 + var6;
-                var7 = var7 ^ var8 << 1588423242;
+                var7 = var7 ^ var8 << 10;
                 var8 = var8 + var9;
                 var10 = var10 + var7;
-                var8 = var8 ^ var9 >>> 391159908;
+                var8 = var8 ^ var9 >>> 4;
                 var3 = var3 + var8;
                 var9 = var9 + var10;
-                var9 = var9 ^ var10 << 302716168;
+                var9 = var9 ^ var10 << 8;
                 var4 = var4 + var9;
                 var10 = var10 + var3;
-                var10 = var10 ^ var3 >>> -1688836407;
+                var10 = var10 ^ var3 >>> 9;
                 var5 = var5 + var10;
                 var3 = var3 + var4;
                 ((o) this).field_c[var2] = var3;
@@ -231,28 +229,28 @@ final class o {
               }
             }
           } else {
-            var3 = var3 ^ var4 << -1613804693;
+            var3 = var3 ^ var4 << 11;
             var4 = var4 + var5;
             var6 = var6 + var3;
-            var4 = var4 ^ var5 >>> -1121109854;
+            var4 = var4 ^ var5 >>> 2;
             var5 = var5 + var6;
             var7 = var7 + var4;
-            var5 = var5 ^ var6 << 913084296;
+            var5 = var5 ^ var6 << 8;
             var8 = var8 + var5;
             var6 = var6 + var7;
-            var6 = var6 ^ var7 >>> -691264880;
+            var6 = var6 ^ var7 >>> 16;
             var9 = var9 + var6;
             var7 = var7 + var8;
-            var7 = var7 ^ var8 << -683511286;
+            var7 = var7 ^ var8 << 10;
             var10 = var10 + var7;
             var8 = var8 + var9;
-            var8 = var8 ^ var9 >>> -1328579900;
+            var8 = var8 ^ var9 >>> 4;
             var9 = var9 + var10;
             var3 = var3 + var8;
-            var9 = var9 ^ var10 << 688162056;
+            var9 = var9 ^ var10 << 8;
             var10 = var10 + var3;
             var4 = var4 + var9;
-            var10 = var10 ^ var3 >>> -1655429527;
+            var10 = var10 ^ var3 >>> 9;
             var3 = var3 + var4;
             var5 = var5 + var10;
             var2++;
@@ -262,24 +260,29 @@ final class o {
     }
 
     o(int[] param0) {
-        int var2 = 0;
-        ((o) this).field_c = new int[256];
-        ((o) this).field_g = new int[256];
-        for (var2 = 0; var2 < param0.length; var2++) {
-            ((o) this).field_g[var2] = param0[var2];
+        int var2_int = 0;
+        try {
+            ((o) this).field_c = new int[256];
+            ((o) this).field_g = new int[256];
+            for (var2_int = 0; var2_int < param0.length; var2_int++) {
+                ((o) this).field_g[var2_int] = param0[var2_int];
+            }
+            this.a(false);
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) (Object) runtimeException, "o.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }
-        this.a(false);
     }
 
     final static void a(u param0, int param1, int param2) {
         ga var3 = ma.field_a;
         var3.b((byte) -35, param1);
         var3.a(-54, 2);
-        if (param2 >= -69) {
-            return;
+        try {
+            var3.a(125, 0);
+            var3.a(-55, param0.field_g);
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) (Object) runtimeException, "o.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + -85 + 41);
         }
-        var3.a(125, 0);
-        var3.a(-55, param0.field_g);
     }
 
     static {

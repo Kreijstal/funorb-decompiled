@@ -33,7 +33,7 @@ final class tf {
     }
 
     final static boolean a(int param0, int param1, int param2) {
-        if (-14 != (qi.field_a ^ -1)) {
+        if (qi.field_a != 13) {
           if (qi.field_a != 102) {
             if (param0 == 15585) {
               if (null != im.field_Ub) {

@@ -21,7 +21,7 @@ final class ok {
         field_c = null;
         field_a = null;
         field_f = null;
-        int var1 = -60 / ((76 - param0) / 41);
+        int var1 = 60;
     }
 
     final static boolean a(int param0, char param1) {

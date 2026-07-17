@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import javax.sound.sampled.AudioFormat;
+
 final class pd extends tj {
     private byte[] field_w;
     private javax.sound.sampled.SourceDataLine field_z;
@@ -63,19 +65,12 @@ final class pd extends tj {
 
     final void b(int param0) throws javax.sound.sampled.LineUnavailableException {
         javax.sound.sampled.DataLine.Info var2 = null;
-        try {
+        {
             var2 = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, ((pd) this).field_v, param0 << (field_g ? 2 : 1));
             ((pd) this).field_z = (javax.sound.sampled.SourceDataLine) (Object) javax.sound.sampled.AudioSystem.getLine((javax.sound.sampled.Line.Info) (Object) var2);
             ((pd) this).field_z.open();
             ((pd) this).field_z.start();
             ((pd) this).field_y = param0;
-        } catch (javax.sound.sampled.LineUnavailableException lineUnavailableException) {
-            if (ob.b((byte) -94, param0) != 1) {
-                ((pd) this).b(fj.a(param0, (byte) -64));
-                return;
-            }
-            ((pd) this).field_z = null;
-            throw lineUnavailableException;
         }
     }
 
@@ -108,31 +103,31 @@ final class pd extends tj {
         Object stackIn_16_0 = null;
         int stackIn_16_1 = 0;
         int stackIn_16_2 = 0;
-        Object stackOut_10_0;
-        javax.sound.sampled.AudioFormat stackOut_10_1;
-        javax.sound.sampled.AudioFormat stackOut_10_2;
-        float stackOut_10_3;
-        int stackOut_10_4;
-        Object stackOut_12_0;
-        javax.sound.sampled.AudioFormat stackOut_12_1;
-        javax.sound.sampled.AudioFormat stackOut_12_2;
-        float stackOut_12_3;
-        int stackOut_12_4;
-        int stackOut_12_5;
-        Object stackOut_11_0;
-        javax.sound.sampled.AudioFormat stackOut_11_1;
-        javax.sound.sampled.AudioFormat stackOut_11_2;
-        float stackOut_11_3;
-        int stackOut_11_4;
-        int stackOut_11_5;
-        Object stackOut_13_0;
-        int stackOut_13_1;
-        Object stackOut_15_0;
-        int stackOut_15_1;
-        int stackOut_15_2;
-        Object stackOut_14_0;
-        int stackOut_14_1;
-        int stackOut_14_2;
+        Object stackOut_10_0 = null;
+        javax.sound.sampled.AudioFormat stackOut_10_1 = null;
+        javax.sound.sampled.AudioFormat stackOut_10_2 = null;
+        float stackOut_10_3 = 0.0f;
+        int stackOut_10_4 = 0;
+        Object stackOut_12_0 = null;
+        javax.sound.sampled.AudioFormat stackOut_12_1 = null;
+        javax.sound.sampled.AudioFormat stackOut_12_2 = null;
+        float stackOut_12_3 = 0.0f;
+        int stackOut_12_4 = 0;
+        int stackOut_12_5 = 0;
+        Object stackOut_11_0 = null;
+        javax.sound.sampled.AudioFormat stackOut_11_1 = null;
+        javax.sound.sampled.AudioFormat stackOut_11_2 = null;
+        float stackOut_11_3 = 0.0f;
+        int stackOut_11_4 = 0;
+        int stackOut_11_5 = 0;
+        Object stackOut_13_0 = null;
+        int stackOut_13_1 = 0;
+        Object stackOut_15_0 = null;
+        int stackOut_15_1 = 0;
+        int stackOut_15_2 = 0;
+        Object stackOut_14_0 = null;
+        int stackOut_14_1 = 0;
+        int stackOut_14_2 = 0;
         L0: {
           var2 = javax.sound.sampled.AudioSystem.getMixerInfo();
           if (var2 == null) {
@@ -215,8 +210,7 @@ final class pd extends tj {
           }
         }
         L3: {
-          new javax.sound.sampled.AudioFormat(stackIn_13_3, stackIn_13_4, stackIn_13_5, true, false);
-          ((pd) this).field_v = (javax.sound.sampled.AudioFormat) (Object) stackIn_13_1;
+          ((pd) this).field_v = new javax.sound.sampled.AudioFormat(stackIn_13_3, stackIn_13_4, stackIn_13_5, true, false);
           stackOut_13_0 = this;
           stackOut_13_1 = 256;
           stackIn_15_0 = stackOut_13_0;

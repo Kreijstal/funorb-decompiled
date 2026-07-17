@@ -12,25 +12,23 @@ final class eh extends qb {
     int field_k;
 
     final static boolean a(int param0) {
-        if (param0 != 37) {
-            field_l = 28;
-            return ja.field_b.a(2);
-        }
         return ja.field_b.a(2);
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6, int param7) {
         if (param3 <= 102) {
-          return;
-        } else {
-          ((eh) this).field_h = param6;
-          ((eh) this).field_k = param7;
-          ((eh) this).field_m = param4;
-          ((eh) this).field_g = param2;
-          ((eh) this).field_i = param0;
-          ((eh) this).field_n = param1;
-          ((eh) this).field_j = param5;
-          return;
+            return;
+        }
+        try {
+            ((eh) this).field_h = param6;
+            ((eh) this).field_k = param7;
+            ((eh) this).field_m = param4;
+            ((eh) this).field_g = param2;
+            ((eh) this).field_i = param0;
+            ((eh) this).field_n = param1;
+            ((eh) this).field_j = param5;
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) (Object) runtimeException, "eh.C(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 44 + param7 + 41);
         }
     }
 
@@ -44,7 +42,7 @@ final class eh extends qb {
         int var11 = 0;
         var11 = Main.field_T;
         if (0L < param1) {
-          if ((param1 ^ -1L) > -6582952005840035282L) {
+          if (param1 < 6582952005840035281L) {
             if (param1 % 37L == (long)param0) {
               return null;
             } else {
@@ -54,7 +52,7 @@ final class eh extends qb {
                 if (var4 == 0L) {
                   var6 = new StringBuilder(var3);
                   L1: while (true) {
-                    if (-1L == (param1 ^ -1L)) {
+                    if (param1 == 0L) {
                       StringBuilder discarded$2 = var6.reverse();
                       var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
                       return var6.toString();

@@ -15,7 +15,7 @@ final class i {
             return true;
           } else {
             L0: {
-              if (param0 < param1) {
+              if (param0 < 160) {
                 break L0;
               } else {
                 if (255 < param0) {
@@ -51,7 +51,7 @@ final class i {
             return true;
           }
         } else {
-          if (param0 >= param1) {
+          if (param0 >= 160) {
             if (255 >= param0) {
               return true;
             } else {
@@ -108,55 +108,29 @@ final class i {
 
     final static void a(boolean param0) {
         ng.field_i = null;
-        ej.field_n = param0 ? true : false;
+        ej.field_n = false;
         ne.field_a = null;
         th.field_d = null;
         bd.field_p = null;
     }
 
     final static boolean b(boolean param0) {
-        if (param0) {
-          if (null != nk.field_b) {
-            if (lj.field_z != ll.field_Q) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+        if (null == nk.field_b) {
             return false;
-          }
-        } else {
-          field_c = null;
-          if (null != nk.field_b) {
-            if (lj.field_z != ll.field_Q) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
         }
+        if (lj.field_z != ll.field_Q) {
+            return false;
+        }
+        return true;
     }
 
     public static void c(boolean param0) {
         field_f = null;
-        if (!param0) {
-          field_e = null;
-          field_d = null;
-          field_e = null;
-          field_b = null;
-          field_a = null;
-          field_c = null;
-          return;
-        } else {
-          field_d = null;
-          field_e = null;
-          field_b = null;
-          field_a = null;
-          field_c = null;
-          return;
-        }
+        field_d = null;
+        field_e = null;
+        field_b = null;
+        field_a = null;
+        field_c = null;
     }
 
     static {

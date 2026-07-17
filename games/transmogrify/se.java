@@ -20,7 +20,7 @@ abstract class se extends ri {
         field_o = null;
         field_p = null;
         field_q = null;
-        int var1 = 57 / ((38 - param0) / 45);
+        int var1 = -57;
     }
 
     se() {

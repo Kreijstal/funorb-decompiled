@@ -17,11 +17,57 @@ final class sf extends qt {
     }
 
     final static void a(int param0, int param1, nu param2, boolean param3) {
-        jn.field_kb = param1;
-        tq.field_F = param2;
-        wp.field_c = param0;
-        if (!param3) {
-            boolean discarded$0 = sf.c(20, -118);
+        RuntimeException var4 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
+        try {
+          jn.field_kb = param1;
+          tq.field_F = param2;
+          wp.field_c = param0;
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L0: {
+            var4 = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var4;
+            stackOut_2_1 = new StringBuilder().append("sf.J(").append(param0).append(44).append(param1).append(44);
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
+            if (param2 == null) {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L0;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L0;
+            }
+          }
+          throw nb.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 1 + 41);
         }
     }
 
@@ -30,10 +76,10 @@ final class sf extends qt {
         if (param0 != 20378) {
           var3 = null;
           ((sf) this).a(59, false, 46, (js) null);
-          ((sf) this).field_B.a(true, ((sf) this).field_B.field_q, -180 + f.field_d, 50 + (vc.field_B >> 1328004993), ((sf) this).field_B.field_mb);
+          ((sf) this).field_B.a(true, ((sf) this).field_B.field_q, -180 + f.field_d, 50 + (vc.field_B >> 1), ((sf) this).field_B.field_mb);
           return;
         } else {
-          ((sf) this).field_B.a(true, ((sf) this).field_B.field_q, -180 + f.field_d, 50 + (vc.field_B >> 1328004993), ((sf) this).field_B.field_mb);
+          ((sf) this).field_B.a(true, ((sf) this).field_B.field_q, -180 + f.field_d, 50 + (vc.field_B >> 1), ((sf) this).field_B.field_mb);
           return;
         }
     }
@@ -41,39 +87,39 @@ final class sf extends qt {
     final void a(boolean param0, int param1) {
         if (param1 >= 99) {
           super.a(param0, 110);
-          on.a(((sf) this).field_B.field_F + -10, ((sf) this).field_B.field_T - 20, 20 + ((sf) this).field_B.field_q, 100 + ((sf) this).field_B.field_mb, 8, 65793, ((sf) this).field_E >> 1059378561);
+          on.a(((sf) this).field_B.field_F + -10, ((sf) this).field_B.field_T - 20, 20 + ((sf) this).field_B.field_q, 100 + ((sf) this).field_B.field_mb, 8, 65793, ((sf) this).field_E >> 1);
           ((sf) this).field_B.a(76, param0);
-          un.field_d.c(sk.field_b, ((sf) this).field_B.field_F + (((sf) this).field_B.field_q >> -244618911), (((sf) this).field_B.field_mb >> -1822431423) + (((sf) this).field_B.field_T + -28), 16777215, -1, ((sf) this).field_E);
-          un.field_d.c(jd.field_e.toUpperCase(), (((sf) this).field_B.field_q >> -513643007) + ((sf) this).field_B.field_F, 6 + ((sf) this).field_B.field_T - -(((sf) this).field_B.field_mb >> -1798838303), 16777215, -1, ((sf) this).field_E);
+          un.field_d.c(sk.field_b, ((sf) this).field_B.field_F + (((sf) this).field_B.field_q >> 1), (((sf) this).field_B.field_mb >> 1) + (((sf) this).field_B.field_T + -28), 16777215, -1, ((sf) this).field_E);
+          un.field_d.c(jd.field_e.toUpperCase(), (((sf) this).field_B.field_q >> 1) + ((sf) this).field_B.field_F, 6 + ((sf) this).field_B.field_T - -(((sf) this).field_B.field_mb >> 1), 16777215, -1, ((sf) this).field_E);
           int discarded$2 = un.field_d.a(ri.field_v.toLowerCase(), ((sf) this).field_B.field_F, ((sf) this).field_B.field_mb + ((sf) this).field_B.field_T, ((sf) this).field_B.field_q, 80, 16777215, -1, ((sf) this).field_E, 1, 1, 0);
           if (tu.field_E.field_J[0]) {
             if (!la.a(100)) {
               return;
             } else {
-              on.a(((sf) this).field_B.field_F, ((sf) this).field_B.field_T, ((sf) this).field_B.field_q, ((sf) this).field_B.field_mb, 8, 0, ((sf) this).field_E >> -2129015263);
+              on.a(((sf) this).field_B.field_F, ((sf) this).field_B.field_T, ((sf) this).field_B.field_q, ((sf) this).field_B.field_mb, 8, 0, ((sf) this).field_E >> 1);
               return;
             }
           } else {
-            on.a(((sf) this).field_B.field_F, ((sf) this).field_B.field_T, ((sf) this).field_B.field_q, ((sf) this).field_B.field_mb, 8, 0, ((sf) this).field_E >> -2129015263);
+            on.a(((sf) this).field_B.field_F, ((sf) this).field_B.field_T, ((sf) this).field_B.field_q, ((sf) this).field_B.field_mb, 8, 0, ((sf) this).field_E >> 1);
             return;
           }
         } else {
           ((sf) this).field_B = null;
           super.a(param0, 110);
-          on.a(((sf) this).field_B.field_F + -10, ((sf) this).field_B.field_T - 20, 20 + ((sf) this).field_B.field_q, 100 + ((sf) this).field_B.field_mb, 8, 65793, ((sf) this).field_E >> 1059378561);
+          on.a(((sf) this).field_B.field_F + -10, ((sf) this).field_B.field_T - 20, 20 + ((sf) this).field_B.field_q, 100 + ((sf) this).field_B.field_mb, 8, 65793, ((sf) this).field_E >> 1);
           ((sf) this).field_B.a(76, param0);
-          un.field_d.c(sk.field_b, ((sf) this).field_B.field_F + (((sf) this).field_B.field_q >> -244618911), (((sf) this).field_B.field_mb >> -1822431423) + (((sf) this).field_B.field_T + -28), 16777215, -1, ((sf) this).field_E);
-          un.field_d.c(jd.field_e.toUpperCase(), (((sf) this).field_B.field_q >> -513643007) + ((sf) this).field_B.field_F, 6 + ((sf) this).field_B.field_T - -(((sf) this).field_B.field_mb >> -1798838303), 16777215, -1, ((sf) this).field_E);
+          un.field_d.c(sk.field_b, ((sf) this).field_B.field_F + (((sf) this).field_B.field_q >> 1), (((sf) this).field_B.field_mb >> 1) + (((sf) this).field_B.field_T + -28), 16777215, -1, ((sf) this).field_E);
+          un.field_d.c(jd.field_e.toUpperCase(), (((sf) this).field_B.field_q >> 1) + ((sf) this).field_B.field_F, 6 + ((sf) this).field_B.field_T - -(((sf) this).field_B.field_mb >> 1), 16777215, -1, ((sf) this).field_E);
           int discarded$3 = un.field_d.a(ri.field_v.toLowerCase(), ((sf) this).field_B.field_F, ((sf) this).field_B.field_mb + ((sf) this).field_B.field_T, ((sf) this).field_B.field_q, 80, 16777215, -1, ((sf) this).field_E, 1, 1, 0);
           if (tu.field_E.field_J[0]) {
             if (!la.a(100)) {
               return;
             } else {
-              on.a(((sf) this).field_B.field_F, ((sf) this).field_B.field_T, ((sf) this).field_B.field_q, ((sf) this).field_B.field_mb, 8, 0, ((sf) this).field_E >> -2129015263);
+              on.a(((sf) this).field_B.field_F, ((sf) this).field_B.field_T, ((sf) this).field_B.field_q, ((sf) this).field_B.field_mb, 8, 0, ((sf) this).field_E >> 1);
               return;
             }
           } else {
-            on.a(((sf) this).field_B.field_F, ((sf) this).field_B.field_T, ((sf) this).field_B.field_q, ((sf) this).field_B.field_mb, 8, 0, ((sf) this).field_E >> -2129015263);
+            on.a(((sf) this).field_B.field_F, ((sf) this).field_B.field_T, ((sf) this).field_B.field_q, ((sf) this).field_B.field_mb, 8, 0, ((sf) this).field_E >> 1);
             return;
           }
         }
@@ -86,9 +132,9 @@ final class sf extends qt {
         var6 = Kickabout.field_G;
         if (param1 < -5) {
           var4 = ((sf) this).field_x.field_e;
-          if (-100 != (param0 ^ -1)) {
+          if (param0 != 99) {
             if (98 != param0) {
-              if (-98 == (param0 ^ -1)) {
+              if (param0 == 97) {
                 L0: {
                   var5 = var4;
                   if (3 != var4) {
@@ -107,7 +153,7 @@ final class sf extends qt {
                   }
                 }
                 L2: {
-                  if ((var4 ^ -1) == -6) {
+                  if (var4 == 5) {
                     var5 = 6;
                     break L2;
                   } else {
@@ -123,7 +169,7 @@ final class sf extends qt {
                   }
                 }
                 L4: {
-                  if (-1 >= (var5 ^ -1)) {
+                  if (var5 >= 0) {
                     break L4;
                   } else {
                     var5 = 6;
@@ -136,7 +182,7 @@ final class sf extends qt {
                 if (param0 != 96) {
                   L5: {
                     ((sf) this).field_x.b(-99);
-                    if ((((sf) this).field_x.field_e ^ -1) > -1) {
+                    if (((sf) this).field_x.field_e < 0) {
                       break L5;
                     } else {
                       if (((sf) this).field_x.c(-1)) {
@@ -167,7 +213,7 @@ final class sf extends qt {
                     }
                   }
                   L8: {
-                    if ((var4 ^ -1) == -6) {
+                    if (var4 == 5) {
                       var5 = 6;
                       break L8;
                     } else {
@@ -183,7 +229,7 @@ final class sf extends qt {
                     }
                   }
                   L10: {
-                    if (-1 >= (var5 ^ -1)) {
+                    if (var5 >= 0) {
                       break L10;
                     } else {
                       var5 = 6;
@@ -197,7 +243,7 @@ final class sf extends qt {
             } else {
               L11: {
                 var5 = -1 + var4;
-                if (-1 == (var4 ^ -1)) {
+                if (var4 == 0) {
                   var5 = 5;
                   break L11;
                 } else {
@@ -213,7 +259,7 @@ final class sf extends qt {
                 }
               }
               L13: {
-                if ((var4 ^ -1) != -6) {
+                if (var4 != 5) {
                   break L13;
                 } else {
                   var5 = 3;
@@ -221,7 +267,7 @@ final class sf extends qt {
                 }
               }
               L14: {
-                if (-7 == (var4 ^ -1)) {
+                if (var4 == 6) {
                   var5 = 4;
                   break L14;
                 } else {
@@ -258,7 +304,7 @@ final class sf extends qt {
               }
             }
             L18: {
-              if ((var4 ^ -1) != -6) {
+              if (var4 != 5) {
                 break L18;
               } else {
                 var5 = 0;
@@ -328,14 +374,14 @@ final class sf extends qt {
 
     final int b(int param0, int param1) {
         int var3 = 0;
-        var3 = -((sf) this).field_i[param0].field_d + ((sf) this).field_i[0].field_d >> 1733467681;
+        var3 = -((sf) this).field_i[param0].field_d + ((sf) this).field_i[0].field_d >> 1;
         if (param1 == -22667) {
           if (3 != param0) {
-            if (-6 != (param0 ^ -1)) {
+            if (param0 != 5) {
               if (param0 == 4) {
                 return 190 - -var3;
               } else {
-                if (-7 != (param0 ^ -1)) {
+                if (param0 != 6) {
                   return 190;
                 } else {
                   return 190 - -var3;
@@ -350,11 +396,11 @@ final class sf extends qt {
         } else {
           ((sf) this).a(false, 58);
           if (3 != param0) {
-            if (-6 != (param0 ^ -1)) {
+            if (param0 != 5) {
               if (param0 == 4) {
                 return 190 - -var3;
               } else {
-                if (-7 != (param0 ^ -1)) {
+                if (param0 != 6) {
                   return 190;
                 } else {
                   return 190 - -var3;
@@ -372,16 +418,8 @@ final class sf extends qt {
     public static void f(int param0) {
         field_F = null;
         field_C = null;
-        if (param0 != 90) {
-          field_D = null;
-          field_G = null;
-          field_D = null;
-          return;
-        } else {
-          field_G = null;
-          field_D = null;
-          return;
-        }
+        field_G = null;
+        field_D = null;
     }
 
     final void a(byte param0, boolean param1) {
@@ -492,35 +530,43 @@ final class sf extends qt {
     }
 
     final static int a(int param0, int param1, int param2) {
-        int var3 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
+        int stackIn_7_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_6_0 = 0;
         var4 = Kickabout.field_G;
-        if (param0 != -5974) {
-          field_D = null;
-          var3 = 0;
-          L0: while (true) {
-            if (0 >= param2) {
-              return var3;
-            } else {
-              var3 = var3 << 1292833537 | 1 & param1;
-              param1 = param1 >>> 1;
-              param2--;
-              continue L0;
+        try {
+          L0: {
+            L1: {
+              if (param0 == -5974) {
+                break L1;
+              } else {
+                field_D = null;
+                break L1;
+              }
+            }
+            var3_int = 0;
+            L2: while (true) {
+              if (0 >= param2) {
+                stackOut_6_0 = var3_int;
+                stackIn_7_0 = stackOut_6_0;
+                break L0;
+              } else {
+                var3_int = var3_int << 1 | 1 & param1;
+                param1 = param1 >>> 1;
+                param2--;
+                continue L2;
+              }
             }
           }
-        } else {
-          var3 = 0;
-          L1: while (true) {
-            if (0 >= param2) {
-              return var3;
-            } else {
-              var3 = var3 << 1292833537 | 1 & param1;
-              param1 = param1 >>> 1;
-              param2--;
-              continue L1;
-            }
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw nb.a((Throwable) (Object) var3, "sf.H(" + param0 + 44 + param1 + 44 + param2 + 41);
         }
+        return stackIn_7_0;
     }
 
     sf() {
@@ -528,118 +574,26 @@ final class sf extends qt {
     }
 
     final void a(int param0, boolean param1, int param2, js param3) {
-        super.a(param0, param1, -96, param3);
-        if (param2 < -28) {
-          this.e(20378);
-          if (param1) {
-            ((sf) this).field_E = param0;
-            if ((((sf) this).field_E ^ -1) < -257) {
-              L0: {
-                ((sf) this).field_E = 256;
-                if (((sf) this).field_E < 0) {
-                  ((sf) this).field_E = 0;
-                  break L0;
-                } else {
-                  break L0;
-                }
-              }
-              ((sf) this).field_B.field_P = ((sf) this).field_E;
-              return;
-            } else {
-              L1: {
-                if (((sf) this).field_E < 0) {
-                  ((sf) this).field_E = 0;
-                  break L1;
-                } else {
-                  break L1;
-                }
-              }
-              ((sf) this).field_B.field_P = ((sf) this).field_E;
-              return;
+        try {
+            super.a(param0, param1, -96, param3);
+            if (param2 >= -28) {
+                field_C = null;
             }
-          } else {
-            ((sf) this).field_E = 256 - (param0 << -271571615);
-            if ((((sf) this).field_E ^ -1) >= -257) {
-              L2: {
-                if (((sf) this).field_E < 0) {
-                  ((sf) this).field_E = 0;
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              ((sf) this).field_B.field_P = ((sf) this).field_E;
-              return;
+            this.e(20378);
+            if (!param1) {
+                ((sf) this).field_E = 256 - (param0 << 1);
             } else {
-              L3: {
-                ((sf) this).field_E = 256;
-                if (((sf) this).field_E < 0) {
-                  ((sf) this).field_E = 0;
-                  break L3;
-                } else {
-                  break L3;
-                }
-              }
-              ((sf) this).field_B.field_P = ((sf) this).field_E;
-              return;
+                ((sf) this).field_E = param0;
             }
-          }
-        } else {
-          field_C = null;
-          this.e(20378);
-          if (param1) {
-            ((sf) this).field_E = param0;
-            if ((((sf) this).field_E ^ -1) >= -257) {
-              L4: {
-                if (((sf) this).field_E < 0) {
-                  ((sf) this).field_E = 0;
-                  break L4;
-                } else {
-                  break L4;
-                }
-              }
-              ((sf) this).field_B.field_P = ((sf) this).field_E;
-              return;
-            } else {
-              L5: {
+            if (((sf) this).field_E > 256) {
                 ((sf) this).field_E = 256;
-                if (((sf) this).field_E < 0) {
-                  ((sf) this).field_E = 0;
-                  break L5;
-                } else {
-                  break L5;
-                }
-              }
-              ((sf) this).field_B.field_P = ((sf) this).field_E;
-              return;
             }
-          } else {
-            ((sf) this).field_E = 256 - (param0 << -271571615);
-            if ((((sf) this).field_E ^ -1) >= -257) {
-              L6: {
-                if (((sf) this).field_E < 0) {
-                  ((sf) this).field_E = 0;
-                  break L6;
-                } else {
-                  break L6;
-                }
-              }
-              ((sf) this).field_B.field_P = ((sf) this).field_E;
-              return;
-            } else {
-              L7: {
-                ((sf) this).field_E = 256;
-                if (((sf) this).field_E < 0) {
-                  ((sf) this).field_E = 0;
-                  break L7;
-                } else {
-                  break L7;
-                }
-              }
-              ((sf) this).field_B.field_P = ((sf) this).field_E;
-              return;
+            if (!(((sf) this).field_E >= 0)) {
+                ((sf) this).field_E = 0;
             }
-          }
+            ((sf) this).field_B.field_P = ((sf) this).field_E;
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "sf.F(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 

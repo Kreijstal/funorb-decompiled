@@ -17,11 +17,6 @@ class ce extends nb {
     public static void d(int param0) {
         field_r = null;
         field_v = null;
-        if (param0 >= -121) {
-            field_q = false;
-            field_t = null;
-            return;
-        }
         field_t = null;
     }
 

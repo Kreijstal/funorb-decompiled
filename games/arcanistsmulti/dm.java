@@ -12,7 +12,7 @@ final class dm extends wn {
 
     final static void g(byte param0) {
         eh.field_e = null;
-        int var1 = -115 / ((param0 - 8) / 53);
+        int var1 = 115;
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
@@ -25,7 +25,7 @@ final class dm extends wn {
             if (0 == ((dm) this).field_K) {
               return;
             } else {
-              if (-257 == (((dm) this).field_K ^ -1)) {
+              if (((dm) this).field_K == 256) {
                 ((dm) this).field_B.a((byte) -66, param1 + ((dm) this).field_n, param2, ((dm) this).field_j + param3);
                 return;
               } else {
@@ -80,19 +80,11 @@ final class dm extends wn {
         field_J = null;
         field_F = null;
         field_G = null;
-        if (!param0) {
-            return;
-        }
         field_I = null;
     }
 
     final static Boolean f(int param0) {
         Boolean var1 = kj.field_e;
-        if (param0 != 18727) {
-            boolean discarded$0 = dm.h((byte) 104);
-            kj.field_e = null;
-            return var1;
-        }
         kj.field_e = null;
         return var1;
     }
@@ -104,9 +96,13 @@ final class dm extends wn {
 
     dm(qm param0) {
         super(param0.field_n, param0.field_j, param0.field_v, param0.field_k, (pf) null, (wc) null);
-        param0.a(((dm) this).field_k, 0, ((dm) this).field_v, 0, -81);
-        ((dm) this).field_B = param0;
-        ((dm) this).field_K = 256;
+        try {
+            param0.a(((dm) this).field_k, 0, ((dm) this).field_v, 0, -81);
+            ((dm) this).field_B = param0;
+            ((dm) this).field_K = 256;
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "dm.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

@@ -5,51 +5,26 @@ final class fc {
     static int field_a;
 
     final static void a(boolean param0) {
-        if (kb.field_d != 0 + -hb.field_h) {
-          if (kb.field_d == 250 - hb.field_h) {
+        if (kb.field_d != -hb.field_h) {
+          if (kb.field_d != 250 - hb.field_h) {
             kb.field_d = kb.field_d + 1;
-            if (!param0) {
-              int discarded$6 = fc.a(74, -19);
-              return;
-            } else {
-              return;
-            }
+            return;
           } else {
             kb.field_d = kb.field_d + 1;
-            if (!param0) {
-              int discarded$7 = fc.a(74, -19);
-              return;
-            } else {
-              return;
-            }
+            return;
           }
         } else {
           kb.field_d = kb.field_d + 1;
-          if (!param0) {
-            int discarded$8 = fc.a(74, -19);
-            return;
-          } else {
-            return;
-          }
+          return;
         }
     }
 
     final static void a(int param0) {
         ei.field_i = false;
-        if (param0 != 3161) {
-          field_a = -26;
-          eb.field_H = false;
-          lj.a(-1, param0 + -3109);
-          dn.field_q = vn.field_g;
-          ui.field_b = vn.field_g;
-          return;
-        } else {
-          eb.field_H = false;
-          lj.a(-1, param0 + -3109);
-          dn.field_q = vn.field_g;
-          ui.field_b = vn.field_g;
-          return;
-        }
+        eb.field_H = false;
+        lj.a(-1, 52);
+        dn.field_q = vn.field_g;
+        ui.field_b = vn.field_g;
     }
 
     final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, boolean param6, int param7, int param8, int param9, int param10, boolean param11) {
@@ -63,7 +38,7 @@ final class fc {
           if (param6) {
             param1 = 2 + -(bk.a(6, false, -param1 + 2) * 6);
             param2 = 3 - -(6 * bk.a(6, false, -2 + (param2 - 1)));
-            param10 = -(6 * bk.a(6, false, 0 - param10)) + 0;
+            param10 = -(6 * bk.a(6, false, 0 - param10));
             param3 = 1 - -(bk.a(6, false, param3 - 1) * 6);
             break L0;
           } else {
@@ -74,7 +49,7 @@ final class fc {
           if (param4) {
             if (param0 < 16) {
               var12 = 66049 * (16 - param0);
-              var13 = 986895 & 330245 * (-param0 + 16) >> -1363120412;
+              var13 = 986895 & 330245 * (-param0 + 16) >> 4;
               var14 = param1;
               var15 = param10;
               var16 = param2;
@@ -146,7 +121,7 @@ final class fc {
             } else {
               if (param0 < 16) {
                 var12 = 66049 * (16 - param0);
-                var13 = 986895 & 330245 * (-param0 + 16) >> -1363120412;
+                var13 = 986895 & 330245 * (-param0 + 16) >> 4;
                 var14 = param1;
                 var15 = param10;
                 var16 = param2;
@@ -262,7 +237,7 @@ final class fc {
           param1 = param1 & 8191;
           if (param1 < 4096) {
             L0: {
-              if (-2049 >= (param1 ^ -1)) {
+              if (param1 >= 2048) {
                 stackOut_18_0 = un.field_t[-param1 + 4096];
                 stackIn_19_0 = stackOut_18_0;
                 break L0;
@@ -292,7 +267,7 @@ final class fc {
           param1 = param1 & 8191;
           if (param1 < 4096) {
             L2: {
-              if (-2049 >= (param1 ^ -1)) {
+              if (param1 >= 2048) {
                 stackOut_8_0 = un.field_t[-param1 + 4096];
                 stackIn_9_0 = stackOut_8_0;
                 break L2;

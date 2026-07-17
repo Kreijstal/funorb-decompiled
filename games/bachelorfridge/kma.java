@@ -11,21 +11,72 @@ final class kma extends k {
     private int field_q;
 
     final void a(byte param0, lu param1, int param2) {
-        if (param2 != 0) {
-          if (param0 != -71) {
-            field_o = null;
-            return;
-          } else {
-            return;
+        RuntimeException var4 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param2 != 0) {
+                break L1;
+              } else {
+                ((kma) this).field_l = param1.e((byte) 60);
+                break L1;
+              }
+            }
+            L2: {
+              if (param0 == -71) {
+                break L2;
+              } else {
+                field_o = null;
+                break L2;
+              }
+            }
+            break L0;
           }
-        } else {
-          ((kma) this).field_l = param1.e((byte) 60);
-          if (param0 == -71) {
-            return;
-          } else {
-            field_o = null;
-            return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var4 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var4;
+            stackOut_5_1 = new StringBuilder().append("kma.E(").append(param0).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param1 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L3;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L3;
+            }
           }
+          throw pe.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param2 + 41);
         }
     }
 
@@ -99,11 +150,12 @@ final class kma extends k {
               var8 = 0;
               L1: while (true) {
                 if (hh.field_d > var8) {
+                  int incrementValue$3 = var4;
                   var4++;
-                  var9 = ((kma) this).field_n[var4];
-                  var7[var8] = dda.a(4080, var9 << 442831940);
-                  var6[var8] = dda.a(var9, 65280) >> 330292804;
-                  var5[var8] = dda.a(4080, var9 >> -16962676);
+                  var9 = ((kma) this).field_n[incrementValue$3];
+                  var7[var8] = dda.a(4080, var9 << 4);
+                  var6[var8] = dda.a(var9, 65280) >> 4;
+                  var5[var8] = dda.a(4080, var9 >> 12);
                   var8++;
                   continue L1;
                 } else {
@@ -116,9 +168,9 @@ final class kma extends k {
                 if (hh.field_d > var8) {
                   var9 = ((kma) this).field_k * var8 / hh.field_d;
                   var10 = ((kma) this).field_n[var4 - -var9];
-                  var7[var8] = dda.a(4080, var10 << -1404954812);
-                  var6[var8] = dda.a(var10, 65280) >> 787189476;
-                  var5[var8] = dda.a(4080, var10 >> -2082261940);
+                  var7[var8] = dda.a(4080, var10 << 4);
+                  var6[var8] = dda.a(var10, 65280) >> 4;
+                  var5[var8] = dda.a(4080, var10 >> 12);
                   var8++;
                   continue L2;
                 } else {
@@ -130,7 +182,7 @@ final class kma extends k {
             return var3;
           }
         } else {
-          int discarded$1 = ((kma) this).c((byte) 116);
+          int discarded$4 = ((kma) this).c((byte) 116);
           var17 = ((kma) this).field_h.a(param1, -858);
           var15 = var17;
           var14 = var15;
@@ -166,9 +218,9 @@ final class kma extends k {
                 if (hh.field_d > var8) {
                   var9 = ((kma) this).field_k * var8 / hh.field_d;
                   var10 = ((kma) this).field_n[var4 - -var9];
-                  var7[var8] = dda.a(4080, var10 << -1404954812);
-                  var6[var8] = dda.a(var10, 65280) >> 787189476;
-                  var5[var8] = dda.a(4080, var10 >> -2082261940);
+                  var7[var8] = dda.a(4080, var10 << 4);
+                  var6[var8] = dda.a(var10, 65280) >> 4;
+                  var5[var8] = dda.a(4080, var10 >> 12);
                   var8++;
                   continue L4;
                 } else {
@@ -181,11 +233,12 @@ final class kma extends k {
                 if (hh.field_d <= var8) {
                   return var3;
                 } else {
+                  int incrementValue$5 = var4;
                   var4++;
-                  var9 = ((kma) this).field_n[var4];
-                  var7[var8] = dda.a(4080, var9 << 442831940);
-                  var6[var8] = dda.a(var9, 65280) >> 330292804;
-                  var5[var8] = dda.a(4080, var9 >> -16962676);
+                  var9 = ((kma) this).field_n[incrementValue$5];
+                  var7[var8] = dda.a(4080, var9 << 4);
+                  var6[var8] = dda.a(var9, 65280) >> 4;
+                  var5[var8] = dda.a(4080, var9 >> 12);
                   var8++;
                   continue L5;
                 }
@@ -203,7 +256,7 @@ final class kma extends k {
         int stackOut_7_0 = 0;
         int stackOut_6_0 = 0;
         if (param1 <= -9) {
-          this.a(param0, (byte) -95, param2);
+          super.a(param0, (byte) -95, param2);
           if (((kma) this).field_l >= 0) {
             if (da.field_c == null) {
               return;
@@ -247,44 +300,45 @@ final class kma extends k {
     }
 
     final void b(int param0) {
-        this.b(param0);
+        super.b(param0);
         ((kma) this).field_n = null;
     }
 
     final static void d(int param0) {
-        int var1 = 0;
+        int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
+        RuntimeException decompiledCaughtException = null;
         var2 = BachelorFridge.field_y;
-        ng.field_f = new js(32);
-        if (param0 > -93) {
-          return;
-        } else {
-          var1 = 0;
-          L0: while (true) {
-            if (fj.field_m.length <= var1) {
-              return;
+        try {
+          L0: {
+            ng.field_f = new js(32);
+            if (param0 <= -93) {
+              var1_int = 0;
+              L1: while (true) {
+                if (fj.field_m.length <= var1_int) {
+                  break L0;
+                } else {
+                  ng.field_f.a((long)fj.field_m[var1_int].toLowerCase().hashCode(), (byte) -114, (bw) (Object) new ji(var1_int));
+                  var1_int++;
+                  continue L1;
+                }
+              }
             } else {
-              ng.field_f.a((long)fj.field_m[var1].toLowerCase().hashCode(), (byte) -114, (bw) (Object) new ji(var1));
-              var1++;
-              continue L0;
+              return;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw pe.a((Throwable) (Object) var1, "kma.D(" + param0 + 41);
         }
     }
 
     public static void e(int param0) {
-        if (param0 != -1) {
-          field_p = null;
-          field_p = null;
-          field_m = null;
-          field_o = null;
-          return;
-        } else {
-          field_p = null;
-          field_m = null;
-          field_o = null;
-          return;
-        }
+        field_p = null;
+        field_m = null;
+        field_o = null;
     }
 
     static {

@@ -22,7 +22,7 @@ final class vd {
         int var7_int = 0;
         int[] var7 = null;
         int var8 = 0;
-        vd var8_ref = null;
+        vd var8_ref_vd = null;
         vd var9 = null;
         int var10 = 0;
         int var11 = 0;
@@ -97,7 +97,7 @@ final class vd {
                                             return var3;
                                           } else {
                                             var9 = var3[var8];
-                                            var10 = ((vd) var9).field_h * ((vd) var9).field_c;
+                                            var10 = var9.field_h * var9.field_c;
                                             var9.field_d = new byte[var10];
                                             var11 = var1.g(29);
                                             if ((var11 & 2) != 0) {
@@ -107,21 +107,22 @@ final class vd {
                                                 if ((var11 & 1) != 0) {
                                                   var13 = 0;
                                                   L10: while (true) {
-                                                    if (var13 >= ((vd) var9).field_h) {
+                                                    if (var13 >= var9.field_h) {
                                                       var13 = 0;
                                                       L11: while (true) {
-                                                        if (var13 >= ((vd) var9).field_h) {
+                                                        if (var13 >= var9.field_h) {
                                                           break L9;
                                                         } else {
                                                           var14 = 0;
                                                           L12: while (true) {
-                                                            if (var14 >= ((vd) var9).field_c) {
+                                                            if (var14 >= var9.field_c) {
                                                               var13++;
                                                               continue L11;
                                                             } else {
                                                               L13: {
-                                                                ((vd) var9).field_e[var13 + var14 * ((vd) var9).field_h] = var1.d(0);
-                                                                var15 = var1.d(0);
+                                                                byte dupTemp$2 = var1.d(0);
+                                                                var9.field_e[var13 + var14 * var9.field_h] = dupTemp$2;
+                                                                var15 = dupTemp$2;
                                                                 stackOut_61_0 = var12;
                                                                 stackIn_63_0 = stackOut_61_0;
                                                                 stackIn_62_0 = stackOut_61_0;
@@ -149,11 +150,11 @@ final class vd {
                                                     } else {
                                                       var14 = 0;
                                                       L14: while (true) {
-                                                        if (var14 >= ((vd) var9).field_c) {
+                                                        if (var14 >= var9.field_c) {
                                                           var13++;
                                                           continue L10;
                                                         } else {
-                                                          ((vd) var9).field_d[var13 + var14 * ((vd) var9).field_h] = var1.d(0);
+                                                          var9.field_d[var13 + var14 * var9.field_h] = var1.d(0);
                                                           var14++;
                                                           continue L14;
                                                         }
@@ -170,8 +171,9 @@ final class vd {
                                                           break L9;
                                                         } else {
                                                           L17: {
-                                                            ((vd) var9).field_e[var13] = var1.d(0);
-                                                            var14 = var1.d(0);
+                                                            byte dupTemp$3 = var1.d(0);
+                                                            var9.field_e[var13] = dupTemp$3;
+                                                            var14 = dupTemp$3;
                                                             stackOut_47_0 = var12;
                                                             stackIn_49_0 = stackOut_47_0;
                                                             stackIn_48_0 = stackOut_47_0;
@@ -195,7 +197,7 @@ final class vd {
                                                         }
                                                       }
                                                     } else {
-                                                      ((vd) var9).field_d[var13] = var1.d(0);
+                                                      var9.field_d[var13] = var1.d(0);
                                                       var13++;
                                                       continue L15;
                                                     }
@@ -214,14 +216,14 @@ final class vd {
                                               if ((var11 & 1) != 0) {
                                                 var12 = 0;
                                                 L18: while (true) {
-                                                  if (var12 < ((vd) var9).field_h) {
+                                                  if (var12 < var9.field_h) {
                                                     var13 = 0;
                                                     L19: while (true) {
-                                                      if (var13 >= ((vd) var9).field_c) {
+                                                      if (var13 >= var9.field_c) {
                                                         var12++;
                                                         continue L18;
                                                       } else {
-                                                        ((vd) var9).field_d[var12 + var13 * ((vd) var9).field_h] = var1.d(0);
+                                                        var9.field_d[var12 + var13 * var9.field_h] = var1.d(0);
                                                         var13++;
                                                         continue L19;
                                                       }
@@ -235,7 +237,7 @@ final class vd {
                                                 var12 = 0;
                                                 L20: while (true) {
                                                   if (var12 < var10) {
-                                                    ((vd) var9).field_d[var12] = var1.d(0);
+                                                    var9.field_d[var12] = var1.d(0);
                                                     var12++;
                                                     continue L20;
                                                   } else {
@@ -266,9 +268,9 @@ final class vd {
                                   }
                                 }
                               } else {
-                                var8_ref = var3[var7_int];
-                                var8_ref.field_g = var4 - ((vd) var8_ref).field_h - ((vd) var8_ref).field_a;
-                                var8_ref.field_b = var5 - ((vd) var8_ref).field_c - ((vd) var8_ref).field_i;
+                                var8_ref_vd = var3[var7_int];
+                                var8_ref_vd.field_g = var4 - var8_ref_vd.field_h - var8_ref_vd.field_a;
+                                var8_ref_vd.field_b = var5 - var8_ref_vd.field_c - var8_ref_vd.field_i;
                                 var7_int++;
                                 continue L5;
                               }

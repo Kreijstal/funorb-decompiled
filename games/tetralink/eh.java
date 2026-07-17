@@ -16,31 +16,31 @@ final class eh extends mc {
     static u field_p;
 
     final static void b(byte param0) {
-        int var1 = 6 % ((40 - param0) / 42);
-        if ((th.field_g ^ -1) < -1) {
+        int var1 = 0;
+        if (th.field_g > 0) {
             th.field_g = th.field_g - 1;
-            if ((te.field_P ^ -1) == (pk.field_O.field_j ^ -1)) {
-                if (!(-1 <= (th.field_g ^ -1))) {
+            if (~te.field_P == ~pk.field_O.field_j) {
+                if (!(th.field_g <= 0)) {
                     lc.a((byte) -61);
                 }
                 return;
             }
             ja.field_f = ja.field_f + (pk.field_O.field_j + -te.field_P);
             te.field_P = pk.field_O.field_j;
-            if (!(-1 <= (th.field_g ^ -1))) {
+            if (!(th.field_g <= 0)) {
                 lc.a((byte) -61);
             }
             return;
         }
-        if ((te.field_P ^ -1) != (pk.field_O.field_j ^ -1)) {
+        if (~te.field_P != ~pk.field_O.field_j) {
             ja.field_f = ja.field_f + (pk.field_O.field_j + -te.field_P);
             te.field_P = pk.field_O.field_j;
-            if (!(-1 <= (th.field_g ^ -1))) {
+            if (!(th.field_g <= 0)) {
                 lc.a((byte) -61);
             }
             return;
         }
-        if (!(-1 <= (th.field_g ^ -1))) {
+        if (!(th.field_g <= 0)) {
             lc.a((byte) -61);
         }
     }

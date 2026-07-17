@@ -60,11 +60,11 @@ final class ti implements nn {
               var6 = uk.field_c;
               var3 = var6;
               var4 = param2;
-              var6[var4 >> -1602143771] = ll.a(var6[var4 >> -1602143771], 1 << ua.a(31, var4));
+              var6[var4 >> 5] = ll.a(var6[var4 >> 5], 1 << ua.a(31, var4));
               var7 = bm.field_b;
               var3 = var7;
               var4 = param2;
-              var7[var4 >> -2067938075] = ll.a(var7[var4 >> -2067938075], 1 << ua.a(var4, 31));
+              var7[var4 >> 5] = ll.a(var7[var4 >> 5], 1 << ua.a(var4, 31));
               var5 = 20 / ((-70 - param1) / 40);
               ac.field_i.a((am) (Object) new t(param2), 90);
               if (ta.p(3)) {
@@ -85,217 +85,164 @@ final class ti implements nn {
     }
 
     public final void a(int param0, int param1, int param2, ag param3, boolean param4) {
-        int var6 = 0;
+        RuntimeException var6 = null;
+        int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
+        int stackIn_5_0 = 0;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        String stackIn_22_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_3_0 = 0;
+        int stackOut_4_0 = 0;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
         var11 = HostileSpawn.field_I ? 1 : 0;
-        if (!param3.field_u) {
-          if (!param3.g(-9015)) {
-            var6 = 2188450;
-            if (param2 == 15430) {
-              int discarded$3 = ((ti) this).field_h.a("<u=" + Integer.toString(var6, 16) + ">" + param3.field_n + "</u>", param1 - -param3.field_v, param0 + param3.field_m, param3.field_s, param3.field_x, var6, -1, ((ti) this).field_e, ((ti) this).field_g, ((ti) this).field_h.field_y + ((ti) this).field_h.field_F);
-              if (param3.g(param2 + -24445)) {
-                L0: {
-                  var7 = ((ti) this).field_h.a(param3.field_n);
-                  var8 = ((ti) this).field_h.field_y + ((ti) this).field_h.field_F;
-                  var9 = param1 - -param3.field_v;
-                  var10 = param3.field_m + param0;
-                  if (-3 == (((ti) this).field_e ^ -1)) {
-                    var9 = var9 + (-var7 + param3.field_s);
-                    break L0;
-                  } else {
-                    if (((ti) this).field_e != -2) {
-                      break L0;
-                    } else {
-                      var9 = var9 + (param3.field_s + -var7 >> 1612629825);
-                      if (-3 != ((ti) this).field_g) {
-                        if (((ti) this).field_g == 1) {
-                          var10 = var10 + (param3.field_x + -var8 >> -1986237471);
-                          bh.a(var8, 2 + var10, (byte) 65, var9 + -2, var7 - -4);
-                          return;
-                        } else {
-                          bh.a(var8, 2 + var10, (byte) 65, var9 + -2, var7 - -4);
-                          return;
-                        }
-                      } else {
-                        var10 = var10 + (-var8 + param3.field_x);
-                        bh.a(var8, 2 + var10, (byte) 65, var9 + -2, var7 - -4);
-                        return;
-                      }
-                    }
-                  }
-                }
-                if (-3 != (((ti) this).field_g ^ -1)) {
-                  if (((ti) this).field_g == 1) {
-                    var10 = var10 + (param3.field_x + -var8 >> -1986237471);
-                    bh.a(var8, 2 + var10, (byte) 65, var9 + -2, var7 - -4);
-                    return;
-                  } else {
-                    bh.a(var8, 2 + var10, (byte) 65, var9 + -2, var7 - -4);
-                    return;
-                  }
-                } else {
-                  var10 = var10 + (-var8 + param3.field_x);
-                  bh.a(var8, 2 + var10, (byte) 65, var9 + -2, var7 - -4);
-                  return;
-                }
-              } else {
-                return;
-              }
-            } else {
-              return;
-            }
-          } else {
-            var6 = 3249872;
-            if (param2 == 15430) {
-              int discarded$4 = ((ti) this).field_h.a("<u=" + Integer.toString(var6, 16) + ">" + param3.field_n + "</u>", param1 - -param3.field_v, param0 + param3.field_m, param3.field_s, param3.field_x, var6, -1, ((ti) this).field_e, ((ti) this).field_g, ((ti) this).field_h.field_y + ((ti) this).field_h.field_F);
-              if (param3.g(param2 + -24445)) {
-                L1: {
-                  var7 = ((ti) this).field_h.a(param3.field_n);
-                  var8 = ((ti) this).field_h.field_y + ((ti) this).field_h.field_F;
-                  var9 = param1 - -param3.field_v;
-                  var10 = param3.field_m + param0;
-                  if (-3 == (((ti) this).field_e ^ -1)) {
-                    var9 = var9 + (-var7 + param3.field_s);
-                    break L1;
-                  } else {
-                    if (((ti) this).field_e != -2) {
-                      break L1;
-                    } else {
-                      var9 = var9 + (param3.field_s + -var7 >> 1612629825);
-                      if (-3 != ((ti) this).field_g) {
-                        if (((ti) this).field_g != 1) {
-                          bh.a(var8, 2 + var10, (byte) 65, var9 + -2, var7 - -4);
-                          return;
-                        } else {
-                          var10 = var10 + (param3.field_x + -var8 >> -1986237471);
-                          bh.a(var8, 2 + var10, (byte) 65, var9 + -2, var7 - -4);
-                          return;
-                        }
-                      } else {
-                        var10 = var10 + (-var8 + param3.field_x);
-                        bh.a(var8, 2 + var10, (byte) 65, var9 + -2, var7 - -4);
-                        return;
-                      }
-                    }
-                  }
-                }
-                if (-3 != (((ti) this).field_g ^ -1)) {
-                  if (((ti) this).field_g != 1) {
-                    bh.a(var8, 2 + var10, (byte) 65, var9 + -2, var7 - -4);
-                    return;
-                  } else {
-                    var10 = var10 + (param3.field_x + -var8 >> -1986237471);
-                    bh.a(var8, 2 + var10, (byte) 65, var9 + -2, var7 - -4);
-                    return;
-                  }
-                } else {
-                  var10 = var10 + (-var8 + param3.field_x);
-                  bh.a(var8, 2 + var10, (byte) 65, var9 + -2, var7 - -4);
-                  return;
-                }
-              } else {
-                return;
-              }
-            } else {
-              return;
-            }
-          }
-        } else {
-          var6 = 3249872;
-          if (param2 == 15430) {
-            int discarded$5 = ((ti) this).field_h.a("<u=" + Integer.toString(var6, 16) + ">" + param3.field_n + "</u>", param1 - -param3.field_v, param0 + param3.field_m, param3.field_s, param3.field_x, var6, -1, ((ti) this).field_e, ((ti) this).field_g, ((ti) this).field_h.field_y + ((ti) this).field_h.field_F);
-            if (param3.g(param2 + -24445)) {
+        try {
+          L0: {
+            L1: {
               L2: {
-                var7 = ((ti) this).field_h.a(param3.field_n);
-                var8 = ((ti) this).field_h.field_y + ((ti) this).field_h.field_F;
-                var9 = param1 - -param3.field_v;
-                var10 = param3.field_m + param0;
-                if (-3 == (((ti) this).field_e ^ -1)) {
-                  var9 = var9 + (-var7 + param3.field_s);
+                if (param3.field_u) {
                   break L2;
                 } else {
-                  if (((ti) this).field_e != -2) {
+                  if (param3.g(-9015)) {
                     break L2;
                   } else {
-                    L3: {
-                      var9 = var9 + (param3.field_s + -var7 >> 1612629825);
-                      if (-3 == ((ti) this).field_g) {
-                        var10 = var10 + (-var8 + param3.field_x);
-                        break L3;
-                      } else {
-                        if (((ti) this).field_g == 1) {
-                          var10 = var10 + (param3.field_x + -var8 >> -1986237471);
-                          break L3;
-                        } else {
-                          break L3;
-                        }
-                      }
-                    }
-                    bh.a(var8, 2 + var10, (byte) 65, var9 + -2, var7 - -4);
-                    return;
+                    stackOut_3_0 = 2188450;
+                    stackIn_5_0 = stackOut_3_0;
+                    break L1;
                   }
                 }
               }
-              if (-3 != (((ti) this).field_g ^ -1)) {
-                if (((ti) this).field_g != 1) {
-                  bh.a(var8, 2 + var10, (byte) 65, var9 + -2, var7 - -4);
-                  return;
+              stackOut_4_0 = 3249872;
+              stackIn_5_0 = stackOut_4_0;
+              break L1;
+            }
+            var6_int = stackIn_5_0;
+            if (param2 == 15430) {
+              L3: {
+                int discarded$1 = ((ti) this).field_h.a("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_n + "</u>", param1 - -param3.field_v, param0 + param3.field_m, param3.field_s, param3.field_x, var6_int, -1, ((ti) this).field_e, ((ti) this).field_g, ((ti) this).field_h.field_y + ((ti) this).field_h.field_F);
+                if (!param3.g(param2 + -24445)) {
+                  break L3;
                 } else {
-                  var10 = var10 + (param3.field_x + -var8 >> -1986237471);
+                  L4: {
+                    var7 = ((ti) this).field_h.a(param3.field_n);
+                    var8 = ((ti) this).field_h.field_y + ((ti) this).field_h.field_F;
+                    var9 = param1 - -param3.field_v;
+                    var10 = param3.field_m + param0;
+                    if (((ti) this).field_e == 2) {
+                      var9 = var9 + (-var7 + param3.field_s);
+                      break L4;
+                    } else {
+                      if (((ti) this).field_e != 1) {
+                        break L4;
+                      } else {
+                        var9 = var9 + (param3.field_s + -var7 >> 1);
+                        break L4;
+                      }
+                    }
+                  }
+                  L5: {
+                    if (((ti) this).field_g == 2) {
+                      var10 = var10 + (-var8 + param3.field_x);
+                      break L5;
+                    } else {
+                      if (((ti) this).field_g == 1) {
+                        var10 = var10 + (param3.field_x + -var8 >> 1);
+                        break L5;
+                      } else {
+                        break L5;
+                      }
+                    }
+                  }
                   bh.a(var8, 2 + var10, (byte) 65, var9 + -2, var7 - -4);
-                  return;
+                  break L3;
                 }
-              } else {
-                var10 = var10 + (-var8 + param3.field_x);
-                bh.a(var8, 2 + var10, (byte) 65, var9 + -2, var7 - -4);
-                return;
               }
+              break L0;
             } else {
               return;
             }
-          } else {
-            return;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L6: {
+            var6 = decompiledCaughtException;
+            stackOut_19_0 = (RuntimeException) var6;
+            stackOut_19_1 = new StringBuilder().append("ti.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackIn_21_0 = stackOut_19_0;
+            stackIn_21_1 = stackOut_19_1;
+            stackIn_20_0 = stackOut_19_0;
+            stackIn_20_1 = stackOut_19_1;
+            if (param3 == null) {
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "null";
+              stackIn_22_0 = stackOut_21_0;
+              stackIn_22_1 = stackOut_21_1;
+              stackIn_22_2 = stackOut_21_2;
+              break L6;
+            } else {
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "{...}";
+              stackIn_22_0 = stackOut_20_0;
+              stackIn_22_1 = stackOut_20_1;
+              stackIn_22_2 = stackOut_20_2;
+              break L6;
+            }
+          }
+          throw wg.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + param4 + 41);
         }
     }
 
     ti(vm param0, int param1, int param2) {
-        ((ti) this).field_h = param0;
-        ((ti) this).field_e = param1;
-        ((ti) this).field_g = param2;
+        try {
+            ((ti) this).field_h = param0;
+            ((ti) this).field_e = param1;
+            ((ti) this).field_g = param2;
+        } catch (RuntimeException runtimeException) {
+            throw wg.a((Throwable) (Object) runtimeException, "ti.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     final static kb b(byte param0) {
         try {
             Throwable var1 = null;
-            kb stackIn_3_0 = null;
+            kb stackIn_2_0 = null;
             Throwable decompiledCaughtException = null;
-            kb stackOut_2_0 = null;
-            L0: {
-              if (param0 <= -50) {
-                break L0;
-              } else {
-                ti.a(109);
+            kb stackOut_1_0 = null;
+            try {
+              L0: {
+                stackOut_1_0 = (kb) Class.forName("ol").newInstance();
+                stackIn_2_0 = stackOut_1_0;
                 break L0;
               }
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var1 = decompiledCaughtException;
+              return null;
             }
-            try {
-              stackOut_2_0 = (kb) Class.forName("ol").newInstance();
-              stackIn_3_0 = stackOut_2_0;
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
-              return stackIn_3_0;
-            }
+            return stackIn_2_0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
             throw new RuntimeException(decompiledCheckedException);
         }
-        return null;
     }
 
     static {

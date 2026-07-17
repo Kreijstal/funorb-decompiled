@@ -406,7 +406,7 @@ final class td {
                                                                                 }
                                                                               } else {
                                                                                 param0.field_t[var31] = param0.field_t[var31] - 1;
-                                                                                param0.field_h[param0.field_t[var31]] = param0.field_h[param0.field_t[var31 - 1] + 16 - 1];
+                                                                                param0.field_h[param0.field_t[var31]] = param0.field_h[param0.field_t[var31 - 1] + 15];
                                                                                 var31--;
                                                                                 continue L19;
                                                                               }
@@ -492,7 +492,7 @@ final class td {
                                                                       break L27;
                                                                     }
                                                                   } else {
-                                                                    var15 = var15 + 1 * var16;
+                                                                    var15 = var15 + var16;
                                                                     break L27;
                                                                   }
                                                                 }
@@ -904,7 +904,7 @@ final class td {
         synchronized (var5) {
           L0: {
             field_a.field_j = param2;
-            field_a.field_r = param4;
+            field_a.field_r = 9;
             field_a.field_w = param0;
             field_a.field_E = 0;
             field_a.field_e = param1;

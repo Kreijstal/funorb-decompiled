@@ -24,17 +24,10 @@ final class ti {
     }
 
     final static boolean b(int param0) {
-        if (param0 != 10618) {
-            String discarded$0 = ti.a((byte) -1);
-            return ma.a(-120, rl.a((byte) -77));
-        }
         return ma.a(-120, rl.a((byte) -77));
     }
 
     public static void a(int param0) {
-        if (param0 != -23740) {
-            return;
-        }
         field_a = null;
         field_b = null;
     }

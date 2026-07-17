@@ -77,10 +77,10 @@ final class hh implements Iterator {
             var1_ref = ne.field_a;
             var2 = var1_ref.h(param0 ^ 16255);
             if (0 != var2) {
-              if ((var2 ^ -1) != -2) {
-                if (-3 == (var2 ^ -1)) {
+              if (var2 != 1) {
+                if (var2 == 2) {
                   L2: {
-                    if (-2 == (q.field_a ^ -1)) {
+                    if (q.field_a == 1) {
                       q.field_a = 2;
                       break L2;
                     } else {
@@ -90,7 +90,7 @@ final class hh implements Iterator {
                   return;
                 } else {
                   if (3 != var2) {
-                    if (-5 != (var2 ^ -1)) {
+                    if (var2 != 4) {
                       hb.a((Throwable) null, 0, "F1: " + jc.b(77));
                       lj.a((byte) 118);
                       break L0;
@@ -104,7 +104,7 @@ final class hh implements Iterator {
                     }
                   } else {
                     L3: {
-                      if (-3 == (q.field_a ^ -1)) {
+                      if (q.field_a == 2) {
                         q.field_a = 1;
                         break L3;
                       } else {

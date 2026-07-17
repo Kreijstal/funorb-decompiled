@@ -16,31 +16,11 @@ abstract class s {
 
     final static void a(boolean param0) {
         int var1 = 0;
-        if (param0) {
-          L0: {
-            field_b = null;
-            if (224 > si.field_l) {
-              var1 = si.field_l % 32;
-              mf.a(si.field_l - -32 - var1, 21298);
-              break L0;
-            } else {
-              mf.a(256, 21298);
-              break L0;
-            }
-          }
-          return;
+        if (224 <= si.field_l) {
+            mf.a(256, 21298);
         } else {
-          L1: {
-            if (224 > si.field_l) {
-              var1 = si.field_l % 32;
-              mf.a(si.field_l - -32 - var1, 21298);
-              break L1;
-            } else {
-              mf.a(256, 21298);
-              break L1;
-            }
-          }
-          return;
+            var1 = si.field_l % 32;
+            mf.a(si.field_l - -32 - var1, 21298);
         }
     }
 
@@ -50,7 +30,7 @@ abstract class s {
         field_a = null;
         field_b = null;
         field_d = null;
-        int var1 = -45 % ((param0 - -49) / 37);
+        int var1 = 0;
         field_i = null;
         field_e = null;
     }

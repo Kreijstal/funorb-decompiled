@@ -51,7 +51,7 @@ final class vd {
 
     final void a(int param0, int param1) {
         if (param0 == 0) {
-          if (-1 >= (param1 ^ -1)) {
+          if (param1 >= 0) {
             if (param1 <= ((vd) this).field_j) {
               if (((vd) this).field_j != param1) {
                 rd.a(((vd) this).field_d, param1 - -1, ((vd) this).field_d, param1, ((vd) this).field_j - param1);
@@ -69,7 +69,7 @@ final class vd {
           }
         } else {
           this.a(false, 25);
-          if (-1 >= (param1 ^ -1)) {
+          if (param1 >= 0) {
             if (param1 <= ((vd) this).field_j) {
               if (((vd) this).field_j == param1) {
                 ((vd) this).field_j = ((vd) this).field_j - 1;
@@ -227,8 +227,8 @@ final class vd {
         int stackOut_50_1 = 0;
         hl stackOut_51_0 = null;
         int stackOut_51_1 = 0;
-        kl.a(640 + ra.field_f >> -2033808831, ra.field_e, 0, (byte) -79, -640 + ra.field_f >> 1618882657);
-        if ((qd.field_ab ^ -1) < -1) {
+        kl.a(640 + ra.field_f >> 1, ra.field_e, 0, (byte) -79, -640 + ra.field_f >> 1);
+        if (qd.field_ab > 0) {
           L0: {
             if (null == hd.field_r) {
               break L0;
@@ -366,7 +366,7 @@ final class vd {
             return;
           } else {
             L10: {
-              if (-1 <= (am.field_f ^ -1)) {
+              if (am.field_f <= 0) {
                 break L10;
               } else {
                 L11: {
@@ -443,7 +443,7 @@ final class vd {
           }
         } else {
           if (ng.field_t <= param1) {
-            if (-1 > (am.field_f ^ -1)) {
+            if (am.field_f > 0) {
               L16: {
                 if (hd.field_r != null) {
                   hd.field_r.b(tl.field_P.field_M, 0);

@@ -16,27 +16,14 @@ final class bb extends vg {
     int[][] field_p;
 
     public static void a(boolean param0) {
-        if (param0) {
-          field_f = null;
-          field_l = null;
-          field_g = null;
-          field_q = null;
-          field_f = null;
-          return;
-        } else {
-          field_l = null;
-          field_g = null;
-          field_q = null;
-          field_f = null;
-          return;
-        }
+        field_l = null;
+        field_g = null;
+        field_q = null;
+        field_f = null;
     }
 
     final static void a(int param0) {
-        asa.a(param0 ^ 21810, cia.field_g);
-        if (param0 != -21844) {
-            field_l = null;
-        }
+        asa.a(-98, cia.field_g);
     }
 
     bb() {

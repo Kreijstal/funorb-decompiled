@@ -88,35 +88,35 @@ abstract class wl extends ij {
           L0: {
             var7_int = 2147483647;
             var8 = -2147483648;
-            var21 = param0[3] >> 615365666;
-            var22 = param0[4] >> -1262587006;
-            var23 = param0[5] >> -1689253854;
-            var24 = param0[6] >> 1914335394;
-            var25 = param0[7] >> -1266327134;
-            var26 = param0[8] >> 1636657730;
-            var27 = param0[9] >> 306658402;
-            var28 = param0[10] >> -682360990;
-            var12 = param5[5] * var23 + param5[4] * var22 + param5[3] * var21 >> -555744658;
-            var29 = param0[11] >> -930642174;
-            var13 = param5[3] * var24 + (var25 * param5[4] + var26 * param5[5]) >> -528187474;
-            var14 = var29 * param5[5] + (param5[3] * var27 - -(param5[4] * var28)) >> -1052548178;
-            var20 = var29 * param5[11] + param5[10] * var28 + param5[9] * var27 >> 921819566;
-            var19 = var24 * param5[param2] - (-(var25 * param5[10]) + -(param5[11] * var26)) >> -718140338;
-            var16 = param5[8] * var26 + var25 * param5[7] + param5[6] * var24 >> 744916718;
-            var18 = param5[9] * var21 - (-(var22 * param5[10]) - param5[11] * var23) >> -554072082;
-            var17 = var29 * param5[8] + (var27 * param5[6] - -(var28 * param5[7])) >> 513061518;
-            var15 = var21 * param5[6] - -(var22 * param5[7]) + param5[8] * var23 >> 240954094;
+            var21 = param0[3] >> 2;
+            var22 = param0[4] >> 2;
+            var23 = param0[5] >> 2;
+            var24 = param0[6] >> 2;
+            var25 = param0[7] >> 2;
+            var26 = param0[8] >> 2;
+            var27 = param0[9] >> 2;
+            var28 = param0[10] >> 2;
+            var12 = param5[5] * var23 + param5[4] * var22 + param5[3] * var21 >> 14;
+            var29 = param0[11] >> 2;
+            var13 = param5[3] * var24 + (var25 * param5[4] + var26 * param5[5]) >> 14;
+            var14 = var29 * param5[5] + (param5[3] * var27 - -(param5[4] * var28)) >> 14;
+            var20 = var29 * param5[11] + param5[10] * var28 + param5[9] * var27 >> 14;
+            var19 = var24 * param5[param2] - (-(var25 * param5[10]) + -(param5[11] * var26)) >> 14;
+            var16 = param5[8] * var26 + var25 * param5[7] + param5[6] * var24 >> 14;
+            var18 = param5[9] * var21 - (-(var22 * param5[10]) - param5[11] * var23) >> 14;
+            var17 = var29 * param5[8] + (var27 * param5[6] - -(var28 * param5[7])) >> 14;
+            var15 = var21 * param5[6] - -(var22 * param5[7]) + param5[8] * var23 >> 14;
             var21 = -param0[0] + param5[0];
             var22 = param5[1] + -param0[1];
             var23 = param5[2] - param0[2];
             var9 = var23 * param0[5] + (var21 * param0[3] + var22 * param0[4]) >> 16 + -li.field_c;
-            var11 = param0[9] * var21 + (param0[10] * var22 - -(var23 * param0[11])) >> 126615088;
+            var11 = param0[9] * var21 + (param0[10] * var22 - -(var23 * param0[11])) >> 16;
             var10 = var23 * param0[8] + param0[6] * var21 - -(var22 * param0[7]) >> 16 - li.field_c;
             var21 = nb.field_h;
             var22 = nb.field_f;
             var23 = 0;
             L1: while (true) {
-              if ((var23 ^ -1) <= (param1.field_n ^ -1)) {
+              if (~var23 <= ~param1.field_n) {
                 L2: {
                   if (param1.field_P == null) {
                     break L2;
@@ -153,21 +153,21 @@ abstract class wl extends ij {
                                         var24 = param1.field_P[var23];
                                         var25 = param1.field_f[var23];
                                         var26 = param1.field_H[var23];
-                                        qa.field_i[var23] = (var12 * var24 - (-(var15 * var25) + -(var18 * var26)) >> 509343088) + var9;
-                                        fh.field_k[var23] = var10 - -(var25 * var16 + var24 * var13 + var19 * var26 >> 2066575664);
-                                        vg.field_b[var23] = (var14 * var24 - (-(var17 * var25) - var26 * var20) >> -309041808) + var11;
+                                        qa.field_i[var23] = (var12 * var24 - (-(var15 * var25) + -(var18 * var26)) >> 16) + var9;
+                                        fh.field_k[var23] = var10 - -(var25 * var16 + var24 * var13 + var19 * var26 >> 16);
+                                        vg.field_b[var23] = (var14 * var24 - (-(var17 * var25) - var26 * var20) >> 16) + var11;
                                         var24 = param1.field_q[var23];
                                         var25 = param1.field_d[var23];
                                         var26 = param1.field_M[var23];
-                                        ol.field_C[var23] = (var15 * var25 + (var12 * var24 + var26 * var18) >> -461125008) + var9;
-                                        ud.field_bb[var23] = (var24 * var13 - -(var16 * var25) + var26 * var19 >> 1791169712) + var10;
-                                        ol.field_y[var23] = var11 - -(var26 * var20 + var14 * var24 - -(var17 * var25) >> 480374288);
+                                        ol.field_C[var23] = (var15 * var25 + (var12 * var24 + var26 * var18) >> 16) + var9;
+                                        ud.field_bb[var23] = (var24 * var13 - -(var16 * var25) + var26 * var19 >> 16) + var10;
+                                        ol.field_y[var23] = var11 - -(var26 * var20 + var14 * var24 - -(var17 * var25) >> 16);
                                         var24 = param1.field_z[var23];
                                         var25 = param1.field_m[var23];
                                         var26 = param1.field_y[var23];
-                                        hp.field_q[var23] = (var18 * var26 + var25 * var15 + var24 * var12 >> 1618610608) + var9;
-                                        vf.field_e[var23] = var10 + (var25 * var16 + (var13 * var24 - -(var19 * var26)) >> -100825200);
-                                        d.field_a[var23] = (var25 * var17 + var24 * var14 - -(var26 * var20) >> -314336432) + var11;
+                                        hp.field_q[var23] = (var18 * var26 + var25 * var15 + var24 * var12 >> 16) + var9;
+                                        vf.field_e[var23] = var10 + (var25 * var16 + (var13 * var24 - -(var19 * var26)) >> 16);
+                                        d.field_a[var23] = (var25 * var17 + var24 * var14 - -(var26 * var20) >> 16) + var11;
                                         var23++;
                                         continue L3;
                                       }
@@ -198,15 +198,15 @@ abstract class wl extends ij {
                       if (var18 >= param1.field_D) {
                         break L4;
                       } else {
-                        if ((cf.field_b.length ^ -1) >= (var18 ^ -1)) {
+                        if (~cf.field_b.length >= ~var18) {
                           break L4;
                         } else {
                           var19 = param1.field_a[var18];
                           var20 = param1.field_N[var18];
                           var21 = param1.field_u[var18];
-                          cf.field_b[var18] = var15 * var21 + var12 * var20 + var9 * var19 >> -1825066064;
-                          jp.field_a[var18] = var21 * var16 + var13 * var20 + var19 * var10 >> -861936144;
-                          vm.field_d[var18] = var19 * var11 - (-(var14 * var20) + -(var21 * var17)) >> -348251376;
+                          cf.field_b[var18] = var15 * var21 + var12 * var20 + var9 * var19 >> 16;
+                          jp.field_a[var18] = var21 * var16 + var13 * var20 + var19 * var10 >> 16;
+                          vm.field_d[var18] = var19 * var11 - (-(var14 * var20) + -(var21 * var17)) >> 16;
                           var18++;
                           continue L5;
                         }
@@ -225,8 +225,8 @@ abstract class wl extends ij {
                   var26 = param1.field_b[var23];
                   var27 = (var15 * var25 + var12 * var24 - -(var26 * var18) >> 16 + -li.field_c) + var9;
                   var28 = var10 - -(var19 * var26 + var25 * var16 + var13 * var24 >> 16 + -li.field_c);
-                  var29 = var11 + (var26 * var20 + var14 * var24 + var25 * var17 >> -933789936);
-                  if ((var29 ^ -1) <= -51) {
+                  var29 = var11 + (var26 * var20 + var14 * var24 + var25 * var17 >> 16);
+                  if (var29 >= 50) {
                     L7: {
                       dn.field_a[var23] = var21 - -(var27 / var29);
                       qk.field_E[var23] = var28 / var29 + var22;
@@ -238,7 +238,7 @@ abstract class wl extends ij {
                         break L7;
                       }
                     }
-                    if ((var29 ^ -1) > (var7_int ^ -1)) {
+                    if (~var29 > ~var7_int) {
                       var7_int = var29;
                       break L6;
                     } else {
@@ -458,9 +458,9 @@ abstract class wl extends ij {
         try {
           L0: {
             L1: {
-              sm.field_j = (63 & param1) >> -1492213148;
-              j.field_j = (param1 & 13) >> 177883554;
-              if (-3 > (sm.field_j ^ -1)) {
+              sm.field_j = (63 & param1) >> 4;
+              j.field_j = (param1 & 13) >> 2;
+              if (sm.field_j > 2) {
                 sm.field_j = 2;
                 break L1;
               } else {
@@ -468,7 +468,7 @@ abstract class wl extends ij {
               }
             }
             L2: {
-              if (-3 <= (j.field_j ^ -1)) {
+              if (j.field_j <= 2) {
                 break L2;
               } else {
                 j.field_j = 2;
@@ -477,7 +477,7 @@ abstract class wl extends ij {
             }
             L3: {
               no.field_m = 3 & param1;
-              if ((no.field_m ^ -1) >= -3) {
+              if (no.field_m <= 2) {
                 break L3;
               } else {
                 no.field_m = 2;

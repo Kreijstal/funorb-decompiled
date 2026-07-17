@@ -9,47 +9,111 @@ final class waa {
     static String field_e;
 
     final static int a(ft param0, int param1) {
-        if (param1 != 1383) {
-            field_e = null;
-            if (param0 == it.field_b) {
-                return 6407;
+        RuntimeException var2 = null;
+        int stackIn_5_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackIn_12_0 = 0;
+        int stackIn_16_0 = 0;
+        int stackIn_18_0 = 0;
+        int stackIn_20_0 = 0;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        String stackIn_25_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_19_0 = 0;
+        int stackOut_17_0 = 0;
+        int stackOut_15_0 = 0;
+        int stackOut_11_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_4_0 = 0;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        String stackOut_24_2 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        String stackOut_23_2 = null;
+        try {
+          L0: {
+            if (param1 == 1383) {
+              break L0;
+            } else {
+              field_e = null;
+              break L0;
             }
-            if (gpa.field_a == param0) {
-                return 6408;
+          }
+          if (param0 == it.field_b) {
+            stackOut_19_0 = 6407;
+            stackIn_20_0 = stackOut_19_0;
+            return stackIn_20_0;
+          } else {
+            if (gpa.field_a != param0) {
+              if (rp.field_g != param0) {
+                if (param0 == qr.field_w) {
+                  stackOut_17_0 = 6409;
+                  stackIn_18_0 = stackOut_17_0;
+                  return stackIn_18_0;
+                } else {
+                  if (wo.field_i != param0) {
+                    if (param0 == js.field_g) {
+                      stackOut_15_0 = 6145;
+                      stackIn_16_0 = stackOut_15_0;
+                      return stackIn_16_0;
+                    } else {
+                      throw new IllegalStateException();
+                    }
+                  } else {
+                    stackOut_11_0 = 6410;
+                    stackIn_12_0 = stackOut_11_0;
+                    return stackIn_12_0;
+                  }
+                }
+              } else {
+                stackOut_7_0 = 6406;
+                stackIn_8_0 = stackOut_7_0;
+                return stackIn_8_0;
+              }
+            } else {
+              stackOut_4_0 = 6408;
+              stackIn_5_0 = stackOut_4_0;
+              return stackIn_5_0;
             }
-            if (rp.field_g == param0) {
-                return 6406;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var2 = decompiledCaughtException;
+            stackOut_22_0 = (RuntimeException) var2;
+            stackOut_22_1 = new StringBuilder().append("waa.B(");
+            stackIn_24_0 = stackOut_22_0;
+            stackIn_24_1 = stackOut_22_1;
+            stackIn_23_0 = stackOut_22_0;
+            stackIn_23_1 = stackOut_22_1;
+            if (param0 == null) {
+              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
+              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_2 = "null";
+              stackIn_25_0 = stackOut_24_0;
+              stackIn_25_1 = stackOut_24_1;
+              stackIn_25_2 = stackOut_24_2;
+              break L1;
+            } else {
+              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_2 = "{...}";
+              stackIn_25_0 = stackOut_23_0;
+              stackIn_25_1 = stackOut_23_1;
+              stackIn_25_2 = stackOut_23_2;
+              break L1;
             }
-            if (param0 == qr.field_w) {
-                return 6409;
-            }
-            if (wo.field_i == param0) {
-                return 6410;
-            }
-            if (!(param0 != js.field_g)) {
-                return 6145;
-            }
-            throw new IllegalStateException();
+          }
+          throw tba.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + param1 + 41);
         }
-        if (param0 == it.field_b) {
-            return 6407;
-        }
-        if (gpa.field_a == param0) {
-            return 6408;
-        }
-        if (rp.field_g == param0) {
-            return 6406;
-        }
-        if (param0 == qr.field_w) {
-            return 6409;
-        }
-        if (wo.field_i == param0) {
-            return 6410;
-        }
-        if (!(param0 != js.field_g)) {
-            return 6145;
-        }
-        throw new IllegalStateException();
     }
 
     public static void a(int param0) {
@@ -96,7 +160,7 @@ final class waa {
         ((waa) this).field_d.a(1, true, (byte) -94, 6);
         ((waa) this).field_a = (int)((double)param0 * Math.random());
         ((waa) this).field_c = (int)(Math.random() * (double)param1);
-        if ((((waa) this).field_a ^ -1) > -21) {
+        if (((waa) this).field_a < 20) {
             ((waa) this).field_a = 20;
         }
         if (20 > ((waa) this).field_c) {

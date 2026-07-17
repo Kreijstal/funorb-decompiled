@@ -136,7 +136,7 @@ final class vf {
             L1: while (true) {
               L2: {
                 L3: {
-                  if ((((vf) this).field_k ^ -1) <= (((vf) this).field_c ^ -1)) {
+                  if (~((vf) this).field_k <= ~((vf) this).field_c) {
                     break L3;
                   } else {
                     var2_ref = ((vf) this).field_f[((vf) this).field_k];
@@ -148,7 +148,7 @@ final class vf {
                     } else {
                       if (stackIn_3_0) {
                         L4: {
-                          if ((var2_ref.field_g ^ -1) > -1) {
+                          if (var2_ref.field_g < 0) {
                             break L4;
                           } else {
                             if (!var2_ref.field_a.a((byte) 101, var2_ref.field_g)) {
@@ -293,7 +293,7 @@ final class vf {
               var6 = param1 * 3;
               var7 = -10 + var5_int;
               wi.a(0);
-              if (-1 <= (param0.field_M ^ -1)) {
+              if (param0.field_M <= 0) {
                 break L1;
               } else {
                 if (null != param0.field_i) {
@@ -317,7 +317,7 @@ final class vf {
             L3: while (true) {
               L4: {
                 L5: {
-                  if ((param0.field_R ^ -1) >= (var8 ^ -1)) {
+                  if (~param0.field_R >= ~var8) {
                     break L5;
                   } else {
                     var9 = param0.field_G[var8];
@@ -365,7 +365,7 @@ final class vf {
                         }
                         L9: {
                           var13 = hl.field_b[var10];
-                          if (2147483647 != (var13 ^ -1)) {
+                          if (var13 != -2147483648) {
                             break L9;
                           } else {
                             if (var19 == 0) {
@@ -377,7 +377,7 @@ final class vf {
                         }
                         L10: {
                           var14 = hl.field_b[var11];
-                          if ((var14 ^ -1) != 2147483647) {
+                          if (var14 != -2147483648) {
                             break L10;
                           } else {
                             if (var19 == 0) {
@@ -389,7 +389,7 @@ final class vf {
                         }
                         L11: {
                           var15 = var14 + var12 - (-var13 + var6);
-                          if (-1 < (var7 ^ -1)) {
+                          if (var7 < 0) {
                             stackOut_35_0 = var15 << -var7;
                             stackIn_36_0 = stackOut_35_0;
                             break L11;
@@ -404,12 +404,12 @@ final class vf {
                         L12: while (true) {
                           L13: {
                             L14: {
-                              if ((var17 >> 1323046340 ^ -1) == -1) {
+                              if (var17 >> 4 == 0) {
                                 break L14;
                               } else {
                                 var16--;
                                 stackOut_38_0 = -1;
-                                stackOut_38_1 = var16 ^ -1;
+                                stackOut_38_1 = ~var16;
                                 stackIn_47_0 = stackOut_38_0;
                                 stackIn_47_1 = stackOut_38_1;
                                 stackIn_39_0 = stackOut_38_0;
@@ -438,7 +438,7 @@ final class vf {
                                 }
                               }
                             }
-                            stackOut_46_0 = var16 << -151484860;
+                            stackOut_46_0 = var16 << 4;
                             stackOut_46_1 = -var17;
                             stackIn_47_0 = stackOut_46_0;
                             stackIn_47_1 = stackOut_46_1;
@@ -448,7 +448,7 @@ final class vf {
                             var18 = stackIn_47_0 - stackIn_47_1;
                             mn.field_bb[var18] = var8;
                             u.field_v[var16] = 1 + var17;
-                            if (-1 <= (param0.field_M ^ -1)) {
+                            if (param0.field_M <= 0) {
                               break L16;
                             } else {
                               if (param0.field_i == null) {

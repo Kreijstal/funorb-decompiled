@@ -17,14 +17,12 @@ abstract class cm extends l {
     final static void d(byte param0) {
         int var1 = 0;
         if (bc.field_b > 10) {
-          rf.b(80, bc.field_b + -10);
-          var1 = 4 % ((-52 - param0) / 51);
-          return;
-        } else {
-          rf.b(80, 0);
-          var1 = 4 % ((-52 - param0) / 51);
-          return;
+            rf.b(80, bc.field_b + -10);
+            var1 = 0;
+            return;
         }
+        rf.b(80, 0);
+        var1 = 0;
     }
 
     cm(int param0) {
@@ -35,11 +33,6 @@ abstract class cm extends l {
         field_s = null;
         field_t = null;
         field_v = null;
-        if (param0) {
-            cm.a(false);
-            field_r = null;
-            return;
-        }
         field_r = null;
     }
 

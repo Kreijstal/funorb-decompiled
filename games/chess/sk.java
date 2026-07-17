@@ -25,14 +25,7 @@ final class sk extends ph {
         field_r = null;
         field_q = null;
         field_s = null;
-        if (param0 != 10) {
-          field_u = null;
-          field_o = null;
-          return;
-        } else {
-          field_o = null;
-          return;
-        }
+        field_o = null;
     }
 
     final ug b(byte param0) {

@@ -37,82 +37,93 @@ final class ov implements Iterator {
     }
 
     final static void a(tf param0, int param1) {
-        gn var2 = null;
+        Object var2 = null;
+        gn var2_ref = null;
+        RuntimeException var2_ref2 = null;
+        gn var3 = null;
         int var4 = 0;
-        gn var5 = null;
-        gn var6 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
         var4 = Kickabout.field_G;
-        if (param1 != 0) {
-          field_b = -112;
-          L0: while (true) {
-            if (!jo.a(param0, false)) {
-              var2 = param0.g(24009);
-              L1: while (true) {
-                if (!(var2 instanceof ak)) {
-                  continue L0;
-                } else {
-                  if (!(var2.field_d instanceof ak)) {
-                    continue L0;
-                  } else {
-                    L2: {
-                      var6 = var2.field_d;
-                      if (((ak) (Object) var2).a((byte) 120) < ((ak) (Object) var6).a((byte) -73)) {
-                        var2.c((byte) -109);
-                        pa.a(var2, var6, (byte) 127);
-                        break L2;
-                      } else {
-                        break L2;
-                      }
-                    }
-                    var2 = var6;
+        try {
+          L0: {
+            L1: while (true) {
+              if (jo.a(param0, false)) {
+                break L0;
+              } else {
+                var2_ref = param0.g(24009);
+                L2: while (true) {
+                  if (!(var2_ref instanceof ak)) {
                     continue L1;
-                  }
-                }
-              }
-            } else {
-              return;
-            }
-          }
-        } else {
-          L3: while (true) {
-            if (!jo.a(param0, false)) {
-              var2 = param0.g(24009);
-              L4: while (true) {
-                if (!(var2 instanceof ak)) {
-                  continue L3;
-                } else {
-                  if (!(var2.field_d instanceof ak)) {
-                    continue L3;
                   } else {
-                    L5: {
-                      var5 = var2.field_d;
-                      if (((ak) (Object) var2).a((byte) 120) < ((ak) (Object) var5).a((byte) -73)) {
-                        var2.c((byte) -109);
-                        pa.a(var2, var5, (byte) 127);
-                        break L5;
-                      } else {
-                        break L5;
+                    if (!(var2_ref.field_d instanceof ak)) {
+                      continue L1;
+                    } else {
+                      L3: {
+                        var3 = var2_ref.field_d;
+                        if (((ak) (Object) var2_ref).a((byte) 120) < ((ak) (Object) var3).a((byte) -73)) {
+                          var2_ref.c((byte) -109);
+                          pa.a(var2_ref, var3, (byte) 127);
+                          break L3;
+                        } else {
+                          break L3;
+                        }
                       }
+                      var2_ref = var3;
+                      continue L2;
                     }
-                    var2 = var5;
-                    continue L4;
                   }
                 }
               }
-            } else {
-              return;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var2_ref2 = decompiledCaughtException;
+            stackOut_11_0 = (RuntimeException) var2_ref2;
+            stackOut_11_1 = new StringBuilder().append("ov.A(");
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
+            if (param0 == null) {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L4;
+            } else {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L4;
+            }
+          }
+          throw nb.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + 0 + 41);
         }
     }
 
     public static void a(int param0) {
-        if (param0 != 1) {
-            boolean discarded$0 = ov.a(-70, -86, -1);
-            field_a = null;
-            field_c = null;
-            return;
-        }
         field_a = null;
         field_c = null;
     }
@@ -163,17 +174,17 @@ final class ov implements Iterator {
     }
 
     private final void b(int param0) {
-        ((ov) this).field_e = ((ov) this).field_d.field_e[param0].field_d;
+        ((ov) this).field_e = ((ov) this).field_d.field_e[0].field_d;
         ((ov) this).field_f = 1;
         ((ov) this).field_g = null;
     }
 
     final static boolean a(int param0, int param1, int param2) {
-        if ((cc.field_e ^ -1) == param1) {
+        if (~cc.field_e == param1) {
             hq.b((byte) 124);
             return true;
         }
-        if (!(-103 != (cc.field_e ^ -1))) {
+        if (!(cc.field_e != 102)) {
             dr.field_g.a(5075);
             return true;
         }
@@ -188,8 +199,12 @@ final class ov implements Iterator {
 
     ov(ht param0) {
         ((ov) this).field_g = null;
-        ((ov) this).field_d = param0;
-        this.b(0);
+        try {
+            ((ov) this).field_d = param0;
+            this.b(0);
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "ov.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

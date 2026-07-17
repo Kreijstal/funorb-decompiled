@@ -22,9 +22,6 @@ final class cm {
             return;
         }
         a.a(112, 4, false);
-        if (param0 != -15544) {
-            cm.b(44);
-        }
     }
 
     static {

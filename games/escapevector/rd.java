@@ -17,6 +17,7 @@ final class rd {
 
     final static String a(byte param0, String param1) {
         char[] var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
         int var4_int = 0;
         char[] var4 = null;
@@ -27,59 +28,123 @@ final class rd {
         char[] var9 = null;
         char[] var10 = null;
         char[] var11 = null;
-        L0: {
-          var7 = EscapeVector.field_A;
-          if (param0 == 72) {
-            break L0;
-          } else {
-            rd.a(111, -86, -93, -27, 95);
-            break L0;
-          }
-        }
-        var10 = param1.toCharArray();
-        var8 = var10;
-        var2 = var8;
-        var3 = 0;
-        var4_int = 0;
-        L1: while (true) {
-          L2: {
-            if (var4_int >= var10.length) {
-              break L2;
-            } else {
-              if (var4_int < -var3 + -1 + var10.length) {
-                var5 = var10[var4_int];
-                if (Character.isSpaceChar((char) var5)) {
-                  var3++;
-                  var6 = 1 + var4_int;
-                  L3: while (true) {
-                    if (var10.length > var6) {
-                      var2[-1 + var6] = var10[var6];
-                      var6++;
-                      continue L3;
-                    } else {
-                      var4_int++;
-                      continue L1;
-                    }
-                  }
-                } else {
-                  var4_int++;
-                  continue L1;
-                }
+        char[] var12 = null;
+        char[] var13 = null;
+        char[] var14 = null;
+        char[] var15 = null;
+        String stackIn_14_0 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_18_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        String stackOut_13_0 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        var7 = EscapeVector.field_A;
+        try {
+          L0: {
+            L1: {
+              if (param0 == 72) {
+                break L1;
               } else {
-                break L2;
+                rd.a(111, -86, -93, -27, 95);
+                break L1;
               }
             }
+            var14 = param1.toCharArray();
+            var12 = var14;
+            var10 = var12;
+            var8 = var10;
+            var2 = var8;
+            var3 = 0;
+            var4_int = 0;
+            L2: while (true) {
+              L3: {
+                if (var4_int >= var14.length) {
+                  break L3;
+                } else {
+                  if (var4_int < -var3 + -1 + var14.length) {
+                    L4: {
+                      var5 = var14[var4_int];
+                      if (Character.isSpaceChar((char) var5)) {
+                        var3++;
+                        var6 = 1 + var4_int;
+                        L5: while (true) {
+                          if (var14.length <= var6) {
+                            break L4;
+                          } else {
+                            var2[-1 + var6] = var14[var6];
+                            var6++;
+                            continue L5;
+                          }
+                        }
+                      } else {
+                        break L4;
+                      }
+                    }
+                    var4_int++;
+                    continue L2;
+                  } else {
+                    break L3;
+                  }
+                }
+              }
+              var15 = new char[var14.length - var3];
+              var13 = var15;
+              var11 = var13;
+              var9 = var11;
+              var4 = var9;
+              qg.a(var2, 0, var4, 0, var15.length);
+              stackOut_13_0 = new String(var15);
+              stackIn_14_0 = stackOut_13_0;
+              break L0;
+            }
           }
-          var11 = new char[var10.length - var3];
-          var9 = var11;
-          var4 = var9;
-          qg.a(var2, 0, var4, 0, var11.length);
-          return new String(var11);
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L6: {
+            var2_ref = decompiledCaughtException;
+            stackOut_15_0 = (RuntimeException) var2_ref;
+            stackOut_15_1 = new StringBuilder().append("rd.A(").append(param0).append(44);
+            stackIn_17_0 = stackOut_15_0;
+            stackIn_17_1 = stackOut_15_1;
+            stackIn_16_0 = stackOut_15_0;
+            stackIn_16_1 = stackOut_15_1;
+            if (param1 == null) {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "null";
+              stackIn_18_0 = stackOut_17_0;
+              stackIn_18_1 = stackOut_17_1;
+              stackIn_18_2 = stackOut_17_2;
+              break L6;
+            } else {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "{...}";
+              stackIn_18_0 = stackOut_16_0;
+              stackIn_18_1 = stackOut_16_1;
+              stackIn_18_2 = stackOut_16_2;
+              break L6;
+            }
+          }
+          throw t.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
         }
+        return stackIn_14_0;
     }
 
     public static void a(int param0) {
-        int var1 = -2 % ((param0 - 10) / 48);
+        int var1 = 0;
         field_b = null;
         field_c = null;
     }

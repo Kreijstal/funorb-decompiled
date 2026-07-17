@@ -6,9 +6,6 @@ final class jda extends ci {
 
     final static void a(boolean param0, int param1) {
         gl.a(false, param0, (byte) 116);
-        if (param1 != 262144) {
-            field_m = -89;
-        }
     }
 
     public jda() {
@@ -32,7 +29,7 @@ final class jda extends ci {
             stackOut_2_0 = go.d(param0, param2, param1 ^ -3045);
             stackIn_4_0 = stackOut_2_0;
             stackIn_3_0 = stackOut_2_0;
-            if (-1 == (262144 & param2 ^ -1)) {
+            if ((262144 & param2) == 0) {
               stackOut_4_0 = stackIn_4_0;
               stackOut_4_1 = 0;
               stackIn_5_0 = stackOut_4_0;

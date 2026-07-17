@@ -308,7 +308,7 @@ final class qb extends ll {
                                         if ((((qb) this).field_A[var44] & 65535) != ((qb) this).field_e[var45]) {
                                           break L17;
                                         } else {
-                                          ((qb) this).field_B[var45] = (byte)-1;
+                                          ((qb) this).field_B[var45] = (byte) -1;
                                           var45++;
                                           continue L16;
                                         }
@@ -468,13 +468,13 @@ final class qb extends ll {
                       }
                     }
                     if ((var39 & 2) != 2) {
-                      ((qb) this).field_B[var38] = (byte)-1;
-                      ((qb) this).field_p[var38] = (short)-1;
+                      ((qb) this).field_B[var38] = (byte) -1;
+                      ((qb) this).field_p[var38] = (short) -1;
                       break L25;
                     } else {
                       ((qb) this).field_B[var38] = (byte)(var39 >> 2);
                       ((qb) this).field_p[var38] = ((qb) this).field_W[var38];
-                      ((qb) this).field_W[var38] = (short)127;
+                      ((qb) this).field_W[var38] = (short) 127;
                       if (((qb) this).field_p[var38] == -1) {
                         break L25;
                       } else {
@@ -1449,7 +1449,7 @@ final class qb extends ll {
                 }
                 if (((qb) this).field_B != null) {
                   if (((qb) this).field_p[var53] == -1) {
-                    ((qb) this).field_B[var53] = (byte)-1;
+                    ((qb) this).field_B[var53] = (byte) -1;
                     var53++;
                     continue L22;
                   } else {
@@ -1572,7 +1572,7 @@ final class qb extends ll {
                                     break L4;
                                   }
                                 }
-                                var6.field_s[var10] = (byte)2;
+                                var6.field_s[var10] = (byte) 2;
                                 var10++;
                                 continue L3;
                               } else {
@@ -1601,7 +1601,7 @@ final class qb extends ll {
                                 break L5;
                               }
                             }
-                            ((qb) this).field_s[var10] = (byte)2;
+                            ((qb) this).field_s[var10] = (byte) 2;
                             var10++;
                             continue L2;
                           } else {

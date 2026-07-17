@@ -13,9 +13,6 @@ final class ij implements wb {
         if (rf.field_g == null) {
             rf.field_g = cp.b(-2, 0, 2, 10, 3);
         }
-        if (!param0) {
-            return false;
-        }
         if (rf.field_g.field_o) {
             be.field_a = true;
             r.field_A = true;
@@ -62,11 +59,8 @@ final class ij implements wb {
         if (!(-1 != param0)) {
             return (gf) (Object) pe.field_o;
         }
-        if (1 == (param0 ^ -1)) {
+        if (param0 == -2) {
             return (gf) (Object) ki.field_p;
-        }
-        if (param1 > -5) {
-            field_e = null;
         }
         return (gf) (Object) bq.a(param0, 28472);
     }
@@ -84,8 +78,8 @@ final class ij implements wb {
 
     public final boolean a(int param0) {
         int stackIn_15_0 = 0;
-        int stackOut_13_0;
-        int stackOut_14_0;
+        int stackOut_13_0 = 0;
+        int stackOut_14_0 = 0;
         L0: {
           if (hb.field_y) {
             break L0;
@@ -155,7 +149,7 @@ final class ij implements wb {
             fp.field_y = new pe[2];
             var2 = 0;
             L1: while (true) {
-              if (-3 >= (var2 ^ -1)) {
+              if (var2 >= 2) {
                 break L0;
               } else {
                 fp.field_y[var2] = fa.a(1, (byte) -72, var2, 5);
@@ -169,7 +163,7 @@ final class ij implements wb {
         var3 = 0;
         if (param0 == 127) {
           L2: while (true) {
-            if ((var3 ^ -1) <= -3) {
+            if (var3 >= 2) {
               L3: {
                 if (var2 != 0) {
                   fp.field_y = null;
@@ -225,16 +219,16 @@ final class ij implements wb {
         s stackIn_9_0 = null;
         mf stackIn_9_1 = null;
         int stackIn_9_2 = 0;
-        int stackOut_4_0;
-        int stackOut_3_0;
-        s stackOut_6_0;
-        mf stackOut_6_1;
-        s stackOut_8_0;
-        mf stackOut_8_1;
-        int stackOut_8_2;
-        s stackOut_7_0;
-        mf stackOut_7_1;
-        int stackOut_7_2;
+        int stackOut_4_0 = 0;
+        int stackOut_3_0 = 0;
+        s stackOut_6_0 = null;
+        mf stackOut_6_1 = null;
+        s stackOut_8_0 = null;
+        mf stackOut_8_1 = null;
+        int stackOut_8_2 = 0;
+        s stackOut_7_0 = null;
+        mf stackOut_7_1 = null;
+        int stackOut_7_2 = 0;
         L0: {
           if (null != qc.field_k) {
             L1: {
@@ -306,7 +300,7 @@ final class ij implements wb {
             break L2;
           }
         }
-        ((s) (Object) stackIn_9_0).a((mf) (Object) stackIn_9_1, stackIn_9_2 != 0, hp.field_k, qm.field_e);
+        ((s) (Object) stackIn_9_0).a(stackIn_9_1, stackIn_9_2 != 0, hp.field_k, qm.field_e);
         bh.field_tb.a(uf.field_a, false, hp.field_k, qm.field_e);
     }
 
@@ -320,7 +314,7 @@ final class ij implements wb {
           var3 = be.field_c;
           if (0 != var3) {
             if (var3 != 1) {
-              if (-3 != (var3 ^ -1)) {
+              if (var3 != 2) {
                 if (3 != var3) {
                   if (4 == var3) {
                     ai.a((byte) 24, 92.0f, vn.field_x);

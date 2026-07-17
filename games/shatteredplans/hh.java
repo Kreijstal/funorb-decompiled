@@ -14,8 +14,9 @@ final class hh extends nq {
             for (var12 = -param6; var12 < 0; var12++) {
                 if (param1[param3] != 0) {
                     var13 = param0[param4];
+                    int incrementValue$0 = param4;
                     param4++;
-                    param0[param4] = (((var13 & 16711935) * param10 & -16711936) + ((var13 & 65280) * param10 & 16711680) >> 8) + param2;
+                    param0[incrementValue$0] = (((var13 & 16711935) * param10 & -16711936) + ((var13 & 65280) * param10 & 16711680) >> 8) + param2;
                 } else {
                     param4++;
                 }
@@ -34,29 +35,33 @@ final class hh extends nq {
         for (var11 = -param7; var11 < 0; var11++) {
             for (var12 = var10; var12 < 0; var12++) {
                 if (param1[param3] != 0) {
+                    int incrementValue$1 = param4;
                     param4++;
-                    param0[param4] = param2;
+                    param0[incrementValue$1] = param2;
                 } else {
                     param4++;
                 }
                 param3 = param3 + param5;
                 if (param1[param3] != 0) {
+                    int incrementValue$3 = param4;
                     param4++;
-                    param0[param4] = param2;
+                    param0[incrementValue$3] = param2;
                 } else {
                     param4++;
                 }
                 param3 = param3 + param5;
                 if (param1[param3] != 0) {
+                    int incrementValue$5 = param4;
                     param4++;
-                    param0[param4] = param2;
+                    param0[incrementValue$5] = param2;
                 } else {
                     param4++;
                 }
                 param3 = param3 + param5;
                 if (param1[param3] != 0) {
+                    int incrementValue$7 = param4;
                     param4++;
-                    param0[param4] = param2;
+                    param0[incrementValue$7] = param2;
                 } else {
                     param4++;
                 }
@@ -64,8 +69,9 @@ final class hh extends nq {
             }
             for (var12 = param6; var12 < 0; var12++) {
                 if (param1[param3] != 0) {
+                    int incrementValue$9 = param4;
                     param4++;
-                    param0[param4] = param2;
+                    param0[incrementValue$9] = param2;
                 } else {
                     param4++;
                 }
@@ -95,15 +101,17 @@ final class hh extends nq {
                 var10++;
                 continue L0;
               } else {
+                int incrementValue$66 = param3;
                 param3++;
-                if (param1[param3] == 0) {
+                if (param1[incrementValue$66] == 0) {
                   param4++;
                   var11++;
                   continue L1;
                 } else {
                   var12 = param0[param4];
+                  int incrementValue$67 = param4;
                   param4++;
-                  param0[param4] = (((var12 & 16711935) * param9 & -16711936) + ((var12 & 65280) * param9 & 16711680) >> 8) + param2;
+                  param0[incrementValue$67] = (((var12 & 16711935) * param9 & -16711936) + ((var12 & 65280) * param9 & 16711680) >> 8) + param2;
                   var11++;
                   continue L1;
                 }
@@ -212,14 +220,16 @@ final class hh extends nq {
                     var10++;
                     continue L0;
                   } else {
+                    int incrementValue$218 = param3;
                     param3++;
-                    if (param1[param3] == 0) {
+                    if (param1[incrementValue$218] == 0) {
                       param4++;
                       var11++;
                       continue L2;
                     } else {
+                      int incrementValue$219 = param4;
                       param4++;
-                      param0[param4] = param2;
+                      param0[incrementValue$219] = param2;
                       var11++;
                       continue L2;
                     }
@@ -227,46 +237,54 @@ final class hh extends nq {
                 }
               } else {
                 L3: {
+                  int incrementValue$220 = param3;
                   param3++;
-                  if (param1[param3] == 0) {
+                  if (param1[incrementValue$220] == 0) {
                     param4++;
                     break L3;
                   } else {
+                    int incrementValue$221 = param4;
                     param4++;
-                    param0[param4] = param2;
+                    param0[incrementValue$221] = param2;
                     break L3;
                   }
                 }
                 L4: {
+                  int incrementValue$222 = param3;
                   param3++;
-                  if (param1[param3] == 0) {
+                  if (param1[incrementValue$222] == 0) {
                     param4++;
                     break L4;
                   } else {
+                    int incrementValue$223 = param4;
                     param4++;
-                    param0[param4] = param2;
+                    param0[incrementValue$223] = param2;
                     break L4;
                   }
                 }
                 L5: {
+                  int incrementValue$224 = param3;
                   param3++;
-                  if (param1[param3] == 0) {
+                  if (param1[incrementValue$224] == 0) {
                     param4++;
                     break L5;
                   } else {
+                    int incrementValue$225 = param4;
                     param4++;
-                    param0[param4] = param2;
+                    param0[incrementValue$225] = param2;
                     break L5;
                   }
                 }
+                int incrementValue$226 = param3;
                 param3++;
-                if (param1[param3] == 0) {
+                if (param1[incrementValue$226] == 0) {
                   param4++;
                   var11++;
                   continue L1;
                 } else {
+                  int incrementValue$227 = param4;
                   param4++;
-                  param0[param4] = param2;
+                  param0[incrementValue$227] = param2;
                   var11++;
                   continue L1;
                 }
@@ -415,14 +433,16 @@ final class hh extends nq {
                 var15++;
                 continue L0;
               } else {
+                int incrementValue$2 = param7;
                 param7++;
-                if (param1[param7] == 0) {
+                if (param1[incrementValue$2] == 0) {
                   param8++;
                   var20++;
                   continue L3;
                 } else {
+                  int incrementValue$3 = param8;
                   param8++;
-                  gf.field_h[param8] = param6;
+                  gf.field_h[incrementValue$3] = param6;
                   var20++;
                   continue L3;
                 }

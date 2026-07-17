@@ -6,7 +6,7 @@ final class ca {
     private static String field_z;
 
     public static void a(int param0) {
-        int var1 = -41 / ((param0 - 48) / 58);
+        int var1 = -41;
         field_a = null;
     }
 

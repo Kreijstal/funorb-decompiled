@@ -13,8 +13,12 @@ final class fa extends go implements ki {
     static qr field_X;
 
     final void a(int param0, int param1, vg param2, byte param3) {
-        super.a(param0, param1, param2, param3);
-        ((fa) this).field_U = pd.field_k - (((fa) this).field_m + param0);
+        try {
+            super.a(param0, param1, param2, param3);
+            ((fa) this).field_U = pd.field_k - (((fa) this).field_m + param0);
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "fa.PA(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+        }
     }
 
     fa(String param0, ko param1, int param2) {
@@ -73,12 +77,14 @@ final class fa extends go implements ki {
     }
 
     final void a(gk param0, int param1) {
-        if (param1 != 8945) {
-            field_T = null;
+        try {
+            if (param1 != 8945) {
+                field_T = null;
+            }
             ((fa) this).field_V = param0;
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "fa.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
-        ((fa) this).field_V = param0;
     }
 
     public final gk a(byte param0) {
@@ -122,9 +128,6 @@ final class fa extends go implements ki {
         field_Z = null;
         field_S = null;
         field_J = null;
-        if (param0 != 5) {
-            fa.a(-11, (byte) -25);
-        }
     }
 
     static {

@@ -7,11 +7,6 @@ final class kd {
 
     public static void a(byte param0) {
         field_a = null;
-        if (param0 != 95) {
-            field_b = null;
-            field_b = null;
-            return;
-        }
         field_b = null;
     }
 
@@ -45,17 +40,17 @@ final class kd {
             var4 = -35 + param0;
             var5 = param2;
             if (75 > td.field_u) {
-              var5 = (td.field_u << 72443560) / 75;
+              var5 = (td.field_u << 8) / 75;
               break L0;
             } else {
               break L0;
             }
           }
           L1: {
-            if ((td.field_u ^ -1) >= -201) {
+            if (td.field_u <= 200) {
               break L1;
             } else {
-              var5 = (250 - td.field_u << 899881416) / 50;
+              var5 = (250 - td.field_u << 8) / 50;
               break L1;
             }
           }
@@ -63,7 +58,7 @@ final class kd {
             jq.a(7161, sn.field_a);
             nk.b();
             lk.b();
-            ok.b(param2 + 0);
+            ok.b(param2);
             if (256 > var5) {
               lk.b(0, 0, lk.field_b, lk.field_c, 0, 256 + -var5);
               break L2;
@@ -72,13 +67,13 @@ final class kd {
             }
           }
           su.a((byte) -69);
-          if (-151 < (td.field_u ^ -1)) {
+          if (td.field_u < 150) {
             sn.field_a.b(var3, var4);
             var6 = td.field_u + -125;
             if (var6 > 0) {
-              if (-51 < (var6 ^ -1)) {
+              if (var6 < 50) {
                 if (20 <= var6) {
-                  if ((var6 ^ -1) <= -31) {
+                  if (var6 >= 30) {
                     L3: {
                       var7 = (12800 + -(256 * var6)) / 20;
                       eh.field_b.d(var3, var4, var7);
@@ -95,7 +90,7 @@ final class kd {
                             break L4;
                           }
                         }
-                        mq.field_a.a(var3 - -15, 10 + var4, var5 * var7 >> -113781016);
+                        mq.field_a.a(var3 - -15, 10 + var4, var5 * var7 >> 8);
                         break L3;
                       }
                     }
@@ -116,7 +111,7 @@ final class kd {
                             break L6;
                           }
                         }
-                        mq.field_a.a(var3 - -15, 10 + var4, var5 * var7 >> -113781016);
+                        mq.field_a.a(var3 - -15, 10 + var4, var5 * var7 >> 8);
                         break L5;
                       }
                     }
@@ -139,7 +134,7 @@ final class kd {
                           break L8;
                         }
                       }
-                      mq.field_a.a(var3 - -15, 10 + var4, var5 * var7 >> -113781016);
+                      mq.field_a.a(var3 - -15, 10 + var4, var5 * var7 >> 8);
                       break L7;
                     }
                   }
@@ -160,7 +155,7 @@ final class kd {
                         break L10;
                       }
                     }
-                    mq.field_a.a(var3 - -15, 10 + var4, var5 * var7 >> -113781016);
+                    mq.field_a.a(var3 - -15, 10 + var4, var5 * var7 >> 8);
                     break L9;
                   }
                 }
@@ -181,7 +176,7 @@ final class kd {
                       break L12;
                     }
                   }
-                  mq.field_a.a(var3 - -15, 10 + var4, var5 * var7 >> -113781016);
+                  mq.field_a.a(var3 - -15, 10 + var4, var5 * var7 >> 8);
                   break L11;
                 }
               }
@@ -191,9 +186,9 @@ final class kd {
             kh.field_a.a(var3 - -15, 10 + var4, var5);
             var6 = td.field_u + -125;
             if (var6 > 0) {
-              if (-51 < (var6 ^ -1)) {
+              if (var6 < 50) {
                 if (20 <= var6) {
-                  if ((var6 ^ -1) <= -31) {
+                  if (var6 >= 30) {
                     L13: {
                       var7 = (12800 + -(256 * var6)) / 20;
                       eh.field_b.d(var3, var4, var7);
@@ -210,7 +205,7 @@ final class kd {
                             break L14;
                           }
                         }
-                        mq.field_a.a(var3 - -15, 10 + var4, var5 * var7 >> -113781016);
+                        mq.field_a.a(var3 - -15, 10 + var4, var5 * var7 >> 8);
                         break L13;
                       }
                     }
@@ -231,7 +226,7 @@ final class kd {
                             break L16;
                           }
                         }
-                        mq.field_a.a(var3 - -15, 10 + var4, var5 * var7 >> -113781016);
+                        mq.field_a.a(var3 - -15, 10 + var4, var5 * var7 >> 8);
                         break L15;
                       }
                     }
@@ -254,7 +249,7 @@ final class kd {
                           break L18;
                         }
                       }
-                      mq.field_a.a(var3 - -15, 10 + var4, var5 * var7 >> -113781016);
+                      mq.field_a.a(var3 - -15, 10 + var4, var5 * var7 >> 8);
                       break L17;
                     }
                   }
@@ -275,7 +270,7 @@ final class kd {
                         break L20;
                       }
                     }
-                    mq.field_a.a(var3 - -15, 10 + var4, var5 * var7 >> -113781016);
+                    mq.field_a.a(var3 - -15, 10 + var4, var5 * var7 >> 8);
                     break L19;
                   }
                 }
@@ -296,7 +291,7 @@ final class kd {
                       break L22;
                     }
                   }
-                  mq.field_a.a(var3 - -15, 10 + var4, var5 * var7 >> -113781016);
+                  mq.field_a.a(var3 - -15, 10 + var4, var5 * var7 >> 8);
                   break L21;
                 }
               }
@@ -307,11 +302,6 @@ final class kd {
     }
 
     final static void a(boolean param0, int param1) {
-        if (param1 >= -78) {
-            kd.a(-106, 83, -73);
-            ut.field_o.a(120, param0);
-            return;
-        }
         ut.field_o.a(120, param0);
     }
 

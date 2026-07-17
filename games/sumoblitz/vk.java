@@ -14,7 +14,8 @@ final class vk {
     }
 
     final static void a(int param0, int param1, byte param2, int param3, int param4, int param5, boolean param6) {
-        int var7 = 0;
+        RuntimeException var7 = null;
+        int var7_int = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -22,103 +23,116 @@ final class vk {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        int stackIn_21_0 = 0;
-        int stackOut_20_0 = 0;
-        int stackOut_19_0 = 0;
+        int stackIn_23_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_22_0 = 0;
+        int stackOut_21_0 = 0;
         var14 = Sumoblitz.field_L ? 1 : 0;
-        if (param4 > param5) {
-          if (param3 > 1 + param5) {
-            L0: {
-              if (param3 <= param5 - -5) {
-                break L0;
-              } else {
-                if (param0 == param1) {
-                  break L0;
-                } else {
-                  var7 = (param0 & param1 & 1) + (param0 >> 429166529) - -(param1 >> 1439930241);
-                  var8 = param5;
-                  var9 = param1;
-                  var10 = param0;
-                  var11 = param5;
-                  L1: while (true) {
-                    if (param3 <= var11) {
-                      vk.a(var9, param1, param2, var8, param4, param5, param6);
-                      vk.a(param0, var10, (byte) -107, param3, param4, var8, param6);
-                      return;
+        try {
+          L0: {
+            if (param4 > param5) {
+              if (param3 > 1 + param5) {
+                L1: {
+                  if (param3 <= param5 - -5) {
+                    break L1;
+                  } else {
+                    if (param0 == param1) {
+                      break L1;
                     } else {
-                      L2: {
-                        var12 = pd.field_q[var11];
-                        if (!param6) {
-                          stackOut_20_0 = uc.field_c[var12];
-                          stackIn_21_0 = stackOut_20_0;
-                          break L2;
+                      var7_int = (param0 & param1 & 1) + (param0 >> 1) - -(param1 >> 1);
+                      var8 = param5;
+                      var9 = param1;
+                      var10 = param0;
+                      var11 = param5;
+                      L2: while (true) {
+                        if (param3 <= var11) {
+                          vk.a(var9, param1, param2, var8, param4, param5, param6);
+                          vk.a(param0, var10, (byte) -107, param3, param4, var8, param6);
+                          break L0;
                         } else {
-                          stackOut_19_0 = lj.field_a[var12];
-                          stackIn_21_0 = stackOut_19_0;
-                          break L2;
+                          L3: {
+                            var12 = pd.field_q[var11];
+                            if (!param6) {
+                              stackOut_22_0 = uc.field_c[var12];
+                              stackIn_23_0 = stackOut_22_0;
+                              break L3;
+                            } else {
+                              stackOut_21_0 = lj.field_a[var12];
+                              stackIn_23_0 = stackOut_21_0;
+                              break L3;
+                            }
+                          }
+                          L4: {
+                            var13 = stackIn_23_0;
+                            if (var13 <= var7_int) {
+                              if (var13 > var10) {
+                                var10 = var13;
+                                break L4;
+                              } else {
+                                break L4;
+                              }
+                            } else {
+                              L5: {
+                                pd.field_q[var11] = pd.field_q[var8];
+                                if (var13 < var9) {
+                                  var9 = var13;
+                                  break L5;
+                                } else {
+                                  break L5;
+                                }
+                              }
+                              int incrementValue$1 = var8;
+                              var8++;
+                              pd.field_q[incrementValue$1] = var12;
+                              break L4;
+                            }
+                          }
+                          var11++;
+                          continue L2;
                         }
                       }
-                      var13 = stackIn_21_0;
-                      if (var13 <= var7) {
-                        if (var13 > var10) {
-                          var10 = var13;
-                          var11++;
-                          continue L1;
-                        } else {
-                          var11++;
-                          continue L1;
-                        }
+                    }
+                  }
+                }
+                var7_int = -1 + param3;
+                L6: while (true) {
+                  if (var7_int <= param5) {
+                    return;
+                  } else {
+                    var8 = param5;
+                    L7: while (true) {
+                      if (var8 >= var7_int) {
+                        var7_int--;
+                        continue L6;
                       } else {
-                        L3: {
-                          pd.field_q[var11] = pd.field_q[var8];
-                          if (var13 < var9) {
-                            var9 = var13;
-                            break L3;
+                        L8: {
+                          var9 = pd.field_q[var8];
+                          var10 = pd.field_q[1 + var8];
+                          if (jl.a(var10, var9, param6, (byte) 98)) {
+                            pd.field_q[var8] = var10;
+                            pd.field_q[var8 + 1] = var9;
+                            break L8;
                           } else {
-                            break L3;
+                            break L8;
                           }
                         }
                         var8++;
-                        pd.field_q[var8] = var12;
-                        var11++;
-                        continue L1;
+                        continue L7;
                       }
                     }
                   }
                 }
-              }
-            }
-            var7 = -1 + param3;
-            L4: while (true) {
-              if (var7 <= param5) {
-                return;
               } else {
-                var8 = param5;
-                L5: while (true) {
-                  if (var8 >= var7) {
-                    var7--;
-                    continue L4;
-                  } else {
-                    var9 = pd.field_q[var8];
-                    var10 = pd.field_q[1 + var8];
-                    if (jl.a(var10, var9, param6, (byte) 98)) {
-                      pd.field_q[var8] = var10;
-                      pd.field_q[var8 + 1] = var9;
-                      var8++;
-                      continue L5;
-                    } else {
-                      var8++;
-                      continue L5;
-                    }
-                  }
-                }
+                return;
               }
+            } else {
+              return;
             }
-          } else {
-            return;
           }
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var7 = decompiledCaughtException;
+          throw qo.a((Throwable) (Object) var7, "vk.C(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
         }
     }
 
@@ -131,15 +145,16 @@ final class vk {
 
     public static void b(int param0) {
         field_b = null;
-        if (param0 != 429166529) {
-            vk.a(100, 10, (byte) 96, 17, -1, -25, true);
-        }
         field_d = null;
     }
 
     vk(fr param0, int param1, int param2) {
-        ((vk) this).field_a = param2;
-        ((vk) this).field_c = param0;
+        try {
+            ((vk) this).field_a = param2;
+            ((vk) this).field_c = param0;
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "vk.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     static {

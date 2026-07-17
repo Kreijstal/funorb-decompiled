@@ -93,53 +93,106 @@ abstract class vv {
     }
 
     final int a(int param0, String param1, int param2, int param3) {
-        int var5 = 0;
+        int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
+        int stackIn_14_0 = 0;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_19_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_13_0 = 0;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
         var10 = BachelorFridge.field_y;
-        var5 = 0;
-        var6 = 0;
-        var7 = param1.length();
-        var8 = 0;
-        L0: while (true) {
-          if (var8 >= var7) {
-            if ((var5 ^ -1) < param0) {
-              return (-param2 + param3 << -630724280) / var5;
-            } else {
-              return 0;
-            }
-          } else {
-            var9 = param1.charAt(var8);
-            if (var9 != 60) {
-              if (var9 == 62) {
-                var6 = 0;
-                var8++;
-                continue L0;
-              } else {
-                if (var6 == 0) {
-                  if (32 == var9) {
-                    var5++;
-                    var8++;
-                    continue L0;
-                  } else {
-                    var8++;
-                    continue L0;
-                  }
+        try {
+          L0: {
+            var5_int = 0;
+            var6 = 0;
+            var7 = param1.length();
+            var8 = 0;
+            L1: while (true) {
+              if (var8 >= var7) {
+                if (~var5_int < param0) {
+                  stackOut_13_0 = (-param2 + param3 << 8) / var5_int;
+                  stackIn_14_0 = stackOut_13_0;
+                  break L0;
                 } else {
-                  var8++;
-                  continue L0;
+                  return 0;
                 }
+              } else {
+                L2: {
+                  var9 = param1.charAt(var8);
+                  if (var9 != 60) {
+                    if (var9 == 62) {
+                      var6 = 0;
+                      break L2;
+                    } else {
+                      L3: {
+                        if (var6 != 0) {
+                          break L3;
+                        } else {
+                          break L3;
+                        }
+                      }
+                      var8++;
+                      continue L1;
+                    }
+                  } else {
+                    var6 = 1;
+                    break L2;
+                  }
+                }
+                var8++;
+                continue L1;
               }
-            } else {
-              var6 = 1;
-              var8++;
-              continue L0;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var5 = decompiledCaughtException;
+            stackOut_16_0 = (RuntimeException) var5;
+            stackOut_16_1 = new StringBuilder().append("vv.L(").append(param0).append(44);
+            stackIn_18_0 = stackOut_16_0;
+            stackIn_18_1 = stackOut_16_1;
+            stackIn_17_0 = stackOut_16_0;
+            stackIn_17_1 = stackOut_16_1;
+            if (param1 == null) {
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "null";
+              stackIn_19_0 = stackOut_18_0;
+              stackIn_19_1 = stackOut_18_1;
+              stackIn_19_2 = stackOut_18_2;
+              break L4;
+            } else {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "{...}";
+              stackIn_19_0 = stackOut_17_0;
+              stackIn_19_1 = stackOut_17_1;
+              stackIn_19_2 = stackOut_17_2;
+              break L4;
+            }
+          }
+          throw pe.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param2 + 44 + param3 + 41);
         }
+        return stackIn_14_0;
     }
 
     final int a(int param0, int param1) {
@@ -176,7 +229,7 @@ abstract class vv {
             if (null == ((vv) this).field_a) {
               break L2;
             } else {
-              if ((((vv) this).field_a.length ^ -1) < -1) {
+              if (((vv) this).field_a.length > 0) {
                 stackOut_6_0 = -((vv) this).field_a[0].field_c + ((vv) this).field_a[-1 + ((vv) this).field_a.length].field_d;
                 stackIn_7_0 = stackOut_6_0;
                 break L1;
@@ -211,7 +264,7 @@ abstract class vv {
           if (null == ((vv) this).field_a) {
             break L1;
           } else {
-            if (-1 == (((vv) this).field_a.length ^ -1)) {
+            if (((vv) this).field_a.length == 0) {
               break L1;
             } else {
               if (((vv) this).field_a[0].field_c <= param1) {
@@ -261,10 +314,7 @@ abstract class vv {
     }
 
     final static sna a(int param0) {
-        if (param0 != 31185) {
-            return null;
-        }
-        return qca.e(param0 + -117517072);
+        return qca.e(-117485887);
     }
 
     static {

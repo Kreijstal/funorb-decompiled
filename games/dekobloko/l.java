@@ -23,9 +23,6 @@ final class l {
     final static int[] c(int param0) {
         int var2 = 0;
         int var3 = client.field_A ? 1 : 0;
-        if (param0 != 4) {
-            w discarded$0 = l.a(64);
-        }
         int[] var4 = new int[4];
         int[] var1 = var4;
         for (var2 = 0; var2 < 4; var2++) {
@@ -38,9 +35,6 @@ final class l {
         field_a = null;
         field_e = null;
         field_j = null;
-        if (param0 < 118) {
-            field_h = -47L;
-        }
         field_i = null;
         field_b = null;
         field_d = null;

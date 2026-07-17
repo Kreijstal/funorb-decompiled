@@ -39,7 +39,7 @@ final class jha extends vg {
 
     final void b(byte param0) {
         int var3 = -52 % ((param0 - -59) / 45);
-        int var2 = 255 - (((jha) this).field_o * 255 >> 1568147408);
+        int var2 = 255 - (((jha) this).field_o * 255 >> 16);
         rba.a(var2 / 2, ((jha) this).field_k, 1, ((jha) this).field_g, (byte) 99, ((jha) this).field_s, ((jha) this).field_t);
         int var4 = fn.field_f[((jha) this).field_r];
         int discarded$0 = dh.a(kn.field_p, var2, 0, 16, 4 + ((jha) this).field_t, ((jha) this).field_k - 8, var4, ((jha) this).field_s - -4, 1, 29870, 1, -8 + ((jha) this).field_g, ((jha) this).field_q);
@@ -89,17 +89,17 @@ final class jha extends vg {
         L1: {
           if (0 < var2) {
             ((jha) this).field_o = var2 * 65536 / var3;
-            ((jha) this).field_o = (((jha) this).field_o >> -2140331064) * (((jha) this).field_o >> 1140461480);
+            ((jha) this).field_o = (((jha) this).field_o >> 8) * (((jha) this).field_o >> 8);
             break L1;
           } else {
             ((jha) this).field_o = 0;
             break L1;
           }
         }
-        if ((((jha) this).field_m ^ -1) != -2) {
+        if (((jha) this).field_m != 1) {
           if (((jha) this).field_s < ((jha) this).field_u) {
             ((jha) this).field_s = ((jha) this).field_s + 1;
-            ((jha) this).field_t = ((jha) this).field_p + (256 * ((jha) this).field_o >> -1740220208);
+            ((jha) this).field_t = ((jha) this).field_p + (256 * ((jha) this).field_o >> 16);
             if (null != ((jha) this).field_q) {
               if (param0 >= -36) {
                 int discarded$9 = ((jha) this).c((byte) 42);
@@ -136,7 +136,7 @@ final class jha extends vg {
             if (((jha) this).field_s > ((jha) this).field_u) {
               L2: {
                 ((jha) this).field_s = ((jha) this).field_s - 1;
-                ((jha) this).field_t = ((jha) this).field_p + (256 * ((jha) this).field_o >> -1740220208);
+                ((jha) this).field_t = ((jha) this).field_p + (256 * ((jha) this).field_o >> 16);
                 if (null != ((jha) this).field_q) {
                   break L2;
                 } else {
@@ -162,7 +162,7 @@ final class jha extends vg {
                 return;
               }
             } else {
-              ((jha) this).field_t = ((jha) this).field_p + (256 * ((jha) this).field_o >> -1740220208);
+              ((jha) this).field_t = ((jha) this).field_p + (256 * ((jha) this).field_o >> 16);
               if (null == ((jha) this).field_q) {
                 L3: {
                   if (null == ((jha) this).field_h) {
@@ -200,7 +200,7 @@ final class jha extends vg {
           }
         } else {
           ((jha) this).field_s = ((jha) this).field_u;
-          ((jha) this).field_t = ((jha) this).field_p + (256 * ((jha) this).field_o >> -1740220208);
+          ((jha) this).field_t = ((jha) this).field_p + (256 * ((jha) this).field_o >> 16);
           if (null != ((jha) this).field_q) {
             if (param0 >= -36) {
               int discarded$15 = ((jha) this).c((byte) 42);
@@ -354,9 +354,13 @@ final class jha extends vg {
     }
 
     jha(int param0, String param1, String param2) {
-        ((jha) this).field_h = param1;
-        ((jha) this).field_r = param0;
-        ((jha) this).field_n = param2;
+        try {
+            ((jha) this).field_h = param1;
+            ((jha) this).field_r = param0;
+            ((jha) this).field_n = param2;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "jha.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

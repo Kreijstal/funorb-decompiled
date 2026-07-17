@@ -17,9 +17,6 @@ final class qd {
         field_h = null;
         field_a = null;
         field_i = null;
-        if (param0 != 15) {
-            return;
-        }
         field_b = null;
         field_f = null;
     }
@@ -53,54 +50,72 @@ final class qd {
     }
 
     final static int a(int param0, int param1, int param2) {
-        int var3 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        L0: {
-          var8 = Torquing.field_u;
-          var3 = 0;
-          var4 = a.field_d;
-          if (param0 == 16452) {
-            break L0;
-          } else {
-            field_g = 47;
-            break L0;
-          }
-        }
-        L1: while (true) {
-          if (var3 >= wh.field_z.length) {
-            return -1;
-          } else {
-            var5 = mn.field_Z[var3];
-            if (-1 >= (var5 ^ -1)) {
-              var6 = mh.a(true, -90, wh.field_z[var3]);
-              var4 = var4 + hn.field_z;
-              var7 = -(var6 >> -1377499807) + vk.field_A;
-              if (l.a((ln.field_D << -1610520607) + kp.field_d, param2, param0 + 6821, param1, (aq.field_b << -919387679) + var6, var7 - aq.field_b, var4)) {
-                return var5;
+        int stackIn_9_0 = 0;
+        int stackIn_13_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_12_0 = 0;
+        int stackOut_8_0 = 0;
+        var8 = Torquing.field_u;
+        try {
+          L0: {
+            L1: {
+              var3_int = 0;
+              var4 = a.field_d;
+              if (param0 == 16452) {
+                break L1;
               } else {
-                var4 = var4 + (kp.field_d + (ln.field_D << -2056109855) + hn.field_z);
-                var3++;
-                continue L1;
+                field_g = 47;
+                break L1;
               }
-            } else {
-              var4 = var4 + bp.field_e;
-              var3++;
-              continue L1;
+            }
+            L2: while (true) {
+              if (var3_int >= wh.field_z.length) {
+                stackOut_12_0 = -1;
+                stackIn_13_0 = stackOut_12_0;
+                break L0;
+              } else {
+                L3: {
+                  var5 = mn.field_Z[var3_int];
+                  if (var5 >= 0) {
+                    var6 = mh.a(true, -90, wh.field_z[var3_int]);
+                    var4 = var4 + hn.field_z;
+                    var7 = -(var6 >> 1) + vk.field_A;
+                    if (l.a((ln.field_D << 1) + kp.field_d, param2, param0 + 6821, param1, (aq.field_b << 1) + var6, var7 - aq.field_b, var4)) {
+                      stackOut_8_0 = var5;
+                      stackIn_9_0 = stackOut_8_0;
+                      return stackIn_9_0;
+                    } else {
+                      var4 = var4 + (kp.field_d + (ln.field_D << 1) + hn.field_z);
+                      break L3;
+                    }
+                  } else {
+                    var4 = var4 + bp.field_e;
+                    break L3;
+                  }
+                }
+                var3_int++;
+                continue L2;
+              }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw rb.a((Throwable) (Object) var3, "qd.D(" + param0 + 44 + param1 + 44 + param2 + 41);
         }
+        return stackIn_13_0;
     }
 
     final static Boolean a(int param0) {
         Boolean var1 = jl.field_T;
         jl.field_T = null;
-        if (param0 >= -12) {
-            field_g = 126;
-        }
         return var1;
     }
 

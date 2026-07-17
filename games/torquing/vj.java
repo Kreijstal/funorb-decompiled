@@ -52,19 +52,12 @@ final class vj extends pi {
 
     final void a(int param0) throws javax.sound.sampled.LineUnavailableException {
         javax.sound.sampled.DataLine.Info var2 = null;
-        try {
+        {
             var2 = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, ((vj) this).field_y, param0 << (field_r ? 2 : 1));
             ((vj) this).field_v = (javax.sound.sampled.SourceDataLine) (Object) javax.sound.sampled.AudioSystem.getLine((javax.sound.sampled.Line.Info) (Object) var2);
             ((vj) this).field_v.open();
             ((vj) this).field_v.start();
             ((vj) this).field_z = param0;
-        } catch (javax.sound.sampled.LineUnavailableException lineUnavailableException) {
-            if (re.a(252645135, param0) != 1) {
-                ((vj) this).a(qm.a((byte) -106, param0));
-                return;
-            }
-            ((vj) this).field_v = null;
-            throw lineUnavailableException;
         }
     }
 

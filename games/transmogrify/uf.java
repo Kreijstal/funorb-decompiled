@@ -43,23 +43,97 @@ final class uf {
     }
 
     final static q a(boolean param0, String param1) {
+        int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        int var5 = Transmogrify.field_A ? 1 : 0;
-        int var2 = param1.length();
-        for (var3 = 0; var3 < var2; var3++) {
-            var4 = param1.charAt(var3);
-            if (var4 < 48) {
-                return null;
+        int var5 = 0;
+        Object stackIn_7_0 = null;
+        q stackIn_12_0 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        q stackOut_11_0 = null;
+        Object stackOut_6_0 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        var5 = Transmogrify.field_A ? 1 : 0;
+        try {
+          L0: {
+            var2_int = param1.length();
+            var3 = 0;
+            L1: while (true) {
+              if (var3 >= var2_int) {
+                L2: {
+                  if (!param0) {
+                    break L2;
+                  } else {
+                    field_a = -121;
+                    break L2;
+                  }
+                }
+                stackOut_11_0 = vc.field_N;
+                stackIn_12_0 = stackOut_11_0;
+                break L0;
+              } else {
+                var4 = param1.charAt(var3);
+                if (var4 >= 48) {
+                  if (var4 <= 57) {
+                    var3++;
+                    continue L1;
+                  } else {
+                    stackOut_6_0 = null;
+                    stackIn_7_0 = stackOut_6_0;
+                    return (q) (Object) stackIn_7_0;
+                  }
+                } else {
+                  return null;
+                }
+              }
             }
-            if (var4 > 57) {
-                return null;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2 = decompiledCaughtException;
+            stackOut_13_0 = (RuntimeException) var2;
+            stackOut_13_1 = new StringBuilder().append("uf.D(").append(param0).append(44);
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
+            if (param1 == null) {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L3;
+            } else {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L3;
             }
+          }
+          throw ch.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
         }
-        if (param0) {
-            field_a = -121;
-        }
-        return vc.field_N;
+        return stackIn_12_0;
     }
 
     public static void a(int param0) {
@@ -70,10 +144,7 @@ final class uf {
     }
 
     final static boolean a(byte param0) {
-        if (param0 != -76) {
-            uf.a(60);
-        }
-        return !dl.field_l.b(-26753) ? true : false;
+        return !dl.field_l.b(-26753);
     }
 
     static {

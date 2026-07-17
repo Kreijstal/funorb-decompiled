@@ -118,8 +118,9 @@ final class it extends da {
                 var22++;
                 continue L2;
               } else {
+                int incrementValue$2 = param3;
                 param3++;
-                var28 = param0[param3] & 255;
+                var28 = param0[incrementValue$2] & 255;
                 if (var28 == 0) {
                   param4++;
                   var27++;
@@ -128,8 +129,9 @@ final class it extends da {
                   var29 = ((param2 & 16711935) * var28 & -16711936) + ((param2 & 65280) * var28 & 16711680) >> 8;
                   var28 = 256 - var28;
                   var30 = param1[param4];
+                  int incrementValue$3 = param4;
                   param4++;
-                  param1[param4] = (((var30 & 16711935) * var28 & -16711936) + ((var30 & 65280) * var28 & 16711680) >> 8) + var29;
+                  param1[incrementValue$3] = (((var30 & 16711935) * var28 & -16711936) + ((var30 & 65280) * var28 & 16711680) >> 8) + var29;
                   var27++;
                   continue L5;
                 }
@@ -318,8 +320,9 @@ final class it extends da {
                 var10++;
                 continue L0;
               } else {
+                int incrementValue$66 = param3;
                 param3++;
-                var12 = param0[param3] & 255;
+                var12 = param0[incrementValue$66] & 255;
                 if (var12 == 0) {
                   param4++;
                   var11++;
@@ -328,8 +331,9 @@ final class it extends da {
                   var13 = ((param2 & 16711935) * var12 & -16711936) + ((param2 & 65280) * var12 & 16711680) >> 8;
                   var12 = 256 - var12;
                   var14 = param1[param4];
+                  int incrementValue$67 = param4;
                   param4++;
-                  param1[param4] = (((var14 & 16711935) * var12 & -16711936) + ((var14 & 65280) * var12 & 16711680) >> 8) + var13;
+                  param1[incrementValue$67] = (((var14 & 16711935) * var12 & -16711936) + ((var14 & 65280) * var12 & 16711680) >> 8) + var13;
                   var11++;
                   continue L1;
                 }

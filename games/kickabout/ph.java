@@ -10,65 +10,31 @@ final class ph {
     static kg[][] field_e;
 
     final static boolean a(boolean param0) {
-        if (!param0) {
-            field_c = null;
-            return !kb.field_C ? true : false;
-        }
-        return !kb.field_C ? true : false;
+        return !kb.field_C;
     }
 
     final static void b(boolean param0) {
-        int var1 = 0;
-        int var2 = 0;
-        var1 = uc.h((byte) -118);
-        var2 = qo.e((byte) 18);
-        if (!param0) {
-          field_c = null;
-          oi.field_g.a(nb.field_k + -is.field_d, var2 + (jm.field_e << 1114366657), hm.field_I + -jm.field_e, var1 - -(is.field_d << -2061819135), 3);
-          na.k(0);
-          return;
-        } else {
-          oi.field_g.a(nb.field_k + -is.field_d, var2 + (jm.field_e << 1114366657), hm.field_I + -jm.field_e, var1 - -(is.field_d << -2061819135), 3);
-          na.k(0);
-          return;
-        }
+        int var1 = uc.h((byte) -118);
+        int var2 = qo.e((byte) 18);
+        oi.field_g.a(nb.field_k + -is.field_d, var2 + (jm.field_e << 1), hm.field_I + -jm.field_e, var1 - -(is.field_d << 1), 3);
+        na.k(0);
     }
 
     final static void a(int param0) {
         if (null == cb.field_d) {
-          if (null == pg.field_d) {
-            if (param0 != 4) {
-              field_a = -35;
-              return;
-            } else {
-              return;
-            }
-          } else {
+          if (null != pg.field_d) {
             pg.field_d.c();
-            if (param0 != 4) {
-              field_a = -35;
-              return;
-            } else {
-              return;
-            }
+            return;
+          } else {
+            return;
           }
         } else {
           cb.field_d.c();
-          if (null != pg.field_d) {
-            pg.field_d.c();
-            if (param0 == 4) {
-              return;
-            } else {
-              field_a = -35;
-              return;
-            }
+          if (null == pg.field_d) {
+            return;
           } else {
-            if (param0 != 4) {
-              field_a = -35;
-              return;
-            } else {
-              return;
-            }
+            pg.field_d.c();
+            return;
           }
         }
     }
@@ -93,7 +59,7 @@ final class ph {
             return;
         }
         ba.a(false, 6, 4);
-        int var1 = -31 / ((param0 - 88) / 33);
+        int var1 = 5;
     }
 
     static {

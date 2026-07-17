@@ -12,11 +12,6 @@ class le {
 
     public static void b(byte param0) {
         field_e = null;
-        if (param0 != 61) {
-            field_c = -123;
-            field_a = null;
-            return;
-        }
         field_a = null;
     }
 

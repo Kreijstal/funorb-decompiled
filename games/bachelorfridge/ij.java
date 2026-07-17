@@ -8,7 +8,7 @@ final class ij extends pu {
 
     public static void d(byte param0) {
         field_m = null;
-        int var1 = -90 % ((61 - param0) / 41);
+        int var1 = 0;
         field_l = null;
     }
 

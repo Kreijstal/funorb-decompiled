@@ -30,7 +30,7 @@ final class oka extends wv {
         int stackOut_16_0 = 0;
         L0: {
           var9 = TombRacer.field_G ? 1 : 0;
-          super.a(param0, param1, param2 ^ 0);
+          super.a(param0, param1, param2);
           if (param0) {
             if (!this.d((byte) -124)) {
               stackOut_4_0 = 1;
@@ -73,7 +73,7 @@ final class oka extends wv {
                     break L4;
                   }
                 }
-                if ((stackIn_18_0 ^ -1) != (((oka) this).field_s ^ -1)) {
+                if (~stackIn_18_0 != ~((oka) this).field_s) {
                   break L3;
                 } else {
                   break L2;
@@ -81,8 +81,9 @@ final class oka extends wv {
               }
             }
             L5: {
+              int fieldTemp$2 = ((oka) this).field_s + 1;
               ((oka) this).field_s = ((oka) this).field_s + 1;
-              if ((((oka) this).field_s + 1 ^ -1) != -31) {
+              if (fieldTemp$2 != 30) {
                 break L5;
               } else {
                 ((oka) this).field_s = -30;
@@ -102,8 +103,9 @@ final class oka extends wv {
               }
             }
           } else {
+            int fieldTemp$3 = ((oka) this).field_s + 1;
             ((oka) this).field_s = ((oka) this).field_s + 1;
-            if (((oka) this).field_s + 1 == 15) {
+            if (fieldTemp$3 == 15) {
               ((oka) this).field_s = 0;
               if (var4 != 0) {
                 ((oka) this).field_u = ((oka) this).field_u >> 2;
@@ -129,8 +131,8 @@ final class oka extends wv {
               } else {
                 if (mca.a((byte) 6, var5)) {
                   if (bma.d(100, var5)) {
-                    var6 = jw.field_z[var5] + (((oka) this).field_t - -(uta.field_d.a() >> 117981793));
-                    var7 = ((oka) this).field_r - (-hq.field_b[var5] + -(uta.field_d.c() >> -1549770655));
+                    var6 = jw.field_z[var5] + (((oka) this).field_t - -(uta.field_d.a() >> 1));
+                    var7 = ((oka) this).field_r - (-hq.field_b[var5] + -(uta.field_d.c() >> 1));
                     var8 = 20;
                     if (jba.field_j > var6 + -var8) {
                       if (var8 + var6 > jba.field_j) {
@@ -185,9 +187,9 @@ final class oka extends wv {
         if (param0 < 111) {
             ((oka) this).field_v = -113;
         }
-        if (-2 == param1) {
-            if (!(-4 != ((oka) this).field_m.length)) {
-                return aaa.a(false) + -((oka) this).field_m[param1].e(-163) >> 321283137;
+        if (param1 == 1) {
+            if (!(((oka) this).field_m.length != 3)) {
+                return aaa.a(false) + -((oka) this).field_m[param1].e(-163) >> 1;
             }
         }
         return aaa.a(false) + -((oka) this).field_m[param1].e(-163) - 10;
@@ -197,7 +199,7 @@ final class oka extends wv {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        nh var5_ref = null;
+        nh var5_ref_nh = null;
         int var6 = 0;
         int var7 = 0;
         String var8 = null;
@@ -232,12 +234,12 @@ final class oka extends wv {
                     ura.a(-10985);
                     ((oka) this).field_x.b(((oka) this).field_r, 11327, ((oka) this).field_t);
                     se.f((byte) -6);
-                    var6 = aaa.a(false) >> 1887479553;
+                    var6 = aaa.a(false) >> 1;
                     var5 = 40;
                     var4 = 260;
                     var7 = ((oka) this).field_r - (100 + -koa.b(param0 + 28));
-                    kq.field_a.a(var6 - (kq.field_a.a() >> -1460351231), -(kq.field_a.c() >> -1013927935) + var7);
-                    int discarded$2 = be.a(vj.field_d[((oka) this).field_v].toUpperCase(), 1, eda.field_f, 2431750, 8 + o.field_d.field_m, var5, 1, var7 - (var5 >> -1930522463), var6 + -(var4 >> 810653985), -1, (byte) 60, var4);
+                    kq.field_a.a(var6 - (kq.field_a.a() >> 1), -(kq.field_a.c() >> 1) + var7);
+                    int discarded$2 = be.a(vj.field_d[((oka) this).field_v].toUpperCase(), 1, eda.field_f, 2431750, 8 + o.field_d.field_m, var5, 1, var7 - (var5 >> 1), var6 + -(var4 >> 1), -1, (byte) 60, var4);
                     if (rd.b(false)) {
                       L4: {
                         if (vpa.a(62)) {
@@ -259,9 +261,9 @@ final class oka extends wv {
                           var7 = koa.b(0) / 2 + ((oka) this).field_r;
                           var4 = 350;
                           var5 = 100;
-                          tga.field_a.c(-1442774783, var6 + -(var4 >> 1880941473), var4, -(var5 >> -1674340543) + var7, -22971, var5);
-                          tga.field_a.a(var7 + -(var5 >> -1051923423), -(var4 >> 2050313441) + var6, var5, var4, -1442774783, (byte) -75);
-                          tga.field_a.a(var7 - (var5 >> -1410591071) + 1, 1 + -(var4 >> 523501377) + var6, -2 + var5, var4 + -2, -1426063361, (byte) -128);
+                          tga.field_a.c(-1442774783, var6 + -(var4 >> 1), var4, -(var5 >> 1) + var7, -22971, var5);
+                          tga.field_a.a(var7 + -(var5 >> 1), -(var4 >> 1) + var6, var5, var4, -1442774783, (byte) -75);
+                          tga.field_a.a(var7 - (var5 >> 1) + 1, 1 + -(var4 >> 1) + var6, -2 + var5, var4 + -2, -1426063361, (byte) -128);
                           if (vpa.a(42)) {
                             break L6;
                           } else {
@@ -281,7 +283,7 @@ final class oka extends wv {
                           break L5;
                         }
                       }
-                      int discarded$3 = be.a(var8, 1, kn.field_p, 16777215, 16, var5, 1, var7 + -(var5 >> -356409631), 10 + (var6 - (var4 >> 1785892385)), -1, (byte) 60, -20 + var4);
+                      int discarded$3 = be.a(var8, 1, kn.field_p, 16777215, 16, var5, 1, var7 + -(var5 >> 1), 10 + (var6 - (var4 >> 1)), -1, (byte) 60, -20 + var4);
                       break L3;
                     } else {
                       break L3;
@@ -315,7 +317,7 @@ final class oka extends wv {
                     }
                     L9: {
                       cb.field_i[var4].a(pha.field_ub[var4] + ((oka) this).field_t, ((oka) this).field_r - -dba.field_b[var4]);
-                      var5_ref = uta.field_d;
+                      var5_ref_nh = uta.field_d;
                       if (null == mq.field_e) {
                         break L9;
                       } else {
@@ -323,7 +325,7 @@ final class oka extends wv {
                           if (mq.field_e.field_n[var4] != 3) {
                             break L10;
                           } else {
-                            var5_ref = je.field_E;
+                            var5_ref_nh = je.field_E;
                             break L10;
                           }
                         }
@@ -331,19 +333,19 @@ final class oka extends wv {
                           if (mq.field_e.field_n[var4] != -3) {
                             break L11;
                           } else {
-                            var5_ref = eu.field_a;
+                            var5_ref_nh = eu.field_a;
                             break L11;
                           }
                         }
                         if (-2 != mq.field_e.field_n[var4]) {
                           break L9;
                         } else {
-                          var5_ref = pq.field_a;
+                          var5_ref_nh = pq.field_a;
                           break L9;
                         }
                       }
                     }
-                    var5_ref.a(jw.field_z[var4] + ((oka) this).field_t, ((oka) this).field_r + hq.field_b[var4]);
+                    var5_ref_nh.a(jw.field_z[var4] + ((oka) this).field_t, ((oka) this).field_r + hq.field_b[var4]);
                     var4++;
                     continue L2;
                   } else {
@@ -362,9 +364,6 @@ final class oka extends wv {
     }
 
     private final boolean d(byte param0) {
-        if (param0 != -124) {
-            this.f(-35);
-        }
         return false;
     }
 
@@ -399,9 +398,6 @@ final class oka extends wv {
 
     private final void b(boolean param0) {
         bja.a(((oka) this).field_v, (byte) -102, 1);
-        if (param0) {
-            boolean discarded$0 = ((oka) this).a(-11, '￘', 77);
-        }
     }
 
     final int g(int param0, int param1) {
@@ -412,13 +408,21 @@ final class oka extends wv {
     }
 
     final static void a(String param0, int param1, da param2, int param3, int param4, int param5, int param6) {
-        param2.a(fm.a(false, param6), param3, param5, fm.a(false, param1), param4, param0);
+        try {
+            param2.a(fm.a(false, param6), param3, param5, fm.a(false, param1), param4, param0);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "oka.GA(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+        }
     }
 
     oka(int param0, int param1, int param2, int param3, int param4, int[] param5) {
         super(param0, param1, param2, param3, param4, param5);
         ((oka) this).field_s = -30;
-        ((oka) this).field_o = false;
+        try {
+            ((oka) this).field_o = false;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "oka.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final int a(int param0, byte param1) {
@@ -435,21 +439,34 @@ final class oka extends wv {
     }
 
     final void b(boolean param0, boolean param1, int param2) {
-        if (-1 >= (param2 ^ -1)) {
-            // if_icmpge L19
-        } else {
-            return;
-        }
-        super.b(param0, param1, param2);
-        if (((oka) this).field_k.a(param0)) {
-            if (!(-22 != (((oka) this).field_m[param2].field_g ^ -1))) {
-                this.b(false);
+        L0: {
+          if (param2 < 0) {
+            break L0;
+          } else {
+            if (param2 >= ((oka) this).field_m.length) {
+              break L0;
+            } else {
+              L1: {
+                super.b(param0, param1, param2);
+                if (!((oka) this).field_k.a(param0)) {
+                  break L1;
+                } else {
+                  if (((oka) this).field_m[param2].field_g == 21) {
+                    this.b(false);
+                    break L1;
+                  } else {
+                    break L1;
+                  }
+                }
+              }
+              return;
             }
+          }
         }
     }
 
     public static void d(int param0) {
-        int var1 = -7 % ((param0 - -15) / 53);
+        int var1 = 0;
         field_w = null;
         field_y = null;
         field_A = null;
@@ -485,7 +502,7 @@ final class oka extends wv {
         int stackOut_41_0 = 0;
         L0: {
           var11 = TombRacer.field_G ? 1 : 0;
-          if ((param0 ^ -1) != -97) {
+          if (param0 != 96) {
             if (param0 == kda.field_hd) {
               stackOut_4_0 = 1;
               stackIn_6_0 = stackOut_4_0;
@@ -529,7 +546,7 @@ final class oka extends wv {
           }
         }
         L3: {
-          if ((param0 ^ -1) == -99) {
+          if (param0 == 98) {
             stackOut_18_0 = 1;
             stackIn_20_0 = stackOut_18_0;
             break L3;
@@ -624,7 +641,7 @@ final class oka extends wv {
                         if (bma.d(96, var10)) {
                           L11: {
                             if (var9.b(true)) {
-                              ((oka) this).field_x.a(-28562, var9.field_k << -117956528, var9.field_j << -284564720);
+                              ((oka) this).field_x.a(-28562, var9.field_k << 16, var9.field_j << 16);
                               break L11;
                             } else {
                               break L11;
@@ -677,9 +694,6 @@ final class oka extends wv {
     private final int e(int param0) {
         int var3 = 0;
         int var2 = koa.b(0);
-        if (param0 != -18796) {
-            ((oka) this).field_r = -91;
-        }
         if (0 <= ((oka) this).field_s) {
             if (((oka) this).field_u > 0) {
                 return ((oka) this).field_s * ((-((oka) this).field_s + 15) * -((oka) this).field_u) / 225;
@@ -702,11 +716,11 @@ final class oka extends wv {
           var2 = 0;
           var3 = tl.field_r;
           if (5 <= var3) {
-            if (var3 > -106) {
+            if (var3 < 105) {
               var2 = (-40960 + var3 * 16384) / 220;
               break L0;
             } else {
-              if (-121 <= var3) {
+              if (var3 >= 120) {
                 break L0;
               } else {
                 var3 = 120 - var3;
@@ -738,7 +752,7 @@ final class oka extends wv {
           }
         }
         L3: {
-          if ((param1 ^ -1) != -4) {
+          if (param1 != 3) {
             break L3;
           } else {
             var4 = -1;
@@ -746,7 +760,7 @@ final class oka extends wv {
           }
         }
         L4: {
-          if ((param1 ^ -1) == -5) {
+          if (param1 == 4) {
             var5 = 1;
             var4 = 1;
             break L4;
@@ -755,7 +769,7 @@ final class oka extends wv {
           }
         }
         L5: {
-          if (param1 != -6) {
+          if (param1 != 5) {
             break L5;
           } else {
             var4 = -1;
@@ -764,7 +778,7 @@ final class oka extends wv {
           }
         }
         L6: {
-          if (-7 == param1) {
+          if (param1 == 6) {
             var4 = 1;
             var5 = -1;
             break L6;
@@ -774,10 +788,10 @@ final class oka extends wv {
         }
         L7: {
           L8: {
-            if (param1 == -8) {
+            if (param1 == 7) {
               break L8;
             } else {
-              if (-9 != param1) {
+              if (param1 != 8) {
                 break L7;
               } else {
                 break L8;
@@ -806,7 +820,7 @@ final class oka extends wv {
           }
         }
         L11: {
-          if ((param1 ^ -1) != -14) {
+          if (param1 != 13) {
             break L11;
           } else {
             var4 = 1;

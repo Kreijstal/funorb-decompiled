@@ -15,26 +15,91 @@ final class nh extends jq {
     static String field_p;
 
     final static boolean a(String param0, byte param1) {
+        RuntimeException var2 = null;
         Object var3 = null;
-        if (param0 != null) {
-          if (param0.length() >= vb.field_h) {
-            if (param0.length() <= fg.field_Y) {
-              if (param1 != -113) {
-                var3 = null;
-                boolean discarded$2 = nh.a((String) null, (byte) 14);
-                return false;
+        int stackIn_5_0 = 0;
+        int stackIn_9_0 = 0;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_8_0 = 0;
+        int stackOut_4_0 = 0;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 == null) {
+                break L1;
               } else {
-                return false;
+                if (param0.length() < vb.field_h) {
+                  break L1;
+                } else {
+                  if (param0.length() <= fg.field_Y) {
+                    L2: {
+                      if (param1 == -113) {
+                        break L2;
+                      } else {
+                        var3 = null;
+                        boolean discarded$2 = nh.a((String) null, (byte) 14);
+                        break L2;
+                      }
+                    }
+                    stackOut_8_0 = 0;
+                    stackIn_9_0 = stackOut_8_0;
+                    break L0;
+                  } else {
+                    return true;
+                  }
+                }
               }
-            } else {
-              return true;
             }
-          } else {
-            return true;
+            stackOut_4_0 = 1;
+            stackIn_5_0 = stackOut_4_0;
+            return stackIn_5_0 != 0;
           }
-        } else {
-          return true;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2 = decompiledCaughtException;
+            stackOut_10_0 = (RuntimeException) var2;
+            stackOut_10_1 = new StringBuilder().append("nh.C(");
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
+            if (param0 == null) {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L3;
+            } else {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L3;
+            }
+          }
+          throw wn.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param1 + 41);
         }
+        return stackIn_9_0 != 0;
     }
 
     nh(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -51,16 +116,8 @@ final class nh extends jq {
         field_i = null;
         field_n = null;
         field_l = null;
-        if (param0) {
-          field_n = null;
-          field_r = null;
-          field_p = null;
-          return;
-        } else {
-          field_r = null;
-          field_p = null;
-          return;
-        }
+        field_r = null;
+        field_p = null;
     }
 
     final void b(int param0, byte param1, int param2) {
@@ -83,10 +140,10 @@ final class nh extends jq {
         if (param2 != 45) {
           return;
         } else {
-          var4 = param1 * ((nh) this).field_j >> 1364542028;
-          var5 = ((nh) this).field_q * param1 >> -1604299572;
-          var6 = param0 * ((nh) this).field_k >> 1654680684;
-          var7 = param0 * ((nh) this).field_o >> -812871380;
+          var4 = param1 * ((nh) this).field_j >> 12;
+          var5 = ((nh) this).field_q * param1 >> 12;
+          var6 = param0 * ((nh) this).field_k >> 12;
+          var7 = param0 * ((nh) this).field_o >> 12;
           eh.a(var7, var5, (byte) -4, var6, ((nh) this).field_a, var4);
           return;
         }

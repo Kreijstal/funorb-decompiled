@@ -6,45 +6,45 @@ final class ii {
     static String field_b;
 
     final static void a(byte param0, int param1) {
-        ng.field_pb = 3 & param1 >> 474699460;
+        ng.field_pb = 3 & param1 >> 4;
         if (2 < ng.field_pb) {
             ng.field_pb = 2;
-            lh.field_d = 3 & param1 >> 1758044066;
+            lh.field_d = 3 & param1 >> 2;
             vi.field_f = 3 & param1;
             if (param0 == 16) {
-                if (!((lh.field_d ^ -1) >= -3)) {
+                if (!(lh.field_d <= 2)) {
                     lh.field_d = 2;
                 }
-                if (!(-3 <= (vi.field_f ^ -1))) {
+                if (!(vi.field_f <= 2)) {
                     vi.field_f = 2;
                 }
                 return;
             }
             ii.a(17);
-            if (!((lh.field_d ^ -1) >= -3)) {
+            if (!(lh.field_d <= 2)) {
                 lh.field_d = 2;
             }
-            if (!(-3 <= (vi.field_f ^ -1))) {
+            if (!(vi.field_f <= 2)) {
                 vi.field_f = 2;
             }
             return;
         }
-        lh.field_d = 3 & param1 >> 1758044066;
+        lh.field_d = 3 & param1 >> 2;
         vi.field_f = 3 & param1;
         if (param0 != 16) {
             ii.a(17);
-            if (!((lh.field_d ^ -1) >= -3)) {
+            if (!(lh.field_d <= 2)) {
                 lh.field_d = 2;
             }
-            if (!(-3 <= (vi.field_f ^ -1))) {
+            if (!(vi.field_f <= 2)) {
                 vi.field_f = 2;
             }
             return;
         }
-        if (!((lh.field_d ^ -1) >= -3)) {
+        if (!(lh.field_d <= 2)) {
             lh.field_d = 2;
         }
-        if (!(-3 <= (vi.field_f ^ -1))) {
+        if (!(vi.field_f <= 2)) {
             vi.field_f = 2;
         }
     }
@@ -61,26 +61,22 @@ final class ii {
     }
 
     final static boolean b(int param0) {
-        if (param0 == 16836) {
-          if (20 <= fc.field_a) {
-            if (aa.a((byte) -84)) {
-              if ((am.field_g ^ -1) < -1) {
-                if (g.i(90)) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
+        if (20 <= fc.field_a) {
+          if (aa.a((byte) -84)) {
+            if (am.field_g > 0) {
+              if (g.i(90)) {
                 return false;
+              } else {
+                return true;
               }
             } else {
-              return true;
+              return false;
             }
           } else {
             return true;
           }
         } else {
-          return false;
+          return true;
         }
     }
 

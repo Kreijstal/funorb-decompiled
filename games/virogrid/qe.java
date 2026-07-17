@@ -26,108 +26,141 @@ abstract class qe extends mi implements bo {
     }
 
     qe(wa param0) {
-        ((qe) this).field_g = param0;
+        try {
+            ((qe) this).field_g = param0;
+        } catch (RuntimeException runtimeException) {
+            throw kg.a((Throwable) (Object) runtimeException, "qe.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static void a(byte param0, int param1) {
-        Object var2 = null;
-        pe var2_ref = null;
+        pe var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
-        var2 = null;
+        RuntimeException decompiledCaughtException = null;
         var3 = Virogrid.field_F ? 1 : 0;
-        ag.field_c = param1;
-        if (param0 >= 34) {
-          var2_ref = (pe) (Object) co.field_a.a((byte) -105);
-          L0: while (true) {
-            if (var2_ref == null) {
-              if (null != gk.field_f) {
-                var2_ref = (pe) (Object) gk.field_f.a((byte) -124);
-                L1: while (true) {
-                  if (var2_ref != null) {
-                    L2: {
-                      if (!var2_ref.field_h.b(false)) {
-                        var2_ref.a(false);
-                        break L2;
-                      } else {
-                        var2_ref.field_g.f(128 + var2_ref.field_i * ag.field_c >> -362887576);
-                        break L2;
-                      }
-                    }
-                    var2_ref = (pe) (Object) gk.field_f.a(16213);
-                    continue L1;
-                  } else {
-                    return;
-                  }
-                }
+        try {
+          L0: {
+            L1: {
+              ag.field_c = param1;
+              if (param0 >= 34) {
+                break L1;
               } else {
-                return;
+                field_i = null;
+                break L1;
               }
-            } else {
-              L3: {
-                if (var2_ref.field_h.b(false)) {
-                  var2_ref.field_g.f(ag.field_c * var2_ref.field_i + 128 >> -319970392);
-                  break L3;
-                } else {
-                  var2_ref.a(false);
-                  break L3;
-                }
-              }
-              var2_ref = (pe) (Object) co.field_a.a(16213);
-              continue L0;
             }
-          }
-        } else {
-          field_i = null;
-          var2_ref = (pe) (Object) co.field_a.a((byte) -105);
-          L4: while (true) {
-            if (var2_ref == null) {
-              L5: {
-                if (null == gk.field_f) {
-                  break L5;
-                } else {
-                  var2_ref = (pe) (Object) gk.field_f.a((byte) -124);
-                  L6: while (true) {
-                    if (var2_ref == null) {
-                      break L5;
-                    } else {
-                      L7: {
-                        if (!var2_ref.field_h.b(false)) {
-                          var2_ref.a(false);
-                          break L7;
-                        } else {
-                          var2_ref.field_g.f(128 + var2_ref.field_i * ag.field_c >> -362887576);
-                          break L7;
+            var2 = (pe) (Object) co.field_a.a((byte) -105);
+            L2: while (true) {
+              if (var2 == null) {
+                L3: {
+                  if (null == gk.field_f) {
+                    break L3;
+                  } else {
+                    var2 = (pe) (Object) gk.field_f.a((byte) -124);
+                    L4: while (true) {
+                      if (var2 == null) {
+                        break L3;
+                      } else {
+                        L5: {
+                          if (!var2.field_h.b(false)) {
+                            var2.a(false);
+                            break L5;
+                          } else {
+                            var2.field_g.f(128 + var2.field_i * ag.field_c >> 8);
+                            break L5;
+                          }
                         }
+                        var2 = (pe) (Object) gk.field_f.a(16213);
+                        continue L4;
                       }
-                      var2_ref = (pe) (Object) gk.field_f.a(16213);
-                      continue L6;
                     }
                   }
                 }
-              }
-              return;
-            } else {
-              L8: {
-                if (var2_ref.field_h.b(false)) {
-                  var2_ref.field_g.f(ag.field_c * var2_ref.field_i + 128 >> -319970392);
-                  break L8;
-                } else {
-                  var2_ref.a(false);
-                  break L8;
+                break L0;
+              } else {
+                L6: {
+                  if (var2.field_h.b(false)) {
+                    var2.field_g.f(ag.field_c * var2.field_i + 128 >> 8);
+                    break L6;
+                  } else {
+                    var2.a(false);
+                    break L6;
+                  }
                 }
+                var2 = (pe) (Object) co.field_a.a(16213);
+                continue L2;
               }
-              var2_ref = (pe) (Object) co.field_a.a(16213);
-              continue L4;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          throw kg.a((Throwable) (Object) var2_ref, "qe.K(" + param0 + 44 + param1 + 41);
         }
     }
 
     abstract String a(int param0, String param1);
 
     public final void a(boolean param0, wa param1) {
-        if (param0) {
-            boolean discarded$0 = ((qe) this).a(true);
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (!param0) {
+                break L1;
+              } else {
+                boolean discarded$2 = ((qe) this).a(true);
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_1 = new StringBuilder().append("qe.T(").append(param0).append(44);
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param1 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
+            }
+          }
+          throw kg.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
         }
     }
 
@@ -140,102 +173,98 @@ abstract class qe extends mi implements bo {
 
     final static int g(int param0) {
         if (dj.field_n >= 2) {
-          if (param0 == 11108) {
-            if (ih.field_c != 0) {
-              if (sj.field_l != null) {
-                if (!sj.field_l.c(param0 ^ 11108)) {
-                  return 14;
+          if (ih.field_c != 0) {
+            if (sj.field_l != null) {
+              if (!sj.field_l.c(0)) {
+                return 14;
+              } else {
+                if (!sj.field_l.a("", true)) {
+                  return 29;
                 } else {
-                  if (!sj.field_l.a("", true)) {
-                    return 29;
-                  } else {
-                    if (sj.field_l.a((byte) -102, "")) {
-                      if (td.field_a.c(0)) {
-                        if (td.field_a.a((byte) -102, "commonui")) {
-                          if (!jf.field_j.c(0)) {
-                            return 71;
+                  if (sj.field_l.a((byte) -102, "")) {
+                    if (td.field_a.c(0)) {
+                      if (td.field_a.a((byte) -102, "commonui")) {
+                        if (!jf.field_j.c(0)) {
+                          return 71;
+                        } else {
+                          if (!jf.field_j.a((byte) -102, "commonui")) {
+                            return 80;
                           } else {
-                            if (!jf.field_j.a((byte) -102, "commonui")) {
-                              return 80;
-                            } else {
-                              if (qn.field_I.c(0)) {
-                                if (qn.field_I.b(25867)) {
-                                  return 100;
-                                } else {
-                                  return 86;
-                                }
+                            if (qn.field_I.c(0)) {
+                              if (qn.field_I.b(25867)) {
+                                return 100;
                               } else {
-                                return 82;
+                                return 86;
                               }
+                            } else {
+                              return 82;
                             }
                           }
-                        } else {
-                          return 57;
                         }
                       } else {
-                        return 43;
+                        return 57;
                       }
                     } else {
-                      return 29;
-                    }
-                  }
-                }
-              } else {
-                if (td.field_a.c(0)) {
-                  if (td.field_a.a((byte) -102, "commonui")) {
-                    if (!jf.field_j.c(0)) {
-                      return 71;
-                    } else {
-                      if (!jf.field_j.a((byte) -102, "commonui")) {
-                        return 80;
-                      } else {
-                        if (qn.field_I.c(0)) {
-                          if (!qn.field_I.b(25867)) {
-                            return 86;
-                          } else {
-                            return 100;
-                          }
-                        } else {
-                          return 82;
-                        }
-                      }
+                      return 43;
                     }
                   } else {
-                    return 57;
+                    return 29;
                   }
-                } else {
-                  return 43;
                 }
               }
             } else {
               if (td.field_a.c(0)) {
                 if (td.field_a.a((byte) -102, "commonui")) {
-                  if (!jf.field_j.c(param0 ^ 11108)) {
-                    return 50;
+                  if (!jf.field_j.c(0)) {
+                    return 71;
                   } else {
-                    if (jf.field_j.a((byte) -102, "commonui")) {
-                      if (qn.field_I.c(param0 + -11108)) {
-                        if (qn.field_I.b(25867)) {
-                          return 100;
+                    if (!jf.field_j.a((byte) -102, "commonui")) {
+                      return 80;
+                    } else {
+                      if (qn.field_I.c(0)) {
+                        if (!qn.field_I.b(25867)) {
+                          return 86;
                         } else {
-                          return 80;
+                          return 100;
                         }
                       } else {
-                        return 70;
+                        return 82;
                       }
-                    } else {
-                      return 60;
                     }
                   }
                 } else {
-                  return 40;
+                  return 57;
                 }
               } else {
-                return 20;
+                return 43;
               }
             }
           } else {
-            return -58;
+            if (td.field_a.c(0)) {
+              if (td.field_a.a((byte) -102, "commonui")) {
+                if (!jf.field_j.c(0)) {
+                  return 50;
+                } else {
+                  if (jf.field_j.a((byte) -102, "commonui")) {
+                    if (qn.field_I.c(0)) {
+                      if (qn.field_I.b(25867)) {
+                        return 100;
+                      } else {
+                        return 80;
+                      }
+                    } else {
+                      return 70;
+                    }
+                  } else {
+                    return 60;
+                  }
+                }
+              } else {
+                return 40;
+              }
+            } else {
+              return 20;
+            }
           }
         } else {
           return 0;
@@ -246,7 +275,11 @@ abstract class qe extends mi implements bo {
         if (param1 != 13) {
             return;
         }
-        ((qe) this).b(false);
+        try {
+            ((qe) this).b(false);
+        } catch (RuntimeException runtimeException) {
+            throw kg.a((Throwable) (Object) runtimeException, "qe.V(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     final String c(int param0) {
@@ -258,19 +291,19 @@ abstract class qe extends mi implements bo {
 
     final static int b(int param0, int param1) {
         int var2 = 0;
-        var2 = param1 >>> 1743078753;
-        var2 = var2 | var2 >>> -728240159;
-        var2 = var2 | var2 >>> -1224113630;
-        var2 = var2 | var2 >>> 1651648292;
+        var2 = param1 >>> 1;
+        var2 = var2 | var2 >>> 1;
+        var2 = var2 | var2 >>> 2;
+        var2 = var2 | var2 >>> 4;
         if (param0 != -728240159) {
           field_m = -87;
-          var2 = var2 | var2 >>> -843083384;
-          var2 = var2 | var2 >>> 319273104;
-          return (var2 ^ -1) & param1;
+          var2 = var2 | var2 >>> 8;
+          var2 = var2 | var2 >>> 16;
+          return ~var2 & param1;
         } else {
-          var2 = var2 | var2 >>> -843083384;
-          var2 = var2 | var2 >>> 319273104;
-          return (var2 ^ -1) & param1;
+          var2 = var2 | var2 >>> 8;
+          var2 = var2 | var2 >>> 16;
+          return ~var2 & param1;
         }
     }
 

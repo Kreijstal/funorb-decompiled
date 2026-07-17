@@ -33,30 +33,21 @@ final class tla {
     }
 
     tla(cka param0, int param1) {
-        ((tla) this).field_i = jaggl.OpenGL.glGenLists(param1);
+        try {
+            ((tla) this).field_i = jaggl.OpenGL.glGenLists(param1);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "tla.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     public static void a(byte param0) {
-        if (param0 < 76) {
-          field_h = null;
-          field_d = null;
-          field_c = null;
-          field_h = null;
-          field_g = null;
-          field_a = null;
-          field_f = null;
-          field_j = null;
-          return;
-        } else {
-          field_d = null;
-          field_c = null;
-          field_h = null;
-          field_g = null;
-          field_a = null;
-          field_f = null;
-          field_j = null;
-          return;
-        }
+        field_d = null;
+        field_c = null;
+        field_h = null;
+        field_g = null;
+        field_a = null;
+        field_f = null;
+        field_j = null;
     }
 
     static {

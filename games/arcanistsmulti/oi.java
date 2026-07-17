@@ -6,13 +6,13 @@ final class oi {
     static String field_a;
 
     public static void a(int param0) {
-        int var1 = 49 % ((31 - param0) / 61);
+        int var1 = 0;
         field_b = null;
         field_a = null;
     }
 
     final static int b(int param0) {
-        int var1 = 55 % ((-41 - param0) / 59);
+        int var1 = 1;
         return 1;
     }
 

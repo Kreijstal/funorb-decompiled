@@ -13,10 +13,66 @@ final class dea extends lw {
     }
 
     final static void a(String param0, float param1, int param2) {
-        qd.field_q = param1;
-        mp.field_p = param0;
-        if (param2 < 114) {
-            dea.d(124);
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        try {
+          L0: {
+            L1: {
+              qd.field_q = param1;
+              mp.field_p = param0;
+              if (param2 >= 114) {
+                break L1;
+              } else {
+                dea.d(124);
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_1 = new StringBuilder().append("dea.A(");
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param0 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
+            }
+          }
+          throw pe.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 44 + param2 + 41);
         }
     }
 
@@ -42,7 +98,7 @@ final class dea extends lw {
           }
         } else {
           if (param0 == 20) {
-            if (((dea) this).field_e == -2) {
+            if (((dea) this).field_e == 1) {
               fla.b(param1 ^ 23564);
               if (param1 == 73) {
                 return;
@@ -51,7 +107,7 @@ final class dea extends lw {
                 return;
               }
             } else {
-              if (-41 == param0) {
+              if (param0 == 40) {
                 if (0 == ((dea) this).field_e) {
                   ((dea) this).b(1);
                   ((dea) this).c(109);
@@ -62,8 +118,8 @@ final class dea extends lw {
                     return;
                   }
                 } else {
-                  if (-35 == param0) {
-                    if (-2 > ((dea) this).field_e) {
+                  if (param0 == 34) {
+                    if (((dea) this).field_e < 1) {
                       L0: {
                         ((dea) this).b((byte) 112);
                         if (((dea) this).field_e == 0) {
@@ -118,8 +174,8 @@ final class dea extends lw {
                   }
                 }
               } else {
-                if (-35 == param0) {
-                  if (-2 > ((dea) this).field_e) {
+                if (param0 == 34) {
+                  if (((dea) this).field_e < 1) {
                     L3: {
                       ((dea) this).b((byte) 112);
                       if (((dea) this).field_e == 0) {
@@ -177,9 +233,9 @@ final class dea extends lw {
               }
             }
           } else {
-            if (-41 != param0) {
-              if (-35 == (param0 ^ -1)) {
-                if (-2 < (((dea) this).field_e ^ -1)) {
+            if (param0 != 40) {
+              if (param0 == 34) {
+                if (((dea) this).field_e < 1) {
                   L5: {
                     ((dea) this).b((byte) 112);
                     if (((dea) this).field_e == 0) {
@@ -227,10 +283,10 @@ final class dea extends lw {
                   return;
                 }
               } else {
-                if (param1 != 73) {
-                  field_o = null;
+                if (param1 == 73) {
                   return;
                 } else {
+                  field_o = null;
                   return;
                 }
               }
@@ -245,8 +301,8 @@ final class dea extends lw {
                   return;
                 }
               } else {
-                if (-35 == param0) {
-                  if (-2 < (((dea) this).field_e ^ -1)) {
+                if (param0 == 34) {
+                  if (((dea) this).field_e < 1) {
                     L7: {
                       ((dea) this).b((byte) 112);
                       if (((dea) this).field_e == 0) {
@@ -285,10 +341,10 @@ final class dea extends lw {
                         }
                       }
                     }
-                    if (param1 != 73) {
-                      field_o = null;
+                    if (param1 == 73) {
                       return;
                     } else {
+                      field_o = null;
                       return;
                     }
                   } else {

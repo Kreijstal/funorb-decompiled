@@ -20,14 +20,11 @@ final class hc {
         fp.field_a = fl.field_g;
         je.field_j = nh.field_F;
         ll.a(-94, param0, false);
-        ue.field_c = param1 ? true : false;
+        ue.field_c = false;
     }
 
     public static void a(int param0) {
         field_a = null;
-        if (param0 != -21017) {
-            return;
-        }
         field_b = null;
         field_c = null;
     }

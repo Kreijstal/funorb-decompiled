@@ -20,23 +20,52 @@ final class sl extends ln implements fk {
     public static void b(int param0) {
         field_e = null;
         field_c = null;
-        if (param0 >= -83) {
-            field_e = null;
-        }
     }
 
     final static boolean a(byte param0, int param1) {
-        int var2 = 0;
-        int var3 = Sumoblitz.field_L ? 1 : 0;
-        if (param0 != 90) {
-            return false;
-        }
-        for (var2 = 0; var2 < param1; var2++) {
-            if (!up.field_g[var2]) {
-                return false;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int stackIn_3_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackIn_11_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_10_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_2_0 = 0;
+        var3 = Sumoblitz.field_L ? 1 : 0;
+        try {
+          L0: {
+            if (param0 == 90) {
+              var2_int = 0;
+              L1: while (true) {
+                if (var2_int >= param1) {
+                  stackOut_10_0 = 1;
+                  stackIn_11_0 = stackOut_10_0;
+                  break L0;
+                } else {
+                  if (up.field_g[var2_int]) {
+                    var2_int++;
+                    continue L1;
+                  } else {
+                    stackOut_7_0 = 0;
+                    stackIn_8_0 = stackOut_7_0;
+                    return stackIn_8_0 != 0;
+                  }
+                }
+              }
+            } else {
+              stackOut_2_0 = 0;
+              stackIn_3_0 = stackOut_2_0;
+              return stackIn_3_0 != 0;
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw qo.a((Throwable) (Object) var2, "sl.C(" + param0 + 44 + param1 + 41);
         }
-        return true;
+        return stackIn_11_0 != 0;
     }
 
     static {

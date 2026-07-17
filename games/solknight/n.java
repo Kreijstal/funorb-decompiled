@@ -15,7 +15,7 @@ final class n implements Iterator {
     public static void a(int param0) {
         field_b = null;
         field_c = null;
-        int var1 = -127 % ((-59 - param0) / 44);
+        int var1 = 0;
         field_a = null;
     }
 
@@ -54,14 +54,7 @@ final class n implements Iterator {
     private final void b(int param0) {
         ((n) this).field_f = ((n) this).field_e.field_b[0].field_d;
         ((n) this).field_d = null;
-        if (param0 > -23) {
-          boolean discarded$2 = ((n) this).hasNext();
-          ((n) this).field_g = 1;
-          return;
-        } else {
-          ((n) this).field_g = 1;
-          return;
-        }
+        ((n) this).field_g = 1;
     }
 
     public final Object next() {
@@ -95,8 +88,12 @@ final class n implements Iterator {
 
     n(ii param0) {
         ((n) this).field_d = null;
-        ((n) this).field_e = param0;
-        this.b(-59);
+        try {
+            ((n) this).field_e = param0;
+            this.b(-59);
+        } catch (RuntimeException runtimeException) {
+            throw fc.a((Throwable) (Object) runtimeException, "n.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

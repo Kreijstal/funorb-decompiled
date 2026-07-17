@@ -15,7 +15,7 @@ final class ba {
 
     public static void a(int param0) {
         field_e = null;
-        int var1 = -14 / ((-15 - param0) / 60);
+        int var1 = -14;
         field_g = null;
         field_b = null;
         field_c = null;

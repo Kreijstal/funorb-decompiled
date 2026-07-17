@@ -14,17 +14,11 @@ abstract class oe {
 
     final static void a(boolean param0) {
         ef.field_a = 0;
-        if (!param0) {
-            field_b = true;
-        }
     }
 
     abstract void a(int param0, java.awt.Component param1);
 
     public static void b(byte param0) {
-        if (param0 <= 103) {
-            return;
-        }
         field_e = null;
         field_c = null;
         field_g = null;

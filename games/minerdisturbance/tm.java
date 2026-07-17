@@ -168,29 +168,29 @@ final class tm extends pi {
             L1: {
               var7_int = 2147483647;
               var8 = -2147483648;
-              var21 = param2[3] >> -1438759454;
-              var22 = param2[4] >> -2123204094;
-              var23 = param2[5] >> -1260355742;
-              var24 = param2[6] >> 1488546242;
-              var25 = param2[7] >> 1260932258;
-              var26 = param2[8] >> -1178665982;
-              var27 = param2[9] >> -820210558;
-              var28 = param2[10] >> 654968706;
-              var13 = var26 * param3[5] + (var24 * param3[3] + param3[4] * var25) >> 1072901006;
-              var12 = param3[3] * var21 + (param3[4] * var22 + param3[5] * var23) >> -520637138;
-              var29 = param2[11] >> -136854494;
-              var17 = param3[6] * var27 + param3[7] * var28 + var29 * param3[8] >> -1198368530;
-              var18 = var23 * param3[11] + (var21 * param3[9] + param3[10] * var22) >> 349265294;
-              var19 = var24 * param3[9] - (-(var25 * param3[10]) - param3[11] * var26) >> 668381006;
-              var15 = param3[7] * var22 + param3[6] * var21 - -(param3[8] * var23) >> -1539282514;
-              var20 = var29 * param3[11] + var27 * param3[9] + param3[10] * var28 >> 1382583758;
-              var14 = param3[3] * var27 + var28 * param3[4] + param3[5] * var29 >> 761327406;
-              var16 = var26 * param3[8] + (param3[6] * var24 + var25 * param3[7]) >> 745049038;
+              var21 = param2[3] >> 2;
+              var22 = param2[4] >> 2;
+              var23 = param2[5] >> 2;
+              var24 = param2[6] >> 2;
+              var25 = param2[7] >> 2;
+              var26 = param2[8] >> 2;
+              var27 = param2[9] >> 2;
+              var28 = param2[10] >> 2;
+              var13 = var26 * param3[5] + (var24 * param3[3] + param3[4] * var25) >> 14;
+              var12 = param3[3] * var21 + (param3[4] * var22 + param3[5] * var23) >> 14;
+              var29 = param2[11] >> 2;
+              var17 = param3[6] * var27 + param3[7] * var28 + var29 * param3[8] >> 14;
+              var18 = var23 * param3[11] + (var21 * param3[9] + param3[10] * var22) >> 14;
+              var19 = var24 * param3[9] - (-(var25 * param3[10]) - param3[11] * var26) >> 14;
+              var15 = param3[7] * var22 + param3[6] * var21 - -(param3[8] * var23) >> 14;
+              var20 = var29 * param3[11] + var27 * param3[9] + param3[10] * var28 >> 14;
+              var14 = param3[3] * var27 + var28 * param3[4] + param3[5] * var29 >> 14;
+              var16 = var26 * param3[8] + (param3[6] * var24 + var25 * param3[7]) >> 14;
               var21 = -param2[0] + param3[0];
               var22 = param3[1] - param2[1];
               var23 = param3[2] - param2[2];
               var9 = var23 * param2[5] + (var22 * param2[4] + param2[3] * var21) >> -ml.field_d + 16;
-              var11 = param2[10] * var22 + var21 * param2[9] + var23 * param2[11] >> -145897456;
+              var11 = param2[10] * var22 + var21 * param2[9] + var23 * param2[11] >> 16;
               var10 = var22 * param2[7] + var21 * param2[6] - -(param2[8] * var23) >> -ml.field_d + 16;
               var21 = dj.field_d;
               var22 = dj.field_c;
@@ -203,7 +203,7 @@ final class tm extends pi {
             }
             var23 = 0;
             L2: while (true) {
-              if ((param0.field_y ^ -1) >= (var23 ^ -1)) {
+              if (~param0.field_y >= ~var23) {
                 L3: {
                   if (param0.field_b == null) {
                     break L3;
@@ -232,27 +232,27 @@ final class tm extends pi {
                                   if (param0.field_k != null) {
                                     var23 = 0;
                                     L4: while (true) {
-                                      if ((var23 ^ -1) <= (param0.field_I ^ -1)) {
+                                      if (~var23 <= ~param0.field_I) {
                                         break L3;
                                       } else {
                                         var24 = param0.field_b[var23];
                                         var25 = param0.field_D[var23];
                                         var26 = param0.field_o[var23];
-                                        sd.field_g[var23] = var9 - -(var25 * var15 + var24 * var12 + var18 * var26 >> -1613428336);
-                                        kk.field_c[var23] = (var16 * var25 + (var24 * var13 + var19 * var26) >> -585034512) + var10;
-                                        mj.field_n[var23] = (var24 * var14 + (var17 * var25 - -(var20 * var26)) >> -410258832) + var11;
+                                        sd.field_g[var23] = var9 - -(var25 * var15 + var24 * var12 + var18 * var26 >> 16);
+                                        kk.field_c[var23] = (var16 * var25 + (var24 * var13 + var19 * var26) >> 16) + var10;
+                                        mj.field_n[var23] = (var24 * var14 + (var17 * var25 - -(var20 * var26)) >> 16) + var11;
                                         var24 = param0.field_p[var23];
                                         var25 = param0.field_N[var23];
                                         var26 = param0.field_S[var23];
-                                        bl.field_z[var23] = (var24 * var12 + (var25 * var15 + var18 * var26) >> 1183260560) + var9;
-                                        jc.field_F[var23] = var10 + (var13 * var24 + var25 * var16 - -(var19 * var26) >> 591515536);
-                                        id.field_b[var23] = var11 + (var14 * var24 + var17 * var25 + var20 * var26 >> 1079038224);
+                                        bl.field_z[var23] = (var24 * var12 + (var25 * var15 + var18 * var26) >> 16) + var9;
+                                        jc.field_F[var23] = var10 + (var13 * var24 + var25 * var16 - -(var19 * var26) >> 16);
+                                        id.field_b[var23] = var11 + (var14 * var24 + var17 * var25 + var20 * var26 >> 16);
                                         var24 = param0.field_m[var23];
                                         var25 = param0.field_L[var23];
                                         var26 = param0.field_k[var23];
-                                        qg.field_n[var23] = var9 + (var15 * var25 + var24 * var12 + var18 * var26 >> -226410736);
-                                        pk.field_f[var23] = (var25 * var16 + var13 * var24 + var26 * var19 >> -363953584) + var10;
-                                        wc.field_a[var23] = (var20 * var26 + var25 * var17 + var24 * var14 >> -34052304) + var11;
+                                        qg.field_n[var23] = var9 + (var15 * var25 + var24 * var12 + var18 * var26 >> 16);
+                                        pk.field_f[var23] = (var25 * var16 + var13 * var24 + var26 * var19 >> 16) + var10;
+                                        wc.field_a[var23] = (var20 * var26 + var25 * var17 + var24 * var14 >> 16) + var11;
                                         var23++;
                                         continue L4;
                                       }
@@ -295,9 +295,9 @@ final class tm extends pi {
                           var19 = param0.field_C[var18];
                           var20 = param0.field_q[var18];
                           var21 = param0.field_B[var18];
-                          fb.field_b[var18] = var15 * var21 + (var20 * var12 + var9 * var19) >> -1577322032;
-                          sf.field_a[var18] = var10 * var19 + (var20 * var13 + var16 * var21) >> 315659824;
-                          h.field_a[var18] = var17 * var21 + (var14 * var20 + var19 * var11) >> -254115120;
+                          fb.field_b[var18] = var15 * var21 + (var20 * var12 + var9 * var19) >> 16;
+                          sf.field_a[var18] = var10 * var19 + (var20 * var13 + var16 * var21) >> 16;
+                          h.field_a[var18] = var17 * var21 + (var14 * var20 + var19 * var11) >> 16;
                           var18++;
                           continue L6;
                         }
@@ -316,7 +316,7 @@ final class tm extends pi {
                   var26 = param0.field_Q[var23];
                   var27 = var9 + (var26 * var18 + var24 * var12 + var25 * var15 >> 16 - ml.field_d);
                   var28 = var10 - -(var19 * var26 + var24 * var13 - -(var25 * var16) >> 16 - ml.field_d);
-                  var29 = (var17 * var25 + var14 * var24 + var20 * var26 >> -563390512) + var11;
+                  var29 = (var17 * var25 + var14 * var24 + var20 * var26 >> 16) + var11;
                   if (var29 < 50) {
                     oc.field_l[var23] = -2147483648;
                     break L7;
@@ -332,7 +332,7 @@ final class tm extends pi {
                       }
                     }
                     oc.field_l[var23] = var29;
-                    if ((var29 ^ -1) <= (var7_int ^ -1)) {
+                    if (~var29 <= ~var7_int) {
                       break L7;
                     } else {
                       var7_int = var29;
@@ -459,7 +459,7 @@ final class tm extends pi {
                     var3 = -db.field_d + ((tm) this).field_p;
                     var4 = var2_int + ((tm) this).field_z;
                     var5 = ((tm) this).field_C + var3;
-                    if ((((tm) this).field_q ^ -1) <= -1) {
+                    if (((tm) this).field_q >= 0) {
                       break L3;
                     } else {
                       if (!((tm) this).field_B) {
@@ -473,10 +473,10 @@ final class tm extends pi {
                     if (((tm) this).field_x < 1.0f) {
                       break L4;
                     } else {
-                      if (404 < (var4 ^ -1)) {
+                      if (var4 < -405) {
                         break L2;
                       } else {
-                        if ((var4 ^ -1) < -641) {
+                        if (var4 > 640) {
                           break L2;
                         } else {
                           if (var5 > 480) {
@@ -604,20 +604,20 @@ final class tm extends pi {
         if (d.field_b) {
           L0: {
             var2_int = ce.field_d.field_I + (ce.field_d.field_E - 2);
-            if (-471 > (350 + ((tm) this).field_A ^ -1)) {
+            if (350 + ((tm) this).field_A > 470) {
               break L0;
             } else {
               break L0;
             }
           }
           L1: {
-            if (-1 <= (((tm) this).field_D ^ -1)) {
+            if (((tm) this).field_D <= 0) {
               break L1;
             } else {
-              if ((((tm) this).field_J ^ -1) >= -1) {
+              if (((tm) this).field_J <= 0) {
                 break L1;
               } else {
-                ef.field_b[3].a(-li.field_c + (((tm) this).field_D + -ef.field_b[3].field_x), (ef.field_b[3].field_A >> 1179547202) + (((tm) this).field_J - db.field_d), ((tm) this).field_G ^ -1 | ((tm) this).field_G << 1972890860);
+                ef.field_b[3].a(-li.field_c + (((tm) this).field_D + -ef.field_b[3].field_x), (ef.field_b[3].field_A >> 2) + (((tm) this).field_J - db.field_d), ~((tm) this).field_G | ((tm) this).field_G << 12);
                 break L1;
               }
             }
@@ -629,10 +629,10 @@ final class tm extends pi {
               var5 = ca.field_k * 32 + -li.field_c + sk.field_d / 10;
               var6 = -db.field_d + 32 * hf.field_t - -(mf.field_i / 10);
               var7 = 360;
-              if ((var5 ^ -1) >= (-96 + (((tm) this).field_z - -var3) - 32 ^ -1)) {
+              if (~var5 >= ~(-96 + (((tm) this).field_z - -var3) - 32)) {
                 break L3;
               } else {
-                if ((45 + (((tm) this).field_z - -var3 - (-var7 - 96)) ^ -1) >= (var5 ^ -1)) {
+                if (~(45 + (((tm) this).field_z - -var3 - (-var7 - 96))) >= ~var5) {
                   break L3;
                 } else {
                   if (var6 <= -128 + (var4 + ((tm) this).field_C)) {
@@ -669,14 +669,14 @@ final class tm extends pi {
             if (var8 != 0) {
               L6: {
                 var9 = 0;
-                var10 = a.field_a[0].field_x >> 671904225;
-                var11 = a.field_a[0].field_A >> 1802860673;
+                var10 = a.field_a[0].field_x >> 1;
+                var11 = a.field_a[0].field_A >> 1;
                 var12 = var10 + var5 + 96;
                 var13 = var11 + var6 + 96;
                 var14 = var11 + var6 + -96;
                 var15 = var10 + var5 - 96;
                 var16 = 0;
-                if (-1 >= (var15 ^ -1)) {
+                if (var15 >= 0) {
                   break L6;
                 } else {
                   var16 = var15 * -1;
@@ -711,7 +711,7 @@ final class tm extends pi {
                 }
               }
               L10: while (true) {
-                if ((var14 ^ -1) <= (var13 ^ -1)) {
+                if (~var14 <= ~var13) {
                   break L5;
                 } else {
                   var9 = var9 + var16;
@@ -748,7 +748,7 @@ final class tm extends pi {
                 var9 = var9 + (ah.field_c[2].field_x + ah.field_c[0].field_x);
                 var10 = var10 - (ah.field_c[0].field_A - -ah.field_c[6].field_A);
                 var10 = (var10 / ah.field_c[3].field_A + 1) * ah.field_c[3].field_A;
-                if ((var7 - -60 ^ -1) < (var9 ^ -1)) {
+                if (~(var7 - -60) < ~var9) {
                   var9 = var9 + ah.field_c[1].field_x;
                   break L13;
                 } else {
@@ -786,12 +786,12 @@ final class tm extends pi {
           var13 = 0;
           if (param0 == 94) {
             L16: while (true) {
-              if ((((tm) this).field_t.length ^ -1) >= (var13 ^ -1)) {
+              if (~((tm) this).field_t.length >= ~var13) {
                 L17: {
                   var13 = 0;
-                  if (-4 != (((tm) this).field_s ^ -1)) {
+                  if (((tm) this).field_s != 3) {
                     if (((tm) this).field_s != 9) {
-                      if (-3 == (((tm) this).field_s ^ -1)) {
+                      if (((tm) this).field_s == 2) {
                         fl.field_j[8].c(var10, var11);
                         var13 = fl.field_j[8].field_j;
                         break L17;
@@ -844,14 +844,14 @@ final class tm extends pi {
                   } else {
                     L21: {
                       var14 = 0;
-                      var15 = a.field_a[0].field_x >> 675825793;
-                      var16 = a.field_a[0].field_A >> 1248886913;
+                      var15 = a.field_a[0].field_x >> 1;
+                      var16 = a.field_a[0].field_A >> 1;
                       var17 = var15 + (var5 + 96);
                       var18 = var16 + (var6 + 96);
                       var19 = var16 + (-96 + var6);
                       var20 = var15 + var5 - 96;
                       var21 = 0;
-                      if (-1 >= (var20 ^ -1)) {
+                      if (var20 >= 0) {
                         break L21;
                       } else {
                         var21 = var20 * -1;
@@ -903,7 +903,7 @@ final class tm extends pi {
                             int incrementValue$4 = var14;
                             var14++;
                             var27 = m.field_j[incrementValue$4];
-                            eh.field_f[var23 + eh.field_g * var19] = c.a(16711680, var24 * c.a(var27, 65280) - -(c.a(var26, 65280) * var25)) + c.a(-16711936, var25 * c.a(var26, 16711935) + c.a(var27, 16711935) * var24) >> 1964181640;
+                            eh.field_f[var23 + eh.field_g * var19] = c.a(16711680, var24 * c.a(var27, 65280) - -(c.a(var26, 65280) * var25)) + c.a(-16711936, var25 * c.a(var26, 16711935) + c.a(var27, 16711935) * var24) >> 8;
                             var23++;
                             continue L26;
                           }
@@ -934,16 +934,16 @@ final class tm extends pi {
                     if (16 == ((tm) this).field_s) {
                       break L28;
                     } else {
-                      if ((((tm) this).field_s ^ -1) == -14) {
+                      if (((tm) this).field_s == 13) {
                         break L28;
                       } else {
-                        if ((((tm) this).field_s ^ -1) == -1) {
+                        if (((tm) this).field_s == 0) {
                           break L28;
                         } else {
                           if (2 == ((tm) this).field_s) {
                             break L28;
                           } else {
-                            if ((((tm) this).field_s ^ -1) != -10) {
+                            if (((tm) this).field_s != 9) {
                               var7 = 360;
                               break L27;
                             } else {
@@ -1003,13 +1003,13 @@ final class tm extends pi {
                   ((tm) this).field_B = param3;
                   var5_int = ce.field_d.field_I + (ce.field_d.field_E + -2);
                   var6 = 360;
-                  if (-10 == (((tm) this).field_s ^ -1)) {
+                  if (((tm) this).field_s == 9) {
                     break L3;
                   } else {
                     if (((tm) this).field_s == 2) {
                       break L3;
                     } else {
-                      if (-1 == (((tm) this).field_s ^ -1)) {
+                      if (((tm) this).field_s == 0) {
                         break L3;
                       } else {
                         if (((tm) this).field_s == 16) {
@@ -1057,7 +1057,7 @@ final class tm extends pi {
                       var8 = 20 + ((tm) this).field_A;
                       var9 = -var8 + (-64 + 32 * hf.field_t) - db.field_d;
                       ((tm) this).field_o = 32 * ca.field_k - li.field_c + -180;
-                      if ((db.field_d + var9 ^ -1) > -33) {
+                      if (db.field_d + var9 < 32) {
                         break L8;
                       } else {
                         if (((tm) this).field_B) {
@@ -1073,8 +1073,8 @@ final class tm extends pi {
                   L9: {
                     ((tm) this).field_z = -var7;
                     ((tm) this).field_C = 480 + var8;
-                    if (-1 >= (((tm) this).field_o ^ -1)) {
-                      if ((((tm) this).field_o ^ -1) >= (1024 + -li.field_c - 405 ^ -1)) {
+                    if (((tm) this).field_o >= 0) {
+                      if (~((tm) this).field_o >= ~(1024 + -li.field_c - 405)) {
                         break L9;
                       } else {
                         ((tm) this).field_o = -li.field_c + 555;
@@ -1098,7 +1098,7 @@ final class tm extends pi {
                     if (((tm) this).field_s != 3) {
                       break L10;
                     } else {
-                      if ((var7 ^ -1) >= -2) {
+                      if (var7 <= 1) {
                         break L10;
                       } else {
                         var6 = 320;

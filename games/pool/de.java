@@ -131,27 +131,14 @@ final class de {
         try {
             IOException var2 = null;
             Throwable decompiledCaughtException = null;
-            if (param1 == 0) {
-              L0: {
-                if (jd.field_c == null) {
-                  break L0;
-                } else {
-                  L1: {
-                    if (param0 >= 0) {
-                      if (tl.field_J != ta.field_a) {
-                        break L0;
-                      } else {
-                        if (ej.field_j.field_v != 0) {
-                          break L1;
-                        } else {
-                          if (rl.a((byte) -108) <= nf.field_Q - -10000L) {
-                            break L1;
-                          } else {
-                            ej.field_j.b(false, param0);
-                            break L1;
-                          }
-                        }
-                      }
+            L0: {
+              if (jd.field_c == null) {
+                break L0;
+              } else {
+                L1: {
+                  if (param0 >= 0) {
+                    if (tl.field_J != ta.field_a) {
+                      break L0;
                     } else {
                       if (ej.field_j.field_v != 0) {
                         break L1;
@@ -164,37 +151,38 @@ final class de {
                         }
                       }
                     }
-                  }
-                  L2: {
-                    if ((ej.field_j.field_v ^ -1) < -1) {
-                      try {
-                        L3: {
-                          jd.field_c.a(ej.field_j.field_t, (byte) 70, ej.field_j.field_v, 0);
-                          nf.field_Q = rl.a((byte) -111);
-                          break L3;
-                        }
-                      } catch (java.io.IOException decompiledCaughtParameter0) {
-                        decompiledCaughtException = decompiledCaughtParameter0;
-                        L4: {
-                          var2 = (IOException) (Object) decompiledCaughtException;
-                          dn.c(-74);
-                          break L4;
-                        }
-                      }
-                      ej.field_j.field_v = 0;
-                      break L2;
+                  } else {
+                    if (ej.field_j.field_v != 0) {
+                      break L1;
                     } else {
-                      break L2;
+                      if (rl.a((byte) -108) <= nf.field_Q - -10000L) {
+                        break L1;
+                      } else {
+                        ej.field_j.b(false, param0);
+                        break L1;
+                      }
                     }
                   }
-                  return;
                 }
+                L2: {
+                  if (ej.field_j.field_v > 0) {
+                    {
+                      L3: {
+                        jd.field_c.a(ej.field_j.field_t, (byte) 70, ej.field_j.field_v, 0);
+                        nf.field_Q = rl.a((byte) -111);
+                        break L3;
+                      }
+                    }
+                    ej.field_j.field_v = 0;
+                    break L2;
+                  } else {
+                    break L2;
+                  }
+                }
+                return;
               }
-              ej.field_j.field_v = 0;
-              return;
-            } else {
-              return;
             }
+            ej.field_j.field_v = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -203,25 +191,93 @@ final class de {
     }
 
     final static boolean a(byte param0, ge param1) {
-        int var2 = param1.g(-112);
-        int var3 = (var2 ^ -1) != -2 ? 0 : 1;
-        int var4 = 127 / ((13 - param0) / 63);
-        return var3 != 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        int stackIn_3_0 = 0;
+        int stackIn_4_0 = 0;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_2_0 = 0;
+        int stackOut_1_0 = 0;
+        int stackOut_3_0 = 0;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            L1: {
+              var2_int = param1.g(-112);
+              if (var2_int == 1) {
+                stackOut_2_0 = 1;
+                stackIn_3_0 = stackOut_2_0;
+                break L1;
+              } else {
+                stackOut_1_0 = 0;
+                stackIn_3_0 = stackOut_1_0;
+                break L1;
+              }
+            }
+            var3 = stackIn_3_0;
+            var4 = 127 / ((13 - param0) / 63);
+            stackOut_3_0 = var3;
+            stackIn_4_0 = stackOut_3_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var2;
+            stackOut_5_1 = new StringBuilder().append("de.D(").append(param0).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param1 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L2;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L2;
+            }
+          }
+          throw wm.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
+        }
+        return stackIn_4_0 != 0;
     }
 
     final static int a(int param0, int param1, int param2, int param3) {
         if (param0 + param2 <= qh.field_l) {
           return param2;
         } else {
-          if (-1 < (param1 + param2 + -param0 ^ -1)) {
-            if (param3 != 0) {
-              field_f = null;
-              return qh.field_l - param0;
-            } else {
-              return qh.field_l - param0;
-            }
-          } else {
+          if (param1 + param2 + -param0 >= 0) {
             return param2 + (param1 + -param0);
+          } else {
+            field_f = null;
+            return qh.field_l - param0;
           }
         }
     }

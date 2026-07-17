@@ -7,36 +7,78 @@ final class wua extends le {
     private int field_i;
 
     final void a(int param0, int param1, ds param2) {
-        int var4 = 0;
+        int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
         var5 = VoidHunters.field_G;
-        if (param1 < -60) {
-          var4 = param0;
-          if (var4 != 0) {
-            if (1 == var4) {
-              ((wua) this).field_i = param2.e(1869);
-              return;
+        try {
+          L0: {
+            L1: {
+              if (param1 < -60) {
+                break L1;
+              } else {
+                int[] discarded$2 = ((wua) this).a(28, false);
+                break L1;
+              }
+            }
+            var4_int = param0;
+            if (var4_int != 0) {
+              if (1 != var4_int) {
+                break L0;
+              } else {
+                ((wua) this).field_i = param2.e(1869);
+                return;
+              }
             } else {
+              ((wua) this).field_j = param2.e(1869);
               return;
             }
-          } else {
-            ((wua) this).field_j = param2.e(1869);
-            return;
           }
-        } else {
-          int[] discarded$2 = ((wua) this).a(28, false);
-          var4 = param0;
-          if (var4 != 0) {
-            if (1 != var4) {
-              return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var4 = decompiledCaughtException;
+            stackOut_10_0 = (RuntimeException) var4;
+            stackOut_10_1 = new StringBuilder().append("wua.F(").append(param0).append(44).append(param1).append(44);
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
+            if (param2 == null) {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L2;
             } else {
-              ((wua) this).field_i = param2.e(1869);
-              return;
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L2;
             }
-          } else {
-            ((wua) this).field_j = param2.e(1869);
-            return;
           }
+          throw rta.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
         }
     }
 

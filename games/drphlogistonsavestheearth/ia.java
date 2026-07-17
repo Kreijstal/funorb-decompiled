@@ -8,58 +8,53 @@ final class ia {
 
     final static void a(byte param0) {
         ml var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
+        RuntimeException decompiledCaughtException = null;
         var2 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        el.field_sb.a();
-        k.field_J.a();
-        vb.field_k = vb.field_k - 1;
-        if (param0 >= 4) {
-          if (-1 == (vb.field_k ^ -1)) {
-            vb.field_k = 200;
-            var1 = (ml) (Object) ff.field_O.h(-11151);
-            L0: while (true) {
-              if (var1 != null) {
-                L1: {
-                  if (var1.field_o.c(-1387)) {
-                    break L1;
-                  } else {
-                    var1.a(-16175);
-                    break L1;
-                  }
-                }
-                var1 = (ml) (Object) ff.field_O.e(0);
-                continue L0;
+        try {
+          L0: {
+            L1: {
+              el.field_sb.a();
+              k.field_J.a();
+              vb.field_k = vb.field_k - 1;
+              if (param0 >= 4) {
+                break L1;
               } else {
-                return;
+                field_c = -62;
+                break L1;
               }
             }
-          } else {
-            return;
-          }
-        } else {
-          field_c = -62;
-          if (-1 == (vb.field_k ^ -1)) {
-            vb.field_k = 200;
-            var1 = (ml) (Object) ff.field_O.h(-11151);
-            L2: while (true) {
-              if (var1 != null) {
-                L3: {
-                  if (var1.field_o.c(-1387)) {
-                    break L3;
+            L2: {
+              if (vb.field_k != 0) {
+                break L2;
+              } else {
+                vb.field_k = 200;
+                var1 = (ml) (Object) ff.field_O.h(-11151);
+                L3: while (true) {
+                  if (var1 == null) {
+                    break L2;
                   } else {
-                    var1.a(-16175);
-                    break L3;
+                    L4: {
+                      if (var1.field_o.c(-1387)) {
+                        break L4;
+                      } else {
+                        var1.a(-16175);
+                        break L4;
+                      }
+                    }
+                    var1 = (ml) (Object) ff.field_O.e(0);
+                    continue L3;
                   }
                 }
-                var1 = (ml) (Object) ff.field_O.e(0);
-                continue L2;
-              } else {
-                return;
               }
             }
-          } else {
-            return;
+            break L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw ie.a((Throwable) (Object) var1_ref, "ia.D(" + param0 + 41);
         }
     }
 
@@ -70,67 +65,29 @@ final class ia {
     public static void b(int param0) {
         field_b = null;
         field_a = null;
-        if (param0 != 27174) {
-            ia.a((byte) 30);
-        }
     }
 
     final static void a(int param0) {
         Object var1 = null;
         int var2 = 0;
         Throwable var3 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var1 = (Object) (Object) pj.field_G;
-                    // monitorenter pj.field_G
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        db.field_a = tf.field_mb;
-                        th.field_e = th.field_e + 1;
-                        ck.field_c = e.field_q;
-                        ob.field_g = mj.field_u;
-                        var2 = -96 / ((27 - param0) / 56);
-                        df.field_o = lk.field_j;
-                        lk.field_j = false;
-                        mh.field_f = f.field_h;
-                        ae.field_gb = ee.field_d;
-                        ih.field_R = fj.field_j;
-                        f.field_h = 0;
-                        // monitorexit var1
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        var3 = caughtException;
-                        // monitorexit var1
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    throw (RuntimeException) (Object) var3;
-                }
-                case 5: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
-            }
+        Throwable decompiledCaughtException = null;
+        var1 = (Object) (Object) pj.field_G;
+        synchronized (var1) {
+          L0: {
+            db.field_a = tf.field_mb;
+            th.field_e = th.field_e + 1;
+            ck.field_c = e.field_q;
+            ob.field_g = mj.field_u;
+            var2 = -48;
+            df.field_o = lk.field_j;
+            lk.field_j = false;
+            mh.field_f = f.field_h;
+            ae.field_gb = ee.field_d;
+            ih.field_R = fj.field_j;
+            f.field_h = 0;
+            break L0;
+          }
         }
     }
 
@@ -140,7 +97,11 @@ final class ia {
         if (param1 != 0) {
             return;
         }
-        di.field_d = param3;
+        try {
+            di.field_d = param3;
+        } catch (RuntimeException runtimeException) {
+            throw ie.a((Throwable) (Object) runtimeException, "ia.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+        }
     }
 
     static {

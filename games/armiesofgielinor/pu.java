@@ -64,36 +64,70 @@ final class pu {
     }
 
     final static void d(int param0) {
+        RuntimeException var1 = null;
+        int var2 = 0;
         of var3 = null;
-        int var2 = ArmiesOfGielinor.field_M ? 1 : 0;
-        vu.field_M = null;
-        no.field_K = null;
-        ua.field_s = false;
-        if (null != be.field_u) {
-            be.field_u.b(76);
-            be.field_u = null;
-        }
-        oi.field_d = null;
-        if (param0 > -86) {
-            return;
-        }
-        if (null != qc.field_g) {
-            qc.field_g.b(94);
-            qc.field_g = null;
-        }
-        qm.field_J = null;
-        if (!(wl.field_F == null)) {
-            wl.field_F.b(87);
-            wl.field_F = null;
-        }
-        eu.field_e = null;
-        if (!(null == oi.field_d)) {
-            var3 = (of) (Object) oi.field_d.a((byte) 66);
-            while (var3 != null) {
-                var3.c((byte) -76);
-                var3 = (of) (Object) oi.field_d.c(1);
+        RuntimeException decompiledCaughtException = null;
+        var2 = ArmiesOfGielinor.field_M ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              vu.field_M = null;
+              no.field_K = null;
+              ua.field_s = false;
+              if (null == be.field_u) {
+                oi.field_d = null;
+                break L1;
+              } else {
+                be.field_u.b(76);
+                be.field_u = null;
+                oi.field_d = null;
+                break L1;
+              }
             }
-            oi.field_d = null;
+            L2: {
+              if (null == qc.field_g) {
+                break L2;
+              } else {
+                qc.field_g.b(94);
+                qc.field_g = null;
+                break L2;
+              }
+            }
+            L3: {
+              qm.field_J = null;
+              if (wl.field_F != null) {
+                wl.field_F.b(87);
+                wl.field_F = null;
+                break L3;
+              } else {
+                break L3;
+              }
+            }
+            L4: {
+              eu.field_e = null;
+              if (null != oi.field_d) {
+                var3 = (of) (Object) oi.field_d.a((byte) 66);
+                L5: while (true) {
+                  if (var3 == null) {
+                    oi.field_d = null;
+                    break L4;
+                  } else {
+                    var3.c((byte) -76);
+                    var3 = (of) (Object) oi.field_d.c(1);
+                    continue L5;
+                  }
+                }
+              } else {
+                break L4;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw ig.a((Throwable) (Object) var1, "pu.E(" + -112 + 41);
         }
     }
 
@@ -219,18 +253,33 @@ final class pu {
     }
 
     final static void b(int param0) {
+        bv var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
-        int var3 = ArmiesOfGielinor.field_M ? 1 : 0;
-        if (param0 != 28704) {
-            field_h = null;
-        }
-        bv var1 = vl.field_n;
-        while (g.a(param0 ^ -13083)) {
-            var1.h(32161, 8);
-            var1.field_q = var1.field_q + 1;
-            var2 = var1.field_q + 1;
-            fg.a(param0 ^ 28704, var1);
-            vl.field_n.e(-var2 + var1.field_q, param0 + -22774);
+        int var3 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var3 = ArmiesOfGielinor.field_M ? 1 : 0;
+        try {
+          L0: {
+            var1 = vl.field_n;
+            L1: while (true) {
+              if (!g.a(-17211)) {
+                break L0;
+              } else {
+                var1.h(32161, 8);
+                int fieldTemp$5 = var1.field_q + 1;
+                var1.field_q = var1.field_q + 1;
+                var2 = fieldTemp$5;
+                fg.a(0, var1);
+                vl.field_n.e(-var2 + var1.field_q, 5930);
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw ig.a((Throwable) (Object) var1_ref, "pu.C(" + 28704 + 41);
         }
     }
 

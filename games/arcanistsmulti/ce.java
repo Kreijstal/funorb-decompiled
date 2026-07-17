@@ -76,7 +76,7 @@ final class ce extends pg {
             }
             var6 = (na) (Object) nk.field_q.a((long)ki.field_q, (byte) -109);
             var7 = var6;
-            na var6_ref = var7;
+            var6 = var7;
             ki.field_q = param0;
             if (var7 != null) {
                 var7.field_Qb = null;

@@ -15,7 +15,7 @@ final class pi {
         var4.field_i = param0;
         var4.field_m = new int[param1];
         lk.field_O.a(false, (lh) (Object) var4);
-        int var5 = 109 / ((72 - param3) / 46);
+        int var5 = -109;
         rd.a(param2, var4, (byte) -99);
         return var4;
     }
@@ -54,12 +54,9 @@ final class pi {
     }
 
     final static void c(byte param0) {
-        if (param0 != 15) {
-            pi.a((byte) -9);
-        }
         b.field_e = ae.field_a.h(0);
         CharSequence var2 = (CharSequence) (Object) b.field_e;
-        ma.field_a = uk.a(param0 + -127, var2);
+        ma.field_a = uk.a(-112, var2);
     }
 
     public static void a(byte param0) {
@@ -86,7 +83,7 @@ final class pi {
                 if (var3 >= ((pi) this).field_d.length) {
                   return ((pi) this).field_d.length + -1;
                 } else {
-                  if (param1 >= ((pi) this).field_d[var3 + -1] + ((pi) this).field_d[var3] >> -1248493535) {
+                  if (param1 >= ((pi) this).field_d[var3 + -1] + ((pi) this).field_d[var3] >> 1) {
                     var3++;
                     continue L0;
                   } else {

@@ -215,7 +215,7 @@ class gd {
                 }
               }
               field_q = stackIn_7_0 != 0;
-              field_n = param2;
+              field_n = 10;
               return;
             } else {
               break L0;
@@ -325,7 +325,7 @@ class gd {
         je var15 = null;
         int var15_int = 0;
         L0: {
-          var3 = param1;
+          var3 = 256;
           if (!field_q) {
             break L0;
           } else {
@@ -335,7 +335,7 @@ class gd {
         }
         L1: {
           og.a(param0, 0, var3);
-          ((gd) this).field_u = ((gd) this).field_u - param1;
+          ((gd) this).field_u = ((gd) this).field_u - 256;
           if (((gd) this).field_h == null) {
             break L1;
           } else {
@@ -369,7 +369,7 @@ class gd {
                       if (var9 != 0) {
                         L6: {
                           if ((var9 & 1) != 0) {
-                            var5 = var5 & (1 << var7_int ^ -1);
+                            var5 = var5 & ~(1 << var7_int);
                             var10 = null;
                             var11 = ((gd) this).field_k[var7_int];
                             var14 = var11;
@@ -502,7 +502,7 @@ class gd {
           if (((gd) this).field_h == null) {
             break L17;
           } else {
-            ((gd) this).field_h.a(param0, 0, param1);
+            ((gd) this).field_h.a(param0, 0, 256);
             break L17;
           }
         }
@@ -645,12 +645,12 @@ class gd {
     }
 
     private final void b(int param0) {
-        ((gd) this).field_u = ((gd) this).field_u - param0;
+        ((gd) this).field_u = ((gd) this).field_u - 256;
         if (((gd) this).field_u < 0) {
             ((gd) this).field_u = 0;
         }
         if (((gd) this).field_h != null) {
-            ((gd) this).field_h.a(param0);
+            ((gd) this).field_h.a(256);
             return;
         }
     }

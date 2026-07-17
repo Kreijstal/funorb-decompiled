@@ -52,8 +52,9 @@ final class nk {
 
     final int a(int param0) {
         if (((nk) this).field_f >= ((nk) this).field_h) {
+            int fieldTemp$0 = ((nk) this).field_g;
             ((nk) this).field_g = ((nk) this).field_g + 1;
-            ((nk) this).field_k = ((nk) this).field_e[((nk) this).field_g] << 15;
+            ((nk) this).field_k = ((nk) this).field_e[fieldTemp$0] << 15;
             if (((nk) this).field_g >= ((nk) this).field_a) {
                 ((nk) this).field_g = ((nk) this).field_a - 1;
             }

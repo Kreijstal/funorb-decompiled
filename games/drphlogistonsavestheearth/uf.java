@@ -20,14 +20,7 @@ final class uf {
         field_j = null;
         field_c = null;
         field_d = null;
-        if (param0 != -60) {
-          field_a = null;
-          field_a = null;
-          return;
-        } else {
-          field_a = null;
-          return;
-        }
+        field_a = null;
     }
 
     private uf() throws Throwable {

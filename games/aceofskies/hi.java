@@ -16,10 +16,14 @@ final class hi extends to {
     }
 
     hi(ea param0) {
-        super(((ea) param0).field_p, ((ea) param0).field_h, ((ea) param0).field_q, ((ea) param0).field_n, (ir) null, (no) null);
-        param0.a(((hi) this).field_n, 0, 0, ((hi) this).field_q, (byte) 126);
-        ((hi) this).field_u = 256;
-        ((hi) this).field_s = param0;
+        super(param0.field_p, param0.field_h, param0.field_q, param0.field_n, (ir) null, (no) null);
+        try {
+            param0.a(((hi) this).field_n, 0, 0, ((hi) this).field_q, (byte) 126);
+            ((hi) this).field_u = 256;
+            ((hi) this).field_s = param0;
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) (Object) runtimeException, "hi.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public hi() {
@@ -108,7 +112,7 @@ final class hi extends to {
                 stackOut_25_0 = stackIn_25_0 != 0 | gl.a(param1, 544, param2) | gh.a(param2, false, param1);
                 stackIn_27_0 = stackOut_25_0;
                 stackIn_26_0 = stackOut_25_0;
-                if (-1 != (55 & param2 ^ -1)) {
+                if ((55 & param2) != 0) {
                   stackOut_27_0 = stackIn_27_0;
                   stackOut_27_1 = 0;
                   stackIn_28_0 = stackOut_27_0;
@@ -166,7 +170,7 @@ final class hi extends to {
                 stackOut_10_0 = stackIn_10_0 != 0 | gl.a(param1, 544, param2) | gh.a(param2, false, param1);
                 stackIn_12_0 = stackOut_10_0;
                 stackIn_11_0 = stackOut_10_0;
-                if (-1 != (55 & param2 ^ -1)) {
+                if ((55 & param2) != 0) {
                   stackOut_12_0 = stackIn_12_0;
                   stackOut_12_1 = 0;
                   stackIn_13_0 = stackOut_12_0;
@@ -190,19 +194,19 @@ final class hi extends to {
 
     final void a(byte param0, int param1, int param2, int param3) {
         ll var6 = null;
-        if (-1 != (param1 ^ -1)) {
+        if (param1 != 0) {
           return;
         } else {
           if (((hi) this).field_s != null) {
             if (0 != ((hi) this).field_u) {
-              if ((((hi) this).field_u ^ -1) != -257) {
+              if (((hi) this).field_u != 256) {
                 var6 = new ll(((hi) this).field_s.field_q, ((hi) this).field_s.field_n);
                 cm.a(var6, -14492);
                 ((hi) this).field_s.a((byte) 90, param1, 0, 0);
                 sl.c(2765);
                 var6.a(param3 - -((hi) this).field_p, param2 - -((hi) this).field_h, ((hi) this).field_u);
                 if (param0 < 64) {
-                  field_v = (vs) null;
+                  field_v = null;
                   return;
                 } else {
                   return;
@@ -221,18 +225,10 @@ final class hi extends to {
     }
 
     final static void j(int param0) {
-        if (!gi.a(true)) {
-          return;
-        } else {
-          if (param0 != 8585) {
-            hi.k(37);
-            nk.a((byte) -119, 4, false);
+        if (!(gi.a(true))) {
             return;
-          } else {
-            nk.a((byte) -119, 4, false);
-            return;
-          }
         }
+        nk.a((byte) -119, 4, false);
     }
 
     static {

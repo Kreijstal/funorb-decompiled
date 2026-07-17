@@ -24,12 +24,68 @@ final class gl {
     }
 
     final static void a(int param0, int param1, boolean param2, hj[] param3) {
-        ui.field_b = new pf(param3);
-        ak.field_z = param1;
-        df.field_d = param0;
-        jm.b(-1178583839);
-        if (param2) {
-            gl.c(74);
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        try {
+          L0: {
+            L1: {
+              ui.field_b = new pf(param3);
+              ak.field_z = param1;
+              df.field_d = param0;
+              jm.b(-1178583839);
+              if (!param2) {
+                break L1;
+              } else {
+                gl.c(74);
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_1 = new StringBuilder().append("gl.D(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param3 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
+            }
+          }
+          throw dd.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
         }
     }
 
@@ -102,35 +158,95 @@ final class gl {
     }
 
     final void a(int param0, byte param1, int param2, byte[] param3) throws IOException {
-        int var5 = 5 / ((65 - param1) / 60);
-        if (!((((gl) this).field_g + (long)param2 ^ -1L) >= (((gl) this).field_e ^ -1L))) {
-            ((gl) this).field_d.seek(((gl) this).field_e);
-            ((gl) this).field_d.write(1);
-            throw new EOFException();
+        try {
+            int var5_int = 5 / ((65 - param1) / 60);
+            if (!(~(((gl) this).field_g + (long)param2) >= ~((gl) this).field_e)) {
+                ((gl) this).field_d.seek(((gl) this).field_e);
+                ((gl) this).field_d.write(1);
+                throw new EOFException();
+            }
+            ((gl) this).field_d.write(param3, param0, param2);
+            ((gl) this).field_g = ((gl) this).field_g + (long)param2;
+        } catch (RuntimeException runtimeException) {
+            throw dd.a((Throwable) (Object) runtimeException, "gl.G(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
-        ((gl) this).field_d.write(param3, param0, param2);
-        ((gl) this).field_g = ((gl) this).field_g + (long)param2;
     }
 
     final int a(int param0, int param1, int param2, byte[] param3) throws IOException {
-        int var5 = 0;
-        var5 = ((gl) this).field_d.read(param3, param0, param1);
-        if (var5 <= 0) {
-          if (param2 != -4837) {
-            gl.c(7);
-            return var5;
-          } else {
-            return var5;
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int stackIn_5_0 = 0;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_4_0 = 0;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        try {
+          L0: {
+            L1: {
+              var5_int = ((gl) this).field_d.read(param3, param0, param1);
+              if (var5_int <= 0) {
+                break L1;
+              } else {
+                ((gl) this).field_g = ((gl) this).field_g + (long)var5_int;
+                break L1;
+              }
+            }
+            L2: {
+              if (param2 == -4837) {
+                break L2;
+              } else {
+                gl.c(7);
+                break L2;
+              }
+            }
+            stackOut_4_0 = var5_int;
+            stackIn_5_0 = stackOut_4_0;
+            break L0;
           }
-        } else {
-          ((gl) this).field_g = ((gl) this).field_g + (long)var5;
-          if (param2 == -4837) {
-            return var5;
-          } else {
-            gl.c(7);
-            return var5;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var5 = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var5;
+            stackOut_6_1 = new StringBuilder().append("gl.E(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param3 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L3;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L3;
+            }
           }
+          throw dd.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
         }
+        return stackIn_5_0;
     }
 
     final void d(int param0) throws IOException {
@@ -175,25 +291,28 @@ final class gl {
     }
 
     gl(File param0, String param1, long param2) throws IOException {
-        if ((param2 ^ -1L) == 0L) {
-            param2 = 9223372036854775807L;
-        }
-        if (param2 < param0.length()) {
-            boolean discarded$0 = param0.delete();
-        }
-        ((gl) this).field_d = new RandomAccessFile(param0, param1);
-        ((gl) this).field_e = param2;
-        ((gl) this).field_g = 0L;
-        int var5 = ((gl) this).field_d.read();
-        if (var5 != -1) {
-            // ifne L108
+        int var5_int = 0;
+        try {
+            if (param2 == -1L) {
+                param2 = 9223372036854775807L;
+            }
+            if (param2 < param0.length()) {
+                boolean discarded$0 = param0.delete();
+            }
+            ((gl) this).field_d = new RandomAccessFile(param0, param1);
+            ((gl) this).field_e = param2;
+            ((gl) this).field_g = 0L;
+            var5_int = ((gl) this).field_d.read();
+            if (var5_int != -1) {
+                if (!param1.equals((Object) (Object) "r")) {
+                    ((gl) this).field_d.seek(0L);
+                    ((gl) this).field_d.write(var5_int);
+                }
+            }
             ((gl) this).field_d.seek(0L);
-            ((gl) this).field_d.write(var5);
-        } else {
-            ((gl) this).field_d.seek(0L);
-            ((gl) this).field_d.seek(0L);
+        } catch (RuntimeException runtimeException) {
+            throw dd.a((Throwable) (Object) runtimeException, "gl.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
-        ((gl) this).field_d.seek(0L);
     }
 
     static {

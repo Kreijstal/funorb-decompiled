@@ -10,22 +10,12 @@ final class c extends gca {
     private eaa field_l;
 
     private final void e(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        cia var6 = null;
-        var2 = baa.field_v.nextInt() & 8191;
-        var3 = (255 & baa.field_v.nextInt()) + 128;
-        var4 = var3 * via.a(var2, (byte) 72) >> -1366520336;
-        if (param0 != 99) {
-          return;
-        } else {
-          var5 = var3 * ft.a(var2, (byte) -128) >> 2096387248;
-          var6 = new cia(var4, 0, var5, 0, 0, 0, 128, -2);
-          ((c) this).field_l.a((bw) (Object) var6, true);
-          return;
-        }
+        int var2 = baa.field_v.nextInt() & 8191;
+        int var3 = (255 & baa.field_v.nextInt()) + 128;
+        int var4 = var3 * via.a(var2, (byte) 72) >> 16;
+        int var5 = var3 * ft.a(var2, (byte) -128) >> 16;
+        cia var6 = new cia(var4, 0, var5, 0, 0, 0, 128, -2);
+        ((c) this).field_l.a((bw) (Object) var6, true);
     }
 
     final static void f(byte param0) {
@@ -38,19 +28,11 @@ final class c extends gca {
     }
 
     final static int a(int param0, int param1, boolean param2) {
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        if (param2) {
-          return -114;
-        } else {
-          var3 = param1 >> -919215056;
-          var4 = param1 & 65535;
-          var5 = param0 >> 10966544;
-          var6 = param0 & 65535;
-          return (var6 * var4 >> -355858576) + param0 * var3 - -(var5 * var4);
-        }
+        int var3 = param1 >> 16;
+        int var4 = param1 & 65535;
+        int var5 = param0 >> 16;
+        int var6 = param0 & 65535;
+        return (var6 * var4 >> 16) + param0 * var3 - -(var5 * var4);
     }
 
     final void a(int param0, int param1, byte param2) {
@@ -65,7 +47,7 @@ final class c extends gca {
             if (var4_ref == null) {
               return;
             } else {
-              dg.f((var4_ref.field_i >> 1364491844) + param1, (var4_ref.field_q >> 1599571013) + param0 + (var4_ref.field_h >> 1220394217), 2, 12632256, var4_ref.field_o);
+              dg.f((var4_ref.field_i >> 4) + param1, (var4_ref.field_q >> 5) + param0 + (var4_ref.field_h >> 9), 2, 12632256, var4_ref.field_o);
               var4_ref = (cia) (Object) ((c) this).field_l.c(0);
               continue L0;
             }
@@ -77,7 +59,7 @@ final class c extends gca {
             if (var4_ref == null) {
               return;
             } else {
-              dg.f((var4_ref.field_i >> 1364491844) + param1, (var4_ref.field_q >> 1599571013) + param0 + (var4_ref.field_h >> 1220394217), 2, 12632256, var4_ref.field_o);
+              dg.f((var4_ref.field_i >> 4) + param1, (var4_ref.field_q >> 5) + param0 + (var4_ref.field_h >> 9), 2, 12632256, var4_ref.field_o);
               var4_ref = (cia) (Object) ((c) this).field_l.c(0);
               continue L1;
             }
@@ -86,12 +68,6 @@ final class c extends gca {
     }
 
     public static void a(int param0) {
-        if (param0 != -20330) {
-            c.f((byte) -87);
-            field_k = null;
-            field_i = null;
-            return;
-        }
         field_k = null;
         field_i = null;
     }
@@ -102,7 +78,7 @@ final class c extends gca {
         if (param0 != 1220394217) {
           L0: {
             c.a(88, 16);
-            if (-7 != (param1 ^ -1)) {
+            if (param1 != 6) {
               break L0;
             } else {
               var2 = 2;
@@ -113,7 +89,7 @@ final class c extends gca {
           return;
         } else {
           L1: {
-            if (-7 != (param1 ^ -1)) {
+            if (param1 != 6) {
               break L1;
             } else {
               var2 = 2;

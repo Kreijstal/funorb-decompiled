@@ -19,7 +19,7 @@ final class po {
     public static void a(byte param0) {
         field_c = null;
         field_a = null;
-        int var1 = 43 / ((param0 - 18) / 42);
+        int var1 = 43;
         field_d = null;
         field_h = null;
         field_e = null;
@@ -28,7 +28,7 @@ final class po {
 
     final static void a(int param0) {
         em.field_h = 0;
-        int var1 = 42 % ((param0 - 4) / 47);
+        int var1 = 0;
         sr.field_h = true;
     }
 

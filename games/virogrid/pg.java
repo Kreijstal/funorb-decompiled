@@ -23,39 +23,80 @@ final class pg {
 
     final static void a(boolean param0, he param1) {
         he var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
         var3 = Virogrid.field_F ? 1 : 0;
-        param1.a(param0);
-        var2 = (he) (Object) te.field_f.a((byte) -126);
-        L0: while (true) {
-          if (var2 != null) {
-            if (var2.a(param1, -12712)) {
-              var2 = (he) (Object) te.field_f.a(16213);
-              continue L0;
-            } else {
-              L1: {
-                if (var2 != null) {
-                  td.a((l) (Object) var2, (byte) 89, (l) (Object) param1);
-                  break L1;
+        try {
+          L0: {
+            param1.a(param0);
+            var2 = (he) (Object) te.field_f.a((byte) -126);
+            L1: while (true) {
+              L2: {
+                if (var2 == null) {
+                  break L2;
                 } else {
-                  te.field_f.a((l) (Object) param1, (byte) -42);
-                  break L1;
+                  if (!var2.a(param1, -12712)) {
+                    break L2;
+                  } else {
+                    var2 = (he) (Object) te.field_f.a(16213);
+                    continue L1;
+                  }
                 }
               }
-              return;
-            }
-          } else {
-            L2: {
               if (var2 != null) {
                 td.a((l) (Object) var2, (byte) 89, (l) (Object) param1);
-                break L2;
+                break L0;
               } else {
                 te.field_f.a((l) (Object) param1, (byte) -42);
-                break L2;
+                return;
               }
             }
-            return;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2_ref = decompiledCaughtException;
+            stackOut_9_0 = (RuntimeException) var2_ref;
+            stackOut_9_1 = new StringBuilder().append("pg.E(").append(param0).append(44);
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
+            if (param1 == null) {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
+              break L3;
+            } else {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
+              break L3;
+            }
+          }
+          throw kg.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
         }
     }
 
@@ -72,10 +113,6 @@ final class pg {
     }
 
     final static String a(int param0) {
-        if (param0 != -1) {
-            field_g = -109;
-            return rf.field_a;
-        }
         return rf.field_a;
     }
 
@@ -85,7 +122,7 @@ final class pg {
         int stackOut_1_0 = 0;
         var1 = -1 / ((-93 - param0) / 33);
         if (!qm.i(20)) {
-          if ((bn.field_d ^ -1) >= -1) {
+          if (bn.field_d <= 0) {
             return true;
           } else {
             return false;

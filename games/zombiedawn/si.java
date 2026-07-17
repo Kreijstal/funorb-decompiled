@@ -14,7 +14,7 @@ final class si extends qk {
 
     final static void x(int param0) {
         tf.field_c.field_h = 0;
-        tf.field_c.field_e = param0;
+        tf.field_c.field_e = 0;
     }
 
     final void g(int param0) {
@@ -26,7 +26,7 @@ final class si extends qk {
         } else {
           if (param0 < 95) {
             field_Rb = 94;
-            if (-1 == (((si) this).field_F ^ -1)) {
+            if (((si) this).field_F == 0) {
               if (((si) this).field_Ob == null) {
                 int fieldTemp$14 = ((si) this).field_Pb;
                 ((si) this).field_Pb = ((si) this).field_Pb + 1;
@@ -42,7 +42,7 @@ final class si extends qk {
                 return;
               }
             } else {
-              if ((((si) this).field_F ^ -1) != -2) {
+              if (((si) this).field_F != 1) {
                 if (-11 == ((si) this).field_F) {
                   ((si) this).field_N = ((si) this).field_N + 3;
                   return;
@@ -66,7 +66,7 @@ final class si extends qk {
                           ((si) this).field_U = dc.a((byte) 18, 85);
                           int fieldTemp$16 = ((si) this).field_Tb;
                           ((si) this).field_Tb = ((si) this).field_Tb + 1;
-                          if ((fieldTemp$16 ^ -1) <= -5) {
+                          if (fieldTemp$16 >= 4) {
                             ((si) this).l((byte) 52);
                             ((si) this).field_Tb = 0;
                             return;
@@ -89,7 +89,7 @@ final class si extends qk {
                     if (0L != tp.field_p % 3L) {
                       int fieldTemp$18 = ((si) this).field_Tb;
                       ((si) this).field_Tb = ((si) this).field_Tb + 1;
-                      if ((fieldTemp$18 ^ -1) <= -5) {
+                      if (fieldTemp$18 >= 4) {
                         ((si) this).l((byte) 52);
                         ((si) this).field_Tb = 0;
                         return;
@@ -100,7 +100,7 @@ final class si extends qk {
                       ((si) this).field_U = dc.a((byte) 18, 85);
                       int fieldTemp$19 = ((si) this).field_Tb;
                       ((si) this).field_Tb = ((si) this).field_Tb + 1;
-                      if ((fieldTemp$19 ^ -1) <= -5) {
+                      if (fieldTemp$19 >= 4) {
                         ((si) this).l((byte) 52);
                         ((si) this).field_Tb = 0;
                         return;
@@ -112,7 +112,7 @@ final class si extends qk {
                 } else {
                   int fieldTemp$20 = ((si) this).field_Tb;
                   ((si) this).field_Tb = ((si) this).field_Tb + 1;
-                  if ((fieldTemp$20 ^ -1) > -5) {
+                  if (fieldTemp$20 < 4) {
                     return;
                   } else {
                     ((si) this).l((byte) 52);
@@ -139,7 +139,7 @@ final class si extends qk {
                 return;
               }
             } else {
-              if ((((si) this).field_F ^ -1) != -2) {
+              if (((si) this).field_F != 1) {
                 if (-11 != ((si) this).field_F) {
                   return;
                 } else {
@@ -167,7 +167,7 @@ final class si extends qk {
                     } else {
                       int fieldTemp$24 = ((si) this).field_Tb;
                       ((si) this).field_Tb = ((si) this).field_Tb + 1;
-                      if ((fieldTemp$24 ^ -1) > -5) {
+                      if (fieldTemp$24 < 4) {
                         return;
                       } else {
                         ((si) this).l((byte) 52);
@@ -187,7 +187,7 @@ final class si extends qk {
                       }
                       int fieldTemp$25 = ((si) this).field_Tb;
                       ((si) this).field_Tb = ((si) this).field_Tb + 1;
-                      if ((fieldTemp$25 ^ -1) > -5) {
+                      if (fieldTemp$25 < 4) {
                         return;
                       } else {
                         ((si) this).l((byte) 52);
@@ -197,7 +197,7 @@ final class si extends qk {
                     } else {
                       int fieldTemp$26 = ((si) this).field_Tb;
                       ((si) this).field_Tb = ((si) this).field_Tb + 1;
-                      if ((fieldTemp$26 ^ -1) > -5) {
+                      if (fieldTemp$26 < 4) {
                         return;
                       } else {
                         ((si) this).l((byte) 52);
@@ -209,7 +209,7 @@ final class si extends qk {
                 } else {
                   int fieldTemp$27 = ((si) this).field_Tb;
                   ((si) this).field_Tb = ((si) this).field_Tb + 1;
-                  if ((fieldTemp$27 ^ -1) > -5) {
+                  if (fieldTemp$27 < 4) {
                     return;
                   } else {
                     ((si) this).l((byte) 52);
@@ -322,7 +322,7 @@ final class si extends qk {
                           if (var11.field_g > var5) {
                             break L8;
                           } else {
-                            if ((var5 ^ -1) != 0) {
+                            if (var5 != -1) {
                               break L5;
                             } else {
                               break L8;
@@ -418,7 +418,7 @@ final class si extends qk {
                           if (var30.field_g > var5) {
                             break L16;
                           } else {
-                            if ((var5 ^ -1) != 0) {
+                            if (var5 != -1) {
                               break L13;
                             } else {
                               break L16;
@@ -515,7 +515,7 @@ final class si extends qk {
                         if (var10.field_g > var5) {
                           break L24;
                         } else {
-                          if ((var5 ^ -1) != 0) {
+                          if (var5 != -1) {
                             break L21;
                           } else {
                             break L24;
@@ -542,64 +542,229 @@ final class si extends qk {
     }
 
     private final void a(int param0, kd param1) {
-        int var3 = 0;
-        ((si) this).field_Ob = param1;
-        param1.field_Bb = param1.field_Bb + 1;
-        var3 = -77 / ((70 - param0) / 46);
-        if (null != ((si) this).field_U) {
-          if (!((si) this).field_U.l()) {
-            return;
-          } else {
-            ((si) this).field_U = dc.a((byte) 18, 87);
-            return;
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            L1: {
+              L2: {
+                ((si) this).field_Ob = param1;
+                param1.field_Bb = param1.field_Bb + 1;
+                var3_int = -77 / ((70 - param0) / 46);
+                if (null == ((si) this).field_U) {
+                  break L2;
+                } else {
+                  if (((si) this).field_U.l()) {
+                    break L2;
+                  } else {
+                    break L1;
+                  }
+                }
+              }
+              ((si) this).field_U = dc.a((byte) 18, 87);
+              break L1;
+            }
+            break L0;
           }
-        } else {
-          ((si) this).field_U = dc.a((byte) 18, 87);
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var3 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_1 = new StringBuilder().append("si.NA(").append(param0).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param1 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L3;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L3;
+            }
+          }
+          throw sh.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
         }
     }
 
     final void a(wk param0, int param1) {
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        int var3 = param0.a(((si) this).a(true), (byte) -80);
-        int var4 = param0.a(((si) this).f(param1 + 237234924), param1 ^ param1);
-        bi.d(var3, var4, ((si) this).field_Sb, 255);
-        bi.d(var3, var4, ((si) this).field_pb, 65535);
-        if (!(null == ((si) this).field_Ob)) {
-            bi.e(var3, var4, param0.a(((si) this).field_Ob.a(true), (byte) -106), param0.a(((si) this).field_Ob.f(237239984), 0), 16711680);
-        }
-        if (!(null == ((si) this).field_yb)) {
-            var5 = param0.a(((si) this).field_yb.a(true), (byte) -78);
-            var6 = param0.a(((si) this).field_yb.f(param1 + 237234924), 0);
-            bi.e(var3, -48 + var4 + 10, var5, var6 - 38, 16776960);
-            bj.field_q.c(Integer.toString(((si) this).field_F), var3, var4 + -48, 16777215, 0);
-            bj.field_q.c(Integer.toString(((si) this).field_yb.field_F), var5, var6 - 48, 16777215, 0);
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        try {
+          L0: {
+            L1: {
+              var3_int = param0.a(((si) this).a(true), (byte) -80);
+              var4 = param0.a(((si) this).f(param1 + 237234924), param1 ^ param1);
+              bi.d(var3_int, var4, ((si) this).field_Sb, 255);
+              bi.d(var3_int, var4, ((si) this).field_pb, 65535);
+              if (null != ((si) this).field_Ob) {
+                bi.e(var3_int, var4, param0.a(((si) this).field_Ob.a(true), (byte) -106), param0.a(((si) this).field_Ob.f(237239984), 0), 16711680);
+                break L1;
+              } else {
+                break L1;
+              }
+            }
+            L2: {
+              if (null != ((si) this).field_yb) {
+                var5 = param0.a(((si) this).field_yb.a(true), (byte) -78);
+                var6 = param0.a(((si) this).field_yb.f(param1 + 237234924), 0);
+                bi.e(var3_int, -48 + var4 + 10, var5, var6 - 38, 16776960);
+                bj.field_q.c(Integer.toString(((si) this).field_F), var3_int, var4 + -48, 16777215, 0);
+                bj.field_q.c(Integer.toString(((si) this).field_yb.field_F), var5, var6 - 48, 16777215, 0);
+                break L2;
+              } else {
+                break L2;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var3 = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var3;
+            stackOut_7_1 = new StringBuilder().append("si.L(");
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param0 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L3;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L3;
+            }
+          }
+          throw sh.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 41);
         }
     }
 
     final static vn a(int param0, int param1, dj param2, int param3) {
+        RuntimeException var4 = null;
         Object var5 = null;
-        if (param3 == 48) {
-          if (!ph.a(param1, param3 + 30995, param0, param2)) {
-            return null;
-          } else {
-            return fg.d(-127);
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        try {
+          L0: {
+            if (param3 == 48) {
+              break L0;
+            } else {
+              var5 = null;
+              vn discarded$2 = si.a(-109, -74, (dj) null, 70);
+              break L0;
+            }
           }
-        } else {
-          var5 = null;
-          vn discarded$5 = si.a(-109, -74, (dj) null, 70);
-          if (!ph.a(param1, param3 + 30995, param0, param2)) {
-            return null;
-          } else {
+          if (ph.a(param1, param3 + 30995, param0, param2)) {
             return fg.d(-127);
+          } else {
+            return null;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var4 = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var4;
+            stackOut_6_1 = new StringBuilder().append("si.TB(").append(param0).append(44).append(param1).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param2 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L1;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L1;
+            }
+          }
+          throw sh.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param3 + 41);
         }
     }
 
     final void o(int param0) {
         this.y(param0 ^ -6269);
-        super.o(param0 ^ 0);
+        super.o(param0);
         if (param0 != -6253) {
             ((si) this).o(114);
         }
@@ -628,16 +793,8 @@ final class si extends qk {
         if (((si) this).field_Ob == null) {
           return;
         } else {
-          L0: {
-            ((si) this).a(((si) this).field_Ob.a(true), (byte) 121, ((si) this).field_Ob.f(237239984));
-            ((si) this).c(0, ((si) this).field_D / 2);
-            if (param0 == 71) {
-              break L0;
-            } else {
-              ((si) this).o(28);
-              break L0;
-            }
-          }
+          ((si) this).a(((si) this).field_Ob.a(true), (byte) 121, ((si) this).field_Ob.f(237239984));
+          ((si) this).c(0, ((si) this).field_D / 2);
           return;
         }
     }
@@ -686,7 +843,7 @@ final class si extends qk {
                   return;
                 }
               } else {
-                if ((((si) this).field_Ob.field_F ^ -1) != -10) {
+                if (((si) this).field_Ob.field_F != 9) {
                   if (null != ((si) this).field_Ob) {
                     break L0;
                   } else {
@@ -763,7 +920,7 @@ final class si extends qk {
                   break L0;
                 }
               } else {
-                if (-4 != (((si) this).field_F ^ -1)) {
+                if (((si) this).field_F != 3) {
                   L4: {
                     if (((si) this).field_U == null) {
                       ((si) this).field_U = dc.a((byte) 18, 86);

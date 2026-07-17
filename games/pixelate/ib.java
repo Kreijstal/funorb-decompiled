@@ -16,27 +16,73 @@ final class ib {
     final static void a(java.applet.Applet param0, boolean param1) {
         try {
             Throwable var2 = null;
+            RuntimeException var2_ref = null;
             String var3 = null;
             java.net.URL var4 = null;
+            RuntimeException stackIn_5_0 = null;
+            StringBuilder stackIn_5_1 = null;
+            RuntimeException stackIn_6_0 = null;
+            StringBuilder stackIn_6_1 = null;
+            RuntimeException stackIn_7_0 = null;
+            StringBuilder stackIn_7_1 = null;
+            String stackIn_7_2 = null;
             Throwable decompiledCaughtException = null;
+            RuntimeException stackOut_4_0 = null;
+            StringBuilder stackOut_4_1 = null;
+            RuntimeException stackOut_6_0 = null;
+            StringBuilder stackOut_6_1 = null;
+            String stackOut_6_2 = null;
+            RuntimeException stackOut_5_0 = null;
+            StringBuilder stackOut_5_1 = null;
+            String stackOut_5_2 = null;
             try {
-              L0: {
-                var4 = param0.getCodeBase();
-                var3 = lg.a(param1, param0, var4).getFile();
-                Object discarded$6 = cq.a(param0, (byte) -62, new Object[2], "updatelinks");
-                Object discarded$7 = cq.a(param0, (byte) -115, new Object[2], "updatelinks");
-                Object discarded$8 = cq.a(param0, (byte) 108, new Object[2], "updatelinks");
-                Object discarded$9 = cq.a(param0, (byte) -44, new Object[2], "updatelinks");
-                Object discarded$10 = cq.a(param0, (byte) 78, new Object[2], "updatelinks");
-                Object discarded$11 = cq.a(param0, (byte) 66, new Object[2], "updatelinks");
-                break L0;
-              }
-            } catch (java.lang.Throwable decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              L1: {
+              try {
+                L0: {
+                  var4 = param0.getCodeBase();
+                  var3 = lg.a(false, param0, var4).getFile();
+                  Object discarded$6 = cq.a(param0, (byte) -62, new Object[2], "updatelinks");
+                  Object discarded$7 = cq.a(param0, (byte) -115, new Object[2], "updatelinks");
+                  Object discarded$8 = cq.a(param0, (byte) 108, new Object[2], "updatelinks");
+                  Object discarded$9 = cq.a(param0, (byte) -44, new Object[2], "updatelinks");
+                  Object discarded$10 = cq.a(param0, (byte) 78, new Object[2], "updatelinks");
+                  Object discarded$11 = cq.a(param0, (byte) 66, new Object[2], "updatelinks");
+                  break L0;
+                }
+              } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
                 var2 = decompiledCaughtException;
-                break L1;
+                return;
               }
+              return;
+            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L1: {
+                var2_ref = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_4_0 = (RuntimeException) var2_ref;
+                stackOut_4_1 = new StringBuilder().append("ib.C(");
+                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_1 = stackOut_4_1;
+                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_1 = stackOut_4_1;
+                if (param0 == null) {
+                  stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+                  stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+                  stackOut_6_2 = "null";
+                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_1 = stackOut_6_1;
+                  stackIn_7_2 = stackOut_6_2;
+                  break L1;
+                } else {
+                  stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+                  stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+                  stackOut_5_2 = "{...}";
+                  stackIn_7_0 = stackOut_5_0;
+                  stackIn_7_1 = stackOut_5_1;
+                  stackIn_7_2 = stackOut_5_2;
+                  break L1;
+                }
+              }
+              throw aa.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 0 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

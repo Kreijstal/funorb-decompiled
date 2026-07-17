@@ -7,20 +7,25 @@ final class jla extends rj {
 
     jla(String param0, qc param1, boolean param2) {
         this(param0, param1);
-        ((jla) this).field_w = param2 ? true : false;
+        try {
+            ((jla) this).field_w = param2 ? true : false;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "jla.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     private jla(String param0, isa param1, qc param2) {
         super(param0, param1, param2);
-        ((jla) this).field_r = afa.field_c.field_d;
+        try {
+            ((jla) this).field_r = afa.field_c.field_d;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "jla.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void b(int param0) {
         field_B = null;
         field_z = null;
-        if (param0 != -23884) {
-            field_B = null;
-        }
     }
 
     final void b(int param0, int param1, int param2, int param3) {
@@ -64,7 +69,11 @@ final class jla extends rj {
 
     private jla(String param0, qc param1) {
         this(param0, afa.field_c.field_u, param1);
-        ((jla) this).field_r = afa.field_c.field_d;
+        try {
+            ((jla) this).field_r = afa.field_c.field_d;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "jla.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

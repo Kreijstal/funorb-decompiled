@@ -9,52 +9,45 @@ final class so {
 
     final static void a(int param0, byte param1) {
         wf var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
-        Object var4 = null;
-        oc var4_ref = null;
-        var4 = null;
+        oc var4 = null;
+        RuntimeException decompiledCaughtException = null;
         var3 = AceOfSkies.field_G ? 1 : 0;
-        if (param1 <= -29) {
-          var4_ref = (oc) ci.field_j.d(268435455);
-          L0: while (true) {
-            if (var4_ref == null) {
-              var2 = wu.field_w.d(268435455);
-              L1: while (true) {
-                if (var2 != null) {
-                  lb.a(param0, 0);
-                  var2 = wu.field_w.b((byte) 103);
-                  continue L1;
-                } else {
-                  return;
-                }
+        try {
+          L0: {
+            L1: {
+              if (param1 <= -29) {
+                break L1;
+              } else {
+                so.a(-27, (byte) -64);
+                break L1;
               }
-            } else {
-              ac.a(param0, 0, var4_ref);
-              var4_ref = (oc) ci.field_j.b((byte) 103);
-              continue L0;
+            }
+            var4 = (oc) (Object) ci.field_j.d(268435455);
+            L2: while (true) {
+              if (var4 == null) {
+                var2 = wu.field_w.d(268435455);
+                L3: while (true) {
+                  if (var2 == null) {
+                    break L0;
+                  } else {
+                    lb.a(param0, 0);
+                    var2 = wu.field_w.b((byte) 103);
+                    continue L3;
+                  }
+                }
+              } else {
+                ac.a(param0, 0, var4);
+                var4 = (oc) (Object) ci.field_j.b((byte) 103);
+                continue L2;
+              }
             }
           }
-        } else {
-          so.a(-27, (byte) -64);
-          var4_ref = (oc) ci.field_j.d(268435455);
-          L2: while (true) {
-            if (var4_ref == null) {
-              var2 = wu.field_w.d(268435455);
-              L3: while (true) {
-                if (var2 != null) {
-                  lb.a(param0, 0);
-                  var2 = wu.field_w.b((byte) 103);
-                  continue L3;
-                } else {
-                  return;
-                }
-              }
-            } else {
-              ac.a(param0, 0, var4_ref);
-              var4_ref = (oc) ci.field_j.b((byte) 103);
-              continue L2;
-            }
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          throw pn.a((Throwable) (Object) var2_ref, "so.A(" + param0 + 44 + param1 + 41);
         }
     }
 

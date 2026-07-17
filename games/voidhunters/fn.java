@@ -123,15 +123,17 @@ final class fn extends da {
                               var19_int++;
                               continue L3;
                             } else {
+                              int incrementValue$7 = var18_int;
                               var18_int++;
-                              var21 = var12_ref_byte__[var18_int];
-                              if (var12_ref_byte__[var18_int] == 0) {
+                              var21 = var12_ref_byte__[incrementValue$7];
+                              if (var12_ref_byte__[incrementValue$7] == 0) {
                                 var17_int++;
                                 var20_int++;
                                 continue L4;
                               } else {
+                                int incrementValue$8 = var17_int;
                                 var17_int++;
-                                var7_ref_int__[var17_int] = -16777216 | var10[var21 & 255];
+                                var7_ref_int__[incrementValue$8] = -16777216 | var10[var21 & 255];
                                 var20_int++;
                                 continue L4;
                               }
@@ -153,8 +155,9 @@ final class fn extends da {
                               var19_int++;
                               continue L5;
                             } else {
+                              int incrementValue$9 = var17_int;
                               var17_int++;
-                              var7_ref_int__[var17_int] = var39[var18_int] << 24 | var10[var40[var18_int] & 255];
+                              var7_ref_int__[incrementValue$9] = var39[var18_int] << 24 | var10[var40[var18_int] & 255];
                               var18_int++;
                               var20_int++;
                               continue L6;
@@ -200,9 +203,11 @@ final class fn extends da {
                               var17_int++;
                               continue L8;
                             } else {
+                              int incrementValue$10 = var14;
                               var14++;
+                              int incrementValue$11 = var15_int;
                               var15_int++;
-                              var7_ref_byte__[var14] = var16_ref_byte__[var15_int];
+                              var7_ref_byte__[incrementValue$10] = var16_ref_byte__[incrementValue$11];
                               var18_int++;
                               continue L9;
                             }
@@ -225,15 +230,17 @@ final class fn extends da {
                               continue L10;
                             } else {
                               L12: {
+                                int incrementValue$12 = var14;
                                 var14++;
+                                int incrementValue$13 = var15_int;
                                 var15_int++;
                                 stackOut_16_0 = (byte[]) var7_ref_byte__;
-                                stackOut_16_1 = var14;
+                                stackOut_16_1 = incrementValue$12;
                                 stackIn_18_0 = stackOut_16_0;
                                 stackIn_18_1 = stackOut_16_1;
                                 stackIn_17_0 = stackOut_16_0;
                                 stackIn_17_1 = stackOut_16_1;
-                                if (var16_ref_byte__[var15_int] != 0) {
+                                if (var16_ref_byte__[incrementValue$13] != 0) {
                                   stackOut_18_0 = (byte[]) (Object) stackIn_18_0;
                                   stackOut_18_1 = stackIn_18_1;
                                   stackOut_18_2 = -1;
@@ -273,6 +280,7 @@ final class fn extends da {
             var9 = 0;
             L13: while (true) {
               if (var9 >= 256) {
+                return;
               } else {
                 var29 = param2[var9];
                 var11 = var29.field_e;

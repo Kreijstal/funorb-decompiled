@@ -322,7 +322,7 @@ class rm extends pa {
                                         if ((((rm) this).field_x[var44] & 65535) != ((rm) this).field_q[var45]) {
                                           break L17;
                                         } else {
-                                          ((rm) this).field_D[var45] = (byte)-1;
+                                          ((rm) this).field_D[var45] = (byte) -1;
                                           var45++;
                                           continue L16;
                                         }
@@ -482,13 +482,13 @@ class rm extends pa {
                       }
                     }
                     if ((var39 & 2) != 2) {
-                      ((rm) this).field_D[var38] = (byte)-1;
-                      ((rm) this).field_A[var38] = (short)-1;
+                      ((rm) this).field_D[var38] = (byte) -1;
+                      ((rm) this).field_A[var38] = (short) -1;
                       break L25;
                     } else {
                       ((rm) this).field_D[var38] = (byte)(var39 >> 2);
                       ((rm) this).field_A[var38] = ((rm) this).field_m[var38];
-                      ((rm) this).field_m[var38] = (short)127;
+                      ((rm) this).field_m[var38] = (short) 127;
                       if (((rm) this).field_A[var38] == -1) {
                         break L25;
                       } else {
@@ -1380,7 +1380,7 @@ class rm extends pa {
                 }
                 if (((rm) this).field_D != null) {
                   if (((rm) this).field_A[var53] == -1) {
-                    ((rm) this).field_D[var53] = (byte)-1;
+                    ((rm) this).field_D[var53] = (byte) -1;
                     var53++;
                     continue L22;
                   } else {
@@ -2069,7 +2069,7 @@ class rm extends pa {
                           break L22;
                         } else {
                           if (var18.field_A == null) {
-                            ((rm) this).field_A[((rm) this).field_g] = (short)-1;
+                            ((rm) this).field_A[((rm) this).field_g] = (short) -1;
                             break L22;
                           } else {
                             ((rm) this).field_A[((rm) this).field_g] = var15.field_A[var12];

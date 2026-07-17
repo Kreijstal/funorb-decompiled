@@ -18,8 +18,8 @@ final class ge {
     }
 
     public static void a() {
-        field_e = (float[][]) null;
-        field_h = (int[][]) null;
+        field_e = null;
+        field_h = null;
     }
 
     final int a(int param0, float param1) {

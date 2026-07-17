@@ -6,16 +6,13 @@ final class lm {
     static String field_a;
 
     public static void a(int param0) {
-        int var1 = -116 % ((param0 - 62) / 49);
+        int var1 = 0;
         field_b = null;
         field_a = null;
     }
 
     final static boolean a(boolean param0) {
-        if (!param0) {
-            return false;
-        }
-        return -251 > (nd.field_r ^ -1) ? true : false;
+        return nd.field_r > 250;
     }
 
     static {

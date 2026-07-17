@@ -31,18 +31,16 @@ final class nb implements Iterator {
     }
 
     final static void a(int param0, int param1, int param2, sb param3) {
-        Object var5 = null;
-        v.field_d = param1;
-        if (param2 != 7) {
-          var5 = null;
-          nb.a(-44, 85, 83, (sb) null);
-          nl.field_c = param3;
-          ao.field_d = param0;
-          return;
-        } else {
-          nl.field_c = param3;
-          ao.field_d = param0;
-          return;
+        try {
+            v.field_d = param1;
+            if (param2 != 7) {
+                Object var5 = null;
+                nb.a(-44, 85, 83, (sb) null);
+            }
+            nl.field_c = param3;
+            ao.field_d = param0;
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "nb.A(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -59,119 +57,29 @@ final class nb implements Iterator {
     }
 
     final static void a(int param0, tf[] param1, byte param2) {
+        RuntimeException var3 = null;
         String var4 = null;
         int var5 = 0;
         tf[] var6 = null;
         tf[] var7 = null;
-        String var8 = null;
-        tf[] var9 = null;
-        tf[] var10 = null;
-        String var11 = null;
-        tf[] var12 = null;
-        tf[] var13 = null;
-        String var14 = null;
-        tf[] var15 = null;
-        tf[] var16 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        String stackIn_24_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        String stackOut_23_2 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        String stackOut_22_2 = null;
         var5 = Pixelate.field_H ? 1 : 0;
-        if (param2 != -53) {
-          field_b = null;
-          if (null == kb.field_L) {
-            kb.field_L = rk.field_e;
-            var15 = new tf[]{param1[0], param1[1]};
-            var6 = var15;
-            var16 = var6;
-            var14 = wc.field_m[param0];
-            if (-1 != (param0 ^ -1)) {
-              if (1 != param0) {
-                if (-3 != (param0 ^ -1)) {
-                  if (-4 == (param0 ^ -1)) {
-                    rj.field_C[param0] = (jj) (Object) new lk(var14, var16);
-                    return;
-                  } else {
-                    if ((param0 ^ -1) != -5) {
-                      if (param0 == 5) {
-                        rj.field_C[param0] = (jj) (Object) new da(var14, var16);
-                        return;
-                      } else {
-                        if ((param0 ^ -1) != -7) {
-                          if (param0 != 7) {
-                            return;
-                          } else {
-                            rj.field_C[param0] = (jj) (Object) new wc(var14, var16);
-                            return;
-                          }
-                        } else {
-                          rj.field_C[param0] = (jj) (Object) new bm(var14, var16);
-                          return;
-                        }
-                      }
-                    } else {
-                      rj.field_C[param0] = (jj) (Object) new se(var14, var16);
-                      return;
-                    }
-                  }
-                } else {
-                  rj.field_C[param0] = (jj) (Object) new ci(var14, var16);
-                  return;
-                }
-              } else {
-                rj.field_C[param0] = (jj) (Object) new qi(var14, var16);
-                return;
-              }
-            } else {
-              rj.field_C[param0] = (jj) (Object) new ql(var14, var15);
-              return;
-            }
-          } else {
-            var12 = new tf[]{param1[0], param1[1]};
-            var6 = var12;
-            var13 = var6;
-            var7 = var13;
-            var11 = wc.field_m[param0];
-            var4 = var11;
-            if (-1 != (param0 ^ -1)) {
-              if (1 != param0) {
-                if (-3 != (param0 ^ -1)) {
-                  if (-4 == (param0 ^ -1)) {
-                    rj.field_C[param0] = (jj) (Object) new lk(var11, var13);
-                    return;
-                  } else {
-                    if ((param0 ^ -1) != -5) {
-                      if (param0 == 5) {
-                        rj.field_C[param0] = (jj) (Object) new da(var11, var13);
-                        return;
-                      } else {
-                        if ((param0 ^ -1) != -7) {
-                          if (param0 != 7) {
-                            return;
-                          } else {
-                            rj.field_C[param0] = (jj) (Object) new wc(var11, var13);
-                            return;
-                          }
-                        } else {
-                          rj.field_C[param0] = (jj) (Object) new bm(var11, var13);
-                          return;
-                        }
-                      }
-                    } else {
-                      rj.field_C[param0] = (jj) (Object) new se(var11, var13);
-                      return;
-                    }
-                  }
-                } else {
-                  rj.field_C[param0] = (jj) (Object) new ci(var11, var13);
-                  return;
-                }
-              } else {
-                rj.field_C[param0] = (jj) (Object) new qi(var11, var13);
-                return;
-              }
-            } else {
-              rj.field_C[param0] = (jj) (Object) new ql(var11, var12);
-              return;
-            }
-          }
-        } else {
+        try {
           L0: {
             if (null != kb.field_L) {
               break L0;
@@ -180,61 +88,91 @@ final class nb implements Iterator {
               break L0;
             }
           }
-          var9 = new tf[]{param1[0], param1[1]};
-          var6 = var9;
-          var10 = var6;
-          var7 = var10;
-          var8 = wc.field_m[param0];
-          var4 = var8;
-          if (-1 != (param0 ^ -1)) {
+          var6 = new tf[]{param1[0], param1[1]};
+          var7 = var6;
+          var4 = wc.field_m[param0];
+          if (param0 != 0) {
             if (1 != param0) {
-              if (-3 != (param0 ^ -1)) {
-                if (-4 == (param0 ^ -1)) {
-                  rj.field_C[param0] = (jj) (Object) new lk(var8, var10);
+              if (param0 != 2) {
+                if (param0 == 3) {
+                  rj.field_C[param0] = (jj) (Object) new lk(var4, var7);
                   return;
                 } else {
-                  if ((param0 ^ -1) != -5) {
+                  if (param0 != 4) {
                     if (param0 == 5) {
-                      rj.field_C[param0] = (jj) (Object) new da(var8, var10);
+                      rj.field_C[param0] = (jj) (Object) new da(var4, var7);
                       return;
                     } else {
-                      if ((param0 ^ -1) != -7) {
-                        if (param0 != 7) {
+                      if (param0 != 6) {
+                        if (param0 == 7) {
+                          rj.field_C[param0] = (jj) (Object) new wc(var4, var7);
                           return;
                         } else {
-                          rj.field_C[param0] = (jj) (Object) new wc(var8, var10);
                           return;
                         }
                       } else {
-                        rj.field_C[param0] = (jj) (Object) new bm(var8, var10);
+                        rj.field_C[param0] = (jj) (Object) new bm(var4, var7);
                         return;
                       }
                     }
                   } else {
-                    rj.field_C[param0] = (jj) (Object) new se(var8, var10);
+                    rj.field_C[param0] = (jj) (Object) new se(var4, var7);
                     return;
                   }
                 }
               } else {
-                rj.field_C[param0] = (jj) (Object) new ci(var8, var10);
+                rj.field_C[param0] = (jj) (Object) new ci(var4, var7);
                 return;
               }
             } else {
-              rj.field_C[param0] = (jj) (Object) new qi(var8, var10);
+              rj.field_C[param0] = (jj) (Object) new qi(var4, var7);
               return;
             }
           } else {
-            rj.field_C[param0] = (jj) (Object) new ql(var8, var9);
+            rj.field_C[param0] = (jj) (Object) new ql(var4, var6);
             return;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var3 = decompiledCaughtException;
+            stackOut_21_0 = (RuntimeException) var3;
+            stackOut_21_1 = new StringBuilder().append("nb.B(").append(param0).append(44);
+            stackIn_23_0 = stackOut_21_0;
+            stackIn_23_1 = stackOut_21_1;
+            stackIn_22_0 = stackOut_21_0;
+            stackIn_22_1 = stackOut_21_1;
+            if (param1 == null) {
+              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_2 = "null";
+              stackIn_24_0 = stackOut_23_0;
+              stackIn_24_1 = stackOut_23_1;
+              stackIn_24_2 = stackOut_23_2;
+              break L1;
+            } else {
+              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_2 = "{...}";
+              stackIn_24_0 = stackOut_22_0;
+              stackIn_24_1 = stackOut_22_1;
+              stackIn_24_2 = stackOut_22_2;
+              break L1;
+            }
+          }
+          throw aa.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 44 + -53 + 41);
         }
     }
 
     nb(pg param0) {
         ((nb) this).field_e = null;
-        ((nb) this).field_d = param0;
-        ((nb) this).field_f = ((nb) this).field_d.field_a.field_p;
-        ((nb) this).field_e = null;
+        try {
+            ((nb) this).field_d = param0;
+            ((nb) this).field_f = ((nb) this).field_d.field_a.field_p;
+            ((nb) this).field_e = null;
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "nb.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

@@ -47,7 +47,7 @@ abstract class kl implements wia {
     }
 
     private final void a(boolean param0) {
-        ((kl) this).field_h.a(param0, (kl) this);
+        ((kl) this).field_h.a(true, (kl) this);
         if (!((kl) this).field_g) {
             jaggl.OpenGL.glTexParameteri(((kl) this).field_e, 10241, ((kl) this).field_d ? 9984 : 9728);
             jaggl.OpenGL.glTexParameteri(((kl) this).field_e, 10240, 9728);
@@ -172,42 +172,8 @@ abstract class kl implements wia {
     }
 
     private final int d(int param0) {
-        int var2 = 0;
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        var2 = ((kl) this).field_h.a(((kl) this).field_c, (byte) -65) * ((kl) this).field_f;
-        if (param0 != 9729) {
-          L0: {
-            kl.c(61);
-            if (!((kl) this).field_d) {
-              stackOut_7_0 = var2;
-              stackIn_8_0 = stackOut_7_0;
-              break L0;
-            } else {
-              stackOut_6_0 = var2 * 4 / 3;
-              stackIn_8_0 = stackOut_6_0;
-              break L0;
-            }
-          }
-          return stackIn_8_0;
-        } else {
-          L1: {
-            if (!((kl) this).field_d) {
-              stackOut_3_0 = var2;
-              stackIn_4_0 = stackOut_3_0;
-              break L1;
-            } else {
-              stackOut_2_0 = var2 * 4 / 3;
-              stackIn_4_0 = stackOut_2_0;
-              break L1;
-            }
-          }
-          return stackIn_4_0;
-        }
+        int var2 = ((kl) this).field_h.a(((kl) this).field_c, (byte) -65) * ((kl) this).field_f;
+        return ((kl) this).field_d ? var2 * 4 / 3 : var2;
     }
 
     final void b(boolean param0, int param1) {
@@ -278,14 +244,18 @@ abstract class kl implements wia {
 
     kl(cka param0, int param1, int param2, int param3, boolean param4) {
         ((kl) this).field_g = false;
-        ((kl) this).field_h = param0;
-        ((kl) this).field_d = param4 ? true : false;
-        ((kl) this).field_c = param2;
-        ((kl) this).field_e = param1;
-        ((kl) this).field_f = param3;
-        jaggl.OpenGL.glGenTextures(1, pu.field_a, 0);
-        ((kl) this).field_i = pu.field_a[0];
-        this.a((byte) 109, 0);
+        try {
+            ((kl) this).field_h = param0;
+            ((kl) this).field_d = param4 ? true : false;
+            ((kl) this).field_c = param2;
+            ((kl) this).field_e = param1;
+            ((kl) this).field_f = param3;
+            jaggl.OpenGL.glGenTextures(1, pu.field_a, 0);
+            ((kl) this).field_i = pu.field_a[0];
+            this.a((byte) 109, 0);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "kl.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+        }
     }
 
     final void b(int param0) {

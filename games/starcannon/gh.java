@@ -8,56 +8,73 @@ final class gh extends dk {
 
     private gh(String param0, de param1, qg param2) {
         super(param0, param1, param2);
-        ((gh) this).field_o = eh.field_j.field_p;
+        try {
+            ((gh) this).field_o = eh.field_j.field_p;
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "gh.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static void a(byte param0, int param1) {
         rf var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
         hb var4 = null;
+        RuntimeException decompiledCaughtException = null;
         var3 = StarCannon.field_A;
-        var4 = (hb) (Object) hi.field_f.c(-3905);
-        L0: while (true) {
-          if (var4 == null) {
-            var2 = sd.field_d.c(-3905);
-            if (param0 >= -27) {
-              field_A = null;
-              L1: while (true) {
-                if (var2 != null) {
-                  u.a(param1, 1);
-                  var2 = sd.field_d.a(-16913);
-                  continue L1;
-                } else {
-                  return;
+        try {
+          L0: {
+            var4 = (hb) (Object) hi.field_f.c(-3905);
+            L1: while (true) {
+              if (var4 == null) {
+                L2: {
+                  var2 = sd.field_d.c(-3905);
+                  if (param0 < -27) {
+                    break L2;
+                  } else {
+                    field_A = null;
+                    break L2;
+                  }
                 }
-              }
-            } else {
-              L2: while (true) {
-                if (var2 != null) {
-                  u.a(param1, 1);
-                  var2 = sd.field_d.a(-16913);
-                  continue L2;
-                } else {
-                  return;
+                L3: while (true) {
+                  if (var2 == null) {
+                    break L0;
+                  } else {
+                    u.a(4, 1);
+                    var2 = sd.field_d.a(-16913);
+                    continue L3;
+                  }
                 }
+              } else {
+                hb.a(107, 4, var4);
+                var4 = (hb) (Object) hi.field_f.a(-16913);
+                continue L1;
               }
             }
-          } else {
-            hb.a(107, param1, var4);
-            var4 = (hb) (Object) hi.field_f.a(-16913);
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          throw sd.a((Throwable) (Object) var2_ref, "gh.A(" + param0 + 44 + 4 + 41);
         }
     }
 
     gh(String param0, qg param1, boolean param2) {
         this(param0, param1);
-        ((gh) this).field_z = param2 ? true : false;
+        try {
+            ((gh) this).field_z = param2 ? true : false;
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "gh.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     private gh(String param0, qg param1) {
         this(param0, eh.field_j.field_d, param1);
-        ((gh) this).field_o = eh.field_j.field_p;
+        try {
+            ((gh) this).field_o = eh.field_j.field_p;
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "gh.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void e(int param0) {

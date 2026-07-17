@@ -46,7 +46,7 @@ final class se extends ct {
                     stackIn_10_0 = stackOut_9_0;
                     return stackIn_10_0;
                   } else {
-                    var3 = (ub) (Object) var2.a(param0 ^ 0);
+                    var3 = (ub) (Object) var2.a(param0);
                     if (var4 == 0) {
                       continue L2;
                     } else {
@@ -312,7 +312,7 @@ final class se extends ct {
                   L4: {
                     du.field_f.field_E = uf.field_a;
                     kk.field_R.field_lb = false;
-                    if (-2 != (ts.field_d ^ -1)) {
+                    if (ts.field_d != 1) {
                       break L4;
                     } else {
                       ei.field_d.field_Cb.field_zb.field_E = aw.field_I;
@@ -435,7 +435,7 @@ final class se extends ct {
                             stackOut_33_0 = var7.field_Bb;
                             stackIn_36_0 = stackOut_33_0;
                             stackIn_34_0 = stackOut_33_0;
-                            if ((var14 ^ -1) < -1) {
+                            if (var14 > 0) {
                               stackOut_36_0 = (hd) (Object) stackIn_36_0;
                               stackOut_36_1 = hu.a(var7.field_Bb.field_X, var7.field_Gb, var14);
                               stackIn_37_0 = stackOut_36_0;
@@ -519,7 +519,7 @@ final class se extends ct {
                               }
                             }
                             L21: {
-                              if ((var7.field_sb ^ -1) == -1) {
+                              if (var7.field_sb == 0) {
                                 break L21;
                               } else {
                                 L22: {
@@ -585,7 +585,7 @@ final class se extends ct {
                     break L6;
                   }
                   L24: {
-                    if ((((hd) (Object) stackIn_86_0).field_sb ^ -1) != -1) {
+                    if (((hd) (Object) stackIn_86_0).field_sb != 0) {
                       k.field_m = new sl(ei.field_d.field_Eb.field_F, ei.field_d.field_Eb.field_T, ei.field_d.field_Eb.field_q, ei.field_d.field_Eb.field_mb, sf.field_G, pn.field_u, dw.field_e, dw.field_e);
                       fs.field_b = 0;
                       break L24;
@@ -594,7 +594,7 @@ final class se extends ct {
                     }
                   }
                   L25: {
-                    if ((ei.field_d.field_zb.field_sb ^ -1) != -1) {
+                    if (ei.field_d.field_zb.field_sb != 0) {
                       k.field_m = new sl(ei.field_d.field_zb.field_F, ei.field_d.field_zb.field_T, ei.field_d.field_zb.field_q, ei.field_d.field_zb.field_mb, kf.field_yb, pn.field_u, dw.field_e, dw.field_e);
                       fs.field_b = 1;
                       break L25;

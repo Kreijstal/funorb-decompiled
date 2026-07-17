@@ -42,12 +42,12 @@ final class ph extends fa {
                     if (1 != rb.field_q) {
                       break L2;
                     } else {
-                      if ((se.field_o.field_b ^ -1) == -3) {
+                      if (se.field_o.field_b == 2) {
                         stackOut_13_0 = ce.a((byte) -124, -1);
                         stackIn_14_0 = stackOut_13_0;
                         return stackIn_14_0;
                       } else {
-                        if ((se.field_o.field_b ^ -1) == -2) {
+                        if (se.field_o.field_b == 1) {
                           rb.field_q = rb.field_q + 1;
                           break L2;
                         } else {
@@ -74,7 +74,7 @@ final class ph extends fa {
                   L4: {
                     if (rb.field_q == 3) {
                       if (sc.field_d.a(-120) <= 0) {
-                        if ((co.field_a ^ -1L) <= (hm.a(64) ^ -1L)) {
+                        if (~co.field_a <= ~hm.a(64)) {
                           break L4;
                         } else {
                           stackOut_29_0 = ce.a((byte) -124, -2);
@@ -97,7 +97,7 @@ final class ph extends fa {
                     }
                   }
                   if (param0 == 25960) {
-                    if ((rb.field_q ^ -1) == -5) {
+                    if (rb.field_q == 4) {
                       pm.field_h.a((Object) (Object) sc.field_d, kn.field_L, 8);
                       sc.field_d = null;
                       se.field_o = null;
@@ -148,37 +148,80 @@ final class ph extends fa {
     }
 
     final static void a(fm param0, byte param1) {
+        RuntimeException var2 = null;
         ak var3 = null;
         ak var5 = null;
         ak var6 = null;
-        dk.field_e = bi.a("basic", "display_name_changed", param0, (byte) -25);
-        ma.field_z = new pd(0L, rm.field_a, tp.field_u, op.field_q);
-        v.field_e = new pd(0L, rm.field_a, qh.field_e, k.field_n);
-        wa.field_f = new ak(0L, (ak) null);
-        ak.field_E = new ak(0L, mg.field_h);
-        ak.field_E.field_Bb = 1;
-        kc.field_u = new ak(0L, u.field_l, qn.field_m);
-        ae.field_e = new ak(0L, ni.field_s, gp.field_Jb);
-        sk.field_e = new ak(0L, dn.field_c);
-        wa.field_f.a(ak.field_E, (byte) 26);
-        wa.field_f.a(kc.field_u, (byte) 26);
-        wa.field_f.a(ae.field_e, (byte) 26);
-        wa.field_f.a((ak) (Object) ma.field_z, (byte) 26);
-        wa.field_f.a(sk.field_e, (byte) 26);
-        ma.field_z.field_Gb.field_Ib.a(param1 ^ 27853, mg.field_h);
-        ma.field_z.field_Gb.field_Ib.field_kb = 1;
-        var5 = ma.field_z.field_Gb.field_Ib;
-        var6 = var5;
-        var6.field_Bb = 1;
-        v.field_e.field_Gb.field_Ib.a(param1 ^ 27853, mg.field_h);
-        v.field_e.field_Gb.field_Ib.field_kb = 1;
-        var3 = v.field_e.field_Gb.field_Ib;
-        var3.field_Bb = 1;
-        if (param1 != -106) {
-          ph.a(-30);
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
+        try {
+          dk.field_e = bi.a("basic", "display_name_changed", param0, (byte) -25);
+          ma.field_z = new pd(0L, rm.field_a, tp.field_u, op.field_q);
+          v.field_e = new pd(0L, rm.field_a, qh.field_e, k.field_n);
+          wa.field_f = new ak(0L, (ak) null);
+          ak.field_E = new ak(0L, mg.field_h);
+          ak.field_E.field_Bb = 1;
+          kc.field_u = new ak(0L, u.field_l, qn.field_m);
+          ae.field_e = new ak(0L, ni.field_s, gp.field_Jb);
+          sk.field_e = new ak(0L, dn.field_c);
+          wa.field_f.a(ak.field_E, (byte) 26);
+          wa.field_f.a(kc.field_u, (byte) 26);
+          wa.field_f.a(ae.field_e, (byte) 26);
+          wa.field_f.a((ak) (Object) ma.field_z, (byte) 26);
+          wa.field_f.a(sk.field_e, (byte) 26);
+          ma.field_z.field_Gb.field_Ib.a(-27813, mg.field_h);
+          ma.field_z.field_Gb.field_Ib.field_kb = 1;
+          var5 = ma.field_z.field_Gb.field_Ib;
+          var6 = var5;
+          var6.field_Bb = 1;
+          v.field_e.field_Gb.field_Ib.a(-27813, mg.field_h);
+          v.field_e.field_Gb.field_Ib.field_kb = 1;
+          var3 = v.field_e.field_Gb.field_Ib;
+          var3.field_Bb = 1;
           return;
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L0: {
+            var2 = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var2;
+            stackOut_2_1 = new StringBuilder().append("ph.B(");
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
+            if (param0 == null) {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L0;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L0;
+            }
+          }
+          throw aa.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + -106 + 41);
         }
     }
 

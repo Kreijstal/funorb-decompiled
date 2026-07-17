@@ -27,12 +27,7 @@ final class uj {
         L0: while (true) {
           if (ih.field_b <= var2) {
             wd.d(-9);
-            if (param0 != 31151) {
-              field_e = null;
-              return var1;
-            } else {
-              return var1;
-            }
+            return var1;
           } else {
             var3 = ql.field_b[var2] * wk.field_b[var2];
             var4 = re.field_K[var2];
@@ -55,18 +50,9 @@ final class uj {
 
     public static void b(int param0) {
         field_h = null;
-        if (param0 != -1) {
-          field_e = null;
-          field_c = null;
-          field_e = null;
-          field_d = null;
-          return;
-        } else {
-          field_c = null;
-          field_e = null;
-          field_d = null;
-          return;
-        }
+        field_c = null;
+        field_e = null;
+        field_d = null;
     }
 
     uj(boolean param0) {

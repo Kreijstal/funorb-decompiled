@@ -18,15 +18,12 @@ final class ql extends lh {
     public static void a(byte param0) {
         field_l = null;
         field_j = null;
-        if (param0 != -92) {
-            return;
-        }
         field_k = null;
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
         gb.a(si.field_R);
-        int var4 = param3;
+        int var4 = 95;
         int var5 = param2;
         int var6 = 26 % ((-63 - param1) / 50);
         gb.a(var4, var5, 16 + var4, 16 + var5);

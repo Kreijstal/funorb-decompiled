@@ -9,67 +9,97 @@ final class olb extends le {
     private int field_j;
 
     final void a(int param0, int param1, ds param2) {
-        int var4 = 0;
+        RuntimeException var4 = null;
+        int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        String stackIn_20_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
         var6 = VoidHunters.field_G;
-        var5 = param0;
-        if (0 != var5) {
-          if (var5 == -2) {
-            ((olb) this).field_j = param2.e(1869);
+        try {
+          L0: {
+            L1: {
+              var5 = param0;
+              if (0 != var5) {
+                if (var5 == 1) {
+                  ((olb) this).field_j = param2.e(1869);
+                  break L1;
+                } else {
+                  if (var5 != 2) {
+                    if (var5 == 3) {
+                      ((olb) this).field_m = param2.e(1869);
+                      break L1;
+                    } else {
+                      if (var5 != 4) {
+                        break L1;
+                      } else {
+                        var4_int = param2.c((byte) -57);
+                        ((olb) this).field_i[1] = dla.a(var4_int >> 4, 4080);
+                        ((olb) this).field_i[2] = dla.a(255, var4_int) >> 12;
+                        ((olb) this).field_i[0] = dla.a(var4_int, 16711680) << 4;
+                        break L1;
+                      }
+                    }
+                  } else {
+                    ((olb) this).field_l = param2.e(1869);
+                    break L1;
+                  }
+                }
+              } else {
+                ((olb) this).field_k = param2.e(1869);
+                break L1;
+              }
+            }
             if (param1 < -60) {
-              return;
+              break L0;
             } else {
               ((olb) this).field_i = null;
               return;
             }
-          } else {
-            if (-3 != var5) {
-              if (var5 == -4) {
-                ((olb) this).field_m = param2.e(1869);
-                if (param1 >= -60) {
-                  ((olb) this).field_i = null;
-                  return;
-                } else {
-                  return;
-                }
-              } else {
-                L0: {
-                  if (-5 != var5) {
-                    break L0;
-                  } else {
-                    var4 = param2.c((byte) -57);
-                    ((olb) this).field_i[1] = dla.a(var4 >> 1538608676, 4080);
-                    ((olb) this).field_i[2] = dla.a(255, var4) >> 1551975820;
-                    ((olb) this).field_i[0] = dla.a(var4, 16711680) << 2154340;
-                    break L0;
-                  }
-                }
-                if (param1 >= -60) {
-                  ((olb) this).field_i = null;
-                  return;
-                } else {
-                  return;
-                }
-              }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var4 = decompiledCaughtException;
+            stackOut_17_0 = (RuntimeException) var4;
+            stackOut_17_1 = new StringBuilder().append("olb.F(").append(param0).append(44).append(param1).append(44);
+            stackIn_19_0 = stackOut_17_0;
+            stackIn_19_1 = stackOut_17_1;
+            stackIn_18_0 = stackOut_17_0;
+            stackIn_18_1 = stackOut_17_1;
+            if (param2 == null) {
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "null";
+              stackIn_20_0 = stackOut_19_0;
+              stackIn_20_1 = stackOut_19_1;
+              stackIn_20_2 = stackOut_19_2;
+              break L2;
             } else {
-              ((olb) this).field_l = param2.e(1869);
-              if (param1 >= -60) {
-                ((olb) this).field_i = null;
-                return;
-              } else {
-                return;
-              }
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "{...}";
+              stackIn_20_0 = stackOut_18_0;
+              stackIn_20_1 = stackOut_18_1;
+              stackIn_20_2 = stackOut_18_2;
+              break L2;
             }
           }
-        } else {
-          ((olb) this).field_k = param2.e(1869);
-          if (param1 < -60) {
-            return;
-          } else {
-            ((olb) this).field_i = null;
-            return;
-          }
+          throw rta.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 41);
         }
     }
 
@@ -170,7 +200,7 @@ final class olb extends le {
                     L3: {
                       var15 = var47[var11];
                       var12 = var15 + -((olb) this).field_i[2];
-                      if ((var12 ^ -1) <= -1) {
+                      if (var12 >= 0) {
                         break L3;
                       } else {
                         var12 = -var12;
@@ -178,9 +208,9 @@ final class olb extends le {
                       }
                     }
                     if (var12 <= ((olb) this).field_k) {
-                      var8[var11] = ((olb) this).field_m * var13 >> 991426348;
-                      var9[var11] = ((olb) this).field_l * var14 >> -807764916;
-                      var10[var11] = var15 * ((olb) this).field_j >> 2072267884;
+                      var8[var11] = ((olb) this).field_m * var13 >> 12;
+                      var9[var11] = ((olb) this).field_l * var14 >> 12;
+                      var10[var11] = var15 * ((olb) this).field_j >> 12;
                       var11++;
                       continue L0;
                     } else {
@@ -221,6 +251,7 @@ final class olb extends le {
 
     final static void d(int param0) {
         int[] var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int[] var4 = null;
@@ -234,156 +265,98 @@ final class olb extends le {
         int[] var12 = null;
         int[] var13 = null;
         int[] var14 = null;
-        int[] var15 = null;
-        int[] var16 = null;
-        int[] var17 = null;
-        int[] var18 = null;
+        RuntimeException decompiledCaughtException = null;
         var3 = VoidHunters.field_G;
-        if (oab.field_o != wgb.field_f) {
+        try {
           L0: {
-            if (wqa.a(false, oab.field_o)) {
-              lo.field_a[oab.field_o].b((byte) 49);
-              break L0;
+            if (oab.field_o != wgb.field_f) {
+              L1: {
+                if (wqa.a(false, oab.field_o)) {
+                  lo.field_a[oab.field_o].b((byte) 49);
+                  break L1;
+                } else {
+                  break L1;
+                }
+              }
+              L2: {
+                lrb.field_f = bg.field_o;
+                oab.field_o = wgb.field_f;
+                if (param0 == 991426348) {
+                  break L2;
+                } else {
+                  olb.d(25);
+                  break L2;
+                }
+              }
+              L3: {
+                pob.field_b = 0;
+                if (aeb.field_a) {
+                  nkb.a(false, "Destroying game");
+                  vqa.field_g = null;
+                  aeb.field_a = false;
+                  ndb.field_a = null;
+                  break L3;
+                } else {
+                  break L3;
+                }
+              }
+              L4: {
+                if (fhb.field_p) {
+                  qa.field_o = new ij();
+                  var13 = bv.field_a;
+                  var11 = var13;
+                  var9 = var11;
+                  var7 = var9;
+                  var4 = var7;
+                  var1 = var4;
+                  var2 = 0;
+                  L5: while (true) {
+                    if (var2 >= 8) {
+                      var14 = ska.field_m;
+                      var12 = var14;
+                      var10 = var12;
+                      var8 = var10;
+                      var5 = var8;
+                      var1 = var5;
+                      var6 = 0;
+                      var2 = var6;
+                      L6: while (true) {
+                        if (8 <= var6) {
+                          fhb.field_p = false;
+                          break L4;
+                        } else {
+                          var14[var6] = 0;
+                          var6++;
+                          continue L6;
+                        }
+                      }
+                    } else {
+                      var13[var2] = 0;
+                      var2++;
+                      continue L5;
+                    }
+                  }
+                } else {
+                  break L4;
+                }
+              }
+              if (enb.field_b) {
+                vjb.a((byte) 95);
+                qo.a(15);
+                ija.a(114);
+                enb.field_b = false;
+                break L0;
+              } else {
+                return;
+              }
             } else {
-              break L0;
+              return;
             }
           }
-          lrb.field_f = bg.field_o;
-          oab.field_o = wgb.field_f;
-          if (param0 != 991426348) {
-            L1: {
-              olb.d(25);
-              pob.field_b = 0;
-              if (aeb.field_a) {
-                nkb.a(false, "Destroying game");
-                vqa.field_g = null;
-                aeb.field_a = false;
-                ndb.field_a = null;
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            L2: {
-              if (fhb.field_p) {
-                qa.field_o = new ij();
-                var15 = bv.field_a;
-                var11 = var15;
-                var9 = var11;
-                var7 = var9;
-                var4 = var7;
-                var1 = var4;
-                var2 = 0;
-                L3: while (true) {
-                  if (-9 >= (var2 ^ -1)) {
-                    var16 = ska.field_m;
-                    var12 = var16;
-                    var10 = var12;
-                    var8 = var10;
-                    var5 = var8;
-                    var1 = var5;
-                    var6 = 0;
-                    var2 = var6;
-                    L4: while (true) {
-                      if (8 <= var6) {
-                        fhb.field_p = false;
-                        break L2;
-                      } else {
-                        var16[var6] = 0;
-                        var6++;
-                        continue L4;
-                      }
-                    }
-                  } else {
-                    var15[var2] = 0;
-                    var2++;
-                    continue L3;
-                  }
-                }
-              } else {
-                break L2;
-              }
-            }
-            L5: {
-              if (enb.field_b) {
-                vjb.a((byte) 95);
-                qo.a(15);
-                ija.a(114);
-                enb.field_b = false;
-                break L5;
-              } else {
-                break L5;
-              }
-            }
-            return;
-          } else {
-            L6: {
-              pob.field_b = 0;
-              if (aeb.field_a) {
-                nkb.a(false, "Destroying game");
-                vqa.field_g = null;
-                aeb.field_a = false;
-                ndb.field_a = null;
-                break L6;
-              } else {
-                break L6;
-              }
-            }
-            L7: {
-              if (fhb.field_p) {
-                qa.field_o = new ij();
-                var17 = bv.field_a;
-                var13 = var17;
-                var9 = var13;
-                var7 = var9;
-                var4 = var7;
-                var1 = var4;
-                var2 = 0;
-                L8: while (true) {
-                  if (-9 >= (var2 ^ -1)) {
-                    var18 = ska.field_m;
-                    var14 = var18;
-                    var10 = var14;
-                    var8 = var10;
-                    var5 = var8;
-                    var1 = var5;
-                    var6 = 0;
-                    var2 = var6;
-                    L9: while (true) {
-                      if (8 <= var6) {
-                        fhb.field_p = false;
-                        break L7;
-                      } else {
-                        var18[var6] = 0;
-                        var6++;
-                        continue L9;
-                      }
-                    }
-                  } else {
-                    var17[var2] = 0;
-                    var2++;
-                    continue L8;
-                  }
-                }
-              } else {
-                break L7;
-              }
-            }
-            L10: {
-              if (enb.field_b) {
-                vjb.a((byte) 95);
-                qo.a(15);
-                ija.a(114);
-                enb.field_b = false;
-                break L10;
-              } else {
-                break L10;
-              }
-            }
-            return;
-          }
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw rta.a((Throwable) (Object) var1_ref, "olb.C(" + param0 + 41);
         }
     }
 

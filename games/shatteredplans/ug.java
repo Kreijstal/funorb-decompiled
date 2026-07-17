@@ -14,66 +14,36 @@ public class ug {
     public static void a(int param0, String param1, byte param2) {
         Exception exception = null;
         int var3 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    field_e = param0;
-                    var3 = 82 / ((-5 - param2) / 57);
-                    field_c = param1;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        field_b = System.getProperty("user.home");
-                        if (field_b == null) {
-                            statePc = 5;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 4;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        field_b = field_b + "/";
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 4;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    exception = (Exception) (Object) caughtException;
-                    statePc = 5;
-                    continue stateLoop;
-                }
-                case 5: {
-                    field_d = true;
-                    if (field_b == null) {
-                        statePc = 7;
-                    } else {
-                        statePc = 6;
-                    }
-                    continue stateLoop;
-                }
-                case 6: {
-                    return;
-                }
-                case 7: {
-                    field_b = "~/";
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        field_e = param0;
+        var3 = 82 / ((-5 - param2) / 57);
+        field_c = param1;
+        try {
+          L0: {
+            L1: {
+              field_b = System.getProperty("user.home");
+              if (field_b == null) {
+                break L1;
+              } else {
+                field_b = field_b + "/";
+                break L1;
+              }
             }
+            break L0;
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            exception = (Exception) (Object) decompiledCaughtException;
+            break L2;
+          }
+        }
+        field_d = true;
+        if (field_b == null) {
+          field_b = "~/";
+          return;
+        } else {
+          return;
         }
     }
 

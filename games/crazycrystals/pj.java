@@ -24,7 +24,8 @@ final class pj extends bo implements Cloneable {
     }
 
     final static void a(int param0, int param1, int param2, boolean param3, int param4, byte param5, int param6) {
-        int var7 = 0;
+        RuntimeException var7 = null;
+        int var7_int = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -33,108 +34,121 @@ final class pj extends bo implements Cloneable {
         int var13 = 0;
         int var14 = 0;
         int stackIn_23_0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int stackOut_22_0 = 0;
         int stackOut_21_0 = 0;
         var14 = CrazyCrystals.field_B;
-        if (param6 >= param1) {
-          return;
-        } else {
-          if (param2 > param6 - -1) {
-            L0: {
-              if (param2 <= 5 + param6) {
-                break L0;
-              } else {
-                if (param4 == param0) {
-                  break L0;
-                } else {
-                  var7 = (param4 >> 11203745) + ((param0 >> -792122655) - -(1 & (param4 & param0)));
-                  var8 = param6;
-                  var9 = param4;
-                  var10 = param0;
-                  var11 = param6;
-                  L1: while (true) {
-                    if (var11 >= param2) {
-                      pj.a(var9, param1, var8, param3, param4, param5, param6);
-                      pj.a(param0, param1, param2, param3, var10, (byte) 119, var8);
-                      return;
-                    } else {
-                      L2: {
-                        var12 = wp.field_d[var11];
-                        if (!param3) {
-                          stackOut_22_0 = jk.field_g[var12];
-                          stackIn_23_0 = stackOut_22_0;
-                          break L2;
-                        } else {
-                          stackOut_21_0 = mh.field_l[var12];
-                          stackIn_23_0 = stackOut_21_0;
-                          break L2;
-                        }
-                      }
-                      var13 = stackIn_23_0;
-                      if (var13 <= var7) {
-                        if (var13 > var10) {
-                          var10 = var13;
-                          var11++;
-                          continue L1;
-                        } else {
-                          var11++;
-                          continue L1;
-                        }
-                      } else {
-                        wp.field_d[var11] = wp.field_d[var8];
-                        int incrementValue$1 = var8;
-                        var8++;
-                        wp.field_d[incrementValue$1] = var12;
-                        if (var9 > var13) {
-                          var9 = var13;
-                          var11++;
-                          continue L1;
-                        } else {
-                          var11++;
-                          continue L1;
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-            var7 = -1 + param2;
-            L3: while (true) {
-              if (param6 >= var7) {
-                return;
-              } else {
-                var8 = param6;
-                L4: while (true) {
-                  if (var7 <= var8) {
-                    var7--;
-                    continue L3;
+        try {
+          L0: {
+            if (param6 >= param1) {
+              return;
+            } else {
+              if (param2 > param6 - -1) {
+                L1: {
+                  if (param2 <= 5 + param6) {
+                    break L1;
                   } else {
-                    var9 = wp.field_d[var8];
-                    var10 = wp.field_d[var8 - -1];
-                    if (da.a(var9, (byte) 52, param3, var10)) {
-                      wp.field_d[var8] = var10;
-                      wp.field_d[var8 - -1] = var9;
-                      var8++;
-                      continue L4;
+                    if (param4 == param0) {
+                      break L1;
                     } else {
-                      var8++;
-                      continue L4;
+                      var7_int = (param4 >> 1) + ((param0 >> 1) - -(1 & (param4 & param0)));
+                      var8 = param6;
+                      var9 = param4;
+                      var10 = param0;
+                      var11 = param6;
+                      L2: while (true) {
+                        if (var11 >= param2) {
+                          pj.a(var9, param1, var8, param3, param4, param5, param6);
+                          pj.a(param0, param1, param2, param3, var10, (byte) 119, var8);
+                          break L0;
+                        } else {
+                          L3: {
+                            var12 = wp.field_d[var11];
+                            if (!param3) {
+                              stackOut_22_0 = jk.field_g[var12];
+                              stackIn_23_0 = stackOut_22_0;
+                              break L3;
+                            } else {
+                              stackOut_21_0 = mh.field_l[var12];
+                              stackIn_23_0 = stackOut_21_0;
+                              break L3;
+                            }
+                          }
+                          var13 = stackIn_23_0;
+                          if (var13 <= var7_int) {
+                            L4: {
+                              if (var13 <= var10) {
+                                break L4;
+                              } else {
+                                break L4;
+                              }
+                            }
+                            var11++;
+                            continue L2;
+                          } else {
+                            L5: {
+                              wp.field_d[var11] = wp.field_d[var8];
+                              int incrementValue$1 = var8;
+                              var8++;
+                              wp.field_d[incrementValue$1] = var12;
+                              if (var9 <= var13) {
+                                break L5;
+                              } else {
+                                break L5;
+                              }
+                            }
+                            var11++;
+                            continue L2;
+                          }
+                        }
+                      }
                     }
                   }
                 }
+                var7_int = -1 + param2;
+                L6: while (true) {
+                  if (param6 >= var7_int) {
+                    return;
+                  } else {
+                    var8 = param6;
+                    L7: while (true) {
+                      if (var7_int <= var8) {
+                        var7_int--;
+                        continue L6;
+                      } else {
+                        L8: {
+                          var9 = wp.field_d[var8];
+                          var10 = wp.field_d[var8 - -1];
+                          if (!da.a(var9, (byte) 52, param3, var10)) {
+                            break L8;
+                          } else {
+                            wp.field_d[var8] = var10;
+                            wp.field_d[var8 - -1] = var9;
+                            break L8;
+                          }
+                        }
+                        var8++;
+                        continue L7;
+                      }
+                    }
+                  }
+                }
+              } else {
+                return;
               }
             }
-          } else {
-            return;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var7 = decompiledCaughtException;
+          throw dn.a((Throwable) (Object) var7, "pj.K(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
         }
     }
 
     final void b(int param0, int param1, int param2, boolean param3, int param4, int param5) {
         int var7 = 0;
         L0: {
-          if ((((pj) this).field_u ^ -1) <= -1) {
+          if (((pj) this).field_u >= 0) {
             L1: {
               L2: {
                 var7 = ((pj) this).field_t;
@@ -155,7 +169,7 @@ final class pj extends bo implements Cloneable {
               if (24 != param1) {
                 break L3;
               } else {
-                if ((param2 ^ -1) != -25) {
+                if (param2 != 24) {
                   break L3;
                 } else {
                   le.field_g[((pj) this).field_u][var7].a(param4, param5 + -param2);
@@ -194,8 +208,12 @@ final class pj extends bo implements Cloneable {
     pj(int param0, int param1, f param2) {
         super(param2);
         ((pj) this).field_t = -1;
-        ((pj) this).field_s = param1;
-        ((pj) this).field_u = param0;
+        try {
+            ((pj) this).field_s = param1;
+            ((pj) this).field_u = param0;
+        } catch (RuntimeException runtimeException) {
+            throw dn.a((Throwable) (Object) runtimeException, "pj.<init>(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void a(int param0, int param1) {
@@ -211,13 +229,13 @@ final class pj extends bo implements Cloneable {
         if (!param0) {
             return;
         }
-        if ((((pj) this).field_u ^ -1) <= -1) {
-            if (-5 < (((pj) this).field_u ^ -1)) {
+        if (((pj) this).field_u >= 0) {
+            if (((pj) this).field_u < 4) {
                 if (!(((pj) this).field_s != 0)) {
                     var3 = le.field_g[((pj) this).field_u].length + -10;
                     var4 = (int)(3.0 * ((double)var3 * Math.random()));
-                    if (-1 >= (var4 ^ -1)) {
-                        if (!((var4 ^ -1) <= (var3 ^ -1))) {
+                    if (var4 >= 0) {
+                        if (!(~var4 <= ~var3)) {
                             ((pj) this).field_t = 10 - -var4;
                         }
                     }

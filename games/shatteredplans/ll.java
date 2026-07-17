@@ -3,9 +3,6 @@
  */
 final class ll {
     final static void a(java.applet.Applet param0, String param1, byte param2) throws Throwable {
-        if (param2 != 123) {
-            return;
-        }
         Object discarded$0 = netscape.javascript.JSObject.getWindow(param0).eval(param1);
     }
 

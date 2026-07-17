@@ -91,10 +91,10 @@ final class kb {
                 L1: while (true) {
                   L2: {
                     L3: {
-                      if (-8 >= (var8 ^ -1)) {
+                      if (var8 >= 7) {
                         break L3;
                       } else {
-                        df.d(var8, var8 - -1, -(var8 << -363006367) + 14, 16777215);
+                        df.d(var8, var8 - -1, -(var8 << 1) + 14, 16777215);
                         var8++;
                         if (var9 != 0) {
                           break L2;
@@ -184,7 +184,7 @@ final class kb {
         try {
           L0: {
             L1: {
-              if (-2 != (param2 ^ -1)) {
+              if (param2 != 1) {
                 break L1;
               } else {
                 if (gf.a(-122, param1)) {
@@ -500,7 +500,7 @@ final class kb {
             L1: while (true) {
               L2: {
                 L3: {
-                  if (-6 >= (var18 ^ -1)) {
+                  if (var18 >= 5) {
                     break L3;
                   } else {
                     stackOut_3_0 = var18;
@@ -883,7 +883,7 @@ final class kb {
     public static void a(int param0) {
         try {
             field_a = null;
-            int var1_int = 77 / ((param0 - 0) / 35);
+            int var1_int = 77 / (param0 / 35);
             field_d = null;
             field_b = null;
         } catch (RuntimeException runtimeException) {

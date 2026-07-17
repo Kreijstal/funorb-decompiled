@@ -23,7 +23,11 @@ final class kg {
     kg(String param0) {
         ((kg) this).field_b = false;
         ((kg) this).field_d = false;
-        ((kg) this).field_f = param0;
+        try {
+            ((kg) this).field_f = param0;
+        } catch (RuntimeException runtimeException) {
+            throw kg.a((Throwable) (Object) runtimeException, "kg.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final boolean a(byte param0) {

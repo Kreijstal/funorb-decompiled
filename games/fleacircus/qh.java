@@ -25,18 +25,10 @@ final class qh extends dl {
     }
 
     final static String i(int param0) {
-        if (param0 > -104) {
-            return null;
-        }
         return fg.field_m;
     }
 
     public static void b(boolean param0) {
-        if (param0) {
-            field_D = 35;
-            field_C = null;
-            return;
-        }
         field_C = null;
     }
 
@@ -46,17 +38,17 @@ final class qh extends dl {
         bf.field_b = 0;
         td.field_i = hd.field_c;
         ul.field_G = new pl(2);
-        ul.field_G.a(em.a(kc.field_b, param1, ag.field_f), -1, param0, -81);
+        ul.field_G.a(em.a(kc.field_b, false, ag.field_f), -1, param0, -81);
     }
 
     final static int a(int param0, int param1) {
         int var2 = 0;
-        if (!((param1 ^ -1) != -1)) {
+        if (!(param1 != 0)) {
             return 0;
         }
-        if (-1 > (param1 ^ -1)) {
+        if (param1 > 0) {
             var2 = 1;
-            if (!((param1 ^ -1) >= -65536)) {
+            if (!(param1 <= 65535)) {
                 var2 += 16;
                 param1 = param1 >> 16;
             }
@@ -64,7 +56,7 @@ final class qh extends dl {
                 var2 += 8;
                 param1 = param1 >> 8;
             }
-            if (!((param1 ^ -1) >= -16)) {
+            if (!(param1 <= 15)) {
                 param1 = param1 >> 4;
                 var2 += 4;
             }
@@ -72,7 +64,7 @@ final class qh extends dl {
                 param1 = param1 >> 2;
                 var2 += 2;
             }
-            if (-2 > (param1 ^ -1)) {
+            if (param1 > 1) {
                 param1 = param1 >> 1;
                 var2++;
             }
@@ -83,15 +75,15 @@ final class qh extends dl {
             param1 = param1 >> 16;
             var2 += 16;
         }
-        if ((param1 ^ -1) > 255) {
+        if (param1 < -256) {
             var2 += 8;
             param1 = param1 >> 8;
         }
-        if (15 < (param1 ^ -1)) {
+        if (param1 < -16) {
             param1 = param1 >> 4;
             var2 += 4;
         }
-        if (!((param1 ^ -1) <= param0)) {
+        if (!(~param1 <= param0)) {
             param1 = param1 >> 2;
             var2 += 2;
         }
@@ -113,28 +105,13 @@ final class qh extends dl {
     }
 
     final static boolean j(int param0) {
-        if (param0 == 32391) {
-          if (null != sg.field_h) {
-            if (fh.field_b != rh.field_k) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+        if (null == sg.field_h) {
             return false;
-          }
-        } else {
-          int discarded$6 = qh.a(1, 113);
-          if (null != sg.field_h) {
-            if (fh.field_b != rh.field_k) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
         }
+        if (fh.field_b != rh.field_k) {
+            return false;
+        }
+        return true;
     }
 
     final static boolean c(byte param0) {

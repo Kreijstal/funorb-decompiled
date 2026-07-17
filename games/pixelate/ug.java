@@ -14,9 +14,6 @@ final class ug extends fa {
 
     final static void a(int param0, int param1, int param2) {
         qh.field_b = param0;
-        if (param2 != -26104) {
-            return;
-        }
         bq.field_d = param1;
     }
 
@@ -43,9 +40,13 @@ final class ug extends fa {
     }
 
     ug(long param0, int param1, byte[] param2) {
-        ((ug) this).field_o = param0;
-        ((ug) this).field_m = param1;
-        ((ug) this).field_r = param2;
+        try {
+            ((ug) this).field_o = param0;
+            ((ug) this).field_m = param1;
+            ((ug) this).field_r = param2;
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "ug.<init>(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void e(int param0) {

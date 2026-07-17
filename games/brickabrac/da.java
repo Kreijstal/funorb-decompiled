@@ -28,44 +28,140 @@ final class da extends hb {
     }
 
     final static void f(byte param0) {
-        if (pe.field_o.c(95)) {
-          dn.b(0, -108, 11);
-          if (param0 == 122) {
+        if (!pe.field_o.c(95)) {
+            vg.a(o.field_e.e((byte) 31), false, 11);
+            ed.field_d = true;
             return;
-          } else {
-            field_E = null;
-            return;
-          }
-        } else {
-          vg.a(o.field_e.e((byte) 31), false, 11);
-          ed.field_d = true;
-          if (param0 == 122) {
-            return;
-          } else {
-            field_E = null;
-            return;
-          }
         }
+        dn.b(0, -108, 11);
     }
 
     final static void a(String param0, int param1, java.applet.Applet param2) {
         try {
+            String var3 = null;
+            Throwable var3_ref = null;
+            RuntimeException var3_ref2 = null;
+            String var4 = null;
             String var5 = null;
-            sk.field_G = param0;
-            String var3 = param2.getParameter("cookieprefix");
-            String var4 = param2.getParameter("cookiehost");
-            if (param1 <= 44) {
-                return;
-            }
+            RuntimeException stackIn_12_0 = null;
+            StringBuilder stackIn_12_1 = null;
+            RuntimeException stackIn_13_0 = null;
+            StringBuilder stackIn_13_1 = null;
+            RuntimeException stackIn_14_0 = null;
+            StringBuilder stackIn_14_1 = null;
+            String stackIn_14_2 = null;
+            RuntimeException stackIn_15_0 = null;
+            StringBuilder stackIn_15_1 = null;
+            RuntimeException stackIn_16_0 = null;
+            StringBuilder stackIn_16_1 = null;
+            RuntimeException stackIn_17_0 = null;
+            StringBuilder stackIn_17_1 = null;
+            String stackIn_17_2 = null;
+            Throwable decompiledCaughtException = null;
+            RuntimeException stackOut_11_0 = null;
+            StringBuilder stackOut_11_1 = null;
+            RuntimeException stackOut_13_0 = null;
+            StringBuilder stackOut_13_1 = null;
+            String stackOut_13_2 = null;
+            RuntimeException stackOut_12_0 = null;
+            StringBuilder stackOut_12_1 = null;
+            String stackOut_12_2 = null;
+            RuntimeException stackOut_14_0 = null;
+            StringBuilder stackOut_14_1 = null;
+            RuntimeException stackOut_16_0 = null;
+            StringBuilder stackOut_16_1 = null;
+            String stackOut_16_2 = null;
+            RuntimeException stackOut_15_0 = null;
+            StringBuilder stackOut_15_1 = null;
+            String stackOut_15_2 = null;
             try {
-                var5 = var3 + "session=" + param0 + "; version=1; path=/; domain=" + var4;
-                if (!(param0.length() != 0)) {
-                    var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
+              L0: {
+                sk.field_G = param0;
+                try {
+                  L1: {
+                    var3 = param2.getParameter("cookieprefix");
+                    var4 = param2.getParameter("cookiehost");
+                    if (param1 > 44) {
+                      L2: {
+                        var5 = var3 + "session=" + param0 + "; version=1; path=/; domain=" + var4;
+                        if (param0.length() == 0) {
+                          var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
+                          break L2;
+                        } else {
+                          break L2;
+                        }
+                      }
+                      ne.a(param2, "document.cookie=\"" + var5 + "\"", 5797);
+                      break L1;
+                    } else {
+                      return;
+                    }
+                  }
+                } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  L3: {
+                    var3_ref = decompiledCaughtException;
+                    break L3;
+                  }
                 }
-                ne.a(param2, "document.cookie=\"" + var5 + "\"", 5797);
-            } catch (Throwable throwable) {
+                td.a(false, param2);
+                break L0;
+              }
+            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L4: {
+                var3_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_11_0 = (RuntimeException) var3_ref2;
+                stackOut_11_1 = new StringBuilder().append("da.A(");
+                stackIn_13_0 = stackOut_11_0;
+                stackIn_13_1 = stackOut_11_1;
+                stackIn_12_0 = stackOut_11_0;
+                stackIn_12_1 = stackOut_11_1;
+                if (param0 == null) {
+                  stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+                  stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+                  stackOut_13_2 = "null";
+                  stackIn_14_0 = stackOut_13_0;
+                  stackIn_14_1 = stackOut_13_1;
+                  stackIn_14_2 = stackOut_13_2;
+                  break L4;
+                } else {
+                  stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+                  stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+                  stackOut_12_2 = "{...}";
+                  stackIn_14_0 = stackOut_12_0;
+                  stackIn_14_1 = stackOut_12_1;
+                  stackIn_14_2 = stackOut_12_2;
+                  break L4;
+                }
+              }
+              L5: {
+                stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+                stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(44).append(param1).append(44);
+                stackIn_16_0 = stackOut_14_0;
+                stackIn_16_1 = stackOut_14_1;
+                stackIn_15_0 = stackOut_14_0;
+                stackIn_15_1 = stackOut_14_1;
+                if (param2 == null) {
+                  stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+                  stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+                  stackOut_16_2 = "null";
+                  stackIn_17_0 = stackOut_16_0;
+                  stackIn_17_1 = stackOut_16_1;
+                  stackIn_17_2 = stackOut_16_2;
+                  break L5;
+                } else {
+                  stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+                  stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+                  stackOut_15_2 = "{...}";
+                  stackIn_17_0 = stackOut_15_0;
+                  stackIn_17_1 = stackOut_15_1;
+                  stackIn_17_2 = stackOut_15_2;
+                  break L5;
+                }
+              }
+              throw qb.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
             }
-            td.a(false, param2);
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -77,7 +173,7 @@ final class da extends hb {
         field_M = null;
         field_J = null;
         field_C = null;
-        int var1 = -85 / ((4 - param0) / 55);
+        int var1 = 85;
         field_H = null;
         field_E = null;
         field_L = null;
@@ -92,9 +188,6 @@ final class da extends hb {
                 return wn.field_a;
             }
             return d.field_C;
-        }
-        if (param0 != 103) {
-            return null;
         }
         if (!(ma.field_P.a((byte) -127))) {
             return tm.field_e;
@@ -111,7 +204,7 @@ final class da extends hb {
         if (!(ja.field_c.a((byte) -127))) {
             return hp.field_k;
         }
-        if (!(ja.field_c.a(param0 ^ 12))) {
+        if (!(ja.field_c.a(107))) {
             return qm.field_e + " - " + ja.field_c.b(-4126) + "%";
         }
         return kd.field_a;

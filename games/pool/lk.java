@@ -20,9 +20,6 @@ final class lk extends ma {
         field_r = null;
         field_w = null;
         field_t = null;
-        if (param0 != -24061) {
-            field_u = 64;
-        }
     }
 
     final void c(int param0) {
@@ -32,7 +29,7 @@ final class lk extends ma {
         sa.field_h.a((bb[]) (Object) nf.field_Z, bi.field_d);
         sa.field_h.d(((lk) this).field_x, 1, 1 + sa.field_h.field_C, ((lk) this).field_s, param0);
         sh.field_P.b(param0 ^ -15101);
-        ((lk) this).field_n.e((16711423 & ((lk) this).field_s) >> 945865697);
+        ((lk) this).field_n.e((16711423 & ((lk) this).field_s) >> 1);
     }
 
     lk() {

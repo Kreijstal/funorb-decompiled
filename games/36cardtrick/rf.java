@@ -35,7 +35,7 @@ final class rf implements Runnable {
                       break L2;
                     } else {
                       var1_int = ((rf) this).field_h.read(((rf) this).field_c.field_g, ((rf) this).field_c.field_i, ((rf) this).field_c.field_g.length - ((rf) this).field_c.field_i);
-                      if (-1 < (var1_int ^ -1)) {
+                      if (var1_int < 0) {
                         break L2;
                       } else {
                         ((rf) this).field_c.field_i = ((rf) this).field_c.field_i + var1_int;
@@ -159,7 +159,7 @@ final class rf implements Runnable {
               if (0 == ((rf) this).field_j.field_a) {
                 return false;
               } else {
-                if ((((rf) this).field_j.field_a ^ -1) == -2) {
+                if (((rf) this).field_j.field_a == 1) {
                   break L2;
                 } else {
                   ((rf) this).field_i = ((rf) this).field_i + 1;
@@ -222,7 +222,7 @@ final class rf implements Runnable {
           }
           if (param0) {
             if (0 != ((rf) this).field_b.field_a) {
-              if ((((rf) this).field_b.field_a ^ -1) != -2) {
+              if (((rf) this).field_b.field_a != 1) {
                 ((rf) this).finalize();
                 ((rf) this).field_i = ((rf) this).field_i + 1;
                 return false;
@@ -239,31 +239,81 @@ final class rf implements Runnable {
     }
 
     final static boolean a(char param0, int param1) {
+        char[] var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
-        int var5 = Main.field_T;
-        if (Character.isISOControl(param0)) {
-            return false;
-        }
-        if (!(!ph.a(param0, false))) {
-            return true;
-        }
-        char[] var6 = kh.field_f;
-        char[] var2 = var6;
-        for (var3 = param1; var6.length > var3; var3++) {
-            var4 = var6[var3];
-            if (param0 == var4) {
-                return true;
+        int var5 = 0;
+        char[] var6 = null;
+        int stackIn_3_0 = 0;
+        int stackIn_7_0 = 0;
+        int stackIn_12_0 = 0;
+        int stackIn_19_0 = 0;
+        int stackIn_22_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_6_0 = 0;
+        int stackOut_21_0 = 0;
+        int stackOut_18_0 = 0;
+        int stackOut_11_0 = 0;
+        int stackOut_2_0 = 0;
+        var5 = Main.field_T;
+        try {
+          L0: {
+            if (!Character.isISOControl(param0)) {
+              if (ph.a(param0, false)) {
+                stackOut_6_0 = 1;
+                stackIn_7_0 = stackOut_6_0;
+                return stackIn_7_0 != 0;
+              } else {
+                var6 = kh.field_f;
+                var2 = var6;
+                var3 = 0;
+                L1: while (true) {
+                  if (var6.length <= var3) {
+                    var2 = ok.field_a;
+                    var3 = 0;
+                    L2: while (true) {
+                      if (var3 >= var2.length) {
+                        stackOut_21_0 = 0;
+                        stackIn_22_0 = stackOut_21_0;
+                        break L0;
+                      } else {
+                        var4 = var2[var3];
+                        if (var4 == param0) {
+                          stackOut_18_0 = 1;
+                          stackIn_19_0 = stackOut_18_0;
+                          return stackIn_19_0 != 0;
+                        } else {
+                          var3++;
+                          continue L2;
+                        }
+                      }
+                    }
+                  } else {
+                    var4 = var6[var3];
+                    if (param0 != var4) {
+                      var3++;
+                      continue L1;
+                    } else {
+                      stackOut_11_0 = 1;
+                      stackIn_12_0 = stackOut_11_0;
+                      return stackIn_12_0 != 0;
+                    }
+                  }
+                }
+              }
+            } else {
+              stackOut_2_0 = 0;
+              stackIn_3_0 = stackOut_2_0;
+              return stackIn_3_0 != 0;
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          throw ma.a((Throwable) (Object) var2_ref, "rf.C(" + param0 + 44 + 0 + 41);
         }
-        var2 = ok.field_a;
-        for (var3 = 0; var3 < var2.length; var3++) {
-            var4 = var2[var3];
-            if (!(var4 != param0)) {
-                return true;
-            }
-        }
-        return false;
+        return stackIn_22_0 != 0;
     }
 
     protected final void finalize() {
@@ -305,18 +355,46 @@ final class rf implements Runnable {
     }
 
     final static void a(int param0, int param1) {
-        int var2 = 0;
-        int var3 = Main.field_T;
-        ai.a(bd.field_F, param1, ei.field_f, 0, true, fk.field_h, 8192);
-        if (param0 != -23243) {
-            rf.c(-100);
-        }
-        for (var2 = 0; ei.field_f > var2; var2++) {
-            re.field_c[param1 + var2] = var2;
-        }
-        ai.a(ah.field_d, param1 + param1, ei.field_f + param1, param1, false, mf.field_g, 8192);
-        if (!(param1 >= ei.field_f)) {
-            ei.field_f = param1;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var3 = Main.field_T;
+        try {
+          L0: {
+            L1: {
+              ai.a(bd.field_F, param1, ei.field_f, 0, true, fk.field_h, 8192);
+              if (param0 == -23243) {
+                break L1;
+              } else {
+                rf.c(-100);
+                break L1;
+              }
+            }
+            var2_int = 0;
+            L2: while (true) {
+              if (ei.field_f <= var2_int) {
+                L3: {
+                  ai.a(ah.field_d, param1 + param1, ei.field_f + param1, param1, false, mf.field_g, 8192);
+                  if (param1 < ei.field_f) {
+                    ei.field_f = param1;
+                    break L3;
+                  } else {
+                    break L3;
+                  }
+                }
+                break L0;
+              } else {
+                re.field_c[param1 + var2_int] = var2_int;
+                var2_int++;
+                continue L2;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw ma.a((Throwable) (Object) var2, "rf.E(" + param0 + 44 + param1 + 41);
         }
     }
 
@@ -331,9 +409,13 @@ final class rf implements Runnable {
     }
 
     rf(le param0, java.net.URL param1, int param2) {
-        ((rf) this).field_a = param1;
-        ((rf) this).field_f = param0;
-        ((rf) this).field_c = new pb(param2);
+        try {
+            ((rf) this).field_a = param1;
+            ((rf) this).field_f = param0;
+            ((rf) this).field_c = new pb(param2);
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) (Object) runtimeException, "rf.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     static {

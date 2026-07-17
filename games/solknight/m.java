@@ -9,36 +9,90 @@ final class m extends gg {
     static nc field_h;
 
     final static int a(int param0, char param1, CharSequence param2) {
-        int var3 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
+        int stackIn_11_0 = 0;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_10_0 = 0;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
         var6 = SolKnight.field_L ? 1 : 0;
-        var3 = 0;
-        var4 = param2.length();
-        var5 = param0;
-        L0: while (true) {
-          if (var4 <= var5) {
-            return var3;
-          } else {
-            if (param2.charAt(var5) == param1) {
-              var3++;
-              var5++;
-              var5++;
-              continue L0;
-            } else {
-              var5++;
-              var5++;
-              continue L0;
+        try {
+          L0: {
+            var3_int = 0;
+            var4 = param2.length();
+            var5 = param0;
+            L1: while (true) {
+              if (var4 <= var5) {
+                stackOut_10_0 = var3_int;
+                stackIn_11_0 = stackOut_10_0;
+                break L0;
+              } else {
+                L2: {
+                  if (param2.charAt(var5) == param1) {
+                    var3_int++;
+                    var5++;
+                    break L2;
+                  } else {
+                    var5++;
+                    break L2;
+                  }
+                }
+                var5++;
+                continue L1;
+              }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var3 = decompiledCaughtException;
+            stackOut_12_0 = (RuntimeException) var3;
+            stackOut_12_1 = new StringBuilder().append("m.D(").append(param0).append(44).append(param1).append(44);
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
+            if (param2 == null) {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L3;
+            } else {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L3;
+            }
+          }
+          throw fc.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
         }
+        return stackIn_11_0;
     }
 
     public static void a(int param0) {
-        if (param0 != 0) {
-            return;
-        }
         field_h = null;
     }
 
@@ -62,83 +116,81 @@ final class m extends gg {
 
     final static void b(boolean param0) {
         try {
-            IOException iOException = null;
-            int var1 = 0;
+            IOException var1 = null;
+            RuntimeException var1_ref = null;
+            int var1_int = 0;
             IOException var2 = null;
             int var3 = 0;
             Throwable decompiledCaughtException = null;
-            L0: {
-              var3 = SolKnight.field_L ? 1 : 0;
-              if (il.field_c == null) {
-                break L0;
-              } else {
-                il.field_c.a((byte) 92);
-                break L0;
-              }
-            }
-            if (!param0) {
-              L1: {
-                if (pf.field_d != null) {
-                  pf.field_d.a(5);
-                  break L1;
-                } else {
-                  break L1;
+            var3 = SolKnight.field_L ? 1 : 0;
+            try {
+              L0: {
+                L1: {
+                  if (il.field_c == null) {
+                    break L1;
+                  } else {
+                    il.field_c.a((byte) 92);
+                    break L1;
+                  }
                 }
-              }
-              L2: {
-                if (null != hc.field_c) {
-                  try {
-                    L3: {
-                      hc.field_c.d(false);
-                      break L3;
-                    }
-                  } catch (java.io.IOException decompiledCaughtParameter0) {
-                    decompiledCaughtException = decompiledCaughtParameter0;
-                    L4: {
-                      iOException = (IOException) (Object) decompiledCaughtException;
-                      break L4;
+                if (!param0) {
+                  L2: {
+                    if (pf.field_d != null) {
+                      pf.field_d.a(5);
+                      break L2;
+                    } else {
+                      break L2;
                     }
                   }
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              if (tk.field_p != null) {
-                var1 = 0;
-                L5: while (true) {
-                  if (tk.field_p.length <= var1) {
-                    return;
-                  } else {
-                    if (null != tk.field_p[var1]) {
-                      try {
-                        L6: {
-                          tk.field_p[var1].d(false);
-                          var1++;
-                          var1++;
-                          break L6;
-                        }
-                      } catch (java.io.IOException decompiledCaughtParameter1) {
-                        decompiledCaughtException = decompiledCaughtParameter1;
-                        L7: {
-                          var2 = (IOException) (Object) decompiledCaughtException;
-                          var1++;
-                          break L7;
+                  L3: {
+                    if (null != hc.field_c) {
+                      {
+                        L4: {
+                          hc.field_c.d(false);
+                          break L4;
                         }
                       }
-                      continue L5;
+                      break L3;
                     } else {
-                      var1++;
-                      var1++;
-                      continue L5;
+                      break L3;
                     }
                   }
+                  if (tk.field_p != null) {
+                    var1_int = 0;
+                    L6: while (true) {
+                      if (tk.field_p.length <= var1_int) {
+                        break L0;
+                      } else {
+                        L7: {
+                          if (null == tk.field_p[var1_int]) {
+                            var1_int++;
+                            break L7;
+                          } else {
+                            {
+                              L8: {
+                                tk.field_p[var1_int].d(false);
+                                var1_int++;
+                                break L8;
+                              }
+                            }
+                            break L7;
+                          }
+                        }
+                        var1_int++;
+                        continue L6;
+                      }
+                    }
+                  } else {
+                    return;
+                  }
+                } else {
+                  return;
                 }
-              } else {
-                return;
               }
-            } else {
-              return;
+            } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
+              decompiledCaughtException = decompiledCaughtParameter2;
+              var1_ref = (RuntimeException) (Object) decompiledCaughtException;
+              throw fc.a((Throwable) (Object) var1_ref, "m.C(" + param0 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

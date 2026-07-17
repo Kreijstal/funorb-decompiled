@@ -18,6 +18,40 @@ decompiler recovers **structure** (control flow, expressions, method bodies),
 semantic meaning. This is expected and is not something the decompiler tries to
 "fix".
 
+## Constant-expression cleanup
+
+This snapshot was generated with dekobloko-work's gated
+`--experimental-interclass-dce` mode. Before Java is emitted, the pipeline
+evaluates side-effect-free `int` and `long` literal arithmetic, conversions,
+comparisons, and JVM-masked shift counts. It also removes neutral operations
+such as `x + 0`, `x ^ 0`, and `x * 1`, combines adjacent additive constants,
+and deletes branches whose conditions become literal constants. In the emitted
+source, the bytecode idiom `x ^ -1` is written as the equivalent `~x`; when it
+is compared with a constant, the bound is complemented and a signed inequality
+is reversed as required.
+
+The evaluator deliberately does not reassociate floating-point or string
+expressions, suppress integer division/remainder by zero, or fold across an
+alternate control-flow entry. Integer overflow and shift distances follow JVM
+semantics. Interclass argument specialization is limited to gamepack-internal
+methods for which every direct caller supplies the same literal; public applet,
+platform callback, networking, OS, reflection/native, and otherwise external
+entry points remain open. The feature is gated in the generating pipeline so a
+runtime A/B build can disable it if later experimentation finds a bad
+closed-world assumption.
+
+This snapshot also enables the independently gated checked-catch cleanup
+(`PIPELINE_EXPERIMENTAL_UNTHROWABLE_CATCH_DCE=1`). After control-flow
+reconstruction, a catch of a specific checked type is retained only when the
+emitted try contains a call whose Java declaration throws that type. Otherwise
+both the catch and the decompiler's synthetic `if (false)` reachability throw
+are removed. Broad `Throwable`, `Exception`,
+`RuntimeException`, and `Error` catches remain conservative because ordinary
+JVM instructions can produce them. This is a source-readability policy: it does
+not preserve a specific checked exception propagated by bytecode when no
+source-visible `throws` declaration supports it, and is gated so runtime A/B
+testing can disable it if that closed-world choice proves wrong.
+
 ## Source repositories
 
 - **[Kreijstal/dekobloko-work](https://github.com/Kreijstal/dekobloko-work)** —
@@ -118,12 +152,6 @@ This is decompiler output under **active correction**. The reconstructed
 where the emitted Java, though it compiles, does not branch identically to the
 original bytecode. Known open classes of bug (tracked in dekobloko-work):
 
-- **Dropped bitwise complement** in comparisons — the `~x` idiom
-  (`iconst_m1; ixor`) is sometimes omitted, inverting a guard (e.g. `~n == -4`
-  emitted as `n == -4`, never true). One instance stalls the recompiled
-  `dekobloko` build at "Connecting to update server".
-  ([#6](https://github.com/Kreijstal/dekobloko-work/issues/6),
-  [#12](https://github.com/Kreijstal/dekobloko-work/issues/12))
 - **ABI dictionary emission** — see above
   ([#11](https://github.com/Kreijstal/dekobloko-work/issues/11)).
 
@@ -132,8 +160,9 @@ fixed in the decompiler; the sources here are regenerated as fixes land.
 
 ## Caveats
 
-- This is **decompiler output**. It is not guaranteed to recompile cleanly with
-  `javac`, and it is not intended to be a drop-in buildable project.
+- This is **decompiler output**. The current 44-game snapshot was verified to
+  recompile cleanly with `javac`, but it is not intended to be a drop-in
+  runnable distribution.
 - The goal is faithful reconstruction of program structure for research and
   preservation, not pristine source.
 - Some methods still carry runtime-behaviour bugs (see *Work in progress*
@@ -143,12 +172,12 @@ fixed in the decompiler; the sources here are regenerated as fixes land.
 ## Games included
 
 All **44** games are included — this is the full canonical roster, and every
-one produced decompiled Java. Total: **18,321** `.java` files across 44 games.
+one produced decompiled Java. Total: **18,481** `.java` files across 44 games.
 
 | Game | `.java` files |
 | --- | --- |
 | 36cardtrick | 295 |
-| aceofskies | 505 |
+| aceofskies | 545 |
 | arcanistsmulti | 363 |
 | armiesofgielinor | 542 |
 | bachelorfridge | 865 |
@@ -175,18 +204,19 @@ one produced decompiled Java. Total: **18,321** `.java` files across 44 games.
 | shatteredplans | 457 |
 | solknight | 294 |
 | starcannon | 287 |
+| steelsentinels | 347 |
 | stellarshard | 301 |
-| sumoblitz | 546 |
+| sumoblitz | 586 |
 | terraphoenix | 311 |
 | tetralink | 355 |
-| tombracer | 1050 |
+| tombracer | 1090 |
 | torchallenge | 300 |
 | torquing | 396 |
 | trackcontroller | 298 |
 | transmogrify | 299 |
 | vertigo2 | 437 |
 | virogrid | 347 |
-| voidhunters | 1530 |
+| voidhunters | 1570 |
 | wizardrun | 298 |
 | zombiedawn | 386 |
 | zombiedawnmulti | 417 |

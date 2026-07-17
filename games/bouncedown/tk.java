@@ -128,7 +128,8 @@ final class tk extends IOException {
     }
 
     final static void a(int param0, int param1, int param2, byte param3, int param4, int[] param5, int param6, int param7, int param8, int param9) {
-        int[] var10 = null;
+        RuntimeException var10 = null;
+        int[] var10_array = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -136,40 +137,84 @@ final class tk extends IOException {
         int var15 = 0;
         int var16 = 0;
         int[] var17 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
         var16 = Bounce.field_N;
-        if (param3 == -72) {
-          param0--;
-          L0: while (true) {
-            if ((param0 ^ -1) <= -1) {
-              var17 = param5;
-              var10 = var17;
-              var11 = param1;
-              var12 = param2;
-              var13 = param8;
-              var14 = param7;
-              var15 = 8355711 & var17[var11] >> -640755295;
-              var10[var11] = var15 + da.b(var14 >> -1653411503, 255) + (da.b(var12 >> -956147679, 16711680) - -(da.b(33423384, var13) >> -1816906583));
-              param1++;
-              param2 = param2 + param4;
-              param7 = param7 + param6;
-              param8 = param8 + param9;
+        try {
+          L0: {
+            if (param3 == -72) {
               param0--;
-              continue L0;
+              L1: while (true) {
+                if (param0 < 0) {
+                  break L0;
+                } else {
+                  var17 = param5;
+                  var10_array = var17;
+                  var11 = param1;
+                  var12 = param2;
+                  var13 = param8;
+                  var14 = param7;
+                  var15 = 8355711 & var17[var11] >> 1;
+                  var10_array[var11] = var15 + da.b(var14 >> 17, 255) + (da.b(var12 >> 1, 16711680) - -(da.b(33423384, var13) >> 9));
+                  param1++;
+                  param2 = param2 + param4;
+                  param7 = param7 + param6;
+                  param8 = param8 + param9;
+                  param0--;
+                  continue L1;
+                }
+              }
             } else {
               return;
             }
           }
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var10 = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var10;
+            stackOut_8_1 = new StringBuilder().append("tk.G(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param5 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L2;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L2;
+            }
+          }
+          throw ii.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 41);
         }
     }
 
     public static void b(int param0) {
-        if (param0 != 8191) {
-            field_a = false;
-            field_b = null;
-            return;
-        }
         field_b = null;
     }
 
@@ -186,20 +231,12 @@ final class tk extends IOException {
     }
 
     final static void d(int param0) {
-        if (pg.field_c) {
-          pa.field_e = true;
-          qb.a(true, -1402584374);
-          if (param0 != -6144) {
-            field_a = false;
-            mh.field_U = 0;
-            return;
-          } else {
-            mh.field_U = 0;
-            return;
-          }
-        } else {
-          throw new IllegalStateException();
+        if (!pg.field_c) {
+            throw new IllegalStateException();
         }
+        pa.field_e = true;
+        qb.a(true, -1402584374);
+        mh.field_U = 0;
     }
 
     static {

@@ -15,7 +15,7 @@ final class hd extends ac {
     public static void f(int param0) {
         field_I = null;
         field_H = null;
-        int var1 = 84 / ((-18 - param0) / 55);
+        int var1 = -84;
         field_O = null;
     }
 
@@ -62,13 +62,13 @@ final class hd extends ac {
 
     final int e(byte param0) {
         int var2 = -28 / ((param0 - -73) / 48);
-        return ((hd) this).field_K == null ? 200 : (1 + ((hd) this).field_K.length * 2) * ((hd) this).field_J >> -1827804159;
+        return ((hd) this).field_K == null ? 200 : (1 + ((hd) this).field_K.length * 2) * ((hd) this).field_J >> 1;
     }
 
     final Object a(int param0) {
         if (param0 < -22) {
           if (null != ((hd) this).field_K) {
-            if (0 == (((hd) this).field_L ^ -1)) {
+            if (((hd) this).field_L == -1) {
               return null;
             } else {
               return ((hd) this).field_K[((hd) this).field_L];
@@ -79,7 +79,7 @@ final class hd extends ac {
         } else {
           ((hd) this).a(((int[]) ((hd) this).field_K[0])[0], ((int[]) ((hd) this).field_K[1])[7], (byte) -89, -41);
           if (null != ((hd) this).field_K) {
-            if (0 == (((hd) this).field_L ^ -1)) {
+            if (((hd) this).field_L == -1) {
               return null;
             } else {
               return ((hd) this).field_K[((hd) this).field_L];
@@ -114,31 +114,82 @@ final class hd extends ac {
     }
 
     private final void a(int param0, int param1, Object[] param2) {
-        ((hd) this).field_K = param2;
-        ((hd) this).field_N = -1;
-        ((hd) this).field_L = param1;
-        if (param2 != null) {
-          if (((hd) this).field_L >= -1) {
-            if (((hd) this).field_K.length > ((hd) this).field_L) {
-              if (param0 != -22994) {
-                ((hd) this).field_N = ((int[]) ((hd) this).field_K[1])[1];
-                return;
+        RuntimeException var4 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        try {
+          L0: {
+            L1: {
+              ((hd) this).field_K = param2;
+              ((hd) this).field_N = -1;
+              ((hd) this).field_L = param1;
+              if (param2 == null) {
+                break L1;
               } else {
-                return;
+                L2: {
+                  if (((hd) this).field_L < -1) {
+                    break L2;
+                  } else {
+                    if (((hd) this).field_K.length > ((hd) this).field_L) {
+                      break L1;
+                    } else {
+                      break L2;
+                    }
+                  }
+                }
+                throw new IllegalStateException();
               }
-            } else {
-              throw new IllegalStateException();
             }
-          } else {
-            throw new IllegalStateException();
+            if (param0 == -22994) {
+              break L0;
+            } else {
+              ((hd) this).field_N = ((int[]) ((hd) this).field_K[1])[1];
+              return;
+            }
           }
-        } else {
-          if (param0 != -22994) {
-            ((hd) this).field_N = ((int[]) ((hd) this).field_K[1])[1];
-            return;
-          } else {
-            return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var4 = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var4;
+            stackOut_8_1 = new StringBuilder().append("hd.DB(").append(param0).append(44).append(param1).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param2 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L3;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L3;
+            }
           }
+          throw qo.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
         }
     }
 
@@ -239,10 +290,14 @@ final class hd extends ac {
 
     hd(ld param0, vn param1, Object[] param2, int param3) {
         super((pk) (Object) param0);
-        ((hd) this).field_M = param0;
-        ((hd) this).field_P = param1;
-        ((hd) this).field_J = ((hd) this).field_P.field_I + ((hd) this).field_P.field_s;
-        this.a(-22994, param3, param2);
+        try {
+            ((hd) this).field_M = param0;
+            ((hd) this).field_P = param1;
+            ((hd) this).field_J = ((hd) this).field_P.field_I + ((hd) this).field_P.field_s;
+            this.a(-22994, param3, param2);
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "hd.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+        }
     }
 
     static {

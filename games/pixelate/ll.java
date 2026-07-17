@@ -76,14 +76,7 @@ final class ll implements Runnable {
         field_m = null;
         field_p = null;
         field_c = null;
-        if (param0 != -57) {
-          field_p = null;
-          field_f = null;
-          return;
-        } else {
-          field_f = null;
-          return;
-        }
+        field_f = null;
     }
 
     final we a(int param0) {
@@ -275,7 +268,7 @@ final class ll implements Runnable {
                     break L1;
                   } else {
                     var1_int = ((ll) this).field_o.read(((ll) this).field_l.field_k, ((ll) this).field_l.field_m, -((ll) this).field_l.field_m + ((ll) this).field_l.field_k.length);
-                    if (-1 >= (var1_int ^ -1)) {
+                    if (var1_int >= 0) {
                       ((ll) this).field_l.field_m = ((ll) this).field_l.field_m + var1_int;
                       continue L0;
                     } else {
@@ -318,9 +311,13 @@ final class ll implements Runnable {
     }
 
     ll(cb param0, java.net.URL param1, int param2) {
-        ((ll) this).field_h = param0;
-        ((ll) this).field_b = param1;
-        ((ll) this).field_l = new we(param2);
+        try {
+            ((ll) this).field_h = param0;
+            ((ll) this).field_b = param1;
+            ((ll) this).field_l = new we(param2);
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "ll.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     static {

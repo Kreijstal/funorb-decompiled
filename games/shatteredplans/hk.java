@@ -7,8 +7,12 @@ final class hk extends il {
     static String field_pb;
 
     final void b(vg param0, int param1) {
-        int var3 = 113 / ((51 - param1) / 57);
-        super.b(param0, 125);
+        try {
+            int var3_int = 113 / ((51 - param1) / 57);
+            super.b(param0, 125);
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "hk.AB(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     public static void p(int param0) {
@@ -25,9 +29,6 @@ final class hk extends il {
     }
 
     final static void a(int param0, byte param1) {
-        if (param1 < 33) {
-            return;
-        }
         vg.field_i = 1000000000L / (long)param0;
     }
 

@@ -11,14 +11,18 @@ final class wl extends sna {
 
     private wl(long param0, sna param1, sna param2, gba param3) {
         super(param0, (sna) null);
-        ((wl) this).field_xb = new sna(0L, param2);
-        ((wl) this).field_vb = new gba(0L, param3, true);
-        ((wl) this).field_zb = new gba(0L, param3, false);
-        ((wl) this).a(-1, ((wl) this).field_xb);
-        ((wl) this).a(-1, (sna) (Object) ((wl) this).field_vb);
-        ((wl) this).a(-1, (sna) (Object) ((wl) this).field_zb);
-        ((wl) this).field_Ab = param1;
-        ((wl) this).field_xb.a(-1, param1);
+        try {
+            ((wl) this).field_xb = new sna(0L, param2);
+            ((wl) this).field_vb = new gba(0L, param3, true);
+            ((wl) this).field_zb = new gba(0L, param3, false);
+            ((wl) this).a(-1, ((wl) this).field_xb);
+            ((wl) this).a(-1, (sna) (Object) ((wl) this).field_vb);
+            ((wl) this).a(-1, (sna) (Object) ((wl) this).field_zb);
+            ((wl) this).field_Ab = param1;
+            ((wl) this).field_xb.a(-1, param1);
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "wl.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
+        }
     }
 
     private final void a(int param0, int param1, int param2) {
@@ -138,7 +142,7 @@ final class wl extends sna {
           }
         }
         L1: {
-          if (((wl) this).field_vb.b(param5)) {
+          if (((wl) this).field_vb.b(false)) {
             ((wl) this).field_Ab.field_I = ((wl) this).field_Ab.field_I - param3;
             break L1;
           } else {
@@ -225,14 +229,14 @@ final class wl extends sna {
               }
             }
             L12: {
-              if ((-(((wl) this).field_Ab.field_I + ((wl) this).field_Ab.field_rb) ^ -1) <= -1) {
+              if (-(((wl) this).field_Ab.field_I + ((wl) this).field_Ab.field_rb) >= 0) {
                 break L12;
               } else {
                 ((wl) this).field_Ab.field_I = -((wl) this).field_Ab.field_rb;
                 break L12;
               }
             }
-            if ((-(((wl) this).field_Ab.field_kb + ((wl) this).field_Ab.field_mb) ^ -1) > -1) {
+            if (-(((wl) this).field_Ab.field_kb + ((wl) this).field_Ab.field_mb) < 0) {
               ((wl) this).field_Ab.field_mb = -((wl) this).field_Ab.field_kb;
               break L9;
             } else {
@@ -240,7 +244,7 @@ final class wl extends sna {
             }
           } else {
             L13: {
-              if ((-(((wl) this).field_Ab.field_I + ((wl) this).field_Ab.field_rb) ^ -1) <= -1) {
+              if (-(((wl) this).field_Ab.field_I + ((wl) this).field_Ab.field_rb) >= 0) {
                 break L13;
               } else {
                 ((wl) this).field_Ab.field_I = -((wl) this).field_Ab.field_rb;
@@ -256,7 +260,7 @@ final class wl extends sna {
               }
             }
             L15: {
-              if ((-(((wl) this).field_Ab.field_mb + ((wl) this).field_Ab.field_kb) ^ -1) > -1) {
+              if (-(((wl) this).field_Ab.field_mb + ((wl) this).field_Ab.field_kb) < 0) {
                 ((wl) this).field_Ab.field_mb = -((wl) this).field_Ab.field_kb;
                 break L15;
               } else {
@@ -296,9 +300,6 @@ final class wl extends sna {
     public static void f(int param0) {
         field_yb = null;
         field_wb = null;
-        if (param0 != 0) {
-            field_yb = null;
-        }
     }
 
     static {

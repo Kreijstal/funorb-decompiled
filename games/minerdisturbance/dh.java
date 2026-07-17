@@ -11,18 +11,9 @@ final class dh {
 
     public static void a(int param0) {
         field_b = null;
-        if (param0 > -115) {
-          field_a = null;
-          field_d = null;
-          field_a = null;
-          field_c = null;
-          return;
-        } else {
-          field_d = null;
-          field_a = null;
-          field_c = null;
-          return;
-        }
+        field_d = null;
+        field_a = null;
+        field_c = null;
     }
 
     static {

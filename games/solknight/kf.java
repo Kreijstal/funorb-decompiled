@@ -11,16 +11,20 @@ abstract class kf extends ki {
     static String field_H;
 
     kf(i param0, int param1, int param2) {
-        super(-param1 + og.field_f >> 1600490529, -param2 + wc.field_e >> -753274303, param1, param2, (j) null);
-        ((kf) this).field_J = false;
-        ((kf) this).field_I = 0;
-        ((kf) this).field_E = param0;
+        super(-param1 + og.field_f >> 1, -param2 + wc.field_e >> 1, param1, param2, (j) null);
+        try {
+            ((kf) this).field_J = false;
+            ((kf) this).field_I = 0;
+            ((kf) this).field_E = param0;
+        } catch (RuntimeException runtimeException) {
+            throw fc.a((Throwable) (Object) runtimeException, "kf.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     boolean e(byte param0) {
         if (param0 == 124) {
           ((kf) this).field_I = this.a((byte) 11);
-          if (-1 == (((kf) this).field_I ^ -1)) {
+          if (((kf) this).field_I == 0) {
             if (((kf) this).field_J) {
               return false;
             } else {
@@ -32,7 +36,7 @@ abstract class kf extends ki {
         } else {
           field_H = null;
           ((kf) this).field_I = this.a((byte) 11);
-          if (-1 == (((kf) this).field_I ^ -1)) {
+          if (((kf) this).field_I == 0) {
             if (((kf) this).field_J) {
               return false;
             } else {
@@ -57,7 +61,7 @@ abstract class kf extends ki {
     }
 
     final void b(int param0, int param1, int param2) {
-        ((kf) this).b(param2, param0, og.field_f - param0 >> -2038584927, 0, -param2 + wc.field_e >> -984831359);
+        ((kf) this).b(param2, param0, og.field_f - param0 >> 1, 0, -param2 + wc.field_e >> 1);
         if (param1 != -2038584927) {
             Object var5 = null;
             kf.a(-72, (String[]) null);
@@ -202,23 +206,73 @@ abstract class kf extends ki {
     }
 
     final static void a(int param0, String[] param1) {
-        if (param0 == 1) {
+        RuntimeException var2 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        try {
           L0: {
-            if (k.field_d != null) {
-              k.field_d.field_G.a(20870, param1);
-              break L0;
+            if (param0 == 1) {
+              L1: {
+                if (k.field_d != null) {
+                  k.field_d.field_G.a(20870, param1);
+                  break L1;
+                } else {
+                  break L1;
+                }
+              }
+              if (null == sj.field_d) {
+                break L0;
+              } else {
+                sj.field_d.field_F.a(20870, param1);
+                return;
+              }
             } else {
-              break L0;
+              return;
             }
           }
-          if (null != sj.field_d) {
-            sj.field_d.field_F.a(20870, param1);
-            return;
-          } else {
-            return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var2;
+            stackOut_8_1 = new StringBuilder().append("kf.WB(").append(param0).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param1 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L2;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L2;
+            }
           }
-        } else {
-          return;
+          throw fc.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
         }
     }
 
@@ -236,13 +290,13 @@ abstract class kf extends ki {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        if (-1 != (((kf) this).field_I ^ -1)) {
+        if (((kf) this).field_I != 0) {
           if (256 <= ((kf) this).field_I) {
             if (param1 != 0) {
               return;
             } else {
               ((kf) this).a(((kf) this).field_m + param2, (byte) 55, ((kf) this).field_j + param0);
-              super.a(param0, param1, param2, param3 ^ 0);
+              super.a(param0, param1, param2, param3);
               return;
             }
           } else {
@@ -295,16 +349,8 @@ abstract class kf extends ki {
     public static void i(int param0) {
         field_G = null;
         field_F = null;
-        if (param0 < 16) {
-          field_D = null;
-          field_H = null;
-          field_D = null;
-          return;
-        } else {
-          field_H = null;
-          field_D = null;
-          return;
-        }
+        field_H = null;
+        field_D = null;
     }
 
     static {

@@ -11,9 +11,6 @@ final class gn {
 
     public static void a(byte param0) {
         field_c = null;
-        if (param0 != 37) {
-            return;
-        }
         field_e = null;
         field_f = null;
         field_a = null;
@@ -23,7 +20,7 @@ final class gn {
         if (param0 != -22798) {
             return null;
         }
-        return (java.awt.Canvas) (dc.field_L != null ? dc.field_L : ne.field_F);
+        return dc.field_L != null ? (java.awt.Canvas) (Object) dc.field_L : ne.field_F;
     }
 
     static {

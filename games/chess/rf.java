@@ -8,10 +8,7 @@ final class rf {
     static String field_c;
 
     final static String a(byte param0) {
-        if (param0 != -54) {
-            int discarded$0 = rf.a(-112, 99);
-        }
-        return tk.field_h.d(param0 ^ -54);
+        return tk.field_h.d(0);
     }
 
     final static void b(int param0, int param1) {
@@ -45,14 +42,6 @@ final class rf {
         var2 = 0;
         L0: while (true) {
           if (var2 >= h.field_n) {
-            L1: {
-              if (param0 == 8) {
-                break L1;
-              } else {
-                rf.b(-16, 25);
-                break L1;
-              }
-            }
             ch.k(4210752);
             return var1;
           } else {
@@ -62,7 +51,7 @@ final class rf {
               var10 = new int[var3];
               var26 = var10;
               var6 = 0;
-              L2: while (true) {
+              L1: while (true) {
                 if (var3 <= var6) {
                   var1[var2] = new km(cd.field_p, ek.field_a, be.field_a[var2], a.field_c[var2], wm.field_b[var2], b.field_c[var2], var26);
                   var2++;
@@ -70,7 +59,7 @@ final class rf {
                 } else {
                   var10[var6] = uh.field_r[ce.a((int) var24[var6], 255)];
                   var6++;
-                  continue L2;
+                  continue L1;
                 }
               }
             } else {
@@ -86,15 +75,15 @@ final class rf {
               var13 = var17;
               var6_ref_int__ = var13;
               var7 = 0;
-              L3: while (true) {
+              L2: while (true) {
                 if (var3 <= var7) {
                   var1[var2] = (km) (Object) new wi(cd.field_p, ek.field_a, be.field_a[var2], a.field_c[var2], wm.field_b[var2], b.field_c[var2], var25);
                   var2++;
                   continue L0;
                 } else {
-                  var6_ref_int__[var7] = s.a(ce.a((int) var23[var7], 255) << 1779478680, uh.field_r[ce.a((int) var24[var7], 255)]);
+                  var6_ref_int__[var7] = s.a(ce.a((int) var23[var7], 255) << 24, uh.field_r[ce.a((int) var24[var7], 255)]);
                   var7++;
-                  continue L3;
+                  continue L2;
                 }
               }
             }
@@ -130,7 +119,7 @@ final class rf {
         if (4096 > param0) {
             return param0 >= 2048 ? -hj.field_b[-2048 + param0] : hj.field_b[-param0 + 2048];
         }
-        return -6145 < (param0 ^ -1) ? -hj.field_b[-param0 + 6144] : hj.field_b[param0 + -6144];
+        return param0 < 6144 ? -hj.field_b[-param0 + 6144] : hj.field_b[param0 + -6144];
     }
 
     final static void a(byte param0, boolean param1) {
@@ -146,9 +135,6 @@ final class rf {
 
     public static void a(int param0) {
         field_d = null;
-        if (param0 != 9) {
-            field_a = null;
-        }
         field_c = null;
         field_a = null;
     }

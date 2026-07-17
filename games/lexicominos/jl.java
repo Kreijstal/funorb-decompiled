@@ -7,20 +7,18 @@ final class jl {
     static String[] field_b;
 
     public static void a(int param0) {
-        if (param0 != -15699) {
-            field_a = null;
-            field_b = null;
-            field_a = null;
-            return;
-        }
         field_b = null;
         field_a = null;
     }
 
     final static void a(String param0, byte param1) {
-        int var2 = -48 / ((0 - param1) / 37);
-        si.field_q = param0;
-        ni.a(-124, 12);
+        try {
+            int var2_int = -48 / ((0 - param1) / 37);
+            si.field_q = param0;
+            ni.a(-124, 12);
+        } catch (RuntimeException runtimeException) {
+            throw ld.a((Throwable) (Object) runtimeException, "jl.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     static {

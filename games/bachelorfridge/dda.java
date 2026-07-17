@@ -11,7 +11,7 @@ final class dda extends kj {
     private int field_i;
 
     final void a(int param0) {
-        this.a(param0);
+        super.a(param0);
         ((dda) this).field_h = true;
     }
 
@@ -27,14 +27,19 @@ final class dda extends kj {
 
     dda(gj param0, int param1, int param2) {
         super(param0, param1, param2);
-        ((dda) this).field_i = 150;
+        try {
+            ((dda) this).field_i = 150;
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "dda.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     final boolean b(int param0) {
         if (param0 > 21) {
           if (!((dda) this).field_g) {
+            int fieldTemp$4 = ((dda) this).field_i - 1;
             ((dda) this).field_i = ((dda) this).field_i - 1;
-            if ((((dda) this).field_i - 1 ^ -1) > -1) {
+            if (fieldTemp$4 < 0) {
               ((dda) this).field_h = false;
               ((dda) this).field_i = 0;
               return false;
@@ -42,8 +47,9 @@ final class dda extends kj {
               return false;
             }
           } else {
+            int fieldTemp$5 = ((dda) this).field_i + 1;
             ((dda) this).field_i = ((dda) this).field_i + 1;
-            if (150 > ((dda) this).field_i + 1) {
+            if (150 > fieldTemp$5) {
               return false;
             } else {
               ((dda) this).field_h = false;
@@ -53,8 +59,9 @@ final class dda extends kj {
         } else {
           field_k = null;
           if (!((dda) this).field_g) {
+            int fieldTemp$6 = ((dda) this).field_i - 1;
             ((dda) this).field_i = ((dda) this).field_i - 1;
-            if ((((dda) this).field_i - 1 ^ -1) <= -1) {
+            if (fieldTemp$6 >= 0) {
               return false;
             } else {
               ((dda) this).field_h = false;
@@ -62,8 +69,9 @@ final class dda extends kj {
               return false;
             }
           } else {
+            int fieldTemp$7 = ((dda) this).field_i + 1;
             ((dda) this).field_i = ((dda) this).field_i + 1;
-            if (150 > ((dda) this).field_i + 1) {
+            if (150 > fieldTemp$7) {
               return false;
             } else {
               ((dda) this).field_h = false;
@@ -76,9 +84,6 @@ final class dda extends kj {
     public static void a(boolean param0) {
         field_k = null;
         field_l = null;
-        if (param0) {
-            dda.c(52);
-        }
     }
 
     final static void c(int param0) {

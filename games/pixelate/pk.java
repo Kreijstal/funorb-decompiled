@@ -61,7 +61,7 @@ final class pk {
                     break L3;
                   } else {
                     param1 = kb.field_N[var5_int];
-                    stackOut_3_0 = var5_int << -611089916;
+                    stackOut_3_0 = var5_int << 4;
                     stackIn_13_0 = stackOut_3_0;
                     stackIn_4_0 = stackOut_3_0;
                     if (var7 != 0) {
@@ -273,7 +273,7 @@ final class pk {
         try {
           L0: {
             var2_int = param0.c(8, (byte) -34);
-            if ((var2_int ^ -1) < param1) {
+            if (~var2_int < param1) {
               throw new IllegalStateException("" + var2_int);
             } else {
               L1: {
@@ -360,7 +360,7 @@ final class pk {
                         }
                       }
                       stackOut_28_0 = -1;
-                      stackOut_28_1 = var6 ^ -1;
+                      stackOut_28_1 = ~var6;
                       stackIn_29_0 = stackOut_28_0;
                       stackIn_29_1 = stackOut_28_1;
                       break L6;
@@ -490,7 +490,7 @@ final class pk {
             L1: {
               var1 = null;
               var2 = null;
-              if (-1 != (ce.field_d ^ -1)) {
+              if (ce.field_d != 0) {
                 break L1;
               } else {
                 if (null == bn.field_S) {
@@ -571,7 +571,7 @@ final class pk {
                           var4 = sd.a(dg.field_b, 73, new String[1]);
                           var8 = sd.a(sk.field_c, 69, new String[1]);
                           var7 = -485 + (nf.field_d.field_K + rh.field_y.field_K + vl.field_Q.c(var8) + -vl.field_Q.c(var4));
-                          if ((var7 ^ -1) <= -1) {
+                          if (var7 >= 0) {
                             break L9;
                           } else {
                             var7 = 0;
@@ -675,7 +675,7 @@ final class pk {
                         if (!nf.field_d.field_W) {
                           break L18;
                         } else {
-                          if ((-nf.field_d.field_tb + uf.field_d ^ -1) > (var9 ^ -1)) {
+                          if (~(-nf.field_d.field_tb + uf.field_d) > ~var9) {
                             if (!ln.field_q) {
                               var1 = (Object) (Object) ll.field_i;
                               break L18;
@@ -691,7 +691,7 @@ final class pk {
                       if (nf.field_d.field_P == 0) {
                         break L7;
                       } else {
-                        if ((nf.field_d.field_ub ^ -1) <= (var9 ^ -1)) {
+                        if (~nf.field_d.field_ub <= ~var9) {
                           break L7;
                         } else {
                           if (ln.field_q) {

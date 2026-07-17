@@ -137,414 +137,235 @@ public final class cta extends eo {
         Object stackIn_18_0 = null;
         Object stackIn_19_0 = null;
         int stackIn_19_1 = 0;
+        Throwable decompiledCaughtException = null;
         Object stackOut_1_0 = null;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
         Object stackOut_3_0 = null;
         int stackOut_3_1 = 0;
+        Object stackOut_2_0 = null;
+        int stackOut_2_1 = 0;
         Object stackOut_4_0 = null;
-        Object stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
         Object stackOut_6_0 = null;
         int stackOut_6_1 = 0;
+        Object stackOut_5_0 = null;
+        int stackOut_5_1 = 0;
         Object stackOut_7_0 = null;
-        Object stackOut_8_0 = null;
-        int stackOut_8_1 = 0;
         Object stackOut_9_0 = null;
         int stackOut_9_1 = 0;
+        Object stackOut_8_0 = null;
+        int stackOut_8_1 = 0;
         Object stackOut_10_0 = null;
-        Object stackOut_11_0 = null;
-        int stackOut_11_1 = 0;
         Object stackOut_12_0 = null;
         int stackOut_12_1 = 0;
+        Object stackOut_11_0 = null;
+        int stackOut_11_1 = 0;
         Object stackOut_13_0 = null;
-        Object stackOut_14_0 = null;
-        int stackOut_14_1 = 0;
         Object stackOut_15_0 = null;
         int stackOut_15_1 = 0;
+        Object stackOut_14_0 = null;
+        int stackOut_14_1 = 0;
         Object stackOut_16_0 = null;
-        Object stackOut_17_0 = null;
-        int stackOut_17_1 = 0;
         Object stackOut_18_0 = null;
         int stackOut_18_1 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    ((cta) this).field_Pc = false;
-                    ((cta) this).field_ed = 0;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        ((cta) this).field_Xc = param0;
-                        ((cta) this).field_Mc = param3;
-                        ((cta) this).field_ad = param7;
-                        ((cta) this).field_id = param1;
-                        ((cta) this).field_jd = param5;
-                        ((cta) this).field_dd = param4;
-                        ((cta) this).field_ld = param8;
-                        ((cta) this).field_kd = param6;
-                        ((cta) this).field_Zc = new jagdx.D3DLIGHT(((cta) this).field_Mc);
-                        ((cta) this).field_cd = new jagdx.D3DLIGHT(((cta) this).field_Mc);
-                        ((cta) this).field_Wc = new jagdx.D3DLIGHT(((cta) this).field_Mc);
-                        ((cta) this).field_Nc = new jagdx.PixelBuffer(((cta) this).field_Mc);
-                        ((cta) this).field_Oc = new jagdx.GeometryBuffer(((cta) this).field_Mc);
-                        jagdx.GeometryBuffer discarded$3 = new jagdx.GeometryBuffer(((cta) this).field_Mc);
-                        stackOut_1_0 = this;
-                        stackIn_3_0 = stackOut_1_0;
-                        stackIn_2_0 = stackOut_1_0;
-                        if (0 == (65536 & ((cta) this).field_ld.TextureCaps)) {
-                            statePc = 3;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 23;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        stackOut_2_0 = this;
-                        stackOut_2_1 = 1;
-                        stackIn_4_0 = stackOut_2_0;
-                        stackIn_4_1 = stackOut_2_1;
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 23;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        stackOut_3_0 = this;
-                        stackOut_3_1 = 0;
-                        stackIn_4_0 = stackOut_3_0;
-                        stackIn_4_1 = stackOut_3_1;
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 23;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        ((cta) this).field_nd = stackIn_4_1 != 0;
-                        stackOut_4_0 = this;
-                        stackIn_6_0 = stackOut_4_0;
-                        stackIn_5_0 = stackOut_4_0;
-                        if ((((cta) this).field_ld.TextureCaps & 2048) == -1) {
-                            statePc = 6;
-                        } else {
-                            statePc = 5;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 23;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        stackOut_5_0 = this;
-                        stackOut_5_1 = 1;
-                        stackIn_7_0 = stackOut_5_0;
-                        stackIn_7_1 = stackOut_5_1;
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 23;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        stackOut_6_0 = this;
-                        stackOut_6_1 = 0;
-                        stackIn_7_0 = stackOut_6_0;
-                        stackIn_7_1 = stackOut_6_1;
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 23;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        ((cta) this).field_Ob = stackIn_7_1 != 0;
-                        stackOut_7_0 = this;
-                        stackIn_9_0 = stackOut_7_0;
-                        stackIn_8_0 = stackOut_7_0;
-                        if (-1 != (2 & ((cta) this).field_ld.TextureCaps)) {
-                            statePc = 9;
-                        } else {
-                            statePc = 8;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 23;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        stackOut_8_0 = this;
-                        stackOut_8_1 = 1;
-                        stackIn_10_0 = stackOut_8_0;
-                        stackIn_10_1 = stackOut_8_1;
-                        statePc = 10;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 23;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    try {
-                        stackOut_9_0 = this;
-                        stackOut_9_1 = 0;
-                        stackIn_10_0 = stackOut_9_0;
-                        stackIn_10_1 = stackOut_9_1;
-                        statePc = 10;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 23;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    try {
-                        ((cta) this).field_Tc = stackIn_10_1 != 0;
-                        stackOut_10_0 = this;
-                        stackIn_12_0 = stackOut_10_0;
-                        stackIn_11_0 = stackOut_10_0;
-                        if (((cta) this).field_ld.MaxActiveLights > 0) {
-                            statePc = 12;
-                        } else {
-                            statePc = 11;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 23;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    try {
-                        stackOut_11_0 = this;
-                        stackOut_11_1 = 8;
-                        stackIn_13_0 = stackOut_11_0;
-                        stackIn_13_1 = stackOut_11_1;
-                        statePc = 13;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_11) {
-                        caughtException = stateCaught_11;
-                        statePc = 23;
-                        continue stateLoop;
-                    }
-                }
-                case 12: {
-                    try {
-                        stackOut_12_0 = this;
-                        stackOut_12_1 = ((cta) this).field_ld.MaxActiveLights;
-                        stackIn_13_0 = stackOut_12_0;
-                        stackIn_13_1 = stackOut_12_1;
-                        statePc = 13;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_12) {
-                        caughtException = stateCaught_12;
-                        statePc = 23;
-                        continue stateLoop;
-                    }
-                }
-                case 13: {
-                    try {
-                        ((cta) this).field_e = stackIn_13_1;
-                        ((cta) this).field_Vb = ((cta) this).field_ld.MaxSimultaneousTextures;
-                        stackOut_13_0 = this;
-                        stackIn_15_0 = stackOut_13_0;
-                        stackIn_14_0 = stackOut_13_0;
-                        if ((16384 & ((cta) this).field_ld.TextureCaps) == 0) {
-                            statePc = 15;
-                        } else {
-                            statePc = 14;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_13) {
-                        caughtException = stateCaught_13;
-                        statePc = 23;
-                        continue stateLoop;
-                    }
-                }
-                case 14: {
-                    try {
-                        stackOut_14_0 = this;
-                        stackOut_14_1 = 1;
-                        stackIn_16_0 = stackOut_14_0;
-                        stackIn_16_1 = stackOut_14_1;
-                        statePc = 16;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_14) {
-                        caughtException = stateCaught_14;
-                        statePc = 23;
-                        continue stateLoop;
-                    }
-                }
-                case 15: {
-                    try {
-                        stackOut_15_0 = this;
-                        stackOut_15_1 = 0;
-                        stackIn_16_0 = stackOut_15_0;
-                        stackIn_16_1 = stackOut_15_1;
-                        statePc = 16;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_15) {
-                        caughtException = stateCaught_15;
-                        statePc = 23;
-                        continue stateLoop;
-                    }
-                }
-                case 16: {
-                    try {
-                        ((cta) this).field_Sc = stackIn_16_1 != 0;
-                        stackOut_16_0 = this;
-                        stackIn_18_0 = stackOut_16_0;
-                        stackIn_17_0 = stackOut_16_0;
-                        if ((8192 & ((cta) this).field_ld.TextureCaps) == 0) {
-                            statePc = 18;
-                        } else {
-                            statePc = 17;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_16) {
-                        caughtException = stateCaught_16;
-                        statePc = 23;
-                        continue stateLoop;
-                    }
-                }
-                case 17: {
-                    try {
-                        stackOut_17_0 = this;
-                        stackOut_17_1 = 1;
-                        stackIn_19_0 = stackOut_17_0;
-                        stackIn_19_1 = stackOut_17_1;
-                        statePc = 19;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_17) {
-                        caughtException = stateCaught_17;
-                        statePc = 23;
-                        continue stateLoop;
-                    }
-                }
-                case 18: {
-                    try {
-                        stackOut_18_0 = this;
-                        stackOut_18_1 = 0;
-                        stackIn_19_0 = stackOut_18_0;
-                        stackIn_19_1 = stackOut_18_1;
-                        statePc = 19;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_18) {
-                        caughtException = stateCaught_18;
-                        statePc = 23;
-                        continue stateLoop;
-                    }
-                }
-                case 19: {
-                    try {
-                        ((cta) this).field_x = stackIn_19_1 != 0;
-                        if (0 < ((cta) this).field_Gc) {
-                            statePc = 21;
-                        } else {
-                            statePc = 20;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_19) {
-                        caughtException = stateCaught_19;
-                        statePc = 23;
-                        continue stateLoop;
-                    }
-                }
-                case 20: {
-                    try {
-                        int discarded$4 = ((cta) this).field_dd.CheckDeviceMultiSampleType(((cta) this).field_Xc, ((cta) this).field_id, ((cta) this).field_ad.BackBufferFormat, true, 2);
-                        statePc = 21;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_20) {
-                        caughtException = stateCaught_20;
-                        statePc = 23;
-                        continue stateLoop;
-                    }
-                }
-                case 21: {
-                    try {
-                        ((cta) this).field_Rc = new hs[((cta) this).field_Vb];
-                        ((cta) this).field_bd = new boolean[((cta) this).field_Vb];
-                        ((cta) this).field_Yc = new boolean[((cta) this).field_Vb];
-                        ((cta) this).field_gd = new int[((cta) this).field_Vb];
-                        ((cta) this).field_Uc = new boolean[((cta) this).field_Vb];
-                        ((cta) this).field_Qc = new boolean[((cta) this).field_Vb];
-                        int discarded$5 = ((cta) this).field_jd.BeginScene();
-                        statePc = 24;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_21) {
-                        caughtException = stateCaught_21;
-                        statePc = 23;
-                        continue stateLoop;
-                    }
-                }
-                case 23: {
-                    var13 = caughtException;
-                    var13.printStackTrace();
-                    ((cta) this).a(true);
-                    throw new RuntimeException("");
-                }
-                case 24: {
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Object stackOut_17_0 = null;
+        int stackOut_17_1 = 0;
+        ((cta) this).field_Pc = false;
+        ((cta) this).field_ed = 0;
+        try {
+          L0: {
+            L1: {
+              ((cta) this).field_Xc = param0;
+              ((cta) this).field_Mc = param3;
+              ((cta) this).field_ad = param7;
+              ((cta) this).field_id = param1;
+              ((cta) this).field_jd = param5;
+              ((cta) this).field_dd = param4;
+              ((cta) this).field_ld = param8;
+              ((cta) this).field_kd = param6;
+              ((cta) this).field_Zc = new jagdx.D3DLIGHT(((cta) this).field_Mc);
+              ((cta) this).field_cd = new jagdx.D3DLIGHT(((cta) this).field_Mc);
+              ((cta) this).field_Wc = new jagdx.D3DLIGHT(((cta) this).field_Mc);
+              ((cta) this).field_Nc = new jagdx.PixelBuffer(((cta) this).field_Mc);
+              ((cta) this).field_Oc = new jagdx.GeometryBuffer(((cta) this).field_Mc);
+              jagdx.GeometryBuffer discarded$3 = new jagdx.GeometryBuffer(((cta) this).field_Mc);
+              stackOut_1_0 = this;
+              stackIn_3_0 = stackOut_1_0;
+              stackIn_2_0 = stackOut_1_0;
+              if (0 == (65536 & ((cta) this).field_ld.TextureCaps)) {
+                stackOut_3_0 = this;
+                stackOut_3_1 = 0;
+                stackIn_4_0 = stackOut_3_0;
+                stackIn_4_1 = stackOut_3_1;
+                break L1;
+              } else {
+                stackOut_2_0 = this;
+                stackOut_2_1 = 1;
+                stackIn_4_0 = stackOut_2_0;
+                stackIn_4_1 = stackOut_2_1;
+                break L1;
+              }
             }
+            L2: {
+              ((cta) this).field_nd = stackIn_4_1 != 0;
+              stackOut_4_0 = this;
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_5_0 = stackOut_4_0;
+              if ((((cta) this).field_ld.TextureCaps & 2048) == -1) {
+                stackOut_6_0 = this;
+                stackOut_6_1 = 0;
+                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_1 = stackOut_6_1;
+                break L2;
+              } else {
+                stackOut_5_0 = this;
+                stackOut_5_1 = 1;
+                stackIn_7_0 = stackOut_5_0;
+                stackIn_7_1 = stackOut_5_1;
+                break L2;
+              }
+            }
+            L3: {
+              ((cta) this).field_Ob = stackIn_7_1 != 0;
+              stackOut_7_0 = this;
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_8_0 = stackOut_7_0;
+              if (-1 != (2 & ((cta) this).field_ld.TextureCaps)) {
+                stackOut_9_0 = this;
+                stackOut_9_1 = 0;
+                stackIn_10_0 = stackOut_9_0;
+                stackIn_10_1 = stackOut_9_1;
+                break L3;
+              } else {
+                stackOut_8_0 = this;
+                stackOut_8_1 = 1;
+                stackIn_10_0 = stackOut_8_0;
+                stackIn_10_1 = stackOut_8_1;
+                break L3;
+              }
+            }
+            L4: {
+              ((cta) this).field_Tc = stackIn_10_1 != 0;
+              stackOut_10_0 = this;
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_11_0 = stackOut_10_0;
+              if (((cta) this).field_ld.MaxActiveLights > 0) {
+                stackOut_12_0 = this;
+                stackOut_12_1 = ((cta) this).field_ld.MaxActiveLights;
+                stackIn_13_0 = stackOut_12_0;
+                stackIn_13_1 = stackOut_12_1;
+                break L4;
+              } else {
+                stackOut_11_0 = this;
+                stackOut_11_1 = 8;
+                stackIn_13_0 = stackOut_11_0;
+                stackIn_13_1 = stackOut_11_1;
+                break L4;
+              }
+            }
+            L5: {
+              ((cta) this).field_e = stackIn_13_1;
+              ((cta) this).field_Vb = ((cta) this).field_ld.MaxSimultaneousTextures;
+              stackOut_13_0 = this;
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_14_0 = stackOut_13_0;
+              if ((16384 & ((cta) this).field_ld.TextureCaps) == 0) {
+                stackOut_15_0 = this;
+                stackOut_15_1 = 0;
+                stackIn_16_0 = stackOut_15_0;
+                stackIn_16_1 = stackOut_15_1;
+                break L5;
+              } else {
+                stackOut_14_0 = this;
+                stackOut_14_1 = 1;
+                stackIn_16_0 = stackOut_14_0;
+                stackIn_16_1 = stackOut_14_1;
+                break L5;
+              }
+            }
+            L6: {
+              ((cta) this).field_Sc = stackIn_16_1 != 0;
+              stackOut_16_0 = this;
+              stackIn_18_0 = stackOut_16_0;
+              stackIn_17_0 = stackOut_16_0;
+              if ((8192 & ((cta) this).field_ld.TextureCaps) == 0) {
+                stackOut_18_0 = this;
+                stackOut_18_1 = 0;
+                stackIn_19_0 = stackOut_18_0;
+                stackIn_19_1 = stackOut_18_1;
+                break L6;
+              } else {
+                stackOut_17_0 = this;
+                stackOut_17_1 = 1;
+                stackIn_19_0 = stackOut_17_0;
+                stackIn_19_1 = stackOut_17_1;
+                break L6;
+              }
+            }
+            L7: {
+              ((cta) this).field_x = stackIn_19_1 != 0;
+              if (0 < ((cta) this).field_Gc) {
+                break L7;
+              } else {
+                int discarded$4 = ((cta) this).field_dd.CheckDeviceMultiSampleType(((cta) this).field_Xc, ((cta) this).field_id, ((cta) this).field_ad.BackBufferFormat, true, 2);
+                break L7;
+              }
+            }
+            ((cta) this).field_Rc = new hs[((cta) this).field_Vb];
+            ((cta) this).field_bd = new boolean[((cta) this).field_Vb];
+            ((cta) this).field_Yc = new boolean[((cta) this).field_Vb];
+            ((cta) this).field_gd = new int[((cta) this).field_Vb];
+            ((cta) this).field_Uc = new boolean[((cta) this).field_Vb];
+            ((cta) this).field_Qc = new boolean[((cta) this).field_Vb];
+            int discarded$5 = ((cta) this).field_jd.BeginScene();
+            break L0;
+          }
+        } catch (java.lang.Throwable decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var13 = decompiledCaughtException;
+          var13.printStackTrace();
+          ((cta) this).a(true);
+          throw new RuntimeException("");
         }
     }
 
     final static int a(ft param0, int param1, una param2) {
-        if (param1 >= -127) {
+        L0: {
+          if (param1 < -127) {
+            break L0;
+          } else {
             field_md = null;
+            break L0;
+          }
         }
-        if (!(param2 != una.field_g)) {
-            if (it.field_b != param0) {
-                if (param0 != gpa.field_a) {
-                    if (param0 == rp.field_g) {
-                        return 28;
-                    }
-                    if (param0 == qr.field_w) {
-                        return 50;
-                    }
-                    if (param0 == wo.field_i) {
-                        return 51;
-                    }
-                    // if_acmpne L86
-                    return 77;
-                }
+        L1: {
+          if (param2 == una.field_g) {
+            if (it.field_b == param0) {
+              return 22;
+            } else {
+              if (param0 == gpa.field_a) {
                 return 21;
+              } else {
+                if (param0 != rp.field_g) {
+                  if (param0 != qr.field_w) {
+                    if (param0 != wo.field_i) {
+                      if (js.field_g != param0) {
+                        break L1;
+                      } else {
+                        return 77;
+                      }
+                    } else {
+                      return 51;
+                    }
+                  } else {
+                    return 50;
+                  }
+                } else {
+                  return 28;
+                }
+              }
             }
-            return 22;
+          } else {
+            break L1;
+          }
         }
         throw new IllegalArgumentException("");
     }
@@ -601,420 +422,134 @@ public final class cta extends eo {
         int stackIn_4_0 = 0;
         int stackIn_31_0 = 0;
         int stackIn_33_0 = 0;
+        Throwable decompiledCaughtException = null;
         int stackOut_3_0 = 0;
-        int stackOut_30_0 = 0;
         int stackOut_32_0 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var6 = 0;
-                    var7 = 0;
-                    var8 = 0;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        var9_int = 108 / ((param0 - 28) / 50);
-                        var10 = new jagdx.D3DDISPLAYMODE();
-                        if (jagdx.ah.a(param1.a(param5, var10), 10643)) {
-                            statePc = 3;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 34;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 34;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        stackOut_3_0 = 0;
-                        stackIn_4_0 = stackOut_3_0;
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 34;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    return stackIn_4_0 != 0;
-                }
-                case 5: {
-                    try {
-                        if (-1 < (param2 ^ -1)) {
-                            statePc = 26;
-                        } else {
-                            statePc = 6;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 34;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        if (param2 != 1) {
-                            statePc = 8;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 34;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        statePc = 25;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 34;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
+        int stackOut_30_0 = 0;
+        var6 = 0;
+        var7 = 0;
+        var8 = 0;
+        try {
+          L0: {
+            var9_int = 108 / ((param0 - 28) / 50);
+            var10 = new jagdx.D3DDISPLAYMODE();
+            if (jagdx.ah.a(param1.a(param5, var10), 10643)) {
+              stackOut_3_0 = 0;
+              stackIn_4_0 = stackOut_3_0;
+              return stackIn_4_0 != 0;
+            } else {
+              L1: while (true) {
+                L2: {
+                  if (param2 < 0) {
+                    break L2;
+                  } else {
+                    L3: {
+                      if (param2 != 1) {
                         var8 = 0 - -param2;
                         var11 = 0;
-                        statePc = 9;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 34;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    try {
-                        if (field_md.length <= var11) {
-                            statePc = 25;
-                        } else {
-                            statePc = 10;
+                        L4: while (true) {
+                          if (field_md.length <= var11) {
+                            break L3;
+                          } else {
+                            L5: {
+                              if (0 != param1.CheckDeviceType(param5, param3, var10.Format, field_md[var11], true)) {
+                                break L5;
+                              } else {
+                                if (param1.CheckDeviceFormat(param5, param3, var10.Format, 1, 1, field_md[var11]) != 0) {
+                                  break L5;
+                                } else {
+                                  L6: {
+                                    if (param2 == 0) {
+                                      break L6;
+                                    } else {
+                                      if (param1.CheckDeviceMultiSampleType(param5, param3, field_md[var11], true, var8) != 0) {
+                                        break L5;
+                                      } else {
+                                        break L6;
+                                      }
+                                    }
+                                  }
+                                  var12 = 0;
+                                  L7: while (true) {
+                                    if (~var12 <= ~field_fd.length) {
+                                      break L5;
+                                    } else {
+                                      L8: {
+                                        if (0 != param1.CheckDeviceFormat(param5, param3, var10.Format, 2, 1, field_fd[var12])) {
+                                          break L8;
+                                        } else {
+                                          if (0 != param1.CheckDepthStencilMatch(param5, param3, var10.Format, field_md[var11], field_fd[var12])) {
+                                            break L8;
+                                          } else {
+                                            L9: {
+                                              if (param2 == 0) {
+                                                break L9;
+                                              } else {
+                                                if (param1.CheckDeviceMultiSampleType(param5, param3, field_fd[var11], true, var8) == 0) {
+                                                  break L9;
+                                                } else {
+                                                  break L8;
+                                                }
+                                              }
+                                            }
+                                            var7 = field_md[var11];
+                                            var6 = field_fd[var12];
+                                            break L2;
+                                          }
+                                        }
+                                      }
+                                      var12++;
+                                      continue L7;
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                            var11++;
+                            continue L4;
+                          }
                         }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 34;
-                        continue stateLoop;
+                      } else {
+                        break L3;
+                      }
                     }
+                    param2--;
+                    continue L1;
+                  }
                 }
-                case 10: {
-                    try {
-                        if (0 != param1.CheckDeviceType(param5, param3, var10.Format, field_md[var11], true)) {
-                            statePc = 24;
-                        } else {
-                            statePc = 11;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 34;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    try {
-                        if (-1 != param1.CheckDeviceFormat(param5, param3, var10.Format, 1, 1, field_md[var11])) {
-                            statePc = 24;
-                        } else {
-                            statePc = 12;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_11) {
-                        caughtException = stateCaught_11;
-                        statePc = 34;
-                        continue stateLoop;
-                    }
-                }
-                case 12: {
-                    try {
-                        if (-1 == param2) {
-                            statePc = 15;
-                        } else {
-                            statePc = 13;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_12) {
-                        caughtException = stateCaught_12;
-                        statePc = 34;
-                        continue stateLoop;
-                    }
-                }
-                case 13: {
-                    try {
-                        if (param1.CheckDeviceMultiSampleType(param5, param3, field_md[var11], true, var8) != 0) {
-                            statePc = 24;
-                        } else {
-                            statePc = 14;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_13) {
-                        caughtException = stateCaught_13;
-                        statePc = 34;
-                        continue stateLoop;
-                    }
-                }
-                case 14: {
-                    try {
-                        statePc = 15;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_14) {
-                        caughtException = stateCaught_14;
-                        statePc = 34;
-                        continue stateLoop;
-                    }
-                }
-                case 15: {
-                    try {
-                        var12 = 0;
-                        statePc = 16;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_15) {
-                        caughtException = stateCaught_15;
-                        statePc = 34;
-                        continue stateLoop;
-                    }
-                }
-                case 16: {
-                    try {
-                        if (var12 >= field_fd.length) {
-                            statePc = 24;
-                        } else {
-                            statePc = 17;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_16) {
-                        caughtException = stateCaught_16;
-                        statePc = 34;
-                        continue stateLoop;
-                    }
-                }
-                case 17: {
-                    try {
-                        if (0 != param1.CheckDeviceFormat(param5, param3, var10.Format, 2, 1, field_fd[var12])) {
-                            statePc = 23;
-                        } else {
-                            statePc = 18;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_17) {
-                        caughtException = stateCaught_17;
-                        statePc = 34;
-                        continue stateLoop;
-                    }
-                }
-                case 18: {
-                    try {
-                        if (0 != param1.CheckDepthStencilMatch(param5, param3, var10.Format, field_md[var11], field_fd[var12])) {
-                            statePc = 23;
-                        } else {
-                            statePc = 19;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_18) {
-                        caughtException = stateCaught_18;
-                        statePc = 34;
-                        continue stateLoop;
-                    }
-                }
-                case 19: {
-                    try {
-                        if (param2 == 0) {
-                            statePc = 22;
-                        } else {
-                            statePc = 20;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_19) {
-                        caughtException = stateCaught_19;
-                        statePc = 34;
-                        continue stateLoop;
-                    }
-                }
-                case 20: {
-                    try {
-                        if (-1 == (param1.CheckDeviceMultiSampleType(param5, param3, field_fd[var11], true, var8) ^ -1)) {
-                            statePc = 22;
-                        } else {
-                            statePc = 21;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_20) {
-                        caughtException = stateCaught_20;
-                        statePc = 34;
-                        continue stateLoop;
-                    }
-                }
-                case 21: {
-                    try {
-                        statePc = 23;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_21) {
-                        caughtException = stateCaught_21;
-                        statePc = 34;
-                        continue stateLoop;
-                    }
-                }
-                case 22: {
-                    try {
-                        var7 = field_md[var11];
-                        var6 = field_fd[var12];
-                        statePc = 26;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_22) {
-                        caughtException = stateCaught_22;
-                        statePc = 34;
-                        continue stateLoop;
-                    }
-                }
-                case 23: {
-                    try {
-                        var12++;
-                        statePc = 16;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_23) {
-                        caughtException = stateCaught_23;
-                        statePc = 34;
-                        continue stateLoop;
-                    }
-                }
-                case 24: {
-                    try {
-                        var11++;
-                        statePc = 9;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_24) {
-                        caughtException = stateCaught_24;
-                        statePc = 34;
-                        continue stateLoop;
-                    }
-                }
-                case 25: {
-                    try {
-                        param2--;
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_25) {
-                        caughtException = stateCaught_25;
-                        statePc = 34;
-                        continue stateLoop;
-                    }
-                }
-                case 26: {
-                    try {
-                        if (-1 < (param2 ^ -1)) {
-                            statePc = 30;
-                        } else {
-                            statePc = 27;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_26) {
-                        caughtException = stateCaught_26;
-                        statePc = 34;
-                        continue stateLoop;
-                    }
-                }
-                case 27: {
-                    try {
-                        if (0 == var7) {
-                            statePc = 30;
-                        } else {
-                            statePc = 28;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_27) {
-                        caughtException = stateCaught_27;
-                        statePc = 34;
-                        continue stateLoop;
-                    }
-                }
-                case 28: {
-                    try {
-                        if (var6 == 0) {
-                            statePc = 30;
-                        } else {
-                            statePc = 29;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_28) {
-                        caughtException = stateCaught_28;
-                        statePc = 34;
-                        continue stateLoop;
-                    }
-                }
-                case 29: {
-                    try {
-                        statePc = 32;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_29) {
-                        caughtException = stateCaught_29;
-                        statePc = 34;
-                        continue stateLoop;
-                    }
-                }
-                case 30: {
-                    try {
-                        stackOut_30_0 = 0;
-                        stackIn_31_0 = stackOut_30_0;
-                        statePc = 31;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_30) {
-                        caughtException = stateCaught_30;
-                        statePc = 34;
-                        continue stateLoop;
-                    }
-                }
-                case 31: {
-                    return stackIn_31_0 != 0;
-                }
-                case 32: {
-                    try {
+                L10: {
+                  if (param2 < 0) {
+                    break L10;
+                  } else {
+                    if (0 == var7) {
+                      break L10;
+                    } else {
+                      if (var6 == 0) {
+                        break L10;
+                      } else {
                         param4.AutoDepthStencilFormat = var6;
                         param4.MultiSampleQuality = 0;
                         param4.MultiSampleType = var8;
                         param4.BackBufferFormat = var7;
                         stackOut_32_0 = 1;
                         stackIn_33_0 = stackOut_32_0;
-                        statePc = 33;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_32) {
-                        caughtException = stateCaught_32;
-                        statePc = 34;
-                        continue stateLoop;
+                        break L0;
+                      }
                     }
+                  }
                 }
-                case 33: {
-                    return stackIn_33_0 != 0;
-                }
-                case 34: {
-                    var9 = caughtException;
-                    return false;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+                stackOut_30_0 = 0;
+                stackIn_31_0 = stackOut_30_0;
+                return stackIn_31_0 != 0;
+              }
             }
+          }
+        } catch (java.lang.Throwable decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var9 = decompiledCaughtException;
+          return false;
         }
+        return stackIn_33_0 != 0;
     }
 
     private final static int a(ica param0, int param1) {
@@ -1271,7 +806,7 @@ public final class cta extends eo {
             var5 = var3.c(-120);
             var6 = var3.b(0) / 255.0f;
             ((cta) this).field_Wc.SetPosition((float)var3.d(13437), (float)var3.a(19848), (float)var3.b((byte) 11));
-            ((cta) this).field_Wc.SetDiffuse(var6 * (float)(255 & var5 >> 141273392), (float)(var5 >> 570686696 & 255) * var6, var6 * (float)(255 & var5), 0.0f);
+            ((cta) this).field_Wc.SetDiffuse(var6 * (float)(255 & var5 >> 16), (float)(var5 >> 8 & 255) * var6, var6 * (float)(255 & var5), 0.0f);
             ((cta) this).field_Wc.SetAttenuation(0.0f, 0.0f, 1.0f / (float)(var3.a((byte) 109) * var3.a((byte) 102)));
             ((cta) this).field_Wc.SetRange((float)var3.a((byte) -113));
             int discarded$0 = ((cta) this).field_jd.SetLight(var4, ((cta) this).field_Wc);
@@ -1314,7 +849,7 @@ public final class cta extends eo {
               ((cta) this).field_cd.SetType(3);
               ((cta) this).field_Wc.SetType(1);
               ((cta) this).field_Pc = false;
-              super.h(param0 + 0);
+              super.h(param0);
               return;
             } else {
               return;
@@ -1353,7 +888,7 @@ public final class cta extends eo {
             if (4 == var3) {
               return (vw) (Object) new usa((cta) this, ((cta) this).field_I, ((cta) this).field_Mb);
             } else {
-              if ((var3 ^ -1) == -9) {
+              if (var3 == 8) {
                 return (vw) (Object) new oja((cta) this, ((cta) this).field_I, ((cta) this).field_Mb);
               } else {
                 return super.e(param0, 106);
@@ -1379,8 +914,8 @@ public final class cta extends eo {
         }
         L1: {
           var7 = param3;
-          if (var7 != -2) {
-            if (-3 == var7) {
+          if (var7 != 1) {
+            if (var7 == 2) {
               var5 = 27;
               break L1;
             } else {
@@ -1417,11 +952,11 @@ public final class cta extends eo {
         int var8 = 0;
         L0: {
           var8 = param1;
-          if (-2 == var8) {
+          if (var8 == 1) {
             var6 = 3;
             break L0;
           } else {
-            if (-3 != var8) {
+            if (var8 != 2) {
               var6 = 2;
               break L0;
             } else {
@@ -1480,236 +1015,146 @@ public final class cta extends eo {
     }
 
     final static ha createToolkit(java.awt.Canvas param0, d param1, cn param2, Integer param3) {
-        cta var4 = null;
-        int var5 = 0;
+        Object var12_ref = null;
+        Object var4 = null;
+        int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         jaclib.peer.sha var7 = null;
-        jagdx.IDirect3D var8 = null;
+        Object var8 = null;
+        jagdx.IDirect3D var8_ref = null;
         jagdx.D3DCAPS var9 = null;
-        jagdx.D3DPRESENT_PARAMETERS var10 = null;
+        Object var10 = null;
+        jagdx.D3DPRESENT_PARAMETERS var10_ref = null;
         int var11 = 0;
         jagdx.IDirect3DDevice var12 = null;
         gua var13 = null;
         jagdx.eva var14 = null;
         cta var15 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var4 = null;
-                    var5 = 0;
-                    var6 = 1;
-                    var7 = new jaclib.peer.sha();
-                    var8 = jagdx.IDirect3D.a(-2147483616, var7);
-                    var9 = var8.a(var5, var6);
-                    if ((16777216 & var9.RasterCaps) != -1) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    throw new RuntimeException("");
-                }
-                case 2: {
-                    if (-3 <= var9.MaxSimultaneousTextures) {
-                        statePc = 4;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 3: {
-                    throw new RuntimeException("");
-                }
-                case 4: {
-                    if (-1 != (var9.TextureOpCaps & 2)) {
-                        statePc = 6;
-                    } else {
-                        statePc = 5;
-                    }
-                    continue stateLoop;
-                }
-                case 5: {
-                    throw new RuntimeException("");
-                }
-                case 6: {
-                    if (-1 != (8 & var9.TextureOpCaps)) {
-                        statePc = 8;
-                    } else {
-                        statePc = 7;
-                    }
-                    continue stateLoop;
-                }
-                case 7: {
-                    throw new RuntimeException("");
-                }
-                case 8: {
+        cta stackIn_37_0 = null;
+        Throwable decompiledCaughtException = null;
+        cta stackOut_36_0 = null;
+        var12_ref = null;
+        var4 = null;
+        try {
+          L0: {
+            var5_int = 0;
+            var6 = 1;
+            var7 = new jaclib.peer.sha();
+            var8_ref = jagdx.IDirect3D.a(-2147483616, var7);
+            var9 = var8_ref.a(var5_int, var6);
+            if ((16777216 & var9.RasterCaps) != -1) {
+              if (-3 <= var9.MaxSimultaneousTextures) {
+                if (-1 != (var9.TextureOpCaps & 2)) {
+                  if (-1 != (8 & var9.TextureOpCaps)) {
                     if (0 != (64 & var9.TextureOpCaps)) {
-                        statePc = 10;
+                      if ((512 & var9.TextureOpCaps) == -1) {
+                        throw new RuntimeException("");
+                      } else {
+                        if (-1 != (var9.TextureOpCaps & 33554432)) {
+                          if ((16 & (var9.DestBlendCaps & var9.SrcBlendCaps)) == 0) {
+                            throw new RuntimeException("");
+                          } else {
+                            if (0 != (var9.DestBlendCaps & var9.SrcBlendCaps & 32)) {
+                              if ((2 & (var9.SrcBlendCaps & var9.DestBlendCaps)) != 0) {
+                                L1: {
+                                  if (var9.MaxActiveLights <= 0) {
+                                    break L1;
+                                  } else {
+                                    if (2 <= var9.MaxActiveLights) {
+                                      break L1;
+                                    } else {
+                                      throw new RuntimeException("");
+                                    }
+                                  }
+                                }
+                                if (var9.MaxStreams >= 5) {
+                                  var10_ref = new jagdx.D3DPRESENT_PARAMETERS(param0);
+                                  if (cta.a(-30, var8_ref, param3.intValue(), var6, var10_ref, var5_int)) {
+                                    L2: {
+                                      var10_ref.PresentationInterval = -2147483648;
+                                      var10_ref.Windowed = true;
+                                      var10_ref.EnableAutoDepthStencil = true;
+                                      var11 = 2;
+                                      if ((var9.DevCaps & 1048576) == 0) {
+                                        break L2;
+                                      } else {
+                                        var11 = var11 | 16;
+                                        break L2;
+                                      }
+                                    }
+                                    var12_ref = null;
+                                    try {
+                                      L3: {
+                                        var12 = var8_ref.a(var5_int, var6, param0, var11 | 64, var10_ref);
+                                        break L3;
+                                      }
+                                    } catch (java.lang.Exception decompiledCaughtParameter0) {
+                                      decompiledCaughtException = decompiledCaughtParameter0;
+                                      L4: {
+                                        var14 = (jagdx.eva) (Object) decompiledCaughtException;
+                                        var12 = var8_ref.a(var5_int, var6, param0, 32 | var11, var10_ref);
+                                        break L4;
+                                      }
+                                    }
+                                    var13 = new gua(var12.b(0), var12.b());
+                                    var15 = new cta(var5_int, var6, param0, var7, var8_ref, var12, var13, var10_ref, var9, param1, param2, param3.intValue());
+                                    var4 = (Object) (Object) var15;
+                                    var15.K(-107);
+                                    stackOut_36_0 = (cta) var15;
+                                    stackIn_37_0 = stackOut_36_0;
+                                    break L0;
+                                  } else {
+                                    throw new RuntimeException("");
+                                  }
+                                } else {
+                                  throw new RuntimeException("");
+                                }
+                              } else {
+                                throw new RuntimeException("");
+                              }
+                            } else {
+                              throw new RuntimeException("");
+                            }
+                          }
+                        } else {
+                          throw new RuntimeException("");
+                        }
+                      }
                     } else {
-                        statePc = 9;
+                      throw new RuntimeException("");
                     }
-                    continue stateLoop;
-                }
-                case 9: {
+                  } else {
                     throw new RuntimeException("");
+                  }
+                } else {
+                  throw new RuntimeException("");
                 }
-                case 10: {
-                    if ((512 & var9.TextureOpCaps) == -1) {
-                        statePc = 12;
-                    } else {
-                        statePc = 13;
-                    }
-                    continue stateLoop;
-                }
-                case 12: {
-                    throw new RuntimeException("");
-                }
-                case 13: {
-                    if (-1 != (var9.TextureOpCaps & 33554432)) {
-                        statePc = 15;
-                    } else {
-                        statePc = 14;
-                    }
-                    continue stateLoop;
-                }
-                case 14: {
-                    throw new RuntimeException("");
-                }
-                case 15: {
-                    if (-1 == (16 & (var9.DestBlendCaps & var9.SrcBlendCaps) ^ -1)) {
-                        statePc = 17;
-                    } else {
-                        statePc = 18;
-                    }
-                    continue stateLoop;
-                }
-                case 17: {
-                    throw new RuntimeException("");
-                }
-                case 18: {
-                    if (0 != (var9.DestBlendCaps & var9.SrcBlendCaps & 32)) {
-                        statePc = 20;
-                    } else {
-                        statePc = 19;
-                    }
-                    continue stateLoop;
-                }
-                case 19: {
-                    throw new RuntimeException("");
-                }
-                case 20: {
-                    if ((2 & (var9.SrcBlendCaps & var9.DestBlendCaps)) != 0) {
-                        statePc = 22;
-                    } else {
-                        statePc = 21;
-                    }
-                    continue stateLoop;
-                }
-                case 21: {
-                    throw new RuntimeException("");
-                }
-                case 22: {
-                    if (var9.MaxActiveLights <= 0) {
-                        statePc = 25;
-                    } else {
-                        statePc = 23;
-                    }
-                    continue stateLoop;
-                }
-                case 23: {
-                    if (2 <= var9.MaxActiveLights) {
-                        statePc = 25;
-                    } else {
-                        statePc = 24;
-                    }
-                    continue stateLoop;
-                }
-                case 24: {
-                    throw new RuntimeException("");
-                }
-                case 25: {
-                    if ((var9.MaxStreams ^ -1) <= -6) {
-                        statePc = 27;
-                    } else {
-                        statePc = 26;
-                    }
-                    continue stateLoop;
-                }
-                case 26: {
-                    throw new RuntimeException("");
-                }
-                case 27: {
-                    var10 = new jagdx.D3DPRESENT_PARAMETERS(param0);
-                    if (cta.a(-30, var8, param3.intValue(), var6, var10, var5)) {
-                        statePc = 29;
-                    } else {
-                        statePc = 28;
-                    }
-                    continue stateLoop;
-                }
-                case 28: {
-                    throw new RuntimeException("");
-                }
-                case 29: {
-                    var10.PresentationInterval = -2147483648;
-                    var10.Windowed = true;
-                    var10.EnableAutoDepthStencil = true;
-                    var11 = 2;
-                    if ((var9.DevCaps & 1048576) == 0) {
-                        statePc = 31;
-                    } else {
-                        statePc = 30;
-                    }
-                    continue stateLoop;
-                }
-                case 30: {
-                    var11 = var11 | 16;
-                    statePc = 31;
-                    continue stateLoop;
-                }
-                case 31: {
-                    var12 = null;
-                    statePc = 32;
-                    continue stateLoop;
-                }
-                case 32: {
-                    try {
-                        var12 = var8.a(var5, var6, param0, var11 | 64, var10);
-                        statePc = 35;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_32) {
-                        caughtException = stateCaught_32;
-                        statePc = 34;
-                        continue stateLoop;
-                    }
-                }
-                case 34: {
-                    var14 = (jagdx.eva) (Object) caughtException;
-                    var12 = var8.a(var5, var6, param0, 32 | var11, var10);
-                    statePc = 35;
-                    continue stateLoop;
-                }
-                case 35: {
-                    var13 = new gua(var12.b(0), var12.b());
-                    var15 = new cta(var5, var6, param0, var7, var8, var12, var13, var10, var9, param1, param2, param3.intValue());
-                    var4 = var15;
-                    var15.K(-107);
-                    return (ha) (Object) var15;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              } else {
+                throw new RuntimeException("");
+              }
+            } else {
+              throw new RuntimeException("");
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+          decompiledCaughtException = decompiledCaughtParameter1;
+          L5: {
+            var5 = (RuntimeException) (Object) decompiledCaughtException;
+            if (var4 == null) {
+              break L5;
+            } else {
+              ((cta) var4).k();
+              break L5;
+            }
+          }
+          throw var5;
         }
+        return (ha) (Object) stackIn_37_0;
     }
 
     private final boolean T(int param0) {
         int var4 = 0;
-        if (param0 != -2005530519) {
-            return false;
-        }
         int var2 = ((cta) this).field_jd.TestCooperativeLevel();
         if (var2 != 0) {
             if (-2005530519 != var2) {
@@ -1721,7 +1166,7 @@ public final class cta extends eo {
         var3.a(true);
         ((cta) this).field_ad.BackBufferWidth = 0;
         ((cta) this).field_ad.BackBufferHeight = 0;
-        if (cta.a(param0 + 2005530607, ((cta) this).field_dd, ((cta) this).field_Gc, ((cta) this).field_id, ((cta) this).field_ad, ((cta) this).field_Xc)) {
+        if (cta.a(88, ((cta) this).field_dd, ((cta) this).field_Gc, ((cta) this).field_id, ((cta) this).field_ad, ((cta) this).field_Xc)) {
             var4 = ((cta) this).field_jd.Reset(((cta) this).field_ad);
             if (!(!jagdx.ah.a(var4, (byte) 123))) {
                 var3.a((byte) -17, ((cta) this).field_jd.b(0), ((cta) this).field_jd.b());
@@ -1735,11 +1180,12 @@ public final class cta extends eo {
 
     final void a(int param0, int param1) throws qva {
         L0: {
-          int discarded$22 = ((cta) this).field_jd.EndScene();
+          int discarded$23 = ((cta) this).field_jd.EndScene();
           if (!((cta) this).field_kd.a((byte) 75)) {
+            int fieldTemp$24 = ((cta) this).field_ed + 1;
             ((cta) this).field_ed = ((cta) this).field_ed + 1;
-            if (((cta) this).field_ed + 1 <= 50) {
-              boolean discarded$23 = this.T(-2005530519);
+            if (fieldTemp$24 <= 50) {
+              boolean discarded$25 = this.T(-2005530519);
               break L0;
             } else {
               throw new qva();
@@ -1747,14 +1193,14 @@ public final class cta extends eo {
           } else {
             ((cta) this).field_ed = 0;
             if (jagdx.ah.a(((cta) this).field_kd.a(0, 0), 10643)) {
-              boolean discarded$24 = this.T(-2005530519);
+              boolean discarded$26 = this.T(-2005530519);
               break L0;
             } else {
               break L0;
             }
           }
         }
-        int discarded$25 = ((cta) this).field_jd.BeginScene();
+        int discarded$27 = ((cta) this).field_jd.BeginScene();
     }
 
     final void f(int param0) {
@@ -1993,7 +1439,7 @@ public final class cta extends eo {
                 stackIn_4_1 = stackOut_2_1;
                 stackIn_3_0 = stackOut_2_0;
                 stackIn_3_1 = stackOut_2_1;
-                if (-1 < (((cta) this).field_J ^ -1)) {
+                if (((cta) this).field_J < 0) {
                   break L1;
                 } else {
                   stackOut_3_0 = (jagdx.IDirect3DDevice) (Object) stackIn_3_0;

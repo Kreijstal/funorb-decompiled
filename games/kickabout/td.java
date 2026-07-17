@@ -8,12 +8,6 @@ final class td {
     static ut field_c;
 
     public static void a(boolean param0) {
-        if (param0) {
-            field_d = 121;
-            field_c = null;
-            field_a = null;
-            return;
-        }
         field_c = null;
         field_a = null;
     }
@@ -705,26 +699,21 @@ final class td {
         eo.a(param1 - -448, 73 + param0, 241, param3);
         ta.e(124);
         pt.a(param1 + 896, -22914, param1, 1076 + param0, param0);
-        eo.a(param1 + 448, param0 - -1344 + -482 - -168 + 241, 241, param3);
+        eo.a(param1 + 448, param0 + 1271, 241, param3);
         ta.e(127);
         pt.a(param1 + 896, -22914, param1, 1344 + param0, param0);
         eo.a(param1 + param3, param3 + param0, 33, param3);
         eo.a(-param3 + param1 - -896, param3 + param0, 33, param3);
         eo.a(param3 + param1, 1344 + param0 + -param3, 33, param3);
-        if (param5) {
-          return;
-        } else {
-          eo.a(param1 - -896 + -param3, param0 - -1344 + -param3, 33, param3);
-          ta.e(121);
-          eo.b(param1, param0, 896, 1344, param3);
-          eo.c(param1, (1344 - param3 >> -1757873151) + param0, 896, param3);
-          eo.b(314 + param1, param0, 268, 122, param3);
-          eo.b(param1 + 314, 1344 + (param0 + -122), 268, 122, param3);
-          eo.b(param1 + 179, param0, 537, 268, param3);
-          eo.b(179 + param1, 1076 + param0, 537, 268, param3);
-          vj.a(0);
-          return;
-        }
+        eo.a(param1 - -896 + -param3, param0 - -1344 + -param3, 33, param3);
+        ta.e(121);
+        eo.b(param1, param0, 896, 1344, param3);
+        eo.c(param1, (1344 - param3 >> 1) + param0, 896, param3);
+        eo.b(314 + param1, param0, 268, 122, param3);
+        eo.b(param1 + 314, 1344 + (param0 + -122), 268, 122, param3);
+        eo.b(param1 + 179, param0, 537, 268, param3);
+        eo.b(179 + param1, 1076 + param0, 537, 268, param3);
+        vj.a(0);
     }
 
     static {
@@ -732,7 +721,7 @@ final class td {
     }
 
     private static void $cfr$clinit() {
-        field_a = new char[]{(char)97, (char)97, (char)97, (char)97, (char)97, (char)97, (char)97, (char)97, (char)97, (char)98, (char)98, (char)98, (char)99, (char)99, (char)99, (char)99, (char)99, (char)99, (char)100, (char)100, (char)100, (char)100, (char)100, (char)100, (char)100, (char)101, (char)101, (char)101, (char)101, (char)101, (char)101, (char)101, (char)102, (char)102, (char)102, (char)102, (char)103, (char)103, (char)103, (char)103, (char)104, (char)104, (char)104, (char)104, (char)104, (char)104, (char)105, (char)105, (char)105, (char)106, (char)106, (char)106, (char)106, (char)106, (char)107, (char)107, (char)108, (char)108, (char)108, (char)108, (char)108, (char)109, (char)109, (char)109, (char)109, (char)109, (char)110, (char)110, (char)110, (char)110, (char)110, (char)110, (char)110, (char)110, (char)111, (char)112, (char)112, (char)112, (char)112, (char)112, (char)113, (char)114, (char)114, (char)114, (char)114, (char)114, (char)114, (char)115, (char)115, (char)115, (char)115, (char)115, (char)115, (char)116, (char)116, (char)116, (char)116, (char)116, (char)116, (char)116, (char)116, (char)116, (char)117, (char)117, (char)117, (char)118, (char)118, (char)118, (char)119, (char)119, (char)119, (char)119, (char)120, (char)121, (char)122};
+        field_a = new char[]{'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'b', 'b', 'b', 'c', 'c', 'c', 'c', 'c', 'c', 'd', 'd', 'd', 'd', 'd', 'd', 'd', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'f', 'f', 'f', 'f', 'g', 'g', 'g', 'g', 'h', 'h', 'h', 'h', 'h', 'h', 'i', 'i', 'i', 'j', 'j', 'j', 'j', 'j', 'k', 'k', 'l', 'l', 'l', 'l', 'l', 'm', 'm', 'm', 'm', 'm', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'n', 'o', 'p', 'p', 'p', 'p', 'p', 'q', 'r', 'r', 'r', 'r', 'r', 'r', 's', 's', 's', 's', 's', 's', 't', 't', 't', 't', 't', 't', 't', 't', 't', 'u', 'u', 'u', 'v', 'v', 'v', 'w', 'w', 'w', 'w', 'x', 'y', 'z'};
         field_d = -1;
     }
 }

@@ -21,14 +21,7 @@ final class cm extends bo {
         field_r = null;
         field_n = null;
         field_t = null;
-        if (param0 != -121) {
-          field_o = -51;
-          field_p = null;
-          return;
-        } else {
-          field_p = null;
-          return;
-        }
+        field_p = null;
     }
 
     final cd a(int param0) {

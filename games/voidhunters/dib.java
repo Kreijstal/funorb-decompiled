@@ -11,52 +11,15 @@ final class dib extends ev {
     private int field_h;
 
     final static void a(File param0, int param1, byte[] param2, byte param3) throws IOException {
-        EOFException eOFException = null;
         DataInputStream var4 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var4 = new DataInputStream((InputStream) (Object) new BufferedInputStream((InputStream) (Object) new FileInputStream(param0)));
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        var4.readFully(param2, 0, param1);
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    eOFException = (EOFException) (Object) caughtException;
-                    statePc = 4;
-                    continue stateLoop;
-                }
-                case 4: {
-                    if (param3 != 119) {
-                        statePc = 6;
-                    } else {
-                        statePc = 5;
-                    }
-                    continue stateLoop;
-                }
-                case 5: {
-                    var4.close();
-                    return;
-                }
-                case 6: {
-                    field_j = null;
-                    var4.close();
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        try {
+            var4 = new DataInputStream((InputStream) (Object) new BufferedInputStream((InputStream) (Object) new FileInputStream(param0)));
+            {
+                var4.readFully(param2, 0, param1);
             }
+            var4.close();
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "dib.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + 119 + 41);
         }
     }
 
@@ -68,20 +31,20 @@ final class dib extends ev {
             if (param2 >= 256) {
                 return param1;
             }
-            if (!(-1 > (param2 ^ -1))) {
+            if (!(param2 > 0)) {
                 return param3;
             }
             var4 = 256 + -param2;
-            return (16711935 & var4 * (param3 & 16711935) - -(param2 * (16711935 & param1)) >>> 2083025192) + (-16711936 & ((-16711855 & param1) >>> 37992968) * param2 + ((param3 & -16711919) >>> 25640488) * var4);
+            return (16711935 & var4 * (param3 & 16711935) - -(param2 * (16711935 & param1)) >>> 8) + (-16711936 & ((-16711855 & param1) >>> 8) * param2 + ((param3 & -16711919) >>> 8) * var4);
         }
         if (param2 >= 256) {
             return param1;
         }
-        if (!(-1 > (param2 ^ -1))) {
+        if (!(param2 > 0)) {
             return param3;
         }
         var4 = 256 + -param2;
-        return (16711935 & var4 * (param3 & 16711935) - -(param2 * (16711935 & param1)) >>> 2083025192) + (-16711936 & ((-16711855 & param1) >>> 37992968) * param2 + ((param3 & -16711919) >>> 25640488) * var4);
+        return (16711935 & var4 * (param3 & 16711935) - -(param2 * (16711935 & param1)) >>> 8) + (-16711936 & ((-16711855 & param1) >>> 8) * param2 + ((param3 & -16711919) >>> 8) * var4);
     }
 
     dib(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -94,43 +57,107 @@ final class dib extends ev {
 
     final static tsa[] a(String param0, int param1) {
         ij var2 = null;
+        RuntimeException var2_ref = null;
         tsa[] var3 = null;
         int var4 = 0;
         tsa var5 = null;
         int var6 = 0;
+        tsa[] stackIn_4_0 = null;
+        Object stackIn_7_0 = null;
+        tsa[] stackIn_11_0 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        tsa[] stackOut_3_0 = null;
+        tsa[] stackOut_10_0 = null;
+        Object stackOut_6_0 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
         var6 = VoidHunters.field_G;
-        if (param0.equals((Object) (Object) tkb.field_o)) {
-          return neb.field_q;
-        } else {
-          var2 = ck.a(-1, param0);
-          var3 = new tsa[var2.c(3)];
-          var4 = 0;
-          var5 = (tsa) (Object) var2.d(0);
-          if (param1 >= 32) {
-            L0: while (true) {
-              if (var5 == null) {
-                neb.field_q = var3;
-                tkb.field_o = param0;
-                return var3;
+        try {
+          L0: {
+            if (param0.equals((Object) (Object) tkb.field_o)) {
+              stackOut_3_0 = neb.field_q;
+              stackIn_4_0 = stackOut_3_0;
+              return stackIn_4_0;
+            } else {
+              var2 = ck.a(-1, param0);
+              var3 = new tsa[var2.c(3)];
+              var4 = 0;
+              var5 = (tsa) (Object) var2.d(0);
+              if (param1 >= 32) {
+                L1: while (true) {
+                  if (var5 == null) {
+                    neb.field_q = var3;
+                    tkb.field_o = param0;
+                    stackOut_10_0 = (tsa[]) var3;
+                    stackIn_11_0 = stackOut_10_0;
+                    break L0;
+                  } else {
+                    int incrementValue$2 = var4;
+                    var4++;
+                    var3[incrementValue$2] = var5;
+                    var5 = (tsa) (Object) var2.a((byte) 82);
+                    continue L1;
+                  }
+                }
               } else {
-                var4++;
-                var3[var4] = var5;
-                var5 = (tsa) (Object) var2.a((byte) 82);
-                continue L0;
+                stackOut_6_0 = null;
+                stackIn_7_0 = stackOut_6_0;
+                return (tsa[]) (Object) stackIn_7_0;
               }
             }
-          } else {
-            return null;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2_ref = decompiledCaughtException;
+            stackOut_12_0 = (RuntimeException) var2_ref;
+            stackOut_12_1 = new StringBuilder().append("dib.H(");
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
+            if (param0 == null) {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L2;
+            } else {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L2;
+            }
+          }
+          throw rta.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param1 + 41);
         }
+        return stackIn_11_0;
     }
 
     final void a(byte param0, int param1, int param2) {
-        int var4 = param2 * ((dib) this).field_g >> -131278068;
-        int var5 = ((dib) this).field_i * param2 >> -1375694164;
-        int var6 = ((dib) this).field_f * param1 >> 159812396;
+        int var4 = param2 * ((dib) this).field_g >> 12;
+        int var5 = ((dib) this).field_i * param2 >> 12;
+        int var6 = ((dib) this).field_f * param1 >> 12;
         int var8 = 62 % ((-48 - param0) / 40);
-        int var7 = ((dib) this).field_h * param1 >> 535509932;
+        int var7 = ((dib) this).field_h * param1 >> 12;
         pda.a(var7, var4, ((dib) this).field_d, var6, -2, var5, ((dib) this).field_a);
     }
 
@@ -139,17 +166,17 @@ final class dib extends ev {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        var4 = param1 * ((dib) this).field_g >> 864555308;
-        var5 = ((dib) this).field_i * param1 >> -456668532;
+        var4 = param1 * ((dib) this).field_g >> 12;
+        var5 = ((dib) this).field_i * param1 >> 12;
         if (param0 != -112) {
           int discarded$1 = dib.a((byte) 92, -127, 80, 107);
-          var6 = param2 * ((dib) this).field_f >> 783961356;
-          var7 = ((dib) this).field_h * param2 >> -1415387124;
+          var6 = param2 * ((dib) this).field_f >> 12;
+          var7 = ((dib) this).field_h * param2 >> 12;
           fcb.a(((dib) this).field_e, var7, var6, var4, var5, (byte) -117);
           return;
         } else {
-          var6 = param2 * ((dib) this).field_f >> 783961356;
-          var7 = ((dib) this).field_h * param2 >> -1415387124;
+          var6 = param2 * ((dib) this).field_f >> 12;
+          var7 = ((dib) this).field_h * param2 >> 12;
           fcb.a(((dib) this).field_e, var7, var6, var4, var5, (byte) -117);
           return;
         }
@@ -160,18 +187,18 @@ final class dib extends ev {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        var4 = ((dib) this).field_g * param2 >> -1259938868;
+        var4 = ((dib) this).field_g * param2 >> 12;
         if (param1 != 110) {
           field_j = null;
-          var5 = ((dib) this).field_i * param2 >> 6262668;
-          var6 = param0 * ((dib) this).field_f >> 1495800812;
-          var7 = ((dib) this).field_h * param0 >> -628585908;
+          var5 = ((dib) this).field_i * param2 >> 12;
+          var6 = param0 * ((dib) this).field_f >> 12;
+          var7 = ((dib) this).field_h * param0 >> 12;
           kpa.a(((dib) this).field_a, var5, ((dib) this).field_e, var6, ((dib) this).field_d, var4, var7, 0);
           return;
         } else {
-          var5 = ((dib) this).field_i * param2 >> 6262668;
-          var6 = param0 * ((dib) this).field_f >> 1495800812;
-          var7 = ((dib) this).field_h * param0 >> -628585908;
+          var5 = ((dib) this).field_i * param2 >> 12;
+          var6 = param0 * ((dib) this).field_f >> 12;
+          var7 = ((dib) this).field_h * param0 >> 12;
           kpa.a(((dib) this).field_a, var5, ((dib) this).field_e, var6, ((dib) this).field_d, var4, var7, 0);
           return;
         }

@@ -17,7 +17,7 @@ abstract class wb extends ul {
         if (param0 >= 0) {
             return;
         }
-        if (-1 <= (((wb) this).field_U ^ -1)) {
+        if (((wb) this).field_U <= 0) {
             return;
         }
         ((wb) this).a(((wb) this).field_Q, 15767, ((wb) this).field_Y);
@@ -30,22 +30,20 @@ abstract class wb extends ul {
         int var3 = 0;
         int var5 = 0;
         int var4 = 0;
-        if (param0 != 65393) {
-            return false;
-        }
-        if (-1 <= (((wb) this).field_U ^ -1)) {
+        if (((wb) this).field_U <= 0) {
         } else {
             var2 = ((wb) this).field_Q;
             var3 = ((wb) this).field_Y;
+            int fieldTemp$0 = ((wb) this).field_T + 1;
             ((wb) this).field_T = ((wb) this).field_T + 1;
-            if (((wb) this).field_U > ((wb) this).field_T + 1) {
+            if (((wb) this).field_U > fieldTemp$0) {
                 var4 = (-((wb) this).field_T + 2 * ((wb) this).field_U) * ((wb) this).field_T;
                 var5 = ((wb) this).field_U * ((wb) this).field_U;
                 var3 = ((wb) this).field_X + var4 * (-((wb) this).field_X + ((wb) this).field_Y) / var5;
                 var2 = ((wb) this).field_V - -(var4 * (-((wb) this).field_V + ((wb) this).field_Q) / var5);
             } else {
                 ((wb) this).field_U = 0;
-                ((wb) this).o(param0 + -65373);
+                ((wb) this).o(20);
             }
             ((wb) this).a(var2, 15767, var3);
         }
@@ -96,7 +94,7 @@ abstract class wb extends ul {
                       return;
                     } else {
                       var9 = (var6 - var5) * var7 / var4 + var5;
-                      var9 = var9 | (var9 << 85717768 | var9 << 1580487984);
+                      var9 = var9 | (var9 << 8 | var9 << 16);
                       si.a(param2, var8, 6, var9);
                       si.a(-6 + ((wb) this).field_s + param2, var8, 6, var9);
                       var8++;
@@ -106,7 +104,7 @@ abstract class wb extends ul {
                   }
                 } else {
                   var9 = (-var5 + var6) * var7 / var4 + var5;
-                  var9 = var9 | (var9 << -1887167504 | var9 << -2129196120);
+                  var9 = var9 | (var9 << 16 | var9 << 8);
                   si.a(param2, var8, 6, var9);
                   si.a(((wb) this).field_s + (param2 - 6), var8, 6, var9);
                   var7++;
@@ -127,31 +125,31 @@ abstract class wb extends ul {
                           break L5;
                         } else {
                           L6: while (true) {
-                            if (-21 > (var10 ^ -1)) {
+                            if (var10 > 20) {
                               break L5;
                             } else {
                               var12 = (-var10 + 20) * (20 - var10) + (20 - var7) * (20 + -var7);
                               if (var12 <= 462) {
                                 if (420 <= var12) {
                                   var13 = (462 - var12) * var9 / 42;
-                                  var13 = var13 | (var13 << -71613464 | var13 << -158903376);
+                                  var13 = var13 | (var13 << 8 | var13 << 16);
                                   si.field_i[var10 + si.field_e * var8 - -param2] = var13;
                                   var10++;
                                   continue L6;
                                 } else {
-                                  if (-21 <= (var7 ^ -1)) {
+                                  if (var7 <= 20) {
                                     var12 = var11;
                                     var11 -= 21;
                                     var13 = 0;
                                     L7: while (true) {
-                                      if ((var13 ^ -1) < -21) {
+                                      if (var13 > 20) {
                                         break L4;
                                       } else {
                                         var14 = var13 * var13 + (20 + -var7) * (20 - var7);
                                         if (462 >= var14) {
-                                          if ((var14 ^ -1) <= -421) {
+                                          if (var14 >= 420) {
                                             var15 = (-var14 + 462) * var9 / 42;
-                                            var15 = var15 | (var15 << 177358920 | var15 << -2037525232);
+                                            var15 = var15 | (var15 << 8 | var15 << 16);
                                             si.field_i[var8 * si.field_e + (param2 + var11)] = var15;
                                             var13++;
                                             var11++;
@@ -179,19 +177,19 @@ abstract class wb extends ul {
                           }
                         }
                       }
-                      if (-21 <= (var7 ^ -1)) {
+                      if (var7 <= 20) {
                         var12 = var11;
                         var11 -= 21;
                         var13 = 0;
                         L8: while (true) {
-                          if ((var13 ^ -1) < -21) {
+                          if (var13 > 20) {
                             break L4;
                           } else {
                             var14 = var13 * var13 + (20 + -var7) * (20 - var7);
                             if (462 >= var14) {
-                              if ((var14 ^ -1) <= -421) {
+                              if (var14 >= 420) {
                                 var15 = (-var14 + 462) * var9 / 42;
-                                var15 = var15 | (var15 << 177358920 | var15 << -2037525232);
+                                var15 = var15 | (var15 << 8 | var15 << 16);
                                 si.field_i[var8 * si.field_e + (param2 + var11)] = var15;
                                 var13++;
                                 var11++;
@@ -214,7 +212,7 @@ abstract class wb extends ul {
                     var11 = var12;
                     break L3;
                   }
-                  var9 = var9 | (var9 << -423765296 | var9 << -793447768);
+                  var9 = var9 | (var9 << 16 | var9 << 8);
                   si.a(var10 + param2, var8, -var10 + var11, var9);
                   var8++;
                   var7++;
@@ -237,7 +235,7 @@ abstract class wb extends ul {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        if (!(-1 > (param0 ^ -1))) {
+        if (!(param0 > 0)) {
             ((wb) this).a(param1, 15767, param3);
             return;
         }
@@ -246,7 +244,7 @@ abstract class wb extends ul {
         ((wb) this).field_Y = param3;
         ((wb) this).field_T = 0;
         ((wb) this).field_X = ((wb) this).field_x;
-        int var5 = -90 / ((param2 - 0) / 63);
+        int var5 = -90 / (param2 / 63);
         ((wb) this).field_U = param0;
     }
 
@@ -275,20 +273,82 @@ abstract class wb extends ul {
     }
 
     final static int a(int param0, boolean param1, String param2) {
-        if (param0 < 79) {
-            wb.n(119);
+        RuntimeException var3 = null;
+        int stackIn_4_0 = 0;
+        int stackIn_6_0 = 0;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_5_0 = 0;
+        int stackOut_3_0 = 0;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 >= 79) {
+                break L1;
+              } else {
+                wb.n(119);
+                break L1;
+              }
+            }
+            if (!param1) {
+              stackOut_5_0 = lj.field_u.a(param2);
+              stackIn_6_0 = stackOut_5_0;
+              break L0;
+            } else {
+              stackOut_3_0 = na.field_c.a(param2);
+              stackIn_4_0 = stackOut_3_0;
+              return stackIn_4_0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var3;
+            stackOut_7_1 = new StringBuilder().append("wb.AC(").append(param0).append(44).append(param1).append(44);
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param2 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L2;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L2;
+            }
+          }
+          throw wg.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
         }
-        if (param1) {
-            return na.field_c.a(param2);
-        }
-        return lj.field_u.a(param2);
+        return stackIn_6_0;
     }
 
     boolean j(int param0) {
-        if (param0 != -15953) {
-            return false;
-        }
-        ((wb) this).m(param0 + 15877);
+        ((wb) this).m(-76);
         return super.j(-15953);
     }
 

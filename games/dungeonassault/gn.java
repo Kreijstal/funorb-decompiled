@@ -14,11 +14,15 @@ final class gn {
     static cn field_c;
 
     final static void a(byte param0, java.awt.Component param1) {
-        param1.removeMouseListener((java.awt.event.MouseListener) (Object) ib.field_f);
-        param1.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) ib.field_f);
-        param1.removeFocusListener((java.awt.event.FocusListener) (Object) ib.field_f);
-        int var2 = -90 % ((69 - param0) / 55);
-        ua.field_a = 0;
+        try {
+            param1.removeMouseListener((java.awt.event.MouseListener) (Object) ib.field_f);
+            param1.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) ib.field_f);
+            param1.removeFocusListener((java.awt.event.FocusListener) (Object) ib.field_f);
+            int var2_int = -90 % ((69 - param0) / 55);
+            ua.field_a = 0;
+        } catch (RuntimeException runtimeException) {
+            throw vk.a((Throwable) (Object) runtimeException, "gn.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void a(int param0) {
@@ -94,8 +98,12 @@ final class gn {
     }
 
     gn(String param0, String param1) {
-        ((gn) this).field_j = param1;
-        ((gn) this).field_e = param0;
+        try {
+            ((gn) this).field_j = param1;
+            ((gn) this).field_e = param0;
+        } catch (RuntimeException runtimeException) {
+            throw vk.a((Throwable) (Object) runtimeException, "gn.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

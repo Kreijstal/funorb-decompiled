@@ -27,10 +27,10 @@ final class up {
         int var3 = 0;
         int var4 = 0;
         jn.field_n.a(100, false);
-        if ((hj.field_S ^ -1) == 0) {
+        if (hj.field_S == -1) {
           var1 = -qe.field_n + qe.field_f;
           var2 = qe.field_l - qe.field_c;
-          var3 = ug.a(true, (var2 >> -1360178292) * (var2 >> -1542754292) + (var1 >> 412359916) * (var1 >> 2112222732)) >> 193682278;
+          var3 = ug.a(true, (var2 >> 12) * (var2 >> 12) + (var1 >> 12) * (var1 >> 12)) >> 6;
           if (0 > var3) {
             throw new RuntimeException();
           } else {
@@ -40,8 +40,8 @@ final class up {
                 var1 = var1 / var3;
                 qe.field_a = qe.field_a + var1;
                 qe.field_j = qe.field_j + var2;
-                qe.field_j = 14 * qe.field_j >> 363381124;
-                qe.field_a = qe.field_a * 14 >> -389346396;
+                qe.field_j = 14 * qe.field_j >> 4;
+                qe.field_a = qe.field_a * 14 >> 4;
                 break L0;
               } else {
                 break L0;
@@ -55,11 +55,11 @@ final class up {
             return;
           }
         } else {
-          qe.field_l = eh.field_h << 36554640;
-          qe.field_f = hj.field_S << 804050224;
+          qe.field_l = eh.field_h << 16;
+          qe.field_f = hj.field_S << 16;
           var1 = -qe.field_n + qe.field_f;
           var2 = qe.field_l - qe.field_c;
-          var3 = ug.a(true, (var2 >> -1360178292) * (var2 >> -1542754292) + (var1 >> 412359916) * (var1 >> 2112222732)) >> 193682278;
+          var3 = ug.a(true, (var2 >> 12) * (var2 >> 12) + (var1 >> 12) * (var1 >> 12)) >> 6;
           if (0 > var3) {
             throw new RuntimeException();
           } else {
@@ -69,8 +69,8 @@ final class up {
                 var1 = var1 / var3;
                 qe.field_a = qe.field_a + var1;
                 qe.field_j = qe.field_j + var2;
-                qe.field_j = 14 * qe.field_j >> 363381124;
-                qe.field_a = qe.field_a * 14 >> -389346396;
+                qe.field_j = 14 * qe.field_j >> 4;
+                qe.field_a = qe.field_a * 14 >> 4;
                 break L1;
               } else {
                 break L1;
@@ -130,27 +130,19 @@ final class up {
     }
 
     final void a(ll param0, int param1) {
-        if (null == param0.field_l) {
-          param0.field_n = ((up) this).field_a;
-          if (param1 != -32711) {
+        if (null != param0.field_l) {
+            param0.b((byte) -2);
+        }
+        param0.field_n = ((up) this).field_a;
+        if (param1 != -32711) {
             return;
-          } else {
+        }
+        try {
             param0.field_l = ((up) this).field_a.field_l;
             param0.field_l.field_n = param0;
             param0.field_n.field_l = param0;
-            return;
-          }
-        } else {
-          param0.b((byte) -2);
-          param0.field_n = ((up) this).field_a;
-          if (param1 != -32711) {
-            return;
-          } else {
-            param0.field_l = ((up) this).field_a.field_l;
-            param0.field_l.field_n = param0;
-            param0.field_n.field_l = param0;
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw vk.a((Throwable) (Object) runtimeException, "up.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 

@@ -11,37 +11,94 @@ final class sg {
     static ag field_f;
 
     final static int a(CharSequence param0, byte param1, char param2) {
-        int var3 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
+        int stackIn_7_0 = 0;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_6_0 = 0;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
         var7 = Chess.field_G;
-        var3 = 0;
-        var4 = param0.length();
-        var6 = -83 / ((75 - param1) / 49);
-        var5 = 0;
-        L0: while (true) {
-          if (var5 >= var4) {
-            return var3;
-          } else {
-            if (param2 == param0.charAt(var5)) {
-              var3++;
-              var5++;
-              continue L0;
-            } else {
-              var5++;
-              continue L0;
+        try {
+          L0: {
+            var3_int = 0;
+            var4 = param0.length();
+            var6 = -83 / ((75 - param1) / 49);
+            var5 = 0;
+            L1: while (true) {
+              if (var5 >= var4) {
+                stackOut_6_0 = var3_int;
+                stackIn_7_0 = stackOut_6_0;
+                break L0;
+              } else {
+                L2: {
+                  if (param2 != param0.charAt(var5)) {
+                    break L2;
+                  } else {
+                    var3_int++;
+                    break L2;
+                  }
+                }
+                var5++;
+                continue L1;
+              }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var3 = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var3;
+            stackOut_8_1 = new StringBuilder().append("sg.C(");
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param0 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L3;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L3;
+            }
+          }
+          throw fk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 44 + param2 + 41);
         }
+        return stackIn_7_0;
     }
 
     final static int a(int param0, int param1, int param2, int param3) {
         if (!(wb.field_c < param2 + param0 + param1)) {
             return param2 + param0;
         }
-        if (!(-param1 + param0 < param3)) {
+        if (!(-param1 + param0 < 0)) {
             return param0 - param1;
         }
         return -param1 + wb.field_c;
@@ -74,7 +131,7 @@ final class sg {
         field_e = null;
         field_f = null;
         field_g = null;
-        int var1 = 98 / ((25 - param0) / 38);
+        int var1 = -49;
     }
 
     static {

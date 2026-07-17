@@ -10,15 +10,9 @@ final class bc {
 
     final static void b(int param0) {
         gi.field_i = null;
-        if (param0 != 10) {
-            field_d = null;
-        }
     }
 
     public static void c(int param0) {
-        if (param0 != 22382) {
-            field_d = null;
-        }
         field_b = null;
         field_d = null;
         field_c = null;
@@ -26,44 +20,14 @@ final class bc {
     }
 
     final static void a(int param0, int param1, byte param2, boolean param3) {
-        int var4 = 0;
         L0: {
           if (param2 == -59) {
+            er.field_j.g(param0, param1);
             break L0;
           } else {
             bc.a((byte) 86);
+            er.field_j.g(param0, param1);
             break L0;
-          }
-        }
-        L1: {
-          er.field_j.g(param0, param1);
-          if (param3) {
-            L2: {
-              var4 = fn.field_c % er.field_j.field_x * 2;
-              if (var4 < er.field_j.field_x) {
-                break L2;
-              } else {
-                var4 = er.field_j.field_x + -var4 + er.field_j.field_x;
-                break L2;
-              }
-            }
-            L3: {
-              if (var4 < 10) {
-                var4 = 10;
-                break L3;
-              } else {
-                if (-40 + er.field_j.field_x < var4) {
-                  var4 = -40 + er.field_j.field_x;
-                  break L3;
-                } else {
-                  break L3;
-                }
-              }
-            }
-            ij.a(param1, 30, 0, param0, false, var4, 0, er.field_j, 80);
-            break L1;
-          } else {
-            break L1;
           }
         }
     }
@@ -82,15 +46,11 @@ final class bc {
     }
 
     final static ri[] a(int param0) {
+        int var2 = 0;
         int var3 = ZombieDawnMulti.field_E ? 1 : 0;
         ri[] var1 = new ri[qc.field_v];
-        int var2 = 0;
-        if (param0 != 2) {
-            return null;
-        }
-        while (var2 < qc.field_v) {
+        for (var2 = 0; var2 < qc.field_v; var2++) {
             var1[var2] = new ri(ie.field_nb, hj.field_a, k.field_i[var2], qj.field_o[var2], oq.field_w[var2], vj.field_p[var2], qp.field_t[var2], tp.field_t);
-            var2++;
         }
         fd.h((byte) 125);
         return var1;

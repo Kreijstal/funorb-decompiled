@@ -18,7 +18,8 @@ final class ai extends q {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        int var8 = 0;
+        RuntimeException var8 = null;
+        int var8_int = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -62,172 +63,185 @@ final class ai extends q {
         int[] var49 = null;
         int[] var50 = null;
         int[] var51 = null;
-        int stackIn_7_0 = 0;
+        int stackIn_8_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_7_0 = 0;
         int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
         var47 = Torquing.field_u;
-        var8 = 0;
-        var9 = param7;
-        var10 = 0;
-        var11 = param3 - param5;
-        var12 = param7 + -param5;
-        var13 = param3 * param3;
-        if (param6 < -51) {
-          var14 = param7 * param7;
-          var15 = var11 * var11;
-          var16 = var12 * var12;
-          var17 = var14 << 2102585857;
-          var18 = var13 << 2126257569;
-          var19 = var16 << 1913274081;
-          var20 = var15 << -1276155583;
-          var21 = param7 << -2081826815;
-          var22 = var12 << -575468831;
-          var23 = var17 + var13 * (1 + -var21);
-          var24 = -((var21 + -1) * var18) + var14;
-          var25 = var15 * (1 - var22) - -var19;
-          var26 = var16 - var20 * (-1 + var22);
-          var27 = var13 << 1874108642;
-          var28 = var14 << -1569806174;
-          var29 = var15 << -164128542;
-          var30 = var16 << -1581647902;
-          var31 = var17 * 3;
-          var32 = var18 * (-3 + var21);
-          var33 = 3 * var19;
-          var34 = var20 * (-3 + var22);
-          var35 = var28;
-          var36 = (param7 + -1) * var27;
-          var37 = var30;
-          var38 = (var12 + -1) * var29;
-          var51 = qd.field_a[param4];
-          var50 = var51;
-          var49 = var50;
-          var48 = var49;
-          var39 = var48;
-          di.a(param2 + -param3, (byte) 60, param1, var39, -var11 + param2);
-          di.a(param2 - var11, (byte) 110, param0, var51, var11 + param2);
-          di.a(var11 + param2, (byte) -10, param1, var51, param3 + param2);
-          L0: while (true) {
-            if (-1 <= (var9 ^ -1)) {
-              return;
-            } else {
-              L1: {
-                if (var12 < var9) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  break L1;
+        try {
+          L0: {
+            var8_int = 0;
+            var9 = param7;
+            var10 = 0;
+            var11 = param3 - param5;
+            var12 = param7 + -param5;
+            var13 = param3 * param3;
+            if (param6 < -51) {
+              var14 = param7 * param7;
+              var15 = var11 * var11;
+              var16 = var12 * var12;
+              var17 = var14 << 1;
+              var18 = var13 << 1;
+              var19 = var16 << 1;
+              var20 = var15 << 1;
+              var21 = param7 << 1;
+              var22 = var12 << 1;
+              var23 = var17 + var13 * (1 + -var21);
+              var24 = -((var21 + -1) * var18) + var14;
+              var25 = var15 * (1 - var22) - -var19;
+              var26 = var16 - var20 * (-1 + var22);
+              var27 = var13 << 2;
+              var28 = var14 << 2;
+              var29 = var15 << 2;
+              var30 = var16 << 2;
+              var31 = var17 * 3;
+              var32 = var18 * (-3 + var21);
+              var33 = 3 * var19;
+              var34 = var20 * (-3 + var22);
+              var35 = var28;
+              var36 = (param7 + -1) * var27;
+              var37 = var30;
+              var38 = (var12 + -1) * var29;
+              var51 = qd.field_a[param4];
+              var50 = var51;
+              var49 = var50;
+              var48 = var49;
+              var39 = var48;
+              di.a(param2 + -param3, (byte) 60, param1, var39, -var11 + param2);
+              di.a(param2 - var11, (byte) 110, param0, var51, var11 + param2);
+              di.a(var11 + param2, (byte) -10, param1, var51, param3 + param2);
+              L1: while (true) {
+                if (var9 <= 0) {
+                  break L0;
                 } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  break L1;
-                }
-              }
-              L2: {
-                var40 = stackIn_7_0;
-                if (var40 == 0) {
-                  break L2;
-                } else {
+                  L2: {
+                    if (var12 < var9) {
+                      stackOut_7_0 = 0;
+                      stackIn_8_0 = stackOut_7_0;
+                      break L2;
+                    } else {
+                      stackOut_6_0 = 1;
+                      stackIn_8_0 = stackOut_6_0;
+                      break L2;
+                    }
+                  }
                   L3: {
-                    if ((var25 ^ -1) > -1) {
-                      L4: while (true) {
-                        if (0 <= var25) {
-                          break L3;
+                    var40 = stackIn_8_0;
+                    if (var40 == 0) {
+                      break L3;
+                    } else {
+                      L4: {
+                        if (var25 < 0) {
+                          L5: while (true) {
+                            if (0 <= var25) {
+                              break L4;
+                            } else {
+                              var26 = var26 + var37;
+                              var25 = var25 + var33;
+                              var33 = var33 + var30;
+                              var37 = var37 + var30;
+                              var10++;
+                              continue L5;
+                            }
+                          }
                         } else {
-                          var26 = var26 + var37;
-                          var25 = var25 + var33;
-                          var33 = var33 + var30;
-                          var37 = var37 + var30;
-                          var10++;
-                          continue L4;
+                          break L4;
                         }
                       }
-                    } else {
+                      L6: {
+                        if (0 > var26) {
+                          var26 = var26 + var37;
+                          var25 = var25 + var33;
+                          var37 = var37 + var30;
+                          var10++;
+                          var33 = var33 + var30;
+                          break L6;
+                        } else {
+                          break L6;
+                        }
+                      }
+                      var25 = var25 + -var38;
+                      var26 = var26 + -var34;
+                      var34 = var34 - var29;
+                      var38 = var38 - var29;
                       break L3;
                     }
                   }
-                  L5: {
-                    if (0 > var26) {
-                      var26 = var26 + var37;
-                      var25 = var25 + var33;
-                      var37 = var37 + var30;
-                      var10++;
-                      var33 = var33 + var30;
-                      break L5;
+                  L7: {
+                    if (var23 >= 0) {
+                      break L7;
                     } else {
-                      break L5;
+                      L8: while (true) {
+                        if (0 <= var23) {
+                          break L7;
+                        } else {
+                          var24 = var24 + var35;
+                          var23 = var23 + var31;
+                          var8_int++;
+                          var35 = var35 + var28;
+                          var31 = var31 + var28;
+                          continue L8;
+                        }
+                      }
                     }
                   }
-                  var25 = var25 + -var38;
-                  var26 = var26 + -var34;
-                  var34 = var34 - var29;
-                  var38 = var38 - var29;
-                  break L2;
-                }
-              }
-              L6: {
-                if (-1 >= (var23 ^ -1)) {
-                  break L6;
-                } else {
-                  L7: while (true) {
-                    if (0 <= var23) {
-                      break L6;
-                    } else {
+                  L9: {
+                    if (0 > var24) {
                       var24 = var24 + var35;
                       var23 = var23 + var31;
-                      var8++;
-                      var35 = var35 + var28;
                       var31 = var31 + var28;
-                      continue L7;
+                      var35 = var35 + var28;
+                      var8_int++;
+                      break L9;
+                    } else {
+                      break L9;
                     }
+                  }
+                  var24 = var24 + -var32;
+                  var23 = var23 + -var36;
+                  var9--;
+                  var32 = var32 - var27;
+                  var36 = var36 - var27;
+                  var41 = -var9 + param4;
+                  var42 = param4 + var9;
+                  var43 = param2 - -var8_int;
+                  var44 = -var8_int + param2;
+                  if (var40 == 0) {
+                    di.a(var44, (byte) 87, param1, qd.field_a[var41], var43);
+                    di.a(var44, (byte) -124, param1, qd.field_a[var42], var43);
+                    continue L1;
+                  } else {
+                    var45 = param2 - -var10;
+                    var46 = param2 + -var10;
+                    di.a(var44, (byte) 88, param1, qd.field_a[var41], var46);
+                    di.a(var46, (byte) -117, param0, qd.field_a[var41], var45);
+                    di.a(var45, (byte) -106, param1, qd.field_a[var41], var43);
+                    di.a(var44, (byte) 41, param1, qd.field_a[var42], var46);
+                    di.a(var46, (byte) 19, param0, qd.field_a[var42], var45);
+                    di.a(var45, (byte) -125, param1, qd.field_a[var42], var43);
+                    continue L1;
                   }
                 }
               }
-              L8: {
-                if (0 > var24) {
-                  var24 = var24 + var35;
-                  var23 = var23 + var31;
-                  var31 = var31 + var28;
-                  var35 = var35 + var28;
-                  var8++;
-                  break L8;
-                } else {
-                  break L8;
-                }
-              }
-              var24 = var24 + -var32;
-              var23 = var23 + -var36;
-              var9--;
-              var32 = var32 - var27;
-              var36 = var36 - var27;
-              var41 = -var9 + param4;
-              var42 = param4 + var9;
-              var43 = param2 - -var8;
-              var44 = -var8 + param2;
-              if (var40 == 0) {
-                di.a(var44, (byte) 87, param1, qd.field_a[var41], var43);
-                di.a(var44, (byte) -124, param1, qd.field_a[var42], var43);
-                continue L0;
-              } else {
-                var45 = param2 - -var10;
-                var46 = param2 + -var10;
-                di.a(var44, (byte) 88, param1, qd.field_a[var41], var46);
-                di.a(var46, (byte) -117, param0, qd.field_a[var41], var45);
-                di.a(var45, (byte) -106, param1, qd.field_a[var41], var43);
-                di.a(var44, (byte) 41, param1, qd.field_a[var42], var46);
-                di.a(var46, (byte) 19, param0, qd.field_a[var42], var45);
-                di.a(var45, (byte) -125, param1, qd.field_a[var42], var43);
-                continue L0;
-              }
+            } else {
+              return;
             }
           }
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var8 = decompiledCaughtException;
+          throw rb.a((Throwable) (Object) var8, "ai.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
         }
     }
 
     ai(long param0, int param1, byte[] param2) {
-        ((ai) this).field_k = param2;
-        ((ai) this).field_j = param1;
-        ((ai) this).field_n = param0;
+        try {
+            ((ai) this).field_k = param2;
+            ((ai) this).field_j = param1;
+            ((ai) this).field_n = param0;
+        } catch (RuntimeException runtimeException) {
+            throw rb.a((Throwable) (Object) runtimeException, "ai.<init>(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

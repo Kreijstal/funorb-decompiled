@@ -60,12 +60,12 @@ final class vla extends ci {
               if (var9 >= ns.field_g) {
                 break L1;
               } else {
-                var10 = 255 & 255 * var32[var9] >> 161605196;
-                var11 = ((vla) this).field_n * var33[var9] >> 823153740;
-                var12 = lm.field_r[var10] * var11 >> 1097848812;
-                var13 = ou.field_e[var10] * var11 >> 537874092;
-                var14 = (var12 >> 1381407564) + var9 & una.field_b;
-                var15 = hba.field_b & (var13 >> -983615444) + param0;
+                var10 = 255 & 255 * var32[var9] >> 12;
+                var11 = ((vla) this).field_n * var33[var9] >> 12;
+                var12 = lm.field_r[var10] * var11 >> 12;
+                var13 = ou.field_e[var10] * var11 >> 12;
+                var14 = (var12 >> 12) + var9 & una.field_b;
+                var15 = hba.field_b & (var13 >> 12) + param0;
                 var34 = ((vla) this).a(var15, 0, -1);
                 var6[var9] = var34[0][var14];
                 var7[var9] = var34[1][var14];
@@ -108,12 +108,12 @@ final class vla extends ci {
             var26 = ((vla) this).c(1, param0 + -85, param1);
             var27 = ((vla) this).c(2, -119, param1);
             for (var6 = 0; var6 < ns.field_g; var6++) {
-                var7 = (4094 & var26[var6]) >> -2094747676;
-                var8 = ((vla) this).field_n * var27[var6] >> 1537868108;
-                var9 = lm.field_r[var7] * var8 >> -300688436;
-                var10 = ou.field_e[var7] * var8 >> -1312890356;
-                var11 = var6 + (var9 >> -2001009108) & una.field_b;
-                var12 = hba.field_b & (var10 >> -846579476) + param1;
+                var7 = (4094 & var26[var6]) >> 4;
+                var8 = ((vla) this).field_n * var27[var6] >> 12;
+                var9 = lm.field_r[var7] * var8 >> 12;
+                var10 = ou.field_e[var7] * var8 >> 12;
+                var11 = var6 + (var9 >> 12) & una.field_b;
+                var12 = hba.field_b & (var10 >> 12) + param1;
                 var28 = ((vla) this).c(0, -27, var12);
                 var16[var6] = var28[var11];
             }
@@ -122,55 +122,106 @@ final class vla extends ci {
     }
 
     final void a(byte param0, uia param1, int param2) {
-        int var4 = 0;
+        int var4_int = 0;
+        RuntimeException var4 = null;
         Object stackIn_5_0 = null;
         Object stackIn_6_0 = null;
         Object stackIn_7_0 = null;
         int stackIn_7_1 = 0;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
         Object stackOut_4_0 = null;
         Object stackOut_6_0 = null;
         int stackOut_6_1 = 0;
         Object stackOut_5_0 = null;
         int stackOut_5_1 = 0;
-        L0: {
-          var4 = param2;
-          if (-1 == (var4 ^ -1)) {
-            ((vla) this).field_n = param1.d(122) << 157721188;
-            break L0;
-          } else {
-            if (1 == var4) {
-              L1: {
-                stackOut_4_0 = this;
-                stackIn_6_0 = stackOut_4_0;
-                stackIn_5_0 = stackOut_4_0;
-                if (-2 != (param1.h(255) ^ -1)) {
-                  stackOut_6_0 = this;
-                  stackOut_6_1 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  stackIn_7_1 = stackOut_6_1;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        try {
+          L0: {
+            L1: {
+              var4_int = param2;
+              if (var4_int == 0) {
+                ((vla) this).field_n = param1.d(122) << 4;
+                break L1;
+              } else {
+                if (1 == var4_int) {
+                  L2: {
+                    stackOut_4_0 = this;
+                    stackIn_6_0 = stackOut_4_0;
+                    stackIn_5_0 = stackOut_4_0;
+                    if (param1.h(255) != 1) {
+                      stackOut_6_0 = this;
+                      stackOut_6_1 = 0;
+                      stackIn_7_0 = stackOut_6_0;
+                      stackIn_7_1 = stackOut_6_1;
+                      break L2;
+                    } else {
+                      stackOut_5_0 = this;
+                      stackOut_5_1 = 1;
+                      stackIn_7_0 = stackOut_5_0;
+                      stackIn_7_1 = stackOut_5_1;
+                      break L2;
+                    }
+                  }
+                  ((vla) this).field_g = stackIn_7_1 != 0;
                   break L1;
                 } else {
-                  stackOut_5_0 = this;
-                  stackOut_5_1 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  stackIn_7_1 = stackOut_5_1;
                   break L1;
                 }
               }
-              ((vla) this).field_g = stackIn_7_1 != 0;
-              break L0;
+            }
+            L3: {
+              if (param0 == 107) {
+                break L3;
+              } else {
+                ((vla) this).field_n = -22;
+                break L3;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var4 = decompiledCaughtException;
+            stackOut_11_0 = (RuntimeException) var4;
+            stackOut_11_1 = new StringBuilder().append("vla.A(").append(param0).append(44);
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
+            if (param1 == null) {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L4;
             } else {
-              break L0;
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L4;
             }
           }
-        }
-        L2: {
-          if (param0 == 107) {
-            break L2;
-          } else {
-            ((vla) this).field_n = -22;
-            break L2;
-          }
+          throw tba.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param2 + 41);
         }
     }
 

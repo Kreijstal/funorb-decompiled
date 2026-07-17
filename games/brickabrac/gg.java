@@ -17,7 +17,7 @@ final class gg extends nm {
     static jp[] field_p;
 
     public static void a(byte param0) {
-        int var1 = 127 % ((-74 - param0) / 42);
+        int var1 = 0;
         field_o = null;
         field_t = null;
         field_q = null;

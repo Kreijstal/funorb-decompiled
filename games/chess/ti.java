@@ -8,9 +8,6 @@ final class ti {
 
     public static void a(int param0) {
         field_a = null;
-        if (param0 != 3411) {
-            return;
-        }
         field_b = null;
     }
 

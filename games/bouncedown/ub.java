@@ -10,20 +10,10 @@ final class ub {
 
     public static void a(byte param0) {
         field_a = null;
-        if (param0 != -104) {
-          field_b = null;
-          field_c = null;
-          field_d = null;
-          field_e = null;
-          field_b = null;
-          return;
-        } else {
-          field_c = null;
-          field_d = null;
-          field_e = null;
-          field_b = null;
-          return;
-        }
+        field_c = null;
+        field_d = null;
+        field_e = null;
+        field_b = null;
     }
 
     final static void a(byte param0, gk param1) {
@@ -31,21 +21,23 @@ final class ub {
         int var3 = 0;
         int var4 = 0;
         if (param0 != -32) {
-          return;
-        } else {
-          var2 = new tg(param1.b("final_frame.jpg", "", -90), (java.awt.Component) (Object) ch.field_h);
-          var3 = var2.field_s;
-          var4 = var2.field_q;
-          wa.a(true);
-          jl.field_c = new tg(var3, 3 * var4 / 4);
-          jl.field_c.d();
-          var2.b(0, 0);
-          bf.field_o = new tg(var3, var4 + -jl.field_c.field_q);
-          bf.field_o.d();
-          var2.b(0, -jl.field_c.field_q);
-          bf.field_o.field_p = jl.field_c.field_q;
-          ve.a(param0 ^ 100);
-          return;
+            return;
+        }
+        try {
+            var2 = new tg(param1.b("final_frame.jpg", "", -90), (java.awt.Component) (Object) ch.field_h);
+            var3 = var2.field_s;
+            var4 = var2.field_q;
+            wa.a(true);
+            jl.field_c = new tg(var3, 3 * var4 / 4);
+            jl.field_c.d();
+            var2.b(0, 0);
+            bf.field_o = new tg(var3, var4 + -jl.field_c.field_q);
+            bf.field_o.d();
+            var2.b(0, -jl.field_c.field_q);
+            bf.field_o.field_p = jl.field_c.field_q;
+            ve.a(param0 ^ 100);
+        } catch (RuntimeException runtimeException) {
+            throw ii.a((Throwable) (Object) runtimeException, "ub.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

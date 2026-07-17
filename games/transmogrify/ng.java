@@ -24,23 +24,17 @@ final class ng extends wf {
     }
 
     final static void a(boolean param0, java.awt.Canvas param1) {
-        L0: {
-          if (gl.field_y == 11) {
-            sd.q(274);
-            break L0;
-          } else {
-            break L0;
-          }
-        }
-        if (param0) {
-          ng.a((byte) 43);
-          ch.a(58, ea.field_n, g.field_A, ah.field_a);
-          ah.a(0, 0, (byte) 90, param1);
-          return;
-        } else {
-          ch.a(58, ea.field_n, g.field_A, ah.field_a);
-          ah.a(0, 0, (byte) 90, param1);
-          return;
+        try {
+            if (!(gl.field_y != 11)) {
+                sd.q(274);
+            }
+            if (param0) {
+                ng.a((byte) 43);
+            }
+            ch.a(58, ea.field_n, g.field_A, ah.field_a);
+            ah.a(0, 0, (byte) 90, param1);
+        } catch (RuntimeException runtimeException) {
+            throw ch.a((Throwable) (Object) runtimeException, "ng.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

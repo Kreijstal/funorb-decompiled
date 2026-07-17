@@ -17,16 +17,8 @@ final class fb {
         field_h = null;
         field_e = null;
         field_g = null;
-        if (!param0) {
-          field_h = null;
-          field_b = null;
-          field_a = null;
-          return;
-        } else {
-          field_b = null;
-          field_a = null;
-          return;
-        }
+        field_b = null;
+        field_a = null;
     }
 
     static {

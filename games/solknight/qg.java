@@ -8,9 +8,6 @@ final class qg {
     static int field_a;
 
     public static void a(boolean param0) {
-        if (param0) {
-            field_c = null;
-        }
         field_c = null;
         field_b = null;
     }
@@ -19,12 +16,12 @@ final class qg {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        var3 = -1 + (((qg) this).field_d.length >> -1402369503);
+        var3 = -1 + (((qg) this).field_d.length >> 1);
         var4 = var3 & param1;
         if (param0 == 0) {
           L0: while (true) {
             var5 = ((qg) this).field_d[var4 + var4 - -1];
-            if ((var5 ^ -1) == 0) {
+            if (var5 == -1) {
               return -1;
             } else {
               if (param1 != ((qg) this).field_d[var4 - -var4]) {
@@ -41,89 +38,215 @@ final class qg {
     }
 
     final static void a(hf param0, byte param1) {
-        int var2 = 0;
+        RuntimeException var2 = null;
+        int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        String stackIn_22_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
         var5 = SolKnight.field_L ? 1 : 0;
-        var2 = 0;
-        L0: while (true) {
-          if (var2 >= 3) {
-            var2 = 0;
+        try {
+          L0: {
+            var2_int = 0;
             L1: while (true) {
-              if (var2 >= al.field_p) {
-                int dupTemp$4 = param0.a(1910696752);
-                SolKnight.field_K[dupTemp$4] = SolKnight.field_K[dupTemp$4] + 1;
-                var2 = 0;
-                var3 = 0;
+              if (var2_int >= 3) {
+                var2_int = 0;
                 L2: while (true) {
-                  if (var3 >= al.field_p) {
-                    var4 = -52 / ((param1 - -2) / 59);
-                    al.field_p = var2;
-                    int fieldTemp$5 = al.field_p;
-                    al.field_p = al.field_p + 1;
-                    kc.field_K[fieldTemp$5] = param0;
-                    return;
-                  } else {
-                    L3: {
-                      if (kc.field_K[var3].field_i == param0.field_i) {
-                        var4 = kc.field_K[var3].a(1910696752);
-                        if (i.field_K >= SolKnight.field_K[var4]) {
-                          break L3;
-                        } else {
-                          SolKnight.field_K[var4] = SolKnight.field_K[var4] - 1;
-                          var3++;
-                          continue L2;
-                        }
+                  if (var2_int >= al.field_p) {
+                    int dupTemp$4 = param0.a(1910696752);
+                    SolKnight.field_K[dupTemp$4] = SolKnight.field_K[dupTemp$4] + 1;
+                    var2_int = 0;
+                    var3 = 0;
+                    L3: while (true) {
+                      if (var3 >= al.field_p) {
+                        var4 = 52;
+                        al.field_p = var2_int;
+                        int fieldTemp$5 = al.field_p;
+                        al.field_p = al.field_p + 1;
+                        kc.field_K[fieldTemp$5] = param0;
+                        break L0;
                       } else {
-                        break L3;
+                        L4: {
+                          L5: {
+                            if (kc.field_K[var3].field_i == param0.field_i) {
+                              var4 = kc.field_K[var3].a(1910696752);
+                              if (i.field_K >= SolKnight.field_K[var4]) {
+                                break L5;
+                              } else {
+                                SolKnight.field_K[var4] = SolKnight.field_K[var4] - 1;
+                                break L4;
+                              }
+                            } else {
+                              break L5;
+                            }
+                          }
+                          int incrementValue$6 = var2_int;
+                          var2_int++;
+                          kc.field_K[incrementValue$6] = kc.field_K[var3];
+                          break L4;
+                        }
+                        var3++;
+                        continue L3;
                       }
                     }
-                    int incrementValue$6 = var2;
-                    var2++;
-                    kc.field_K[incrementValue$6] = kc.field_K[var3];
+                  } else {
+                    L6: {
+                      if (kc.field_K[var2_int].field_i != param0.field_i) {
+                        break L6;
+                      } else {
+                        int dupTemp$7 = kc.field_K[var2_int].a(1910696752);
+                        SolKnight.field_K[dupTemp$7] = SolKnight.field_K[dupTemp$7] + 1;
+                        break L6;
+                      }
+                    }
+                    var2_int++;
+                    continue L2;
+                  }
+                }
+              } else {
+                SolKnight.field_K[var2_int] = 0;
+                var2_int++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L7: {
+            var2 = decompiledCaughtException;
+            stackOut_19_0 = (RuntimeException) var2;
+            stackOut_19_1 = new StringBuilder().append("qg.A(");
+            stackIn_21_0 = stackOut_19_0;
+            stackIn_21_1 = stackOut_19_1;
+            stackIn_20_0 = stackOut_19_0;
+            stackIn_20_1 = stackOut_19_1;
+            if (param0 == null) {
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "null";
+              stackIn_22_0 = stackOut_21_0;
+              stackIn_22_1 = stackOut_21_1;
+              stackIn_22_2 = stackOut_21_2;
+              break L7;
+            } else {
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "{...}";
+              stackIn_22_0 = stackOut_20_0;
+              stackIn_22_1 = stackOut_20_1;
+              stackIn_22_2 = stackOut_20_2;
+              break L7;
+            }
+          }
+          throw fc.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + -92 + 41);
+        }
+    }
+
+    qg(int[] param0) {
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        try {
+          L0: {
+            var2_int = 1;
+            L1: while (true) {
+              if ((param0.length >> 1) + param0.length < var2_int) {
+                ((qg) this).field_d = new int[var2_int + var2_int];
+                var3 = 0;
+                L2: while (true) {
+                  if (var2_int + var2_int <= var3) {
+                    var3 = 0;
+                    L3: while (true) {
+                      if (var3 >= param0.length) {
+                        break L0;
+                      } else {
+                        var4 = param0[var3] & var2_int + -1;
+                        L4: while (true) {
+                          if (-1 == ((qg) this).field_d[var4 + var4 + 1]) {
+                            ((qg) this).field_d[var4 + var4] = param0[var3];
+                            ((qg) this).field_d[1 + var4 + var4] = var3;
+                            var3++;
+                            continue L3;
+                          } else {
+                            var4 = var2_int - 1 & 1 + var4;
+                            continue L4;
+                          }
+                        }
+                      }
+                    }
+                  } else {
+                    ((qg) this).field_d[var3] = -1;
                     var3++;
                     continue L2;
                   }
                 }
               } else {
-                if (kc.field_K[var2].field_i == param0.field_i) {
-                  int dupTemp$7 = kc.field_K[var2].a(1910696752);
-                  SolKnight.field_K[dupTemp$7] = SolKnight.field_K[dupTemp$7] + 1;
-                  var2++;
-                  continue L1;
-                } else {
-                  var2++;
-                  continue L1;
-                }
+                var2_int = var2_int << 1;
+                continue L1;
               }
             }
-          } else {
-            SolKnight.field_K[var2] = 0;
-            var2++;
-            continue L0;
           }
-        }
-    }
-
-    qg(int[] param0) {
-        int var3 = 0;
-        int var4 = 0;
-        int var2 = 1;
-        while ((param0.length >> -996309951) + param0.length >= var2) {
-            var2 = var2 << 1;
-        }
-        ((qg) this).field_d = new int[var2 + var2];
-        for (var3 = 0; var2 + var2 > var3; var3++) {
-            ((qg) this).field_d[var3] = -1;
-        }
-        for (var3 = 0; var3 < param0.length; var3++) {
-            var4 = param0[var3] & var2 + -1;
-            while (-1 != ((qg) this).field_d[var4 + var4 + 1]) {
-                var4 = var2 - 1 & 1 + var4;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L5: {
+            var2 = decompiledCaughtException;
+            stackOut_14_0 = (RuntimeException) var2;
+            stackOut_14_1 = new StringBuilder().append("qg.<init>(");
+            stackIn_16_0 = stackOut_14_0;
+            stackIn_16_1 = stackOut_14_1;
+            stackIn_15_0 = stackOut_14_0;
+            stackIn_15_1 = stackOut_14_1;
+            if (param0 == null) {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "null";
+              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_1 = stackOut_16_1;
+              stackIn_17_2 = stackOut_16_2;
+              break L5;
+            } else {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "{...}";
+              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_1 = stackOut_15_1;
+              stackIn_17_2 = stackOut_15_2;
+              break L5;
             }
-            ((qg) this).field_d[var4 + var4] = param0[var3];
-            ((qg) this).field_d[1 + var4 + var4] = var3;
+          }
+          throw fc.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
         }
     }
 

@@ -15,30 +15,28 @@ final class lr {
     }
 
     final static void a(boolean param0, String param1, byte param2, String param3) {
-        int var4 = -26 % ((76 - param2) / 42);
-        ac.field_F = param3;
-        kh.field_d = param1;
-        oc.a(us.field_m, param0, (byte) -99);
+        try {
+            int var4_int = -26 % ((76 - param2) / 42);
+            ac.field_F = param3;
+            kh.field_d = param1;
+            oc.a(us.field_m, param0, (byte) -99);
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "lr.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void c(int param0) {
         field_b = null;
         field_a = null;
-        if (param0 != 16766976) {
-            field_b = null;
-            field_c = null;
-            return;
-        }
         field_c = null;
     }
 
     final static void a(tv param0, byte param1) {
-        if (param1 < 15) {
-            int[] discarded$0 = lr.a(-61);
+        try {
             jd.a(param0, (byte) 109, true);
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "lr.E(" + (param0 != null ? "{...}" : "null") + 44 + 56 + 41);
         }
-        jd.a(param0, (byte) 109, true);
     }
 
     lr(boolean param0) {

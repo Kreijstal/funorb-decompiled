@@ -63,33 +63,19 @@ final class al {
     }
 
     final void a(byte param0, ah param1) {
-        if (param1.field_l == null) {
-          param1.field_l = ((al) this).field_d.field_l;
-          param1.field_m = ((al) this).field_d;
-          if (param0 < 122) {
-            ah discarded$2 = ((al) this).a(-109);
+        try {
+            if (param1.field_l != null) {
+                param1.c((byte) 36);
+            }
+            param1.field_l = ((al) this).field_d.field_l;
+            param1.field_m = ((al) this).field_d;
+            if (param0 < 122) {
+                ah discarded$0 = ((al) this).a(-109);
+            }
             param1.field_l.field_m = param1;
             param1.field_m.field_l = param1;
-            return;
-          } else {
-            param1.field_l.field_m = param1;
-            param1.field_m.field_l = param1;
-            return;
-          }
-        } else {
-          param1.c((byte) 36);
-          param1.field_l = ((al) this).field_d.field_l;
-          param1.field_m = ((al) this).field_d;
-          if (param0 >= 122) {
-            param1.field_l.field_m = param1;
-            param1.field_m.field_l = param1;
-            return;
-          } else {
-            ah discarded$3 = ((al) this).a(-109);
-            param1.field_l.field_m = param1;
-            param1.field_m.field_l = param1;
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) (Object) runtimeException, "al.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -120,85 +106,55 @@ final class al {
 
     final static void b(boolean param0) {
         int[] var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int[] var5 = null;
-        int[] var6 = null;
-        int[] var7 = null;
+        RuntimeException decompiledCaughtException = null;
         var4 = stellarshard.field_B;
-        var7 = gg.field_h;
-        var6 = var7;
-        var5 = var6;
-        var1 = var5;
-        var2 = 0;
-        if (!param0) {
-          var3 = var7.length;
-          L0: while (true) {
-            if (var3 > var2) {
-              int incrementValue$40 = var2;
-              var2++;
-              var5[incrementValue$40] = 0;
-              int incrementValue$41 = var2;
-              var2++;
-              var5[incrementValue$41] = 0;
-              int incrementValue$42 = var2;
-              var2++;
-              var5[incrementValue$42] = 0;
-              int incrementValue$43 = var2;
-              var2++;
-              var5[incrementValue$43] = 0;
-              int incrementValue$44 = var2;
-              var2++;
-              var5[incrementValue$44] = 0;
-              int incrementValue$45 = var2;
-              var2++;
-              var5[incrementValue$45] = 0;
-              int incrementValue$46 = var2;
-              var2++;
-              var5[incrementValue$46] = 0;
-              int incrementValue$47 = var2;
-              var2++;
-              var5[incrementValue$47] = 0;
-              continue L0;
-            } else {
-              return;
+        try {
+          L0: {
+            var5 = gg.field_h;
+            var1 = var5;
+            var2 = 0;
+            var3 = var5.length;
+            L1: while (true) {
+              if (var3 <= var2) {
+                break L0;
+              } else {
+                int incrementValue$40 = var2;
+                var2++;
+                var5[incrementValue$40] = 0;
+                int incrementValue$41 = var2;
+                var2++;
+                var5[incrementValue$41] = 0;
+                int incrementValue$42 = var2;
+                var2++;
+                var5[incrementValue$42] = 0;
+                int incrementValue$43 = var2;
+                var2++;
+                var5[incrementValue$43] = 0;
+                int incrementValue$44 = var2;
+                var2++;
+                var5[incrementValue$44] = 0;
+                int incrementValue$45 = var2;
+                var2++;
+                var5[incrementValue$45] = 0;
+                int incrementValue$46 = var2;
+                var2++;
+                var5[incrementValue$46] = 0;
+                int incrementValue$47 = var2;
+                var2++;
+                var5[incrementValue$47] = 0;
+                continue L1;
+              }
             }
           }
-        } else {
-          field_e = null;
-          var3 = var7.length;
-          L1: while (true) {
-            if (var3 > var2) {
-              int incrementValue$48 = var2;
-              var2++;
-              var5[incrementValue$48] = 0;
-              int incrementValue$49 = var2;
-              var2++;
-              var5[incrementValue$49] = 0;
-              int incrementValue$50 = var2;
-              var2++;
-              var5[incrementValue$50] = 0;
-              int incrementValue$51 = var2;
-              var2++;
-              var5[incrementValue$51] = 0;
-              int incrementValue$52 = var2;
-              var2++;
-              var5[incrementValue$52] = 0;
-              int incrementValue$53 = var2;
-              var2++;
-              var5[incrementValue$53] = 0;
-              int incrementValue$54 = var2;
-              var2++;
-              var5[incrementValue$54] = 0;
-              int incrementValue$55 = var2;
-              var2++;
-              var5[incrementValue$55] = 0;
-              continue L1;
-            } else {
-              return;
-            }
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw ma.a((Throwable) (Object) var1_ref, "al.G(" + 0 + 41);
         }
     }
 

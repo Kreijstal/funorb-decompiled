@@ -21,77 +21,188 @@ final class mh extends fc {
     }
 
     final boolean a(byte[] param0, int[] param1, byte param2, jc param3) {
-        int var5 = 0;
+        RuntimeException var5 = null;
+        int var5_int = 0;
         int var6 = 0;
         Object var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
+        int stackIn_3_0 = 0;
+        int stackIn_14_0 = 0;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_18_2 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        String stackIn_21_2 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        String stackIn_24_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_13_0 = 0;
+        int stackOut_2_0 = 0;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        String stackOut_23_2 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        String stackOut_22_2 = null;
         var10 = TrackController.field_F ? 1 : 0;
-        var5 = 1;
-        var6 = 0;
-        if (param2 <= -29) {
-          var7 = null;
-          var8 = 0;
-          L0: while (true) {
-            if ((var8 ^ -1) <= -129) {
-              return var5 != 0;
-            } else {
-              L1: {
-                if (param0 == null) {
-                  break L1;
+        try {
+          L0: {
+            var5_int = 1;
+            var6 = 0;
+            if (param2 <= -29) {
+              var7 = null;
+              var8 = 0;
+              L1: while (true) {
+                if (var8 >= 128) {
+                  stackOut_13_0 = var5_int;
+                  stackIn_14_0 = stackOut_13_0;
+                  break L0;
                 } else {
-                  if (0 != param0[var8]) {
-                    break L1;
-                  } else {
-                    var8++;
-                    continue L0;
-                  }
-                }
-              }
-              var9 = ((mh) this).field_n[var8];
-              if (var9 != 0) {
-                L2: {
-                  if (var9 == var6) {
-                    break L2;
-                  } else {
-                    L3: {
-                      var6 = var9;
-                      var9--;
-                      if ((var9 & 1) == 0) {
-                        var7 = (Object) (Object) param3.a(param1, false, var9 >> 87380994);
-                        break L3;
-                      } else {
-                        var7 = (Object) (Object) param3.a(param1, -2059411540, var9 >> -899237790);
-                        break L3;
-                      }
-                    }
-                    if (var7 == null) {
-                      var5 = 0;
+                  L2: {
+                    if (param0 == null) {
                       break L2;
                     } else {
-                      break L2;
+                      if (0 != param0[var8]) {
+                        break L2;
+                      } else {
+                        var8++;
+                        continue L1;
+                      }
                     }
                   }
-                }
-                if (var7 != null) {
-                  ((mh) this).field_o[var8] = (ik) var7;
-                  ((mh) this).field_n[var8] = 0;
+                  L3: {
+                    var9 = ((mh) this).field_n[var8];
+                    if (var9 == 0) {
+                      break L3;
+                    } else {
+                      break L3;
+                    }
+                  }
                   var8++;
-                  continue L0;
-                } else {
-                  var8++;
-                  continue L0;
+                  continue L1;
                 }
-              } else {
-                var8++;
-                continue L0;
               }
+            } else {
+              stackOut_2_0 = 0;
+              stackIn_3_0 = stackOut_2_0;
+              return stackIn_3_0 != 0;
             }
           }
-        } else {
-          return false;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var5 = decompiledCaughtException;
+            stackOut_15_0 = (RuntimeException) var5;
+            stackOut_15_1 = new StringBuilder().append("mh.B(");
+            stackIn_17_0 = stackOut_15_0;
+            stackIn_17_1 = stackOut_15_1;
+            stackIn_16_0 = stackOut_15_0;
+            stackIn_16_1 = stackOut_15_1;
+            if (param0 == null) {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "null";
+              stackIn_18_0 = stackOut_17_0;
+              stackIn_18_1 = stackOut_17_1;
+              stackIn_18_2 = stackOut_17_2;
+              break L4;
+            } else {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "{...}";
+              stackIn_18_0 = stackOut_16_0;
+              stackIn_18_1 = stackOut_16_1;
+              stackIn_18_2 = stackOut_16_2;
+              break L4;
+            }
+          }
+          L5: {
+            stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+            stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(44);
+            stackIn_20_0 = stackOut_18_0;
+            stackIn_20_1 = stackOut_18_1;
+            stackIn_19_0 = stackOut_18_0;
+            stackIn_19_1 = stackOut_18_1;
+            if (param1 == null) {
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "null";
+              stackIn_21_0 = stackOut_20_0;
+              stackIn_21_1 = stackOut_20_1;
+              stackIn_21_2 = stackOut_20_2;
+              break L5;
+            } else {
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "{...}";
+              stackIn_21_0 = stackOut_19_0;
+              stackIn_21_1 = stackOut_19_1;
+              stackIn_21_2 = stackOut_19_2;
+              break L5;
+            }
+          }
+          L6: {
+            stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(44).append(param2).append(44);
+            stackIn_23_0 = stackOut_21_0;
+            stackIn_23_1 = stackOut_21_1;
+            stackIn_22_0 = stackOut_21_0;
+            stackIn_22_1 = stackOut_21_1;
+            if (param3 == null) {
+              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_2 = "null";
+              stackIn_24_0 = stackOut_23_0;
+              stackIn_24_1 = stackOut_23_1;
+              stackIn_24_2 = stackOut_23_2;
+              break L6;
+            } else {
+              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_2 = "{...}";
+              stackIn_24_0 = stackOut_22_0;
+              stackIn_24_1 = stackOut_22_1;
+              stackIn_24_2 = stackOut_22_2;
+              break L6;
+            }
+          }
+          throw sl.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 41);
         }
+        return stackIn_14_0 != 0;
     }
 
     final static boolean e(int param0) {
@@ -124,9 +235,6 @@ final class mh extends fc {
     }
 
     public static void d(int param0) {
-        if (param0 != -24011) {
-            field_i = false;
-        }
         field_k = null;
     }
 
@@ -220,7 +328,7 @@ final class mh extends fc {
         var38 = new be(param0);
         var3 = 0;
         L0: while (true) {
-          if (-1 == (var38.field_j[var3 + var38.field_k] ^ -1)) {
+          if (var38.field_j[var3 + var38.field_k] == 0) {
             var67 = new byte[var3];
             var61 = var67;
             var55 = var61;
@@ -235,7 +343,7 @@ final class mh extends fc {
                 var38.field_k = var38.field_k + var3;
                 var6 = 0;
                 L2: while (true) {
-                  if ((var38.field_j[var6 + var38.field_k] ^ -1) == -1) {
+                  if (var38.field_j[var6 + var38.field_k] == 0) {
                     var68 = new byte[var6];
                     var62 = var68;
                     var56 = var62;
@@ -250,7 +358,7 @@ final class mh extends fc {
                         var38.field_k = var38.field_k + var6;
                         var9 = 0;
                         L4: while (true) {
-                          if ((var38.field_j[var38.field_k - -var9] ^ -1) == -1) {
+                          if (var38.field_j[var38.field_k - -var9] == 0) {
                             var69 = new byte[var9];
                             var63 = var69;
                             var57 = var63;
@@ -267,7 +375,7 @@ final class mh extends fc {
                                   var53 = var59;
                                   var39 = var53;
                                   var11 = var39;
-                                  if (-2 <= (var9 ^ -1)) {
+                                  if (var9 <= 1) {
                                     var12 = var9;
                                     break L6;
                                   } else {
@@ -276,14 +384,14 @@ final class mh extends fc {
                                     var12 = 2;
                                     var14 = 2;
                                     L7: while (true) {
-                                      if ((var9 ^ -1) >= (var14 ^ -1)) {
+                                      if (~var9 >= ~var14) {
                                         break L6;
                                       } else {
                                         L8: {
                                           var15_int = var38.h(16383);
-                                          if ((var15_int ^ -1) != -1) {
+                                          if (var15_int != 0) {
                                             L9: {
-                                              if ((var13_int ^ -1) > (var15_int ^ -1)) {
+                                              if (~var13_int > ~var15_int) {
                                                 break L9;
                                               } else {
                                                 var15_int--;
@@ -309,7 +417,7 @@ final class mh extends fc {
                                 var13 = new uh[var12];
                                 var14 = 0;
                                 L10: while (true) {
-                                  if ((var13.length ^ -1) >= (var14 ^ -1)) {
+                                  if (~var13.length >= ~var14) {
                                     L11: {
                                       var14 = var38.h(16383);
                                       if (0 >= var14) {
@@ -343,7 +451,7 @@ final class mh extends fc {
                                     var16 = var47;
                                     var17 = 0;
                                     L13: while (true) {
-                                      if (-1 == (var38.field_j[var38.field_k - -var17] ^ -1)) {
+                                      if (var38.field_j[var38.field_k - -var17] == 0) {
                                         var66 = new byte[var17];
                                         var60 = var66;
                                         var54 = var60;
@@ -351,7 +459,7 @@ final class mh extends fc {
                                         var18 = var41;
                                         var19 = 0;
                                         L14: while (true) {
-                                          if ((var19 ^ -1) <= (var17 ^ -1)) {
+                                          if (~var19 <= ~var17) {
                                             var38.field_k = var38.field_k + 1;
                                             var17++;
                                             var19 = 0;
@@ -385,7 +493,7 @@ final class mh extends fc {
                                                                 var25 = null;
                                                                 var26 = 0;
                                                                 L20: while (true) {
-                                                                  if (-129 >= (var26 ^ -1)) {
+                                                                  if (var26 >= 128) {
                                                                     var21 = 0;
                                                                     var20 = 0;
                                                                     var26 = 0;
@@ -395,14 +503,14 @@ final class mh extends fc {
                                                                         ((mh) this).field_m = var38.h(16383) - -1;
                                                                         var27 = 0;
                                                                         L22: while (true) {
-                                                                          if ((var27 ^ -1) <= (var12 ^ -1)) {
+                                                                          if (~var27 <= ~var12) {
                                                                             L23: {
                                                                               if (var15_array == null) {
                                                                                 break L23;
                                                                               } else {
                                                                                 var27 = 1;
                                                                                 L24: while (true) {
-                                                                                  if ((var46.length ^ -1) >= (var27 ^ -1)) {
+                                                                                  if (~var46.length >= ~var27) {
                                                                                     break L23;
                                                                                   } else {
                                                                                     var15_array[var27] = var38.f(-128);
@@ -418,7 +526,7 @@ final class mh extends fc {
                                                                               } else {
                                                                                 var27 = 1;
                                                                                 L26: while (true) {
-                                                                                  if ((var27 ^ -1) <= (var70.length ^ -1)) {
+                                                                                  if (~var27 <= ~var70.length) {
                                                                                     break L25;
                                                                                   } else {
                                                                                     var16[var27] = var38.f(-127);
@@ -430,7 +538,7 @@ final class mh extends fc {
                                                                             }
                                                                             var27 = 0;
                                                                             L27: while (true) {
-                                                                              if ((var27 ^ -1) <= (var12 ^ -1)) {
+                                                                              if (~var27 <= ~var12) {
                                                                                 var27 = 0;
                                                                                 L28: while (true) {
                                                                                   if (var27 >= var12) {
@@ -457,7 +565,7 @@ final class mh extends fc {
                                                                                                         var15_array = null;
                                                                                                         break L29;
                                                                                                       } else {
-                                                                                                        ((mh) this).field_j[var30] = (byte)(((mh) this).field_j[var30] * var28 - -32 >> 1690542374);
+                                                                                                        ((mh) this).field_j[var30] = (byte)(((mh) this).field_j[var30] * var28 - -32 >> 6);
                                                                                                         var30++;
                                                                                                         continue L33;
                                                                                                       }
@@ -476,7 +584,7 @@ final class mh extends fc {
                                                                                                       } else {
                                                                                                         var34 = mf.a(-var27 + var30, 14, var32);
                                                                                                         var32 = var32 + (-var28 + var31);
-                                                                                                        ((mh) this).field_j[var33] = (byte)(((mh) this).field_j[var33] * var34 - -32 >> 1477188902);
+                                                                                                        ((mh) this).field_j[var33] = (byte)(((mh) this).field_j[var33] * var34 - -32 >> 6);
                                                                                                         var33++;
                                                                                                         continue L34;
                                                                                                       }
@@ -484,7 +592,7 @@ final class mh extends fc {
                                                                                                   }
                                                                                                 }
                                                                                               } else {
-                                                                                                ((mh) this).field_j[var29] = (byte)(((mh) this).field_j[var29] * var28 - -32 >> -920856602);
+                                                                                                ((mh) this).field_j[var29] = (byte)(((mh) this).field_j[var29] * var28 - -32 >> 6);
                                                                                                 var29++;
                                                                                                 continue L31;
                                                                                               }
@@ -504,9 +612,9 @@ final class mh extends fc {
                                                                                         var16[0] = (byte)var19;
                                                                                         var27 = 2;
                                                                                         L36: while (true) {
-                                                                                          if ((var27 ^ -1) <= (var70.length ^ -1)) {
+                                                                                          if (~var27 <= ~var70.length) {
                                                                                             var27 = var70[0];
-                                                                                            var28 = var70[1] << 649052801;
+                                                                                            var28 = var70[1] << 1;
                                                                                             var29 = 0;
                                                                                             L37: while (true) {
                                                                                               if (var29 >= var27) {
@@ -516,7 +624,7 @@ final class mh extends fc {
                                                                                                     var16 = null;
                                                                                                     var30 = var27;
                                                                                                     L39: while (true) {
-                                                                                                      if ((var30 ^ -1) <= -129) {
+                                                                                                      if (var30 >= 128) {
                                                                                                         var27 = 0;
                                                                                                         L40: while (true) {
                                                                                                           if (var27 >= var12) {
@@ -538,7 +646,7 @@ final class mh extends fc {
                                                                                                           }
                                                                                                         }
                                                                                                         L42: {
-                                                                                                          if ((var31 ^ -1) >= -129) {
+                                                                                                          if (var31 <= 128) {
                                                                                                             break L42;
                                                                                                           } else {
                                                                                                             var31 = 128;
@@ -552,12 +660,12 @@ final class mh extends fc {
                                                                                                     }
                                                                                                   } else {
                                                                                                     var30 = var70[var29];
-                                                                                                    var31 = var16[1 + var29] << 1400793761;
+                                                                                                    var31 = var16[1 + var29] << 1;
                                                                                                     var32 = var28 * (var30 + -var27) - -((var30 - var27) / 2);
                                                                                                     var37 = var27;
                                                                                                     var33 = var37;
                                                                                                     L43: while (true) {
-                                                                                                      if ((var30 ^ -1) >= (var37 ^ -1)) {
+                                                                                                      if (~var30 >= ~var37) {
                                                                                                         var29 += 2;
                                                                                                         var27 = var30;
                                                                                                         var28 = var31;
@@ -566,7 +674,7 @@ final class mh extends fc {
                                                                                                         L44: {
                                                                                                           var34 = mf.a(-var27 + var30, 14, var32);
                                                                                                           var35 = var34 + (255 & ((mh) this).field_r[var37]);
-                                                                                                          if ((var35 ^ -1) <= -1) {
+                                                                                                          if (var35 >= 0) {
                                                                                                             break L44;
                                                                                                           } else {
                                                                                                             var35 = 0;
@@ -592,7 +700,7 @@ final class mh extends fc {
                                                                                               } else {
                                                                                                 L46: {
                                                                                                   var30 = var28 + (((mh) this).field_r[var29] & 255);
-                                                                                                  if (-1 >= (var30 ^ -1)) {
+                                                                                                  if (var30 >= 0) {
                                                                                                     break L46;
                                                                                                   } else {
                                                                                                     var30 = 0;
@@ -640,15 +748,15 @@ final class mh extends fc {
                                                                                           if (var27 >= var12) {
                                                                                             var27 = 0;
                                                                                             L51: while (true) {
-                                                                                              if ((var12 ^ -1) >= (var27 ^ -1)) {
+                                                                                              if (~var12 >= ~var27) {
                                                                                                 var27 = 0;
                                                                                                 L52: while (true) {
-                                                                                                  if ((var12 ^ -1) >= (var27 ^ -1)) {
+                                                                                                  if (~var12 >= ~var27) {
                                                                                                     return;
                                                                                                   } else {
                                                                                                     L53: {
                                                                                                       var52 = var13[var27];
-                                                                                                      if (-1 <= (var52.field_h ^ -1)) {
+                                                                                                      if (var52.field_h <= 0) {
                                                                                                         break L53;
                                                                                                       } else {
                                                                                                         var52.field_l = var38.h(16383);
@@ -742,7 +850,7 @@ final class mh extends fc {
                                                                                     var19 = 0;
                                                                                     var29 = 2;
                                                                                     L61: while (true) {
-                                                                                      if ((var29 ^ -1) <= (var48.field_i.length ^ -1)) {
+                                                                                      if (~var29 <= ~var48.field_i.length) {
                                                                                         break L60;
                                                                                       } else {
                                                                                         var19 = var19 - -1 + var38.h(16383);
@@ -765,7 +873,7 @@ final class mh extends fc {
                                                                               } else {
                                                                                 var29 = 1;
                                                                                 L63: while (true) {
-                                                                                  if ((var29 ^ -1) <= (var45.field_c.length ^ -1)) {
+                                                                                  if (~var29 <= ~var45.field_c.length) {
                                                                                     break L62;
                                                                                   } else {
                                                                                     var45.field_c[var29] = var38.f(-126);
@@ -797,11 +905,11 @@ final class mh extends fc {
                                                                         }
                                                                       } else {
                                                                         L66: {
-                                                                          if (-1 != (var20 ^ -1)) {
+                                                                          if (var20 != 0) {
                                                                             break L66;
                                                                           } else {
                                                                             L67: {
-                                                                              if ((var21 ^ -1) > (var66.length ^ -1)) {
+                                                                              if (~var21 > ~var66.length) {
                                                                                 int incrementValue$10 = var21;
                                                                                 var21++;
                                                                                 var20 = var18[incrementValue$10];
@@ -811,7 +919,7 @@ final class mh extends fc {
                                                                                 break L67;
                                                                               }
                                                                             }
-                                                                            if (-1 <= (((mh) this).field_n[var27] ^ -1)) {
+                                                                            if (((mh) this).field_n[var27] <= 0) {
                                                                               break L66;
                                                                             } else {
                                                                               var26 = 1 + var38.h(16383);
@@ -827,15 +935,15 @@ final class mh extends fc {
                                                                     }
                                                                   } else {
                                                                     L68: {
-                                                                      if ((((mh) this).field_n[var26] ^ -1) == -1) {
+                                                                      if (((mh) this).field_n[var26] == 0) {
                                                                         break L68;
                                                                       } else {
                                                                         L69: {
-                                                                          if (-1 != (var20 ^ -1)) {
+                                                                          if (var20 != 0) {
                                                                             break L69;
                                                                           } else {
                                                                             var25 = (Object) (Object) var13[var65[var21]];
-                                                                            if ((var21 ^ -1) <= (var69.length ^ -1)) {
+                                                                            if (~var21 <= ~var69.length) {
                                                                               var20 = -1;
                                                                               break L69;
                                                                             } else {
@@ -866,8 +974,8 @@ final class mh extends fc {
                                                                       } else {
                                                                         int incrementValue$12 = var8;
                                                                         var8++;
-                                                                        var24 = var38.field_j[incrementValue$12] - -16 << -406894174;
-                                                                        if ((var21 ^ -1) > (var68.length ^ -1)) {
+                                                                        var24 = var38.field_j[incrementValue$12] - -16 << 2;
+                                                                        if (~var21 > ~var68.length) {
                                                                           int incrementValue$13 = var21;
                                                                           var21++;
                                                                           var20 = var7[incrementValue$13];
@@ -889,7 +997,7 @@ final class mh extends fc {
                                                             }
                                                           } else {
                                                             L72: {
-                                                              if (-1 == (((mh) this).field_n[var24] ^ -1)) {
+                                                              if (((mh) this).field_n[var24] == 0) {
                                                                 break L72;
                                                               } else {
                                                                 L73: {
@@ -899,7 +1007,7 @@ final class mh extends fc {
                                                                     int incrementValue$14 = var5;
                                                                     var5++;
                                                                     var23 = var38.field_j[incrementValue$14] - 1;
-                                                                    if ((var67.length ^ -1) >= (var21 ^ -1)) {
+                                                                    if (~var67.length >= ~var21) {
                                                                       var20 = -1;
                                                                       break L73;
                                                                     } else {
@@ -939,7 +1047,7 @@ final class mh extends fc {
                                                             break L74;
                                                           }
                                                         }
-                                                        ((mh) this).field_q[var23] = (short)(((mh) this).field_q[var23] + tc.a(-1 + var22 << 1195177710, 32768));
+                                                        ((mh) this).field_q[var23] = (short)(((mh) this).field_q[var23] + tc.a(-1 + var22 << 14, 32768));
                                                         ((mh) this).field_n[var23] = var22;
                                                         var20--;
                                                         var23++;
@@ -948,7 +1056,7 @@ final class mh extends fc {
                                                     }
                                                   } else {
                                                     var19 = var19 + var38.h(16383);
-                                                    ((mh) this).field_q[var20] = (short)(((mh) this).field_q[var20] + (var19 << -1427565496));
+                                                    ((mh) this).field_q[var20] = (short)(((mh) this).field_q[var20] + (var19 << 8));
                                                     var20++;
                                                     continue L16;
                                                   }
@@ -987,11 +1095,11 @@ final class mh extends fc {
                                     }
                                     L77: {
                                       var16_int = var38.h(16383);
-                                      if (-1 <= (var16_int ^ -1)) {
+                                      if (var16_int <= 0) {
                                         break L77;
                                       } else {
                                         var15.field_i = new byte[2 + 2 * var16_int];
-                                        var40.field_i[1] = (byte)64;
+                                        var40.field_i[1] = (byte) 64;
                                         break L77;
                                       }
                                     }

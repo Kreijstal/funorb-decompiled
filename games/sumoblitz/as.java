@@ -14,6 +14,7 @@ final class as extends nt {
     final static void f(int param0) {
         ct var1 = null;
         byte[] var3 = null;
+        ks var1_ref = null;
         byte[] var4 = null;
         if (null == pd.field_n) {
             var1 = new ct();
@@ -21,12 +22,9 @@ final class as extends nt {
             pd.field_n = aj.a((byte) -125, var3, false);
         }
         if (!(mk.field_d != null)) {
-            var1 = (ct) (Object) new ks();
-            var4 = ((ks) (Object) var1).b(1, 128, 128, 16);
+            var1_ref = new ks();
+            var4 = var1_ref.b(1, 128, 128, 16);
             mk.field_d = aj.a((byte) -120, var4, false);
-        }
-        if (param0 != 23369) {
-            field_x = null;
         }
     }
 
@@ -39,13 +37,73 @@ final class as extends nt {
     }
 
     final void a(ha param0, int param1) {
-        if (param1 > -121) {
-            boolean discarded$0 = ((as) this).a(-59);
-        }
-        if (0 == ((as) this).field_t) {
-            uc.field_a.a((float)(((as) this).field_k >> 1538054664), (float)(((as) this).field_o >> 1016533960), 1024, 0, 0, (((as) this).field_p * (128 / ((as) this).field_s) << 1199849944) + ((as) this).field_q, 1);
-        } else {
-            im.field_a.a((float)(((as) this).field_k >> 1988628584), (float)(((as) this).field_o >> 1218913224), 4096, 0, 0, (((as) this).field_p * (128 / ((as) this).field_s) << 677098712) + ((as) this).field_q, 1);
+        RuntimeException var3 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param1 <= -121) {
+                break L1;
+              } else {
+                boolean discarded$2 = ((as) this).a(-59);
+                break L1;
+              }
+            }
+            L2: {
+              if (0 != ((as) this).field_t) {
+                im.field_a.a((float)(((as) this).field_k >> 8), (float)(((as) this).field_o >> 8), 4096, 0, 0, (((as) this).field_p * (128 / ((as) this).field_s) << 24) + ((as) this).field_q, 1);
+                break L2;
+              } else {
+                uc.field_a.a((float)(((as) this).field_k >> 8), (float)(((as) this).field_o >> 8), 1024, 0, 0, (((as) this).field_p * (128 / ((as) this).field_s) << 24) + ((as) this).field_q, 1);
+                break L2;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var3 = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var3;
+            stackOut_6_1 = new StringBuilder().append("as.C(");
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param0 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L3;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L3;
+            }
+          }
+          throw qo.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 41);
         }
     }
 
@@ -58,14 +116,80 @@ final class as extends nt {
     }
 
     final static void a(int param0, String[] param1) {
-        if (ce.field_o != null) {
-            ce.field_o.field_B.a(param1, false);
-        }
-        if (ro.field_a != null) {
-            ro.field_a.field_E.a(param1, false);
-        }
-        if (param0 != 256) {
-            field_y = null;
+        RuntimeException var2 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (ce.field_o == null) {
+                break L1;
+              } else {
+                ce.field_o.field_B.a(param1, false);
+                break L1;
+              }
+            }
+            L2: {
+              if (ro.field_a == null) {
+                break L2;
+              } else {
+                ro.field_a.field_E.a(param1, false);
+                break L2;
+              }
+            }
+            L3: {
+              if (param0 == 256) {
+                break L3;
+              } else {
+                field_y = null;
+                break L3;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var2 = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var2;
+            stackOut_7_1 = new StringBuilder().append("as.E(").append(param0).append(44);
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param1 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L4;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L4;
+            }
+          }
+          throw qo.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
         }
     }
 
@@ -76,12 +200,12 @@ final class as extends nt {
             ((as) this).field_o = ((as) this).field_o + ((as) this).field_z;
             ((as) this).field_u = ((as) this).field_u * 251 / 285;
             ((as) this).field_z = ((as) this).field_z * 251 / 285;
-            if (-1 < (((as) this).field_u ^ -1)) {
+            if (((as) this).field_u < 0) {
                 ((as) this).field_u = ((as) this).field_u - 1;
             } else {
                 ((as) this).field_u = ((as) this).field_u + 1;
             }
-            if ((((as) this).field_z ^ -1) > -1) {
+            if (((as) this).field_z < 0) {
                 ((as) this).field_z = ((as) this).field_z - 1;
             } else {
                 ((as) this).field_z = ((as) this).field_z + 1;
@@ -90,7 +214,7 @@ final class as extends nt {
         if (param0 != -2567) {
             as.e(-88);
         }
-        return super.a(param0 + 0);
+        return super.a(param0);
     }
 
     static {
@@ -106,6 +230,7 @@ final class as extends nt {
         var1 = 0;
         L0: while (true) {
           if (var1 >= 256) {
+            return;
           } else {
             var0 = var1;
             var2 = 0;
@@ -115,8 +240,8 @@ final class as extends nt {
                 var1++;
                 continue L0;
               } else {
-                if ((1 & var0 ^ -1) == -2) {
-                  var0 = var0 >>> -1832820543 ^ -306674912;
+                if ((1 & var0) == 1) {
+                  var0 = var0 >>> 1 ^ -306674912;
                   var2++;
                   continue L1;
                 } else {

@@ -9,21 +9,31 @@ abstract class tu extends ma implements hc {
     static String field_C;
 
     final void a(int param0, pk param1) {
-        ma.field_t = param1;
-        ((tu) this).a(true, -1);
-        ((tu) this).h((byte) 105);
-        ((tu) this).l(-1);
-        if (param0 < 97) {
-            ((tu) this).a(108, false);
+        try {
+            try {
+                ma.field_t = param1;
+                ((tu) this).a(true, -1);
+                ((tu) this).h((byte) 105);
+                ((tu) this).l(-1);
+                if (param0 < 97) {
+                    ((tu) this).a(108, false);
+                }
+                ((tu) this).m(10);
+                ((tu) this).g(13);
+                ((tu) this).e(6);
+                ((tu) this).i(13);
+                uc.field_A[10] = -1;
+                uc.field_A[9] = -1;
+                sn.field_g = new Vector();
+                oa.a(false, (hc) this);
+            } catch (RuntimeException runtimeException) {
+                throw nb.a((Throwable) (Object) runtimeException, "tu.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+            }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+            throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+            throw new RuntimeException(decompiledCheckedException);
         }
-        ((tu) this).m(10);
-        ((tu) this).g(13);
-        ((tu) this).e(6);
-        ((tu) this).i(13);
-        uc.field_A[10] = -1;
-        uc.field_A[9] = -1;
-        sn.field_g = new Vector();
-        oa.a(false, (hc) this);
     }
 
     final static void b(int param0, int param1, int param2) {
@@ -181,10 +191,10 @@ abstract class tu extends ma implements hc {
             L9: {
               L10: {
                 var2 = ((tu) this).i((byte) -65);
-                if (-1 == (var2 ^ -1)) {
+                if (var2 == 0) {
                   break L10;
                 } else {
-                  if (-2 == (var2 ^ -1)) {
+                  if (var2 == 1) {
                     break L10;
                   } else {
                     break L9;
@@ -196,7 +206,7 @@ abstract class tu extends ma implements hc {
             }
             L11: {
               var3 = 0;
-              if ((var2 ^ -1) == -3) {
+              if (var2 == 2) {
                 var3 = 1;
                 break L11;
               } else {
@@ -325,10 +335,10 @@ abstract class tu extends ma implements hc {
                 L3: {
                   L4: {
                     var3 = ((tu) this).b(stackIn_36_1, stackIn_36_2 != 0);
-                    if (-2 == (var3 ^ -1)) {
+                    if (var3 == 1) {
                       break L4;
                     } else {
-                      if ((var3 ^ -1) == -3) {
+                      if (var3 == 2) {
                         break L4;
                       } else {
                         break L3;
@@ -343,7 +353,7 @@ abstract class tu extends ma implements hc {
                       break L5;
                     }
                   }
-                  if (-3 != (var3 ^ -1)) {
+                  if (var3 != 2) {
                     break L3;
                   } else {
                     js.a(param0 + 1477, so.a(-79));
@@ -357,7 +367,7 @@ abstract class tu extends ma implements hc {
                   if (!nv.i(0)) {
                     L6: {
                       var3 = df.g(-61);
-                      if ((var3 ^ -1) == -2) {
+                      if (var3 == 1) {
                         ql.a((byte) 50, true, dg.field_f);
                         break L6;
                       } else {
@@ -489,34 +499,41 @@ abstract class tu extends ma implements hc {
     abstract boolean a(int param0, ml param1, int param2);
 
     final static void n(byte param0) {
-        int var1 = 0;
+        int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
+        RuntimeException decompiledCaughtException = null;
         var2 = Kickabout.field_G;
-        wk.field_d = new ut[ig.field_a.length];
-        gb.field_G = new ut[ig.field_a.length];
-        if (param0 == -10) {
-          var1 = 0;
-          L0: while (true) {
-            if (ig.field_a.length <= var1) {
-              return;
+        try {
+          L0: {
+            wk.field_d = new ut[ig.field_a.length];
+            gb.field_G = new ut[ig.field_a.length];
+            if (param0 == -10) {
+              var1_int = 0;
+              L1: while (true) {
+                if (ig.field_a.length <= var1_int) {
+                  break L0;
+                } else {
+                  wk.field_d[var1_int] = nm.a(16729156, ek.b((int) param0, 85), ig.field_a[var1_int]);
+                  gb.field_G[var1_int] = nm.a(4521796, -92, ig.field_a[var1_int]);
+                  var1_int++;
+                  continue L1;
+                }
+              }
             } else {
-              wk.field_d[var1] = nm.a(16729156, ek.b((int) param0, 85), ig.field_a[var1]);
-              gb.field_G[var1] = nm.a(4521796, -92, ig.field_a[var1]);
-              var1++;
-              continue L0;
+              return;
             }
           }
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw nb.a((Throwable) (Object) var1, "tu.D(" + param0 + 41);
         }
     }
 
     public abstract boolean a(int param0, int param1, char param2);
 
     final static int a(int param0, int param1, int param2) {
-        if (param2 != -23146) {
-            return 89;
-        }
         param0 = param0 >> 8;
         param1 = param1 >> 8;
         return pc.a(param1 * param1 + param0 * param0, -524289);
@@ -525,9 +542,6 @@ abstract class tu extends ma implements hc {
     public static void q(int param0) {
         field_D = null;
         field_C = null;
-        if (param0 != 30907) {
-            return;
-        }
         field_E = null;
     }
 
@@ -539,7 +553,7 @@ abstract class tu extends ma implements hc {
         var3 = Kickabout.field_G;
         L0: while (true) {
           if (!dr.a(-125, uc.field_A)) {
-            var2 = 80 / ((param0 - -28) / 48);
+            var2 = -80;
             return;
           } else {
             if (((tu) this).a(so.field_b, un.field_e, 1)) {

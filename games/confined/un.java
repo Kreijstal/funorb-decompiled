@@ -25,7 +25,7 @@ final class un {
         }
         var2 = 53 / ((param0 - -47) / 52);
         if (((un) this).field_c.field_x.field_a <= 1) {
-          if (-513 >= (((un) this).field_e ^ -1)) {
+          if (((un) this).field_e >= 512) {
             ((un) this).field_c.field_B.field_jb.a((byte) 85, ((un) this).field_f);
             ((un) this).field_g.a(26214, ((un) this).field_f, 0.000009765625 * (double)((un) this).field_e);
             return;
@@ -102,12 +102,16 @@ final class un {
         ((un) this).field_g = new kn();
         ((un) this).field_f = new double[12];
         ((un) this).field_e = 0;
-        ((un) this).field_c = param0;
-        param0.field_M = true;
-        rm.field_f = new eg(100);
-        bg.field_f = 0;
-        ie.field_a = true;
-        hc.field_u = ve.field_e;
+        try {
+            ((un) this).field_c = param0;
+            param0.field_M = true;
+            rm.field_f = new eg(100);
+            bg.field_f = 0;
+            ie.field_a = true;
+            hc.field_u = ve.field_e;
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "un.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

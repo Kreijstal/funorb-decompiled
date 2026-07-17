@@ -162,7 +162,7 @@ final class po extends ah {
               super.g(120);
               if (((po) this).field_F == 10) {
                 L2: {
-                  if ((((po) this).field_G ^ -1) != -1) {
+                  if (((po) this).field_G != 0) {
                     break L2;
                   } else {
                     if (((po) this).field_N != 5) {
@@ -174,7 +174,7 @@ final class po extends ah {
                   }
                 }
                 L3: {
-                  if (-2 != (((po) this).field_G ^ -1)) {
+                  if (((po) this).field_G != 1) {
                     break L3;
                   } else {
                     if (((po) this).field_yb != null) {
@@ -458,7 +458,7 @@ final class po extends ah {
                         }
                         L7: {
                           var12 = pj.field_s[var9];
-                          if (2147483647 != (var12 ^ -1)) {
+                          if (var12 != -2147483648) {
                             break L7;
                           } else {
                             if (var19 == 0) {
@@ -469,7 +469,7 @@ final class po extends ah {
                           }
                         }
                         var13 = pj.field_s[var10];
-                        if (2147483647 == (var13 ^ -1)) {
+                        if (var13 == -2147483648) {
                           break L5;
                         } else {
                           var14 = pj.field_s[var11];
@@ -493,7 +493,7 @@ final class po extends ah {
                             L9: while (true) {
                               L10: {
                                 L11: {
-                                  if (0 == var17 >> -916753404) {
+                                  if (0 == var17 >> 4) {
                                     break L11;
                                   } else {
                                     var16--;
@@ -524,7 +524,7 @@ final class po extends ah {
                                     }
                                   }
                                 }
-                                stackOut_38_0 = var17 + (var16 << -769810076);
+                                stackOut_38_0 = var17 + (var16 << 4);
                                 stackIn_39_0 = stackOut_38_0;
                                 break L10;
                               }
@@ -532,7 +532,7 @@ final class po extends ah {
                                 var18 = stackIn_39_0;
                                 uf.field_o[var18] = var8;
                                 je.field_b[var16] = 1 + var17;
-                                if (-1 <= (param4.field_p ^ -1)) {
+                                if (param4.field_p <= 0) {
                                   break L13;
                                 } else {
                                   if (null != param4.field_F) {
@@ -558,7 +558,7 @@ final class po extends ah {
                     }
                   }
                 }
-                stackOut_48_0 = param4.field_p ^ -1;
+                stackOut_48_0 = ~param4.field_p;
                 stackIn_49_0 = stackOut_48_0;
                 break L3;
               }
@@ -726,7 +726,7 @@ final class po extends ah {
                     if (!(var4 instanceof kd)) {
                       break L4;
                     } else {
-                      if ((((kd) (Object) var4).field_F ^ -1) == -9) {
+                      if (((kd) (Object) var4).field_F == 8) {
                         break L4;
                       } else {
                         if (((kd) (Object) var4).x(37)) {
@@ -736,7 +736,7 @@ final class po extends ah {
                             var7 = -var5 + ((po) this).a(true);
                             var8 = -var6 + ((po) this).f(237239984);
                             var9 = var8 * var8 + var7 * var7;
-                            if ((var9 ^ -1) > (var3 ^ -1)) {
+                            if (~var9 > ~var3) {
                               break L5;
                             } else {
                               if (-1 != var3) {

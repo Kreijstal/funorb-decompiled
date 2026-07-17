@@ -17,9 +17,13 @@ final class wa extends fc {
     }
 
     wa(long param0, int param1, byte[] param2) {
-        ((wa) this).field_m = param2;
-        ((wa) this).field_i = param1;
-        ((wa) this).field_l = param0;
+        try {
+            ((wa) this).field_m = param2;
+            ((wa) this).field_i = param1;
+            ((wa) this).field_l = param0;
+        } catch (RuntimeException runtimeException) {
+            throw sl.a((Throwable) (Object) runtimeException, "wa.<init>(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

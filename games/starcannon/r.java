@@ -23,13 +23,17 @@ final class r {
 
     final static void a(int param0, long param1) {
         try {
-            if (false) throw (InterruptedException) null;
-            Thread.sleep(param1);
-        } catch (InterruptedException interruptedException) {
-        }
-        if (param0 != 18780) {
-            r.a(82);
-            return;
+            {
+                Thread.sleep(param1);
+            }
+            if (param0 != 18780) {
+                r.a(82);
+                return;
+            }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+            throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+            throw new RuntimeException(decompiledCheckedException);
         }
     }
 

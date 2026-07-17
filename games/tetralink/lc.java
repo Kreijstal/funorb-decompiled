@@ -20,18 +20,9 @@ final class lc {
         field_b = null;
         field_g = null;
         field_c = null;
-        if (param0 != 120) {
-          field_c = null;
-          field_d = null;
-          field_i = null;
-          field_e = null;
-          return;
-        } else {
-          field_d = null;
-          field_i = null;
-          field_e = null;
-          return;
-        }
+        field_d = null;
+        field_i = null;
+        field_e = null;
     }
 
     final static void a(byte param0) {

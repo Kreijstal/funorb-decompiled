@@ -61,9 +61,6 @@ final class ab {
         field_e = null;
         field_m = null;
         field_g = null;
-        if (!param0) {
-            java.awt.Canvas discarded$0 = ab.a(-3);
-        }
     }
 
     static {

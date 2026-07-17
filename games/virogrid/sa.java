@@ -14,15 +14,15 @@ final class sa extends l {
     static String field_m;
 
     final static void a(byte param0, String param1, String param2, boolean param3) {
-        wd.field_d = param1;
-        pm.field_g = param2;
-        if (param0 <= 98) {
-          sa.a(-84);
-          gk.a(param3, bn.field_a, false);
-          return;
-        } else {
-          gk.a(param3, bn.field_a, false);
-          return;
+        try {
+            wd.field_d = param1;
+            pm.field_g = param2;
+            if (param0 <= 98) {
+                sa.a(-84);
+            }
+            gk.a(param3, bn.field_a, false);
+        } catch (RuntimeException runtimeException) {
+            throw kg.a((Throwable) (Object) runtimeException, "sa.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
         }
     }
 
@@ -33,7 +33,7 @@ final class sa extends l {
     public static void a(byte param0) {
         field_m = null;
         field_o = null;
-        int var1 = 84 / ((param0 - 23) / 62);
+        int var1 = -84;
         field_l = null;
         field_p = null;
     }

@@ -12,8 +12,9 @@ final class td extends jl {
         ((td) this).field_j = param0.a(false, ((td) this).field_j);
         ((td) this).field_f = param0.a(((td) this).field_f, -98);
         if (((td) this).field_i == ((td) this).field_g) {
-          ((td) this).field_g = param0.a(((td) this).field_i, (byte) 44);
-          ((td) this).field_i = param0.a(((td) this).field_i, (byte) 44);
+          int dupTemp$2 = param0.a(((td) this).field_i, (byte) 44);
+          ((td) this).field_g = dupTemp$2;
+          ((td) this).field_i = dupTemp$2;
           return (td) this;
         } else {
           L0: {

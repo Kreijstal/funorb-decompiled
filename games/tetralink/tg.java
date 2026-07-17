@@ -652,7 +652,7 @@ final class tg {
                               break L6;
                             } else {
                               L7: {
-                                if ((var18 ^ -1) != -2) {
+                                if (var18 != 1) {
                                   break L7;
                                 } else {
                                   if (!go.field_c) {

@@ -6,134 +6,100 @@ final class wg {
     int field_b;
 
     final static int b(int param0, int param1, int param2) {
-        int var3 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
+        int stackIn_8_0 = 0;
+        int stackIn_16_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_15_0 = 0;
+        int stackOut_7_0 = 0;
         var8 = Sumoblitz.field_L ? 1 : 0;
-        var3 = 0;
-        var4 = hh.field_f;
-        if (param1 != 1882601153) {
-          wb discarded$7 = wg.a(78, -126, 77);
-          if (bf.field_c.length > var3) {
-            var5 = eb.field_a[var3];
-            if (var5 >= 0) {
-              var6 = gt.a((byte) -59, bf.field_c[var3], true);
-              var7 = oj.field_a - (var6 >> 1882601153);
-              var4 = var4 + qc.field_a;
-              if (oc.a(var4, (byte) 122, param2, var7 + -dw.field_b, ga.field_h + (ag.field_b << 1607587585), param0, (dw.field_b << 597440705) + var6)) {
-                return var5;
+        try {
+          L0: {
+            L1: {
+              var3_int = 0;
+              var4 = hh.field_f;
+              if (param1 == 1882601153) {
+                break L1;
               } else {
-                var4 = var4 + (qc.field_a + (ag.field_b << -1942197855) - -ga.field_h);
-                var3++;
-                var3++;
-                var3++;
-                var3++;
-                return -1;
+                wb discarded$2 = wg.a(78, -126, 77);
+                break L1;
               }
-            } else {
-              var4 = var4 + fn.field_t;
-              var3++;
-              var3++;
-              var3++;
-              return -1;
             }
-          } else {
-            return -1;
-          }
-        } else {
-          if (bf.field_c.length > var3) {
-            var5 = eb.field_a[var3];
-            if (var5 >= 0) {
-              var6 = gt.a((byte) -59, bf.field_c[var3], true);
-              var7 = oj.field_a - (var6 >> 1882601153);
-              var4 = var4 + qc.field_a;
-              if (oc.a(var4, (byte) 122, param2, var7 + -dw.field_b, ga.field_h + (ag.field_b << 1607587585), param0, (dw.field_b << 597440705) + var6)) {
-                return var5;
+            L2: while (true) {
+              if (bf.field_c.length <= var3_int) {
+                stackOut_15_0 = -1;
+                stackIn_16_0 = stackOut_15_0;
+                break L0;
               } else {
-                var4 = var4 + (qc.field_a + (ag.field_b << -1942197855) - -ga.field_h);
-                var3++;
-                var3++;
-                var3++;
-                var3++;
-                return -1;
+                L3: {
+                  var5 = eb.field_a[var3_int];
+                  if (var5 < 0) {
+                    var4 = var4 + fn.field_t;
+                    var3_int++;
+                    break L3;
+                  } else {
+                    var6 = gt.a((byte) -59, bf.field_c[var3_int], true);
+                    var7 = oj.field_a - (var6 >> 1);
+                    var4 = var4 + qc.field_a;
+                    if (oc.a(var4, (byte) 122, param2, var7 + -dw.field_b, ga.field_h + (ag.field_b << 1), param0, (dw.field_b << 1) + var6)) {
+                      stackOut_7_0 = var5;
+                      stackIn_8_0 = stackOut_7_0;
+                      return stackIn_8_0;
+                    } else {
+                      var4 = var4 + (qc.field_a + (ag.field_b << 1) - -ga.field_h);
+                      var3_int++;
+                      break L3;
+                    }
+                  }
+                }
+                var3_int++;
+                continue L2;
               }
-            } else {
-              var4 = var4 + fn.field_t;
-              var3++;
-              var3++;
-              var3++;
-              return -1;
             }
-          } else {
-            return -1;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw qo.a((Throwable) (Object) var3, "wg.A(" + param0 + 44 + param1 + 44 + param2 + 41);
         }
+        return stackIn_16_0;
     }
 
     final static int a(int param0, int param1) {
-        int var2 = 0;
         if (param0 >= -113) {
-          return 84;
-        } else {
-          L0: {
-            if (param1 <= -1) {
-              break L0;
-            } else {
-              param1 = -param1;
-              break L0;
-            }
-          }
-          L1: {
-            var2 = 0;
-            if (-65536 >= param1) {
-              break L1;
-            } else {
-              var2 = var2 | 16;
-              param1 = param1 >>> 16;
-              break L1;
-            }
-          }
-          L2: {
-            if (param1 >= -256) {
-              break L2;
-            } else {
-              var2 = var2 | 8;
-              param1 = param1 >>> 8;
-              break L2;
-            }
-          }
-          L3: {
-            if (-16 < param1) {
-              var2 = var2 | 4;
-              param1 = param1 >>> 4;
-              break L3;
-            } else {
-              break L3;
-            }
-          }
-          L4: {
-            if (3 < param1) {
-              param1 = param1 >>> 2;
-              var2 = var2 | 2;
-              break L4;
-            } else {
-              break L4;
-            }
-          }
-          L5: {
-            if (param1 <= 1) {
-              break L5;
-            } else {
-              param1 = param1 >>> 1;
-              var2 = var2 | 1;
-              break L5;
-            }
-          }
-          return var2;
+            return 84;
         }
+        if (param1 < 0) {
+            param1 = -param1;
+        }
+        int var2 = 0;
+        if (param1 > 65535) {
+            var2 = var2 | 16;
+            param1 = param1 >>> 16;
+        }
+        if (param1 > 255) {
+            var2 = var2 | 8;
+            param1 = param1 >>> 8;
+        }
+        if (!(param1 <= 15)) {
+            var2 = var2 | 4;
+            param1 = param1 >>> 4;
+        }
+        if (!(3 >= param1)) {
+            param1 = param1 >>> 2;
+            var2 = var2 | 2;
+        }
+        if (param1 > 1) {
+            param1 = param1 >>> 1;
+            var2 = var2 | 1;
+        }
+        return var2;
     }
 
     protected final void finalize() throws Throwable {
@@ -142,8 +108,12 @@ final class wg {
     }
 
     wg(on param0, int param1, int param2) {
-        ((wg) this).field_b = param2;
-        ((wg) this).field_a = param0;
+        try {
+            ((wg) this).field_b = param2;
+            ((wg) this).field_a = param0;
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "wg.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     final static wb a(int param0, int param1, int param2) {

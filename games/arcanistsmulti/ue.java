@@ -22,37 +22,24 @@ final class ue {
         field_b = null;
         field_c = null;
         field_d = null;
-        if (param0 != 62) {
-          int discarded$2 = ue.b((byte) -12);
-          field_a = null;
-          return;
-        } else {
-          field_a = null;
-          return;
-        }
+        field_a = null;
     }
 
     final static void a(byte param0, le param1) {
-        kl.field_A = 320;
-        if (param0 > -26) {
-          ue.b(-27);
-          mf.field_g = -1;
-          hc.field_f = true;
-          ti.field_N = -1;
-          bk.field_J = param1.field_V;
-          bm.field_g = param1;
-          mo.field_f = null;
-          i.b(-120);
-          return;
-        } else {
-          mf.field_g = -1;
-          hc.field_f = true;
-          ti.field_N = -1;
-          bk.field_J = param1.field_V;
-          bm.field_g = param1;
-          mo.field_f = null;
-          i.b(-120);
-          return;
+        try {
+            kl.field_A = 320;
+            if (param0 > -26) {
+                ue.b(-27);
+            }
+            mf.field_g = -1;
+            hc.field_f = true;
+            ti.field_N = -1;
+            bk.field_J = param1.field_V;
+            bm.field_g = param1;
+            mo.field_f = null;
+            i.b(-120);
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "ue.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

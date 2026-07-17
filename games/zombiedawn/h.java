@@ -9,20 +9,132 @@ final class h implements java.awt.event.MouseListener, java.awt.event.MouseMotio
     static boolean field_c;
 
     public final synchronized void mouseDragged(java.awt.event.MouseEvent param0) {
-        if (null != ng.field_b) {
-            wc.field_Ob = 0;
-            lf.field_m = param0.getX();
-            vg.field_c = param0.getY();
-            kg.field_l = true;
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (null == ng.field_b) {
+                break L1;
+              } else {
+                wc.field_Ob = 0;
+                lf.field_m = param0.getX();
+                vg.field_c = param0.getY();
+                kg.field_l = true;
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_1 = new StringBuilder().append("h.mouseDragged(");
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param0 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
+            }
+          }
+          throw sh.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
         }
     }
 
     public final synchronized void mouseMoved(java.awt.event.MouseEvent param0) {
-        if (null != ng.field_b) {
-            wc.field_Ob = 0;
-            lf.field_m = param0.getX();
-            vg.field_c = param0.getY();
-            kg.field_l = true;
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (null == ng.field_b) {
+                break L1;
+              } else {
+                wc.field_Ob = 0;
+                lf.field_m = param0.getX();
+                vg.field_c = param0.getY();
+                kg.field_l = true;
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_1 = new StringBuilder().append("h.mouseMoved(");
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param0 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
+            }
+          }
+          throw sh.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
         }
     }
 
@@ -30,780 +142,649 @@ final class h implements java.awt.event.MouseListener, java.awt.event.MouseMotio
     }
 
     final static void a(vn[] param0, int param1, int param2, byte param3, int param4) {
-        int var5 = 0;
+        RuntimeException var5 = null;
+        int var5_int = 0;
         int var6 = 0;
+        RuntimeException stackIn_40_0 = null;
+        StringBuilder stackIn_40_1 = null;
+        RuntimeException stackIn_41_0 = null;
+        StringBuilder stackIn_41_1 = null;
+        RuntimeException stackIn_42_0 = null;
+        StringBuilder stackIn_42_1 = null;
+        String stackIn_42_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_39_0 = null;
+        StringBuilder stackOut_39_1 = null;
+        RuntimeException stackOut_41_0 = null;
+        StringBuilder stackOut_41_1 = null;
+        String stackOut_41_2 = null;
+        RuntimeException stackOut_40_0 = null;
+        StringBuilder stackOut_40_1 = null;
+        String stackOut_40_2 = null;
         var6 = ZombieDawn.field_J;
-        if (param3 == -17) {
+        try {
           L0: {
-            if (-1 == (param1 ^ -1)) {
-              break L0;
-            } else {
+            if (param3 == -17) {
               L1: {
-                L2: {
-                  L3: {
-                    if (param1 == 1) {
-                      break L3;
-                    } else {
-                      L4: {
-                        if (param1 == 2) {
-                          break L4;
-                        } else {
-                          L5: {
-                            if (-4 == (param1 ^ -1)) {
-                              break L5;
-                            } else {
-                              L6: {
-                                if (param1 == 4) {
-                                  break L6;
-                                } else {
-                                  L7: {
-                                    if (6 == param1) {
-                                      break L7;
-                                    } else {
-                                      L8: {
-                                        if (param1 != 8) {
-                                          break L8;
-                                        } else {
-                                          param0[param2].a();
-                                          param0[param4].e(0, 0);
-                                          var5 = 0;
-                                          L9: while (true) {
-                                            L10: {
-                                              if (var5 >= 24) {
-                                                break L10;
-                                              } else {
-                                                bi.a(0, var5, var5 + 1, 0, -(5 * var5) + 120);
-                                                bi.g(var5, 0, var5, 0, -(5 * var5) + 120);
-                                                var5++;
-                                                if (0 == 0) {
-                                                  if (0 == 0) {
-                                                    continue L9;
-                                                  } else {
-                                                    break L10;
-                                                  }
-                                                } else {
-                                                  return;
-                                                }
-                                              }
-                                            }
-                                            if (0 != 0) {
-                                              break L8;
-                                            } else {
-                                              cn.field_f.b(-124);
-                                              return;
-                                            }
-                                          }
-                                        }
-                                      }
-                                      L11: {
-                                        if (-8 != (param1 ^ -1)) {
-                                          break L11;
-                                        } else {
-                                          param0[param2].a();
-                                          param0[param4].e(0, 0);
-                                          var5 = 0;
-                                          L12: while (true) {
-                                            L13: {
-                                              if (-25 >= (var5 ^ -1)) {
-                                                break L13;
-                                              } else {
-                                                bi.a(0, var5, 24 + -var5, 0, var5 * 5);
-                                                bi.g(var5, -var5 + 24, var5, 0, 120 - var5 * 5);
-                                                var5++;
-                                                if (0 == 0) {
-                                                  if (0 == 0) {
-                                                    continue L12;
-                                                  } else {
-                                                    break L13;
-                                                  }
-                                                } else {
-                                                  return;
-                                                }
-                                              }
-                                            }
-                                            if (0 != 0) {
-                                              break L11;
-                                            } else {
-                                              cn.field_f.b(-124);
-                                              return;
-                                            }
-                                          }
-                                        }
-                                      }
-                                      if (-6 != (param1 ^ -1)) {
-                                        break L2;
-                                      } else {
-                                        param0[param2].a();
-                                        param0[param4].e(0, 0);
-                                        var5 = 0;
-                                        L14: while (true) {
-                                          L15: {
-                                            if (-25 >= (var5 ^ -1)) {
-                                              break L15;
-                                            } else {
-                                              bi.a(24 + -var5, var5, var5, 0, -(var5 * 5) + 120);
-                                              bi.g(var5, 0, 24 - var5, 0, 5 * var5);
-                                              var5++;
-                                              if (0 != 0) {
-                                                break L1;
-                                              } else {
-                                                if (0 == 0) {
-                                                  continue L14;
-                                                } else {
-                                                  break L15;
-                                                }
-                                              }
-                                            }
-                                          }
-                                          if (0 == 0) {
-                                            break L2;
-                                          } else {
-                                            break L7;
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                  param0[param2].a();
-                                  param0[param4].e(0, 0);
-                                  var5 = 0;
-                                  L16: while (true) {
-                                    if (24 <= var5) {
-                                      if (0 == 0) {
-                                        break L2;
-                                      } else {
-                                        break L6;
-                                      }
-                                    } else {
-                                      bi.a(var5 + 1, var5, -var5 + 24, 0, var5 * 5);
-                                      bi.g(var5, var5, 24 - var5, 0, 5 * var5);
-                                      var5++;
-                                      if (0 != 0) {
-                                        break L1;
-                                      } else {
-                                        if (0 == 0) {
-                                          continue L16;
-                                        } else {
-                                          L17: {
-                                            L18: {
-                                              if (0 == 0) {
-                                                break L18;
-                                              } else {
-                                                param0[param2].a();
-                                                param0[param4].e(0, 0);
-                                                var5 = 0;
-                                                L19: while (true) {
-                                                  L20: {
-                                                    if ((var5 ^ -1) <= -25) {
-                                                      break L20;
-                                                    } else {
-                                                      bi.a(0, var5, 24, 0, -(var5 * 5) + 120);
-                                                      var5++;
-                                                      if (0 != 0) {
-                                                        break L17;
-                                                      } else {
-                                                        if (0 == 0) {
-                                                          continue L19;
-                                                        } else {
-                                                          break L20;
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                  if (0 == 0) {
-                                                    break L18;
-                                                  } else {
-                                                    param0[param2].a();
-                                                    param0[param4].e(0, 0);
-                                                    var5 = 0;
-                                                    L21: while (true) {
-                                                      L22: {
-                                                        if ((var5 ^ -1) <= -25) {
-                                                          break L22;
-                                                        } else {
-                                                          bi.a(0, var5, 24, 0, 5 * var5);
-                                                          var5++;
-                                                          if (0 != 0) {
-                                                            break L17;
-                                                          } else {
-                                                            if (0 == 0) {
-                                                              continue L21;
-                                                            } else {
-                                                              break L22;
-                                                            }
-                                                          }
-                                                        }
-                                                      }
-                                                      if (0 == 0) {
-                                                        break L18;
-                                                      } else {
-                                                        param0[param2].a();
-                                                        param0[param4].e(0, 0);
-                                                        var5 = 0;
-                                                        L23: while (true) {
-                                                          L24: {
-                                                            if (24 <= var5) {
-                                                              break L24;
-                                                            } else {
-                                                              bi.g(var5, 0, 24, 0, -(var5 * 5) + 120);
-                                                              var5++;
-                                                              if (0 != 0) {
-                                                                break L17;
-                                                              } else {
-                                                                if (0 == 0) {
-                                                                  continue L23;
-                                                                } else {
-                                                                  break L24;
-                                                                }
-                                                              }
-                                                            }
-                                                          }
-                                                          if (0 == 0) {
-                                                            break L18;
-                                                          } else {
-                                                            param0[param2].a();
-                                                            param0[param4].e(0, 0);
-                                                            var5 = 0;
-                                                            L25: while (true) {
-                                                              L26: {
-                                                                if (var5 >= 24) {
-                                                                  break L26;
-                                                                } else {
-                                                                  bi.g(var5, 0, 24, 0, 5 * var5);
-                                                                  var5++;
-                                                                  if (0 != 0) {
-                                                                    break L17;
-                                                                  } else {
-                                                                    if (0 == 0) {
-                                                                      continue L25;
-                                                                    } else {
-                                                                      break L26;
-                                                                    }
-                                                                  }
-                                                                }
-                                                              }
-                                                              if (0 == 0) {
-                                                                break L18;
-                                                              } else {
-                                                                param0[param2].a();
-                                                                param0[param4].e(0, 0);
-                                                                bi.a(0, 0, 24, 24, 0, 128);
-                                                                break L18;
-                                                              }
-                                                            }
-                                                          }
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                            }
-                                            cn.field_f.b(-124);
-                                            break L17;
-                                          }
-                                          return;
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                              }
-                              param0[param2].a();
-                              param0[param4].e(0, 0);
-                              var5 = 0;
-                              L27: while (true) {
-                                if ((var5 ^ -1) <= -25) {
-                                  if (0 == 0) {
-                                    break L2;
-                                  } else {
-                                    break L5;
-                                  }
-                                } else {
-                                  bi.a(0, var5, 24, 0, -(var5 * 5) + 120);
-                                  var5++;
-                                  if (0 != 0) {
-                                    break L1;
-                                  } else {
-                                    if (0 == 0) {
-                                      continue L27;
-                                    } else {
-                                      L28: {
-                                        L29: {
-                                          if (0 == 0) {
-                                            break L29;
-                                          } else {
-                                            param0[param2].a();
-                                            param0[param4].e(0, 0);
-                                            var5 = 0;
-                                            L30: while (true) {
-                                              L31: {
-                                                if ((var5 ^ -1) <= -25) {
-                                                  break L31;
-                                                } else {
-                                                  bi.a(0, var5, 24, 0, 5 * var5);
-                                                  var5++;
-                                                  if (0 != 0) {
-                                                    break L28;
-                                                  } else {
-                                                    if (0 == 0) {
-                                                      continue L30;
-                                                    } else {
-                                                      break L31;
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                              if (0 == 0) {
-                                                break L29;
-                                              } else {
-                                                param0[param2].a();
-                                                param0[param4].e(0, 0);
-                                                var5 = 0;
-                                                L32: while (true) {
-                                                  L33: {
-                                                    if (24 <= var5) {
-                                                      break L33;
-                                                    } else {
-                                                      bi.g(var5, 0, 24, 0, -(var5 * 5) + 120);
-                                                      var5++;
-                                                      if (0 != 0) {
-                                                        break L28;
-                                                      } else {
-                                                        if (0 == 0) {
-                                                          continue L32;
-                                                        } else {
-                                                          break L33;
-                                                        }
-                                                      }
-                                                    }
-                                                  }
-                                                  if (0 == 0) {
-                                                    break L29;
-                                                  } else {
-                                                    param0[param2].a();
-                                                    param0[param4].e(0, 0);
-                                                    var5 = 0;
-                                                    L34: while (true) {
-                                                      L35: {
-                                                        if (var5 >= 24) {
-                                                          break L35;
-                                                        } else {
-                                                          bi.g(var5, 0, 24, 0, 5 * var5);
-                                                          var5++;
-                                                          if (0 != 0) {
-                                                            break L28;
-                                                          } else {
-                                                            if (0 == 0) {
-                                                              continue L34;
-                                                            } else {
-                                                              break L35;
-                                                            }
-                                                          }
-                                                        }
-                                                      }
-                                                      if (0 == 0) {
-                                                        break L29;
-                                                      } else {
-                                                        param0[param2].a();
-                                                        param0[param4].e(0, 0);
-                                                        bi.a(0, 0, 24, 24, 0, 128);
-                                                        break L29;
-                                                      }
-                                                    }
-                                                  }
-                                                }
-                                              }
-                                            }
-                                          }
-                                        }
-                                        cn.field_f.b(-124);
-                                        break L28;
-                                      }
-                                      return;
-                                    }
-                                  }
-                                }
-                              }
-                            }
-                          }
-                          param0[param2].a();
-                          param0[param4].e(0, 0);
-                          var5 = 0;
-                          L36: while (true) {
-                            if ((var5 ^ -1) <= -25) {
-                              if (0 == 0) {
-                                break L2;
-                              } else {
-                                break L4;
-                              }
-                            } else {
-                              bi.a(0, var5, 24, 0, 5 * var5);
-                              var5++;
-                              if (0 != 0) {
-                                break L1;
-                              } else {
-                                if (0 == 0) {
-                                  continue L36;
-                                } else {
-                                  L37: {
-                                    if (0 == 0) {
-                                      cn.field_f.b(-124);
-                                      break L37;
-                                    } else {
-                                      param0[param2].a();
-                                      param0[param4].e(0, 0);
-                                      var5 = 0;
-                                      L38: while (true) {
-                                        L39: {
-                                          if (24 <= var5) {
-                                            break L39;
-                                          } else {
-                                            bi.g(var5, 0, 24, 0, -(var5 * 5) + 120);
-                                            var5++;
-                                            if (0 != 0) {
-                                              break L37;
-                                            } else {
-                                              if (0 == 0) {
-                                                continue L38;
-                                              } else {
-                                                break L39;
-                                              }
-                                            }
-                                          }
-                                        }
-                                        if (0 == 0) {
-                                          cn.field_f.b(-124);
-                                          return;
-                                        } else {
-                                          param0[param2].a();
-                                          param0[param4].e(0, 0);
-                                          var5 = 0;
-                                          L40: while (true) {
-                                            L41: {
-                                              if (var5 >= 24) {
-                                                break L41;
-                                              } else {
-                                                bi.g(var5, 0, 24, 0, 5 * var5);
-                                                var5++;
-                                                if (0 != 0) {
-                                                  break L37;
-                                                } else {
-                                                  if (0 == 0) {
-                                                    continue L40;
-                                                  } else {
-                                                    break L41;
-                                                  }
-                                                }
-                                              }
-                                            }
-                                            if (0 == 0) {
-                                              cn.field_f.b(-124);
-                                              return;
-                                            } else {
-                                              param0[param2].a();
-                                              param0[param4].e(0, 0);
-                                              bi.a(0, 0, 24, 24, 0, 128);
-                                              cn.field_f.b(-124);
-                                              return;
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                  return;
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                      param0[param2].a();
-                      param0[param4].e(0, 0);
-                      var5 = 0;
-                      L42: while (true) {
-                        if (24 <= var5) {
-                          if (0 == 0) {
-                            break L2;
-                          } else {
-                            break L3;
-                          }
-                        } else {
-                          bi.g(var5, 0, 24, 0, -(var5 * 5) + 120);
-                          var5++;
-                          if (0 != 0) {
-                            break L1;
-                          } else {
-                            if (0 == 0) {
-                              continue L42;
-                            } else {
-                              L43: {
-                                L44: {
-                                  if (0 == 0) {
-                                    break L44;
-                                  } else {
-                                    param0[param2].a();
-                                    param0[param4].e(0, 0);
-                                    var5 = 0;
-                                    L45: while (true) {
-                                      if (var5 >= 24) {
-                                        if (0 == 0) {
-                                          break L44;
-                                        } else {
-                                          param0[param2].a();
-                                          param0[param4].e(0, 0);
-                                          bi.a(0, 0, 24, 24, 0, 128);
-                                          cn.field_f.b(-124);
-                                          return;
-                                        }
-                                      } else {
-                                        bi.g(var5, 0, 24, 0, 5 * var5);
-                                        var5++;
-                                        if (0 != 0) {
-                                          break L43;
-                                        } else {
-                                          if (0 == 0) {
-                                            continue L45;
-                                          } else {
-                                            if (0 == 0) {
-                                              cn.field_f.b(-124);
-                                              return;
-                                            } else {
-                                              param0[param2].a();
-                                              param0[param4].e(0, 0);
-                                              bi.a(0, 0, 24, 24, 0, 128);
-                                              cn.field_f.b(-124);
-                                              return;
-                                            }
-                                          }
-                                        }
-                                      }
-                                    }
-                                  }
-                                }
-                                cn.field_f.b(-124);
-                                break L43;
-                              }
-                              return;
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
+                if (param1 == 0) {
                   param0[param2].a();
                   param0[param4].e(0, 0);
-                  var5 = 0;
-                  L46: while (true) {
-                    if (var5 >= 24) {
-                      if (0 == 0) {
-                        break L2;
-                      } else {
-                        break L0;
-                      }
-                    } else {
-                      bi.g(var5, 0, 24, 0, 5 * var5);
-                      var5++;
-                      if (0 != 0) {
+                  bi.a(0, 0, 24, 24, 0, 128);
+                  break L1;
+                } else {
+                  if (param1 == 1) {
+                    param0[param2].a();
+                    param0[param4].e(0, 0);
+                    var5_int = 0;
+                    L2: while (true) {
+                      if (var5_int >= 24) {
                         break L1;
                       } else {
-                        if (0 == 0) {
-                          continue L46;
+                        bi.g(var5_int, 0, 24, 0, 5 * var5_int);
+                        var5_int++;
+                        continue L2;
+                      }
+                    }
+                  } else {
+                    if (param1 == 2) {
+                      param0[param2].a();
+                      param0[param4].e(0, 0);
+                      var5_int = 0;
+                      L3: while (true) {
+                        if (24 <= var5_int) {
+                          break L1;
                         } else {
-                          if (0 == 0) {
-                            cn.field_f.b(-124);
-                            return;
+                          bi.g(var5_int, 0, 24, 0, -(var5_int * 5) + 120);
+                          var5_int++;
+                          continue L3;
+                        }
+                      }
+                    } else {
+                      if (param1 == 3) {
+                        param0[param2].a();
+                        param0[param4].e(0, 0);
+                        var5_int = 0;
+                        L4: while (true) {
+                          if (var5_int >= 24) {
+                            break L1;
                           } else {
+                            bi.a(0, var5_int, 24, 0, 5 * var5_int);
+                            var5_int++;
+                            continue L4;
+                          }
+                        }
+                      } else {
+                        if (param1 == 4) {
+                          param0[param2].a();
+                          param0[param4].e(0, 0);
+                          var5_int = 0;
+                          L5: while (true) {
+                            if (var5_int >= 24) {
+                              break L1;
+                            } else {
+                              bi.a(0, var5_int, 24, 0, -(var5_int * 5) + 120);
+                              var5_int++;
+                              continue L5;
+                            }
+                          }
+                        } else {
+                          if (6 == param1) {
                             param0[param2].a();
                             param0[param4].e(0, 0);
-                            bi.a(0, 0, 24, 24, 0, 128);
-                            cn.field_f.b(-124);
-                            return;
+                            var5_int = 0;
+                            L6: while (true) {
+                              if (24 <= var5_int) {
+                                break L1;
+                              } else {
+                                bi.a(var5_int + 1, var5_int, -var5_int + 24, 0, var5_int * 5);
+                                bi.g(var5_int, var5_int, 24 - var5_int, 0, 5 * var5_int);
+                                var5_int++;
+                                continue L6;
+                              }
+                            }
+                          } else {
+                            if (param1 != 8) {
+                              if (param1 != 7) {
+                                if (param1 != 5) {
+                                  break L1;
+                                } else {
+                                  param0[param2].a();
+                                  param0[param4].e(0, 0);
+                                  var5_int = 0;
+                                  L7: while (true) {
+                                    if (var5_int >= 24) {
+                                      break L1;
+                                    } else {
+                                      bi.a(24 + -var5_int, var5_int, var5_int, 0, -(var5_int * 5) + 120);
+                                      bi.g(var5_int, 0, 24 - var5_int, 0, 5 * var5_int);
+                                      var5_int++;
+                                      continue L7;
+                                    }
+                                  }
+                                }
+                              } else {
+                                param0[param2].a();
+                                param0[param4].e(0, 0);
+                                var5_int = 0;
+                                L8: while (true) {
+                                  if (var5_int >= 24) {
+                                    break L1;
+                                  } else {
+                                    bi.a(0, var5_int, 24 + -var5_int, 0, var5_int * 5);
+                                    bi.g(var5_int, -var5_int + 24, var5_int, 0, 120 - var5_int * 5);
+                                    var5_int++;
+                                    continue L8;
+                                  }
+                                }
+                              }
+                            } else {
+                              param0[param2].a();
+                              param0[param4].e(0, 0);
+                              var5_int = 0;
+                              L9: while (true) {
+                                if (var5_int >= 24) {
+                                  break L1;
+                                } else {
+                                  bi.a(0, var5_int, var5_int + 1, 0, -(5 * var5_int) + 120);
+                                  bi.g(var5_int, 0, var5_int, 0, -(5 * var5_int) + 120);
+                                  var5_int++;
+                                  continue L9;
+                                }
+                              }
+                            }
                           }
                         }
                       }
                     }
                   }
                 }
-                cn.field_f.b(-124);
-                break L1;
               }
+              cn.field_f.b(-124);
+              break L0;
+            } else {
               return;
             }
           }
-          param0[param2].a();
-          param0[param4].e(0, 0);
-          bi.a(0, 0, 24, 24, 0, 128);
-          cn.field_f.b(-124);
-          return;
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L10: {
+            var5 = decompiledCaughtException;
+            stackOut_39_0 = (RuntimeException) var5;
+            stackOut_39_1 = new StringBuilder().append("h.A(");
+            stackIn_41_0 = stackOut_39_0;
+            stackIn_41_1 = stackOut_39_1;
+            stackIn_40_0 = stackOut_39_0;
+            stackIn_40_1 = stackOut_39_1;
+            if (param0 == null) {
+              stackOut_41_0 = (RuntimeException) (Object) stackIn_41_0;
+              stackOut_41_1 = (StringBuilder) (Object) stackIn_41_1;
+              stackOut_41_2 = "null";
+              stackIn_42_0 = stackOut_41_0;
+              stackIn_42_1 = stackOut_41_1;
+              stackIn_42_2 = stackOut_41_2;
+              break L10;
+            } else {
+              stackOut_40_0 = (RuntimeException) (Object) stackIn_40_0;
+              stackOut_40_1 = (StringBuilder) (Object) stackIn_40_1;
+              stackOut_40_2 = "{...}";
+              stackIn_42_0 = stackOut_40_0;
+              stackIn_42_1 = stackOut_40_1;
+              stackIn_42_2 = stackOut_40_2;
+              break L10;
+            }
+          }
+          throw sh.a((Throwable) (Object) stackIn_42_0, stackIn_42_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
     public final void mouseClicked(java.awt.event.MouseEvent param0) {
-        if (param0.isPopupTrigger()) {
-            param0.consume();
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (!param0.isPopupTrigger()) {
+                break L1;
+              } else {
+                param0.consume();
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_1 = new StringBuilder().append("h.mouseClicked(");
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param0 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
+            }
+          }
+          throw sh.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
         }
     }
 
     final static v[] a(dj param0, int param1, int param2, int param3) {
+        RuntimeException var4 = null;
         Object var5 = null;
-        if (param2 <= -68) {
-          if (!ph.a(param1, 31043, param3, param0)) {
-            return null;
-          } else {
-            return di.a(-79);
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        try {
+          L0: {
+            if (param2 <= -68) {
+              break L0;
+            } else {
+              var5 = null;
+              h.a((vn[]) null, -98, 92, (byte) 28, 20);
+              break L0;
+            }
           }
-        } else {
-          var5 = null;
-          h.a((vn[]) null, -98, 92, (byte) 28, 20);
-          if (!ph.a(param1, 31043, param3, param0)) {
-            return null;
-          } else {
+          if (ph.a(param1, 31043, param3, param0)) {
             return di.a(-79);
+          } else {
+            return null;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var4 = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var4;
+            stackOut_6_1 = new StringBuilder().append("h.B(");
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param0 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L1;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L1;
+            }
+          }
+          throw sh.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }
     }
 
     public final synchronized void mouseExited(java.awt.event.MouseEvent param0) {
-        if (ng.field_b != null) {
-            wc.field_Ob = 0;
-            lf.field_m = -1;
-            vg.field_c = -1;
-            kg.field_l = true;
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (ng.field_b == null) {
+                break L1;
+              } else {
+                wc.field_Ob = 0;
+                lf.field_m = -1;
+                vg.field_c = -1;
+                kg.field_l = true;
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_1 = new StringBuilder().append("h.mouseExited(");
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param0 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
+            }
+          }
+          throw sh.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
         }
     }
 
     public final synchronized void mousePressed(java.awt.event.MouseEvent param0) {
-        int var2 = 0;
-        if (null != ng.field_b) {
-          wc.field_Ob = 0;
-          ep.field_m = param0.getX();
-          pf.field_c = param0.getY();
-          if (!javax.swing.SwingUtilities.isRightMouseButton(param0)) {
-            L0: {
-              nb.field_j = 1;
-              le.field_c = 1;
-              var2 = param0.getModifiers();
-              kg.field_l = true;
-              if ((var2 & 8) != 0) {
-                break L0;
-              } else {
-                break L0;
-              }
-            }
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        try {
+          L0: {
             L1: {
-              if ((var2 & 16) == 0) {
+              if (null == ng.field_b) {
                 break L1;
               } else {
-                break L1;
-              }
-            }
-            L2: {
-              if (0 != (var2 & 4)) {
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            if (param0.isPopupTrigger()) {
-              param0.consume();
-              return;
-            } else {
-              return;
-            }
-          } else {
-            L3: {
-              nb.field_j = 2;
-              le.field_c = 2;
-              var2 = param0.getModifiers();
-              kg.field_l = true;
-              if ((var2 & 8) != 0) {
-                break L3;
-              } else {
-                break L3;
-              }
-            }
-            L4: {
-              if ((var2 & 16) == 0) {
-                break L4;
-              } else {
-                break L4;
+                L2: {
+                  wc.field_Ob = 0;
+                  ep.field_m = param0.getX();
+                  pf.field_c = param0.getY();
+                  if (!javax.swing.SwingUtilities.isRightMouseButton(param0)) {
+                    nb.field_j = 1;
+                    le.field_c = 1;
+                    break L2;
+                  } else {
+                    nb.field_j = 2;
+                    le.field_c = 2;
+                    break L2;
+                  }
+                }
+                L3: {
+                  var2_int = param0.getModifiers();
+                  kg.field_l = true;
+                  if ((var2_int & 8) != 0) {
+                    break L3;
+                  } else {
+                    break L3;
+                  }
+                }
+                L4: {
+                  if ((var2_int & 16) == 0) {
+                    break L4;
+                  } else {
+                    break L4;
+                  }
+                }
+                if (0 != (var2_int & 4)) {
+                  break L1;
+                } else {
+                  break L1;
+                }
               }
             }
             L5: {
-              if (0 != (var2 & 4)) {
+              if (!param0.isPopupTrigger()) {
                 break L5;
               } else {
+                param0.consume();
                 break L5;
               }
             }
-            if (!param0.isPopupTrigger()) {
-              return;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L6: {
+            var2 = decompiledCaughtException;
+            stackOut_10_0 = (RuntimeException) var2;
+            stackOut_10_1 = new StringBuilder().append("h.mousePressed(");
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
+            if (param0 == null) {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L6;
             } else {
-              param0.consume();
-              return;
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L6;
             }
           }
-        } else {
-          if (param0.isPopupTrigger()) {
-            param0.consume();
-            return;
-          } else {
-            return;
-          }
+          throw sh.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
         }
     }
 
     public final synchronized void mouseReleased(java.awt.event.MouseEvent param0) {
-        int var2 = 0;
-        if (ng.field_b != null) {
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        try {
           L0: {
-            wc.field_Ob = 0;
-            le.field_c = 0;
-            kg.field_l = true;
-            var2 = param0.getModifiers();
-            if ((var2 & 4) != 0) {
-              break L0;
+            L1: {
+              if (ng.field_b != null) {
+                L2: {
+                  wc.field_Ob = 0;
+                  le.field_c = 0;
+                  kg.field_l = true;
+                  var2_int = param0.getModifiers();
+                  if ((var2_int & 4) != 0) {
+                    break L2;
+                  } else {
+                    break L2;
+                  }
+                }
+                L3: {
+                  if ((var2_int & 8) == 0) {
+                    break L3;
+                  } else {
+                    break L3;
+                  }
+                }
+                if ((var2_int & 16) != 0) {
+                  break L1;
+                } else {
+                  break L1;
+                }
+              } else {
+                break L1;
+              }
+            }
+            L4: {
+              if (!param0.isPopupTrigger()) {
+                break L4;
+              } else {
+                param0.consume();
+                break L4;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L5: {
+            var2 = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var2;
+            stackOut_8_1 = new StringBuilder().append("h.mouseReleased(");
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param0 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L5;
             } else {
-              break L0;
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L5;
             }
           }
-          L1: {
-            if (-1 == (var2 & 8 ^ -1)) {
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          L2: {
-            if ((var2 & 16) != 0) {
-              break L2;
-            } else {
-              break L2;
-            }
-          }
-          if (param0.isPopupTrigger()) {
-            param0.consume();
-            return;
-          } else {
-            return;
-          }
-        } else {
-          if (!param0.isPopupTrigger()) {
-            return;
-          } else {
-            param0.consume();
-            return;
-          }
+          throw sh.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
         }
     }
 
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
-        if (!(null == ng.field_b)) {
-            le.field_c = 0;
+        RuntimeException var2 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (null != ng.field_b) {
+                le.field_c = 0;
+                break L1;
+              } else {
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_1 = new StringBuilder().append("h.focusLost(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw sh.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
         }
     }
 
@@ -815,11 +796,67 @@ final class h implements java.awt.event.MouseListener, java.awt.event.MouseMotio
     }
 
     public final synchronized void mouseEntered(java.awt.event.MouseEvent param0) {
-        if (!(null == ng.field_b)) {
-            wc.field_Ob = 0;
-            lf.field_m = param0.getX();
-            vg.field_c = param0.getY();
-            kg.field_l = true;
+        RuntimeException var2 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (null != ng.field_b) {
+                wc.field_Ob = 0;
+                lf.field_m = param0.getX();
+                vg.field_c = param0.getY();
+                kg.field_l = true;
+                break L1;
+              } else {
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_1 = new StringBuilder().append("h.mouseEntered(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw sh.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
         }
     }
 

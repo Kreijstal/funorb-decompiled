@@ -62,7 +62,7 @@ class e {
         wf var15 = null;
         int var15_int = 0;
         L0: {
-          var3 = param1;
+          var3 = 256;
           if (!field_s) {
             break L0;
           } else {
@@ -72,7 +72,7 @@ class e {
         }
         L1: {
           cb.a(param0, 0, var3);
-          ((e) this).field_b = ((e) this).field_b - param1;
+          ((e) this).field_b = ((e) this).field_b - 256;
           if (((e) this).field_t == null) {
             break L1;
           } else {
@@ -106,7 +106,7 @@ class e {
                       if (var9 != 0) {
                         L6: {
                           if ((var9 & 1) != 0) {
-                            var5 = var5 & (1 << var7_int ^ -1);
+                            var5 = var5 & ~(1 << var7_int);
                             var10 = null;
                             var11 = ((e) this).field_c[var7_int];
                             var14 = var11;
@@ -239,7 +239,7 @@ class e {
           if (((e) this).field_t == null) {
             break L17;
           } else {
-            ((e) this).field_t.a(param0, 0, param1);
+            ((e) this).field_t.a(param0, 0, 256);
             break L17;
           }
         }
@@ -329,7 +329,7 @@ class e {
                 }
               }
               field_s = stackIn_7_0 != 0;
-              field_l = param2;
+              field_l = 10;
               return;
             } else {
               break L0;
@@ -649,12 +649,12 @@ class e {
     }
 
     private final void a(int param0) {
-        ((e) this).field_b = ((e) this).field_b - param0;
+        ((e) this).field_b = ((e) this).field_b - 256;
         if (((e) this).field_b < 0) {
             ((e) this).field_b = 0;
         }
         if (((e) this).field_t != null) {
-            ((e) this).field_t.a(param0);
+            ((e) this).field_t.a(256);
             return;
         }
     }

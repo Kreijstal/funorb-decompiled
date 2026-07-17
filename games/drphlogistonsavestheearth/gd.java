@@ -11,21 +11,19 @@ final class gd {
     public static void a(int param0) {
         field_b = null;
         field_d = null;
-        if (param0 != -27770) {
-            return;
-        }
         field_e = null;
     }
 
     final static void a(vj param0, int param1, vj param2) {
-        if (param1 != 255) {
-            field_b = null;
+        try {
+            if (param1 != 255) {
+                field_b = null;
+            }
             ce.field_a = param2;
             sb.field_g = param0;
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw ie.a((Throwable) (Object) runtimeException, "gd.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
-        ce.field_a = param2;
-        sb.field_g = param0;
     }
 
     static {

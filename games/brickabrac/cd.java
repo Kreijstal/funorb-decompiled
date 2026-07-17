@@ -32,7 +32,7 @@ final class cd {
                     break L0;
                   } else {
                     var5 = 6000;
-                    if ((var3 ^ -1L) < ((long)var5 ^ -1L)) {
+                    if (~var3 < ~(long)var5) {
                       ob.field_G = var1;
                       qj.field_h = qj.field_h + 1;
                       return true;
@@ -42,7 +42,7 @@ final class cd {
                   }
                 }
               }
-              if ((var3 ^ -1L) >= ((long)var5 ^ -1L)) {
+              if (~var3 >= ~(long)var5) {
                 return false;
               } else {
                 ob.field_G = var1;
@@ -51,7 +51,7 @@ final class cd {
               }
             } else {
               var5 = 12000;
-              if ((var3 ^ -1L) < ((long)var5 ^ -1L)) {
+              if (~var3 < ~(long)var5) {
                 ob.field_G = var1;
                 qj.field_h = qj.field_h + 1;
                 return true;
@@ -73,7 +73,7 @@ final class cd {
             if (7 > qj.field_h) {
               if (5 <= qj.field_h) {
                 var5 = 9000;
-                if ((var3 ^ -1L) < ((long)var5 ^ -1L)) {
+                if (~var3 < ~(long)var5) {
                   ob.field_G = var1;
                   qj.field_h = qj.field_h + 1;
                   return true;
@@ -83,7 +83,7 @@ final class cd {
               } else {
                 if (qj.field_h >= 3) {
                   var5 = 6000;
-                  if ((var3 ^ -1L) < ((long)var5 ^ -1L)) {
+                  if (~var3 < ~(long)var5) {
                     ob.field_G = var1;
                     qj.field_h = qj.field_h + 1;
                     return true;
@@ -91,7 +91,7 @@ final class cd {
                     return false;
                   }
                 } else {
-                  if ((var3 ^ -1L) < ((long)var5 ^ -1L)) {
+                  if (~var3 < ~(long)var5) {
                     ob.field_G = var1;
                     qj.field_h = qj.field_h + 1;
                     return true;
@@ -102,7 +102,7 @@ final class cd {
               }
             } else {
               var5 = 12000;
-              if ((var3 ^ -1L) < ((long)var5 ^ -1L)) {
+              if (~var3 < ~(long)var5) {
                 ob.field_G = var1;
                 qj.field_h = qj.field_h + 1;
                 return true;
@@ -120,7 +120,7 @@ final class cd {
 
     final static oh a(boolean param0, boolean param1) {
         oh var2 = new oh(param0);
-        var2.field_a = param1 ? true : false;
+        var2.field_a = false;
         return var2;
     }
 
@@ -128,7 +128,7 @@ final class cd {
         field_c = null;
         field_h = null;
         field_d = null;
-        int var1 = 123 / ((param0 - -23) / 38);
+        int var1 = 61;
         field_f = null;
         field_b = null;
         field_g = null;
@@ -143,10 +143,14 @@ final class cd {
         if (param3 != 7) {
             return;
         }
-        uc.field_l = param1;
-        ag.field_F = param0;
-        wg.field_f = param4;
-        ek.field_lb = param5;
+        try {
+            uc.field_l = param1;
+            ag.field_F = param0;
+            wg.field_f = param4;
+            ek.field_lb = param5;
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) (Object) runtimeException, "cd.C(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+        }
     }
 
     cd(int param0) {

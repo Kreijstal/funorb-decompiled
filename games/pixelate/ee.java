@@ -73,7 +73,7 @@ final class ee {
           L0: {
             var1_ref = vi.field_o;
             var2 = var1_ref.f(255);
-            if ((var2 ^ -1) == -1) {
+            if (var2 == 0) {
               L1: {
                 if (null != hq.field_q) {
                   break L1;
@@ -84,7 +84,7 @@ final class ee {
                 }
               }
               L2: {
-                if (-2 != (var1_ref.f(255) ^ -1)) {
+                if (var1_ref.f(255) != 1) {
                   stackOut_10_0 = 0;
                   stackIn_11_0 = stackOut_10_0;
                   break L2;
@@ -154,10 +154,10 @@ final class ee {
               var6.field_Gb = var7;
               return;
             } else {
-              if (-2 != (var2 ^ -1)) {
-                if (-3 == (var2 ^ -1)) {
+              if (var2 != 1) {
+                if (var2 == 2) {
                   L8: {
-                    if (-2 == (gk.field_db ^ -1)) {
+                    if (gk.field_db == 1) {
                       gk.field_db = 2;
                       break L8;
                     } else {
@@ -185,7 +185,7 @@ final class ee {
                     }
                   } else {
                     L9: {
-                      if (-3 == (gk.field_db ^ -1)) {
+                      if (gk.field_db == 2) {
                         gk.field_db = 1;
                         break L9;
                       } else {
@@ -347,7 +347,7 @@ final class ee {
               if (var3 == null) {
                 break L2;
               } else {
-                if ((var3.field_m ^ -1) > (param0 ^ -1)) {
+                if (~var3.field_m > ~param0) {
                   var3.c(2779);
                   stackOut_9_0 = var3.field_k;
                   stackIn_10_0 = stackOut_9_0;
@@ -405,7 +405,7 @@ final class ee {
             var5 = 0;
             L1: while (true) {
               L2: {
-                if ((var5 ^ -1) <= (((ee) this).field_e.length ^ -1)) {
+                if (~var5 <= ~((ee) this).field_e.length) {
                   break L2;
                 } else {
                   if (!((ee) this).field_e[var5].b(0)) {
@@ -502,7 +502,7 @@ final class ee {
                     break L3;
                   } else {
                     var3 = kb.field_N[var2];
-                    qb.a(nd.field_c, var2 << -1827091836, nd.field_c, var1_int, var3);
+                    qb.a(nd.field_c, var2 << 4, nd.field_c, var1_int, var3);
                     var1_int = var1_int + var3;
                     var2++;
                     if (var4 != 0) {

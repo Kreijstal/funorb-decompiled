@@ -9,9 +9,6 @@ class vg extends id {
     static String field_r;
 
     public static void c(int param0) {
-        if (param0 != -7392) {
-            return;
-        }
         field_s = null;
         field_t = null;
         field_q = null;
@@ -24,32 +21,17 @@ class vg extends id {
     }
 
     final static pb c(byte param0) {
-        int var1 = 0;
-        byte[] var2 = null;
-        int[] var3 = null;
         int var4_int = 0;
-        pb var4 = null;
-        int var5 = 0;
-        var5 = stellarshard.field_B;
-        if (param0 > -80) {
-          return null;
-        } else {
-          var1 = vc.field_b[0] * ih.field_d[0];
-          var2 = ih.field_b[0];
-          var3 = new int[var1];
-          var4_int = 0;
-          L0: while (true) {
-            if (var1 <= var4_int) {
-              var4 = new pb(nc.field_G, wd.field_b, ak.field_c[0], vi.field_c[0], vc.field_b[0], ih.field_d[0], var3);
-              tb.f((byte) -73);
-              return var4;
-            } else {
-              var3[var4_int] = gj.field_w[sa.a(255, (int) var2[var4_int])];
-              var4_int++;
-              continue L0;
-            }
-          }
+        int var5 = stellarshard.field_B;
+        int var1 = vc.field_b[0] * ih.field_d[0];
+        byte[] var2 = ih.field_b[0];
+        int[] var3 = new int[var1];
+        for (var4_int = 0; var1 > var4_int; var4_int++) {
+            var3[var4_int] = gj.field_w[sa.a(255, (int) var2[var4_int])];
         }
+        pb var4 = new pb(nc.field_G, wd.field_b, ak.field_c[0], vi.field_c[0], vc.field_b[0], ih.field_d[0], var3);
+        tb.f((byte) -73);
+        return var4;
     }
 
     vg(bd param0, int param1) {
@@ -57,13 +39,13 @@ class vg extends id {
     }
 
     public final void a(boolean param0, int param1, int param2, rj param3, int param4) {
-        if (param0) {
-          nd.a(param3.field_p, param2 - -param3.field_k, param3.field_t, param3.field_w + param1, (byte) -103);
-          super.a(param0, param1, param2, param3, param4);
-          return;
-        } else {
-          super.a(param0, param1, param2, param3, param4);
-          return;
+        try {
+            if (param0) {
+                nd.a(param3.field_p, param2 - -param3.field_k, param3.field_t, param3.field_w + param1, (byte) -103);
+            }
+            super.a(param0, param1, param2, param3, param4);
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) (Object) runtimeException, "vg.A(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 41);
         }
     }
 

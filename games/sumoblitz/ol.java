@@ -128,12 +128,12 @@ final class ol extends rq {
     }
 
     final void b(int param0) {
-        jagdx.IDirect3DDevice var2_ref = null;
+        jagdx.IDirect3DDevice var2_ref_jagdx_IDirect3DDevice = null;
         ut var3 = null;
         if (null != ((ol) this).field_j) {
-            var2_ref = ((ol) this).field_l.field_Cc;
+            var2_ref_jagdx_IDirect3DDevice = ((ol) this).field_l.field_Cc;
             var3 = ((ol) this).field_l.k((byte) 67);
-            int discarded$0 = var2_ref.a(0, var3.a(0, field_h));
+            int discarded$0 = var2_ref_jagdx_IDirect3DDevice.a(0, var3.a(0, field_h));
         }
         int var2 = -118 % ((41 - param0) / 46);
     }
@@ -182,7 +182,7 @@ final class ol extends rq {
         jagdx.IDirect3DVertexShader stackOut_3_0 = null;
         jagdx.IDirect3DVertexShader stackOut_2_0 = null;
         L0: {
-          var5 = -19 % ((-23 - param0) / 63);
+          var5 = 0;
           var3 = ((ol) this).field_l.field_Cc;
           var4 = ((ol) this).field_b.M(-66);
           var6 = ((ol) this).field_b.g((byte) -28);
@@ -202,7 +202,7 @@ final class ol extends rq {
             break L0;
           } else {
             L2: {
-              if (-2147483648 == (var4 ^ -1)) {
+              if (var4 == 2147483647) {
                 stackOut_3_0 = ((ol) this).field_n;
                 stackIn_4_0 = stackOut_3_0;
                 break L2;
@@ -316,35 +316,22 @@ final class ol extends rq {
         ut var2 = null;
         jagdx.IDirect3DDevice var3 = null;
         ut var4 = null;
-        L0: {
-          if (((ol) this).field_j == null) {
-            break L0;
+        if (((ol) this).field_j != null) {
+          if (!((ol) this).field_o) {
+            return;
           } else {
-            if (((ol) this).field_o) {
-              var4 = ((ol) this).field_b.c(true);
-              var2 = var4;
-              var3 = ((ol) this).field_l.field_Cc;
-              int discarded$5 = var3.b(13, ((ol) this).field_b.field_T * ((ol) this).field_b.field_J, ((ol) this).field_b.field_T * ((ol) this).field_b.field_jb, ((ol) this).field_b.field_Xb * ((ol) this).field_b.field_T, 1.0f);
-              int discarded$6 = var3.b(14, ((ol) this).field_b.field_J * ((ol) this).field_b.field_S, ((ol) this).field_b.field_jb * ((ol) this).field_b.field_S, ((ol) this).field_b.field_Xb * ((ol) this).field_b.field_S, 1.0f);
-              int discarded$7 = var3.b(16, ((ol) this).field_b.field_hb * ((ol) this).field_b.field_J, ((ol) this).field_b.field_jb * ((ol) this).field_b.field_hb, ((ol) this).field_b.field_hb * ((ol) this).field_b.field_Xb, 1.0f);
-              var4.a(-1416, ((ol) this).field_b.field_G[1], ((ol) this).field_b.field_G[0], field_k, ((ol) this).field_b.field_G[2]);
-              int discarded$8 = var3.SetVertexShaderConstantF(15, field_k, 1);
-              var4.a(-1416, ((ol) this).field_b.field_U[1], ((ol) this).field_b.field_U[0], field_k, ((ol) this).field_b.field_U[2]);
-              int discarded$9 = var3.SetVertexShaderConstantF(17, field_k, 1);
-              break L0;
-            } else {
-              if (param0 >= 3) {
-                return;
-              } else {
-                ((ol) this).a(false, -14);
-                return;
-              }
-            }
+            var4 = ((ol) this).field_b.c(true);
+            var2 = var4;
+            var3 = ((ol) this).field_l.field_Cc;
+            int discarded$5 = var3.b(13, ((ol) this).field_b.field_T * ((ol) this).field_b.field_J, ((ol) this).field_b.field_T * ((ol) this).field_b.field_jb, ((ol) this).field_b.field_Xb * ((ol) this).field_b.field_T, 1.0f);
+            int discarded$6 = var3.b(14, ((ol) this).field_b.field_J * ((ol) this).field_b.field_S, ((ol) this).field_b.field_jb * ((ol) this).field_b.field_S, ((ol) this).field_b.field_Xb * ((ol) this).field_b.field_S, 1.0f);
+            int discarded$7 = var3.b(16, ((ol) this).field_b.field_hb * ((ol) this).field_b.field_J, ((ol) this).field_b.field_jb * ((ol) this).field_b.field_hb, ((ol) this).field_b.field_hb * ((ol) this).field_b.field_Xb, 1.0f);
+            var4.a(-1416, ((ol) this).field_b.field_G[1], ((ol) this).field_b.field_G[0], field_k, ((ol) this).field_b.field_G[2]);
+            int discarded$8 = var3.SetVertexShaderConstantF(15, field_k, 1);
+            var4.a(-1416, ((ol) this).field_b.field_U[1], ((ol) this).field_b.field_U[0], field_k, ((ol) this).field_b.field_U[2]);
+            int discarded$9 = var3.SetVertexShaderConstantF(17, field_k, 1);
+            return;
           }
-        }
-        if (param0 < 3) {
-          ((ol) this).a(false, -14);
-          return;
         } else {
           return;
         }
@@ -388,7 +375,7 @@ final class ol extends rq {
           if (param1 == null) {
             break L0;
           } else {
-            if (-258 >= (65535 & ((ol) this).field_l.field_Kc.VertexShaderVersion ^ -1)) {
+            if ((65535 & ((ol) this).field_l.field_Kc.VertexShaderVersion) >= 257) {
               L1: {
                 ((ol) this).field_f = ((ol) this).field_l.field_Cc.a(param1.a("uw_ground_unlit", "dx", -1));
                 ((ol) this).field_n = ((ol) this).field_l.field_Cc.a(param1.a("uw_ground_lit", "dx", -1));
@@ -462,8 +449,10 @@ final class ol extends rq {
                 ((ol) this).field_i = ((ol) this).field_b.a(new int[2], 1, false, -110, 2);
                 ((ol) this).field_i.a(false, false, true);
                 ((ol) this).field_g = true;
+                return;
               } else {
                 ((ol) this).field_g = false;
+                return;
               }
             } else {
               break L0;

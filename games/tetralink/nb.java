@@ -13,7 +13,7 @@ abstract class nb extends ld {
     static String field_T;
 
     void a(boolean param0) {
-        if ((((nb) this).field_S ^ -1) >= -1) {
+        if (((nb) this).field_S <= 0) {
             return;
         }
         ((nb) this).a(((nb) this).field_R, (byte) 48, ((nb) this).field_Q);
@@ -41,7 +41,7 @@ abstract class nb extends ld {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        if (param0 > (((nb) this).field_S ^ -1)) {
+        if (((nb) this).field_S > 0) {
             var2 = ((nb) this).field_R;
             var3 = ((nb) this).field_Q;
             int fieldTemp$0 = ((nb) this).field_P + 1;
@@ -111,7 +111,7 @@ abstract class nb extends ld {
                     return;
                   } else {
                     var9 = (var6 + -var5) * var7 / var4 + var5;
-                    var9 = var9 | (var9 << -1814073592 | var9 << -908753040);
+                    var9 = var9 | (var9 << 8 | var9 << 16);
                     ra.g(param2, var8, 6, var9);
                     ra.g(-6 + (((nb) this).field_F + param2), var8, 6, var9);
                     var7++;
@@ -121,7 +121,7 @@ abstract class nb extends ld {
                 }
               } else {
                 var9 = (-var5 + var6) * var7 / var4 + var5;
-                var9 = var9 | (var9 << -1985692688 | var9 << 178537256);
+                var9 = var9 | (var9 << 16 | var9 << 8);
                 ra.g(param2, var8, 6, var9);
                 ra.g(-6 + (param2 - -((nb) this).field_F), var8, 6, var9);
                 var8++;
@@ -145,9 +145,9 @@ abstract class nb extends ld {
                       } else {
                         var12 = (20 + -var7) * (-var7 + 20) - -((-var10 + 20) * (20 - var10));
                         if (462 >= var12) {
-                          if (-421 >= (var12 ^ -1)) {
+                          if (var12 >= 420) {
                             var13 = (-var12 + 462) * var9 / 42;
-                            var13 = var13 | (var13 << 158917416 | var13 << 652390224);
+                            var13 = var13 | (var13 << 8 | var13 << 16);
                             ra.field_b[ra.field_f * var8 - (-param2 - var10)] = var13;
                             var10++;
                             continue L5;
@@ -169,11 +169,11 @@ abstract class nb extends ld {
                     var13 = 0;
                     L7: while (true) {
                       L8: {
-                        if ((var13 ^ -1) < -21) {
+                        if (var13 > 20) {
                           break L8;
                         } else {
                           var14 = (20 + -var7) * (-var7 + 20) + var13 * var13;
-                          if (-463 > (var14 ^ -1)) {
+                          if (var14 > 462) {
                             break L8;
                           } else {
                             if (420 > var14) {
@@ -183,7 +183,7 @@ abstract class nb extends ld {
                               continue L7;
                             } else {
                               var15 = (462 - var14) * var9 / 42;
-                              var15 = var15 | (var15 << -959608624 | var15 << -1245365944);
+                              var15 = var15 | (var15 << 16 | var15 << 8);
                               ra.field_b[var11 + var8 * ra.field_f + param2] = var15;
                               var11++;
                               var13++;
@@ -199,7 +199,7 @@ abstract class nb extends ld {
                     break L6;
                   }
                 }
-                var9 = var9 | (var9 << 1934566160 | var9 << -371609336);
+                var9 = var9 | (var9 << 16 | var9 << 8);
                 ra.g(param2 + var10, var8, -var10 + var11, var9);
                 var7++;
                 var8++;
@@ -221,9 +221,6 @@ abstract class nb extends ld {
     public static void n(int param0) {
         field_V = null;
         field_W = null;
-        if (param0 != -463) {
-            field_V = null;
-        }
         field_T = null;
     }
 
@@ -232,11 +229,11 @@ abstract class nb extends ld {
         if (param0 != 652390224) {
             boolean discarded$0 = ((nb) this).h(37);
         }
-        return super.h(param0 + 0);
+        return super.h(param0);
     }
 
     final void a(boolean param0, int param1, int param2, int param3) {
-        if (-1 <= (param1 ^ -1)) {
+        if (param1 <= 0) {
             ((nb) this).a(param2, (byte) 70, param3);
             return;
         }

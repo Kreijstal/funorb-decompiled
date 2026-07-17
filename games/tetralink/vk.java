@@ -65,19 +65,12 @@ final class vk extends nk {
 
     final void b(int param0) throws javax.sound.sampled.LineUnavailableException {
         javax.sound.sampled.DataLine.Info var2 = null;
-        try {
+        {
             var2 = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, ((vk) this).field_w, param0 << (field_s ? 2 : 1));
             ((vk) this).field_x = (javax.sound.sampled.SourceDataLine) (Object) javax.sound.sampled.AudioSystem.getLine((javax.sound.sampled.Line.Info) (Object) var2);
             ((vk) this).field_x.open();
             ((vk) this).field_x.start();
             ((vk) this).field_v = param0;
-        } catch (javax.sound.sampled.LineUnavailableException lineUnavailableException) {
-            if (cc.a((byte) 71, param0) != 1) {
-                ((vk) this).b(cc.a(param0, (byte) -93));
-                return;
-            }
-            ((vk) this).field_x = null;
-            throw lineUnavailableException;
         }
     }
 

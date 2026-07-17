@@ -16,9 +16,6 @@ final class a {
         field_d = null;
         field_g = null;
         field_b = null;
-        if (param0 != -3323) {
-            pb[] discarded$0 = a.a(118, 52, -105, -52, 50);
-        }
     }
 
     final static pb[] a(int param0, int param1, int param2, int param3, int param4) {

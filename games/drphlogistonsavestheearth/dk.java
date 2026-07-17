@@ -8,11 +8,6 @@ final class dk {
     private static String field_z;
 
     public static void a(int param0) {
-        if (param0 != 24) {
-            field_a = null;
-            field_a = null;
-            return;
-        }
         field_a = null;
     }
 

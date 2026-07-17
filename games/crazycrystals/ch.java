@@ -10,7 +10,7 @@ final class ch {
     private int field_a;
 
     final void c(int param0, int param1) {
-        if ((param1 ^ -1) <= -1) {
+        if (param1 >= 0) {
           if (param1 <= ((ch) this).field_e) {
             L0: {
               if (param1 != ((ch) this).field_e) {
@@ -83,7 +83,7 @@ final class ch {
               return var3;
             } else {
               if (((ch) this).field_b) {
-                if (-1 == (var3 ^ -1)) {
+                if (var3 == 0) {
                   var3 = 1;
                   continue L0;
                 } else {
@@ -103,7 +103,7 @@ final class ch {
               return var3;
             } else {
               if (((ch) this).field_b) {
-                if (-1 == (var3 ^ -1)) {
+                if (var3 == 0) {
                   var3 = 1;
                   continue L1;
                 } else {
@@ -155,9 +155,6 @@ final class ch {
     public static void a(int param0) {
         field_c = null;
         field_d = null;
-        if (param0 != 855) {
-            field_c = null;
-        }
     }
 
     private ch() throws Throwable {

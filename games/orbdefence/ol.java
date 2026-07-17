@@ -32,52 +32,53 @@ final class ol implements Iterator {
     }
 
     final static void a(int param0, qf param1, int param2) {
-        int var4 = 0;
-        Object var5 = null;
         se var6 = null;
-        var6 = uk.field_b;
-        var6.i(param2, 112);
-        var6.field_i = var6.field_i + 1;
-        var4 = var6.field_i;
-        var6.a(1, param0 ^ 30243);
-        var6.a(param1.field_j, -8);
-        var6.f(-1, param1.field_i);
-        var6.b(param1.field_g, -1);
-        var6.b(param1.field_l, param0 + 30328);
-        if (param0 != -30329) {
-          var5 = null;
-          ol.a((String) null, -82);
-          var6.b(param1.field_f, -1);
-          var6.b(param1.field_n, -1);
-          int discarded$2 = var6.e(-18951, var4);
-          var6.c((byte) -69, -var4 + var6.field_i);
-          return;
-        } else {
-          var6.b(param1.field_f, -1);
-          var6.b(param1.field_n, -1);
-          int discarded$3 = var6.e(-18951, var4);
-          var6.c((byte) -69, -var4 + var6.field_i);
-          return;
+        int var4 = 0;
+        try {
+            var6 = uk.field_b;
+            var6.i(param2, 112);
+            var6.field_i = var6.field_i + 1;
+            var4 = var6.field_i;
+            var6.a(1, param0 ^ 30243);
+            var6.a(param1.field_j, -8);
+            var6.f(-1, param1.field_i);
+            var6.b(param1.field_g, -1);
+            var6.b(param1.field_l, param0 + 30328);
+            if (param0 != -30329) {
+                Object var5 = null;
+                ol.a((String) null, -82);
+            }
+            var6.b(param1.field_f, -1);
+            var6.b(param1.field_n, -1);
+            int discarded$0 = var6.e(-18951, var4);
+            var6.c((byte) -69, -var4 + var6.field_i);
+        } catch (RuntimeException runtimeException) {
+            throw dd.a((Throwable) (Object) runtimeException, "ol.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
     }
 
     final static void a(String param0, int param1) {
-        tj.field_a = param0;
-        il.a(12, param1 ^ param1);
+        try {
+            tj.field_a = param0;
+            il.a(12, param1 ^ param1);
+        } catch (RuntimeException runtimeException) {
+            throw dd.a((Throwable) (Object) runtimeException, "ol.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     public static void a(boolean param0) {
         field_f = null;
-        if (param0) {
-            field_h = -20;
-        }
     }
 
     ol(qe param0) {
         ((ol) this).field_c = null;
-        ((ol) this).field_g = param0;
-        ((ol) this).field_c = null;
-        ((ol) this).field_i = ((ol) this).field_g.field_a.field_f;
+        try {
+            ((ol) this).field_g = param0;
+            ((ol) this).field_c = null;
+            ((ol) this).field_i = ((ol) this).field_g.field_a.field_f;
+        } catch (RuntimeException runtimeException) {
+            throw dd.a((Throwable) (Object) runtimeException, "ol.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public final void remove() {

@@ -8,7 +8,7 @@ final class dt {
 
     public static void a(byte param0) {
         field_b = null;
-        int var1 = 58 % ((param0 - -80) / 45);
+        int var1 = 0;
         field_a = null;
     }
 

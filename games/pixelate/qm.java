@@ -597,24 +597,24 @@ class qm extends ng {
             L1: {
               var7_int = 2147483647;
               var8 = -2147483648;
-              var21 = param1[3] >> 761181602;
-              var22 = param1[4] >> -246048734;
-              var23 = param1[5] >> -1098812414;
-              var24 = param1[6] >> -1044620926;
-              var25 = param1[7] >> -385707870;
-              var26 = param1[8] >> 1613946530;
-              var27 = param1[9] >> 1788628002;
-              var28 = param1[10] >> 1601499458;
-              var29 = param1[11] >> -1808533406;
-              var13 = var25 * param3[4] + var24 * param3[3] - -(param3[5] * var26) >> -1500521970;
-              var12 = param3[5] * var23 + (param3[3] * var21 + param3[4] * var22) >> -945126674;
-              var14 = var29 * param3[5] + (var28 * param3[4] + param3[3] * var27) >> 803521742;
-              var20 = param3[11] * var29 + (var27 * param3[9] + param3[10] * var28) >> 1116052910;
-              var19 = param3[10] * var25 + var24 * param3[9] - -(param3[11] * var26) >> -146386226;
-              var17 = param3[8] * var29 + var28 * param3[7] + param3[6] * var27 >> -2062872690;
-              var16 = var26 * param3[8] + var24 * param3[6] - -(var25 * param3[7]) >> 1389276270;
-              var15 = var21 * param3[6] + param3[7] * var22 - -(var23 * param3[8]) >> 1331949326;
-              var18 = param3[11] * var23 + param3[10] * var22 + param3[9] * var21 >> -2089981170;
+              var21 = param1[3] >> 2;
+              var22 = param1[4] >> 2;
+              var23 = param1[5] >> 2;
+              var24 = param1[6] >> 2;
+              var25 = param1[7] >> 2;
+              var26 = param1[8] >> 2;
+              var27 = param1[9] >> 2;
+              var28 = param1[10] >> 2;
+              var29 = param1[11] >> 2;
+              var13 = var25 * param3[4] + var24 * param3[3] - -(param3[5] * var26) >> 14;
+              var12 = param3[5] * var23 + (param3[3] * var21 + param3[4] * var22) >> 14;
+              var14 = var29 * param3[5] + (var28 * param3[4] + param3[3] * var27) >> 14;
+              var20 = param3[11] * var29 + (var27 * param3[9] + param3[10] * var28) >> 14;
+              var19 = param3[10] * var25 + var24 * param3[9] - -(param3[11] * var26) >> 14;
+              var17 = param3[8] * var29 + var28 * param3[7] + param3[6] * var27 >> 14;
+              var16 = var26 * param3[8] + var24 * param3[6] - -(var25 * param3[7]) >> 14;
+              var15 = var21 * param3[6] + param3[7] * var22 - -(var23 * param3[8]) >> 14;
+              var18 = param3[11] * var23 + param3[10] * var22 + param3[9] * var21 >> 14;
               var21 = param3[0] - param1[0];
               var22 = param3[1] + -param1[1];
               var23 = -param1[2] + param3[2];
@@ -627,7 +627,7 @@ class qm extends ng {
             }
             var9 = var21 * param1[3] - -(param1[4] * var22) + var23 * param1[5] >> -ai.field_x + 16;
             var10 = var23 * param1[8] + (param1[7] * var22 + param1[6] * var21) >> 16 + -ai.field_x;
-            var11 = param1[11] * var23 + param1[9] * var21 - -(param1[10] * var22) >> -1423010576;
+            var11 = param1[11] * var23 + param1[9] * var21 - -(param1[10] * var22) >> 16;
             var21 = ja.field_b;
             var22 = ja.field_i;
             var23 = 0;
@@ -667,21 +667,21 @@ class qm extends ng {
                                         var24 = param0.field_w[var23];
                                         var25 = param0.field_H[var23];
                                         var26 = param0.field_C[var23];
-                                        h.field_Y[var23] = (var26 * var18 + (var12 * var24 - -(var15 * var25)) >> 1632444336) + var9;
-                                        vk.field_ub[var23] = (var26 * var19 + (var24 * var13 + var25 * var16) >> 416578480) + var10;
-                                        gh.field_r[var23] = var11 - -(var26 * var20 + (var14 * var24 + var25 * var17) >> -118613232);
+                                        h.field_Y[var23] = (var26 * var18 + (var12 * var24 - -(var15 * var25)) >> 16) + var9;
+                                        vk.field_ub[var23] = (var26 * var19 + (var24 * var13 + var25 * var16) >> 16) + var10;
+                                        gh.field_r[var23] = var11 - -(var26 * var20 + (var14 * var24 + var25 * var17) >> 16);
                                         var24 = param0.field_v[var23];
                                         var25 = param0.field_P[var23];
                                         var26 = param0.field_u[var23];
-                                        eg.field_l[var23] = var9 - -(var18 * var26 + (var12 * var24 - -(var25 * var15)) >> -1575370448);
-                                        dj.field_b[var23] = var10 + (var16 * var25 + var24 * var13 - -(var19 * var26) >> 1945691088);
-                                        kh.field_c[var23] = (var20 * var26 + var14 * var24 - -(var25 * var17) >> -1789684176) + var11;
+                                        eg.field_l[var23] = var9 - -(var18 * var26 + (var12 * var24 - -(var25 * var15)) >> 16);
+                                        dj.field_b[var23] = var10 + (var16 * var25 + var24 * var13 - -(var19 * var26) >> 16);
+                                        kh.field_c[var23] = (var20 * var26 + var14 * var24 - -(var25 * var17) >> 16) + var11;
                                         var24 = param0.field_M[var23];
                                         var25 = param0.field_y[var23];
                                         var26 = param0.field_R[var23];
-                                        eg.field_h[var23] = (var24 * var12 - (-(var15 * var25) + -(var26 * var18)) >> -1580121136) + var9;
-                                        ip.field_x[var23] = var10 + (var24 * var13 - (-(var16 * var25) + -(var26 * var19)) >> -901180944);
-                                        le.field_b[var23] = (var14 * var24 - (-(var25 * var17) - var26 * var20) >> -25757392) + var11;
+                                        eg.field_h[var23] = (var24 * var12 - (-(var15 * var25) + -(var26 * var18)) >> 16) + var9;
+                                        ip.field_x[var23] = var10 + (var24 * var13 - (-(var16 * var25) + -(var26 * var19)) >> 16);
+                                        le.field_b[var23] = (var14 * var24 - (-(var25 * var17) - var26 * var20) >> 16) + var11;
                                         var23++;
                                         continue L4;
                                       }
@@ -711,7 +711,7 @@ class qm extends ng {
                     var17 = param3[11];
                     var18 = 0;
                     L6: while (true) {
-                      if ((param0.field_a ^ -1) >= (var18 ^ -1)) {
+                      if (~param0.field_a >= ~var18) {
                         break L5;
                       } else {
                         stackOut_64_0 = var18;
@@ -722,9 +722,9 @@ class qm extends ng {
                           var19 = param0.field_K[var18];
                           var20 = param0.field_q[var18];
                           var21 = param0.field_p[var18];
-                          wd.field_i[var18] = var12 * var20 + (var9 * var19 + var15 * var21) >> 383177008;
-                          lo.field_Ib[var18] = var16 * var21 + var20 * var13 + var19 * var10 >> -138139216;
-                          wn.field_q[var18] = var17 * var21 + var11 * var19 + var14 * var20 >> 847763312;
+                          wd.field_i[var18] = var12 * var20 + (var9 * var19 + var15 * var21) >> 16;
+                          lo.field_Ib[var18] = var16 * var21 + var20 * var13 + var19 * var10 >> 16;
+                          wn.field_q[var18] = var17 * var21 + var11 * var19 + var14 * var20 >> 16;
                           var18++;
                           continue L6;
                         }
@@ -743,13 +743,13 @@ class qm extends ng {
                   var26 = param0.field_E[var23];
                   var27 = (var18 * var26 + var24 * var12 - -(var25 * var15) >> -ai.field_x + 16) + var9;
                   var28 = var10 + (var26 * var19 + var13 * var24 - -(var25 * var16) >> 16 - ai.field_x);
-                  var29 = var11 + (var25 * var17 + var24 * var14 - -(var26 * var20) >> 1738462096);
-                  if (-51 >= (var29 ^ -1)) {
+                  var29 = var11 + (var25 * var17 + var24 * var14 - -(var26 * var20) >> 16);
+                  if (var29 >= 50) {
                     L8: {
                       jp.field_a[var23] = var21 + var27 / var29;
                       al.field_m[var23] = var22 + var28 / var29;
                       qe.field_v[var23] = var29;
-                      if ((var29 ^ -1) > (var7_int ^ -1)) {
+                      if (~var29 > ~var7_int) {
                         var7_int = var29;
                         break L8;
                       } else {
@@ -1283,10 +1283,10 @@ class qm extends ng {
             var4 = th.a(param1, 8191);
             var5 = mi.d(-4096, param0);
             var6 = th.a(param0, 8191);
-            var7 = (int)((long)var3_int * (long)var5 >> 468917712);
-            var8 = (int)((long)var3_int * (long)var6 >> -1760164144);
-            var9 = (int)((long)var5 * (long)var4 >> 161988112);
-            var10 = (int)((long)var6 * (long)var4 >> 1728931536);
+            var7 = (int)((long)var3_int * (long)var5 >> 16);
+            var8 = (int)((long)var3_int * (long)var6 >> 16);
+            var9 = (int)((long)var5 * (long)var4 >> 16);
+            var10 = (int)((long)var6 * (long)var4 >> 16);
             stackOut_3_0 = new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3_int, var10};
             stackIn_4_0 = stackOut_3_0;
             break L0;

@@ -13,12 +13,6 @@ final class wj extends tc {
     static int field_q;
 
     public static void a(boolean param0) {
-        if (!param0) {
-            Object var2 = null;
-            wk[] discarded$0 = wj.a(96, (wk[]) null);
-            field_n = null;
-            return;
-        }
         field_n = null;
     }
 
@@ -26,99 +20,122 @@ final class wj extends tc {
     }
 
     final static wk[] a(int param0, wk[] param1) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         wk var3 = null;
         int var4 = 0;
+        Object stackIn_3_0 = null;
+        wk[] stackIn_8_0 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        wk[] stackOut_7_0 = null;
+        Object stackOut_2_0 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
         var4 = ArmiesOfGielinor.field_M ? 1 : 0;
-        if (param0 != -12310) {
-          return null;
-        } else {
-          var2 = 0;
-          L0: while (true) {
-            if (param1.length <= var2) {
-              return param1;
+        try {
+          L0: {
+            if (param0 == -12310) {
+              var2_int = 0;
+              L1: while (true) {
+                if (param1.length <= var2_int) {
+                  stackOut_7_0 = (wk[]) param1;
+                  stackIn_8_0 = stackOut_7_0;
+                  break L0;
+                } else {
+                  var3 = param1[var2_int];
+                  param1[var2_int].field_z = 0;
+                  var3.field_w = 0;
+                  param1[var2_int].field_A = param1[var2_int].field_y;
+                  param1[var2_int].field_x = param1[var2_int].field_v;
+                  var2_int++;
+                  continue L1;
+                }
+              }
             } else {
-              var3 = param1[var2];
-              param1[var2].field_z = 0;
-              var3.field_w = 0;
-              param1[var2].field_A = param1[var2].field_y;
-              param1[var2].field_x = param1[var2].field_v;
-              var2++;
-              continue L0;
+              stackOut_2_0 = null;
+              stackIn_3_0 = stackOut_2_0;
+              return (wk[]) (Object) stackIn_3_0;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_9_0 = (RuntimeException) var2;
+            stackOut_9_1 = new StringBuilder().append("wj.C(").append(param0).append(44);
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
+            if (param1 == null) {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
+              break L2;
+            } else {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
+              break L2;
+            }
+          }
+          throw ig.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
         }
+        return stackIn_8_0;
     }
 
     final static void a(int param0) {
         try {
             Exception var1 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        if (null == le.field_d) {
-                            statePc = 6;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        try {
-                            le.field_d.a(-1, 0L);
-                            le.field_d.a(24, mg.field_e.field_q, (byte) 46, mg.field_e.field_o);
-                            statePc = 2;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_1) {
-                            caughtException = stateCaught_1;
-                            statePc = 5;
-                            continue stateLoop;
-                        }
-                    }
-                    case 2: {
-                        if (param0 == 0) {
-                            statePc = 4;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    }
-                    case 3: {
-                        field_n = null;
-                        statePc = 4;
-                        continue stateLoop;
-                    }
-                    case 4: {
-                        mg.field_e.field_q = mg.field_e.field_q + 24;
-                        return;
-                    }
-                    case 5: {
-                        var1 = (Exception) (Object) caughtException;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                    case 6: {
-                        if (param0 != 0) {
-                            statePc = 8;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    }
-                    case 7: {
-                        mg.field_e.field_q = mg.field_e.field_q + 24;
-                        return;
-                    }
-                    case 8: {
-                        field_n = null;
-                        mg.field_e.field_q = mg.field_e.field_q + 24;
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
+            L0: {
+              if (null == le.field_d) {
+                break L0;
+              } else {
+                try {
+                  L1: {
+                    le.field_d.a(-1, 0L);
+                    le.field_d.a(24, mg.field_e.field_q, (byte) 46, mg.field_e.field_o);
+                    decompiledRegionSelector0 = 0;
+                    break L1;
+                  }
+                } catch (java.lang.Exception decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  L2: {
+                    var1 = (Exception) (Object) decompiledCaughtException;
+                    decompiledRegionSelector0 = 1;
+                    break L2;
+                  }
                 }
+                if (decompiledRegionSelector0 == 0) {
+                  mg.field_e.field_q = mg.field_e.field_q + 24;
+                  return;
+                } else {
+                  break L0;
+                }
+              }
             }
+            mg.field_e.field_q = mg.field_e.field_q + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

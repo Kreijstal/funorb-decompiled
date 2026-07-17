@@ -62,27 +62,21 @@ final class vg {
 
     final void a(boolean param0, lm param1, long param2) {
         lm var5 = null;
-        L0: {
-          if (param1.field_r != null) {
-            param1.e(17);
-            break L0;
-          } else {
-            break L0;
-          }
-        }
-        var5 = ((vg) this).field_a[(int)((long)(((vg) this).field_h - 1) & param2)];
-        param1.field_r = var5.field_r;
-        param1.field_p = var5;
-        param1.field_r.field_p = param1;
-        if (param0) {
-          vg.b(-98, -4);
-          param1.field_p.field_r = param1;
-          param1.field_q = param2;
-          return;
-        } else {
-          param1.field_p.field_r = param1;
-          param1.field_q = param2;
-          return;
+        try {
+            if (!(param1.field_r == null)) {
+                param1.e(17);
+            }
+            var5 = ((vg) this).field_a[(int)((long)(((vg) this).field_h - 1) & param2)];
+            param1.field_r = var5.field_r;
+            param1.field_p = var5;
+            param1.field_r.field_p = param1;
+            if (param0) {
+                vg.b(-98, -4);
+            }
+            param1.field_p.field_r = param1;
+            param1.field_q = param2;
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "vg.G(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
     }
 
@@ -90,7 +84,7 @@ final class vg {
         if (param1 != 23) {
             return;
         }
-        if (!(-1L > (param0 ^ -1L))) {
+        if (!(param0 > 0L)) {
             return;
         }
         if (0L != param0 % 10L) {
@@ -110,7 +104,7 @@ final class vg {
         int stackOut_3_0 = 0;
         if (param0 >= 84) {
           L0: {
-            if ((param1 ^ -1) > -11) {
+            if (param1 < 10) {
               stackOut_4_0 = 0;
               stackIn_5_0 = stackOut_4_0;
               break L0;
@@ -128,7 +122,7 @@ final class vg {
               return new ib(3, 4);
             }
           } else {
-            if ((var2 ^ -1) == -2) {
+            if (var2 == 1) {
               var3 = ok.a(tg.field_f, -121, 3);
               if (var3 == 0) {
                 return new ib(3, 5);
@@ -136,7 +130,7 @@ final class vg {
                 if (var3 == 1) {
                   return new ib(4, 4);
                 } else {
-                  if ((var3 ^ -1) == -3) {
+                  if (var3 == 2) {
                     return new ib(5, 3);
                   } else {
                     return new ib(4, 4);
@@ -145,7 +139,7 @@ final class vg {
               }
             } else {
               if (2 == var2) {
-                if ((ok.a(tg.field_f, -103, 2) ^ -1) == -2) {
+                if (ok.a(tg.field_f, -103, 2) == 1) {
                   return new ib(4, 5);
                 } else {
                   return new ib(5, 4);
@@ -260,52 +254,52 @@ final class vg {
         int var2 = 0;
         int var3 = 0;
         var3 = Pixelate.field_H ? 1 : 0;
-        if (param1 == (param0 ^ -1)) {
+        if (param1 == ~param0) {
           return 0;
         } else {
-          if (-1 < (param0 ^ -1)) {
+          if (param0 < 0) {
             throw new IllegalArgumentException("");
           } else {
-            if ((param0 ^ -1) > -32769) {
-              if (-129 < (param0 ^ -1)) {
+            if (param0 < 32768) {
+              if (param0 < 128) {
                 if (param0 < 8) {
-                  if (-3 < (param0 ^ -1)) {
+                  if (param0 < 2) {
                     return 256;
                   } else {
                     var2 = 7;
-                    param0 = param0 << (var2 << 312350369);
+                    param0 = param0 << (var2 << 1);
                     return bl.field_a[-32768 + param0] >> var2;
                   }
                 } else {
                   if (32 <= param0) {
                     var2 = 5;
-                    param0 = param0 << (var2 << 312350369);
+                    param0 = param0 << (var2 << 1);
                     return bl.field_a[-32768 + param0] >> var2;
                   } else {
                     var2 = 6;
-                    param0 = param0 << (var2 << 312350369);
+                    param0 = param0 << (var2 << 1);
                     return bl.field_a[-32768 + param0] >> var2;
                   }
                 }
               } else {
-                if (-2049 < (param0 ^ -1)) {
+                if (param0 < 2048) {
                   if (512 <= param0) {
                     var2 = 3;
-                    param0 = param0 << (var2 << 312350369);
+                    param0 = param0 << (var2 << 1);
                     return bl.field_a[-32768 + param0] >> var2;
                   } else {
                     var2 = 4;
-                    param0 = param0 << (var2 << 312350369);
+                    param0 = param0 << (var2 << 1);
                     return bl.field_a[-32768 + param0] >> var2;
                   }
                 } else {
                   if (param0 < 8192) {
                     var2 = 2;
-                    param0 = param0 << (var2 << 312350369);
+                    param0 = param0 << (var2 << 1);
                     return bl.field_a[-32768 + param0] >> var2;
                   } else {
                     var2 = 1;
-                    param0 = param0 << (var2 << 312350369);
+                    param0 = param0 << (var2 << 1);
                     return bl.field_a[-32768 + param0] >> var2;
                   }
                 }
@@ -314,39 +308,39 @@ final class vg {
               if (131072 <= param0) {
                 if (33554432 > param0) {
                   if (2097152 <= param0) {
-                    if (-8388609 < (param0 ^ -1)) {
+                    if (param0 < 8388608) {
                       var2 = 3;
-                      param0 = param0 >> (var2 << 1548094401);
+                      param0 = param0 >> (var2 << 1);
                       return bl.field_a[param0 + -32768] << var2;
                     } else {
                       var2 = 4;
-                      param0 = param0 >> (var2 << 1548094401);
+                      param0 = param0 >> (var2 << 1);
                       return bl.field_a[param0 + -32768] << var2;
                     }
                   } else {
-                    if (-524289 < (param0 ^ -1)) {
+                    if (param0 < 524288) {
                       var2 = 1;
-                      param0 = param0 >> (var2 << 1548094401);
+                      param0 = param0 >> (var2 << 1);
                       return bl.field_a[param0 + -32768] << var2;
                     } else {
                       var2 = 2;
-                      param0 = param0 >> (var2 << 1548094401);
+                      param0 = param0 >> (var2 << 1);
                       return bl.field_a[param0 + -32768] << var2;
                     }
                   }
                 } else {
-                  if ((param0 ^ -1) <= -536870913) {
+                  if (param0 >= 536870912) {
                     var2 = 7;
-                    param0 = param0 >> (var2 << 1548094401);
+                    param0 = param0 >> (var2 << 1);
                     return bl.field_a[param0 + -32768] << var2;
                   } else {
-                    if ((param0 ^ -1) <= -134217729) {
+                    if (param0 >= 134217728) {
                       var2 = 6;
-                      param0 = param0 >> (var2 << 1548094401);
+                      param0 = param0 >> (var2 << 1);
                       return bl.field_a[param0 + -32768] << var2;
                     } else {
                       var2 = 5;
-                      param0 = param0 >> (var2 << 1548094401);
+                      param0 = param0 >> (var2 << 1);
                       return bl.field_a[param0 + -32768] << var2;
                     }
                   }
@@ -373,7 +367,7 @@ final class vg {
           ((vg) this).field_g = var7.field_p;
           L0: while (true) {
             if (((vg) this).field_g != var4) {
-              if ((param1 ^ -1L) != (((vg) this).field_g.field_q ^ -1L)) {
+              if (~param1 != ~((vg) this).field_g.field_q) {
                 ((vg) this).field_g = ((vg) this).field_g.field_p;
                 continue L0;
               } else {
@@ -394,7 +388,7 @@ final class vg {
           ((vg) this).field_g = var8.field_p;
           L1: while (true) {
             if (((vg) this).field_g != var4) {
-              if ((param1 ^ -1L) != (((vg) this).field_g.field_q ^ -1L)) {
+              if (~param1 != ~((vg) this).field_g.field_q) {
                 ((vg) this).field_g = ((vg) this).field_g.field_p;
                 continue L1;
               } else {
@@ -430,7 +424,7 @@ final class vg {
               L0: {
                 if (param0 < 0) {
                   if (aa.field_f.field_m == 0) {
-                    if ((hm.a(64) ^ -1L) >= (aj.field_m + 10000L ^ -1L)) {
+                    if (~hm.a(64) >= ~(aj.field_m + 10000L)) {
                       break L0;
                     } else {
                       aa.field_f.g(param0, 15514);
@@ -440,7 +434,7 @@ final class vg {
                     if (aa.field_f.field_m != 0) {
                       break L0;
                     } else {
-                      if ((hm.a(64) ^ -1L) >= (aj.field_m + 10000L ^ -1L)) {
+                      if (~hm.a(64) >= ~(aj.field_m + 10000L)) {
                         break L0;
                       } else {
                         aa.field_f.g(param0, 15514);
@@ -452,7 +446,7 @@ final class vg {
                   if (aa.field_f.field_m != 0) {
                     break L0;
                   } else {
-                    if ((hm.a(64) ^ -1L) >= (aj.field_m + 10000L ^ -1L)) {
+                    if (~hm.a(64) >= ~(aj.field_m + 10000L)) {
                       break L0;
                     } else {
                       aa.field_f.g(param0, 15514);
@@ -462,19 +456,12 @@ final class vg {
                 }
               }
               L1: {
-                if ((aa.field_f.field_m ^ -1) < -1) {
-                  try {
+                if (aa.field_f.field_m > 0) {
+                  {
                     L2: {
                       sh.field_e.a(aa.field_f.field_m, -98, 0, aa.field_f.field_k);
                       aj.field_m = hm.a(64);
                       break L2;
-                    }
-                  } catch (java.io.IOException decompiledCaughtParameter0) {
-                    decompiledCaughtException = decompiledCaughtParameter0;
-                    L3: {
-                      var2 = (IOException) (Object) decompiledCaughtException;
-                      na.a(true);
-                      break L3;
                     }
                   }
                   aa.field_f.field_m = 0;
@@ -520,12 +507,6 @@ final class vg {
     }
 
     public static void a(boolean param0) {
-        if (!param0) {
-            vg.a(-87L, (byte) 117);
-            field_e = null;
-            field_f = null;
-            return;
-        }
         field_e = null;
         field_f = null;
     }

@@ -63,7 +63,7 @@ final class tf {
         L0: {
           var6 = EscapeVector.field_A;
           em.a(0, 0, 640, 480, 0, 64);
-          if ((mj.field_d ^ -1) <= -21) {
+          if (mj.field_d >= 20) {
             stackOut_2_0 = 0;
             stackIn_3_0 = stackOut_2_0;
             break L0;
@@ -208,24 +208,16 @@ final class tf {
                 }
               }
               L5: {
-                if (!param1) {
-                  break L5;
-                } else {
-                  String discarded$1 = tf.b((byte) 111);
-                  break L5;
-                }
-              }
-              L6: {
                 if (((tf) this).field_e != param0) {
-                  break L6;
+                  break L5;
                 } else {
                   var3 = (Object) (Object) oa.field_q;
-                  break L6;
+                  break L5;
                 }
               }
               return fh.field_g.b((String) var3);
             } else {
-              L7: {
+              L6: {
                 var3_int = fh.field_g.b(nk.field_s);
                 var4 = (fh.field_g.b(rh.field_J) - -fh.field_g.b(nb.field_d)) / 2;
                 var5 = (var3_int - var4) / 2;
@@ -234,11 +226,11 @@ final class tf {
                 if (var7 >= var6) {
                   stackOut_9_0 = var7;
                   stackIn_10_0 = stackOut_9_0;
-                  break L7;
+                  break L6;
                 } else {
                   stackOut_8_0 = var6;
                   stackIn_10_0 = stackOut_8_0;
-                  break L7;
+                  break L6;
                 }
               }
               return stackIn_10_0;
@@ -310,7 +302,7 @@ final class tf {
           }
         }
         L1: {
-          if ((ch.field_a.field_h ^ -1) != -1) {
+          if (ch.field_a.field_h != 0) {
             break L1;
           } else {
             if (ch.field_a.b((byte) -18)) {
@@ -324,7 +316,7 @@ final class tf {
           }
         }
         L2: {
-          if ((ch.field_a.field_h ^ -1) != (((tf) this).field_l ^ -1)) {
+          if (~ch.field_a.field_h != ~((tf) this).field_l) {
             break L2;
           } else {
             if (ch.field_a.b((byte) -18)) {
@@ -342,7 +334,7 @@ final class tf {
           }
         }
         L3: {
-          if ((ch.field_a.field_h ^ -1) != (((tf) this).field_b ^ -1)) {
+          if (~ch.field_a.field_h != ~((tf) this).field_b) {
             break L3;
           } else {
             if (!ch.field_a.b((byte) -18)) {
@@ -354,7 +346,7 @@ final class tf {
           }
         }
         L4: {
-          if ((((tf) this).field_g ^ -1) != (ch.field_a.field_h ^ -1)) {
+          if (~((tf) this).field_g != ~ch.field_a.field_h) {
             break L4;
           } else {
             if (ch.field_a.b((byte) -18)) {
@@ -366,15 +358,15 @@ final class tf {
           }
         }
         L5: {
-          if ((ch.field_a.field_h ^ -1) == (((tf) this).field_j ^ -1)) {
+          if (~ch.field_a.field_h == ~((tf) this).field_j) {
             L6: {
               if (!ch.field_a.g(13)) {
                 break L6;
               } else {
-                if (-1 > (qm.field_c ^ -1)) {
+                if (qm.field_c > 0) {
                   L7: {
                     qm.field_c = qm.field_c - 8;
-                    if (-1 < (qm.field_c ^ -1)) {
+                    if (qm.field_c < 0) {
                       qm.field_c = 0;
                       break L7;
                     } else {
@@ -452,11 +444,11 @@ final class tf {
                 var5 = stackIn_39_0;
                 var6 = 320 - -((var5 - 68) / 2);
                 var7 = -var6 - (2 - dh.field_d);
-                if ((var7 ^ -1) > -1) {
+                if (var7 < 0) {
                   var7 = 0;
                   break L13;
                 } else {
-                  if (-65 <= (var7 ^ -1)) {
+                  if (var7 <= 64) {
                     break L13;
                   } else {
                     var7 = 64;
@@ -468,7 +460,7 @@ final class tf {
                 if (ch.field_a.b((byte) -18)) {
                   break L14;
                 } else {
-                  if ((var7 ^ -1) != (qm.field_c ^ -1)) {
+                  if (~var7 != ~qm.field_c) {
                     break L14;
                   } else {
                     break L5;
@@ -525,7 +517,7 @@ final class tf {
               if (!ch.field_a.b(-98)) {
                 break L19;
               } else {
-                if ((kc.field_b ^ -1) <= -65) {
+                if (kc.field_b >= 64) {
                   break L19;
                 } else {
                   L20: {
@@ -593,8 +585,8 @@ final class tf {
                 var5 = stackIn_79_0;
                 var6 = 320 - -((var5 + -68) / 2);
                 var7 = -2 - (var6 - dh.field_d);
-                if ((var7 ^ -1) <= -1) {
-                  if ((var7 ^ -1) >= -65) {
+                if (var7 >= 0) {
+                  if (var7 <= 64) {
                     break L24;
                   } else {
                     var7 = 64;
@@ -670,7 +662,7 @@ final class tf {
             break L27;
           }
         }
-        if ((((tf) this).field_e ^ -1) != (ch.field_a.field_h ^ -1)) {
+        if (~((tf) this).field_e != ~ch.field_a.field_h) {
           return false;
         } else {
           if (ch.field_a.b((byte) -18)) {
@@ -689,6 +681,7 @@ final class tf {
     final static String a(int param0, java.applet.Applet param1) {
         try {
             Throwable var2 = null;
+            RuntimeException var2_ref = null;
             String var3 = null;
             String var4 = null;
             String[] var5 = null;
@@ -697,58 +690,239 @@ final class tf {
             int var8 = 0;
             String var9 = null;
             String stackIn_6_0 = null;
-            Throwable decompiledCaughtException = null;
+            String stackIn_12_0 = null;
+            String stackIn_16_0 = null;
+            RuntimeException stackIn_18_0 = null;
+            StringBuilder stackIn_18_1 = null;
+            RuntimeException stackIn_19_0 = null;
+            StringBuilder stackIn_19_1 = null;
+            RuntimeException stackIn_20_0 = null;
+            StringBuilder stackIn_20_1 = null;
+            String stackIn_20_2 = null;
             String stackOut_5_0 = null;
-            var8 = EscapeVector.field_A;
-            try {
-              L0: {
-                var9 = param1.getParameter("cookieprefix");
-                var3 = var9 + "settings";
-                var4 = (String) sd.a(param1, "getcookies", -29155);
-                var5 = bb.a(-128, var4, ';');
-                var6 = 0;
-                L1: while (true) {
-                  if (var6 >= var5.length) {
-                    break L0;
-                  } else {
-                    L2: {
-                      var7 = var5[var6].indexOf('=');
-                      if (var7 < 0) {
-                        break L2;
-                      } else {
-                        if (!var5[var6].substring(0, var7).trim().equals((Object) (Object) var3)) {
-                          break L2;
-                        } else {
-                          stackOut_5_0 = var5[var6].substring(var7 + 1).trim();
-                          stackIn_6_0 = stackOut_5_0;
-                          return stackIn_6_0;
-                        }
-                      }
+            String stackOut_11_0 = null;
+            String stackOut_15_0 = null;
+            RuntimeException stackOut_17_0 = null;
+            StringBuilder stackOut_17_1 = null;
+            RuntimeException stackOut_18_0 = null;
+            StringBuilder stackOut_18_1 = null;
+            String stackOut_18_2 = null;
+            RuntimeException stackOut_19_0 = null;
+            StringBuilder stackOut_19_1 = null;
+            String stackOut_19_2 = null;
+            int statePc = 0;
+            Throwable caughtException = null;
+            stateLoop: while (true) {
+                switch (statePc) {
+                    case 0: {
+                        var8 = EscapeVector.field_A;
+                        statePc = 1;
+                        continue stateLoop;
                     }
-                    var6++;
-                    continue L1;
-                  }
+                    case 1: {
+                        try {
+                            var9 = param1.getParameter("cookieprefix");
+                            var3 = var9 + "settings";
+                            var4 = (String) sd.a(param1, "getcookies", -29155);
+                            var5 = bb.a(-128, var4, ';');
+                            var6 = 0;
+                            statePc = 2;
+                            continue stateLoop;
+                        } catch (Throwable stateCaught_1) {
+                            caughtException = stateCaught_1;
+                            statePc = 9;
+                            continue stateLoop;
+                        }
+                    }
+                    case 2: {
+                        try {
+                            if (var6 >= var5.length) {
+                                statePc = 10;
+                            } else {
+                                statePc = 3;
+                            }
+                            continue stateLoop;
+                        } catch (Throwable stateCaught_2) {
+                            caughtException = stateCaught_2;
+                            statePc = 9;
+                            continue stateLoop;
+                        }
+                    }
+                    case 3: {
+                        try {
+                            var7 = var5[var6].indexOf('=');
+                            if (var7 < 0) {
+                                statePc = 7;
+                            } else {
+                                statePc = 4;
+                            }
+                            continue stateLoop;
+                        } catch (Throwable stateCaught_3) {
+                            caughtException = stateCaught_3;
+                            statePc = 9;
+                            continue stateLoop;
+                        }
+                    }
+                    case 4: {
+                        try {
+                            if (!var5[var6].substring(0, var7).trim().equals((Object) (Object) var3)) {
+                                statePc = 7;
+                            } else {
+                                statePc = 5;
+                            }
+                            continue stateLoop;
+                        } catch (Throwable stateCaught_4) {
+                            caughtException = stateCaught_4;
+                            statePc = 9;
+                            continue stateLoop;
+                        }
+                    }
+                    case 5: {
+                        try {
+                            stackOut_5_0 = var5[var6].substring(var7 + 1).trim();
+                            stackIn_6_0 = stackOut_5_0;
+                            statePc = 6;
+                            continue stateLoop;
+                        } catch (Throwable stateCaught_5) {
+                            caughtException = stateCaught_5;
+                            statePc = 9;
+                            continue stateLoop;
+                        }
+                    }
+                    case 6: {
+                        return stackIn_6_0;
+                    }
+                    case 7: {
+                        try {
+                            var6++;
+                            statePc = 2;
+                            continue stateLoop;
+                        } catch (Throwable stateCaught_7) {
+                            caughtException = stateCaught_7;
+                            statePc = 9;
+                            continue stateLoop;
+                        }
+                    }
+                    case 9: {
+                        try {
+                            var2 = caughtException;
+                            statePc = 10;
+                            continue stateLoop;
+                        } catch (Throwable stateCaught_9) {
+                            caughtException = stateCaught_9;
+                            statePc = 17;
+                            continue stateLoop;
+                        }
+                    }
+                    case 10: {
+                        try {
+                            if (oh.field_p == null) {
+                                statePc = 13;
+                            } else {
+                                statePc = 11;
+                            }
+                            continue stateLoop;
+                        } catch (Throwable stateCaught_10) {
+                            caughtException = stateCaught_10;
+                            statePc = 17;
+                            continue stateLoop;
+                        }
+                    }
+                    case 11: {
+                        try {
+                            stackOut_11_0 = oh.field_p;
+                            stackIn_12_0 = stackOut_11_0;
+                            statePc = 12;
+                            continue stateLoop;
+                        } catch (Throwable stateCaught_11) {
+                            caughtException = stateCaught_11;
+                            statePc = 17;
+                            continue stateLoop;
+                        }
+                    }
+                    case 12: {
+                        return stackIn_12_0;
+                    }
+                    case 13: {
+                        try {
+                            if (param0 == -1) {
+                                statePc = 15;
+                            } else {
+                                statePc = 14;
+                            }
+                            continue stateLoop;
+                        } catch (Throwable stateCaught_13) {
+                            caughtException = stateCaught_13;
+                            statePc = 17;
+                            continue stateLoop;
+                        }
+                    }
+                    case 14: {
+                        try {
+                            String discarded$1 = tf.b((byte) -31);
+                            statePc = 15;
+                            continue stateLoop;
+                        } catch (Throwable stateCaught_14) {
+                            caughtException = stateCaught_14;
+                            statePc = 17;
+                            continue stateLoop;
+                        }
+                    }
+                    case 15: {
+                        try {
+                            stackOut_15_0 = param1.getParameter("settings");
+                            stackIn_16_0 = stackOut_15_0;
+                            statePc = 16;
+                            continue stateLoop;
+                        } catch (Throwable stateCaught_15) {
+                            caughtException = stateCaught_15;
+                            statePc = 17;
+                            continue stateLoop;
+                        }
+                    }
+                    case 16: {
+                        return stackIn_16_0;
+                    }
+                    case 17: {
+                        var2_ref = (RuntimeException) (Object) caughtException;
+                        stackOut_17_0 = (RuntimeException) var2_ref;
+                        stackOut_17_1 = new StringBuilder().append("tf.D(").append(param0).append(44);
+                        stackIn_19_0 = stackOut_17_0;
+                        stackIn_19_1 = stackOut_17_1;
+                        stackIn_18_0 = stackOut_17_0;
+                        stackIn_18_1 = stackOut_17_1;
+                        if (param1 == null) {
+                            statePc = 19;
+                        } else {
+                            statePc = 18;
+                        }
+                        continue stateLoop;
+                    }
+                    case 18: {
+                        stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+                        stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+                        stackOut_18_2 = "{...}";
+                        stackIn_20_0 = stackOut_18_0;
+                        stackIn_20_1 = stackOut_18_1;
+                        stackIn_20_2 = stackOut_18_2;
+                        statePc = 20;
+                        continue stateLoop;
+                    }
+                    case 19: {
+                        stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+                        stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+                        stackOut_19_2 = "null";
+                        stackIn_20_0 = stackOut_19_0;
+                        stackIn_20_1 = stackOut_19_1;
+                        stackIn_20_2 = stackOut_19_2;
+                        statePc = 20;
+                        continue stateLoop;
+                    }
+                    case 20: {
+                        throw t.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 41);
+                    }
+                    default: throw new IllegalStateException("invalid CFG state " + statePc);
                 }
-              }
-            } catch (java.lang.Throwable decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              L3: {
-                var2 = decompiledCaughtException;
-                break L3;
-              }
-            }
-            if (oh.field_p == null) {
-              L4: {
-                if (param0 == -1) {
-                  break L4;
-                } else {
-                  String discarded$1 = tf.b((byte) -31);
-                  break L4;
-                }
-              }
-              return param1.getParameter("settings");
-            } else {
-              return oh.field_p;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -835,7 +1009,7 @@ final class tf {
           int incrementValue$21 = var2;
           var2++;
           ((tf) this).field_c = incrementValue$21;
-          if ((s.field_x ^ -1) < -1) {
+          if (s.field_x > 0) {
             int incrementValue$22 = var2;
             var2++;
             ((tf) this).field_m = incrementValue$22;
@@ -847,7 +1021,7 @@ final class tf {
         }
         L4: {
           L5: {
-            if ((var5.field_Pb ^ -1) > -1) {
+            if (var5.field_Pb < 0) {
               break L5;
             } else {
               if (!var5.field_rc) {

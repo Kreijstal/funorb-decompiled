@@ -41,6 +41,7 @@ final class fca extends ksa {
 
     final static fca a(asb param0, int param1, int param2) {
         try {
+            fca var4_ref = null;
             if (!fca.a(param0)) {
                 boolean discarded$0 = param0.a((byte) 87, param2, param1);
                 return null;
@@ -49,13 +50,11 @@ final class fca extends ksa {
             if (var3 == null) {
                 return null;
             }
-            fca var4 = null;
-            try {
-                var4 = new fca(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
+            Object var4 = null;
+            {
+                var4_ref = new fca(var3);
             }
-            return var4;
+            return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -293,7 +292,7 @@ final class fca extends ksa {
 
     private final static void a(byte[] param0, int param1) {
         field_y = param0;
-        field_m = param1;
+        field_m = 0;
         field_u = 0;
     }
 
@@ -318,7 +317,7 @@ final class fca extends ksa {
         ((fca) this).field_w = var2.h(29);
         ((fca) this).field_g = var2.h(87);
         if (((fca) this).field_g < 0) {
-            ((fca) this).field_g = ((fca) this).field_g ^ -1;
+            ((fca) this).field_g = ~((fca) this).field_g;
             ((fca) this).field_j = true;
         }
         int var3 = var2.h(103);
@@ -424,12 +423,13 @@ final class fca extends ksa {
                       if ((var6 & -256) == 0) {
                         break L8;
                       } else {
-                        var6 = (var6 ^ -1) >> 31;
+                        var6 = ~var6 >> 31;
                         break L8;
                       }
                     }
+                    int incrementValue$1 = var3;
                     var3++;
-                    ((fca) this).field_C[var3] = (byte)(var6 - 128);
+                    ((fca) this).field_C[incrementValue$1] = (byte)(var6 - 128);
                     var5++;
                     continue L6;
                   }
@@ -479,12 +479,13 @@ final class fca extends ksa {
                     if ((var7 & -256) == 0) {
                       break L3;
                     } else {
-                      var7 = (var7 ^ -1) >> 31;
+                      var7 = ~var7 >> 31;
                       break L3;
                     }
                   }
+                  int incrementValue$1 = var2;
                   var2++;
-                  var1[var2] = (byte)(var7 - 128);
+                  var1[incrementValue$1] = (byte)(var7 - 128);
                   var6++;
                   continue L2;
                 } else {
@@ -502,6 +503,7 @@ final class fca extends ksa {
 
     final static fca a(asb param0, String param1, String param2) {
         try {
+            fca var4_ref = null;
             if (!fca.a(param0)) {
                 boolean discarded$0 = param0.a(false, param2, param1);
                 return null;
@@ -510,13 +512,11 @@ final class fca extends ksa {
             if (var3 == null) {
                 return null;
             }
-            fca var4 = null;
-            try {
-                var4 = new fca(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
+            Object var4 = null;
+            {
+                var4_ref = new fca(var3);
             }
-            return var4;
+            return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -572,7 +572,6 @@ final class fca extends ksa {
         int var16 = 0;
         int var17_int = 0;
         Object var17 = null;
-        float[] var17_array = null;
         int var18_int = 0;
         float[] var18 = null;
         int var19 = 0;
@@ -1088,7 +1087,7 @@ final class fca extends ksa {
                   var50 = var54;
                   var46 = var50;
                   var40 = var46;
-                  var17_array = var40;
+                  var17 = (Object) (Object) var40;
                   if (((fca) this).field_F) {
                     break L36;
                   } else {
@@ -1146,7 +1145,7 @@ final class fca extends ksa {
               }
             }
             ((fca) this).field_F = stackIn_111_1 != 0;
-            return var17_array;
+            return (float[]) var17;
           } else {
             var42 = field_d[var14.field_d[var17_int]];
             var55 = field_r;

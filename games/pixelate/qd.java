@@ -51,7 +51,7 @@ final class qd extends fa {
 
     private final static void a(byte[] param0, int param1) {
         field_x = param0;
-        field_N = param1;
+        field_N = 0;
         field_P = 0;
     }
 
@@ -67,10 +67,8 @@ final class qd extends fa {
                 return null;
             }
             Object var4 = null;
-            try {
+            {
                 var4_ref = new qd(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
             }
             return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -166,7 +164,7 @@ final class qd extends fa {
                       if ((var6 & -256) == 0) {
                         break L8;
                       } else {
-                        var6 = (var6 ^ -1) >> 31;
+                        var6 = ~var6 >> 31;
                         break L8;
                       }
                     }
@@ -196,7 +194,7 @@ final class qd extends fa {
         ((qd) this).field_M = var2.k(0);
         ((qd) this).field_G = var2.k(0);
         if (((qd) this).field_G < 0) {
-            ((qd) this).field_G = ((qd) this).field_G ^ -1;
+            ((qd) this).field_G = ~((qd) this).field_G;
             ((qd) this).field_K = true;
         }
         int var3 = var2.k(0);
@@ -253,7 +251,7 @@ final class qd extends fa {
                     if ((var7 & -256) == 0) {
                       break L3;
                     } else {
-                      var7 = (var7 ^ -1) >> 31;
+                      var7 = ~var7 >> 31;
                       break L3;
                     }
                   }
@@ -295,10 +293,8 @@ final class qd extends fa {
                 return null;
             }
             Object var4 = null;
-            try {
+            {
                 var4_ref = new qd(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
             }
             return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {

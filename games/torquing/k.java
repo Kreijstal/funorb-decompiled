@@ -16,16 +16,13 @@ final class k {
     }
 
     final static int b(int param0) {
-        int var1 = -3 % ((64 - param0) / 36);
+        int var1 = 0;
         return po.field_w;
     }
 
     final static void a(int param0, int param1) {
         int var2 = 0;
         int var3 = 0;
-        if (param1 != 1) {
-            return;
-        }
         if (ia.a(-22426, 0)) {
             param0 = 6;
         }
@@ -44,7 +41,7 @@ final class k {
                 var2 = 1207964;
                 var3 = 402741;
             }
-            if (!((param0 ^ -1) != -7)) {
+            if (!(param0 != 6)) {
                 var3 = 1207964;
                 var2 = 402741;
             }
@@ -67,22 +64,58 @@ final class k {
     }
 
     final static int a(int param0, int param1, int param2) {
-        int var4 = Torquing.field_u;
-        int var3 = 1;
-        while (param2 > 1) {
-            if (0 != (param2 & 1)) {
-                var3 = var3 * param1;
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        int stackIn_8_0 = 0;
+        int stackIn_11_0 = 0;
+        int stackIn_13_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_12_0 = 0;
+        int stackOut_10_0 = 0;
+        int stackOut_7_0 = 0;
+        var4 = Torquing.field_u;
+        try {
+          L0: {
+            var3_int = 1;
+            L1: while (true) {
+              if (param2 <= 1) {
+                if (param0 == 25518) {
+                  if (param2 != 1) {
+                    stackOut_12_0 = var3_int;
+                    stackIn_13_0 = stackOut_12_0;
+                    break L0;
+                  } else {
+                    stackOut_10_0 = param1 * var3_int;
+                    stackIn_11_0 = stackOut_10_0;
+                    return stackIn_11_0;
+                  }
+                } else {
+                  stackOut_7_0 = 43;
+                  stackIn_8_0 = stackOut_7_0;
+                  return stackIn_8_0;
+                }
+              } else {
+                L2: {
+                  if (0 == (param2 & 1)) {
+                    break L2;
+                  } else {
+                    var3_int = var3_int * param1;
+                    break L2;
+                  }
+                }
+                param2 = param2 >> 1;
+                param1 = param1 * param1;
+                continue L1;
+              }
             }
-            param2 = param2 >> 1;
-            param1 = param1 * param1;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw rb.a((Throwable) (Object) var3, "k.B(" + param0 + 44 + param1 + 44 + param2 + 41);
         }
-        if (param0 != 25518) {
-            return 43;
-        }
-        if (param2 == 1) {
-            return param1 * var3;
-        }
-        return var3;
+        return stackIn_13_0;
     }
 
     static {
@@ -97,7 +130,7 @@ final class k {
         field_b = new String[]{"Junior Explorer", "Expert Explorer", "Master Explorer", "Extreme Explorer", "Survivor", "Master Survivor", "Junior Torquester", "Torquester", "Hoarder", "Expert Hoarder", "Master Hoarder", "Virtuoso Hoarder", "Diviner of Secrets", "Order of the Golden Torque", "Knife-edge Skillster", "Skin Artist", "Ghostlit"};
         int var0 = 0;
         field_c = new byte[32896];
-        for (var1 = 0; (var1 ^ -1) > -257; var1++) {
+        for (var1 = 0; var1 < 256; var1++) {
             for (var2 = 0; var2 <= var1; var2++) {
                 int incrementValue$0 = var0;
                 var0++;

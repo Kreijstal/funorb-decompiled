@@ -18,57 +18,34 @@ final class dea {
     }
 
     final static String a(int param0, byte param1) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
         String var6 = null;
-        int var7 = 0;
-        String var8 = null;
-        String var9 = null;
-        var7 = TombRacer.field_G ? 1 : 0;
-        var2 = param0 * 20;
-        var3 = var2 / 10;
-        var4 = var2 / 1000;
-        var5 = var4 / 60;
+        int var7 = TombRacer.field_G ? 1 : 0;
+        int var2 = param0 * 20;
+        int var3 = var2 / 10;
+        int var4 = var2 / 1000;
+        int var5 = var4 / 60;
         var3 = var3 % 100;
-        if (param1 != -8) {
-          return null;
+        var4 = var4 % 60;
+        if (10 > var5) {
+            var6 = "0" + var5;
         } else {
-          L0: {
-            var4 = var4 % 60;
-            if (10 <= var5) {
-              var6 = "" + var5;
-              break L0;
-            } else {
-              var6 = "0" + var5;
-              break L0;
-            }
-          }
-          L1: {
-            var8 = var6 + ":";
-            var6 = var8;
-            var6 = var8;
-            if (-11 >= (var4 ^ -1)) {
-              var6 = var8 + var4;
-              break L1;
-            } else {
-              var6 = var8 + "0" + var4;
-              break L1;
-            }
-          }
-          L2: {
-            var9 = var6 + ".";
-            if (10 <= var3) {
-              var6 = var9 + var3;
-              break L2;
-            } else {
-              var6 = var9 + "0" + var3;
-              break L2;
-            }
-          }
-          return var6;
+            var6 = "" + var5;
         }
+        String var8 = var6 + ":";
+        var6 = var8;
+        var6 = var8;
+        if (var4 < 10) {
+            var6 = var8 + "0" + var4;
+        } else {
+            var6 = var8 + var4;
+        }
+        String var9 = var6 + ".";
+        if (10 > var3) {
+            var6 = var9 + "0" + var3;
+        } else {
+            var6 = var9 + var3;
+        }
+        return var6;
     }
 
     final boolean b(int param0) {
@@ -275,11 +252,6 @@ final class dea {
     }
 
     public static void a(boolean param0) {
-        if (!param0) {
-            field_a = null;
-            field_a = null;
-            return;
-        }
         field_a = null;
     }
 

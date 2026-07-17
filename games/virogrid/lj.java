@@ -199,7 +199,7 @@ final class lj implements ol {
                 break L6;
               } else {
                 var10 = ((lj) this).field_n + (((lj) this).field_f + ((lj) this).field_e);
-                int discarded$1 = ((lj) this).field_p.a(param1.field_n, var10 + (param1.field_l + param0), param1.field_u + param3 - -((lj) this).field_q, param1.field_g - var10 + -((lj) this).field_e, -(((lj) this).field_e << -1482831743) + param1.field_m, ((lj) this).field_c, ((lj) this).field_b, ((lj) this).field_h, ((lj) this).field_m, 0);
+                int discarded$1 = ((lj) this).field_p.a(param1.field_n, var10 + (param1.field_l + param0), param1.field_u + param3 - -((lj) this).field_q, param1.field_g - var10 + -((lj) this).field_e, -(((lj) this).field_e << 1) + param1.field_m, ((lj) this).field_c, ((lj) this).field_b, ((lj) this).field_h, ((lj) this).field_m, 0);
                 break L6;
               }
             }
@@ -306,7 +306,7 @@ final class lj implements ol {
             if (param1) {
               L1: {
                 var7 = -10 + var5_int;
-                if ((param4.field_a ^ -1) >= -1) {
+                if (param4.field_a <= 0) {
                   break L1;
                 } else {
                   if (null == param4.field_z) {
@@ -345,7 +345,7 @@ final class lj implements ol {
                               var15 = en.field_Hb[var11] + -var12;
                               var16 = ld.field_h[var10] - var13;
                               var17 = -var13 + ld.field_h[var11];
-                              if (-1 >= (var14 * var17 - var15 * var16 ^ -1)) {
+                              if (var14 * var17 - var15 * var16 >= 0) {
                                 break L5;
                               } else {
                                 break L6;
@@ -403,11 +403,11 @@ final class lj implements ol {
                               L9: while (true) {
                                 L10: {
                                   L11: {
-                                    if ((var17 >> 1231154692 ^ -1) == -1) {
+                                    if (var17 >> 4 == 0) {
                                       break L11;
                                     } else {
                                       var16--;
-                                      stackOut_28_0 = var16 ^ -1;
+                                      stackOut_28_0 = ~var16;
                                       stackOut_28_1 = -1;
                                       stackIn_36_0 = stackOut_28_0;
                                       stackIn_36_1 = stackOut_28_1;
@@ -437,7 +437,7 @@ final class lj implements ol {
                                       }
                                     }
                                   }
-                                  stackOut_35_0 = var16 << -307386940;
+                                  stackOut_35_0 = var16 << 4;
                                   stackOut_35_1 = var17;
                                   stackIn_36_0 = stackOut_35_0;
                                   stackIn_36_1 = stackOut_35_1;
@@ -447,7 +447,7 @@ final class lj implements ol {
                                   var18 = stackIn_36_0 + stackIn_36_1;
                                   bf.field_m[var18] = var8;
                                   da.field_g[var16] = 1 + var17;
-                                  if ((param4.field_a ^ -1) >= -1) {
+                                  if (param4.field_a <= 0) {
                                     break L13;
                                   } else {
                                     if (param4.field_z != null) {
@@ -473,7 +473,7 @@ final class lj implements ol {
                       }
                     }
                   }
-                  stackOut_45_0 = param4.field_a ^ -1;
+                  stackOut_45_0 = ~param4.field_a;
                   stackIn_46_0 = stackOut_45_0;
                   break L3;
                 }
@@ -571,11 +571,11 @@ final class lj implements ol {
         try {
           L0: {
             L1: {
-              ve.field_s = param1.c((byte) 83) << 1973319621;
+              ve.field_s = param1.c((byte) 83) << 5;
               var2_int = param1.g(11132);
-              ve.field_s = ve.field_s + (var2_int >> -1224722717);
-              ng.field_X = (var2_int & 7) << 714934034;
-              ng.field_X = ng.field_X + (param1.c((byte) -43) << -207788830);
+              ve.field_s = ve.field_s + (var2_int >> 3);
+              ng.field_X = (var2_int & 7) << 18;
+              ng.field_X = ng.field_X + (param1.c((byte) -43) << 2);
               var2_int = param1.g(11132);
               if (param0) {
                 break L1;
@@ -584,12 +584,12 @@ final class lj implements ol {
                 break L1;
               }
             }
-            ng.field_X = ng.field_X + (var2_int >> -1073484602);
-            ug.field_b = (63 & var2_int) << -112872785;
-            ug.field_b = ug.field_b + (param1.g(11132) << -1838234041);
+            ng.field_X = ng.field_X + (var2_int >> 6);
+            ug.field_b = (63 & var2_int) << 15;
+            ug.field_b = ug.field_b + (param1.g(11132) << 7);
             var2_int = param1.g(11132);
-            lm.field_j = (var2_int & 1) << -448396304;
-            ug.field_b = ug.field_b + (var2_int >> -28791807);
+            lm.field_j = (var2_int & 1) << 16;
+            ug.field_b = ug.field_b + (var2_int >> 1);
             lm.field_j = lm.field_j + param1.c((byte) 70);
             break L0;
           }

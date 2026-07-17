@@ -71,14 +71,117 @@ final class toa {
     }
 
     final static void a(int param0, float param1, int param2, float param3, float param4, byte param5, vjb param6, float param7, int param8, float param9, int param10, int param11, byte[] param12) {
-        int var13 = 0;
-        int var14 = VoidHunters.field_G;
-        if (param5 >= -38) {
-            boolean discarded$0 = toa.a(80, -3, -102);
-        }
-        for (var13 = 0; param2 > var13; var13++) {
-            nq.a(param7, param10, param1, param0, param11, var13, param9, param6, param2, param3, param8, param12, (byte) 126, param4);
-            param8 = param8 + param0 * param11;
+        int var13_int = 0;
+        RuntimeException var13 = null;
+        int var14 = 0;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        var14 = VoidHunters.field_G;
+        try {
+          L0: {
+            L1: {
+              if (param5 < -38) {
+                break L1;
+              } else {
+                boolean discarded$2 = toa.a(80, -3, -102);
+                break L1;
+              }
+            }
+            var13_int = 0;
+            L2: while (true) {
+              if (param2 <= var13_int) {
+                break L0;
+              } else {
+                nq.a(param7, param10, param1, param0, param11, var13_int, param9, param6, param2, param3, param8, param12, (byte) 126, param4);
+                param8 = param8 + param0 * param11;
+                var13_int++;
+                continue L2;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var13 = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var13;
+            stackOut_7_1 = new StringBuilder().append("toa.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44);
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param6 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L3;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L3;
+            }
+          }
+          L4: {
+            stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(44).append(param7).append(44).append(param8).append(44).append(param9).append(44).append(param10).append(44).append(param11).append(44);
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
+            if (param12 == null) {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L4;
+            } else {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L4;
+            }
+          }
+          throw rta.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
         }
     }
 
@@ -89,20 +192,35 @@ final class toa {
     }
 
     final int a(int param0, int param1) {
+        int var3 = 0;
         int var4 = 0;
-        int var5 = VoidHunters.field_G;
-        int var3 = -63 / ((-8 - param0) / 54);
-        if (((toa) this).field_c != null) {
-            // ifeq L34
-        } else {
-            return 0;
-        }
-        for (var4 = 1; var4 < ((toa) this).field_c.length; var4++) {
-            if (!(param1 >= ((toa) this).field_c[var4 - 1] + ((toa) this).field_c[var4] >> -1833770719)) {
-                return var4 - 1;
+        int var5 = 0;
+        L0: {
+          var5 = VoidHunters.field_G;
+          var3 = -63 / ((-8 - param0) / 54);
+          if (((toa) this).field_c == null) {
+            break L0;
+          } else {
+            if (((toa) this).field_c.length == 0) {
+              break L0;
+            } else {
+              var4 = 1;
+              L1: while (true) {
+                if (var4 >= ((toa) this).field_c.length) {
+                  return ((toa) this).field_c.length - 1;
+                } else {
+                  if (param1 < ((toa) this).field_c[var4 - 1] + ((toa) this).field_c[var4] >> 1) {
+                    return var4 - 1;
+                  } else {
+                    var4++;
+                    continue L1;
+                  }
+                }
+              }
             }
+          }
         }
-        return ((toa) this).field_c.length - 1;
+        return 0;
     }
 
     static {

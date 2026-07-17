@@ -11,186 +11,167 @@ final class ui extends ug {
     static boolean field_G;
 
     public static void h(int param0) {
-        Object var2 = null;
         field_U = null;
         field_V = null;
-        if (param0 != -13) {
-          var2 = null;
-          String discarded$2 = ui.a(20, (CharSequence) null);
-          field_W = null;
-          field_S = null;
-          return;
-        } else {
-          field_W = null;
-          field_S = null;
-          return;
-        }
+        field_W = null;
+        field_S = null;
     }
 
     final static String a(int param0, CharSequence param1) {
-        int var2 = 0;
+        RuntimeException var2 = null;
+        int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
+        StringBuilder var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        StringBuilder var10 = null;
-        StringBuilder var11 = null;
+        Object stackIn_16_0 = null;
+        RuntimeException stackIn_32_0 = null;
+        StringBuilder stackIn_32_1 = null;
+        RuntimeException stackIn_33_0 = null;
+        StringBuilder stackIn_33_1 = null;
+        RuntimeException stackIn_34_0 = null;
+        StringBuilder stackIn_34_1 = null;
+        String stackIn_34_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        Object stackOut_15_0 = null;
+        RuntimeException stackOut_31_0 = null;
+        StringBuilder stackOut_31_1 = null;
+        RuntimeException stackOut_33_0 = null;
+        StringBuilder stackOut_33_1 = null;
+        String stackOut_33_2 = null;
+        RuntimeException stackOut_32_0 = null;
+        StringBuilder stackOut_32_1 = null;
+        String stackOut_32_2 = null;
         var9 = SteelSentinels.field_G;
-        if (param1 != null) {
-          var2 = 0;
-          var3 = param1.length();
-          L0: while (true) {
-            if (var3 > var2) {
-              if (jd.a(param1.charAt(var2), -33)) {
-                var2++;
-                continue L0;
-              } else {
-                L1: while (true) {
-                  L2: {
-                    if (var2 >= var3) {
-                      break L2;
-                    } else {
-                      if (!jd.a(param1.charAt(-1 + var3), -33)) {
-                        break L2;
-                      } else {
-                        var3--;
-                        continue L1;
-                      }
-                    }
-                  }
-                  var4 = var3 - var2;
-                  if (var4 >= param0) {
-                    if ((var4 ^ -1) >= -13) {
-                      L3: {
-                        var11 = new StringBuilder(var4);
-                        var6 = var2;
-                        if (var3 <= var6) {
-                          break L3;
-                        } else {
-                          L4: {
-                            var7 = param1.charAt(var6);
-                            if (!qh.a((byte) -30, (char) var7)) {
-                              var6++;
-                              break L4;
-                            } else {
-                              L5: {
-                                var8 = sg.a((byte) 115, (char) var7);
-                                if (var8 == 0) {
-                                  var6++;
-                                  break L5;
-                                } else {
-                                  StringBuilder discarded$2 = var11.append(var8);
-                                  break L5;
-                                }
-                              }
-                              var6++;
-                              break L4;
-                            }
-                          }
-                          var6++;
-                          var6++;
-                          var6++;
-                          var6++;
-                          break L3;
-                        }
-                      }
-                      if (0 == var11.length()) {
-                        return null;
-                      } else {
-                        return var11.toString();
-                      }
-                    } else {
-                      return null;
-                    }
+        try {
+          if (param1 != null) {
+            var2_int = 0;
+            var3 = param1.length();
+            L0: while (true) {
+              L1: {
+                if (var3 <= var2_int) {
+                  break L1;
+                } else {
+                  if (!jd.a(param1.charAt(var2_int), -33)) {
+                    break L1;
                   } else {
-                    return null;
+                    var2_int++;
+                    continue L0;
                   }
                 }
               }
-            } else {
-              L6: while (true) {
-                L7: {
-                  if (var2 >= var3) {
-                    break L7;
+              L2: while (true) {
+                L3: {
+                  if (var2_int >= var3) {
+                    break L3;
                   } else {
                     if (!jd.a(param1.charAt(-1 + var3), -33)) {
-                      break L7;
+                      break L3;
                     } else {
                       var3--;
-                      continue L6;
+                      continue L2;
                     }
                   }
                 }
-                var4 = var3 - var2;
+                var4 = var3 - var2_int;
                 if (var4 >= param0) {
-                  if ((var4 ^ -1) >= -13) {
-                    L8: {
-                      var10 = new StringBuilder(var4);
-                      var6 = var2;
+                  if (var4 <= 12) {
+                    var5 = new StringBuilder(var4);
+                    var6 = var2_int;
+                    L4: while (true) {
                       if (var3 <= var6) {
-                        break L8;
+                        if (0 != var5.length()) {
+                          return var5.toString();
+                        } else {
+                          return null;
+                        }
                       } else {
-                        L9: {
+                        L5: {
                           var7 = param1.charAt(var6);
                           if (!qh.a((byte) -30, (char) var7)) {
                             var6++;
-                            break L9;
+                            break L5;
                           } else {
-                            L10: {
-                              var8 = sg.a((byte) 115, (char) var7);
-                              if (var8 == 0) {
-                                var6++;
-                                break L10;
-                              } else {
-                                StringBuilder discarded$3 = var10.append(var8);
-                                break L10;
-                              }
+                            var8 = sg.a((byte) 115, (char) var7);
+                            if (var8 == 0) {
+                              var6++;
+                              break L5;
+                            } else {
+                              StringBuilder discarded$1 = var5.append(var8);
+                              var6++;
+                              break L5;
                             }
-                            var6++;
-                            break L9;
                           }
                         }
                         var6++;
-                        var6++;
-                        var6++;
-                        var6++;
-                        break L8;
+                        continue L4;
                       }
                     }
-                    if (0 == var10.length()) {
-                      return null;
-                    } else {
-                      return var10.toString();
-                    }
                   } else {
-                    return null;
+                    stackOut_15_0 = null;
+                    stackIn_16_0 = stackOut_15_0;
+                    return (String) (Object) stackIn_16_0;
                   }
                 } else {
                   return null;
                 }
               }
             }
+          } else {
+            return null;
           }
-        } else {
-          return null;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L6: {
+            var2 = decompiledCaughtException;
+            stackOut_31_0 = (RuntimeException) var2;
+            stackOut_31_1 = new StringBuilder().append("ui.CA(").append(param0).append(44);
+            stackIn_33_0 = stackOut_31_0;
+            stackIn_33_1 = stackOut_31_1;
+            stackIn_32_0 = stackOut_31_0;
+            stackIn_32_1 = stackOut_31_1;
+            if (param1 == null) {
+              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
+              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
+              stackOut_33_2 = "null";
+              stackIn_34_0 = stackOut_33_0;
+              stackIn_34_1 = stackOut_33_1;
+              stackIn_34_2 = stackOut_33_2;
+              break L6;
+            } else {
+              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
+              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
+              stackOut_32_2 = "{...}";
+              stackIn_34_0 = stackOut_32_0;
+              stackIn_34_1 = stackOut_32_1;
+              stackIn_34_2 = stackOut_32_2;
+              break L6;
+            }
+          }
+          throw ci.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + 41);
         }
     }
 
     ui(lh param0) {
         super(param0.field_o, param0.field_z, param0.field_x, param0.field_E, (qk) null, (tn) null);
-        param0.a(0, (byte) -101, 0, ((ui) this).field_x, ((ui) this).field_E);
-        ((ui) this).field_J = param0;
-        ((ui) this).field_R = 256;
+        try {
+            param0.a(0, (byte) -101, 0, ((ui) this).field_x, ((ui) this).field_E);
+            ((ui) this).field_J = param0;
+            ((ui) this).field_R = 256;
+        } catch (RuntimeException runtimeException) {
+            throw ci.a((Throwable) (Object) runtimeException, "ui.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void a(int param0, byte param1, int param2, int param3) {
         wk var6 = null;
-        if (-1 == (param3 ^ -1)) {
+        if (param3 == 0) {
           if (((ui) this).field_J != null) {
             if (0 != ((ui) this).field_R) {
-              if ((((ui) this).field_R ^ -1) == -257) {
+              if (((ui) this).field_R == 256) {
                 ((ui) this).field_J.a(param0 - -((ui) this).field_z, (byte) -117, param2 - -((ui) this).field_o, param3);
                 return;
               } else {
@@ -217,9 +198,6 @@ final class ui extends ug {
     }
 
     final static int a(boolean param0) {
-        if (param0) {
-            return -12;
-        }
         return al.field_d;
     }
 

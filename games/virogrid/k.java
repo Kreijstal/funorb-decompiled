@@ -7,18 +7,9 @@ final class k {
     static int[] field_c;
 
     public static void a(int param0) {
-        if (param0 != 1000) {
-          field_c = null;
-          field_a = null;
-          field_b = null;
-          field_c = null;
-          return;
-        } else {
-          field_a = null;
-          field_b = null;
-          field_c = null;
-          return;
-        }
+        field_a = null;
+        field_b = null;
+        field_c = null;
     }
 
     final static boolean b(int param0) {

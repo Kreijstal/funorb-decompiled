@@ -74,7 +74,7 @@ final class pna extends gda {
     }
 
     public static void e(int param0) {
-        int var1 = -86 / ((param0 - 40) / 50);
+        int var1 = -86;
         field_k = null;
     }
 

@@ -43,7 +43,7 @@ abstract class oe extends ce implements ra {
                     break L2;
                   } else {
                     var7 = var6.d(-30);
-                    if ((var2_int ^ -1) <= (var7 ^ -1)) {
+                    if (~var2_int <= ~var7) {
                       break L2;
                     } else {
                       var2_int = var7;
@@ -100,7 +100,7 @@ abstract class oe extends ce implements ra {
             var3 = ((oe) this).field_K;
             var4 = 0;
             L1: while (true) {
-              if ((var3.length ^ -1) >= (var4 ^ -1)) {
+              if (~var3.length >= ~var4) {
                 L2: {
                   if (!param0) {
                     break L2;
@@ -203,7 +203,7 @@ abstract class oe extends ce implements ra {
             } else {
               var4_int = ((oe) this).field_K.length - 1;
               L1: while (true) {
-                if ((var4_int ^ -1) > -1) {
+                if (var4_int < 0) {
                   L2: {
                     if (param2 == 0) {
                       break L2;
@@ -224,7 +224,7 @@ abstract class oe extends ce implements ra {
                       if (var5.a(true)) {
                         var4_int = var4_int - param1;
                         L4: while (true) {
-                          if ((var4_int ^ -1) > -1) {
+                          if (var4_int < 0) {
                             break L3;
                           } else {
                             L5: {
@@ -320,7 +320,7 @@ abstract class oe extends ce implements ra {
                 var5 = ((oe) this).field_K;
                 var6 = 0;
                 L1: while (true) {
-                  if ((var5.length ^ -1) >= (var6 ^ -1)) {
+                  if (~var5.length >= ~var6) {
                     break L0;
                   } else {
                     L2: {
@@ -449,9 +449,9 @@ abstract class oe extends ce implements ra {
               if (0 <= var10) {
                 break L0;
               } else {
-                var11 = -var7_int + 65536 >> 1531409928;
-                var12 = var7_int >> -1962121400;
-                var13 = (var11 * (param4 & 16711935) - -(var12 * (param2 & 16711935)) & -16711936) - -(16711680 & var12 * (65280 & param2) + (65280 & param4) * var11) >>> 1249901160;
+                var11 = -var7_int + 65536 >> 8;
+                var12 = var7_int >> 8;
+                var13 = (var11 * (param4 & 16711935) - -(var12 * (param2 & 16711935)) & -16711936) - -(16711680 & var12 * (65280 & param2) + (65280 & param4) * var11) >>> 8;
                 var14 = -param1;
                 L8: while (true) {
                   if (0 <= var14) {
@@ -526,13 +526,13 @@ abstract class oe extends ce implements ra {
               }
               var8 = 0;
               L2: while (true) {
-                if ((var7.length ^ -1) >= (var8 ^ -1)) {
+                if (~var7.length >= ~var8) {
                   break L0;
                 } else {
                   L3: {
                     var9 = var7[var8];
                     if (null != var9) {
-                      var9.a(param0, param1 + 0, ((oe) this).field_u + param2, param3, param4 + ((oe) this).field_D, param5);
+                      var9.a(param0, param1, ((oe) this).field_u + param2, param3, param4 + ((oe) this).field_D, param5);
                       break L3;
                     } else {
                       break L3;
@@ -803,7 +803,7 @@ abstract class oe extends ce implements ra {
               } else {
                 L3: {
                   var4 = param1.charAt(var3);
-                  if (-49 < (var4 ^ -1)) {
+                  if (var4 < 48) {
                     break L3;
                   } else {
                     if (57 >= var4) {
@@ -866,7 +866,7 @@ abstract class oe extends ce implements ra {
             var2 = ((oe) this).field_K;
             var3 = 0;
             L1: while (true) {
-              if ((var3 ^ -1) <= (var2.length ^ -1)) {
+              if (~var3 <= ~var2.length) {
                 L2: {
                   if (param0 == -95) {
                     break L2;
@@ -924,7 +924,7 @@ abstract class oe extends ce implements ra {
             if (!param0) {
               var1_ref = de.field_V;
               var2 = var1_ref.d((byte) -25);
-              if (-1 != (var2 ^ -1)) {
+              if (var2 != 0) {
                 if (1 != var2) {
                   if (2 == var2) {
                     L1: {
@@ -937,7 +937,7 @@ abstract class oe extends ce implements ra {
                     }
                     return;
                   } else {
-                    if ((var2 ^ -1) != -4) {
+                    if (var2 != 3) {
                       if (4 != var2) {
                         qb.a((Throwable) null, 16408, "F1: " + qk.d((byte) 17));
                         si.a(100);
@@ -952,7 +952,7 @@ abstract class oe extends ce implements ra {
                       }
                     } else {
                       L2: {
-                        if ((jj.field_b ^ -1) != -3) {
+                        if (jj.field_b != 2) {
                           break L2;
                         } else {
                           jj.field_b = 1;
@@ -1061,7 +1061,7 @@ abstract class oe extends ce implements ra {
                   }
                 }
                 L12: {
-                  if ((var1_ref.d((byte) -111) ^ -1) != -2) {
+                  if (var1_ref.d((byte) -111) != 1) {
                     stackOut_12_0 = 0;
                     stackIn_13_0 = stackOut_12_0;
                     break L12;
@@ -1160,7 +1160,7 @@ abstract class oe extends ce implements ra {
               if (null != ((oe) this).field_K) {
                 var5_int = -1 + ((oe) this).field_K.length;
                 L3: while (true) {
-                  if (-1 < (var5_int ^ -1)) {
+                  if (var5_int < 0) {
                     break L2;
                   } else {
                     L4: {
@@ -1232,7 +1232,7 @@ abstract class oe extends ce implements ra {
               var8 = ((oe) this).field_K;
               var9 = 0;
               L1: while (true) {
-                if ((var9 ^ -1) <= (var8.length ^ -1)) {
+                if (~var9 <= ~var8.length) {
                   L2: {
                     if (param6 == -55) {
                       break L2;
@@ -1359,7 +1359,7 @@ abstract class oe extends ce implements ra {
                       } else {
                         var4_int = var4_int + param1;
                         L4: while (true) {
-                          if ((var4_int ^ -1) <= (((oe) this).field_K.length ^ -1)) {
+                          if (~var4_int <= ~((oe) this).field_K.length) {
                             break L3;
                           } else {
                             L5: {
@@ -1677,8 +1677,8 @@ abstract class oe extends ce implements ra {
           L0: {
             L1: {
               param1--;
-              param1 = param1 | param1 >>> -1810527583;
-              param1 = param1 | param1 >>> -1027453694;
+              param1 = param1 | param1 >>> 1;
+              param1 = param1 | param1 >>> 2;
               if (param0 == -10498) {
                 break L1;
               } else {
@@ -1686,9 +1686,9 @@ abstract class oe extends ce implements ra {
                 break L1;
               }
             }
-            param1 = param1 | param1 >>> 499290852;
-            param1 = param1 | param1 >>> -972289368;
-            param1 = param1 | param1 >>> -1371497776;
+            param1 = param1 | param1 >>> 4;
+            param1 = param1 | param1 >>> 8;
+            param1 = param1 | param1 >>> 16;
             stackOut_3_0 = param1 + 1;
             stackIn_4_0 = stackOut_3_0;
             break L0;
@@ -1742,7 +1742,7 @@ abstract class oe extends ce implements ra {
                     var2 = oh.field_f;
                     var3 = 0;
                     L3: while (true) {
-                      if ((var2.length ^ -1) >= (var3 ^ -1)) {
+                      if (~var2.length >= ~var3) {
                         stackOut_29_0 = 0;
                         stackIn_30_0 = stackOut_29_0;
                         break L0;
@@ -1825,9 +1825,9 @@ abstract class oe extends ce implements ra {
               var6 = ((oe) this).field_K;
               var7 = 0;
               L1: while (true) {
-                if ((var6.length ^ -1) >= (var7 ^ -1)) {
+                if (~var6.length >= ~var7) {
                   var5_int = param1;
-                  if ((var5_int ^ -1) == -81) {
+                  if (var5_int == 80) {
                     L2: {
                       if (!bj.field_d[81]) {
                         stackOut_26_0 = this.b(param2, 0);

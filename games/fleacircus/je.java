@@ -6902,8 +6902,8 @@ final class je extends bb {
               L1: {
                 L2: {
                   L3: {
-                    var5_int = (((je) this).field_u >> 150073281) + (param1 - -((je) this).field_y);
-                    var6 = param0 + (((je) this).field_z - -(((je) this).field_j >> -720462879));
+                    var5_int = (((je) this).field_u >> 1) + (param1 - -((je) this).field_y);
+                    var6 = param0 + (((je) this).field_z - -(((je) this).field_j >> 1));
                     var8 = ((je) this).field_K.a(false);
                     if (ea.field_b == var8) {
                       break L3;
@@ -6919,15 +6919,15 @@ final class je extends bb {
                     L5: {
                       L6: {
                         var7 = t.field_h[0];
-                        var9 = var7.field_x << -1396202815;
-                        var10 = var7.field_r << 429082017;
+                        var9 = var7.field_x << 1;
+                        var10 = var7.field_r << 1;
                         if (pb.field_c == null) {
                           break L6;
                         } else {
-                          if ((pb.field_c.field_w ^ -1) > (var9 ^ -1)) {
+                          if (~pb.field_c.field_w > ~var9) {
                             break L6;
                           } else {
-                            if ((var10 ^ -1) >= (pb.field_c.field_t ^ -1)) {
+                            if (~var10 >= ~pb.field_c.field_t) {
                               break L5;
                             } else {
                               break L6;
@@ -6947,7 +6947,7 @@ final class je extends bb {
                     gb.c();
                     break L4;
                   }
-                  var7.a(112, 144, var7.field_x << 1618462532, var7.field_r << 1430294852, -((je) this).field_L << -386559766, 4096);
+                  var7.a(112, 144, var7.field_x << 4, var7.field_r << 4, -((je) this).field_L << 10, 4096);
                   ia.a(-80);
                   pb.field_c.a(var5_int + -var7.field_x, var6 - var7.field_r, 256);
                   if (var11 == 0) {
@@ -6962,7 +6962,7 @@ final class je extends bb {
                   } else {
                     if (var8 == hm.field_b) {
                       var7 = t.field_h[1];
-                      var7.a(-(var7.field_w >> -999702399) + var5_int, var6 - (var7.field_t >> -1757584447), 256);
+                      var7.a(-(var7.field_w >> 1) + var5_int, var6 - (var7.field_t >> 1), 256);
                       if (var11 == 0) {
                         break L1;
                       } else {
@@ -6974,7 +6974,7 @@ final class je extends bb {
                   }
                 }
                 var7 = t.field_h[2];
-                var7.a(-(var7.field_w >> -2094976831) + var5_int, var6 + -(var7.field_t >> 874680897), 256);
+                var7.a(-(var7.field_w >> 1) + var5_int, var6 + -(var7.field_t >> 1), 256);
                 break L1;
               }
               break L0;

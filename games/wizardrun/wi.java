@@ -98,16 +98,21 @@ final class wi extends mi {
     }
 
     final void b(ub param0, byte param1) {
-        if (!(param0 instanceof tj)) {
-            throw new IllegalArgumentException();
+        tj var3 = null;
+        try {
+            if (!(param0 instanceof tj)) {
+                throw new IllegalArgumentException();
+            }
+            var3 = (tj) (Object) param0;
+            if (param1 < 50) {
+                tj discarded$0 = ((wi) this).f(95);
+            }
+            ((wi) this).field_I.a((wl) (Object) var3, -5441);
+            var3.field_H = true;
+            boolean discarded$1 = var3.a((ub) this, 8);
+        } catch (RuntimeException runtimeException) {
+            throw bd.a((Throwable) (Object) runtimeException, "wi.QA(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
-        tj var3 = (tj) (Object) param0;
-        if (param1 < 50) {
-            tj discarded$0 = ((wi) this).f(95);
-        }
-        ((wi) this).field_I.a((wl) (Object) var3, -5441);
-        var3.field_H = true;
-        boolean discarded$1 = var3.a((ub) this, 8);
     }
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -127,9 +132,6 @@ final class wi extends mi {
     }
 
     public static void h(byte param0) {
-        if (param0 <= 80) {
-            return;
-        }
         field_H = null;
         field_G = null;
         field_L = null;

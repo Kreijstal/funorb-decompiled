@@ -139,60 +139,52 @@ final class jp {
     }
 
     final static void a(int param0, int param1, int param2, wk[] param3, int param4, int param5) {
-        if (param5 != -8991) {
-          field_g = null;
-          param3[0].g(param0, param1, param4);
-          param3[1].b(param3[1].field_y + param0, param1, -(param3[2].field_y << -1362163231) + param2, param3[2].field_v, param4);
-          param3[2].g(-param3[2].field_y + (param2 + param0), param1, param4);
-          return;
-        } else {
-          param3[0].g(param0, param1, param4);
-          param3[1].b(param3[1].field_y + param0, param1, -(param3[2].field_y << -1362163231) + param2, param3[2].field_v, param4);
-          param3[2].g(-param3[2].field_y + (param2 + param0), param1, param4);
-          return;
+        try {
+            param3[0].g(param0, param1, param4);
+            param3[1].b(param3[1].field_y + param0, param1, -(param3[2].field_y << 1) + param2, param3[2].field_v, param4);
+            param3[2].g(-param3[2].field_y + (param2 + param0), param1, param4);
+        } catch (RuntimeException runtimeException) {
+            throw ig.a((Throwable) (Object) runtimeException, "jp.B(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + -8991 + 41);
         }
     }
 
     final static void a(vh param0, int param1) {
-        la.field_d = param0.e((byte) -104) << 721562789;
-        int var2 = param0.k(0);
-        rt.field_D = (var2 & 7) << 1026024594;
-        la.field_d = la.field_d + (var2 >> -137564637);
-        rt.field_D = rt.field_D + (param0.e((byte) -104) << 1261039714);
-        var2 = param0.k(0);
-        nk.field_m = 2064384 & var2 << 638124015;
-        rt.field_D = rt.field_D + (var2 >> 1838881158);
-        nk.field_m = nk.field_m + (param0.k(0) << 733537511);
-        int var3 = 16 % ((param1 - -45) / 34);
-        var2 = param0.k(0);
-        ov.field_e = (1 & var2) << 126026960;
-        nk.field_m = nk.field_m + (var2 >> -67324479);
-        ov.field_e = ov.field_e + param0.e((byte) -104);
+        int var2_int = 0;
+        try {
+            la.field_d = param0.e((byte) -104) << 5;
+            var2_int = param0.k(0);
+            rt.field_D = (var2_int & 7) << 18;
+            la.field_d = la.field_d + (var2_int >> 3);
+            rt.field_D = rt.field_D + (param0.e((byte) -104) << 2);
+            var2_int = param0.k(0);
+            nk.field_m = 2064384 & var2_int << 15;
+            rt.field_D = rt.field_D + (var2_int >> 6);
+            nk.field_m = nk.field_m + (param0.k(0) << 7);
+            int var3 = 0;
+            var2_int = param0.k(0);
+            ov.field_e = (1 & var2_int) << 16;
+            nk.field_m = nk.field_m + (var2_int >> 1);
+            ov.field_e = ov.field_e + param0.e((byte) -104);
+        } catch (RuntimeException runtimeException) {
+            throw ig.a((Throwable) (Object) runtimeException, "jp.D(" + (param0 != null ? "{...}" : "null") + 44 + -83 + 41);
+        }
     }
 
     private final void a(int param0, we param1, byte param2) {
-        float var4 = 0.0f;
-        var4 = (float)(((jp) this).field_e - -1) + (float)param0 / 100.0f;
-        if (param0 == 0) {
-          ((jp) this).field_b = param1.field_e;
-          if (param2 <= -64) {
-            ((jp) this).field_d = (float)((jp) this).field_h * var4 / (float)(1 + ((jp) this).field_f);
-            return;
-          } else {
-            boolean discarded$2 = ((jp) this).a(8);
-            ((jp) this).field_d = (float)((jp) this).field_h * var4 / (float)(1 + ((jp) this).field_f);
-            return;
-          }
-        } else {
-          ((jp) this).field_b = param1.field_j + " - " + param0 + "%";
-          if (param2 <= -64) {
-            ((jp) this).field_d = (float)((jp) this).field_h * var4 / (float)(1 + ((jp) this).field_f);
-            return;
-          } else {
-            boolean discarded$3 = ((jp) this).a(8);
-            ((jp) this).field_d = (float)((jp) this).field_h * var4 / (float)(1 + ((jp) this).field_f);
-            return;
-          }
+        float var4_float = 0.0f;
+        try {
+            var4_float = (float)(((jp) this).field_e - -1) + (float)param0 / 100.0f;
+            if (param0 != 0) {
+                ((jp) this).field_b = param1.field_j + " - " + param0 + "%";
+            } else {
+                ((jp) this).field_b = param1.field_e;
+            }
+            if (param2 > -64) {
+                boolean discarded$0 = ((jp) this).a(8);
+            }
+            ((jp) this).field_d = (float)((jp) this).field_h * var4_float / (float)(1 + ((jp) this).field_f);
+        } catch (RuntimeException runtimeException) {
+            throw ig.a((Throwable) (Object) runtimeException, "jp.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
     }
 
@@ -200,7 +192,7 @@ final class jp {
         if (qn.field_l >= param2 + param0) {
             return param0;
         }
-        if (!((param0 + param1 - param2 ^ -1) > param3)) {
+        if (!(param0 + param1 - param2 < 0)) {
             return -param2 + (param1 + param0);
         }
         return -param2 + qn.field_l;

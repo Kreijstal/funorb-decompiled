@@ -14,7 +14,7 @@ final class en {
         synchronized (var5) {
           L0: {
             field_a.field_D = param2;
-            field_a.field_H = param4;
+            field_a.field_H = 9;
             field_a.field_C = param0;
             field_a.field_i = 0;
             field_a.field_y = param1;
@@ -579,7 +579,7 @@ final class en {
                                                                                 }
                                                                               } else {
                                                                                 param0.field_b[var31] = param0.field_b[var31] - 1;
-                                                                                param0.field_g[param0.field_b[var31]] = param0.field_g[param0.field_b[var31 - 1] + 16 - 1];
+                                                                                param0.field_g[param0.field_b[var31]] = param0.field_g[param0.field_b[var31 - 1] + 15];
                                                                                 var31--;
                                                                                 continue L19;
                                                                               }
@@ -665,7 +665,7 @@ final class en {
                                                                       break L27;
                                                                     }
                                                                   } else {
-                                                                    var15 = var15 + 1 * var16;
+                                                                    var15 = var15 + var16;
                                                                     break L27;
                                                                   }
                                                                 }
@@ -843,11 +843,11 @@ final class en {
                                                 var1 = en.d(param0);
                                                 if (var1 != 0) {
                                                   var1 = en.d(param0);
-                                                  if (var1 == 0) {
+                                                  if (var1 != 0) {
                                                     var17--;
                                                     continue L39;
                                                   } else {
-                                                    var17--;
+                                                    var17++;
                                                     continue L39;
                                                   }
                                                 } else {

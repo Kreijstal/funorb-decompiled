@@ -3,9 +3,6 @@
  */
 final class ne {
     final static void a(java.applet.Applet param0, String param1, int param2) throws Throwable {
-        if (param2 != 5797) {
-            return;
-        }
         Object discarded$0 = netscape.javascript.JSObject.getWindow(param0).eval(param1);
     }
 

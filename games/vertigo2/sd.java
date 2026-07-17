@@ -100,16 +100,21 @@ final class sd extends oh {
     }
 
     final void b(iq param0, int param1) {
-        if (!(param0 instanceof nm)) {
-            throw new IllegalArgumentException();
+        nm var3 = null;
+        try {
+            if (!(param0 instanceof nm)) {
+                throw new IllegalArgumentException();
+            }
+            var3 = (nm) (Object) param0;
+            ((sd) this).field_J.a((li) (Object) var3, (byte) 27);
+            var3.field_I = true;
+            if (param1 != 0) {
+                sd.f((byte) 122);
+            }
+            boolean discarded$0 = var3.a((byte) 116, (iq) this);
+        } catch (RuntimeException runtimeException) {
+            throw wn.a((Throwable) (Object) runtimeException, "sd.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
-        nm var3 = (nm) (Object) param0;
-        ((sd) this).field_J.a((li) (Object) var3, (byte) 27);
-        var3.field_I = true;
-        if (param1 != 0) {
-            sd.f((byte) 122);
-        }
-        boolean discarded$0 = var3.a((byte) 116, (iq) this);
     }
 
     final void a(boolean param0, int param1, int param2, int param3) {

@@ -168,9 +168,6 @@ final class of {
 
     private final void c(byte param0) {
         ((of) this).field_y = false;
-        if (param0 != 32) {
-            of.a((byte) -15);
-        }
     }
 
     final void a(int param0, int param1, int param2, int param3, byte param4) {
@@ -186,10 +183,7 @@ final class of {
     }
 
     final static void b(byte param0) {
-        hb.field_x.c((gm) (Object) new fm(), param0 + -72);
-        if (param0 != 105) {
-            field_m = 65;
-        }
+        hb.field_x.c((gm) (Object) new fm(), 33);
     }
 
     public static void a(byte param0) {

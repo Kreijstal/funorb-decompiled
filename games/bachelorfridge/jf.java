@@ -9,9 +9,6 @@ final class jf extends pu {
 
     public static void b(int param0) {
         field_n = null;
-        if (param0 != 0) {
-            return;
-        }
         field_l = null;
     }
 

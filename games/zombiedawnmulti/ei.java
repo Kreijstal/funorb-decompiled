@@ -15,14 +15,7 @@ final class ei {
         field_d = null;
         field_g = null;
         field_c = null;
-        if (param0 != -5794) {
-          field_e = null;
-          field_e = null;
-          return;
-        } else {
-          field_e = null;
-          return;
-        }
+        field_e = null;
     }
 
     final static void a(int param0, int param1, int param2) {

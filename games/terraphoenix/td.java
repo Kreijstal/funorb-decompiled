@@ -19,16 +19,8 @@ abstract class td {
         field_b = null;
         field_a = null;
         field_e = null;
-        if (param0 != -21697) {
-          field_a = null;
-          field_h = null;
-          field_j = null;
-          return;
-        } else {
-          field_h = null;
-          field_j = null;
-          return;
-        }
+        field_h = null;
+        field_j = null;
     }
 
     abstract void a(int param0, int param1, int param2);

@@ -15,121 +15,146 @@ final class le extends bg {
 
     final static void a(Object param0, int param1, pn param2) {
         Exception var3 = null;
+        RuntimeException var3_ref = null;
         int var3_int = 0;
         int var4 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var4 = SteelSentinels.field_G;
-                    if (param2.field_b == null) {
-                        statePc = 2;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 2: {
-                    return;
-                }
-                case 3: {
-                    var3_int = 0;
-                    statePc = 4;
-                    continue stateLoop;
-                }
-                case 4: {
-                    if (var3_int >= 50) {
-                        statePc = 7;
-                    } else {
-                        statePc = 5;
-                    }
-                    continue stateLoop;
-                }
-                case 5: {
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_19_2 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        String stackIn_22_2 = null;
+        Throwable decompiledCaughtException = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
+        var4 = SteelSentinels.field_G;
+        try {
+          L0: {
+            if (param2.field_b == null) {
+              return;
+            } else {
+              var3_int = 0;
+              L1: while (true) {
+                L2: {
+                  if (var3_int >= 50) {
+                    break L2;
+                  } else {
                     if (param2.field_b.peekEvent() == null) {
-                        statePc = 7;
+                      break L2;
                     } else {
-                        statePc = 6;
+                      a.a((byte) 125, 1L);
+                      var3_int++;
+                      continue L1;
                     }
-                    continue stateLoop;
+                  }
                 }
-                case 6: {
-                    a.a((byte) 125, 1L);
-                    var3_int++;
-                    statePc = 4;
-                    continue stateLoop;
-                }
-                case 7: {
-                    try {
-                        if (param0 != null) {
-                            statePc = 9;
-                        } else {
-                            statePc = 8;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        statePc = 10;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    try {
+                try {
+                  L3: {
+                    L4: {
+                      if (param0 != null) {
                         param2.field_b.postEvent((java.awt.AWTEvent) (Object) new java.awt.event.ActionEvent(param0, 1001, "dummy"));
-                        statePc = 10;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 13;
-                        continue stateLoop;
+                        break L4;
+                      } else {
+                        break L4;
+                      }
                     }
-                }
-                case 10: {
-                    try {
-                        if (param1 == 50) {
-                            statePc = 14;
-                        } else {
-                            statePc = 11;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 13;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    try {
+                    L5: {
+                      if (param1 == 50) {
+                        break L5;
+                      } else {
                         field_L = null;
-                        statePc = 14;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_11) {
-                        caughtException = stateCaught_11;
-                        statePc = 13;
-                        continue stateLoop;
+                        break L5;
+                      }
                     }
+                    break L3;
+                  }
+                } catch (java.lang.Exception decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  L6: {
+                    var3 = (Exception) (Object) decompiledCaughtException;
+                    break L6;
+                  }
                 }
-                case 13: {
-                    var3 = (Exception) (Object) caughtException;
-                    statePc = 14;
-                    continue stateLoop;
-                }
-                case 14: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+                break L0;
+              }
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+          decompiledCaughtException = decompiledCaughtParameter1;
+          L7: {
+            var3_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackOut_16_0 = (RuntimeException) var3_ref;
+            stackOut_16_1 = new StringBuilder().append("le.J(");
+            stackIn_18_0 = stackOut_16_0;
+            stackIn_18_1 = stackOut_16_1;
+            stackIn_17_0 = stackOut_16_0;
+            stackIn_17_1 = stackOut_16_1;
+            if (param0 == null) {
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "null";
+              stackIn_19_0 = stackOut_18_0;
+              stackIn_19_1 = stackOut_18_1;
+              stackIn_19_2 = stackOut_18_2;
+              break L7;
+            } else {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "{...}";
+              stackIn_19_0 = stackOut_17_0;
+              stackIn_19_1 = stackOut_17_1;
+              stackIn_19_2 = stackOut_17_2;
+              break L7;
+            }
+          }
+          L8: {
+            stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(44).append(param1).append(44);
+            stackIn_21_0 = stackOut_19_0;
+            stackIn_21_1 = stackOut_19_1;
+            stackIn_20_0 = stackOut_19_0;
+            stackIn_20_1 = stackOut_19_1;
+            if (param2 == null) {
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "null";
+              stackIn_22_0 = stackOut_21_0;
+              stackIn_22_1 = stackOut_21_1;
+              stackIn_22_2 = stackOut_21_2;
+              break L8;
+            } else {
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "{...}";
+              stackIn_22_0 = stackOut_20_0;
+              stackIn_22_1 = stackOut_20_1;
+              stackIn_22_2 = stackOut_20_2;
+              break L8;
+            }
+          }
+          throw ci.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 41);
         }
     }
 
@@ -145,13 +170,14 @@ final class le extends bg {
 
     le(Object param0, int param1) {
         super(param1);
-        ((le) this).field_I = param0;
+        try {
+            ((le) this).field_I = param0;
+        } catch (RuntimeException runtimeException) {
+            throw ci.a((Throwable) (Object) runtimeException, "le.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     public static void i(int param0) {
-        if (param0 < 59) {
-            return;
-        }
         field_L = null;
         field_B = null;
         field_J = null;

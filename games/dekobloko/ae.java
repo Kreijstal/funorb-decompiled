@@ -15,11 +15,11 @@ final class ae extends com.ms.dll.Callback {
             return com.ms.win32.User32.CallWindowProc(var5, param0, param1, param2, param3);
         }
         if (32 != param1) {
-            if ((param1 ^ -1) == -101025) {
+            if (param1 == 101024) {
                 int discarded$0 = com.ms.win32.User32.SetCursor(((ae) this).field_b ? ((ae) this).field_d : 0);
                 return 0;
             }
-            if (-2 == (param1 ^ -1)) {
+            if (param1 == 1) {
                 ((ae) this).field_e = 0;
                 ((ae) this).field_b = true;
                 return com.ms.win32.User32.CallWindowProc(((ae) this).field_a, param0, param1, param2, param3);
@@ -31,11 +31,11 @@ final class ae extends com.ms.dll.Callback {
             int discarded$1 = com.ms.win32.User32.SetCursor(!((ae) this).field_b ? 0 : ((ae) this).field_d);
             return 0;
         }
-        if ((param1 ^ -1) == -101025) {
+        if (param1 == 101024) {
             int discarded$2 = com.ms.win32.User32.SetCursor(((ae) this).field_b ? ((ae) this).field_d : 0);
             return 0;
         }
-        if (-2 == (param1 ^ -1)) {
+        if (param1 == 1) {
             ((ae) this).field_e = 0;
             ((ae) this).field_b = true;
             return com.ms.win32.User32.CallWindowProc(((ae) this).field_a, param0, param1, param2, param3);

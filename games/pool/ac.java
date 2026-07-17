@@ -12,34 +12,81 @@ final class ac extends tm {
 
     final static void a(int param0, boolean param1, boolean param2, cg param3) {
         Object var4 = null;
+        RuntimeException var4_ref = null;
         Throwable var5 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_12_2 = null;
         Throwable decompiledCaughtException = null;
-        if (ij.field_u == param3) {
-          if (param0 != 256) {
-            field_p = null;
-            return;
-          } else {
-            return;
-          }
-        } else {
-          var4 = (Object) (Object) tl.field_N;
-          synchronized (var4) {
-            L0: {
-              tl.field_N.a((byte) -121, -1, 256);
-              ij.field_u = param3;
-              tl.field_N.a(param3, param1, (byte) -14, param2);
-              break L0;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (ij.field_u == param3) {
+                break L1;
+              } else {
+                var4 = (Object) (Object) tl.field_N;
+                synchronized (var4) {
+                  L2: {
+                    tl.field_N.a((byte) -121, -1, 256);
+                    ij.field_u = param3;
+                    tl.field_N.a(param3, param1, (byte) -14, param2);
+                    break L2;
+                  }
+                }
+                break L1;
+              }
             }
+            L3: {
+              if (param0 == 256) {
+                break L3;
+              } else {
+                field_p = null;
+                break L3;
+              }
+            }
+            break L0;
           }
-          L1: {
-            if (param0 == 256) {
-              break L1;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var4_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackOut_9_0 = (RuntimeException) var4_ref;
+            stackOut_9_1 = new StringBuilder().append("ac.H(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
+            if (param3 == null) {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
+              break L4;
             } else {
-              field_p = null;
-              break L1;
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
+              break L4;
             }
           }
-          return;
+          throw wm.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
         }
     }
 
@@ -52,13 +99,13 @@ final class ac extends tm {
           var5 = null;
           ((ac) this).a(-117, (di) null);
           var3 = param0;
-          if ((var3 ^ -1) == -1) {
+          if (var3 == 0) {
             return 13421772;
           } else {
             if (1 != var3) {
               if (var3 != 2) {
                 if (var3 != 3) {
-                  if (-5 != (var3 ^ -1)) {
+                  if (var3 != 4) {
                     if (5 == var3) {
                       return this.c(91, 0);
                     } else {
@@ -67,7 +114,7 @@ final class ac extends tm {
                           if (var3 == 8) {
                             return 3355443;
                           } else {
-                            if (-10 != (var3 ^ -1)) {
+                            if (var3 != 9) {
                               L0: {
                                 if (10 == var3) {
                                   break L0;
@@ -75,14 +122,14 @@ final class ac extends tm {
                                   if (var3 == 11) {
                                     break L0;
                                   } else {
-                                    if ((var3 ^ -1) == -13) {
+                                    if (var3 == 12) {
                                       break L0;
                                     } else {
                                       if (13 != var3) {
-                                        if (-15 == (var3 ^ -1)) {
+                                        if (var3 == 14) {
                                           break L0;
                                         } else {
-                                          if ((var3 ^ -1) != -16) {
+                                          if (var3 != 15) {
                                             return 16711935;
                                           } else {
                                             return this.c(101, 1);
@@ -122,14 +169,14 @@ final class ac extends tm {
           }
         } else {
           var3 = param0;
-          if ((var3 ^ -1) == -1) {
+          if (var3 == 0) {
             return 13421772;
           } else {
             if (1 != var3) {
               if (var3 != 2) {
                 if (var3 != 3) {
                   L1: {
-                    if (-5 == (var3 ^ -1)) {
+                    if (var3 == 4) {
                       break L1;
                     } else {
                       if (5 == var3) {
@@ -140,7 +187,7 @@ final class ac extends tm {
                             if (var3 == 8) {
                               return 3355443;
                             } else {
-                              if (-10 != (var3 ^ -1)) {
+                              if (var3 != 9) {
                                 L2: {
                                   if (10 == var3) {
                                     break L2;
@@ -148,14 +195,14 @@ final class ac extends tm {
                                     if (var3 == 11) {
                                       break L2;
                                     } else {
-                                      if ((var3 ^ -1) == -13) {
+                                      if (var3 == 12) {
                                         break L2;
                                       } else {
                                         if (13 != var3) {
-                                          if (-15 == (var3 ^ -1)) {
+                                          if (var3 == 14) {
                                             break L2;
                                           } else {
-                                            if ((var3 ^ -1) != -16) {
+                                            if (var3 != 15) {
                                               return 16711935;
                                             } else {
                                               return this.c(101, 1);
@@ -200,7 +247,7 @@ final class ac extends tm {
         if (param0 < 9) {
             return null;
         }
-        if ((param1 ^ -1) == -1) {
+        if (param1 == 0) {
             return ae.field_b;
         }
         return ae.field_b;
@@ -238,7 +285,7 @@ final class ac extends tm {
     private final int c(int param0, int param1) {
         if (param0 > 75) {
           if (param1 != 0) {
-            if ((param1 ^ -1) != -2) {
+            if (param1 != 1) {
               return 16777215;
             } else {
               return 6715289;
@@ -249,7 +296,7 @@ final class ac extends tm {
         } else {
           ac.i(-122);
           if (param1 != 0) {
-            if ((param1 ^ -1) != -2) {
+            if (param1 != 1) {
               return 16777215;
             } else {
               return 6715289;
@@ -261,53 +308,158 @@ final class ac extends tm {
     }
 
     final void a(int param0, di param1) {
-        if (param0 != 198123656) {
-            boolean discarded$0 = ((ac) this).c(45);
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 == 198123656) {
+                break L1;
+              } else {
+                boolean discarded$2 = ((ac) this).c(45);
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_1 = new StringBuilder().append("ac.D(").append(param0).append(44);
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param1 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
+            }
+          }
+          throw wm.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
         }
     }
 
     final static void b(int param0, byte param1) {
         int var2 = 99 % ((-11 - param1) / 49);
         fm.field_M = fm.field_M + param0;
-        tq.field_q = (no.field_q.field_y - -sa.field_h.field_C >> 106614625) + fm.field_M;
+        tq.field_q = (no.field_q.field_y - -sa.field_h.field_C >> 1) + fm.field_M;
     }
 
     final void a(di param0, byte param1) {
-        if (((ac) this).field_a == null) {
-          ((ac) this).field_a = new eg[16];
-          ((ac) this).field_a[0] = ((ac) this).g(-930305852);
-          eg dupTemp$2 = eg.a(param0, "", "balls/ball_killer_red");
-          ((ac) this).field_a[15] = dupTemp$2;
-          ((ac) this).field_a[14] = dupTemp$2;
-          ((ac) this).field_a[13] = dupTemp$2;
-          ((ac) this).field_a[12] = dupTemp$2;
-          ((ac) this).field_a[11] = dupTemp$2;
-          ((ac) this).field_a[10] = dupTemp$2;
-          ((ac) this).field_a[9] = dupTemp$2;
-          ((ac) this).field_a[7] = dupTemp$2;
-          ((ac) this).field_a[6] = dupTemp$2;
-          ((ac) this).field_a[5] = dupTemp$2;
-          ((ac) this).field_a[4] = dupTemp$2;
-          ((ac) this).field_a[3] = dupTemp$2;
-          ((ac) this).field_a[2] = dupTemp$2;
-          ((ac) this).field_a[1] = dupTemp$2;
-          ((ac) this).field_a[8] = eg.a(param0, "", "balls/ball_killer_black");
-          if (param1 != 117) {
-            boolean discarded$3 = ((ac) this).c(40);
-            ((ac) this).field_a[1].a(8, 8, 8, 4);
-            ((ac) this).field_a[8].a(8, 8, 8, 4);
-            li.a(((ac) this).field_a[1], 0);
-            li.a(((ac) this).field_a[8], 0);
-            return;
-          } else {
-            ((ac) this).field_a[1].a(8, 8, 8, 4);
-            ((ac) this).field_a[8].a(8, 8, 8, 4);
-            li.a(((ac) this).field_a[1], 0);
-            li.a(((ac) this).field_a[8], 0);
-            return;
+        RuntimeException var3 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        try {
+          L0: {
+            if (((ac) this).field_a == null) {
+              L1: {
+                ((ac) this).field_a = new eg[16];
+                ((ac) this).field_a[0] = ((ac) this).g(-930305852);
+                eg dupTemp$2 = eg.a(param0, "", "balls/ball_killer_red");
+                ((ac) this).field_a[15] = dupTemp$2;
+                ((ac) this).field_a[14] = dupTemp$2;
+                ((ac) this).field_a[13] = dupTemp$2;
+                ((ac) this).field_a[12] = dupTemp$2;
+                ((ac) this).field_a[11] = dupTemp$2;
+                ((ac) this).field_a[10] = dupTemp$2;
+                ((ac) this).field_a[9] = dupTemp$2;
+                ((ac) this).field_a[7] = dupTemp$2;
+                ((ac) this).field_a[6] = dupTemp$2;
+                ((ac) this).field_a[5] = dupTemp$2;
+                ((ac) this).field_a[4] = dupTemp$2;
+                ((ac) this).field_a[3] = dupTemp$2;
+                ((ac) this).field_a[2] = dupTemp$2;
+                ((ac) this).field_a[1] = dupTemp$2;
+                ((ac) this).field_a[8] = eg.a(param0, "", "balls/ball_killer_black");
+                if (param1 == 117) {
+                  break L1;
+                } else {
+                  boolean discarded$3 = ((ac) this).c(40);
+                  break L1;
+                }
+              }
+              ((ac) this).field_a[1].a(8, 8, 8, 4);
+              ((ac) this).field_a[8].a(8, 8, 8, 4);
+              li.a(((ac) this).field_a[1], 0);
+              li.a(((ac) this).field_a[8], 0);
+              break L0;
+            } else {
+              return;
+            }
           }
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var3;
+            stackOut_6_1 = new StringBuilder().append("ac.C(");
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param0 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L2;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L2;
+            }
+          }
+          throw wm.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 41);
         }
     }
 
@@ -331,14 +483,14 @@ final class ac extends tm {
         field_r = new int[]{2, 20, 21, 49, 6, 5, 9};
         field_o = new int[98304];
         for (var0 = 92682; 46341 <= var0; var0--) {
-            var4 = (long)((var0 << 738371457) + -1);
-            var6 = (long)((var0 << -604846783) + 1);
-            var2 = (int)(-32768L + (var4 * var4 >> -220200046));
-            var3 = (int)(-32768L + (var6 * var6 >> 581461202));
+            var4 = (long)((var0 << 1) + -1);
+            var6 = (long)((var0 << 1) + 1);
+            var2 = (int)(-32768L + (var4 * var4 >> 18));
+            var3 = (int)(-32768L + (var6 * var6 >> 18));
             if (field_o.length <= var3) {
                 var3 = -1 + field_o.length;
             }
-            for (var1 = (var2 ^ -1) <= -1 ? var2 : 0; var3 >= var1; var1++) {
+            for (var1 = var2 >= 0 ? var2 : 0; var3 >= var1; var1++) {
                 field_o[var1] = var0;
             }
         }

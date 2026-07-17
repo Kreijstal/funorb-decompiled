@@ -42,12 +42,20 @@ final class mi extends nb {
         if (param0 != -2) {
             return;
         }
-        param1.a(-97, ((mi) this).field_j);
+        try {
+            param1.a(-97, ((mi) this).field_j);
+        } catch (RuntimeException runtimeException) {
+            throw qk.a((Throwable) (Object) runtimeException, "mi.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     mi(String param0, String param1) {
-        ((mi) this).field_j = param1;
-        ((mi) this).field_k = param0;
+        try {
+            ((mi) this).field_j = param1;
+            ((mi) this).field_k = param0;
+        } catch (RuntimeException runtimeException) {
+            throw qk.a((Throwable) (Object) runtimeException, "mi.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

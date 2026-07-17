@@ -15,9 +15,6 @@ final class oi extends wf {
         field_k = null;
         field_j = null;
         field_l = null;
-        if (param0 >= -36) {
-            field_g = null;
-        }
     }
 
     private oi() throws Throwable {

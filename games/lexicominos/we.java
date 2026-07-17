@@ -23,24 +23,12 @@ final class we {
     }
 
     public static void a(byte param0) {
-        if (param0 > -63) {
-          field_h = null;
-          field_j = null;
-          field_c = null;
-          field_h = null;
-          field_b = null;
-          field_g = null;
-          field_i = null;
-          return;
-        } else {
-          field_j = null;
-          field_c = null;
-          field_h = null;
-          field_b = null;
-          field_g = null;
-          field_i = null;
-          return;
-        }
+        field_j = null;
+        field_c = null;
+        field_h = null;
+        field_b = null;
+        field_g = null;
+        field_i = null;
     }
 
     static {

@@ -28,7 +28,11 @@ final class ri extends fe {
 
     private ri(String param0, cc param1) {
         this(param0, db.field_Sb.field_l, param1);
-        ((ri) this).field_z = db.field_Sb.field_o;
+        try {
+            ((ri) this).field_z = db.field_Sb.field_o;
+        } catch (RuntimeException runtimeException) {
+            throw wm.a((Throwable) (Object) runtimeException, "ri.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -71,7 +75,7 @@ final class ri extends fe {
             }
           }
           ((ri) this).field_G = stackIn_8_1 != 0;
-          super.a(param0 + 0, param1, param2, param3);
+          super.a(param0, param1, param2, param3);
           return;
         } else {
           L1: {
@@ -93,19 +97,27 @@ final class ri extends fe {
             }
           }
           ((ri) this).field_G = stackIn_4_1 != 0;
-          super.a(param0 + 0, param1, param2, param3);
+          super.a(param0, param1, param2, param3);
           return;
         }
     }
 
     private ri(String param0, fp param1, cc param2) {
         super(param0, param1, param2);
-        ((ri) this).field_z = db.field_Sb.field_o;
+        try {
+            ((ri) this).field_z = db.field_Sb.field_o;
+        } catch (RuntimeException runtimeException) {
+            throw wm.a((Throwable) (Object) runtimeException, "ri.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     ri(String param0, cc param1, boolean param2) {
         this(param0, param1);
-        ((ri) this).field_G = param2 ? true : false;
+        try {
+            ((ri) this).field_G = param2 ? true : false;
+        } catch (RuntimeException runtimeException) {
+            throw wm.a((Throwable) (Object) runtimeException, "ri.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     static {

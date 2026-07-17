@@ -54,9 +54,6 @@ abstract class cb {
 
     public static void b(int param0) {
         field_a = null;
-        if (param0 != 3981) {
-            return;
-        }
         field_c = null;
         field_b = null;
         field_d = null;

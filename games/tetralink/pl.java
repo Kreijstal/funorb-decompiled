@@ -13,7 +13,7 @@ final class pl {
     public static void a(byte param0) {
         field_c = null;
         field_f = null;
-        int var1 = 70 % ((param0 - -45) / 36);
+        int var1 = 1;
         field_a = null;
         field_g = null;
         field_e = null;
@@ -46,7 +46,7 @@ final class pl {
     }
 
     private static void $cfr$clinit() {
-        field_a = new byte[]{(byte)7};
+        field_a = new byte[]{(byte) 7};
         field_c = "Players: <%0>/<%1>";
         field_g = "You have 1 unread message!";
         field_b = "Send private Quick Chat to <%0>";

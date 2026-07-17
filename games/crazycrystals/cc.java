@@ -8,9 +8,6 @@ final class cc {
     static String field_b;
 
     public static void a(int param0) {
-        if (param0 != -18277) {
-            field_c = null;
-        }
         field_c = null;
         field_d = null;
         field_b = null;
@@ -19,59 +16,149 @@ final class cc {
 
     final static void a(int param0, java.applet.Applet param1, byte param2, int param3, String[] param4, int param5) {
         String var6 = null;
+        RuntimeException var6_ref = null;
         int var7 = 0;
         int var8 = 0;
-        L0: {
-          var8 = CrazyCrystals.field_B;
-          pb.field_b = param1.getParameter("overxgames");
-          if (pb.field_b != null) {
-            break L0;
-          } else {
-            pb.field_b = "0";
-            break L0;
-          }
-        }
-        L1: {
-          fp.field_b = param1.getParameter("overxachievements");
-          if (null == fp.field_b) {
-            fp.field_b = "0";
-            break L1;
-          } else {
-            break L1;
-          }
-        }
-        L2: {
-          L3: {
-            var6 = param1.getParameter("currency");
-            if (var6 == null) {
-              break L3;
-            } else {
-              if (cd.a((CharSequence) (Object) var6, (byte) -98)) {
-                v.field_d = ti.a(100, (CharSequence) (Object) var6);
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_19_2 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        String stackIn_22_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
+        var8 = CrazyCrystals.field_B;
+        try {
+          L0: {
+            L1: {
+              pb.field_b = param1.getParameter("overxgames");
+              if (pb.field_b != null) {
+                break L1;
+              } else {
+                pb.field_b = "0";
+                break L1;
+              }
+            }
+            L2: {
+              fp.field_b = param1.getParameter("overxachievements");
+              if (null == fp.field_b) {
+                fp.field_b = "0";
                 break L2;
               } else {
-                break L3;
+                break L2;
+              }
+            }
+            L3: {
+              L4: {
+                var6 = param1.getParameter("currency");
+                if (var6 == null) {
+                  break L4;
+                } else {
+                  if (cd.a((CharSequence) (Object) var6, (byte) -98)) {
+                    v.field_d = ti.a(100, (CharSequence) (Object) var6);
+                    break L3;
+                  } else {
+                    break L4;
+                  }
+                }
+              }
+              v.field_d = 2;
+              break L3;
+            }
+            pb.field_a = param3;
+            qm.field_n = param0;
+            mg.field_e = 192;
+            ld.field_v = new dl[param4.length];
+            var7 = 0;
+            L5: while (true) {
+              if (var7 >= param4.length) {
+                var7 = 16 % ((param2 - 5) / 62);
+                hf.field_c = param4;
+                break L0;
+              } else {
+                ld.field_v[var7] = new dl(317, 34);
+                var7++;
+                continue L5;
               }
             }
           }
-          v.field_d = 2;
-          break L2;
-        }
-        pb.field_a = param3;
-        qm.field_n = param0;
-        mg.field_e = param5;
-        ld.field_v = new dl[param4.length];
-        var7 = 0;
-        L4: while (true) {
-          if (var7 >= param4.length) {
-            var7 = 16 % ((param2 - 5) / 62);
-            hf.field_c = param4;
-            return;
-          } else {
-            ld.field_v[var7] = new dl(317, 34);
-            var7++;
-            continue L4;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L6: {
+            var6_ref = decompiledCaughtException;
+            stackOut_16_0 = (RuntimeException) var6_ref;
+            stackOut_16_1 = new StringBuilder().append("cc.B(").append(param0).append(44);
+            stackIn_18_0 = stackOut_16_0;
+            stackIn_18_1 = stackOut_16_1;
+            stackIn_17_0 = stackOut_16_0;
+            stackIn_17_1 = stackOut_16_1;
+            if (param1 == null) {
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "null";
+              stackIn_19_0 = stackOut_18_0;
+              stackIn_19_1 = stackOut_18_1;
+              stackIn_19_2 = stackOut_18_2;
+              break L6;
+            } else {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "{...}";
+              stackIn_19_0 = stackOut_17_0;
+              stackIn_19_1 = stackOut_17_1;
+              stackIn_19_2 = stackOut_17_2;
+              break L6;
+            }
           }
+          L7: {
+            stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(44).append(param2).append(44).append(param3).append(44);
+            stackIn_21_0 = stackOut_19_0;
+            stackIn_21_1 = stackOut_19_1;
+            stackIn_20_0 = stackOut_19_0;
+            stackIn_20_1 = stackOut_19_1;
+            if (param4 == null) {
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "null";
+              stackIn_22_0 = stackOut_21_0;
+              stackIn_22_1 = stackOut_21_1;
+              stackIn_22_2 = stackOut_21_2;
+              break L7;
+            } else {
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "{...}";
+              stackIn_22_0 = stackOut_20_0;
+              stackIn_22_1 = stackOut_20_1;
+              stackIn_22_2 = stackOut_20_2;
+              break L7;
+            }
+          }
+          throw dn.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + 192 + 41);
         }
     }
 

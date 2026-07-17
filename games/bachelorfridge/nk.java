@@ -198,8 +198,9 @@ final class nk {
                 if (param2 != 0) {
                     param3 = param0[param6];
                     param2 = 256 - (param2 & 255);
+                    int incrementValue$0 = param6;
                     param6++;
-                    param0[param6] = ((param3 & 16711935) * param2 & -16711936 | (param3 & 65280) * param2 & 16711680) >> 8;
+                    param0[incrementValue$0] = ((param3 & 16711935) * param2 & -16711936 | (param3 & 65280) * param2 & 16711680) >> 8;
                 } else {
                     param6++;
                 }

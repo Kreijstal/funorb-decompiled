@@ -22,7 +22,7 @@ final class ef {
         if (param0 != 82) {
           L0: {
             ef.a(54);
-            if ((param1 ^ -1) != -3) {
+            if (param1 != 2) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -35,7 +35,7 @@ final class ef {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if ((param1 ^ -1) != -3) {
+            if (param1 != 2) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;

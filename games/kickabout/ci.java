@@ -34,27 +34,19 @@ final class ci implements Iterable {
     }
 
     final void a(int param0, am param1) {
-        if (null == param1.field_e) {
-          param1.field_f = ((ci) this).field_d;
-          if (param0 != -8545) {
+        if (null != param1.field_e) {
+            param1.f(-81);
+        }
+        param1.field_f = ((ci) this).field_d;
+        if (param0 != -8545) {
             return;
-          } else {
+        }
+        try {
             param1.field_e = ((ci) this).field_d.field_e;
             param1.field_e.field_f = param1;
             param1.field_f.field_e = param1;
-            return;
-          }
-        } else {
-          param1.f(-81);
-          param1.field_f = ((ci) this).field_d;
-          if (param0 != -8545) {
-            return;
-          } else {
-            param1.field_e = ((ci) this).field_d.field_e;
-            param1.field_e.field_f = param1;
-            param1.field_f.field_e = param1;
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "ci.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -65,17 +57,10 @@ final class ci implements Iterable {
     }
 
     final static void a(boolean param0) {
-        int var1 = 0;
-        int var2 = 0;
-        var1 = wq.b((byte) 46);
-        if (param0) {
-          return;
-        } else {
-          var2 = gn.d((byte) 101);
-          ba.field_p.a(-dq.field_f + ka.field_a, (mt.field_a << -323301471) + var2, uq.field_c - mt.field_a, (dq.field_f << -798677951) + var1, 3);
-          re.a(0);
-          return;
-        }
+        int var1 = wq.b((byte) 46);
+        int var2 = gn.d((byte) 101);
+        ba.field_p.a(-dq.field_f + ka.field_a, (mt.field_a << 1) + var2, uq.field_c - mt.field_a, (dq.field_f << 1) + var1, 3);
+        re.a(0);
     }
 
     public static void a(int param0) {
@@ -83,14 +68,7 @@ final class ci implements Iterable {
         field_f = null;
         field_g = null;
         field_h = null;
-        if (param0 <= 4) {
-          field_f = null;
-          field_b = null;
-          return;
-        } else {
-          field_b = null;
-          return;
-        }
+        field_b = null;
     }
 
     static {

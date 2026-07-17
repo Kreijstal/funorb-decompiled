@@ -37,7 +37,11 @@ final class sf extends hl implements eja {
 
     sf(kda param0, una param1, boolean param2) {
         super(param0, 34963, param2);
-        ((sf) this).field_l = param1;
+        try {
+            ((sf) this).field_l = param1;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "sf.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     static {

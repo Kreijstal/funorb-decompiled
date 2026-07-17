@@ -8,54 +8,17 @@ abstract class hn {
     static boolean field_c;
 
     final static String c(int param0) {
-        String var1 = null;
-        L0: {
-          var1 = "";
-          if (di.field_D == null) {
-            break L0;
-          } else {
+        String var1 = "";
+        if (di.field_D != null) {
             var1 = di.field_D.a((byte) 117);
-            break L0;
-          }
         }
-        if (param0 <= 74) {
-          L1: {
-            ed discarded$11 = hn.a(true, (byte) 38);
-            if (var1.length() == 0) {
-              var1 = cb.a((byte) -98);
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          L2: {
-            if (var1.length() != 0) {
-              break L2;
-            } else {
-              var1 = bm.field_r;
-              break L2;
-            }
-          }
-          return var1;
-        } else {
-          L3: {
-            if (var1.length() == 0) {
-              var1 = cb.a((byte) -98);
-              break L3;
-            } else {
-              break L3;
-            }
-          }
-          L4: {
-            if (var1.length() != 0) {
-              break L4;
-            } else {
-              var1 = bm.field_r;
-              break L4;
-            }
-          }
-          return var1;
+        if (!(var1.length() != 0)) {
+            var1 = cb.a((byte) -98);
         }
+        if (var1.length() == 0) {
+            var1 = bm.field_r;
+        }
+        return var1;
     }
 
     abstract ec b(int param0);
@@ -112,9 +75,6 @@ abstract class hn {
         ti.field_J = kj.field_a.a(false);
         CharSequence var2 = (CharSequence) (Object) ti.field_J;
         in.field_b = cl.a(-95, var2);
-        if (param0 > -22) {
-            ed discarded$0 = hn.a(true, (byte) 100);
-        }
     }
 
     static {

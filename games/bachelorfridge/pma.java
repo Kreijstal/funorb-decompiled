@@ -8,22 +8,81 @@ final class pma extends k {
     private int field_m;
 
     final void a(byte param0, lu param1, int param2) {
-        int var4 = param2;
-        if (!(0 != var4)) {
-            this.a(param1.a(3), true);
-        }
-        if (param0 != -71) {
-            ((pma) this).field_n = 29;
+        int var4_int = 0;
+        RuntimeException var4 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        try {
+          L0: {
+            L1: {
+              var4_int = param2;
+              if (0 == var4_int) {
+                this.a(param1.a(3), true);
+                break L1;
+              } else {
+                break L1;
+              }
+            }
+            L2: {
+              if (param0 == -71) {
+                break L2;
+              } else {
+                ((pma) this).field_n = 29;
+                break L2;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var4 = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var4;
+            stackOut_6_1 = new StringBuilder().append("pma.E(").append(param0).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param1 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L3;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L3;
+            }
+          }
+          throw pe.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param2 + 41);
         }
     }
 
     private final void a(int param0, boolean param1) {
-        if (!param1) {
-            pma.b(-29, -88);
-        }
-        ((pma) this).field_n = 4080 & param0 >> 438700516;
-        ((pma) this).field_l = 4080 & param0 >> -815458420;
-        ((pma) this).field_m = 4080 & param0 << 549701156;
+        ((pma) this).field_n = 4080 & param0 >> 4;
+        ((pma) this).field_l = 4080 & param0 >> 12;
+        ((pma) this).field_m = 4080 & param0 << 4;
     }
 
     private pma(int param0) {
@@ -167,7 +226,7 @@ final class pma extends k {
           stackIn_14_3 = stackOut_13_3;
           stackIn_14_4 = stackOut_13_4;
           stackIn_14_5 = stackOut_13_5;
-          if ((md.field_l ^ -1) >= -51) {
+          if (md.field_l <= 50) {
             stackOut_15_0 = stackIn_15_0;
             stackOut_15_1 = stackIn_15_1;
             stackOut_15_2 = stackIn_15_2;
@@ -253,7 +312,7 @@ final class pma extends k {
           }
         }
         L2: {
-          if ((wca.field_n ^ -1) < -4) {
+          if (wca.field_n > 3) {
             break L2;
           } else {
             sh.field_I = false;
@@ -293,7 +352,7 @@ final class pma extends k {
           }
         }
         L7: {
-          if ((wca.field_n ^ -1) < -3) {
+          if (wca.field_n > 2) {
             break L7;
           } else {
             hp.field_a = false;
@@ -301,7 +360,7 @@ final class pma extends k {
           }
         }
         L8: {
-          if ((wca.field_n ^ -1) < -8) {
+          if (wca.field_n > 7) {
             break L8;
           } else {
             wf.field_x = false;
@@ -317,7 +376,7 @@ final class pma extends k {
           }
         }
         L10: {
-          if (wca.field_n > -9) {
+          if (wca.field_n < 8) {
             mka.field_j = false;
             break L10;
           } else {
@@ -325,7 +384,7 @@ final class pma extends k {
           }
         }
         L11: {
-          if (-6 >= wca.field_n) {
+          if (wca.field_n <= 5) {
             bfa.field_a = false;
             break L11;
           } else {

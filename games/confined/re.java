@@ -14,7 +14,7 @@ final class re implements qb {
         for (var1 = 0; 2 > var1; var1++) {
             ((re) this).field_b[var1] = new com.ms.directX.DSBufferDesc();
         }
-        for (var1 = 0; -3 < (var1 ^ -1); var1++) {
+        for (var1 = 0; var1 < 2; var1++) {
             ((re) this).field_a[var1] = new com.ms.directX.DSCursors();
         }
     }

@@ -30,41 +30,50 @@ final class jm extends dp {
 
     final static void a(int param0, int param1) {
         q var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
         qp var4 = null;
+        RuntimeException decompiledCaughtException = null;
         var3 = Torquing.field_u;
-        var4 = (qp) (Object) tl.field_p.b(param1 + 0);
-        L0: while (true) {
-          if (var4 == null) {
-            var2 = to.field_q.b(param1);
+        try {
+          L0: {
+            var4 = (qp) (Object) tl.field_p.b(param1);
             L1: while (true) {
-              if (var2 != null) {
-                hj.a(false, param0);
-                var2 = to.field_q.f(-24059);
-                continue L1;
+              if (var4 == null) {
+                var2 = to.field_q.b(param1);
+                L2: while (true) {
+                  if (var2 == null) {
+                    break L0;
+                  } else {
+                    hj.a(false, param0);
+                    var2 = to.field_q.f(-24059);
+                    continue L2;
+                  }
+                }
               } else {
-                return;
+                l.a(param0, var4, param1 + 1);
+                var4 = (qp) (Object) tl.field_p.f(param1 + -24059);
+                continue L1;
               }
             }
-          } else {
-            l.a(param0, var4, param1 + 1);
-            var4 = (qp) (Object) tl.field_p.f(param1 + -24059);
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          throw rb.a((Throwable) (Object) var2_ref, "jm.B(" + param0 + 44 + param1 + 41);
         }
     }
 
     final void a(byte param0, byte[] param1) {
-        ((jm) this).field_c = java.nio.ByteBuffer.allocateDirect(param1.length);
-        if (param0 > -11) {
-          jm.c(28);
-          java.nio.Buffer discarded$8 = ((jm) this).field_c.position(0);
-          java.nio.ByteBuffer discarded$9 = ((jm) this).field_c.put(param1);
-          return;
-        } else {
-          java.nio.Buffer discarded$10 = ((jm) this).field_c.position(0);
-          java.nio.ByteBuffer discarded$11 = ((jm) this).field_c.put(param1);
-          return;
+        try {
+            ((jm) this).field_c = java.nio.ByteBuffer.allocateDirect(param1.length);
+            if (param0 > -11) {
+                jm.c(28);
+            }
+            java.nio.Buffer discarded$0 = ((jm) this).field_c.position(0);
+            java.nio.ByteBuffer discarded$1 = ((jm) this).field_c.put(param1);
+        } catch (RuntimeException runtimeException) {
+            throw rb.a((Throwable) (Object) runtimeException, "jm.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

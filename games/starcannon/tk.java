@@ -21,7 +21,7 @@ abstract class tk {
 
     public static void a(int param0) {
         field_f = null;
-        int var1 = -112 % ((-81 - param0) / 42);
+        int var1 = 0;
         field_a = null;
     }
 

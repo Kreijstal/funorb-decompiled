@@ -24,20 +24,12 @@ final class od {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        L0: {
-          var6 = OrbDefence.field_D ? 1 : 0;
-          var2 = ul.field_b;
-          var3 = ul.field_f;
-          ((od) this).field_o = 0;
-          ((od) this).field_m = new int[200];
-          ((od) this).field_e = 0;
-          if (param0 <= -58) {
-            break L0;
-          } else {
-            od.b((byte) -52);
-            break L0;
-          }
-        }
+        var6 = OrbDefence.field_D ? 1 : 0;
+        var2 = ul.field_b;
+        var3 = ul.field_f;
+        ((od) this).field_o = 0;
+        ((od) this).field_m = new int[200];
+        ((od) this).field_e = 0;
         var4 = ul.field_l;
         ((od) this).field_d = new int[200];
         ((od) this).field_b = new int[200];
@@ -46,12 +38,12 @@ final class od {
         ((od) this).field_l = new re(new int[5]);
         ((od) this).field_i = new int[64];
         var5 = 0;
-        L1: while (true) {
-          if (-65 >= (var5 ^ -1)) {
+        L0: while (true) {
+          if (var5 >= 64) {
             ((od) this).field_n = new int[32];
             var5 = 0;
-            L2: while (true) {
-              if ((var5 ^ -1) <= -17) {
+            L1: while (true) {
+              if (var5 >= 16) {
                 ul.field_f = var3;
                 ul.field_b = var2;
                 ul.field_l = var4;
@@ -61,25 +53,25 @@ final class od {
                 ((od) this).field_n[var5] = var5 * 262660;
                 ((od) this).field_n[31 + -var5] = var5 * 262660;
                 var5++;
-                continue L2;
+                continue L1;
               }
             }
           } else {
             ((od) this).field_i[var5] = 65537 * var5;
-            if ((var5 ^ -1) < -33) {
+            if (var5 > 32) {
               ((od) this).field_i[var5] = ge.a(((od) this).field_i[var5], -8192 + 256 * var5);
               var5++;
-              continue L1;
+              continue L0;
             } else {
               var5++;
-              continue L1;
+              continue L0;
             }
           }
         }
     }
 
     final void a(boolean param0) {
-        if (-26 >= (((od) this).field_e ^ -1)) {
+        if (((od) this).field_e >= 25) {
             this.a((byte) -124, 25);
         } else {
             this.a((byte) -119, 25 * cc.field_f.field_e / 25);
@@ -90,18 +82,41 @@ final class od {
     }
 
     final static void a(int param0) {
+        se var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
-        int var3 = OrbDefence.field_D ? 1 : 0;
-        if (param0 != 192) {
-            od.b((byte) 41);
-        }
-        se var1 = uk.field_b;
-        while (wl.a(-1)) {
-            var1.i(8, -44);
-            var1.field_i = var1.field_i + 1;
-            var2 = var1.field_i + 1;
-            dk.a((byte) 15, var1);
-            uk.field_b.c((byte) 115, var1.field_i - var2);
+        int var3 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var3 = OrbDefence.field_D ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              if (param0 == 192) {
+                break L1;
+              } else {
+                od.b((byte) 41);
+                break L1;
+              }
+            }
+            var1 = uk.field_b;
+            L2: while (true) {
+              if (!wl.a(-1)) {
+                break L0;
+              } else {
+                var1.i(8, -44);
+                int fieldTemp$5 = var1.field_i + 1;
+                var1.field_i = var1.field_i + 1;
+                var2 = fieldTemp$5;
+                dk.a((byte) 15, var1);
+                uk.field_b.c((byte) 115, var1.field_i - var2);
+                continue L2;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw dd.a((Throwable) (Object) var1_ref, "od.D(" + param0 + 41);
         }
     }
 
@@ -137,34 +152,34 @@ final class od {
           }
         }
         var4 = 108;
-        ul.f(((od) this).field_g, var3, var4 >> -1644137087, 0);
-        ul.g(((od) this).field_g, var3, var4 >> 720140225, 7798903);
+        ul.f(((od) this).field_g, var3, var4 >> 1, 0);
+        ul.g(((od) this).field_g, var3, var4 >> 1, 7798903);
         var6 = -102 / ((param0 - -55) / 63);
         var10 = 0;
         L1: while (true) {
-          if ((var10 ^ -1) <= -201) {
+          if (var10 >= 200) {
             L2: {
-              ul.i(((od) this).field_g, var3, var4 >> 2110462369, 0, 50);
-              ul.b(((od) this).field_g << 995427908, var3 << 1244985412, 2 + var4 << -996124 >> -1274580319, 192, ((od) this).field_n);
-              if (-26 >= (param1 ^ -1)) {
+              ul.i(((od) this).field_g, var3, var4 >> 1, 0, 50);
+              ul.b(((od) this).field_g << 4, var3 << 4, 2 + var4 << 4 >> 1, 192, ((od) this).field_n);
+              if (param1 >= 25) {
                 break L2;
               } else {
                 ul.i(((od) this).field_g, var3, 48, 0, 250 - 10 * param1);
                 break L2;
               }
             }
-            ul.b(((od) this).field_g << 170556708, var3 << -959401948, 2 + var4 << -247191452 >> -573841791, 192, ((od) this).field_n);
-            ul.b(((od) this).field_g << -304367900, var3 << 1793011716, 2 + var4 << -1739466108 >> 1560146497, 192, ((od) this).field_n);
-            ul.b(((od) this).field_g << -1611454780, var3 << 1527287428, 2 + var4 << -1919723388 >> -1529704223, 192, ((od) this).field_n);
+            ul.b(((od) this).field_g << 4, var3 << 4, 2 + var4 << 4 >> 1, 192, ((od) this).field_n);
+            ul.b(((od) this).field_g << 4, var3 << 4, 2 + var4 << 4 >> 1, 192, ((od) this).field_n);
+            ul.b(((od) this).field_g << 4, var3 << 4, 2 + var4 << 4 >> 1, 192, ((od) this).field_n);
             return;
           } else {
-            var8 = ((((od) this).field_d[var10] >> 732925668) * (((od) this).field_d[var10] >> -1614043100) + (((od) this).field_c[var10] >> 1847670244) * (((od) this).field_c[var10] >> -2002186652)) / 3;
-            if (-1 > (var8 ^ -1)) {
+            var8 = ((((od) this).field_d[var10] >> 4) * (((od) this).field_d[var10] >> 4) + (((od) this).field_c[var10] >> 4) * (((od) this).field_c[var10] >> 4)) / 3;
+            if (var8 > 0) {
               L3: {
-                var9 = var8 >> 1553684068;
+                var9 = var8 >> 4;
                 var5 = (int)((double)(var4 * ((od) this).field_d[var10]) / Math.sqrt((double)(var8 * 3)));
                 var7 = (int)((double)(var4 * ((od) this).field_c[var10]) / Math.sqrt((double)(var8 * 3)));
-                if ((param1 ^ -1) < -26) {
+                if (param1 > 25) {
                   var8 = var8 + (10 * param1 + -250);
                   var9 = var9 + (-25 + param1);
                   break L3;
@@ -180,7 +195,7 @@ final class od {
                   break L4;
                 }
               }
-              ul.a((var5 >> 1592781025) - -(((od) this).field_g << -2130156444), (var3 << 709311908) + (var7 >> 1581001889), var8 >> -1761747486 >> 1733067201, var9, ((od) this).field_i);
+              ul.a((var5 >> 1) - -(((od) this).field_g << 4), (var3 << 4) + (var7 >> 1), var8 >> 2 >> 1, var9, ((od) this).field_i);
               var10++;
               continue L1;
             } else {

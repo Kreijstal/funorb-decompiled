@@ -22,42 +22,52 @@ final class va extends IOException {
     }
 
     final static void a(int param0) {
-        int var1 = 0;
+        int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
+        RuntimeException decompiledCaughtException = null;
         var2 = CrazyCrystals.field_B;
-        var1 = 0;
-        L0: while (true) {
-          if (var1 >= md.field_k.length) {
-            L1: {
-              if (param0 >= 15) {
-                break L1;
+        try {
+          L0: {
+            var1_int = 0;
+            L1: while (true) {
+              if (var1_int >= md.field_k.length) {
+                L2: {
+                  if (param0 >= 15) {
+                    break L2;
+                  } else {
+                    va.a(false);
+                    break L2;
+                  }
+                }
+                break L0;
               } else {
-                va.a(false);
-                break L1;
-              }
-            }
-            return;
-          } else {
-            if (field_c == var1) {
-              if (-33 > md.field_k[var1]) {
-                md.field_k[var1] = md.field_k[var1] + 1;
-                var1++;
-                continue L0;
-              } else {
-                var1++;
-                continue L0;
-              }
-            } else {
-              if (-1 > md.field_k[var1]) {
-                md.field_k[var1] = md.field_k[var1] - 1;
-                var1++;
-                continue L0;
-              } else {
-                var1++;
-                continue L0;
+                L3: {
+                  if (field_c == var1_int) {
+                    if (-33 > md.field_k[var1_int]) {
+                      md.field_k[var1_int] = md.field_k[var1_int] + 1;
+                      break L3;
+                    } else {
+                      break L3;
+                    }
+                  } else {
+                    if (-1 > md.field_k[var1_int]) {
+                      md.field_k[var1_int] = md.field_k[var1_int] - 1;
+                      break L3;
+                    } else {
+                      break L3;
+                    }
+                  }
+                }
+                var1_int++;
+                continue L1;
               }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw dn.a((Throwable) (Object) var1, "va.A(" + param0 + 41);
         }
     }
 

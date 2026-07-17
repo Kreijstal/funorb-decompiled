@@ -26,9 +26,6 @@ final class tv {
         field_a = null;
         field_k = null;
         field_e = null;
-        if (param0 != 2) {
-            return;
-        }
         field_f = null;
         field_b = null;
     }
@@ -41,7 +38,7 @@ final class tv {
                 if (((tv) this).field_d == dd.field_c) {
                   return 1;
                 } else {
-                  if (-3 == (ts.field_d ^ -1)) {
+                  if (ts.field_d == 2) {
                     if (lf.a(((tv) this).field_q, param0 + 18)) {
                       return 1;
                     } else {
@@ -56,7 +53,7 @@ final class tv {
                 if (((tv) this).field_d == dd.field_c) {
                   return 1;
                 } else {
-                  if (-3 == (ts.field_d ^ -1)) {
+                  if (ts.field_d == 2) {
                     if (!lf.a(((tv) this).field_q, param0 + 18)) {
                       return 0;
                     } else {
@@ -75,7 +72,7 @@ final class tv {
               if (((tv) this).field_d == dd.field_c) {
                 return 1;
               } else {
-                if (-3 == (ts.field_d ^ -1)) {
+                if (ts.field_d == 2) {
                   if (!lf.a(((tv) this).field_q, param0 + 18)) {
                     return 0;
                   } else {
@@ -90,7 +87,7 @@ final class tv {
               if (((tv) this).field_d == dd.field_c) {
                 return 1;
               } else {
-                if (-3 == (ts.field_d ^ -1)) {
+                if (ts.field_d == 2) {
                   if (!lf.a(((tv) this).field_q, param0 + 18)) {
                     return 0;
                   } else {
@@ -127,18 +124,22 @@ final class tv {
     }
 
     tv(int param0, String param1, int param2, String param3, String param4) {
-        ((tv) this).field_r = null;
-        ((tv) this).field_d = 0L;
-        ((tv) this).field_j = 0;
-        ((tv) this).field_o = 0;
-        ((tv) this).field_l = param3;
-        ((tv) this).field_n = param2;
-        ((tv) this).field_h = param1;
-        ((tv) this).field_m = true;
-        ((tv) this).field_c = param0;
-        ((tv) this).field_p = 0;
-        ((tv) this).field_g = param4;
-        ((tv) this).field_q = param1;
+        try {
+            ((tv) this).field_r = null;
+            ((tv) this).field_d = 0L;
+            ((tv) this).field_j = 0;
+            ((tv) this).field_o = 0;
+            ((tv) this).field_l = param3;
+            ((tv) this).field_n = param2;
+            ((tv) this).field_h = param1;
+            ((tv) this).field_m = true;
+            ((tv) this).field_c = param0;
+            ((tv) this).field_p = 0;
+            ((tv) this).field_g = param4;
+            ((tv) this).field_q = param1;
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "tv.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

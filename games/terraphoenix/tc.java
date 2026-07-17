@@ -43,197 +43,81 @@ final class tc implements Iterable {
 
     final static void b(int param0) {
         Object var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
         Throwable var3 = null;
         int var4 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var4 = Terraphoenix.field_V;
-                    var1 = (Object) (Object) th.field_g;
-                    // monitorenter th.field_g
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        eb.field_F = eb.field_F + 1;
-                        r.field_V = d.field_M;
-                        if (0 <= dj.field_e) {
-                            statePc = 6;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        var2 = 0;
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        if (-113 >= (var2 ^ -1)) {
-                            statePc = 5;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        bh.field_e[var2] = false;
-                        var2++;
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        dj.field_e = vl.field_h;
-                        statePc = 10;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        if (vl.field_h == dj.field_e) {
-                            statePc = 10;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
+        Throwable decompiledCaughtException = null;
+        var4 = Terraphoenix.field_V;
+        try {
+          L0: {
+            var1 = (Object) (Object) th.field_g;
+            synchronized (var1) {
+              L1: {
+                L2: {
+                  eb.field_F = eb.field_F + 1;
+                  r.field_V = d.field_M;
+                  if (0 <= dj.field_e) {
+                    L3: while (true) {
+                      if (vl.field_h == dj.field_e) {
+                        break L2;
+                      } else {
                         var2 = sj.field_g[vl.field_h];
                         vl.field_h = vl.field_h + 1 & 127;
-                        if (-1 >= (var2 ^ -1)) {
-                            statePc = 9;
+                        if (var2 >= 0) {
+                          bh.field_e[var2] = true;
+                          continue L3;
                         } else {
-                            statePc = 8;
+                          bh.field_e[~var2] = false;
+                          continue L3;
                         }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 12;
-                        continue stateLoop;
+                      }
                     }
-                }
-                case 8: {
-                    try {
-                        bh.field_e[var2 ^ -1] = false;
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 12;
-                        continue stateLoop;
+                  } else {
+                    var2 = 0;
+                    L4: while (true) {
+                      if (var2 >= 112) {
+                        dj.field_e = vl.field_h;
+                        break L2;
+                      } else {
+                        bh.field_e[var2] = false;
+                        var2++;
+                        continue L4;
+                      }
                     }
+                  }
                 }
-                case 9: {
-                    try {
-                        bh.field_e[var2] = true;
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    try {
-                        d.field_M = u.field_g;
-                        // monitorexit var1
-                        statePc = 14;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 12: {
-                    try {
-                        var3 = caughtException;
-                        // monitorexit var1
-                        statePc = 13;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_12) {
-                        caughtException = stateCaught_12;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 13: {
-                    throw (RuntimeException) (Object) var3;
-                }
-                case 14: {
-                    if (param0 == 1) {
-                        statePc = 16;
-                    } else {
-                        statePc = 15;
-                    }
-                    continue stateLoop;
-                }
-                case 15: {
-                    tc.a(122);
-                    statePc = 16;
-                    continue stateLoop;
-                }
-                case 16: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+                d.field_M = u.field_g;
+                break L1;
+              }
             }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = (RuntimeException) (Object) decompiledCaughtException;
+          throw qk.a((Throwable) (Object) var1_ref, "tc.B(" + 1 + 41);
         }
     }
 
     final void a(vh param0, byte param1) {
-        if (!(param0.field_i == null)) {
-            param0.c((byte) 13);
+        try {
+            if (!(param0.field_i == null)) {
+                param0.c((byte) 13);
+            }
+            param0.field_i = ((tc) this).field_a.field_i;
+            param0.field_o = ((tc) this).field_a;
+            param0.field_i.field_o = param0;
+            int var3_int = -73 / ((param1 - -57) / 49);
+            param0.field_o.field_i = param0;
+        } catch (RuntimeException runtimeException) {
+            throw qk.a((Throwable) (Object) runtimeException, "tc.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
-        param0.field_i = ((tc) this).field_a.field_i;
-        param0.field_o = ((tc) this).field_a;
-        param0.field_i.field_o = param0;
-        int var3 = -73 / ((param1 - -57) / 49);
-        param0.field_o.field_i = param0;
     }
 
     final static String a(byte param0, byte[] param1, int param2, int param3) {
         char[] var4 = null;
+        RuntimeException var4_ref = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -242,58 +126,119 @@ final class tc implements Iterable {
         char[] var10 = null;
         char[] var11 = null;
         char[] var12 = null;
-        L0: {
-          var9 = Terraphoenix.field_V;
-          var12 = new char[param2];
-          var11 = var12;
-          var10 = var11;
-          var4 = var10;
-          if (param0 == -114) {
-            break L0;
-          } else {
-            field_b = null;
-            break L0;
-          }
-        }
-        var5 = 0;
-        var6 = 0;
-        L1: while (true) {
-          if (var6 >= param2) {
-            return new String(var12, 0, var5);
-          } else {
-            var7 = 255 & param1[var6 + param3];
-            if (var7 != -1) {
-              L2: {
-                if (-129 > var7) {
-                  break L2;
-                } else {
-                  if (-161 >= (var7 ^ -1)) {
-                    break L2;
+        char[] var13 = null;
+        char[] var14 = null;
+        String stackIn_14_0 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_18_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        String stackOut_13_0 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        var9 = Terraphoenix.field_V;
+        try {
+          L0: {
+            L1: {
+              var14 = new char[param2];
+              var13 = var14;
+              var12 = var13;
+              var11 = var12;
+              var10 = var11;
+              var4 = var10;
+              if (param0 == -114) {
+                break L1;
+              } else {
+                field_b = null;
+                break L1;
+              }
+            }
+            var5 = 0;
+            var6 = 0;
+            L2: while (true) {
+              if (var6 >= param2) {
+                stackOut_13_0 = new String(var14, 0, var5);
+                stackIn_14_0 = stackOut_13_0;
+                break L0;
+              } else {
+                L3: {
+                  var7 = 255 & param1[var6 + param3];
+                  if (var7 == 0) {
+                    break L3;
                   } else {
-                    L3: {
-                      var8 = oj.field_s[var7 + -128];
-                      if (0 != var8) {
-                        break L3;
+                    L4: {
+                      if (var7 < 128) {
+                        break L4;
                       } else {
-                        var8 = 63;
-                        break L3;
+                        if (var7 >= 160) {
+                          break L4;
+                        } else {
+                          L5: {
+                            var8 = oj.field_s[var7 + -128];
+                            if (0 != var8) {
+                              break L5;
+                            } else {
+                              var8 = 63;
+                              break L5;
+                            }
+                          }
+                          var7 = var8;
+                          break L4;
+                        }
                       }
                     }
-                    var7 = var8;
-                    break L2;
+                    int incrementValue$2 = var5;
+                    var5++;
+                    var10[incrementValue$2] = (char)var7;
+                    break L3;
                   }
                 }
+                var6++;
+                continue L2;
               }
-              var5++;
-              var10[var5] = (char)var7;
-              var6++;
-              continue L1;
-            } else {
-              var6++;
-              continue L1;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L6: {
+            var4_ref = decompiledCaughtException;
+            stackOut_15_0 = (RuntimeException) var4_ref;
+            stackOut_15_1 = new StringBuilder().append("tc.C(").append(param0).append(44);
+            stackIn_17_0 = stackOut_15_0;
+            stackIn_17_1 = stackOut_15_1;
+            stackIn_16_0 = stackOut_15_0;
+            stackIn_16_1 = stackOut_15_1;
+            if (param1 == null) {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "null";
+              stackIn_18_0 = stackOut_17_0;
+              stackIn_18_1 = stackOut_17_1;
+              stackIn_18_2 = stackOut_17_2;
+              break L6;
+            } else {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "{...}";
+              stackIn_18_0 = stackOut_16_0;
+              stackIn_18_1 = stackOut_16_1;
+              stackIn_18_2 = stackOut_16_2;
+              break L6;
+            }
+          }
+          throw qk.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + param2 + 44 + param3 + 41);
         }
+        return stackIn_14_0;
     }
 
     final static int a(boolean param0, int param1, int param2, int param3, int param4) {

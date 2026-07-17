@@ -23,9 +23,6 @@ final class gd {
         vd.field_c.a(oc.field_O, (byte) 26);
         cl.field_g = new wo(ul.field_m, vd.field_c);
         ql.field_n = new ak(0L, (ak) null);
-        if (param0 != -7) {
-            gd.a(-71);
-        }
         ql.field_n.a((ak) (Object) cl.field_g.field_g, (byte) 26);
         ql.field_n.a(gk.field_cb, (byte) 26);
         we.b(false);
@@ -62,25 +59,25 @@ final class gd {
         int var0 = 307;
         for (var2 = 0; var0 > var2; var2++) {
             var3 = 255 & 255 * var2 / var0;
-            field_h[var2] = bq.a(var3 << 563357840, 65280);
+            field_h[var2] = bq.a(var3 << 16, 65280);
         }
         int var1 = 153;
-        for (var2 = var0; (var1 + var0 ^ -1) < (var2 ^ -1); var2++) {
+        for (var2 = var0; ~(var1 + var0) < ~var2; var2++) {
             var3 = 255 * (-var0 + var2) / var1;
-            field_h[var2] = bq.a(-cm.a(255, var3) + 255 << 1039657096, 16711680);
+            field_h[var2] = bq.a(-cm.a(255, var3) + 255 << 8, 16711680);
         }
-        for (var2 = var1 + var0; (var2 ^ -1) > -616; var2++) {
+        for (var2 = var1 + var0; var2 < 615; var2++) {
             var3 = 255 * (-var1 + var2 + -var0) / var1;
-            if (-256 > (var3 ^ -1)) {
+            if (var3 > 255) {
                 var3 = 255;
             }
-            field_h[var2] = -(cm.a(255, var3) / 2) + 255 << -1053882384;
+            field_h[var2] = -(cm.a(255, var3) / 2) + 255 << 16;
         }
-        for (var2 = 0; (var2 ^ -1) > -9; var2++) {
-            field_b[var2] = 65793 * (var2 << -619879772);
+        for (var2 = 0; var2 < 8; var2++) {
+            field_b[var2] = 65793 * (var2 << 4);
         }
-        for (var2 = 0; (field_c.length ^ -1) < (var2 ^ -1); var2++) {
-            field_c[var2] = (var2 << 979140168) / field_c.length * 65793;
+        for (var2 = 0; ~field_c.length < ~var2; var2++) {
+            field_c[var2] = (var2 << 8) / field_c.length * 65793;
         }
         field_j = "Only show lobby chat from my friends";
         field_e = new so[50];
@@ -93,7 +90,7 @@ final class gd {
         var7[10] = 22;
         var7[5] = 30;
         var7[1] = 26;
-        for (var2 = 18; -51 < (var2 ^ -1); var2++) {
+        for (var2 = 18; var2 < 50; var2++) {
             var7[var2] = var1;
         }
         var7[29] = 0;

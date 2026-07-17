@@ -11,7 +11,7 @@ final class bl {
     final static boolean b(int param0) {
         if (param0 == 0) {
           if (null != oba.field_e) {
-            if (!km.field_p.a(param0 + 0)) {
+            if (!km.field_p.a(param0)) {
               return false;
             } else {
               return true;
@@ -22,7 +22,7 @@ final class bl {
         } else {
           bl.a(-92, 118);
           if (null != oba.field_e) {
-            if (!km.field_p.a(param0 + 0)) {
+            if (!km.field_p.a(param0)) {
               return false;
             } else {
               return true;
@@ -34,50 +34,73 @@ final class bl {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        int var10 = TombRacer.field_G ? 1 : 0;
-        bea.c(param3, param1, param4 + param0, 10000536);
-        bea.c(param3, param2 + param1, param0 - -1, 12105912);
-        int var5 = 1;
-        if (var5 + param1 < bea.field_h) {
-            var5 = -param1 + bea.field_h;
-        }
-        int var6 = param2;
-        if (bea.field_k < var6 + param1) {
-            var6 = bea.field_k - param1;
-        }
-        for (var7 = var5; var6 > var7; var7++) {
-            var8 = var7 * 48 / param2 + 152;
-            var9 = var8 << -1662844688 | var8 << -230884408 | var8;
-            bea.field_l[param3 + (var7 + param1) * bea.field_g] = var9;
-            bea.field_l[param0 + ((var7 + param1) * bea.field_g + param3)] = var9;
+        int var10 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var10 = TombRacer.field_G ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              bea.c(param3, param1, 1 + param0, 10000536);
+              bea.c(param3, param2 + param1, param0 - -1, 12105912);
+              var5_int = 1;
+              if (var5_int + param1 >= bea.field_h) {
+                break L1;
+              } else {
+                var5_int = -param1 + bea.field_h;
+                break L1;
+              }
+            }
+            L2: {
+              var6 = param2;
+              if (bea.field_k >= var6 + param1) {
+                break L2;
+              } else {
+                var6 = bea.field_k - param1;
+                break L2;
+              }
+            }
+            var7 = var5_int;
+            L3: while (true) {
+              if (var6 <= var7) {
+                break L0;
+              } else {
+                var8 = var7 * 48 / param2 + 152;
+                var9 = var8 << 16 | var8 << 8 | var8;
+                bea.field_l[param3 + (var7 + param1) * bea.field_g] = var9;
+                bea.field_l[param0 + ((var7 + param1) * bea.field_g + param3)] = var9;
+                var7++;
+                continue L3;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          throw tba.a((Throwable) (Object) var5, "bl.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + 1 + 41);
         }
     }
 
     public static void a(int param0) {
         field_a = null;
-        if (param0 <= 83) {
-            field_a = null;
-            field_c = null;
-            field_b = null;
-            return;
-        }
         field_c = null;
         field_b = null;
     }
 
     final static void a(int param0, int param1) {
         try {
-            IOException iOException = null;
             Throwable decompiledCaughtException = null;
             L0: {
               if (oba.field_e == null) {
                 break L0;
               } else {
                 L1: {
-                  if (-1 < param0) {
+                  if (param0 < 0) {
                     break L1;
                   } else {
                     if (uga.field_n == km.field_p) {
@@ -88,7 +111,7 @@ final class bl {
                   }
                 }
                 L2: {
-                  if (param1 != ql.field_k.field_h) {
+                  if (param1 != ~ql.field_k.field_h) {
                     break L2;
                   } else {
                     if (mha.field_D - -10000L < bva.b((byte) -107)) {
@@ -101,20 +124,20 @@ final class bl {
                 }
                 L3: {
                   if (ql.field_k.field_h > 0) {
-                    try {
-                      oba.field_e.a(ql.field_k.field_g, 0, ql.field_k.field_h, param1 + 119);
-                      mha.field_D = bva.b((byte) -107);
-                    } catch (java.io.IOException decompiledCaughtParameter) {
-                      decompiledCaughtException = decompiledCaughtParameter;
+                    {
+                      L4: {
+                        oba.field_e.a(ql.field_k.field_g, 0, ql.field_k.field_h, param1 + 119);
+                        mha.field_D = bva.b((byte) -107);
+                        break L4;
+                      }
                     }
-                    iOException = (IOException) (Object) decompiledCaughtException;
-                    dea.a(60);
+                    ql.field_k.field_h = 0;
                     break L3;
                   } else {
                     break L3;
                   }
                 }
-                ql.field_k.field_h = 0;
+                return;
               }
             }
             ql.field_k.field_h = 0;

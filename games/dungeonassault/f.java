@@ -13,53 +13,13 @@ final class f {
         field_f = null;
         field_e = null;
         field_b = null;
-        if (!param0) {
-          field_b = null;
-          field_a = null;
-          field_c = null;
-          return;
-        } else {
-          field_a = null;
-          field_c = null;
-          return;
-        }
+        field_b = null;
+        field_a = null;
+        field_c = null;
     }
 
     final static boolean a(byte param0) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        if (param0 >= -19) {
-          L0: {
-            field_c = null;
-            if (im.field_b.b(36)) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
-              break L0;
-            } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if (im.field_b.b(36)) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
-              break L1;
-            } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
-        }
+        return !im.field_b.b(36);
     }
 
     final static int a(int param0, int param1, int param2) {
@@ -210,12 +170,30 @@ final class f {
     }
 
     final static void a(int param0, byte param1) {
-        int var4 = DungeonAssault.field_K;
-        int var2 = -12 / ((param1 - -9) / 36);
-        jd var3 = (jd) (Object) ta.field_f.e(-24172);
-        while (var3 != null) {
-            o.a(param0, 62, var3);
-            var3 = (jd) (Object) ta.field_f.a(4);
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        jd var3 = null;
+        int var4 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var4 = DungeonAssault.field_K;
+        try {
+          L0: {
+            var2_int = 12;
+            var3 = (jd) (Object) ta.field_f.e(-24172);
+            L1: while (true) {
+              if (var3 == null) {
+                break L0;
+              } else {
+                o.a(param0, 62, var3);
+                var3 = (jd) (Object) ta.field_f.a(4);
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw vk.a((Throwable) (Object) var2, "f.C(" + param0 + 44 + -50 + 41);
         }
     }
 

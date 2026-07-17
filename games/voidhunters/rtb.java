@@ -40,9 +40,6 @@ final class rtb extends pib {
 
     public static void c(byte param0) {
         field_h = null;
-        if (param0 < 40) {
-            field_h = null;
-        }
     }
 
     public final void a(int param0) {
@@ -58,14 +55,18 @@ final class rtb extends pib {
 
     rtb(qfa param0, int param1, int param2, boolean param3, byte[][] param4, int param5) {
         super(param0, 34067, param1, 6 * (param2 * param2), param3);
-        int var7 = 0;
+        int var7_int = 0;
         ((rtb) this).field_j = -1;
         ((rtb) this).field_i = -1;
-        ((rtb) this).field_g.a(80, (pib) this);
-        for (var7 = 0; 6 > var7; var7++) {
-            jaggl.OpenGL.glTexImage2Dub(34069 + var7, 0, ((rtb) this).field_d, param2, param2, 0, param5, 5121, param4[var7], 0);
+        try {
+            ((rtb) this).field_g.a(80, (pib) this);
+            for (var7_int = 0; 6 > var7_int; var7_int++) {
+                jaggl.OpenGL.glTexImage2Dub(34069 + var7_int, 0, ((rtb) this).field_d, param2, param2, 0, param5, 5121, param4[var7_int], 0);
+            }
+            ((rtb) this).a(87, true);
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "rtb.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 41);
         }
-        ((rtb) this).a(87, true);
     }
 
     static {

@@ -26,10 +26,10 @@ final class lb extends pi {
         int var3 = 0;
         if (param0) {
           lb.a(-94);
-          var3 = param1 >>> -1033791905;
+          var3 = param1 >>> 31;
           return -var3 + (var3 + param1) / param2;
         } else {
-          var3 = param1 >>> -1033791905;
+          var3 = param1 >>> 31;
           return -var3 + (var3 + param1) / param2;
         }
     }

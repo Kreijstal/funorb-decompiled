@@ -67,140 +67,133 @@ final class d {
 
     final static int a(int param0, int param1) {
         int var2 = 0;
-        if (param1 == -31479) {
-          var2 = 0;
-          if (0 <= param0) {
-            if (-65537 < (param0 ^ -1)) {
-              L0: {
-                if (256 <= param0) {
-                  param0 = param0 >>> 8;
-                  var2 += 8;
-                  break L0;
-                } else {
-                  break L0;
-                }
+        var2 = 0;
+        if (0 <= param0) {
+          if (param0 < 65536) {
+            L0: {
+              if (256 <= param0) {
+                param0 = param0 >>> 8;
+                var2 += 8;
+                break L0;
+              } else {
+                break L0;
               }
-              L1: {
-                if (-17 < (param0 ^ -1)) {
-                  break L1;
-                } else {
-                  param0 = param0 >>> 4;
-                  var2 += 4;
-                  break L1;
-                }
-              }
-              L2: {
-                if (-5 >= (param0 ^ -1)) {
-                  param0 = param0 >>> 2;
-                  var2 += 2;
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              L3: {
-                if ((param0 ^ -1) <= -2) {
-                  param0 = param0 >>> 1;
-                  var2++;
-                  break L3;
-                } else {
-                  break L3;
-                }
-              }
-              return var2 - -param0;
-            } else {
-              L4: {
-                var2 += 16;
-                param0 = param0 >>> 16;
-                if (256 <= param0) {
-                  param0 = param0 >>> 8;
-                  var2 += 8;
-                  break L4;
-                } else {
-                  break L4;
-                }
-              }
-              L5: {
-                if (-17 < (param0 ^ -1)) {
-                  break L5;
-                } else {
-                  param0 = param0 >>> 4;
-                  var2 += 4;
-                  break L5;
-                }
-              }
-              L6: {
-                if (-5 >= (param0 ^ -1)) {
-                  param0 = param0 >>> 2;
-                  var2 += 2;
-                  break L6;
-                } else {
-                  break L6;
-                }
-              }
-              L7: {
-                if ((param0 ^ -1) <= -2) {
-                  param0 = param0 >>> 1;
-                  var2++;
-                  break L7;
-                } else {
-                  break L7;
-                }
-              }
-              return var2 - -param0;
             }
+            L1: {
+              if (param0 < 16) {
+                break L1;
+              } else {
+                param0 = param0 >>> 4;
+                var2 += 4;
+                break L1;
+              }
+            }
+            L2: {
+              if (param0 >= 4) {
+                param0 = param0 >>> 2;
+                var2 += 2;
+                break L2;
+              } else {
+                break L2;
+              }
+            }
+            L3: {
+              if (param0 >= 1) {
+                param0 = param0 >>> 1;
+                var2++;
+                break L3;
+              } else {
+                break L3;
+              }
+            }
+            return var2 - -param0;
           } else {
-            L8: {
+            L4: {
               var2 += 16;
               param0 = param0 >>> 16;
               if (256 <= param0) {
                 param0 = param0 >>> 8;
                 var2 += 8;
-                break L8;
+                break L4;
               } else {
-                break L8;
+                break L4;
               }
             }
-            L9: {
-              if (-17 < (param0 ^ -1)) {
-                break L9;
+            L5: {
+              if (param0 < 16) {
+                break L5;
               } else {
                 param0 = param0 >>> 4;
                 var2 += 4;
-                break L9;
+                break L5;
               }
             }
-            L10: {
-              if (-5 >= (param0 ^ -1)) {
+            L6: {
+              if (param0 >= 4) {
                 param0 = param0 >>> 2;
                 var2 += 2;
-                break L10;
+                break L6;
               } else {
-                break L10;
+                break L6;
               }
             }
-            L11: {
-              if ((param0 ^ -1) <= -2) {
+            L7: {
+              if (param0 >= 1) {
                 param0 = param0 >>> 1;
                 var2++;
-                break L11;
+                break L7;
               } else {
-                break L11;
+                break L7;
               }
             }
             return var2 - -param0;
           }
         } else {
-          return -39;
+          L8: {
+            var2 += 16;
+            param0 = param0 >>> 16;
+            if (256 <= param0) {
+              param0 = param0 >>> 8;
+              var2 += 8;
+              break L8;
+            } else {
+              break L8;
+            }
+          }
+          L9: {
+            if (param0 < 16) {
+              break L9;
+            } else {
+              param0 = param0 >>> 4;
+              var2 += 4;
+              break L9;
+            }
+          }
+          L10: {
+            if (param0 >= 4) {
+              param0 = param0 >>> 2;
+              var2 += 2;
+              break L10;
+            } else {
+              break L10;
+            }
+          }
+          L11: {
+            if (param0 >= 1) {
+              param0 = param0 >>> 1;
+              var2++;
+              break L11;
+            } else {
+              break L11;
+            }
+          }
+          return var2 - -param0;
         }
     }
 
     public static void a(byte param0) {
         field_a = null;
         field_d = null;
-        if (param0 != 109) {
-            boolean discarded$0 = d.a(-41, -22, (byte) -35);
-        }
     }
 
     static {

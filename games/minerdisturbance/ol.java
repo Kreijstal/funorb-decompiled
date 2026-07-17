@@ -9,221 +9,119 @@ final class ol {
 
     final static void a(byte param0) {
         int var1 = 0;
-        if (param0 != -94) {
-          L0: {
-            field_d = null;
-            if (ee.field_J < 224) {
-              var1 = ee.field_J % 32;
-              fc.a(-var1 + (ee.field_J - -32), (byte) 52);
-              break L0;
-            } else {
-              fc.a(256, (byte) 72);
-              break L0;
-            }
-          }
-          return;
+        if (ee.field_J >= 224) {
+            fc.a(256, (byte) 72);
         } else {
-          L1: {
-            if (ee.field_J < 224) {
-              var1 = ee.field_J % 32;
-              fc.a(-var1 + (ee.field_J - -32), (byte) 52);
-              break L1;
-            } else {
-              fc.a(256, (byte) 72);
-              break L1;
-            }
-          }
-          return;
+            var1 = ee.field_J % 32;
+            fc.a(-var1 + (ee.field_J - -32), (byte) 52);
         }
     }
 
     public static void a(int param0) {
         field_c = null;
-        if (param0 != 1) {
-          field_b = null;
-          field_a = null;
-          field_d = null;
-          field_b = null;
-          return;
-        } else {
-          field_a = null;
-          field_d = null;
-          field_b = null;
-          return;
-        }
+        field_a = null;
+        field_d = null;
+        field_b = null;
     }
 
     final static int a(int param0, int param1, int param2) {
-        int var3 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
+        int stackIn_9_0 = 0;
+        int stackIn_11_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_10_0 = 0;
+        int stackOut_8_0 = 0;
         var4 = MinerDisturbance.field_ab;
-        if (param2 >= 31) {
-          var3 = 1;
-          L0: while (true) {
-            if ((param1 ^ -1) >= -2) {
-              if (param1 == 1) {
-                return var3 * param0;
-              } else {
-                return var3;
-              }
-            } else {
-              L1: {
-                if (0 != (param1 & 1)) {
-                  var3 = var3 * param0;
-                  break L1;
+        try {
+          L0: {
+            var3_int = 1;
+            L1: while (true) {
+              if (param1 <= 1) {
+                if (param1 != 1) {
+                  stackOut_10_0 = var3_int;
+                  stackIn_11_0 = stackOut_10_0;
+                  break L0;
                 } else {
-                  break L1;
+                  stackOut_8_0 = var3_int * param0;
+                  stackIn_9_0 = stackOut_8_0;
+                  return stackIn_9_0;
                 }
+              } else {
+                L2: {
+                  if (0 != (param1 & 1)) {
+                    var3_int = var3_int * param0;
+                    break L2;
+                  } else {
+                    break L2;
+                  }
+                }
+                param0 = param0 * param0;
+                param1 = param1 >> 1;
+                continue L1;
               }
-              param0 = param0 * param0;
-              param1 = param1 >> 1;
-              continue L0;
             }
           }
-        } else {
-          field_b = null;
-          var3 = 1;
-          L2: while (true) {
-            if ((param1 ^ -1) >= -2) {
-              if (param1 == 1) {
-                return var3 * param0;
-              } else {
-                return var3;
-              }
-            } else {
-              L3: {
-                if (0 != (param1 & 1)) {
-                  var3 = var3 * param0;
-                  break L3;
-                } else {
-                  break L3;
-                }
-              }
-              param0 = param0 * param0;
-              param1 = param1 >> 1;
-              continue L2;
-            }
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw lj.a((Throwable) (Object) var3, "ol.D(" + param0 + 44 + param1 + 44 + 55 + 41);
         }
+        return stackIn_11_0;
     }
 
     final static int a(int param0, int param1) {
         int var2 = 0;
-        if (0 != param0) {
-          if (0 >= param0) {
-            L0: {
-              var2 = 2;
-              if (65535 < (param0 ^ -1)) {
-                param0 = param0 >> 16;
-                var2 += 16;
-                break L0;
-              } else {
-                break L0;
-              }
-            }
-            L1: {
-              if (param0 >= -256) {
-                break L1;
-              } else {
-                var2 += 8;
-                param0 = param0 >> 8;
-                break L1;
-              }
-            }
-            L2: {
-              if (-16 <= param0) {
-                break L2;
-              } else {
-                param0 = param0 >> 4;
-                var2 += 4;
-                break L2;
-              }
-            }
-            L3: {
-              if (3 >= (param0 ^ -1)) {
-                break L3;
-              } else {
-                param0 = param0 >> 2;
-                var2 += 2;
-                break L3;
-              }
-            }
-            if (param1 == 8) {
-              L4: {
-                if ((param0 ^ -1) > 1) {
-                  var2++;
-                  param0 = param0 >> 1;
-                  break L4;
-                } else {
-                  break L4;
-                }
-              }
-              return var2;
-            } else {
-              L5: {
-                field_c = null;
-                if ((param0 ^ -1) > 1) {
-                  var2++;
-                  param0 = param0 >> 1;
-                  break L5;
-                } else {
-                  break L5;
-                }
-              }
-              return var2;
-            }
-          } else {
-            L6: {
-              var2 = 1;
-              if (param0 <= 65535) {
-                break L6;
-              } else {
+        if (0 == param0) {
+            return 0;
+        }
+        if (0 < param0) {
+            var2 = 1;
+            if (param0 > 65535) {
                 var2 += 16;
                 param0 = param0 >> 16;
-                break L6;
-              }
             }
-            L7: {
-              if (-256 <= (param0 ^ -1)) {
-                break L7;
-              } else {
+            if (param0 > 255) {
                 var2 += 8;
                 param0 = param0 >> 8;
-                break L7;
-              }
             }
-            L8: {
-              if (-16 > (param0 ^ -1)) {
+            if (!(param0 <= 15)) {
                 var2 += 4;
                 param0 = param0 >> 4;
-                break L8;
-              } else {
-                break L8;
-              }
             }
-            L9: {
-              if ((param0 ^ -1) < -4) {
+            if (!(param0 <= 3)) {
                 var2 += 2;
                 param0 = param0 >> 2;
-                break L9;
-              } else {
-                break L9;
-              }
             }
-            L10: {
-              if ((param0 ^ -1) < -2) {
+            if (!(param0 <= 1)) {
                 var2++;
                 param0 = param0 >> 1;
-                break L10;
-              } else {
-                break L10;
-              }
             }
             return var2;
-          }
-        } else {
-          return 0;
         }
+        var2 = 2;
+        if (!(param0 >= -65536)) {
+            param0 = param0 >> 16;
+            var2 += 16;
+        }
+        if (param0 < -256) {
+            var2 += 8;
+            param0 = param0 >> 8;
+        }
+        if (-16 > param0) {
+            param0 = param0 >> 4;
+            var2 += 4;
+        }
+        if (param0 < -4) {
+            param0 = param0 >> 2;
+            var2 += 2;
+        }
+        if (!(param0 >= -2)) {
+            var2++;
+            param0 = param0 >> 1;
+        }
+        return var2;
     }
 
     static {

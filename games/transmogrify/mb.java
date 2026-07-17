@@ -288,8 +288,9 @@ final class mb {
             for (var12 = 0; var12 < var8; var12++) {
                 var13 = ((mb) this).field_g[var7][var11 & var10];
                 var11 = var11 >>> var9;
+                int incrementValue$0 = var5;
                 var5++;
-                field_d[var5] = var13 >= 0 ? ml.field_y[var13].c() : 0;
+                field_d[incrementValue$0] = var13 >= 0 ? ml.field_y[var13].c() : 0;
             }
         }
         return true;
@@ -454,6 +455,7 @@ final class mb {
                             field_k = new boolean[var5];
                             break L4;
                           }
+                          return;
                         } else {
                           var7 = ((mb) this).field_l[var6];
                           var8 = 0;
@@ -462,8 +464,9 @@ final class mb {
                               var6++;
                               continue L3;
                             } else {
+                              int incrementValue$2 = var5;
                               var5++;
-                              ((mb) this).field_f[var5] = ml.f(var4);
+                              ((mb) this).field_f[incrementValue$2] = ml.f(var4);
                               var8++;
                               continue L6;
                             }
@@ -479,8 +482,9 @@ final class mb {
                 } else {
                   L7: {
                     ((mb) this).field_i[var4] = ml.f(3) + 1;
-                    ((mb) this).field_a[var4] = ml.f(2);
-                    var5 = ml.f(2);
+                    int dupTemp$3 = ml.f(2);
+                    ((mb) this).field_a[var4] = dupTemp$3;
+                    var5 = dupTemp$3;
                     if (var5 == 0) {
                       break L7;
                     } else {

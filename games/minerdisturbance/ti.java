@@ -36,47 +36,45 @@ final class ti extends hc {
 
     public static void c(byte param0) {
         field_L = null;
-        if (param0 != -53) {
-          field_I = null;
-          field_P = null;
-          field_O = null;
-          field_J = null;
-          field_N = null;
-          field_K = null;
-          field_I = null;
-          return;
-        } else {
-          field_P = null;
-          field_O = null;
-          field_J = null;
-          field_N = null;
-          field_K = null;
-          field_I = null;
-          return;
-        }
+        field_P = null;
+        field_O = null;
+        field_J = null;
+        field_N = null;
+        field_K = null;
+        field_I = null;
     }
 
     ti(String param0, rm param1, boolean param2) {
         this(param0, param1);
-        ((ti) this).field_H = param2 ? true : false;
+        try {
+            ((ti) this).field_H = param2 ? true : false;
+        } catch (RuntimeException runtimeException) {
+            throw lj.a((Throwable) (Object) runtimeException, "ti.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     private ti(String param0, rm param1) {
         this(param0, bd.field_c.field_m, param1);
-        ((ti) this).field_A = bd.field_c.field_e;
+        try {
+            ((ti) this).field_A = bd.field_c.field_e;
+        } catch (RuntimeException runtimeException) {
+            throw lj.a((Throwable) (Object) runtimeException, "ti.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static void a(jb param0, boolean param1, int param2) {
         ld var3 = null;
         if (!param1) {
-          return;
-        } else {
-          var3 = sn.field_c;
-          var3.d((byte) -61, param2);
-          var3.c(2, 25564);
-          var3.c(0, 25564);
-          var3.c(param0.field_n, 25564);
-          return;
+            return;
+        }
+        try {
+            var3 = sn.field_c;
+            var3.d((byte) -61, param2);
+            var3.c(2, 25564);
+            var3.c(0, 25564);
+            var3.c(param0.field_n, 25564);
+        } catch (RuntimeException runtimeException) {
+            throw lj.a((Throwable) (Object) runtimeException, "ti.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }
     }
 
@@ -86,7 +84,7 @@ final class ti extends hc {
         int var1 = qk.field_b[0] * ng.field_e[0];
         byte[] var2 = db.field_b[0];
         int[] var3 = new int[var1];
-        for (var4_int = param0; var1 > var4_int; var4_int++) {
+        for (var4_int = 0; var1 > var4_int; var4_int++) {
             var3[var4_int] = af.field_p[c.a(255, (int) var2[var4_int])];
         }
         ea var4 = new ea(pf.field_c, wd.field_a, bg.field_d[0], oc.field_e[0], qk.field_b[0], ng.field_e[0], var3);
@@ -96,7 +94,11 @@ final class ti extends hc {
 
     private ti(String param0, ad param1, rm param2) {
         super(param0, param1, param2);
-        ((ti) this).field_A = bd.field_c.field_e;
+        try {
+            ((ti) this).field_A = bd.field_c.field_e;
+        } catch (RuntimeException runtimeException) {
+            throw lj.a((Throwable) (Object) runtimeException, "ti.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

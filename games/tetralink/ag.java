@@ -125,7 +125,7 @@ final class ag extends mc {
                       if ((var6 & -256) == 0) {
                         break L8;
                       } else {
-                        var6 = (var6 ^ -1) >> 31;
+                        var6 = ~var6 >> 31;
                         break L8;
                       }
                     }
@@ -155,7 +155,7 @@ final class ag extends mc {
         ((ag) this).field_U = var2.f(-127);
         ((ag) this).field_S = var2.f(19);
         if (((ag) this).field_S < 0) {
-            ((ag) this).field_S = ((ag) this).field_S ^ -1;
+            ((ag) this).field_S = ~((ag) this).field_S;
             ((ag) this).field_w = true;
         }
         int var3 = var2.f(-120);
@@ -187,10 +187,8 @@ final class ag extends mc {
                 return null;
             }
             Object var4 = null;
-            try {
+            {
                 var4_ref = new ag(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
             }
             return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -245,7 +243,7 @@ final class ag extends mc {
                     if ((var7 & -256) == 0) {
                       break L3;
                     } else {
-                      var7 = (var7 ^ -1) >> 31;
+                      var7 = ~var7 >> 31;
                       break L3;
                     }
                   }
@@ -1097,10 +1095,8 @@ final class ag extends mc {
                 return null;
             }
             Object var4 = null;
-            try {
+            {
                 var4_ref = new ag(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
             }
             return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -1144,7 +1140,7 @@ final class ag extends mc {
 
     private final static void a(byte[] param0, int param1) {
         field_M = param0;
-        field_A = param1;
+        field_A = 0;
         field_R = 0;
     }
 

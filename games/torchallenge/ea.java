@@ -15,9 +15,6 @@ final class ea {
         field_b = null;
         field_d = null;
         field_h = null;
-        if (param0 > -78) {
-            return;
-        }
         field_g = null;
         field_a = null;
     }

@@ -167,7 +167,7 @@ public final class stellarshard extends rb implements cf {
                   ((stellarshard) this).c(127, te.field_c);
                   oc.field_d = false;
                   cl.field_a = cl.field_a + te.field_c;
-                  if ((tl.field_a ^ -1) >= -1) {
+                  if (tl.field_a <= 0) {
                     break L4;
                   } else {
                     oc.field_d = true;
@@ -335,7 +335,7 @@ public final class stellarshard extends rb implements cf {
             var18 = sk.field_a[11];
             var20 = 0;
             L2: while (true) {
-              if (-7 >= (var20 ^ -1)) {
+              if (var20 >= 6) {
                 break L0;
               } else {
                 var21 = ag.field_b[var20];
@@ -346,23 +346,23 @@ public final class stellarshard extends rb implements cf {
                 var26 = lg.field_a[var20];
                 var27 = 0;
                 L3: while (true) {
-                  if (-26 >= (var27 ^ -1)) {
+                  if (var27 >= 25) {
                     var27 = 0;
                     L4: while (true) {
-                      if ((var27 ^ -1) <= -5) {
+                      if (var27 >= 4) {
                         var20++;
                         continue L2;
                       } else {
                         var28 = 0;
                         L5: while (true) {
-                          if ((var28 ^ -1) <= -5) {
+                          if (var28 >= 4) {
                             var27++;
                             continue L4;
                           } else {
                             L6: {
                               L7: {
                                 var29 = 4 * var28 + var27;
-                                if (-3 == (var20 ^ -1)) {
+                                if (var20 == 2) {
                                   break L7;
                                 } else {
                                   if (4 == var20) {
@@ -384,7 +384,7 @@ public final class stellarshard extends rb implements cf {
                               }
                             }
                             L9: {
-                              if (-2 == (var20 ^ -1)) {
+                              if (var20 == 1) {
                                 var29 += 48;
                                 break L9;
                               } else {
@@ -625,7 +625,7 @@ public final class stellarshard extends rb implements cf {
                               }
                               L12: {
                                 var2_int = oa.a((rb) this, stackIn_81_1, stackIn_81_2 != 0);
-                                if (-2 != (var2_int ^ -1)) {
+                                if (var2_int != 1) {
                                   if (2 == var2_int) {
                                     L13: {
                                       if (null != s.field_e) {
@@ -641,7 +641,7 @@ public final class stellarshard extends rb implements cf {
                                     df.a(false, hf.a((byte) -84));
                                     break L12;
                                   } else {
-                                    if (-2364825 == (var2_int ^ -1)) {
+                                    if (var2_int == 2364824) {
                                       cj.b(-5);
                                       break L12;
                                     } else {
@@ -682,13 +682,13 @@ public final class stellarshard extends rb implements cf {
                       } else {
                         if (be.field_g.field_n) {
                           L15: {
-                            tl.field_a = tl.field_a & (be.field_g.field_m[0] ^ -1);
+                            tl.field_a = tl.field_a & ~be.field_g.field_m[0];
                             sd.field_d = sd.field_d | be.field_g.field_m[0];
                             be.field_g = null;
                             if (na.field_j == null) {
                               break L15;
                             } else {
-                              if ((tl.field_a ^ -1) == -1) {
+                              if (tl.field_a == 0) {
                                 oc.field_d = false;
                                 break L15;
                               } else {
@@ -772,7 +772,7 @@ public final class stellarshard extends rb implements cf {
                 break L2;
               } else {
                 L3: {
-                  if (-1 <= (param1 ^ -1)) {
+                  if (param1 <= 0) {
                     break L3;
                   } else {
                     if (e.field_c) {
@@ -850,12 +850,12 @@ public final class stellarshard extends rb implements cf {
                         fk.field_k = new int[48];
                         var5 = 0;
                         L4: while (true) {
-                          if ((var5 ^ -1) <= -13) {
+                          if (var5 >= 12) {
                             lc.field_k = new pb(640, 480);
                             lc.field_k.e();
                             var5 = 0;
                             L5: while (true) {
-                              if ((var5 ^ -1) <= -257) {
+                              if (var5 >= 256) {
                                 pd.field_h.a((byte) -107);
                                 ba.a(22050, false, 10);
                                 ac.field_h = ba.a(ic.field_d, (java.awt.Component) (Object) qd.field_j, 0, 512);
@@ -892,7 +892,7 @@ public final class stellarshard extends rb implements cf {
                                   }
                                 }
                                 L7: {
-                                  if ((var10 ^ -1) != -3) {
+                                  if (var10 != 2) {
                                     break L7;
                                   } else {
                                     var9 = var3;
@@ -914,7 +914,7 @@ public final class stellarshard extends rb implements cf {
                                     continue L5;
                                   } else {
                                     L10: {
-                                      ti.a(var7 << 1540194404, var8 << 1687099620, var6 << -412111996, -var6 + 128, var9);
+                                      ti.a(var7 << 4, var8 << 4, var6 << 4, -var6 + 128, var9);
                                       if (0 == var11) {
                                         var7 += 640;
                                         break L10;
@@ -931,7 +931,7 @@ public final class stellarshard extends rb implements cf {
                                       }
                                     }
                                     L12: {
-                                      if (-3 == (var11 ^ -1)) {
+                                      if (var11 == 2) {
                                         var7 -= 640;
                                         break L12;
                                       } else {
@@ -945,8 +945,8 @@ public final class stellarshard extends rb implements cf {
                               }
                             }
                           } else {
-                            fk.field_k[0 + var5 * 4] = (int)(640.0 * Math.random()) << -848692028;
-                            fk.field_k[var5 * 4 - -1] = (int)(Math.random() * 480.0) << 1186934916;
+                            fk.field_k[var5 * 4] = (int)(640.0 * Math.random()) << 4;
+                            fk.field_k[var5 * 4 - -1] = (int)(Math.random() * 480.0) << 4;
                             fk.field_k[2 + var5 * 4] = (int)(33.0 * Math.random() - 16.0);
                             fk.field_k[3 + 4 * var5] = (int)(33.0 * Math.random() - 16.0);
                             ei.field_D[var5] = new pb(256, 256);
@@ -960,7 +960,7 @@ public final class stellarshard extends rb implements cf {
                                 var7 = (int)(64.0 * Math.random() + 64.0);
                                 var8 = (int)(Math.random() * (double)((128 - var7) * 2) + (double)var7);
                                 var9_int = (int)(Math.random() * (double)(2 * (-var7 + 128)) + (double)var7);
-                                ti.a(var8 << 712095268, var9_int << -78655388, var7 << -496645788, -var7 + 128, eh.field_e);
+                                ti.a(var8 << 4, var9_int << 4, var7 << 4, -var7 + 128, eh.field_e);
                                 var6++;
                                 continue L13;
                               }
@@ -984,7 +984,7 @@ public final class stellarshard extends rb implements cf {
               } else {
                 eh.field_e[var5] = 65793 * var5;
                 var2_array[var5] = var5 * 256;
-                var3[var5] = var5 * 1;
+                var3[var5] = var5;
                 var4[var5] = 65536 * var5;
                 var5++;
                 continue L1;
@@ -1046,7 +1046,7 @@ public final class stellarshard extends rb implements cf {
               }
             }
             L4: {
-              if (-31 <= (qi.field_a ^ -1)) {
+              if (qi.field_a <= 30) {
                 break L4;
               } else {
                 e.field_e = 1;
@@ -1056,7 +1056,7 @@ public final class stellarshard extends rb implements cf {
             L5: {
               gf.field_c = 0;
               lh.field_d = lh.field_d - 1;
-              if (-41 <= (qi.field_a ^ -1)) {
+              if (qi.field_a <= 40) {
                 break L5;
               } else {
                 e.field_e = 3;
@@ -1324,10 +1324,10 @@ public final class stellarshard extends rb implements cf {
           }
         }
         L6: {
-          if ((qi.field_a ^ -1) >= -2) {
+          if (qi.field_a <= 1) {
             break L6;
           } else {
-            if ((((stellarshard) this).field_J ^ -1) < -1) {
+            if (((stellarshard) this).field_J > 0) {
               ((stellarshard) this).field_J = ((stellarshard) this).field_J - 1;
               break L6;
             } else {
@@ -1381,7 +1381,7 @@ public final class stellarshard extends rb implements cf {
         L11: {
           int fieldTemp$11 = bf.field_c;
           bf.field_c = bf.field_c + 1;
-          if ((fieldTemp$11 ^ -1) >= (qj.field_a.b(sj.field_C) ^ -1)) {
+          if (~fieldTemp$11 >= ~qj.field_a.b(sj.field_C)) {
             break L11;
           } else {
             bf.field_c = bf.field_c - qj.field_a.b(sj.field_C) * 2;
@@ -1423,7 +1423,7 @@ public final class stellarshard extends rb implements cf {
               if (null == gj.field_r) {
                 break L16;
               } else {
-                if ((og.field_a ^ -1) >= -1) {
+                if (og.field_a <= 0) {
                   og.field_a = 25;
                   gj.field_r.b(25, 0);
                   break L16;
@@ -1433,7 +1433,7 @@ public final class stellarshard extends rb implements cf {
               }
             }
             L17: {
-              if ((tl.field_c ^ -1) == -9) {
+              if (tl.field_c == 8) {
                 L18: {
                   var2_int = qc.a((byte) -115, true);
                   if (3 != var2_int) {
@@ -1444,7 +1444,7 @@ public final class stellarshard extends rb implements cf {
                   }
                 }
                 if (var2_int != 1) {
-                  if ((var2_int ^ -1) != -3) {
+                  if (var2_int != 2) {
                     break L17;
                   } else {
                     tl.field_c = 0;
@@ -1461,11 +1461,11 @@ public final class stellarshard extends rb implements cf {
               }
             }
             L19: {
-              if ((tl.field_c ^ -1) != -4) {
+              if (tl.field_c != 3) {
                 break L19;
               } else {
                 if (gh.field_c == 1) {
-                  if (0 != (na.field_j.field_r ^ -1)) {
+                  if (na.field_j.field_r != -1) {
                     if (na.field_j.field_u == na.field_j.field_r) {
                       na.field_j.field_u = -1;
                       break L19;
@@ -1495,7 +1495,7 @@ public final class stellarshard extends rb implements cf {
                 if (4 == tl.field_c) {
                   L21: {
                     na.field_j.field_p = na.field_j.field_p + 1;
-                    if ((na.field_j.field_p ^ -1) >= -51) {
+                    if (na.field_j.field_p <= 50) {
                       break L21;
                     } else {
                       na.field_j.field_p = na.field_j.field_p - 50;
@@ -1503,12 +1503,12 @@ public final class stellarshard extends rb implements cf {
                       break L21;
                     }
                   }
-                  if (-1 <= (na.field_j.field_s ^ -1)) {
+                  if (na.field_j.field_s <= 0) {
                     L22: {
                       gh.field_d = null;
                       tl.field_c = 2;
                       na.field_j.field_l = 9;
-                      if (-1 > (tl.field_a ^ -1)) {
+                      if (tl.field_a > 0) {
                         tl.field_c = 3;
                         break L22;
                       } else {
@@ -1530,7 +1530,7 @@ public final class stellarshard extends rb implements cf {
                 var2_int = 0;
                 L24: while (true) {
                   if (var2_int >= 9) {
-                    if (-3 < (ph.field_D ^ -1)) {
+                    if (ph.field_D < 2) {
                       break L23;
                     } else {
                       L25: {
@@ -1603,10 +1603,10 @@ public final class stellarshard extends rb implements cf {
                   } else {
                     L30: {
                       if (na.field_j.field_l != var2_int) {
-                        nj.field_f[var2_int] = 0 + nj.field_f[var2_int] * 15 >> -684140508;
+                        nj.field_f[var2_int] = nj.field_f[var2_int] * 15 >> 4;
                         break L30;
                       } else {
-                        nj.field_f[var2_int] = nj.field_f[var2_int] * 15 - -64 >> -1454863004;
+                        nj.field_f[var2_int] = nj.field_f[var2_int] * 15 - -64 >> 4;
                         break L30;
                       }
                     }
@@ -1622,15 +1622,15 @@ public final class stellarshard extends rb implements cf {
               if (tl.field_c == 4) {
                 var2_int = 8;
                 L32: while (true) {
-                  if (-10 >= (var2_int ^ -1)) {
+                  if (var2_int >= 9) {
                     break L31;
                   } else {
                     L33: {
                       if (var2_int == na.field_j.field_l) {
-                        nj.field_f[var2_int] = 64 + nj.field_f[var2_int] * 15 >> -1379369532;
+                        nj.field_f[var2_int] = 64 + nj.field_f[var2_int] * 15 >> 4;
                         break L33;
                       } else {
-                        nj.field_f[var2_int] = 0 + 15 * nj.field_f[var2_int] >> -2026623196;
+                        nj.field_f[var2_int] = 15 * nj.field_f[var2_int] >> 4;
                         break L33;
                       }
                     }
@@ -1643,18 +1643,18 @@ public final class stellarshard extends rb implements cf {
               }
             }
             L34: {
-              if ((tl.field_c ^ -1) == -2) {
+              if (tl.field_c == 1) {
                 var2_int = 9;
                 L35: while (true) {
                   if (var2_int >= 10) {
                     break L34;
                   } else {
                     L36: {
-                      if ((var2_int ^ -1) == (na.field_j.field_l ^ -1)) {
-                        nj.field_f[var2_int] = 64 + nj.field_f[var2_int] * 15 >> -1291897628;
+                      if (~var2_int == ~na.field_j.field_l) {
+                        nj.field_f[var2_int] = 64 + nj.field_f[var2_int] * 15 >> 4;
                         break L36;
                       } else {
-                        nj.field_f[var2_int] = nj.field_f[var2_int] * 15 - 0 >> 344090308;
+                        nj.field_f[var2_int] = nj.field_f[var2_int] * 15 >> 4;
                         break L36;
                       }
                     }
@@ -1677,11 +1677,11 @@ public final class stellarshard extends rb implements cf {
                     break L37;
                   } else {
                     L39: {
-                      if ((na.field_j.field_l ^ -1) == (var3 ^ -1)) {
-                        nj.field_f[var3] = nj.field_f[var3] * 15 - -64 >> -1495521532;
+                      if (~na.field_j.field_l == ~var3) {
+                        nj.field_f[var3] = nj.field_f[var3] * 15 - -64 >> 4;
                         break L39;
                       } else {
-                        nj.field_f[var3] = 0 + 15 * nj.field_f[var3] >> -1540175100;
+                        nj.field_f[var3] = 15 * nj.field_f[var3] >> 4;
                         break L39;
                       }
                     }
@@ -1692,7 +1692,7 @@ public final class stellarshard extends rb implements cf {
               }
             }
             L40: {
-              if ((tl.field_c ^ -1) == -4) {
+              if (tl.field_c == 3) {
                 L41: {
                   var2_int = 8;
                   if (ah.a(-1)) {
@@ -1708,15 +1708,15 @@ public final class stellarshard extends rb implements cf {
                 }
                 var3 = var2_int;
                 L42: while (true) {
-                  if (-11 >= (var3 ^ -1)) {
+                  if (var3 >= 10) {
                     break L40;
                   } else {
                     L43: {
                       if (na.field_j.field_l != var3) {
-                        nj.field_f[var3] = 15 * nj.field_f[var3] + 0 >> -1489526652;
+                        nj.field_f[var3] = 15 * nj.field_f[var3] >> 4;
                         break L43;
                       } else {
-                        nj.field_f[var3] = 15 * nj.field_f[var3] - -64 >> 914360292;
+                        nj.field_f[var3] = 15 * nj.field_f[var3] - -64 >> 4;
                         break L43;
                       }
                     }
@@ -1736,7 +1736,7 @@ public final class stellarshard extends rb implements cf {
                 break L44;
               }
             }
-            if ((n.field_L ^ -1) >= -1) {
+            if (n.field_L <= 0) {
               break L14;
             } else {
               n.field_L = n.field_L - 1;
@@ -1756,7 +1756,7 @@ public final class stellarshard extends rb implements cf {
                       break L47;
                     } else {
                       stackOut_175_0 = -4;
-                      stackOut_175_1 = tl.field_c ^ -1;
+                      stackOut_175_1 = ~tl.field_c;
                       stackIn_176_0 = stackOut_175_0;
                       stackIn_176_1 = stackOut_175_1;
                       L48: {
@@ -1767,14 +1767,14 @@ public final class stellarshard extends rb implements cf {
                         }
                       }
                       L49: {
-                        if ((tl.field_c ^ -1) == -3) {
+                        if (tl.field_c == 2) {
                           break L49;
                         } else {
                           break L49;
                         }
                       }
                       L50: {
-                        if (-2 == (tl.field_c ^ -1)) {
+                        if (tl.field_c == 1) {
                           break L50;
                         } else {
                           break L50;
@@ -1806,13 +1806,13 @@ public final class stellarshard extends rb implements cf {
                         break L52;
                       } else {
                         L53: {
-                          if ((tl.field_c ^ -1) == -3) {
+                          if (tl.field_c == 2) {
                             break L53;
                           } else {
                             if (tl.field_c == 1) {
                               break L53;
                             } else {
-                              if (-4 != (tl.field_c ^ -1)) {
+                              if (tl.field_c != 3) {
                                 break L52;
                               } else {
                                 break L53;
@@ -1872,7 +1872,7 @@ public final class stellarshard extends rb implements cf {
             break L56;
           } else {
             jg.field_pb = jg.field_pb + 1;
-            if ((jg.field_pb ^ -1) <= -37) {
+            if (jg.field_pb >= 36) {
               jg.field_pb = 0;
               wh.field_c = 2;
               break L56;
@@ -1884,7 +1884,7 @@ public final class stellarshard extends rb implements cf {
         L57: {
           if (2 == wh.field_c) {
             jg.field_pb = jg.field_pb + 1;
-            if ((jg.field_pb ^ -1) > -31) {
+            if (jg.field_pb < 30) {
               break L57;
             } else {
               wh.field_c = 3;
@@ -1896,7 +1896,7 @@ public final class stellarshard extends rb implements cf {
           }
         }
         L58: {
-          if (-4 == (wh.field_c ^ -1)) {
+          if (wh.field_c == 3) {
             L59: {
               jg.field_pb = jg.field_pb + 1;
               if (1 == jg.field_pb) {
@@ -1914,7 +1914,7 @@ public final class stellarshard extends rb implements cf {
                 break L59;
               }
             }
-            if (-251 <= (jg.field_pb ^ -1)) {
+            if (jg.field_pb <= 250) {
               break L58;
             } else {
               jg.field_pb = 0;
@@ -1926,11 +1926,11 @@ public final class stellarshard extends rb implements cf {
           }
         }
         L60: {
-          if ((al.field_c ^ -1) == (ke.field_a ^ -1)) {
+          if (~al.field_c == ~ke.field_a) {
             break L60;
           } else {
             kg.field_D = kg.field_D - 1;
-            if (-1 <= (kg.field_D ^ -1)) {
+            if (kg.field_D <= 0) {
               kg.field_D = 255;
               ke.field_a = al.field_c;
               break L60;
@@ -1949,9 +1949,9 @@ public final class stellarshard extends rb implements cf {
           }
         }
         L62: {
-          if (-2 == (nc.field_H ^ -1)) {
+          if (nc.field_H == 1) {
             L63: {
-              if ((a.field_h[0].field_g ^ -1) > -2) {
+              if (a.field_h[0].field_g < 1) {
                 a.field_h[0].field_g = a.field_h[0].field_g + 1;
                 gh.field_b = gh.field_b - 1;
                 break L63;
@@ -2024,7 +2024,7 @@ public final class stellarshard extends rb implements cf {
             if (null == a.field_h[0]) {
               break L69;
             } else {
-              if (0 == (a.field_h[0].field_m ^ -1)) {
+              if (a.field_h[0].field_m == -1) {
                 break L68;
               } else {
                 break L69;
@@ -2073,7 +2073,7 @@ public final class stellarshard extends rb implements cf {
                     }
                   }
                 }
-                if ((a.field_h[0].field_g ^ -1) < -1) {
+                if (a.field_h[0].field_g > 0) {
                   L75: {
                     stackOut_272_0 = a.field_h[0];
                     stackOut_272_1 = a.field_h[0].field_k;
@@ -2123,7 +2123,7 @@ public final class stellarshard extends rb implements cf {
                     stackIn_277_0 = stackOut_276_0;
                     stackIn_277_1 = stackOut_276_1;
                     stackIn_277_2 = stackOut_276_2;
-                    if (-9 == (e.field_e ^ -1)) {
+                    if (e.field_e == 8) {
                       stackOut_278_0 = (qe) (Object) stackIn_278_0;
                       stackOut_278_1 = stackIn_278_1;
                       stackOut_278_2 = stackIn_278_2;
@@ -2147,7 +2147,7 @@ public final class stellarshard extends rb implements cf {
                   }
                   L77: {
                     stackIn_279_0.field_d = stackIn_279_1 - stackIn_279_2 * stackIn_279_3;
-                    if ((nc.field_H ^ -1) != -5) {
+                    if (nc.field_H != 4) {
                       break L77;
                     } else {
                       a.field_h[0].field_k = a.field_h[0].field_k - 0.1 * Math.cos(3.141592653589793 * (double)a.field_h[0].field_h * 2.0 / 256.0);
@@ -2155,7 +2155,7 @@ public final class stellarshard extends rb implements cf {
                       if (!fe.field_e) {
                         break L77;
                       } else {
-                        if (-1 > (og.field_a ^ -1)) {
+                        if (og.field_a > 0) {
                           break L77;
                         } else {
                           ll.field_c.a(sb.field_e[35], 100, pk.field_h / 2);
@@ -2168,7 +2168,7 @@ public final class stellarshard extends rb implements cf {
                   L78: {
                     var2_int = 3;
                     var3 = 5;
-                    if ((nc.field_H ^ -1) == -5) {
+                    if (nc.field_H == 4) {
                       var3 = 10;
                       var2_int = 6;
                       break L78;
@@ -2184,7 +2184,7 @@ public final class stellarshard extends rb implements cf {
                       } else {
                         var5 = 4 * (gh.field_b % 8);
                         L80: while (true) {
-                          if (-257 >= (var5 ^ -1)) {
+                          if (var5 >= 256) {
                             break L72;
                           } else {
                             L81: {
@@ -2247,7 +2247,7 @@ public final class stellarshard extends rb implements cf {
                         stackIn_293_1 = stackOut_290_1;
                         stackIn_291_0 = stackOut_290_0;
                         stackIn_291_1 = stackOut_290_1;
-                        if ((nc.field_H ^ -1) != -5) {
+                        if (nc.field_H != 4) {
                           stackOut_293_0 = null;
                           stackOut_293_1 = null;
                           stackOut_293_2 = 1;
@@ -2272,7 +2272,7 @@ public final class stellarshard extends rb implements cf {
                       L84: {
                         var4_ref_vl = new vl(stackIn_294_2, a.field_h[0]);
                         var4_ref_vl.field_q = 16711680;
-                        if (-5 == (nc.field_H ^ -1)) {
+                        if (nc.field_H == 4) {
                           var4_ref_vl.field_q = 16776960;
                           var4_ref_vl.field_p = 10;
                           break L84;
@@ -2318,10 +2318,10 @@ public final class stellarshard extends rb implements cf {
                   var3 = 5;
                   var5 = 0;
                   L86: while (true) {
-                    if ((var2_int ^ -1) >= (var5 ^ -1)) {
+                    if (~var2_int >= ~var5) {
                       var5 = 0;
                       L87: while (true) {
-                        if ((var2_int ^ -1) >= (var5 ^ -1)) {
+                        if (~var2_int >= ~var5) {
                           break L72;
                         } else {
                           var4_ref_vl = new vl(1, a.field_h[0]);
@@ -2464,7 +2464,7 @@ public final class stellarshard extends rb implements cf {
                 if (!si.field_jb[97]) {
                   break L93;
                 } else {
-                  if ((a.field_h[0].field_g ^ -1) >= -1) {
+                  if (a.field_h[0].field_g <= 0) {
                     break L93;
                   } else {
                     L94: {
@@ -2499,7 +2499,7 @@ public final class stellarshard extends rb implements cf {
                   }
                 }
               }
-              if ((((stellarshard) this).field_M ^ -1) <= -1) {
+              if (((stellarshard) this).field_M >= 0) {
                 break L92;
               } else {
                 ((stellarshard) this).field_M = ((stellarshard) this).field_M + 5;
@@ -2533,7 +2533,7 @@ public final class stellarshard extends rb implements cf {
                     }
                     L100: {
                       var2_int = stackIn_356_0;
-                      if ((var2_int / 3 ^ -1) >= (((stellarshard) this).field_M ^ -1)) {
+                      if (~(var2_int / 3) >= ~((stellarshard) this).field_M) {
                         break L100;
                       } else {
                         ((stellarshard) this).field_M = var2_int / 3;
@@ -2552,9 +2552,9 @@ public final class stellarshard extends rb implements cf {
                   }
                 }
               }
-              if (-1 > (((stellarshard) this).field_M ^ -1)) {
+              if (((stellarshard) this).field_M > 0) {
                 ((stellarshard) this).field_M = ((stellarshard) this).field_M - 5;
-                if ((((stellarshard) this).field_M ^ -1) <= -1) {
+                if (((stellarshard) this).field_M >= 0) {
                   break L97;
                 } else {
                   ((stellarshard) this).field_M = 0;
@@ -2575,7 +2575,7 @@ public final class stellarshard extends rb implements cf {
                   if (10 != e.field_e) {
                     break L71;
                   } else {
-                    if (-1 >= (a.field_h[0].field_i ^ -1)) {
+                    if (a.field_h[0].field_i >= 0) {
                       break L71;
                     } else {
                       break L102;
@@ -2591,7 +2591,7 @@ public final class stellarshard extends rb implements cf {
                   if (!fe.field_e) {
                     break L103;
                   } else {
-                    if (-1 > (a.field_h[0].field_i ^ -1)) {
+                    if (a.field_h[0].field_i > 0) {
                       break L103;
                     } else {
                       ll.field_c.a(sb.field_e[27], 100, 2 * pk.field_h);
@@ -2599,7 +2599,7 @@ public final class stellarshard extends rb implements cf {
                     }
                   }
                 } else {
-                  if ((var2_int ^ -1) == -1) {
+                  if (var2_int == 0) {
                     if (!fe.field_e) {
                       break L103;
                     } else {
@@ -2611,12 +2611,12 @@ public final class stellarshard extends rb implements cf {
                       }
                     }
                   } else {
-                    if ((var2_int ^ -1) != -2) {
+                    if (var2_int != 1) {
                       if (2 == var2_int) {
                         if (!fe.field_e) {
                           break L103;
                         } else {
-                          if (-1 > (a.field_h[0].field_i ^ -1)) {
+                          if (a.field_h[0].field_i > 0) {
                             break L103;
                           } else {
                             ll.field_c.a(sb.field_e[1], 100, pk.field_h * 2);
@@ -2638,7 +2638,7 @@ public final class stellarshard extends rb implements cf {
                               }
                             }
                           } else {
-                            if (-6 == (var2_int ^ -1)) {
+                            if (var2_int == 5) {
                               if (!fe.field_e) {
                                 break L103;
                               } else {
@@ -2662,7 +2662,7 @@ public final class stellarshard extends rb implements cf {
                                   }
                                 }
                               } else {
-                                if (-8 == (var2_int ^ -1)) {
+                                if (var2_int == 7) {
                                   if (!fe.field_e) {
                                     break L103;
                                   } else {
@@ -2679,7 +2679,7 @@ public final class stellarshard extends rb implements cf {
                                       if (!fe.field_e) {
                                         break L103;
                                       } else {
-                                        if ((af.field_o ^ -1) >= -1) {
+                                        if (af.field_o <= 0) {
                                           ll.field_c.a(sb.field_e[7], 100, 2 * pk.field_h);
                                           af.field_o = 5;
                                           break L103;
@@ -2688,7 +2688,7 @@ public final class stellarshard extends rb implements cf {
                                         }
                                       }
                                     } else {
-                                      if (-11 != (var2_int ^ -1)) {
+                                      if (var2_int != 10) {
                                         break L103;
                                       } else {
                                         if (!fe.field_e) {
@@ -2724,7 +2724,7 @@ public final class stellarshard extends rb implements cf {
                           if (!fe.field_e) {
                             break L103;
                           } else {
-                            if (-1 <= (a.field_h[0].field_i ^ -1)) {
+                            if (a.field_h[0].field_i <= 0) {
                               ll.field_c.a(sb.field_e[21], 100, 2 * pk.field_h);
                               break L103;
                             } else {
@@ -2737,7 +2737,7 @@ public final class stellarshard extends rb implements cf {
                       if (!fe.field_e) {
                         break L103;
                       } else {
-                        if ((a.field_h[0].field_i ^ -1) >= -1) {
+                        if (a.field_h[0].field_i <= 0) {
                           ll.field_c.a(sb.field_e[33], 100, pk.field_h * 2);
                           break L103;
                         } else {
@@ -2748,12 +2748,12 @@ public final class stellarshard extends rb implements cf {
                   }
                 }
               }
-              if (-1 > (a.field_h[0].field_i ^ -1)) {
+              if (a.field_h[0].field_i > 0) {
                 break L71;
               } else {
                 var4 = e.field_e;
                 if (var4 != -1) {
-                  if ((var4 ^ -1) == -1) {
+                  if (var4 == 0) {
                     L104: {
                       int fieldTemp$12 = mj.field_F + 1;
                       mj.field_F = mj.field_F + 1;
@@ -2767,15 +2767,15 @@ public final class stellarshard extends rb implements cf {
                     a.field_h[0].field_i = 10;
                     var4 = -4;
                     L105: while (true) {
-                      if (-5 > (var4 ^ -1)) {
+                      if (var4 > 4) {
                         break L71;
                       } else {
                         L106: {
                           L107: {
                             L108: {
                               var2_ref = new vl(0, a.field_h[0]);
-                              var2_ref.field_j = var2_ref.field_j - Math.sin(2.0 * ((double)(a.field_h[0].field_h - -(1 * var4)) * 3.141592653589793) / 256.0) * 8.0;
-                              var2_ref.field_a = var2_ref.field_a - Math.cos(3.141592653589793 * (double)(1 * var4 + a.field_h[0].field_h) * 2.0 / 256.0) * 8.0;
+                              var2_ref.field_j = var2_ref.field_j - Math.sin(2.0 * ((double)(a.field_h[0].field_h - -var4) * 3.141592653589793) / 256.0) * 8.0;
+                              var2_ref.field_a = var2_ref.field_a - Math.cos(3.141592653589793 * (double)(var4 + a.field_h[0].field_h) * 2.0 / 256.0) * 8.0;
                               var2_ref.field_k = -((double)var4 * var2_ref.field_j / 4.0) + (a.field_h[0].field_l + 2.0 * var2_ref.field_a);
                               var2_ref.field_c = var2_ref.field_a * (double)var4 / 4.0 + (a.field_h[0].field_a + 2.0 * var2_ref.field_j);
                               var2_ref.field_q = 255;
@@ -2783,17 +2783,17 @@ public final class stellarshard extends rb implements cf {
                               var2_ref.field_n = e.field_e;
                               var2_ref.field_p = 2;
                               var2_ref.field_j = var2_ref.field_j + a.field_h[0].field_d;
-                              if ((var4 ^ -1) != -1) {
+                              if (var4 != 0) {
                                 break L108;
                               } else {
-                                if (-1 == (mj.field_F ^ -1)) {
+                                if (mj.field_F == 0) {
                                   break L107;
                                 } else {
                                   break L108;
                                 }
                               }
                             }
-                            if ((var4 ^ -1) == -1) {
+                            if (var4 == 0) {
                               break L106;
                             } else {
                               if (1 != mj.field_F) {
@@ -2816,7 +2816,7 @@ public final class stellarshard extends rb implements cf {
                       L109: {
                         int fieldTemp$13 = mj.field_F + 1;
                         mj.field_F = mj.field_F + 1;
-                        if ((fieldTemp$13 ^ -1) < -2) {
+                        if (fieldTemp$13 > 1) {
                           mj.field_F = 0;
                           break L109;
                         } else {
@@ -2826,7 +2826,7 @@ public final class stellarshard extends rb implements cf {
                       a.field_h[0].field_i = 5;
                       var4 = -3;
                       L110: while (true) {
-                        if (-4 > (var4 ^ -1)) {
+                        if (var4 > 3) {
                           break L71;
                         } else {
                           L111: {
@@ -2842,8 +2842,8 @@ public final class stellarshard extends rb implements cf {
                               wk.field_b[eg.a(-91)] = var2_ref;
                               var2_ref.field_q = 16728128;
                               var2_ref.field_n = e.field_e;
-                              if ((Math.abs(var4) ^ -1) < -2) {
-                                if ((Math.abs(var4) ^ -1) >= -2) {
+                              if (Math.abs(var4) > 1) {
+                                if (Math.abs(var4) <= 1) {
                                   break L111;
                                 } else {
                                   if (mj.field_F == 1) {
@@ -2864,15 +2864,15 @@ public final class stellarshard extends rb implements cf {
                         }
                       }
                     } else {
-                      if (-3 != (var4 ^ -1)) {
+                      if (var4 != 2) {
                         if (3 != var4) {
-                          if (-5 != (var4 ^ -1)) {
+                          if (var4 != 4) {
                             if (5 != var4) {
                               if (6 == var4) {
                                 a.field_h[0].field_i = 5;
                                 var4 = -10;
                                 L113: while (true) {
-                                  if (-11 > (var4 ^ -1)) {
+                                  if (var4 > 10) {
                                     break L71;
                                   } else {
                                     var2_ref = new vl(0, a.field_h[0]);
@@ -2893,12 +2893,12 @@ public final class stellarshard extends rb implements cf {
                                 }
                               } else {
                                 if (var4 != 7) {
-                                  if ((var4 ^ -1) != -9) {
-                                    if ((var4 ^ -1) == -10) {
+                                  if (var4 != 8) {
+                                    if (var4 == 9) {
                                       a.field_h[0].field_i = 1;
                                       var4 = -2;
                                       L114: while (true) {
-                                        if ((var4 ^ -1) < -3) {
+                                        if (var4 > 2) {
                                           break L71;
                                         } else {
                                           var2_ref = new vl(0, a.field_h[0]);
@@ -2923,7 +2923,7 @@ public final class stellarshard extends rb implements cf {
                                       } else {
                                         L115: {
                                           a.field_h[0].field_i = a.field_h[0].field_i - 1;
-                                          if ((a.field_h[0].field_i ^ -1) < 24) {
+                                          if (a.field_h[0].field_i > -25) {
                                             break L115;
                                           } else {
                                             a.field_h[0].field_i = 10;
@@ -2940,7 +2940,7 @@ public final class stellarshard extends rb implements cf {
                                           }
                                         }
                                         L117: {
-                                          if (-11 <= (var3 ^ -1)) {
+                                          if (var3 <= 10) {
                                             break L117;
                                           } else {
                                             var3 = 10;
@@ -2948,7 +2948,7 @@ public final class stellarshard extends rb implements cf {
                                           }
                                         }
                                         L118: {
-                                          if (-2 < (var3 ^ -1)) {
+                                          if (var3 < 1) {
                                             var3 = 1;
                                             break L118;
                                           } else {
@@ -2957,7 +2957,7 @@ public final class stellarshard extends rb implements cf {
                                         }
                                         var4 = -1;
                                         L119: while (true) {
-                                          if (-2 > (var4 ^ -1)) {
+                                          if (var4 > 1) {
                                             break L71;
                                           } else {
                                             L120: {
@@ -3020,7 +3020,7 @@ public final class stellarshard extends rb implements cf {
                                         if (var4 > 3) {
                                           var4 = 9;
                                           L124: while (true) {
-                                            if ((var4 ^ -1) < -12) {
+                                            if (var4 > 11) {
                                               break L71;
                                             } else {
                                               L125: {
@@ -3034,7 +3034,7 @@ public final class stellarshard extends rb implements cf {
                                                 }
                                               }
                                               L126: {
-                                                if (-3 == (Math.abs(var4 - 10) ^ -1)) {
+                                                if (Math.abs(var4 - 10) == 2) {
                                                   var5_double = 4.8;
                                                   break L126;
                                                 } else {
@@ -3061,7 +3061,7 @@ public final class stellarshard extends rb implements cf {
                                           L127: {
                                             var2_ref = new vl(0, a.field_h[0]);
                                             var5_double = 5.0;
-                                            if ((Math.abs(var4) ^ -1) != -4) {
+                                            if (Math.abs(var4) != 3) {
                                               break L127;
                                             } else {
                                               var5_double = 4.5;
@@ -3069,7 +3069,7 @@ public final class stellarshard extends rb implements cf {
                                             }
                                           }
                                           L128: {
-                                            if (-3 != (Math.abs(var4) ^ -1)) {
+                                            if (Math.abs(var4) != 2) {
                                               break L128;
                                             } else {
                                               var5_double = 4.8;
@@ -3144,7 +3144,7 @@ public final class stellarshard extends rb implements cf {
                                   var2_ref.field_j = var2_ref.field_j + a.field_h[0].field_d;
                                   var2_ref.field_p = 1;
                                   var2_ref.field_a = var2_ref.field_a + a.field_h[0].field_k;
-                                  var2_ref.field_q = 65280 + (Math.abs(var4) * 255 / 30 << 1688133712 & 16771312);
+                                  var2_ref.field_q = 65280 + (Math.abs(var4) * 255 / 30 << 16 & 16771312);
                                   wk.field_b[eg.a(-54)] = var2_ref;
                                   var2_ref.field_n = e.field_e;
                                   var4++;
@@ -3186,7 +3186,7 @@ public final class stellarshard extends rb implements cf {
                               L134: {
                                 var2_ref = new vl(0, a.field_h[0]);
                                 var5_double = 5.0;
-                                if ((Math.abs(var4) ^ -1) == -4) {
+                                if (Math.abs(var4) == 3) {
                                   var5_double = 4.5;
                                   break L134;
                                 } else {
@@ -3220,7 +3220,7 @@ public final class stellarshard extends rb implements cf {
                                 }
                               }
                               L137: {
-                                if ((Math.abs(var4) ^ -1) == -2) {
+                                if (Math.abs(var4) == 1) {
                                   var2_ref.field_q = 16711680;
                                   var2_ref.field_d = 16777088;
                                   break L137;
@@ -3229,7 +3229,7 @@ public final class stellarshard extends rb implements cf {
                                 }
                               }
                               L138: {
-                                if ((Math.abs(var4) ^ -1) == -1) {
+                                if (Math.abs(var4) == 0) {
                                   var2_ref.field_q = 16711680;
                                   var2_ref.field_d = 16777088;
                                   break L138;
@@ -3250,7 +3250,7 @@ public final class stellarshard extends rb implements cf {
                           a.field_h[0].field_i = 6;
                           int fieldTemp$14 = mj.field_F + 1;
                           mj.field_F = mj.field_F + 1;
-                          if ((fieldTemp$14 ^ -1) >= -4) {
+                          if (fieldTemp$14 <= 3) {
                             break L139;
                           } else {
                             mj.field_F = 0;
@@ -3259,12 +3259,12 @@ public final class stellarshard extends rb implements cf {
                         }
                         var4 = -1;
                         L140: while (true) {
-                          if (-2 > (var4 ^ -1)) {
+                          if (var4 > 1) {
                             break L71;
                           } else {
                             L141: {
                               var2_ref = new vl(0, a.field_h[0]);
-                              if ((var4 ^ -1) != 0) {
+                              if (var4 != -1) {
                                 break L141;
                               } else {
                                 mj.field_F = 3 - mj.field_F;
@@ -3275,7 +3275,7 @@ public final class stellarshard extends rb implements cf {
                               var2_ref.field_j = var2_ref.field_j - Math.sin(3.141592653589793 * (double)(a.field_h[0].field_h + 4 * (1 + mj.field_F) * var4) * 2.0 / 256.0) * 6.0;
                               var2_ref.field_a = var2_ref.field_a - Math.cos((double)(a.field_h[0].field_h + (mj.field_F - -1) * (var4 * 4)) * 3.141592653589793 * 2.0 / 256.0) * 6.0;
                               var2_ref.field_c = var2_ref.field_j * 3.0 + a.field_h[0].field_a;
-                              if ((var4 ^ -1) == 0) {
+                              if (var4 == -1) {
                                 mj.field_F = -mj.field_F + 3;
                                 break L142;
                               } else {
@@ -3301,10 +3301,10 @@ public final class stellarshard extends rb implements cf {
                                     }
                                   }
                                 }
-                                if (-1 == (var4 ^ -1)) {
+                                if (var4 == 0) {
                                   break L143;
                                 } else {
-                                  if ((mj.field_F % 2 ^ -1) == -2) {
+                                  if (mj.field_F % 2 == 1) {
                                     break L144;
                                   } else {
                                     break L143;
@@ -3326,7 +3326,7 @@ public final class stellarshard extends rb implements cf {
                   L146: {
                     int fieldTemp$15 = mj.field_F + 1;
                     mj.field_F = mj.field_F + 1;
-                    if ((fieldTemp$15 ^ -1) < -5) {
+                    if (fieldTemp$15 > 4) {
                       mj.field_F = 0;
                       break L146;
                     } else {
@@ -3336,7 +3336,7 @@ public final class stellarshard extends rb implements cf {
                   L147: {
                     a.field_h[0].field_i = 5;
                     var4 = mj.field_F + -1;
-                    if ((var4 ^ -1) != -3) {
+                    if (var4 != 2) {
                       break L147;
                     } else {
                       var4 = 0;
@@ -3344,7 +3344,7 @@ public final class stellarshard extends rb implements cf {
                     }
                   }
                   L148: {
-                    if ((var4 ^ -1) == -4) {
+                    if (var4 == 3) {
                       var4 = -1;
                       break L148;
                     } else {
@@ -3390,7 +3390,7 @@ public final class stellarshard extends rb implements cf {
                 if (!qh.c(89)) {
                   break L150;
                 } else {
-                  stackOut_652_0 = gi.field_f ^ -1;
+                  stackOut_652_0 = ~gi.field_f;
                   stackIn_653_0 = stackOut_652_0;
                   stackOut_653_0 = stackIn_653_0;
                   stackOut_653_1 = -34;
@@ -3405,7 +3405,7 @@ public final class stellarshard extends rb implements cf {
                       } else {
                         e.field_e = e.field_e + 1;
                         e.field_c = true;
-                        if (-11 <= (e.field_e ^ -1)) {
+                        if (e.field_e <= 10) {
                           break L152;
                         } else {
                           e.field_e = -1;
@@ -3441,7 +3441,7 @@ public final class stellarshard extends rb implements cf {
                     if (gi.field_f != 48) {
                       break L155;
                     } else {
-                      if (-3 >= (ph.field_D ^ -1)) {
+                      if (ph.field_D >= 2) {
                         hj.a(255, 0, 1);
                         break L155;
                       } else {
@@ -3449,7 +3449,7 @@ public final class stellarshard extends rb implements cf {
                       }
                     }
                   }
-                  if ((gi.field_f ^ -1) == -14) {
+                  if (gi.field_f == 13) {
                     na.field_j = new ij((stellarshard) this);
                     tl.field_c = 0;
                     return;
@@ -3480,7 +3480,7 @@ public final class stellarshard extends rb implements cf {
                       if (null == a.field_h[0]) {
                         break L159;
                       } else {
-                        if (0 != (a.field_h[0].field_m ^ -1)) {
+                        if (a.field_h[0].field_m != -1) {
                           break L159;
                         } else {
                           stackOut_720_0 = a.field_h[0];
@@ -3507,10 +3507,10 @@ public final class stellarshard extends rb implements cf {
                     var5 = stackIn_726_0;
                     if (var5 == 0) {
                       pk.field_c = pk.field_c - 1;
-                      if (-1 < (pk.field_c ^ -1)) {
+                      if (pk.field_c < 0) {
                         L161: {
                           var6 = gh.field_b;
-                          if ((var6 ^ -1) < -6) {
+                          if (var6 > 5) {
                             var6 = 5;
                             break L161;
                           } else {
@@ -3519,7 +3519,7 @@ public final class stellarshard extends rb implements cf {
                         }
                         pk.field_c = 25 + var6 * 25;
                         var7 = 160 + -(var6 * 32);
-                        if (-1 <= (var7 ^ -1)) {
+                        if (var7 <= 0) {
                           break L160;
                         } else {
                           if (fe.field_e) {
@@ -3541,7 +3541,7 @@ public final class stellarshard extends rb implements cf {
                   var8 = null;
                   var9 = 0;
                   L162: while (true) {
-                    if ((var9 ^ -1) <= -1001) {
+                    if (var9 >= 1000) {
                       if (null == var8) {
                         break L157;
                       } else {
@@ -3555,7 +3555,7 @@ public final class stellarshard extends rb implements cf {
                           }
                         }
                         L164: {
-                          if (-129 > (var9 ^ -1)) {
+                          if (var9 > 128) {
                             var9 = 128;
                             break L164;
                           } else {
@@ -3584,7 +3584,7 @@ public final class stellarshard extends rb implements cf {
                         if (var10 == null) {
                           break L166;
                         } else {
-                          if (0 == (var10.field_m ^ -1)) {
+                          if (var10.field_m == -1) {
                             break L166;
                           } else {
                             if (var10.a((byte) -102)) {
@@ -3639,19 +3639,19 @@ public final class stellarshard extends rb implements cf {
                                 if (param0) {
                                   var5 = 0;
                                   L172: while (true) {
-                                    if (-3001 >= (var5 ^ -1)) {
+                                    if (var5 >= 3000) {
                                       L173: {
                                         if (qi.field_a < 10) {
                                           break L173;
                                         } else {
-                                          if (-1 > (mk.field_k ^ -1)) {
+                                          if (mk.field_k > 0) {
                                             break L173;
                                           } else {
                                             if (!s.field_i) {
                                               break L173;
                                             } else {
                                               nc.field_A = nc.field_A - 1;
-                                              if ((nc.field_A ^ -1) >= -1) {
+                                              if (nc.field_A <= 0) {
                                                 a.field_h[0] = null;
                                                 this.k((byte) 97);
                                                 break L173;
@@ -3666,9 +3666,9 @@ public final class stellarshard extends rb implements cf {
                                         if (50 != qi.field_a) {
                                           break L174;
                                         } else {
-                                          if ((nc.field_A ^ -1) < -1) {
+                                          if (nc.field_A > 0) {
                                             nc.field_A = nc.field_A - 1;
-                                            if ((nc.field_A ^ -1) < -1) {
+                                            if (nc.field_A > 0) {
                                               break L174;
                                             } else {
                                               a.field_h[0] = null;
@@ -3685,7 +3685,7 @@ public final class stellarshard extends rb implements cf {
                                           break L175;
                                         } else {
                                           L176: {
-                                            if (-11 < (qi.field_a ^ -1)) {
+                                            if (qi.field_a < 10) {
                                               break L176;
                                             } else {
                                               if (mk.field_k <= 0) {
@@ -3715,7 +3715,7 @@ public final class stellarshard extends rb implements cf {
                                                     break L179;
                                                   } else {
                                                     L180: {
-                                                      if (-2 == (tl.field_c ^ -1)) {
+                                                      if (tl.field_c == 1) {
                                                         if (((stellarshard) this).field_Q < 612) {
                                                           break L180;
                                                         } else {
@@ -3725,7 +3725,7 @@ public final class stellarshard extends rb implements cf {
                                                             if (((stellarshard) this).field_O < 176) {
                                                               break L180;
                                                             } else {
-                                                              if (-193 >= (((stellarshard) this).field_O ^ -1)) {
+                                                              if (((stellarshard) this).field_O >= 192) {
                                                                 break L180;
                                                               } else {
                                                                 if (gh.field_c == 1) {
@@ -3748,7 +3748,7 @@ public final class stellarshard extends rb implements cf {
                                                         break L181;
                                                       } else {
                                                         L182: {
-                                                          if ((((stellarshard) this).field_Q ^ -1) > -497) {
+                                                          if (((stellarshard) this).field_Q < 496) {
                                                             break L182;
                                                           } else {
                                                             if (512 <= ((stellarshard) this).field_Q) {
@@ -3757,10 +3757,10 @@ public final class stellarshard extends rb implements cf {
                                                               if (208 > ((stellarshard) this).field_O) {
                                                                 break L182;
                                                               } else {
-                                                                if (-225 >= (((stellarshard) this).field_O ^ -1)) {
+                                                                if (((stellarshard) this).field_O >= 224) {
                                                                   break L182;
                                                                 } else {
-                                                                  if (-2 != (gh.field_c ^ -1)) {
+                                                                  if (gh.field_c != 1) {
                                                                     break L182;
                                                                   } else {
                                                                     tl.field_c = 0;
@@ -3774,16 +3774,16 @@ public final class stellarshard extends rb implements cf {
                                                           }
                                                         }
                                                         L183: {
-                                                          if ((((stellarshard) this).field_Q ^ -1) > -249) {
+                                                          if (((stellarshard) this).field_Q < 248) {
                                                             break L183;
                                                           } else {
-                                                            if ((((stellarshard) this).field_Q ^ -1) < -265) {
+                                                            if (((stellarshard) this).field_Q > 264) {
                                                               break L183;
                                                             } else {
                                                               if (460 > ((stellarshard) this).field_O) {
                                                                 break L183;
                                                               } else {
-                                                                if (-485 > (((stellarshard) this).field_O ^ -1)) {
+                                                                if (((stellarshard) this).field_O > 484) {
                                                                   break L183;
                                                                 } else {
                                                                   if (1 == gh.field_c) {
@@ -3806,21 +3806,21 @@ public final class stellarshard extends rb implements cf {
                                                         if (((stellarshard) this).field_Q < 376) {
                                                           break L181;
                                                         } else {
-                                                          if ((((stellarshard) this).field_Q ^ -1) < -393) {
+                                                          if (((stellarshard) this).field_Q > 392) {
                                                             break L181;
                                                           } else {
                                                             if (460 > ((stellarshard) this).field_O) {
                                                               break L181;
                                                             } else {
-                                                              if ((((stellarshard) this).field_O ^ -1) < -485) {
+                                                              if (((stellarshard) this).field_O > 484) {
                                                                 break L181;
                                                               } else {
-                                                                if (-2 != (gh.field_c ^ -1)) {
+                                                                if (gh.field_c != 1) {
                                                                   break L181;
                                                                 } else {
                                                                   int fieldTemp$17 = si.field_X + 1;
                                                                   si.field_X = si.field_X + 1;
-                                                                  if (-4 >= (fieldTemp$17 ^ -1)) {
+                                                                  if (fieldTemp$17 >= 3) {
                                                                     si.field_X = si.field_X - 3;
                                                                     break L181;
                                                                   } else {
@@ -3837,19 +3837,19 @@ public final class stellarshard extends rb implements cf {
                                                       if (3 != tl.field_c) {
                                                         break L184;
                                                       } else {
-                                                        if ((((stellarshard) this).field_Q ^ -1) > -497) {
+                                                        if (((stellarshard) this).field_Q < 496) {
                                                           break L184;
                                                         } else {
-                                                          if ((((stellarshard) this).field_Q ^ -1) <= -513) {
+                                                          if (((stellarshard) this).field_Q >= 512) {
                                                             break L184;
                                                           } else {
                                                             if (208 > ((stellarshard) this).field_O) {
                                                               break L184;
                                                             } else {
-                                                              if ((((stellarshard) this).field_O ^ -1) <= -225) {
+                                                              if (((stellarshard) this).field_O >= 224) {
                                                                 break L184;
                                                               } else {
-                                                                if (-2 == (gh.field_c ^ -1)) {
+                                                                if (gh.field_c == 1) {
                                                                   tl.field_c = 0;
                                                                   n.field_L = 256;
                                                                   if (!oc.field_d) {
@@ -3878,17 +3878,17 @@ public final class stellarshard extends rb implements cf {
                                                   if (null == na.field_j) {
                                                     break L185;
                                                   } else {
-                                                    if (-14 != (gi.field_f ^ -1)) {
+                                                    if (gi.field_f != 13) {
                                                       break L185;
                                                     } else {
                                                       L186: {
-                                                        if ((tl.field_c ^ -1) == -3) {
+                                                        if (tl.field_c == 2) {
                                                           break L186;
                                                         } else {
-                                                          if ((tl.field_c ^ -1) == -2) {
+                                                          if (tl.field_c == 1) {
                                                             break L186;
                                                           } else {
-                                                            if (-4 != (tl.field_c ^ -1)) {
+                                                            if (tl.field_c != 3) {
                                                               break L185;
                                                             } else {
                                                               break L186;
@@ -3920,7 +3920,7 @@ public final class stellarshard extends rb implements cf {
                                           break L187;
                                         } else {
                                           L188: {
-                                            if ((wh.field_c ^ -1) < -2) {
+                                            if (wh.field_c > 1) {
                                               break L188;
                                             } else {
                                               if (ni.field_a) {
@@ -4026,8 +4026,8 @@ public final class stellarshard extends rb implements cf {
                 }
               } else {
                 L195: {
-                  fk.field_k[var5] = fk.field_k[var5] + (-(var2_int << -887623772) + fk.field_k[var5 - -2]);
-                  fk.field_k[1 + var5] = fk.field_k[1 + var5] + (fk.field_k[var5 - -3] - (var3 << 1176895620));
+                  fk.field_k[var5] = fk.field_k[var5] + (-(var2_int << 4) + fk.field_k[var5 - -2]);
+                  fk.field_k[1 + var5] = fk.field_k[1 + var5] + (fk.field_k[var5 - -3] - (var3 << 4));
                   if (fk.field_k[var5] >= -2048) {
                     break L195;
                   } else {
@@ -4036,7 +4036,7 @@ public final class stellarshard extends rb implements cf {
                   }
                 }
                 L196: {
-                  if ((fk.field_k[var5] ^ -1) >= -12289) {
+                  if (fk.field_k[var5] <= 12288) {
                     break L196;
                   } else {
                     fk.field_k[var5] = fk.field_k[var5] - 14336;
@@ -4044,7 +4044,7 @@ public final class stellarshard extends rb implements cf {
                   }
                 }
                 L197: {
-                  if ((fk.field_k[1 + var5] ^ -1) > 2047) {
+                  if (fk.field_k[1 + var5] < -2048) {
                     fk.field_k[1 + var5] = fk.field_k[1 + var5] + 11776;
                     break L197;
                   } else {
@@ -4052,7 +4052,7 @@ public final class stellarshard extends rb implements cf {
                   }
                 }
                 L198: {
-                  if ((fk.field_k[1 + var5] ^ -1) >= -9729) {
+                  if (fk.field_k[1 + var5] <= 9728) {
                     break L198;
                   } else {
                     fk.field_k[var5 + 1] = fk.field_k[var5 + 1] - 11776;
@@ -4072,14 +4072,14 @@ public final class stellarshard extends rb implements cf {
                 if (14 != a.field_h[var5].field_m) {
                   break L199;
                 } else {
-                  if ((var5 ^ -1) <= -1000) {
+                  if (var5 >= 999) {
                     break L199;
                   } else {
                     L200: {
                       if (null == a.field_h[1 + var5]) {
                         break L200;
                       } else {
-                        if ((a.field_h[1 + var5].field_m ^ -1) == -15) {
+                        if (a.field_h[1 + var5].field_m == 14) {
                           break L199;
                         } else {
                           break L200;
@@ -4148,7 +4148,7 @@ public final class stellarshard extends rb implements cf {
                           break L207;
                         }
                       }
-                      if ((a.field_h[var5].field_m ^ -1) == -15) {
+                      if (a.field_h[var5].field_m == 14) {
                         var4 += 20;
                         break L202;
                       } else {
@@ -4640,7 +4640,7 @@ public final class stellarshard extends rb implements cf {
                   }
                 }
                 L7: {
-                  if ((cg.field_c ^ -1) == -5) {
+                  if (cg.field_c == 4) {
                     var4_int = 0;
                     var3 = (Object) (Object) pa.a(jf.field_m, "", "asteroid_ice_2");
                     break L7;
@@ -4678,7 +4678,7 @@ public final class stellarshard extends rb implements cf {
                   }
                 }
                 L11: {
-                  if ((cg.field_c ^ -1) != -9) {
+                  if (cg.field_c != 8) {
                     break L11;
                   } else {
                     var5 = 2500;
@@ -4698,7 +4698,7 @@ public final class stellarshard extends rb implements cf {
                   }
                 }
                 L13: {
-                  if (-11 != (cg.field_c ^ -1)) {
+                  if (cg.field_c != 10) {
                     break L13;
                   } else {
                     var5 = 2500;
@@ -4708,7 +4708,7 @@ public final class stellarshard extends rb implements cf {
                   }
                 }
                 L14: {
-                  if (-12 == (cg.field_c ^ -1)) {
+                  if (cg.field_c == 11) {
                     var3 = (Object) (Object) pa.a(jf.field_m, "", "player");
                     var4_int = 3;
                     rh.field_b = (pa) var3;
@@ -4738,7 +4738,7 @@ public final class stellarshard extends rb implements cf {
                   }
                 }
                 L17: {
-                  if ((cg.field_c ^ -1) == -15) {
+                  if (cg.field_c == 14) {
                     var5 = 2500;
                     var3 = (Object) (Object) pa.a(jf.field_m, "", "gravity_well");
                     var4_int = 4;
@@ -4759,10 +4759,10 @@ public final class stellarshard extends rb implements cf {
                 }
                 var6_int = 0;
                 L19: while (true) {
-                  if (-129 >= (var6_int ^ -1)) {
+                  if (var6_int >= 128) {
                     L20: {
                       pd.field_h.a((byte) -107);
-                      if ((cg.field_c ^ -1) != -16) {
+                      if (cg.field_c != 15) {
                         break L20;
                       } else {
                         jf.field_n = ml.a("", (byte) 87, bh.field_a, "bar");
@@ -4778,7 +4778,7 @@ public final class stellarshard extends rb implements cf {
                       var7_ref = new pa((pa) var3, false, false, false, false);
                       var8_int = (int)(65536.0 * Math.cos(3.141592653589793 * (double)var6_int / 64.0));
                       var9 = (int)(65536.0 * Math.sin((double)var6_int * 3.141592653589793 / 64.0));
-                      if (-4 < (var4_int ^ -1)) {
+                      if (var4_int < 3) {
                         break L21;
                       } else {
                         var7_ref.a(new int[12]);
@@ -4788,7 +4788,7 @@ public final class stellarshard extends rb implements cf {
                     }
                     L22: {
                       var7_ref.a(new int[12]);
-                      if (-4 >= (var4_int ^ -1)) {
+                      if (var4_int >= 3) {
                         break L22;
                       } else {
                         var7_ref.a(new int[12]);
@@ -4825,34 +4825,34 @@ public final class stellarshard extends rb implements cf {
                     }
                     L25: {
                       L26: {
-                        if (-3 == (var4_int ^ -1)) {
+                        if (var4_int == 2) {
                           break L26;
                         } else {
-                          if ((var4_int ^ -1) != -5) {
+                          if (var4_int != 4) {
                             break L25;
                           } else {
                             break L26;
                           }
                         }
                       }
-                      rd.field_a[cg.field_c + -8][var6_int >> 1267709602] = new pb(96, 96);
-                      rd.field_a[-8 + cg.field_c][var6_int >> 187928066].e();
+                      rd.field_a[cg.field_c + -8][var6_int >> 2] = new pb(96, 96);
+                      rd.field_a[-8 + cg.field_c][var6_int >> 2].e();
                       ti.f(0, 0, 96, 96, 0);
                       cc.a();
                       var10_ref_bj.a(0, 0, 0, 0, 0, 0, var5, -1L);
-                      rd.field_a[-8 + cg.field_c][var6_int >> 1284941826].d();
+                      rd.field_a[-8 + cg.field_c][var6_int >> 2].d();
                       break L25;
                     }
                     L27: {
-                      if ((var4_int ^ -1) != -4) {
+                      if (var4_int != 3) {
                         break L27;
                       } else {
-                        cm.field_d[var6_int >> 1356809249] = new pb(96, 96);
-                        cm.field_d[var6_int >> 1944614753].e();
+                        cm.field_d[var6_int >> 1] = new pb(96, 96);
+                        cm.field_d[var6_int >> 1].e();
                         ti.f(0, 0, 96, 96, 0);
                         cc.a();
                         var10_ref_bj.a(0, 0, 0, 0, 0, 0, 2500, -1L);
-                        cm.field_d[var6_int >> -875018111].d();
+                        cm.field_d[var6_int >> 1].d();
                         break L27;
                       }
                     }
@@ -4875,7 +4875,7 @@ public final class stellarshard extends rb implements cf {
                   var3 = null;
                   var4_int = 0;
                   L28: while (true) {
-                    if (-13 >= (var4_int ^ -1)) {
+                    if (var4_int >= 12) {
                       fa.field_k = new pb[15];
                       var4_int = 0;
                       L29: while (true) {
@@ -4914,7 +4914,7 @@ public final class stellarshard extends rb implements cf {
                             }
                           }
                           L32: {
-                            if (-4 == (var4_int ^ -1)) {
+                            if (var4_int == 3) {
                               var3 = (Object) (Object) ml.a("", (byte) 118, bh.field_a, "anim_shine2");
                               break L32;
                             } else {
@@ -4938,17 +4938,17 @@ public final class stellarshard extends rb implements cf {
                             }
                           }
                           L35: {
-                            if ((var4_int ^ -1) == -13) {
+                            if (var4_int == 12) {
                               var3 = (Object) (Object) ml.a("", (byte) -25, bh.field_a, "anim_shine5");
                               break L35;
                             } else {
                               break L35;
                             }
                           }
-                          fa.field_k[var4_int + 0] = (pb) ((Object[]) var3)[0];
+                          fa.field_k[var4_int] = (pb) ((Object[]) var3)[0];
                           fa.field_k[1 + var4_int] = (pb) ((Object[]) var3)[1];
                           fa.field_k[2 + var4_int] = (pb) ((Object[]) var3)[2];
-                          fa.field_k[0 + var4_int].d();
+                          fa.field_k[var4_int].d();
                           fa.field_k[1 + var4_int].d();
                           fa.field_k[2 + var4_int].d();
                           var4_int += 3;
@@ -4973,7 +4973,7 @@ public final class stellarshard extends rb implements cf {
                         }
                       }
                       L38: {
-                        if ((var4_int ^ -1) != -7) {
+                        if (var4_int != 6) {
                           break L38;
                         } else {
                           var3 = (Object) (Object) ml.a("", (byte) -72, bh.field_a, "anim_shatter3");
@@ -4981,17 +4981,17 @@ public final class stellarshard extends rb implements cf {
                         }
                       }
                       L39: {
-                        if (-10 != (var4_int ^ -1)) {
+                        if (var4_int != 9) {
                           break L39;
                         } else {
                           var3 = (Object) (Object) ml.a("", (byte) 119, bh.field_a, "anim_shatter4");
                           break L39;
                         }
                       }
-                      rh.field_a[var4_int - 0] = (pb) ((Object[]) var3)[0];
+                      rh.field_a[var4_int] = (pb) ((Object[]) var3)[0];
                       rh.field_a[var4_int + 1] = (pb) ((Object[]) var3)[1];
                       rh.field_a[2 + var4_int] = (pb) ((Object[]) var3)[2];
-                      rh.field_a[var4_int + 0].d();
+                      rh.field_a[var4_int].d();
                       rh.field_a[1 + var4_int].d();
                       rh.field_a[2 + var4_int].d();
                       var4_int += 3;
@@ -5012,7 +5012,7 @@ public final class stellarshard extends rb implements cf {
                   mf.field_a = new pb[64];
                   var5 = 0;
                   L40: while (true) {
-                    if ((var5 ^ -1) <= -5) {
+                    if (var5 >= 4) {
                       be.field_d = null;
                       bh.field_a = null;
                       rg.g(-33);
@@ -5036,7 +5036,7 @@ public final class stellarshard extends rb implements cf {
                         }
                       }
                       L43: {
-                        if ((var5 ^ -1) == -3) {
+                        if (var5 == 2) {
                           var6 = (Object) (Object) "stars0";
                           break L43;
                         } else {
@@ -5060,7 +5060,7 @@ public final class stellarshard extends rb implements cf {
                         if (var8.length <= var9) {
                           var9 = 0;
                           L46: while (true) {
-                            if ((var9 ^ -1) <= -5) {
+                            if (var9 >= 4) {
                               pd.field_h.a((byte) -107);
                               var5++;
                               continue L40;
@@ -5101,7 +5101,7 @@ public final class stellarshard extends rb implements cf {
                           }
                         } else {
                           L48: {
-                            if ((var8[var9] ^ -1) == -1) {
+                            if (var8[var9] == 0) {
                               var8[var9] = 1;
                               break L48;
                             } else {
@@ -5389,12 +5389,12 @@ public final class stellarshard extends rb implements cf {
               }
             }
             L3: {
-              if ((e.field_e ^ -1) != -9) {
+              if (e.field_e != 8) {
                 break L3;
               } else {
                 int fieldTemp$5 = sf.field_b;
                 sf.field_b = sf.field_b + 1;
-                if ((fieldTemp$5 ^ -1) != -6) {
+                if (fieldTemp$5 != 5) {
                   break L3;
                 } else {
                   hj.a(253, 2, 1);
@@ -5403,7 +5403,7 @@ public final class stellarshard extends rb implements cf {
               }
             }
             L4: {
-              if ((e.field_e ^ -1) == -10) {
+              if (e.field_e == 9) {
                 int fieldTemp$6 = sj.field_K;
                 sj.field_K = sj.field_K + 1;
                 if (fieldTemp$6 == 5) {
@@ -5420,7 +5420,7 @@ public final class stellarshard extends rb implements cf {
               if (e.field_e == 10) {
                 int fieldTemp$7 = ua.field_d;
                 ua.field_d = ua.field_d + 1;
-                if ((fieldTemp$7 ^ -1) == -6) {
+                if (fieldTemp$7 == 5) {
                   hj.a(251, 4, 1);
                   break L5;
                 } else {
@@ -5440,11 +5440,11 @@ public final class stellarshard extends rb implements cf {
               }
             }
             L7: {
-              if ((qi.field_a ^ -1) < (-1 + mg.field_t ^ -1)) {
+              if (~qi.field_a < ~(-1 + mg.field_t)) {
                 L8: {
                   var2_int = of.field_A;
                   of.field_A = Math.max(qi.field_a, of.field_A);
-                  if ((of.field_A ^ -1) < -51) {
+                  if (of.field_A > 50) {
                     of.field_A = 50;
                     break L8;
                   } else {
@@ -5468,10 +5468,10 @@ public final class stellarshard extends rb implements cf {
               if (10 > qi.field_a) {
                 break L9;
               } else {
-                if (-1 > (nc.field_A ^ -1)) {
+                if (nc.field_A > 0) {
                   break L9;
                 } else {
-                  if (-1 > (mk.field_k ^ -1)) {
+                  if (mk.field_k > 0) {
                     break L9;
                   } else {
                     if (!s.field_i) {
@@ -5493,11 +5493,11 @@ public final class stellarshard extends rb implements cf {
               }
             }
             L11: {
-              if (-51 <= (qi.field_a ^ -1)) {
+              if (qi.field_a <= 50) {
                 break L11;
               } else {
                 qi.field_a = 50;
-                if (-1 <= (nc.field_A ^ -1)) {
+                if (nc.field_A <= 0) {
                   nc.field_A = 1500;
                   break L11;
                 } else {
@@ -5506,7 +5506,7 @@ public final class stellarshard extends rb implements cf {
               }
             }
             L12: {
-              if ((qi.field_a ^ -1) != -2) {
+              if (qi.field_a != 1) {
                 break L12;
               } else {
                 ((stellarshard) this).field_J = 100;
@@ -5526,7 +5526,7 @@ public final class stellarshard extends rb implements cf {
               }
             }
             L14: {
-              if (-21 != (qi.field_a ^ -1)) {
+              if (qi.field_a != 20) {
                 break L14;
               } else {
                 if (nf.field_r) {
@@ -5538,7 +5538,7 @@ public final class stellarshard extends rb implements cf {
               }
             }
             L15: {
-              if (-11 != (qi.field_a ^ -1)) {
+              if (qi.field_a != 10) {
                 break L15;
               } else {
                 break L15;
@@ -5552,7 +5552,7 @@ public final class stellarshard extends rb implements cf {
               }
             }
             L17: {
-              if (-51 != (qi.field_a ^ -1)) {
+              if (qi.field_a != 50) {
                 break L17;
               } else {
                 break L17;
@@ -5560,7 +5560,7 @@ public final class stellarshard extends rb implements cf {
             }
             L18: {
               var2_array = new int[16];
-              if (-2 != (qi.field_a ^ -1)) {
+              if (qi.field_a != 1) {
                 break L18;
               } else {
                 var2_array[1] = 4;
@@ -5602,7 +5602,7 @@ public final class stellarshard extends rb implements cf {
               }
             }
             L23: {
-              if (-6 == (qi.field_a ^ -1)) {
+              if (qi.field_a == 5) {
                 var2_array[12] = 2;
                 var2_array[3] = 8;
                 break L23;
@@ -5611,7 +5611,7 @@ public final class stellarshard extends rb implements cf {
               }
             }
             L24: {
-              if ((qi.field_a ^ -1) == -9) {
+              if (qi.field_a == 8) {
                 var2_array[5] = 8;
                 var2_array[7] = 1;
                 break L24;
@@ -5620,7 +5620,7 @@ public final class stellarshard extends rb implements cf {
               }
             }
             L25: {
-              if ((qi.field_a ^ -1) != -8) {
+              if (qi.field_a != 7) {
                 break L25;
               } else {
                 var2_array[15] = 2;
@@ -5629,7 +5629,7 @@ public final class stellarshard extends rb implements cf {
               }
             }
             L26: {
-              if ((qi.field_a ^ -1) != -10) {
+              if (qi.field_a != 9) {
                 break L26;
               } else {
                 var2_array[6] = 1;
@@ -5675,7 +5675,7 @@ public final class stellarshard extends rb implements cf {
                   }
                 }
                 L32: {
-                  if ((qi.field_a % 10 ^ -1) == -3) {
+                  if (qi.field_a % 10 == 2) {
                     var2_array[1] = 5 + qi.field_a / 3;
                     var2_array[13] = qi.field_a / 5;
                     break L32;
@@ -5693,7 +5693,7 @@ public final class stellarshard extends rb implements cf {
                   }
                 }
                 L34: {
-                  if ((qi.field_a % 10 ^ -1) == -8) {
+                  if (qi.field_a % 10 == 7) {
                     var2_array[6] = qi.field_a / 10;
                     var2_array[5] = qi.field_a / 3 - -5;
                     var2_array[12] = qi.field_a / 5;
@@ -5732,7 +5732,7 @@ public final class stellarshard extends rb implements cf {
                   }
                 }
                 L38: {
-                  if (-21 == (qi.field_a ^ -1)) {
+                  if (qi.field_a == 20) {
                     var2_array[14] = 1;
                     var2_array[7] = 10;
                     break L38;
@@ -5741,7 +5741,7 @@ public final class stellarshard extends rb implements cf {
                   }
                 }
                 L39: {
-                  if (-31 != (qi.field_a ^ -1)) {
+                  if (qi.field_a != 30) {
                     break L39;
                   } else {
                     var2_array[14] = 2;
@@ -5768,10 +5768,10 @@ public final class stellarshard extends rb implements cf {
                     break L41;
                   }
                 }
-                if (-1 != (qi.field_a % 10 ^ -1)) {
+                if (qi.field_a % 10 != 0) {
                   break L28;
                 } else {
-                  if ((qi.field_a ^ -1) >= -51) {
+                  if (qi.field_a <= 50) {
                     break L28;
                   } else {
                     var2_array[14] = qi.field_a / 5;
@@ -5784,12 +5784,12 @@ public final class stellarshard extends rb implements cf {
             }
             var3 = 0;
             L42: while (true) {
-              if ((var3 ^ -1) <= -17) {
+              if (var3 >= 16) {
                 break L0;
               } else {
                 var4 = 0;
                 L43: while (true) {
-                  if ((var4 ^ -1) <= (var2_array[var3] ^ -1)) {
+                  if (~var4 <= ~var2_array[var3]) {
                     var3++;
                     continue L42;
                   } else {
@@ -5881,7 +5881,7 @@ public final class stellarshard extends rb implements cf {
               }
             }
             L2: {
-              if (-1 <= (mk.field_k ^ -1)) {
+              if (mk.field_k <= 0) {
                 break L2;
               } else {
                 if (!lh.a(ic.field_d, (byte) 115)) {
@@ -6121,7 +6121,7 @@ public final class stellarshard extends rb implements cf {
                     var3 = 0;
                     var4 = -((stellarshard) this).field_F.field_z.length;
                     L3: while (true) {
-                      if (-1 >= (var4 ^ -1)) {
+                      if (var4 >= 0) {
                         break L2;
                       } else {
                         int incrementValue$9 = var3;
@@ -6143,7 +6143,7 @@ public final class stellarshard extends rb implements cf {
                       break L4;
                     } else {
                       L5: {
-                        if ((wh.field_c ^ -1) < -2) {
+                        if (wh.field_c > 1) {
                           break L5;
                         } else {
                           if (ni.field_a) {
@@ -6205,7 +6205,7 @@ public final class stellarshard extends rb implements cf {
                   if (null == ((stellarshard) this).field_F) {
                     break L11;
                   } else {
-                    if ((el.field_I ^ -1) >= -1) {
+                    if (el.field_I <= 0) {
                       break L11;
                     } else {
                       if (na.field_j == null) {
@@ -6236,7 +6236,7 @@ public final class stellarshard extends rb implements cf {
                   if (var4 >= 12) {
                     var3 = 0;
                     L14: while (true) {
-                      if ((var3 ^ -1) <= -1001) {
+                      if (var3 >= 1000) {
                         L15: {
                           if (((stellarshard) this).field_G == null) {
                             ((stellarshard) this).field_G = new pb(640, 480);
@@ -6273,7 +6273,7 @@ public final class stellarshard extends rb implements cf {
                                               } else {
                                                 if (s.field_i) {
                                                   L22: {
-                                                    if ((ag.field_a ^ -1) >= -1) {
+                                                    if (ag.field_a <= 0) {
                                                       break L22;
                                                     } else {
                                                       if (128 <= ag.field_a) {
@@ -6285,10 +6285,10 @@ public final class stellarshard extends rb implements cf {
                                                     }
                                                   }
                                                   L23: {
-                                                    if ((ag.field_a ^ -1) >= -1) {
+                                                    if (ag.field_a <= 0) {
                                                       break L23;
                                                     } else {
-                                                      if (-129 < (ag.field_a ^ -1)) {
+                                                      if (ag.field_a < 128) {
                                                         qj.field_a.a(nd.field_F, 20, 335, 16711680, -1);
                                                         break L23;
                                                       } else {
@@ -6298,18 +6298,18 @@ public final class stellarshard extends rb implements cf {
                                                   }
                                                   var5_int = gf.field_c;
                                                   var6_int = 100;
-                                                  if (-1 <= (ml.field_h ^ -1)) {
+                                                  if (ml.field_h <= 0) {
                                                     break L21;
                                                   } else {
-                                                    if ((var6_int ^ -1) <= (var5_int ^ -1)) {
+                                                    if (~var6_int <= ~var5_int) {
                                                       L24: {
                                                         var7 = 32;
-                                                        var8 = var7 >> 1675413121;
+                                                        var8 = var7 >> 1;
                                                         if (16 > var5_int) {
                                                           var7 = var5_int * 4;
                                                           break L24;
                                                         } else {
-                                                          if ((-64 + var6_int ^ -1) > (var5_int ^ -1)) {
+                                                          if (~(-64 + var6_int) > ~var5_int) {
                                                             var7 = -var5_int + var6_int;
                                                             break L24;
                                                           } else {
@@ -6355,7 +6355,7 @@ public final class stellarshard extends rb implements cf {
                                                       ti.e(2, 352, var5_int + -2, 126, 2, 8421504);
                                                       ti.g(3, 351, var5_int + -5, 16777215);
                                                       ti.f(1, 353, 123, 16777215);
-                                                      ti.g(4, 478, var5_int + -1 + -4, 4210752);
+                                                      ti.g(4, 478, var5_int - 5, 4210752);
                                                       ti.f(-1 + var5_int + 1, 354, 123, 4210752);
                                                       ti.e(3, 353, -4 + var5_int, 124, 1, 0);
                                                       ti.f(-2 + -(var7 / 2) + var5_int / 2, 342, 4 + var7, 19, 9, 8421504);
@@ -6363,7 +6363,7 @@ public final class stellarshard extends rb implements cf {
                                                       ti.d(-(var7 / 2) + var5_int / 2 - 2, 350, 8 + var5_int / 2 + var7 / 2 + -2, 361);
                                                       ti.e(-(var7 / 2) + var5_int / 2 - 2, 342, 4 + var7, 19, 9, 4210752);
                                                       ti.b();
-                                                      if ((var7 ^ -1) <= -101) {
+                                                      if (var7 >= 100) {
                                                         break L28;
                                                       } else {
                                                         var8 = 0;
@@ -6373,7 +6373,7 @@ public final class stellarshard extends rb implements cf {
                                                           } else {
                                                             L30: {
                                                               var9 = (int)(5.0 + Math.cos(3.14 * (double)var8 / 20.0) * 5.0);
-                                                              if ((var9 ^ -1) < -10) {
+                                                              if (var9 > 9) {
                                                                 var9 = 9;
                                                                 break L30;
                                                               } else {
@@ -6428,7 +6428,7 @@ public final class stellarshard extends rb implements cf {
                                                   if (na.field_j == null) {
                                                     break L33;
                                                   } else {
-                                                    if (-9 == (tl.field_c ^ -1)) {
+                                                    if (tl.field_c == 8) {
                                                       break L32;
                                                     } else {
                                                       if (tl.field_c == 1) {
@@ -6437,7 +6437,7 @@ public final class stellarshard extends rb implements cf {
                                                         if (tl.field_c == 3) {
                                                           break L32;
                                                         } else {
-                                                          if (-3 != (tl.field_c ^ -1)) {
+                                                          if (tl.field_c != 2) {
                                                             break L33;
                                                           } else {
                                                             break L32;
@@ -6466,7 +6466,7 @@ public final class stellarshard extends rb implements cf {
                                                 L35: {
                                                   if (0 == wh.field_c) {
                                                     aa.field_b.a(0, 128, 310, (byte) -120, 90);
-                                                    wc.field_s.a(0, 128, -jg.field_pb + 320 + -10, (byte) -124, 90);
+                                                    wc.field_s.a(0, 128, -jg.field_pb + 310, (byte) -124, 90);
                                                     pl.field_R.a(0, 128, 310 + jg.field_pb, (byte) -119, 90);
                                                     break L35;
                                                   } else {
@@ -6491,7 +6491,7 @@ public final class stellarshard extends rb implements cf {
                                                     break L37;
                                                   }
                                                 }
-                                                if (-4 == (wh.field_c ^ -1)) {
+                                                if (wh.field_c == 3) {
                                                   fa.field_k[0].a(0, 128, 310, (byte) 54, 90);
                                                   break L32;
                                                 } else {
@@ -6505,7 +6505,7 @@ public final class stellarshard extends rb implements cf {
                                                   var5 = h.a(hh.field_d, 0, new String[1]);
                                                   var6_int = nj.field_f[0];
                                                   nj.field_f[0] = qi.field_a * 64 / 50;
-                                                  if (-64 > (nj.field_f[0] ^ -1)) {
+                                                  if (nj.field_f[0] > 63) {
                                                     nj.field_f[0] = 63;
                                                     break L39;
                                                   } else {
@@ -6516,7 +6516,7 @@ public final class stellarshard extends rb implements cf {
                                                   ic.a(var5, 0, -1, false, 480, 16777215, 0);
                                                   nj.field_f[0] = 64 * te.field_c / 250000;
                                                   var5 = ce.field_f + te.field_c;
-                                                  if (-64 > (nj.field_f[0] ^ -1)) {
+                                                  if (nj.field_f[0] > 63) {
                                                     nj.field_f[0] = 63;
                                                     break L40;
                                                   } else {
@@ -6536,7 +6536,7 @@ public final class stellarshard extends rb implements cf {
                                                   }
                                                 }
                                                 L42: {
-                                                  if ((e.field_e ^ -1) == -2) {
+                                                  if (e.field_e == 1) {
                                                     var7_ref = (Object) (Object) gf.field_a;
                                                     break L42;
                                                   } else {
@@ -6544,7 +6544,7 @@ public final class stellarshard extends rb implements cf {
                                                   }
                                                 }
                                                 L43: {
-                                                  if (-3 == (e.field_e ^ -1)) {
+                                                  if (e.field_e == 2) {
                                                     var7_ref = (Object) (Object) ka.field_l;
                                                     break L43;
                                                   } else {
@@ -6584,7 +6584,7 @@ public final class stellarshard extends rb implements cf {
                                                   }
                                                 }
                                                 L48: {
-                                                  if (-8 != (e.field_e ^ -1)) {
+                                                  if (e.field_e != 7) {
                                                     break L48;
                                                   } else {
                                                     var7_ref = (Object) (Object) we.field_e;
@@ -6601,7 +6601,7 @@ public final class stellarshard extends rb implements cf {
                                                   }
                                                 }
                                                 L50: {
-                                                  if ((e.field_e ^ -1) == -10) {
+                                                  if (e.field_e == 9) {
                                                     var7_ref = (Object) (Object) ja.field_k;
                                                     var8 += 5;
                                                     break L50;
@@ -6626,17 +6626,17 @@ public final class stellarshard extends rb implements cf {
                                                     var9 = qj.field_a.b((String) var7_ref) - -40;
                                                     var10_int = 307;
                                                     ti.f(-20 + var10_int, 427, 42, 42, 20, 0);
-                                                    ti.f(-2 + var10_int + -var9, 435, var9 - -4 + 19, 26, 12, 0);
+                                                    ti.f(-2 + var10_int + -var9, 435, var9 + 23, 26, 12, 0);
                                                     ti.f(var10_int + -var9, 437, 19 - -var9, 22, 10, 11186350);
                                                     ti.f(var10_int + -18, 429, 38, 38, 18, 11186350);
-                                                    ti.a(var10_int - 20 << -974064924, 7152, 200, 100, eh.field_e);
-                                                    ti.a(var10_int - -10 - var9 << 504782724, 7152, 200, 150, eh.field_e);
-                                                    ti.a(-var9 + var10_int + 40 << 242496644, 7152, 200, 150, eh.field_e);
-                                                    ti.a(var10_int + 10 << 1772377540, 7152, 200, 200, eh.field_e);
+                                                    ti.a(var10_int - 20 << 4, 7152, 200, 100, eh.field_e);
+                                                    ti.a(var10_int - -10 - var9 << 4, 7152, 200, 150, eh.field_e);
+                                                    ti.a(-var9 + var10_int + 40 << 4, 7152, 200, 150, eh.field_e);
+                                                    ti.a(var10_int + 10 << 4, 7152, 200, 200, eh.field_e);
                                                     ti.f(-var9 - -2 + var10_int, 439, 21 - (-var9 + -96) + -140, 18, 8, 0);
                                                     qj.field_a.b((String) var7_ref, -63 + var10_int - -33, 453, 16777215, -1);
                                                     ti.a(var10_int - 15, 432, 32, 32, 14, 0, 192);
-                                                    e.field_g[var8].e(var10_int + 33 + -80, 400);
+                                                    e.field_g[var8].e(var10_int - 47, 400);
                                                     break L52;
                                                   }
                                                 }
@@ -6644,7 +6644,7 @@ public final class stellarshard extends rb implements cf {
                                                   var9 = 250;
                                                   var10 = null;
                                                   var11 = -1;
-                                                  if (-2 == (nc.field_H ^ -1)) {
+                                                  if (nc.field_H == 1) {
                                                     var10 = (Object) (Object) pe.field_a;
                                                     var11 = 8;
                                                     break L53;
@@ -6686,7 +6686,7 @@ public final class stellarshard extends rb implements cf {
                                                       var12 = 40 + qj.field_a.b((String) var10);
                                                       var13 = 100;
                                                       var9 += 250;
-                                                      ti.f(var9 + -20 - 1, 427, 42, 42, 20, 0);
+                                                      ti.f(var9 - 21, 427, 42, 42, 20, 0);
                                                       ti.f(-2 - var12 + var9, 435, 21 - (-4 + -var12), 26, 12, 0);
                                                       if (0 >= var13) {
                                                         break L58;
@@ -6697,7 +6697,7 @@ public final class stellarshard extends rb implements cf {
                                                     }
                                                     L59: {
                                                       ti.f(var9 - var12, 437, 21 + var12, 22, 10, 11186350);
-                                                      if (-1 > (var13 ^ -1)) {
+                                                      if (var13 > 0) {
                                                         ti.f(var9, 437, var13 + 21, 22, 10, 11186350);
                                                         break L59;
                                                       } else {
@@ -6706,12 +6706,12 @@ public final class stellarshard extends rb implements cf {
                                                     }
                                                     L60: {
                                                       ti.f(-1 + (-18 + var9), 429, 38, 38, 18, 11186350);
-                                                      ti.a(-20 + var9 << 1872140068, 7152, 200, 100, eh.field_e);
-                                                      ti.a(var9 - -10 << 1537771172, 7152, 200, 150, eh.field_e);
-                                                      ti.a(40 + (-var12 + var9) << -1493931836, 7152, 200, 150, eh.field_e);
-                                                      ti.a(-var12 - (-20 - var9) << 481878244, 7152, 200, 200, eh.field_e);
+                                                      ti.a(-20 + var9 << 4, 7152, 200, 100, eh.field_e);
+                                                      ti.a(var9 - -10 << 4, 7152, 200, 150, eh.field_e);
+                                                      ti.a(40 + (-var12 + var9) << 4, 7152, 200, 150, eh.field_e);
+                                                      ti.a(-var12 - (-20 - var9) << 4, 7152, 200, 200, eh.field_e);
                                                       if (0 < var13) {
-                                                        ti.a(var13 + var9 << -1161243260, 7152, 200, 200, eh.field_e);
+                                                        ti.a(var13 + var9 << 4, 7152, 200, 200, eh.field_e);
                                                         break L60;
                                                       } else {
                                                         break L60;
@@ -6719,7 +6719,7 @@ public final class stellarshard extends rb implements cf {
                                                     }
                                                     L61: {
                                                       ti.f(var9 - -2 - var12, 439, -119 - -var12 - -96, 18, 8, 0);
-                                                      if ((var13 ^ -1) >= -1) {
+                                                      if (var13 <= 0) {
                                                         break L61;
                                                       } else {
                                                         L62: {
@@ -6738,7 +6738,7 @@ public final class stellarshard extends rb implements cf {
                                                             }
                                                             var14 = 8421504;
                                                             var15 = gh.field_b * 20 / 500;
-                                                            if ((gh.field_b ^ -1) > -251) {
+                                                            if (gh.field_b < 250) {
                                                               var14 = 327680 * (gh.field_b % 50);
                                                               break L62;
                                                             } else {
@@ -6747,9 +6747,9 @@ public final class stellarshard extends rb implements cf {
                                                           }
                                                         }
                                                         L64: {
-                                                          if ((nc.field_H ^ -1) == -4) {
+                                                          if (nc.field_H == 3) {
                                                             L65: {
-                                                              if (-1501 <= (gh.field_b ^ -1)) {
+                                                              if (gh.field_b <= 1500) {
                                                                 break L65;
                                                               } else {
                                                                 gh.field_b = 1500;
@@ -6758,7 +6758,7 @@ public final class stellarshard extends rb implements cf {
                                                             }
                                                             var15 = 20 * gh.field_b / 1500;
                                                             var14 = 16777215;
-                                                            if ((gh.field_b ^ -1) <= -251) {
+                                                            if (gh.field_b >= 250) {
                                                               break L64;
                                                             } else {
                                                               var14 = gh.field_b % 50 * 327680;
@@ -6780,7 +6780,7 @@ public final class stellarshard extends rb implements cf {
                                                             }
                                                             var14 = 16776960;
                                                             var15 = gh.field_b * 20 / 500;
-                                                            if (-251 >= (gh.field_b ^ -1)) {
+                                                            if (gh.field_b >= 250) {
                                                               break L66;
                                                             } else {
                                                               var14 = gh.field_b % 50 * 327680;
@@ -6791,11 +6791,11 @@ public final class stellarshard extends rb implements cf {
                                                           }
                                                         }
                                                         L68: {
-                                                          if ((nc.field_H ^ -1) != -2) {
+                                                          if (nc.field_H != 1) {
                                                             break L68;
                                                           } else {
                                                             L69: {
-                                                              if (-6 == (gh.field_b ^ -1)) {
+                                                              if (gh.field_b == 5) {
                                                                 var14 = 16777215;
                                                                 break L69;
                                                               } else {
@@ -6804,7 +6804,7 @@ public final class stellarshard extends rb implements cf {
                                                             }
                                                             L70: {
                                                               var15 = gh.field_b * 4;
-                                                              if (-5 != (gh.field_b ^ -1)) {
+                                                              if (gh.field_b != 4) {
                                                                 break L70;
                                                               } else {
                                                                 var14 = 8454143;
@@ -6812,7 +6812,7 @@ public final class stellarshard extends rb implements cf {
                                                               }
                                                             }
                                                             L71: {
-                                                              if ((gh.field_b ^ -1) != -4) {
+                                                              if (gh.field_b != 3) {
                                                                 break L71;
                                                               } else {
                                                                 var14 = 8421631;
@@ -6820,7 +6820,7 @@ public final class stellarshard extends rb implements cf {
                                                               }
                                                             }
                                                             L72: {
-                                                              if (-3 == (gh.field_b ^ -1)) {
+                                                              if (gh.field_b == 2) {
                                                                 var14 = 16744703;
                                                                 break L72;
                                                               } else {
@@ -6838,9 +6838,9 @@ public final class stellarshard extends rb implements cf {
                                                         L73: {
                                                           var16 = 20 + (2 + var9);
                                                           var17 = 439;
-                                                          ti.f(var16, var17, -3 + var13, 18, 8, (var14 & 16711422) >> 523782209);
+                                                          ti.f(var16, var17, -3 + var13, 18, 8, (var14 & 16711422) >> 1);
                                                           if (3 != nc.field_H) {
-                                                            ti.e(var16, var17, var13 + -3, 18, 8, 4144959 & var14 >> 838676258);
+                                                            ti.e(var16, var17, var13 + -3, 18, 8, 4144959 & var14 >> 2);
                                                             break L73;
                                                           } else {
                                                             ti.e(var16, var17, -3 + var13, 18, 8, var14);
@@ -6854,21 +6854,21 @@ public final class stellarshard extends rb implements cf {
                                                           if (var19 >= var15) {
                                                             var19 += 2;
                                                             L75: while (true) {
-                                                              if ((var19 ^ -1) <= -21) {
+                                                              if (var19 >= 20) {
                                                                 break L61;
                                                               } else {
                                                                 L76: {
                                                                   var18 = (var19 + ki.field_s) % 10;
-                                                                  if ((var18 ^ -1) >= -6) {
+                                                                  if (var18 <= 5) {
                                                                     var18 = 10 - var18;
                                                                     break L76;
                                                                   } else {
                                                                     break L76;
                                                                   }
                                                                 }
-                                                                ti.c((var18 + var19 * 10) * (var13 + -35) / 10 + var16 - -136 >> -2047132252, 136 + var17 >> -527722428, 9, 0, 32);
-                                                                ti.c((var13 + -35) * (var18 + var19 * 10) / 10 + (var16 + 136) >> 1627503108, var17 + 136 >> 2061627876, 7, 0, 32);
-                                                                ti.c(136 + var16 - -((var13 + -35) * (var18 + var19 * 10) / 10) >> -742821596, var17 - -136 >> 419818596, 5, 0, 32);
+                                                                ti.c((var18 + var19 * 10) * (var13 + -35) / 10 + var16 - -136 >> 4, 136 + var17 >> 4, 9, 0, 32);
+                                                                ti.c((var13 + -35) * (var18 + var19 * 10) / 10 + (var16 + 136) >> 4, var17 + 136 >> 4, 7, 0, 32);
+                                                                ti.c(136 + var16 - -((var13 + -35) * (var18 + var19 * 10) / 10) >> 4, var17 - -136 >> 4, 5, 0, 32);
                                                                 var19++;
                                                                 continue L75;
                                                               }
@@ -6876,7 +6876,7 @@ public final class stellarshard extends rb implements cf {
                                                           } else {
                                                             L77: {
                                                               var18 = (ki.field_s + var19) % 10;
-                                                              if ((var18 ^ -1) < -6) {
+                                                              if (var18 > 5) {
                                                                 var18 = 10 + -var18;
                                                                 break L77;
                                                               } else {
@@ -6884,11 +6884,11 @@ public final class stellarshard extends rb implements cf {
                                                               }
                                                             }
                                                             L78: {
-                                                              if ((nc.field_H ^ -1) != -3) {
+                                                              if (nc.field_H != 2) {
                                                                 ti.a((var13 - 35) * (var18 + var19 * 10) / 10 + var16 + 136, 136 + var17, 144, 50, eh.field_e);
                                                                 break L78;
                                                               } else {
-                                                                ti.a((var13 - 35) * (10 * var19) / 10 + (136 + var16), (var18 << 2097387618) + (136 + var17), -var18 + 9 << -933891388, 50, eh.field_e);
+                                                                ti.a((var13 - 35) * (10 * var19) / 10 + (136 + var16), (var18 << 2) + (136 + var17), -var18 + 9 << 4, 50, eh.field_e);
                                                                 break L78;
                                                               }
                                                             }
@@ -6908,7 +6908,7 @@ public final class stellarshard extends rb implements cf {
                                                   }
                                                 }
                                                 nj.field_f[0] = var6_int;
-                                                if ((((stellarshard) this).field_J ^ -1) < -1) {
+                                                if (((stellarshard) this).field_J > 0) {
                                                   var5 = ah.field_k;
                                                   break L38;
                                                 } else {
@@ -6919,7 +6919,7 @@ public final class stellarshard extends rb implements cf {
                                               }
                                             }
                                             L79: {
-                                              if ((ig.field_D ^ -1) >= -1) {
+                                              if (ig.field_D <= 0) {
                                                 break L79;
                                               } else {
                                                 ti.b(0, 0, 640, 480, 16777215, ig.field_D);
@@ -6946,13 +6946,13 @@ public final class stellarshard extends rb implements cf {
                                               }
                                             }
                                             L82: {
-                                              if (-1 <= (nc.field_A ^ -1)) {
+                                              if (nc.field_A <= 0) {
                                                 break L82;
                                               } else {
                                                 if (!s.field_i) {
                                                   break L82;
                                                 } else {
-                                                  if ((mk.field_k ^ -1) < -1) {
+                                                  if (mk.field_k > 0) {
                                                     break L82;
                                                   } else {
                                                     var6 = dd.field_i + nc.field_A / 50 + ef.field_o;
@@ -6990,8 +6990,8 @@ public final class stellarshard extends rb implements cf {
                                               } else {
                                                 L85: {
                                                   var7 = ((stellarshard) this).field_I;
-                                                  if (-81 >= (var7 ^ -1)) {
-                                                    if (-231 < (var7 ^ -1)) {
+                                                  if (var7 >= 80) {
+                                                    if (var7 < 230) {
                                                       var8 = 255;
                                                       break L85;
                                                     } else {
@@ -7014,7 +7014,7 @@ public final class stellarshard extends rb implements cf {
                                                 }
                                                 L87: {
                                                   ti.b(4, 353, -6 + var9, 123, 0, var8);
-                                                  if (-256 == (var8 ^ -1)) {
+                                                  if (var8 == 255) {
                                                     wh.field_e[var6_ref.field_o].a(-24 + var9 / 2, 369, 48, 48);
                                                     int discarded$17 = qj.field_a.a(rc.field_e[var6_ref.field_o], 8, 425, var9 - 16, 56, 65535, -1, 1, 1, qj.field_a.field_N);
                                                     break L87;
@@ -7036,7 +7036,7 @@ public final class stellarshard extends rb implements cf {
                                                 break L88;
                                               } else {
                                                 ti.b(0, 0, 640, 480, 0, 128);
-                                                ti.f(-(ok.a((byte) 126) / 2) + 320 + -19, -16 + -(kb.b((byte) -114) / 2) + 240 - 5, ok.a((byte) 125) + 6 - -32, kb.b((byte) 121) + 10 + 32, 0);
+                                                ti.f(-(ok.a((byte) 126) / 2) + 301, -16 + -(kb.b((byte) -114) / 2) + 235, ok.a((byte) 125) + 38, kb.b((byte) 121) + 42, 0);
                                                 na.a(28, 256, 28, fg.field_P);
                                                 break L88;
                                               }
@@ -7087,7 +7087,7 @@ public final class stellarshard extends rb implements cf {
                                             pd.a((java.awt.Canvas) (Object) stackIn_363_0, 0, 0, (byte) -73);
                                             return;
                                           } else {
-                                            ei.field_D[var6_int].d(-128 + (fk.field_k[var5_int] >> 346012836), -128 + (fk.field_k[1 + var5_int] >> -2060443996), -(el.field_I * 2) + 128);
+                                            ei.field_D[var6_int].d(-128 + (fk.field_k[var5_int] >> 4), -128 + (fk.field_k[1 + var5_int] >> 4), -(el.field_I * 2) + 128);
                                             var5_int += 8;
                                             var6_int += 2;
                                             continue L20;
@@ -7121,7 +7121,7 @@ public final class stellarshard extends rb implements cf {
                                     L95: {
                                       var6_int = var3;
                                       var7 = var5_int * ((stellarshard) this).field_G.field_v;
-                                      if ((var6_int ^ -1) > -1) {
+                                      if (var6_int < 0) {
                                         stackOut_90_0 = -var6_int;
                                         stackIn_91_0 = stackOut_90_0;
                                         break L95;
@@ -7133,7 +7133,7 @@ public final class stellarshard extends rb implements cf {
                                     }
                                     L96: {
                                       var8 = stackIn_91_0;
-                                      if (-641 <= (((stellarshard) this).field_G.field_v + var6_int ^ -1)) {
+                                      if (((stellarshard) this).field_G.field_v + var6_int <= 640) {
                                         stackOut_93_0 = ((stellarshard) this).field_G.field_v;
                                         stackIn_94_0 = stackOut_93_0;
                                         break L96;
@@ -7146,19 +7146,19 @@ public final class stellarshard extends rb implements cf {
                                     var9 = stackIn_94_0;
                                     var10_int = var8;
                                     L97: while (true) {
-                                      if ((var10_int ^ -1) <= (var9 ^ -1)) {
+                                      if (~var10_int <= ~var9) {
                                         var5_int++;
                                         continue L18;
                                       } else {
                                         L98: {
                                           var4 = ((stellarshard) this).field_G.field_z[var7 + var10_int];
-                                          if (-1 > (var4 ^ -1)) {
+                                          if (var4 > 0) {
                                             L99: {
-                                              if ((var4 ^ -1) >= -1) {
+                                              if (var4 <= 0) {
                                                 break L99;
                                               } else {
-                                                if (-97 <= (var4 ^ -1)) {
-                                                  ((stellarshard) this).field_G.field_z[var7 + var10_int] = var4 * 255 / 96 << 1305875024;
+                                                if (var4 <= 96) {
+                                                  ((stellarshard) this).field_G.field_z[var7 + var10_int] = var4 * 255 / 96 << 16;
                                                   break L99;
                                                 } else {
                                                   break L99;
@@ -7166,11 +7166,11 @@ public final class stellarshard extends rb implements cf {
                                               }
                                             }
                                             L100: {
-                                              if ((var4 ^ -1) >= -97) {
+                                              if (var4 <= 96) {
                                                 break L100;
                                               } else {
                                                 if (var4 < 160) {
-                                                  ((stellarshard) this).field_G.field_z[var7 + var10_int] = 16711680 - -((-24480 + 255 * var4) / 64 << 1954957448);
+                                                  ((stellarshard) this).field_G.field_z[var7 + var10_int] = 16711680 - -((-24480 + 255 * var4) / 64 << 8);
                                                   break L100;
                                                 } else {
                                                   break L100;
@@ -7180,7 +7180,7 @@ public final class stellarshard extends rb implements cf {
                                             if (160 > var4) {
                                               break L98;
                                             } else {
-                                              if ((var4 ^ -1) <= -256) {
+                                              if (var4 >= 255) {
                                                 break L98;
                                               } else {
                                                 ((stellarshard) this).field_G.field_z[var10_int + var7] = 255 * (-160 + var4) / 95 + 16776960;
@@ -7232,7 +7232,7 @@ public final class stellarshard extends rb implements cf {
                           if (stackIn_59_0 == (Object) (Object) a.field_h[var3]) {
                             break L103;
                           } else {
-                            if (-15 == (a.field_h[var3].field_m ^ -1)) {
+                            if (a.field_h[var3].field_m == 14) {
                               break L103;
                             } else {
                               if (!a.field_h[var3].a((byte) -96)) {
@@ -7249,7 +7249,7 @@ public final class stellarshard extends rb implements cf {
                       }
                     }
                   } else {
-                    ei.field_D[var4].d((fk.field_k[var3] >> -573905436) - 128, (fk.field_k[var3 - -1] >> -1973196764) + -128, 128 - el.field_I * 2);
+                    ei.field_D[var4].d((fk.field_k[var3] >> 4) - 128, (fk.field_k[var3 - -1] >> 4) + -128, 128 - el.field_I * 2);
                     var3 += 8;
                     var4 += 2;
                     continue L13;

@@ -294,7 +294,7 @@ final class pa extends tf {
                                         if ((((pa) this).field_k[var44] & 65535) != ((pa) this).field_G[var45]) {
                                           break L17;
                                         } else {
-                                          ((pa) this).field_J[var45] = (byte)-1;
+                                          ((pa) this).field_J[var45] = (byte) -1;
                                           var45++;
                                           continue L16;
                                         }
@@ -454,13 +454,13 @@ final class pa extends tf {
                       }
                     }
                     if ((var39 & 2) != 2) {
-                      ((pa) this).field_J[var38] = (byte)-1;
-                      ((pa) this).field_D[var38] = (short)-1;
+                      ((pa) this).field_J[var38] = (byte) -1;
+                      ((pa) this).field_D[var38] = (short) -1;
                       break L25;
                     } else {
                       ((pa) this).field_J[var38] = (byte)(var39 >> 2);
                       ((pa) this).field_D[var38] = ((pa) this).field_I[var38];
-                      ((pa) this).field_I[var38] = (short)127;
+                      ((pa) this).field_I[var38] = (short) 127;
                       if (((pa) this).field_D[var38] == -1) {
                         break L25;
                       } else {
@@ -1179,7 +1179,7 @@ final class pa extends tf {
                 }
                 if (((pa) this).field_J != null) {
                   if (((pa) this).field_D[var53] == -1) {
-                    ((pa) this).field_J[var53] = (byte)-1;
+                    ((pa) this).field_J[var53] = (byte) -1;
                     var53++;
                     continue L22;
                   } else {

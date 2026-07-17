@@ -13,19 +13,24 @@ final class rh extends nv implements ut {
         field_o = null;
         field_q = null;
         field_r = null;
-        if (param0 != 15) {
-            field_s = true;
-        }
     }
 
     final void a(boolean param0, kh param1) {
-        super.a(param0, param1);
-        ((rh) this).field_p.a(((rh) this).h((byte) 113), (byte) 82, param1);
+        try {
+            super.a(param0, param1);
+            ((rh) this).field_p.a(((rh) this).h((byte) 113), (byte) 82, param1);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "rh.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     rh(la param0, boolean param1) {
         super(param0, param1);
-        ((rh) this).field_p = new jma(15);
+        try {
+            ((rh) this).field_p = new jma(15);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "rh.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     public final int g(byte param0) {
@@ -81,7 +86,11 @@ final class rh extends nv implements ut {
 
     rh(la param0, kh param1, boolean param2) {
         super(param0, param1, param2);
-        ((rh) this).field_p = new jma(15, param0, param1);
+        try {
+            ((rh) this).field_p = new jma(15, param0, param1);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "rh.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     final void k(int param0) {

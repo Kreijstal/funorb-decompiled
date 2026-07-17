@@ -20,7 +20,7 @@ abstract class fb extends gp {
     abstract void a(int param0, int param1, int param2, int param3);
 
     final static void h(int param0) {
-        field_D.setLength(param0);
+        field_D.setLength(0);
         ui.field_g = 0;
     }
 
@@ -67,14 +67,7 @@ abstract class fb extends gp {
         field_D = null;
         field_A = null;
         field_u = null;
-        if (param0 < 91) {
-          fb.a(-125, false);
-          field_w = null;
-          return;
-        } else {
-          field_w = null;
-          return;
-        }
+        field_w = null;
     }
 
     final static void a(int param0, boolean param1) {

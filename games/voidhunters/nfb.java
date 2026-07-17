@@ -18,7 +18,7 @@ final class nfb implements dja {
     }
 
     public static void b(byte param0) {
-        int var1 = 76 / ((param0 - -65) / 53);
+        int var1 = 25;
         field_a = null;
     }
 

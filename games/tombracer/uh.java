@@ -20,9 +20,6 @@ final class uh extends vg {
         field_h = null;
         field_k = null;
         field_i = null;
-        if (param0 != 0) {
-            field_h = null;
-        }
     }
 
     final void a(int param0, int param1) {
@@ -41,17 +38,17 @@ final class uh extends vg {
             if (((uh) this).field_o != null) {
               if (null != ((uh) this).field_o.field_c) {
                 if (0.05000000074505806f < ((uh) this).field_o.field_c.b(0)) {
-                  if (-1 == (((uh) this).field_o.field_c.c(-122) ^ -1)) {
+                  if (((uh) this).field_o.field_c.c(-122) == 0) {
                     return -1;
                   } else {
-                    var5 = -((uh) this).field_j + param1 >> 1011094480;
-                    var6 = -((uh) this).field_f + param2 >> 1492816464;
-                    var7 = -((uh) this).field_q + param0 >> 128327984;
+                    var5 = -((uh) this).field_j + param1 >> 16;
+                    var6 = -((uh) this).field_f + param2 >> 16;
+                    var7 = -((uh) this).field_q + param0 >> 16;
                     if (param3 > -33) {
                       field_k = null;
-                      return -(var7 * var7 + var5 * var5 - -(var6 * var6) >> -171995262) + ((uh) this).field_p;
+                      return -(var7 * var7 + var5 * var5 - -(var6 * var6) >> 2) + ((uh) this).field_p;
                     } else {
-                      return -(var7 * var7 + var5 * var5 - -(var6 * var6) >> -171995262) + ((uh) this).field_p;
+                      return -(var7 * var7 + var5 * var5 - -(var6 * var6) >> 2) + ((uh) this).field_p;
                     }
                   }
                 } else {
@@ -78,51 +75,102 @@ final class uh extends vg {
     }
 
     final static mu a(String param0, int param1) {
-        String var2 = null;
+        Object var2 = null;
         mu var3 = null;
         int var4 = 0;
         String var5 = null;
         int var6 = 0;
         CharSequence var7 = null;
         CharSequence var8 = null;
+        mu stackIn_14_0 = null;
+        Object stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        Object stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        Object stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        String stackIn_20_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        mu stackOut_13_0 = null;
+        Object stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        Object stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
+        Object stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
         var6 = TombRacer.field_G ? 1 : 0;
-        if (bla.field_G != null) {
-          L0: {
-            var7 = (CharSequence) (Object) param0;
-            var2 = jd.a(1, var7);
-            if (var2 != null) {
-              break L0;
-            } else {
-              var2 = (String) (Object) var7;
-              break L0;
-            }
-          }
-          var3 = (mu) (Object) bla.field_G.a(-114, (long)var2.hashCode());
-          var4 = -95 / ((param1 - -46) / 54);
-          L1: while (true) {
-            if (var3 != null) {
-              L2: {
-                var8 = (CharSequence) (Object) var3.field_tb;
-                var5 = jd.a(1, var8);
-                if (var5 != null) {
-                  break L2;
-                } else {
-                  var5 = var3.field_tb;
-                  break L2;
-                }
-              }
-              if (var5.equals((Object) (Object) var2)) {
-                return var3;
+        try {
+          if (bla.field_G != null) {
+            L0: {
+              var7 = (CharSequence) (Object) param0;
+              var2 = (Object) (Object) jd.a(1, var7);
+              if (var2 != null) {
+                break L0;
               } else {
-                var3 = (mu) (Object) bla.field_G.b((byte) 99);
-                continue L1;
+                var2 = (Object) (Object) var7;
+                break L0;
               }
+            }
+            var3 = (mu) (Object) bla.field_G.a(-114, (long)((String) var2).hashCode());
+            var4 = -95 / ((param1 - -46) / 54);
+            L1: while (true) {
+              if (var3 != null) {
+                L2: {
+                  var8 = (CharSequence) (Object) var3.field_tb;
+                  var5 = jd.a(1, var8);
+                  if (var5 != null) {
+                    break L2;
+                  } else {
+                    var5 = var3.field_tb;
+                    break L2;
+                  }
+                }
+                if (var5.equals(var2)) {
+                  stackOut_13_0 = (mu) var3;
+                  stackIn_14_0 = stackOut_13_0;
+                  return stackIn_14_0;
+                } else {
+                  var3 = (mu) (Object) bla.field_G.b((byte) 99);
+                  continue L1;
+                }
+              } else {
+                return null;
+              }
+            }
+          } else {
+            return null;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2 = (Object) (Object) decompiledCaughtException;
+            stackOut_17_0 = var2;
+            stackOut_17_1 = new StringBuilder().append("uh.N(");
+            stackIn_19_0 = stackOut_17_0;
+            stackIn_19_1 = stackOut_17_1;
+            stackIn_18_0 = stackOut_17_0;
+            stackIn_18_1 = stackOut_17_1;
+            if (param0 == null) {
+              stackOut_19_0 = stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "null";
+              stackIn_20_0 = stackOut_19_0;
+              stackIn_20_1 = stackOut_19_1;
+              stackIn_20_2 = stackOut_19_2;
+              break L3;
             } else {
-              return null;
+              stackOut_18_0 = stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "{...}";
+              stackIn_20_0 = stackOut_18_0;
+              stackIn_20_1 = stackOut_18_1;
+              stackIn_20_2 = stackOut_18_2;
+              break L3;
             }
           }
-        } else {
-          return null;
+          throw tba.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + param1 + 41);
         }
     }
 
@@ -191,9 +239,9 @@ final class uh extends vg {
             break L0;
           } else {
             if (((uh) this).field_o.field_c != null) {
-              ((uh) this).field_m[0] = ((uh) this).field_j >> 1456965582;
-              ((uh) this).field_m[1] = -((uh) this).field_q >> -1459852242;
-              ((uh) this).field_m[2] = -((uh) this).field_f >> -459431602;
+              ((uh) this).field_m[0] = ((uh) this).field_j >> 14;
+              ((uh) this).field_m[1] = -((uh) this).field_q >> 14;
+              ((uh) this).field_m[2] = -((uh) this).field_f >> 14;
               ((uh) this).field_o.field_c.a(((uh) this).field_m[1], ((uh) this).field_m[0], (byte) -127, ((uh) this).field_m[2]);
               if (param0 < 21) {
                 boolean discarded$1 = uh.a((byte) 98);
@@ -345,7 +393,11 @@ final class uh extends vg {
         ((uh) this).field_r = false;
         ((uh) this).field_m = new int[3];
         ((uh) this).field_g = false;
-        ((uh) this).field_o = param0;
+        try {
+            ((uh) this).field_o = param0;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "uh.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

@@ -12,7 +12,11 @@ final class rn {
         if (param0 >= -1) {
             return;
         }
-        nn.a((byte) 96, param1);
+        try {
+            nn.a((byte) 96, param1);
+        } catch (RuntimeException runtimeException) {
+            throw ig.a((Throwable) (Object) runtimeException, "rn.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static int a(int param0, int param1) {
@@ -20,20 +24,10 @@ final class rn {
     }
 
     final static String b(boolean param0) {
-        if (param0) {
-          if (null == mv.field_d) {
+        if (null == mv.field_d) {
             return "";
-          } else {
-            return mv.field_d;
-          }
-        } else {
-          rn.a(true);
-          if (null == mv.field_d) {
-            return "";
-          } else {
-            return mv.field_d;
-          }
         }
+        return mv.field_d;
     }
 
     public final String toString() {
@@ -41,18 +35,17 @@ final class rn {
     }
 
     final static void a(int param0, String param1, boolean param2, boolean param3) {
-        ou.a(true);
-        rl.field_C.j(param0 ^ -124);
-        np.field_Qb = new df(ga.field_d, (String) null, fh.field_i, param2, param3);
-        if (param0 != 3) {
-          field_d = -55;
-          lt.field_g = new lw(rl.field_C, (kb) (Object) np.field_Qb);
-          rl.field_C.a((kb) (Object) lt.field_g, 0);
-          return;
-        } else {
-          lt.field_g = new lw(rl.field_C, (kb) (Object) np.field_Qb);
-          rl.field_C.a((kb) (Object) lt.field_g, 0);
-          return;
+        try {
+            ou.a(true);
+            rl.field_C.j(param0 ^ -124);
+            np.field_Qb = new df(ga.field_d, (String) null, fh.field_i, param2, param3);
+            if (param0 != 3) {
+                field_d = -55;
+            }
+            lt.field_g = new lw(rl.field_C, (kb) (Object) np.field_Qb);
+            rl.field_C.a((kb) (Object) lt.field_g, 0);
+        } catch (RuntimeException runtimeException) {
+            throw ig.a((Throwable) (Object) runtimeException, "rn.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
         }
     }
 

@@ -12,38 +12,30 @@ final class nma extends ana {
     }
 
     final static boolean e(int param0) {
-        if (param0 != -8774) {
-            field_v = null;
-            return paa.a(15000);
-        }
         return paa.a(15000);
     }
 
     final static void a(vr param0, boolean param1, boolean param2, vr param3) {
-        if (!param1) {
-          nma.d(126);
-          qq.a(uaa.field_i, gfa.field_f, qf.field_y, rea.field_g, (po) (Object) hl.field_H, ina.field_n, qs.field_m, oe.field_c, dla.field_k, -30803, nu.field_c, param2);
-          gi.field_b = gw.a("lobby", "chatfilter", param3, -112);
-          qo.field_a[0] = wj.field_x;
-          qo.field_a[2] = cn.field_i;
-          qo.field_a[1] = de.field_K;
-          gaa.a((po) (Object) ds.field_l, param0, -95);
-          return;
-        } else {
-          qq.a(uaa.field_i, gfa.field_f, qf.field_y, rea.field_g, (po) (Object) hl.field_H, ina.field_n, qs.field_m, oe.field_c, dla.field_k, -30803, nu.field_c, param2);
-          gi.field_b = gw.a("lobby", "chatfilter", param3, -112);
-          qo.field_a[0] = wj.field_x;
-          qo.field_a[2] = cn.field_i;
-          qo.field_a[1] = de.field_K;
-          gaa.a((po) (Object) ds.field_l, param0, -95);
-          return;
+        try {
+            if (!param1) {
+                nma.d(126);
+            }
+            qq.a(uaa.field_i, gfa.field_f, qf.field_y, rea.field_g, (po) (Object) hl.field_H, ina.field_n, qs.field_m, oe.field_c, dla.field_k, -30803, nu.field_c, param2);
+            gi.field_b = gw.a("lobby", "chatfilter", param3, -112);
+            qo.field_a[0] = wj.field_x;
+            qo.field_a[2] = cn.field_i;
+            qo.field_a[1] = de.field_K;
+            gaa.a((po) (Object) ds.field_l, param0, -95);
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "nma.G(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
     final boolean c(byte param0) {
         int var2 = 0;
+        int fieldTemp$2 = ((nma) this).field_l - 1;
         ((nma) this).field_l = ((nma) this).field_l - 1;
-        if (-1 >= (((nma) this).field_l - 1 ^ -1)) {
+        if (fieldTemp$2 >= 0) {
           if (25 == ((nma) this).field_l) {
             this.e((byte) 100);
             return false;
@@ -58,14 +50,7 @@ final class nma extends ana {
     }
 
     final static Boolean b(boolean param0) {
-        Boolean var1 = null;
-        if (!param0) {
-            field_v = null;
-            var1 = vg.field_l;
-            vg.field_l = null;
-            return var1;
-        }
-        var1 = vg.field_l;
+        Boolean var1 = vg.field_l;
         vg.field_l = null;
         return var1;
     }
@@ -78,7 +63,7 @@ final class nma extends ana {
         int var6 = 0;
         var6 = BachelorFridge.field_y;
         var2 = ((nma) this).field_w.field_l.a(95, ((nma) this).field_q.field_h);
-        var3 = 22 % ((param0 - 16) / 42);
+        var3 = 0;
         if (var2.i(84)) {
           return;
         } else {
@@ -111,7 +96,11 @@ final class nma extends ana {
 
     nma(gj param0, vha param1) {
         super(param0, (bca) (Object) param1);
-        ((nma) this).field_w = param1;
+        try {
+            ((nma) this).field_w = param1;
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "nma.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

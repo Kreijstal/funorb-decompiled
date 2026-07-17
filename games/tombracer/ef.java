@@ -14,33 +14,91 @@ final class ef extends pd {
     }
 
     final boolean a(int param0, hca param1) {
+        RuntimeException var3 = null;
         Object var4 = null;
-        param1.g(62, 106);
-        param1.a(((ef) this).field_t, true);
-        if (param0 >= -114) {
-          var4 = null;
-          boolean discarded$2 = ((ef) this).a(66, (hca) null);
-          return true;
-        } else {
-          return true;
+        int stackIn_3_0 = 0;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_2_0 = 0;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            param1.g(62, 106);
+            param1.a(((ef) this).field_t, true);
+            if (param0 < -114) {
+              stackOut_2_0 = 1;
+              stackIn_3_0 = stackOut_2_0;
+              break L0;
+            } else {
+              var4 = null;
+              boolean discarded$2 = ((ef) this).a(66, (hca) null);
+              return true;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var3 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_1 = new StringBuilder().append("ef.L(").append(param0).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param1 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L1;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L1;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
         }
+        return stackIn_3_0 != 0;
     }
 
     ef(la param0, boolean param1) {
         super(param0, param1);
-        ((ef) this).field_t = ci.a(4, -1);
+        try {
+            ((ef) this).field_t = ci.a(4, -1);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "ef.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     final void a(boolean param0, kh param1) {
-        if (param0) {
-          field_s = 2.416393518447876f;
-          super.a(param0, param1);
-          ((ef) this).field_t.a(param1, (byte) 7);
-          return;
-        } else {
-          super.a(param0, param1);
-          ((ef) this).field_t.a(param1, (byte) 7);
-          return;
+        try {
+            if (param0) {
+                field_s = 2.416393518447876f;
+            }
+            super.a(param0, param1);
+            ((ef) this).field_t.a(param1, (byte) 7);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "ef.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -56,12 +114,20 @@ final class ef extends pd {
         if (param1 != 5) {
             return;
         }
-        ((ef) this).field_t = param0;
+        try {
+            ((ef) this).field_t = param0;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "ef.R(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     ef(la param0, kh param1, boolean param2) {
         super(param0, param1, param2);
-        ((ef) this).field_t = jl.a(param0, true, param1);
+        try {
+            ((ef) this).field_t = jl.a(param0, true, param1);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "ef.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     static {

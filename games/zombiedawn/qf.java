@@ -390,7 +390,7 @@ class qf {
         sp var15 = null;
         int var15_int = 0;
         L0: {
-          var3 = param1;
+          var3 = 256;
           if (!field_l) {
             break L0;
           } else {
@@ -400,7 +400,7 @@ class qf {
         }
         L1: {
           gp.a(param0, 0, var3);
-          ((qf) this).field_i = ((qf) this).field_i - param1;
+          ((qf) this).field_i = ((qf) this).field_i - 256;
           if (((qf) this).field_f == null) {
             break L1;
           } else {
@@ -434,7 +434,7 @@ class qf {
                       if (var9 != 0) {
                         L6: {
                           if ((var9 & 1) != 0) {
-                            var5 = var5 & (1 << var7_int ^ -1);
+                            var5 = var5 & ~(1 << var7_int);
                             var10 = null;
                             var11 = ((qf) this).field_t[var7_int];
                             var14 = var11;
@@ -567,7 +567,7 @@ class qf {
           if (((qf) this).field_f == null) {
             break L17;
           } else {
-            ((qf) this).field_f.a(param0, 0, param1);
+            ((qf) this).field_f.a(param0, 0, 256);
             break L17;
           }
         }
@@ -575,12 +575,12 @@ class qf {
     }
 
     private final void b(int param0) {
-        ((qf) this).field_i = ((qf) this).field_i - param0;
+        ((qf) this).field_i = ((qf) this).field_i - 256;
         if (((qf) this).field_i < 0) {
             ((qf) this).field_i = 0;
         }
         if (((qf) this).field_f != null) {
-            ((qf) this).field_f.a(param0);
+            ((qf) this).field_f.a(256);
             return;
         }
     }
@@ -671,7 +671,7 @@ class qf {
                 }
               }
               field_l = stackIn_7_0 != 0;
-              field_q = param2;
+              field_q = 10;
               return;
             } else {
               break L0;

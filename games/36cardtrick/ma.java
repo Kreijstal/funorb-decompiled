@@ -27,61 +27,53 @@ final class ma {
             var11 = 0;
             L1: while (true) {
               if (param1 <= var11) {
-                L2: {
-                  if (param8 < -12) {
-                    break L2;
-                  } else {
-                    field_d = null;
-                    break L2;
-                  }
-                }
                 var11 = 0;
-                L3: while (true) {
+                L2: while (true) {
                   if (var11 >= param1) {
                     var11 = 0;
-                    L4: while (true) {
+                    L3: while (true) {
                       if (param4 <= var11) {
                         var11 = 0;
-                        L5: while (true) {
-                          if (var11 >= param4 >> 548650273) {
+                        L4: while (true) {
+                          if (var11 >= param4 >> 1) {
                             return var10;
                           } else {
                             var12 = 0;
-                            L6: while (true) {
+                            L5: while (true) {
                               if (param3 > var12) {
                                 var10[1].field_r[(var9 + (-var12 - 1)) * param4 - -var11] = param5;
                                 var10[3].field_r[var9 * var11 - (var12 + (1 + -var9))] = param5;
                                 var10[7].field_r[var12 * param4 - -var11] = param5;
                                 var10[5].field_r[var9 * var11 + var12] = param5;
                                 var12++;
-                                continue L6;
+                                continue L5;
                               } else {
                                 var11++;
-                                continue L5;
+                                continue L4;
                               }
                             }
                           }
                         }
                       } else {
                         var12 = 0;
-                        L7: while (true) {
+                        L6: while (true) {
                           if (param1 <= var12) {
                             var11++;
-                            continue L4;
+                            continue L3;
                           } else {
                             var10[7].field_r[(-1 + (var9 - var12)) * param4 + var11] = param0;
                             var10[5].field_r[-var12 - -var9 + (-1 + var11 * var9)] = param0;
                             var10[1].field_r[var11 + var12 * param4] = param7;
                             var10[3].field_r[var12 + var11 * var9] = param7;
                             var12++;
-                            continue L7;
+                            continue L6;
                           }
                         }
                       }
                     }
                   } else {
                     var12 = 0;
-                    L8: while (true) {
+                    L7: while (true) {
                       if (var12 < var9) {
                         var10[0].field_r[var12 - -(var11 * var9)] = param7;
                         var10[0].field_r[var9 * var12 + var11] = param7;
@@ -89,21 +81,21 @@ final class ma {
                           var10[2].field_r[var12 + var11 * var9] = param7;
                           var10[6].field_r[var12 * var9 - -var11] = param7;
                           var12++;
-                          continue L8;
+                          continue L7;
                         } else {
                           var12++;
-                          continue L8;
+                          continue L7;
                         }
                       } else {
                         var11++;
-                        continue L3;
+                        continue L2;
                       }
                     }
                   }
                 }
               } else {
                 var12 = 0;
-                L9: while (true) {
+                L8: while (true) {
                   if (var9 <= var12) {
                     var11++;
                     continue L1;
@@ -113,7 +105,7 @@ final class ma {
                     var10[2].field_r[-1 - (-var9 - -var11 - var9 * var12)] = param0;
                     var10[8].field_r[var9 * var12 - var11 - (1 + -var9)] = param0;
                     var12++;
-                    continue L9;
+                    continue L8;
                   }
                 }
               }
@@ -121,14 +113,14 @@ final class ma {
           } else {
             var13 = var11_ref_kc__[var12];
             var14 = 0;
-            L10: while (true) {
+            L9: while (true) {
               if (var13.field_r.length <= var14) {
                 var12++;
                 continue L0;
               } else {
                 var13.field_r[var14] = param2;
                 var14++;
-                continue L10;
+                continue L9;
               }
             }
           }
@@ -136,24 +128,95 @@ final class ma {
     }
 
     final static qa a(java.applet.Applet param0, int param1) {
+        String var2 = null;
+        RuntimeException var2_ref = null;
+        qa[] var3 = null;
         int var4 = 0;
         qa var5 = null;
-        int var6 = Main.field_T;
-        String var2 = he.a(param1 + -21124, param0, "jagex-last-login-method");
-        if (!(var2 != null)) {
-            return bf.field_c;
-        }
-        qa[] var3 = ff.a(param1 + -17914);
-        for (var4 = 0; var3.length > var4; var4++) {
-            var5 = var3[var4];
-            if (var5.a(true, var2)) {
-                return var5;
+        int var6 = 0;
+        qa stackIn_4_0 = null;
+        qa stackIn_9_0 = null;
+        qa stackIn_14_0 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_18_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        qa stackOut_3_0 = null;
+        qa stackOut_13_0 = null;
+        qa stackOut_8_0 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        var6 = Main.field_T;
+        try {
+          L0: {
+            var2 = he.a(-24949, param0, "jagex-last-login-method");
+            if (var2 == null) {
+              stackOut_3_0 = bf.field_c;
+              stackIn_4_0 = stackOut_3_0;
+              return stackIn_4_0;
+            } else {
+              var3 = ff.a(-21739);
+              var4 = 0;
+              L1: while (true) {
+                if (var3.length <= var4) {
+                  stackOut_13_0 = bf.field_c;
+                  stackIn_14_0 = stackOut_13_0;
+                  break L0;
+                } else {
+                  var5 = var3[var4];
+                  if (!var5.a(true, var2)) {
+                    var4++;
+                    continue L1;
+                  } else {
+                    stackOut_8_0 = (qa) var5;
+                    stackIn_9_0 = stackOut_8_0;
+                    return stackIn_9_0;
+                  }
+                }
+              }
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2_ref = decompiledCaughtException;
+            stackOut_15_0 = (RuntimeException) var2_ref;
+            stackOut_15_1 = new StringBuilder().append("ma.B(");
+            stackIn_17_0 = stackOut_15_0;
+            stackIn_17_1 = stackOut_15_1;
+            stackIn_16_0 = stackOut_15_0;
+            stackIn_16_1 = stackOut_15_1;
+            if (param0 == null) {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "null";
+              stackIn_18_0 = stackOut_17_0;
+              stackIn_18_1 = stackOut_17_1;
+              stackIn_18_2 = stackOut_17_2;
+              break L2;
+            } else {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "{...}";
+              stackIn_18_0 = stackOut_16_0;
+              stackIn_18_1 = stackOut_16_1;
+              stackIn_18_2 = stackOut_16_2;
+              break L2;
+            }
+          }
+          throw ma.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + -3825 + 41);
         }
-        if (param1 != -3825) {
-            field_c = -86;
-        }
-        return bf.field_c;
+        return stackIn_14_0;
     }
 
     final static ac a(Throwable param0, String param1) {
@@ -169,9 +232,6 @@ final class ma {
 
     public static void a(int param0) {
         field_a = null;
-        if (param0 >= -27) {
-            return;
-        }
         field_d = null;
         field_b = null;
     }
@@ -190,7 +250,7 @@ final class ma {
             dg.field_H.field_l = 2;
             break L0;
           } else {
-            if (-51 != (param1 ^ -1)) {
+            if (param1 != 50) {
               dg.field_H.field_l = 1;
               break L0;
             } else {
@@ -216,14 +276,14 @@ final class ma {
           if (dg.field_H.field_b < 2) {
             break L2;
           } else {
-            if ((param1 ^ -1) != -51) {
+            if (param1 != 50) {
               break L2;
             } else {
               return 5;
             }
           }
         }
-        if ((dg.field_H.field_b ^ -1) > -5) {
+        if (dg.field_H.field_b < 4) {
           return -1;
         } else {
           return 1;

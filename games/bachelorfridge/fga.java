@@ -32,11 +32,17 @@ final class fga extends kj {
               }
             }
             try {
-              Object discarded$1 = ac.a(nia.d(param1 + -31766), "resizing", new Object[1], (byte) 73);
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+              L1: {
+                Object discarded$1 = ac.a(nia.d(param1 + -31766), "resizing", new Object[1], (byte) 73);
+                break L1;
+              }
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L2: {
+                var2 = decompiledCaughtException;
+                break L2;
+              }
             }
-            var2 = decompiledCaughtException;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -46,7 +52,11 @@ final class fga extends kj {
 
     fga(gj param0, int param1, int param2, int param3) {
         super(param0, param1, param2);
-        ((fga) this).field_g = new vca((po) (Object) taa.field_u, Integer.toString(param3), 16736256, 20, 30, 50);
+        try {
+            ((fga) this).field_g = new vca((po) (Object) taa.field_u, Integer.toString(param3), 16736256, 20, 30, 50);
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "fga.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+        }
     }
 
     final void a(int param0, int param1, int param2) {
@@ -61,11 +71,6 @@ final class fga extends kj {
     }
 
     public static void a(boolean param0) {
-        if (param0) {
-            fga.a(126, (byte) -89);
-            field_h = null;
-            return;
-        }
         field_h = null;
     }
 

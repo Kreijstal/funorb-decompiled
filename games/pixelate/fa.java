@@ -39,7 +39,6 @@ class fa {
         long stackIn_8_2 = 0L;
         ak stackIn_8_3 = null;
         String stackIn_8_4 = null;
-        Object stackIn_53_0 = null;
         ak stackOut_5_0 = null;
         ak stackOut_5_1 = null;
         long stackOut_5_2 = 0L;
@@ -54,7 +53,6 @@ class fa {
         long stackOut_6_2 = 0L;
         ak stackOut_6_3 = null;
         String stackOut_6_4 = null;
-        Object stackOut_52_0 = null;
         L0: {
           var21 = Pixelate.field_H ? 1 : 0;
           dq.field_b = param9;
@@ -224,266 +222,204 @@ class fa {
         hc.field_L[0] = new lo[6];
         var17_int = 0;
         L6: while (true) {
-          L7: {
-            if (5 <= var17_int) {
-              break L7;
-            } else {
-              hc.field_L[0][var17_int + 1] = new lo(0L, bc.field_o, (ak) null, dn.field_c, bn.field_P[var17_int], rb.field_p[var17_int]);
-              var17_int++;
-              if (0 == 0) {
-                continue L6;
+          if (5 <= var17_int) {
+            L7: {
+              if (ia.field_a.length >= 2) {
+                dh.field_b[1] = new ak(0L, qk.field_d, pk.field_e);
+                hc.field_L[1] = new lo[ia.field_a.length + 1];
+                hc.field_L[1][0] = new lo(0L, bc.field_o, (ak) null, dn.field_c, (tf) null, fg.field_a);
+                var17_int = 0;
+                L8: while (true) {
+                  if (ia.field_a.length <= var17_int) {
+                    break L7;
+                  } else {
+                    hc.field_L[1][var17_int - -1] = new lo(0L, bc.field_o, (ak) null, dn.field_c, (tf) null, Integer.toString(ia.field_a[var17_int]));
+                    var17_int++;
+                    continue L8;
+                  }
+                }
               } else {
                 break L7;
               }
             }
-          }
-          L8: {
-            if ((ia.field_a.length ^ -1) <= -3) {
-              dh.field_b[1] = new ak(0L, qk.field_d, pk.field_e);
-              hc.field_L[1] = new lo[ia.field_a.length + 1];
-              hc.field_L[1][0] = new lo(0L, bc.field_o, (ak) null, dn.field_c, (tf) null, fg.field_a);
-              var17_int = 0;
-              L9: while (true) {
-                if (ia.field_a.length <= var17_int) {
-                  break L8;
-                } else {
-                  hc.field_L[1][var17_int - -1] = new lo(0L, bc.field_o, (ak) null, dn.field_c, (tf) null, Integer.toString(ia.field_a[var17_int]));
-                  var17_int++;
-                  if (0 == 0) {
-                    continue L9;
+            L9: {
+              dh.field_b[2] = new ak(0L, qk.field_d, eq.field_Xb);
+              hc.field_L[2] = new lo[3];
+              if (ff.field_i > 1) {
+                dh.field_b[3] = new ak(0L, qk.field_d, ii.field_c);
+                hc.field_L[3] = new lo[1 + ff.field_i];
+                hc.field_L[3][0] = new lo(0L, bc.field_o, (ak) null, dn.field_c, (tf) null, fg.field_a);
+                var17_int = 0;
+                L10: while (true) {
+                  if (var17_int >= ff.field_i) {
+                    break L9;
                   } else {
-                    break L8;
+                    hc.field_L[3][var17_int + 1] = new lo(0L, bc.field_o, (ak) null, dn.field_c, (tf) null, rm.field_b[var17_int]);
+                    var17_int++;
+                    continue L10;
                   }
                 }
+              } else {
+                break L9;
               }
-            } else {
-              break L8;
             }
-          }
-          L10: {
-            dh.field_b[2] = new ak(0L, qk.field_d, eq.field_Xb);
-            hc.field_L[2] = new lo[3];
-            if (ff.field_i > 1) {
-              dh.field_b[3] = new ak(0L, qk.field_d, ii.field_c);
-              hc.field_L[3] = new lo[1 + ff.field_i];
-              hc.field_L[3][0] = new lo(0L, bc.field_o, (ak) null, dn.field_c, (tf) null, fg.field_a);
-              var17_int = 0;
-              L11: while (true) {
-                if (var17_int >= ff.field_i) {
-                  break L10;
-                } else {
-                  hc.field_L[3][var17_int + 1] = new lo(0L, bc.field_o, (ak) null, dn.field_c, (tf) null, rm.field_b[var17_int]);
-                  var17_int++;
-                  if (0 == 0) {
-                    continue L11;
-                  } else {
-                    break L10;
-                  }
-                }
-              }
-            } else {
-              break L10;
-            }
-          }
-          var17_int = 0;
-          L12: while (true) {
-            L13: {
+            var17_int = 0;
+            L11: while (true) {
               if (param12 <= var17_int) {
-                break L13;
+                var17_int = 0;
+                L12: while (true) {
+                  if (4 + param12 <= var17_int) {
+                    wm.field_d = new ak(0L, bf.field_k);
+                    ep.field_a = new ak(0L, bf.field_k);
+                    nk.field_e = new ak(0L, kj.field_l);
+                    nk.field_e.a(-27813, mg.field_h);
+                    nk.field_e.field_kb = 1;
+                    var17 = nk.field_e;
+                    var17.field_Bb = 1;
+                    ai.field_A = new ak(0L, (ak) null);
+                    ai.field_A.a(vp.field_Qb, (byte) 26);
+                    ai.field_A.a(dc.field_a, (byte) 26);
+                    dc.field_a.a(sm.field_m, (byte) 26);
+                    var18 = 0;
+                    L13: while (true) {
+                      if (param12 - -4 <= var18) {
+                        ai.field_A.a(wm.field_d, (byte) 26);
+                        ai.field_A.a(ep.field_a, (byte) 26);
+                        ai.field_A.a(nk.field_e, (byte) 26);
+                        ih.field_g = new ak(0L, pj.field_i, ca.field_k.toUpperCase());
+                        hb.field_eb = new ak(0L, nk.field_f, ec.field_o.toUpperCase());
+                        return;
+                      } else {
+                        L14: {
+                          L15: {
+                            if (var18 != 1) {
+                              break L15;
+                            } else {
+                              if (ia.field_a.length >= 2) {
+                                break L15;
+                              } else {
+                                break L14;
+                              }
+                            }
+                          }
+                          L16: {
+                            if (3 != var18) {
+                              break L16;
+                            } else {
+                              if (ff.field_i <= 1) {
+                                break L14;
+                              } else {
+                                break L16;
+                              }
+                            }
+                          }
+                          dc.field_a.a(dh.field_b[var18], (byte) 26);
+                          var19 = 0;
+                          L17: while (true) {
+                            if (hc.field_L[var18].length <= var19) {
+                              break L14;
+                            } else {
+                              L18: {
+                                if (hc.field_L[var18][var19] == null) {
+                                  break L18;
+                                } else {
+                                  dc.field_a.a((ak) (Object) hc.field_L[var18][var19], (byte) 26);
+                                  break L18;
+                                }
+                              }
+                              var19++;
+                              continue L17;
+                            }
+                          }
+                        }
+                        var18++;
+                        continue L13;
+                      }
+                    }
+                  } else {
+                    L19: {
+                      if (null == dh.field_b[var17_int]) {
+                        break L19;
+                      } else {
+                        dh.field_b[var17_int].field_mb = 11;
+                        break L19;
+                      }
+                    }
+                    L20: {
+                      if (null == hc.field_L[var17_int]) {
+                        break L20;
+                      } else {
+                        var18 = 0;
+                        L21: while (true) {
+                          if (hc.field_L[var17_int].length <= var18) {
+                            break L20;
+                          } else {
+                            L22: {
+                              if (hc.field_L[var17_int][var18] == null) {
+                                break L22;
+                              } else {
+                                break L22;
+                              }
+                            }
+                            var18++;
+                            continue L21;
+                          }
+                        }
+                      }
+                    }
+                    var17_int++;
+                    continue L12;
+                  }
+                }
               } else {
                 dh.field_b[4 + var17_int] = new ak(0L, qk.field_d, jk.field_e[var17_int]);
                 hc.field_L[4 - -var17_int] = new lo[1 + cm.a(255, (int) g.field_s[var17_int])];
                 hc.field_L[var17_int + 4][0] = new lo(0L, bc.field_o, (ak) null, dn.field_c, (tf) null, fg.field_a);
                 var18 = 0;
-                L14: while (true) {
-                  L15: {
-                    if ((g.field_s[var17_int] & 255) <= var18) {
-                      break L15;
-                    } else {
-                      L16: {
-                        if (null == dk.field_a) {
-                          var19_ref = null;
-                          break L16;
-                        } else {
-                          if (dk.field_a[var17_int] != null) {
-                            var19_ref = (Object) (Object) dk.field_a[var17_int][var18];
-                            break L16;
-                          } else {
-                            var19_ref = null;
-                            break L16;
-                          }
-                        }
-                      }
-                      L17: {
-                        if (bf.field_q == null) {
-                          var20 = null;
-                          break L17;
-                        } else {
-                          if (bf.field_q[var17_int] != null) {
-                            var20 = (Object) (Object) bf.field_q[var17_int][var18];
-                            break L17;
-                          } else {
-                            var20 = null;
-                            break L17;
-                          }
-                        }
-                      }
-                      hc.field_L[4 + var17_int][1 + var18] = new lo(0L, bc.field_o, (ak) null, dn.field_c, (tf) var19_ref, (String) var20);
-                      var18++;
-                      if (0 == 0) {
-                        continue L14;
+                L23: while (true) {
+                  if ((g.field_s[var17_int] & 255) <= var18) {
+                    var17_int++;
+                    continue L11;
+                  } else {
+                    L24: {
+                      if (null == dk.field_a) {
+                        var19_ref = null;
+                        break L24;
                       } else {
-                        break L15;
-                      }
-                    }
-                  }
-                  var17_int++;
-                  if (0 == 0) {
-                    continue L12;
-                  } else {
-                    break L13;
-                  }
-                }
-              }
-            }
-            var17_int = 0;
-            L18: while (true) {
-              L19: {
-                if (4 + param12 <= var17_int) {
-                  break L19;
-                } else {
-                  stackOut_52_0 = null;
-                  stackIn_53_0 = stackOut_52_0;
-                  L20: {
-                    if (stackIn_53_0 == (Object) (Object) dh.field_b[var17_int]) {
-                      break L20;
-                    } else {
-                      dh.field_b[var17_int].field_mb = 11;
-                      break L20;
-                    }
-                  }
-                  L21: {
-                    if (null == hc.field_L[var17_int]) {
-                      break L21;
-                    } else {
-                      var18 = 0;
-                      L22: while (true) {
-                        if (hc.field_L[var17_int].length <= var18) {
-                          break L21;
+                        if (dk.field_a[var17_int] != null) {
+                          var19_ref = (Object) (Object) dk.field_a[var17_int][var18];
+                          break L24;
                         } else {
-                          L23: {
-                            if (hc.field_L[var17_int][var18] == null) {
-                              break L23;
-                            } else {
-                              if (hc.field_L[var17_int][var18].field_Eb != null) {
-                                hc.field_L[var17_int][var18].field_Eb.field_mb = 11;
-                                break L23;
-                              } else {
-                                break L23;
-                              }
-                            }
-                          }
-                          var18++;
-                          if (0 == 0) {
-                            continue L22;
-                          } else {
-                            break L21;
-                          }
+                          var19_ref = null;
+                          break L24;
                         }
                       }
                     }
-                  }
-                  var17_int++;
-                  if (0 == 0) {
-                    continue L18;
-                  } else {
-                    break L19;
-                  }
-                }
-              }
-              wm.field_d = new ak(0L, bf.field_k);
-              ep.field_a = new ak(0L, bf.field_k);
-              nk.field_e = new ak(0L, kj.field_l);
-              nk.field_e.a(-27813, mg.field_h);
-              nk.field_e.field_kb = 1;
-              var17 = nk.field_e;
-              var17.field_Bb = 1;
-              ai.field_A = new ak(0L, (ak) null);
-              ai.field_A.a(vp.field_Qb, (byte) 26);
-              ai.field_A.a(dc.field_a, (byte) 26);
-              dc.field_a.a(sm.field_m, (byte) 26);
-              var18 = 0;
-              L24: while (true) {
-                L25: {
-                  if (param12 - -4 <= var18) {
-                    break L25;
-                  } else {
-                    L26: {
-                      L27: {
-                        if (var18 != 1) {
-                          break L27;
+                    L25: {
+                      if (bf.field_q == null) {
+                        var20 = null;
+                        break L25;
+                      } else {
+                        if (bf.field_q[var17_int] != null) {
+                          var20 = (Object) (Object) bf.field_q[var17_int][var18];
+                          break L25;
                         } else {
-                          if (ia.field_a.length >= 2) {
-                            break L27;
-                          } else {
-                            if (0 == 0) {
-                              break L26;
-                            } else {
-                              break L27;
-                            }
-                          }
-                        }
-                      }
-                      L28: {
-                        if (3 != var18) {
-                          break L28;
-                        } else {
-                          if (ff.field_i <= 1) {
-                            break L26;
-                          } else {
-                            break L28;
-                          }
-                        }
-                      }
-                      dc.field_a.a(dh.field_b[var18], (byte) 26);
-                      var19 = 0;
-                      L29: while (true) {
-                        if (hc.field_L[var18].length <= var19) {
-                          break L26;
-                        } else {
-                          L30: {
-                            if (hc.field_L[var18][var19] == null) {
-                              break L30;
-                            } else {
-                              dc.field_a.a((ak) (Object) hc.field_L[var18][var19], (byte) 26);
-                              break L30;
-                            }
-                          }
-                          var19++;
-                          if (0 == 0) {
-                            continue L29;
-                          } else {
-                            break L26;
-                          }
+                          var20 = null;
+                          break L25;
                         }
                       }
                     }
+                    hc.field_L[4 + var17_int][1 + var18] = new lo(0L, bc.field_o, (ak) null, dn.field_c, (tf) var19_ref, (String) var20);
                     var18++;
-                    if (0 == 0) {
-                      continue L24;
-                    } else {
-                      break L25;
-                    }
+                    continue L23;
                   }
                 }
-                ai.field_A.a(wm.field_d, (byte) 26);
-                ai.field_A.a(ep.field_a, (byte) 26);
-                ai.field_A.a(nk.field_e, (byte) 26);
-                ih.field_g = new ak(0L, pj.field_i, ca.field_k.toUpperCase());
-                hb.field_eb = new ak(0L, nk.field_f, ec.field_o.toUpperCase());
-                return;
               }
             }
+          } else {
+            hc.field_L[0][var17_int + 1] = new lo(0L, bc.field_o, (ak) null, dn.field_c, bn.field_P[var17_int], rb.field_p[var17_int]);
+            var17_int++;
+            continue L6;
           }
         }
     }
@@ -511,19 +447,16 @@ class fa {
     }
 
     final void c(int param0) {
-        if (((fa) this).field_h == null) {
-          return;
-        } else {
-          ((fa) this).field_h.field_a = ((fa) this).field_a;
-          if (param0 != 2779) {
+        if (!(((fa) this).field_h != null)) {
             return;
-          } else {
-            ((fa) this).field_a.field_h = ((fa) this).field_h;
-            ((fa) this).field_a = null;
-            ((fa) this).field_h = null;
-            return;
-          }
         }
+        ((fa) this).field_h.field_a = ((fa) this).field_a;
+        if (param0 != 2779) {
+            return;
+        }
+        ((fa) this).field_a.field_h = ((fa) this).field_h;
+        ((fa) this).field_a = null;
+        ((fa) this).field_h = null;
     }
 
     static {

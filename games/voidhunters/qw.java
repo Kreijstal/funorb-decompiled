@@ -19,9 +19,6 @@ final class qw extends ksa {
         field_e = null;
         field_g = null;
         field_l = null;
-        if (!param0) {
-            field_e = null;
-        }
     }
 
     qw() {

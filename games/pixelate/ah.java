@@ -60,7 +60,7 @@ abstract class ah extends lm {
         var6 = 0;
         var7 = -1 + sd.field_L;
         L0: while (true) {
-          if (-1 < (var7 ^ -1)) {
+          if (var7 < 0) {
             var7 = 0;
             if (param0 < -90) {
               var8 = 0;
@@ -276,7 +276,7 @@ abstract class ah extends lm {
                     L15: {
                       l.field_p.field_Fb.a(var16.field_q, (byte) 26);
                       var16.field_q.a(var7, param1, param3, 256, var16.field_q.g(0));
-                      if (-1 == (var16.field_q.field_P ^ -1)) {
+                      if (var16.field_q.field_P == 0) {
                         break L15;
                       } else {
                         var4 = (Object) (Object) var16;
@@ -371,7 +371,7 @@ abstract class ah extends lm {
                     L22: {
                       l.field_p.field_Fb.a(var14.field_q, (byte) 26);
                       var14.field_q.a(var7, param1, param3, 256, var14.field_q.g(0));
-                      if (-1 == (var14.field_q.field_P ^ -1)) {
+                      if (var14.field_q.field_P == 0) {
                         break L22;
                       } else {
                         var4 = (Object) (Object) var14;
@@ -449,10 +449,10 @@ abstract class ah extends lm {
               var11 = var10 + jl.b(var8_ref_aa.field_g);
               var12 = lc.a(var8_ref_aa, false);
               var8_ref_aa.field_q = new ak(0L, oi.field_e, var11);
-              var8_ref_aa.field_q.field_y = ((16711423 & oi.field_e.field_y) >> 1472347681) + (var12 - (var12 >> 1027916897 & 8355711));
+              var8_ref_aa.field_q.field_y = ((16711423 & oi.field_e.field_y) >> 1) + (var12 - (var12 >> 1 & 8355711));
               var8_ref_aa.field_q.field_N = var12;
               var6 = var6 + param1;
-              var8_ref_aa.field_q.field_pb = ((oi.field_e.field_pb & 16711422) >> -520925311) + -((var12 & 16711422) >> 1066772193) + var12;
+              var8_ref_aa.field_q.field_pb = ((oi.field_e.field_pb & 16711422) >> 1) + -((var12 & 16711422) >> 1) + var12;
               var8_ref_aa.field_q.field_Db = vl.field_Q;
               var7--;
               continue L0;
@@ -463,25 +463,19 @@ abstract class ah extends lm {
 
     final static void a(int param0, byte param1) {
         try {
-            Throwable throwable = null;
+            Throwable var2 = null;
             Throwable decompiledCaughtException = null;
             try {
               L0: {
-                Object discarded$2 = cq.a(ao.a(13867), (byte) -64, new Object[1], "resizing");
+                Object discarded$1 = cq.a(ao.a(13867), (byte) -64, new Object[1], "resizing");
                 break L0;
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               L1: {
-                throwable = decompiledCaughtException;
+                var2 = decompiledCaughtException;
                 break L1;
               }
-            }
-            if (param1 <= 69) {
-              field_u = null;
-              return;
-            } else {
-              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

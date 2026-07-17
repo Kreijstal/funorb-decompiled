@@ -7,16 +7,21 @@ final class tc extends kf {
     static String field_y;
 
     final void a(byte param0, uj param1) {
+        qd var3 = null;
         if (param0 <= 68) {
             return;
         }
-        if (!(param1 instanceof qd)) {
-            throw new IllegalArgumentException();
+        try {
+            if (!(param1 instanceof qd)) {
+                throw new IllegalArgumentException();
+            }
+            var3 = (qd) (Object) param1;
+            ((tc) this).field_w.a(-125, (rf) (Object) var3);
+            var3.field_G = true;
+            boolean discarded$0 = var3.a(0, (uj) this);
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "tc.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        qd var3 = (qd) (Object) param1;
-        ((tc) this).field_w.a(-125, (rf) (Object) var3);
-        var3.field_G = true;
-        boolean discarded$0 = var3.a(0, (uj) this);
     }
 
     public tc() {
@@ -25,19 +30,23 @@ final class tc extends kf {
     }
 
     final static void j(int param0) {
-        int var1 = 0;
+        int var1_int = 0;
         int var2 = StarCannon.field_A;
         p.field_d.b((byte) -78);
-        for (var1 = 0; 32 > var1; var1++) {
-            jb.field_j[var1] = 0L;
+        for (var1_int = 0; 32 > var1_int; var1_int++) {
+            jb.field_j[var1_int] = 0L;
         }
         if (param0 != 32) {
             return;
         }
-        for (var1 = 0; 32 > var1; var1++) {
-            vd.field_g[var1] = 0L;
+        try {
+            for (var1_int = 0; 32 > var1_int; var1_int++) {
+                vd.field_g[var1_int] = 0L;
+            }
+            sg.field_k = 0;
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "tc.B(" + param0 + 41);
         }
-        sg.field_k = 0;
     }
 
     final qd k(int param0) {

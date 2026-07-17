@@ -12,49 +12,90 @@ final class ck {
 
     final static kc a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, dj param7, int param8, int param9, int param10, int param11, int param12) {
         kc var13 = null;
+        RuntimeException var13_ref = null;
         Object var14 = null;
-        var13 = new kc(0L, (kc) null);
-        var13.field_v = fk.a(param0, 43, param4);
-        if (param8 < 56) {
-          var14 = null;
-          kc discarded$1 = ck.a(-51, 34, -67, 14, 71, -24, 60, (dj) null, 32, -82, -98, 65, 2);
-          var13.field_Ab = fk.a(param11, 58, param3);
-          var13.field_xb = fk.a(param12, 38, param10);
-          var13.field_hb = fk.a(param5, 110, param1);
-          var13.field_K = fk.a(param6, 58, param2);
-          var13.field_Z = param7;
-          var13.field_ob = param9;
-          return var13;
-        } else {
-          var13.field_Ab = fk.a(param11, 58, param3);
-          var13.field_xb = fk.a(param12, 38, param10);
-          var13.field_hb = fk.a(param5, 110, param1);
-          var13.field_K = fk.a(param6, 58, param2);
-          var13.field_Z = param7;
-          var13.field_ob = param9;
-          return var13;
+        kc stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        kc stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              var13 = new kc(0L, (kc) null);
+              var13.field_v = fk.a(param0, 43, param4);
+              if (param8 >= 56) {
+                break L1;
+              } else {
+                var14 = null;
+                kc discarded$1 = ck.a(-51, 34, -67, 14, 71, -24, 60, (dj) null, 32, -82, -98, 65, 2);
+                break L1;
+              }
+            }
+            var13.field_Ab = fk.a(param11, 58, param3);
+            var13.field_xb = fk.a(param12, 38, param10);
+            var13.field_hb = fk.a(param5, 110, param1);
+            var13.field_K = fk.a(param6, 58, param2);
+            var13.field_Z = param7;
+            var13.field_ob = param9;
+            stackOut_2_0 = (kc) var13;
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var13_ref = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var13_ref;
+            stackOut_4_1 = new StringBuilder().append("ck.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param7 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw aa.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param8 + 44 + param9 + 44 + param10 + 44 + param11 + 44 + param12 + 41);
         }
+        return stackIn_3_0;
     }
 
     public static void b(byte param0) {
         field_b = null;
         field_e = null;
-        if (param0 <= 84) {
-          ck.a((byte) -85);
-          field_a = null;
-          field_d = null;
-          field_g = null;
-          field_c = null;
-          field_f = null;
-          return;
-        } else {
-          field_a = null;
-          field_d = null;
-          field_g = null;
-          field_c = null;
-          field_f = null;
-          return;
-        }
+        field_a = null;
+        field_d = null;
+        field_g = null;
+        field_c = null;
+        field_f = null;
     }
 
     final static void a(byte param0) {

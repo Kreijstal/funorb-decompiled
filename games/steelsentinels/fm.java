@@ -32,18 +32,79 @@ final class fm {
     }
 
     final static gh a(int param0, boolean param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, mi param11, int param12) {
-        gh var13 = new gh(0L, (gh) null);
-        var13.field_I = ul.a((byte) 0, param12, param8);
-        var13.field_Ab = ul.a((byte) 0, param6, param10);
-        var13.field_mb = ul.a((byte) 0, param3, param2);
-        if (param1) {
-            fm.a(-102);
+        gh var13 = null;
+        RuntimeException var13_ref = null;
+        gh stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        gh stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              var13 = new gh(0L, (gh) null);
+              var13.field_I = ul.a((byte) 0, param12, param8);
+              var13.field_Ab = ul.a((byte) 0, param6, param10);
+              var13.field_mb = ul.a((byte) 0, param3, param2);
+              if (!param1) {
+                break L1;
+              } else {
+                fm.a(-102);
+                break L1;
+              }
+            }
+            var13.field_bb = ul.a((byte) 0, param5, param9);
+            var13.field_H = ul.a((byte) 0, param4, param0);
+            var13.field_nb = param7;
+            var13.field_L = param11;
+            stackOut_2_0 = (gh) var13;
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var13_ref = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var13_ref;
+            stackOut_4_1 = new StringBuilder().append("fm.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44).append(param6).append(44).append(param7).append(44).append(param8).append(44).append(param9).append(44).append(param10).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param11 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw ci.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param12 + 41);
         }
-        var13.field_bb = ul.a((byte) 0, param5, param9);
-        var13.field_H = ul.a((byte) 0, param4, param0);
-        var13.field_nb = param7;
-        var13.field_L = param11;
-        return var13;
+        return stackIn_3_0;
     }
 
     public final String toString() {
@@ -57,16 +118,16 @@ final class fm {
 
     final static int a(int param0, int param1) {
         int var2 = 0;
-        if (-1 == param0) {
+        if (param0 == 0) {
             return 0;
         }
         if (!(0 >= param0)) {
             var2 = 1;
-            if (!(-65536 >= param0)) {
+            if (!(param0 <= 65535)) {
                 param0 = param0 >> 16;
                 var2 += 16;
             }
-            if (!(-256 <= param0)) {
+            if (!(param0 <= 255)) {
                 var2 += 8;
                 param0 = param0 >> 8;
             }
@@ -74,18 +135,18 @@ final class fm {
                 param0 = param0 >> 4;
                 var2 += 4;
             }
-            if (!(-4 >= param0)) {
+            if (!(param0 <= 3)) {
                 var2 += 2;
                 param0 = param0 >> 2;
             }
-            if ((param0 ^ -1) < -2) {
+            if (param0 > 1) {
                 var2++;
                 param0 = param0 >> 1;
             }
             return var2;
         }
         var2 = 2;
-        if (!((param0 ^ -1) <= 65535)) {
+        if (!(param0 >= -65536)) {
             param0 = param0 >> 16;
             var2 += 16;
         }
@@ -93,10 +154,7 @@ final class fm {
             param0 = param0 >> 8;
             var2 += 8;
         }
-        if (param1 < 13) {
-            field_d = -36;
-        }
-        if ((param0 ^ -1) > 15) {
+        if (param0 < -16) {
             param0 = param0 >> 4;
             var2 += 4;
         }
@@ -126,16 +184,17 @@ final class fm {
         var0 = 0;
         var2 = -96;
         L0: while (true) {
-          if (var2 <= -97) {
+          if (var2 >= 96) {
             field_g = "Open";
             field_l = new int[8192];
             field_i = "Z";
             field_e = new int[8192];
             field_f = new int[3];
+            return;
           } else {
             var3 = -96;
             L1: while (true) {
-              if (-97 <= var3) {
+              if (var3 >= 96) {
                 var2++;
                 continue L0;
               } else {
@@ -149,7 +208,7 @@ final class fm {
                   }
                 }
                 L3: {
-                  if (-128 > (var1 ^ -1)) {
+                  if (var1 > 127) {
                     var1 = 127;
                     break L3;
                   } else {
@@ -157,9 +216,10 @@ final class fm {
                   }
                 }
                 L4: {
+                  int incrementValue$1 = var0;
                   var0++;
-                  field_j.field_p[var0] = (byte)var1;
-                  if ((var3 * var3 + var2 * var2 ^ -1) <= -6725) {
+                  field_j.field_p[incrementValue$1] = (byte)var1;
+                  if (var3 * var3 + var2 * var2 >= 6724) {
                     break L4;
                   } else {
                     field_j.field_p[-1 + var0] = (byte)(field_j.field_p[-1 + var0] + 127);
@@ -174,14 +234,16 @@ final class fm {
                     break L5;
                   }
                 }
-                if (-4901 < (var2 * var2 - -(var3 * var3) ^ -1)) {
-                  field_j.field_p[-1 + var0] = (byte) 0;
-                  var3++;
-                  continue L1;
-                } else {
-                  var3++;
-                  continue L1;
+                L6: {
+                  if (var2 * var2 - -(var3 * var3) >= 4900) {
+                    break L6;
+                  } else {
+                    field_j.field_p[-1 + var0] = (byte) 0;
+                    break L6;
+                  }
                 }
+                var3++;
+                continue L1;
               }
             }
           }

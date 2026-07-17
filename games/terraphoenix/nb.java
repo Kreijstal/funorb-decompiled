@@ -35,11 +35,6 @@ abstract class nb {
     }
 
     final static void a(boolean param0, byte param1) {
-        if (param1 != -126) {
-            field_e = 80;
-            qc.a(param0, false, 115);
-            return;
-        }
         qc.a(param0, false, 115);
     }
 
@@ -61,11 +56,6 @@ abstract class nb {
         field_f = null;
         field_c = null;
         field_b = null;
-        if (param0 != 0) {
-            nb.a(25);
-            field_d = null;
-            return;
-        }
         field_d = null;
     }
 

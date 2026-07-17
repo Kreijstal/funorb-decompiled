@@ -8,7 +8,7 @@ abstract class bkb {
     public static void b(int param0) {
         field_a = null;
         field_b = null;
-        int var1 = -115 / ((param0 - -34) / 45);
+        int var1 = -115;
     }
 
     final static hkb a(int param0) {
@@ -31,7 +31,7 @@ abstract class bkb {
         var6.field_e = var2;
         var6.field_d = var3;
         var10.a(5706, var6);
-        var10.a((byte) -65, new rdb(var2 / 2 + var6.field_f, var6.field_g + var3 / 2, param0));
+        var10.a((byte) -65, new rdb(var2 / 2 + var6.field_f, var6.field_g + var3 / 2, 0));
         var10.a((byte) -106, new rdb(var2 / 2 + var2 + var6.field_f, var3 / 2 + var6.field_g, 0));
         var10.a((byte) -54, new rdb(var6.field_f - -(var2 / 2), -var3 + var6.field_g - -(var3 / 2), 0));
         var10.a((byte) -54, new rdb(var2 / 2 + var2 + var6.field_f, -var3 + var6.field_g + var3 / 2, 0));

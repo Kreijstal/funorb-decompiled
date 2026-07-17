@@ -10,26 +10,20 @@ class fd extends ug {
         field_o = null;
         field_n = null;
         field_m = null;
-        if (param0) {
-            String discarded$0 = fd.c((byte) 32);
-        }
     }
 
     final static void a(gk param0, int param1) {
         te var2 = null;
-        Object var3 = null;
-        if (param1 != -1) {
-          var3 = null;
-          fd.a((gk) null, 94);
-          te.b(param0.b("headers.packvorbis", "", param1 + -72));
-          var2 = te.a(param0, "jagex logo2.packvorbis", "");
-          ue discarded$4 = var2.a();
-          return;
-        } else {
-          te.b(param0.b("headers.packvorbis", "", param1 + -72));
-          var2 = te.a(param0, "jagex logo2.packvorbis", "");
-          ue discarded$5 = var2.a();
-          return;
+        try {
+            if (param1 != -1) {
+                Object var3 = null;
+                fd.a((gk) null, 94);
+            }
+            te.b(param0.b("headers.packvorbis", "", param1 + -72));
+            var2 = te.a(param0, "jagex logo2.packvorbis", "");
+            ue discarded$0 = var2.a();
+        } catch (RuntimeException runtimeException) {
+            throw ii.a((Throwable) (Object) runtimeException, "fd.G(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 

@@ -8,9 +8,6 @@ final class ia {
 
     public static void a(boolean param0) {
         field_c = null;
-        if (param0) {
-            return;
-        }
         field_b = null;
         field_a = null;
     }

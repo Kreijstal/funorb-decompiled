@@ -21,7 +21,11 @@ final class n extends ta {
     }
 
     n(byte[] param0) {
-        ((n) this).field_v = param0;
+        try {
+            ((n) this).field_v = param0;
+        } catch (RuntimeException runtimeException) {
+            throw rb.a((Throwable) (Object) runtimeException, "n.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static int a(int param0, boolean param1, int param2) {
@@ -193,10 +197,6 @@ final class n extends ta {
     }
 
     final static int c(byte param0) {
-        if (param0 != 57) {
-            n.a(-55);
-            return (int)(1000000000L / eg.field_u);
-        }
         return (int)(1000000000L / eg.field_u);
     }
 

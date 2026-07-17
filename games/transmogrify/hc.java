@@ -11,9 +11,6 @@ final class hc extends dl {
     static int field_u;
 
     public static void d(byte param0) {
-        if (param0 != 105) {
-            return;
-        }
         field_v = null;
         field_r = null;
     }
@@ -27,7 +24,11 @@ final class hc extends dl {
 
     hc(Object param0, int param1) {
         super(param1);
-        ((hc) this).field_s = param0;
+        try {
+            ((hc) this).field_s = param0;
+        } catch (RuntimeException runtimeException) {
+            throw ch.a((Throwable) (Object) runtimeException, "hc.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     final Object c(byte param0) {

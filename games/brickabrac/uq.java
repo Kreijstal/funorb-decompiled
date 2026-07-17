@@ -66,8 +66,9 @@ final class uq {
                   var4--;
                   continue L1;
                 } else {
+                  int incrementValue$49 = var3;
                   var3++;
-                  param0.field_G[var1] = -var3;
+                  param0.field_G[var1] = -incrementValue$49;
                   var1--;
                   var4--;
                   continue L1;
@@ -118,8 +119,9 @@ final class uq {
                     continue L1;
                   } else {
                     L3: {
+                      int incrementValue$52 = var2;
                       var2++;
-                      var7 = param0.field_G[var2];
+                      var7 = param0.field_G[incrementValue$52];
                       if (var7 >= 0) {
                         break L3;
                       } else {
@@ -128,8 +130,9 @@ final class uq {
                         break L3;
                       }
                     }
+                    int incrementValue$53 = var4;
                     var4++;
-                    var3[var4] = var7;
+                    var3[incrementValue$53] = var7;
                     var6++;
                     continue L2;
                   }
@@ -143,8 +146,9 @@ final class uq {
                 var3_int++;
                 continue L0;
               } else {
+                int incrementValue$54 = var2;
                 var2++;
-                var5 = param0.field_G[var2];
+                var5 = param0.field_G[incrementValue$54];
                 if (var5 < 0) {
                   var2 = var2 - var5;
                   var4 = var4 - var5;
@@ -181,8 +185,9 @@ final class uq {
                     var10++;
                     continue L0;
                   } else {
+                    int incrementValue$22 = param2;
                     param2++;
-                    param4 = param1[param2];
+                    param4 = param1[incrementValue$22];
                     if (param4 > 0) {
                       param0[param3 + var9] = param4;
                       var9++;
@@ -195,8 +200,9 @@ final class uq {
                   }
                 }
               } else {
+                int incrementValue$23 = param2;
                 param2++;
-                param4 = param1[param2];
+                param4 = param1[incrementValue$23];
                 if (param4 <= 0) {
                   var9 = var9 - param4;
                   var9++;

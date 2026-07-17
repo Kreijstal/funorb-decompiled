@@ -13,24 +13,26 @@ final class mq implements Runnable {
     volatile boolean field_d;
 
     final static void a(vh param0, byte param1) {
+        vh var3 = null;
         vh var4 = null;
-        if (param1 != 109) {
-            field_f = 43;
+        try {
+            var3 = (vh) (Object) param0.field_T.c((byte) -74);
+            vh var2 = var3;
+            while (var3 != null) {
+                var3.field_Db = 0;
+                var3.field_Cb = 0;
+                var3.field_eb = 0;
+                var3.field_E = 0;
+                var4 = (vh) (Object) param0.field_T.f((byte) -5);
+                var4 = var4;
+            }
+            param0.field_Db = 0;
+            param0.field_eb = 0;
+            param0.field_E = 0;
+            param0.field_Cb = 0;
+        } catch (RuntimeException runtimeException) {
+            throw wm.a((Throwable) (Object) runtimeException, "mq.A(" + (param0 != null ? "{...}" : "null") + 44 + 109 + 41);
         }
-        vh var3 = (vh) (Object) param0.field_T.c((byte) -74);
-        vh var2 = var3;
-        while (var3 != null) {
-            var3.field_Db = 0;
-            var3.field_Cb = 0;
-            var3.field_eb = 0;
-            var3.field_E = 0;
-            var4 = (vh) (Object) param0.field_T.f((byte) -5);
-            var4 = var4;
-        }
-        param0.field_Db = 0;
-        param0.field_eb = 0;
-        param0.field_E = 0;
-        param0.field_Cb = 0;
     }
 
     final static void a(int param0, boolean param1) {
@@ -82,9 +84,6 @@ final class mq implements Runnable {
 
     public static void a(boolean param0) {
         field_g = null;
-        if (param0) {
-            return;
-        }
         field_b = null;
         field_a = null;
         field_c = null;

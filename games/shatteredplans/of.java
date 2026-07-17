@@ -11,22 +11,11 @@ final class of {
     static String field_d;
 
     public static void b(int param0) {
-        if (param0 != 64) {
-          field_f = 72;
-          field_g = null;
-          field_d = null;
-          field_a = null;
-          field_c = null;
-          field_b = null;
-          return;
-        } else {
-          field_g = null;
-          field_d = null;
-          field_a = null;
-          field_c = null;
-          field_b = null;
-          return;
-        }
+        field_g = null;
+        field_d = null;
+        field_a = null;
+        field_c = null;
+        field_b = null;
     }
 
     final static String a(byte param0) {
@@ -59,25 +48,13 @@ final class of {
     }
 
     final static e a(int param0) {
-        String var1 = null;
-        var1 = bh.d(-77);
-        if (param0 != 64) {
-          return null;
-        } else {
-          L0: {
-            if (var1 == null) {
-              break L0;
-            } else {
-              if (-1 < (var1.indexOf('@') ^ -1)) {
-                break L0;
-              } else {
+        String var1 = bh.d(-77);
+        if (var1 != null) {
+            if (var1.indexOf('@') >= 0) {
                 var1 = "";
-                break L0;
-              }
             }
-          }
-          return new e(bh.d(-98), ta.a(33));
         }
+        return new e(bh.d(-98), ta.a(33));
     }
 
     static {

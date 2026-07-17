@@ -14,9 +14,6 @@ abstract class pb extends od {
     public static void a(byte param0) {
         field_l = null;
         field_n = null;
-        if (param0 != 98) {
-            field_k = -92;
-        }
     }
 
     pb(int param0) {

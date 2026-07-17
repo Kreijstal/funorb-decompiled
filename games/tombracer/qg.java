@@ -21,8 +21,12 @@ final class qg {
     }
 
     qg(g[] param0, boolean param1) {
-        ((qg) this).field_c = param0;
-        ((qg) this).field_b = param1 ? true : false;
+        try {
+            ((qg) this).field_c = param0;
+            ((qg) this).field_b = param1 ? true : false;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "qg.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     static {

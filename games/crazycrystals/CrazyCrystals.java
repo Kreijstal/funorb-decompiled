@@ -106,7 +106,7 @@ public final class CrazyCrystals extends eb {
                         if (!qh.field_o.isEmpty()) {
                           break L4;
                         } else {
-                          if ((en.field_O ^ -1) != -1) {
+                          if (en.field_O != 0) {
                             break L4;
                           } else {
                             if (cn.field_d == null) {
@@ -135,7 +135,7 @@ public final class CrazyCrystals extends eb {
                     }
                   }
                   if (!qp.field_f) {
-                    stackOut_54_0 = mo.field_f ^ -1;
+                    stackOut_54_0 = ~mo.field_f;
                     stackOut_54_1 = -1;
                     stackIn_55_0 = stackOut_54_0;
                     stackIn_55_1 = stackOut_54_1;
@@ -155,7 +155,7 @@ public final class CrazyCrystals extends eb {
                   }
                 } else {
                   var2_int = pj.field_q;
-                  if ((var2_int ^ -1) == -86) {
+                  if (var2_int == 85) {
                     if (!(ab.field_D instanceof ja)) {
                       hc.a(false, false);
                       continue L3;
@@ -163,11 +163,11 @@ public final class CrazyCrystals extends eb {
                       continue L3;
                     }
                   } else {
-                    if (-81 == (var2_int ^ -1)) {
+                    if (var2_int == 80) {
                       continue L3;
                     } else {
-                      if (-85 != (var2_int ^ -1)) {
-                        if (-14 == (var2_int ^ -1)) {
+                      if (var2_int != 84) {
+                        if (var2_int == 13) {
                           L6: {
                             gh.i(127);
                             if (ab.field_D instanceof ja) {
@@ -252,12 +252,12 @@ public final class CrazyCrystals extends eb {
                     break L10;
                   } else {
                     ca.field_j = ca.field_j + 1;
-                    if ((ca.field_j ^ -1) <= (ia.field_g ^ -1)) {
+                    if (~ca.field_j <= ~ia.field_g) {
                       bq.field_i = td.field_c;
                       cn.field_d = null;
                       break L7;
                     } else {
-                      if ((ca.field_j ^ -1) >= -1) {
+                      if (ca.field_j <= 0) {
                         bq.field_i = cn.field_d;
                         break L7;
                       } else {
@@ -311,7 +311,7 @@ public final class CrazyCrystals extends eb {
                       break L13;
                     }
                   }
-                  if (-1 <= (mo.field_f ^ -1)) {
+                  if (mo.field_f <= 0) {
                     break L7;
                   } else {
                     L14: {
@@ -374,7 +374,7 @@ public final class CrazyCrystals extends eb {
                 L18: while (true) {
                   if (-1 + (-ia.field_i + tm.field_d.length) <= var3) {
                     if ((1 & var2_int) == 0) {
-                      if (-1 != (var2_int & 2 ^ -1)) {
+                      if ((var2_int & 2) != 0) {
                         ab.field_D = (te) (Object) new r();
                         break L17;
                       } else {
@@ -430,7 +430,7 @@ public final class CrazyCrystals extends eb {
                                 }
                               }
                               L25: {
-                                if ((uo.field_o ^ -1) != -40) {
+                                if (uo.field_o != 39) {
                                   break L25;
                                 } else {
                                   rc.a(1, we.field_h, b.field_a, 253, je.field_j, 2, fp.field_a);
@@ -445,7 +445,7 @@ public final class CrazyCrystals extends eb {
                                   break L26;
                                 }
                               }
-                              if ((uo.field_o ^ -1) != -70) {
+                              if (uo.field_o != 69) {
                                 break L22;
                               } else {
                                 rc.a(1, we.field_h, b.field_a, 251, je.field_j, 4, fp.field_a);
@@ -456,9 +456,9 @@ public final class CrazyCrystals extends eb {
                             }
                           }
                           L27: {
-                            if ((jo.field_o ^ -1) == -5) {
+                            if (jo.field_o == 4) {
                               L28: {
-                                if ((uo.field_o ^ -1) == -5) {
+                                if (uo.field_o == 4) {
                                   rc.a(1, we.field_h, b.field_a, 250, je.field_j, 5, fp.field_a);
                                   break L28;
                                 } else {
@@ -483,7 +483,7 @@ public final class CrazyCrystals extends eb {
                               }
                               L31: {
                                 ld.field_y = ld.field_y + q.field_a[2].field_d;
-                                if (-31 >= (ld.field_y ^ -1)) {
+                                if (ld.field_y >= 30) {
                                   rc.a(1, we.field_h, b.field_a, 243, je.field_j, 12, fp.field_a);
                                   break L31;
                                 } else {
@@ -491,10 +491,10 @@ public final class CrazyCrystals extends eb {
                                 }
                               }
                               L32: {
-                                if ((uo.field_o ^ -1) != -12) {
+                                if (uo.field_o != 11) {
                                   break L32;
                                 } else {
-                                  if ((va.field_d ^ -1) != -1) {
+                                  if (va.field_d != 0) {
                                     rc.a(1, we.field_h, b.field_a, 242, je.field_j, 13, fp.field_a);
                                     break L32;
                                   } else {
@@ -514,13 +514,13 @@ public final class CrazyCrystals extends eb {
                                   }
                                 }
                               }
-                              if (-10 != (uo.field_o ^ -1)) {
+                              if (uo.field_o != 9) {
                                 break L27;
                               } else {
-                                if ((va.field_d ^ -1) == -1) {
+                                if (va.field_d == 0) {
                                   break L27;
                                 } else {
-                                  if ((ol.field_B ^ -1) == -1) {
+                                  if (ol.field_B == 0) {
                                     break L27;
                                   } else {
                                     rc.a(1, we.field_h, b.field_a, 240, je.field_j, 15, fp.field_a);
@@ -536,7 +536,7 @@ public final class CrazyCrystals extends eb {
                             if (!ai.a(100, 0)) {
                               break L34;
                             } else {
-                              if (-13 != (uo.field_o + -dk.field_h ^ -1)) {
+                              if (uo.field_o + -dk.field_h != 12) {
                                 break L34;
                               } else {
                                 rc.a(1, we.field_h, b.field_a, 239, je.field_j, 16, fp.field_a);
@@ -554,7 +554,7 @@ public final class CrazyCrystals extends eb {
                   } else {
                     var4 = 1 + w.field_f;
                     L35: while (true) {
-                      if ((-w.field_f + tm.field_d[0].length + -1 ^ -1) >= (var4 ^ -1)) {
+                      if (~(-w.field_f + tm.field_d[0].length + -1) >= ~var4) {
                         var3++;
                         continue L18;
                       } else {
@@ -605,8 +605,8 @@ public final class CrazyCrystals extends eb {
             if (uh.field_n) {
               break L37;
             } else {
-              if ((pj.field_v ^ -1) != -1) {
-                if ((to.field_a ^ -1) <= -481) {
+              if (pj.field_v != 0) {
+                if (to.field_a >= 480) {
                   L38: {
                     if (null != ab.field_D) {
                       break L38;
@@ -614,18 +614,18 @@ public final class CrazyCrystals extends eb {
                       if (vh.field_a) {
                         break L38;
                       } else {
-                        if ((dp.field_h ^ -1) > -49) {
+                        if (dp.field_h < 48) {
                           break L38;
                         } else {
                           if (158 > dp.field_h) {
                             var2_int = 0;
                             var3 = 0;
                             L39: while (true) {
-                              if ((var3 ^ -1) <= -4) {
+                              if (var3 >= 3) {
                                 var3 = -(var2_int * 26) + 562;
                                 var4 = 0;
                                 L40: while (true) {
-                                  if (-4 >= (var4 ^ -1)) {
+                                  if (var4 >= 3) {
                                     break L38;
                                   } else {
                                     L41: {
@@ -634,10 +634,10 @@ public final class CrazyCrystals extends eb {
                                           if (oe.field_a[var4] == null) {
                                             break L42;
                                           } else {
-                                            if ((var3 ^ -1) < (to.field_a ^ -1)) {
+                                            if (~var3 < ~to.field_a) {
                                               break L42;
                                             } else {
-                                              if ((to.field_a ^ -1) <= (var3 + 48 ^ -1)) {
+                                              if (~to.field_a <= ~(var3 + 48)) {
                                                 break L42;
                                               } else {
                                                 li.field_a = oe.field_a[var4].a(23525, li.field_a);
@@ -677,7 +677,7 @@ public final class CrazyCrystals extends eb {
                     }
                   }
                   L44: {
-                    if ((dp.field_h ^ -1) > -159) {
+                    if (dp.field_h < 158) {
                       break L44;
                     } else {
                       if (null != li.field_a) {
@@ -705,7 +705,7 @@ public final class CrazyCrystals extends eb {
                                   break L46;
                                 } else {
                                   L48: {
-                                    if ((gm.field_c[var3] ^ -1) >= -1) {
+                                    if (gm.field_c[var3] <= 0) {
                                       break L48;
                                     } else {
                                       if (dp.field_h < 12 + var2_int) {
@@ -716,7 +716,7 @@ public final class CrazyCrystals extends eb {
                                             stackOut_264_0 = lm.field_d;
                                             stackIn_266_0 = stackOut_264_0;
                                             stackIn_265_0 = stackOut_264_0;
-                                            if ((var3 ^ -1) == -1) {
+                                            if (var3 == 0) {
                                               stackOut_266_0 = (f[]) (Object) stackIn_266_0;
                                               stackOut_266_1 = 15;
                                               stackIn_267_0 = stackOut_266_0;
@@ -751,7 +751,7 @@ public final class CrazyCrystals extends eb {
                         if (!qh.field_o.isEmpty()) {
                           break L45;
                         } else {
-                          if (-1 != (en.field_O ^ -1)) {
+                          if (en.field_O != 0) {
                             break L45;
                           } else {
                             if (cn.field_d != null) {
@@ -774,7 +774,7 @@ public final class CrazyCrystals extends eb {
                                 if (640 <= to.field_a) {
                                   break L45;
                                 } else {
-                                  if ((var3 + 282 ^ -1) < (dp.field_h ^ -1)) {
+                                  if (~(var3 + 282) < ~dp.field_h) {
                                     break L45;
                                   } else {
                                     if (dp.field_h >= var4 + 282) {
@@ -808,15 +808,15 @@ public final class CrazyCrystals extends eb {
                   L52: {
                     var2_int = 460;
                     if (!(ab.field_D instanceof ja)) {
-                      stackOut_295_0 = dp.field_h ^ -1;
-                      stackOut_295_1 = var2_int ^ -1;
+                      stackOut_295_0 = ~dp.field_h;
+                      stackOut_295_1 = ~var2_int;
                       stackIn_296_0 = stackOut_295_0;
                       stackIn_296_1 = stackOut_295_1;
                       L53: {
                         if (stackIn_296_0 > stackIn_296_1) {
                           break L53;
                         } else {
-                          if ((dp.field_h ^ -1) <= (var2_int - -20 ^ -1)) {
+                          if (~dp.field_h <= ~(var2_int - -20)) {
                             break L53;
                           } else {
                             uh.field_p = (uc) (Object) new p(true);
@@ -860,13 +860,13 @@ public final class CrazyCrystals extends eb {
                       var10 = -var4_double + (240.0 + var6 / 2.0);
                       var12 = (int)Math.floor(((double)to.field_a - var8) / (var6 * 2.0));
                       var13 = (int)Math.floor(((double)dp.field_h - var10) / (var6 * 2.0));
-                      if ((var12 ^ -1) > -1) {
+                      if (var12 < 0) {
                         break L54;
                       } else {
-                        if ((var12 ^ -1) <= (tm.field_d[0].length ^ -1)) {
+                        if (~var12 <= ~tm.field_d[0].length) {
                           break L54;
                         } else {
-                          if (-1 < (var13 ^ -1)) {
+                          if (var13 < 0) {
                             break L54;
                           } else {
                             if (var13 < tm.field_d.length) {
@@ -1378,7 +1378,7 @@ public final class CrazyCrystals extends eb {
                       var6 = 30 + (var3 / 2 + 320);
                       var7 = var5 + cb.field_w * ((var6 - var5) * cb.field_w) / 400;
                       var8 = -20 + -(var4 / 2) + 240;
-                      var9 = var4 / 2 + 240 + 20;
+                      var9 = var4 / 2 + 260;
                       wi.a(var5, jn.field_o, var8, var9 - var8, (byte) -71, -var5 + var7);
                       kh.d(var5 - -8, var8 + 8, -16 + (var7 + -var5), -16 + -var8 + var9, 0, 192);
                       if (!fj.a(136)) {
@@ -1424,7 +1424,7 @@ public final class CrazyCrystals extends eb {
                             } else {
                               var4_ref_int__ = ge.field_d.field_w;
                               var5_ref_int__ = kh.field_i;
-                              var6 = (var3 << -1694850777) / 640 + 128;
+                              var6 = (var3 << 7) / 640 + 128;
                               var7 = 0;
                               CrazyCrystals.a(0, var6, 0, var3, var5_ref_int__, var4_ref_int__, 0, var7);
                               break L7;
@@ -1454,7 +1454,7 @@ public final class CrazyCrystals extends eb {
                     }
                   }
                   L9: {
-                    if ((rb.field_h ^ -1) > -3) {
+                    if (rb.field_h < 2) {
                       break L9;
                     } else {
                       if (sg.field_a) {
@@ -1772,7 +1772,7 @@ public final class CrazyCrystals extends eb {
                   vp.field_a[2] = var11;
                   var12 = 3;
                   L11: while (true) {
-                    if ((var8_ref_dl__.length ^ -1) >= (var12 ^ -1)) {
+                    if (~var8_ref_dl__.length >= ~var12) {
                       vp.field_a[3] = var11;
                       var12 = 3;
                       L12: while (true) {
@@ -1785,13 +1785,13 @@ public final class CrazyCrystals extends eb {
                             if (var6 >= 17) {
                               var6 = 0;
                               L14: while (true) {
-                                if ((var6 ^ -1) <= -5) {
+                                if (var6 >= 4) {
                                   vp.a(111);
                                   return;
                                 } else {
                                   L15: {
                                     var7 = null;
-                                    if (-1 == (var6 ^ -1)) {
+                                    if (var6 == 0) {
                                       var7 = (Object) (Object) ci.a(new String[3], fb.field_e, 3);
                                       break L15;
                                     } else {
@@ -1815,7 +1815,7 @@ public final class CrazyCrystals extends eb {
                                     }
                                   }
                                   L18: {
-                                    if (-4 == (var6 ^ -1)) {
+                                    if (var6 == 3) {
                                       var7 = (Object) (Object) jn.field_n;
                                       break L18;
                                     } else {
@@ -1823,7 +1823,7 @@ public final class CrazyCrystals extends eb {
                                     }
                                   }
                                   L19: {
-                                    if (-6 <= (go.field_l.a((String) var7, 148) ^ -1)) {
+                                    if (go.field_l.a((String) var7, 148) <= 5) {
                                       break L19;
                                     } else {
                                       break L19;
@@ -1849,7 +1849,7 @@ public final class CrazyCrystals extends eb {
                                 }
                               }
                               L21: {
-                                if (-14 >= (var6 ^ -1)) {
+                                if (var6 >= 13) {
                                   var8 = 4;
                                   break L21;
                                 } else {
@@ -1936,10 +1936,10 @@ public final class CrazyCrystals extends eb {
                     if (12 <= var4) {
                       var4 = 0;
                       L25: while (true) {
-                        if ((var4 ^ -1) <= -13) {
+                        if (var4 >= 12) {
                           var4 = 0;
                           L26: while (true) {
-                            if (-13 >= (var4 ^ -1)) {
+                            if (var4 >= 12) {
                               vp.a(118);
                               return;
                             } else {
@@ -2172,11 +2172,11 @@ public final class CrazyCrystals extends eb {
                   var3_array = bf.a(-1, "sprites_explosion", "", l.field_d);
                   var4 = 0;
                   L28: while (true) {
-                    if ((var4 ^ -1) <= -9) {
+                    if (var4 >= 8) {
                       vp.a(118);
                       return;
                     } else {
-                      ba.field_g[var4] = var3_array[7 * var4 + 0];
+                      ba.field_g[var4] = var3_array[7 * var4];
                       jg.field_i[var4] = var3_array[7 * var4 + 1];
                       hj.field_b[var4] = var3_array[var4 * 7 - -2];
                       q.field_b[var4] = var3_array[7 * var4 + 3];
@@ -2215,7 +2215,7 @@ public final class CrazyCrystals extends eb {
                       }
                     }
                   } else {
-                    wl.field_p[var4 >> 457065986][pf.b(3, var4)] = var3_array[var4];
+                    wl.field_p[var4 >> 2][pf.b(3, var4)] = var3_array[var4];
                     var4++;
                     continue L29;
                   }
@@ -2510,7 +2510,7 @@ public final class CrazyCrystals extends eb {
                               }
                             }
                             L17: {
-                              if (-3 == (var4 ^ -1)) {
+                              if (var4 == 2) {
                                 q.a(false);
                                 break L17;
                               } else {
@@ -2518,7 +2518,7 @@ public final class CrazyCrystals extends eb {
                               }
                             }
                             L18: {
-                              if ((var4 ^ -1) != -5) {
+                              if (var4 != 4) {
                                 break L18;
                               } else {
                                 s.field_l = true;
@@ -2556,7 +2556,7 @@ public final class CrazyCrystals extends eb {
                                 if (uh.field_n) {
                                   break L21;
                                 } else {
-                                  if ((qn.field_n ^ -1) <= -641) {
+                                  if (qn.field_n >= 640) {
                                     break L21;
                                   } else {
                                     L22: {
@@ -2571,7 +2571,7 @@ public final class CrazyCrystals extends eb {
                                     if (qn.field_n >= 320) {
                                       break L21;
                                     } else {
-                                      if ((ca.field_j ^ -1) > -1) {
+                                      if (ca.field_j < 0) {
                                         ca.field_j = ca.field_j - 1;
                                         break L21;
                                       } else {
@@ -2607,7 +2607,7 @@ public final class CrazyCrystals extends eb {
                             break L11;
                           }
                         } else {
-                          if ((cb.field_w ^ -1) < -1) {
+                          if (cb.field_w > 0) {
                             cb.field_w = cb.field_w - 1;
                             break L11;
                           } else {
@@ -2626,7 +2626,7 @@ public final class CrazyCrystals extends eb {
                               } else {
                                 if (qn.field_n < 640) {
                                   L26: {
-                                    if ((qn.field_n ^ -1) > -137) {
+                                    if (qn.field_n < 136) {
                                       gh.field_C = gh.field_C + 1;
                                       break L26;
                                     } else {
@@ -2660,7 +2660,7 @@ public final class CrazyCrystals extends eb {
                             }
                             L28: {
                               var2_int = na.a((eb) this, stackIn_69_1 != 0, 10);
-                              if ((var2_int ^ -1) != -2364825) {
+                              if (var2_int != 2364824) {
                                 break L28;
                               } else {
                                 w.a(33423575);
@@ -2668,7 +2668,7 @@ public final class CrazyCrystals extends eb {
                               }
                             }
                             L29: {
-                              if (-2 != (var2_int ^ -1)) {
+                              if (var2_int != 1) {
                                 break L29;
                               } else {
                                 q.a(false);
@@ -2676,7 +2676,7 @@ public final class CrazyCrystals extends eb {
                               }
                             }
                             L30: {
-                              if (-3 == (var2_int ^ -1)) {
+                              if (var2_int == 2) {
                                 q.a(false);
                                 ta.a(le.b((byte) -20), 19);
                                 break L30;
@@ -2703,7 +2703,7 @@ public final class CrazyCrystals extends eb {
                           if (var2_int == 0) {
                             break L33;
                           } else {
-                            if (-2 != (var2_int ^ -1)) {
+                            if (var2_int != 1) {
                               break L32;
                             } else {
                               break L33;
@@ -2717,7 +2717,7 @@ public final class CrazyCrystals extends eb {
                         break L32;
                       }
                       L34: {
-                        if (-3 != (var2_int ^ -1)) {
+                        if (var2_int != 2) {
                           break L34;
                         } else {
                           L35: {

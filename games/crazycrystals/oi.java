@@ -8,7 +8,7 @@ final class oi {
     static ob field_d;
 
     public static void a(byte param0) {
-        int var1 = -48 % ((49 - param0) / 41);
+        int var1 = 0;
         field_a = null;
         field_b = null;
         field_c = null;

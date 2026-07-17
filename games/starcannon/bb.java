@@ -69,7 +69,7 @@ final class bb {
                   if (param0 == 2) {
                     if (var2 != eh.field_n) {
                       ((bb) this).field_s.a((byte) 61, var2, var3);
-                      if ((((bb) this).field_b ^ -1) >= -1) {
+                      if (((bb) this).field_b <= 0) {
                         return;
                       } else {
                         k.field_a = (((bb) this).field_b - eh.field_n) / 2;
@@ -78,14 +78,14 @@ final class bb {
                     } else {
                       if (ef.field_d != var3) {
                         ((bb) this).field_s.a((byte) 61, var2, var3);
-                        if ((((bb) this).field_b ^ -1) >= -1) {
+                        if (((bb) this).field_b <= 0) {
                           return;
                         } else {
                           k.field_a = (((bb) this).field_b - eh.field_n) / 2;
                           return;
                         }
                       } else {
-                        if ((((bb) this).field_b ^ -1) >= -1) {
+                        if (((bb) this).field_b <= 0) {
                           return;
                         } else {
                           k.field_a = (((bb) this).field_b - eh.field_n) / 2;
@@ -97,7 +97,7 @@ final class bb {
                     field_j = null;
                     if (var2 != eh.field_n) {
                       ((bb) this).field_s.a((byte) 61, var2, var3);
-                      if ((((bb) this).field_b ^ -1) >= -1) {
+                      if (((bb) this).field_b <= 0) {
                         return;
                       } else {
                         k.field_a = (((bb) this).field_b - eh.field_n) / 2;
@@ -106,14 +106,14 @@ final class bb {
                     } else {
                       if (ef.field_d != var3) {
                         ((bb) this).field_s.a((byte) 61, var2, var3);
-                        if ((((bb) this).field_b ^ -1) >= -1) {
+                        if (((bb) this).field_b <= 0) {
                           return;
                         } else {
                           k.field_a = (((bb) this).field_b - eh.field_n) / 2;
                           return;
                         }
                       } else {
-                        if ((((bb) this).field_b ^ -1) >= -1) {
+                        if (((bb) this).field_b <= 0) {
                           return;
                         } else {
                           k.field_a = (((bb) this).field_b - eh.field_n) / 2;
@@ -127,7 +127,7 @@ final class bb {
                     field_j = null;
                     if (var2 != eh.field_n) {
                       ((bb) this).field_s.a((byte) 61, var2, var3);
-                      if ((((bb) this).field_b ^ -1) >= -1) {
+                      if (((bb) this).field_b <= 0) {
                         return;
                       } else {
                         k.field_a = (((bb) this).field_b - eh.field_n) / 2;
@@ -136,14 +136,14 @@ final class bb {
                     } else {
                       if (ef.field_d != var3) {
                         ((bb) this).field_s.a((byte) 61, var2, var3);
-                        if ((((bb) this).field_b ^ -1) >= -1) {
+                        if (((bb) this).field_b <= 0) {
                           return;
                         } else {
                           k.field_a = (((bb) this).field_b - eh.field_n) / 2;
                           return;
                         }
                       } else {
-                        if ((((bb) this).field_b ^ -1) >= -1) {
+                        if (((bb) this).field_b <= 0) {
                           return;
                         } else {
                           k.field_a = (((bb) this).field_b - eh.field_n) / 2;
@@ -162,7 +162,7 @@ final class bb {
                         } else {
                           L4: {
                             ((bb) this).field_s.a((byte) 61, var2, var3);
-                            if ((((bb) this).field_b ^ -1) >= -1) {
+                            if (((bb) this).field_b <= 0) {
                               break L4;
                             } else {
                               k.field_a = (((bb) this).field_b - eh.field_n) / 2;
@@ -173,7 +173,7 @@ final class bb {
                         }
                       }
                     }
-                    if ((((bb) this).field_b ^ -1) >= -1) {
+                    if (((bb) this).field_b <= 0) {
                       return;
                     } else {
                       k.field_a = (((bb) this).field_b - eh.field_n) / 2;
@@ -189,7 +189,7 @@ final class bb {
           if (param0 == 2) {
             if (var2 != eh.field_n) {
               ((bb) this).field_s.a((byte) 61, var2, var3);
-              if ((((bb) this).field_b ^ -1) >= -1) {
+              if (((bb) this).field_b <= 0) {
                 return;
               } else {
                 k.field_a = (((bb) this).field_b - eh.field_n) / 2;
@@ -197,7 +197,7 @@ final class bb {
               }
             } else {
               if (ef.field_d == var3) {
-                if ((((bb) this).field_b ^ -1) >= -1) {
+                if (((bb) this).field_b <= 0) {
                   return;
                 } else {
                   k.field_a = (((bb) this).field_b - eh.field_n) / 2;
@@ -205,7 +205,7 @@ final class bb {
                 }
               } else {
                 ((bb) this).field_s.a((byte) 61, var2, var3);
-                if ((((bb) this).field_b ^ -1) >= -1) {
+                if (((bb) this).field_b <= 0) {
                   return;
                 } else {
                   k.field_a = (((bb) this).field_b - eh.field_n) / 2;
@@ -217,7 +217,7 @@ final class bb {
             field_j = null;
             if (var2 != eh.field_n) {
               ((bb) this).field_s.a((byte) 61, var2, var3);
-              if ((((bb) this).field_b ^ -1) >= -1) {
+              if (((bb) this).field_b <= 0) {
                 return;
               } else {
                 k.field_a = (((bb) this).field_b - eh.field_n) / 2;
@@ -225,7 +225,7 @@ final class bb {
               }
             } else {
               if (ef.field_d == var3) {
-                if ((((bb) this).field_b ^ -1) >= -1) {
+                if (((bb) this).field_b <= 0) {
                   return;
                 } else {
                   k.field_a = (((bb) this).field_b - eh.field_n) / 2;
@@ -233,7 +233,7 @@ final class bb {
                 }
               } else {
                 ((bb) this).field_s.a((byte) 61, var2, var3);
-                if ((((bb) this).field_b ^ -1) >= -1) {
+                if (((bb) this).field_b <= 0) {
                   return;
                 } else {
                   k.field_a = (((bb) this).field_b - eh.field_n) / 2;
@@ -287,8 +287,9 @@ final class bb {
               }
             }
             if (((bb) this).field_a) {
+              int fieldTemp$1 = ((bb) this).field_e - 1;
               ((bb) this).field_e = ((bb) this).field_e - 1;
-              if (((bb) this).field_e - 1 <= 0) {
+              if (fieldTemp$1 <= 0) {
                 ((bb) this).field_e = ((bb) this).field_c;
                 if (((bb) this).field_i > la.field_b) {
                   ((bb) this).field_a = false;
@@ -350,40 +351,32 @@ final class bb {
     }
 
     public static void b(int param0) {
-        if (param0 != 2) {
-            field_j = null;
-            field_j = null;
-            return;
-        }
         field_j = null;
     }
 
     final static void a(int param0, int param1, of param2) {
         int var4 = 0;
-        ia var5 = null;
-        var5 = d.field_b;
+        ia var5 = d.field_b;
         var5.d((byte) 67, param1);
         if (param0 != 2) {
-          return;
-        } else {
-          L0: {
+            return;
+        }
+        try {
             var5.field_g = var5.field_g + 1;
             var4 = var5.field_g;
             var5.a(1, -63);
-            if (null == param2.field_i) {
-              var5.a(0, -111);
-              break L0;
+            if (null != param2.field_i) {
+                var5.a(param2.field_i.length, param0 + -96);
+                var5.a(param2.field_i, param2.field_i.length, -20144, 0);
             } else {
-              var5.a(param2.field_i.length, param0 + -96);
-              var5.a(param2.field_i, param2.field_i.length, -20144, 0);
-              break L0;
+                var5.a(0, -111);
             }
-          }
-          int discarded$2 = var5.b((byte) -121, var4);
-          var5.field_g = var5.field_g - 4;
-          param2.field_h = var5.f((byte) -109);
-          var5.b(-var4 + var5.field_g, param0 ^ 31702);
-          return;
+            int discarded$0 = var5.b((byte) -121, var4);
+            var5.field_g = var5.field_g - 4;
+            param2.field_h = var5.f((byte) -109);
+            var5.b(-var4 + var5.field_g, param0 ^ 31702);
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "bb.C(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

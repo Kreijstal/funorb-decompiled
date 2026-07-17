@@ -20,9 +20,6 @@ final class qk {
     }
 
     public static void a(byte param0) {
-        if (param0 <= 120) {
-            return;
-        }
         field_e = null;
         field_d = null;
         field_b = null;
@@ -30,7 +27,11 @@ final class qk {
     }
 
     qk(cn[] param0) {
-        ((qk) this).field_a = param0;
+        try {
+            ((qk) this).field_a = param0;
+        } catch (RuntimeException runtimeException) {
+            throw vk.a((Throwable) (Object) runtimeException, "qk.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

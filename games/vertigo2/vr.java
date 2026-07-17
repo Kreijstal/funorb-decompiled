@@ -65,19 +65,12 @@ final class vr extends dd {
 
     final void b(int param0) throws javax.sound.sampled.LineUnavailableException {
         javax.sound.sampled.DataLine.Info var2 = null;
-        try {
+        {
             var2 = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, ((vr) this).field_v, param0 << (field_h ? 2 : 1));
             ((vr) this).field_z = (javax.sound.sampled.SourceDataLine) (Object) javax.sound.sampled.AudioSystem.getLine((javax.sound.sampled.Line.Info) (Object) var2);
             ((vr) this).field_z.open();
             ((vr) this).field_z.start();
             ((vr) this).field_w = param0;
-        } catch (javax.sound.sampled.LineUnavailableException lineUnavailableException) {
-            if (eh.a(param0, (byte) -64) != 1) {
-                ((vr) this).b(qp.a(param0, 118));
-                return;
-            }
-            ((vr) this).field_z = null;
-            throw lineUnavailableException;
         }
     }
 
@@ -217,8 +210,7 @@ final class vr extends dd {
           }
         }
         L3: {
-          new javax.sound.sampled.AudioFormat(stackIn_13_3, stackIn_13_4, stackIn_13_5, true, false);
-          ((vr) this).field_v = stackIn_13_1;
+          ((vr) this).field_v = new javax.sound.sampled.AudioFormat(stackIn_13_3, stackIn_13_4, stackIn_13_5, true, false);
           stackOut_13_0 = this;
           stackOut_13_1 = 256;
           stackIn_15_0 = stackOut_13_0;

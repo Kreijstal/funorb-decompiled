@@ -82,7 +82,7 @@ abstract class ub {
               if (((ub) this).field_a == null) {
                 break L1;
               } else {
-                if (-1 <= (((ub) this).field_a.length ^ -1)) {
+                if (((ub) this).field_a.length <= 0) {
                   break L1;
                 } else {
                   stackOut_4_0 = -((ub) this).field_a[0].field_d + ((ub) this).field_a[-1 + ((ub) this).field_a.length].field_e;
@@ -102,90 +102,118 @@ abstract class ub {
     }
 
     final int a(int param0, boolean param1, String param2, int param3) {
-        int var5 = 0;
+        int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        L0: {
-          var10 = Chess.field_G;
-          var5 = 0;
-          if (param1) {
-            break L0;
-          } else {
-            field_e = 17;
-            break L0;
-          }
-        }
-        var6 = 0;
-        var7 = param2.length();
-        var8 = 0;
-        L1: while (true) {
-          if (var8 >= var7) {
-            if (0 < var5) {
-              return (param3 + -param0 << -429191896) / var5;
-            } else {
-              return 0;
-            }
-          } else {
-            var9 = param2.charAt(var8);
-            if (var9 != 60) {
-              if (var9 == 62) {
-                var6 = 0;
-                var8++;
-                continue L1;
+        int stackIn_16_0 = 0;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        String stackIn_21_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_15_0 = 0;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
+        var10 = Chess.field_G;
+        try {
+          L0: {
+            L1: {
+              var5_int = 0;
+              if (param1) {
+                break L1;
               } else {
-                if (var6 == 0) {
-                  if (var9 == 32) {
-                    var5++;
-                    var8++;
-                    continue L1;
-                  } else {
-                    var8++;
-                    continue L1;
-                  }
-                } else {
-                  var8++;
-                  continue L1;
-                }
+                field_e = 17;
+                break L1;
               }
-            } else {
-              var6 = 1;
-              var8++;
-              continue L1;
+            }
+            var6 = 0;
+            var7 = param2.length();
+            var8 = 0;
+            L2: while (true) {
+              if (var8 >= var7) {
+                if (0 < var5_int) {
+                  stackOut_15_0 = (param3 + -param0 << 8) / var5_int;
+                  stackIn_16_0 = stackOut_15_0;
+                  break L0;
+                } else {
+                  return 0;
+                }
+              } else {
+                L3: {
+                  var9 = param2.charAt(var8);
+                  if (var9 != 60) {
+                    if (var9 == 62) {
+                      var6 = 0;
+                      break L3;
+                    } else {
+                      L4: {
+                        if (var6 != 0) {
+                          break L4;
+                        } else {
+                          break L4;
+                        }
+                      }
+                      var8++;
+                      continue L2;
+                    }
+                  } else {
+                    var6 = 1;
+                    break L3;
+                  }
+                }
+                var8++;
+                continue L2;
+              }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L5: {
+            var5 = decompiledCaughtException;
+            stackOut_18_0 = (RuntimeException) var5;
+            stackOut_18_1 = new StringBuilder().append("ub.L(").append(param0).append(44).append(param1).append(44);
+            stackIn_20_0 = stackOut_18_0;
+            stackIn_20_1 = stackOut_18_1;
+            stackIn_19_0 = stackOut_18_0;
+            stackIn_19_1 = stackOut_18_1;
+            if (param2 == null) {
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "null";
+              stackIn_21_0 = stackOut_20_0;
+              stackIn_21_1 = stackOut_20_1;
+              stackIn_21_2 = stackOut_20_2;
+              break L5;
+            } else {
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "{...}";
+              stackIn_21_0 = stackOut_19_0;
+              stackIn_21_1 = stackOut_19_1;
+              stackIn_21_2 = stackOut_19_2;
+              break L5;
+            }
+          }
+          throw fk.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + param3 + 41);
         }
+        return stackIn_16_0;
     }
 
     final static boolean a(int param0) {
-        int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
-        if (param0 == 21549) {
-          L0: {
-            L1: {
-              if (null == lj.field_a) {
-                break L1;
-              } else {
-                if (tb.field_f != ik.field_e) {
-                  break L1;
-                } else {
-                  stackOut_4_0 = 1;
-                  stackIn_6_0 = stackOut_4_0;
-                  break L0;
-                }
-              }
-            }
-            stackOut_5_0 = 0;
-            stackIn_6_0 = stackOut_5_0;
-            break L0;
-          }
-          return stackIn_6_0 != 0;
-        } else {
-          return true;
-        }
+        return null != lj.field_a && tb.field_f == ik.field_e;
     }
 
     final int a(int param0, int param1) {
@@ -224,7 +252,7 @@ abstract class ub {
           if (((ub) this).field_a == null) {
             break L0;
           } else {
-            if (-1 == (((ub) this).field_a.length ^ -1)) {
+            if (((ub) this).field_a.length == 0) {
               break L0;
             } else {
               if (param0 < ((ub) this).field_a[0].field_d) {

@@ -33,14 +33,14 @@ final class ud extends km {
           }
         }
         L1: {
-          if (-1 >= (((ud) this).field_h.field_j ^ -1)) {
+          if (((ud) this).field_h.field_j >= 0) {
             if (((ud) this).field_h.field_j == 3) {
               L2: {
-                if (-98 == (param1 ^ -1)) {
+                if (param1 == 97) {
                   break L2;
                 } else {
-                  if (param1 != -97) {
-                    if (-99 == param1) {
+                  if (param1 != 96) {
+                    if (param1 == 98) {
                       ((ud) this).field_h.a(false, 1);
                       ((ud) this).field_y.b((byte) -100);
                       break L1;
@@ -81,7 +81,7 @@ final class ud extends km {
                   if (param1 == 97) {
                     break L3;
                   } else {
-                    if (-97 == (param1 ^ -1)) {
+                    if (param1 == 96) {
                       break L3;
                     } else {
                       if (98 != param1) {
@@ -133,23 +133,23 @@ final class ud extends km {
         int stackIn_18_3 = 0;
         int stackIn_18_4 = 0;
         int stackIn_18_5 = 0;
-        int stackOut_15_0;
-        int stackOut_15_1;
-        int stackOut_15_2;
-        int stackOut_15_3;
-        int stackOut_15_4;
-        int stackOut_17_0;
-        int stackOut_17_1;
-        int stackOut_17_2;
-        int stackOut_17_3;
-        int stackOut_17_4;
-        int stackOut_17_5;
-        int stackOut_16_0;
-        int stackOut_16_1;
-        int stackOut_16_2;
-        int stackOut_16_3;
-        int stackOut_16_4;
-        int stackOut_16_5;
+        int stackOut_15_0 = 0;
+        int stackOut_15_1 = 0;
+        int stackOut_15_2 = 0;
+        int stackOut_15_3 = 0;
+        int stackOut_15_4 = 0;
+        int stackOut_17_0 = 0;
+        int stackOut_17_1 = 0;
+        int stackOut_17_2 = 0;
+        int stackOut_17_3 = 0;
+        int stackOut_17_4 = 0;
+        int stackOut_17_5 = 0;
+        int stackOut_16_0 = 0;
+        int stackOut_16_1 = 0;
+        int stackOut_16_2 = 0;
+        int stackOut_16_3 = 0;
+        int stackOut_16_4 = 0;
+        int stackOut_16_5 = 0;
         L0: {
           L1: {
             super.b((byte) -101);
@@ -159,7 +159,7 @@ final class ud extends km {
             im.a(385, 5, 243, 5, 178, (byte) -124, 210);
             nn.field_g.b(qn.field_u[((ud) this).field_A.field_h], 320, 1 + (178 - nn.field_g.field_L), 0, -1);
             da.field_E[((ud) this).field_A.field_h].e(565, 140, -2048, 4096);
-            if (-1 < (((ud) this).field_y.field_q ^ -1)) {
+            if (((ud) this).field_y.field_q < 0) {
               break L1;
             } else {
               if (((ud) this).field_y.field_q >= ((ud) this).field_A.field_i) {
@@ -410,50 +410,105 @@ final class ud extends km {
     }
 
     final static boolean a(long param0, String param1, int param2) {
-        int var4 = 0;
+        int var4_int = 0;
+        RuntimeException var4 = null;
         mp var5 = null;
-        int stackIn_8_0 = 0;
-        int stackOut_6_0;
-        int stackOut_7_0;
-        L0: {
-          var4 = -82 / ((-47 - param2) / 37);
-          var5 = pf.a(false, param1);
-          if (var5 == null) {
-            break L0;
-          } else {
-            if (var5.field_Ub != null) {
-              return true;
-            } else {
-              break L0;
-            }
-          }
-        }
-        L1: {
-          L2: {
-            if (o.field_e == null) {
-              break L2;
-            } else {
-              if (null == ac.a(param0, 2)) {
-                break L2;
-              } else {
-                stackOut_6_0 = 1;
-                stackIn_8_0 = stackOut_6_0;
+        int stackIn_4_0 = 0;
+        int stackIn_9_0 = 0;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_3_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_8_0 = 0;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        try {
+          L0: {
+            L1: {
+              var4_int = -82 / ((-47 - param2) / 37);
+              var5 = pf.a(false, param1);
+              if (var5 == null) {
                 break L1;
+              } else {
+                if (var5.field_Ub != null) {
+                  stackOut_3_0 = 1;
+                  stackIn_4_0 = stackOut_3_0;
+                  return stackIn_4_0 != 0;
+                } else {
+                  break L1;
+                }
               }
             }
+            L2: {
+              L3: {
+                if (o.field_e == null) {
+                  break L3;
+                } else {
+                  if (null == ac.a(param0, 2)) {
+                    break L3;
+                  } else {
+                    stackOut_7_0 = 1;
+                    stackIn_9_0 = stackOut_7_0;
+                    break L2;
+                  }
+                }
+              }
+              stackOut_8_0 = 0;
+              stackIn_9_0 = stackOut_8_0;
+              break L2;
+            }
+            break L0;
           }
-          stackOut_7_0 = 0;
-          stackIn_8_0 = stackOut_7_0;
-          break L1;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var4 = decompiledCaughtException;
+            stackOut_10_0 = (RuntimeException) var4;
+            stackOut_10_1 = new StringBuilder().append("ud.LA(").append(param0).append(44);
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
+            if (param1 == null) {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L4;
+            } else {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L4;
+            }
+          }
+          throw qb.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param2 + 41);
         }
-        return stackIn_8_0 != 0;
+        return stackIn_9_0 != 0;
     }
 
     final boolean a(char param0, int param1, int param2) {
         if (param1 <= 98) {
             int discarded$0 = ((ud) this).a(true);
         }
-        if (-49 != (param2 ^ -1)) {
+        if (param2 != 48) {
             return super.a(param0, 100, param2);
         }
         if (cf.a((byte) 62)) {
@@ -464,9 +519,6 @@ final class ud extends km {
     }
 
     final static tp c(boolean param0) {
-        if (param0) {
-            return null;
-        }
         tp var1 = new tp(cf.field_d, ek.field_db, ag.field_K[0], dl.field_d[0], jh.field_b[0], gg.field_t[0], cn.field_a[0], qp.field_c);
         ee.d((byte) 96);
         return var1;
@@ -486,10 +538,6 @@ final class ud extends km {
         if (!(ka.field_l != jm.field_f)) {
             return om.field_pc;
         }
-        if (!param0) {
-            Object var2 = null;
-            ud.a(67, (e) null, (byte) 80);
-        }
         if (!ma.field_I.b(96)) {
             return om.field_pc;
         }
@@ -498,31 +546,26 @@ final class ud extends km {
 
     private ud(int param0, int[] param1, int param2) {
         super(param0, 180, 460, 402, 35, param1);
-        int var4 = 0;
+        int var4_int = 0;
         int var5 = 0;
         ((ud) this).field_F = new vl[3];
         ((ud) this).field_z = new vl();
         ((ud) this).field_r = new kq();
         ((ud) this).field_s = new ga();
         ((ud) this).field_G = 0;
-        ((ud) this).field_C = oj.field_s.toLowerCase();
-        ((ud) this).field_A = na.field_L[param2];
-        var4 = 0;
-        L0: while (true) {
-          if (((ud) this).field_A.field_i <= var4) {
+        try {
+            ((ud) this).field_C = oj.field_s.toLowerCase();
+            ((ud) this).field_A = na.field_L[param2];
+            for (var4_int = 0; ((ud) this).field_A.field_i > var4_int; var4_int++) {
+                var5 = nn.field_g.c(((ud) this).field_A.field_c[var4_int].field_o);
+                if (var5 > ((ud) this).field_G) {
+                    ((ud) this).field_G = var5;
+                }
+            }
             ((ud) this).b(true);
             ((ud) this).field_y = new uj(20, 0, 1, (km) this, ((ud) this).field_m[1], ((ud) this).field_A);
-          } else {
-            var5 = nn.field_g.c(((ud) this).field_A.field_c[var4].field_o);
-            if (var5 > ((ud) this).field_G) {
-              ((ud) this).field_G = var5;
-              var4++;
-              continue L0;
-            } else {
-              var4++;
-              continue L0;
-            }
-          }
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) (Object) runtimeException, "ud.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
     }
 
@@ -544,7 +587,7 @@ final class ud extends km {
         L1: {
           var5 = var8.field_f;
           var6 = var5;
-          if ((var6 ^ -1) == -32) {
+          if (var6 == 31) {
             if (!((ud) this).field_h.a((byte) 113)) {
               break L1;
             } else {
@@ -571,7 +614,7 @@ final class ud extends km {
               }
             }
           } else {
-            if ((var6 ^ -1) == -30) {
+            if (var6 == 29) {
               if (!param1) {
                 break L1;
               } else {
@@ -583,7 +626,7 @@ final class ud extends km {
                 }
               }
             } else {
-              if ((var6 ^ -1) != -31) {
+              if (var6 != 30) {
                 return super.a(param0, param1, (byte) 123);
               } else {
                 if (!param1) {
@@ -604,26 +647,32 @@ final class ud extends km {
     }
 
     final static void a(int param0, e param1, byte param2) {
-        pi var6 = k.field_h;
-        var6.e(-13413, param0);
-        var6.field_l = var6.field_l + 1;
-        int var4 = var6.field_l;
-        var6.a(116, 1);
-        var6.a(-116, param1.field_o);
-        var6.a(-103, param1.field_i);
-        var6.a(param1.field_k, (byte) -79);
-        var6.a(param1.field_n, (byte) -79);
-        var6.a(param1.field_m, (byte) -79);
-        var6.a(param1.field_p, (byte) -79);
-        int var5 = -68 / ((param2 - -15) / 63);
-        int discarded$0 = var6.d(3, var4);
-        var6.d((byte) 117, var6.field_l - var4);
+        pi var6 = null;
+        int var4 = 0;
+        try {
+            var6 = k.field_h;
+            var6.e(-13413, param0);
+            var6.field_l = var6.field_l + 1;
+            var4 = var6.field_l;
+            var6.a(116, 1);
+            var6.a(-116, param1.field_o);
+            var6.a(-103, param1.field_i);
+            var6.a(param1.field_k, (byte) -79);
+            var6.a(param1.field_n, (byte) -79);
+            var6.a(param1.field_m, (byte) -79);
+            var6.a(param1.field_p, (byte) -79);
+            int var5 = -68 / ((param2 - -15) / 63);
+            int discarded$0 = var6.d(3, var4);
+            var6.d((byte) 117, var6.field_l - var4);
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) (Object) runtimeException, "ud.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     public static void f(byte param0) {
         field_t = null;
         field_x = null;
-        int var1 = 2 % ((-51 - param0) / 58);
+        int var1 = 0;
     }
 
     final void d(int param0) {
@@ -637,18 +686,15 @@ final class ud extends km {
         int var8 = 0;
         on var9 = null;
         int var10 = BrickABrac.field_J ? 1 : 0;
-        if (param4 != 85) {
-            ((ud) this).field_s = null;
-        }
-        int var6 = ((ud) this).field_D - ((ud) this).field_u >> 1127303817;
+        int var6 = ((ud) this).field_D - ((ud) this).field_u >> 9;
         param2 = param2 + (-var6 + param3) / 2;
-        int var7 = -((ud) this).field_I + ((ud) this).field_B >> 1131475945;
+        int var7 = -((ud) this).field_I + ((ud) this).field_B >> 9;
         param0 = param0 + (param1 + -var7) / 2;
         for (var8 = 0; var8 < ((ud) this).field_F.length; var8++) {
             var9 = (on) (Object) ((ud) this).field_F[var8].d(-109);
             while (var9 != null) {
-                if (-1 == (1 & var9.field_N ^ -1)) {
-                    pa.field_m[var9.field_i].a((var9.field_j + -((ud) this).field_u >> -168374967) + param2, (var9.field_m + -((ud) this).field_I >> -187382135) + param0, 17, 8);
+                if ((1 & var9.field_N) == 0) {
+                    pa.field_m[var9.field_i].a((var9.field_j + -((ud) this).field_u >> 9) + param2, (var9.field_m + -((ud) this).field_I >> 9) + param0, 17, 8);
                 }
                 var9 = (on) (Object) ((ud) this).field_F[var8].a((byte) 116);
             }
@@ -656,7 +702,6 @@ final class ud extends km {
     }
 
     final void b(boolean param0) {
-        String var12_ref = null;
         q var3 = null;
         q var4 = null;
         int var5 = 0;
@@ -670,9 +715,8 @@ final class ud extends km {
         String var12 = null;
         q var13 = null;
         String stackIn_9_0 = null;
-        String stackOut_8_0;
-        String stackOut_7_0;
-        var12_ref = null;
+        String stackOut_8_0 = null;
+        String stackOut_7_0 = null;
         var9 = BrickABrac.field_J ? 1 : 0;
         if (null != ((ud) this).field_A) {
           L0: {
@@ -731,11 +775,12 @@ final class ud extends km {
                   break L3;
                 }
               }
-              var12_ref = (String) (Object) stackIn_9_0;
-              var8 = var12_ref;
-              var7_ref_q.field_j = 30 + nn.field_g.c(var12_ref);
-              var5 = var5 + (30 + nn.field_g.c(var12_ref));
-              if (-4 > (var6 ^ -1)) {
+              var12 = stackIn_9_0;
+              var8 = var12;
+              int dupTemp$1 = 30 + nn.field_g.c(var12);
+              var7_ref_q.field_j = dupTemp$1;
+              var5 = var5 + dupTemp$1;
+              if (var6 > 3) {
                 var5 += 10;
                 var6++;
                 continue L1;
@@ -773,7 +818,7 @@ final class ud extends km {
         int var0 = 0;
         field_x = new int[256];
         field_t = "Player";
-        for (var0 = 0; (var0 ^ -1) > -257; var0++) {
+        for (var0 = 0; var0 < 256; var0++) {
             field_x[var0] = var0;
         }
     }

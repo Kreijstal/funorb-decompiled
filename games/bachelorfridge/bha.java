@@ -10,7 +10,7 @@ final class bha extends pu {
 
     public static void d(byte param0) {
         field_m = null;
-        int var1 = 95 / ((-7 - param0) / 43);
+        int var1 = -95;
     }
 
     static {

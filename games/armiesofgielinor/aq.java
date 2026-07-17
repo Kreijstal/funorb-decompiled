@@ -7,7 +7,7 @@ final class aq {
 
     public static void a(byte param0) {
         field_a = null;
-        int var1 = -103 / ((22 - param0) / 40);
+        int var1 = -103;
     }
 
     static {

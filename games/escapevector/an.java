@@ -10,9 +10,6 @@ final class an {
     public static void a(int param0) {
         field_c = null;
         field_b = null;
-        if (param0 <= 17) {
-            field_a = false;
-        }
     }
 
     static {

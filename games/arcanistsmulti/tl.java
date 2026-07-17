@@ -32,85 +32,72 @@ abstract class tl {
 
     final static void e(byte param0) {
         int[] var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int[] var5 = null;
-        int[] var6 = null;
-        int[] var7 = null;
-        int[] var8 = null;
-        int[] var9 = null;
+        RuntimeException decompiledCaughtException = null;
         var4 = ArcanistsMulti.field_G ? 1 : 0;
-        if (param0 >= -52) {
-          int discarded$2 = tl.c((byte) -27);
-          var8 = kl.field_B;
-          var6 = var8;
-          var5 = var6;
-          var1 = var5;
-          var2 = 0;
-          var3 = var8.length;
-          L0: while (true) {
-            if (var3 <= var2) {
-              return;
-            } else {
-              var2++;
-              var5[var2] = 0;
-              var2++;
-              var5[var2] = 0;
-              var2++;
-              var5[var2] = 0;
-              var2++;
-              var5[var2] = 0;
-              var2++;
-              var5[var2] = 0;
-              var2++;
-              var5[var2] = 0;
-              var2++;
-              var5[var2] = 0;
-              var2++;
-              var5[var2] = 0;
-              continue L0;
+        try {
+          L0: {
+            L1: {
+              if (param0 < -52) {
+                break L1;
+              } else {
+                int discarded$42 = tl.c((byte) -27);
+                break L1;
+              }
+            }
+            var5 = kl.field_B;
+            var1 = var5;
+            var2 = 0;
+            var3 = var5.length;
+            L2: while (true) {
+              if (var3 <= var2) {
+                break L0;
+              } else {
+                int incrementValue$43 = var2;
+                var2++;
+                var5[incrementValue$43] = 0;
+                int incrementValue$44 = var2;
+                var2++;
+                var5[incrementValue$44] = 0;
+                int incrementValue$45 = var2;
+                var2++;
+                var5[incrementValue$45] = 0;
+                int incrementValue$46 = var2;
+                var2++;
+                var5[incrementValue$46] = 0;
+                int incrementValue$47 = var2;
+                var2++;
+                var5[incrementValue$47] = 0;
+                int incrementValue$48 = var2;
+                var2++;
+                var5[incrementValue$48] = 0;
+                int incrementValue$49 = var2;
+                var2++;
+                var5[incrementValue$49] = 0;
+                int incrementValue$50 = var2;
+                var2++;
+                var5[incrementValue$50] = 0;
+                continue L2;
+              }
             }
           }
-        } else {
-          var9 = kl.field_B;
-          var7 = var9;
-          var5 = var7;
-          var1 = var5;
-          var2 = 0;
-          var3 = var9.length;
-          L1: while (true) {
-            if (var3 <= var2) {
-              return;
-            } else {
-              var2++;
-              var5[var2] = 0;
-              var2++;
-              var5[var2] = 0;
-              var2++;
-              var5[var2] = 0;
-              var2++;
-              var5[var2] = 0;
-              var2++;
-              var5[var2] = 0;
-              var2++;
-              var5[var2] = 0;
-              var2++;
-              var5[var2] = 0;
-              var2++;
-              var5[var2] = 0;
-              continue L1;
-            }
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw aa.a((Throwable) (Object) var1_ref, "tl.E(" + param0 + 41);
         }
     }
 
     final static int c(byte param0) {
-        if (-3 < ih.field_f) {
+        if (ih.field_f < 2) {
           return 0;
         } else {
           if (param0 == -77) {
-            if (-1 != (gm.field_f ^ -1)) {
+            if (gm.field_f != 0) {
               if (null != lh.field_g) {
                 if (!lh.field_g.c(-10923)) {
                   return 14;
@@ -118,7 +105,9 @@ abstract class tl {
                   if (!lh.field_g.a(true, "")) {
                     return 29;
                   } else {
-                    if (lh.field_g.a("", -24417)) {
+                    if (!lh.field_g.a("", -24417)) {
+                      return 29;
+                    } else {
                       if (da.field_b.c(param0 ^ 10982)) {
                         if (da.field_b.a("commonui", -24417)) {
                           if (ea.field_C.c(-10923)) {
@@ -144,103 +133,6 @@ abstract class tl {
                       } else {
                         return 43;
                       }
-                    } else {
-                      return 29;
-                    }
-                  }
-                }
-              } else {
-                if (da.field_b.c(param0 ^ 10982)) {
-                  if (da.field_b.a("commonui", -24417)) {
-                    if (ea.field_C.c(-10923)) {
-                      if (ea.field_C.a("commonui", param0 ^ 24364)) {
-                        if (ho.field_g.c(-10923)) {
-                          if (!ho.field_g.a(param0 ^ 35)) {
-                            return 86;
-                          } else {
-                            return 100;
-                          }
-                        } else {
-                          return 82;
-                        }
-                      } else {
-                        return 80;
-                      }
-                    } else {
-                      return 71;
-                    }
-                  } else {
-                    return 57;
-                  }
-                } else {
-                  return 43;
-                }
-              }
-            } else {
-              if (!da.field_b.c(-10923)) {
-                return 20;
-              } else {
-                if (!da.field_b.a("commonui", -24417)) {
-                  return 40;
-                } else {
-                  if (ea.field_C.c(-10923)) {
-                    if (!ea.field_C.a("commonui", -24417)) {
-                      return 60;
-                    } else {
-                      if (!ho.field_g.c(-10923)) {
-                        return 70;
-                      } else {
-                        if (!ho.field_g.a(-86)) {
-                          return 80;
-                        } else {
-                          return 100;
-                        }
-                      }
-                    }
-                  } else {
-                    return 50;
-                  }
-                }
-              }
-            }
-          } else {
-            tl.e((byte) -108);
-            if (-1 != gm.field_f) {
-              if (null != lh.field_g) {
-                if (!lh.field_g.c(-10923)) {
-                  return 14;
-                } else {
-                  if (!lh.field_g.a(true, "")) {
-                    return 29;
-                  } else {
-                    if (lh.field_g.a("", -24417)) {
-                      if (da.field_b.c(param0 ^ 10982)) {
-                        if (da.field_b.a("commonui", -24417)) {
-                          if (ea.field_C.c(-10923)) {
-                            if (ea.field_C.a("commonui", param0 ^ 24364)) {
-                              if (ho.field_g.c(-10923)) {
-                                if (!ho.field_g.a(param0 ^ 35)) {
-                                  return 86;
-                                } else {
-                                  return 100;
-                                }
-                              } else {
-                                return 82;
-                              }
-                            } else {
-                              return 80;
-                            }
-                          } else {
-                            return 71;
-                          }
-                        } else {
-                          return 57;
-                        }
-                      } else {
-                        return 43;
-                      }
-                    } else {
-                      return 29;
                     }
                   }
                 }
@@ -298,15 +190,106 @@ abstract class tl {
                 }
               }
             }
+          } else {
+            tl.e((byte) -108);
+            if (gm.field_f != 0) {
+              if (null != lh.field_g) {
+                if (!lh.field_g.c(-10923)) {
+                  return 14;
+                } else {
+                  if (!lh.field_g.a(true, "")) {
+                    return 29;
+                  } else {
+                    if (!lh.field_g.a("", -24417)) {
+                      return 29;
+                    } else {
+                      if (da.field_b.c(param0 ^ 10982)) {
+                        if (da.field_b.a("commonui", -24417)) {
+                          if (ea.field_C.c(-10923)) {
+                            if (ea.field_C.a("commonui", param0 ^ 24364)) {
+                              if (ho.field_g.c(-10923)) {
+                                if (!ho.field_g.a(param0 ^ 35)) {
+                                  return 86;
+                                } else {
+                                  return 100;
+                                }
+                              } else {
+                                return 82;
+                              }
+                            } else {
+                              return 80;
+                            }
+                          } else {
+                            return 71;
+                          }
+                        } else {
+                          return 57;
+                        }
+                      } else {
+                        return 43;
+                      }
+                    }
+                  }
+                }
+              } else {
+                if (da.field_b.c(param0 ^ 10982)) {
+                  if (da.field_b.a("commonui", -24417)) {
+                    if (ea.field_C.c(-10923)) {
+                      if (ea.field_C.a("commonui", param0 ^ 24364)) {
+                        if (ho.field_g.c(-10923)) {
+                          if (!ho.field_g.a(param0 ^ 35)) {
+                            return 86;
+                          } else {
+                            return 100;
+                          }
+                        } else {
+                          return 82;
+                        }
+                      } else {
+                        return 80;
+                      }
+                    } else {
+                      return 71;
+                    }
+                  } else {
+                    return 57;
+                  }
+                } else {
+                  return 43;
+                }
+              }
+            } else {
+              if (!da.field_b.c(-10923)) {
+                return 20;
+              } else {
+                if (!da.field_b.a("commonui", -24417)) {
+                  return 40;
+                } else {
+                  if (ea.field_C.c(-10923)) {
+                    if (!ea.field_C.a("commonui", -24417)) {
+                      return 60;
+                    } else {
+                      if (!ho.field_g.c(-10923)) {
+                        return 70;
+                      } else {
+                        if (!ho.field_g.a(-86)) {
+                          return 80;
+                        } else {
+                          return 100;
+                        }
+                      }
+                    }
+                  } else {
+                    return 50;
+                  }
+                }
+              }
+            }
           }
         }
     }
 
     final static String b(byte param0) {
-        if (param0 < 95) {
-            tl.a((byte) 55);
-            return vi.field_F;
-        }
         return vi.field_F;
     }
 
@@ -317,24 +300,12 @@ abstract class tl {
     abstract byte[] a(int param0, boolean param1);
 
     final static void a(int param0) {
-        if (ob.field_Y == null) {
-          li.a(0, param0 + 30267);
-          if (param0 != -30267) {
-            field_e = null;
+        if (ob.field_Y != null) {
+            ob.field_Y.field_l = false;
+            li.a(0, 0);
             return;
-          } else {
-            return;
-          }
-        } else {
-          ob.field_Y.field_l = false;
-          li.a(0, param0 + 30267);
-          if (param0 == -30267) {
-            return;
-          } else {
-            field_e = null;
-            return;
-          }
         }
+        li.a(0, 0);
     }
 
     static {

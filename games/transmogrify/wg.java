@@ -12,6 +12,7 @@ final class wg implements Iterator {
     private ri field_b;
 
     final static void b(int param0) {
+        RuntimeException var1 = null;
         int var2 = 0;
         he var3_ref_he = null;
         int var3 = 0;
@@ -20,92 +21,73 @@ final class wg implements Iterator {
         Object var5 = null;
         int var6 = 0;
         hj var8 = null;
-        byte[] var14 = null;
+        byte[] var12 = null;
+        RuntimeException decompiledCaughtException = null;
         var6 = Transmogrify.field_A ? 1 : 0;
-        var8 = nf.field_l;
-        var2 = var8.d((byte) 59);
-        if (-1 != (var2 ^ -1)) {
-          if (1 == var2) {
-            var3 = var8.c((byte) -122);
-            var4 = (gh) (Object) mf.field_b.a((byte) -95);
-            L0: while (true) {
-              if (var4 == null) {
+        try {
+          var8 = nf.field_l;
+          var2 = var8.d((byte) 59);
+          if (var2 != 0) {
+            if (1 == var2) {
+              var3 = var8.c((byte) -122);
+              var4 = (gh) (Object) mf.field_b.a((byte) -95);
+              L0: while (true) {
+                L1: {
+                  if (var4 == null) {
+                    break L1;
+                  } else {
+                    if (var4.field_j != var3) {
+                      var4 = (gh) (Object) mf.field_b.a(true);
+                      continue L0;
+                    } else {
+                      break L1;
+                    }
+                  }
+                }
                 if (var4 == null) {
-                  pc.a(param0 + -3);
+                  pc.a(1);
                   return;
                 } else {
                   var4.c(5);
-                  if (param0 != 4) {
-                    field_e = null;
-                    return;
-                  } else {
-                    return;
-                  }
+                  return;
                 }
-              } else {
-                if (var4.field_j != var3) {
-                  var4 = (gh) (Object) mf.field_b.a(true);
-                  continue L0;
+              }
+            } else {
+              d.a((Throwable) null, 13, "A1: " + ik.q(48));
+              pc.a(1);
+              return;
+            }
+          } else {
+            var3_ref_he = (he) (Object) pj.field_A.a((byte) -95);
+            if (var3_ref_he != null) {
+              L2: {
+                var4_int = var8.d((byte) 85);
+                if (0 != var4_int) {
+                  var12 = new byte[var4_int];
+                  var8.a(var4_int, 2, var12, 0);
+                  break L2;
                 } else {
-                  if (var4 == null) {
-                    pc.a(param0 + -3);
-                    return;
-                  } else {
-                    L1: {
-                      var4.c(5);
-                      if (param0 == 4) {
-                        break L1;
-                      } else {
-                        field_e = null;
-                        break L1;
-                      }
-                    }
-                    return;
-                  }
+                  var5 = null;
+                  break L2;
                 }
               }
-            }
-          } else {
-            d.a((Throwable) null, 13, "A1: " + ik.q(48));
-            pc.a(1);
-            if (param0 == 4) {
-              return;
+              var8.field_h = var8.field_h + 4;
+              if (!var8.d(5432)) {
+                pc.a(1);
+                return;
+              } else {
+                var3_ref_he.c(5);
+                return;
+              }
             } else {
-              field_e = null;
+              pc.a(1);
               return;
             }
           }
-        } else {
-          var3_ref_he = (he) (Object) pj.field_A.a((byte) -95);
-          if (var3_ref_he != null) {
-            L2: {
-              var4_int = var8.d((byte) 85);
-              if (0 != var4_int) {
-                var14 = new byte[var4_int];
-                var8.a(var4_int, 2, var14, 0);
-                break L2;
-              } else {
-                var5 = null;
-                break L2;
-              }
-            }
-            var8.field_h = var8.field_h + 4;
-            if (!var8.d(5432)) {
-              pc.a(param0 + -3);
-              return;
-            } else {
-              var3_ref_he.c(param0 ^ 1);
-              if (param0 == 4) {
-                return;
-              } else {
-                field_e = null;
-                return;
-              }
-            }
-          } else {
-            pc.a(param0 ^ 5);
-            return;
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw ch.a((Throwable) (Object) var1, "wg.B(" + 4 + 41);
         }
     }
 
@@ -133,16 +115,17 @@ final class wg implements Iterator {
         field_d = null;
         field_e = null;
         field_f = null;
-        if (param0 != 20738) {
-            field_d = null;
-        }
     }
 
     wg(pf param0) {
         ((wg) this).field_a = null;
-        ((wg) this).field_c = param0;
-        ((wg) this).field_a = null;
-        ((wg) this).field_b = ((wg) this).field_c.field_e.field_h;
+        try {
+            ((wg) this).field_c = param0;
+            ((wg) this).field_a = null;
+            ((wg) this).field_b = ((wg) this).field_c.field_e.field_h;
+        } catch (RuntimeException runtimeException) {
+            throw ch.a((Throwable) (Object) runtimeException, "wg.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public final boolean hasNext() {

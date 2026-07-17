@@ -67,39 +67,32 @@ final class bh extends gf {
 
     public static void a(byte param0) {
         field_h = null;
-        if (param0 < 71) {
-          boolean discarded$2 = bh.b((byte) -16);
-          field_l = null;
-          field_i = null;
-          field_m = null;
-          field_n = null;
-          return;
-        } else {
-          field_l = null;
-          field_i = null;
-          field_m = null;
-          field_n = null;
-          return;
-        }
+        field_l = null;
+        field_i = null;
+        field_m = null;
+        field_n = null;
     }
 
     final static void a(int param0, hf param1, int param2) {
-        int var3 = 113 / ((59 - param0) / 39);
-        dh.field_a.a(22125, (fa) (Object) param1);
-        id.a((byte) -109, param1, param2);
+        try {
+            int var3_int = 113 / ((59 - param0) / 39);
+            dh.field_a.a(22125, (fa) (Object) param1);
+            id.a((byte) -109, param1, param2);
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "bh.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     final void a(byte[] param0, boolean param1) {
-        ((bh) this).field_j = java.nio.ByteBuffer.allocateDirect(param0.length);
-        if (!param1) {
-          field_m = null;
-          java.nio.Buffer discarded$8 = ((bh) this).field_j.position(0);
-          java.nio.ByteBuffer discarded$9 = ((bh) this).field_j.put(param0);
-          return;
-        } else {
-          java.nio.Buffer discarded$10 = ((bh) this).field_j.position(0);
-          java.nio.ByteBuffer discarded$11 = ((bh) this).field_j.put(param0);
-          return;
+        try {
+            ((bh) this).field_j = java.nio.ByteBuffer.allocateDirect(param0.length);
+            if (!param1) {
+                field_m = null;
+            }
+            java.nio.Buffer discarded$0 = ((bh) this).field_j.position(0);
+            java.nio.ByteBuffer discarded$1 = ((bh) this).field_j.put(param0);
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "bh.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 

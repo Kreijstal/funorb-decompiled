@@ -12,38 +12,103 @@ final class dla {
     private pe field_f;
 
     final static int a(int param0) {
-        int var1 = -61 % ((47 - param0) / 45);
+        int var1 = -1;
         return cd.field_c;
     }
 
     private final void a(boolean param0, Random param1, int param2, int param3) {
-        int var5 = ib.a(-99, 0, za.c((byte) -93), param1);
-        if (!param0) {
-            if (var5 != -3) {
-                // if_icmpeq L35
-            } else {
-                var5 = 2 + var5;
+        RuntimeException runtimeException = null;
+        int var5_int = 0;
+        sg var6 = null;
+        int var7 = 0;
+        int var8 = 0;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        try {
+          L0: {
+            L1: {
+              var5_int = ib.a(-99, 0, za.c((byte) -93), param1);
+              if (param0) {
+                break L1;
+              } else {
+                L2: {
+                  if (var5_int == 2) {
+                    break L2;
+                  } else {
+                    if (var5_int == 1) {
+                      break L2;
+                    } else {
+                      break L1;
+                    }
+                  }
+                }
+                var5_int = 2 + var5_int;
+                break L1;
+              }
             }
+            var6 = t.a(var5_int, (byte) 94);
+            var6.a(new aoa(), 4);
+            var6.h(17704, param3);
+            if (param2 <= -26) {
+              var7 = -((dla) this).field_f.g((byte) -122) / 2 + hob.a(param1, ((dla) this).field_f.g((byte) -122), 119);
+              var8 = -((dla) this).field_f.m(1) / 2 - -hob.a(param1, ((dla) this).field_f.m(1), 120);
+              var6.a(var7, var8, (byte) -72);
+              var6.a(hob.a(param1, 8192, 126), -85);
+              ((dla) this).field_f.a(var6, (byte) 125);
+              break L0;
+            } else {
+              return;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            runtimeException = decompiledCaughtException;
+            stackOut_9_0 = (RuntimeException) runtimeException;
+            stackOut_9_1 = new StringBuilder().append("dla.B(").append(param0).append(44);
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
+            if (param1 == null) {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
+              break L3;
+            } else {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
+              break L3;
+            }
+          }
+          throw rta.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param2 + 44 + param3 + 41);
         }
-        sg var6 = t.a(var5, (byte) 94);
-        var6.a(new aoa(), 4);
-        var6.h(17704, param3);
-        if (param2 > -26) {
-            return;
-        }
-        int var7 = -((dla) this).field_f.g((byte) -122) / 2 + hob.a(param1, ((dla) this).field_f.g((byte) -122), 119);
-        int var8 = -((dla) this).field_f.m(1) / 2 - -hob.a(param1, ((dla) this).field_f.m(1), 120);
-        var6.a(var7, var8, (byte) -72);
-        var6.a(hob.a(param1, 8192, 126), -85);
-        ((dla) this).field_f.a(var6, (byte) 125);
     }
 
     final static String c(int param0) {
         if (null == kca.field_a) {
             return "";
-        }
-        if (param0 <= 106) {
-            field_d = 106;
         }
         return kca.field_a;
     }
@@ -60,9 +125,9 @@ final class dla {
         nbb var10_ref_nbb = null;
         int var10 = 0;
         int var11 = 0;
-        ml var11_ref = null;
+        ml var11_ref_ml = null;
         int var12 = 0;
-        String var12_ref = null;
+        String var12_ref_String = null;
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -99,10 +164,10 @@ final class dla {
             break L1;
           } else {
             L2: {
-              if (0 != (pk.field_o ^ -1)) {
+              if (pk.field_o != -1) {
                 break L2;
               } else {
-                if ((noa.field_q ^ -1) == 0) {
+                if (noa.field_q == -1) {
                   break L1;
                 } else {
                   break L2;
@@ -118,7 +183,7 @@ final class dla {
                 L4: {
                   var18 = ((dla) this).field_f.a(true, var6, var5, var5, var6);
                   if (var18 != null) {
-                    var8 = var18.g(-71) << 92877506;
+                    var8 = var18.g(-71) << 2;
                     var9 = me.a(var18.field_k, (byte) 106);
                     var10 = var18.field_k.b(true);
                     var11 = -var5 + var10;
@@ -127,8 +192,8 @@ final class dla {
                     var14 = ar.a(var11, (byte) 106, var13);
                     if (var14 <= var8) {
                       var15 = ((dla) this).field_b.a(var10, (byte) 116);
-                      cka.a(1, var9, 16777215, ((dla) this).field_b.b(true, -10000 + var12), -(kga.a(-51, var9) >> 1515080225) + var15, 4266);
-                      c.a(((dla) this).field_b.b(true, var12), var15, -(kga.a(-100, var9) >> -1525052286) + var15, ((dla) this).field_b.b(true, -10000 + var12), -16777216, 16777215);
+                      cka.a(1, var9, 16777215, ((dla) this).field_b.b(true, -10000 + var12), -(kga.a(-51, var9) >> 1) + var15, 4266);
+                      c.a(((dla) this).field_b.b(true, var12), var15, -(kga.a(-100, var9) >> 2) + var15, ((dla) this).field_b.b(true, -10000 + var12), -16777216, 16777215);
                       break L4;
                     } else {
                       break L4;
@@ -143,14 +208,14 @@ final class dla {
                 var18 = var10_ref_nbb;
                 var18 = var10_ref_nbb;
                 if (var10_ref_nbb != null) {
-                  var11_ref = var10_ref_nbb.field_k.a(var6, var5, true);
-                  if (var11_ref != null) {
-                    var12_ref = me.a(var11_ref, (byte) 72);
-                    var13 = var11_ref.b(true);
-                    var14 = var11_ref.a((byte) 111);
+                  var11_ref_ml = var10_ref_nbb.field_k.a(var6, var5, true);
+                  if (var11_ref_ml != null) {
+                    var12_ref_String = me.a(var11_ref_ml, (byte) 72);
+                    var13 = var11_ref_ml.b(true);
+                    var14 = var11_ref_ml.a((byte) 111);
                     var15 = ((dla) this).field_b.a(var13, (byte) 115);
-                    cka.a(1, var12_ref, 16777215, ((dla) this).field_b.b(true, -10000 + var14), -(kga.a(112, var12_ref) >> -921736255) + var15, 4266);
-                    c.a(((dla) this).field_b.b(true, var14), var15, -(kga.a(-77, var12_ref) >> 632747554) + var15, ((dla) this).field_b.b(true, -10000 + var14), -16777216, 16777215);
+                    cka.a(1, var12_ref_String, 16777215, ((dla) this).field_b.b(true, -10000 + var14), -(kga.a(112, var12_ref_String) >> 1) + var15, 4266);
+                    c.a(((dla) this).field_b.b(true, var14), var15, -(kga.a(-77, var12_ref_String) >> 2) + var15, ((dla) this).field_b.b(true, -10000 + var14), -16777216, 16777215);
                     return;
                   } else {
                     var9_int++;
@@ -174,7 +239,6 @@ final class dla {
         int var6 = 0;
         int var7_int = 0;
         Object var7 = null;
-        nbb var7_ref = null;
         sg[] var8 = null;
         int var9 = 0;
         sg var10_ref_sg = null;
@@ -226,7 +290,7 @@ final class dla {
                   if (var10_ref_sg.q((byte) 78) < unb.field_p) {
                     var6 = mjb.b(param0 ^ 21957, var10_ref_sg.q((byte) 102));
                     if (1 != var10_ref_sg.field_k.k(0)) {
-                      if ((var10_ref_sg.field_k.k(0) ^ -1) != -3) {
+                      if (var10_ref_sg.field_k.k(0) != 2) {
                         stackOut_13_0 = 1;
                         stackIn_15_0 = stackOut_13_0;
                         var7_int = stackIn_15_0;
@@ -254,14 +318,15 @@ final class dla {
             break L0;
           }
         }
-        var15 = ((dla) this).field_f.h((byte) -33);
-        var5_array = ((dla) this).field_f.h((byte) -33);
+        nbb[] dupTemp$1 = ((dla) this).field_f.h((byte) -33);
+        var15 = dupTemp$1;
+        var5_array = dupTemp$1;
         var6 = param0;
         var7_int = 0;
         L4: while (true) {
           if (var7_int >= var15.length) {
             L5: {
-              if (-101 <= (var6 ^ -1)) {
+              if (var6 <= 100) {
                 break L5;
               } else {
                 var7 = null;
@@ -280,7 +345,7 @@ final class dla {
                           var11++;
                           continue L6;
                         } else {
-                          var7_ref = var15[var11];
+                          var7 = (Object) (Object) var15[var11];
                           break L7;
                         }
                       } else {
@@ -289,10 +354,10 @@ final class dla {
                       }
                     }
                   }
-                  if (var7_ref == null) {
+                  if (var7 == null) {
                     break L5;
                   } else {
-                    ((dla) this).field_f.a(-118, 1, (anb) (Object) var7_ref);
+                    ((dla) this).field_f.a(-118, 1, (anb) var7);
                     break L5;
                   }
                 }
@@ -317,9 +382,6 @@ final class dla {
     }
 
     public static void a(byte param0) {
-        if (param0 != 101) {
-            return;
-        }
         field_e = null;
     }
 
@@ -401,92 +463,67 @@ final class dla {
         Exception var4_ref_Exception = null;
         int var4 = 0;
         int var5 = 0;
-        sg var5_ref = null;
+        sg var5_ref_sg = null;
         int var6 = 0;
         crb var9 = null;
         int[] var12 = null;
         Throwable decompiledCaughtException = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    ((dla) this).field_f = new pe(0);
-                    ((dla) this).field_b = new lta();
-                    var1 = ((dla) this).field_b.a(true, ip.field_p.width) - ((dla) this).field_b.a(true, 0);
-                    var2 = ((dla) this).field_b.a(0, ip.field_p.height) + -((dla) this).field_b.a(0, 0);
-                    ((dla) this).field_f.a(var1, (byte) -93);
-                    ((dla) this).field_f.e(var2, 0);
-                    var3 = new Random();
-                    if (null == es.field_b) {
-                        statePc = 6;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    if (null == es.field_b.field_f) {
-                        statePc = 6;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 3: {
-                    try {
-                        var12 = es.field_b.field_f.field_c;
-                        var5_ref = ae.a(var12, (byte) 45);
-                        var5_ref.h(17704, 3);
-                        var5_ref.a(new aoa(), 4);
-                        var5_ref.a(hob.a(var3, 8192, 122), -67);
-                        ((dla) this).field_f.a(var5_ref, (byte) 107);
-                        statePc = 9;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    var4_ref_Exception = (Exception) (Object) caughtException;
+        L0: {
+          L1: {
+            ((dla) this).field_f = new pe(0);
+            ((dla) this).field_b = new lta();
+            var1 = ((dla) this).field_b.a(true, ip.field_p.width) - ((dla) this).field_b.a(true, 0);
+            var2 = ((dla) this).field_b.a(0, ip.field_p.height) + -((dla) this).field_b.a(0, 0);
+            ((dla) this).field_f.a(var1, (byte) -93);
+            ((dla) this).field_f.e(var2, 0);
+            var3 = new Random();
+            if (null == es.field_b) {
+              break L1;
+            } else {
+              if (null == es.field_b.field_f) {
+                break L1;
+              } else {
+                try {
+                  L2: {
+                    var12 = es.field_b.field_f.field_c;
+                    var5_ref_sg = ae.a(var12, (byte) 45);
+                    var5_ref_sg.h(17704, 3);
+                    var5_ref_sg.a(new aoa(), 4);
+                    var5_ref_sg.a(hob.a(var3, 8192, 122), -67);
+                    ((dla) this).field_f.a(var5_ref_sg, (byte) 107);
+                    break L2;
+                  }
+                } catch (java.lang.Exception decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  L3: {
+                    var4_ref_Exception = (Exception) (Object) decompiledCaughtException;
                     es.field_b.field_f = null;
                     eg.e((byte) -111);
                     gna.a((Throwable) (Object) var4_ref_Exception, "player_gamedata version " + es.field_b.field_d + " blueprint is corrupted", 0);
-                    statePc = 9;
-                    continue stateLoop;
+                    break L3;
+                  }
                 }
-                case 6: {
-                    var4 = 0;
-                    statePc = 7;
-                    continue stateLoop;
-                }
-                case 7: {
-                    if ((var4 ^ -1) <= -3) {
-                        statePc = 9;
-                    } else {
-                        statePc = 8;
-                    }
-                    continue stateLoop;
-                }
-                case 8: {
-                    var5 = var4 % 2;
-                    this.a(false, var3, -99, var5);
-                    var4++;
-                    statePc = 7;
-                    continue stateLoop;
-                }
-                case 9: {
-                    var9 = new crb(new ml(49));
-                    var5 = -((dla) this).field_f.g((byte) -122) / 2 - -hob.a(var3, ((dla) this).field_f.g((byte) -122), 120);
-                    var6 = -((dla) this).field_f.m(1) / 2 + hob.a(var3, ((dla) this).field_f.m(1), 123);
-                    var9.a(var5, var6, (byte) 43);
-                    ((dla) this).field_f.a((byte) 126, var9);
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+                break L0;
+              }
             }
+          }
+          var4 = 0;
+          L4: while (true) {
+            if (var4 >= 2) {
+              break L0;
+            } else {
+              var5 = var4 % 2;
+              this.a(false, var3, -99, var5);
+              var4++;
+              continue L4;
+            }
+          }
         }
+        var9 = new crb(new ml(49));
+        var5 = -((dla) this).field_f.g((byte) -122) / 2 - -hob.a(var3, ((dla) this).field_f.g((byte) -122), 120);
+        var6 = -((dla) this).field_f.m(1) / 2 + hob.a(var3, ((dla) this).field_f.m(1), 123);
+        var9.a(var5, var6, (byte) 43);
+        ((dla) this).field_f.a((byte) 126, var9);
     }
 
     static {

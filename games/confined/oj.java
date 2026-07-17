@@ -33,7 +33,11 @@ final class oj extends nd {
 
     oj(Object param0, int param1) {
         super(param1);
-        ((oj) this).field_v = param0;
+        try {
+            ((oj) this).field_v = param0;
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "oj.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     final boolean f(byte param0) {

@@ -16,7 +16,7 @@ abstract class cj extends wj implements cw {
     final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, boolean param6) {
         String var7 = null;
         L0: {
-          if (-3 != (ov.field_b ^ -1)) {
+          if (ov.field_b != 2) {
             var7 = vo.field_db;
             break L0;
           } else {
@@ -35,13 +35,15 @@ abstract class cj extends wj implements cw {
     }
 
     void a(hl param0, int param1) {
-        ((cj) this).field_B = param0;
-        if (param1 != -20274) {
-            cj.a(-16);
+        try {
+            ((cj) this).field_B = param0;
+            if (param1 != -20274) {
+                cj.a(-16);
+            }
             ((cj) this).field_B.field_g = (cj) this;
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "cj.K(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
-        ((cj) this).field_B.field_g = (cj) this;
     }
 
     abstract int l(int param0);

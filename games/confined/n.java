@@ -30,9 +30,6 @@ abstract class n {
     public static void a(byte param0) {
         field_e = null;
         field_a = null;
-        if (param0 < 112) {
-            field_a = null;
-        }
     }
 
     static {

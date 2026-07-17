@@ -275,7 +275,7 @@ class ua {
                 }
               }
               field_q = stackIn_7_0 != 0;
-              field_i = param2;
+              field_i = 10;
               return;
             } else {
               break L0;
@@ -296,12 +296,12 @@ class ua {
     }
 
     private final void a(int param0) {
-        ((ua) this).field_j = ((ua) this).field_j - param0;
+        ((ua) this).field_j = ((ua) this).field_j - 256;
         if (((ua) this).field_j < 0) {
             ((ua) this).field_j = 0;
         }
         if (((ua) this).field_d != null) {
-            ((ua) this).field_d.a(param0);
+            ((ua) this).field_d.a(256);
             return;
         }
     }
@@ -500,7 +500,7 @@ class ua {
         in var15 = null;
         int var15_int = 0;
         L0: {
-          var3 = param1;
+          var3 = 256;
           if (!field_q) {
             break L0;
           } else {
@@ -510,7 +510,7 @@ class ua {
         }
         L1: {
           ek.a(param0, 0, var3);
-          ((ua) this).field_j = ((ua) this).field_j - param1;
+          ((ua) this).field_j = ((ua) this).field_j - 256;
           if (((ua) this).field_d == null) {
             break L1;
           } else {
@@ -544,7 +544,7 @@ class ua {
                       if (var9 != 0) {
                         L6: {
                           if ((var9 & 1) != 0) {
-                            var5 = var5 & (1 << var7_int ^ -1);
+                            var5 = var5 & ~(1 << var7_int);
                             var10 = null;
                             var11 = ((ua) this).field_u[var7_int];
                             var14 = var11;
@@ -677,7 +677,7 @@ class ua {
           if (((ua) this).field_d == null) {
             break L17;
           } else {
-            ((ua) this).field_d.b(param0, 0, param1);
+            ((ua) this).field_d.b(param0, 0, 256);
             break L17;
           }
         }

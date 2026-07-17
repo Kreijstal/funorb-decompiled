@@ -22,9 +22,9 @@ final class c {
         int var2 = 0;
         int stackIn_7_0 = 0;
         int stackOut_5_0 = 0;
-        var2 = -3 % ((23 - param1) / 60);
-        if ((bw.field_m[param0][0] ^ -1) != -5) {
-          if ((bw.field_m[param0][0] ^ -1) != -4) {
+        var2 = 0;
+        if (bw.field_m[param0][0] != 4) {
+          if (bw.field_m[param0][0] != 3) {
             if (2 != bw.field_m[param0][0]) {
               if ((2048 & bw.field_m[param0][10]) != 0) {
                 return true;

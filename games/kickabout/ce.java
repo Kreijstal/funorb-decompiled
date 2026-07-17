@@ -11,13 +11,19 @@ final class ce extends i {
 
     ce(sp param0) {
         super(30, (lv) (Object) param0.field_Sb);
-        ((ce) this).field_H = param0.field_Fb;
-        ((ce) this).field_J = param0.field_Qb;
-        String var5 = param0.field_Sb.d(100);
-        String var2 = var5;
-        String var3 = param0.field_Nb;
-        String var4 = vo.a((byte) -18, gd.field_e[30], new String[2]);
-        ((ce) this).a(var4, ((ce) this).field_t, ((ce) this).field_D, -91, ((ce) this).field_u);
+        String var5 = null;
+        String var4 = null;
+        try {
+            ((ce) this).field_H = param0.field_Fb;
+            ((ce) this).field_J = param0.field_Qb;
+            var5 = param0.field_Sb.d(100);
+            String var2 = var5;
+            String var3 = param0.field_Nb;
+            var4 = vo.a((byte) -18, gd.field_e[30], new String[2]);
+            ((ce) this).a(var4, ((ce) this).field_t, ((ce) this).field_D, -91, ((ce) this).field_u);
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "ce.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void g(int param0) {

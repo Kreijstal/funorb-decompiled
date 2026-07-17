@@ -23,11 +23,18 @@ abstract class al extends df {
             Throwable decompiledCaughtException = null;
             if (param0) {
               try {
-                Object discarded$1 = fo.a(jl.b(0), "resizing", (byte) 23, new Object[1]);
-              } catch (java.lang.Throwable decompiledCaughtParameter) {
-                decompiledCaughtException = decompiledCaughtParameter;
+                L0: {
+                  Object discarded$1 = fo.a(jl.b(0), "resizing", (byte) 23, new Object[1]);
+                  break L0;
+                }
+              } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                L1: {
+                  var2 = decompiledCaughtException;
+                  break L1;
+                }
               }
-              var2 = decompiledCaughtException;
+              return;
             } else {
               return;
             }
@@ -49,15 +56,13 @@ abstract class al extends df {
         int var3 = 0;
         int var5 = 0;
         int var4 = 0;
-        if (param0 != -27388) {
-            ((al) this).a(-14, (byte) 3, 7, -57);
-        }
-        if ((((al) this).field_db ^ -1) >= -1) {
+        if (((al) this).field_db <= 0) {
         } else {
             var2 = ((al) this).field_V;
             var3 = ((al) this).field_Y;
+            int fieldTemp$0 = ((al) this).field_S + 1;
             ((al) this).field_S = ((al) this).field_S + 1;
-            if (((al) this).field_S + 1 < ((al) this).field_db) {
+            if (fieldTemp$0 < ((al) this).field_db) {
                 var4 = (((al) this).field_db * 2 - ((al) this).field_S) * ((al) this).field_S;
                 var5 = ((al) this).field_db * ((al) this).field_db;
                 var2 = var4 * (-((al) this).field_X + ((al) this).field_V) / var5 + ((al) this).field_X;
@@ -66,22 +71,19 @@ abstract class al extends df {
                 ((al) this).field_db = 0;
                 ((al) this).j((byte) -101);
             }
-            ((al) this).b(var2, var3, param0 + 27505);
+            ((al) this).b(var2, var3, 117);
         }
         return super.i(-27388);
     }
 
     final static String k(int param0) {
-        if (param0 <= 68) {
-            return null;
-        }
         return s.field_e.f((byte) -24);
     }
 
     final static void j(int param0) {
         ch.field_e = false;
         nj.field_f = false;
-        fb.a(param0, 99);
+        fb.a(-1, 99);
         id.field_B = mp.field_b;
         ta.field_hb = mp.field_b;
     }
@@ -89,7 +91,7 @@ abstract class al extends df {
     public static void i(byte param0) {
         field_U = null;
         field_cb = null;
-        int var1 = -15 % ((-22 - param0) / 60);
+        int var1 = 0;
         field_eb = null;
         field_ab = null;
         field_fb = null;
@@ -145,7 +147,7 @@ abstract class al extends df {
                     return;
                   } else {
                     var9 = (-var5 + var6) * var7 / var4 + var5;
-                    var9 = var9 | (var9 << -93270328 | var9 << 1585262128);
+                    var9 = var9 | (var9 << 8 | var9 << 16);
                     oo.b(param1, var8, 6, var9);
                     oo.b(((al) this).field_n + (param1 + -6), var8, 6, var9);
                     var8++;
@@ -155,7 +157,7 @@ abstract class al extends df {
                 }
               } else {
                 var9 = var5 - -(var7 * (-var5 + var6) / var4);
-                var9 = var9 | (var9 << -1091786168 | var9 << -649710544);
+                var9 = var9 | (var9 << 8 | var9 << 16);
                 oo.b(param1, var8, 6, var9);
                 oo.b(param1 + (((al) this).field_n + -6), var8, 6, var9);
                 var8++;
@@ -176,10 +178,10 @@ abstract class al extends df {
                         break L3;
                       } else {
                         var12 = (-var10 + 20) * (20 - var10) + (-var7 + 20) * (20 + -var7);
-                        if ((var12 ^ -1) >= -463) {
+                        if (var12 <= 462) {
                           if (var12 >= 420) {
                             var13 = var9 * (462 + -var12) / 42;
-                            var13 = var13 | (var13 << 558023208 | var13 << 1956100304);
+                            var13 = var13 | (var13 << 8 | var13 << 16);
                             oo.field_i[param1 + oo.field_b * var8 + var10] = var13;
                             var10++;
                             continue L4;
@@ -197,7 +199,7 @@ abstract class al extends df {
                   }
                 }
                 L5: {
-                  if ((var7 ^ -1) < -21) {
+                  if (var7 > 20) {
                     break L5;
                   } else {
                     var12 = var11;
@@ -205,11 +207,11 @@ abstract class al extends df {
                     var13 = 0;
                     L6: while (true) {
                       L7: {
-                        if ((var13 ^ -1) < -21) {
+                        if (var13 > 20) {
                           break L7;
                         } else {
                           var14 = (20 + -var7) * (20 + -var7) + var13 * var13;
-                          if (-463 <= (var14 ^ -1)) {
+                          if (var14 <= 462) {
                             if (var14 < 420) {
                               var12 = 1 + var11;
                               var11++;
@@ -217,7 +219,7 @@ abstract class al extends df {
                               continue L6;
                             } else {
                               var15 = (462 - var14) * var9 / 42;
-                              var15 = var15 | (var15 << -1020322064 | var15 << 1238176072);
+                              var15 = var15 | (var15 << 16 | var15 << 8);
                               oo.field_i[var11 + (param1 + var8 * oo.field_b)] = var15;
                               var11++;
                               var13++;
@@ -233,7 +235,7 @@ abstract class al extends df {
                     }
                   }
                 }
-                var9 = var9 | (var9 << 336458792 | var9 << 2118029456);
+                var9 = var9 | (var9 << 8 | var9 << 16);
                 oo.b(var10 + param1, var8, -var10 + var11, var9);
                 var8++;
                 var7++;
@@ -301,7 +303,7 @@ abstract class al extends df {
     }
 
     final void a(int param0, byte param1, int param2, int param3) {
-        if (-1 <= (param0 ^ -1)) {
+        if (param0 <= 0) {
             ((al) this).b(param3, param2, 73);
             return;
         }

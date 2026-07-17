@@ -18,8 +18,12 @@ final class gk {
         if (param4 > -49) {
             return;
         }
-        qh.field_c = param2;
-        qs.field_K = param3;
+        try {
+            qh.field_c = param2;
+            qs.field_K = param3;
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "gk.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+        }
     }
 
     public static void a(byte param0) {
@@ -27,16 +31,8 @@ final class gk {
         field_h = null;
         field_c = null;
         field_b = null;
-        if (param0 != -127) {
-          gk.a((String) null, 72, 78L, 101, (byte) 105);
-          field_f = null;
-          field_a = null;
-          return;
-        } else {
-          field_f = null;
-          field_a = null;
-          return;
-        }
+        field_f = null;
+        field_a = null;
     }
 
     static {

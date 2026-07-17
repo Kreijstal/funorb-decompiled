@@ -32,7 +32,7 @@ abstract class vg {
             if (null == ((vg) this).field_b) {
               break L1;
             } else {
-              if (-1 <= (((vg) this).field_b.length ^ -1)) {
+              if (((vg) this).field_b.length <= 0) {
                 break L1;
               } else {
                 stackOut_2_0 = -((vg) this).field_b[0].field_b + ((vg) this).field_b[-1 + ((vg) this).field_b.length].field_g;
@@ -49,57 +49,118 @@ abstract class vg {
     }
 
     final int a(int param0, String param1, int param2, int param3) {
-        int var5 = 0;
+        int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
+        int stackIn_3_0 = 0;
+        int stackIn_16_0 = 0;
+        int stackIn_18_0 = 0;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        String stackIn_22_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_17_0 = 0;
+        int stackOut_15_0 = 0;
+        int stackOut_2_0 = 0;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
         var10 = ZombieDawn.field_J;
-        var5 = 0;
-        if (param3 > 15) {
-          var6 = 0;
-          var7 = param1.length();
-          var8 = 0;
-          L0: while (true) {
-            if (var8 >= var7) {
-              if (var5 <= 0) {
-                return 0;
-              } else {
-                return (-param0 + param2 << -281590264) / var5;
+        try {
+          L0: {
+            var5_int = 0;
+            if (param3 > 15) {
+              var6 = 0;
+              var7 = param1.length();
+              var8 = 0;
+              L1: while (true) {
+                if (var8 >= var7) {
+                  if (var5_int <= 0) {
+                    stackOut_17_0 = 0;
+                    stackIn_18_0 = stackOut_17_0;
+                    break L0;
+                  } else {
+                    stackOut_15_0 = (-param0 + param2 << 8) / var5_int;
+                    stackIn_16_0 = stackOut_15_0;
+                    return stackIn_16_0;
+                  }
+                } else {
+                  L2: {
+                    var9 = param1.charAt(var8);
+                    if (var9 != 60) {
+                      if (62 == var9) {
+                        var6 = 0;
+                        break L2;
+                      } else {
+                        L3: {
+                          if (var6 != 0) {
+                            break L3;
+                          } else {
+                            break L3;
+                          }
+                        }
+                        var8++;
+                        continue L1;
+                      }
+                    } else {
+                      var6 = 1;
+                      break L2;
+                    }
+                  }
+                  var8++;
+                  continue L1;
+                }
               }
             } else {
-              var9 = param1.charAt(var8);
-              if (var9 != 60) {
-                if (62 == var9) {
-                  var6 = 0;
-                  var8++;
-                  continue L0;
-                } else {
-                  if (var6 == 0) {
-                    if (var9 == 32) {
-                      var5++;
-                      var8++;
-                      continue L0;
-                    } else {
-                      var8++;
-                      continue L0;
-                    }
-                  } else {
-                    var8++;
-                    continue L0;
-                  }
-                }
-              } else {
-                var6 = 1;
-                var8++;
-                continue L0;
-              }
+              stackOut_2_0 = 100;
+              stackIn_3_0 = stackOut_2_0;
+              return stackIn_3_0;
             }
           }
-        } else {
-          return 100;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var5 = decompiledCaughtException;
+            stackOut_19_0 = (RuntimeException) var5;
+            stackOut_19_1 = new StringBuilder().append("vg.E(").append(param0).append(44);
+            stackIn_21_0 = stackOut_19_0;
+            stackIn_21_1 = stackOut_19_1;
+            stackIn_20_0 = stackOut_19_0;
+            stackIn_20_1 = stackOut_19_1;
+            if (param1 == null) {
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "null";
+              stackIn_22_0 = stackOut_21_0;
+              stackIn_22_1 = stackOut_21_1;
+              stackIn_22_2 = stackOut_21_2;
+              break L4;
+            } else {
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "{...}";
+              stackIn_22_0 = stackOut_20_0;
+              stackIn_22_1 = stackOut_20_1;
+              stackIn_22_2 = stackOut_20_2;
+              break L4;
+            }
+          }
+          throw sh.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + param2 + 44 + param3 + 41);
         }
+        return stackIn_18_0;
     }
 
     final int a(byte param0, int param1) {
@@ -147,7 +208,7 @@ abstract class vg {
                 break L1;
               } else {
                 if (param1 <= ((vg) this).field_b[-1 + ((vg) this).field_b.length].field_g) {
-                  if (-2 != (((vg) this).field_b.length ^ -1)) {
+                  if (((vg) this).field_b.length != 1) {
                     var4 = 0;
                     var5 = 0;
                     L2: while (true) {
@@ -161,7 +222,7 @@ abstract class vg {
                           } else {
                             if (var6.field_g >= param1) {
                               var7 = var6.a(param0, 0);
-                              if (0 != (var7 ^ -1)) {
+                              if (var7 != -1) {
                                 return var7 + var4;
                               } else {
                                 return -1;
@@ -235,9 +296,6 @@ abstract class vg {
     }
 
     public static void a(int param0) {
-        if (param0 != -1) {
-            field_c = 105;
-        }
         field_a = null;
     }
 

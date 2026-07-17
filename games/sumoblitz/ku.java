@@ -40,23 +40,40 @@ final class ku {
 
     public static void a(boolean param0) {
         field_I = null;
-        if (!param0) {
-            field_j = 2;
-        }
         field_J = null;
     }
 
     final static int a(byte param0) {
+        int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
-        int var3 = Sumoblitz.field_L ? 1 : 0;
-        int var1 = 0;
-        if (param0 != -94) {
-            field_J = null;
+        int var3 = 0;
+        int stackIn_5_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_4_0 = 0;
+        var3 = Sumoblitz.field_L ? 1 : 0;
+        try {
+          L0: {
+            var1_int = 0;
+            var2 = 0;
+            L1: while (true) {
+              if (var2 >= 25) {
+                stackOut_4_0 = var1_int;
+                stackIn_5_0 = stackOut_4_0;
+                break L0;
+              } else {
+                var1_int = var1_int + go.field_j[var2];
+                var2++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw qo.a((Throwable) (Object) var1, "ku.B(" + -94 + 41);
         }
-        for (var2 = 0; (var2 ^ -1) > -26; var2++) {
-            var1 = var1 + go.field_j[var2];
-        }
-        return var1;
+        return stackIn_5_0;
     }
 
     ku() {

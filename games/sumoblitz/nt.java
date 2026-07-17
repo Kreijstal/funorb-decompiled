@@ -53,10 +53,12 @@ class nt extends ms {
 
     void a(ha param0, int param1) {
         if (param1 >= -121) {
-          return;
-        } else {
-          ua.field_g[0].a((float)((nt) this).field_k, (float)((nt) this).field_o, 1848 - (int)((double)((nt) this).field_p / 30.0 * 2048.0), 0, 1, 0, 2);
-          return;
+            return;
+        }
+        try {
+            ua.field_g[0].a((float)((nt) this).field_k, (float)((nt) this).field_o, 1848 - (int)((double)((nt) this).field_p / 30.0 * 2048.0), 0, 1, 0, 2);
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "nt.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
@@ -94,53 +96,15 @@ class nt extends ms {
 
     final static void a(byte[] param0, int param1, File param2, int param3) throws IOException {
         DataInputStream var4 = null;
-        EOFException var5 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var4 = new DataInputStream((InputStream) (Object) new BufferedInputStream((InputStream) (Object) new FileInputStream(param2)));
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        var4.readFully(param0, 0, param3);
-                        if (param1 == 7039) {
-                            statePc = 5;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 4;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        field_r = true;
-                        var4.close();
-                        return;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 4;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    var5 = (EOFException) (Object) caughtException;
-                    statePc = 5;
-                    continue stateLoop;
-                }
-                case 5: {
-                    var4.close();
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        try {
+            var4 = new DataInputStream((InputStream) (Object) new BufferedInputStream((InputStream) (Object) new FileInputStream(param2)));
+            var4.readFully(param0, 0, param3);
+            if (param1 != 7039) {
+                field_r = true;
             }
+            var4.close();
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "nt.J(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
         }
     }
 
@@ -155,9 +119,6 @@ class nt extends ms {
         field_m = null;
         field_n = null;
         field_l = null;
-        if (param0 != 31295) {
-            field_r = true;
-        }
     }
 
     static {

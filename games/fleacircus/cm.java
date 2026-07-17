@@ -48,16 +48,36 @@ abstract class cm {
     }
 
     final static void a(int param0, byte param1) {
-        int var2 = 0;
-        int var3 = fleas.field_A ? 1 : 0;
-        gi.a(true, 0, qh.field_D, -3300, lc.field_u, param0, ea.field_a);
-        for (var2 = 0; qh.field_D > var2; var2++) {
-            mh.field_y[param0 + var2] = var2;
-        }
-        var2 = -9 % ((79 - param1) / 38);
-        gi.a(false, param0, qh.field_D - -param0, -3300, ok.field_L, param0 - -param0, ak.field_f);
-        if (!(param0 >= qh.field_D)) {
-            qh.field_D = param0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var3 = fleas.field_A ? 1 : 0;
+        try {
+          L0: {
+            gi.a(true, 0, qh.field_D, -3300, lc.field_u, param0, ea.field_a);
+            var2_int = 0;
+            L1: while (true) {
+              if (qh.field_D <= var2_int) {
+                var2_int = 0;
+                gi.a(false, param0, qh.field_D - -param0, -3300, ok.field_L, param0 - -param0, ak.field_f);
+                if (param0 < qh.field_D) {
+                  qh.field_D = param0;
+                  break L0;
+                } else {
+                  return;
+                }
+              } else {
+                mh.field_y[param0 + var2_int] = var2_int;
+                var2_int++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw pf.a((Throwable) (Object) var2, "cm.I(" + param0 + 44 + 118 + 41);
         }
     }
 

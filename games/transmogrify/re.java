@@ -46,16 +46,11 @@ final class re {
     public static void a(byte param0) {
         field_y = null;
         field_m = null;
-        if (param0 != -37) {
-          return;
-        } else {
-          field_a = null;
-          field_i = null;
-          field_K = null;
-          field_h = null;
-          field_C = null;
-          return;
-        }
+        field_a = null;
+        field_i = null;
+        field_K = null;
+        field_h = null;
+        field_C = null;
     }
 
     final static void a(int param0, int param1) {

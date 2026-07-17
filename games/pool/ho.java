@@ -109,7 +109,7 @@ final class ho extends ma {
 
     final static void c(byte param0) {
         wa.l(23323);
-        int var1 = 95 / ((param0 - 47) / 60);
+        int var1 = -95;
         af.a(sg.field_M[0].field_w, kj.field_j, ad.field_x, nk.field_n, (byte) 36, tk.field_i);
     }
 
@@ -117,9 +117,6 @@ final class ho extends ma {
         field_s = null;
         field_u = null;
         field_l = null;
-        if (!param0) {
-            field_s = null;
-        }
     }
 
     ho() {

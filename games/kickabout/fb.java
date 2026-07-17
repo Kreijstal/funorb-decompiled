@@ -142,28 +142,36 @@ final class fb extends cj {
 
     private fb(gj param0, boolean param1) {
         super(0, 0, 0, 0, (gj) null);
-        ((fb) this).field_L = (ga) (Object) new mr("", (jv) null, 2);
-        ((fb) this).field_K = (ga) (Object) new mr("", (jv) null, 2);
-        ((fb) this).field_P = (ga) (Object) new mr("", (jv) null, 4);
-        ((fb) this).field_P.field_r = param0;
-        ((fb) this).field_K.field_r = param0;
-        ((fb) this).field_L.field_r = param0;
-        ((fb) this).field_U = param1 ? true : false;
-        if (((fb) this).field_U) {
-            ((fb) this).a(-126, (fd) (Object) ((fb) this).field_K);
-            ((fb) this).a(-20, (fd) (Object) ((fb) this).field_L);
-        } else {
-            ((fb) this).a(-123, (fd) (Object) ((fb) this).field_L);
-            ((fb) this).a(-46, (fd) (Object) ((fb) this).field_K);
+        try {
+            ((fb) this).field_L = (ga) (Object) new mr("", (jv) null, 2);
+            ((fb) this).field_K = (ga) (Object) new mr("", (jv) null, 2);
+            ((fb) this).field_P = (ga) (Object) new mr("", (jv) null, 4);
+            ((fb) this).field_P.field_r = param0;
+            ((fb) this).field_K.field_r = param0;
+            ((fb) this).field_L.field_r = param0;
+            ((fb) this).field_U = param1 ? true : false;
+            if (((fb) this).field_U) {
+                ((fb) this).a(-126, (fd) (Object) ((fb) this).field_K);
+                ((fb) this).a(-20, (fd) (Object) ((fb) this).field_L);
+            } else {
+                ((fb) this).a(-123, (fd) (Object) ((fb) this).field_L);
+                ((fb) this).a(-46, (fd) (Object) ((fb) this).field_K);
+            }
+            ((fb) this).a(-57, (fd) (Object) ((fb) this).field_P);
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "fb.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
-        ((fb) this).a(-57, (fd) (Object) ((fb) this).field_P);
     }
 
     final void a(hl param0, int param1) {
-        super.a(param0, param1);
-        ((fb) this).field_L.field_k = (jv) (Object) param0;
-        ((fb) this).field_K.field_k = (jv) (Object) param0;
-        ((fb) this).field_P.field_k = (jv) (Object) param0;
+        try {
+            super.a(param0, param1);
+            ((fb) this).field_L.field_k = (jv) (Object) param0;
+            ((fb) this).field_K.field_k = (jv) (Object) param0;
+            ((fb) this).field_P.field_k = (jv) (Object) param0;
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "fb.K(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     final int m(int param0) {
@@ -195,14 +203,22 @@ final class fb extends cj {
 
     fb(gj param0, boolean param1, int param2, int param3, int param4, int param5) {
         this(param0, param1);
-        ((fb) this).a(param5, 1, param2, param4, param3);
+        try {
+            ((fb) this).a(param5, 1, param2, param4, param3);
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "fb.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+        }
     }
 
     private final void a(fd param0, String param1, int param2, byte param3, int param4) {
-        if (param3 < 86) {
-            field_R = 41;
+        try {
+            if (param3 < 86) {
+                field_R = 41;
+            }
+            qo.field_k.d(param1, param4 + param0.field_t - -(param0.field_n >> 1), -5 + param0.field_g + param2, 16777215, -1);
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "fb.L(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
-        qo.field_k.d(param1, param4 + param0.field_t - -(param0.field_n >> -1702966015), -5 + param0.field_g + param2, 16777215, -1);
     }
 
     final static kg[] i(byte param0) {
@@ -212,22 +228,19 @@ final class fb extends cj {
         for (var2 = 0; var2 < io.field_l; var2++) {
             var1[var2] = new kg(kw.field_i, ai.field_J, aq.field_f[var2], fc.field_g[var2], ku.field_c[var2], lo.field_j[var2], pq.field_O[var2], lt.field_a);
         }
-        if (param0 <= 78) {
-            fb.n(-91);
-        }
         tk.h((byte) -118);
         return var1;
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
-        super.a(param0, param1 + 0, param2, param3, param4);
-        int var6 = -130 + param3 >> 1267612225;
+        super.a(param0, param1, param2, param3, param4);
+        int var6 = -130 + param3 >> 1;
         if (((fb) this).field_U) {
             ((fb) this).field_K.a(param0, 1, var6, 25, 0);
-            ((fb) this).field_L.a(param0, param1 + 0, 45 + var6, 25, 0);
+            ((fb) this).field_L.a(param0, param1, 45 + var6, 25, 0);
         } else {
             ((fb) this).field_L.a(param0, 1, var6, 25, 0);
-            ((fb) this).field_K.a(param0, param1 + 0, var6 - -45, 25, 0);
+            ((fb) this).field_K.a(param0, param1, var6 - -45, 25, 0);
         }
         ((fb) this).field_P.a(param0, param1, 90 + var6, 40, 0);
     }

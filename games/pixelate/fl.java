@@ -14,28 +14,20 @@ final class fl {
         int var1_int = 0;
         IllegalArgumentException var1 = null;
         qe var2 = null;
-        qe stackIn_6_0 = null;
+        qe stackIn_4_0 = null;
         Throwable decompiledCaughtException = null;
-        qe stackOut_5_0 = null;
+        qe stackOut_3_0 = null;
         try {
-          L0: {
-            if (param0 == -3060) {
-              break L0;
-            } else {
-              fl.a((byte) 81);
-              break L0;
-            }
-          }
           var1_int = 0;
-          L1: while (true) {
+          L0: while (true) {
             var2 = w.field_y.a(var1_int, false);
             if (var2.field_y) {
-              stackOut_5_0 = (qe) var2;
-              stackIn_6_0 = stackOut_5_0;
-              return stackIn_6_0;
+              stackOut_3_0 = (qe) var2;
+              stackIn_4_0 = stackOut_3_0;
+              return stackIn_4_0;
             } else {
               var1_int++;
-              continue L1;
+              continue L0;
             }
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -52,7 +44,7 @@ final class fl {
         if (un.field_l) {
             return vl.b(102, param2, param1);
         }
-        if (hn.a(param1, param2, param3)) {
+        if (hn.a(param1, param2, 0)) {
             return true;
         }
         if (!(!lh.field_g)) {
@@ -163,9 +155,6 @@ final class fl {
         field_c = null;
         field_f = null;
         field_b = null;
-        if (param0 != 0) {
-            field_g = null;
-        }
     }
 
     final String b(byte param0) {
@@ -176,7 +165,11 @@ final class fl {
     fl(String param0) {
         ((fl) this).field_d = false;
         ((fl) this).field_a = false;
-        ((fl) this).field_e = param0;
+        try {
+            ((fl) this).field_e = param0;
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "fl.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

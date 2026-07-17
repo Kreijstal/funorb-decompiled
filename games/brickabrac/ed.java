@@ -10,29 +10,22 @@ final class ed {
     static int[] field_e;
 
     final static void a(int param0, int param1) {
-        si.field_k.a(true, dm.field_b, 0, param1, param0);
-        if (!(-8 != (si.field_k.field_m ^ -1))) {
+        si.field_k.a(true, dm.field_b, 0, 0, param0);
+        if (!(si.field_k.field_m != 7)) {
             hq.b(true, true, param0);
         }
     }
 
     final static void a(boolean param0, mf param1, mf param2, byte param3) {
-        ai.a(lp.field_Ab, (dh) (Object) ul.field_m, f.field_a, vo.field_C, im.field_d, wi.field_n, tk.field_t, ad.field_l, (byte) 61, param0, ic.field_c, fp.field_u);
-        if (param3 < 74) {
-          int discarded$1 = ed.b(2, -57);
-          ef.field_b = cr.a("lobby", param1, "chatfilter", 2);
-          rh.field_e[0] = mc.field_a;
-          rh.field_e[2] = sp.field_s;
-          rh.field_e[1] = e.field_j;
-          hk.a((dh) (Object) rd.field_e, (byte) 90, param2);
-          return;
-        } else {
-          ef.field_b = cr.a("lobby", param1, "chatfilter", 2);
-          rh.field_e[0] = mc.field_a;
-          rh.field_e[2] = sp.field_s;
-          rh.field_e[1] = e.field_j;
-          hk.a((dh) (Object) rd.field_e, (byte) 90, param2);
-          return;
+        try {
+            ai.a(lp.field_Ab, (dh) (Object) ul.field_m, f.field_a, vo.field_C, im.field_d, wi.field_n, tk.field_t, ad.field_l, (byte) 61, param0, ic.field_c, fp.field_u);
+            ef.field_b = cr.a("lobby", param1, "chatfilter", 2);
+            rh.field_e[0] = mc.field_a;
+            rh.field_e[2] = sp.field_s;
+            rh.field_e[1] = e.field_j;
+            hk.a((dh) (Object) rd.field_e, (byte) 90, param2);
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) (Object) runtimeException, "ed.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + 104 + 41);
         }
     }
 
@@ -47,7 +40,7 @@ final class ed {
             break L0;
           }
         }
-        if (-1 >= (param1 ^ -1)) {
+        if (param1 >= 0) {
           if (param1 >= 65536) {
             L1: {
               var2 += 16;
@@ -173,9 +166,6 @@ final class ed {
     public static void a(int param0) {
         field_a = null;
         field_f = null;
-        if (param0 > -61) {
-            return;
-        }
         field_c = null;
         field_e = null;
         field_b = null;

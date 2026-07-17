@@ -24,17 +24,17 @@ final class uma extends ev {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        var4 = ((uma) this).field_f * param1 >> -1343071252;
-        var5 = ((uma) this).field_g * param1 >> -176812788;
+        var4 = ((uma) this).field_f * param1 >> 12;
+        var5 = ((uma) this).field_g * param1 >> 12;
         if (param0 != -112) {
           ((uma) this).field_h = -14;
-          var6 = ((uma) this).field_h * param2 >> -1881735892;
-          var7 = param2 * ((uma) this).field_i >> -1500447284;
+          var6 = ((uma) this).field_h * param2 >> 12;
+          var7 = param2 * ((uma) this).field_i >> 12;
           mf.a(var4, var7, param0 + 17112, var5, ((uma) this).field_e, var6);
           return;
         } else {
-          var6 = ((uma) this).field_h * param2 >> -1881735892;
-          var7 = param2 * ((uma) this).field_i >> -1500447284;
+          var6 = ((uma) this).field_h * param2 >> 12;
+          var7 = param2 * ((uma) this).field_i >> 12;
           mf.a(var4, var7, param0 + 17112, var5, ((uma) this).field_e, var6);
           return;
         }
@@ -45,17 +45,17 @@ final class uma extends ev {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        var4 = param2 * ((uma) this).field_f >> 1480865772;
-        var5 = param2 * ((uma) this).field_g >> 1042149356;
+        var4 = param2 * ((uma) this).field_f >> 12;
+        var5 = param2 * ((uma) this).field_g >> 12;
         if (param1 != 110) {
           ((uma) this).field_h = -115;
-          var6 = ((uma) this).field_h * param0 >> -294457268;
-          var7 = param0 * ((uma) this).field_i >> 2129933452;
+          var6 = ((uma) this).field_h * param0 >> 12;
+          var7 = param0 * ((uma) this).field_i >> 12;
           nt.a((byte) 11, var7, ((uma) this).field_e, ((uma) this).field_a, ((uma) this).field_d, var5, var4, var6);
           return;
         } else {
-          var6 = ((uma) this).field_h * param0 >> -294457268;
-          var7 = param0 * ((uma) this).field_i >> 2129933452;
+          var6 = ((uma) this).field_h * param0 >> 12;
+          var7 = param0 * ((uma) this).field_i >> 12;
           nt.a((byte) 11, var7, ((uma) this).field_e, ((uma) this).field_a, ((uma) this).field_d, var5, var4, var6);
           return;
         }

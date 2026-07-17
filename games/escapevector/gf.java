@@ -55,13 +55,13 @@ final class gf {
         if (param0 == -78) {
           od.field_j.field_g = od.field_j.field_g + 1;
           if (param1 != 51) {
-            if ((param1 ^ -1) != -51) {
+            if (param1 != 50) {
               L0: {
                 od.field_j.field_d = 1;
-                if ((od.field_j.field_g ^ -1) > -3) {
+                if (od.field_j.field_g < 2) {
                   break L0;
                 } else {
-                  if ((param1 ^ -1) != -52) {
+                  if (param1 != 51) {
                     break L0;
                   } else {
                     return 2;
@@ -69,7 +69,7 @@ final class gf {
                 }
               }
               if (od.field_j.field_g < 2) {
-                if (-5 < (od.field_j.field_g ^ -1)) {
+                if (od.field_j.field_g < 4) {
                   return -1;
                 } else {
                   return 1;
@@ -78,7 +78,7 @@ final class gf {
                 if (param1 == 50) {
                   return 5;
                 } else {
-                  if (-5 < (od.field_j.field_g ^ -1)) {
+                  if (od.field_j.field_g < 4) {
                     return -1;
                   } else {
                     return 1;
@@ -88,10 +88,10 @@ final class gf {
             } else {
               L1: {
                 od.field_j.field_d = 5;
-                if ((od.field_j.field_g ^ -1) > -3) {
+                if (od.field_j.field_g < 2) {
                   break L1;
                 } else {
-                  if ((param1 ^ -1) != -52) {
+                  if (param1 != 51) {
                     break L1;
                   } else {
                     return 2;
@@ -99,7 +99,7 @@ final class gf {
                 }
               }
               if (od.field_j.field_g < 2) {
-                if (-5 < (od.field_j.field_g ^ -1)) {
+                if (od.field_j.field_g < 4) {
                   return -1;
                 } else {
                   return 1;
@@ -108,7 +108,7 @@ final class gf {
                 if (param1 == 50) {
                   return 5;
                 } else {
-                  if (-5 < (od.field_j.field_g ^ -1)) {
+                  if (od.field_j.field_g < 4) {
                     return -1;
                   } else {
                     return 1;
@@ -119,10 +119,10 @@ final class gf {
           } else {
             L2: {
               od.field_j.field_d = 2;
-              if ((od.field_j.field_g ^ -1) > -3) {
+              if (od.field_j.field_g < 2) {
                 break L2;
               } else {
-                if ((param1 ^ -1) != -52) {
+                if (param1 != 51) {
                   break L2;
                 } else {
                   return 2;
@@ -130,7 +130,7 @@ final class gf {
               }
             }
             if (od.field_j.field_g < 2) {
-              if (-5 < (od.field_j.field_g ^ -1)) {
+              if (od.field_j.field_g < 4) {
                 return -1;
               } else {
                 return 1;
@@ -139,7 +139,7 @@ final class gf {
               if (param1 == 50) {
                 return 5;
               } else {
-                if (-5 < (od.field_j.field_g ^ -1)) {
+                if (od.field_j.field_g < 4) {
                   return -1;
                 } else {
                   return 1;
@@ -152,10 +152,10 @@ final class gf {
           tg discarded$1 = gf.a((String) null, (byte) 43);
           od.field_j.field_g = od.field_j.field_g + 1;
           if (param1 != 51) {
-            if ((param1 ^ -1) != -51) {
+            if (param1 != 50) {
               od.field_j.field_d = 1;
-              if ((od.field_j.field_g ^ -1) <= -3) {
-                if ((param1 ^ -1) == -52) {
+              if (od.field_j.field_g >= 2) {
+                if (param1 == 51) {
                   return 2;
                 } else {
                   L3: {
@@ -169,7 +169,7 @@ final class gf {
                       }
                     }
                   }
-                  if (-5 < (od.field_j.field_g ^ -1)) {
+                  if (od.field_j.field_g < 4) {
                     return -1;
                   } else {
                     return 1;
@@ -187,7 +187,7 @@ final class gf {
                     }
                   }
                 }
-                if (-5 < (od.field_j.field_g ^ -1)) {
+                if (od.field_j.field_g < 4) {
                   return -1;
                 } else {
                   return 1;
@@ -195,8 +195,8 @@ final class gf {
               }
             } else {
               od.field_j.field_d = 5;
-              if ((od.field_j.field_g ^ -1) <= -3) {
-                if ((param1 ^ -1) == -52) {
+              if (od.field_j.field_g >= 2) {
+                if (param1 == 51) {
                   return 2;
                 } else {
                   L5: {
@@ -210,7 +210,7 @@ final class gf {
                       }
                     }
                   }
-                  if (-5 < (od.field_j.field_g ^ -1)) {
+                  if (od.field_j.field_g < 4) {
                     return -1;
                   } else {
                     return 1;
@@ -228,7 +228,7 @@ final class gf {
                     }
                   }
                 }
-                if (-5 < (od.field_j.field_g ^ -1)) {
+                if (od.field_j.field_g < 4) {
                   return -1;
                 } else {
                   return 1;
@@ -237,8 +237,8 @@ final class gf {
             }
           } else {
             od.field_j.field_d = 2;
-            if ((od.field_j.field_g ^ -1) <= -3) {
-              if ((param1 ^ -1) == -52) {
+            if (od.field_j.field_g >= 2) {
+              if (param1 == 51) {
                 return 2;
               } else {
                 L7: {
@@ -252,7 +252,7 @@ final class gf {
                     }
                   }
                 }
-                if (-5 < (od.field_j.field_g ^ -1)) {
+                if (od.field_j.field_g < 4) {
                   return -1;
                 } else {
                   return 1;
@@ -270,7 +270,7 @@ final class gf {
                   }
                 }
               }
-              if (-5 < (od.field_j.field_g ^ -1)) {
+              if (od.field_j.field_g < 4) {
                 return -1;
               } else {
                 return 1;
@@ -295,45 +295,9 @@ final class gf {
     }
 
     private final int a(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        var2 = this.a(-73);
-        if (param0 != -57) {
-          L0: {
-            ((gf) this).field_h = 59;
-            if (((gf) this).field_l <= var2) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
-              break L0;
-            } else {
-              stackOut_6_0 = (-var2 + ((gf) this).field_l) * ((gf) this).field_h / ((gf) this).field_l;
-              stackIn_8_0 = stackOut_6_0;
-              break L0;
-            }
-          }
-          var3 = stackIn_8_0;
-          return var3;
-        } else {
-          L1: {
-            if (((gf) this).field_l <= var2) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
-              break L1;
-            } else {
-              stackOut_2_0 = (-var2 + ((gf) this).field_l) * ((gf) this).field_h / ((gf) this).field_l;
-              stackIn_4_0 = stackOut_2_0;
-              break L1;
-            }
-          }
-          var3 = stackIn_4_0;
-          return var3;
-        }
+        int var2 = this.a(-73);
+        int var3 = ((gf) this).field_l > var2 ? (-var2 + ((gf) this).field_l) * ((gf) this).field_h / ((gf) this).field_l : 0;
+        return var3;
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, byte param5) {
@@ -356,50 +320,112 @@ final class gf {
     final static tg a(String param0, byte param1) {
         Object var2 = null;
         tg var3 = null;
-        int var4_int = 0;
-        String var4 = null;
+        String var4_ref_String = null;
+        int var4 = 0;
         int var5 = 0;
         CharSequence var6 = null;
         CharSequence var7 = null;
+        Object stackIn_3_0 = null;
+        tg stackIn_14_0 = null;
+        Object stackIn_17_0 = null;
+        Object stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        Object stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        Object stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        String stackIn_21_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        Object stackOut_16_0 = null;
+        tg stackOut_13_0 = null;
+        Object stackOut_2_0 = null;
+        Object stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        Object stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
+        Object stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
         var5 = EscapeVector.field_A;
-        if (null != ml.field_a) {
+        try {
           L0: {
-            var6 = (CharSequence) (Object) param0;
-            var2 = (Object) (Object) sf.a(-104, var6);
-            if (var2 == null) {
-              var2 = (Object) (Object) var6;
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          var3 = (tg) (Object) ml.field_a.a(-82, (long)((String) var2).hashCode());
-          L1: while (true) {
-            if (var3 != null) {
-              L2: {
-                var7 = (CharSequence) (Object) var3.field_ob;
-                var4 = sf.a(-75, var7);
-                if (var4 == null) {
-                  var4 = var3.field_ob;
-                  break L2;
+            if (null != ml.field_a) {
+              L1: {
+                var6 = (CharSequence) (Object) param0;
+                var2 = (Object) (Object) sf.a(-104, var6);
+                if (var2 == null) {
+                  var2 = (Object) (Object) var6;
+                  break L1;
                 } else {
-                  break L2;
+                  break L1;
                 }
               }
-              if (!var4.equals(var2)) {
-                var3 = (tg) (Object) ml.field_a.a((byte) -36);
-                continue L1;
-              } else {
-                return var3;
+              var3 = (tg) (Object) ml.field_a.a(-82, (long)((String) var2).hashCode());
+              L2: while (true) {
+                if (var3 == null) {
+                  var4 = -98 / ((param1 - -63) / 57);
+                  stackOut_16_0 = null;
+                  stackIn_17_0 = stackOut_16_0;
+                  break L0;
+                } else {
+                  L3: {
+                    var7 = (CharSequence) (Object) var3.field_ob;
+                    var4_ref_String = sf.a(-75, var7);
+                    if (var4_ref_String == null) {
+                      var4_ref_String = var3.field_ob;
+                      break L3;
+                    } else {
+                      break L3;
+                    }
+                  }
+                  if (!var4_ref_String.equals(var2)) {
+                    var3 = (tg) (Object) ml.field_a.a((byte) -36);
+                    continue L2;
+                  } else {
+                    stackOut_13_0 = (tg) var3;
+                    stackIn_14_0 = stackOut_13_0;
+                    return stackIn_14_0;
+                  }
+                }
               }
             } else {
-              var4_int = -98 / ((param1 - -63) / 57);
-              return null;
+              stackOut_2_0 = null;
+              stackIn_3_0 = stackOut_2_0;
+              return (tg) (Object) stackIn_3_0;
             }
           }
-        } else {
-          return null;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var2 = (Object) (Object) decompiledCaughtException;
+            stackOut_18_0 = var2;
+            stackOut_18_1 = new StringBuilder().append("gf.F(");
+            stackIn_20_0 = stackOut_18_0;
+            stackIn_20_1 = stackOut_18_1;
+            stackIn_19_0 = stackOut_18_0;
+            stackIn_19_1 = stackOut_18_1;
+            if (param0 == null) {
+              stackOut_20_0 = stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "null";
+              stackIn_21_0 = stackOut_20_0;
+              stackIn_21_1 = stackOut_20_1;
+              stackIn_21_2 = stackOut_20_2;
+              break L4;
+            } else {
+              stackOut_19_0 = stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "{...}";
+              stackIn_21_0 = stackOut_19_0;
+              stackIn_21_1 = stackOut_19_1;
+              stackIn_21_2 = stackOut_19_2;
+              break L4;
+            }
+          }
+          throw t.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 44 + param1 + 41);
         }
+        return (tg) (Object) stackIn_17_0;
     }
 
     final void c(int param0) {
@@ -436,11 +462,6 @@ final class gf {
 
     public static void b(int param0) {
         field_e = null;
-        if (param0 != 12474) {
-            field_a = -26;
-            field_b = null;
-            return;
-        }
         field_b = null;
     }
 

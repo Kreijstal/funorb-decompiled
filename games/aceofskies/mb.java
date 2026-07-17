@@ -9,18 +9,9 @@ final class mb extends he {
     private java.lang.ref.SoftReference field_r;
 
     public static void g(int param0) {
-        if (param0 != 255) {
-          field_u = (pa[]) null;
-          field_t = null;
-          field_s = null;
-          field_u = null;
-          return;
-        } else {
-          field_t = null;
-          field_s = null;
-          field_u = null;
-          return;
-        }
+        field_t = null;
+        field_s = null;
+        field_u = null;
     }
 
     final static void a(int param0, int param1, byte param2) {
@@ -43,39 +34,58 @@ final class mb extends he {
 
     mb(Object param0, int param1) {
         super(param1);
-        ((mb) this).field_r = new java.lang.ref.SoftReference(param0);
+        try {
+            try {
+                ((mb) this).field_r = new java.lang.ref.SoftReference(param0);
+            } catch (RuntimeException runtimeException) {
+                throw pn.a((Throwable) (Object) runtimeException, "mb.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+            throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+            throw new RuntimeException(decompiledCheckedException);
+        }
     }
 
     final static void c(byte param0) {
+        RuntimeException var1 = null;
         int var2 = 0;
+        RuntimeException decompiledCaughtException = null;
         var2 = AceOfSkies.field_G ? 1 : 0;
-        if (!bo.a((byte) 102)) {
-          if (null != jf.field_a) {
-            if (jf.field_a.field_b) {
-              tt.b(-32546);
-              hr.field_e.a((ea) (Object) new oq(hr.field_e, ro.field_r), 0);
+        try {
+          L0: {
+            if (!bo.a((byte) 102)) {
+              L1: {
+                if (null == jf.field_a) {
+                  break L1;
+                } else {
+                  if (!jf.field_a.field_b) {
+                    break L1;
+                  } else {
+                    tt.b(-32546);
+                    hr.field_e.a((ea) (Object) new oq(hr.field_e, ro.field_r), 0);
+                    break L1;
+                  }
+                }
+              }
               return;
             } else {
-              return;
-            }
-          } else {
-            return;
-          }
-        } else {
-          boolean discarded$11 = hr.field_e.a(ik.field_l, true, qo.field_d, true);
-          hr.field_e.f((byte) 33);
-          if (param0 >= 120) {
-            L0: while (true) {
-              if (ek.a((byte) -127)) {
-                boolean discarded$12 = hr.field_e.a(108, fr.field_e, bk.field_f);
-                continue L0;
-              } else {
-                return;
+              boolean discarded$7 = hr.field_e.a(ik.field_l, true, qo.field_d, true);
+              hr.field_e.f((byte) 33);
+              L2: while (true) {
+                if (!ek.a((byte) -127)) {
+                  break L0;
+                } else {
+                  boolean discarded$8 = hr.field_e.a(108, fr.field_e, bk.field_f);
+                  continue L2;
+                }
               }
             }
-          } else {
-            return;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw pn.a((Throwable) (Object) var1, "mb.F(" + 125 + 41);
         }
     }
 

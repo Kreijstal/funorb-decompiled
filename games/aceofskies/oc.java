@@ -13,7 +13,7 @@ final class oc extends wf {
 
     public static void a(byte param0) {
         field_g = null;
-        int var1 = -105 / ((param0 - 66) / 46);
+        int var1 = -105;
     }
 
     oc(int param0, int param1, int param2, int param3, int param4, int param5) {

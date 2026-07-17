@@ -10,18 +10,16 @@ final class db {
 
     public static void a(int param0) {
         field_a = null;
-        if (param0 < 8) {
-            field_a = null;
-            field_b = null;
-            field_d = null;
-            return;
-        }
         field_b = null;
         field_d = null;
     }
 
     final static void a(go param0, int param1, java.awt.Component param2, gd param3, int param4, boolean param5) {
-        kk.a(param1, param5, param1, (byte) 119, param2, param0, param4, param3);
+        try {
+            kk.a(param1, true, param1, (byte) 119, param2, param0, param4, param3);
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) (Object) runtimeException, "db.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + 1 + 41);
+        }
     }
 
     public final String toString() {

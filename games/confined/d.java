@@ -16,14 +16,7 @@ final class d {
         field_f = null;
         field_c = null;
         field_b = null;
-        if (param0 <= 44) {
-          field_b = null;
-          field_g = null;
-          return;
-        } else {
-          field_g = null;
-          return;
-        }
+        field_g = null;
     }
 
     static {

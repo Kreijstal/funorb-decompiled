@@ -16,7 +16,7 @@ final class sd extends tc {
     private static String field_z;
 
     public static void a(byte param0) {
-        int var1 = -111 / ((param0 - 44) / 53);
+        int var1 = 55;
         field_s = null;
         field_l = null;
         field_r = null;

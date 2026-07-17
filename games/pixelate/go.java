@@ -10,7 +10,7 @@ class go extends rg {
     static int field_k;
 
     final static int c(int param0) {
-        int var1 = -70 % ((param0 - 39) / 33);
+        int var1 = 0;
         return nf.field_c;
     }
 
@@ -67,7 +67,7 @@ class go extends rg {
         }
         L1: {
           var4 = 30 / ((param1 - 90) / 34);
-          if ((ce.field_d ^ -1) != -1) {
+          if (ce.field_d != 0) {
             break L1;
           } else {
             if (bn.field_S != null) {
@@ -79,7 +79,7 @@ class go extends rg {
           }
         }
         L2: {
-          if (-3 != (ce.field_d ^ -1)) {
+          if (ce.field_d != 2) {
             break L2;
           } else {
             if (ra.a((byte) -96)) {
@@ -93,7 +93,7 @@ class go extends rg {
         if (ke.field_a == 84) {
           L3: {
             if (var3 != 0) {
-              if (-1 > (mp.field_a.length() ^ -1)) {
+              if (mp.field_a.length() > 0) {
                 var5_ref_String = mp.field_a.toString();
                 var8 = var5_ref_String;
                 var8 = var5_ref_String;
@@ -109,7 +109,7 @@ class go extends rg {
                 } else {
                   L4: {
                     var6 = ce.field_d;
-                    if (-1 != (var6 ^ -1)) {
+                    if (var6 != 0) {
                       break L4;
                     } else {
                       if (io.field_c == null) {
@@ -136,7 +136,7 @@ class go extends rg {
                 break L3;
               }
             } else {
-              if ((ce.field_d ^ -1) != -1) {
+              if (ce.field_d != 0) {
                 nd.a((byte) 77);
                 break L3;
               } else {
@@ -148,7 +148,7 @@ class go extends rg {
         } else {
           if (ke.field_a == 85) {
             if (var3 != 0) {
-              if ((mp.field_a.length() ^ -1) < -1) {
+              if (mp.field_a.length() > 0) {
                 StringBuilder discarded$7 = nk.a(mp.field_a, -1 + mp.field_a.length(), ' ', 16736352);
                 return true;
               } else {
@@ -161,7 +161,7 @@ class go extends rg {
             var5 = nj.field_f;
             if (ii.a(1, (char) var5)) {
               if (var3 != 0) {
-                if (-81 < (mp.field_a.length() ^ -1)) {
+                if (mp.field_a.length() < 80) {
                   L5: {
                     StringBuilder discarded$8 = mp.field_a.append(var5);
                     var6 = 485;
@@ -185,7 +185,7 @@ class go extends rg {
                         break L5;
                       } else {
                         var6 = var6 - var11;
-                        if ((vl.field_Q.c(mp.field_a.toString()) ^ -1) >= (var6 ^ -1)) {
+                        if (~vl.field_Q.c(mp.field_a.toString()) >= ~var6) {
                           return true;
                         } else {
                           StringBuilder discarded$9 = nk.a(mp.field_a, -1 + mp.field_a.length(), ' ', 16736352);
@@ -195,7 +195,7 @@ class go extends rg {
                     } else {
                       L6: {
                         var8 = "";
-                        if (-1 != (ce.field_d ^ -1)) {
+                        if (ce.field_d != 0) {
                           break L6;
                         } else {
                           L7: {
@@ -215,7 +215,7 @@ class go extends rg {
                               var37 = "[" + sd.a(fk.field_q, 49, new String[1]) + "] ";
                               var38 = var37 + var33 + ": ";
                               var6 = var6 - vl.field_Q.c(var38);
-                              if ((vl.field_Q.c(mp.field_a.toString()) ^ -1) >= (var6 ^ -1)) {
+                              if (~vl.field_Q.c(mp.field_a.toString()) >= ~var6) {
                                 return true;
                               } else {
                                 StringBuilder discarded$10 = nk.a(mp.field_a, -1 + mp.field_a.length(), ' ', 16736352);
@@ -229,7 +229,7 @@ class go extends rg {
                                 var35 = "[" + sd.a(fk.field_q, 49, new String[1]) + "] ";
                                 var36 = var35 + var33 + ": ";
                                 var6 = var6 - vl.field_Q.c(var36);
-                                if ((vl.field_Q.c(mp.field_a.toString()) ^ -1) < (var6 ^ -1)) {
+                                if (~vl.field_Q.c(mp.field_a.toString()) < ~var6) {
                                   StringBuilder discarded$11 = nk.a(mp.field_a, -1 + mp.field_a.length(), ' ', 16736352);
                                   return true;
                                 } else {
@@ -246,7 +246,7 @@ class go extends rg {
                       }
                       var39 = var8 + var33 + ": ";
                       var6 = var6 - vl.field_Q.c(var39);
-                      if ((vl.field_Q.c(mp.field_a.toString()) ^ -1) >= (var6 ^ -1)) {
+                      if (~vl.field_Q.c(mp.field_a.toString()) >= ~var6) {
                         return true;
                       } else {
                         StringBuilder discarded$12 = nk.a(mp.field_a, -1 + mp.field_a.length(), ' ', 16736352);
@@ -254,7 +254,7 @@ class go extends rg {
                       }
                     }
                   }
-                  if ((vl.field_Q.c(mp.field_a.toString()) ^ -1) >= (var6 ^ -1)) {
+                  if (~vl.field_Q.c(mp.field_a.toString()) >= ~var6) {
                     return true;
                   } else {
                     StringBuilder discarded$13 = nk.a(mp.field_a, -1 + mp.field_a.length(), ' ', 16736352);
@@ -274,24 +274,20 @@ class go extends rg {
     }
 
     final void a(byte param0, we param1) {
-        if (param0 != -12) {
-          ((go) this).field_g = -108L;
-          param1.a(false, ((go) this).field_g);
-          param1.a(-129, ((go) this).field_j);
-          return;
-        } else {
-          param1.a(false, ((go) this).field_g);
-          param1.a(-129, ((go) this).field_j);
-          return;
+        try {
+            if (param0 != -12) {
+                ((go) this).field_g = -108L;
+            }
+            param1.a(false, ((go) this).field_g);
+            param1.a(-129, ((go) this).field_j);
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "go.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
     public static void a(byte param0) {
         field_i = null;
         field_h = null;
-        if (param0 < 44) {
-            field_k = 89;
-        }
     }
 
     final static wm a(int param0, int param1) {
@@ -300,30 +296,30 @@ class go extends rg {
         int var4 = 0;
         wm[] var5 = null;
         var4 = Pixelate.field_H ? 1 : 0;
-        if (param1 <= -50) {
-          var5 = dd.b((byte) 62);
-          var2 = var5;
-          var3 = 0;
-          L0: while (true) {
-            if (var5.length > var3) {
-              if (var5[var3].field_b == param0) {
-                return var5[var3];
-              } else {
-                var3++;
-                continue L0;
-              }
+        var5 = dd.b((byte) 62);
+        var2 = var5;
+        var3 = 0;
+        L0: while (true) {
+          if (var5.length > var3) {
+            if (var5[var3].field_b == param0) {
+              return var5[var3];
             } else {
-              return null;
+              var3++;
+              continue L0;
             }
+          } else {
+            return null;
           }
-        } else {
-          return null;
         }
     }
 
     go(long param0, String param1) {
-        ((go) this).field_j = param1;
-        ((go) this).field_g = param0;
+        try {
+            ((go) this).field_j = param1;
+            ((go) this).field_g = param0;
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "go.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

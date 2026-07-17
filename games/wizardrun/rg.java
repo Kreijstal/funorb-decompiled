@@ -194,7 +194,7 @@ abstract class rg extends tj {
     }
 
     void g(byte param0) {
-        if (-1 > (((rg) this).field_O ^ -1)) {
+        if (((rg) this).field_O > 0) {
           ((rg) this).a(6154, ((rg) this).field_M, ((rg) this).field_N);
           if (param0 != -3) {
             return;
@@ -245,7 +245,7 @@ abstract class rg extends tj {
         var7 = 0;
         var8 = param2;
         L0: while (true) {
-          if ((var4 ^ -1) >= (var7 ^ -1)) {
+          if (~var4 >= ~var7) {
             var6 = 169;
             var5 = 194;
             var4 = 22;
@@ -264,11 +264,11 @@ abstract class rg extends tj {
                 if (param1 != -1) {
                   rg.i(61);
                   L2: while (true) {
-                    if ((var7 ^ -1) <= (var4 ^ -1)) {
+                    if (~var7 <= ~var4) {
                       return;
                     } else {
                       var9 = var7 * (var6 - var5) / var4 + var5;
-                      var9 = var9 | (var9 << -813635792 | var9 << -1380555832);
+                      var9 = var9 | (var9 << 16 | var9 << 8);
                       ed.f(param0, var8, 6, var9);
                       ed.f(-6 + (param0 - -((rg) this).field_r), var8, 6, var9);
                       var7++;
@@ -278,11 +278,11 @@ abstract class rg extends tj {
                   }
                 } else {
                   L3: while (true) {
-                    if ((var7 ^ -1) <= (var4 ^ -1)) {
+                    if (~var7 <= ~var4) {
                       return;
                     } else {
                       var9 = var7 * (var6 - var5) / var4 + var5;
-                      var9 = var9 | (var9 << -813635792 | var9 << -1380555832);
+                      var9 = var9 | (var9 << 16 | var9 << 8);
                       ed.f(param0, var8, 6, var9);
                       ed.f(-6 + (param0 - -((rg) this).field_r), var8, 6, var9);
                       var7++;
@@ -293,7 +293,7 @@ abstract class rg extends tj {
                 }
               } else {
                 var9 = var5 + (-var5 + var6) * var7 / var4;
-                var9 = var9 | (var9 << 2003382472 | var9 << 628685072);
+                var9 = var9 | (var9 << 8 | var9 << 16);
                 ed.f(param0, var8, 6, var9);
                 ed.f(((rg) this).field_r + (param0 + -6), var8, 6, var9);
                 var8++;
@@ -302,19 +302,19 @@ abstract class rg extends tj {
               }
             }
           } else {
-            if ((var8 ^ -1) > (ed.field_i ^ -1)) {
+            if (~var8 > ~ed.field_i) {
               var7++;
               var8++;
               continue L0;
             } else {
-              if ((ed.field_b ^ -1) < (var8 ^ -1)) {
+              if (~ed.field_b < ~var8) {
                 L4: {
                   var9 = var7 * (var6 + -var5) / var4 + var5;
                   var10 = 0;
                   var11 = ((rg) this).field_r;
                   if (20 >= var7) {
                     L5: while (true) {
-                      if (-21 > (var10 ^ -1)) {
+                      if (var10 > 20) {
                         break L4;
                       } else {
                         L6: {
@@ -322,9 +322,9 @@ abstract class rg extends tj {
                           if (var12 > 462) {
                             break L6;
                           } else {
-                            if ((var12 ^ -1) <= -421) {
+                            if (var12 >= 420) {
                               var13 = (462 + -var12) * var9 / 42;
-                              var13 = var13 | (var13 << -1922040592 | var13 << -1323366616);
+                              var13 = var13 | (var13 << 16 | var13 << 8);
                               ed.field_k[var8 * ed.field_h + param0 - -var10] = var13;
                               break L6;
                             } else {
@@ -351,15 +351,15 @@ abstract class rg extends tj {
                           break L9;
                         } else {
                           var14 = (20 + -var7) * (-var7 + 20) + var13 * var13;
-                          if (-463 <= (var14 ^ -1)) {
-                            if (-421 < (var14 ^ -1)) {
+                          if (var14 <= 462) {
+                            if (var14 < 420) {
                               var12 = var11 - -1;
                               var13++;
                               var11++;
                               continue L8;
                             } else {
                               var15 = (462 - var14) * var9 / 42;
-                              var15 = var15 | (var15 << 1098962416 | var15 << -20939352);
+                              var15 = var15 | (var15 << 16 | var15 << 8);
                               ed.field_k[var11 + ed.field_h * var8 - -param0] = var15;
                               var13++;
                               var11++;
@@ -377,7 +377,7 @@ abstract class rg extends tj {
                     break L7;
                   }
                 }
-                var9 = var9 | (var9 << 2128477512 | var9 << -931083280);
+                var9 = var9 | (var9 << 8 | var9 << 16);
                 ed.f(var10 - -param0, var8, -var10 + var11, var9);
                 var7++;
                 var8++;
@@ -394,12 +394,7 @@ abstract class rg extends tj {
 
     boolean a(int param0) {
         ((rg) this).g((byte) -3);
-        if (param0 != 16) {
-          rg.i(-88);
-          return super.a(param0 + 0);
-        } else {
-          return super.a(param0 + 0);
-        }
+        return super.a(16);
     }
 
     boolean g(int param0) {

@@ -20,10 +20,6 @@ abstract class tk {
     ia field_h;
 
     final static int c(int param0) {
-        if (param0 != 1) {
-            field_e = false;
-            return 1;
-        }
         return 1;
     }
 
@@ -33,19 +29,19 @@ abstract class tk {
         int var8 = 0;
         var8 = Vertigo2.field_L ? 1 : 0;
         if (ir.field_d == 0) {
-          if (-1 > param2) {
+          if (param2 > 0) {
             s.field_t = new nj();
             if (param0 == -1) {
               ir.field_d = param2;
               il.field_e = param3;
               if (0 == bq.field_E) {
-                if (-1 < param1) {
+                if (param1 > 0) {
                   nj discarded$9 = new nj();
                   bq.field_E = param1;
                   wo.field_S = param4;
                   return;
                 } else {
-                  if (-1 != (param1 ^ -1)) {
+                  if (param1 != 0) {
                     bq.field_E = param1;
                     wo.field_S = param4;
                     return;
@@ -56,7 +52,7 @@ abstract class tk {
                   }
                 }
               } else {
-                if (-1 != param1) {
+                if (param1 != 0) {
                   bq.field_E = param1;
                   wo.field_S = param4;
                   return;
@@ -71,13 +67,13 @@ abstract class tk {
               ir.field_d = param2;
               il.field_e = param3;
               if (0 == bq.field_E) {
-                if (-1 < param1) {
+                if (param1 > 0) {
                   nj discarded$10 = new nj();
                   bq.field_E = param1;
                   wo.field_S = param4;
                   return;
                 } else {
-                  if (-1 != (param1 ^ -1)) {
+                  if (param1 != 0) {
                     bq.field_E = param1;
                     wo.field_S = param4;
                     return;
@@ -88,7 +84,7 @@ abstract class tk {
                   }
                 }
               } else {
-                if (-1 != param1) {
+                if (param1 != 0) {
                   bq.field_E = param1;
                   wo.field_S = param4;
                   return;
@@ -100,7 +96,7 @@ abstract class tk {
               }
             }
           } else {
-            if (-1 != param2) {
+            if (param2 != 0) {
               if (param0 == -1) {
                 L0: {
                   ir.field_d = param2;
@@ -108,7 +104,7 @@ abstract class tk {
                   if (0 != bq.field_E) {
                     break L0;
                   } else {
-                    if (-1 <= param1) {
+                    if (param1 <= 0) {
                       break L0;
                     } else {
                       nj discarded$11 = new nj();
@@ -118,7 +114,7 @@ abstract class tk {
                     }
                   }
                 }
-                if (-1 != param1) {
+                if (param1 != 0) {
                   bq.field_E = param1;
                   wo.field_S = param4;
                   return;
@@ -135,7 +131,7 @@ abstract class tk {
                   if (0 != bq.field_E) {
                     break L1;
                   } else {
-                    if (-1 <= param1) {
+                    if (param1 <= 0) {
                       break L1;
                     } else {
                       nj discarded$12 = new nj();
@@ -145,7 +141,7 @@ abstract class tk {
                     }
                   }
                 }
-                if (-1 != param1) {
+                if (param1 != 0) {
                   bq.field_E = param1;
                   wo.field_S = param4;
                   return;
@@ -164,7 +160,7 @@ abstract class tk {
                   if (0 != bq.field_E) {
                     break L2;
                   } else {
-                    if (-1 <= param1) {
+                    if (param1 <= 0) {
                       break L2;
                     } else {
                       nj discarded$13 = new nj();
@@ -174,7 +170,7 @@ abstract class tk {
                     }
                   }
                 }
-                if (-1 == param1) {
+                if (param1 != 0) {
                   bq.field_E = param1;
                   wo.field_S = param4;
                   return;
@@ -192,7 +188,7 @@ abstract class tk {
                     if (0 != bq.field_E) {
                       break L4;
                     } else {
-                      if (-1 <= param1) {
+                      if (param1 <= 0) {
                         break L4;
                       } else {
                         nj discarded$14 = new nj();
@@ -200,7 +196,7 @@ abstract class tk {
                       }
                     }
                   }
-                  if (-1 != param1) {
+                  if (param1 != 0) {
                     break L3;
                   } else {
                     break L3;
@@ -213,7 +209,7 @@ abstract class tk {
             }
           }
         } else {
-          if (-1 != (param2 ^ -1)) {
+          if (param2 != 0) {
             if (param0 == -1) {
               L5: {
                 ir.field_d = param2;
@@ -221,7 +217,7 @@ abstract class tk {
                 if (0 != bq.field_E) {
                   break L5;
                 } else {
-                  if (-1 <= param1) {
+                  if (param1 <= 0) {
                     break L5;
                   } else {
                     nj discarded$15 = new nj();
@@ -231,7 +227,7 @@ abstract class tk {
                   }
                 }
               }
-              if (-1 == param1) {
+              if (param1 != 0) {
                 bq.field_E = param1;
                 wo.field_S = param4;
                 return;
@@ -249,7 +245,7 @@ abstract class tk {
                   if (0 != bq.field_E) {
                     break L7;
                   } else {
-                    if (-1 <= param1) {
+                    if (param1 <= 0) {
                       break L7;
                     } else {
                       nj discarded$16 = new nj();
@@ -257,7 +253,7 @@ abstract class tk {
                     }
                   }
                 }
-                if (-1 != param1) {
+                if (param1 != 0) {
                   break L6;
                 } else {
                   break L6;
@@ -284,7 +280,7 @@ abstract class tk {
                 if (0 != bq.field_E) {
                   break L10;
                 } else {
-                  if (-1 <= param1) {
+                  if (param1 <= 0) {
                     break L10;
                   } else {
                     nj discarded$17 = new nj();
@@ -292,7 +288,7 @@ abstract class tk {
                   }
                 }
               }
-              if (-1 != param1) {
+              if (param1 != 0) {
                 break L9;
               } else {
                 break L9;
@@ -308,7 +304,7 @@ abstract class tk {
     final static boolean c(byte param0) {
         if (param0 < -28) {
           if (hn.field_w >= 10) {
-            if (-14 < (qc.field_A ^ -1)) {
+            if (qc.field_A < 13) {
               return false;
             } else {
               return true;
@@ -334,11 +330,62 @@ abstract class tk {
     }
 
     final static byte[] a(String param0, boolean param1) {
-        if (param1) {
-            field_p = null;
-            return re.field_a.a("", param0, 0);
+        RuntimeException var2 = null;
+        byte[] stackIn_1_0 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        byte[] stackOut_0_0 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
+        try {
+          L0: {
+            stackOut_0_0 = re.field_a.a("", param0, 0);
+            stackIn_1_0 = stackOut_0_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var2 = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var2;
+            stackOut_2_1 = new StringBuilder().append("tk.N(");
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
+            if (param0 == null) {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
+            }
+          }
+          throw wn.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 0 + 41);
         }
-        return re.field_a.a("", param0, 0);
+        return stackIn_1_0;
     }
 
     static int a(int param0, int param1) {
@@ -368,7 +415,7 @@ abstract class tk {
         int stackOut_2_1 = 0;
         if (!param4) {
           L0: {
-            var6 = ((long)param1 << 7817440) + (long)param0;
+            var6 = ((long)param1 << 32) + (long)param0;
             var8 = new ia();
             var8.field_B = param3;
             var8.field_n = var6;
@@ -408,7 +455,7 @@ abstract class tk {
         } else {
           L1: {
             field_c = null;
-            var6 = ((long)param1 << 7817440) + (long)param0;
+            var6 = ((long)param1 << 32) + (long)param0;
             var8 = new ia();
             var8.field_B = param3;
             var8.field_n = var6;
@@ -507,7 +554,7 @@ abstract class tk {
         if (param0 != 6) {
             return true;
         }
-        return -21 >= (((tk) this).b(-1) ^ -1) ? true : false;
+        return ((tk) this).b(-1) >= 20 ? true : false;
     }
 
     tk() {

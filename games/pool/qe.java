@@ -62,144 +62,114 @@ final class qe extends ma {
     }
 
     final static tc b(boolean param0) {
-        if (!param0) {
-            field_K = null;
-            return w.a(false, 1);
-        }
+        field_K = null;
         return w.a(false, 1);
     }
 
     final String a(int param0, al param1) {
-        String var3 = null;
+        RuntimeException var3 = null;
+        String var3_ref = null;
         int var4 = 0;
-        if (param0 == 1) {
+        String stackIn_17_0 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        String stackIn_21_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        String stackOut_16_0 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
+        try {
           L0: {
-            var3 = "Shot " + ((qe) this).field_v + " " + am.a(8, ((qe) this).field_q) + " player " + param1.field_h[((qe) this).field_L];
-            if (0 <= ((qe) this).field_M) {
-              var3 = var3 + " break seed " + ((qe) this).field_M;
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          var4 = ((qe) this).field_u;
-          if ((var4 ^ -1) != -3) {
-            if (-4 != (var4 ^ -1)) {
-              if (var4 == 1) {
-                L1: {
-                  var3 = var3 + " BiH kitchen";
-                  var3 = var3 + " before_group_on=" + ((qe) this).field_z;
-                  if (null != ((qe) this).field_T) {
-                    break L1;
-                  } else {
-                    var3 = var3 + " before state null!";
-                    break L1;
-                  }
-                }
-                return var3;
+            L1: {
+              if (param0 == 1) {
+                break L1;
               } else {
-                L2: {
-                  var3 = var3 + " before_group_on=" + ((qe) this).field_z;
-                  if (null != ((qe) this).field_T) {
-                    break L2;
-                  } else {
-                    var3 = var3 + " before state null!";
-                    break L2;
-                  }
-                }
-                return var3;
+                tc discarded$1 = qe.b(false);
+                break L1;
               }
-            } else {
-              L3: {
-                var3 = var3 + " BiH D";
-                var3 = var3 + " before_group_on=" + ((qe) this).field_z;
-                if (null != ((qe) this).field_T) {
-                  break L3;
-                } else {
-                  var3 = var3 + " before state null!";
-                  break L3;
-                }
-              }
-              return var3;
             }
-          } else {
+            L2: {
+              var3_ref = "Shot " + ((qe) this).field_v + " " + am.a(8, ((qe) this).field_q) + " player " + param1.field_h[((qe) this).field_L];
+              if (0 <= ((qe) this).field_M) {
+                var3_ref = var3_ref + " break seed " + ((qe) this).field_M;
+                break L2;
+              } else {
+                break L2;
+              }
+            }
+            L3: {
+              var4 = ((qe) this).field_u;
+              if (var4 != 2) {
+                if (var4 != 3) {
+                  if (var4 == 1) {
+                    var3_ref = var3_ref + " BiH kitchen";
+                    break L3;
+                  } else {
+                    break L3;
+                  }
+                } else {
+                  var3_ref = var3_ref + " BiH D";
+                  break L3;
+                }
+              } else {
+                var3_ref = var3_ref + " BiH anywhere";
+                break L3;
+              }
+            }
             L4: {
-              var3 = var3 + " BiH anywhere";
-              var3 = var3 + " before_group_on=" + ((qe) this).field_z;
+              var3_ref = var3_ref + " before_group_on=" + ((qe) this).field_z;
               if (null != ((qe) this).field_T) {
                 break L4;
               } else {
-                var3 = var3 + " before state null!";
+                var3_ref = var3_ref + " before state null!";
                 break L4;
               }
             }
-            return var3;
+            stackOut_16_0 = (String) var3_ref;
+            stackIn_17_0 = stackOut_16_0;
+            break L0;
           }
-        } else {
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
           L5: {
-            tc discarded$1 = qe.b(false);
-            var3 = "Shot " + ((qe) this).field_v + " " + am.a(8, ((qe) this).field_q) + " player " + param1.field_h[((qe) this).field_L];
-            if (0 <= ((qe) this).field_M) {
-              var3 = var3 + " break seed " + ((qe) this).field_M;
+            var3 = decompiledCaughtException;
+            stackOut_18_0 = (RuntimeException) var3;
+            stackOut_18_1 = new StringBuilder().append("qe.E(").append(param0).append(44);
+            stackIn_20_0 = stackOut_18_0;
+            stackIn_20_1 = stackOut_18_1;
+            stackIn_19_0 = stackOut_18_0;
+            stackIn_19_1 = stackOut_18_1;
+            if (param1 == null) {
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "null";
+              stackIn_21_0 = stackOut_20_0;
+              stackIn_21_1 = stackOut_20_1;
+              stackIn_21_2 = stackOut_20_2;
               break L5;
             } else {
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "{...}";
+              stackIn_21_0 = stackOut_19_0;
+              stackIn_21_1 = stackOut_19_1;
+              stackIn_21_2 = stackOut_19_2;
               break L5;
             }
           }
-          var4 = ((qe) this).field_u;
-          if ((var4 ^ -1) != -3) {
-            if (-4 != (var4 ^ -1)) {
-              if (var4 == 1) {
-                L6: {
-                  var3 = var3 + " BiH kitchen";
-                  var3 = var3 + " before_group_on=" + ((qe) this).field_z;
-                  if (null != ((qe) this).field_T) {
-                    break L6;
-                  } else {
-                    var3 = var3 + " before state null!";
-                    break L6;
-                  }
-                }
-                return var3;
-              } else {
-                L7: {
-                  var3 = var3 + " before_group_on=" + ((qe) this).field_z;
-                  if (null != ((qe) this).field_T) {
-                    break L7;
-                  } else {
-                    var3 = var3 + " before state null!";
-                    break L7;
-                  }
-                }
-                return var3;
-              }
-            } else {
-              L8: {
-                var3 = var3 + " BiH D";
-                var3 = var3 + " before_group_on=" + ((qe) this).field_z;
-                if (null != ((qe) this).field_T) {
-                  break L8;
-                } else {
-                  var3 = var3 + " before state null!";
-                  break L8;
-                }
-              }
-              return var3;
-            }
-          } else {
-            L9: {
-              var3 = var3 + " BiH anywhere";
-              var3 = var3 + " before_group_on=" + ((qe) this).field_z;
-              if (null != ((qe) this).field_T) {
-                break L9;
-              } else {
-                var3 = var3 + " before state null!";
-                break L9;
-              }
-            }
-            return var3;
-          }
+          throw wm.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 41);
         }
+        return stackIn_17_0;
     }
 
     final boolean a(int param0) {
@@ -222,7 +192,11 @@ final class qe extends ma {
         if (param1 != 0) {
             return;
         }
-        param0.a((int) ((qe) this).field_l, false);
+        try {
+            param0.a((int) ((qe) this).field_l, false);
+        } catch (RuntimeException runtimeException) {
+            throw wm.a((Throwable) (Object) runtimeException, "qe.U(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     public static void d(byte param0) {
@@ -242,20 +216,73 @@ final class qe extends ma {
     }
 
     final void a(int param0, int param1, int[] param2) {
-        L0: {
-          if (null == ((qe) this).field_R) {
-            ((qe) this).field_R = new ko();
-            break L0;
-          } else {
+        RuntimeException var4 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (null == ((qe) this).field_R) {
+                ((qe) this).field_R = new ko();
+                break L1;
+              } else {
+                break L1;
+              }
+            }
+            L2: {
+              ((qe) this).field_R.b((byte) 124, (ma) (Object) new dn(param0, param2));
+              if (param1 == -14) {
+                break L2;
+              } else {
+                field_S = null;
+                break L2;
+              }
+            }
             break L0;
           }
-        }
-        ((qe) this).field_R.b((byte) 124, (ma) (Object) new dn(param0, param2));
-        if (param1 != -14) {
-          field_S = null;
-          return;
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var4 = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var4;
+            stackOut_6_1 = new StringBuilder().append("qe.W(").append(param0).append(44).append(param1).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param2 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L3;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L3;
+            }
+          }
+          throw wm.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
         }
     }
 
@@ -268,122 +295,187 @@ final class qe extends ma {
     }
 
     final void b(byte param0, ge param1) {
-        L0: {
-          ((qe) this).a(param1.g(-105), true);
-          if (!((qe) this).d(117)) {
-            ((qe) this).field_q = 3;
-            break L0;
-          } else {
+        RuntimeException var3 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        try {
+          L0: {
+            L1: {
+              ((qe) this).a(param1.g(-105), true);
+              if (!((qe) this).d(117)) {
+                ((qe) this).field_q = 3;
+                break L1;
+              } else {
+                break L1;
+              }
+            }
+            L2: {
+              if (param0 > 13) {
+                break L2;
+              } else {
+                boolean discarded$2 = this.a(30, -70);
+                break L2;
+              }
+            }
             break L0;
           }
-        }
-        if (param0 <= 13) {
-          boolean discarded$2 = this.a(30, -70);
-          return;
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var3 = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var3;
+            stackOut_6_1 = new StringBuilder().append("qe.H(").append(param0).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param1 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L3;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L3;
+            }
+          }
+          throw wm.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3, byte param4, int param5) {
-        int var6 = 0;
+        RuntimeException var6 = null;
+        int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        L0: {
-          if (param5 >= qh.field_b) {
-            break L0;
-          } else {
-            param0 = param0 - (-param5 + qh.field_b);
-            param5 = qh.field_b;
-            break L0;
-          }
-        }
-        L1: {
-          if (param3 >= qh.field_c) {
-            break L1;
-          } else {
-            param1 = param1 - (-param3 + qh.field_c);
-            param3 = qh.field_c;
-            break L1;
-          }
-        }
-        L2: {
-          if (qh.field_j >= param0 + param5) {
-            break L2;
-          } else {
-            param0 = qh.field_j - param5;
-            break L2;
-          }
-        }
-        L3: {
-          if (qh.field_g >= param3 + param1) {
-            break L3;
-          } else {
-            param1 = qh.field_g + -param3;
-            break L3;
-          }
-        }
-        if (-1 > (param0 ^ -1)) {
-          if ((param1 ^ -1) < -1) {
-            var6 = param5 - -(qh.field_l * param3);
-            var7 = -param0 + qh.field_l;
-            param3 = -param1;
-            if (param4 >= 94) {
-              L4: while (true) {
-                if (0 <= param3) {
-                  return;
-                } else {
-                  param5 = -param0;
-                  L5: while (true) {
-                    if (0 <= param5) {
-                      var6 = var6 + var7;
-                      param3++;
-                      continue L4;
-                    } else {
-                      var8 = qh.field_d[var6];
-                      if (param2 < (65280 & var8) >> -2093264728) {
-                        if ((var8 & 65280) >> 1123533864 >= (var8 & 16711680) >> 8653456) {
-                          L6: {
-                            var9 = ((16711680 & var8) >> -946288753) - 60;
-                            if (-256 <= (var9 ^ -1)) {
-                              break L6;
-                            } else {
-                              var9 = 255;
-                              break L6;
-                            }
-                          }
-                          var10 = 65280 & var8;
-                          var10 = 65280 & (var10 >> 564463041) - (var10 >> 2095801381);
-                          var11 = (255 & var8) >> -249552189;
-                          qh.field_d[var6] = md.a(var11, md.a(var9 << -553475728, var10));
-                          var6++;
-                          param5++;
-                          continue L5;
-                        } else {
-                          var6++;
-                          param5++;
-                          continue L5;
-                        }
+        RuntimeException decompiledCaughtException = null;
+        try {
+          L0: {
+            L1: {
+              if (param5 >= qh.field_b) {
+                break L1;
+              } else {
+                param0 = param0 - (-param5 + qh.field_b);
+                param5 = qh.field_b;
+                break L1;
+              }
+            }
+            L2: {
+              if (param3 >= qh.field_c) {
+                break L2;
+              } else {
+                param1 = param1 - (-param3 + qh.field_c);
+                param3 = qh.field_c;
+                break L2;
+              }
+            }
+            L3: {
+              if (qh.field_j >= param0 + param5) {
+                break L3;
+              } else {
+                param0 = qh.field_j - param5;
+                break L3;
+              }
+            }
+            L4: {
+              if (qh.field_g >= param3 + param1) {
+                break L4;
+              } else {
+                param1 = qh.field_g + -param3;
+                break L4;
+              }
+            }
+            L5: {
+              if (param0 <= 0) {
+                break L5;
+              } else {
+                if (param1 > 0) {
+                  var6_int = param5 - -(qh.field_l * param3);
+                  var7 = -param0 + qh.field_l;
+                  param3 = -param1;
+                  if (param4 >= 94) {
+                    L6: while (true) {
+                      if (0 <= param3) {
+                        break L0;
                       } else {
-                        var6++;
-                        param5++;
-                        continue L5;
+                        param5 = -param0;
+                        L7: while (true) {
+                          if (0 <= param5) {
+                            var6_int = var6_int + var7;
+                            param3++;
+                            continue L6;
+                          } else {
+                            L8: {
+                              var8 = qh.field_d[var6_int];
+                              if (param2 >= (65280 & var8) >> 8) {
+                                break L8;
+                              } else {
+                                if ((var8 & 65280) >> 8 < (var8 & 16711680) >> 16) {
+                                  break L8;
+                                } else {
+                                  L9: {
+                                    var9 = ((16711680 & var8) >> 15) - 60;
+                                    if (var9 <= 255) {
+                                      break L9;
+                                    } else {
+                                      var9 = 255;
+                                      break L9;
+                                    }
+                                  }
+                                  var10 = 65280 & var8;
+                                  var10 = 65280 & (var10 >> 1) - (var10 >> 5);
+                                  var11 = (255 & var8) >> 3;
+                                  qh.field_d[var6_int] = md.a(var11, md.a(var9 << 16, var10));
+                                  break L8;
+                                }
+                              }
+                            }
+                            var6_int++;
+                            param5++;
+                            continue L7;
+                          }
+                        }
                       }
                     }
+                  } else {
+                    return;
                   }
+                } else {
+                  break L5;
                 }
               }
-            } else {
-              return;
             }
-          } else {
             return;
           }
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = decompiledCaughtException;
+          throw wm.a((Throwable) (Object) var6, "qe.P(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
     }
 
@@ -394,7 +486,7 @@ final class qe extends ma {
         int var5 = 0;
         var2 = param0;
         var3 = im.field_fc;
-        if (-6 >= (var3 ^ -1)) {
+        if (var3 >= 5) {
           if (var3 >= 105) {
             if (120 > var3) {
               L0: {
@@ -402,7 +494,7 @@ final class qe extends ma {
                 var2 = 8192 - var3 * (var3 * 8192) / 3300;
                 var4 = 1;
                 var5 = 0;
-                if (-2 == (param1 ^ -1)) {
+                if (param1 == 1) {
                   var5 = 1;
                   break L0;
                 } else {
@@ -410,7 +502,7 @@ final class qe extends ma {
                 }
               }
               L1: {
-                if ((param1 ^ -1) != -4) {
+                if (param1 != 3) {
                   break L1;
                 } else {
                   var4 = -1;
@@ -418,7 +510,7 @@ final class qe extends ma {
                 }
               }
               L2: {
-                if ((param1 ^ -1) == -5) {
+                if (param1 == 4) {
                   var5 = 1;
                   var4 = 1;
                   break L2;
@@ -427,7 +519,7 @@ final class qe extends ma {
                 }
               }
               L3: {
-                if (-6 == (param1 ^ -1)) {
+                if (param1 == 5) {
                   var4 = -1;
                   var5 = 1;
                   break L3;
@@ -449,7 +541,7 @@ final class qe extends ma {
                   if (param1 == 7) {
                     break L6;
                   } else {
-                    if ((param1 ^ -1) == -9) {
+                    if (param1 == 8) {
                       break L6;
                     } else {
                       break L5;
@@ -461,7 +553,7 @@ final class qe extends ma {
                 break L5;
               }
               L7: {
-                if (-12 == (param1 ^ -1)) {
+                if (param1 == 11) {
                   var4 = -1;
                   break L7;
                 } else {
@@ -469,7 +561,7 @@ final class qe extends ma {
                 }
               }
               L8: {
-                if (-13 == (param1 ^ -1)) {
+                if (param1 == 12) {
                   var4 = -1;
                   var5 = -1;
                   break L8;
@@ -478,7 +570,7 @@ final class qe extends ma {
                 }
               }
               L9: {
-                if ((param1 ^ -1) == -14) {
+                if (param1 == 13) {
                   var5 = -1;
                   var4 = 1;
                   break L9;
@@ -487,7 +579,7 @@ final class qe extends ma {
                 }
               }
               L10: {
-                if ((param1 ^ -1) == -15) {
+                if (param1 == 14) {
                   var5 = 1;
                   var4 = -1;
                   break L10;
@@ -510,7 +602,7 @@ final class qe extends ma {
               L12: {
                 var4 = 1;
                 var5 = 0;
-                if (-2 == (param1 ^ -1)) {
+                if (param1 == 1) {
                   var5 = 1;
                   break L12;
                 } else {
@@ -518,7 +610,7 @@ final class qe extends ma {
                 }
               }
               L13: {
-                if ((param1 ^ -1) != -4) {
+                if (param1 != 3) {
                   break L13;
                 } else {
                   var4 = -1;
@@ -526,7 +618,7 @@ final class qe extends ma {
                 }
               }
               L14: {
-                if ((param1 ^ -1) == -5) {
+                if (param1 == 4) {
                   var5 = 1;
                   var4 = 1;
                   break L14;
@@ -535,7 +627,7 @@ final class qe extends ma {
                 }
               }
               L15: {
-                if (-6 == (param1 ^ -1)) {
+                if (param1 == 5) {
                   var4 = -1;
                   var5 = 1;
                   break L15;
@@ -557,7 +649,7 @@ final class qe extends ma {
                   if (param1 == 7) {
                     break L18;
                   } else {
-                    if ((param1 ^ -1) == -9) {
+                    if (param1 == 8) {
                       break L18;
                     } else {
                       break L17;
@@ -569,7 +661,7 @@ final class qe extends ma {
                 break L17;
               }
               L19: {
-                if (-12 == (param1 ^ -1)) {
+                if (param1 == 11) {
                   var4 = -1;
                   break L19;
                 } else {
@@ -577,7 +669,7 @@ final class qe extends ma {
                 }
               }
               L20: {
-                if (-13 == (param1 ^ -1)) {
+                if (param1 == 12) {
                   var4 = -1;
                   var5 = -1;
                   break L20;
@@ -586,7 +678,7 @@ final class qe extends ma {
                 }
               }
               L21: {
-                if ((param1 ^ -1) == -14) {
+                if (param1 == 13) {
                   var5 = -1;
                   var4 = 1;
                   break L21;
@@ -595,7 +687,7 @@ final class qe extends ma {
                 }
               }
               L22: {
-                if ((param1 ^ -1) == -15) {
+                if (param1 == 14) {
                   var5 = 1;
                   var4 = -1;
                   break L22;
@@ -620,7 +712,7 @@ final class qe extends ma {
               var2 = (-40960 + 16384 * var3) / 220;
               var4 = 1;
               var5 = 0;
-              if (-2 == (param1 ^ -1)) {
+              if (param1 == 1) {
                 var5 = 1;
                 break L24;
               } else {
@@ -628,7 +720,7 @@ final class qe extends ma {
               }
             }
             L25: {
-              if ((param1 ^ -1) != -4) {
+              if (param1 != 3) {
                 break L25;
               } else {
                 var4 = -1;
@@ -636,7 +728,7 @@ final class qe extends ma {
               }
             }
             L26: {
-              if ((param1 ^ -1) == -5) {
+              if (param1 == 4) {
                 var5 = 1;
                 var4 = 1;
                 break L26;
@@ -645,7 +737,7 @@ final class qe extends ma {
               }
             }
             L27: {
-              if (-6 == (param1 ^ -1)) {
+              if (param1 == 5) {
                 var4 = -1;
                 var5 = 1;
                 break L27;
@@ -663,9 +755,9 @@ final class qe extends ma {
               }
             }
             if (param1 != 7) {
-              if ((param1 ^ -1) != -9) {
+              if (param1 != 8) {
                 L29: {
-                  if (-12 == (param1 ^ -1)) {
+                  if (param1 == 11) {
                     var4 = -1;
                     break L29;
                   } else {
@@ -673,7 +765,7 @@ final class qe extends ma {
                   }
                 }
                 L30: {
-                  if (-13 == (param1 ^ -1)) {
+                  if (param1 == 12) {
                     var4 = -1;
                     var5 = -1;
                     break L30;
@@ -682,7 +774,7 @@ final class qe extends ma {
                   }
                 }
                 L31: {
-                  if ((param1 ^ -1) == -14) {
+                  if (param1 == 13) {
                     var5 = -1;
                     var4 = 1;
                     break L31;
@@ -691,7 +783,7 @@ final class qe extends ma {
                   }
                 }
                 L32: {
-                  if ((param1 ^ -1) == -15) {
+                  if (param1 == 14) {
                     var5 = 1;
                     var4 = -1;
                     break L32;
@@ -714,7 +806,7 @@ final class qe extends ma {
                 L34: {
                   var4 = -1;
                   var5 = -1;
-                  if (-12 == (param1 ^ -1)) {
+                  if (param1 == 11) {
                     var4 = -1;
                     break L34;
                   } else {
@@ -722,7 +814,7 @@ final class qe extends ma {
                   }
                 }
                 L35: {
-                  if (-13 == (param1 ^ -1)) {
+                  if (param1 == 12) {
                     var4 = -1;
                     var5 = -1;
                     break L35;
@@ -731,7 +823,7 @@ final class qe extends ma {
                   }
                 }
                 L36: {
-                  if ((param1 ^ -1) == -14) {
+                  if (param1 == 13) {
                     var5 = -1;
                     var4 = 1;
                     break L36;
@@ -740,7 +832,7 @@ final class qe extends ma {
                   }
                 }
                 L37: {
-                  if ((param1 ^ -1) == -15) {
+                  if (param1 == 14) {
                     var5 = 1;
                     var4 = -1;
                     break L37;
@@ -764,7 +856,7 @@ final class qe extends ma {
               L39: {
                 var4 = -1;
                 var5 = -1;
-                if (-12 == (param1 ^ -1)) {
+                if (param1 == 11) {
                   var4 = -1;
                   break L39;
                 } else {
@@ -772,7 +864,7 @@ final class qe extends ma {
                 }
               }
               L40: {
-                if (-13 == (param1 ^ -1)) {
+                if (param1 == 12) {
                   var4 = -1;
                   var5 = -1;
                   break L40;
@@ -781,7 +873,7 @@ final class qe extends ma {
                 }
               }
               L41: {
-                if ((param1 ^ -1) == -14) {
+                if (param1 == 13) {
                   var5 = -1;
                   var4 = 1;
                   break L41;
@@ -790,7 +882,7 @@ final class qe extends ma {
                 }
               }
               L42: {
-                if ((param1 ^ -1) == -15) {
+                if (param1 == 14) {
                   var5 = 1;
                   var4 = -1;
                   break L42;
@@ -816,7 +908,7 @@ final class qe extends ma {
             var2 = var3 * var3 * 8192 / 1100;
             var4 = 1;
             var5 = 0;
-            if (-2 == (param1 ^ -1)) {
+            if (param1 == 1) {
               var5 = 1;
               break L44;
             } else {
@@ -824,7 +916,7 @@ final class qe extends ma {
             }
           }
           L45: {
-            if ((param1 ^ -1) != -4) {
+            if (param1 != 3) {
               break L45;
             } else {
               var4 = -1;
@@ -832,7 +924,7 @@ final class qe extends ma {
             }
           }
           L46: {
-            if ((param1 ^ -1) == -5) {
+            if (param1 == 4) {
               var5 = 1;
               var4 = 1;
               break L46;
@@ -841,7 +933,7 @@ final class qe extends ma {
             }
           }
           L47: {
-            if (-6 == (param1 ^ -1)) {
+            if (param1 == 5) {
               var4 = -1;
               var5 = 1;
               break L47;
@@ -859,9 +951,9 @@ final class qe extends ma {
             }
           }
           if (param1 != 7) {
-            if ((param1 ^ -1) != -9) {
+            if (param1 != 8) {
               L49: {
-                if (-12 == (param1 ^ -1)) {
+                if (param1 == 11) {
                   var4 = -1;
                   break L49;
                 } else {
@@ -869,7 +961,7 @@ final class qe extends ma {
                 }
               }
               L50: {
-                if (-13 == (param1 ^ -1)) {
+                if (param1 == 12) {
                   var4 = -1;
                   var5 = -1;
                   break L50;
@@ -878,7 +970,7 @@ final class qe extends ma {
                 }
               }
               L51: {
-                if ((param1 ^ -1) == -14) {
+                if (param1 == 13) {
                   var5 = -1;
                   var4 = 1;
                   break L51;
@@ -887,7 +979,7 @@ final class qe extends ma {
                 }
               }
               L52: {
-                if ((param1 ^ -1) == -15) {
+                if (param1 == 14) {
                   var5 = 1;
                   var4 = -1;
                   break L52;
@@ -910,7 +1002,7 @@ final class qe extends ma {
               L54: {
                 var4 = -1;
                 var5 = -1;
-                if (-12 == (param1 ^ -1)) {
+                if (param1 == 11) {
                   var4 = -1;
                   break L54;
                 } else {
@@ -918,7 +1010,7 @@ final class qe extends ma {
                 }
               }
               L55: {
-                if (-13 == (param1 ^ -1)) {
+                if (param1 == 12) {
                   var4 = -1;
                   var5 = -1;
                   break L55;
@@ -927,7 +1019,7 @@ final class qe extends ma {
                 }
               }
               L56: {
-                if ((param1 ^ -1) == -14) {
+                if (param1 == 13) {
                   var5 = -1;
                   var4 = 1;
                   break L56;
@@ -936,7 +1028,7 @@ final class qe extends ma {
                 }
               }
               L57: {
-                if ((param1 ^ -1) == -15) {
+                if (param1 == 14) {
                   var5 = 1;
                   var4 = -1;
                   break L57;
@@ -960,7 +1052,7 @@ final class qe extends ma {
             L59: {
               var4 = -1;
               var5 = -1;
-              if (-12 == (param1 ^ -1)) {
+              if (param1 == 11) {
                 var4 = -1;
                 break L59;
               } else {
@@ -968,7 +1060,7 @@ final class qe extends ma {
               }
             }
             L60: {
-              if (-13 == (param1 ^ -1)) {
+              if (param1 == 12) {
                 var4 = -1;
                 var5 = -1;
                 break L60;
@@ -977,7 +1069,7 @@ final class qe extends ma {
               }
             }
             L61: {
-              if ((param1 ^ -1) == -14) {
+              if (param1 == 13) {
                 var5 = -1;
                 var4 = 1;
                 break L61;
@@ -986,7 +1078,7 @@ final class qe extends ma {
               }
             }
             L62: {
-              if ((param1 ^ -1) == -15) {
+              if (param1 == 14) {
                 var5 = 1;
                 var4 = -1;
                 break L62;
@@ -1010,160 +1102,211 @@ final class qe extends ma {
     }
 
     final byte c(byte param0, ge param1) {
-        int var3 = 0;
+        RuntimeException var3 = null;
+        int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int stackIn_18_0 = 0;
-        int stackIn_35_0 = 0;
-        int stackOut_33_0 = 0;
-        int stackOut_34_0 = 0;
-        int stackOut_17_0 = 0;
+        int stackIn_11_0 = 0;
+        int stackIn_13_0 = 0;
+        int stackIn_17_0 = 0;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        String stackIn_21_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int stackOut_16_0 = 0;
-        if (param0 == -28) {
-          var3 = param1.g(-78) & 255;
-          if ((((qe) this).field_v & 255) == var3) {
-            var4 = param1.d((byte) -80);
-            var5 = param1.d((byte) -108);
-            var6 = param1.d((byte) -103);
-            var7 = param1.e((byte) 105);
-            var8 = param1.e((byte) 105);
-            if (((qe) this).field_q != 0) {
-              L0: {
-                L1: {
-                  if (((qe) this).field_C != var4) {
-                    break L1;
-                  } else {
-                    if (var5 != ((qe) this).field_A) {
-                      break L1;
+        int stackOut_12_0 = 0;
+        int stackOut_9_0 = 0;
+        int stackOut_10_0 = 0;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 == -28) {
+                break L1;
+              } else {
+                ((qe) this).field_T = null;
+                break L1;
+              }
+            }
+            var3_int = param1.g(-78) & 255;
+            if ((((qe) this).field_v & 255) != var3_int) {
+              param1.field_v = param1.field_v + 6;
+              if (var3_int < ((qe) this).field_v - 1) {
+                System.out.println("Read the wrong move packet. Wanted " + ((qe) this).field_v + ", but got " + var3_int);
+                stackOut_16_0 = 1;
+                stackIn_17_0 = stackOut_16_0;
+                break L0;
+              } else {
+                return (byte) 1;
+              }
+            } else {
+              var4 = param1.d((byte) -80);
+              var5 = param1.d((byte) -108);
+              var6 = param1.d((byte) -103);
+              var7 = param1.e((byte) 105);
+              var8 = param1.e((byte) 105);
+              if (((qe) this).field_q == 0) {
+                ((qe) this).field_D = (byte)var7;
+                ((qe) this).field_H = (byte)var8;
+                ((qe) this).field_C = (short)var4;
+                ((qe) this).field_V = (short)var6;
+                ((qe) this).field_A = (short)var5;
+                stackOut_12_0 = 0;
+                stackIn_13_0 = stackOut_12_0;
+                return (byte) stackIn_13_0;
+              } else {
+                L2: {
+                  L3: {
+                    if (((qe) this).field_C != var4) {
+                      break L3;
                     } else {
-                      if (var6 != ((qe) this).field_V) {
-                        break L1;
+                      if (var5 != ((qe) this).field_A) {
+                        break L3;
                       } else {
-                        if (((qe) this).field_D != var7) {
-                          break L1;
+                        if (var6 != ((qe) this).field_V) {
+                          break L3;
                         } else {
-                          if (var8 != ((qe) this).field_H) {
-                            break L1;
+                          if (((qe) this).field_D != var7) {
+                            break L3;
                           } else {
-                            stackOut_33_0 = 0;
-                            stackIn_35_0 = stackOut_33_0;
-                            break L0;
+                            if (var8 != ((qe) this).field_H) {
+                              break L3;
+                            } else {
+                              stackOut_9_0 = 0;
+                              stackIn_11_0 = stackOut_9_0;
+                              break L2;
+                            }
                           }
                         }
                       }
                     }
                   }
+                  stackOut_10_0 = 2;
+                  stackIn_11_0 = stackOut_10_0;
+                  break L2;
                 }
-                stackOut_34_0 = 2;
-                stackIn_35_0 = stackOut_34_0;
-                break L0;
-              }
-              return (byte) stackIn_35_0;
-            } else {
-              ((qe) this).field_D = (byte)var7;
-              ((qe) this).field_H = (byte)var8;
-              ((qe) this).field_C = (short)var4;
-              ((qe) this).field_V = (short)var6;
-              ((qe) this).field_A = (short)var5;
-              return (byte) 0;
-            }
-          } else {
-            L2: {
-              param1.field_v = param1.field_v + 6;
-              if (var3 < ((qe) this).field_v - 1) {
-                System.out.println("Read the wrong move packet. Wanted " + ((qe) this).field_v + ", but got " + var3);
-                break L2;
-              } else {
-                break L2;
+                return (byte) stackIn_11_0;
               }
             }
-            return (byte) 1;
           }
-        } else {
-          ((qe) this).field_T = null;
-          var3 = param1.g(-78) & 255;
-          if ((((qe) this).field_v & 255) == var3) {
-            var4 = param1.d((byte) -80);
-            var5 = param1.d((byte) -108);
-            var6 = param1.d((byte) -103);
-            var7 = param1.e((byte) 105);
-            var8 = param1.e((byte) 105);
-            if (((qe) this).field_q != 0) {
-              if (((qe) this).field_C == var4) {
-                if (var5 == ((qe) this).field_A) {
-                  if (var6 == ((qe) this).field_V) {
-                    if (((qe) this).field_D != var7) {
-                      return (byte) 2;
-                    } else {
-                      L3: {
-                        if (var8 != ((qe) this).field_H) {
-                          stackOut_17_0 = 2;
-                          stackIn_18_0 = stackOut_17_0;
-                          break L3;
-                        } else {
-                          stackOut_16_0 = 0;
-                          stackIn_18_0 = stackOut_16_0;
-                          break L3;
-                        }
-                      }
-                      return (byte) stackIn_18_0;
-                    }
-                  } else {
-                    return (byte) 2;
-                  }
-                } else {
-                  return (byte) 2;
-                }
-              } else {
-                return (byte) 2;
-              }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var3 = decompiledCaughtException;
+            stackOut_18_0 = (RuntimeException) var3;
+            stackOut_18_1 = new StringBuilder().append("qe.J(").append(param0).append(44);
+            stackIn_20_0 = stackOut_18_0;
+            stackIn_20_1 = stackOut_18_1;
+            stackIn_19_0 = stackOut_18_0;
+            stackIn_19_1 = stackOut_18_1;
+            if (param1 == null) {
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "null";
+              stackIn_21_0 = stackOut_20_0;
+              stackIn_21_1 = stackOut_20_1;
+              stackIn_21_2 = stackOut_20_2;
+              break L4;
             } else {
-              ((qe) this).field_D = (byte)var7;
-              ((qe) this).field_H = (byte)var8;
-              ((qe) this).field_C = (short)var4;
-              ((qe) this).field_V = (short)var6;
-              ((qe) this).field_A = (short)var5;
-              return (byte) 0;
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "{...}";
+              stackIn_21_0 = stackOut_19_0;
+              stackIn_21_1 = stackOut_19_1;
+              stackIn_21_2 = stackOut_19_2;
+              break L4;
             }
-          } else {
-            L4: {
-              param1.field_v = param1.field_v + 6;
-              if (var3 < ((qe) this).field_v - 1) {
-                System.out.println("Read the wrong move packet. Wanted " + ((qe) this).field_v + ", but got " + var3);
-                break L4;
-              } else {
-                break L4;
-              }
-            }
-            return (byte) 1;
           }
+          throw wm.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 41);
         }
+        return (byte) stackIn_17_0;
     }
 
     final void b(ge param0, byte param1) {
-        if (((qe) this).field_q == 2) {
-          param0.b(((qe) this).field_s, 66);
-          if (param1 >= -65) {
-            String discarded$4 = qe.a(false, 'ﾨ');
-            return;
-          } else {
-            return;
-          }
-        } else {
-          if (3 == ((qe) this).field_q) {
-            param0.b(((qe) this).field_s, 66);
-            if (param1 < -65) {
-              return;
-            } else {
-              String discarded$5 = qe.a(false, 'ﾨ');
-              return;
+        RuntimeException var3 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (((qe) this).field_q == 2) {
+                break L1;
+              } else {
+                if (3 != ((qe) this).field_q) {
+                  throw new IllegalStateException("Can't write an end resolution until the shot is finished");
+                } else {
+                  break L1;
+                }
+              }
             }
-          } else {
-            throw new IllegalStateException("Can't write an end resolution until the shot is finished");
+            L2: {
+              param0.b(((qe) this).field_s, 66);
+              if (param1 < -65) {
+                break L2;
+              } else {
+                String discarded$2 = qe.a(false, 'ﾨ');
+                break L2;
+              }
+            }
+            break L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var3 = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var3;
+            stackOut_7_1 = new StringBuilder().append("qe.N(");
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param0 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L3;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L3;
+            }
+          }
+          throw wm.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 41);
         }
     }
 
@@ -1171,7 +1314,7 @@ final class qe extends ma {
         String var2 = null;
         L0: {
           var2 = "end choice: ";
-          if (-1 != (((qe) this).field_l & 1 ^ -1)) {
+          if ((((qe) this).field_l & 1) != 0) {
             var2 = var2 + "; group 0";
             break L0;
           } else {
@@ -1251,26 +1394,23 @@ final class qe extends ma {
     }
 
     final void a(al param0, ge param1, int param2) {
-        al var4 = null;
-        ge var4_ref = null;
-        pq var5 = null;
         al var6 = null;
-        var6 = param0;
-        var4 = var6;
-        var5 = var6.field_l[0];
-        ((qe) this).field_Q = var5.field_k;
-        ((qe) this).field_P = var5.field_g;
-        if (param2 != -7478) {
-          ((qe) this).field_t = false;
-          var4_ref = param1;
-          var4_ref.a(true, ((qe) this).field_P);
-          var4_ref.a(true, ((qe) this).field_Q);
-          return;
-        } else {
-          var4_ref = param1;
-          var4_ref.a(true, ((qe) this).field_P);
-          var4_ref.a(true, ((qe) this).field_Q);
-          return;
+        pq var5 = null;
+        ge var4_ref = null;
+        try {
+            var6 = param0;
+            al var4 = var6;
+            var5 = var6.field_l[0];
+            ((qe) this).field_Q = var5.field_k;
+            ((qe) this).field_P = var5.field_g;
+            if (param2 != -7478) {
+                ((qe) this).field_t = false;
+            }
+            var4_ref = param1;
+            var4_ref.a(true, ((qe) this).field_P);
+            var4_ref.a(true, ((qe) this).field_Q);
+        } catch (RuntimeException runtimeException) {
+            throw wm.a((Throwable) (Object) runtimeException, "qe.K(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
     }
 
@@ -1340,7 +1480,7 @@ final class qe extends ma {
     final boolean c(boolean param0) {
         if (param0) {
           if (0 != (oa.field_b & ((qe) this).field_s)) {
-            if (-1 != (3 & ((qe) this).field_l ^ -1)) {
+            if ((3 & ((qe) this).field_l) != 0) {
               return false;
             } else {
               return true;
@@ -1372,7 +1512,7 @@ final class qe extends ma {
             stackOut_6_0 = (StringBuilder) (Object) stackIn_6_0;
             stackIn_8_0 = stackOut_6_0;
             stackIn_7_0 = stackOut_6_0;
-            if ((((qe) this).field_Q ^ -1) == 0) {
+            if (((qe) this).field_Q == -1) {
               return "";
             } else {
               return " cueball@" + ((qe) this).field_P + "," + ((qe) this).field_Q;
@@ -1394,28 +1534,28 @@ final class qe extends ma {
         int var4 = 0;
         L0: {
           var4 = Pool.field_O;
-          if (-1 == (oa.field_b & ((qe) this).field_s ^ -1)) {
+          if ((oa.field_b & ((qe) this).field_s) == 0) {
             break L0;
           } else {
-            if ((3 & param0 ^ -1) != -1) {
+            if ((3 & param0) != 0) {
               var3 = ((qe) this).field_l & 3;
-              if (-1 == (var3 ^ -1)) {
+              if (var3 == 0) {
                 var3 = param0;
                 ((qe) this).field_l = (byte)(((qe) this).field_l | param0);
                 break L0;
               } else {
-                if ((var3 ^ -1) != (param0 ^ -1)) {
+                if (~var3 != ~param0) {
                   throw new IllegalStateException("Already made another group choice!");
                 } else {
                   L1: {
-                    if ((ab.field_g & ((qe) this).field_s ^ -1) == -1) {
+                    if ((ab.field_g & ((qe) this).field_s) == 0) {
                       break L1;
                     } else {
-                      if ((param0 & 24 ^ -1) == -1) {
+                      if ((param0 & 24) == 0) {
                         break L1;
                       } else {
                         var3 = ((qe) this).field_l & 24;
-                        if ((var3 ^ -1) == -1) {
+                        if (var3 == 0) {
                           var3 = param0;
                           ((qe) this).field_l = (byte)(((qe) this).field_l | param0);
                           break L1;
@@ -1430,10 +1570,10 @@ final class qe extends ma {
                     }
                   }
                   L2: {
-                    if (-1 == (a.field_d & ((qe) this).field_s ^ -1)) {
+                    if ((a.field_d & ((qe) this).field_s) == 0) {
                       break L2;
                     } else {
-                      if (-1 == (96 & param0 ^ -1)) {
+                      if ((96 & param0) == 0) {
                         break L2;
                       } else {
                         L3: {
@@ -1450,7 +1590,7 @@ final class qe extends ma {
                             }
                           }
                         }
-                        if ((var3 ^ -1) != (param0 ^ -1)) {
+                        if (~var3 != ~param0) {
                           throw new IllegalStateException("Already made another opponent play/pass choice!");
                         } else {
                           break L2;
@@ -1479,11 +1619,11 @@ final class qe extends ma {
                 }
               }
             } else {
-              if ((ab.field_g & ((qe) this).field_s ^ -1) != -1) {
-                if ((param0 & 24 ^ -1) != -1) {
+              if ((ab.field_g & ((qe) this).field_s) != 0) {
+                if ((param0 & 24) != 0) {
                   L5: {
                     var3 = ((qe) this).field_l & 24;
-                    if ((var3 ^ -1) == -1) {
+                    if (var3 == 0) {
                       var3 = param0;
                       ((qe) this).field_l = (byte)(((qe) this).field_l | param0);
                       break L5;
@@ -1496,10 +1636,10 @@ final class qe extends ma {
                     }
                   }
                   L6: {
-                    if (-1 == (a.field_d & ((qe) this).field_s ^ -1)) {
+                    if ((a.field_d & ((qe) this).field_s) == 0) {
                       break L6;
                     } else {
-                      if (-1 == (96 & param0 ^ -1)) {
+                      if ((96 & param0) == 0) {
                         break L6;
                       } else {
                         L7: {
@@ -1516,7 +1656,7 @@ final class qe extends ma {
                             }
                           }
                         }
-                        if ((var3 ^ -1) != (param0 ^ -1)) {
+                        if (~var3 != ~param0) {
                           throw new IllegalStateException("Already made another opponent play/pass choice!");
                         } else {
                           break L6;
@@ -1547,10 +1687,10 @@ final class qe extends ma {
                   throw new IllegalStateException("Can't make a choice now!");
                 } else {
                   L10: {
-                    if (-1 == (a.field_d & ((qe) this).field_s ^ -1)) {
+                    if ((a.field_d & ((qe) this).field_s) == 0) {
                       break L10;
                     } else {
-                      if (-1 == (96 & param0 ^ -1)) {
+                      if ((96 & param0) == 0) {
                         break L10;
                       } else {
                         L11: {
@@ -1567,7 +1707,7 @@ final class qe extends ma {
                             }
                           }
                         }
-                        if ((var3 ^ -1) != (param0 ^ -1)) {
+                        if (~var3 != ~param0) {
                           throw new IllegalStateException("Already made another opponent play/pass choice!");
                         } else {
                           break L10;
@@ -1599,10 +1739,10 @@ final class qe extends ma {
                 }
               } else {
                 L14: {
-                  if (-1 == (a.field_d & ((qe) this).field_s ^ -1)) {
+                  if ((a.field_d & ((qe) this).field_s) == 0) {
                     break L14;
                   } else {
-                    if (-1 == (96 & param0 ^ -1)) {
+                    if ((96 & param0) == 0) {
                       break L14;
                     } else {
                       L15: {
@@ -1619,7 +1759,7 @@ final class qe extends ma {
                           }
                         }
                       }
-                      if ((var3 ^ -1) != (param0 ^ -1)) {
+                      if (~var3 != ~param0) {
                         throw new IllegalStateException("Already made another opponent play/pass choice!");
                       } else {
                         break L14;
@@ -1652,17 +1792,17 @@ final class qe extends ma {
             }
           }
         }
-        if ((ab.field_g & ((qe) this).field_s ^ -1) != -1) {
-          if ((param0 & 24 ^ -1) != -1) {
+        if ((ab.field_g & ((qe) this).field_s) != 0) {
+          if ((param0 & 24) != 0) {
             var3 = ((qe) this).field_l & 24;
-            if ((var3 ^ -1) == -1) {
+            if (var3 == 0) {
               L18: {
                 var3 = param0;
                 ((qe) this).field_l = (byte)(((qe) this).field_l | param0);
-                if (-1 == (a.field_d & ((qe) this).field_s ^ -1)) {
+                if ((a.field_d & ((qe) this).field_s) == 0) {
                   break L18;
                 } else {
-                  if (-1 == (96 & param0 ^ -1)) {
+                  if ((96 & param0) == 0) {
                     break L18;
                   } else {
                     L19: {
@@ -1679,7 +1819,7 @@ final class qe extends ma {
                         }
                       }
                     }
-                    if ((var3 ^ -1) != (param0 ^ -1)) {
+                    if (~var3 != ~param0) {
                       throw new IllegalStateException("Already made another opponent play/pass choice!");
                     } else {
                       if (!this.a(-28872, param0)) {
@@ -1721,10 +1861,10 @@ final class qe extends ma {
                 throw new IllegalStateException("Already made another play/pass choice!");
               } else {
                 L20: {
-                  if (-1 == (a.field_d & ((qe) this).field_s ^ -1)) {
+                  if ((a.field_d & ((qe) this).field_s) == 0) {
                     break L20;
                   } else {
-                    if (-1 == (96 & param0 ^ -1)) {
+                    if ((96 & param0) == 0) {
                       break L20;
                     } else {
                       L21: {
@@ -1741,7 +1881,7 @@ final class qe extends ma {
                           }
                         }
                       }
-                      if ((var3 ^ -1) != (param0 ^ -1)) {
+                      if (~var3 != ~param0) {
                         throw new IllegalStateException("Already made another opponent play/pass choice!");
                       } else {
                         L22: {
@@ -1788,10 +1928,10 @@ final class qe extends ma {
             }
           } else {
             L24: {
-              if (-1 == (a.field_d & ((qe) this).field_s ^ -1)) {
+              if ((a.field_d & ((qe) this).field_s) == 0) {
                 break L24;
               } else {
-                if (-1 == (96 & param0 ^ -1)) {
+                if ((96 & param0) == 0) {
                   break L24;
                 } else {
                   L25: {
@@ -1808,7 +1948,7 @@ final class qe extends ma {
                       }
                     }
                   }
-                  if ((var3 ^ -1) != (param0 ^ -1)) {
+                  if (~var3 != ~param0) {
                     throw new IllegalStateException("Already made another opponent play/pass choice!");
                   } else {
                     if (!this.a(-28872, param0)) {
@@ -1848,10 +1988,10 @@ final class qe extends ma {
           }
         } else {
           L26: {
-            if (-1 == (a.field_d & ((qe) this).field_s ^ -1)) {
+            if ((a.field_d & ((qe) this).field_s) == 0) {
               break L26;
             } else {
-              if (-1 == (96 & param0 ^ -1)) {
+              if ((96 & param0) == 0) {
                 break L26;
               } else {
                 L27: {
@@ -1868,7 +2008,7 @@ final class qe extends ma {
                     }
                   }
                 }
-                if ((var3 ^ -1) != (param0 ^ -1)) {
+                if (~var3 != ~param0) {
                   throw new IllegalStateException("Already made another opponent play/pass choice!");
                 } else {
                   if (!this.a(-28872, param0)) {
@@ -1933,21 +2073,71 @@ final class qe extends ma {
     }
 
     final void a(byte param0, ge param1) {
-        int var3 = 0;
-        var3 = param1.f(98);
-        if (param0 < 76) {
-          return;
-        } else {
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        try {
           L0: {
-            ((qe) this).c(2, var3);
-            if ((pd.field_i & 2097152L) != 0L) {
-              System.out.println("->S2C_END_SHOT: " + ab.a(((qe) this).field_s, (byte) 10));
+            var3_int = param1.f(98);
+            if (param0 >= 76) {
+              L1: {
+                ((qe) this).c(2, var3_int);
+                if ((pd.field_i & 2097152L) != 0L) {
+                  System.out.println("->S2C_END_SHOT: " + ab.a(((qe) this).field_s, (byte) 10));
+                  break L1;
+                } else {
+                  break L1;
+                }
+              }
               break L0;
             } else {
-              break L0;
+              return;
             }
           }
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var3;
+            stackOut_6_1 = new StringBuilder().append("qe.F(").append(param0).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param1 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L2;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L2;
+            }
+          }
+          throw wm.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
         }
     }
 
@@ -1955,7 +2145,7 @@ final class qe extends ma {
         if (param0) {
             return null;
         }
-        return String.valueOf(param1);
+        return String.valueOf('ﾨ');
     }
 
     final void c(int param0, int param1) {
@@ -2016,15 +2206,15 @@ final class qe extends ma {
         int stackOut_15_0 = 0;
         int stackOut_20_0 = 0;
         int stackOut_19_0 = 0;
-        if ((((qe) this).field_s & oa.field_b ^ -1) != -1) {
+        if ((((qe) this).field_s & oa.field_b) != 0) {
           if ((param1 & 3) != 0) {
             L0: {
-              if (-1 == (3 & ((qe) this).field_l ^ -1)) {
+              if ((3 & ((qe) this).field_l) == 0) {
                 stackOut_71_0 = 1;
                 stackIn_73_0 = stackOut_71_0;
                 break L0;
               } else {
-                if ((3 & ((qe) this).field_l ^ -1) != (param1 ^ -1)) {
+                if (~(3 & ((qe) this).field_l) != ~param1) {
                   stackOut_72_0 = 0;
                   stackIn_73_0 = stackOut_72_0;
                   break L0;
@@ -2063,7 +2253,7 @@ final class qe extends ma {
             }
             if (param0 == -28872) {
               L3: {
-                if ((((qe) this).field_s & a.field_d ^ -1) == -1) {
+                if ((((qe) this).field_s & a.field_d) == 0) {
                   break L3;
                 } else {
                   if ((param1 & 96) == 0) {
@@ -2089,7 +2279,7 @@ final class qe extends ma {
                 }
               }
               L5: {
-                if ((param1 ^ -1) != -1) {
+                if (param1 != 0) {
                   stackOut_66_0 = 0;
                   stackIn_67_0 = stackOut_66_0;
                   break L5;
@@ -2103,7 +2293,7 @@ final class qe extends ma {
             } else {
               L6: {
                 ((qe) this).field_A = (short) 5;
-                if ((((qe) this).field_s & a.field_d ^ -1) == -1) {
+                if ((((qe) this).field_s & a.field_d) == 0) {
                   break L6;
                 } else {
                   if ((param1 & 96) == 0) {
@@ -2129,7 +2319,7 @@ final class qe extends ma {
                 }
               }
               L8: {
-                if ((param1 ^ -1) != -1) {
+                if (param1 != 0) {
                   stackOut_54_0 = 0;
                   stackIn_55_0 = stackOut_54_0;
                   break L8;
@@ -2171,7 +2361,7 @@ final class qe extends ma {
           }
           if (param0 == -28872) {
             L11: {
-              if ((((qe) this).field_s & a.field_d ^ -1) == -1) {
+              if ((((qe) this).field_s & a.field_d) == 0) {
                 break L11;
               } else {
                 if ((param1 & 96) == 0) {
@@ -2197,7 +2387,7 @@ final class qe extends ma {
               }
             }
             L13: {
-              if ((param1 ^ -1) != -1) {
+              if (param1 != 0) {
                 stackOut_32_0 = 0;
                 stackIn_33_0 = stackOut_32_0;
                 break L13;
@@ -2211,7 +2401,7 @@ final class qe extends ma {
           } else {
             L14: {
               ((qe) this).field_A = (short) 5;
-              if ((((qe) this).field_s & a.field_d ^ -1) == -1) {
+              if ((((qe) this).field_s & a.field_d) == 0) {
                 break L14;
               } else {
                 if ((param1 & 96) == 0) {
@@ -2240,7 +2430,7 @@ final class qe extends ma {
               }
             }
             L17: {
-              if ((param1 ^ -1) != -1) {
+              if (param1 != 0) {
                 stackOut_20_0 = 0;
                 stackIn_21_0 = stackOut_20_0;
                 break L17;

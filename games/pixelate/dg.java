@@ -11,65 +11,26 @@ final class dg {
 
     final static void a(boolean param0, int param1, int param2, String param3, String param4, int param5) {
         int var7 = 0;
-        pc var8 = null;
-        int stackIn_8_0 = 0;
-        int stackIn_15_0 = 0;
-        int stackOut_14_0 = 0;
-        int stackOut_13_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        var8 = aa.field_f;
+        pc var8 = aa.field_f;
         var8.g(param5, 15514);
         var8.field_m = var8.field_m + 1;
-        if (param0) {
-          var7 = var8.field_m;
-          var8.e(160, param1);
-          if ((param1 ^ -1) != -3) {
-            if (param3 != null) {
-              L0: {
-                if (param0) {
-                  stackOut_14_0 = 0;
-                  stackIn_15_0 = stackOut_14_0;
-                  break L0;
-                } else {
-                  stackOut_13_0 = 1;
-                  stackIn_15_0 = stackOut_13_0;
-                  break L0;
-                }
-              }
-              int discarded$2 = hn.a(stackIn_15_0 != 0, param3, (we) (Object) var8);
-              var8.f(var8.field_m + -var7, -1);
-              return;
-            } else {
-              var8.b(1276387944, param2);
-              var8.f(var8.field_m + -var7, -1);
-              return;
+        if (!param0) {
+            return;
+        }
+        try {
+            var7 = var8.field_m;
+            var8.e(160, param1);
+            if (param1 == 2) {
+                var8.b((byte) -41, param4);
             }
-          } else {
-            var8.b((byte) -41, param4);
             if (param3 != null) {
-              L1: {
-                if (param0) {
-                  stackOut_7_0 = 0;
-                  stackIn_8_0 = stackOut_7_0;
-                  break L1;
-                } else {
-                  stackOut_6_0 = 1;
-                  stackIn_8_0 = stackOut_6_0;
-                  break L1;
-                }
-              }
-              int discarded$3 = hn.a(stackIn_8_0 != 0, param3, (we) (Object) var8);
-              var8.f(var8.field_m + -var7, -1);
-              return;
+                int discarded$1 = hn.a(!param0 ? true : false, param3, (we) (Object) var8);
             } else {
-              var8.b(1276387944, param2);
-              var8.f(var8.field_m + -var7, -1);
-              return;
+                var8.b(1276387944, param2);
             }
-          }
-        } else {
-          return;
+            var8.f(var8.field_m + -var7, -1);
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "dg.A(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 41);
         }
     }
 

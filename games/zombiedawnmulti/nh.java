@@ -13,28 +13,88 @@ final class nh extends br {
     int field_f;
 
     final static String a(int param0, String param1) {
-        int var2 = h.a(kj.field_q, 19313, am.field_b);
-        if (var2 == 1) {
-            param1 = "<img=0>" + param1;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        String stackIn_6_0 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        String stackOut_5_0 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        try {
+          L0: {
+            L1: {
+              var2_int = h.a(kj.field_q, 19313, am.field_b);
+              if (var2_int != 1) {
+                break L1;
+              } else {
+                param1 = "<img=0>" + param1;
+                break L1;
+              }
+            }
+            L2: {
+              if (var2_int == param0) {
+                param1 = "<img=1>" + param1;
+                break L2;
+              } else {
+                break L2;
+              }
+            }
+            stackOut_5_0 = (String) param1;
+            stackIn_6_0 = stackOut_5_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2 = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var2;
+            stackOut_7_1 = new StringBuilder().append("nh.A(").append(param0).append(44);
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param1 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L3;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L3;
+            }
+          }
+          throw fa.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
         }
-        if (!(var2 != param0)) {
-            param1 = "<img=1>" + param1;
-        }
-        return param1;
+        return stackIn_6_0;
     }
 
     final static boolean c(byte param0) {
-        if (param0 >= -25) {
-            return true;
-        }
         return ab.field_k;
     }
 
     public static void a(byte param0) {
         field_j = null;
-        if (param0 != 48) {
-            return;
-        }
         field_i = null;
         field_g = null;
         field_n = null;

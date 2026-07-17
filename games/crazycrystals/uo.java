@@ -32,10 +32,10 @@ final class uo extends el {
             if (param3 <= -59) {
               var12 = 0;
               L0: while (true) {
-                if (-9 >= (var12 ^ -1)) {
-                  var12 = param1 * (16 - -((uo) this).field_j) >> -461073084;
+                if (var12 >= 8) {
+                  var12 = param1 * (16 - -((uo) this).field_j) >> 4;
                   var13 = -var12 + (param1 + param5);
-                  var14 = param2 + param6 - (var12 * (((uo) this).field_j - -16) >> 1489868387);
+                  var14 = param2 + param6 - (var12 * (((uo) this).field_j - -16) >> 3);
                   if (0 >= 3 * var12 + var14) {
                     kh.d(var8, var9, var10, var11);
                     return;
@@ -52,13 +52,13 @@ final class uo extends el {
                     }
                   }
                 } else {
-                  var13 = -var12 + (-1 + (((uo) this).field_j >> 1196954369)) << 308704545;
-                  if (-1 >= (var13 ^ -1)) {
+                  var13 = -var12 + (-1 + (((uo) this).field_j >> 1)) << 1;
+                  if (var13 >= 0) {
                     L1: {
-                      var14 = (var13 + 16) * param1 >> 521682852;
-                      var15 = param1 + (param5 - (var14 >> -1530299902));
-                      var16 = -(var14 * (-2 + var13 - -16) >> 1008753315) + (param2 + param6);
-                      if (-1 > (var16 - -(var14 * 3 >> -593657662) ^ -1)) {
+                      var14 = (var13 + 16) * param1 >> 4;
+                      var15 = param1 + (param5 - (var14 >> 2));
+                      var16 = -(var14 * (-2 + var13 - -16) >> 3) + (param2 + param6);
+                      if (var16 - -(var14 * 3 >> 2) > 0) {
                         L2: {
                           if (param4) {
                             break L2;
@@ -67,7 +67,7 @@ final class uo extends el {
                             break L2;
                           }
                         }
-                        bd.field_n[var12].a(var15, var16, var14 >> -702978623, var14 * 3 >> 1427565250, 256);
+                        bd.field_n[var12].a(var15, var16, var14 >> 1, var14 * 3 >> 2, 256);
                         break L1;
                       } else {
                         break L1;
@@ -77,9 +77,9 @@ final class uo extends el {
                     continue L0;
                   } else {
                     L3: {
-                      var12 = param1 * (16 - -((uo) this).field_j) >> -461073084;
+                      var12 = param1 * (16 - -((uo) this).field_j) >> 4;
                       var13 = -var12 + (param1 + param5);
-                      var14 = param2 + param6 - (var12 * (((uo) this).field_j - -16) >> 1489868387);
+                      var14 = param2 + param6 - (var12 * (((uo) this).field_j - -16) >> 3);
                       if (0 >= 3 * var12 + var14) {
                         break L3;
                       } else {
@@ -101,15 +101,15 @@ final class uo extends el {
             } else {
               ((uo) this).a(true, -118, 73, (byte) -80, true, 50, -86);
               var12 = 0;
-              if (-9 < (var12 ^ -1)) {
+              if (var12 < 8) {
                 L4: {
-                  var13 = -var12 + (-1 + (((uo) this).field_j >> 1196954369)) << 308704545;
-                  if (-1 >= (var13 ^ -1)) {
+                  var13 = -var12 + (-1 + (((uo) this).field_j >> 1)) << 1;
+                  if (var13 >= 0) {
                     L5: {
-                      var14 = (var13 + 16) * param1 >> 521682852;
-                      var15 = param1 + (param5 - (var14 >> -1530299902));
-                      var16 = -(var14 * (-2 + var13 - -16) >> 1008753315) + (param2 + param6);
-                      if (-1 > (var16 - -(var14 * 3 >> -593657662) ^ -1)) {
+                      var14 = (var13 + 16) * param1 >> 4;
+                      var15 = param1 + (param5 - (var14 >> 2));
+                      var16 = -(var14 * (-2 + var13 - -16) >> 3) + (param2 + param6);
+                      if (var16 - -(var14 * 3 >> 2) > 0) {
                         L6: {
                           if (param4) {
                             break L6;
@@ -118,7 +118,7 @@ final class uo extends el {
                             break L6;
                           }
                         }
-                        bd.field_n[var12].a(var15, var16, var14 >> -702978623, var14 * 3 >> 1427565250, 256);
+                        bd.field_n[var12].a(var15, var16, var14 >> 1, var14 * 3 >> 2, 256);
                         break L5;
                       } else {
                         var12++;
@@ -132,9 +132,9 @@ final class uo extends el {
                     break L4;
                   }
                 }
-                var12 = param1 * (16 - -((uo) this).field_j) >> -461073084;
+                var12 = param1 * (16 - -((uo) this).field_j) >> 4;
                 var13 = -var12 + (param1 + param5);
-                var14 = param2 + param6 - (var12 * (((uo) this).field_j - -16) >> 1489868387);
+                var14 = param2 + param6 - (var12 * (((uo) this).field_j - -16) >> 3);
                 if (0 < 3 * var12 + var14) {
                   if (param4) {
                     ((uo) this).field_a.h(-30).b(var13, var14, var12 * 2, var12 * 3, ek.field_f[((uo) this).field_a.field_u]);
@@ -152,9 +152,9 @@ final class uo extends el {
                 }
               } else {
                 L7: {
-                  var12 = param1 * (16 - -((uo) this).field_j) >> -461073084;
+                  var12 = param1 * (16 - -((uo) this).field_j) >> 4;
                   var13 = -var12 + (param1 + param5);
-                  var14 = param2 + param6 - (var12 * (((uo) this).field_j - -16) >> 1489868387);
+                  var14 = param2 + param6 - (var12 * (((uo) this).field_j - -16) >> 3);
                   if (0 >= 3 * var12 + var14) {
                     break L7;
                   } else {
@@ -184,16 +184,16 @@ final class uo extends el {
             }
             L9: {
               var12 = 0;
-              if (-9 >= (var12 ^ -1)) {
+              if (var12 >= 8) {
                 break L9;
               } else {
-                var13 = -var12 + (-1 + (((uo) this).field_j >> 1196954369)) << 308704545;
-                if (-1 >= (var13 ^ -1)) {
+                var13 = -var12 + (-1 + (((uo) this).field_j >> 1)) << 1;
+                if (var13 >= 0) {
                   L10: {
-                    var14 = (var13 + 16) * param1 >> 521682852;
-                    var15 = param1 + (param5 - (var14 >> -1530299902));
-                    var16 = -(var14 * (-2 + var13 - -16) >> 1008753315) + (param2 + param6);
-                    if (-1 > (var16 - -(var14 * 3 >> -593657662) ^ -1)) {
+                    var14 = (var13 + 16) * param1 >> 4;
+                    var15 = param1 + (param5 - (var14 >> 2));
+                    var16 = -(var14 * (-2 + var13 - -16) >> 3) + (param2 + param6);
+                    if (var16 - -(var14 * 3 >> 2) > 0) {
                       L11: {
                         if (param4) {
                           break L11;
@@ -202,7 +202,7 @@ final class uo extends el {
                           break L11;
                         }
                       }
-                      bd.field_n[var12].a(var15, var16, var14 >> -702978623, var14 * 3 >> 1427565250, 256);
+                      bd.field_n[var12].a(var15, var16, var14 >> 1, var14 * 3 >> 2, 256);
                       break L10;
                     } else {
                       var12++;
@@ -219,9 +219,9 @@ final class uo extends el {
               }
             }
             L12: {
-              var12 = param1 * (16 - -((uo) this).field_j) >> -461073084;
+              var12 = param1 * (16 - -((uo) this).field_j) >> 4;
               var13 = -var12 + (param1 + param5);
-              var14 = param2 + param6 - (var12 * (((uo) this).field_j - -16) >> 1489868387);
+              var14 = param2 + param6 - (var12 * (((uo) this).field_j - -16) >> 3);
               if (0 >= 3 * var12 + var14) {
                 break L12;
               } else {
@@ -258,16 +258,16 @@ final class uo extends el {
           }
           L15: {
             var12 = 0;
-            if (-9 >= (var12 ^ -1)) {
+            if (var12 >= 8) {
               break L15;
             } else {
-              var13 = -var12 + (-1 + (((uo) this).field_j >> 1196954369)) << 308704545;
-              if (-1 >= (var13 ^ -1)) {
+              var13 = -var12 + (-1 + (((uo) this).field_j >> 1)) << 1;
+              if (var13 >= 0) {
                 L16: {
-                  var14 = (var13 + 16) * param1 >> 521682852;
-                  var15 = param1 + (param5 - (var14 >> -1530299902));
-                  var16 = -(var14 * (-2 + var13 - -16) >> 1008753315) + (param2 + param6);
-                  if (-1 > (var16 - -(var14 * 3 >> -593657662) ^ -1)) {
+                  var14 = (var13 + 16) * param1 >> 4;
+                  var15 = param1 + (param5 - (var14 >> 2));
+                  var16 = -(var14 * (-2 + var13 - -16) >> 3) + (param2 + param6);
+                  if (var16 - -(var14 * 3 >> 2) > 0) {
                     L17: {
                       if (param4) {
                         break L17;
@@ -276,7 +276,7 @@ final class uo extends el {
                         break L17;
                       }
                     }
-                    bd.field_n[var12].a(var15, var16, var14 >> -702978623, var14 * 3 >> 1427565250, 256);
+                    bd.field_n[var12].a(var15, var16, var14 >> 1, var14 * 3 >> 2, 256);
                     break L16;
                   } else {
                     var12++;
@@ -293,9 +293,9 @@ final class uo extends el {
             }
           }
           L18: {
-            var12 = param1 * (16 - -((uo) this).field_j) >> -461073084;
+            var12 = param1 * (16 - -((uo) this).field_j) >> 4;
             var13 = -var12 + (param1 + param5);
-            var14 = param2 + param6 - (var12 * (((uo) this).field_j - -16) >> 1489868387);
+            var14 = param2 + param6 - (var12 * (((uo) this).field_j - -16) >> 3);
             if (0 >= 3 * var12 + var14) {
               break L18;
             } else {
@@ -335,7 +335,7 @@ final class uo extends el {
     public static void c(int param0) {
         field_n = null;
         field_l = null;
-        int var1 = 69 / ((20 - param0) / 58);
+        int var1 = 69;
         field_k = null;
         field_i = null;
     }

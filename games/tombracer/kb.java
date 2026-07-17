@@ -17,52 +17,86 @@ final class kb extends vg {
     final static ka a(int param0, boolean param1, boolean param2, int param3, int param4) {
         int var5 = 0;
         int var6 = 0;
-        L0: {
-          var6 = TombRacer.field_G ? 1 : 0;
-          if (param3 == 2) {
-            break L0;
-          } else {
-            boolean discarded$1 = kb.a(-126, -35, (byte) 96);
-            break L0;
-          }
-        }
-        var5 = param4;
-        if (0 != var5) {
-          if (var5 != 1) {
-            if (-3 != var5) {
-              if (-4 != var5) {
-                if ((var5 ^ -1) != -5) {
-                  if (5 != var5) {
-                    if (var5 != 6) {
-                      if (var5 != -8) {
-                        if (-9 == var5) {
-                          return hh.field_b[param0];
-                        } else {
-                          throw new IllegalArgumentException("Model category not recognised");
-                        }
-                      } else {
-                        return koa.field_b[param0];
-                      }
+        var6 = TombRacer.field_G ? 1 : 0;
+        if (param3 == 2) {
+          var5 = param4;
+          if (0 != var5) {
+            if (var5 != 1) {
+              if (var5 == 2) {
+                return ta.field_ub[param0];
+              } else {
+                if (var5 != 3) {
+                  if (var5 != 4) {
+                    if (5 == var5) {
+                      return gca.field_g[param0];
                     } else {
-                      return mh.field_F[param0];
+                      if (var5 == 6) {
+                        return mh.field_F[param0];
+                      } else {
+                        if (var5 != 7) {
+                          if (var5 != 8) {
+                            throw new IllegalArgumentException("Model category not recognised");
+                          } else {
+                            return hh.field_b[param0];
+                          }
+                        } else {
+                          return koa.field_b[param0];
+                        }
+                      }
                     }
                   } else {
-                    return gca.field_g[param0];
+                    return jna.field_j[param0];
                   }
                 } else {
-                  return jna.field_j[param0];
+                  return rl.field_t[param0];
                 }
-              } else {
-                return rl.field_t[param0];
               }
             } else {
-              return ta.field_ub[param0];
+              return df.field_J[param0];
             }
           } else {
-            return df.field_J[param0];
+            return dia.a(param2, param0, param1, (byte) 124);
           }
         } else {
-          return dia.a(param2, param0, param1, (byte) 124);
+          boolean discarded$1 = kb.a(-126, -35, (byte) 96);
+          var5 = param4;
+          if (0 != var5) {
+            if (var5 != 1) {
+              if (var5 == 2) {
+                return ta.field_ub[param0];
+              } else {
+                if (var5 != 3) {
+                  if (var5 != 4) {
+                    if (5 == var5) {
+                      return gca.field_g[param0];
+                    } else {
+                      if (var5 == 6) {
+                        return mh.field_F[param0];
+                      } else {
+                        if (var5 != 7) {
+                          if (var5 != 8) {
+                            throw new IllegalArgumentException("Model category not recognised");
+                          } else {
+                            return hh.field_b[param0];
+                          }
+                        } else {
+                          return koa.field_b[param0];
+                        }
+                      }
+                    }
+                  } else {
+                    return jna.field_j[param0];
+                  }
+                } else {
+                  return rl.field_t[param0];
+                }
+              }
+            } else {
+              return df.field_J[param0];
+            }
+          } else {
+            return dia.a(param2, param0, param1, (byte) 124);
+          }
         }
     }
 
@@ -97,15 +131,20 @@ final class kb extends vg {
     }
 
     kb(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
-        ((kb) this).field_j = param5;
-        ((kb) this).field_n = param1;
-        ((kb) this).field_k = param4;
-        ((kb) this).field_i = param2;
-        ((kb) this).field_g = param3;
-        uk.field_N = uk.field_N + 1;
-        ((kb) this).field_l = 65535 & uk.field_N;
-        ((kb) this).field_o = param6;
-        ((kb) this).field_f = param0;
+        try {
+            ((kb) this).field_j = param5;
+            ((kb) this).field_n = param1;
+            ((kb) this).field_k = param4;
+            ((kb) this).field_i = param2;
+            ((kb) this).field_g = param3;
+            int fieldTemp$0 = uk.field_N;
+            uk.field_N = uk.field_N + 1;
+            ((kb) this).field_l = 65535 & fieldTemp$0;
+            ((kb) this).field_o = param6;
+            ((kb) this).field_f = param0;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "kb.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static void a(int param0, boolean param1) {

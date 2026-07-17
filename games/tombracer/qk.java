@@ -11,38 +11,50 @@ final class qk extends rt {
 
     qk(cka param0, int param1, int param2, int param3, boolean param4, int[] param5, int param6, int param7) {
         super(param0, param1, 6408, param2, param3, param4, param5, param6, param7, true);
-        if ((((qk) this).field_e ^ -1) != -34038) {
-            ((qk) this).field_v = 1.0f;
-            ((qk) this).field_r = 1.0f;
-        } else {
-            ((qk) this).field_v = (float)param3;
-            ((qk) this).field_r = (float)param2;
+        try {
+            if (((qk) this).field_e != 34037) {
+                ((qk) this).field_v = 1.0f;
+                ((qk) this).field_r = 1.0f;
+            } else {
+                ((qk) this).field_v = (float)param3;
+                ((qk) this).field_r = (float)param2;
+            }
+            ((qk) this).field_t = param2;
+            ((qk) this).field_s = param3;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "qk.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 44 + param6 + 44 + param7 + 41);
         }
-        ((qk) this).field_t = param2;
-        ((qk) this).field_s = param3;
     }
 
     qk(cka param0, int param1, int param2, int param3, int param4, boolean param5, byte[] param6, int param7) {
         super(param0, param1, param2, param3, param4, param5, param6, param7, true);
-        ((qk) this).field_s = param4;
-        if ((((qk) this).field_e ^ -1) != -34038) {
-            ((qk) this).field_r = 1.0f;
-            ((qk) this).field_v = 1.0f;
-        } else {
-            ((qk) this).field_r = (float)param3;
-            ((qk) this).field_v = (float)param4;
+        try {
+            ((qk) this).field_s = param4;
+            if (((qk) this).field_e != 34037) {
+                ((qk) this).field_r = 1.0f;
+                ((qk) this).field_v = 1.0f;
+            } else {
+                ((qk) this).field_r = (float)param3;
+                ((qk) this).field_v = (float)param4;
+            }
+            ((qk) this).field_t = param3;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "qk.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 44 + param7 + 41);
         }
-        ((qk) this).field_t = param3;
     }
 
     qk(cka param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int param7) {
         super(param0, 3553, param1, param4, param5);
-        ((qk) this).field_t = param2;
-        ((qk) this).field_s = param3;
-        ((qk) this).a(0, 0, param3, 0, 0, param6, -24575, param2, param7, true);
-        ((qk) this).field_r = (float)param2 / (float)param4;
-        ((qk) this).field_v = (float)param3 / (float)param5;
-        ((qk) this).a(false, false, -3554);
+        try {
+            ((qk) this).field_t = param2;
+            ((qk) this).field_s = param3;
+            ((qk) this).a(0, 0, param3, 0, 0, param6, -24575, param2, param7, true);
+            ((qk) this).field_r = (float)param2 / (float)param4;
+            ((qk) this).field_v = (float)param3 / (float)param5;
+            ((qk) this).a(false, false, -3554);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "qk.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 44 + param7 + 41);
+        }
     }
 
     public static void j(int param0) {
@@ -55,22 +67,26 @@ final class qk extends rt {
 
     qk(cka param0, int param1, int param2, int param3, int param4, int[] param5) {
         super(param0, 3553, 6408, param3, param4);
-        ((qk) this).field_s = param2;
-        ((qk) this).field_t = param1;
-        ((qk) this).a(0, 0, param2, param1, 0, param5, (byte) 68, true, 0);
-        ((qk) this).field_r = (float)param1 / (float)param3;
-        ((qk) this).field_v = (float)param2 / (float)param4;
-        ((qk) this).a(false, false, -3554);
+        try {
+            ((qk) this).field_s = param2;
+            ((qk) this).field_t = param1;
+            ((qk) this).a(0, 0, param2, param1, 0, param5, (byte) 68, true, 0);
+            ((qk) this).field_r = (float)param1 / (float)param3;
+            ((qk) this).field_v = (float)param2 / (float)param4;
+            ((qk) this).a(false, false, -3554);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "qk.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static void a(int param0, ha param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        if (param3 < 34) {
-          kn discarded$2 = qk.h(-73);
-          cha.a(param7, 2, param1, param6, param2, param5, param0, 1, param4);
-          return;
-        } else {
-          cha.a(param7, 2, param1, param6, param2, param5, param0, 1, param4);
-          return;
+        try {
+            if (param3 < 34) {
+                kn discarded$0 = qk.h(-73);
+            }
+            cha.a(param7, 2, param1, param6, param2, param5, param0, 1, param4);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "qk.K(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
         }
     }
 
@@ -92,10 +108,7 @@ final class qk extends rt {
     }
 
     final static boolean i(int param0) {
-        if (param0 != 250) {
-            return true;
-        }
-        return tl.field_r > 250 ? true : false;
+        return tl.field_r > 250;
     }
 
     static {

@@ -39,55 +39,26 @@ final class ek implements Iterable {
     public static void b(int param0) {
         field_c = null;
         field_a = null;
-        if (param0 != -1) {
-            field_e = null;
-            field_e = null;
-            return;
-        }
         field_e = null;
     }
 
     final void a(ca param0, int param1, long param2) {
         ca var5 = null;
-        ca var6 = null;
-        ca var7 = null;
-        if (null == param0.field_c) {
-          var7 = ((ek) this).field_b[(int)((long)(-1 + ((ek) this).field_d) & param2)];
-          var5 = var7;
-          param0.field_c = var7.field_c;
-          if (param1 >= -122) {
-            field_e = null;
+        try {
+            if (null != param0.field_c) {
+                param0.b(57);
+            }
+            var5 = ((ek) this).field_b[(int)((long)(-1 + ((ek) this).field_d) & param2)];
+            param0.field_c = var5.field_c;
+            if (param1 >= -122) {
+                field_e = null;
+            }
             param0.field_e = var5;
             param0.field_c.field_e = param0;
             param0.field_e.field_c = param0;
             param0.field_d = param2;
-            return;
-          } else {
-            param0.field_e = var5;
-            param0.field_c.field_e = param0;
-            param0.field_e.field_c = param0;
-            param0.field_d = param2;
-            return;
-          }
-        } else {
-          param0.b(57);
-          var6 = ((ek) this).field_b[(int)((long)(-1 + ((ek) this).field_d) & param2)];
-          var5 = var6;
-          param0.field_c = var6.field_c;
-          if (param1 < -122) {
-            param0.field_e = var5;
-            param0.field_c.field_e = param0;
-            param0.field_e.field_c = param0;
-            param0.field_d = param2;
-            return;
-          } else {
-            field_e = null;
-            param0.field_e = var5;
-            param0.field_c.field_e = param0;
-            param0.field_e.field_c = param0;
-            param0.field_d = param2;
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw dd.a((Throwable) (Object) runtimeException, "ek.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }
     }
 
@@ -120,9 +91,6 @@ final class ek implements Iterable {
     }
 
     final static void a(int param0) {
-        if (param0 > -58) {
-            ek.c(126);
-        }
     }
 
     static {

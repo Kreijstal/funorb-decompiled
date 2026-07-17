@@ -11,7 +11,7 @@ final class hn {
     final synchronized static long a(byte param0) {
         long var1 = 0L;
         var1 = System.currentTimeMillis();
-        if ((gb.field_e ^ -1L) >= (var1 ^ -1L)) {
+        if (~gb.field_e >= ~var1) {
           gb.field_e = var1;
           if (param0 != 80) {
             return 95L;
@@ -33,8 +33,6 @@ final class hn {
         field_c = null;
         field_d = null;
         field_e = null;
-        if (param0) {
-        }
     }
 
     static {

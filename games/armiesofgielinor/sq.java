@@ -16,7 +16,7 @@ final class sq extends tc {
         int var1 = 0;
         var1 = 52 / ((-9 - param0) / 42);
         if (fs.a(false)) {
-          if (-1 != (uk.field_n & 8 ^ -1)) {
+          if ((uk.field_n & 8) != 0) {
             return false;
           } else {
             return true;
@@ -58,7 +58,7 @@ final class sq extends tc {
           } else {
             if (((sq) this).field_l > ((sq) this).field_m) {
               var3 = (int)(127.0 * (1.0 - Math.cos((double)((sq) this).field_m * 3.141592653589793 / (double)(((sq) this).field_l / 2))));
-              qn.a(-(((sq) this).field_p >> 37942177) + 320, param1 + (-((sq) this).field_m + -14), ((sq) this).field_p, 20, 5, 0, var3);
+              qn.a(-(((sq) this).field_p >> 1) + 320, param1 + (-((sq) this).field_m + -14), ((sq) this).field_p, 20, 5, 0, var3);
               rs.field_n.a(((sq) this).field_r, 320, param1 + -((sq) this).field_m, 16777215, 0, var3);
               break L0;
             } else {
@@ -137,17 +137,18 @@ final class sq extends tc {
         field_o = null;
         field_n = null;
         field_s = null;
-        if (param0) {
-            String discarded$0 = sq.a(24, (byte) 101, 43, 1);
-        }
     }
 
     sq(String param0, boolean param1, at param2) {
-        ((sq) this).field_m = 0;
-        ((sq) this).field_r = param0;
-        ((sq) this).field_p = 8 + rs.field_n.a(((sq) this).field_r);
-        ((sq) this).field_q = param2.field_d;
-        ((sq) this).field_l = !param1 ? 128 : 500;
+        try {
+            ((sq) this).field_m = 0;
+            ((sq) this).field_r = param0;
+            ((sq) this).field_p = 8 + rs.field_n.a(((sq) this).field_r);
+            ((sq) this).field_q = param2.field_d;
+            ((sq) this).field_l = !param1 ? 128 : 500;
+        } catch (RuntimeException runtimeException) {
+            throw ig.a((Throwable) (Object) runtimeException, "sq.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void a(byte param0) {

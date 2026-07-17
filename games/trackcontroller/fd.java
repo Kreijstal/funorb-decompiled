@@ -17,7 +17,7 @@ abstract class fd {
 
     public static void a(byte param0) {
         field_h = null;
-        int var1 = -32 / ((51 - param0) / 54);
+        int var1 = 32;
         field_d = null;
         field_f = null;
     }

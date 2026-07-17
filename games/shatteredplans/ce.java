@@ -46,24 +46,81 @@ final class ce extends rr {
         String var3 = null;
         long var4 = 0L;
         sq.field_o = true;
-        if (!param1) {
-          return;
-        } else {
-          var2 = "tuhstatbut";
-          var3 = "rvnadlm";
-          var4 = -1L;
-          lg.a(var4, param0, 60, var2, var3);
-          return;
+        try {
+            var2 = "tuhstatbut";
+            var3 = "rvnadlm";
+            var4 = -1L;
+            lg.a(var4, param0, 60, var2, var3);
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "ce.N(" + (param0 != null ? "{...}" : "null") + 44 + 1 + 41);
         }
     }
 
     final String b(boolean param0, vg param1) {
-        if (!param0) {
-          field_w = null;
-          return ad.a('*', param1.field_s.length(), -34);
-        } else {
-          return ad.a('*', param1.field_s.length(), -34);
+        RuntimeException var3 = null;
+        String stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        String stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0) {
+                break L1;
+              } else {
+                field_w = null;
+                break L1;
+              }
+            }
+            stackOut_2_0 = ad.a('*', param1.field_s.length(), -34);
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_1 = new StringBuilder().append("ce.L(").append(param0).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param1 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw r.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
         }
+        return stackIn_3_0;
     }
 
     ce(int param0) {
@@ -71,24 +128,14 @@ final class ce extends rr {
     }
 
     final static void a(String param0, String param1, byte param2) {
-        Object var4 = null;
-        L0: {
-          if (null != ji.field_G) {
-            ji.field_G.i((byte) -104);
-            break L0;
-          } else {
-            break L0;
-          }
-        }
-        no.field_e = new ri(param0, param1, false, true, true);
-        if (param2 != 3) {
-          var4 = null;
-          ce.a((java.applet.Applet) null, true);
-          ae.field_f.b((vg) (Object) no.field_e, 122);
-          return;
-        } else {
-          ae.field_f.b((vg) (Object) no.field_e, 122);
-          return;
+        try {
+            if (!(null == ji.field_G)) {
+                ji.field_G.i((byte) -104);
+            }
+            no.field_e = new ri(param0, param1, false, true, true);
+            ae.field_f.b((vg) (Object) no.field_e, 122);
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "ce.O(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + 3 + 41);
         }
     }
 
@@ -97,9 +144,6 @@ final class ce extends rr {
         field_w = null;
         field_u = null;
         field_v = null;
-        if (!param0) {
-            field_v = null;
-        }
     }
 
     static {

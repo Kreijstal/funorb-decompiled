@@ -19,32 +19,52 @@ final class ru extends tn {
     }
 
     final int a(long param0, int param1) {
-        int var5 = BachelorFridge.field_y;
-        if (param1 != 0) {
-            ((ru) this).field_g = 55;
-        }
-        if (((ru) this).field_k < ((ru) this).field_f) {
-            ((ru) this).field_e = ((ru) this).field_e + (-((ru) this).field_k + ((ru) this).field_f);
-            ((ru) this).field_k = ((ru) this).field_k + (((ru) this).field_f - ((ru) this).field_k);
-            ((ru) this).field_f = ((ru) this).field_f + param0;
-            return 1;
-        }
         int var4 = 0;
-        do {
-            ((ru) this).field_f = ((ru) this).field_f + param0;
-            var4++;
-            // if_icmpge L122
-        } while ((((ru) this).field_k ^ -1L) < (((ru) this).field_f ^ -1L));
-        if (!((((ru) this).field_f ^ -1L) <= (((ru) this).field_k ^ -1L))) {
-            ((ru) this).field_f = ((ru) this).field_k;
+        int var5 = 0;
+        L0: {
+          var5 = BachelorFridge.field_y;
+          if (param1 == 0) {
+            break L0;
+          } else {
+            ((ru) this).field_g = 55;
+            break L0;
+          }
         }
-        return var4;
+        if (((ru) this).field_k >= ((ru) this).field_f) {
+          var4 = 0;
+          L1: while (true) {
+            L2: {
+              ((ru) this).field_f = ((ru) this).field_f + param0;
+              var4++;
+              if (var4 >= 10) {
+                break L2;
+              } else {
+                if (~((ru) this).field_k < ~((ru) this).field_f) {
+                  continue L1;
+                } else {
+                  break L2;
+                }
+              }
+            }
+            L3: {
+              if (~((ru) this).field_f > ~((ru) this).field_k) {
+                ((ru) this).field_f = ((ru) this).field_k;
+                break L3;
+              } else {
+                break L3;
+              }
+            }
+            return var4;
+          }
+        } else {
+          ((ru) this).field_e = ((ru) this).field_e + (-((ru) this).field_k + ((ru) this).field_f);
+          ((ru) this).field_k = ((ru) this).field_k + (((ru) this).field_f - ((ru) this).field_k);
+          ((ru) this).field_f = ((ru) this).field_f + param0;
+          return 1;
+        }
     }
 
     public static void b(int param0) {
-        if (param0 <= 33) {
-            field_d = null;
-        }
         field_j = null;
         field_d = null;
         field_l = null;

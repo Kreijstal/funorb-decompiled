@@ -20,7 +20,7 @@ final class sr {
     private int[] field_f;
 
     final static int a(int param0, int param1, int param2, byte param3) {
-        if (-1 >= (param0 ^ -1)) {
+        if (param0 >= 0) {
           if (0 <= param1) {
             if (ks.field_y > param0) {
               if (param1 < ef.field_c) {
@@ -59,8 +59,8 @@ final class sr {
         ((sr) this).field_k.a(1, param1);
         ((sr) this).field_a[0] = ((sr) this).field_k.field_e[0];
         ((sr) this).field_a[1] = ((sr) this).field_k.field_e[1];
-        ((sr) this).field_b[0] = so.field_b.field_a >> -163208351;
-        ((sr) this).field_b[1] = so.field_b.field_g >> -1697168543;
+        ((sr) this).field_b[0] = so.field_b.field_a >> 1;
+        ((sr) this).field_b[1] = so.field_b.field_g >> 1;
         ((sr) this).field_h = false;
         if (param0 > -59) {
             boolean discarded$0 = ((sr) this).a((byte) -51);
@@ -69,69 +69,95 @@ final class sr {
 
     final void a(int param0, wk param1) {
         int var3_int = 0;
-        Exception var3 = null;
+        RuntimeException var3 = null;
+        Exception var3_ref = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    try {
-                        var7 = ((sr) this).field_n;
-                        var6 = param1.field_x;
-                        var5 = param1.field_A;
-                        var5 = ((sr) this).field_d[0];
-                        var6 = ((sr) this).field_d[1];
-                        var4 = -(var6 >> 868923585) + (((sr) this).field_l >> -2076967775);
-                        var8 = -55 / ((param0 - -18) / 37);
-                        var3_int = (((sr) this).field_c >> -2119200927) - (var5 >> -344491455);
-                        var4 = ((sr) this).field_f[1];
-                        var3_int = ((sr) this).field_f[0];
-                        var4 = var4 - (var6 >> -1341099679);
-                        var3_int = var3_int - (var5 >> 1193823777);
-                        if (256 == var7) {
-                            statePc = 2;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_0) {
-                        caughtException = stateCaught_0;
-                        statePc = 4;
-                        continue stateLoop;
-                    }
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        Throwable decompiledCaughtException = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        try {
+          L0: {
+            try {
+              L1: {
+                L2: {
+                  var7 = ((sr) this).field_n;
+                  var6 = param1.field_x;
+                  var5 = param1.field_A;
+                  var5 = ((sr) this).field_d[0];
+                  var6 = ((sr) this).field_d[1];
+                  var4 = -(var6 >> 1) + (((sr) this).field_l >> 1);
+                  var8 = -55 / ((param0 - -18) / 37);
+                  var3_int = (((sr) this).field_c >> 1) - (var5 >> 1);
+                  var4 = ((sr) this).field_f[1];
+                  var3_int = ((sr) this).field_f[0];
+                  var4 = var4 - (var6 >> 1);
+                  var3_int = var3_int - (var5 >> 1);
+                  if (256 == var7) {
+                    param1.c(var3_int, var4, var5, var6);
+                    break L2;
+                  } else {
+                    param1.c(var3_int, var4, var5, var6, var7);
+                    break L2;
+                  }
                 }
-                case 1: {
-                    try {
-                        param1.c(var3_int, var4, var5, var6, var7);
-                        return;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 4;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    try {
-                        param1.c(var3_int, var4, var5, var6);
-                        return;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 4;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    var3 = (Exception) (Object) caughtException;
-                    var3.printStackTrace();
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+                break L1;
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L3: {
+                var3_ref = (Exception) (Object) decompiledCaughtException;
+                var3_ref.printStackTrace();
+                break L3;
+              }
             }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+          decompiledCaughtException = decompiledCaughtParameter1;
+          L4: {
+            var3 = (RuntimeException) (Object) decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var3;
+            stackOut_6_1 = new StringBuilder().append("sr.B(").append(param0).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param1 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L4;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L4;
+            }
+          }
+          throw ig.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
         }
     }
 
@@ -141,7 +167,7 @@ final class sr {
         if (param0 != 1) {
           L0: {
             ((sr) this).a(9, -1);
-            if ((param3 ^ -1) < -1) {
+            if (param3 > 0) {
               break L0;
             } else {
               param3 = 1;
@@ -153,7 +179,7 @@ final class sr {
           return var7;
         } else {
           L1: {
-            if ((param3 ^ -1) < -1) {
+            if (param3 > 0) {
               break L1;
             } else {
               param3 = 1;
@@ -171,15 +197,15 @@ final class sr {
         int var3 = 0;
         int var4 = 0;
         if (((sr) this).field_o == ((sr) this).field_j) {
-          ((sr) this).field_f[1] = so.field_b.field_g >> -587837663;
-          ((sr) this).field_f[0] = so.field_b.field_a >> 1959107777;
+          ((sr) this).field_f[1] = so.field_b.field_g >> 1;
+          ((sr) this).field_f[0] = so.field_b.field_a >> 1;
           return;
         } else {
           if (param0 == 1959107777) {
             if (!((sr) this).field_h) {
               L0: {
-                ((sr) this).field_b[1] = so.field_b.field_g >> 2102642721;
-                ((sr) this).field_b[0] = so.field_b.field_a >> 1800830017;
+                ((sr) this).field_b[1] = so.field_b.field_g >> 1;
+                ((sr) this).field_b[0] = so.field_b.field_a >> 1;
                 this.a(-120);
                 ((sr) this).field_n = this.a(param0 + -1959107776, ((sr) this).field_j, ((sr) this).field_e, ((sr) this).field_o, ((sr) this).field_m);
                 var2 = ((sr) this).field_i[0] - ((sr) this).field_g[0];
@@ -208,8 +234,8 @@ final class sr {
               return;
             } else {
               L2: {
-                ((sr) this).field_a[0] = so.field_b.field_a >> 1200426849;
-                ((sr) this).field_a[1] = so.field_b.field_g >> -2129312607;
+                ((sr) this).field_a[0] = so.field_b.field_a >> 1;
+                ((sr) this).field_a[1] = so.field_b.field_g >> 1;
                 this.a(-120);
                 ((sr) this).field_n = this.a(param0 + -1959107776, ((sr) this).field_j, ((sr) this).field_e, ((sr) this).field_o, ((sr) this).field_m);
                 var2 = ((sr) this).field_i[0] - ((sr) this).field_g[0];
@@ -244,7 +270,7 @@ final class sr {
     }
 
     private final void a(int param0) {
-        int var2 = -77 / ((param0 - -64) / 53);
+        int var2 = 77;
         ((sr) this).field_d[0] = (((sr) this).field_i[0] * ((sr) this).field_j + (-((sr) this).field_j + ((sr) this).field_o) * ((sr) this).field_g[0]) / ((sr) this).field_o;
         ((sr) this).field_d[1] = (((sr) this).field_i[1] * ((sr) this).field_j + ((sr) this).field_g[1] * (-((sr) this).field_j + ((sr) this).field_o)) / ((sr) this).field_o;
     }
@@ -259,7 +285,7 @@ final class sr {
         if (param0 != -71) {
           L0: {
             ((sr) this).a(-4, 101);
-            if ((param1 ^ -1) > -1) {
+            if (param1 < 0) {
               stackOut_7_0 = -1;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -272,7 +298,7 @@ final class sr {
           return stackIn_8_0;
         } else {
           L1: {
-            if ((param1 ^ -1) > -1) {
+            if (param1 < 0) {
               stackOut_3_0 = -1;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -299,24 +325,16 @@ final class sr {
         ((sr) this).field_b[0] = ((sr) this).field_k.field_e[0];
         ((sr) this).field_h = true;
         int var3 = -107 / ((74 - param1) / 42);
-        ((sr) this).field_a[0] = so.field_b.field_a >> -1810321343;
-        ((sr) this).field_a[1] = so.field_b.field_g >> 660321;
+        ((sr) this).field_a[0] = so.field_b.field_a >> 1;
+        ((sr) this).field_a[1] = so.field_b.field_g >> 1;
     }
 
     private final void b(int param0) {
         ((sr) this).field_d[0] = ((sr) this).field_i[0];
         ((sr) this).field_n = ((sr) this).field_m;
         ((sr) this).field_d[1] = ((sr) this).field_i[1];
-        if (param0 > -41) {
-          ((sr) this).field_g = null;
-          ((sr) this).field_f[1] = ((sr) this).field_a[1];
-          ((sr) this).field_f[0] = ((sr) this).field_a[0];
-          return;
-        } else {
-          ((sr) this).field_f[1] = ((sr) this).field_a[1];
-          ((sr) this).field_f[0] = ((sr) this).field_a[0];
-          return;
-        }
+        ((sr) this).field_f[1] = ((sr) this).field_a[1];
+        ((sr) this).field_f[0] = ((sr) this).field_a[0];
     }
 
     final static int c(int param0, int param1) {
@@ -328,22 +346,23 @@ final class sr {
 
     public static void b(byte param0) {
         field_p = null;
-        if (param0 != 120) {
-            int discarded$0 = sr.a(51, -118, -11, (byte) 113);
-        }
     }
 
     sr(int param0, int param1, v param2) {
         ((sr) this).field_o = 60;
-        ((sr) this).field_a = new int[2];
-        ((sr) this).field_k = param2;
-        ((sr) this).field_d = new int[2];
-        ((sr) this).field_i = new int[2];
-        ((sr) this).field_f = new int[2];
-        ((sr) this).field_g = new int[2];
-        ((sr) this).field_l = param1;
-        ((sr) this).field_c = param0;
-        ((sr) this).field_b = new int[2];
+        try {
+            ((sr) this).field_a = new int[2];
+            ((sr) this).field_k = param2;
+            ((sr) this).field_d = new int[2];
+            ((sr) this).field_i = new int[2];
+            ((sr) this).field_f = new int[2];
+            ((sr) this).field_g = new int[2];
+            ((sr) this).field_l = param1;
+            ((sr) this).field_c = param0;
+            ((sr) this).field_b = new int[2];
+        } catch (RuntimeException runtimeException) {
+            throw ig.a((Throwable) (Object) runtimeException, "sr.<init>(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

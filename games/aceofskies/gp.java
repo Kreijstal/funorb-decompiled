@@ -21,7 +21,7 @@ final class gp extends ag {
             throw new RuntimeException();
           }
         } else {
-          return (byte[]) null;
+          return null;
         }
     }
 

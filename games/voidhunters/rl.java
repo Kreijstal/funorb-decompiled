@@ -47,7 +47,7 @@ final class rl extends rqa {
               L2: {
                 qi.field_p.field_F = 1;
                 qi.field_p.field_w = mla.field_q.field_w;
-                if (-1 > (nf.field_a ^ -1)) {
+                if (nf.field_a > 0) {
                   soa.a(param0, -99, param7, param5);
                   break L2;
                 } else {
@@ -55,7 +55,7 @@ final class rl extends rqa {
                 }
               }
               L3: {
-                if ((tba.field_p ^ -1) < param1) {
+                if (~tba.field_p < param1) {
                   fka.a(param5, (byte) 105, param8, param0, param7);
                   break L3;
                 } else {
@@ -103,7 +103,7 @@ final class rl extends rqa {
               L5: {
                 qi.field_p.field_F = 1;
                 qi.field_p.field_w = mla.field_q.field_w;
-                if (-1 > (nf.field_a ^ -1)) {
+                if (nf.field_a > 0) {
                   soa.a(param0, -99, param7, param5);
                   break L5;
                 } else {
@@ -111,7 +111,7 @@ final class rl extends rqa {
                 }
               }
               L6: {
-                if ((tba.field_p ^ -1) < param1) {
+                if (~tba.field_p < param1) {
                   fka.a(param5, (byte) 105, param8, param0, param7);
                   break L6;
                 } else {
@@ -180,7 +180,7 @@ final class rl extends rqa {
               L11: {
                 qi.field_p.field_F = 1;
                 qi.field_p.field_w = mla.field_q.field_w;
-                if (-1 > (nf.field_a ^ -1)) {
+                if (nf.field_a > 0) {
                   soa.a(param0, -99, param7, param5);
                   break L11;
                 } else {
@@ -188,7 +188,7 @@ final class rl extends rqa {
                 }
               }
               L12: {
-                if ((tba.field_p ^ -1) < param1) {
+                if (~tba.field_p < param1) {
                   fka.a(param5, (byte) 105, param8, param0, param7);
                   break L12;
                 } else {
@@ -233,7 +233,7 @@ final class rl extends rqa {
               L16: {
                 qi.field_p.field_F = 1;
                 qi.field_p.field_w = mla.field_q.field_w;
-                if (-1 > (nf.field_a ^ -1)) {
+                if (nf.field_a > 0) {
                   soa.a(param0, -99, param7, param5);
                   break L16;
                 } else {
@@ -241,7 +241,7 @@ final class rl extends rqa {
                 }
               }
               L17: {
-                if ((tba.field_p ^ -1) < param1) {
+                if (~tba.field_p < param1) {
                   fka.a(param5, (byte) 105, param8, param0, param7);
                   break L17;
                 } else {
@@ -288,7 +288,7 @@ final class rl extends rqa {
           L21: {
             qi.field_p.field_F = 1;
             qi.field_p.field_w = mla.field_q.field_w;
-            if (-1 > (nf.field_a ^ -1)) {
+            if (nf.field_a > 0) {
               soa.a(param0, -99, param7, param5);
               break L21;
             } else {
@@ -296,7 +296,7 @@ final class rl extends rqa {
             }
           }
           L22: {
-            if ((tba.field_p ^ -1) < param1) {
+            if (~tba.field_p < param1) {
               fka.a(param5, (byte) 105, param8, param0, param7);
               break L22;
             } else {
@@ -335,11 +335,70 @@ final class rl extends rqa {
     }
 
     final nc a(nc[] param0, int param1) {
-        if (param1 >= -119) {
-            rl.b(true);
-            return new nc(fua.field_o);
+        RuntimeException var3 = null;
+        nc stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        nc stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param1 < -119) {
+                break L1;
+              } else {
+                rl.b(true);
+                break L1;
+              }
+            }
+            stackOut_2_0 = new nc(fua.field_o);
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_1 = new StringBuilder().append("rl.A(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
         }
-        return new nc(fua.field_o);
+        return stackIn_3_0;
     }
 
     final static void b(boolean param0) {

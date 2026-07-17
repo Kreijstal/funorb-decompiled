@@ -23,9 +23,6 @@ final class v {
         field_e = null;
         field_g = null;
         field_c = null;
-        if (!param0) {
-            v.a(-99);
-        }
         field_d = null;
         field_a = null;
     }
@@ -35,36 +32,22 @@ final class v {
     }
 
     private static void $cfr$clinit() {
-        long var0 = 0L;
         int var2 = 0;
+        long var0 = 0L;
         int var3 = 0;
         field_g = "Quick Chat game";
         field_d = new long[256];
-        var2 = 0;
-        L0: while (true) {
-          if (var2 <= -257) {
-            field_c = "To <%0>: ";
-          } else {
+        for (var2 = 0; var2 < 256; var2++) {
             var0 = (long)var2;
-            var3 = 0;
-            L1: while (true) {
-              if (-9 <= var3) {
-                field_d[var2] = var0;
-                var2++;
-                continue L0;
-              } else {
-                if (1L != (1L & var0)) {
-                  var0 = var0 >>> 1;
-                  var3++;
-                  continue L1;
+            for (var3 = 0; var3 < 8; var3++) {
+                if (1L == (1L & var0)) {
+                    var0 = -3932672073523589310L ^ var0 >>> 1;
                 } else {
-                  var0 = -3932672073523589310L ^ var0 >>> -2052733439;
-                  var3++;
-                  continue L1;
+                    var0 = var0 >>> 1;
                 }
-              }
             }
-          }
+            field_d[var2] = var0;
         }
+        field_c = "To <%0>: ";
     }
 }

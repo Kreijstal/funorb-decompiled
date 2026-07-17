@@ -7,15 +7,38 @@ final class df extends eb {
     static String field_L;
 
     final static void b(int param0, int param1) {
-        int var2 = 0;
-        int var3 = Terraphoenix.field_V;
-        re.a(pb.field_b, (byte) -26, ok.field_j, hm.field_L, true, 0, param1);
-        for (var2 = param0; var2 < pb.field_b; var2++) {
-            pf.field_b[var2 - -param1] = var2;
-        }
-        re.a(pb.field_b + param1, (byte) -117, el.field_d, bd.field_a, false, param1, param1 + param1);
-        if (!(pb.field_b <= param1)) {
-            pb.field_b = param1;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var3 = Terraphoenix.field_V;
+        try {
+          L0: {
+            re.a(pb.field_b, (byte) -26, ok.field_j, hm.field_L, true, 0, param1);
+            var2_int = param0;
+            L1: while (true) {
+              if (var2_int >= pb.field_b) {
+                L2: {
+                  re.a(pb.field_b + param1, (byte) -117, el.field_d, bd.field_a, false, param1, param1 + param1);
+                  if (pb.field_b > param1) {
+                    pb.field_b = param1;
+                    break L2;
+                  } else {
+                    break L2;
+                  }
+                }
+                break L0;
+              } else {
+                pf.field_b[var2_int - -param1] = var2_int;
+                var2_int++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw qk.a((Throwable) (Object) var2, "df.D(" + param0 + 44 + param1 + 41);
         }
     }
 
@@ -23,24 +46,33 @@ final class df extends eb {
         field_L = null;
         field_M = null;
         field_K = null;
-        if (param0 != -106) {
-            field_M = null;
-        }
     }
 
     private df(String param0, cj param1, sc param2) {
         super(param0, param1, param2);
-        ((df) this).field_l = vc.field_c.field_q;
+        try {
+            ((df) this).field_l = vc.field_c.field_q;
+        } catch (RuntimeException runtimeException) {
+            throw qk.a((Throwable) (Object) runtimeException, "df.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     df(String param0, sc param1, boolean param2) {
         this(param0, param1);
-        ((df) this).field_C = param2 ? true : false;
+        try {
+            ((df) this).field_C = param2 ? true : false;
+        } catch (RuntimeException runtimeException) {
+            throw qk.a((Throwable) (Object) runtimeException, "df.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     private df(String param0, sc param1) {
         this(param0, vc.field_c.field_n, param1);
-        ((df) this).field_l = vc.field_c.field_q;
+        try {
+            ((df) this).field_l = vc.field_c.field_q;
+        } catch (RuntimeException runtimeException) {
+            throw qk.a((Throwable) (Object) runtimeException, "df.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void a(int param0, int param1, byte param2, int param3) {

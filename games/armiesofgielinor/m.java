@@ -16,8 +16,10 @@ final class m implements Iterable {
 
     final void a(tc param0, boolean param1, long param2) {
         tc var5 = null;
-        if (param1) {
-            field_i = -49;
+        try {
+            if (param1) {
+                field_i = -49;
+            }
             if (!(param0.field_j == null)) {
                 param0.d(-118);
             }
@@ -27,17 +29,9 @@ final class m implements Iterable {
             param0.field_j.field_b = param0;
             param0.field_b.field_j = param0;
             param0.field_i = param2;
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw ig.a((Throwable) (Object) runtimeException, "m.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }
-        if (!(param0.field_j == null)) {
-            param0.d(-118);
-        }
-        var5 = ((m) this).field_c[(int)((long)(((m) this).field_d - 1) & param2)];
-        param0.field_b = var5;
-        param0.field_j = var5.field_j;
-        param0.field_j.field_b = param0;
-        param0.field_b.field_j = param0;
-        param0.field_i = param2;
     }
 
     public static void a(boolean param0) {
@@ -46,9 +40,6 @@ final class m implements Iterable {
         field_g = null;
         field_h = null;
         field_b = null;
-        if (param0) {
-            m.a(false);
-        }
     }
 
     public final Iterator iterator() {
@@ -110,8 +101,9 @@ final class m implements Iterable {
         ((m) this).field_c = new tc[param0];
         ((m) this).field_d = param0;
         for (var2 = 0; var2 < param0; var2++) {
-            var3 = new tc();
-            ((m) this).field_c[var2] = new tc();
+            tc dupTemp$0 = new tc();
+            var3 = dupTemp$0;
+            ((m) this).field_c[var2] = dupTemp$0;
             var3.field_b = var3;
             var3.field_j = var3;
         }

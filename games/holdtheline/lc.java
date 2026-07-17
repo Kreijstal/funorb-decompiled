@@ -47,7 +47,11 @@ final class lc {
     lc(String param0) {
         ((lc) this).field_b = false;
         ((lc) this).field_e = false;
-        ((lc) this).field_a = param0;
+        try {
+            ((lc) this).field_a = param0;
+        } catch (RuntimeException runtimeException) {
+            throw kk.a((Throwable) (Object) runtimeException, "lc.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void a(boolean param0, int param1) {

@@ -9,15 +9,16 @@ final class mr extends kj {
 
     mr(gj param0, ns param1, int param2, int param3) {
         super(param0, param2, param3);
-        ((mr) this).field_i = param1;
-        ((mr) this).field_g = -25;
+        try {
+            ((mr) this).field_i = param1;
+            ((mr) this).field_g = -25;
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "mr.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
+        }
     }
 
     public static void c(int param0) {
         field_f = null;
-        if (param0 != 0) {
-            return;
-        }
         field_h = null;
     }
 
@@ -37,7 +38,7 @@ final class mr extends kj {
         int stackOut_7_0 = 0;
         L0: {
           var8 = BachelorFridge.field_y;
-          if ((((mr) this).field_g ^ -1) > -1) {
+          if (((mr) this).field_g < 0) {
             stackOut_4_0 = ((mr) this).field_g * -20;
             stackIn_5_0 = stackOut_4_0;
             break L0;
@@ -55,12 +56,12 @@ final class mr extends kj {
         }
         L1: {
           var4 = stackIn_5_0;
-          if (-1 < (((mr) this).field_g ^ -1)) {
+          if (((mr) this).field_g < 0) {
             stackOut_9_0 = 0;
             stackIn_10_0 = stackOut_9_0;
             break L1;
           } else {
-            if ((((mr) this).field_g ^ -1) <= -16) {
+            if (((mr) this).field_g >= 15) {
               stackOut_8_0 = 2;
               stackIn_10_0 = stackOut_8_0;
               break L1;
@@ -78,7 +79,7 @@ final class mr extends kj {
         if (!param1) {
           field_f = null;
           L2: while (true) {
-            if ((var7 ^ -1) < -1) {
+            if (var7 > 0) {
               var7 -= 64;
               vi.field_f.a(param2, var7);
               continue L2;
@@ -88,7 +89,7 @@ final class mr extends kj {
           }
         } else {
           L3: while (true) {
-            if ((var7 ^ -1) < -1) {
+            if (var7 > 0) {
               var7 -= 64;
               vi.field_f.a(param2, var7);
               continue L3;
@@ -100,10 +101,11 @@ final class mr extends kj {
     }
 
     final boolean b(int param0) {
+        int fieldTemp$2 = ((mr) this).field_g + 1;
         ((mr) this).field_g = ((mr) this).field_g + 1;
-        if (((mr) this).field_g + 1 < 65) {
+        if (fieldTemp$2 < 65) {
           L0: {
-            if (-36 == (((mr) this).field_g ^ -1)) {
+            if (((mr) this).field_g == 35) {
               wf.a(44, (byte) 20);
               ((mr) this).field_e.a(((mr) this).field_c, false, ((mr) this).field_d).field_j = 0;
               ((mr) this).field_i.a(false, ((mr) this).field_e.field_h);

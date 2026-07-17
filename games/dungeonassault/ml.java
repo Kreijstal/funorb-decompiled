@@ -11,9 +11,6 @@ final class ml {
         field_c = null;
         field_a = null;
         field_b = null;
-        if (param0 < 8) {
-            field_a = null;
-        }
     }
 
     static {

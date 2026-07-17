@@ -7,7 +7,7 @@ final class wi {
     private static String field_z;
 
     public static void a(int param0) {
-        int var1 = 88 / ((-8 - param0) / 55);
+        int var1 = 88;
         field_a = null;
         field_b = null;
     }

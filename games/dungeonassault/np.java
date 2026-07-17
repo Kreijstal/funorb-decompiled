@@ -27,7 +27,7 @@ class np extends rj {
           if (null != ((np) this).field_L) {
             gf.a(((np) this).field_L);
             gf.a(param0 + ((np) this).field_t, param1 + ((np) this).field_i, ((np) this).field_q + ((np) this).field_t - -param0, param1 + ((np) this).field_x + ((np) this).field_i);
-            var4 = 56 % ((41 - param2) / 61);
+            var4 = 0;
             if (null != ((np) this).field_J) {
               var5 = (rj) (Object) ((np) this).field_J.e(-24172);
               L0: while (true) {
@@ -48,7 +48,7 @@ class np extends rj {
             ((np) this).field_L = new int[4];
             gf.a(((np) this).field_L);
             gf.a(param0 + ((np) this).field_t, param1 + ((np) this).field_i, ((np) this).field_q + ((np) this).field_t - -param0, param1 + ((np) this).field_x + ((np) this).field_i);
-            var4 = 56 % ((41 - param2) / 61);
+            var4 = 0;
             if (null != ((np) this).field_J) {
               var5 = (rj) (Object) ((np) this).field_J.e(-24172);
               L1: while (true) {
@@ -70,18 +70,18 @@ class np extends rj {
     }
 
     final static void a(byte param0, java.applet.Applet param1) {
-        String var2 = null;
-        String var3 = null;
         long var4 = 0L;
         mm.field_k = true;
-        var2 = "tuhstatbut";
-        var3 = "rvnadlm";
+        String var2 = "tuhstatbut";
+        String var3 = "rvnadlm";
         if (param0 >= -121) {
-          return;
-        } else {
-          var4 = -1L;
-          lm.a(false, var2, var4, param1, var3);
-          return;
+            return;
+        }
+        try {
+            var4 = -1L;
+            lm.a(false, var2, var4, param1, var3);
+        } catch (RuntimeException runtimeException) {
+            throw vk.a((Throwable) (Object) runtimeException, "np.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -96,9 +96,6 @@ class np extends rj {
     final static void d(byte param0) {
         Object var2 = null;
         gg.a((byte) -92, (String) null, he.field_m);
-        if (param0 < 45) {
-            String discarded$0 = np.b(25, 106);
-        }
     }
 
     void b(byte param0) {
@@ -106,87 +103,43 @@ class np extends rj {
         rj var4 = null;
         var3 = DungeonAssault.field_K;
         if (null != ((np) this).field_J) {
-          var4 = (rj) (Object) ((np) this).field_J.e(param0 ^ -24182);
+          var4 = (rj) (Object) ((np) this).field_J.e(-24172);
           L0: while (true) {
             if (var4 != null) {
               var4.b((byte) 30);
               var4 = (rj) (Object) ((np) this).field_J.a(4);
               continue L0;
             } else {
-              super.b(param0);
+              super.b((byte) 30);
               return;
             }
           }
         } else {
-          super.b(param0);
+          super.b((byte) 30);
           return;
         }
     }
 
     void a(rj param0, byte param1) {
-        int var3 = 0;
+        int var3_int = 0;
         int var4 = 0;
-        if (param1 <= -27) {
-          L0: {
-            var3 = ((np) this).field_t;
-            if (0 == (1 & param0.field_v)) {
-              break L0;
-            } else {
-              var3 = var3 + ((np) this).field_q;
-              break L0;
+        try {
+            var3_int = ((np) this).field_t;
+            if (0 != (1 & param0.field_v)) {
+                var3_int = var3_int + ((np) this).field_q;
             }
-          }
-          L1: {
             var4 = ((np) this).field_i;
-            if (0 == (param0.field_v & 2)) {
-              break L1;
-            } else {
-              var4 = var4 + ((np) this).field_x;
-              break L1;
+            if (0 != (param0.field_v & 2)) {
+                var4 = var4 + ((np) this).field_x;
             }
-          }
-          param0.e(var4, var3, 100);
-          if (null != ((np) this).field_J) {
-            ((np) this).field_J.b((ne) (Object) param0, false);
-            param0.field_r = (rj) this;
-            return;
-          } else {
-            ((np) this).field_J = new md();
-            ((np) this).field_J.b((ne) (Object) param0, false);
-            param0.field_r = (rj) this;
-            return;
-          }
-        } else {
-          L2: {
-            field_I = null;
-            var3 = ((np) this).field_t;
-            if (0 == (1 & param0.field_v)) {
-              break L2;
-            } else {
-              var3 = var3 + ((np) this).field_q;
-              break L2;
+            param0.e(var4, var3_int, 100);
+            if (null == ((np) this).field_J) {
+                ((np) this).field_J = new md();
             }
-          }
-          L3: {
-            var4 = ((np) this).field_i;
-            if (0 == (param0.field_v & 2)) {
-              break L3;
-            } else {
-              var4 = var4 + ((np) this).field_x;
-              break L3;
-            }
-          }
-          param0.e(var4, var3, 100);
-          if (null != ((np) this).field_J) {
             ((np) this).field_J.b((ne) (Object) param0, false);
             param0.field_r = (rj) this;
-            return;
-          } else {
-            ((np) this).field_J = new md();
-            ((np) this).field_J.b((ne) (Object) param0, false);
-            param0.field_r = (rj) this;
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw vk.a((Throwable) (Object) runtimeException, "np.B(" + (param0 != null ? "{...}" : "null") + 44 + -76 + 41);
         }
     }
 
@@ -203,12 +156,7 @@ class np extends rj {
         field_E = null;
         field_A = null;
         field_M = null;
-        if (param0 != -74) {
-          return;
-        } else {
-          field_C = null;
-          return;
-        }
+        field_C = null;
     }
 
     void e(int param0, int param1, int param2) {
@@ -616,8 +564,9 @@ class np extends rj {
               var8 = (rj) (Object) ((np) this).field_J.e(-24172);
               L0: while (true) {
                 if (var8 != null) {
-                  var5 = var8.a(-31, param1, param2);
-                  if (var8.a(-31, param1, param2) != null) {
+                  rj dupTemp$14 = var8.a(-31, param1, param2);
+                  var5 = dupTemp$14;
+                  if (dupTemp$14 != null) {
                     return var5;
                   } else {
                     var8 = (rj) (Object) ((np) this).field_J.a(4);
@@ -637,8 +586,9 @@ class np extends rj {
               var8 = (rj) (Object) ((np) this).field_J.e(-24172);
               L1: while (true) {
                 if (var8 != null) {
-                  var5 = var8.a(-31, param1, param2);
-                  if (var8.a(-31, param1, param2) != null) {
+                  rj dupTemp$15 = var8.a(-31, param1, param2);
+                  var5 = dupTemp$15;
+                  if (dupTemp$15 != null) {
                     return var5;
                   } else {
                     var8 = (rj) (Object) ((np) this).field_J.a(4);

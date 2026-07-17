@@ -3,9 +3,6 @@
  */
 final class gj {
     final static boolean a(int param0, int param1) {
-        if (param1 != 22681) {
-            return false;
-        }
         return false;
     }
 

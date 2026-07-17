@@ -11,45 +11,28 @@ final class gl extends RuntimeException {
     Throwable field_a;
 
     final static void a(int param0, int param1, byte param2, int param3, int param4, nh param5, int param6, int param7, int param8) {
-        if (param2 > -91) {
-          field_e = null;
-          ph.field_e = param6;
-          af.field_d = param0;
-          hf.field_z = param5;
-          ca.field_db = param1;
-          ac.field_a = param3;
-          fe.field_a = param7;
-          ib.field_l = param8;
-          hd.field_B = param4;
-          return;
-        } else {
-          ph.field_e = param6;
-          af.field_d = param0;
-          hf.field_z = param5;
-          ca.field_db = param1;
-          ac.field_a = param3;
-          fe.field_a = param7;
-          ib.field_l = param8;
-          hd.field_B = param4;
-          return;
+        try {
+            if (param2 > -91) {
+                field_e = null;
+            }
+            ph.field_e = param6;
+            af.field_d = param0;
+            hf.field_z = param5;
+            ca.field_db = param1;
+            ac.field_a = param3;
+            fe.field_a = param7;
+            ib.field_l = param8;
+            hd.field_B = param4;
+        } catch (RuntimeException runtimeException) {
+            throw ie.a((Throwable) (Object) runtimeException, "gl.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 44 + param6 + 44 + param7 + 44 + param8 + 41);
         }
     }
 
     public static void a(boolean param0) {
-        if (param0) {
-          gl.a(false);
-          field_f = null;
-          field_e = null;
-          field_g = null;
-          field_b = null;
-          return;
-        } else {
-          field_f = null;
-          field_e = null;
-          field_g = null;
-          field_b = null;
-          return;
-        }
+        field_f = null;
+        field_e = null;
+        field_g = null;
+        field_b = null;
     }
 
     gl(Throwable param0, String param1) {

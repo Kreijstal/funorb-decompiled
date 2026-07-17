@@ -48,45 +48,52 @@ class nh extends sk {
     }
 
     final void a(int param0, ka param1) {
-        param1.a((byte) 122, ((nh) this).field_j);
-        if (param0 != 95) {
-            ua discarded$0 = ((nh) this).a(-10);
+        try {
+            param1.a((byte) 122, ((nh) this).field_j);
+            if (param0 != 95) {
+                ua discarded$0 = ((nh) this).a(-10);
+            }
+            param1.a(false, ((nh) this).field_i);
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) (Object) runtimeException, "nh.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        param1.a(false, ((nh) this).field_i);
     }
 
     public static void b(int param0) {
         field_e = null;
         field_d = null;
         field_g = null;
-        if (param0 != 245) {
-            field_d = null;
-        }
     }
 
     final static void a(le param0, byte param1, int param2) {
+        int var4 = 0;
         ha var5 = pg.field_fb;
         var5.f(param2, 950);
         if (param1 != -30) {
             return;
         }
-        var5.field_k = var5.field_k + 1;
-        int var4 = var5.field_k;
-        var5.a(false, 1);
-        if (param0.field_p == null) {
-            var5.a(false, 0);
-        } else {
-            var5.a(false, param0.field_p.length);
-            var5.a(param0.field_p.length, 0, (byte) -13, param0.field_p);
+        try {
+            var5.field_k = var5.field_k + 1;
+            var4 = var5.field_k;
+            var5.a(false, 1);
+            if (param0.field_p == null) {
+                var5.a(false, 0);
+            } else {
+                var5.a(false, param0.field_p.length);
+                var5.a(param0.field_p.length, 0, (byte) -13, param0.field_p);
+            }
+            int discarded$0 = var5.c(var4, (byte) -3);
+            var5.field_k = var5.field_k - 4;
+            param0.field_o = var5.b(false);
+            var5.a(-var4 + var5.field_k, (byte) 70);
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) (Object) runtimeException, "nh.L(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }
-        int discarded$0 = var5.c(var4, (byte) -3);
-        var5.field_k = var5.field_k - 4;
-        param0.field_o = var5.b(false);
-        var5.a(-var4 + var5.field_k, (byte) 70);
     }
 
     final static String a(CharSequence param0, boolean param1) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         StringBuilder var5 = null;
@@ -94,123 +101,211 @@ class nh extends sk {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
+        Object stackIn_3_0 = null;
+        Object stackIn_29_0 = null;
+        String stackIn_31_0 = null;
+        RuntimeException stackIn_33_0 = null;
+        StringBuilder stackIn_33_1 = null;
+        RuntimeException stackIn_34_0 = null;
+        StringBuilder stackIn_34_1 = null;
+        RuntimeException stackIn_35_0 = null;
+        StringBuilder stackIn_35_1 = null;
+        String stackIn_35_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        String stackOut_30_0 = null;
+        Object stackOut_28_0 = null;
+        Object stackOut_2_0 = null;
+        RuntimeException stackOut_32_0 = null;
+        StringBuilder stackOut_32_1 = null;
+        RuntimeException stackOut_34_0 = null;
+        StringBuilder stackOut_34_1 = null;
+        String stackOut_34_2 = null;
+        RuntimeException stackOut_33_0 = null;
+        StringBuilder stackOut_33_1 = null;
+        String stackOut_33_2 = null;
         var9 = stellarshard.field_B;
-        if (param0 != null) {
-          var2 = 0;
-          var3 = param0.length();
-          L0: while (true) {
-            L1: {
-              if (var2 >= var3) {
-                break L1;
-              } else {
-                if (!sk.a(param0.charAt(var2), -109)) {
-                  break L1;
-                } else {
-                  var2++;
-                  continue L0;
-                }
-              }
-            }
-            if (!param1) {
-              L2: while (true) {
-                L3: {
-                  if (var3 <= var2) {
-                    break L3;
+        try {
+          L0: {
+            if (param0 != null) {
+              var2_int = 0;
+              var3 = param0.length();
+              L1: while (true) {
+                L2: {
+                  if (var2_int >= var3) {
+                    break L2;
                   } else {
-                    if (!sk.a(param0.charAt(var3 + -1), -118)) {
-                      break L3;
+                    if (!sk.a(param0.charAt(var2_int), -109)) {
+                      break L2;
                     } else {
-                      var3--;
-                      continue L2;
+                      var2_int++;
+                      continue L1;
                     }
                   }
                 }
-                var4 = var3 + -var2;
-                if (1 <= var4) {
-                  if (12 >= var4) {
-                    var5 = new StringBuilder(var4);
-                    var6 = var2;
-                    L4: while (true) {
-                      if (var3 <= var6) {
-                        if (-1 != (var5.length() ^ -1)) {
-                          return var5.toString();
-                        } else {
-                          return null;
-                        }
+                L3: while (true) {
+                  L4: {
+                    if (var3 <= var2_int) {
+                      break L4;
+                    } else {
+                      if (!sk.a(param0.charAt(var3 + -1), -118)) {
+                        break L4;
                       } else {
-                        var7 = param0.charAt(var6);
-                        if (s.a(45, (char) var7)) {
-                          var8 = of.a(-119, (char) var7);
-                          if (var8 != 0) {
-                            StringBuilder discarded$1 = var5.append(var8);
-                            var6++;
-                            continue L4;
+                        var3--;
+                        continue L3;
+                      }
+                    }
+                  }
+                  var4 = var3 + -var2_int;
+                  if (1 <= var4) {
+                    if (12 >= var4) {
+                      var5 = new StringBuilder(var4);
+                      var6 = var2_int;
+                      L5: while (true) {
+                        if (var3 <= var6) {
+                          if (var5.length() != 0) {
+                            stackOut_30_0 = var5.toString();
+                            stackIn_31_0 = stackOut_30_0;
+                            break L0;
                           } else {
-                            var6++;
-                            continue L4;
+                            stackOut_28_0 = null;
+                            stackIn_29_0 = stackOut_28_0;
+                            return (String) (Object) stackIn_29_0;
                           }
                         } else {
+                          L6: {
+                            var7 = param0.charAt(var6);
+                            if (s.a(45, (char) var7)) {
+                              var8 = of.a(-119, (char) var7);
+                              if (var8 != 0) {
+                                StringBuilder discarded$2 = var5.append(var8);
+                                break L6;
+                              } else {
+                                break L6;
+                              }
+                            } else {
+                              break L6;
+                            }
+                          }
                           var6++;
-                          continue L4;
+                          continue L5;
                         }
                       }
+                    } else {
+                      return null;
                     }
                   } else {
                     return null;
                   }
-                } else {
-                  return null;
                 }
               }
             } else {
-              return null;
+              stackOut_2_0 = null;
+              stackIn_3_0 = stackOut_2_0;
+              return (String) (Object) stackIn_3_0;
             }
           }
-        } else {
-          return null;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L7: {
+            var2 = decompiledCaughtException;
+            stackOut_32_0 = (RuntimeException) var2;
+            stackOut_32_1 = new StringBuilder().append("nh.D(");
+            stackIn_34_0 = stackOut_32_0;
+            stackIn_34_1 = stackOut_32_1;
+            stackIn_33_0 = stackOut_32_0;
+            stackIn_33_1 = stackOut_32_1;
+            if (param0 == null) {
+              stackOut_34_0 = (RuntimeException) (Object) stackIn_34_0;
+              stackOut_34_1 = (StringBuilder) (Object) stackIn_34_1;
+              stackOut_34_2 = "null";
+              stackIn_35_0 = stackOut_34_0;
+              stackIn_35_1 = stackOut_34_1;
+              stackIn_35_2 = stackOut_34_2;
+              break L7;
+            } else {
+              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
+              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
+              stackOut_33_2 = "{...}";
+              stackIn_35_0 = stackOut_33_0;
+              stackIn_35_1 = stackOut_33_1;
+              stackIn_35_2 = stackOut_33_2;
+              break L7;
+            }
+          }
+          throw ma.a((Throwable) (Object) stackIn_35_0, stackIn_35_2 + 44 + 0 + 41);
         }
+        return stackIn_31_0;
     }
 
     final static void c(int param0) {
-        int var4 = stellarshard.field_B;
-        int[] var5 = tg.field_a;
-        int[] var1 = var5;
+        int[] var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
-        int var3 = var5.length;
-        while (var2 < var3) {
-            int incrementValue$0 = var2;
-            var2++;
-            var5[incrementValue$0] = 0;
-            int incrementValue$1 = var2;
-            var2++;
-            var5[incrementValue$1] = 0;
-            int incrementValue$2 = var2;
-            var2++;
-            var5[incrementValue$2] = 0;
-            int incrementValue$3 = var2;
-            var2++;
-            var5[incrementValue$3] = 0;
-            int incrementValue$4 = var2;
-            var2++;
-            var5[incrementValue$4] = 0;
-            int incrementValue$5 = var2;
-            var2++;
-            var5[incrementValue$5] = 0;
-            int incrementValue$6 = var2;
-            var2++;
-            var5[incrementValue$6] = 0;
-            int incrementValue$7 = var2;
-            var2++;
-            var5[incrementValue$7] = 0;
-        }
-        if (param0 > -17) {
-            field_h = 114;
+        int var3 = 0;
+        int var4 = 0;
+        int[] var5 = null;
+        RuntimeException decompiledCaughtException = null;
+        var4 = stellarshard.field_B;
+        try {
+          L0: {
+            var5 = tg.field_a;
+            var1 = var5;
+            var2 = 0;
+            var3 = var5.length;
+            L1: while (true) {
+              if (var2 >= var3) {
+                L2: {
+                  if (param0 <= -17) {
+                    break L2;
+                  } else {
+                    field_h = 114;
+                    break L2;
+                  }
+                }
+                break L0;
+              } else {
+                int incrementValue$16 = var2;
+                var2++;
+                var5[incrementValue$16] = 0;
+                int incrementValue$17 = var2;
+                var2++;
+                var5[incrementValue$17] = 0;
+                int incrementValue$18 = var2;
+                var2++;
+                var5[incrementValue$18] = 0;
+                int incrementValue$19 = var2;
+                var2++;
+                var5[incrementValue$19] = 0;
+                int incrementValue$20 = var2;
+                var2++;
+                var5[incrementValue$20] = 0;
+                int incrementValue$21 = var2;
+                var2++;
+                var5[incrementValue$21] = 0;
+                int incrementValue$22 = var2;
+                var2++;
+                var5[incrementValue$22] = 0;
+                int incrementValue$23 = var2;
+                var2++;
+                var5[incrementValue$23] = 0;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw ma.a((Throwable) (Object) var1_ref, "nh.K(" + param0 + 41);
         }
     }
 
     nh(long param0, String param1) {
-        ((nh) this).field_j = param0;
-        ((nh) this).field_i = param1;
+        try {
+            ((nh) this).field_j = param0;
+            ((nh) this).field_i = param1;
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) (Object) runtimeException, "nh.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {
@@ -218,7 +313,7 @@ class nh extends sk {
     }
 
     private static void $cfr$clinit() {
-        field_e = new char[]{(char)32, (char)160, (char)95, (char)45, (char)224, (char)225, (char)226, (char)228, (char)227, (char)192, (char)193, (char)194, (char)196, (char)195, (char)232, (char)233, (char)234, (char)235, (char)200, (char)201, (char)202, (char)203, (char)237, (char)238, (char)239, (char)205, (char)206, (char)207, (char)242, (char)243, (char)244, (char)246, (char)245, (char)210, (char)211, (char)212, (char)214, (char)213, (char)249, (char)250, (char)251, (char)252, (char)217, (char)218, (char)219, (char)220, (char)231, (char)199, (char)255, (char)376, (char)241, (char)209, (char)223};
+        field_e = new char[]{' ', ' ', '_', '-', 'à', 'á', 'â', 'ä', 'ã', 'À', 'Á', 'Â', 'Ä', 'Ã', 'è', 'é', 'ê', 'ë', 'È', 'É', 'Ê', 'Ë', 'í', 'î', 'ï', 'Í', 'Î', 'Ï', 'ò', 'ó', 'ô', 'ö', 'õ', 'Ò', 'Ó', 'Ô', 'Ö', 'Õ', 'ù', 'ú', 'û', 'ü', 'Ù', 'Ú', 'Û', 'Ü', 'ç', 'Ç', 'ÿ', 'Ÿ', 'ñ', 'Ñ', 'ß'};
         field_d = new int[8192];
     }
 }

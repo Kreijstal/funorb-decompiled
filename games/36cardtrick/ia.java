@@ -10,28 +10,13 @@ final class ia {
     static int field_e;
 
     final static boolean a(byte param0) {
-        if (param0 == -79) {
-          if (s.field_d != null) {
-            if (null == s.field_d.d((byte) 94)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+        if (s.field_d == null) {
             return false;
-          }
-        } else {
-          int discarded$6 = ia.a(-122, 113);
-          if (s.field_d != null) {
-            if (null == s.field_d.d((byte) 94)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
         }
+        if (null == s.field_d.d((byte) 94)) {
+            return false;
+        }
+        return true;
     }
 
     final static int b(int param0) {
@@ -42,30 +27,20 @@ final class ia {
     }
 
     public static void a(int param0) {
-        if (param0 != -12765) {
-          field_f = null;
-          field_c = null;
-          field_f = null;
-          field_d = null;
-          field_b = null;
-          return;
-        } else {
-          field_c = null;
-          field_f = null;
-          field_d = null;
-          field_b = null;
-          return;
-        }
+        field_c = null;
+        field_f = null;
+        field_d = null;
+        field_b = null;
     }
 
     final static int a(int param0, int param1) {
         int var2 = 0;
         if (param1 == 2) {
           var2 = 0;
-          if (-1 >= (param0 ^ -1)) {
-            if (-65537 < (param0 ^ -1)) {
+          if (param0 >= 0) {
+            if (param0 < 65536) {
               L0: {
-                if (-257 < (param0 ^ -1)) {
+                if (param0 < 256) {
                   break L0;
                 } else {
                   param0 = param0 >>> 8;
@@ -83,7 +58,7 @@ final class ia {
                 }
               }
               L2: {
-                if ((param0 ^ -1) > -5) {
+                if (param0 < 4) {
                   break L2;
                 } else {
                   var2 += 2;
@@ -105,7 +80,7 @@ final class ia {
               L4: {
                 param0 = param0 >>> 16;
                 var2 += 16;
-                if (-257 < (param0 ^ -1)) {
+                if (param0 < 256) {
                   break L4;
                 } else {
                   param0 = param0 >>> 8;
@@ -123,7 +98,7 @@ final class ia {
                 }
               }
               L6: {
-                if ((param0 ^ -1) > -5) {
+                if (param0 < 4) {
                   break L6;
                 } else {
                   var2 += 2;
@@ -146,7 +121,7 @@ final class ia {
             L8: {
               param0 = param0 >>> 16;
               var2 += 16;
-              if (-257 < (param0 ^ -1)) {
+              if (param0 < 256) {
                 break L8;
               } else {
                 param0 = param0 >>> 8;
@@ -164,7 +139,7 @@ final class ia {
               }
             }
             L10: {
-              if ((param0 ^ -1) > -5) {
+              if (param0 < 4) {
                 break L10;
               } else {
                 var2 += 2;

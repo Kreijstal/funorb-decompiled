@@ -11,62 +11,91 @@ final class de extends oh {
     public static void a(byte param0) {
         field_h = null;
         field_k = null;
-        if (param0 != 102) {
-            Object var2 = null;
-            de.a(62, (java.applet.Applet) null);
-        }
     }
 
     de(String param0) {
-        ((de) this).field_l = param0;
+        try {
+            ((de) this).field_l = param0;
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "de.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static void a(int param0, java.applet.Applet param1) {
         try {
-            Exception exception = null;
             java.net.URL var2 = null;
+            RuntimeException var2_ref = null;
+            Exception var2_ref2 = null;
             Object var3 = null;
+            RuntimeException stackIn_7_0 = null;
+            StringBuilder stackIn_7_1 = null;
+            RuntimeException stackIn_8_0 = null;
+            StringBuilder stackIn_8_1 = null;
+            RuntimeException stackIn_9_0 = null;
+            StringBuilder stackIn_9_1 = null;
+            String stackIn_9_2 = null;
             Throwable decompiledCaughtException = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        try {
-                            var2 = new java.net.URL(param1.getCodeBase(), "tosupport.ws");
-                            param1.getAppletContext().showDocument(jg.a(param1, false, var2), "_top");
-                            statePc = 3;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_0) {
-                            caughtException = stateCaught_0;
-                            statePc = 2;
-                            continue stateLoop;
-                        }
-                    }
-                    case 2: {
-                        exception = (Exception) (Object) caughtException;
-                        exception.printStackTrace();
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                    case 3: {
-                        if (param0 <= 107) {
-                            statePc = 5;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    }
-                    case 4: {
-                        return;
-                    }
-                    case 5: {
-                        var3 = null;
-                        de.a(-3, (java.applet.Applet) null);
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            RuntimeException stackOut_6_0 = null;
+            StringBuilder stackOut_6_1 = null;
+            RuntimeException stackOut_8_0 = null;
+            StringBuilder stackOut_8_1 = null;
+            String stackOut_8_2 = null;
+            RuntimeException stackOut_7_0 = null;
+            StringBuilder stackOut_7_1 = null;
+            String stackOut_7_2 = null;
+            try {
+              L0: {
+                try {
+                  L1: {
+                    var2 = new java.net.URL(param1.getCodeBase(), "tosupport.ws");
+                    param1.getAppletContext().showDocument(jg.a(param1, false, var2), "_top");
+                    break L1;
+                  }
+                } catch (java.lang.Exception decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  L2: {
+                    var2_ref2 = (Exception) (Object) decompiledCaughtException;
+                    var2_ref2.printStackTrace();
+                    break L2;
+                  }
                 }
+                if (param0 > 107) {
+                  break L0;
+                } else {
+                  var3 = null;
+                  de.a(-3, (java.applet.Applet) null);
+                  return;
+                }
+              }
+            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L3: {
+                var2_ref = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_6_0 = (RuntimeException) var2_ref;
+                stackOut_6_1 = new StringBuilder().append("de.B(").append(param0).append(44);
+                stackIn_8_0 = stackOut_6_0;
+                stackIn_8_1 = stackOut_6_1;
+                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_1 = stackOut_6_1;
+                if (param1 == null) {
+                  stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+                  stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+                  stackOut_8_2 = "null";
+                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_1 = stackOut_8_1;
+                  stackIn_9_2 = stackOut_8_2;
+                  break L3;
+                } else {
+                  stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+                  stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+                  stackOut_7_2 = "{...}";
+                  stackIn_9_0 = stackOut_7_0;
+                  stackIn_9_1 = stackOut_7_1;
+                  stackIn_9_2 = stackOut_7_2;
+                  break L3;
+                }
+              }
+              throw r.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

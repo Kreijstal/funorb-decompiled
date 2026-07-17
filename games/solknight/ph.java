@@ -20,29 +20,19 @@ abstract class ph {
     abstract void a(int param0, int param1, int param2);
 
     public static void a(int param0) {
-        if (param0 != -20542) {
-          ph.a(94, true);
-          field_e = null;
-          field_g = null;
-          field_h = null;
-          field_f = null;
-          return;
-        } else {
-          field_e = null;
-          field_g = null;
-          field_h = null;
-          field_f = null;
-          return;
-        }
+        field_e = null;
+        field_g = null;
+        field_h = null;
+        field_f = null;
     }
 
     final static void a(int param0, boolean param1) {
         if (param0 != 25899) {
             field_h = null;
-            nh.a((byte) -72, true, param1);
+            nh.a((byte) -72, true, true);
             return;
         }
-        nh.a((byte) -72, true, param1);
+        nh.a((byte) -72, true, true);
     }
 
     static {

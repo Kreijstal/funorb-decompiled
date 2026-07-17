@@ -21,7 +21,7 @@ final class ho {
         while (((ho) this).field_c[var1] >= 0) {
             var1 = tg.b() != 0 ? ((ho) this).field_c[var1] : var1 + 1;
         }
-        return ((ho) this).field_c[var1] ^ -1;
+        return ~((ho) this).field_c[var1];
     }
 
     private final void a() {
@@ -65,7 +65,7 @@ final class ho {
                   var7 = 0;
                   L2: while (true) {
                     if (var7 >= var4) {
-                      ((ho) this).field_c[var6] = var3 ^ -1;
+                      ((ho) this).field_c[var6] = ~var3;
                       if (var6 >= var2) {
                         var2 = var6 + 1;
                         var3++;

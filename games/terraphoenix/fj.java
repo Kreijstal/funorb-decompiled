@@ -27,8 +27,9 @@ final class fj {
 
     final int a(int param0) {
         if (((fj) this).field_e >= ((fj) this).field_d) {
+            int fieldTemp$0 = ((fj) this).field_c;
             ((fj) this).field_c = ((fj) this).field_c + 1;
-            ((fj) this).field_a = ((fj) this).field_k[((fj) this).field_c] << 15;
+            ((fj) this).field_a = ((fj) this).field_k[fieldTemp$0] << 15;
             if (((fj) this).field_c >= ((fj) this).field_j) {
                 ((fj) this).field_c = ((fj) this).field_j - 1;
             }

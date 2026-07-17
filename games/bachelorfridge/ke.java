@@ -15,7 +15,7 @@ final class ke extends pu {
         var5 = BachelorFridge.field_y;
         var1_int = 0;
         L0: while (true) {
-          if ((var1_int ^ -1) <= -11) {
+          if (var1_int >= 10) {
             L1: {
               jga.field_y[0] = ai.field_d.a("", "bf_ariba", -28494);
               jga.field_y[1] = ai.field_d.a("", "bf_bash", -28494);
@@ -253,13 +253,13 @@ final class ke extends pu {
                         var7 = var6 + ls.field_b[var1_int];
                         var8 = var7 + "_";
                         var9 = var8 + ca.field_e[var2];
-                        if (-7 != (var1_int ^ -1)) {
+                        if (var1_int != 6) {
                           break L5;
                         } else {
                           if (1 + var3 != 3) {
                             break L5;
                           } else {
-                            if ((var2 ^ -1) != -3) {
+                            if (var2 != 2) {
                               break L5;
                             } else {
                               break L4;

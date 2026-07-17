@@ -12,48 +12,66 @@ final class cg {
     static int field_e;
 
     final static int a(int param0) {
-        int var1 = 0;
+        int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
+        int stackIn_13_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_12_0 = 0;
         var3 = ZombieDawn.field_J;
-        var1 = 0;
-        L0: while (true) {
-          if (!on.b(-93)) {
-            L1: {
-              kk.field_m.a((byte) -33, dn.a(ha.field_b, false, ei.field_K), dn.a(nc.field_j, false, hp.field_D));
-              if (!kk.field_m.d(-120)) {
-                break L1;
-              } else {
-                var1 = 1;
-                break L1;
-              }
-            }
-            var2 = param0;
-            if (var1 != 0) {
-              if ((kk.field_m.field_d ^ -1) <= -1) {
-                var2 = gn.field_a[kk.field_m.field_d];
-                if (var2 != 2) {
-                  return var2;
-                } else {
-                  sl.a((byte) 85);
-                  return var2;
+        try {
+          L0: {
+            var1_int = 0;
+            L1: while (true) {
+              if (!on.b(-93)) {
+                L2: {
+                  kk.field_m.a((byte) -33, dn.a(ha.field_b, false, ei.field_K), dn.a(nc.field_j, false, hp.field_D));
+                  if (!kk.field_m.d(-120)) {
+                    break L2;
+                  } else {
+                    var1_int = 1;
+                    break L2;
+                  }
                 }
+                L3: {
+                  var2 = param0;
+                  if (var1_int == 0) {
+                    break L3;
+                  } else {
+                    if (kk.field_m.field_d < 0) {
+                      break L3;
+                    } else {
+                      var2 = gn.field_a[kk.field_m.field_d];
+                      if (var2 == 2) {
+                        sl.a((byte) 85);
+                        break L3;
+                      } else {
+                        break L3;
+                      }
+                    }
+                  }
+                }
+                stackOut_12_0 = var2;
+                stackIn_13_0 = stackOut_12_0;
+                break L0;
               } else {
-                return var2;
+                kk.field_m.a(21657);
+                if (!kk.field_m.d(-122)) {
+                  continue L1;
+                } else {
+                  var1_int = 1;
+                  continue L1;
+                }
               }
-            } else {
-              return var2;
-            }
-          } else {
-            kk.field_m.a(21657);
-            if (!kk.field_m.d(-122)) {
-              continue L0;
-            } else {
-              var1 = 1;
-              continue L0;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw sh.a((Throwable) (Object) var1, "cg.B(" + param0 + 41);
         }
+        return stackIn_13_0;
     }
 
     public static void a(boolean param0) {
@@ -62,9 +80,6 @@ final class cg {
         field_d = null;
         field_g = null;
         field_c = null;
-        if (!param0) {
-            field_b = null;
-        }
     }
 
     cg(int param0, int param1, int param2, int param3) {
@@ -78,17 +93,17 @@ final class cg {
 
     final static int a(int param0, int param1) {
         param1--;
-        param1 = param1 | param1 >>> -1025215327;
-        param1 = param1 | param1 >>> -922314526;
-        param1 = param1 | param1 >>> -66557724;
+        param1 = param1 | param1 >>> 1;
+        param1 = param1 | param1 >>> 2;
+        param1 = param1 | param1 >>> 4;
         if (param0 != -922314526) {
           field_c = null;
-          param1 = param1 | param1 >>> 1701553032;
-          param1 = param1 | param1 >>> 1377342992;
+          param1 = param1 | param1 >>> 8;
+          param1 = param1 | param1 >>> 16;
           return param1 - -1;
         } else {
-          param1 = param1 | param1 >>> 1701553032;
-          param1 = param1 | param1 >>> 1377342992;
+          param1 = param1 | param1 >>> 8;
+          param1 = param1 | param1 >>> 16;
           return param1 - -1;
         }
     }

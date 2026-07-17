@@ -9,15 +9,12 @@ final class hi {
     public static void a(boolean param0) {
         field_b = null;
         field_a = null;
-        if (param0) {
-            boolean discarded$0 = hi.a((byte) 43);
-        }
     }
 
     final static boolean a(byte param0) {
         if (param0 <= -99) {
           if (10 <= mh.field_U) {
-            if ((sa.field_k ^ -1) > -14) {
+            if (sa.field_k < 13) {
               return false;
             } else {
               return true;

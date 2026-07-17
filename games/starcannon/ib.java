@@ -54,7 +54,7 @@ final class ib {
                   var7 = 0;
                   L2: while (true) {
                     if (var7 >= var4) {
-                      ((ib) this).field_b[var6] = var3 ^ -1;
+                      ((ib) this).field_b[var6] = ~var3;
                       if (var6 >= var2) {
                         var2 = var6 + 1;
                         var3++;
@@ -178,7 +178,7 @@ final class ib {
         while (((ib) this).field_b[var1] >= 0) {
             var1 = nj.b() != 0 ? ((ib) this).field_b[var1] : var1 + 1;
         }
-        return ((ib) this).field_b[var1] ^ -1;
+        return ~((ib) this).field_b[var1];
     }
 
     private final static int a(int param0, int param1) {
@@ -216,7 +216,7 @@ final class ib {
         int stackOut_22_0 = 0;
         int stackOut_21_0 = 0;
         L0: {
-          int discarded$1 = nj.a(24);
+          int discarded$2 = nj.a(24);
           ((ib) this).field_d = nj.a(16);
           ((ib) this).field_f = nj.a(24);
           ((ib) this).field_c = new int[((ib) this).field_f];
@@ -283,8 +283,9 @@ final class ib {
                     var3_int++;
                     continue L5;
                   } else {
+                    int incrementValue$3 = var2;
                     var2++;
-                    ((ib) this).field_c[var2] = var3_int;
+                    ((ib) this).field_c[incrementValue$3] = var3_int;
                     var5++;
                     continue L6;
                   }

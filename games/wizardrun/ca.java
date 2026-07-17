@@ -14,9 +14,6 @@ final class ca {
     public static void a(byte param0) {
         field_g = null;
         field_a = null;
-        if (param0 > -68) {
-            return;
-        }
         field_d = null;
     }
 

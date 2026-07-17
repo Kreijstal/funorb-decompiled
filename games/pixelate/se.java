@@ -7,32 +7,7 @@ final class se extends jj {
     private jm[] field_n;
 
     final static boolean b(boolean param0) {
-        int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
-        if (param0) {
-          L0: {
-            L1: {
-              if (null == sh.field_e) {
-                break L1;
-              } else {
-                if (!uk.field_s.b(-21)) {
-                  break L1;
-                } else {
-                  stackOut_4_0 = 1;
-                  stackIn_6_0 = stackOut_4_0;
-                  break L0;
-                }
-              }
-            }
-            stackOut_5_0 = 0;
-            stackIn_6_0 = stackOut_5_0;
-            break L0;
-          }
-          return stackIn_6_0 != 0;
-        } else {
-          return false;
-        }
+        return null != sh.field_e && uk.field_s.b(-21);
     }
 
     final void c(int param0) {
@@ -97,34 +72,122 @@ final class se extends jj {
                 return false;
             }
         }
-        var2 = -99 / ((-7 - param0) / 43);
+        var2 = 49;
         return true;
     }
 
     final static tf[] a(int param0, int param1, int param2, fm param3) {
-        if (!rk.a(param0, false, param3, param1)) {
-            return null;
+        RuntimeException var4 = null;
+        Object stackIn_5_0 = null;
+        tf[] stackIn_7_0 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        tf[] stackOut_6_0 = null;
+        Object stackOut_4_0 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        try {
+          L0: {
+            if (rk.a(param0, false, param3, param1)) {
+              if (param2 == 1000) {
+                stackOut_6_0 = wa.c(param2 + -1119);
+                stackIn_7_0 = stackOut_6_0;
+                break L0;
+              } else {
+                stackOut_4_0 = null;
+                stackIn_5_0 = stackOut_4_0;
+                return (tf[]) (Object) stackIn_5_0;
+              }
+            } else {
+              return null;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var4 = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var4;
+            stackOut_8_1 = new StringBuilder().append("se.D(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param3 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L1;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L1;
+            }
+          }
+          throw aa.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
         }
-        if (param2 != 1000) {
-            return null;
-        }
-        return wa.c(param2 + -1119);
+        return stackIn_7_0;
     }
 
     final static void a(byte param0, int param1) {
-        int var3 = Pixelate.field_H ? 1 : 0;
-        rh var4 = (rh) (Object) de.field_b.c(1504642273);
-        while (var4 != null) {
-            sd.a((byte) -76, var4, param1);
-            var4 = (rh) (Object) de.field_b.f(1504642273);
-        }
-        ue var5 = (ue) (Object) f.field_c.c(1504642273);
-        while (var5 != null) {
-            uj.a(param1, var5, 65536);
-            var5 = (ue) (Object) f.field_c.f(1504642273);
-        }
-        if (param0 <= 3) {
-            boolean discarded$0 = se.b(true);
+        RuntimeException var2 = null;
+        int var3 = 0;
+        rh var4 = null;
+        ue var5 = null;
+        RuntimeException decompiledCaughtException = null;
+        var3 = Pixelate.field_H ? 1 : 0;
+        try {
+          L0: {
+            var4 = (rh) (Object) de.field_b.c(1504642273);
+            L1: while (true) {
+              if (var4 == null) {
+                var5 = (ue) (Object) f.field_c.c(1504642273);
+                L2: while (true) {
+                  if (var5 == null) {
+                    L3: {
+                      if (param0 > 3) {
+                        break L3;
+                      } else {
+                        boolean discarded$2 = se.b(true);
+                        break L3;
+                      }
+                    }
+                    break L0;
+                  } else {
+                    uj.a(3, var5, 65536);
+                    var5 = (ue) (Object) f.field_c.f(1504642273);
+                    continue L2;
+                  }
+                }
+              } else {
+                sd.a((byte) -76, var4, 3);
+                var4 = (rh) (Object) de.field_b.f(1504642273);
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw aa.a((Throwable) (Object) var2, "se.J(" + param0 + 44 + 3 + 41);
         }
     }
 
@@ -163,9 +226,6 @@ final class se extends jj {
         if (null != ip.field_y) {
             return true;
         }
-        if (param0 != 3782) {
-            boolean discarded$0 = se.b(true);
-        }
         if (!(pf.field_d.a("benefits", -1))) {
             return false;
         }
@@ -176,15 +236,12 @@ final class se extends jj {
         bl.a(11833, ip.field_y, po.field_e);
         ni.a(km.field_p, 2, 40, 40, 80, false, -2400, 15, (jl) (Object) rk.field_e, 80, 0);
         pb.a(-25960, li.field_h);
-        sk.a(param0 ^ -3744, cf.field_t);
+        sk.a(-90, cf.field_t);
         return true;
     }
 
     public static void f(int param0) {
         field_o = null;
-        if (param0 != 21476) {
-            field_o = null;
-        }
     }
 
     private final void e(int param0) {
@@ -193,28 +250,20 @@ final class se extends jj {
         var3 = Pixelate.field_H ? 1 : 0;
         L0: while (true) {
           if (this.b((byte) 89)) {
-            L1: {
-              if (param0 == -1) {
-                break L1;
-              } else {
-                field_o = null;
-                break L1;
-              }
-            }
             return;
           } else {
             var2 = 0;
-            L2: while (true) {
+            L1: while (true) {
               if (-1 + ((se) this).field_n.length <= var2) {
                 continue L0;
               } else {
                 if (((se) this).field_n[var2 - -1].field_l < ((se) this).field_n[var2].field_l) {
                   this.a((byte) 108, 1 + var2, var2);
                   var2++;
-                  continue L2;
+                  continue L1;
                 } else {
                   var2++;
-                  continue L2;
+                  continue L1;
                 }
               }
             }
@@ -224,17 +273,21 @@ final class se extends jj {
 
     se(String param0, tf[] param1) {
         super(param0, param1);
-        int var3 = 0;
-        ((se) this).field_n = new jm[10];
-        for (var3 = 0; (var3 ^ -1) > -11; var3++) {
-            ((se) this).field_n[var3] = new jm();
+        int var3_int = 0;
+        try {
+            ((se) this).field_n = new jm[10];
+            for (var3_int = 0; var3_int < 10; var3_int++) {
+                ((se) this).field_n[var3_int] = new jm();
+            }
+            this.e(-1);
+            ((se) this).field_m = new fo[4];
+            ((se) this).field_m[0] = new fo(1400, 150, 400, 500, 1000);
+            ((se) this).field_m[1] = new fo(1800, 430, 320, 800, 1000);
+            ((se) this).field_m[2] = new fo(2200, 500, 140, 900, 1000);
+            ((se) this).field_m[3] = new fo(2600, 230, 220, 700, 1000);
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "se.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        this.e(-1);
-        ((se) this).field_m = new fo[4];
-        ((se) this).field_m[0] = new fo(1400, 150, 400, 500, 1000);
-        ((se) this).field_m[1] = new fo(1800, 430, 320, 800, 1000);
-        ((se) this).field_m[2] = new fo(2200, 500, 140, 900, 1000);
-        ((se) this).field_m[3] = new fo(2600, 230, 220, 700, 1000);
     }
 
     static {

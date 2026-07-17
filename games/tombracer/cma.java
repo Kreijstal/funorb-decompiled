@@ -10,7 +10,7 @@ final class cma extends ci {
     private int field_n;
 
     final static su[] c(int param0) {
-        int var1 = 23 % ((-4 - param0) / 36);
+        int var1 = 2;
         return new su[]{uk.field_M, ula.field_v, csa.field_y, ll.field_d, sga.field_n, bi.field_d, dp.field_g, wc.field_e, vna.field_a, wsa.field_v, al.field_f, kea.field_c, lfa.field_o, oc.field_H};
     }
 
@@ -24,75 +24,102 @@ final class cma extends ci {
     }
 
     final void a(byte param0, uia param1, int param2) {
-        int var4 = 0;
+        RuntimeException var4 = null;
+        int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
         Object var7 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        String stackIn_22_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
         var6 = TombRacer.field_G ? 1 : 0;
-        if (param0 == 107) {
-          var5 = param2;
-          if (var5 != 0) {
-            if (var5 != 1) {
-              if (2 != var5) {
-                if (-4 != (var5 ^ -1)) {
-                  if (4 == var5) {
-                    var4 = param1.a(-32768);
-                    ((cma) this).field_o[2] = sea.c(var4, 255) >> -1933885940;
-                    ((cma) this).field_o[0] = sea.c(267386880, var4 << -721881788);
-                    ((cma) this).field_o[1] = sea.c(4080, var4 >> 456341860);
-                    return;
+        try {
+          L0: {
+            L1: {
+              if (param0 == 107) {
+                break L1;
+              } else {
+                var7 = null;
+                ((cma) this).a((byte) -33, (uia) null, 70);
+                break L1;
+              }
+            }
+            var5 = param2;
+            if (var5 != 0) {
+              if (var5 != 1) {
+                if (2 != var5) {
+                  if (var5 != 3) {
+                    L2: {
+                      if (4 != var5) {
+                        break L2;
+                      } else {
+                        var4_int = param1.a(-32768);
+                        ((cma) this).field_o[2] = sea.c(var4_int, 255) >> 12;
+                        ((cma) this).field_o[0] = sea.c(267386880, var4_int << 4);
+                        ((cma) this).field_o[1] = sea.c(4080, var4_int >> 4);
+                        break L2;
+                      }
+                    }
+                    break L0;
                   } else {
+                    ((cma) this).field_q = param1.d(123);
                     return;
                   }
                 } else {
-                  ((cma) this).field_q = param1.d(123);
+                  ((cma) this).field_r = param1.d(param0 + 20);
                   return;
                 }
               } else {
-                ((cma) this).field_r = param1.d(param0 + 20);
+                ((cma) this).field_p = param1.d(124);
                 return;
               }
             } else {
-              ((cma) this).field_p = param1.d(124);
+              ((cma) this).field_n = param1.d(param0 ^ 17);
               return;
             }
-          } else {
-            ((cma) this).field_n = param1.d(param0 ^ 17);
-            return;
           }
-        } else {
-          var7 = null;
-          ((cma) this).a((byte) -33, (uia) null, 70);
-          var5 = param2;
-          if (var5 != 0) {
-            if (var5 != 1) {
-              if (2 != var5) {
-                if (-4 != (var5 ^ -1)) {
-                  if (4 != var5) {
-                    return;
-                  } else {
-                    var4 = param1.a(-32768);
-                    ((cma) this).field_o[2] = sea.c(var4, 255) >> -1933885940;
-                    ((cma) this).field_o[0] = sea.c(267386880, var4 << -721881788);
-                    ((cma) this).field_o[1] = sea.c(4080, var4 >> 456341860);
-                    return;
-                  }
-                } else {
-                  ((cma) this).field_q = param1.d(123);
-                  return;
-                }
-              } else {
-                ((cma) this).field_r = param1.d(param0 + 20);
-                return;
-              }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var4 = decompiledCaughtException;
+            stackOut_19_0 = (RuntimeException) var4;
+            stackOut_19_1 = new StringBuilder().append("cma.A(").append(param0).append(44);
+            stackIn_21_0 = stackOut_19_0;
+            stackIn_21_1 = stackOut_19_1;
+            stackIn_20_0 = stackOut_19_0;
+            stackIn_20_1 = stackOut_19_1;
+            if (param1 == null) {
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "null";
+              stackIn_22_0 = stackOut_21_0;
+              stackIn_22_1 = stackOut_21_1;
+              stackIn_22_2 = stackOut_21_2;
+              break L3;
             } else {
-              ((cma) this).field_p = param1.d(124);
-              return;
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "{...}";
+              stackIn_22_0 = stackOut_20_0;
+              stackIn_22_1 = stackOut_20_1;
+              stackIn_22_2 = stackOut_20_2;
+              break L3;
             }
-          } else {
-            ((cma) this).field_n = param1.d(param0 ^ 17);
-            return;
           }
+          throw tba.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + param2 + 41);
         }
     }
 
@@ -199,7 +226,7 @@ final class cma extends ci {
                     L3: {
                       var15 = var47[var11];
                       var12 = -((cma) this).field_o[2] + var15;
-                      if (-1 < (var12 ^ -1)) {
+                      if (var12 < 0) {
                         var12 = -var12;
                         break L3;
                       } else {
@@ -211,11 +238,12 @@ final class cma extends ci {
                       var48[var11] = var14;
                       var49[var11] = var15;
                       var11++;
+                      var11++;
                       continue L0;
                     } else {
-                      var8[var11] = var13 * ((cma) this).field_q >> -2111631668;
-                      var9[var11] = var14 * ((cma) this).field_r >> -1020975412;
-                      var10[var11] = ((cma) this).field_p * var15 >> -1598030036;
+                      var8[var11] = var13 * ((cma) this).field_q >> 12;
+                      var9[var11] = var14 * ((cma) this).field_r >> 12;
+                      var10[var11] = ((cma) this).field_p * var15 >> 12;
                       var11++;
                       continue L0;
                     }

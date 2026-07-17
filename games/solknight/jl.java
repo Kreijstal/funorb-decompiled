@@ -18,9 +18,6 @@ final class jl implements Iterator {
         field_c = null;
         field_g = null;
         field_h = null;
-        if (param0 != 0) {
-            String discarded$0 = jl.a(true, 59, false, true);
-        }
     }
 
     public final void remove() {
@@ -106,9 +103,13 @@ final class jl implements Iterator {
 
     jl(ik param0) {
         ((jl) this).field_a = null;
-        ((jl) this).field_i = param0;
-        ((jl) this).field_b = ((jl) this).field_i.field_f.field_i;
-        ((jl) this).field_a = null;
+        try {
+            ((jl) this).field_i = param0;
+            ((jl) this).field_b = ((jl) this).field_i.field_f.field_i;
+            ((jl) this).field_a = null;
+        } catch (RuntimeException runtimeException) {
+            throw fc.a((Throwable) (Object) runtimeException, "jl.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

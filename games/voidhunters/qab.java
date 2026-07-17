@@ -11,11 +11,13 @@ final class qab {
     final char a(int param0) {
         if (param0 > -75) {
           ((qab) this).field_b = -65;
+          int fieldTemp$4 = ((qab) this).field_b;
           ((qab) this).field_b = ((qab) this).field_b + 1;
-          return ((qab) this).field_c.charAt(((qab) this).field_b);
+          return ((qab) this).field_c.charAt(fieldTemp$4);
         } else {
+          int fieldTemp$5 = ((qab) this).field_b;
           ((qab) this).field_b = ((qab) this).field_b + 1;
-          return ((qab) this).field_c.charAt(((qab) this).field_b);
+          return ((qab) this).field_c.charAt(fieldTemp$5);
         }
     }
 
@@ -61,18 +63,13 @@ final class qab {
     }
 
     public static void b(int param0) {
-        if (param0 != 0) {
-            boolean discarded$0 = qab.a(107, -118);
-            field_a = null;
-            return;
-        }
         field_a = null;
     }
 
     final static boolean a(int param0, int param1) {
         if (param0 > 32) {
-          if ((param1 ^ -1) != -12) {
-            if ((param1 ^ -1) == -14) {
+          if (param1 != 11) {
+            if (param1 == 13) {
               return false;
             } else {
               return true;
@@ -82,8 +79,8 @@ final class qab {
           }
         } else {
           field_a = null;
-          if ((param1 ^ -1) != -12) {
-            if ((param1 ^ -1) == -14) {
+          if (param1 != 11) {
+            if (param1 == 13) {
               return false;
             } else {
               return true;
@@ -96,8 +93,12 @@ final class qab {
 
     qab(String param0) {
         ((qab) this).field_b = 0;
-        ((qab) this).field_c = param0;
-        ((qab) this).field_e = ((qab) this).field_c.length();
+        try {
+            ((qab) this).field_c = param0;
+            ((qab) this).field_e = ((qab) this).field_c.length();
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "qab.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

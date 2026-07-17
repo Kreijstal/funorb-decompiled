@@ -10,7 +10,7 @@ final class ar {
     static String field_f;
 
     final static void a(int param0, String param1) {
-        int var2 = 0;
+        int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -18,19 +18,21 @@ final class ar {
         int var7 = 0;
         int var8 = 0;
         if (param0 != 15707) {
-          return;
-        } else {
-          var2 = el.field_A;
-          var3 = n.field_m;
-          var4 = dw.field_e.field_X.b(param1, 500);
-          var5 = 6 + dw.field_e.field_X.a(param1, 500);
-          var6 = 2 + var4 * sh.field_c;
-          var7 = ou.b(var5, var2, 12, 127);
-          var8 = nj.a(var3, 20, var6, 29079);
-          on.e(var7, var8, var5, var6, 0);
-          on.a(var7 - -1, 1 + var8, var5 + -2, -2 + var6, 16777088);
-          int discarded$1 = dw.field_e.field_X.a(param1, 3 + var7, var8 - (-1 + -ig.field_c) - dw.field_e.field_X.field_G, 500, 1000, 0, -1, 0, 0, sh.field_c);
-          return;
+            return;
+        }
+        try {
+            var2_int = el.field_A;
+            var3 = n.field_m;
+            var4 = dw.field_e.field_X.b(param1, 500);
+            var5 = 6 + dw.field_e.field_X.a(param1, 500);
+            var6 = 2 + var4 * sh.field_c;
+            var7 = ou.b(var5, var2_int, 12, 127);
+            var8 = nj.a(var3, 20, var6, 29079);
+            on.e(var7, var8, var5, var6, 0);
+            on.a(var7 - -1, 1 + var8, var5 + -2, -2 + var6, 16777088);
+            int discarded$0 = dw.field_e.field_X.a(param1, 3 + var7, var8 - (-1 + -ig.field_c) - dw.field_e.field_X.field_G, 500, 1000, 0, -1, 0, 0, sh.field_c);
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "ar.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -72,7 +74,7 @@ final class ar {
         field_f = null;
         field_e = null;
         field_c = null;
-        int var1 = -25 % ((param0 - 4) / 35);
+        int var1 = -1;
     }
 
     static {

@@ -54,7 +54,7 @@ final class um extends km {
         L5: {
           if (param0) {
             L6: {
-              if (-1 < (-(((um) this).field_Jb.field_F - -((um) this).field_Jb.field_Cb) ^ -1)) {
+              if (-(((um) this).field_Jb.field_F - -((um) this).field_Jb.field_Cb) < 0) {
                 ((um) this).field_Jb.field_Cb = -((um) this).field_Jb.field_F;
                 break L6;
               } else {
@@ -170,12 +170,16 @@ final class um extends km {
 
     um(long param0, km param1, km param2, qm param3) {
         super(param0, (km) null);
-        ((um) this).field_Eb = new km(0L, param2);
-        ((um) this).field_Hb = new qm(0L, param3);
-        ((um) this).a(0, ((um) this).field_Eb);
-        ((um) this).a(0, (km) (Object) ((um) this).field_Hb);
-        ((um) this).field_Jb = param1;
-        ((um) this).field_Eb.a(0, param1);
+        try {
+            ((um) this).field_Eb = new km(0L, param2);
+            ((um) this).field_Hb = new qm(0L, param3);
+            ((um) this).a(0, ((um) this).field_Eb);
+            ((um) this).a(0, (km) (Object) ((um) this).field_Hb);
+            ((um) this).field_Jb = param1;
+            ((um) this).field_Eb.a(0, param1);
+        } catch (RuntimeException runtimeException) {
+            throw kg.a((Throwable) (Object) runtimeException, "um.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static rm[] e(byte param0) {
@@ -198,9 +202,6 @@ final class um extends km {
     }
 
     public static void g(int param0) {
-        if (param0 != 0) {
-            rm[] discarded$0 = um.e((byte) 120);
-        }
         field_Ib = null;
         field_Kb = null;
     }

@@ -37,18 +37,38 @@ final class ds {
         var5 = TombRacer.field_G ? 1 : 0;
         if (param2 == -4) {
           var4 = param0;
-          if (var4 != -8) {
-            if (5 != var4) {
-              if (-13 != var4) {
-                if (-11 != (var4 ^ -1)) {
-                  if (15 != var4) {
-                    if (var4 != -15) {
-                      if (-4 != var4) {
-                        if ((var4 ^ -1) != -5) {
+          if (var4 != 7) {
+            if (5 == var4) {
+              this.e(-127, param1);
+              this.d(param1, -98);
+              return;
+            } else {
+              if (var4 == 12) {
+                this.f(-112, param1);
+                this.d(param1, -98);
+                return;
+              } else {
+                if (var4 == 10) {
+                  this.c(param1, -11);
+                  this.d(param1, -98);
+                  return;
+                } else {
+                  if (15 == var4) {
+                    this.c(param1, -11);
+                    this.d(param1, -98);
+                    return;
+                  } else {
+                    if (var4 == 14) {
+                      this.b(-5, param1);
+                      this.d(param1, -98);
+                      return;
+                    } else {
+                      if (var4 != 3) {
+                        if (var4 == 4) {
+                          this.b(-5, param1);
                           this.d(param1, -98);
                           return;
                         } else {
-                          this.b(-5, param1);
                           this.d(param1, -98);
                           return;
                         }
@@ -57,30 +77,10 @@ final class ds {
                         this.d(param1, -98);
                         return;
                       }
-                    } else {
-                      this.b(-5, param1);
-                      this.d(param1, -98);
-                      return;
                     }
-                  } else {
-                    this.c(param1, -11);
-                    this.d(param1, -98);
-                    return;
                   }
-                } else {
-                  this.c(param1, -11);
-                  this.d(param1, -98);
-                  return;
                 }
-              } else {
-                this.f(-112, param1);
-                this.d(param1, -98);
-                return;
               }
-            } else {
-              this.e(-127, param1);
-              this.d(param1, -98);
-              return;
             }
           } else {
             this.a(param1, 9266);
@@ -105,14 +105,7 @@ final class ds {
         if (!lca.a(false)) {
           return;
         } else {
-          L0: {
-            if (param1) {
-              bea.c(0, 0, bea.field_g, bea.field_a, 0, 192);
-              break L0;
-            } else {
-              break L0;
-            }
-          }
+          bea.c(0, 0, bea.field_g, bea.field_a, 0, 192);
           wu.field_a.b(-108, 0, 0);
           return;
         }
@@ -144,9 +137,6 @@ final class ds {
     }
 
     public static void a(boolean param0) {
-        if (param0) {
-            return;
-        }
         field_l = null;
         field_k = null;
         field_g = null;
@@ -162,9 +152,6 @@ final class ds {
     }
 
     private final void a(int param0, int param1) {
-        if (param1 != 9266) {
-            return;
-        }
         ((ds) this).field_p[param0] = ((ds) this).field_p[param0] + 1;
     }
 
@@ -176,15 +163,15 @@ final class ds {
     }
 
     private final void d(int param0, int param1) {
-        int var3 = -47 % ((0 - param1) / 59);
+        int var3 = 0;
         ((ds) this).field_i[param0] = true;
     }
 
     final static int c(int param0, int param1, int param2) {
-        param2 = (127 & param1) * param2 >> -403311897;
+        param2 = (127 & param1) * param2 >> 7;
         if (param0 == -127) {
           if (2 <= param2) {
-            if (-127 <= (param2 ^ -1)) {
+            if (param2 <= 126) {
               return (param1 & 65408) + param2;
             } else {
               param2 = 126;
@@ -197,7 +184,7 @@ final class ds {
         } else {
           field_n = null;
           if (2 <= param2) {
-            if (-127 <= (param2 ^ -1)) {
+            if (param2 <= 126) {
               return (param1 & 65408) + param2;
             } else {
               param2 = 126;

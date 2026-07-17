@@ -57,12 +57,12 @@ final class h extends RuntimeException {
     }
 
     final static int a(int param0, int param1) {
-        param0 = ((param0 & -1431655766) >>> 1687952609) + (param0 & 1431655765);
-        int var2 = -97 % ((-51 - param1) / 42);
-        param0 = (858993459 & param0) - -((-858993457 & param0) >>> 854086306);
-        param0 = param0 + (param0 >>> 1033602532) & 252645135;
-        param0 = param0 + (param0 >>> -1623321272);
-        param0 = param0 + (param0 >>> -1723567056);
+        param0 = ((param0 & -1431655766) >>> 1) + (param0 & 1431655765);
+        int var2 = 0;
+        param0 = (858993459 & param0) - -((-858993457 & param0) >>> 2);
+        param0 = param0 + (param0 >>> 4) & 252645135;
+        param0 = param0 + (param0 >>> 8);
+        param0 = param0 + (param0 >>> 16);
         return 255 & param0;
     }
 

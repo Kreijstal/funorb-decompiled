@@ -17,16 +17,72 @@ final class ej extends mc {
     static oh field_v;
 
     final static boolean a(String param0, int param1) {
+        RuntimeException var2 = null;
         CharSequence var3 = null;
-        CharSequence var4 = null;
-        if (param1 != 4) {
-          field_v = null;
-          var3 = (CharSequence) (Object) param0;
-          return ik.field_f.equals((Object) (Object) cc.a(var3, (byte) 103));
-        } else {
-          var4 = (CharSequence) (Object) param0;
-          return ik.field_f.equals((Object) (Object) cc.a(var4, (byte) 103));
+        boolean stackIn_3_0 = false;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        boolean stackOut_2_0 = false;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param1 == 4) {
+                break L1;
+              } else {
+                field_v = null;
+                break L1;
+              }
+            }
+            var3 = (CharSequence) (Object) param0;
+            stackOut_2_0 = ik.field_f.equals((Object) (Object) cc.a(var3, (byte) 103));
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_1 = new StringBuilder().append("ej.C(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw oi.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
         }
+        return stackIn_3_0;
     }
 
     final static void a(boolean param0, int param1, byte param2) {
@@ -36,13 +92,13 @@ final class ej extends mc {
         Object var6 = null;
         Object var7 = null;
         CharSequence var8 = null;
-        var3 = -22 / ((-38 - param2) / 57);
+        var3 = 11;
         if (lf.field_b == null) {
           return;
         } else {
           var4 = lf.field_b.a(param0, (byte) 58);
-          if (-1 != (var4 ^ -1)) {
-            if ((var4 ^ -1) != -3) {
+          if (var4 != 0) {
+            if (var4 != 2) {
               ke.field_c = -1;
               lf.field_b = null;
               return;
@@ -65,7 +121,7 @@ final class ej extends mc {
                   }
                   L1: {
                     var6 = null;
-                    if ((ke.field_c ^ -1) != -1) {
+                    if (ke.field_c != 0) {
                       break L1;
                     } else {
                       var6 = (Object) (Object) qf.a((byte) 122, var5, param1);
@@ -73,7 +129,7 @@ final class ej extends mc {
                     }
                   }
                   L2: {
-                    if (-2 != (ke.field_c ^ -1)) {
+                    if (ke.field_c != 1) {
                       break L2;
                     } else {
                       var6 = (Object) (Object) ma.a(false, var5, param1);
@@ -81,7 +137,7 @@ final class ej extends mc {
                     }
                   }
                   L3: {
-                    if ((ke.field_c ^ -1) == -3) {
+                    if (ke.field_c == 2) {
                       var6 = (Object) (Object) li.a(param1, var5, 2);
                       break L3;
                     } else {
@@ -89,7 +145,7 @@ final class ej extends mc {
                     }
                   }
                   L4: {
-                    if ((ke.field_c ^ -1) == -4) {
+                    if (ke.field_c == 3) {
                       var6 = (Object) (Object) aa.a(var5, param1, 2, var5);
                       break L4;
                     } else {
@@ -126,14 +182,7 @@ final class ej extends mc {
         field_o = null;
         field_p = null;
         field_w = null;
-        if (param0 != -1) {
-          field_z = -123;
-          field_t = null;
-          return;
-        } else {
-          field_t = null;
-          return;
-        }
+        field_t = null;
     }
 
     ej(int param0, int param1, boolean param2) {
@@ -145,12 +194,16 @@ final class ej extends mc {
     }
 
     ej(bi param0, boolean param1) {
-        ((ej) this).field_x = param1 ? true : false;
-        ((ej) this).field_s = 0;
-        ((ej) this).field_q = 0;
-        ((ej) this).field_y = 0;
-        ((ej) this).field_u = param0.field_f;
-        ((ej) this).field_n = param0.field_b;
+        try {
+            ((ej) this).field_x = param1 ? true : false;
+            ((ej) this).field_s = 0;
+            ((ej) this).field_q = 0;
+            ((ej) this).field_y = 0;
+            ((ej) this).field_u = param0.field_f;
+            ((ej) this).field_n = param0.field_b;
+        } catch (RuntimeException runtimeException) {
+            throw oi.a((Throwable) (Object) runtimeException, "ej.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     static {

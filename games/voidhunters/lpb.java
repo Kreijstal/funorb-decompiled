@@ -17,413 +17,286 @@ final class lpb implements Runnable {
     private int field_d;
 
     final void b(int param0) {
+        InterruptedException interruptedException = null;
+        Object var2 = null;
+        Throwable var3 = null;
         int var4 = 0;
+        Throwable decompiledCaughtException = null;
         var4 = VoidHunters.field_G;
-        if (((lpb) this).field_c) {
-            return;
-        }
-        if (param0 != 1) {
-            return;
-        }
-        Object var2 = this;
-        // monitorenter this
-        ((lpb) this).field_c = true;
-        this.notifyAll();
-        // monitorexit var2
-        if (((lpb) this).field_g != null) {
-            while (((lpb) this).field_g.field_f == 0) {
-                gdb.b(-94, 1L);
+        if (!((lpb) this).field_c) {
+          if (param0 == 1) {
+            var2 = this;
+            synchronized (var2) {
+              L0: {
+                ((lpb) this).field_c = true;
+                this.notifyAll();
+                break L0;
+              }
             }
-            if (!(((lpb) this).field_g.field_f != 1)) {
-                try {
-                    if (false) throw (InterruptedException) null;
-                    ((Thread) ((lpb) this).field_g.field_d).join();
-                } catch (InterruptedException interruptedException) {
+            L1: {
+              if (((lpb) this).field_g == null) {
+                break L1;
+              } else {
+                L2: while (true) {
+                  if (((lpb) this).field_g.field_f != 0) {
+                    if (((lpb) this).field_g.field_f == 1) {
+                      try {
+                        L3: {
+                          ((Thread) ((lpb) this).field_g.field_d).join();
+                          break L3;
+                        }
+                      } catch (java.lang.Exception decompiledCaughtParameter0) {
+                        decompiledCaughtException = decompiledCaughtParameter0;
+                        L4: {
+                          interruptedException = (InterruptedException) (Object) decompiledCaughtException;
+                          break L4;
+                        }
+                      }
+                      break L1;
+                    } else {
+                      break L1;
+                    }
+                  } else {
+                    gdb.b(-94, 1L);
+                    continue L2;
+                  }
                 }
+              }
             }
+            ((lpb) this).field_g = null;
+            return;
+          } else {
+            return;
+          }
+        } else {
+          return;
         }
-        ((lpb) this).field_g = null;
     }
 
     final void a(int param0, int param1, int param2, byte[] param3) throws IOException {
-        int var5 = 0;
-        int var6 = VoidHunters.field_G;
-        if (param0 >= -121) {
-            ((lpb) this).field_k = 66;
-        }
-        if (((lpb) this).field_c) {
-            return;
-        }
-        while (-1 > (param2 ^ -1)) {
-            var5 = ((lpb) this).field_b.read(param3, param1, param2);
-            if (0 >= var5) {
-                throw new EOFException();
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int var6 = 0;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        var6 = VoidHunters.field_G;
+        try {
+          L0: {
+            L1: {
+              if (param0 < -121) {
+                break L1;
+              } else {
+                ((lpb) this).field_k = 66;
+                break L1;
+              }
             }
-            param1 = param1 + var5;
-            param2 = param2 - var5;
+            if (!((lpb) this).field_c) {
+              L2: while (true) {
+                if (param2 <= 0) {
+                  break L0;
+                } else {
+                  var5_int = ((lpb) this).field_b.read(param3, param1, param2);
+                  if (0 < var5_int) {
+                    param1 = param1 + var5_int;
+                    param2 = param2 - var5_int;
+                    continue L2;
+                  } else {
+                    throw new EOFException();
+                  }
+                }
+              }
+            } else {
+              return;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var5 = decompiledCaughtException;
+            stackOut_10_0 = (RuntimeException) var5;
+            stackOut_10_1 = new StringBuilder().append("lpb.D(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
+            if (param3 == null) {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L3;
+            } else {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L3;
+            }
+          }
+          throw rta.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
         }
     }
 
     public final void run() {
         try {
-            int var1_int = 0;
             IOException var1 = null;
             Exception var1_ref = null;
+            int var1_int = 0;
             int var2 = 0;
-            Object var3 = null;
-            IOException var3_ref = null;
+            IOException var3 = null;
+            Object var3_ref = null;
+            InterruptedException var4 = null;
+            Throwable var5 = null;
             int var6 = 0;
             Object var7 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        var6 = VoidHunters.field_G;
-                        statePc = 1;
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        try {
-                            var3 = this;
-                            if (((lpb) this).field_i == ((lpb) this).field_d) {
-                                statePc = 3;
-                            } else {
-                                statePc = 2;
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
+            var6 = VoidHunters.field_G;
+            try {
+              L0: {
+                L1: while (true) {
+                  var3_ref = this;
+                  synchronized (var3_ref) {
+                    L2: {
+                      L3: {
+                        if (((lpb) this).field_i == ((lpb) this).field_d) {
+                          if (!((lpb) this).field_c) {
+                            {
+                              L4: {
+                                this.wait();
+                                break L4;
+                              }
                             }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_1) {
-                            caughtException = stateCaught_1;
-                            statePc = 31;
-                            continue stateLoop;
+                            break L3;
+                          } else {
+                            decompiledRegionSelector0 = 0;
+                            break L2;
+                          }
+                        } else {
+                          break L3;
                         }
-                    }
-                    case 2: {
-                        try {
-                            statePc = 6;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_2) {
-                            caughtException = stateCaught_2;
-                            statePc = 31;
-                            continue stateLoop;
+                      }
+                      L6: {
+                        var2 = ((lpb) this).field_d;
+                        if (((lpb) this).field_i >= ((lpb) this).field_d) {
+                          var1_int = -((lpb) this).field_d + ((lpb) this).field_i;
+                          break L6;
+                        } else {
+                          var1_int = ((lpb) this).field_k - ((lpb) this).field_d;
+                          break L6;
                         }
+                      }
+                      decompiledRegionSelector0 = 1;
+                      break L2;
                     }
-                    case 3: {
-                        try {
-                            if (!((lpb) this).field_c) {
-                                statePc = 5;
-                            } else {
-                                statePc = 4;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_3) {
-                            caughtException = stateCaught_3;
-                            statePc = 31;
-                            continue stateLoop;
-                        }
-                    }
-                    case 4: {
-                        try {
-                            statePc = 19;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_4) {
-                            caughtException = stateCaught_4;
-                            statePc = 31;
-                            continue stateLoop;
-                        }
-                    }
-                    case 5: {
-                        try {
-                            this.wait();
-                            statePc = 6;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_5) {
-                            caughtException = stateCaught_5;
-                            statePc = 31;
-                            continue stateLoop;
-                        }
-                    }
-                    case 6: {
-                        try {
-                            var2 = ((lpb) this).field_d;
-                            if (((lpb) this).field_i >= ((lpb) this).field_d) {
-                                statePc = 8;
-                            } else {
-                                statePc = 7;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_6) {
-                            caughtException = stateCaught_6;
-                            statePc = 31;
-                            continue stateLoop;
-                        }
-                    }
-                    case 7: {
-                        try {
-                            var1_int = ((lpb) this).field_k - ((lpb) this).field_d;
-                            statePc = 9;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_7) {
-                            caughtException = stateCaught_7;
-                            statePc = 31;
-                            continue stateLoop;
-                        }
-                    }
-                    case 8: {
-                        try {
-                            var1_int = -((lpb) this).field_d + ((lpb) this).field_i;
-                            statePc = 9;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_8) {
-                            caughtException = stateCaught_8;
-                            statePc = 31;
-                            continue stateLoop;
-                        }
-                    }
-                    case 9: {
-                        try {
-                            if (var1_int <= 0) {
-                                statePc = 1;
-                            } else {
-                                statePc = 10;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_9) {
-                            caughtException = stateCaught_9;
-                            statePc = 31;
-                            continue stateLoop;
-                        }
-                    }
-                    case 10: {
-                        try {
-                            ((lpb) this).field_j.write(((lpb) this).field_a, var2, var1_int);
-                            statePc = 11;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_10) {
-                            caughtException = stateCaught_10;
-                            statePc = (stateCaught_10 instanceof IOException ? 12 : 31);
-                            continue stateLoop;
-                        }
-                    }
-                    case 11: {
-                        try {
-                            statePc = 13;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_11) {
-                            caughtException = stateCaught_11;
-                            statePc = 31;
-                            continue stateLoop;
-                        }
-                    }
-                    case 12: {
-                        try {
-                            var3_ref = (IOException) (Object) caughtException;
-                            ((lpb) this).field_f = true;
-                            statePc = 13;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_12) {
-                            caughtException = stateCaught_12;
-                            statePc = 31;
-                            continue stateLoop;
-                        }
-                    }
-                    case 13: {
-                        try {
-                            ((lpb) this).field_d = (var1_int + ((lpb) this).field_d) % ((lpb) this).field_k;
-                            statePc = 14;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_13) {
-                            caughtException = stateCaught_13;
-                            statePc = 31;
-                            continue stateLoop;
-                        }
-                    }
-                    case 14: {
-                        try {
-                            if (((lpb) this).field_i == ((lpb) this).field_d) {
-                                statePc = 16;
-                            } else {
-                                statePc = 15;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_14) {
-                            caughtException = stateCaught_14;
-                            statePc = (stateCaught_14 instanceof IOException ? 18 : 31);
-                            continue stateLoop;
-                        }
-                    }
-                    case 15: {
-                        try {
-                            statePc = 1;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_15) {
-                            caughtException = stateCaught_15;
-                            statePc = (stateCaught_15 instanceof IOException ? 18 : 31);
-                            continue stateLoop;
-                        }
-                    }
-                    case 16: {
-                        try {
-                            ((lpb) this).field_j.flush();
-                            statePc = 17;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_16) {
-                            caughtException = stateCaught_16;
-                            statePc = (stateCaught_16 instanceof IOException ? 18 : 31);
-                            continue stateLoop;
-                        }
-                    }
-                    case 17: {
-                        try {
-                            statePc = 1;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_17) {
-                            caughtException = stateCaught_17;
-                            statePc = 31;
-                            continue stateLoop;
-                        }
-                    }
-                    case 18: {
-                        try {
-                            var3_ref = (IOException) (Object) caughtException;
-                            ((lpb) this).field_f = true;
-                            statePc = 1;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_18) {
-                            caughtException = stateCaught_18;
-                            statePc = 31;
-                            continue stateLoop;
-                        }
-                    }
-                    case 19: {
-                        try {
-                            if (null != ((lpb) this).field_b) {
-                                statePc = 21;
-                            } else {
-                                statePc = 20;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_19) {
-                            caughtException = stateCaught_19;
-                            statePc = (stateCaught_19 instanceof IOException ? 28 : 31);
-                            continue stateLoop;
-                        }
-                    }
-                    case 20: {
-                        try {
-                            statePc = 22;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_20) {
-                            caughtException = stateCaught_20;
-                            statePc = (stateCaught_20 instanceof IOException ? 28 : 31);
-                            continue stateLoop;
-                        }
-                    }
-                    case 21: {
-                        try {
+                  }
+                  if (decompiledRegionSelector0 == 0) {
+                    try {
+                      L7: {
+                        L8: {
+                          if (null != ((lpb) this).field_b) {
                             ((lpb) this).field_b.close();
-                            statePc = 22;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_21) {
-                            caughtException = stateCaught_21;
-                            statePc = (stateCaught_21 instanceof IOException ? 28 : 31);
-                            continue stateLoop;
+                            break L8;
+                          } else {
+                            break L8;
+                          }
                         }
-                    }
-                    case 22: {
-                        try {
-                            if (null != ((lpb) this).field_j) {
-                                statePc = 24;
-                            } else {
-                                statePc = 23;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_22) {
-                            caughtException = stateCaught_22;
-                            statePc = (stateCaught_22 instanceof IOException ? 28 : 31);
-                            continue stateLoop;
-                        }
-                    }
-                    case 23: {
-                        try {
-                            statePc = 25;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_23) {
-                            caughtException = stateCaught_23;
-                            statePc = (stateCaught_23 instanceof IOException ? 28 : 31);
-                            continue stateLoop;
-                        }
-                    }
-                    case 24: {
-                        try {
+                        L9: {
+                          if (null != ((lpb) this).field_j) {
                             ((lpb) this).field_j.close();
-                            statePc = 25;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_24) {
-                            caughtException = stateCaught_24;
-                            statePc = (stateCaught_24 instanceof IOException ? 28 : 31);
-                            continue stateLoop;
+                            break L9;
+                          } else {
+                            break L9;
+                          }
                         }
-                    }
-                    case 25: {
-                        try {
-                            if (((lpb) this).field_h == null) {
-                                statePc = 29;
-                            } else {
-                                statePc = 26;
-                            }
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_25) {
-                            caughtException = stateCaught_25;
-                            statePc = (stateCaught_25 instanceof IOException ? 28 : 31);
-                            continue stateLoop;
-                        }
-                    }
-                    case 26: {
-                        try {
+                        L10: {
+                          if (((lpb) this).field_h == null) {
+                            break L10;
+                          } else {
                             ((lpb) this).field_h.close();
-                            statePc = 29;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_26) {
-                            caughtException = stateCaught_26;
-                            statePc = (stateCaught_26 instanceof IOException ? 28 : 31);
-                            continue stateLoop;
+                            break L10;
+                          }
                         }
+                        break L7;
+                      }
+                    } catch (java.io.IOException decompiledCaughtParameter1) {
+                      decompiledCaughtException = decompiledCaughtParameter1;
+                      L11: {
+                        var1 = (IOException) (Object) decompiledCaughtException;
+                        break L11;
+                      }
                     }
-                    case 28: {
-                        try {
-                            var1 = (IOException) (Object) caughtException;
-                            statePc = 29;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_28) {
-                            caughtException = stateCaught_28;
-                            statePc = 31;
-                            continue stateLoop;
+                    ((lpb) this).field_a = null;
+                    break L0;
+                  } else {
+                    if (var1_int <= 0) {
+                      continue L1;
+                    } else {
+                      try {
+                        L12: {
+                          ((lpb) this).field_j.write(((lpb) this).field_a, var2, var1_int);
+                          break L12;
                         }
-                    }
-                    case 29: {
-                        try {
-                            ((lpb) this).field_a = null;
-                            statePc = 32;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_29) {
-                            caughtException = stateCaught_29;
-                            statePc = 31;
-                            continue stateLoop;
+                      } catch (java.lang.Exception decompiledCaughtParameter2) {
+                        decompiledCaughtException = decompiledCaughtParameter2;
+                        L13: {
+                          var3 = (IOException) (Object) decompiledCaughtException;
+                          ((lpb) this).field_f = true;
+                          break L13;
                         }
+                      }
+                      ((lpb) this).field_d = (var1_int + ((lpb) this).field_d) % ((lpb) this).field_k;
+                      try {
+                        L14: {
+                          L15: {
+                            if (((lpb) this).field_i == ((lpb) this).field_d) {
+                              ((lpb) this).field_j.flush();
+                              break L15;
+                            } else {
+                              break L15;
+                            }
+                          }
+                          break L14;
+                        }
+                      } catch (java.lang.Exception decompiledCaughtParameter3) {
+                        decompiledCaughtException = decompiledCaughtParameter3;
+                        L16: {
+                          var3 = (IOException) (Object) decompiledCaughtException;
+                          ((lpb) this).field_f = true;
+                          break L16;
+                        }
+                      }
+                      continue L1;
                     }
-                    case 31: {
-                        var1_ref = (Exception) (Object) caughtException;
-                        var7 = null;
-                        gna.a((Throwable) (Object) var1_ref, (String) null, 0);
-                        statePc = 32;
-                        continue stateLoop;
-                    }
-                    case 32: {
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+                  }
                 }
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter4) {
+              decompiledCaughtException = decompiledCaughtParameter4;
+              L17: {
+                var1_ref = (Exception) (Object) decompiledCaughtException;
+                var7 = null;
+                gna.a((Throwable) (Object) var1_ref, (String) null, 0);
+                break L17;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -444,201 +317,184 @@ final class lpb implements Runnable {
     }
 
     final void a(int param0, byte[] param1, int param2, int param3) throws IOException {
-        Object var5 = null;
+        RuntimeException var5 = null;
+        Object var5_ref = null;
         int var6 = 0;
-        Object var7 = null;
+        Throwable var7 = null;
         int var8 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var8 = VoidHunters.field_G;
-                    if (!((lpb) this).field_c) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    return;
-                }
-                case 2: {
-                    if (((lpb) this).field_f) {
-                        statePc = 4;
-                    } else {
-                        statePc = 5;
-                    }
-                    continue stateLoop;
-                }
-                case 4: {
-                    ((lpb) this).field_f = false;
-                    throw new IOException();
-                }
-                case 5: {
-                    if (((lpb) this).field_a == null) {
-                        statePc = 7;
-                    } else {
-                        statePc = 8;
-                    }
-                    continue stateLoop;
-                }
-                case 7: {
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        String stackIn_26_2 = null;
+        Throwable decompiledCaughtException = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        RuntimeException stackOut_25_0 = null;
+        StringBuilder stackOut_25_1 = null;
+        String stackOut_25_2 = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        String stackOut_24_2 = null;
+        var8 = VoidHunters.field_G;
+        try {
+          L0: {
+            if (!((lpb) this).field_c) {
+              if (((lpb) this).field_f) {
+                ((lpb) this).field_f = false;
+                throw new IOException();
+              } else {
+                L1: {
+                  if (((lpb) this).field_a == null) {
                     ((lpb) this).field_a = new byte[((lpb) this).field_k];
-                    statePc = 8;
-                    continue stateLoop;
+                    break L1;
+                  } else {
+                    break L1;
+                  }
                 }
-                case 8: {
-                    var5 = this;
-                    // monitorenter this
-                    statePc = 9;
-                    continue stateLoop;
-                }
-                case 9: {
-                    try {
-                        var6 = param0;
-                        statePc = 10;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 19;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    try {
-                        if (var6 >= param2) {
-                            statePc = 14;
-                        } else {
-                            statePc = 11;
+                var5_ref = this;
+                synchronized (var5_ref) {
+                  L2: {
+                    var6 = param0;
+                    L3: while (true) {
+                      if (var6 >= param2) {
+                        L4: {
+                          if (null == ((lpb) this).field_g) {
+                            ((lpb) this).field_g = ((lpb) this).field_e.a(0, 3, (Runnable) this);
+                            break L4;
+                          } else {
+                            break L4;
+                          }
                         }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 19;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    try {
+                        this.notifyAll();
+                        break L2;
+                      } else {
                         ((lpb) this).field_a[((lpb) this).field_i] = param1[var6 + param3];
                         ((lpb) this).field_i = (((lpb) this).field_i + 1) % ((lpb) this).field_k;
                         if (((lpb) this).field_i != (-100 + (((lpb) this).field_k + ((lpb) this).field_d)) % ((lpb) this).field_k) {
-                            statePc = 13;
+                          var6++;
+                          continue L3;
                         } else {
-                            statePc = 12;
+                          throw new IOException();
                         }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_11) {
-                        caughtException = stateCaught_11;
-                        statePc = 19;
-                        continue stateLoop;
+                      }
                     }
+                  }
                 }
-                case 12: {
-                    try {
-                        throw new IOException();
-                    } catch (Throwable stateCaught_12) {
-                        caughtException = stateCaught_12;
-                        statePc = 19;
-                        continue stateLoop;
-                    }
-                }
-                case 13: {
-                    try {
-                        var6++;
-                        statePc = 10;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_13) {
-                        caughtException = stateCaught_13;
-                        statePc = 19;
-                        continue stateLoop;
-                    }
-                }
-                case 14: {
-                    try {
-                        if (null == ((lpb) this).field_g) {
-                            statePc = 16;
-                        } else {
-                            statePc = 15;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_14) {
-                        caughtException = stateCaught_14;
-                        statePc = 19;
-                        continue stateLoop;
-                    }
-                }
-                case 15: {
-                    try {
-                        statePc = 17;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_15) {
-                        caughtException = stateCaught_15;
-                        statePc = 19;
-                        continue stateLoop;
-                    }
-                }
-                case 16: {
-                    try {
-                        ((lpb) this).field_g = ((lpb) this).field_e.a(0, 3, (Runnable) this);
-                        statePc = 17;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_16) {
-                        caughtException = stateCaught_16;
-                        statePc = 19;
-                        continue stateLoop;
-                    }
-                }
-                case 17: {
-                    try {
-                        this.notifyAll();
-                        // monitorexit var5
-                        statePc = 21;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_17) {
-                        caughtException = stateCaught_17;
-                        statePc = 19;
-                        continue stateLoop;
-                    }
-                }
-                case 19: {
-                    try {
-                        var7 = caughtException;
-                        // monitorexit var5
-                        statePc = 20;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_19) {
-                        caughtException = stateCaught_19;
-                        statePc = 19;
-                        continue stateLoop;
-                    }
-                }
-                case 20: {
-                    if (var7 instanceof RuntimeException) throw (RuntimeException) var7;
-                    if (var7 instanceof Error) throw (Error) var7;
-                    throw (IOException) (Object) var7;
-                }
-                case 21: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+                break L0;
+              }
+            } else {
+              return;
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L5: {
+            var5 = (RuntimeException) (Object) decompiledCaughtException;
+            stackOut_23_0 = (RuntimeException) var5;
+            stackOut_23_1 = new StringBuilder().append("lpb.C(").append(param0).append(44);
+            stackIn_25_0 = stackOut_23_0;
+            stackIn_25_1 = stackOut_23_1;
+            stackIn_24_0 = stackOut_23_0;
+            stackIn_24_1 = stackOut_23_1;
+            if (param1 == null) {
+              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
+              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_2 = "null";
+              stackIn_26_0 = stackOut_25_0;
+              stackIn_26_1 = stackOut_25_1;
+              stackIn_26_2 = stackOut_25_2;
+              break L5;
+            } else {
+              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
+              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_2 = "{...}";
+              stackIn_26_0 = stackOut_24_0;
+              stackIn_26_1 = stackOut_24_1;
+              stackIn_26_2 = stackOut_24_2;
+              break L5;
+            }
+          }
+          throw rta.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 44 + param2 + 44 + param3 + 41);
         }
     }
 
     final static ngb a(byte param0, byte[] param1) {
-        if (param1 == null) {
-            return null;
+        ngb var2 = null;
+        RuntimeException var2_ref = null;
+        Object var3 = null;
+        ngb stackIn_6_0 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        ngb stackOut_5_0 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        try {
+          L0: {
+            if (param1 != null) {
+              L1: {
+                if (param0 == 19) {
+                  break L1;
+                } else {
+                  var3 = null;
+                  ngb discarded$2 = lpb.a((byte) -54, (byte[]) null);
+                  break L1;
+                }
+              }
+              var2 = new ngb(param1, iib.field_e, so.field_f, nhb.field_o, hla.field_a, rlb.field_d, sh.field_a);
+              qqb.a(39);
+              stackOut_5_0 = (ngb) var2;
+              stackIn_6_0 = stackOut_5_0;
+              break L0;
+            } else {
+              return null;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2_ref = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var2_ref;
+            stackOut_7_1 = new StringBuilder().append("lpb.A(").append(param0).append(44);
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param1 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L2;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L2;
+            }
+          }
+          throw rta.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
         }
-        if (param0 != 19) {
-            Object var3 = null;
-            ngb discarded$0 = lpb.a((byte) -54, (byte[]) null);
-        }
-        ngb var2 = new ngb(param1, iib.field_e, so.field_f, nhb.field_o, hla.field_a, rlb.field_d, sh.field_a);
-        qqb.a(39);
-        return var2;
+        return stackIn_6_0;
     }
 
     final int c(int param0) throws IOException {
@@ -677,13 +533,17 @@ final class lpb implements Runnable {
         ((lpb) this).field_c = false;
         ((lpb) this).field_i = 0;
         ((lpb) this).field_d = 0;
-        ((lpb) this).field_e = param1;
-        ((lpb) this).field_h = param0;
-        ((lpb) this).field_h.setSoTimeout(30000);
-        ((lpb) this).field_h.setTcpNoDelay(true);
-        ((lpb) this).field_b = ((lpb) this).field_h.getInputStream();
-        ((lpb) this).field_j = ((lpb) this).field_h.getOutputStream();
-        ((lpb) this).field_k = param2;
+        try {
+            ((lpb) this).field_e = param1;
+            ((lpb) this).field_h = param0;
+            ((lpb) this).field_h.setSoTimeout(30000);
+            ((lpb) this).field_h.setTcpNoDelay(true);
+            ((lpb) this).field_b = ((lpb) this).field_h.getInputStream();
+            ((lpb) this).field_j = ((lpb) this).field_h.getOutputStream();
+            ((lpb) this).field_k = param2;
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "lpb.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     static {

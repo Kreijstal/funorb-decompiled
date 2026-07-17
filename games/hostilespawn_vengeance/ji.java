@@ -19,7 +19,6 @@ final class ji extends am {
         int var12 = 0;
         int var13 = 0;
         bc var14 = null;
-        bc var14_ref = null;
         bc var15 = null;
         int[] var16 = null;
         int[] var18 = null;
@@ -111,12 +110,12 @@ final class ji extends am {
                                 break L7;
                               } else {
                                 var15 = new bc(new byte[128]);
-                                var14_ref = var15;
+                                var14 = var15;
                                 ((ji) this).field_i.a(-99, (long)var13, (am) (Object) var15);
                                 break L7;
                               }
                             }
-                            var14_ref.field_h[var11] = (byte) 1;
+                            var14.field_h[var11] = (byte) 1;
                             break L6;
                           }
                         }
@@ -375,6 +374,7 @@ final class ji extends am {
                     var60 = 0;
                     L4: while (true) {
                       if (var60 >= var2) {
+                        return;
                       } else {
                         var51.b(1297379947, 25251);
                         var51.field_i = var51.field_i + 4;
@@ -384,8 +384,9 @@ final class ji extends am {
                           L6: {
                             var63 = param0.m(127);
                             var51.b(false, var63);
+                            int incrementValue$29 = var29;
                             var29++;
-                            var64 = param0.field_n[var29] & 255;
+                            var64 = param0.field_n[incrementValue$29] & 255;
                             if (var64 == var62) {
                               stackOut_72_0 = 0;
                               stackIn_73_0 = stackOut_72_0;
@@ -418,8 +419,9 @@ final class ji extends am {
                                                 break L7;
                                               }
                                             }
+                                            int incrementValue$30 = var44;
                                             var44++;
-                                            var51.d(127, (int) param0.field_n[var44]);
+                                            var51.d(127, (int) param0.field_n[incrementValue$30]);
                                             continue L5;
                                           }
                                         } else {
@@ -431,10 +433,12 @@ final class ji extends am {
                                               break L8;
                                             }
                                           }
+                                          int incrementValue$31 = var37;
                                           var37++;
-                                          var53 = var53 + param0.field_n[var37];
+                                          var53 = var53 + param0.field_n[incrementValue$31];
+                                          int incrementValue$32 = var31;
                                           var31++;
-                                          var58 = var58 + param0.field_n[var31];
+                                          var58 = var58 + param0.field_n[incrementValue$32];
                                           var51.d(95, var53 & 127);
                                           var51.d(124, var58 & 127);
                                           continue L5;
@@ -448,8 +452,9 @@ final class ji extends am {
                                             break L9;
                                           }
                                         }
+                                        int incrementValue$33 = var32;
                                         var32++;
-                                        var57 = var57 + param0.field_n[var32];
+                                        var57 = var57 + param0.field_n[incrementValue$33];
                                         var51.d(103, var57 & 127);
                                         continue L5;
                                       }
@@ -462,10 +467,12 @@ final class ji extends am {
                                           break L10;
                                         }
                                       }
+                                      int incrementValue$34 = var45;
                                       var45++;
-                                      var56 = var56 + param0.field_n[var45];
+                                      var56 = var56 + param0.field_n[incrementValue$34];
+                                      int incrementValue$35 = var33;
                                       var33++;
-                                      var56 = var56 + (param0.field_n[var33] << 7);
+                                      var56 = var56 + (param0.field_n[incrementValue$35] << 7);
                                       var51.d(121, var56 & 127);
                                       var51.d(81, var56 >> 7 & 127);
                                       continue L5;
@@ -481,8 +488,9 @@ final class ji extends am {
                                     }
                                     L12: {
                                       L13: {
+                                        int incrementValue$36 = var15;
                                         var15++;
-                                        var28 = var28 + param0.field_n[var15] & 127;
+                                        var28 = var28 + param0.field_n[incrementValue$36] & 127;
                                         var51.d(114, var28);
                                         if (var28 == 0) {
                                           break L13;
@@ -512,8 +520,9 @@ final class ji extends am {
                                                                           break L14;
                                                                         } else {
                                                                           if (var28 != 123) {
+                                                                            int incrementValue$37 = var39;
                                                                             var39++;
-                                                                            var66 = param0.field_n[var39];
+                                                                            var66 = param0.field_n[incrementValue$37];
                                                                             break L12;
                                                                           } else {
                                                                             break L14;
@@ -523,57 +532,68 @@ final class ji extends am {
                                                                     }
                                                                   }
                                                                 }
+                                                                int incrementValue$38 = var30;
                                                                 var30++;
-                                                                var66 = param0.field_n[var30];
+                                                                var66 = param0.field_n[incrementValue$38];
                                                                 break L12;
                                                               } else {
+                                                                int incrementValue$39 = var49;
                                                                 var49++;
-                                                                var66 = param0.field_n[var49];
+                                                                var66 = param0.field_n[incrementValue$39];
                                                                 break L12;
                                                               }
                                                             } else {
+                                                              int incrementValue$40 = var48;
                                                               var48++;
-                                                              var66 = param0.field_n[var48];
+                                                              var66 = param0.field_n[incrementValue$40];
                                                               break L12;
                                                             }
                                                           } else {
+                                                            int incrementValue$41 = var47;
                                                             var47++;
-                                                            var66 = param0.field_n[var47];
+                                                            var66 = param0.field_n[incrementValue$41];
                                                             break L12;
                                                           }
                                                         } else {
+                                                          int incrementValue$42 = var46;
                                                           var46++;
-                                                          var66 = param0.field_n[var46];
+                                                          var66 = param0.field_n[incrementValue$42];
                                                           break L12;
                                                         }
                                                       } else {
+                                                        int incrementValue$43 = var43;
                                                         var43++;
-                                                        var66 = param0.field_n[var43];
+                                                        var66 = param0.field_n[incrementValue$43];
                                                         break L12;
                                                       }
                                                     } else {
+                                                      int incrementValue$44 = var36;
                                                       var36++;
-                                                      var66 = param0.field_n[var36];
+                                                      var66 = param0.field_n[incrementValue$44];
                                                       break L12;
                                                     }
                                                   } else {
+                                                    int incrementValue$45 = var42;
                                                     var42++;
-                                                    var66 = param0.field_n[var42];
+                                                    var66 = param0.field_n[incrementValue$45];
                                                     break L12;
                                                   }
                                                 } else {
+                                                  int incrementValue$46 = var35;
                                                   var35++;
-                                                  var66 = param0.field_n[var35];
+                                                  var66 = param0.field_n[incrementValue$46];
                                                   break L12;
                                                 }
                                               } else {
+                                                int incrementValue$47 = var41;
                                                 var41++;
-                                                var66 = param0.field_n[var41];
+                                                var66 = param0.field_n[incrementValue$47];
                                                 break L12;
                                               }
                                             } else {
+                                              int incrementValue$48 = var34;
                                               var34++;
-                                              var66 = param0.field_n[var34];
+                                              var66 = param0.field_n[incrementValue$48];
                                               break L12;
                                             }
                                           } else {
@@ -581,8 +601,9 @@ final class ji extends am {
                                           }
                                         }
                                       }
+                                      int incrementValue$49 = var44;
                                       var44++;
-                                      var66 = param0.field_n[var44];
+                                      var66 = param0.field_n[incrementValue$49];
                                       break L12;
                                     }
                                     var66 = var66 + var70[var28];
@@ -599,10 +620,12 @@ final class ji extends am {
                                       break L15;
                                     }
                                   }
+                                  int incrementValue$50 = var37;
                                   var37++;
-                                  var53 = var53 + param0.field_n[var37];
+                                  var53 = var53 + param0.field_n[incrementValue$50];
+                                  int incrementValue$51 = var40;
                                   var40++;
-                                  var55 = var55 + param0.field_n[var40];
+                                  var55 = var55 + param0.field_n[incrementValue$51];
                                   var51.d(123, var53 & 127);
                                   var51.d(93, var55 & 127);
                                   continue L5;
@@ -616,10 +639,12 @@ final class ji extends am {
                                     break L16;
                                   }
                                 }
+                                int incrementValue$52 = var37;
                                 var37++;
-                                var53 = var53 + param0.field_n[var37];
+                                var53 = var53 + param0.field_n[incrementValue$52];
+                                int incrementValue$53 = var38;
                                 var38++;
-                                var54 = var54 + param0.field_n[var38];
+                                var54 = var54 + param0.field_n[incrementValue$53];
                                 var51.d(114, var53 & 127);
                                 var51.d(109, var54 & 127);
                                 continue L5;
@@ -635,12 +660,15 @@ final class ji extends am {
                               }
                               var51.d(109, 81);
                               var51.d(106, 3);
+                              int incrementValue$54 = var50;
                               var50++;
-                              var51.d(88, (int) param0.field_n[var50]);
+                              var51.d(88, (int) param0.field_n[incrementValue$54]);
+                              int incrementValue$55 = var50;
                               var50++;
-                              var51.d(118, (int) param0.field_n[var50]);
+                              var51.d(118, (int) param0.field_n[incrementValue$55]);
+                              int incrementValue$56 = var50;
                               var50++;
-                              var51.d(86, (int) param0.field_n[var50]);
+                              var51.d(86, (int) param0.field_n[incrementValue$56]);
                               continue L5;
                             }
                           } else {
@@ -771,7 +799,7 @@ final class ji extends am {
                   }
                 }
               } else {
-                int discarded$1 = param0.m(127);
+                int discarded$57 = param0.m(127);
                 var15++;
                 continue L1;
               }

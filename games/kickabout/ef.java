@@ -10,27 +10,104 @@ final class ef extends am {
     db[] field_q;
 
     public static void h(byte param0) {
-        int var1 = 35 % ((-83 - param0) / 36);
+        int var1 = 0;
         field_p = null;
         field_s = null;
         field_n = null;
     }
 
     final static boolean a(CharSequence param0, int param1) {
-        int var2 = 0;
-        int var3 = Kickabout.field_G;
-        if (!(hw.a(param0, -26200, true))) {
-            return false;
-        }
-        if (param1 != -9907) {
-            field_n = null;
-        }
-        for (var2 = 0; param0.length() > var2; var2++) {
-            if (!ws.a(param0.charAt(var2), (byte) 121)) {
-                return false;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int stackIn_4_0 = 0;
+        int stackIn_11_0 = 0;
+        int stackIn_14_0 = 0;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_18_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_3_0 = 0;
+        int stackOut_13_0 = 0;
+        int stackOut_10_0 = 0;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        var3 = Kickabout.field_G;
+        try {
+          L0: {
+            if (!hw.a(param0, -26200, true)) {
+              stackOut_3_0 = 0;
+              stackIn_4_0 = stackOut_3_0;
+              return stackIn_4_0 != 0;
+            } else {
+              L1: {
+                if (param1 == -9907) {
+                  break L1;
+                } else {
+                  field_n = null;
+                  break L1;
+                }
+              }
+              var2_int = 0;
+              L2: while (true) {
+                if (param0.length() <= var2_int) {
+                  stackOut_13_0 = 1;
+                  stackIn_14_0 = stackOut_13_0;
+                  break L0;
+                } else {
+                  if (ws.a(param0.charAt(var2_int), (byte) 121)) {
+                    var2_int++;
+                    continue L2;
+                  } else {
+                    stackOut_10_0 = 0;
+                    stackIn_11_0 = stackOut_10_0;
+                    return stackIn_11_0 != 0;
+                  }
+                }
+              }
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2 = decompiledCaughtException;
+            stackOut_15_0 = (RuntimeException) var2;
+            stackOut_15_1 = new StringBuilder().append("ef.A(");
+            stackIn_17_0 = stackOut_15_0;
+            stackIn_17_1 = stackOut_15_1;
+            stackIn_16_0 = stackOut_15_0;
+            stackIn_16_1 = stackOut_15_1;
+            if (param0 == null) {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "null";
+              stackIn_18_0 = stackOut_17_0;
+              stackIn_18_1 = stackOut_17_1;
+              stackIn_18_2 = stackOut_17_2;
+              break L3;
+            } else {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "{...}";
+              stackIn_18_0 = stackOut_16_0;
+              stackIn_18_1 = stackOut_16_1;
+              stackIn_18_2 = stackOut_16_2;
+              break L3;
+            }
+          }
+          throw nb.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + param1 + 41);
         }
-        return true;
+        return stackIn_14_0 != 0;
     }
 
     final boolean g(byte param0) {

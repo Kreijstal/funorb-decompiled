@@ -17,59 +17,30 @@ final class sg extends l {
         var2 = Virogrid.field_F ? 1 : 0;
         fe.field_Fb = false;
         vd.field_X = null;
-        if (param0 == -2) {
-          if (!kb.field_c) {
-            var1 = mf.field_h;
-            if (0 < var1) {
-              if ((var1 ^ -1) == -2) {
-                vd.field_X = og.field_n;
-                vd.field_X = ll.a((byte) 67, new CharSequence[3]);
-                hf.field_w.h(true);
-                dk.f(389);
-                return;
-              } else {
-                vd.field_X = oi.a(new String[1], di.field_t, param0 + 4);
-                vd.field_X = ll.a((byte) 67, new CharSequence[3]);
-                hf.field_w.h(true);
-                dk.f(389);
-                return;
-              }
+        if (!kb.field_c) {
+          var1 = mf.field_h;
+          if (0 < var1) {
+            if (var1 == 1) {
+              vd.field_X = og.field_n;
+              vd.field_X = ll.a((byte) 67, new CharSequence[3]);
+              hf.field_w.h(true);
+              dk.f(389);
+              return;
             } else {
+              vd.field_X = oi.a(new String[1], di.field_t, 2);
+              vd.field_X = ll.a((byte) 67, new CharSequence[3]);
               hf.field_w.h(true);
               dk.f(389);
               return;
             }
           } else {
-            hf.field_w.k(119);
+            hf.field_w.h(true);
+            dk.f(389);
             return;
           }
         } else {
-          sg.d(82);
-          if (!kb.field_c) {
-            var1 = mf.field_h;
-            if (0 < var1) {
-              if ((var1 ^ -1) == -2) {
-                vd.field_X = og.field_n;
-                vd.field_X = ll.a((byte) 67, new CharSequence[3]);
-                hf.field_w.h(true);
-                dk.f(389);
-                return;
-              } else {
-                vd.field_X = oi.a(new String[1], di.field_t, param0 + 4);
-                vd.field_X = ll.a((byte) 67, new CharSequence[3]);
-                hf.field_w.h(true);
-                dk.f(389);
-                return;
-              }
-            } else {
-              hf.field_w.h(true);
-              dk.f(389);
-              return;
-            }
-          } else {
-            hf.field_w.k(119);
-            return;
-          }
+          hf.field_w.k(119);
+          return;
         }
     }
 
@@ -92,7 +63,11 @@ final class sg extends l {
     }
 
     sg(byte[] param0) {
-        ((sg) this).field_h = param0;
+        try {
+            ((sg) this).field_h = param0;
+        } catch (RuntimeException runtimeException) {
+            throw kg.a((Throwable) (Object) runtimeException, "sg.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

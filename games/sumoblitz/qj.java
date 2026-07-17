@@ -8,8 +8,12 @@ final class qj {
     static long field_d;
 
     qj(on param0, long param1, int param2) {
-        ((qj) this).field_a = param1;
-        ((qj) this).field_b = param0;
+        try {
+            ((qj) this).field_a = param1;
+            ((qj) this).field_b = param0;
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "qj.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     protected final void finalize() throws Throwable {
@@ -19,7 +23,7 @@ final class qj {
 
     public static void a(byte param0) {
         field_c = null;
-        int var1 = 0 % ((8 - param0) / 63);
+        int var1 = 0;
     }
 
     static {

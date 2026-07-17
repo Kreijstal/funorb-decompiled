@@ -31,30 +31,26 @@ final class pfb {
     private final void a(int param0, Object param1, long param2, int param3) {
         is var6 = null;
         ska var6_ref = null;
-        int var7 = 0;
-        var7 = VoidHunters.field_G;
-        if (param3 > ((pfb) this).field_e) {
-          throw new IllegalStateException();
-        } else {
-          this.a(-70, param2);
-          ((pfb) this).field_d = ((pfb) this).field_d - param3;
-          L0: while (true) {
-            if (0 <= ((pfb) this).field_d) {
-              if (param0 > -43) {
-                return;
-              } else {
-                var6_ref = new ska(param1, param3);
-                ((pfb) this).field_c.a((ksa) (Object) var6_ref, 0, param2);
-                ((pfb) this).field_b.a(-17569, (fh) (Object) var6_ref);
-                ((is) (Object) var6_ref).field_i = 0L;
-                return;
-              }
-            } else {
-              var6 = (is) (Object) ((pfb) this).field_b.a(-7481);
-              this.a(var6, -17173);
-              continue L0;
-            }
-          }
+        int var7 = VoidHunters.field_G;
+        if (!(1 <= ((pfb) this).field_e)) {
+            throw new IllegalStateException();
+        }
+        this.a(-70, param2);
+        ((pfb) this).field_d = ((pfb) this).field_d - 1;
+        while (0 > ((pfb) this).field_d) {
+            var6 = (is) (Object) ((pfb) this).field_b.a(-7481);
+            this.a(var6, -17173);
+        }
+        if (param0 > -43) {
+            return;
+        }
+        try {
+            var6_ref = new ska(param1, 1);
+            ((pfb) this).field_c.a((ksa) (Object) var6_ref, 0, param2);
+            ((pfb) this).field_b.a(-17569, (fh) (Object) var6_ref);
+            ((is) (Object) var6_ref).field_i = 0L;
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "pfb.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + 1 + 41);
         }
     }
 
@@ -63,13 +59,13 @@ final class pfb {
     }
 
     final void a(Object param0, long param1, byte param2) {
-        if (param2 != -117) {
-          pfb.a(-73);
-          this.a(param2 ^ 20, param0, param1, 1);
-          return;
-        } else {
-          this.a(param2 ^ 20, param0, param1, 1);
-          return;
+        try {
+            if (param2 != -117) {
+                pfb.a(-73);
+            }
+            this.a(param2 ^ 20, param0, param1, 1);
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "pfb.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }
     }
 
@@ -118,8 +114,9 @@ final class pfb {
             } else {
               L1: {
                 if (!var3_ref.e((byte) 74)) {
+                  long fieldTemp$2 = var3_ref.field_i + 1L;
                   var3_ref.field_i = var3_ref.field_i + 1L;
-                  if ((long)param1 < var3_ref.field_i + 1L) {
+                  if ((long)param1 < fieldTemp$2) {
                     var4 = new bna(var3_ref.a(122), var3_ref.field_k);
                     ((pfb) this).field_c.a((ksa) (Object) var4, 0, var3_ref.field_b);
                     gbb.a((fh) (Object) var4, (fh) (Object) var3_ref, (byte) -68);
@@ -153,8 +150,9 @@ final class pfb {
             } else {
               L3: {
                 if (!var3_ref.e((byte) 74)) {
+                  long fieldTemp$3 = var3_ref.field_i + 1L;
                   var3_ref.field_i = var3_ref.field_i + 1L;
-                  if ((long)param1 < var3_ref.field_i + 1L) {
+                  if ((long)param1 < fieldTemp$3) {
                     var4 = new bna(var3_ref.a(122), var3_ref.field_k);
                     ((pfb) this).field_c.a((ksa) (Object) var4, 0, var3_ref.field_b);
                     gbb.a((fh) (Object) var4, (fh) (Object) var3_ref, (byte) -68);
@@ -274,9 +272,24 @@ final class pfb {
     }
 
     private final void a(is param0, int param1) {
-        if (param1 != -17173) {
-          return;
-        } else {
+        RuntimeException var3 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        try {
           L0: {
             if (param0 != null) {
               param0.b(-3846);
@@ -284,10 +297,38 @@ final class pfb {
               ((pfb) this).field_d = ((pfb) this).field_d + param0.field_k;
               break L0;
             } else {
-              break L0;
+              return;
             }
           }
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var3 = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var3;
+            stackOut_6_1 = new StringBuilder().append("pfb.H(");
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param0 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L1;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L1;
+            }
+          }
+          throw rta.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + -17173 + 41);
         }
     }
 
@@ -318,9 +359,11 @@ final class pfb {
               continue L0;
             } else {
               ((pfb) this).field_c = new nga(var3);
+              return;
             }
           } else {
             ((pfb) this).field_c = new nga(var3);
+            return;
           }
         }
     }

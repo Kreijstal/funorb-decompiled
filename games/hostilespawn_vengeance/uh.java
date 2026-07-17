@@ -26,39 +26,31 @@ class uh extends ca {
 
     public static void b(int param0) {
         field_l = null;
-        if (param0 != 64) {
-          field_k = -111;
-          field_m = null;
-          field_f = null;
-          field_h = null;
-          field_g = null;
-          field_j = null;
-          return;
-        } else {
-          field_m = null;
-          field_f = null;
-          field_h = null;
-          field_g = null;
-          field_j = null;
-          return;
-        }
+        field_m = null;
+        field_f = null;
+        field_h = null;
+        field_g = null;
+        field_j = null;
     }
 
     uh(long param0, String param1) {
-        ((uh) this).field_n = param0;
-        ((uh) this).field_e = param1;
+        try {
+            ((uh) this).field_n = param0;
+            ((uh) this).field_e = param1;
+        } catch (RuntimeException runtimeException) {
+            throw wg.a((Throwable) (Object) runtimeException, "uh.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void a(vi param0, int param1) {
-        if (param1 >= -94) {
-          field_g = null;
-          param0.b(9201, ((uh) this).field_n);
-          param0.a((byte) -36, ((uh) this).field_e);
-          return;
-        } else {
-          param0.b(9201, ((uh) this).field_n);
-          param0.a((byte) -36, ((uh) this).field_e);
-          return;
+        try {
+            if (param1 >= -94) {
+                field_g = null;
+            }
+            param0.b(9201, ((uh) this).field_n);
+            param0.a((byte) -36, ((uh) this).field_e);
+        } catch (RuntimeException runtimeException) {
+            throw wg.a((Throwable) (Object) runtimeException, "uh.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 

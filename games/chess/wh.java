@@ -11,75 +11,110 @@ final class wh {
     static int field_f;
 
     final static int a(int param0, ld param1) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
-        L0: {
-          var3 = Chess.field_G;
-          var2 = uh.field_l;
-          if ((param1.field_k ^ -1) != -3) {
-            if (4 != param1.field_k) {
-              if ((gb.field_t ^ -1L) == (param1.field_m ^ -1L)) {
-                var2 = vm.field_i[param1.field_k];
-                break L0;
-              } else {
-                var2 = kg.field_P[param1.field_k];
-                if (param0 == -1) {
-                  return var2;
+        int stackIn_17_0 = 0;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        String stackIn_21_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_16_0 = 0;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
+        var3 = Chess.field_G;
+        try {
+          L0: {
+            L1: {
+              var2_int = uh.field_l;
+              if (param1.field_k != 2) {
+                if (4 != param1.field_k) {
+                  if (~gb.field_t == ~param1.field_m) {
+                    var2_int = vm.field_i[param1.field_k];
+                    break L1;
+                  } else {
+                    var2_int = kg.field_P[param1.field_k];
+                    break L1;
+                  }
                 } else {
-                  field_c = null;
-                  return var2;
+                  var2_int = kg.field_P[param1.field_k];
+                  break L1;
+                }
+              } else {
+                if (!param1.field_d) {
+                  L2: {
+                    if (param1.field_e != 0) {
+                      break L2;
+                    } else {
+                      if (param1.field_q == 0) {
+                        var2_int = vm.field_i[param1.field_k];
+                        break L1;
+                      } else {
+                        break L2;
+                      }
+                    }
+                  }
+                  var2_int = kg.field_P[param1.field_k];
+                  break L1;
+                } else {
+                  var2_int = uh.field_l;
+                  break L1;
                 }
               }
-            } else {
-              var2 = kg.field_P[param1.field_k];
+            }
+            L3: {
               if (param0 == -1) {
-                return var2;
+                break L3;
               } else {
                 field_c = null;
-                return var2;
+                break L3;
               }
             }
-          } else {
-            if (!param1.field_d) {
-              if (-1 != (param1.field_e ^ -1)) {
-                var2 = kg.field_P[param1.field_k];
-                if (param0 != -1) {
-                  field_c = null;
-                  return var2;
-                } else {
-                  return var2;
-                }
-              } else {
-                if ((param1.field_q ^ -1) == -1) {
-                  var2 = vm.field_i[param1.field_k];
-                  if (param0 == -1) {
-                    return var2;
-                  } else {
-                    field_c = null;
-                    return var2;
-                  }
-                } else {
-                  var2 = kg.field_P[param1.field_k];
-                  if (param0 != -1) {
-                    field_c = null;
-                    return var2;
-                  } else {
-                    return var2;
-                  }
-                }
-              }
+            stackOut_16_0 = var2_int;
+            stackIn_17_0 = stackOut_16_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var2 = decompiledCaughtException;
+            stackOut_18_0 = (RuntimeException) var2;
+            stackOut_18_1 = new StringBuilder().append("wh.A(").append(param0).append(44);
+            stackIn_20_0 = stackOut_18_0;
+            stackIn_20_1 = stackOut_18_1;
+            stackIn_19_0 = stackOut_18_0;
+            stackIn_19_1 = stackOut_18_1;
+            if (param1 == null) {
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "null";
+              stackIn_21_0 = stackOut_20_0;
+              stackIn_21_1 = stackOut_20_1;
+              stackIn_21_2 = stackOut_20_2;
+              break L4;
             } else {
-              var2 = uh.field_l;
-              break L0;
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "{...}";
+              stackIn_21_0 = stackOut_19_0;
+              stackIn_21_1 = stackOut_19_1;
+              stackIn_21_2 = stackOut_19_2;
+              break L4;
             }
           }
+          throw fk.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 41);
         }
-        if (param0 == -1) {
-          return var2;
-        } else {
-          field_c = null;
-          return var2;
-        }
+        return stackIn_17_0;
     }
 
     final static km[] a(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -125,7 +160,7 @@ final class wh {
           var14.e();
           wb.f(0, 0, 16, param2, param4);
           var15 = null;
-          if ((param5 ^ -1) >= -1) {
+          if (param5 <= 0) {
             break L0;
           } else {
             var17 = new km(16, 16);
@@ -141,22 +176,11 @@ final class wh {
 
     public static void a(byte param0) {
         field_e = null;
-        if (param0 != -46) {
-          field_b = null;
-          field_a = null;
-          field_b = null;
-          field_g = null;
-          field_d = null;
-          field_c = null;
-          return;
-        } else {
-          field_a = null;
-          field_b = null;
-          field_g = null;
-          field_d = null;
-          field_c = null;
-          return;
-        }
+        field_a = null;
+        field_b = null;
+        field_g = null;
+        field_d = null;
+        field_c = null;
     }
 
     static {

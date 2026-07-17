@@ -12,39 +12,111 @@ final class ok extends sna {
     sna field_Ab;
 
     final static boolean a(CharSequence param0, char param1, byte param2) {
-        int var3 = 0;
-        if (io.a(true, param1)) {
-          if (param0 == null) {
-            return false;
-          } else {
-            var3 = param0.length();
-            if (param2 == -19) {
-              if (12 > var3) {
-                if (mp.a(true, param1)) {
-                  if (var3 == 0) {
-                    return false;
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int stackIn_2_0 = 0;
+        int stackIn_6_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackIn_12_0 = 0;
+        int stackIn_17_0 = 0;
+        int stackIn_19_0 = 0;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        String stackIn_23_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_5_0 = 0;
+        int stackOut_18_0 = 0;
+        int stackOut_16_0 = 0;
+        int stackOut_11_0 = 0;
+        int stackOut_8_0 = 0;
+        int stackOut_1_0 = 0;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        String stackOut_22_2 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
+        try {
+          L0: {
+            if (io.a(true, param1)) {
+              if (param0 == null) {
+                stackOut_5_0 = 0;
+                stackIn_6_0 = stackOut_5_0;
+                return stackIn_6_0 != 0;
+              } else {
+                var3_int = param0.length();
+                if (param2 == -19) {
+                  if (12 > var3_int) {
+                    if (mp.a(true, param1)) {
+                      if (var3_int != 0) {
+                        stackOut_18_0 = 1;
+                        stackIn_19_0 = stackOut_18_0;
+                        break L0;
+                      } else {
+                        stackOut_16_0 = 0;
+                        stackIn_17_0 = stackOut_16_0;
+                        return stackIn_17_0 != 0;
+                      }
+                    } else {
+                      return true;
+                    }
                   } else {
-                    return true;
+                    stackOut_11_0 = 0;
+                    stackIn_12_0 = stackOut_11_0;
+                    return stackIn_12_0 != 0;
                   }
                 } else {
-                  return true;
+                  stackOut_8_0 = 0;
+                  stackIn_9_0 = stackOut_8_0;
+                  return stackIn_9_0 != 0;
                 }
-              } else {
-                return false;
               }
             } else {
-              return false;
+              stackOut_1_0 = 0;
+              stackIn_2_0 = stackOut_1_0;
+              return stackIn_2_0 != 0;
             }
           }
-        } else {
-          return false;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var3 = decompiledCaughtException;
+            stackOut_20_0 = (RuntimeException) var3;
+            stackOut_20_1 = new StringBuilder().append("ok.DA(");
+            stackIn_22_0 = stackOut_20_0;
+            stackIn_22_1 = stackOut_20_1;
+            stackIn_21_0 = stackOut_20_0;
+            stackIn_21_1 = stackOut_20_1;
+            if (param0 == null) {
+              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_2 = "null";
+              stackIn_23_0 = stackOut_22_0;
+              stackIn_23_1 = stackOut_22_1;
+              stackIn_23_2 = stackOut_22_2;
+              break L1;
+            } else {
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "{...}";
+              stackIn_23_0 = stackOut_21_0;
+              stackIn_23_1 = stackOut_21_1;
+              stackIn_23_2 = stackOut_21_2;
+              break L1;
+            }
+          }
+          throw pe.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + param1 + 44 + param2 + 41);
         }
+        return stackIn_19_0 != 0;
     }
 
     final static sna f(byte param0) {
-        if (param0 != -15) {
-            return null;
-        }
         return p.field_n.field_vb;
     }
 
@@ -54,15 +126,19 @@ final class ok extends sna {
 
     ok(long param0, sna param1, sna param2, cw param3, sna param4, String param5, String param6) {
         super(param0, param1);
-        ((ok) this).field_wb = new sna(0L, (sna) null);
-        ((ok) this).field_xb = new sga(0L, ((ok) this).field_wb, param2, param3);
-        ((ok) this).field_Ab = new sna(0L, param4);
-        ((ok) this).field_yb = new sna(0L, param4);
-        ((ok) this).field_Ab.field_Z = param5;
-        ((ok) this).field_yb.field_Z = param6;
-        ((ok) this).a(-1, (sna) (Object) ((ok) this).field_xb);
-        ((ok) this).a(-1, ((ok) this).field_Ab);
-        ((ok) this).a(-1, ((ok) this).field_yb);
+        try {
+            ((ok) this).field_wb = new sna(0L, (sna) null);
+            ((ok) this).field_xb = new sga(0L, ((ok) this).field_wb, param2, param3);
+            ((ok) this).field_Ab = new sna(0L, param4);
+            ((ok) this).field_yb = new sna(0L, param4);
+            ((ok) this).field_Ab.field_Z = param5;
+            ((ok) this).field_yb.field_Z = param6;
+            ((ok) this).a(-1, (sna) (Object) ((ok) this).field_xb);
+            ((ok) this).a(-1, ((ok) this).field_Ab);
+            ((ok) this).a(-1, ((ok) this).field_yb);
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "ok.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 44 + (param6 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static int c(int param0, int param1) {
@@ -107,11 +183,6 @@ final class ok extends sna {
 
     public static void f(int param0) {
         field_Cb = null;
-        if (param0 != 7576) {
-            int discarded$0 = ok.c(53, 83);
-            field_zb = null;
-            return;
-        }
         field_zb = null;
     }
 

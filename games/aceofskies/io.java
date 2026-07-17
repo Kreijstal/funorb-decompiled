@@ -19,22 +19,31 @@ final class io {
 
     protected final void finalize() throws Throwable {
         ((io) this).field_b.a(-25160, ((io) this).field_d);
-        this.finalize();
+        super.finalize();
     }
 
     final static void a(byte param0, int param1) {
+        fp var5 = null;
         int var4 = AceOfSkies.field_G ? 1 : 0;
-        fp var5 = (fp) ks.field_d.d(268435455);
-        while (var5 != null) {
-            po.a(var5, (byte) 115, param1);
-            var5 = (fp) ks.field_d.b((byte) 103);
+        try {
+            var5 = (fp) (Object) ks.field_d.d(268435455);
+            while (var5 != null) {
+                po.a(var5, (byte) 115, 2);
+                var5 = (fp) (Object) ks.field_d.b((byte) 103);
+            }
+            int var3 = 127 % ((param0 - -37) / 51);
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) (Object) runtimeException, "io.B(" + param0 + 44 + 2 + 41);
         }
-        int var3 = 127 % ((param0 - -37) / 51);
     }
 
     io(jc param0, long param1, vj[] param2) {
-        ((io) this).field_b = param0;
-        ((io) this).field_d = param1;
+        try {
+            ((io) this).field_b = param0;
+            ((io) this).field_d = param1;
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) (Object) runtimeException, "io.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

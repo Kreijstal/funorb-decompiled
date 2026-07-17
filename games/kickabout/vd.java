@@ -22,9 +22,9 @@ final class vd {
     final static int a(int param0, int param1, int param2) {
         if (param1 == 11277) {
           if (param2 >= param0) {
-            return no.b((param0 << 1514405456) / param2, param1 ^ 4565);
+            return no.b((param0 << 16) / param2, param1 ^ 4565);
           } else {
-            return 2048 - no.b((param2 << 795101264) / param0, 15832);
+            return 2048 - no.b((param2 << 16) / param0, 15832);
           }
         } else {
           return -52;
@@ -32,12 +32,6 @@ final class vd {
     }
 
     public static void a(int param0) {
-        if (param0 != -5) {
-            field_c = -62;
-            field_b = null;
-            field_a = null;
-            return;
-        }
         field_b = null;
         field_a = null;
     }
@@ -48,71 +42,49 @@ final class vd {
 
     final static boolean a(byte param0) {
         int var1 = 0;
-        if (param0 == 82) {
-          L0: {
-            if (null == um.field_e) {
-              break L0;
-            } else {
-              if (5 != um.field_e.field_o.field_u) {
-                break L0;
-              } else {
-                return true;
-              }
-            }
-          }
-          L1: {
-            if (um.field_e != null) {
-              break L1;
-            } else {
+        int stackIn_17_0 = 0;
+        int stackOut_16_0 = 0;
+        int stackOut_15_0 = 0;
+        if (null != um.field_e) {
+          if (5 != um.field_e.field_o.field_u) {
+            if (um.field_e == null) {
               if (null != ra.field_G) {
-                break L1;
+                return false;
               } else {
-                var1 = cq.field_h.field_c;
-                if (-5 == var1) {
-                  return false;
-                } else {
-                  return true;
-                }
-              }
-            }
-          }
-          return false;
-        } else {
-          field_b = null;
-          if (null != um.field_e) {
-            if (5 != um.field_e.field_o.field_u) {
-              if (um.field_e == null) {
-                if (null == ra.field_G) {
+                L0: {
                   var1 = cq.field_h.field_c;
                   if (-5 == var1) {
-                    return false;
+                    stackOut_16_0 = 0;
+                    stackIn_17_0 = stackOut_16_0;
+                    break L0;
                   } else {
-                    return true;
+                    stackOut_15_0 = 1;
+                    stackIn_17_0 = stackOut_15_0;
+                    break L0;
                   }
-                } else {
-                  return false;
                 }
-              } else {
-                return false;
+                return stackIn_17_0 != 0;
               }
             } else {
-              return true;
+              return false;
             }
           } else {
-            if (um.field_e == null) {
-              if (null == ra.field_G) {
-                var1 = cq.field_h.field_c;
-                if (-5 == var1) {
-                  return false;
-                } else {
-                  return true;
-                }
+            return true;
+          }
+        } else {
+          if (um.field_e == null) {
+            if (null == ra.field_G) {
+              var1 = cq.field_h.field_c;
+              if (-5 != var1) {
+                return true;
               } else {
                 return false;
               }
             } else {
               return false;
             }
+          } else {
+            return false;
           }
         }
     }

@@ -44,9 +44,6 @@ final class fm {
     public static void a(int param0) {
         field_c = null;
         field_e = null;
-        if (param0 != 0) {
-            return;
-        }
         field_a = null;
     }
 

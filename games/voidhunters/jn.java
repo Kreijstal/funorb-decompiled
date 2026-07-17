@@ -51,12 +51,6 @@ final class jn implements Iterator {
     }
 
     public static void a(byte param0) {
-        if (param0 >= -76) {
-            field_c = null;
-            field_c = null;
-            field_a = null;
-            return;
-        }
         field_c = null;
         field_a = null;
     }
@@ -87,9 +81,13 @@ final class jn implements Iterator {
 
     jn(vh param0) {
         ((jn) this).field_b = null;
-        ((jn) this).field_e = param0;
-        ((jn) this).field_d = ((jn) this).field_e.field_a.field_e;
-        ((jn) this).field_b = null;
+        try {
+            ((jn) this).field_e = param0;
+            ((jn) this).field_d = ((jn) this).field_e.field_a.field_e;
+            ((jn) this).field_b = null;
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "jn.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

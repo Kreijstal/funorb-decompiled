@@ -42,7 +42,7 @@ class uh {
         lq var15 = null;
         int var15_int = 0;
         L0: {
-          var3 = param1;
+          var3 = 256;
           if (!field_o) {
             break L0;
           } else {
@@ -52,7 +52,7 @@ class uh {
         }
         L1: {
           dv.a(param0, 0, var3);
-          ((uh) this).field_u = ((uh) this).field_u - param1;
+          ((uh) this).field_u = ((uh) this).field_u - 256;
           if (((uh) this).field_c == null) {
             break L1;
           } else {
@@ -86,7 +86,7 @@ class uh {
                       if (var9 != 0) {
                         L6: {
                           if ((var9 & 1) != 0) {
-                            var5 = var5 & (1 << var7_int ^ -1);
+                            var5 = var5 & ~(1 << var7_int);
                             var10 = null;
                             var11 = ((uh) this).field_b[var7_int];
                             var14 = var11;
@@ -219,7 +219,7 @@ class uh {
           if (((uh) this).field_c == null) {
             break L17;
           } else {
-            ((uh) this).field_c.a(param0, 0, param1);
+            ((uh) this).field_c.a(param0, 0, 256);
             break L17;
           }
         }
@@ -248,7 +248,7 @@ class uh {
                 }
               }
               field_o = stackIn_7_0 != 0;
-              field_h = param2;
+              field_h = 10;
               return;
             } else {
               break L0;
@@ -587,12 +587,12 @@ class uh {
     }
 
     private final void a(int param0) {
-        ((uh) this).field_u = ((uh) this).field_u - param0;
+        ((uh) this).field_u = ((uh) this).field_u - 256;
         if (((uh) this).field_u < 0) {
             ((uh) this).field_u = 0;
         }
         if (((uh) this).field_c != null) {
-            ((uh) this).field_c.a(param0);
+            ((uh) this).field_c.a(256);
             return;
         }
     }

@@ -10,34 +10,20 @@ final class fa extends ksa {
     public static void c(byte param0) {
         field_d = null;
         field_e = null;
-        int var1 = 11 / ((5 - param0) / 58);
+        int var1 = -11;
     }
 
     final static void a(String param0, int param1, boolean param2) {
-        int stackIn_3_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        L0: {
-          rg.field_b = true;
-          if (!param2) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            break L0;
-          } else {
-            stackOut_1_0 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            break L0;
-          }
-        }
-        kmb.field_c = stackIn_3_0 != 0;
-        hwa.field_o = new os(klb.field_r, vob.field_r, param0, tla.field_c, kmb.field_c);
-        if (param1 >= -119) {
-          field_d = null;
-          klb.field_r.a(false, (shb) (Object) hwa.field_o);
-          return;
-        } else {
-          klb.field_r.a(false, (shb) (Object) hwa.field_o);
-          return;
+        try {
+            rg.field_b = true;
+            kmb.field_c = param2 ? true : false;
+            hwa.field_o = new os(klb.field_r, vob.field_r, param0, tla.field_c, kmb.field_c);
+            if (param1 >= -119) {
+                field_d = null;
+            }
+            klb.field_r.a(false, (shb) (Object) hwa.field_o);
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "fa.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }
     }
 

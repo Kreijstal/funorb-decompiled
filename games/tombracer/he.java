@@ -7,11 +7,19 @@ final class he extends java.awt.Canvas {
     static ha field_c;
 
     public final void paint(java.awt.Graphics param0) {
-        ((he) this).field_a.paint(param0);
+        try {
+            ((he) this).field_a.paint(param0);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "he.paint(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public final void update(java.awt.Graphics param0) {
-        ((he) this).field_a.update(param0);
+        try {
+            ((he) this).field_a.update(param0);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "he.update(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void a(int param0) {
@@ -25,7 +33,11 @@ final class he extends java.awt.Canvas {
     }
 
     he(java.awt.Component param0) {
-        ((he) this).field_a = param0;
+        try {
+            ((he) this).field_a = param0;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "he.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

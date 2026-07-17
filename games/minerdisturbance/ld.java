@@ -11,8 +11,12 @@ final class ld extends sb {
     static String[] field_A;
 
     final void b(int[] param0, int param1) {
-        ((ld) this).field_v = new mf(param0);
-        int var3 = -24 % ((param1 - 64) / 40);
+        try {
+            ((ld) this).field_v = new mf(param0);
+            int var3_int = -24 % ((param1 - 64) / 40);
+        } catch (RuntimeException runtimeException) {
+            throw lj.a((Throwable) (Object) runtimeException, "ld.J(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     final static String a(String param0, int param1, String param2, String param3) {
@@ -118,7 +122,7 @@ final class ld extends sb {
         int var6 = 0;
         var6 = MinerDisturbance.field_ab;
         if (param0 < -64) {
-          var3 = ((ld) this).field_y >> 242816483;
+          var3 = ((ld) this).field_y >> 3;
           var4 = -(7 & ((ld) this).field_y) + 8;
           ((ld) this).field_y = ((ld) this).field_y + param1;
           var5 = 0;
@@ -157,7 +161,7 @@ final class ld extends sb {
           }
         } else {
           field_B = -20;
-          var3 = ((ld) this).field_y >> 242816483;
+          var3 = ((ld) this).field_y >> 3;
           var4 = -(7 & ((ld) this).field_y) + 8;
           ((ld) this).field_y = ((ld) this).field_y + param1;
           var5 = 0;
@@ -229,26 +233,76 @@ final class ld extends sb {
     }
 
     final void a(byte[] param0, int param1, int param2, int param3) {
-        int var5 = 0;
+        int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
         var7 = MinerDisturbance.field_ab;
-        var5 = 0;
-        var6 = -2 / ((62 - param1) / 47);
-        L0: while (true) {
-          if (param2 > var5) {
-            int fieldTemp$2 = ((ld) this).field_o;
-            ((ld) this).field_o = ((ld) this).field_o + 1;
-            param0[var5 + param3] = (byte)(((ld) this).field_u[fieldTemp$2] + -((ld) this).field_v.b(4));
-            var5++;
-            if (var7 == 0) {
-              continue L0;
-            } else {
-              return;
+        try {
+          L0: {
+            var5_int = 0;
+            var6 = -2 / ((62 - param1) / 47);
+            L1: while (true) {
+              if (param2 <= var5_int) {
+                break L0;
+              } else {
+                int fieldTemp$5 = ((ld) this).field_o;
+                ((ld) this).field_o = ((ld) this).field_o + 1;
+                param0[var5_int + param3] = (byte)(((ld) this).field_u[fieldTemp$5] + -((ld) this).field_v.b(4));
+                var5_int++;
+                if (var7 == 0) {
+                  continue L1;
+                } else {
+                  return;
+                }
+              }
             }
-          } else {
-            return;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var5 = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var5;
+            stackOut_8_1 = new StringBuilder().append("ld.K(");
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param0 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L2;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L2;
+            }
+          }
+          throw lj.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }
     }
 

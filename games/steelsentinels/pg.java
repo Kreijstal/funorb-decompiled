@@ -43,26 +43,13 @@ final class pg extends fb {
 
     public static void c(int param0) {
         field_v = null;
-        if (param0 != 28873) {
-          boolean discarded$2 = pg.a(-89, 67, 9, -70, 59, 127, 12);
-          field_t = null;
-          field_s = null;
-          field_x = null;
-          field_z = null;
-          field_u = null;
-          field_w = null;
-          field_y = null;
-          return;
-        } else {
-          field_t = null;
-          field_s = null;
-          field_x = null;
-          field_z = null;
-          field_u = null;
-          field_w = null;
-          field_y = null;
-          return;
-        }
+        field_t = null;
+        field_s = null;
+        field_x = null;
+        field_z = null;
+        field_u = null;
+        field_w = null;
+        field_y = null;
     }
 
     final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {

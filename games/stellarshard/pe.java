@@ -9,7 +9,7 @@ final class pe {
     final static void b(int param0) {
         n.field_i = nk.a(-20);
         na.field_d = new ei();
-        th.a(true, true, param0);
+        th.a(true, true, 4);
     }
 
     final static void c(int param0) {
@@ -48,42 +48,22 @@ final class pe {
     final static String a(boolean param0, boolean param1, byte param2, boolean param3) {
         int var4 = 0;
         int var5 = 0;
-        var4 = 0;
-        if (!param3) {
-          L0: {
-            if (param0) {
-              var4 += 2;
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          if (param1) {
-            var4++;
-            var5 = -101 % ((25 - param2) / 39);
-            return bl.field_a[var4];
+        L0: {
+          var4 = 0;
+          if (param0) {
+            var4 += 2;
+            break L0;
           } else {
-            var5 = -101 % ((25 - param2) / 39);
-            return bl.field_a[var4];
+            break L0;
           }
+        }
+        if (param1) {
+          var4++;
+          var5 = -101 % ((25 - param2) / 39);
+          return bl.field_a[var4];
         } else {
-          L1: {
-            var4 += 4;
-            if (param0) {
-              var4 += 2;
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          if (!param1) {
-            var5 = -101 % ((25 - param2) / 39);
-            return bl.field_a[var4];
-          } else {
-            var4++;
-            var5 = -101 % ((25 - param2) / 39);
-            return bl.field_a[var4];
-          }
+          var5 = -101 % ((25 - param2) / 39);
+          return bl.field_a[var4];
         }
     }
 

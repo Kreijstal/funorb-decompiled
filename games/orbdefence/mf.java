@@ -8,9 +8,6 @@ final class mf {
     static boolean field_d;
 
     public static void a(int param0) {
-        if (param0 < 84) {
-            return;
-        }
         field_b = null;
         field_a = null;
     }
@@ -25,9 +22,9 @@ final class mf {
         int stackOut_2_0 = 0;
         var2 = 12 / ((-77 - param1) / 45);
         param0 = param0 & 8191;
-        if (-4097 >= (param0 ^ -1)) {
+        if (param0 >= 4096) {
           L0: {
-            if ((param0 ^ -1) <= -6145) {
+            if (param0 >= 6144) {
               stackOut_7_0 = th.field_c[param0 + -6144];
               stackIn_8_0 = stackOut_7_0;
               break L0;

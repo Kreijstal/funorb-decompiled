@@ -45,7 +45,7 @@ abstract class sc implements eeb {
     public final String c(byte param0) {
         if (param0 == -79) {
           if (!((sc) this).b((byte) -115)) {
-            if ((wt.a(false) ^ -1L) > (((sc) this).field_a - -350L ^ -1L)) {
+            if (~wt.a(false) > ~(((sc) this).field_a - -350L)) {
               return null;
             } else {
               return ((sc) this).d(16384);

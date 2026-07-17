@@ -39,24 +39,52 @@ final class cb extends kd {
     }
 
     final static void b(int param0) {
-        int var1 = 0;
+        int var1_int = 0;
+        RuntimeException var1 = null;
         double var2 = 0.0;
-        int var4 = Lexicominos.field_L ? 1 : 0;
-        k.b();
-        gl.field_e = new int[260];
-        sb.field_d = 11;
-        for (var1 = 0; var1 < 256; var1++) {
-            var2 = 15.0;
-            gl.field_e[var1] = (int)(Math.pow((double)((float)var1 / 256.0f), var2) * 255.0);
-        }
-        if (param0 > -51) {
-            field_n = null;
-        }
-        int var5 = 256;
-        var1 = var5;
-        while (var5 < gl.field_e.length) {
-            gl.field_e[var5] = 255;
-            var5++;
+        int var4 = 0;
+        int var5 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var4 = Lexicominos.field_L ? 1 : 0;
+        try {
+          L0: {
+            k.b();
+            gl.field_e = new int[260];
+            sb.field_d = 11;
+            var1_int = 0;
+            L1: while (true) {
+              if (var1_int >= 256) {
+                L2: {
+                  if (param0 <= -51) {
+                    break L2;
+                  } else {
+                    field_n = null;
+                    break L2;
+                  }
+                }
+                var5 = 256;
+                var1_int = var5;
+                L3: while (true) {
+                  if (var5 >= gl.field_e.length) {
+                    break L0;
+                  } else {
+                    gl.field_e[var5] = 255;
+                    var5++;
+                    continue L3;
+                  }
+                }
+              } else {
+                var2 = 15.0;
+                gl.field_e[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
+                var1_int++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw ld.a((Throwable) (Object) var1, "cb.C(" + param0 + 41);
         }
     }
 
@@ -65,9 +93,6 @@ final class cb extends kd {
         nc.field_p = null;
         af.field_b = false;
         vf.field_r = -1;
-        if (param0 != -52) {
-            field_n = null;
-        }
         bf.field_g = -1;
     }
 

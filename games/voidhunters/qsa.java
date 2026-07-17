@@ -9,9 +9,6 @@ final class qsa {
     private static String field_z;
 
     public static void a(int param0) {
-        if (param0 != 30089) {
-            return;
-        }
         field_d = null;
         field_b = null;
     }

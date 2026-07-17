@@ -11,18 +11,9 @@ final class tc {
 
     public static void a(boolean param0) {
         field_c = null;
-        if (!param0) {
-          field_b = null;
-          field_b = null;
-          field_d = null;
-          field_e = null;
-          return;
-        } else {
-          field_b = null;
-          field_d = null;
-          field_e = null;
-          return;
-        }
+        field_b = null;
+        field_d = null;
+        field_e = null;
     }
 
     static {

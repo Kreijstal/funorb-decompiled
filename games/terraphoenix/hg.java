@@ -50,7 +50,7 @@ final class hg {
                   var7 = 0;
                   L2: while (true) {
                     if (var7 >= var4) {
-                      ((hg) this).field_e[var6] = var3 ^ -1;
+                      ((hg) this).field_e[var6] = ~var3;
                       if (var6 >= var2) {
                         var2 = var6 + 1;
                         var3++;
@@ -185,7 +185,7 @@ final class hg {
         while (((hg) this).field_e[var1] >= 0) {
             var1 = tl.c() != 0 ? ((hg) this).field_e[var1] : var1 + 1;
         }
-        return ((hg) this).field_e[var1] ^ -1;
+        return ~((hg) this).field_e[var1];
     }
 
     hg() {
@@ -216,7 +216,7 @@ final class hg {
         int stackOut_22_0 = 0;
         int stackOut_21_0 = 0;
         L0: {
-          int discarded$1 = tl.d(24);
+          int discarded$2 = tl.d(24);
           ((hg) this).field_b = tl.d(16);
           ((hg) this).field_c = tl.d(24);
           ((hg) this).field_f = new int[((hg) this).field_c];
@@ -283,8 +283,9 @@ final class hg {
                     var3_int++;
                     continue L5;
                   } else {
+                    int incrementValue$3 = var2;
                     var2++;
-                    ((hg) this).field_f[var2] = var3_int;
+                    ((hg) this).field_f[incrementValue$3] = var3_int;
                     var5++;
                     continue L6;
                   }

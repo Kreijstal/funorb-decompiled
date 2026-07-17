@@ -60,20 +60,22 @@ final class k implements Iterator {
 
     public final Object next() {
         int var2 = 0;
-        hf var3 = null;
+        Object var3 = null;
+        hf var3_ref = null;
         hf var4 = null;
         var2 = Geoblox.field_C;
         if (((k) this).field_d.field_a[((k) this).field_j + -1] == ((k) this).field_h) {
           L0: while (true) {
             if (((k) this).field_j < ((k) this).field_d.field_c) {
+              int fieldTemp$2 = ((k) this).field_j;
               ((k) this).field_j = ((k) this).field_j + 1;
-              var3 = ((k) this).field_d.field_a[((k) this).field_j].field_b;
-              if (var3 == ((k) this).field_d.field_a[((k) this).field_j - 1]) {
+              var3_ref = ((k) this).field_d.field_a[fieldTemp$2].field_b;
+              if (var3_ref == ((k) this).field_d.field_a[((k) this).field_j - 1]) {
                 continue L0;
               } else {
-                ((k) this).field_h = var3.field_b;
-                ((k) this).field_c = var3;
-                return (Object) (Object) var3;
+                ((k) this).field_h = var3_ref.field_b;
+                ((k) this).field_c = var3_ref;
+                return (Object) (Object) var3_ref;
               }
             } else {
               return null;
@@ -101,8 +103,12 @@ final class k implements Iterator {
 
     k(gi param0) {
         ((k) this).field_c = null;
-        ((k) this).field_d = param0;
-        this.a(-1);
+        try {
+            ((k) this).field_d = param0;
+            this.a(-1);
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) (Object) runtimeException, "k.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public final boolean hasNext() {
@@ -111,8 +117,9 @@ final class k implements Iterator {
         if (((k) this).field_d.field_a[((k) this).field_j - 1] == ((k) this).field_h) {
           L0: while (true) {
             if (((k) this).field_d.field_c > ((k) this).field_j) {
+              int fieldTemp$1 = ((k) this).field_j;
               ((k) this).field_j = ((k) this).field_j + 1;
-              if (((k) this).field_d.field_a[((k) this).field_j].field_b != ((k) this).field_d.field_a[((k) this).field_j - 1]) {
+              if (((k) this).field_d.field_a[fieldTemp$1].field_b != ((k) this).field_d.field_a[((k) this).field_j - 1]) {
                 ((k) this).field_h = ((k) this).field_d.field_a[-1 + ((k) this).field_j].field_b;
                 return true;
               } else {
@@ -132,12 +139,6 @@ final class k implements Iterator {
         ((k) this).field_c = null;
         ((k) this).field_j = 1;
         ((k) this).field_h = ((k) this).field_d.field_a[0].field_b;
-        if (param0 == -1) {
-          return;
-        } else {
-          ((k) this).remove();
-          return;
-        }
     }
 
     static {

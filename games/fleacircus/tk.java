@@ -45,17 +45,17 @@ final class tk extends lh {
     }
 
     final static void a(int param0, int param1, int[] param2, int param3, int param4, int param5, int param6) {
-        ia.field_p[param5] = param2;
-        ia.field_t[param5] = param1;
-        ia.field_l[param5] = param3;
-        ia.field_j[param5] = param6;
-        if (param4 > -116) {
-          field_y = null;
-          ia.field_r[param5] = param0;
-          return;
-        } else {
-          ia.field_r[param5] = param0;
-          return;
+        try {
+            ia.field_p[param5] = param2;
+            ia.field_t[param5] = param1;
+            ia.field_l[param5] = param3;
+            ia.field_j[param5] = param6;
+            if (param4 > -116) {
+                field_y = null;
+            }
+            ia.field_r[param5] = param0;
+        } catch (RuntimeException runtimeException) {
+            throw pf.a((Throwable) (Object) runtimeException, "tk.C(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
         }
     }
 

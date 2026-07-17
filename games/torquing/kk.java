@@ -18,9 +18,6 @@ final class kk extends lf {
 
     public static void b(int param0) {
         field_n = null;
-        if (param0 != 160) {
-            return;
-        }
         field_q = null;
         field_o = null;
     }
@@ -38,99 +35,112 @@ final class kk extends lf {
     }
 
     final synchronized void b(int[] param0, int param1, int param2) {
-        int var4 = 0;
+        int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        int stackIn_3_0 = 0;
+        int stackIn_4_0 = 0;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_18_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_3_0 = 0;
         int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        L0: {
-          var6 = Torquing.field_u;
-          if (!pi.field_r) {
-            stackOut_2_0 = param2;
-            stackIn_3_0 = stackOut_2_0;
-            break L0;
-          } else {
-            stackOut_1_0 = param2 << -1862505791;
-            stackIn_3_0 = stackOut_1_0;
-            break L0;
-          }
-        }
-        var4 = stackIn_3_0;
-        if (((kk) this).field_p != null) {
-          if (var4 > ((kk) this).field_p.length) {
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        var6 = Torquing.field_u;
+        try {
+          L0: {
             L1: {
-              ((kk) this).field_p = new int[var4];
-              ((kk) this).field_r.b(((kk) this).field_p, 0, param2);
               if (!pi.field_r) {
+                stackOut_3_0 = param2;
+                stackIn_4_0 = stackOut_3_0;
                 break L1;
               } else {
-                param1 = param1 << 1;
+                stackOut_2_0 = param2 << 1;
+                stackIn_4_0 = stackOut_2_0;
                 break L1;
+              }
+            }
+            L2: {
+              L3: {
+                var4_int = stackIn_4_0;
+                if (((kk) this).field_p == null) {
+                  break L3;
+                } else {
+                  if (var4_int <= ((kk) this).field_p.length) {
+                    dk.a(((kk) this).field_p, 0, var4_int);
+                    break L2;
+                  } else {
+                    break L3;
+                  }
+                }
+              }
+              ((kk) this).field_p = new int[var4_int];
+              break L2;
+            }
+            L4: {
+              ((kk) this).field_r.b(((kk) this).field_p, 0, param2);
+              if (!pi.field_r) {
+                break L4;
+              } else {
+                param1 = param1 << 1;
+                break L4;
               }
             }
             var5 = 0;
-            L2: while (true) {
-              if (var4 <= var5) {
-                return;
+            L5: while (true) {
+              if (var4_int <= var5) {
+                break L0;
               } else {
-                int incrementValue$12 = param1;
+                int incrementValue$2 = param1;
                 param1++;
-                int incrementValue$13 = var5;
+                int incrementValue$3 = var5;
                 var5++;
-                param0[incrementValue$12] = param0[incrementValue$12] + on.field_c * ((kk) this).field_p[incrementValue$13] / 160;
-                continue L2;
-              }
-            }
-          } else {
-            L3: {
-              dk.a(((kk) this).field_p, 0, var4);
-              ((kk) this).field_r.b(((kk) this).field_p, 0, param2);
-              if (!pi.field_r) {
-                break L3;
-              } else {
-                param1 = param1 << 1;
-                break L3;
-              }
-            }
-            var5 = 0;
-            L4: while (true) {
-              if (var4 <= var5) {
-                return;
-              } else {
-                int incrementValue$14 = param1;
-                param1++;
-                int incrementValue$15 = var5;
-                var5++;
-                param0[incrementValue$14] = param0[incrementValue$14] + on.field_c * ((kk) this).field_p[incrementValue$15] / 160;
-                continue L4;
+                param0[incrementValue$2] = param0[incrementValue$2] + on.field_c * ((kk) this).field_p[incrementValue$3] / 160;
+                continue L5;
               }
             }
           }
-        } else {
-          L5: {
-            ((kk) this).field_p = new int[var4];
-            ((kk) this).field_r.b(((kk) this).field_p, 0, param2);
-            if (!pi.field_r) {
-              break L5;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L6: {
+            var4 = decompiledCaughtException;
+            stackOut_15_0 = (RuntimeException) var4;
+            stackOut_15_1 = new StringBuilder().append("kk.A(");
+            stackIn_17_0 = stackOut_15_0;
+            stackIn_17_1 = stackOut_15_1;
+            stackIn_16_0 = stackOut_15_0;
+            stackIn_16_1 = stackOut_15_1;
+            if (param0 == null) {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "null";
+              stackIn_18_0 = stackOut_17_0;
+              stackIn_18_1 = stackOut_17_1;
+              stackIn_18_2 = stackOut_17_2;
+              break L6;
             } else {
-              param1 = param1 << 1;
-              break L5;
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "{...}";
+              stackIn_18_0 = stackOut_16_0;
+              stackIn_18_1 = stackOut_16_1;
+              stackIn_18_2 = stackOut_16_2;
+              break L6;
             }
           }
-          var5 = 0;
-          L6: while (true) {
-            if (var4 <= var5) {
-              return;
-            } else {
-              int incrementValue$16 = param1;
-              param1++;
-              int incrementValue$17 = var5;
-              var5++;
-              param0[incrementValue$16] = param0[incrementValue$16] + on.field_c * ((kk) this).field_p[incrementValue$17] / 160;
-              continue L6;
-            }
-          }
+          throw rb.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + param1 + 44 + param2 + 41);
         }
     }
 

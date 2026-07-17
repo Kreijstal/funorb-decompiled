@@ -8,94 +8,100 @@ final class tt {
     static boolean field_a;
 
     public static void a(int param0) {
-        if (param0 != 20525) {
-            return;
-        }
-        field_d = (String[][]) null;
+        field_d = null;
         field_b = null;
         field_c = null;
     }
 
     final static void a(int param0, int param1) {
         wf var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
         ds var4 = null;
+        RuntimeException decompiledCaughtException = null;
         var3 = AceOfSkies.field_G ? 1 : 0;
-        if (param1 == 2048) {
-          var4 = (ds) cl.field_eb.d(268435455);
-          L0: while (true) {
-            if (var4 == null) {
-              var2 = ep.field_z.d(268435455);
-              L1: while (true) {
-                if (var2 != null) {
-                  hn.a(0, param0);
-                  var2 = ep.field_z.b((byte) 103);
-                  continue L1;
-                } else {
-                  return;
+        try {
+          L0: {
+            var4 = (ds) (Object) cl.field_eb.d(268435455);
+            L1: while (true) {
+              if (var4 == null) {
+                var2 = ep.field_z.d(268435455);
+                L2: while (true) {
+                  if (var2 == null) {
+                    break L0;
+                  } else {
+                    hn.a(0, param0);
+                    var2 = ep.field_z.b((byte) 103);
+                    continue L2;
+                  }
                 }
+              } else {
+                nn.a(var4, param0, (byte) 62);
+                var4 = (ds) (Object) cl.field_eb.b((byte) 103);
+                continue L1;
               }
-            } else {
-              nn.a(var4, param0, (byte) 62);
-              var4 = (ds) cl.field_eb.b((byte) 103);
-              continue L0;
             }
           }
-        } else {
-          field_b = (String) null;
-          var4 = (ds) cl.field_eb.d(268435455);
-          L2: while (true) {
-            if (var4 == null) {
-              var2 = ep.field_z.d(268435455);
-              L3: while (true) {
-                if (var2 != null) {
-                  hn.a(0, param0);
-                  var2 = ep.field_z.b((byte) 103);
-                  continue L3;
-                } else {
-                  return;
-                }
-              }
-            } else {
-              nn.a(var4, param0, (byte) 62);
-              var4 = (ds) cl.field_eb.b((byte) 103);
-              continue L2;
-            }
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          throw pn.a((Throwable) (Object) var2_ref, "tt.C(" + param0 + 44 + 2048 + 41);
         }
     }
 
     final static void b(int param0) {
-        if (null == jf.field_a) {
-            return;
-        }
-        pg.a((java.awt.Canvas) (Object) jf.field_a, param0 ^ -32631);
-        jf.field_a.a((byte) 87, pt.field_b);
-        jf.field_a = null;
-        if (null != aj.field_s) {
+        if (null != jf.field_a) {
+          pg.a((java.awt.Canvas) (Object) jf.field_a, 87);
+          jf.field_a.a((byte) 87, pt.field_b);
+          jf.field_a = null;
+          if (null != aj.field_s) {
             aj.field_s.c(1);
-            if (param0 == -32546) {
-                ci.field_f.requestFocus();
-                return;
-            }
-            field_c = (vd[]) null;
             ci.field_f.requestFocus();
             return;
-        }
-        if (param0 != -32546) {
-            field_c = (vd[]) null;
+          } else {
             ci.field_f.requestFocus();
             return;
+          }
+        } else {
+          return;
         }
-        ci.field_f.requestFocus();
     }
 
     final static boolean a(int param0, boolean param1, int param2) {
+        int stackIn_4_0 = 0;
+        int stackIn_8_0 = 0;
+        int stackOut_7_0 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_3_0 = 0;
+        int stackOut_2_0 = 0;
         if (!param1) {
-            field_d = (String[][]) (String[][]) null;
-            return 0 != (param0 & 2048) ? true : false;
+          L0: {
+            field_d = null;
+            if (0 == (param0 & 2048)) {
+              stackOut_7_0 = 0;
+              stackIn_8_0 = stackOut_7_0;
+              break L0;
+            } else {
+              stackOut_6_0 = 1;
+              stackIn_8_0 = stackOut_6_0;
+              break L0;
+            }
+          }
+          return stackIn_8_0 != 0;
+        } else {
+          L1: {
+            if (0 == (param0 & 2048)) {
+              stackOut_3_0 = 0;
+              stackIn_4_0 = stackOut_3_0;
+              break L1;
+            } else {
+              stackOut_2_0 = 1;
+              stackIn_4_0 = stackOut_2_0;
+              break L1;
+            }
+          }
+          return stackIn_4_0 != 0;
         }
-        return 0 != (param0 & 2048) ? true : false;
     }
 
     static {

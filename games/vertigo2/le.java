@@ -11,22 +11,11 @@ final class le {
 
     public static void a(byte param0) {
         field_d = null;
-        if (param0 >= -42) {
-          field_d = null;
-          field_c = null;
-          field_b = null;
-          field_a = null;
-          field_e = null;
-          field_f = null;
-          return;
-        } else {
-          field_c = null;
-          field_b = null;
-          field_a = null;
-          field_e = null;
-          field_f = null;
-          return;
-        }
+        field_c = null;
+        field_b = null;
+        field_a = null;
+        field_e = null;
+        field_f = null;
     }
 
     final static void a(int param0) {
@@ -37,6 +26,7 @@ final class le {
     }
 
     final static void b(int param0) {
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         be var4 = null;
@@ -51,70 +41,70 @@ final class le {
         int[] var11 = null;
         int[] var12 = null;
         int[] var13 = null;
+        RuntimeException decompiledCaughtException = null;
         var8 = Vertigo2.field_L ? 1 : 0;
-        if (param0 < -80) {
-          var9 = id.field_f;
-          var2 = var9.h(-11);
-          var3 = var9.h(-11);
-          if (-1 == (var2 ^ -1)) {
-            var4 = (be) (Object) mb.field_v.a((byte) 100);
-            if (var4 == null) {
-              rm.b((byte) -79);
-              return;
+        try {
+          L0: {
+            var9 = id.field_f;
+            var2 = var9.h(-11);
+            var3 = var9.h(-11);
+            if (var2 == 0) {
+              var4 = (be) (Object) mb.field_v.a((byte) 100);
+              if (var4 == null) {
+                rm.b((byte) -79);
+                return;
+              } else {
+                L1: {
+                  var5 = -var9.field_u + ca.field_b;
+                  var13 = var4.field_o;
+                  var12 = var13;
+                  var11 = var12;
+                  var10 = var11;
+                  var6 = var10;
+                  if (var13.length << 2 >= var5) {
+                    break L1;
+                  } else {
+                    var5 = var13.length << 2;
+                    break L1;
+                  }
+                }
+                var7 = 0;
+                L2: while (true) {
+                  if (var5 <= var7) {
+                    var4.field_p = true;
+                    var4.c(2);
+                    break L0;
+                  } else {
+                    var6[var7 >> 2] = var6[var7 >> 2] + (var9.h(-11) << b.a(768, var7 << 8));
+                    var7++;
+                    continue L2;
+                  }
+                }
+              }
             } else {
-              L0: {
-                var5 = -var9.field_u + ca.field_b;
-                var13 = var4.field_o;
-                var12 = var13;
-                var11 = var12;
-                var10 = var11;
-                var6 = var10;
-                if (var13.length << -1390211198 >= var5) {
-                  break L0;
-                } else {
-                  var5 = var13.length << 1422332130;
-                  break L0;
-                }
-              }
-              var7 = 0;
-              L1: while (true) {
-                if (var5 <= var7) {
-                  var4.field_p = true;
-                  var4.c(2);
-                  return;
-                } else {
-                  var6[var7 >> 468713154] = var6[var7 >> 468713154] + (var9.h(-11) << b.a(768, var7 << -1580328664));
-                  var7++;
-                  continue L1;
-                }
-              }
-            }
-          } else {
-            if ((var2 ^ -1) == -2) {
-              var4_int = var9.j(-3084);
-              var5_ref_ub = (ub) (Object) ob.field_Q.a((byte) 100);
-              L2: while (true) {
-                if (var5_ref_ub != null) {
-                  L3: {
-                    if (var5_ref_ub.field_u != var3) {
-                      break L3;
+              if (var2 == 1) {
+                var4_int = var9.j(-3084);
+                var5_ref_ub = (ub) (Object) ob.field_Q.a((byte) 100);
+                L3: while (true) {
+                  L4: {
+                    if (var5_ref_ub == null) {
+                      break L4;
                     } else {
-                      if (var4_int != var5_ref_ub.field_q) {
-                        break L3;
-                      } else {
-                        if (var5_ref_ub == null) {
-                          rm.b((byte) 83);
-                          return;
+                      L5: {
+                        if (var5_ref_ub.field_u != var3) {
+                          break L5;
                         } else {
-                          var5_ref_ub.c(2);
-                          return;
+                          if (var4_int == var5_ref_ub.field_q) {
+                            break L4;
+                          } else {
+                            break L5;
+                          }
                         }
                       }
+                      var5_ref_ub = (ub) (Object) ob.field_Q.b(82);
+                      continue L3;
                     }
                   }
-                  var5_ref_ub = (ub) (Object) ob.field_Q.b(82);
-                  continue L2;
-                } else {
                   if (var5_ref_ub == null) {
                     rm.b((byte) 83);
                     return;
@@ -123,15 +113,17 @@ final class le {
                     return;
                   }
                 }
+              } else {
+                ke.a((Throwable) null, "LR1: " + or.a(119), 0);
+                rm.b((byte) -30);
+                return;
               }
-            } else {
-              ke.a((Throwable) null, "LR1: " + or.a(119), 0);
-              rm.b((byte) -30);
-              return;
             }
           }
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw wn.a((Throwable) (Object) var1, "le.B(" + -104 + 41);
         }
     }
 

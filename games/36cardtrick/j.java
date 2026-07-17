@@ -59,9 +59,6 @@ final class j extends qg {
 
     final static void i(int param0) {
         gh.a(17, 31888);
-        if (param0 <= 91) {
-            j.j(50);
-        }
     }
 
     public static void m(int param0) {
@@ -104,14 +101,19 @@ final class j extends qg {
     }
 
     final void b(lk param0, byte param1) {
-        if (!(param0 instanceof qf)) {
-            throw new IllegalArgumentException();
+        qf var3 = null;
+        try {
+            if (!(param0 instanceof qf)) {
+                throw new IllegalArgumentException();
+            }
+            int var4 = 61 % ((41 - param1) / 33);
+            var3 = (qf) (Object) param0;
+            ((j) this).field_D.a(-121, (qb) (Object) var3);
+            var3.field_E = true;
+            boolean discarded$0 = var3.a(115, (lk) this);
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) (Object) runtimeException, "j.IA(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
-        int var4 = 61 % ((41 - param1) / 33);
-        qf var3 = (qf) (Object) param0;
-        ((j) this).field_D.a(-121, (qb) (Object) var3);
-        var3.field_E = true;
-        boolean discarded$0 = var3.a(115, (lk) this);
     }
 
     final void k(int param0) {

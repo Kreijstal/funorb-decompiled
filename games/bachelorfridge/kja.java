@@ -23,48 +23,30 @@ final class kja {
     }
 
     final static sna a(byte param0) {
-        if (param0 != 20) {
-            kja.a(-25, 95, (byte) 51, true);
-            return ak.field_q.field_vb;
-        }
         return ak.field_q.field_vb;
     }
 
     public static void b(int param0) {
-        if (param0 != 1900) {
-            field_e = null;
-            field_e = null;
-            return;
-        }
         field_e = null;
     }
 
     final static int a(int param0) {
-        if (param0 != 27168) {
-          field_e = null;
-          return new Date().getYear() + 1900;
-        } else {
-          return new Date().getYear() + 1900;
-        }
+        return new Date().getYear() + 1900;
     }
 
     final static void a(int param0, byte param1, ne param2) {
         pf var3 = null;
-        Object var4 = null;
-        if (param1 < 1) {
-          var4 = null;
-          kja.a(80, (byte) 81, (ne) null);
-          var3 = sja.field_fb;
-          var3.c(param0, (byte) 108);
-          var3.d(param2.field_o, 0);
-          var3.d(param2.field_i, 0);
-          return;
-        } else {
-          var3 = sja.field_fb;
-          var3.c(param0, (byte) 108);
-          var3.d(param2.field_o, 0);
-          var3.d(param2.field_i, 0);
-          return;
+        try {
+            if (param1 < 1) {
+                Object var4 = null;
+                kja.a(80, (byte) 81, (ne) null);
+            }
+            var3 = sja.field_fb;
+            var3.c(param0, (byte) 108);
+            var3.d(param2.field_o, 0);
+            var3.d(param2.field_i, 0);
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "kja.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

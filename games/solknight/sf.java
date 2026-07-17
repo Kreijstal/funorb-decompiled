@@ -22,13 +22,13 @@ final class sf {
         if (param0 < 0) {
           L0: {
             L1: {
-              if ((((sf) this).field_d ^ -1) != -1) {
+              if (((sf) this).field_d != 0) {
                 break L1;
               } else {
                 if (((sf) this).field_a == 84) {
                   break L1;
                 } else {
-                  if (-84 != (((sf) this).field_a ^ -1)) {
+                  if (((sf) this).field_a != 83) {
                     stackOut_7_0 = 0;
                     stackIn_8_0 = stackOut_7_0;
                     break L0;
@@ -71,14 +71,11 @@ final class sf {
 
     public static void a(byte param0) {
         field_b = null;
-        int var1 = -18 / ((param0 - -23) / 53);
+        int var1 = -9;
         field_i = null;
     }
 
     final static Boolean d(int param0) {
-        if (param0 > -109) {
-            return null;
-        }
         Boolean var1 = n.field_b;
         n.field_b = null;
         return var1;
@@ -92,7 +89,7 @@ final class sf {
           if (((sf) this).field_l != 0) {
             break L0;
           } else {
-            if ((el.field_n ^ -1) != -97) {
+            if (el.field_n != 96) {
               break L0;
             } else {
               L1: {
@@ -118,7 +115,7 @@ final class sf {
           }
         }
         L3: {
-          if (-1 != (((sf) this).field_l ^ -1)) {
+          if (((sf) this).field_l != 0) {
             break L3;
           } else {
             if (97 == el.field_n) {
@@ -151,7 +148,7 @@ final class sf {
               }
             }
             L6: {
-              if ((((sf) this).field_f ^ -1) > -1) {
+              if (((sf) this).field_f < 0) {
                 ((sf) this).field_f = param0;
                 break L6;
               } else {
@@ -189,15 +186,7 @@ final class sf {
           fj.field_i = 11;
           break L0;
         }
-        L2: {
-          ib.field_o = true;
-          if (!param0) {
-            break L2;
-          } else {
-            field_c = 51;
-            break L2;
-          }
-        }
+        ib.field_o = true;
     }
 
     final void a(boolean param0) {
@@ -205,7 +194,7 @@ final class sf {
         ((sf) this).field_d = 0;
         ((sf) this).field_a = 0;
         if (0 == ((sf) this).field_l) {
-            if (-99 == (el.field_n ^ -1)) {
+            if (el.field_n == 98) {
                 if (0 >= ((sf) this).field_f) {
                     ((sf) this).field_f = ((sf) this).field_g;
                 }
@@ -213,11 +202,11 @@ final class sf {
                 ((sf) this).field_f = ((sf) this).field_f - 1;
             }
         }
-        if ((((sf) this).field_l ^ -1) == -1) {
+        if (((sf) this).field_l == 0) {
             ((sf) this).field_a = el.field_n;
         }
         if (0 == ((sf) this).field_l) {
-            if (-100 == (el.field_n ^ -1)) {
+            if (el.field_n == 99) {
                 ((sf) this).field_f = ((sf) this).field_f + 1;
                 ((sf) this).field_k = false;
                 if (!(((sf) this).field_f < ((sf) this).field_g)) {
@@ -239,7 +228,7 @@ final class sf {
             break L0;
           }
         }
-        if ((param1 ^ -1) <= (((sf) this).field_g ^ -1)) {
+        if (~param1 <= ~((sf) this).field_g) {
           throw new IllegalArgumentException();
         } else {
           if (param2 >= ((sf) this).field_g) {
@@ -249,7 +238,7 @@ final class sf {
               ((sf) this).field_d = 0;
               ((sf) this).field_a = 0;
               ((sf) this).field_e = 0;
-              if ((hg.field_F ^ -1) == -1) {
+              if (hg.field_F == 0) {
                 break L1;
               } else {
                 ((sf) this).field_e = hg.field_F;
@@ -262,10 +251,10 @@ final class sf {
               }
             }
             L2: {
-              if (-1 == (((sf) this).field_l ^ -1)) {
+              if (((sf) this).field_l == 0) {
                 break L2;
               } else {
-                if ((wb.field_c ^ -1) == -1) {
+                if (wb.field_c == 0) {
                   break L2;
                 } else {
                   L3: {
@@ -286,7 +275,7 @@ final class sf {
               if (0 != hg.field_F) {
                 break L4;
               } else {
-                if (-1 != (wb.field_c ^ -1)) {
+                if (wb.field_c != 0) {
                   break L4;
                 } else {
                   ((sf) this).field_l = 0;
@@ -318,7 +307,7 @@ final class sf {
                   }
                 } else {
                   L7: {
-                    if ((param1 ^ -1) == (((sf) this).field_f ^ -1)) {
+                    if (~param1 == ~((sf) this).field_f) {
                       break L7;
                     } else {
                       break L7;
@@ -392,10 +381,10 @@ final class sf {
             if (((sf) this).field_e != 0) {
               break L2;
             } else {
-              if ((((sf) this).field_a ^ -1) == -85) {
+              if (((sf) this).field_a == 84) {
                 break L2;
               } else {
-                if (-84 != (((sf) this).field_a ^ -1)) {
+                if (((sf) this).field_a != 83) {
                   stackOut_7_0 = 0;
                   stackIn_8_0 = stackOut_7_0;
                   break L1;

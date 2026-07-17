@@ -7,30 +7,17 @@ final class ju extends rt {
     static int field_m;
 
     final static cd e(int param0) {
-        String var1 = null;
-        L0: {
-          var1 = la.a(4);
-          if (var1 == null) {
-            break L0;
-          } else {
-            if ((var1.indexOf('@') ^ -1) > -1) {
-              break L0;
-            } else {
-              var1 = "";
-              break L0;
+        String var1 = la.a(4);
+        if (var1 != null) {
+            if (var1.indexOf('@') >= 0) {
+                var1 = "";
             }
-          }
         }
-        if (param0 <= 120) {
-          field_k = (gb) null;
-          return new cd(la.a(4), pk.d(-98));
-        } else {
-          return new cd(la.a(4), pk.d(-98));
-        }
+        return new cd(la.a(4), pk.d(-98));
     }
 
     final void b(boolean param0, boolean param1) {
-        rb var4 = null;
+        Object var4 = null;
         int stackIn_2_0 = 0;
         int stackIn_2_1 = 0;
         int stackIn_3_0 = 0;
@@ -64,7 +51,7 @@ final class ju extends rt {
         ((ju) this).field_j.a((rt) this, 1);
         if (param0) {
           L0: {
-            var4 = (rb) null;
+            var4 = null;
             ju.a(2, (rb) null);
             stackOut_5_0 = ((ju) this).field_f;
             stackOut_5_1 = 10242;
@@ -125,82 +112,129 @@ final class ju extends rt {
 
     final static String a(int param0, CharSequence param1) {
         String var2 = null;
-        rb var3 = null;
-        L0: {
-          var2 = vf.a(AceOfSkies.a(param1, -44), 28304);
-          if (var2 != null) {
-            break L0;
-          } else {
-            var2 = "";
+        RuntimeException var2_ref = null;
+        Object var3 = null;
+        String stackIn_5_0 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        String stackOut_4_0 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        try {
+          L0: {
+            L1: {
+              var2 = vf.a(AceOfSkies.a(param1, -44), 28304);
+              if (var2 != null) {
+                break L1;
+              } else {
+                var2 = "";
+                break L1;
+              }
+            }
+            L2: {
+              if (param0 == 0) {
+                break L2;
+              } else {
+                var3 = null;
+                ju.a(25, (rb) null);
+                break L2;
+              }
+            }
+            stackOut_4_0 = (String) var2;
+            stackIn_5_0 = stackOut_4_0;
             break L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2_ref = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var2_ref;
+            stackOut_6_1 = new StringBuilder().append("ju.A(").append(param0).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param1 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L3;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L3;
+            }
+          }
+          throw pn.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
         }
-        if (param0 != 0) {
-          var3 = (rb) null;
-          ju.a(25, (rb) null);
-          return var2;
-        } else {
-          return var2;
-        }
+        return stackIn_5_0;
     }
 
     public final void a(byte param0) {
         if (param0 != 11) {
-            field_k = (gb) null;
+            field_k = null;
         }
     }
 
     public static void d(int param0) {
-        if (param0 <= 121) {
-            field_k = (gb) null;
-            field_k = null;
-            return;
-        }
         field_k = null;
     }
 
     ju(wl param0, int param1, int param2, byte[] param3, int param4) {
         super(param0, 3552, param1, param2, false);
-        ((ju) this).field_l = param2;
-        ((ju) this).field_j.a((rt) this, 1);
-        jaggl.OpenGL.glPixelStorei(3317, 1);
-        jaggl.OpenGL.glTexImage1Dub(((ju) this).field_f, 0, ((ju) this).field_b, ((ju) this).field_l, 0, param4, 5121, param3, 0);
-        jaggl.OpenGL.glPixelStorei(3317, 4);
-        ((ju) this).a(true, -128);
+        try {
+            ((ju) this).field_l = param2;
+            ((ju) this).field_j.a((rt) this, 1);
+            jaggl.OpenGL.glPixelStorei(3317, 1);
+            jaggl.OpenGL.glTexImage1Dub(((ju) this).field_f, 0, ((ju) this).field_b, ((ju) this).field_l, 0, param4, 5121, param3, 0);
+            jaggl.OpenGL.glPixelStorei(3317, 4);
+            ((ju) this).a(true, -128);
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) (Object) runtimeException, "ju.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 41);
+        }
     }
 
     final static void a(int param0, rb param1) {
-        int var2 = 0;
-        rb var3 = null;
-        ld.field_a = param1.i((byte) 0) << 1044032549;
-        var2 = param1.g(113);
-        fs.field_c = 1835008 & var2 << -1937030894;
-        if (param0 != 965924047) {
-          var3 = (rb) null;
-          ju.a(-45, (rb) null);
-          ld.field_a = ld.field_a + (var2 >> -1046617053);
-          fs.field_c = fs.field_c + (param1.i((byte) 0) << -1607554110);
-          var2 = param1.g(57);
-          tj.field_o = (63 & var2) << 965924047;
-          fs.field_c = fs.field_c + (var2 >> -19527546);
-          tj.field_o = tj.field_o + (param1.g(-81) << -691642553);
-          var2 = param1.g(-56);
-          gl.field_b = 65536 & var2 << 1405141488;
-          tj.field_o = tj.field_o + (var2 >> -738820607);
-          gl.field_b = gl.field_b + param1.i((byte) 0);
-          return;
-        } else {
-          ld.field_a = ld.field_a + (var2 >> -1046617053);
-          fs.field_c = fs.field_c + (param1.i((byte) 0) << -1607554110);
-          var2 = param1.g(57);
-          tj.field_o = (63 & var2) << 965924047;
-          fs.field_c = fs.field_c + (var2 >> -19527546);
-          tj.field_o = tj.field_o + (param1.g(-81) << -691642553);
-          var2 = param1.g(-56);
-          gl.field_b = 65536 & var2 << 1405141488;
-          tj.field_o = tj.field_o + (var2 >> -738820607);
-          gl.field_b = gl.field_b + param1.i((byte) 0);
-          return;
+        int var2_int = 0;
+        try {
+            ld.field_a = param1.i((byte) 0) << 5;
+            var2_int = param1.g(113);
+            fs.field_c = 1835008 & var2_int << 18;
+            if (param0 != 965924047) {
+                Object var3 = null;
+                ju.a(-45, (rb) null);
+            }
+            ld.field_a = ld.field_a + (var2_int >> 3);
+            fs.field_c = fs.field_c + (param1.i((byte) 0) << 2);
+            var2_int = param1.g(57);
+            tj.field_o = (63 & var2_int) << 15;
+            fs.field_c = fs.field_c + (var2_int >> 6);
+            tj.field_o = tj.field_o + (param1.g(-81) << 7);
+            var2_int = param1.g(-56);
+            gl.field_b = 65536 & var2_int << 16;
+            tj.field_o = tj.field_o + (var2_int >> 1);
+            gl.field_b = gl.field_b + param1.i((byte) 0);
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) (Object) runtimeException, "ju.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

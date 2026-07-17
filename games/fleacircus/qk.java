@@ -51,7 +51,7 @@ final class qk {
             field_a = -114;
             L0: while (true) {
               if (var2 != ((qk) this).field_d) {
-                if ((((qk) this).field_d.field_j ^ -1L) != (((qk) this).field_e ^ -1L)) {
+                if (~((qk) this).field_d.field_j != ~((qk) this).field_e) {
                   ((qk) this).field_d = ((qk) this).field_d.field_p;
                   continue L0;
                 } else {
@@ -67,7 +67,7 @@ final class qk {
           } else {
             L1: while (true) {
               if (var2 != ((qk) this).field_d) {
-                if ((((qk) this).field_d.field_j ^ -1L) != (((qk) this).field_e ^ -1L)) {
+                if (~((qk) this).field_d.field_j != ~((qk) this).field_e) {
                   ((qk) this).field_d = ((qk) this).field_d.field_p;
                   continue L1;
                 } else {
@@ -118,15 +118,20 @@ final class qk {
     }
 
     final void a(pa param0, int param1, long param2) {
-        if (!(null == param0.field_m)) {
-            param0.e(param1 ^ -103);
+        pa var5 = null;
+        try {
+            if (!(null == param0.field_m)) {
+                param0.e(param1 ^ -103);
+            }
+            var5 = ((qk) this).field_c[(int)((long)(param1 + ((qk) this).field_g) & param2)];
+            param0.field_m = var5.field_m;
+            param0.field_p = var5;
+            param0.field_m.field_p = param0;
+            param0.field_p.field_m = param0;
+            param0.field_j = param2;
+        } catch (RuntimeException runtimeException) {
+            throw pf.a((Throwable) (Object) runtimeException, "qk.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }
-        pa var5 = ((qk) this).field_c[(int)((long)(param1 + ((qk) this).field_g) & param2)];
-        param0.field_m = var5.field_m;
-        param0.field_p = var5;
-        param0.field_m.field_p = param0;
-        param0.field_p.field_m = param0;
-        param0.field_j = param2;
     }
 
     static {

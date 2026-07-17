@@ -17,57 +17,50 @@ final class ud implements Runnable {
     private va field_i;
 
     final va b(int param0) {
-        if ((((ud) this).field_g ^ -1) != param0) {
+        if (~((ud) this).field_g != param0) {
             return null;
         }
         return ((ud) this).field_i;
     }
 
     final static void a(byte param0, boolean param1, java.awt.Canvas param2) {
-        int var3 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
         var4 = wizardrun.field_H;
-        if (param0 > 35) {
-          if (ri.field_a >= 10) {
-            if (w.a((byte) -117)) {
-              if (-1 != (ml.field_t ^ -1)) {
-                uc.a(false, param2);
-                return;
-              } else {
-                uk.a((byte) -123, param1, false);
-                fc.a((byte) 80, 0, param2, 0);
-                return;
-              }
+        try {
+          L0: {
+            if (param0 > 35) {
+              break L0;
             } else {
-              ed.d();
-              dg.a(320, 240, (byte) -97);
-              fc.a((byte) 80, 0, param2, 0);
-              return;
+              ud.a(-40, -128);
+              break L0;
             }
-          } else {
-            L0: {
-              var3 = 0;
-              if (!pk.field_o) {
-                break L0;
-              } else {
-                pk.field_o = false;
-                var3 = 1;
-                break L0;
-              }
-            }
-            ug.a(10487, var3 != 0, dl.a(true), wj.g(17325), sa.field_e);
-            return;
           }
-        } else {
-          ud.a(-40, -128);
           if (ri.field_a >= 10) {
             if (w.a((byte) -117)) {
-              if (-1 != (ml.field_t ^ -1)) {
-                uc.a(false, param2);
-                return;
-              } else {
+              if (ml.field_t == 0) {
                 uk.a((byte) -123, param1, false);
                 fc.a((byte) 80, 0, param2, 0);
+                return;
+              } else {
+                uc.a(false, param2);
                 return;
               }
             } else {
@@ -78,18 +71,47 @@ final class ud implements Runnable {
             }
           } else {
             L1: {
-              var3 = 0;
+              var3_int = 0;
               if (!pk.field_o) {
                 break L1;
               } else {
                 pk.field_o = false;
-                var3 = 1;
+                var3_int = 1;
                 break L1;
               }
             }
-            ug.a(10487, var3 != 0, dl.a(true), wj.g(17325), sa.field_e);
+            ug.a(10487, var3_int != 0, dl.a(true), wj.g(17325), sa.field_e);
             return;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_13_0 = (RuntimeException) var3;
+            stackOut_13_1 = new StringBuilder().append("ud.E(").append(param0).append(44).append(param1).append(44);
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
+            if (param2 == null) {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L2;
+            } else {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L2;
+            }
+          }
+          throw bd.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
         }
     }
 
@@ -164,17 +186,40 @@ final class ud implements Runnable {
     }
 
     final static void a(int param0, int param1) {
-        int var4 = wizardrun.field_H;
-        dc var5 = (dc) (Object) v.field_d.b((byte) 111);
-        while (var5 != null) {
-            de.a(-14149, param0, var5);
-            var5 = (dc) (Object) v.field_d.d(8192);
-        }
-        int var3 = 105 % ((param1 - -34) / 40);
-        sc var6 = (sc) (Object) tg.field_c.b((byte) 118);
-        while (var6 != null) {
-            ld.a(param0, var6, 0);
-            var6 = (sc) (Object) tg.field_c.d(8192);
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        dc var5 = null;
+        sc var6 = null;
+        RuntimeException decompiledCaughtException = null;
+        var4 = wizardrun.field_H;
+        try {
+          L0: {
+            var5 = (dc) (Object) v.field_d.b((byte) 111);
+            L1: while (true) {
+              if (var5 == null) {
+                var3 = 105 % ((param1 - -34) / 40);
+                var6 = (sc) (Object) tg.field_c.b((byte) 118);
+                L2: while (true) {
+                  if (var6 == null) {
+                    break L0;
+                  } else {
+                    ld.a(param0, var6, 0);
+                    var6 = (sc) (Object) tg.field_c.d(8192);
+                    continue L2;
+                  }
+                }
+              } else {
+                de.a(-14149, param0, var5);
+                var5 = (dc) (Object) v.field_d.d(8192);
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw bd.a((Throwable) (Object) var2, "ud.B(" + param0 + 44 + param1 + 41);
         }
     }
 
@@ -217,7 +262,7 @@ final class ud implements Runnable {
           return true;
         } else {
           L0: {
-            if (-1 != (((ud) this).field_g ^ -1)) {
+            if (((ud) this).field_g != 0) {
               break L0;
             } else {
               L1: {
@@ -228,7 +273,7 @@ final class ud implements Runnable {
                   break L1;
                 }
               }
-              if (-1 == (((ud) this).field_h.field_a ^ -1)) {
+              if (((ud) this).field_h.field_a == 0) {
                 return false;
               } else {
                 if (((ud) this).field_h.field_a == 1) {
@@ -251,10 +296,10 @@ final class ud implements Runnable {
                   break L3;
                 }
               }
-              if ((((ud) this).field_j.field_a ^ -1) == -1) {
+              if (((ud) this).field_j.field_a == 0) {
                 return false;
               } else {
-                if (-2 == (((ud) this).field_j.field_a ^ -1)) {
+                if (((ud) this).field_j.field_a == 1) {
                   break L2;
                 } else {
                   ((ud) this).field_g = ((ud) this).field_g + 1;
@@ -270,7 +315,7 @@ final class ud implements Runnable {
             try {
               L4: {
                 L5: {
-                  if ((((ud) this).field_g ^ -1) == -1) {
+                  if (((ud) this).field_g == 0) {
                     ((ud) this).field_f = (DataInputStream) ((ud) this).field_h.field_e;
                     break L5;
                   } else {
@@ -399,17 +444,22 @@ final class ud implements Runnable {
     }
 
     final static void a(o param0, boolean param1) {
-        if (param1) {
-            return;
+        try {
+            ph.d(-31782);
+            ed.a(param0.field_B, param0.field_x, param0.field_s);
+        } catch (RuntimeException runtimeException) {
+            throw bd.a((Throwable) (Object) runtimeException, "ud.F(" + (param0 != null ? "{...}" : "null") + 44 + 0 + 41);
         }
-        ph.d(-31782);
-        ed.a(param0.field_B, param0.field_x, param0.field_s);
     }
 
     ud(vh param0, java.net.URL param1, int param2) {
-        ((ud) this).field_d = param1;
-        ((ud) this).field_k = param0;
-        ((ud) this).field_i = new va(param2);
+        try {
+            ((ud) this).field_d = param1;
+            ((ud) this).field_k = param0;
+            ((ud) this).field_i = new va(param2);
+        } catch (RuntimeException runtimeException) {
+            throw bd.a((Throwable) (Object) runtimeException, "ud.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     static {

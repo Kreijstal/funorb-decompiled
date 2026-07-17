@@ -9,31 +9,24 @@ final class pc {
 
     public static void a(int param0) {
         field_a = null;
-        if (param0 <= 1) {
-          field_c = null;
-          field_b = null;
-          field_d = null;
-          field_c = null;
-          return;
-        } else {
-          field_b = null;
-          field_d = null;
-          field_c = null;
-          return;
-        }
+        field_b = null;
+        field_d = null;
+        field_c = null;
     }
 
     final static int a(int param0, byte param1) {
         if (param1 < -22) {
-          if (-6407 != param0) {
+          if (param0 != 6406) {
             if (6409 != param0) {
-              if (-32842 != param0) {
+              if (param0 == 32841) {
+                return 1;
+              } else {
                 if (6410 != param0) {
                   if (6407 != param0) {
-                    if ((param0 ^ -1) == -6409) {
-                      return 4;
-                    } else {
+                    if (param0 != 6408) {
                       throw new IllegalArgumentException("");
+                    } else {
+                      return 4;
                     }
                   } else {
                     return 3;
@@ -41,8 +34,6 @@ final class pc {
                 } else {
                   return 2;
                 }
-              } else {
-                return 1;
               }
             } else {
               return 1;

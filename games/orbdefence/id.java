@@ -7,15 +7,7 @@ final class id {
 
     final static void a(int param0) {
         int var1 = 0;
-        if ((ck.field_f ^ -1) >= -33) {
-          ce.a(0, (byte) -120);
-          if (param0 >= 64) {
-            return;
-          } else {
-            field_b = -78;
-            return;
-          }
-        } else {
+        if (ck.field_f > 32) {
           L0: {
             var1 = ck.field_f % 32;
             if (var1 == 0) {
@@ -26,41 +18,22 @@ final class id {
             }
           }
           ce.a(ck.field_f - var1, (byte) -122);
-          if (param0 >= 64) {
-            return;
-          } else {
-            field_b = -78;
-            return;
-          }
+          return;
+        } else {
+          ce.a(0, (byte) -120);
+          return;
         }
     }
 
     public static void a(byte param0) {
         field_a = null;
-        if (param0 >= -81) {
-            field_a = null;
-        }
     }
 
     final static void a(boolean param0) {
         int var1 = 0;
         int var2 = 0;
-        int stackIn_3_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        L0: {
-          var2 = OrbDefence.field_D ? 1 : 0;
-          if (!param0) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            break L0;
-          } else {
-            stackOut_1_0 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            break L0;
-          }
-        }
-        oe.field_p = stackIn_3_0 != 0;
+        var2 = OrbDefence.field_D ? 1 : 0;
+        oe.field_p = false;
         bm.field_a = null;
         if (!vh.field_j) {
           var1 = cb.field_j;
@@ -90,35 +63,20 @@ final class id {
     }
 
     final static void b(boolean param0) {
-        if (ji.field_b != -ol.field_h + 0) {
-          if (ji.field_b != -ol.field_h + 250) {
-            if (param0) {
-              field_b = 78;
-              ji.field_b = ji.field_b + 1;
-              return;
-            } else {
-              ji.field_b = ji.field_b + 1;
-              return;
-            }
-          } else {
-            if (param0) {
-              field_b = 78;
-              ji.field_b = ji.field_b + 1;
-              return;
-            } else {
-              ji.field_b = ji.field_b + 1;
-              return;
-            }
-          }
-        } else {
-          if (param0) {
+        if (ji.field_b != -ol.field_h) {
+          if (ji.field_b == -ol.field_h + 250) {
             field_b = 78;
             ji.field_b = ji.field_b + 1;
             return;
           } else {
+            field_b = 78;
             ji.field_b = ji.field_b + 1;
             return;
           }
+        } else {
+          field_b = 78;
+          ji.field_b = ji.field_b + 1;
+          return;
         }
     }
 

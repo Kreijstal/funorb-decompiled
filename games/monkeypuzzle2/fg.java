@@ -8,7 +8,7 @@ abstract class fg {
     final int a(long param0, int param1) {
         long var4 = 0L;
         var4 = ((fg) this).a(-43);
-        if ((var4 ^ -1L) >= -1L) {
+        if (var4 <= 0L) {
           if (param1 != -128) {
             int discarded$4 = ((fg) this).a(31L, -83);
             return ((fg) this).a(param0, (byte) 37);
@@ -37,7 +37,7 @@ abstract class fg {
         int var3 = 0;
         var2 = param1 & 255;
         if (param0 == 16) {
-          if (-1 == (var2 ^ -1)) {
+          if (var2 == 0) {
             throw new IllegalArgumentException("" + Integer.toString(var2, 16));
           } else {
             if (128 <= var2) {
@@ -62,7 +62,7 @@ abstract class fg {
           }
         } else {
           char discarded$1 = fg.a(-100, (byte) -72);
-          if (-1 == (var2 ^ -1)) {
+          if (var2 == 0) {
             throw new IllegalArgumentException("" + Integer.toString(var2, 16));
           } else {
             if (128 > var2) {

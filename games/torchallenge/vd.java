@@ -13,44 +13,42 @@ final class vd {
         field_c = null;
         field_d = null;
         field_e = null;
-        int var1 = 35 % ((param0 - 46) / 56);
+        int var1 = 0;
     }
 
     final static void b(int param0) {
-        int var1 = 0;
+        int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
+        RuntimeException decompiledCaughtException = null;
         var2 = TorChallenge.field_F ? 1 : 0;
-        if (vj.field_d != null) {
-          var1 = 0;
-          L0: while (true) {
-            if (vj.field_d.length > var1) {
-              vj.field_d[var1] = null;
-              var1++;
-              continue L0;
-            } else {
-              if (param0 != 0) {
-                int discarded$4 = vd.c(-60);
-                vj.field_d = null;
-                cg.field_g = null;
-                return;
+        try {
+          L0: {
+            L1: {
+              if (vj.field_d == null) {
+                break L1;
               } else {
-                vj.field_d = null;
-                cg.field_g = null;
-                return;
+                var1_int = 0;
+                L2: while (true) {
+                  if (vj.field_d.length <= var1_int) {
+                    break L1;
+                  } else {
+                    vj.field_d[var1_int] = null;
+                    var1_int++;
+                    continue L2;
+                  }
+                }
               }
             }
-          }
-        } else {
-          if (param0 != 0) {
-            int discarded$5 = vd.c(-60);
+            int discarded$2 = vd.c(-60);
             vj.field_d = null;
             cg.field_g = null;
-            return;
-          } else {
-            vj.field_d = null;
-            cg.field_g = null;
-            return;
+            break L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw oj.a((Throwable) (Object) var1, "vd.A(" + 0 + 41);
         }
     }
 

@@ -186,23 +186,33 @@ final class ph {
         param4 = -(param4 & 3);
         for (var9 = -param5; var9 < 0; var9++) {
             for (var10 = var8; var10 < 0; var10++) {
+                int incrementValue$0 = param3;
                 param3++;
+                int incrementValue$1 = param2;
                 param2++;
-                param0[param3] = param1[param2];
+                param0[incrementValue$0] = param1[incrementValue$1];
+                int incrementValue$2 = param3;
                 param3++;
+                int incrementValue$3 = param2;
                 param2++;
-                param0[param3] = param1[param2];
+                param0[incrementValue$2] = param1[incrementValue$3];
+                int incrementValue$4 = param3;
                 param3++;
+                int incrementValue$5 = param2;
                 param2++;
-                param0[param3] = param1[param2];
+                param0[incrementValue$4] = param1[incrementValue$5];
+                int incrementValue$6 = param3;
                 param3++;
+                int incrementValue$7 = param2;
                 param2++;
-                param0[param3] = param1[param2];
+                param0[incrementValue$6] = param1[incrementValue$7];
             }
             for (var10 = param4; var10 < 0; var10++) {
+                int incrementValue$8 = param3;
                 param3++;
+                int incrementValue$9 = param2;
                 param2++;
-                param0[param3] = param1[param2];
+                param0[incrementValue$8] = param1[incrementValue$9];
             }
             param3 = param3 + param6;
             param2 = param2 + param7;
@@ -644,15 +654,17 @@ final class ph {
                     var11++;
                     continue L0;
                   } else {
+                    int incrementValue$218 = param3;
                     param3++;
-                    param2 = param1[param3];
+                    param2 = param1[incrementValue$218];
                     if (param2 == 0) {
                       param4++;
                       var12++;
                       continue L2;
                     } else {
+                      int incrementValue$219 = param4;
                       param4++;
-                      param0[param4] = param2 ^ param5;
+                      param0[incrementValue$219] = param2 ^ param5;
                       var12++;
                       continue L2;
                     }
@@ -660,50 +672,58 @@ final class ph {
                 }
               } else {
                 L3: {
+                  int incrementValue$220 = param3;
                   param3++;
-                  param2 = param1[param3];
+                  param2 = param1[incrementValue$220];
                   if (param2 == 0) {
                     param4++;
                     break L3;
                   } else {
+                    int incrementValue$221 = param4;
                     param4++;
-                    param0[param4] = param2 ^ param5;
+                    param0[incrementValue$221] = param2 ^ param5;
                     break L3;
                   }
                 }
                 L4: {
+                  int incrementValue$222 = param3;
                   param3++;
-                  param2 = param1[param3];
+                  param2 = param1[incrementValue$222];
                   if (param2 == 0) {
                     param4++;
                     break L4;
                   } else {
+                    int incrementValue$223 = param4;
                     param4++;
-                    param0[param4] = param2 ^ param5;
+                    param0[incrementValue$223] = param2 ^ param5;
                     break L4;
                   }
                 }
                 L5: {
+                  int incrementValue$224 = param3;
                   param3++;
-                  param2 = param1[param3];
+                  param2 = param1[incrementValue$224];
                   if (param2 == 0) {
                     param4++;
                     break L5;
                   } else {
+                    int incrementValue$225 = param4;
                     param4++;
-                    param0[param4] = param2 ^ param5;
+                    param0[incrementValue$225] = param2 ^ param5;
                     break L5;
                   }
                 }
+                int incrementValue$226 = param3;
                 param3++;
-                param2 = param1[param3];
+                param2 = param1[incrementValue$226];
                 if (param2 == 0) {
                   param4++;
                   var12++;
                   continue L1;
                 } else {
+                  int incrementValue$227 = param4;
                   param4++;
-                  param0[param4] = param2 ^ param5;
+                  param0[incrementValue$227] = param2 ^ param5;
                   var12++;
                   continue L1;
                 }
@@ -740,15 +760,17 @@ final class ph {
                     var11++;
                     continue L0;
                   } else {
+                    int incrementValue$218 = param3;
                     param3--;
-                    param2 = param1[param3];
+                    param2 = param1[incrementValue$218];
                     if (param2 == 0) {
                       param4++;
                       var12++;
                       continue L2;
                     } else {
+                      int incrementValue$219 = param4;
                       param4++;
-                      param0[param4] = param2 ^ param5;
+                      param0[incrementValue$219] = param2 ^ param5;
                       var12++;
                       continue L2;
                     }
@@ -756,50 +778,58 @@ final class ph {
                 }
               } else {
                 L3: {
+                  int incrementValue$220 = param3;
                   param3--;
-                  param2 = param1[param3];
+                  param2 = param1[incrementValue$220];
                   if (param2 == 0) {
                     param4++;
                     break L3;
                   } else {
+                    int incrementValue$221 = param4;
                     param4++;
-                    param0[param4] = param2 ^ param5;
+                    param0[incrementValue$221] = param2 ^ param5;
                     break L3;
                   }
                 }
                 L4: {
+                  int incrementValue$222 = param3;
                   param3--;
-                  param2 = param1[param3];
+                  param2 = param1[incrementValue$222];
                   if (param2 == 0) {
                     param4++;
                     break L4;
                   } else {
+                    int incrementValue$223 = param4;
                     param4++;
-                    param0[param4] = param2 ^ param5;
+                    param0[incrementValue$223] = param2 ^ param5;
                     break L4;
                   }
                 }
                 L5: {
+                  int incrementValue$224 = param3;
                   param3--;
-                  param2 = param1[param3];
+                  param2 = param1[incrementValue$224];
                   if (param2 == 0) {
                     param4++;
                     break L5;
                   } else {
+                    int incrementValue$225 = param4;
                     param4++;
-                    param0[param4] = param2 ^ param5;
+                    param0[incrementValue$225] = param2 ^ param5;
                     break L5;
                   }
                 }
+                int incrementValue$226 = param3;
                 param3--;
-                param2 = param1[param3];
+                param2 = param1[incrementValue$226];
                 if (param2 == 0) {
                   param4++;
                   var12++;
                   continue L1;
                 } else {
+                  int incrementValue$227 = param4;
                   param4++;
-                  param0[param4] = param2 ^ param5;
+                  param0[incrementValue$227] = param2 ^ param5;
                   var12++;
                   continue L1;
                 }

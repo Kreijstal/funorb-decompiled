@@ -20,7 +20,7 @@ final class dg extends rk {
           var2 = 255 & param1;
           if (0 != var2) {
             if (var2 >= 128) {
-              if ((var2 ^ -1) <= -161) {
+              if (var2 >= 160) {
                 return (char)var2;
               } else {
                 L0: {
@@ -49,40 +49,56 @@ final class dg extends rk {
     public static void b(boolean param0) {
         field_n = null;
         field_p = null;
-        if (param0) {
-            dg.b(false);
-        }
     }
 
     dg() {
     }
 
     final static int a(int param0, int param1, int param2) {
-        int var3 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
+        int stackIn_9_0 = 0;
+        int stackIn_11_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_10_0 = 0;
+        int stackOut_8_0 = 0;
         var4 = Confined.field_J ? 1 : 0;
-        var3 = param0;
-        L0: while (true) {
-          if (-2 <= (param1 ^ -1)) {
-            if (-2 == (param1 ^ -1)) {
-              return var3 * param2;
-            } else {
-              return var3;
-            }
-          } else {
-            L1: {
-              if (0 != (param1 & 1)) {
-                var3 = var3 * param2;
-                break L1;
+        try {
+          L0: {
+            var3_int = param0;
+            L1: while (true) {
+              if (param1 <= 1) {
+                if (param1 != 1) {
+                  stackOut_10_0 = var3_int;
+                  stackIn_11_0 = stackOut_10_0;
+                  break L0;
+                } else {
+                  stackOut_8_0 = var3_int * param2;
+                  stackIn_9_0 = stackOut_8_0;
+                  return stackIn_9_0;
+                }
               } else {
-                break L1;
+                L2: {
+                  if (0 != (param1 & 1)) {
+                    var3_int = var3_int * param2;
+                    break L2;
+                  } else {
+                    break L2;
+                  }
+                }
+                param1 = param1 >> 1;
+                param2 = param2 * param2;
+                continue L1;
               }
             }
-            param1 = param1 >> 1;
-            param2 = param2 * param2;
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw sd.a((Throwable) (Object) var3, "dg.B(" + param0 + 44 + param1 + 44 + param2 + 41);
         }
+        return stackIn_11_0;
     }
 
     static {

@@ -30,12 +30,14 @@ final class l extends oj {
 
     final void a(byte[] param0, boolean param1) {
         ((l) this).field_f = java.nio.ByteBuffer.allocateDirect(param0.length);
-        java.nio.Buffer discarded$9 = ((l) this).field_f.position(0);
+        java.nio.Buffer discarded$6 = ((l) this).field_f.position(0);
         if (!param1) {
-          return;
-        } else {
-          java.nio.ByteBuffer discarded$10 = ((l) this).field_f.put(param0);
-          return;
+            return;
+        }
+        try {
+            java.nio.ByteBuffer discarded$7 = ((l) this).field_f.put(param0);
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) (Object) runtimeException, "l.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 

@@ -10,16 +10,16 @@ final class jk {
     static String field_f;
 
     final static int a(int param0, int param1) {
-        param0 = ((-1431655766 & param0) >>> 317486369) + (1431655765 & param0);
-        param0 = (param0 & 858993459) + ((-858993460 & param0) >>> -258336638);
-        param0 = 252645135 & (param0 >>> 578831364) + param0;
-        param0 = param0 + (param0 >>> 522894888);
+        param0 = ((-1431655766 & param0) >>> 1) + (1431655765 & param0);
+        param0 = (param0 & 858993459) + ((-858993460 & param0) >>> 2);
+        param0 = 252645135 & (param0 >>> 4) + param0;
+        param0 = param0 + (param0 >>> 8);
         if (param1 != 522894888) {
           int discarded$2 = jk.a(-59, -15);
-          param0 = param0 + (param0 >>> -1048541392);
+          param0 = param0 + (param0 >>> 16);
           return 255 & param0;
         } else {
-          param0 = param0 + (param0 >>> -1048541392);
+          param0 = param0 + (param0 >>> 16);
           return 255 & param0;
         }
     }
@@ -30,7 +30,7 @@ final class jk {
         field_b = null;
         field_f = null;
         field_a = null;
-        int var1 = -12 / ((-52 - param0) / 62);
+        int var1 = 6;
     }
 
     final static void a(int param0) {

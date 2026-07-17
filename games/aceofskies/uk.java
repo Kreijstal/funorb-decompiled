@@ -14,19 +14,11 @@ final class uk extends wf {
     int field_k;
 
     final static boolean a(byte param0) {
-        if (param0 != -5) {
-            return true;
-        }
-        return 250 < it.field_c ? true : false;
+        return 250 < it.field_c;
     }
 
     public static void a(int param0) {
         field_j = null;
-        if (param0 != 250) {
-            field_e = -101;
-            field_f = null;
-            return;
-        }
         field_f = null;
     }
 

@@ -20,7 +20,7 @@ final class hc {
         lh var5 = null;
         lh var8 = null;
         var3 = fleas.field_A ? 1 : 0;
-        if (-1 > (((hc) this).field_e ^ -1)) {
+        if (((hc) this).field_e > 0) {
           if (((hc) this).field_a == ((hc) this).field_g[((hc) this).field_e + -1]) {
             L0: while (true) {
               if (((hc) this).field_e >= ((hc) this).field_h) {
@@ -72,12 +72,7 @@ final class hc {
     }
 
     final static wh[] a(byte param0) {
-        if (param0 != -116) {
-          field_j = 101;
-          return new wh[]{ml.field_F, wd.field_b, bf.field_a};
-        } else {
-          return new wh[]{ml.field_F, wd.field_b, bf.field_a};
-        }
+        return new wh[]{ml.field_F, wd.field_b, bf.field_a};
     }
 
     public static void c(byte param0) {
@@ -175,31 +170,21 @@ final class hc {
 
     final void a(lh param0, boolean param1, long param2) {
         lh var5 = null;
-        L0: {
-          if (param0.field_a != null) {
-            param0.c(-1);
-            break L0;
-          } else {
-            break L0;
-          }
-        }
-        if (!param1) {
-          ((hc) this).a((lh) null, true, 11L);
-          var5 = ((hc) this).field_g[(int)(param2 & (long)(((hc) this).field_h + -1))];
-          param0.field_h = var5;
-          param0.field_a = var5.field_a;
-          param0.field_a.field_h = param0;
-          param0.field_h.field_a = param0;
-          param0.field_c = param2;
-          return;
-        } else {
-          var5 = ((hc) this).field_g[(int)(param2 & (long)(((hc) this).field_h + -1))];
-          param0.field_h = var5;
-          param0.field_a = var5.field_a;
-          param0.field_a.field_h = param0;
-          param0.field_h.field_a = param0;
-          param0.field_c = param2;
-          return;
+        try {
+            if (!(param0.field_a == null)) {
+                param0.c(-1);
+            }
+            if (!param1) {
+                ((hc) this).a((lh) null, true, 11L);
+            }
+            var5 = ((hc) this).field_g[(int)(param2 & (long)(((hc) this).field_h + -1))];
+            param0.field_h = var5;
+            param0.field_a = var5.field_a;
+            param0.field_a.field_h = param0;
+            param0.field_h.field_a = param0;
+            param0.field_c = param2;
+        } catch (RuntimeException runtimeException) {
+            throw pf.a((Throwable) (Object) runtimeException, "hc.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }
     }
 

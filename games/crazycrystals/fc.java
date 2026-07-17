@@ -22,7 +22,7 @@ final class fc {
         jb var4 = ((fc) this).field_e[(int)(param0 & (long)(-1 + ((fc) this).field_c))];
         ((fc) this).field_d = var4.field_b;
         while (((fc) this).field_d != var4) {
-            if ((param0 ^ -1L) == (((fc) this).field_d.field_e ^ -1L)) {
+            if (~param0 == ~((fc) this).field_d.field_e) {
                 var5 = ((fc) this).field_d;
                 ((fc) this).field_d = ((fc) this).field_d.field_b;
                 return var5;
@@ -37,25 +37,30 @@ final class fc {
     }
 
     final void a(int param0, long param1, jb param2) {
-        if (null != param2.field_d) {
-            param2.a(false);
+        jb var5 = null;
+        try {
+            if (null != param2.field_d) {
+                param2.a(false);
+            }
+            var5 = ((fc) this).field_e[(int)((long)(-1 + ((fc) this).field_c) & param1)];
+            param2.field_b = var5;
+            param2.field_d = var5.field_d;
+            param2.field_d.field_b = param2;
+            if (param0 != -22072) {
+                ((fc) this).field_d = null;
+            }
+            param2.field_e = param1;
+            param2.field_b.field_d = param2;
+        } catch (RuntimeException runtimeException) {
+            throw dn.a((Throwable) (Object) runtimeException, "fc.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
-        jb var5 = ((fc) this).field_e[(int)((long)(-1 + ((fc) this).field_c) & param1)];
-        param2.field_b = var5;
-        param2.field_d = var5.field_d;
-        param2.field_d.field_b = param2;
-        if (param0 != -22072) {
-            ((fc) this).field_d = null;
-        }
-        param2.field_e = param1;
-        param2.field_b.field_d = param2;
     }
 
     final jb a(int param0) {
         jb var3 = null;
         int var4 = CrazyCrystals.field_B;
         int var2 = -42 % ((param0 - -70) / 47);
-        if ((((fc) this).field_b ^ -1) < -1) {
+        if (((fc) this).field_b > 0) {
             if (((fc) this).field_a != ((fc) this).field_e[-1 + ((fc) this).field_b]) {
                 var3 = ((fc) this).field_a;
                 ((fc) this).field_a = var3.field_b;

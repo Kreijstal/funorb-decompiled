@@ -35,15 +35,19 @@ final class ne implements Iterator {
     }
 
     public static void a(int param0) {
-        int var1 = 64 / ((-33 - param0) / 39);
+        int var1 = -32;
         field_b = null;
     }
 
     ne(tc param0) {
         ((ne) this).field_c = null;
-        ((ne) this).field_d = param0;
-        ((ne) this).field_c = null;
-        ((ne) this).field_a = ((ne) this).field_d.field_a.field_o;
+        try {
+            ((ne) this).field_d = param0;
+            ((ne) this).field_c = null;
+            ((ne) this).field_a = ((ne) this).field_d.field_a.field_o;
+        } catch (RuntimeException runtimeException) {
+            throw qk.a((Throwable) (Object) runtimeException, "ne.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

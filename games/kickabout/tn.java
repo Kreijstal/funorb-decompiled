@@ -15,16 +15,8 @@ final class tn {
         field_f = null;
         field_c = null;
         field_d = null;
-        if (param0) {
-          tn.a(false);
-          field_g = null;
-          field_e = null;
-          return;
-        } else {
-          field_g = null;
-          field_e = null;
-          return;
-        }
+        field_g = null;
+        field_e = null;
     }
 
     static {

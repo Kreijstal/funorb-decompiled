@@ -24,57 +24,21 @@ final class i extends ka implements e {
     final void b() {
         Object var1 = null;
         Throwable var2 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    if (((i) this).field_f.field_l <= 1) {
-                        statePc = 6;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    var1 = this;
-                    // monitorenter this
-                    statePc = 2;
-                    continue stateLoop;
-                }
-                case 2: {
-                    try {
-                        ((i) this).field_a = false;
-                        this.notifyAll();
-                        // monitorexit var1
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 4;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 4;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                case 6: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        L0: {
+          if (((i) this).field_f.field_l <= 1) {
+            break L0;
+          } else {
+            var1 = this;
+            synchronized (var1) {
+              L1: {
+                ((i) this).field_a = false;
+                this.notifyAll();
+                break L1;
+              }
             }
+            break L0;
+          }
         }
     }
 
@@ -102,7 +66,6 @@ final class i extends ka implements e {
     final void a() {
         try {
             Object var1 = null;
-            Object var1_ref = null;
             InterruptedException var2 = null;
             Throwable var3 = null;
             Throwable decompiledCaughtException = null;
@@ -110,25 +73,24 @@ final class i extends ka implements e {
               if (((i) this).field_f.field_l <= 1) {
                 break L0;
               } else {
-                var1_ref = this;
-                // monitorenter this
-                try {
-                  L1: while (true) {
-                    if (!((i) this).field_a) {
-                      var2 = (InterruptedException) (Object) decompiledCaughtException;
-                    } else {
-                      try {
-                        this.wait();
-                      } catch (java.lang.InterruptedException decompiledCaughtParameter) {
-                        decompiledCaughtException = decompiledCaughtParameter;
+                var1 = this;
+                synchronized (var1) {
+                  L1: {
+                    L2: while (true) {
+                      if (!((i) this).field_a) {
+                        ((i) this).field_a = true;
+                        break L1;
+                      } else {
+                        {
+                          L3: {
+                            this.wait();
+                            break L3;
+                          }
+                        }
+                        continue L2;
                       }
-                      continue L1;
                     }
                   }
-                } catch (java.lang.Throwable decompiledCaughtParameter) {
-                  decompiledCaughtException = decompiledCaughtParameter;
-                  ((i) this).field_a = true;
-                  // monitorexit var1_ref
                 }
                 break L0;
               }
@@ -181,16 +143,20 @@ final class i extends ka implements e {
         int[] var22 = var24;
         int[] var11 = var22;
         for (var12 = 0; var12 < var8; var12++) {
+            int incrementValue$0 = var10;
             var10++;
-            var11[var10] = ((i) this).field_e[var12].field_a;
+            var11[incrementValue$0] = ((i) this).field_e[var12].field_a;
+            int incrementValue$1 = var10;
             var10++;
-            var11[var10] = ((i) this).field_e[var12].field_c;
+            var11[incrementValue$1] = ((i) this).field_e[var12].field_c;
+            int incrementValue$2 = var10;
             var10++;
-            var11[var10] = ((i) this).field_e[var12].field_b;
+            var11[incrementValue$2] = ((i) this).field_e[var12].field_b;
         }
         for (var12 = 0; var12 < var9; var12++) {
+            int incrementValue$3 = var10;
             var10++;
-            var11[var10] = ((i) this).field_d[var12].field_a;
+            var11[incrementValue$3] = ((i) this).field_d[var12].field_a;
         }
         var12 = param2.field_m == null ? 0 : param2.field_m.length;
         int[] var29 = new int[var12 * 8];
@@ -203,27 +169,35 @@ final class i extends ka implements e {
             var18 = param2.field_m[var15];
             var21 = var18;
             var17 = fw.a(var21.field_d, false);
+            int incrementValue$4 = var14;
             var14++;
-            var13[var14] = var18.field_a;
+            var13[incrementValue$4] = var18.field_a;
+            int incrementValue$5 = var14;
             var14++;
-            var13[var14] = var17.field_d;
+            var13[incrementValue$5] = var17.field_d;
+            int incrementValue$6 = var14;
             var14++;
-            var13[var14] = var17.field_b;
+            var13[incrementValue$6] = var17.field_b;
+            int incrementValue$7 = var14;
             var14++;
-            var13[var14] = var17.field_f;
+            var13[incrementValue$7] = var17.field_f;
+            int incrementValue$8 = var14;
             var14++;
-            var13[var14] = var17.field_c;
+            var13[incrementValue$8] = var17.field_c;
+            int incrementValue$9 = var14;
             var14++;
-            var13[var14] = var17.field_e;
+            var13[incrementValue$9] = var17.field_e;
+            int incrementValue$10 = var14;
             var14++;
-            var13[var14] = var17.field_i ? -1 : 0;
+            var13[incrementValue$10] = var17.field_i ? -1 : 0;
         }
         int var20 = 0;
         var15 = var20;
         while (var20 < var12) {
             var19 = param2.field_m[var20];
+            int incrementValue$11 = var14;
             var14++;
-            var13[var14] = var19.field_b;
+            var13[incrementValue$11] = var19.field_b;
             var20++;
         }
         this.R(((i) this).field_f, ((i) this).field_g, param2.field_E, param2.field_L, param2.field_b, param2.field_I, param2.field_p, param2.field_l, param2.field_y, param2.field_o, param2.field_a, param2.field_t, param2.field_J, param2.field_G, param2.field_C, param2.field_n, param2.field_g, param2.field_A, param2.field_r, param2.field_D, param2.field_k, param2.field_h, param2.field_F, param2.field_u, param2.field_s, param2.field_q, param2.field_K, param2.field_j, param2.field_f, param2.field_x, param2.field_i, param2.field_z, param2.field_d, param2.field_v, param2.field_c, var28, var8, var9, param3, param4, param5, param6, var29);

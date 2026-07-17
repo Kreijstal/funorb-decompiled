@@ -23,7 +23,7 @@ final class te extends si {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        if (-1 != (param1 ^ -1)) {
+        if (param1 != 0) {
             return;
         }
         if (!(((te) this).field_G != null)) {
@@ -48,16 +48,12 @@ final class te extends si {
         if (param0 != 25403) {
           return -126;
         } else {
-          var3 = -1 + param1 & param2 >> -170852673;
-          return (param2 - -(param2 >>> -2131518657)) % param1 - -var3;
+          var3 = -1 + param1 & param2 >> 31;
+          return (param2 - -(param2 >>> 31)) % param1 - -var3;
         }
     }
 
     final static String d(byte param0) {
-        if (param0 != 18) {
-            te.a((byte) -93);
-            return vc.field_c;
-        }
         return vc.field_c;
     }
 
@@ -68,9 +64,13 @@ final class te extends si {
 
     te(rc param0) {
         super(param0.field_m, param0.field_j, param0.field_t, param0.field_x, (j) null, (dg) null);
-        param0.b(((te) this).field_x, ((te) this).field_t, 0, 0, 0);
-        ((te) this).field_H = 256;
-        ((te) this).field_G = param0;
+        try {
+            param0.b(((te) this).field_x, ((te) this).field_t, 0, 0, 0);
+            ((te) this).field_H = 256;
+            ((te) this).field_G = param0;
+        } catch (RuntimeException runtimeException) {
+            throw fc.a((Throwable) (Object) runtimeException, "te.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

@@ -22,8 +22,8 @@ final class cn implements Iterable {
         var2 = 0;
         var3 = sl.field_a;
         if (var3 >= 5) {
-          if ((var3 ^ -1) <= -106) {
-            if (-121 < (var3 ^ -1)) {
+          if (var3 >= 105) {
+            if (var3 < 120) {
               L0: {
                 var3 = -var3 + 120;
                 var2 = -(var3 * var3 * 8192 / 3300) + 8192;
@@ -54,7 +54,7 @@ final class cn implements Iterable {
                 }
               }
               L3: {
-                if ((param1 ^ -1) != -6) {
+                if (param1 != 5) {
                   break L3;
                 } else {
                   var5 = 1;
@@ -73,7 +73,7 @@ final class cn implements Iterable {
               }
               L5: {
                 L6: {
-                  if ((param1 ^ -1) == -8) {
+                  if (param1 == 7) {
                     break L6;
                   } else {
                     if (8 == param1) {
@@ -105,7 +105,7 @@ final class cn implements Iterable {
                 }
               }
               L9: {
-                if (-14 == (param1 ^ -1)) {
+                if (param1 == 13) {
                   var5 = -1;
                   var4 = 1;
                   break L9;
@@ -115,7 +115,7 @@ final class cn implements Iterable {
               }
               if (param0 == 25) {
                 L10: {
-                  if (-15 != (param1 ^ -1)) {
+                  if (param1 != 14) {
                     break L10;
                   } else {
                     var4 = -1;
@@ -137,7 +137,7 @@ final class cn implements Iterable {
               } else {
                 L12: {
                   cn.b(114);
-                  if (-15 != (param1 ^ -1)) {
+                  if (param1 != 14) {
                     break L12;
                   } else {
                     var4 = -1;
@@ -186,7 +186,7 @@ final class cn implements Iterable {
                 }
               }
               L17: {
-                if ((param1 ^ -1) != -6) {
+                if (param1 != 5) {
                   break L17;
                 } else {
                   var5 = 1;
@@ -203,7 +203,7 @@ final class cn implements Iterable {
                   break L18;
                 }
               }
-              if ((param1 ^ -1) != -8) {
+              if (param1 != 7) {
                 if (8 != param1) {
                   L19: {
                     if (11 == param1) {
@@ -223,7 +223,7 @@ final class cn implements Iterable {
                     }
                   }
                   L21: {
-                    if (-14 == (param1 ^ -1)) {
+                    if (param1 == 13) {
                       var5 = -1;
                       var4 = 1;
                       break L21;
@@ -233,7 +233,7 @@ final class cn implements Iterable {
                   }
                   if (param0 == 25) {
                     L22: {
-                      if (-15 != (param1 ^ -1)) {
+                      if (param1 != 14) {
                         break L22;
                       } else {
                         var4 = -1;
@@ -255,7 +255,7 @@ final class cn implements Iterable {
                   } else {
                     L24: {
                       cn.b(114);
-                      if (-15 != (param1 ^ -1)) {
+                      if (param1 != 14) {
                         break L24;
                       } else {
                         var4 = -1;
@@ -296,7 +296,7 @@ final class cn implements Iterable {
                     }
                   }
                   L28: {
-                    if (-14 == (param1 ^ -1)) {
+                    if (param1 == 13) {
                       var5 = -1;
                       var4 = 1;
                       break L28;
@@ -306,7 +306,7 @@ final class cn implements Iterable {
                   }
                   if (param0 == 25) {
                     L29: {
-                      if (-15 != (param1 ^ -1)) {
+                      if (param1 != 14) {
                         break L29;
                       } else {
                         var4 = -1;
@@ -328,7 +328,7 @@ final class cn implements Iterable {
                   } else {
                     L31: {
                       cn.b(114);
-                      if (-15 != (param1 ^ -1)) {
+                      if (param1 != 14) {
                         break L31;
                       } else {
                         var4 = -1;
@@ -370,7 +370,7 @@ final class cn implements Iterable {
                   }
                 }
                 L35: {
-                  if (-14 == (param1 ^ -1)) {
+                  if (param1 == 13) {
                     var5 = -1;
                     var4 = 1;
                     break L35;
@@ -380,7 +380,7 @@ final class cn implements Iterable {
                 }
                 if (param0 == 25) {
                   L36: {
-                    if (-15 != (param1 ^ -1)) {
+                    if (param1 != 14) {
                       break L36;
                     } else {
                       var4 = -1;
@@ -402,7 +402,7 @@ final class cn implements Iterable {
                 } else {
                   L38: {
                     cn.b(114);
-                    if (-15 != (param1 ^ -1)) {
+                    if (param1 != 14) {
                       break L38;
                     } else {
                       var4 = -1;
@@ -454,7 +454,7 @@ final class cn implements Iterable {
               }
             }
             L43: {
-              if ((param1 ^ -1) != -6) {
+              if (param1 != 5) {
                 break L43;
               } else {
                 var5 = 1;
@@ -473,7 +473,7 @@ final class cn implements Iterable {
             }
             L45: {
               L46: {
-                if ((param1 ^ -1) == -8) {
+                if (param1 == 7) {
                   break L46;
                 } else {
                   if (8 == param1) {
@@ -505,7 +505,7 @@ final class cn implements Iterable {
               }
             }
             L49: {
-              if (-14 == (param1 ^ -1)) {
+              if (param1 == 13) {
                 var5 = -1;
                 var4 = 1;
                 break L49;
@@ -515,7 +515,7 @@ final class cn implements Iterable {
             }
             if (param0 == 25) {
               L50: {
-                if (-15 != (param1 ^ -1)) {
+                if (param1 != 14) {
                   break L50;
                 } else {
                   var4 = -1;
@@ -537,7 +537,7 @@ final class cn implements Iterable {
             } else {
               L52: {
                 cn.b(114);
-                if (-15 != (param1 ^ -1)) {
+                if (param1 != 14) {
                   break L52;
                 } else {
                   var4 = -1;
@@ -588,7 +588,7 @@ final class cn implements Iterable {
             }
           }
           L57: {
-            if ((param1 ^ -1) != -6) {
+            if (param1 != 5) {
               break L57;
             } else {
               var5 = 1;
@@ -605,7 +605,7 @@ final class cn implements Iterable {
               break L58;
             }
           }
-          if ((param1 ^ -1) != -8) {
+          if (param1 != 7) {
             if (8 != param1) {
               L59: {
                 if (11 == param1) {
@@ -625,7 +625,7 @@ final class cn implements Iterable {
                 }
               }
               L61: {
-                if (-14 == (param1 ^ -1)) {
+                if (param1 == 13) {
                   var5 = -1;
                   var4 = 1;
                   break L61;
@@ -635,7 +635,7 @@ final class cn implements Iterable {
               }
               if (param0 == 25) {
                 L62: {
-                  if (-15 != (param1 ^ -1)) {
+                  if (param1 != 14) {
                     break L62;
                   } else {
                     var4 = -1;
@@ -657,7 +657,7 @@ final class cn implements Iterable {
               } else {
                 L64: {
                   cn.b(114);
-                  if (-15 != (param1 ^ -1)) {
+                  if (param1 != 14) {
                     break L64;
                   } else {
                     var4 = -1;
@@ -698,7 +698,7 @@ final class cn implements Iterable {
                 }
               }
               L68: {
-                if (-14 == (param1 ^ -1)) {
+                if (param1 == 13) {
                   var5 = -1;
                   var4 = 1;
                   break L68;
@@ -715,7 +715,7 @@ final class cn implements Iterable {
                 }
               }
               L70: {
-                if (-15 != (param1 ^ -1)) {
+                if (param1 != 14) {
                   break L70;
                 } else {
                   var4 = -1;
@@ -756,7 +756,7 @@ final class cn implements Iterable {
               }
             }
             L74: {
-              if (-14 == (param1 ^ -1)) {
+              if (param1 == 13) {
                 var5 = -1;
                 var4 = 1;
                 break L74;
@@ -773,7 +773,7 @@ final class cn implements Iterable {
               }
             }
             L76: {
-              if (-15 != (param1 ^ -1)) {
+              if (param1 != 14) {
                 break L76;
               } else {
                 var4 = -1;
@@ -807,10 +807,6 @@ final class cn implements Iterable {
     }
 
     final static ci a(int param0) {
-        if (param0 != 11520) {
-            cn.b(-30);
-            return jg.k(110);
-        }
         return jg.k(110);
     }
 
@@ -834,35 +830,19 @@ final class cn implements Iterable {
     }
 
     final void a(l param0, boolean param1) {
-        if (param1) {
-          L0: {
-            Iterator discarded$1 = ((cn) this).iterator();
-            if (null != param0.field_m) {
-              param0.d(-1);
-              break L0;
-            } else {
-              break L0;
+        try {
+            if (param1) {
+                Iterator discarded$0 = ((cn) this).iterator();
             }
-          }
-          param0.field_p = ((cn) this).field_c;
-          param0.field_m = ((cn) this).field_c.field_m;
-          param0.field_m.field_p = param0;
-          param0.field_p.field_m = param0;
-          return;
-        } else {
-          L1: {
-            if (null != param0.field_m) {
-              param0.d(-1);
-              break L1;
-            } else {
-              break L1;
+            if (!(null == param0.field_m)) {
+                param0.d(-1);
             }
-          }
-          param0.field_p = ((cn) this).field_c;
-          param0.field_m = ((cn) this).field_c.field_m;
-          param0.field_m.field_p = param0;
-          param0.field_p.field_m = param0;
-          return;
+            param0.field_p = ((cn) this).field_c;
+            param0.field_m = ((cn) this).field_c.field_m;
+            param0.field_m.field_p = param0;
+            param0.field_p.field_m = param0;
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "cn.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 

@@ -13,16 +13,17 @@ final class eo extends mo {
         if (param0 != 0) {
             return;
         }
-        vl.field_e = param1;
+        try {
+            vl.field_e = param1;
+        } catch (RuntimeException runtimeException) {
+            throw wn.a((Throwable) (Object) runtimeException, "eo.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void b(int param0) {
         field_k = null;
         field_l = null;
         field_n = null;
-        if (param0 != 0) {
-            field_k = null;
-        }
     }
 
     static {

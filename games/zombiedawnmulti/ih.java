@@ -9,56 +9,39 @@ final class ih {
     static String field_a;
 
     final static void a(int param0) {
-        int var1 = 0;
-        int var2 = 0;
-        var2 = ZombieDawnMulti.field_E ? 1 : 0;
+        int var1_int = 0;
+        int var2 = ZombieDawnMulti.field_E ? 1 : 0;
         if (dl.field_h == null) {
-          return;
-        } else {
-          L0: {
-            if (null == ud.field_P) {
-              ud.field_P = new ja(512, 512);
-              break L0;
-            } else {
-              break L0;
+            return;
+        }
+        try {
+            if (!(null != ud.field_P)) {
+                ud.field_P = new ja(512, 512);
             }
-          }
-          ud.field_P.a();
-          var1 = param0;
-          L1: while (true) {
-            if (0 >= var1) {
-              dl.field_h.b((byte) 125);
-              return;
-            } else {
-              oo.d(256, 256, var1, -var1 + 256);
-              var1--;
-              continue L1;
+            ud.field_P.a();
+            for (var1_int = param0; 0 < var1_int; var1_int--) {
+                oo.d(256, 256, var1_int, -var1_int + 256);
             }
-          }
+            dl.field_h.b((byte) 125);
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) (Object) runtimeException, "ih.C(" + param0 + 41);
         }
     }
 
     final static void a(boolean param0, int param1, ug param2) {
-        nc.a(param0, param1, 92, param2);
+        try {
+            nc.a(param0, param1, 92, param2);
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) (Object) runtimeException, "ih.D(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void b(int param0) {
-        if (param0 < 40) {
-          ih.a(-3);
-          field_b = null;
-          field_a = null;
-          field_c = null;
-          field_e = null;
-          field_d = null;
-          return;
-        } else {
-          field_b = null;
-          field_a = null;
-          field_c = null;
-          field_e = null;
-          field_d = null;
-          return;
-        }
+        field_b = null;
+        field_a = null;
+        field_c = null;
+        field_e = null;
+        field_d = null;
     }
 
     final static boolean a(int param0, int param1, int param2, int param3, int param4, boolean param5, int param6) {
@@ -103,46 +86,50 @@ final class ih {
     }
 
     final static void a(n param0, int param1, int param2) {
-        int var4 = 0;
         ga var5 = null;
-        var5 = ma.field_a;
-        var5.b((byte) -35, param2);
-        var5.field_j = var5.field_j + 1;
-        var4 = var5.field_j;
-        var5.a(param1 ^ 112, param1);
-        if (null == param0.field_f) {
-          var5.a(-92, 0);
-          int discarded$4 = var5.f(var4, 121);
-          var5.field_j = var5.field_j - 4;
-          param0.field_h = var5.i(-1478490344);
-          var5.e(41, -var4 + var5.field_j);
-          return;
-        } else {
-          var5.a(-33, param0.field_f.length);
-          var5.a(param0.field_f, param0.field_f.length, 0, 115);
-          int discarded$5 = var5.f(var4, 121);
-          var5.field_j = var5.field_j - 4;
-          param0.field_h = var5.i(-1478490344);
-          var5.e(41, -var4 + var5.field_j);
-          return;
+        int var4 = 0;
+        try {
+            var5 = ma.field_a;
+            var5.b((byte) -35, param2);
+            var5.field_j = var5.field_j + 1;
+            var4 = var5.field_j;
+            var5.a(param1 ^ 112, param1);
+            if (null == param0.field_f) {
+                var5.a(-92, 0);
+            } else {
+                var5.a(-33, param0.field_f.length);
+                var5.a(param0.field_f, param0.field_f.length, 0, 115);
+            }
+            int discarded$0 = var5.f(var4, 121);
+            var5.field_j = var5.field_j - 4;
+            param0.field_h = var5.i(-1478490344);
+            var5.e(41, -var4 + var5.field_j);
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) (Object) runtimeException, "ih.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }
     }
 
     final static void a(byte param0, ab param1, int param2) {
-        ga var6 = ma.field_a;
-        var6.b((byte) -35, param2);
-        int var5 = -62 / ((20 - param0) / 57);
-        var6.field_j = var6.field_j + 1;
-        int var4 = var6.field_j;
-        var6.a(118, 1);
-        var6.a(-128, param1.field_i);
-        var6.a(-109, param1.field_f);
-        var6.b(-104, param1.field_m);
-        var6.b(91, param1.field_l);
-        var6.b(43, param1.field_g);
-        var6.b(-99, param1.field_n);
-        int discarded$0 = var6.f(var4, 117);
-        var6.e(35, var6.field_j - var4);
+        ga var6 = null;
+        int var4 = 0;
+        try {
+            var6 = ma.field_a;
+            var6.b((byte) -35, param2);
+            int var5 = -62 / ((20 - param0) / 57);
+            var6.field_j = var6.field_j + 1;
+            var4 = var6.field_j;
+            var6.a(118, 1);
+            var6.a(-128, param1.field_i);
+            var6.a(-109, param1.field_f);
+            var6.b(-104, param1.field_m);
+            var6.b(91, param1.field_l);
+            var6.b(43, param1.field_g);
+            var6.b(-99, param1.field_n);
+            int discarded$0 = var6.f(var4, 117);
+            var6.e(35, var6.field_j - var4);
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) (Object) runtimeException, "ih.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     static {

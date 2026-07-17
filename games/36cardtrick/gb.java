@@ -23,7 +23,7 @@ final class gb extends com.ms.dll.Callback {
           var5 = com.ms.win32.User32.GetWindowLong(param0, -4);
           return com.ms.win32.User32.CallWindowProc(var5, param0, param1, param2, param3);
         } else {
-          if (-33 == (param1 ^ -1)) {
+          if (param1 == 32) {
             var5 = 65535 & param3;
             if (1 != var5) {
               if (param1 == 101024) {

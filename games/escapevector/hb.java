@@ -24,9 +24,6 @@ final class hb implements Iterator {
     private final void a(byte param0) {
         ((hb) this).field_g = ((hb) this).field_e.field_b[0].field_b;
         ((hb) this).field_c = null;
-        if (param0 != -59) {
-            boolean discarded$0 = ((hb) this).hasNext();
-        }
         ((hb) this).field_f = 1;
     }
 
@@ -87,8 +84,12 @@ final class hb implements Iterator {
 
     hb(qm param0) {
         ((hb) this).field_c = null;
-        ((hb) this).field_e = param0;
-        this.a((byte) -59);
+        try {
+            ((hb) this).field_e = param0;
+            this.a((byte) -59);
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) (Object) runtimeException, "hb.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {
@@ -103,15 +104,15 @@ final class hb implements Iterator {
         int var2 = 0;
         int var1 = 0;
         field_d = new int[98304];
-        for (var0 = 92682; -46342 >= (var0 ^ -1); var0--) {
-            var4 = (long)((var0 << -812795167) + -1);
-            var6 = (long)((var0 << 103230849) + 1);
-            var3 = (int)((var6 * var6 >> -1075158958) + -32768L);
-            var2 = (int)((var4 * var4 >> 579453714) + -32768L);
+        for (var0 = 92682; var0 >= 46341; var0--) {
+            var4 = (long)((var0 << 1) + -1);
+            var6 = (long)((var0 << 1) + 1);
+            var3 = (int)((var6 * var6 >> 18) + -32768L);
+            var2 = (int)((var4 * var4 >> 18) + -32768L);
             if (!(field_d.length > var3)) {
                 var3 = -1 + field_d.length;
             }
-            for (var1 = -1 < (var2 ^ -1) ? 0 : var2; var1 <= var3; var1++) {
+            for (var1 = var2 < 0 ? 0 : var2; var1 <= var3; var1++) {
                 field_d[var1] = var0;
             }
         }

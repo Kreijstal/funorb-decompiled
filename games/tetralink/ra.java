@@ -1190,39 +1190,39 @@ final class ra {
                                                           }
                                                         }
                                                         if (var18 >= var19) {
-                                                          field_b[var10 - var19] = param5;
-                                                          field_b[var11 + var19] = param5;
-                                                          field_b[var12 - var18] = param5;
-                                                          field_b[var13 + var18] = param5;
-                                                          field_b[var14 - var18] = param5;
-                                                          field_b[var15 + var18] = param5;
-                                                          field_b[var16 - var19] = param5;
-                                                          field_b[var17 + var19] = param5;
+                                                          field_b[var10 - var19] = 8421631;
+                                                          field_b[var11 + var19] = 8421631;
+                                                          field_b[var12 - var18] = 8421631;
+                                                          field_b[var13 + var18] = 8421631;
+                                                          field_b[var14 - var18] = 8421631;
+                                                          field_b[var15 + var18] = 8421631;
+                                                          field_b[var16 - var19] = 8421631;
+                                                          field_b[var17 + var19] = 8421631;
                                                           continue L9;
                                                         } else {
                                                           break L3;
                                                         }
                                                       }
                                                     } else {
-                                                      field_b[var22] = param5;
+                                                      field_b[var22] = 8421631;
                                                       var22++;
                                                       continue L8;
                                                     }
                                                   }
                                                 } else {
-                                                  field_b[var22] = param5;
+                                                  field_b[var22] = 8421631;
                                                   var22++;
                                                   continue L7;
                                                 }
                                               }
                                             } else {
-                                              field_b[var22 + var18] = param5;
+                                              field_b[var22 + var18] = 8421631;
                                               var22 = var22 + field_f;
                                               continue L6;
                                             }
                                           }
                                         } else {
-                                          field_b[var22 - var18] = param5;
+                                          field_b[var22 - var18] = 8421631;
                                           var22 = var22 + field_f;
                                           continue L5;
                                         }
@@ -1234,10 +1234,10 @@ final class ra {
                                 }
                               }
                             }
-                            ra.c(param0, param1 + var18, param3 - var18 - var18, param5);
-                            ra.c(param0 + param2 - 1, param1 + var18, param3 - var18 - var18, param5);
-                            ra.g(param0 + var18, param1, param2 - var18 - var18, param5);
-                            ra.g(param0 + var18, param1 + param3 - 1, param2 - var18 - var18, param5);
+                            ra.c(param0, param1 + var18, param3 - var18 - var18, 8421631);
+                            ra.c(param0 + param2 - 1, param1 + var18, param3 - var18 - var18, 8421631);
+                            ra.g(param0 + var18, param1, param2 - var18 - var18, 8421631);
+                            ra.g(param0 + var18, param1 + param3 - 1, param2 - var18 - var18, 8421631);
                             L11: while (true) {
                               L12: {
                                 int incrementValue$3 = var19;
@@ -1274,7 +1274,7 @@ final class ra {
                                           if (var6 - var19 >= field_l) {
                                             break L14;
                                           } else {
-                                            field_b[var10 - var19] = param5;
+                                            field_b[var10 - var19] = 8421631;
                                             break L14;
                                           }
                                         }
@@ -1285,7 +1285,7 @@ final class ra {
                                         if (var8 + var19 >= field_l) {
                                           break L13;
                                         } else {
-                                          field_b[var11 + var19] = param5;
+                                          field_b[var11 + var19] = 8421631;
                                           break L13;
                                         }
                                       }
@@ -1306,7 +1306,7 @@ final class ra {
                                           if (var6 - var18 >= field_l) {
                                             break L16;
                                           } else {
-                                            field_b[var12 - var18] = param5;
+                                            field_b[var12 - var18] = 8421631;
                                             break L16;
                                           }
                                         }
@@ -1317,7 +1317,7 @@ final class ra {
                                         if (var8 + var18 >= field_l) {
                                           break L15;
                                         } else {
-                                          field_b[var13 + var18] = param5;
+                                          field_b[var13 + var18] = 8421631;
                                           break L15;
                                         }
                                       }
@@ -1338,7 +1338,7 @@ final class ra {
                                           if (var6 - var18 >= field_l) {
                                             break L18;
                                           } else {
-                                            field_b[var14 - var18] = param5;
+                                            field_b[var14 - var18] = 8421631;
                                             break L18;
                                           }
                                         }
@@ -1349,7 +1349,7 @@ final class ra {
                                         if (var8 + var18 >= field_l) {
                                           break L17;
                                         } else {
-                                          field_b[var15 + var18] = param5;
+                                          field_b[var15 + var18] = 8421631;
                                           break L17;
                                         }
                                       }
@@ -1369,7 +1369,7 @@ final class ra {
                                         if (var6 - var19 >= field_l) {
                                           break L19;
                                         } else {
-                                          field_b[var16 - var19] = param5;
+                                          field_b[var16 - var19] = 8421631;
                                           break L19;
                                         }
                                       }
@@ -1380,7 +1380,7 @@ final class ra {
                                       if (var8 + var19 >= field_l) {
                                         continue L11;
                                       } else {
-                                        field_b[var17 + var19] = param5;
+                                        field_b[var17 + var19] = 8421631;
                                         continue L11;
                                       }
                                     }
@@ -1407,7 +1407,7 @@ final class ra {
           }
           return;
         } else {
-          ra.b(param0, param1, param2, param3, param5);
+          ra.b(param0, param1, param2, param3, 8421631);
           return;
         }
     }
@@ -1453,8 +1453,8 @@ final class ra {
         int var5 = 0;
         for (var6 = 0; var6 < 4; var6++) {
             var5 = 128 - (var6 << 5);
-            ra.e(param0 + var6, param1 + param3 + var6, param2, param4, var5);
-            ra.f(param0 + param2 + var6, param1 + var6, param3 + 1, param4, var5);
+            ra.e(param0 + var6, param1 + param3 + var6, param2, 5592405, var5);
+            ra.f(param0 + param2 + var6, param1 + var6, param3 + 1, 5592405, var5);
         }
     }
 
@@ -1612,8 +1612,8 @@ final class ra {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        ra.a(field_b, 0, param2 + param3 * field_f, param0, param2, param4, field_f - param4, param5);
-        ra.a(field_b, 0, param2 + param3 * field_f, param1, param3, param5, field_f - param4, param2, param4);
+        ra.a(field_b, 0, param2 + param3 * field_f, param0, param2, param4, field_f - param4, 140);
+        ra.a(field_b, 0, param2 + param3 * field_f, param1, param3, 140, field_f - param4, param2, param4);
     }
 
     final static void f(int param0, int param1, int param2, int param3) {

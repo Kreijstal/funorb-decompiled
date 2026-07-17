@@ -15,22 +15,17 @@ final class fq extends hq {
     }
 
     fq(hu[] param0) {
-        ((fq) this).field_g = param0;
+        try {
+            ((fq) this).field_g = param0;
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "fq.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void a(int param0) {
-        if (param0 < 96) {
-          field_f = null;
-          field_f = null;
-          field_d = null;
-          field_e = null;
-          return;
-        } else {
-          field_f = null;
-          field_d = null;
-          field_e = null;
-          return;
-        }
+        field_f = null;
+        field_d = null;
+        field_e = null;
     }
 
     static {

@@ -45,13 +45,13 @@ final class up {
         } else {
             ((up) this).field_b = ((up) this).field_b + 20;
         }
-        if ((((up) this).field_b ^ -1) > -1) {
+        if (((up) this).field_b < 0) {
             ((up) this).field_b = 0;
         }
         if (param1 != 20) {
             ((up) this).c(-100);
         }
-        if (!((((up) this).field_b ^ -1) >= -256)) {
+        if (!(((up) this).field_b <= 255)) {
             ((up) this).field_b = 255;
         }
     }
@@ -78,7 +78,7 @@ final class up {
         ((up) this).field_l.a(-var2 + 80, 180, ((up) this).field_b);
         if (uo.field_j <= 0) {
             if (!(10 > ((up) this).field_m)) {
-                var3 = 3 * ((up) this).field_b >> -2035067678;
+                var3 = 3 * ((up) this).field_b >> 2;
                 hd.field_w.a(-var2 + 96, 196, var3);
                 hd.field_w.b(-var2 + 96, 196, var3);
             }
@@ -94,7 +94,7 @@ final class up {
         jj var3 = rj.field_C[gd.field_e[((up) this).field_m].field_a];
         ((up) this).field_l = new tf(160, 160);
         ((up) this).field_l.c();
-        int var4 = param0 * (5 - var11.field_f);
+        int var4 = 16 * (5 - var11.field_f);
         int var5 = (-var11.field_a + 5) * 16;
         boolean[] var6 = ad.a(var11, 21922);
         for (var7 = 0; var7 < var11.field_a; var7++) {
@@ -102,7 +102,7 @@ final class up {
                 var3.field_k[!var6[var7 * var10.field_f + var8] ? 0 : 1].f(var8 * 32 + var4, 32 * var7 + var5);
             }
         }
-        qa.field_f.a(param0 + 19676);
+        qa.field_f.a(19692);
     }
 
     up(int param0) {

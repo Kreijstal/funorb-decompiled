@@ -11,7 +11,7 @@ abstract class ui extends g {
     static String field_B;
 
     final void a(int param0, byte param1, int param2, int param3) {
-        if (-1 != (((ui) this).field_E ^ -1)) {
+        if (((ui) this).field_E != 0) {
           if (((ui) this).field_E >= 256) {
             if (param0 != 0) {
               return;
@@ -68,63 +68,34 @@ abstract class ui extends g {
     }
 
     private final int a(int param0) {
-        int stackIn_6_0 = 0;
-        int stackIn_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_5_0 = 0;
+        int stackIn_5_0 = 0;
         int stackOut_4_0 = 0;
         int stackOut_3_0 = 0;
-        if (param0 != 0) {
-          L0: {
-            ((ui) this).b(-18, -2, -61);
-            if (!((ui) this).field_G) {
-              stackOut_11_0 = 0;
-              stackIn_12_0 = stackOut_11_0;
+        int stackOut_2_0 = 0;
+        L0: {
+          if (!((ui) this).field_G) {
+            stackOut_4_0 = 0;
+            stackIn_5_0 = stackOut_4_0;
+            break L0;
+          } else {
+            if ((Object) (Object) ((ui) this).field_H.d((byte) -120) == this) {
+              stackOut_3_0 = 256;
+              stackIn_5_0 = stackOut_3_0;
               break L0;
             } else {
-              if ((Object) (Object) ((ui) this).field_H.d((byte) -120) == this) {
-                stackOut_10_0 = 256;
-                stackIn_12_0 = stackOut_10_0;
-                break L0;
-              } else {
-                stackOut_9_0 = 0;
-                stackIn_12_0 = stackOut_9_0;
-                break L0;
-              }
+              stackOut_2_0 = 0;
+              stackIn_5_0 = stackOut_2_0;
+              break L0;
             }
           }
-          return stackIn_12_0;
-        } else {
-          L1: {
-            if (!((ui) this).field_G) {
-              stackOut_5_0 = 0;
-              stackIn_6_0 = stackOut_5_0;
-              break L1;
-            } else {
-              if ((Object) (Object) ((ui) this).field_H.d((byte) -120) == this) {
-                stackOut_4_0 = 256;
-                stackIn_6_0 = stackOut_4_0;
-                break L1;
-              } else {
-                stackOut_3_0 = 0;
-                stackIn_6_0 = stackOut_3_0;
-                break L1;
-              }
-            }
-          }
-          return stackIn_6_0;
         }
+        return stackIn_5_0;
     }
 
     public static void e(byte param0) {
         field_B = null;
         field_F = null;
         field_C = null;
-        if (param0 != -29) {
-            return;
-        }
         field_D = null;
     }
 
@@ -156,10 +127,10 @@ abstract class ui extends g {
               break L0;
             }
           }
-          if ((var3 ^ -1) > -1) {
+          if (var3 < 0) {
             L1: {
               L2: {
-                ((ui) this).field_E = ((ui) this).field_E + (var3 - 16 - -1) / 16;
+                ((ui) this).field_E = ((ui) this).field_E + (var3 - 15) / 16;
                 if (0 != ((ui) this).field_E) {
                   break L2;
                 } else {
@@ -218,8 +189,8 @@ abstract class ui extends g {
               break L5;
             }
           }
-          if ((var3 ^ -1) > -1) {
-            ((ui) this).field_E = ((ui) this).field_E + (var3 - 16 - -1) / 16;
+          if (var3 < 0) {
+            ((ui) this).field_E = ((ui) this).field_E + (var3 - 15) / 16;
             if (0 == ((ui) this).field_E) {
               if (0 != var2) {
                 return false;
@@ -291,14 +262,18 @@ abstract class ui extends g {
     }
 
     ui(ei param0, int param1, int param2) {
-        super(ml.field_b + -param1 >> -1820756927, -param2 + vf.field_F >> -1655264063, param1, param2, (uk) null);
-        ((ui) this).field_E = 0;
-        ((ui) this).field_H = param0;
-        ((ui) this).field_G = false;
+        super(ml.field_b + -param1 >> 1, -param2 + vf.field_F >> 1, param1, param2, (uk) null);
+        try {
+            ((ui) this).field_E = 0;
+            ((ui) this).field_H = param0;
+            ((ui) this).field_G = false;
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) (Object) runtimeException, "ui.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     final void a(int param0, byte param1, int param2) {
-        ((ui) this).b(param0, ml.field_b - param0 >> 1359765697, vf.field_F + -param2 >> 2138435233, param2, 23987);
+        ((ui) this).b(param0, ml.field_b - param0 >> 1, vf.field_F + -param2 >> 1, param2, 23987);
         if (param1 > -4) {
             field_B = null;
         }

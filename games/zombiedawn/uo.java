@@ -50,64 +50,60 @@ final class uo {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        L0: {
-          var5 = ZombieDawn.field_J;
-          if (param0) {
-            break L0;
-          } else {
-            int discarded$4 = ((uo) this).a(-79);
-            break L0;
-          }
-        }
-        int fieldTemp$5 = ((uo) this).field_g + 1;
+        var5 = ZombieDawn.field_J;
+        int fieldTemp$3 = ((uo) this).field_g + 1;
         ((uo) this).field_g = ((uo) this).field_g + 1;
-        ((uo) this).field_b = ((uo) this).field_b + fieldTemp$5;
+        ((uo) this).field_b = ((uo) this).field_b + fieldTemp$3;
         var2 = 0;
-        L1: while (true) {
-          if (-257 >= (var2 ^ -1)) {
+        L0: while (true) {
+          if (var2 >= 256) {
             return;
           } else {
-            L2: {
+            L1: {
               var3 = ((uo) this).field_f[var2];
-              if (-1 == (var2 & 2 ^ -1)) {
-                if ((1 & var2 ^ -1) == -1) {
-                  ((uo) this).field_c = ((uo) this).field_c ^ ((uo) this).field_c << -1029001043;
-                  break L2;
+              if ((var2 & 2) == 0) {
+                if ((1 & var2) == 0) {
+                  ((uo) this).field_c = ((uo) this).field_c ^ ((uo) this).field_c << 13;
+                  break L1;
                 } else {
-                  ((uo) this).field_c = ((uo) this).field_c ^ ((uo) this).field_c >>> 1592202758;
-                  break L2;
+                  ((uo) this).field_c = ((uo) this).field_c ^ ((uo) this).field_c >>> 6;
+                  break L1;
                 }
               } else {
-                if (-1 != (1 & var2 ^ -1)) {
-                  ((uo) this).field_c = ((uo) this).field_c ^ ((uo) this).field_c >>> -367138800;
-                  break L2;
+                if ((1 & var2) != 0) {
+                  ((uo) this).field_c = ((uo) this).field_c ^ ((uo) this).field_c >>> 16;
+                  break L1;
                 } else {
-                  ((uo) this).field_c = ((uo) this).field_c ^ ((uo) this).field_c << 423575426;
-                  break L2;
+                  ((uo) this).field_c = ((uo) this).field_c ^ ((uo) this).field_c << 2;
+                  break L1;
                 }
               }
             }
             ((uo) this).field_c = ((uo) this).field_c + ((uo) this).field_f[var2 + 128 & 255];
-            int dupTemp$6 = ((uo) this).field_f[eg.a(var3 >> 609051650, 255)] + ((uo) this).field_c + ((uo) this).field_b;
-            var4 = dupTemp$6;
-            ((uo) this).field_f[var2] = dupTemp$6;
-            int dupTemp$7 = ((uo) this).field_f[eg.a(1020, var4 >> 699667336) >> -1828099326] + var3;
-            ((uo) this).field_b = dupTemp$7;
-            ((uo) this).field_i[var2] = dupTemp$7;
+            int dupTemp$4 = ((uo) this).field_f[eg.a(var3 >> 2, 255)] + ((uo) this).field_c + ((uo) this).field_b;
+            var4 = dupTemp$4;
+            ((uo) this).field_f[var2] = dupTemp$4;
+            int dupTemp$5 = ((uo) this).field_f[eg.a(1020, var4 >> 8) >> 2] + var3;
+            ((uo) this).field_b = dupTemp$5;
+            ((uo) this).field_i[var2] = dupTemp$5;
             var2++;
-            continue L1;
+            continue L0;
           }
         }
     }
 
     uo(int[] param0) {
-        int var2 = 0;
-        ((uo) this).field_i = new int[256];
-        ((uo) this).field_f = new int[256];
-        for (var2 = 0; param0.length > var2; var2++) {
-            ((uo) this).field_i[var2] = param0[var2];
+        int var2_int = 0;
+        try {
+            ((uo) this).field_i = new int[256];
+            ((uo) this).field_f = new int[256];
+            for (var2_int = 0; param0.length > var2_int; var2_int++) {
+                ((uo) this).field_i[var2_int] = param0[var2_int];
+            }
+            this.b(20196);
+        } catch (RuntimeException runtimeException) {
+            throw sh.a((Throwable) (Object) runtimeException, "uo.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }
-        this.b(20196);
     }
 
     private final void b(int param0) {
@@ -138,16 +134,8 @@ final class uo {
               if (256 <= var2) {
                 var2 = 0;
                 L2: while (true) {
-                  if ((var2 ^ -1) <= -257) {
-                    L3: {
-                      this.a(true);
-                      if (param0 == 20196) {
-                        break L3;
-                      } else {
-                        uo.c(121);
-                        break L3;
-                      }
-                    }
+                  if (var2 >= 256) {
+                    this.a(true);
                     ((uo) this).field_e = 256;
                     return;
                   } else {
@@ -159,28 +147,28 @@ final class uo {
                     var10 = var10 + ((uo) this).field_f[7 + var2];
                     var6 = var6 + ((uo) this).field_f[3 + var2];
                     var3 = var3 + ((uo) this).field_f[var2];
-                    var3 = var3 ^ var4 << 136525515;
+                    var3 = var3 ^ var4 << 11;
                     var6 = var6 + var3;
                     var4 = var4 + var5;
-                    var4 = var4 ^ var5 >>> 647073634;
+                    var4 = var4 ^ var5 >>> 2;
                     var7 = var7 + var4;
                     var5 = var5 + var6;
-                    var5 = var5 ^ var6 << -1305297304;
+                    var5 = var5 ^ var6 << 8;
                     var8 = var8 + var5;
                     var6 = var6 + var7;
-                    var6 = var6 ^ var7 >>> -737427408;
+                    var6 = var6 ^ var7 >>> 16;
                     var7 = var7 + var8;
                     var9 = var9 + var6;
-                    var7 = var7 ^ var8 << -310693046;
+                    var7 = var7 ^ var8 << 10;
                     var8 = var8 + var9;
                     var10 = var10 + var7;
-                    var8 = var8 ^ var9 >>> 1117429252;
+                    var8 = var8 ^ var9 >>> 4;
                     var3 = var3 + var8;
                     var9 = var9 + var10;
-                    var9 = var9 ^ var10 << 957509864;
+                    var9 = var9 ^ var10 << 8;
                     var4 = var4 + var9;
                     var10 = var10 + var3;
-                    var10 = var10 ^ var3 >>> 1378279241;
+                    var10 = var10 ^ var3 >>> 9;
                     var5 = var5 + var10;
                     var3 = var3 + var4;
                     ((uo) this).field_f[var2] = var3;
@@ -204,28 +192,28 @@ final class uo {
                 var8 = var8 + ((uo) this).field_i[var2 + 5];
                 var3 = var3 + ((uo) this).field_i[var2];
                 var4 = var4 + ((uo) this).field_i[1 + var2];
-                var3 = var3 ^ var4 << -750106325;
+                var3 = var3 ^ var4 << 11;
                 var6 = var6 + var3;
                 var4 = var4 + var5;
-                var4 = var4 ^ var5 >>> -1463656062;
+                var4 = var4 ^ var5 >>> 2;
                 var5 = var5 + var6;
                 var7 = var7 + var4;
-                var5 = var5 ^ var6 << -1658317336;
+                var5 = var5 ^ var6 << 8;
                 var8 = var8 + var5;
                 var6 = var6 + var7;
-                var6 = var6 ^ var7 >>> -582726224;
+                var6 = var6 ^ var7 >>> 16;
                 var9 = var9 + var6;
                 var7 = var7 + var8;
-                var7 = var7 ^ var8 << -1231933590;
+                var7 = var7 ^ var8 << 10;
                 var8 = var8 + var9;
                 var10 = var10 + var7;
-                var8 = var8 ^ var9 >>> 1111593668;
+                var8 = var8 ^ var9 >>> 4;
                 var3 = var3 + var8;
                 var9 = var9 + var10;
-                var9 = var9 ^ var10 << 1582064456;
+                var9 = var9 ^ var10 << 8;
                 var4 = var4 + var9;
                 var10 = var10 + var3;
-                var10 = var10 ^ var3 >>> 372799817;
+                var10 = var10 ^ var3 >>> 9;
                 var5 = var5 + var10;
                 var3 = var3 + var4;
                 ((uo) this).field_f[var2] = var3;
@@ -241,28 +229,28 @@ final class uo {
               }
             }
           } else {
-            var3 = var3 ^ var4 << -2074976053;
+            var3 = var3 ^ var4 << 11;
             var4 = var4 + var5;
             var6 = var6 + var3;
-            var4 = var4 ^ var5 >>> -744462462;
+            var4 = var4 ^ var5 >>> 2;
             var7 = var7 + var4;
             var5 = var5 + var6;
-            var5 = var5 ^ var6 << -1791437016;
+            var5 = var5 ^ var6 << 8;
             var6 = var6 + var7;
             var8 = var8 + var5;
-            var6 = var6 ^ var7 >>> -1493525360;
+            var6 = var6 ^ var7 >>> 16;
             var7 = var7 + var8;
             var9 = var9 + var6;
-            var7 = var7 ^ var8 << -2121818678;
+            var7 = var7 ^ var8 << 10;
             var10 = var10 + var7;
             var8 = var8 + var9;
-            var8 = var8 ^ var9 >>> -146428188;
+            var8 = var8 ^ var9 >>> 4;
             var9 = var9 + var10;
             var3 = var3 + var8;
-            var9 = var9 ^ var10 << -1796285144;
+            var9 = var9 ^ var10 << 8;
             var4 = var4 + var9;
             var10 = var10 + var3;
-            var10 = var10 ^ var3 >>> 1401833257;
+            var10 = var10 ^ var3 >>> 9;
             var5 = var5 + var10;
             var3 = var3 + var4;
             var2++;

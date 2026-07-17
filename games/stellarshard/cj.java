@@ -8,9 +8,6 @@ final class cj {
     static rd field_b;
 
     final static void b(int param0) {
-        if (param0 > -1) {
-            pb[] discarded$0 = cj.a(-25, -30, -99, -115);
-        }
     }
 
     final static pb[] a(int param0, int param1, int param2, int param3) {
@@ -24,9 +21,6 @@ final class cj {
 
     public static void a(int param0) {
         field_b = null;
-        if (param0 != 0) {
-            field_b = null;
-        }
     }
 
     final static String a(long param0, byte param1) {
@@ -39,8 +33,8 @@ final class cj {
         int var11 = 0;
         var11 = stellarshard.field_B;
         if (0L < param0) {
-          if (-6582952005840035282L < (param0 ^ -1L)) {
-            if ((param0 % 37L ^ -1L) != -1L) {
+          if (param0 < 6582952005840035281L) {
+            if (param0 % 37L != 0L) {
               if (param1 > -54) {
                 return null;
               } else {

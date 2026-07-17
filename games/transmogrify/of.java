@@ -14,14 +14,7 @@ final class of {
         field_b = null;
         field_e = null;
         field_a = null;
-        if (param0 != -21068) {
-          field_e = null;
-          field_f = null;
-          return;
-        } else {
-          field_f = null;
-          return;
-        }
+        field_f = null;
     }
 
     final static void b(int param0) {
@@ -44,7 +37,7 @@ final class of {
         de.field_c[7] = he.field_h;
         de.field_c[14] = aa.field_h;
         de.field_c[1] = wf.field_e;
-        de.field_c[param0] = i.field_e;
+        de.field_c[22] = i.field_e;
         de.field_c[13] = kk.field_e;
         de.field_c[4] = nj.field_m;
         de.field_c[3] = qe.field_v;

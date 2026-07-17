@@ -43,7 +43,7 @@ final class ga {
                 var2 = 0;
                 L2: while (true) {
                   if (256 <= var2) {
-                    this.a(param0);
+                    this.a(true);
                     ((ga) this).field_b = 256;
                     return;
                   } else {
@@ -55,28 +55,28 @@ final class ga {
                     var10 = var10 + ((ga) this).field_c[var2 - -7];
                     var8 = var8 + ((ga) this).field_c[5 + var2];
                     var9 = var9 + ((ga) this).field_c[var2 - -6];
-                    var3 = var3 ^ var4 << 527788939;
+                    var3 = var3 ^ var4 << 11;
                     var4 = var4 + var5;
                     var6 = var6 + var3;
-                    var4 = var4 ^ var5 >>> 911965250;
+                    var4 = var4 ^ var5 >>> 2;
                     var7 = var7 + var4;
                     var5 = var5 + var6;
-                    var5 = var5 ^ var6 << -168900152;
+                    var5 = var5 ^ var6 << 8;
                     var8 = var8 + var5;
                     var6 = var6 + var7;
-                    var6 = var6 ^ var7 >>> -2032299984;
+                    var6 = var6 ^ var7 >>> 16;
                     var7 = var7 + var8;
                     var9 = var9 + var6;
-                    var7 = var7 ^ var8 << 1091566890;
+                    var7 = var7 ^ var8 << 10;
                     var10 = var10 + var7;
                     var8 = var8 + var9;
-                    var8 = var8 ^ var9 >>> -584796;
+                    var8 = var8 ^ var9 >>> 4;
                     var9 = var9 + var10;
                     var3 = var3 + var8;
-                    var9 = var9 ^ var10 << 1358174600;
+                    var9 = var9 ^ var10 << 8;
                     var10 = var10 + var3;
                     var4 = var4 + var9;
-                    var10 = var10 ^ var3 >>> 387978569;
+                    var10 = var10 ^ var3 >>> 9;
                     var5 = var5 + var10;
                     var3 = var3 + var4;
                     ((ga) this).field_c[var2] = var3;
@@ -100,28 +100,28 @@ final class ga {
                 var6 = var6 + ((ga) this).field_e[3 + var2];
                 var9 = var9 + ((ga) this).field_e[6 + var2];
                 var4 = var4 + ((ga) this).field_e[var2 - -1];
-                var3 = var3 ^ var4 << 1547421899;
+                var3 = var3 ^ var4 << 11;
                 var4 = var4 + var5;
                 var6 = var6 + var3;
-                var4 = var4 ^ var5 >>> -439065630;
+                var4 = var4 ^ var5 >>> 2;
                 var5 = var5 + var6;
                 var7 = var7 + var4;
-                var5 = var5 ^ var6 << 1624644072;
+                var5 = var5 ^ var6 << 8;
                 var8 = var8 + var5;
                 var6 = var6 + var7;
-                var6 = var6 ^ var7 >>> 1430611120;
+                var6 = var6 ^ var7 >>> 16;
                 var7 = var7 + var8;
                 var9 = var9 + var6;
-                var7 = var7 ^ var8 << 1491474730;
+                var7 = var7 ^ var8 << 10;
                 var8 = var8 + var9;
                 var10 = var10 + var7;
-                var8 = var8 ^ var9 >>> -1911678940;
+                var8 = var8 ^ var9 >>> 4;
                 var9 = var9 + var10;
                 var3 = var3 + var8;
-                var9 = var9 ^ var10 << 142563720;
+                var9 = var9 ^ var10 << 8;
                 var10 = var10 + var3;
                 var4 = var4 + var9;
-                var10 = var10 ^ var3 >>> 1468163305;
+                var10 = var10 ^ var3 >>> 9;
                 var3 = var3 + var4;
                 var5 = var5 + var10;
                 ((ga) this).field_c[var2] = var3;
@@ -137,28 +137,28 @@ final class ga {
               }
             }
           } else {
-            var3 = var3 ^ var4 << -1885353909;
+            var3 = var3 ^ var4 << 11;
             var4 = var4 + var5;
             var6 = var6 + var3;
-            var4 = var4 ^ var5 >>> -1316851006;
+            var4 = var4 ^ var5 >>> 2;
             var5 = var5 + var6;
             var7 = var7 + var4;
-            var5 = var5 ^ var6 << 1622318312;
+            var5 = var5 ^ var6 << 8;
             var8 = var8 + var5;
             var6 = var6 + var7;
-            var6 = var6 ^ var7 >>> 341056080;
+            var6 = var6 ^ var7 >>> 16;
             var7 = var7 + var8;
             var9 = var9 + var6;
-            var7 = var7 ^ var8 << -626919062;
+            var7 = var7 ^ var8 << 10;
             var8 = var8 + var9;
             var10 = var10 + var7;
-            var8 = var8 ^ var9 >>> -857000252;
+            var8 = var8 ^ var9 >>> 4;
             var3 = var3 + var8;
             var9 = var9 + var10;
-            var9 = var9 ^ var10 << -920355608;
+            var9 = var9 ^ var10 << 8;
             var10 = var10 + var3;
             var4 = var4 + var9;
-            var10 = var10 ^ var3 >>> 510930409;
+            var10 = var10 ^ var3 >>> 9;
             var3 = var3 + var4;
             var5 = var5 + var10;
             var2++;
@@ -168,7 +168,7 @@ final class ga {
     }
 
     public static void b(int param0) {
-        int var1 = -102 / ((param0 - 45) / 43);
+        int var1 = 34;
         field_i = null;
         field_d = null;
         field_g = null;
@@ -182,39 +182,42 @@ final class ga {
         int var4 = 0;
         int var5 = 0;
         var5 = ArmiesOfGielinor.field_M ? 1 : 0;
+        int fieldTemp$3 = ((ga) this).field_h + 1;
         ((ga) this).field_h = ((ga) this).field_h + 1;
-        ((ga) this).field_j = ((ga) this).field_j + (((ga) this).field_h + 1);
+        ((ga) this).field_j = ((ga) this).field_j + fieldTemp$3;
         if (param0) {
           var2 = 0;
           L0: while (true) {
-            if (var2 <= -257) {
+            if (var2 >= 256) {
               return;
             } else {
               L1: {
                 var3 = ((ga) this).field_c[var2];
-                if (-1 != (var2 & 2)) {
+                if ((var2 & 2) != 0) {
                   if ((var2 & 1) == 0) {
-                    ((ga) this).field_f = ((ga) this).field_f ^ ((ga) this).field_f << -45955454;
+                    ((ga) this).field_f = ((ga) this).field_f ^ ((ga) this).field_f << 2;
                     break L1;
                   } else {
-                    ((ga) this).field_f = ((ga) this).field_f ^ ((ga) this).field_f >>> -170062224;
+                    ((ga) this).field_f = ((ga) this).field_f ^ ((ga) this).field_f >>> 16;
                     break L1;
                   }
                 } else {
                   if (0 != (1 & var2)) {
-                    ((ga) this).field_f = ((ga) this).field_f ^ ((ga) this).field_f >>> 681687238;
+                    ((ga) this).field_f = ((ga) this).field_f ^ ((ga) this).field_f >>> 6;
                     break L1;
                   } else {
-                    ((ga) this).field_f = ((ga) this).field_f ^ ((ga) this).field_f << 2019060749;
+                    ((ga) this).field_f = ((ga) this).field_f ^ ((ga) this).field_f << 13;
                     break L1;
                   }
                 }
               }
               ((ga) this).field_f = ((ga) this).field_f + ((ga) this).field_c[var2 + 128 & 255];
-              var4 = ((ga) this).field_j + (((ga) this).field_c[rn.a(255, var3 >> 811609538)] + ((ga) this).field_f);
-              ((ga) this).field_c[var2] = ((ga) this).field_j + (((ga) this).field_c[rn.a(255, var3 >> 811609538)] + ((ga) this).field_f);
-              ((ga) this).field_j = ((ga) this).field_c[rn.a(var4 >> -1106998904, 1020) >> -277124574] + var3;
-              ((ga) this).field_e[var2] = ((ga) this).field_c[rn.a(var4 >> -1106998904, 1020) >> -277124574] + var3;
+              int dupTemp$4 = ((ga) this).field_j + (((ga) this).field_c[rn.a(255, var3 >> 2)] + ((ga) this).field_f);
+              var4 = dupTemp$4;
+              ((ga) this).field_c[var2] = dupTemp$4;
+              int dupTemp$5 = ((ga) this).field_c[rn.a(var4 >> 8, 1020) >> 2] + var3;
+              ((ga) this).field_j = dupTemp$5;
+              ((ga) this).field_e[var2] = dupTemp$5;
               var2++;
               continue L0;
             }
@@ -232,18 +235,23 @@ final class ga {
         if (param0 != 256) {
             this.a(false);
         }
+        int fieldTemp$0 = ((ga) this).field_b - 1;
         ((ga) this).field_b = ((ga) this).field_b - 1;
-        return ((ga) this).field_e[((ga) this).field_b - 1];
+        return ((ga) this).field_e[fieldTemp$0];
     }
 
     ga(int[] param0) {
-        int var2 = 0;
-        ((ga) this).field_e = new int[256];
-        ((ga) this).field_c = new int[256];
-        for (var2 = 0; var2 < param0.length; var2++) {
-            ((ga) this).field_e[var2] = param0[var2];
+        int var2_int = 0;
+        try {
+            ((ga) this).field_e = new int[256];
+            ((ga) this).field_c = new int[256];
+            for (var2_int = 0; var2_int < param0.length; var2_int++) {
+                ((ga) this).field_e[var2_int] = param0[var2_int];
+            }
+            this.b(true);
+        } catch (RuntimeException runtimeException) {
+            throw ig.a((Throwable) (Object) runtimeException, "ga.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }
-        this.b(true);
     }
 
     static {

@@ -11,9 +11,6 @@ final class cc {
     }
 
     final static String a(int param0) {
-        if (param0 <= 29) {
-            return null;
-        }
         if (!(pb.field_Kb >= 2)) {
             return kb.field_b;
         }

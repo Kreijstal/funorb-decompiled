@@ -15,9 +15,6 @@ final class og {
     static String[] field_h;
 
     final static void a(byte param0) {
-        if (param0 != -97) {
-            return;
-        }
         ph.field_h = null;
         uj.field_b = null;
         ig.field_H = null;
@@ -55,13 +52,13 @@ final class og {
         field_a = new wb(0);
         field_e = "FULL ACCESS";
         field_g = new int[256];
-        for (var1 = 0; (var1 ^ -1) > -257; var1++) {
+        for (var1 = 0; var1 < 256; var1++) {
             var0 = var1;
-            for (var2 = 0; -9 < (var2 ^ -1); var2++) {
+            for (var2 = 0; var2 < 8; var2++) {
                 if ((1 & var0) != 1) {
                     var0 = var0 >>> 1;
                 } else {
-                    var0 = var0 >>> -640092223 ^ -306674912;
+                    var0 = var0 >>> 1 ^ -306674912;
                 }
             }
             field_g[var1] = var0;

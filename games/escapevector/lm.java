@@ -13,9 +13,6 @@ final class lm {
     public static void b(byte param0) {
         field_b = null;
         field_d = null;
-        if (param0 != -10) {
-            field_b = null;
-        }
     }
 
     final static void a(byte param0) {

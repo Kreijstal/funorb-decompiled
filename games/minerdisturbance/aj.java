@@ -34,7 +34,7 @@ final class aj implements uj {
     }
 
     final static Boolean a(int param0) {
-        int var2 = 10 % ((param0 - 16) / 60);
+        int var2 = 0;
         Boolean var1 = mf.field_a;
         mf.field_a = null;
         return var1;

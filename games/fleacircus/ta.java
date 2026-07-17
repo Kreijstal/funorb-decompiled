@@ -14,7 +14,7 @@ abstract class ta extends pa {
     int field_r;
 
     public static void c(byte param0) {
-        int var1 = -122 % ((-53 - param0) / 38);
+        int var1 = -2;
         field_z = null;
         field_s = null;
     }
@@ -29,17 +29,11 @@ abstract class ta extends pa {
     }
 
     final static String f(int param0) {
-        if (param0 != -15040) {
-            return null;
-        }
-        return ae.field_a.h(param0 + 15040);
+        return ae.field_a.h(0);
     }
 
     final static void a(boolean param0, int param1) {
         uc.field_c.a(param0, 10518);
-        if (param1 <= 43) {
-            dd[] discarded$0 = ta.a(19, 19, 119, 12, 2);
-        }
     }
 
     ta() {

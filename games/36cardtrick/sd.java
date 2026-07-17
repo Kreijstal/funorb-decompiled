@@ -59,7 +59,7 @@ final class sd {
               break L4;
             }
           }
-          if (-1 > (param4 ^ -1)) {
+          if (param4 > 0) {
             if (param1 <= 0) {
               return;
             } else {
@@ -111,11 +111,6 @@ final class sd {
     public static void a(byte param0) {
         field_a = null;
         field_c = null;
-        if (param0 <= 21) {
-            field_a = null;
-            field_b = null;
-            return;
-        }
         field_b = null;
     }
 

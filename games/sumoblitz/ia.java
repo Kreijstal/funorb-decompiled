@@ -14,20 +14,22 @@ final class ia implements Iterator {
 
     public final Object next() {
         int var2 = 0;
-        ms var3 = null;
+        Object var3 = null;
+        ms var3_ref = null;
         ms var4 = null;
         var2 = Sumoblitz.field_L ? 1 : 0;
         if (((ia) this).field_b == ((ia) this).field_e.field_c[((ia) this).field_f + -1]) {
           L0: while (true) {
             if (((ia) this).field_f < ((ia) this).field_e.field_d) {
+              int fieldTemp$2 = ((ia) this).field_f;
               ((ia) this).field_f = ((ia) this).field_f + 1;
-              var3 = ((ia) this).field_e.field_c[((ia) this).field_f].field_b;
-              if (var3 == ((ia) this).field_e.field_c[((ia) this).field_f - 1]) {
+              var3_ref = ((ia) this).field_e.field_c[fieldTemp$2].field_b;
+              if (var3_ref == ((ia) this).field_e.field_c[((ia) this).field_f - 1]) {
                 continue L0;
               } else {
-                ((ia) this).field_g = var3;
-                ((ia) this).field_b = var3.field_b;
-                return (Object) (Object) var3;
+                ((ia) this).field_g = var3_ref;
+                ((ia) this).field_b = var3_ref.field_b;
+                return (Object) (Object) var3_ref;
               }
             } else {
               return null;
@@ -55,8 +57,9 @@ final class ia implements Iterator {
         if (((ia) this).field_e.field_c[-1 + ((ia) this).field_f] == ((ia) this).field_b) {
           L0: while (true) {
             if (((ia) this).field_e.field_d > ((ia) this).field_f) {
+              int fieldTemp$1 = ((ia) this).field_f;
               ((ia) this).field_f = ((ia) this).field_f + 1;
-              if (((ia) this).field_e.field_c[((ia) this).field_f].field_b != ((ia) this).field_e.field_c[-1 + ((ia) this).field_f]) {
+              if (((ia) this).field_e.field_c[fieldTemp$1].field_b != ((ia) this).field_e.field_c[-1 + ((ia) this).field_f]) {
                 ((ia) this).field_b = ((ia) this).field_e.field_c[((ia) this).field_f - 1].field_b;
                 return true;
               } else {
@@ -75,10 +78,6 @@ final class ia implements Iterator {
     public static void a(int param0) {
         field_c = null;
         field_a = null;
-        if (param0 == 1) {
-            return;
-        }
-        field_d = -74;
     }
 
     private final void b(int param0) {
@@ -96,17 +95,16 @@ final class ia implements Iterator {
 
     ia(um param0) {
         ((ia) this).field_g = null;
-        ((ia) this).field_e = param0;
-        this.b(8);
+        try {
+            ((ia) this).field_e = param0;
+            this.b(8);
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "ia.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static void a(int param0, byte param1) {
         int var2 = ps.field_e[param0];
-        if (param1 != -82) {
-            field_a = null;
-            so.a(var2, (byte) -127);
-            return;
-        }
         so.a(var2, (byte) -127);
     }
 

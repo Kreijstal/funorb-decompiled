@@ -17,7 +17,7 @@ final class ln {
         field_c = null;
         field_e = null;
         field_a = null;
-        int var1 = 52 / ((param0 - 7) / 42);
+        int var1 = -26;
         field_d = null;
     }
 

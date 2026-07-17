@@ -41,9 +41,6 @@ final class h extends wn {
     public static void h(int param0) {
         field_K = null;
         field_E = null;
-        if (param0 != 1) {
-            return;
-        }
         field_G = null;
         field_I = null;
     }
@@ -84,15 +81,20 @@ final class h extends wn {
     }
 
     final static void a(long param0, int param1, String param2) {
+        CharSequence var5 = null;
         so.field_p = param2;
         if (param1 != -30687) {
             return;
         }
-        nj.field_c = 2;
-        CharSequence var5 = (CharSequence) (Object) param2;
-        ua.field_S = gk.a(var5, -13);
-        gg.field_e = param0;
-        uc.a(3);
+        try {
+            nj.field_c = 2;
+            var5 = (CharSequence) (Object) param2;
+            ua.field_S = gk.a(var5, -13);
+            gg.field_e = param0;
+            uc.a(3);
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "h.T(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void a(int param0, int param1, int param2) {
@@ -144,10 +146,10 @@ final class h extends wn {
     }
 
     final static hc g(byte param0) {
-        int var1 = -73 % ((param0 - 82) / 43);
+        int var1 = 0;
         String var2 = ed.k(-952);
         if (var2 != null) {
-            if (!(-1 < (var2.indexOf('@') ^ -1))) {
+            if (!(var2.indexOf('@') < 0)) {
                 var2 = "";
             }
         }
@@ -155,34 +157,98 @@ final class h extends wn {
     }
 
     final static void j(int param0) {
+        qb var1 = null;
+        qb var2 = null;
         int var3 = 0;
         int var4 = ArcanistsMulti.field_G ? 1 : 0;
-        qb var1 = new qb(540, 140);
-        fk.a(var1, -23095);
-        id.a();
-        de.b();
-        gi.field_a = param0;
-        cg.f(252566882);
-        qb var2 = var1.g();
-        for (var3 = 0; -16 < (var3 ^ -1); var3++) {
-            var2.a(-2, -2, 16777215);
-            de.d(4, 4, 0, 0, 540, 140);
+        try {
+            var1 = new qb(540, 140);
+            fk.a(var1, -23095);
+            id.a();
+            de.b();
+            gi.field_a = 0;
+            cg.f(252566882);
+            var2 = var1.g();
+            for (var3 = 0; var3 < 15; var3++) {
+                var2.a(-2, -2, 16777215);
+                de.d(4, 4, 0, 0, 540, 140);
+            }
+            gi.field_k.a();
+            var1.b(0, 0);
+            oo.c(-15405);
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "h.G(" + 0 + 41);
         }
-        gi.field_k.a();
-        var1.b(0, 0);
-        oo.c(-15405);
     }
 
     final void b(qm param0, int param1) {
-        if (!(param0 instanceof vi)) {
-            throw new IllegalArgumentException();
-        }
-        vi var3 = (vi) (Object) param0;
-        ((h) this).field_H.a((pg) (Object) var3, (byte) -58);
-        var3.field_G = true;
-        boolean discarded$6 = var3.a(0, (qm) this);
-        if (param1 != 15637) {
-            ((h) this).field_H = null;
+        vi var3 = null;
+        RuntimeException var3_ref = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            if (param0 instanceof vi) {
+              L1: {
+                var3 = (vi) (Object) param0;
+                ((h) this).field_H.a((pg) (Object) var3, (byte) -58);
+                var3.field_G = true;
+                boolean discarded$8 = var3.a(0, (qm) this);
+                if (param1 == 15637) {
+                  break L1;
+                } else {
+                  ((h) this).field_H = null;
+                  break L1;
+                }
+              }
+              break L0;
+            } else {
+              throw new IllegalArgumentException();
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3_ref = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var3_ref;
+            stackOut_5_1 = new StringBuilder().append("h.H(");
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param0 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L2;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L2;
+            }
+          }
+          throw aa.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
         }
     }
 

@@ -13,7 +13,7 @@ final class cl {
 
     final static boolean a(boolean param0, int param1, int param2, int param3) {
         if (param0) {
-          if (-1 < (param3 ^ -1)) {
+          if (param3 < 0) {
             return false;
           } else {
             if (param3 <= 11) {
@@ -60,7 +60,7 @@ final class cl {
         field_d = true;
         var1 = 0;
         L0: while (true) {
-          if ((var1 ^ -1) <= -257) {
+          if (var1 >= 256) {
             field_h = "Hide players in <%0>'s game";
             return;
           } else {
@@ -72,12 +72,12 @@ final class cl {
                 var1++;
                 continue L0;
               } else {
-                if ((var0 & 1 ^ -1) != -2) {
+                if ((var0 & 1) != 1) {
                   var0 = var0 >>> 1;
                   var2++;
                   continue L1;
                 } else {
-                  var0 = var0 >>> -1481890047 ^ -306674912;
+                  var0 = var0 >>> 1 ^ -306674912;
                   var2++;
                   continue L1;
                 }

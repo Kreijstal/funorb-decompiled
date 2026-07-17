@@ -27,7 +27,7 @@ final class oea extends vg {
         }
         if (stackIn_3_0 == 0 | cra.a(param1, -31, param0)) {
           if (!ooa.a(param1, param0, -68)) {
-            var3 = -66 % ((param2 - 4) / 48);
+            var3 = 0;
             if (0 == (55 & param1)) {
               if (!vua.e(param0, param1, 13650)) {
                 return false;
@@ -111,24 +111,25 @@ final class oea extends vg {
         field_i = null;
         field_g = null;
         field_j = null;
-        if (param0 != -49) {
-            oea.a(80, -20, -71, 70, -11, -46, 20, 64);
-        }
     }
 
     final static int a(int param0, int param1, int param2) {
         int var3 = 0;
-        var3 = param1 + -1 & param0 >> 759697279;
+        var3 = param1 + -1 & param0 >> 31;
         if (param2 > -54) {
           int discarded$2 = oea.a(28, -97, -108);
-          return (param0 - -(param0 >>> -48471489)) % param1 - -var3;
+          return (param0 - -(param0 >>> 31)) % param1 - -var3;
         } else {
-          return (param0 - -(param0 >>> -48471489)) % param1 - -var3;
+          return (param0 - -(param0 >>> 31)) % param1 - -var3;
         }
     }
 
     oea(fo param0) {
-        ((oea) this).field_h = param0;
+        try {
+            ((oea) this).field_h = param0;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "oea.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

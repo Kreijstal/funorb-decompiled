@@ -6,11 +6,11 @@ final class gd {
     static String[] field_b;
 
     final static int a(boolean param0, int param1) {
-        param1 = (1431655765 & param1) + ((param1 & -1431655766) >>> -283211423);
-        param1 = (858993459 & param1) + (param1 >>> 1563168642 & -214748365);
-        param1 = param1 + (param1 >>> -1274214748) & 252645135;
-        param1 = param1 + (param1 >>> 1076219080);
-        param1 = param1 + (param1 >>> -375403280);
+        param1 = (1431655765 & param1) + ((param1 & -1431655766) >>> 1);
+        param1 = (858993459 & param1) + (param1 >>> 2 & -214748365);
+        param1 = param1 + (param1 >>> 4) & 252645135;
+        param1 = param1 + (param1 >>> 8);
+        param1 = param1 + (param1 >>> 16);
         if (param0) {
           return 13;
         } else {
@@ -20,9 +20,6 @@ final class gd {
 
     public static void a(int param0) {
         field_b = null;
-        if (param0 != 255) {
-            field_a = -56L;
-        }
     }
 
     static {

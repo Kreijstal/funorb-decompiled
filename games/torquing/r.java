@@ -17,41 +17,67 @@ final class r {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        int[] var10_ref_int__ = null;
-        int[] var11_ref_int__ = null;
-        int var12_int = 0;
-        int var13_int = 0;
+        RuntimeException var5 = null;
+        int var5_int = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
         int var10 = 0;
+        int[] var10_ref_int__ = null;
         int var11 = 0;
+        int[] var11_ref_int__ = null;
         int[] var12 = null;
+        int var12_int = 0;
         int[] var13 = null;
-        int var14 = Torquing.field_u;
-        int var5 = 0;
-        int var7 = -80 % ((param2 - 4) / 43);
-        int var6 = param1;
-        int var8 = -param1;
-        int var9 = -1;
-        di.a(-param1 + param0, (byte) 54, param3, qd.field_a[param4], param0 - -param1);
-        while (var5 < var6) {
-            var9 += 2;
-            var5++;
-            var8 = var8 + var9;
-            if (var8 >= 0) {
-                var6--;
-                var8 = var8 - (var6 << -602293023);
-                var10_ref_int__ = qd.field_a[param4 + var6];
-                var11_ref_int__ = qd.field_a[param4 + -var6];
-                var12_int = param0 + var5;
-                var13_int = param0 + -var5;
-                di.a(var13_int, (byte) 116, param3, var10_ref_int__, var12_int);
-                di.a(var13_int, (byte) 123, param3, var11_ref_int__, var12_int);
+        int var13_int = 0;
+        int var14 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var14 = Torquing.field_u;
+        try {
+          L0: {
+            var5_int = 0;
+            var7 = -80 % ((param2 - 4) / 43);
+            var6 = param1;
+            var8 = -param1;
+            var9 = -1;
+            di.a(-param1 + param0, (byte) 54, param3, qd.field_a[param4], param0 - -param1);
+            L1: while (true) {
+              if (var5_int >= var6) {
+                break L0;
+              } else {
+                L2: {
+                  var9 += 2;
+                  var5_int++;
+                  var8 = var8 + var9;
+                  if (var8 < 0) {
+                    break L2;
+                  } else {
+                    var6--;
+                    var8 = var8 - (var6 << 1);
+                    var10_ref_int__ = qd.field_a[param4 + var6];
+                    var11_ref_int__ = qd.field_a[param4 + -var6];
+                    var12_int = param0 + var5_int;
+                    var13_int = param0 + -var5_int;
+                    di.a(var13_int, (byte) 116, param3, var10_ref_int__, var12_int);
+                    di.a(var13_int, (byte) 123, param3, var11_ref_int__, var12_int);
+                    break L2;
+                  }
+                }
+                var10 = var6 + param0;
+                var11 = param0 - var6;
+                var12 = qd.field_a[var5_int + param4];
+                var13 = qd.field_a[param4 - var5_int];
+                di.a(var11, (byte) 39, param3, var12, var10);
+                di.a(var11, (byte) -95, param3, var13, var10);
+                continue L1;
+              }
             }
-            var10 = var6 + param0;
-            var11 = param0 - var6;
-            var12 = qd.field_a[var5 + param4];
-            var13 = qd.field_a[param4 - var5];
-            di.a(var11, (byte) 39, param3, var12, var10);
-            di.a(var11, (byte) -95, param3, var13, var10);
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          throw rb.a((Throwable) (Object) var5, "r.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 

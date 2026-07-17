@@ -31,14 +31,16 @@ final class tu extends da {
                     var11++;
                     continue L0;
                   } else {
+                    int incrementValue$218 = param3;
                     param3++;
-                    if (param0[param3] == 0) {
+                    if (param0[incrementValue$218] == 0) {
                       param4++;
                       var12++;
                       continue L2;
                     } else {
+                      int incrementValue$219 = param4;
                       param4++;
-                      param1[param4] = param2;
+                      param1[incrementValue$219] = param2;
                       var12++;
                       continue L2;
                     }
@@ -46,46 +48,54 @@ final class tu extends da {
                 }
               } else {
                 L3: {
+                  int incrementValue$220 = param3;
                   param3++;
-                  if (param0[param3] == 0) {
+                  if (param0[incrementValue$220] == 0) {
                     param4++;
                     break L3;
                   } else {
+                    int incrementValue$221 = param4;
                     param4++;
-                    param1[param4] = param2;
+                    param1[incrementValue$221] = param2;
                     break L3;
                   }
                 }
                 L4: {
+                  int incrementValue$222 = param3;
                   param3++;
-                  if (param0[param3] == 0) {
+                  if (param0[incrementValue$222] == 0) {
                     param4++;
                     break L4;
                   } else {
+                    int incrementValue$223 = param4;
                     param4++;
-                    param1[param4] = param2;
+                    param1[incrementValue$223] = param2;
                     break L4;
                   }
                 }
                 L5: {
+                  int incrementValue$224 = param3;
                   param3++;
-                  if (param0[param3] == 0) {
+                  if (param0[incrementValue$224] == 0) {
                     param4++;
                     break L5;
                   } else {
+                    int incrementValue$225 = param4;
                     param4++;
-                    param1[param4] = param2;
+                    param1[incrementValue$225] = param2;
                     break L5;
                   }
                 }
+                int incrementValue$226 = param3;
                 param3++;
-                if (param0[param3] == 0) {
+                if (param0[incrementValue$226] == 0) {
                   param4++;
                   var12++;
                   continue L1;
                 } else {
+                  int incrementValue$227 = param4;
                   param4++;
-                  param1[param4] = param2;
+                  param1[incrementValue$227] = param2;
                   var12++;
                   continue L1;
                 }
@@ -302,13 +312,13 @@ final class tu extends da {
         int stackOut_3_0 = 0;
         L0: {
           var16 = null;
-          var16_ref = (nj) param12;
-          var35 = ((nj) var16_ref).field_h;
+          var16_ref = (nj) (Object) param12;
+          var35 = var16_ref.field_h;
           var34 = var35;
           var33 = var34;
           var32 = var33;
           var17 = var32;
-          var18 = ((nj) var16_ref).field_g;
+          var18 = var16_ref.field_g;
           var19 = param9 - ((tu) this).field_f.field_z;
           var20 = param10;
           if (param14 <= var20) {
@@ -387,16 +397,18 @@ final class tu extends da {
                 var24++;
                 continue L2;
               } else {
+                int incrementValue$2 = param3;
                 param3++;
-                if (param0[param3] == 0) {
+                if (param0[incrementValue$2] == 0) {
                   param4++;
                   var29++;
                   continue L5;
                 } else {
                   var30 = ((param2 & 16711935) * var22 & -16711936) + ((param2 & 65280) * var22 & 16711680) >> 8;
                   var31 = param1[param4];
+                  int incrementValue$3 = param4;
                   param4++;
-                  param1[param4] = (((var31 & 16711935) * var23 & -16711936) + ((var31 & 65280) * var23 & 16711680) >> 8) + var30;
+                  param1[incrementValue$3] = (((var31 & 16711935) * var23 & -16711936) + ((var31 & 65280) * var23 & 16711680) >> 8) + var30;
                   var29++;
                   continue L5;
                 }
@@ -428,13 +440,13 @@ final class tu extends da {
         int stackOut_3_0 = 0;
         L0: {
           var16 = null;
-          var16_ref = (nj) param12;
-          var30 = ((nj) var16_ref).field_h;
+          var16_ref = (nj) (Object) param12;
+          var30 = var16_ref.field_h;
           var29 = var30;
           var28 = var29;
           var27 = var28;
           var17 = var27;
-          var18 = ((nj) var16_ref).field_g;
+          var18 = var16_ref.field_g;
           var19 = param10;
           if (param14 <= var19) {
             break L0;
@@ -510,14 +522,16 @@ final class tu extends da {
                 var21++;
                 continue L2;
               } else {
+                int incrementValue$2 = param3;
                 param3++;
-                if (param0[param3] == 0) {
+                if (param0[incrementValue$2] == 0) {
                   param4++;
                   var26++;
                   continue L5;
                 } else {
+                  int incrementValue$3 = param4;
                   param4++;
-                  param1[param4] = param2;
+                  param1[incrementValue$3] = param2;
                   var26++;
                   continue L5;
                 }
@@ -549,16 +563,18 @@ final class tu extends da {
                 var12++;
                 continue L0;
               } else {
+                int incrementValue$66 = param3;
                 param3++;
-                if (param0[param3] == 0) {
+                if (param0[incrementValue$66] == 0) {
                   param4++;
                   var13++;
                   continue L1;
                 } else {
                   var14 = ((param2 & 16711935) * var10 & -16711936) + ((param2 & 65280) * var10 & 16711680) >> 8;
                   var15 = param1[param4];
+                  int incrementValue$67 = param4;
                   param4++;
-                  param1[param4] = (((var15 & 16711935) * var11 & -16711936) + ((var15 & 65280) * var11 & 16711680) >> 8) + var14;
+                  param1[incrementValue$67] = (((var15 & 16711935) * var11 & -16711936) + ((var15 & 65280) * var11 & 16711680) >> 8) + var14;
                   var13++;
                   continue L1;
                 }

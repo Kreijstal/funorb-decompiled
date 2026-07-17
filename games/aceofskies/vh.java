@@ -125,8 +125,9 @@ final class vh extends mk {
                                         var18++;
                                         continue L6;
                                       } else {
+                                        int incrementValue$43 = var8;
                                         var8++;
-                                        var20 = ((vh) this).field_E[var8];
+                                        var20 = ((vh) this).field_E[incrementValue$43];
                                         if (var20 == 0) {
                                           var7++;
                                           var19++;
@@ -139,8 +140,9 @@ final class vh extends mk {
                                           var22 = var20 + var21;
                                           var23 = (var20 & 16711935) + (var21 & 16711935);
                                           var21 = (var23 & 16777472) + (var22 - var23 & 65536);
+                                          int incrementValue$44 = var7;
                                           var7++;
-                                          var13[var7] = var22 - var21 | var21 - (var21 >>> 8);
+                                          var13[incrementValue$44] = var22 - var21 | var21 - (var21 >>> 8);
                                           var19++;
                                           continue L7;
                                         }
@@ -163,8 +165,9 @@ final class vh extends mk {
                                       var14++;
                                       continue L8;
                                     } else {
+                                      int incrementValue$45 = var8;
                                       var8++;
-                                      var16 = ((vh) this).field_E[var8];
+                                      var16 = ((vh) this).field_E[incrementValue$45];
                                       var17 = var16 + param3;
                                       var18 = (var16 & 16711935) + (param3 & 16711935);
                                       var19 = (var18 & 16777472) + (var17 - var18 & 65536);
@@ -173,8 +176,9 @@ final class vh extends mk {
                                       var17 = var16 + var19;
                                       var18 = (var16 & 16711935) + (var19 & 16711935);
                                       var19 = (var18 & 16777472) + (var17 - var18 & 65536);
+                                      int incrementValue$46 = var7;
                                       var7++;
-                                      var13[var7] = var17 - var19 | var19 - (var19 >>> 8);
+                                      var13[incrementValue$46] = var17 - var19 | var19 - (var19 >>> 8);
                                       var15++;
                                       continue L9;
                                     }
@@ -199,8 +203,9 @@ final class vh extends mk {
                                     var17++;
                                     continue L10;
                                   } else {
+                                    int incrementValue$47 = var8;
                                     var8++;
-                                    var19 = ((vh) this).field_E[var8];
+                                    var19 = ((vh) this).field_E[incrementValue$47];
                                     if (var19 == 0) {
                                       var7++;
                                       var18++;
@@ -214,8 +219,9 @@ final class vh extends mk {
                                       var24 = var19 + var23;
                                       var25 = (var19 & 16711935) + (var23 & 16711935);
                                       var23 = (var25 & 16777472) + (var24 - var25 & 65536);
+                                      int incrementValue$48 = var7;
                                       var7++;
-                                      var13[var7] = var24 - var23 | var23 - (var23 >>> 8);
+                                      var13[incrementValue$48] = var24 - var23 | var23 - (var23 >>> 8);
                                       var18++;
                                       continue L11;
                                     }
@@ -238,8 +244,9 @@ final class vh extends mk {
                                   var14++;
                                   continue L12;
                                 } else {
+                                  int incrementValue$49 = var8;
                                   var8++;
-                                  var16 = ((vh) this).field_E[var8];
+                                  var16 = ((vh) this).field_E[incrementValue$49];
                                   if (var16 == 0) {
                                     var7++;
                                     var15++;
@@ -249,8 +256,9 @@ final class vh extends mk {
                                     var18 = var16 + var17;
                                     var19 = (var16 & 16711935) + (var17 & 16711935);
                                     var17 = (var19 & 16777472) + (var18 - var19 & 65536);
+                                    int incrementValue$50 = var7;
                                     var7++;
-                                    var13[var7] = var18 - var17 | var17 - (var17 >>> 8);
+                                    var13[incrementValue$50] = var18 - var17 | var17 - (var17 >>> 8);
                                     var15++;
                                     continue L13;
                                   }
@@ -285,8 +293,9 @@ final class vh extends mk {
                                       var18++;
                                       continue L14;
                                     } else {
+                                      int incrementValue$51 = var8;
                                       var8++;
-                                      var20 = ((vh) this).field_E[var8];
+                                      var20 = ((vh) this).field_E[incrementValue$51];
                                       if (var20 == 0) {
                                         var7++;
                                         var19++;
@@ -294,8 +303,9 @@ final class vh extends mk {
                                       } else {
                                         var16 = (var20 & 16711935) * var14 & -16711936;
                                         var17 = (var20 & 65280) * var14 & 16711680;
+                                        int incrementValue$52 = var7;
                                         var7++;
-                                        var13[var7] = ((var16 | var17) >>> 8) + param3;
+                                        var13[incrementValue$52] = ((var16 | var17) >>> 8) + param3;
                                         var19++;
                                         continue L15;
                                       }
@@ -321,8 +331,9 @@ final class vh extends mk {
                                     continue L16;
                                   } else {
                                     L18: {
+                                      int incrementValue$53 = var8;
                                       var8++;
-                                      var18 = ((vh) this).field_E[var8];
+                                      var18 = ((vh) this).field_E[incrementValue$53];
                                       var19 = var18 + param3;
                                       var20 = (var18 & 16711935) + (param3 & 16711935);
                                       var21 = (var20 & 16777472) + (var19 - var20 & 65536);
@@ -340,8 +351,9 @@ final class vh extends mk {
                                         }
                                       }
                                     }
+                                    int incrementValue$54 = var7;
                                     var7++;
-                                    var13[var7] = var21;
+                                    var13[incrementValue$54] = var21;
                                     var17++;
                                     continue L17;
                                   }
@@ -369,8 +381,9 @@ final class vh extends mk {
                                     var19++;
                                     continue L19;
                                   } else {
+                                    int incrementValue$55 = var8;
                                     var8++;
-                                    var21 = ((vh) this).field_E[var8];
+                                    var21 = ((vh) this).field_E[incrementValue$55];
                                     if (var21 == 0) {
                                       var7++;
                                       var20++;
@@ -380,8 +393,9 @@ final class vh extends mk {
                                         var22 = (var21 & 16711680) * var14 & -16777216;
                                         var23 = (var21 & 65280) * var15 & 16711680;
                                         var24 = (var21 & 255) * var16 & 65280;
+                                        int incrementValue$56 = var7;
                                         var7++;
-                                        var13[var7] = (var22 | var23 | var24) >>> 8;
+                                        var13[incrementValue$56] = (var22 | var23 | var24) >>> 8;
                                         var20++;
                                         continue L20;
                                       } else {
@@ -390,8 +404,9 @@ final class vh extends mk {
                                         var24 = (var21 & 255) * var16 & 65280;
                                         var21 = (var22 | var23 | var24) >>> 8;
                                         var25 = var29[var7];
+                                        int incrementValue$57 = var7;
                                         var7++;
-                                        var13[var7] = ((var21 & 16711935) * var17 + (var25 & 16711935) * var18 & -16711936) + ((var21 & 65280) * var17 + (var25 & 65280) * var18 & 16711680) >> 8;
+                                        var13[incrementValue$57] = ((var21 & 16711935) * var17 + (var25 & 16711935) * var18 & -16711936) + ((var21 & 65280) * var17 + (var25 & 65280) * var18 & 16711680) >> 8;
                                         var20++;
                                         continue L20;
                                       }
@@ -416,16 +431,18 @@ final class vh extends mk {
                                     var16++;
                                     continue L21;
                                   } else {
+                                    int incrementValue$58 = var8;
                                     var8++;
-                                    var18 = ((vh) this).field_E[var8];
+                                    var18 = ((vh) this).field_E[incrementValue$58];
                                     if (var18 == 0) {
                                       var7++;
                                       var17++;
                                       continue L22;
                                     } else {
                                       var19 = var29[var7];
+                                      int incrementValue$59 = var7;
                                       var7++;
-                                      var13[var7] = ((var18 & 16711935) * var14 + (var19 & 16711935) * var15 & -16711936) + ((var18 & 65280) * var14 + (var19 & 65280) * var15 & 16711680) >> 8;
+                                      var13[incrementValue$59] = ((var18 & 16711935) * var14 + (var19 & 16711935) * var15 & -16711936) + ((var18 & 65280) * var14 + (var19 & 65280) * var15 & 16711680) >> 8;
                                       var17++;
                                       continue L22;
                                     }
@@ -452,63 +469,73 @@ final class vh extends mk {
                                     var14++;
                                     continue L23;
                                   } else {
+                                    int incrementValue$60 = var8;
                                     var8++;
-                                    var16 = ((vh) this).field_E[var8];
+                                    var16 = ((vh) this).field_E[incrementValue$60];
                                     if (var16 == 0) {
                                       var7++;
                                       continue L25;
                                     } else {
+                                      int incrementValue$61 = var7;
                                       var7++;
-                                      var13[var7] = var16;
+                                      var13[incrementValue$61] = var16;
                                       continue L25;
                                     }
                                   }
                                 }
                               } else {
                                 L26: {
+                                  int incrementValue$62 = var8;
                                   var8++;
-                                  var16 = ((vh) this).field_E[var8];
+                                  var16 = ((vh) this).field_E[incrementValue$62];
                                   if (var16 == 0) {
                                     var7++;
                                     break L26;
                                   } else {
+                                    int incrementValue$63 = var7;
                                     var7++;
-                                    var13[var7] = var16;
+                                    var13[incrementValue$63] = var16;
                                     break L26;
                                   }
                                 }
                                 L27: {
+                                  int incrementValue$64 = var8;
                                   var8++;
-                                  var16 = ((vh) this).field_E[var8];
+                                  var16 = ((vh) this).field_E[incrementValue$64];
                                   if (var16 == 0) {
                                     var7++;
                                     break L27;
                                   } else {
+                                    int incrementValue$65 = var7;
                                     var7++;
-                                    var13[var7] = var16;
+                                    var13[incrementValue$65] = var16;
                                     break L27;
                                   }
                                 }
                                 L28: {
+                                  int incrementValue$66 = var8;
                                   var8++;
-                                  var16 = ((vh) this).field_E[var8];
+                                  var16 = ((vh) this).field_E[incrementValue$66];
                                   if (var16 == 0) {
                                     var7++;
                                     break L28;
                                   } else {
+                                    int incrementValue$67 = var7;
                                     var7++;
-                                    var13[var7] = var16;
+                                    var13[incrementValue$67] = var16;
                                     break L28;
                                   }
                                 }
+                                int incrementValue$68 = var8;
                                 var8++;
-                                var16 = ((vh) this).field_E[var8];
+                                var16 = ((vh) this).field_E[incrementValue$68];
                                 if (var16 == 0) {
                                   var7++;
                                   continue L24;
                                 } else {
+                                  int incrementValue$69 = var7;
                                   var7++;
-                                  var13[var7] = var16;
+                                  var13[incrementValue$69] = var16;
                                   continue L24;
                                 }
                               }
@@ -542,12 +569,14 @@ final class vh extends mk {
                                     var18++;
                                     continue L29;
                                   } else {
+                                    int incrementValue$70 = var8;
                                     var8++;
-                                    var20 = ((vh) this).field_E[var8];
+                                    var20 = ((vh) this).field_E[incrementValue$70];
                                     var16 = (var20 & 16711935) * var14 & -16711936;
                                     var17 = (var20 & 65280) * var14 & 16711680;
+                                    int incrementValue$71 = var7;
                                     var7++;
-                                    var13[var7] = ((var16 | var17) >>> 8) + param3;
+                                    var13[incrementValue$71] = ((var16 | var17) >>> 8) + param3;
                                     var19++;
                                     continue L30;
                                   }
@@ -569,13 +598,15 @@ final class vh extends mk {
                                   var14++;
                                   continue L31;
                                 } else {
+                                  int incrementValue$72 = var8;
                                   var8++;
-                                  var16 = ((vh) this).field_E[var8];
+                                  var16 = ((vh) this).field_E[incrementValue$72];
                                   var17 = var16 + param3;
                                   var18 = (var16 & 16711935) + (param3 & 16711935);
                                   var19 = (var18 & 16777472) + (var17 - var18 & 65536);
+                                  int incrementValue$73 = var7;
                                   var7++;
-                                  var13[var7] = var17 - var19 | var19 - (var19 >>> 8);
+                                  var13[incrementValue$73] = var17 - var19 | var19 - (var19 >>> 8);
                                   var15++;
                                   continue L32;
                                 }
@@ -600,13 +631,15 @@ final class vh extends mk {
                                 var17++;
                                 continue L33;
                               } else {
+                                int incrementValue$74 = var8;
                                 var8++;
-                                var19 = ((vh) this).field_E[var8];
+                                var19 = ((vh) this).field_E[incrementValue$74];
                                 var20 = (var19 & 16711680) * var14 & -16777216;
                                 var21 = (var19 & 65280) * var15 & 16711680;
                                 var22 = (var19 & 255) * var16 & 65280;
+                                int incrementValue$75 = var7;
                                 var7++;
-                                var13[var7] = (var20 | var21 | var22) >>> 8;
+                                var13[incrementValue$75] = (var20 | var21 | var22) >>> 8;
                                 var18++;
                                 continue L34;
                               }
@@ -631,25 +664,35 @@ final class vh extends mk {
                                   var14++;
                                   continue L35;
                                 } else {
+                                  int incrementValue$76 = var7;
                                   var7++;
+                                  int incrementValue$77 = var8;
                                   var8++;
-                                  var13[var7] = ((vh) this).field_E[var8];
+                                  var13[incrementValue$76] = ((vh) this).field_E[incrementValue$77];
                                   continue L37;
                                 }
                               }
                             } else {
+                              int incrementValue$78 = var7;
                               var7++;
+                              int incrementValue$79 = var8;
                               var8++;
-                              var13[var7] = ((vh) this).field_E[var8];
+                              var13[incrementValue$78] = ((vh) this).field_E[incrementValue$79];
+                              int incrementValue$80 = var7;
                               var7++;
+                              int incrementValue$81 = var8;
                               var8++;
-                              var13[var7] = ((vh) this).field_E[var8];
+                              var13[incrementValue$80] = ((vh) this).field_E[incrementValue$81];
+                              int incrementValue$82 = var7;
                               var7++;
+                              int incrementValue$83 = var8;
                               var8++;
-                              var13[var7] = ((vh) this).field_E[var8];
+                              var13[incrementValue$82] = ((vh) this).field_E[incrementValue$83];
+                              int incrementValue$84 = var7;
                               var7++;
+                              int incrementValue$85 = var8;
                               var8++;
-                              var13[var7] = ((vh) this).field_E[var8];
+                              var13[incrementValue$84] = ((vh) this).field_E[incrementValue$85];
                               continue L36;
                             }
                           }
@@ -793,8 +836,9 @@ final class vh extends mk {
                         } else {
                           L7: {
                             var10 = (var8 >> 12) * ((vh) this).field_o + (var7 >> 12);
+                            int incrementValue$36 = var6;
                             var6++;
-                            var11 = var6;
+                            var11 = incrementValue$36;
                             var57 = var3;
                             var48 = var57;
                             var39 = var48;
@@ -886,8 +930,9 @@ final class vh extends mk {
                                         } else {
                                           var16 = (var15 & 16711935) * field_C & -16711936;
                                           var17 = (var15 & 65280) * field_C & 16711680;
+                                          int incrementValue$37 = var11;
                                           var11++;
-                                          var12[var11] = ((var16 | var17) >>> 8) + field_s;
+                                          var12[incrementValue$37] = ((var16 | var17) >>> 8) + field_s;
                                           break L7;
                                         }
                                       }
@@ -969,8 +1014,9 @@ final class vh extends mk {
                                       break L7;
                                     }
                                   } else {
+                                    int incrementValue$38 = var10;
                                     var10++;
-                                    var15 = ((vh) this).field_E[var10];
+                                    var15 = ((vh) this).field_E[incrementValue$38];
                                     var16 = field_d;
                                     var17 = var15 + var16;
                                     var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -979,8 +1025,9 @@ final class vh extends mk {
                                     break L7;
                                   }
                                 } else {
+                                  int incrementValue$39 = var10;
                                   var10++;
-                                  var15 = ((vh) this).field_E[var10];
+                                  var15 = ((vh) this).field_E[incrementValue$39];
                                   var16 = (var15 & 16711680) * field_n & -16777216;
                                   var17 = (var15 & 65280) * field_e & 16711680;
                                   var18 = (var15 & 255) * field_b & 65280;
@@ -1064,8 +1111,9 @@ final class vh extends mk {
                         } else {
                           L15: {
                             var10 = (var8 >> 12) * ((vh) this).field_o + (var7 >> 12);
+                            int incrementValue$40 = var6;
                             var6++;
-                            var11 = var6;
+                            var11 = incrementValue$40;
                             var56 = var3;
                             var47 = var56;
                             var38 = var47;
@@ -1157,8 +1205,9 @@ final class vh extends mk {
                                         } else {
                                           var16 = (var15 & 16711935) * field_C & -16711936;
                                           var17 = (var15 & 65280) * field_C & 16711680;
+                                          int incrementValue$41 = var11;
                                           var11++;
-                                          var12[var11] = ((var16 | var17) >>> 8) + field_s;
+                                          var12[incrementValue$41] = ((var16 | var17) >>> 8) + field_s;
                                           break L15;
                                         }
                                       }
@@ -1240,8 +1289,9 @@ final class vh extends mk {
                                       break L15;
                                     }
                                   } else {
+                                    int incrementValue$42 = var10;
                                     var10++;
-                                    var15 = ((vh) this).field_E[var10];
+                                    var15 = ((vh) this).field_E[incrementValue$42];
                                     var16 = field_d;
                                     var17 = var15 + var16;
                                     var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -1250,8 +1300,9 @@ final class vh extends mk {
                                     break L15;
                                   }
                                 } else {
+                                  int incrementValue$43 = var10;
                                   var10++;
-                                  var15 = ((vh) this).field_E[var10];
+                                  var15 = ((vh) this).field_E[incrementValue$43];
                                   var16 = (var15 & 16711680) * field_n & -16777216;
                                   var17 = (var15 & 65280) * field_e & 16711680;
                                   var18 = (var15 & 255) * field_b & 65280;
@@ -1312,8 +1363,9 @@ final class vh extends mk {
                             } else {
                               L22: {
                                 var10 = (var8 >> 12) * ((vh) this).field_o + (var7 >> 12);
+                                int incrementValue$44 = var6;
                                 var6++;
-                                var11 = var6;
+                                var11 = incrementValue$44;
                                 var55 = var3;
                                 var46 = var55;
                                 var37 = var46;
@@ -1405,8 +1457,9 @@ final class vh extends mk {
                                             } else {
                                               var16 = (var15 & 16711935) * field_C & -16711936;
                                               var17 = (var15 & 65280) * field_C & 16711680;
+                                              int incrementValue$45 = var11;
                                               var11++;
-                                              var12[var11] = ((var16 | var17) >>> 8) + field_s;
+                                              var12[incrementValue$45] = ((var16 | var17) >>> 8) + field_s;
                                               break L22;
                                             }
                                           }
@@ -1488,8 +1541,9 @@ final class vh extends mk {
                                           break L22;
                                         }
                                       } else {
+                                        int incrementValue$46 = var10;
                                         var10++;
-                                        var15 = ((vh) this).field_E[var10];
+                                        var15 = ((vh) this).field_E[incrementValue$46];
                                         var16 = field_d;
                                         var17 = var15 + var16;
                                         var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -1498,8 +1552,9 @@ final class vh extends mk {
                                         break L22;
                                       }
                                     } else {
+                                      int incrementValue$47 = var10;
                                       var10++;
-                                      var15 = ((vh) this).field_E[var10];
+                                      var15 = ((vh) this).field_E[incrementValue$47];
                                       var16 = (var15 & 16711680) * field_n & -16777216;
                                       var17 = (var15 & 65280) * field_e & 16711680;
                                       var18 = (var15 & 255) * field_b & 65280;
@@ -1597,8 +1652,9 @@ final class vh extends mk {
                         } else {
                           L30: {
                             var10 = (var8 >> 12) * ((vh) this).field_o + (var7 >> 12);
+                            int incrementValue$48 = var6;
                             var6++;
-                            var11 = var6;
+                            var11 = incrementValue$48;
                             var54 = var3;
                             var45 = var54;
                             var36 = var45;
@@ -1690,8 +1746,9 @@ final class vh extends mk {
                                         } else {
                                           var16 = (var15 & 16711935) * field_C & -16711936;
                                           var17 = (var15 & 65280) * field_C & 16711680;
+                                          int incrementValue$49 = var11;
                                           var11++;
-                                          var12[var11] = ((var16 | var17) >>> 8) + field_s;
+                                          var12[incrementValue$49] = ((var16 | var17) >>> 8) + field_s;
                                           break L30;
                                         }
                                       }
@@ -1773,8 +1830,9 @@ final class vh extends mk {
                                       break L30;
                                     }
                                   } else {
+                                    int incrementValue$50 = var10;
                                     var10++;
-                                    var15 = ((vh) this).field_E[var10];
+                                    var15 = ((vh) this).field_E[incrementValue$50];
                                     var16 = field_d;
                                     var17 = var15 + var16;
                                     var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -1783,8 +1841,9 @@ final class vh extends mk {
                                     break L30;
                                   }
                                 } else {
+                                  int incrementValue$51 = var10;
                                   var10++;
-                                  var15 = ((vh) this).field_E[var10];
+                                  var15 = ((vh) this).field_E[incrementValue$51];
                                   var16 = (var15 & 16711680) * field_n & -16777216;
                                   var17 = (var15 & 65280) * field_e & 16711680;
                                   var18 = (var15 & 255) * field_b & 65280;
@@ -1869,8 +1928,9 @@ final class vh extends mk {
                         } else {
                           L38: {
                             var10 = (var8 >> 12) * ((vh) this).field_o + (var7 >> 12);
+                            int incrementValue$52 = var6;
                             var6++;
-                            var11 = var6;
+                            var11 = incrementValue$52;
                             var53 = var3;
                             var44 = var53;
                             var35 = var44;
@@ -1962,8 +2022,9 @@ final class vh extends mk {
                                         } else {
                                           var16 = (var15 & 16711935) * field_C & -16711936;
                                           var17 = (var15 & 65280) * field_C & 16711680;
+                                          int incrementValue$53 = var11;
                                           var11++;
-                                          var12[var11] = ((var16 | var17) >>> 8) + field_s;
+                                          var12[incrementValue$53] = ((var16 | var17) >>> 8) + field_s;
                                           break L38;
                                         }
                                       }
@@ -2045,8 +2106,9 @@ final class vh extends mk {
                                       break L38;
                                     }
                                   } else {
+                                    int incrementValue$54 = var10;
                                     var10++;
-                                    var15 = ((vh) this).field_E[var10];
+                                    var15 = ((vh) this).field_E[incrementValue$54];
                                     var16 = field_d;
                                     var17 = var15 + var16;
                                     var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -2055,8 +2117,9 @@ final class vh extends mk {
                                     break L38;
                                   }
                                 } else {
+                                  int incrementValue$55 = var10;
                                   var10++;
-                                  var15 = ((vh) this).field_E[var10];
+                                  var15 = ((vh) this).field_E[incrementValue$55];
                                   var16 = (var15 & 16711680) * field_n & -16777216;
                                   var17 = (var15 & 65280) * field_e & 16711680;
                                   var18 = (var15 & 255) * field_b & 65280;
@@ -2118,8 +2181,9 @@ final class vh extends mk {
                             } else {
                               L45: {
                                 var10 = (var8 >> 12) * ((vh) this).field_o + (var7 >> 12);
+                                int incrementValue$56 = var6;
                                 var6++;
-                                var11 = var6;
+                                var11 = incrementValue$56;
                                 var52 = var3;
                                 var43 = var52;
                                 var34 = var43;
@@ -2211,8 +2275,9 @@ final class vh extends mk {
                                             } else {
                                               var16 = (var15 & 16711935) * field_C & -16711936;
                                               var17 = (var15 & 65280) * field_C & 16711680;
+                                              int incrementValue$57 = var11;
                                               var11++;
-                                              var12[var11] = ((var16 | var17) >>> 8) + field_s;
+                                              var12[incrementValue$57] = ((var16 | var17) >>> 8) + field_s;
                                               break L45;
                                             }
                                           }
@@ -2294,8 +2359,9 @@ final class vh extends mk {
                                           break L45;
                                         }
                                       } else {
+                                        int incrementValue$58 = var10;
                                         var10++;
-                                        var15 = ((vh) this).field_E[var10];
+                                        var15 = ((vh) this).field_E[incrementValue$58];
                                         var16 = field_d;
                                         var17 = var15 + var16;
                                         var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -2304,8 +2370,9 @@ final class vh extends mk {
                                         break L45;
                                       }
                                     } else {
+                                      int incrementValue$59 = var10;
                                       var10++;
-                                      var15 = ((vh) this).field_E[var10];
+                                      var15 = ((vh) this).field_E[incrementValue$59];
                                       var16 = (var15 & 16711680) * field_n & -16777216;
                                       var17 = (var15 & 65280) * field_e & 16711680;
                                       var18 = (var15 & 255) * field_b & 65280;
@@ -2379,8 +2446,9 @@ final class vh extends mk {
                             } else {
                               L52: {
                                 var10 = (var8 >> 12) * ((vh) this).field_o + (var7 >> 12);
+                                int incrementValue$60 = var6;
                                 var6++;
-                                var11 = var6;
+                                var11 = incrementValue$60;
                                 var51 = var3;
                                 var42 = var51;
                                 var33 = var42;
@@ -2472,8 +2540,9 @@ final class vh extends mk {
                                             } else {
                                               var16 = (var15 & 16711935) * field_C & -16711936;
                                               var17 = (var15 & 65280) * field_C & 16711680;
+                                              int incrementValue$61 = var11;
                                               var11++;
-                                              var12[var11] = ((var16 | var17) >>> 8) + field_s;
+                                              var12[incrementValue$61] = ((var16 | var17) >>> 8) + field_s;
                                               break L52;
                                             }
                                           }
@@ -2555,8 +2624,9 @@ final class vh extends mk {
                                           break L52;
                                         }
                                       } else {
+                                        int incrementValue$62 = var10;
                                         var10++;
-                                        var15 = ((vh) this).field_E[var10];
+                                        var15 = ((vh) this).field_E[incrementValue$62];
                                         var16 = field_d;
                                         var17 = var15 + var16;
                                         var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -2565,8 +2635,9 @@ final class vh extends mk {
                                         break L52;
                                       }
                                     } else {
+                                      int incrementValue$63 = var10;
                                       var10++;
-                                      var15 = ((vh) this).field_E[var10];
+                                      var15 = ((vh) this).field_E[incrementValue$63];
                                       var16 = (var15 & 16711680) * field_n & -16777216;
                                       var17 = (var15 & 65280) * field_e & 16711680;
                                       var18 = (var15 & 255) * field_b & 65280;
@@ -2637,8 +2708,9 @@ final class vh extends mk {
                             } else {
                               L59: {
                                 var10 = (var8 >> 12) * ((vh) this).field_o + (var7 >> 12);
+                                int incrementValue$64 = var6;
                                 var6++;
-                                var11 = var6;
+                                var11 = incrementValue$64;
                                 var50 = var3;
                                 var41 = var50;
                                 var32 = var41;
@@ -2730,8 +2802,9 @@ final class vh extends mk {
                                             } else {
                                               var16 = (var15 & 16711935) * field_C & -16711936;
                                               var17 = (var15 & 65280) * field_C & 16711680;
+                                              int incrementValue$65 = var11;
                                               var11++;
-                                              var12[var11] = ((var16 | var17) >>> 8) + field_s;
+                                              var12[incrementValue$65] = ((var16 | var17) >>> 8) + field_s;
                                               break L59;
                                             }
                                           }
@@ -2813,8 +2886,9 @@ final class vh extends mk {
                                           break L59;
                                         }
                                       } else {
+                                        int incrementValue$66 = var10;
                                         var10++;
-                                        var15 = ((vh) this).field_E[var10];
+                                        var15 = ((vh) this).field_E[incrementValue$66];
                                         var16 = field_d;
                                         var17 = var15 + var16;
                                         var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -2823,8 +2897,9 @@ final class vh extends mk {
                                         break L59;
                                       }
                                     } else {
+                                      int incrementValue$67 = var10;
                                       var10++;
-                                      var15 = ((vh) this).field_E[var10];
+                                      var15 = ((vh) this).field_E[incrementValue$67];
                                       var16 = (var15 & 16711680) * field_n & -16777216;
                                       var17 = (var15 & 65280) * field_e & 16711680;
                                       var18 = (var15 & 255) * field_b & 65280;
@@ -2877,8 +2952,9 @@ final class vh extends mk {
                               } else {
                                 L64: {
                                   var10 = (var8 >> 12) * ((vh) this).field_o + (var7 >> 12);
+                                  int incrementValue$68 = var6;
                                   var6++;
-                                  var11 = var6;
+                                  var11 = incrementValue$68;
                                   var49 = var3;
                                   var40 = var49;
                                   var31 = var40;
@@ -2970,8 +3046,9 @@ final class vh extends mk {
                                               } else {
                                                 var16 = (var15 & 16711935) * field_C & -16711936;
                                                 var17 = (var15 & 65280) * field_C & 16711680;
+                                                int incrementValue$69 = var11;
                                                 var11++;
-                                                var12[var11] = ((var16 | var17) >>> 8) + field_s;
+                                                var12[incrementValue$69] = ((var16 | var17) >>> 8) + field_s;
                                                 break L64;
                                               }
                                             }
@@ -3053,8 +3130,9 @@ final class vh extends mk {
                                             break L64;
                                           }
                                         } else {
+                                          int incrementValue$70 = var10;
                                           var10++;
-                                          var15 = ((vh) this).field_E[var10];
+                                          var15 = ((vh) this).field_E[incrementValue$70];
                                           var16 = field_d;
                                           var17 = var15 + var16;
                                           var18 = (var15 & 16711935) + (var16 & 16711935);
@@ -3063,8 +3141,9 @@ final class vh extends mk {
                                           break L64;
                                         }
                                       } else {
+                                        int incrementValue$71 = var10;
                                         var10++;
-                                        var15 = ((vh) this).field_E[var10];
+                                        var15 = ((vh) this).field_E[incrementValue$71];
                                         var16 = (var15 & 16711680) * field_n & -16777216;
                                         var17 = (var15 & 65280) * field_e & 16711680;
                                         var18 = (var15 & 255) * field_b & 65280;
@@ -3139,6 +3218,7 @@ final class vh extends mk {
         var9 = 0;
         L1: while (true) {
           if (var9 >= param5) {
+            return;
           } else {
             var10 = 0;
             L2: while (true) {
@@ -3147,18 +3227,21 @@ final class vh extends mk {
                 var9++;
                 continue L1;
               } else {
+                int incrementValue$178 = param2;
                 param2++;
-                var11 = param1[param2];
+                var11 = param1[incrementValue$178];
                 if (var11 >>> 24 != 255) {
+                  int incrementValue$179 = var8;
                   var8++;
-                  ((vh) this).field_E[var8] = 0;
+                  ((vh) this).field_E[incrementValue$179] = 0;
                   var10++;
                   continue L2;
                 } else {
                   L3: {
+                    int incrementValue$180 = var8;
                     var8++;
                     stackOut_8_0 = ((vh) this).field_E;
-                    stackOut_8_1 = var8;
+                    stackOut_8_1 = incrementValue$180;
                     stackIn_10_0 = stackOut_8_0;
                     stackIn_10_1 = stackOut_8_1;
                     stackIn_9_0 = stackOut_8_0;
@@ -3369,8 +3452,9 @@ final class vh extends mk {
                                             var29 = var27 + var28;
                                             var30 = (var27 & 16711935) + (var28 & 16711935);
                                             var28 = (var30 & 16777472) + (var29 - var30 & 65536);
+                                            int incrementValue$14 = var16;
                                             var16++;
-                                            var18[var16] = var29 - var28 | var28 - (var28 >>> 8);
+                                            var18[incrementValue$14] = var29 - var28 | var28 - (var28 >>> 8);
                                             break L12;
                                           }
                                         }
@@ -3408,8 +3492,9 @@ final class vh extends mk {
                                       var24 = var23 + var26;
                                       var25 = (var23 & 16711935) + (var26 & 16711935);
                                       var26 = (var25 & 16777472) + (var24 - var25 & 65536);
+                                      int incrementValue$15 = var16;
                                       var16++;
-                                      var18[var16] = var24 - var26 | var26 - (var26 >>> 8);
+                                      var18[incrementValue$15] = var24 - var26 | var26 - (var26 >>> 8);
                                       var9 = var9 + var14;
                                       var22++;
                                       continue L14;
@@ -3452,8 +3537,9 @@ final class vh extends mk {
                                         var31 = var26 + var30;
                                         var32 = (var26 & 16711935) + (var30 & 16711935);
                                         var30 = (var32 & 16777472) + (var31 - var32 & 65536);
+                                        int incrementValue$16 = var16;
                                         var16++;
-                                        var18[var16] = var31 - var30 | var30 - (var30 >>> 8);
+                                        var18[incrementValue$16] = var31 - var30 | var30 - (var30 >>> 8);
                                         break L17;
                                       }
                                     }
@@ -3492,8 +3578,9 @@ final class vh extends mk {
                                       var25 = var23 + var24;
                                       var26 = (var23 & 16711935) + (var24 & 16711935);
                                       var24 = (var26 & 16777472) + (var25 - var26 & 65536);
+                                      int incrementValue$17 = var16;
                                       var16++;
-                                      var18[var16] = var25 - var24 | var24 - (var24 >>> 8);
+                                      var18[incrementValue$17] = var25 - var24 | var24 - (var24 >>> 8);
                                       break L20;
                                     }
                                   }
@@ -3542,8 +3629,9 @@ final class vh extends mk {
                                         } else {
                                           var21 = (var27 & 16711935) * var19 & -16711936;
                                           var22 = (var27 & 65280) * var19 & 16711680;
+                                          int incrementValue$18 = var16;
                                           var16++;
-                                          var18[var16] = ((var21 | var22) >>> 8) + param5;
+                                          var18[incrementValue$18] = ((var21 | var22) >>> 8) + param5;
                                           break L23;
                                         }
                                       }
@@ -3593,8 +3681,9 @@ final class vh extends mk {
                                         }
                                       }
                                     }
+                                    int incrementValue$19 = var16;
                                     var16++;
-                                    var18[var16] = var28;
+                                    var18[incrementValue$19] = var28;
                                     var9 = var9 + var14;
                                     var24++;
                                     continue L25;
@@ -3636,8 +3725,9 @@ final class vh extends mk {
                                           var29 = (var28 & 16711680) * var20 & -16777216;
                                           var30 = (var28 & 65280) * var21 & 16711680;
                                           var31 = (var28 & 255) * var22 & 65280;
+                                          int incrementValue$20 = var16;
                                           var16++;
-                                          var18[var16] = (var29 | var30 | var31) >>> 8;
+                                          var18[incrementValue$20] = (var29 | var30 | var31) >>> 8;
                                           break L29;
                                         } else {
                                           var29 = (var28 & 16711680) * var20 & -16777216;
@@ -3645,8 +3735,9 @@ final class vh extends mk {
                                           var31 = (var28 & 255) * var22 & 65280;
                                           var28 = (var29 | var30 | var31) >>> 8;
                                           var32 = var36[var16];
+                                          int incrementValue$21 = var16;
                                           var16++;
-                                          var18[var16] = ((var28 & 16711935) * var23 + (var32 & 16711935) * var24 & -16711936) + ((var28 & 65280) * var23 + (var32 & 65280) * var24 & 16711680) >> 8;
+                                          var18[incrementValue$21] = ((var28 & 16711935) * var23 + (var32 & 16711935) * var24 & -16711936) + ((var28 & 65280) * var23 + (var32 & 65280) * var24 & 16711680) >> 8;
                                           var9 = var9 + var14;
                                           var27++;
                                           continue L28;
@@ -3685,8 +3776,9 @@ final class vh extends mk {
                                         break L32;
                                       } else {
                                         var26 = var36[var16];
+                                        int incrementValue$22 = var16;
                                         var16++;
-                                        var18[var16] = ((var25 & 16711935) * var20 + (var26 & 16711935) * var21 & -16711936) + ((var25 & 65280) * var20 + (var26 & 65280) * var21 & 16711680) >> 8;
+                                        var18[incrementValue$22] = ((var25 & 16711935) * var20 + (var26 & 16711935) * var21 & -16711936) + ((var25 & 65280) * var20 + (var26 & 65280) * var21 & 16711680) >> 8;
                                         break L32;
                                       }
                                     }
@@ -3722,8 +3814,9 @@ final class vh extends mk {
                                     var16++;
                                     break L35;
                                   } else {
+                                    int incrementValue$23 = var16;
                                     var16++;
-                                    var18[var16] = var23;
+                                    var18[incrementValue$23] = var23;
                                     break L35;
                                   }
                                 }
@@ -3767,8 +3860,9 @@ final class vh extends mk {
                                     var27 = ((vh) this).field_E[(var9 >> 16) + var25];
                                     var21 = (var27 & 16711935) * var19 & -16711936;
                                     var22 = (var27 & 65280) * var19 & 16711680;
+                                    int incrementValue$24 = var16;
                                     var16++;
-                                    var18[var16] = ((var21 | var22) >>> 8) + param5;
+                                    var18[incrementValue$24] = ((var21 | var22) >>> 8) + param5;
                                     var9 = var9 + var14;
                                     var26++;
                                     continue L37;
@@ -3798,8 +3892,9 @@ final class vh extends mk {
                                   var24 = var23 + param5;
                                   var25 = (var23 & 16711935) + (param5 & 16711935);
                                   var26 = (var25 & 16777472) + (var24 - var25 & 65536);
+                                  int incrementValue$25 = var16;
                                   var16++;
-                                  var18[var16] = var24 - var26 | var26 - (var26 >>> 8);
+                                  var18[incrementValue$25] = var24 - var26 | var26 - (var26 >>> 8);
                                   var9 = var9 + var14;
                                   var22++;
                                   continue L39;
@@ -3832,8 +3927,9 @@ final class vh extends mk {
                                 var27 = (var26 & 16711680) * var19 & -16777216;
                                 var28 = (var26 & 65280) * var20 & 16711680;
                                 var29 = (var26 & 255) * var21 & 65280;
+                                int incrementValue$26 = var16;
                                 var16++;
-                                var18[var16] = (var27 | var28 | var29) >>> 8;
+                                var18[incrementValue$26] = (var27 | var28 | var29) >>> 8;
                                 var9 = var9 + var14;
                                 var25++;
                                 continue L41;
@@ -3859,8 +3955,9 @@ final class vh extends mk {
                               var20++;
                               continue L42;
                             } else {
+                              int incrementValue$27 = var16;
                               var16++;
-                              var18[var16] = ((vh) this).field_E[(var9 >> 16) + var21];
+                              var18[incrementValue$27] = ((vh) this).field_E[(var9 >> 16) + var21];
                               var9 = var9 + var14;
                               var22++;
                               continue L43;

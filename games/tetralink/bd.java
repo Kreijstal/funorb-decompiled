@@ -56,30 +56,22 @@ final class bd {
     }
 
     final static String a(int param0) {
-        if (null == ph.field_w) {
-          return "";
-        } else {
-          if (param0 != 6) {
-            oh[] discarded$2 = bd.a(85, -19, 63, -86, (byte) 97);
-            return ph.field_w;
-          } else {
-            return ph.field_w;
-          }
+        if (!(null != ph.field_w)) {
+            return "";
         }
+        return ph.field_w;
     }
 
     final static void a(oh param0, int param1) {
-        Object var3 = null;
-        if (param1 != 6) {
-          var3 = null;
-          bd.a((oh) null, -66);
-          me.a(false);
-          param0.c();
-          return;
-        } else {
-          me.a(false);
-          param0.c();
-          return;
+        try {
+            if (param1 != 6) {
+                Object var3 = null;
+                bd.a((oh) null, -66);
+            }
+            me.a(false);
+            param0.c();
+        } catch (RuntimeException runtimeException) {
+            throw oi.a((Throwable) (Object) runtimeException, "bd.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 

@@ -7,29 +7,11 @@ final class vg {
     static String field_c;
 
     final static void a(byte param0) {
-        if (0 - lc.field_a != sn.field_c) {
-          if (250 + -lc.field_a == sn.field_c) {
-            if (param0 != -82) {
-              return;
-            } else {
-              sn.field_c = sn.field_c + 1;
-              return;
-            }
-          } else {
-            if (param0 != -82) {
-              return;
-            } else {
-              sn.field_c = sn.field_c + 1;
-              return;
-            }
-          }
-        } else {
-          if (param0 != -82) {
+        if (0 - lc.field_a == sn.field_c) {
             return;
-          } else {
-            sn.field_c = sn.field_c + 1;
+        }
+        if (~(250 + -lc.field_a) != ~sn.field_c) {
             return;
-          }
         }
     }
 
@@ -60,7 +42,7 @@ final class vg {
     }
 
     final static String c(byte param0) {
-        int var2 = -3 / ((param0 - 52) / 52);
+        int var2 = -3;
         String var1 = "";
         if (!(null == mk.field_b)) {
             var1 = mk.field_b.i(-1);
@@ -76,12 +58,6 @@ final class vg {
 
     public static void a(int param0) {
         field_a = null;
-        if (param0 != 8877) {
-            field_a = null;
-            field_b = null;
-            field_c = null;
-            return;
-        }
         field_b = null;
         field_c = null;
     }

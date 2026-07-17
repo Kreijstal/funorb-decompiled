@@ -126,13 +126,13 @@ final class jg extends mf {
               var3 = 1 + (255 & var2_ref.f(255));
               var4 = 0;
               L1: while (true) {
-                if ((wb.field_f ^ -1) >= (var4 ^ -1)) {
+                if (~wb.field_f >= ~var4) {
                   var4 = 0;
                   L2: while (true) {
-                    if ((var4 ^ -1) <= (wb.field_f ^ -1)) {
+                    if (~var4 <= ~wb.field_f) {
                       var4 = 0;
                       L3: while (true) {
-                        if ((var4 ^ -1) <= (wb.field_f ^ -1)) {
+                        if (~var4 <= ~wb.field_f) {
                           var4 = 0;
                           L4: while (true) {
                             if (wb.field_f <= var4) {
@@ -140,7 +140,7 @@ final class jg extends mf {
                               ic.field_b = new int[var3];
                               var4 = 1;
                               L5: while (true) {
-                                if ((var3 ^ -1) >= (var4 ^ -1)) {
+                                if (~var3 >= ~var4) {
                                   var2_ref.field_m = 0;
                                   var4 = 0;
                                   L6: while (true) {
@@ -166,8 +166,8 @@ final class jg extends mf {
                                         if (stackIn_41_0 != (stackIn_41_1 ^ stackIn_41_2)) {
                                           var12 = 0;
                                           L8: while (true) {
-                                            if ((var5 ^ -1) >= (var12 ^ -1)) {
-                                              if (-1 == (var11 & 2 ^ -1)) {
+                                            if (~var5 >= ~var12) {
+                                              if ((var11 & 2) == 0) {
                                                 break L7;
                                               } else {
                                                 var12 = 0;
@@ -177,7 +177,7 @@ final class jg extends mf {
                                                   } else {
                                                     var13 = 0;
                                                     L10: while (true) {
-                                                      if ((var13 ^ -1) <= (var6 ^ -1)) {
+                                                      if (~var13 <= ~var6) {
                                                         var12++;
                                                         continue L9;
                                                       } else {
@@ -188,7 +188,7 @@ final class jg extends mf {
                                                           stackOut_69_0 = var10;
                                                           stackIn_72_0 = stackOut_69_0;
                                                           stackIn_70_0 = stackOut_69_0;
-                                                          if (0 == (var14 ^ -1)) {
+                                                          if (var14 == -1) {
                                                             stackOut_72_0 = stackIn_72_0;
                                                             stackOut_72_1 = 0;
                                                             stackIn_73_0 = stackOut_72_0;
@@ -213,7 +213,7 @@ final class jg extends mf {
                                             } else {
                                               var13 = 0;
                                               L12: while (true) {
-                                                if ((var6 ^ -1) >= (var13 ^ -1)) {
+                                                if (~var6 >= ~var13) {
                                                   var12++;
                                                   continue L8;
                                                 } else {
@@ -233,7 +233,7 @@ final class jg extends mf {
                                               } else {
                                                 var12 = 0;
                                                 L14: while (true) {
-                                                  if ((var12 ^ -1) <= (var7 ^ -1)) {
+                                                  if (~var12 <= ~var7) {
                                                     break L7;
                                                   } else {
                                                     L15: {
@@ -279,7 +279,7 @@ final class jg extends mf {
                                 } else {
                                   L16: {
                                     ic.field_b[var4] = var2_ref.d((byte) 125);
-                                    if ((ic.field_b[var4] ^ -1) == -1) {
+                                    if (ic.field_b[var4] == 0) {
                                       ic.field_b[var4] = 1;
                                       break L16;
                                     } else {
@@ -411,7 +411,7 @@ final class jg extends mf {
                 L1: {
                   if (!param0.equals((Object) (Object) ((jg) this).field_l)) {
                     L2: {
-                      var4 = pl.a(param1 ^ 0, param0);
+                      var4 = pl.a(param1, param0);
                       if (var4 == null) {
                         break L2;
                       } else {
@@ -544,7 +544,7 @@ final class jg extends mf {
                   break L2;
                 } else {
                   L3: {
-                    var3 = pl.a(param0 ^ 0, param1);
+                    var3 = pl.a(param0, param1);
                     if (null == var3) {
                       break L3;
                     } else {

@@ -58,14 +58,14 @@ final class qv extends ci {
               if (var4 >= ns.field_g) {
                 break L1;
               } else {
-                var5 = (ht.field_Fb[var4] << 1898795372) / ((qv) this).field_q + ((qv) this).field_n;
-                var6 = (sj.field_b[param1] << 155959180) / ((qv) this).field_q + ((qv) this).field_p;
+                var5 = (ht.field_Fb[var4] << 12) / ((qv) this).field_q + ((qv) this).field_n;
+                var6 = (sj.field_b[param1] << 12) / ((qv) this).field_q + ((qv) this).field_p;
                 var7 = var5;
                 var8 = var6;
                 var9 = var5;
                 var10 = var6;
-                var11 = var5 * var5 >> 378726476;
-                var12 = var6 * var6 >> 1320982476;
+                var11 = var5 * var5 >> 12;
+                var12 = var6 * var6 >> 12;
                 var13 = 0;
                 L3: while (true) {
                   L4: {
@@ -75,10 +75,10 @@ final class qv extends ci {
                       if (((qv) this).field_r <= var13) {
                         break L4;
                       } else {
-                        var10 = 2 * (var9 * var10 >> 156095276) - -var8;
+                        var10 = 2 * (var9 * var10 >> 12) - -var8;
                         var9 = var7 + var11 - var12;
-                        var11 = var9 * var9 >> 1229981932;
-                        var12 = var10 * var10 >> 1074359500;
+                        var11 = var9 * var9 >> 12;
+                        var12 = var10 * var10 >> 12;
                         var13++;
                         continue L3;
                       }
@@ -102,7 +102,7 @@ final class qv extends ci {
                     } else {
                       stackOut_10_0 = (int[]) (Object) stackIn_10_0;
                       stackOut_10_1 = stackIn_10_1;
-                      stackOut_10_2 = (var13 << -538468084) / ((qv) this).field_r;
+                      stackOut_10_2 = (var13 << 12) / ((qv) this).field_r;
                       stackIn_12_0 = stackOut_10_0;
                       stackIn_12_1 = stackOut_10_1;
                       stackIn_12_2 = stackOut_10_2;
@@ -145,45 +145,92 @@ final class qv extends ci {
     }
 
     final void a(byte param0, uia param1, int param2) {
-        int var4 = 0;
+        int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
         var5 = TombRacer.field_G ? 1 : 0;
-        if (param0 == 107) {
+        try {
           L0: {
-            var4 = param2;
-            if (-1 != var4) {
-              if (1 == var4) {
-                ((qv) this).field_r = param1.d(121);
-                break L0;
-              } else {
-                if (-3 == var4) {
-                  ((qv) this).field_n = param1.d(124);
-                  break L0;
-                } else {
-                  if (3 == var4) {
-                    ((qv) this).field_p = param1.d(121);
-                    break L0;
+            if (param0 == 107) {
+              L1: {
+                var4_int = param2;
+                if (var4_int != 0) {
+                  if (1 == var4_int) {
+                    ((qv) this).field_r = param1.d(121);
+                    break L1;
                   } else {
-                    break L0;
+                    if (var4_int == 2) {
+                      ((qv) this).field_n = param1.d(124);
+                      break L1;
+                    } else {
+                      if (3 == var4_int) {
+                        ((qv) this).field_p = param1.d(121);
+                        break L1;
+                      } else {
+                        break L1;
+                      }
+                    }
                   }
+                } else {
+                  ((qv) this).field_q = param1.d(param0 + 16);
+                  break L1;
                 }
               }
-            } else {
-              ((qv) this).field_q = param1.d(param0 + 16);
               break L0;
+            } else {
+              return;
             }
           }
-          return;
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var4 = decompiledCaughtException;
+            stackOut_14_0 = (RuntimeException) var4;
+            stackOut_14_1 = new StringBuilder().append("qv.A(").append(param0).append(44);
+            stackIn_16_0 = stackOut_14_0;
+            stackIn_16_1 = stackOut_14_1;
+            stackIn_15_0 = stackOut_14_0;
+            stackIn_15_1 = stackOut_14_1;
+            if (param1 == null) {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "null";
+              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_1 = stackOut_16_1;
+              stackIn_17_2 = stackOut_16_2;
+              break L2;
+            } else {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "{...}";
+              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_1 = stackOut_15_1;
+              stackIn_17_2 = stackOut_15_2;
+              break L2;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param2 + 41);
         }
     }
 
     public static void a(boolean param0) {
         field_o = null;
-        if (!param0) {
-            int[][] discarded$0 = qv.a(false, 72, -128, 0.8583102226257324f, -87, (byte) 7, -60, -76, -111);
-        }
     }
 
     public qv() {

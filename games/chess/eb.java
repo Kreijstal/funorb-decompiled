@@ -34,9 +34,9 @@ final class eb extends pk {
 
     private final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
-        wb.a(((eb) this).field_i, ((eb) this).field_k, ((eb) this).field_l, ((eb) this).field_c, -1 + (((eb) this).field_c >> 1381354337), param8, param5);
-        var11 = ((eb) this).field_c + -(((eb) this).field_K << 1226827041);
-        wb.a(((eb) this).field_K + ((eb) this).field_i, ((eb) this).field_k - -((eb) this).field_K, ((eb) this).field_l + -(((eb) this).field_K << -2126489599), var11, (var11 >> -1825822559) + -1, param4, param3);
+        wb.a(((eb) this).field_i, ((eb) this).field_k, ((eb) this).field_l, ((eb) this).field_c, -1 + (((eb) this).field_c >> 1), param8, param5);
+        var11 = ((eb) this).field_c + -(((eb) this).field_K << 1);
+        wb.a(((eb) this).field_K + ((eb) this).field_i, ((eb) this).field_k - -((eb) this).field_K, ((eb) this).field_l + -(((eb) this).field_K << 1), var11, (var11 >> 1) + -1, param4, param3);
         wb.b(((eb) this).field_n);
         if (param6 != 12054) {
           return;
@@ -59,67 +59,34 @@ final class eb extends pk {
     final static void a(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         var5 = Chess.field_G;
-        if (param3 == 3) {
-          if (0 == param0) {
-            if (param1 == 0) {
-              if (param1 != 1) {
-                if (param1 != 6) {
-                  if (-6 == (param1 ^ -1)) {
-                    wf.a(um.field_l[1], 44);
-                    return;
-                  } else {
-                    wf.a(um.field_l[2], param3 ^ 107);
-                    return;
-                  }
-                } else {
+        if (0 == param0) {
+          if (param1 == 0) {
+            if (param1 != 1) {
+              if (param1 != 6) {
+                if (param1 == 5) {
                   wf.a(um.field_l[1], 44);
+                  return;
+                } else {
+                  wf.a(um.field_l[2], 104);
                   return;
                 }
               } else {
-                wf.a(um.field_l[3], -65);
+                wf.a(um.field_l[1], 44);
                 return;
               }
             } else {
-              wf.a(um.field_l[8], 114);
+              wf.a(um.field_l[3], -65);
               return;
             }
           } else {
-            ib.field_a = bc.field_b;
-            rf.b(80, bc.field_b / 3);
-            mf.a(gl.field_b, 0);
+            wf.a(um.field_l[8], 114);
             return;
           }
         } else {
-          field_y = 58;
-          if (0 == param0) {
-            if (param1 == 0) {
-              if (param1 != 1) {
-                if (param1 != 6) {
-                  if (-6 == (param1 ^ -1)) {
-                    wf.a(um.field_l[1], 44);
-                    return;
-                  } else {
-                    wf.a(um.field_l[2], param3 ^ 107);
-                    return;
-                  }
-                } else {
-                  wf.a(um.field_l[1], 44);
-                  return;
-                }
-              } else {
-                wf.a(um.field_l[3], -65);
-                return;
-              }
-            } else {
-              wf.a(um.field_l[8], 114);
-              return;
-            }
-          } else {
-            ib.field_a = bc.field_b;
-            rf.b(80, bc.field_b / 3);
-            mf.a(gl.field_b, 0);
-            return;
-          }
+          ib.field_a = bc.field_b;
+          rf.b(80, bc.field_b / 3);
+          mf.a(gl.field_b, 0);
+          return;
         }
     }
 
@@ -328,7 +295,7 @@ final class eb extends pk {
             if (null != ((eb) this).field_q) {
               var9 = 56 % ((-64 - param0) / 58);
               if (((eb) this).a((byte) -9)) {
-                if (-1 != (wh.field_f ^ -1)) {
+                if (wh.field_f != 0) {
                   var5 = bk.field_k & ((eb) this).field_u;
                   var2 = ((eb) this).field_p & bk.field_k;
                   var4 = ((eb) this).field_E;
@@ -378,10 +345,62 @@ final class eb extends pk {
     }
 
     final static boolean a(CharSequence param0, int param1) {
-        if (param1 != -1) {
-            return true;
+        RuntimeException var2 = null;
+        boolean stackIn_3_0 = false;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        boolean stackOut_2_0 = false;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            stackOut_2_0 = fh.a(param0, 5, false);
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var2 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_1 = new StringBuilder().append("eb.H(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L1;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L1;
+            }
+          }
+          throw fk.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + -1 + 41);
         }
-        return fh.a(param0, 5, false);
+        return stackIn_3_0;
     }
 
     eb(int param0, int param1, int param2, int param3, String param4) {
@@ -409,11 +428,15 @@ final class eb extends pk {
         ((eb) this).field_D = -1;
         ((eb) this).field_O = -1;
         ((eb) this).field_K = 2;
-        ((eb) this).field_c = param3;
-        ((eb) this).field_l = param2;
-        ((eb) this).field_q = param4;
-        ((eb) this).field_k = param1;
-        ((eb) this).field_i = param0;
+        try {
+            ((eb) this).field_c = param3;
+            ((eb) this).field_l = param2;
+            ((eb) this).field_q = param4;
+            ((eb) this).field_k = param1;
+            ((eb) this).field_i = param0;
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "eb.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

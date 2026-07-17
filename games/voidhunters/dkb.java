@@ -6,7 +6,7 @@ final class dkb implements dja {
     static String field_a;
 
     public static void b(byte param0) {
-        int var1 = 94 / ((param0 - -39) / 59);
+        int var1 = -94;
         field_a = null;
     }
 

@@ -12,20 +12,10 @@ final class ra {
     public static void a(boolean param0) {
         field_e = null;
         field_c = null;
-        if (param0) {
-          ra.a(false);
-          field_d = null;
-          field_a = null;
-          field_b = null;
-          field_f = null;
-          return;
-        } else {
-          field_d = null;
-          field_a = null;
-          field_b = null;
-          field_f = null;
-          return;
-        }
+        field_d = null;
+        field_a = null;
+        field_b = null;
+        field_f = null;
     }
 
     final static void a(byte param0) {
@@ -36,12 +26,10 @@ final class ra {
     }
 
     final static void a(int param0, oi param1, int param2) {
-        int var4 = 0;
-        oq var5 = null;
-        var5 = ej.field_j;
+        oq var5 = ej.field_j;
         var5.b(false, param0);
         var5.field_v = var5.field_v + 1;
-        var4 = var5.field_v;
+        int var4 = var5.field_v;
         var5.a(1, false);
         var5.a(param1.field_t, false);
         var5.c(-128, param1.field_l);
@@ -49,12 +37,11 @@ final class ra {
         var5.a(true, param1.field_m);
         var5.a(true, param1.field_s);
         var5.a(true, param1.field_p);
-        int discarded$47 = var5.d(-1, var4);
-        if (param2 > -23) {
-          return;
-        } else {
-          var5.b(var5.field_v + -var4, true);
-          return;
+        int discarded$0 = var5.d(-1, var4);
+        try {
+            var5.b(var5.field_v + -var4, true);
+        } catch (RuntimeException runtimeException) {
+            throw wm.a((Throwable) (Object) runtimeException, "ra.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + -102 + 41);
         }
     }
 

@@ -19,22 +19,18 @@ final class la {
     int field_m;
 
     final static int a(byte param0) {
-        int var1 = 66 / ((param0 - -40) / 60);
+        int var1 = -66;
         return -bf.field_b + d.field_e;
     }
 
     final static int a(int param0, byte param1) {
-        if (param1 != 86) {
-            field_f = false;
-            return re.field_f[param0 & 2047];
-        }
         return re.field_f[param0 & 2047];
     }
 
     final int b(byte param0) {
         if (!((la) this).field_k) {
           if (((la) this).field_n != 2) {
-            if ((((la) this).field_a ^ -1L) != (rk.field_l ^ -1L)) {
+            if (~((la) this).field_a != ~rk.field_l) {
               if (ke.field_d != 2) {
                 if (param0 < 94) {
                   int discarded$4 = ((la) this).b((byte) -110);
@@ -59,7 +55,7 @@ final class la {
             }
           } else {
             if (0 >= ((la) this).field_h) {
-              if ((((la) this).field_a ^ -1L) != (rk.field_l ^ -1L)) {
+              if (~((la) this).field_a != ~rk.field_l) {
                 if (ke.field_d != 2) {
                   if (param0 < 94) {
                     int discarded$6 = ((la) this).b((byte) -110);
@@ -92,15 +88,11 @@ final class la {
     }
 
     final static int a(int param0) {
-        if (param0 != 23940) {
-            field_l = null;
-            return 1;
-        }
         return 1;
     }
 
     public static void c(byte param0) {
-        int var1 = -38 / ((0 - param0) / 45);
+        int var1 = -19;
         field_j = null;
         field_b = null;
         field_l = null;

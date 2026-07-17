@@ -14,22 +14,46 @@ final class ul extends nm {
     int field_q;
 
     final static void a(int param0) {
-        int var1 = 0;
+        int var1_int = 0;
+        RuntimeException var1 = null;
+        int var2 = 0;
         double var3 = 0.0;
-        int var5 = BrickABrac.field_J ? 1 : 0;
-        mg.c();
-        lc.field_k = 11;
-        v.field_a = new int[260];
-        int var2 = -120 / ((param0 - 32) / 49);
-        for (var1 = 0; (var1 ^ -1) > -257; var1++) {
-            var3 = 15.0;
-            v.field_a[var1] = (int)(Math.pow((double)((float)var1 / 256.0f), var3) * 255.0);
-        }
-        int var6 = 256;
-        var1 = var6;
-        while (v.field_a.length > var6) {
-            v.field_a[var6] = 255;
-            var6++;
+        int var5 = 0;
+        int var6 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var5 = BrickABrac.field_J ? 1 : 0;
+        try {
+          L0: {
+            mg.c();
+            lc.field_k = 11;
+            v.field_a = new int[260];
+            var2 = -120 / ((param0 - 32) / 49);
+            var1_int = 0;
+            L1: while (true) {
+              if (var1_int >= 256) {
+                var6 = 256;
+                var1_int = var6;
+                L2: while (true) {
+                  if (v.field_a.length <= var6) {
+                    break L0;
+                  } else {
+                    v.field_a[var6] = 255;
+                    var6++;
+                    continue L2;
+                  }
+                }
+              } else {
+                var3 = 15.0;
+                v.field_a[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var3) * 255.0);
+                var1_int++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw qb.a((Throwable) (Object) var1, "ul.D(" + param0 + 41);
         }
     }
 
@@ -37,9 +61,6 @@ final class ul extends nm {
         field_l = null;
         field_k = null;
         field_m = null;
-        if (param0 >= -41) {
-            return;
-        }
         field_r = null;
         field_j = null;
     }
@@ -52,8 +73,12 @@ final class ul extends nm {
     }
 
     final static void a(int param0, vm param1, int param2, boolean param3, int param4) {
-        dc.field_e.a(param2, !param3 ? true : false, param0, (byte) 22, 1000000, param1);
-        int var5 = 88 / ((-16 - param4) / 38);
+        try {
+            dc.field_e.a(param2, !param3 ? true : false, param0, (byte) 22, 1000000, param1);
+            int var5_int = 44;
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) (Object) runtimeException, "ul.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + -104 + 41);
+        }
     }
 
     final static int a(int param0, int param1) {
@@ -68,8 +93,9 @@ final class ul extends nm {
         if (param0) {
             return false;
         }
+        int fieldTemp$0 = ((ul) this).field_q - 1;
         ((ul) this).field_q = ((ul) this).field_q - 1;
-        return ((ul) this).field_q - 1 != 0 ? true : false;
+        return fieldTemp$0 != 0 ? true : false;
     }
 
     ul(int param0, int param1, int param2) {

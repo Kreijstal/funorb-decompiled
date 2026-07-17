@@ -17,7 +17,7 @@ final class pd {
         field_f = null;
         field_i = null;
         field_g = null;
-        int var1 = -73 / ((42 - param0) / 62);
+        int var1 = -36;
         field_h = null;
         field_b = null;
         field_d = null;
@@ -25,42 +25,35 @@ final class pd {
     }
 
     final static void a(int param0, byte param1) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
+        RuntimeException decompiledCaughtException = null;
         var3 = client.field_A ? 1 : 0;
-        j.a((byte) -33, true, og.field_eb, bg.field_d, param0, ge.field_b, 0);
-        var2 = 0;
-        L0: while (true) {
-          if (og.field_eb <= var2) {
-            if (param1 != 6) {
-              L1: {
-                field_e = null;
+        try {
+          L0: {
+            j.a((byte) -33, true, og.field_eb, bg.field_d, param0, ge.field_b, 0);
+            var2_int = 0;
+            L1: while (true) {
+              if (og.field_eb <= var2_int) {
                 j.a((byte) -33, false, param0 + og.field_eb, rf.field_g, param0 - -param0, mf.field_Q, param0);
                 if (og.field_eb > param0) {
                   og.field_eb = param0;
-                  break L1;
+                  break L0;
                 } else {
-                  break L1;
+                  return;
                 }
+              } else {
+                ch.field_a[var2_int + param0] = var2_int;
+                var2_int++;
+                continue L1;
               }
-              return;
-            } else {
-              L2: {
-                j.a((byte) -33, false, param0 + og.field_eb, rf.field_g, param0 - -param0, mf.field_Q, param0);
-                if (og.field_eb > param0) {
-                  og.field_eb = param0;
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              return;
             }
-          } else {
-            ch.field_a[var2 + param0] = var2;
-            var2++;
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw dh.a((Throwable) (Object) var2, "pd.A(" + param0 + 44 + 6 + 41);
         }
     }
 

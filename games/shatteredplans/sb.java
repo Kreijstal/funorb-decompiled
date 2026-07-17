@@ -16,11 +16,15 @@ final class sb extends oh {
     float field_l;
 
     final static void a(byte param0, java.awt.Component param1) {
-        param1.removeMouseListener((java.awt.event.MouseListener) (Object) pd.field_j);
-        param1.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) pd.field_j);
-        param1.removeFocusListener((java.awt.event.FocusListener) (Object) pd.field_j);
-        v.field_d = 0;
-        int var2 = -125 % ((param0 - -60) / 36);
+        try {
+            param1.removeMouseListener((java.awt.event.MouseListener) (Object) pd.field_j);
+            param1.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) pd.field_j);
+            param1.removeFocusListener((java.awt.event.FocusListener) (Object) pd.field_j);
+            v.field_d = 0;
+            int var2_int = -125 % ((param0 - -60) / 36);
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "sb.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     sb(float param0, float param1, float param2, float param3, float param4, float param5, float param6, float param7) {

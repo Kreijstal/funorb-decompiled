@@ -24,7 +24,7 @@ final class hh {
         int var12 = 0;
         var12 = SteelSentinels.field_G;
         if (param0 > 0L) {
-          if ((param0 ^ -1L) > -6582952005840035282L) {
+          if (param0 < 6582952005840035281L) {
             if (0L == param0 % 37L) {
               return null;
             } else {
@@ -35,7 +35,7 @@ final class hh {
                 if (var5 == 0L) {
                   var7 = new StringBuilder(var3);
                   L1: while (true) {
-                    if (-1L == (param0 ^ -1L)) {
+                    if (param0 == 0L) {
                       StringBuilder discarded$2 = var7.reverse();
                       var7.setCharAt(0, Character.toUpperCase(var7.charAt(0)));
                       return var7.toString();
@@ -81,9 +81,6 @@ final class hh {
     }
 
     public static void a(boolean param0) {
-        if (param0) {
-            return;
-        }
         field_a = null;
         field_e = null;
         field_d = null;
@@ -93,13 +90,10 @@ final class hh {
     }
 
     final static void a(String param0, String param1, int param2) {
-        if (param2 != 50) {
-          int discarded$2 = hh.a(28, true, (byte) -92, -82);
-          ma.a(false, (byte) -65, param0, param1);
-          return;
-        } else {
-          ma.a(false, (byte) -65, param0, param1);
-          return;
+        try {
+            ma.a(false, (byte) -65, param0, param1);
+        } catch (RuntimeException runtimeException) {
+            throw ci.a((Throwable) (Object) runtimeException, "hh.C(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + 50 + 41);
         }
     }
 

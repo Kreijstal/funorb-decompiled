@@ -14,9 +14,6 @@ final class f extends gb {
     public static void c(byte param0) {
         field_A = null;
         field_w = null;
-        if (param0 != 87) {
-            field_w = null;
-        }
         field_x = null;
         field_t = null;
     }

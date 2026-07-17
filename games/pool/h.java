@@ -61,7 +61,7 @@ final class h {
                   var7 = 0;
                   L2: while (true) {
                     if (var7 >= var4) {
-                      ((h) this).field_c[var6] = var3 ^ -1;
+                      ((h) this).field_c[var6] = ~var3;
                       if (var6 >= var2) {
                         var2 = var6 + 1;
                         var3++;
@@ -185,7 +185,7 @@ final class h {
         while (((h) this).field_c[var1] >= 0) {
             var1 = gm.c() != 0 ? ((h) this).field_c[var1] : var1 + 1;
         }
-        return ((h) this).field_c[var1] ^ -1;
+        return ~((h) this).field_c[var1];
     }
 
     h() {

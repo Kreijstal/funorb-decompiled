@@ -23,9 +23,6 @@ final class ik implements Iterator {
     private final void b(int param0) {
         ((ik) this).field_d = 1;
         ((ik) this).field_h = ((ik) this).field_e.field_d[0].field_e;
-        if (param0 > -71) {
-            return;
-        }
         ((ik) this).field_k = null;
     }
 
@@ -37,8 +34,10 @@ final class ik implements Iterator {
             if (((ik) this).field_e.field_c <= ((ik) this).field_d) {
               return false;
             } else {
+              nm[] fieldTemp$16 = ((ik) this).field_e.field_d;
+              int fieldTemp$17 = ((ik) this).field_d;
               ((ik) this).field_d = ((ik) this).field_d + 1;
-              if (((ik) this).field_e.field_d[((ik) this).field_d].field_e != ((ik) this).field_e.field_d[((ik) this).field_d + -1]) {
+              if (fieldTemp$16[fieldTemp$17].field_e != ((ik) this).field_e.field_d[((ik) this).field_d + -1]) {
                 ((ik) this).field_h = ((ik) this).field_e.field_d[((ik) this).field_d + -1].field_e;
                 return true;
               } else {
@@ -65,8 +64,10 @@ final class ik implements Iterator {
             if (((ik) this).field_d >= ((ik) this).field_e.field_c) {
                 return null;
             }
+            nm[] fieldTemp$0 = ((ik) this).field_e.field_d;
+            int fieldTemp$1 = ((ik) this).field_d;
             ((ik) this).field_d = ((ik) this).field_d + 1;
-            var1 = ((ik) this).field_e.field_d[((ik) this).field_d].field_e;
+            var1 = fieldTemp$0[fieldTemp$1].field_e;
         } while (((ik) this).field_e.field_d[((ik) this).field_d + -1] == var1);
         ((ik) this).field_h = var1.field_e;
         ((ik) this).field_k = var1;
@@ -74,84 +75,114 @@ final class ik implements Iterator {
     }
 
     final static boolean a(boolean param0) {
-        int stackIn_6_0 = 0;
-        int stackOut_4_0;
-        int stackOut_5_0;
-        L0: {
-          if (!param0) {
-            break L0;
-          } else {
-            field_g = null;
-            break L0;
-          }
-        }
-        L1: {
-          L2: {
-            if (null == eq.field_g) {
-              break L2;
-            } else {
-              if (q.field_i != rf.field_b) {
-                break L2;
-              } else {
-                stackOut_4_0 = 1;
-                stackIn_6_0 = stackOut_4_0;
-                break L1;
-              }
-            }
-          }
-          stackOut_5_0 = 0;
-          stackIn_6_0 = stackOut_5_0;
-          break L1;
-        }
-        return stackIn_6_0 != 0;
+        return null != eq.field_g && q.field_i == rf.field_b;
     }
 
     final static int a(int param0, gb param1) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
-        L0: {
-          var3 = BrickABrac.field_J ? 1 : 0;
-          var2 = cn.field_d;
-          if (-3 != (param1.field_c ^ -1)) {
-            if (-5 != (param1.field_c ^ -1)) {
-              if ((param1.field_k ^ -1L) != (oc.field_p ^ -1L)) {
-                var2 = r.field_C[param1.field_c];
-                break L0;
-              } else {
-                var2 = ki.field_i[param1.field_c];
-                break L0;
-              }
-            } else {
-              var2 = r.field_C[param1.field_c];
-              break L0;
-            }
-          } else {
-            if (!param1.field_e) {
-              L1: {
-                if (param1.field_f != 0) {
-                  break L1;
-                } else {
-                  if (param1.field_d == 0) {
-                    var2 = ki.field_i[param1.field_c];
-                    break L0;
+        int stackIn_16_0 = 0;
+        int stackIn_18_0 = 0;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        String stackIn_22_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_17_0 = 0;
+        int stackOut_15_0 = 0;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
+        var3 = BrickABrac.field_J ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              var2_int = cn.field_d;
+              if (param1.field_c != 2) {
+                if (param1.field_c != 4) {
+                  if (~param1.field_k != ~oc.field_p) {
+                    var2_int = r.field_C[param1.field_c];
+                    break L1;
                   } else {
+                    var2_int = ki.field_i[param1.field_c];
                     break L1;
                   }
+                } else {
+                  var2_int = r.field_C[param1.field_c];
+                  break L1;
+                }
+              } else {
+                if (!param1.field_e) {
+                  L2: {
+                    if (param1.field_f != 0) {
+                      break L2;
+                    } else {
+                      if (param1.field_d == 0) {
+                        var2_int = ki.field_i[param1.field_c];
+                        break L1;
+                      } else {
+                        break L2;
+                      }
+                    }
+                  }
+                  var2_int = r.field_C[param1.field_c];
+                  break L1;
+                } else {
+                  var2_int = cn.field_d;
+                  break L1;
                 }
               }
-              var2 = r.field_C[param1.field_c];
+            }
+            if (param0 == -31126) {
+              stackOut_17_0 = var2_int;
+              stackIn_18_0 = stackOut_17_0;
               break L0;
             } else {
-              var2 = cn.field_d;
-              break L0;
+              stackOut_15_0 = -27;
+              stackIn_16_0 = stackOut_15_0;
+              return stackIn_16_0;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2 = decompiledCaughtException;
+            stackOut_19_0 = (RuntimeException) var2;
+            stackOut_19_1 = new StringBuilder().append("ik.F(").append(param0).append(44);
+            stackIn_21_0 = stackOut_19_0;
+            stackIn_21_1 = stackOut_19_1;
+            stackIn_20_0 = stackOut_19_0;
+            stackIn_20_1 = stackOut_19_1;
+            if (param1 == null) {
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "null";
+              stackIn_22_0 = stackOut_21_0;
+              stackIn_22_1 = stackOut_21_1;
+              stackIn_22_2 = stackOut_21_2;
+              break L3;
+            } else {
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "{...}";
+              stackIn_22_0 = stackOut_20_0;
+              stackIn_22_1 = stackOut_20_1;
+              stackIn_22_2 = stackOut_20_2;
+              break L3;
+            }
+          }
+          throw qb.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 41);
         }
-        if (param0 == -31126) {
-          return var2;
-        } else {
-          return -27;
-        }
+        return stackIn_18_0;
     }
 
     public final void remove() {
@@ -164,53 +195,79 @@ final class ik implements Iterator {
 
     final static boolean a(int param0) {
         bg var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         bg var5 = null;
+        int stackIn_4_0 = 0;
+        int stackIn_10_0 = 0;
+        int stackIn_14_0 = 0;
+        int stackIn_17_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_3_0 = 0;
+        int stackOut_16_0 = 0;
+        int stackOut_9_0 = 0;
+        int stackOut_13_0 = 0;
         var4 = BrickABrac.field_J ? 1 : 0;
-        var5 = (bg) (Object) mf.field_i.d(-78);
-        var1 = var5;
-        if (var1 == null) {
-          return false;
-        } else {
-          var2 = 0;
-          var3 = -90 / ((param0 - -28) / 50);
-          L0: while (true) {
-            if (var2 >= var1.field_s) {
-              return true;
+        try {
+          L0: {
+            var5 = (bg) (Object) mf.field_i.d(-78);
+            var1 = var5;
+            if (var1 == null) {
+              stackOut_3_0 = 0;
+              stackIn_4_0 = stackOut_3_0;
+              return stackIn_4_0 != 0;
             } else {
-              L1: {
-                if (var5.field_j[var2] == null) {
-                  break L1;
+              var2 = 0;
+              var3 = -45;
+              L1: while (true) {
+                if (var2 >= var1.field_s) {
+                  stackOut_16_0 = 1;
+                  stackIn_17_0 = stackOut_16_0;
+                  break L0;
                 } else {
-                  if (0 != var5.field_j[var2].field_f) {
-                    break L1;
-                  } else {
-                    return false;
+                  L2: {
+                    if (var5.field_j[var2] == null) {
+                      break L2;
+                    } else {
+                      if (0 != var5.field_j[var2].field_f) {
+                        break L2;
+                      } else {
+                        stackOut_9_0 = 0;
+                        stackIn_10_0 = stackOut_9_0;
+                        return stackIn_10_0 != 0;
+                      }
+                    }
                   }
-                }
-              }
-              if (var5.field_l[var2] != null) {
-                if (var5.field_l[var2].field_f == 0) {
-                  return false;
-                } else {
+                  L3: {
+                    if (var5.field_l[var2] == null) {
+                      break L3;
+                    } else {
+                      if (var5.field_l[var2].field_f != 0) {
+                        break L3;
+                      } else {
+                        stackOut_13_0 = 0;
+                        stackIn_14_0 = stackOut_13_0;
+                        return stackIn_14_0 != 0;
+                      }
+                    }
+                  }
                   var2++;
-                  continue L0;
+                  continue L1;
                 }
-              } else {
-                var2++;
-                continue L0;
               }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw qb.a((Throwable) (Object) var1_ref, "ik.C(" + 104 + 41);
         }
+        return stackIn_17_0 != 0;
     }
 
     public static void c(int param0) {
-        if (param0 > -8) {
-            return;
-        }
         field_g = null;
         field_f = null;
         field_i = null;
@@ -221,8 +278,8 @@ final class ik implements Iterator {
 
     final static boolean a(byte param0, char param1) {
         int stackIn_9_0 = 0;
-        int stackOut_8_0;
-        int stackOut_7_0;
+        int stackOut_8_0 = 0;
+        int stackOut_7_0 = 0;
         L0: {
           if (param0 == -9) {
             break L0;
@@ -262,8 +319,12 @@ final class ik implements Iterator {
 
     ik(ji param0) {
         ((ik) this).field_k = null;
-        ((ik) this).field_e = param0;
-        this.b(-101);
+        try {
+            ((ik) this).field_e = param0;
+            this.b(-101);
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) (Object) runtimeException, "ik.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

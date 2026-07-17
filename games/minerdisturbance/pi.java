@@ -34,51 +34,42 @@ class pi {
         field_e = null;
         field_l = null;
         field_k = null;
-        if (param0 != 2) {
-          return;
-        } else {
-          field_g = null;
-          field_j = null;
-          field_h = null;
-          return;
-        }
+        field_g = null;
+        field_j = null;
+        field_h = null;
     }
 
     final static void a(boolean param0, int param1) {
         int var3 = 0;
         tm var4 = null;
         var3 = MinerDisturbance.field_ab;
-        if (param1 == 2) {
-          var4 = (tm) (Object) ec.field_c.b(106);
+        var4 = (tm) (Object) ec.field_c.b(106);
+        if (var4 == null) {
+          var4 = (tm) (Object) ok.field_b.b(127);
           if (var4 == null) {
-            var4 = (tm) (Object) ok.field_b.b(127);
-            if (var4 == null) {
-              ja.field_u = ja.field_u + 1;
-              if (-1501 > (ja.field_u ^ -1)) {
-                if (ke.field_X[23]) {
-                  ag.a(true, 22, -1, -1);
-                  return;
-                } else {
-                  ag.a(true, 23, -1, -1);
-                  return;
-                }
+            ja.field_u = ja.field_u + 1;
+            if (ja.field_u > 1500) {
+              if (ke.field_X[23]) {
+                ag.a(true, 22, -1, -1);
+                return;
               } else {
+                ag.a(true, 23, -1, -1);
                 return;
               }
             } else {
-              var4.a(param0, (byte) 37);
-              if (!var4.e(3)) {
-                return;
-              } else {
-                pi discarded$2 = ok.field_b.e(63854);
-                return;
-              }
+              return;
             }
           } else {
-            var4.a(param0, (byte) 41);
-            return;
+            var4.a(param0, (byte) 37);
+            if (!var4.e(3)) {
+              return;
+            } else {
+              pi discarded$2 = ok.field_b.e(63854);
+              return;
+            }
           }
         } else {
+          var4.a(param0, (byte) 41);
           return;
         }
     }
@@ -149,7 +140,7 @@ class pi {
         field_m[21] = 3;
         var0 = 0;
         L0: while (true) {
-          if (-35 >= (var0 ^ -1)) {
+          if (var0 >= 34) {
             var1 = 14;
             var0 = var1;
             L1: while (true) {

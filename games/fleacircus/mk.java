@@ -18,11 +18,6 @@ final class mk {
         field_c = null;
         field_d = null;
         field_a = null;
-        if (param0 <= 85) {
-            field_i = null;
-            field_i = null;
-            return;
-        }
         field_i = null;
     }
 

@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.lang.String;
+
 final class tg extends pj {
     static o field_J;
     static o field_I;
@@ -9,49 +11,169 @@ final class tg extends pj {
     public static void a(int param0) {
         field_K = null;
         field_I = null;
-        if (param0 != 22722) {
-            return;
-        }
         field_J = null;
     }
 
     final static String a(boolean param0, int param1, CharSequence param2) {
         String var3 = null;
+        RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
+        Object stackIn_3_0 = null;
+        String stackIn_7_0 = null;
+        String stackIn_13_0 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_19_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        String stackOut_6_0 = null;
+        String stackOut_12_0 = null;
+        Object stackOut_2_0 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
         var5 = SolKnight.field_L ? 1 : 0;
-        var3 = uc.a(param0, param2, 0);
-        if (param1 <= -95) {
-          if (var3 != null) {
-            return var3;
-          } else {
-            var4 = 0;
-            L0: while (true) {
-              if (var4 < param2.length()) {
-                if (wg.a(param2.charAt(var4), (byte) -127)) {
-                  var4++;
-                  continue L0;
+        try {
+          var3 = uc.a(param0, param2, 0);
+          if (param1 <= -95) {
+            if (var3 != null) {
+              stackOut_6_0 = (String) var3;
+              stackIn_7_0 = stackOut_6_0;
+              return stackIn_7_0;
+            } else {
+              var4 = 0;
+              L0: while (true) {
+                if (var4 < param2.length()) {
+                  if (wg.a(param2.charAt(var4), (byte) -127)) {
+                    var4++;
+                    continue L0;
+                  } else {
+                    stackOut_12_0 = ah.field_b;
+                    stackIn_13_0 = stackOut_12_0;
+                    return stackIn_13_0;
+                  }
                 } else {
-                  return ah.field_b;
+                  return null;
                 }
-              } else {
-                return null;
               }
             }
+          } else {
+            stackOut_2_0 = null;
+            stackIn_3_0 = stackOut_2_0;
+            return (String) (Object) stackIn_3_0;
           }
-        } else {
-          return null;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var3_ref = decompiledCaughtException;
+            stackOut_16_0 = (RuntimeException) var3_ref;
+            stackOut_16_1 = new StringBuilder().append("tg.E(").append(param0).append(44).append(param1).append(44);
+            stackIn_18_0 = stackOut_16_0;
+            stackIn_18_1 = stackOut_16_1;
+            stackIn_17_0 = stackOut_16_0;
+            stackIn_17_1 = stackOut_16_1;
+            if (param2 == null) {
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "null";
+              stackIn_19_0 = stackOut_18_0;
+              stackIn_19_1 = stackOut_18_1;
+              stackIn_19_2 = stackOut_18_2;
+              break L1;
+            } else {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "{...}";
+              stackIn_19_0 = stackOut_17_0;
+              stackIn_19_1 = stackOut_17_1;
+              stackIn_19_2 = stackOut_17_2;
+              break L1;
+            }
+          }
+          throw fc.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 41);
         }
     }
 
     final static ce a(String param0, int param1) {
-        if (td.field_h.a(false)) {
-            if (!param0.equals((Object) (Object) td.field_h.b(28903))) {
-                td.field_h = hh.a(param0, false);
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        ce stackIn_4_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        ce stackOut_3_0 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (!td.field_h.a(false)) {
+                break L1;
+              } else {
+                if (param0.equals((Object) (Object) td.field_h.b(28903))) {
+                  break L1;
+                } else {
+                  td.field_h = hh.a(param0, false);
+                  break L1;
+                }
+              }
             }
+            var2_int = -48;
+            stackOut_3_0 = td.field_h;
+            stackIn_4_0 = stackOut_3_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var2;
+            stackOut_5_1 = new StringBuilder().append("tg.D(");
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param0 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L2;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L2;
+            }
+          }
+          throw fc.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + -44 + 41);
         }
-        int var2 = -48 / ((44 - param1) / 48);
-        return td.field_h;
+        return stackIn_4_0;
     }
 
     final void a(boolean param0, int param1, int param2, int param3) {
@@ -61,17 +183,29 @@ final class tg extends pj {
 
     tg(String param0, dg param1, boolean param2) {
         this(param0, param1);
-        ((tg) this).field_F = param2 ? true : false;
+        try {
+            ((tg) this).field_F = param2 ? true : false;
+        } catch (RuntimeException runtimeException) {
+            throw fc.a((Throwable) (Object) runtimeException, "tg.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     private tg(String param0, dg param1) {
         this(param0, ph.field_f.field_i, param1);
-        ((tg) this).field_w = ph.field_f.field_r;
+        try {
+            ((tg) this).field_w = ph.field_f.field_r;
+        } catch (RuntimeException runtimeException) {
+            throw fc.a((Throwable) (Object) runtimeException, "tg.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     private tg(String param0, j param1, dg param2) {
         super(param0, param1, param2);
-        ((tg) this).field_w = ph.field_f.field_r;
+        try {
+            ((tg) this).field_w = ph.field_f.field_r;
+        } catch (RuntimeException runtimeException) {
+            throw fc.a((Throwable) (Object) runtimeException, "tg.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

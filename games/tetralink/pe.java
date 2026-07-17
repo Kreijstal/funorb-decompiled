@@ -12,7 +12,7 @@ final class pe {
           if (param0 == 100) {
             if (0 >= nn.field_cb) {
               if (5000 != param0) {
-                if ((param0 ^ -1) != -30001) {
+                if (param0 != 30000) {
                   if (rk.field_c != null) {
                     var2 = 0;
                     L0: while (true) {
@@ -40,7 +40,7 @@ final class pe {
                     return new byte[param0];
                   }
                 } else {
-                  if ((uf.field_e ^ -1) < -1) {
+                  if (uf.field_e > 0) {
                     int fieldTemp$19 = uf.field_e - 1;
                     uf.field_e = uf.field_e - 1;
                     var2_ref_byte__ = ng.field_q[fieldTemp$19];
@@ -77,7 +77,7 @@ final class pe {
                 }
               } else {
                 if (0 >= ae.field_L) {
-                  if ((param0 ^ -1) != -30001) {
+                  if (param0 != 30000) {
                     if (rk.field_c != null) {
                       var2 = 0;
                       L2: while (true) {
@@ -105,7 +105,7 @@ final class pe {
                       return new byte[param0];
                     }
                   } else {
-                    if ((uf.field_e ^ -1) >= -1) {
+                    if (uf.field_e <= 0) {
                       L3: {
                         if (rk.field_c != null) {
                           var2 = 0;
@@ -161,7 +161,7 @@ final class pe {
             }
           } else {
             if (5000 != param0) {
-              if ((param0 ^ -1) != -30001) {
+              if (param0 != 30000) {
                 if (rk.field_c != null) {
                   var2 = 0;
                   if (ed.field_V.length > var2) {
@@ -190,7 +190,7 @@ final class pe {
                   return new byte[param0];
                 }
               } else {
-                if ((uf.field_e ^ -1) >= -1) {
+                if (uf.field_e <= 0) {
                   L4: {
                     if (rk.field_c != null) {
                       var2 = 0;
@@ -234,10 +234,10 @@ final class pe {
             } else {
               if (0 >= ae.field_L) {
                 L5: {
-                  if ((param0 ^ -1) != -30001) {
+                  if (param0 != 30000) {
                     break L5;
                   } else {
-                    if ((uf.field_e ^ -1) < -1) {
+                    if (uf.field_e > 0) {
                       int fieldTemp$24 = uf.field_e - 1;
                       uf.field_e = uf.field_e - 1;
                       var2_ref_byte__ = ng.field_q[fieldTemp$24];
@@ -296,18 +296,12 @@ final class pe {
 
     final static void a(byte param0) {
         ph.field_w = kb.field_q.g((byte) 81);
-        if (param0 < 18) {
-            return;
-        }
         CharSequence var2 = (CharSequence) (Object) ph.field_w;
         ik.field_f = cc.a(var2, (byte) 105);
     }
 
     public static void a(boolean param0) {
         field_a = null;
-        if (!param0) {
-            byte[] discarded$0 = pe.a(80, (byte) 40);
-        }
     }
 
     static {

@@ -11,29 +11,7 @@ final class kfa implements dja {
     }
 
     final static boolean a(int param0) {
-        int stackIn_7_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_6_0 = 0;
-        if (param0 == -26243) {
-          L0: {
-            if (null != wga.field_a) {
-              stackOut_5_0 = 1;
-              stackIn_7_0 = stackOut_5_0;
-              break L0;
-            } else {
-              if (!uga.field_d) {
-                stackOut_6_0 = 0;
-                stackIn_7_0 = stackOut_6_0;
-                break L0;
-              } else {
-                return true;
-              }
-            }
-          }
-          return stackIn_7_0 != 0;
-        } else {
-          return false;
-        }
+        return null != wga.field_a || uga.field_d;
     }
 
     public final tv a(byte param0) {

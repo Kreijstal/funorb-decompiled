@@ -12,9 +12,6 @@ final class aa {
 
     public static void a(byte param0) {
         field_a = null;
-        if (param0 != -14) {
-            field_a = null;
-        }
     }
 
     aa(int param0, int param1, int param2, int param3) {

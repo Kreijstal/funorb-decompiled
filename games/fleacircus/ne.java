@@ -8,53 +8,110 @@ abstract class ne {
     static fh field_d;
 
     final int a(int param0, String param1, int param2, int param3) {
-        int var5 = 0;
+        int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
+        int stackIn_13_0 = 0;
+        int stackIn_15_0 = 0;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_19_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_14_0 = 0;
+        int stackOut_12_0 = 0;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
         var10 = fleas.field_A ? 1 : 0;
-        var5 = 0;
-        var6 = 0;
-        var7 = param1.length();
-        var8 = param2;
-        L0: while (true) {
-          if (var7 <= var8) {
-            if (0 >= var5) {
-              return 0;
-            } else {
-              return (param3 + -param0 << 1573935784) / var5;
-            }
-          } else {
-            var9 = param1.charAt(var8);
-            if (var9 != 60) {
-              if (var9 != 62) {
-                if (var6 == 0) {
-                  if (var9 == 32) {
-                    var5++;
-                    var8++;
-                    continue L0;
-                  } else {
-                    var8++;
-                    continue L0;
-                  }
+        try {
+          L0: {
+            var5_int = 0;
+            var6 = 0;
+            var7 = param1.length();
+            var8 = param2;
+            L1: while (true) {
+              if (var7 <= var8) {
+                if (0 >= var5_int) {
+                  stackOut_14_0 = 0;
+                  stackIn_15_0 = stackOut_14_0;
+                  break L0;
                 } else {
-                  var8++;
-                  continue L0;
+                  stackOut_12_0 = (param3 + -param0 << 8) / var5_int;
+                  stackIn_13_0 = stackOut_12_0;
+                  return stackIn_13_0;
                 }
               } else {
-                var6 = 0;
+                L2: {
+                  var9 = param1.charAt(var8);
+                  if (var9 != 60) {
+                    if (var9 != 62) {
+                      L3: {
+                        if (var6 != 0) {
+                          break L3;
+                        } else {
+                          break L3;
+                        }
+                      }
+                      var8++;
+                      continue L1;
+                    } else {
+                      var6 = 0;
+                      break L2;
+                    }
+                  } else {
+                    var6 = 1;
+                    break L2;
+                  }
+                }
                 var8++;
-                continue L0;
+                continue L1;
               }
-            } else {
-              var6 = 1;
-              var8++;
-              continue L0;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var5 = decompiledCaughtException;
+            stackOut_16_0 = (RuntimeException) var5;
+            stackOut_16_1 = new StringBuilder().append("ne.P(").append(param0).append(44);
+            stackIn_18_0 = stackOut_16_0;
+            stackIn_18_1 = stackOut_16_1;
+            stackIn_17_0 = stackOut_16_0;
+            stackIn_17_1 = stackOut_16_1;
+            if (param1 == null) {
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "null";
+              stackIn_19_0 = stackOut_18_0;
+              stackIn_19_1 = stackOut_18_1;
+              stackIn_19_2 = stackOut_18_2;
+              break L4;
+            } else {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "{...}";
+              stackIn_19_0 = stackOut_17_0;
+              stackIn_19_1 = stackOut_17_1;
+              stackIn_19_2 = stackOut_17_2;
+              break L4;
+            }
+          }
+          throw pf.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param2 + 44 + param3 + 41);
         }
+        return stackIn_15_0;
     }
 
     public static void a(byte param0) {
@@ -83,7 +140,7 @@ abstract class ne {
             if (null == ((ne) this).field_c) {
               break L2;
             } else {
-              if ((((ne) this).field_c.length ^ -1) >= -1) {
+              if (((ne) this).field_c.length <= 0) {
                 break L2;
               } else {
                 stackOut_4_0 = ((ne) this).field_c[-1 + ((ne) this).field_c.length].field_c - ((ne) this).field_c[0].field_a;
@@ -189,7 +246,7 @@ abstract class ne {
                 if (((ne) this).field_c[-1 + ((ne) this).field_c.length].field_c < param1) {
                   return -1;
                 } else {
-                  if ((((ne) this).field_c.length ^ -1) != -2) {
+                  if (((ne) this).field_c.length != 1) {
                     var4 = 0;
                     if (param2 < -104) {
                       var5 = 0;
@@ -206,7 +263,7 @@ abstract class ne {
                                 break L2;
                               } else {
                                 var7 = var6.a(6759, param0);
-                                if ((var7 ^ -1) != 0) {
+                                if (var7 != -1) {
                                   return var4 - -var7;
                                 } else {
                                   return -1;

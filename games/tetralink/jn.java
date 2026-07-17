@@ -14,25 +14,31 @@ final class jn {
         if (!param1) {
             return;
         }
-        nn.field_T = param0;
+        try {
+            nn.field_T = param0;
+        } catch (RuntimeException runtimeException) {
+            throw oi.a((Throwable) (Object) runtimeException, "jn.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void a(byte param0) {
         field_a = null;
         field_d = null;
-        if (param0 != 122) {
-            field_a = null;
-        }
     }
 
     jn(bh param0) {
-        ((jn) this).field_b = param0.e(127);
-        int discarded$0 = param0.d((byte) -99);
-        int var2 = param0.d((byte) -99);
-        if (var2 != 1) {
-            throw new RuntimeException();
+        int var2_int = 0;
+        try {
+            ((jn) this).field_b = param0.e(127);
+            int discarded$0 = param0.d((byte) -99);
+            var2_int = param0.d((byte) -99);
+            if (var2_int != 1) {
+                throw new RuntimeException();
+            }
+            ((jn) this).field_e = param0.e(127);
+        } catch (RuntimeException runtimeException) {
+            throw oi.a((Throwable) (Object) runtimeException, "jn.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }
-        ((jn) this).field_e = param0.e(127);
     }
 
     static {

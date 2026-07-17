@@ -21,9 +21,6 @@ final class pj {
     }
 
     final static java.awt.Container a(byte param0) {
-        if (param0 > -15) {
-            return null;
-        }
         if (null != ea.field_h) {
             return (java.awt.Container) (Object) ea.field_h;
         }
@@ -32,26 +29,13 @@ final class pj {
 
     public static void a(int param0) {
         field_h = null;
-        if (param0 <= 25) {
-          field_c = null;
-          field_d = null;
-          field_f = null;
-          field_c = null;
-          field_b = null;
-          field_i = null;
-          field_a = null;
-          field_g = null;
-          return;
-        } else {
-          field_d = null;
-          field_f = null;
-          field_c = null;
-          field_b = null;
-          field_i = null;
-          field_a = null;
-          field_g = null;
-          return;
-        }
+        field_d = null;
+        field_f = null;
+        field_c = null;
+        field_b = null;
+        field_i = null;
+        field_a = null;
+        field_g = null;
     }
 
     static {

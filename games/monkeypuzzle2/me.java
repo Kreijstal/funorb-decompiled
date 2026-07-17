@@ -14,26 +14,13 @@ final class me extends ug {
     static int[] field_j;
 
     public static void a(boolean param0) {
-        if (!param0) {
-          me.a(true);
-          field_i = null;
-          field_l = null;
-          field_j = null;
-          field_f = null;
-          field_h = null;
-          field_n = null;
-          field_g = null;
-          return;
-        } else {
-          field_i = null;
-          field_l = null;
-          field_j = null;
-          field_f = null;
-          field_h = null;
-          field_n = null;
-          field_g = null;
-          return;
-        }
+        field_i = null;
+        field_l = null;
+        field_j = null;
+        field_f = null;
+        field_h = null;
+        field_n = null;
+        field_g = null;
     }
 
     private me() throws Throwable {

@@ -24,16 +24,16 @@ final class lf {
         var6 = kh.a(-110, param1);
         if (!param2) {
           int[] discarded$1 = lf.a(35, -76, false);
-          var7 = (int)((long)var3 * (long)var5 >> 738112592);
-          var8 = (int)((long)var3 * (long)var6 >> 488210960);
-          var9 = (int)((long)var4 * (long)var5 >> -1902491952);
-          var10 = (int)((long)var4 * (long)var6 >> 1184452752);
+          var7 = (int)((long)var3 * (long)var5 >> 16);
+          var8 = (int)((long)var3 * (long)var6 >> 16);
+          var9 = (int)((long)var4 * (long)var5 >> 16);
+          var10 = (int)((long)var4 * (long)var6 >> 16);
           return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
         } else {
-          var7 = (int)((long)var3 * (long)var5 >> 738112592);
-          var8 = (int)((long)var3 * (long)var6 >> 488210960);
-          var9 = (int)((long)var4 * (long)var5 >> -1902491952);
-          var10 = (int)((long)var4 * (long)var6 >> 1184452752);
+          var7 = (int)((long)var3 * (long)var5 >> 16);
+          var8 = (int)((long)var3 * (long)var6 >> 16);
+          var9 = (int)((long)var4 * (long)var5 >> 16);
+          var10 = (int)((long)var4 * (long)var6 >> 16);
           return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
         }
     }
@@ -105,7 +105,7 @@ final class lf {
                   }
                 }
                 L6: {
-                  var8 = ja.field_b.a(param3, 72, param5, (hc) var6, (hc) var7);
+                  var8 = ja.field_b.a(param3, 72, false, (hc) var6, (hc) var7);
                   if (!param1) {
                     break L6;
                   } else {
@@ -134,7 +134,11 @@ final class lf {
         if (param3 != -75) {
             return;
         }
-        uc.a(param1, param2, param4.field_i, (byte) 0, 0, param0, param4.field_g);
+        try {
+            uc.a(param1, param2, param4.field_i, (byte) 0, 0, param0, param4.field_g);
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) (Object) runtimeException, "lf.A(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

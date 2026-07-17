@@ -46,12 +46,12 @@ abstract class p {
               mi.field_c = new hj[4];
               var3 = 0;
               L1: while (true) {
-                if ((var3 ^ -1) <= -5) {
+                if (var3 >= 4) {
                   ih.field_t = new hj[4];
                   var6 = 0;
                   var3 = var6;
                   L2: while (true) {
-                    if (-5 >= (var6 ^ -1)) {
+                    if (var6 >= 4) {
                       ug.b(-1);
                       break L0;
                     } else {
@@ -70,7 +70,7 @@ abstract class p {
                   mi.field_c[var3] = ra.field_X[var3].e();
                   qm.a(mi.field_c[var3], 64, -1);
                   mi.field_c[var3].f();
-                  rf.field_ab.a(-rf.field_ab.field_s + mi.field_c[var3].field_s >> 1391241089, -rf.field_ab.field_y + mi.field_c[var3].field_y >> 1198891297);
+                  rf.field_ab.a(-rf.field_ab.field_s + mi.field_c[var3].field_s >> 1, -rf.field_ab.field_y + mi.field_c[var3].field_y >> 1);
                   var3++;
                   continue L1;
                 }
@@ -81,7 +81,7 @@ abstract class p {
           }
         }
         if (param1 < -31) {
-          if ((param0 ^ -1) == -2) {
+          if (param0 == 1) {
             return mi.field_c[param2];
           } else {
             if (param0 != 2) {
@@ -96,31 +96,64 @@ abstract class p {
     }
 
     final static void a(int param0) {
-        int var4 = HoldTheLine.field_D;
-        int[] var5 = qg.field_d;
-        int[] var1 = var5;
+        int[] var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
-        if (param0 < 76) {
-            p.a(false);
-        }
-        int var3 = var5.length;
-        while (var2 < var3) {
-            var2++;
-            var5[var2] = 0;
-            var2++;
-            var5[var2] = 0;
-            var2++;
-            var5[var2] = 0;
-            var2++;
-            var5[var2] = 0;
-            var2++;
-            var5[var2] = 0;
-            var2++;
-            var5[var2] = 0;
-            var2++;
-            var5[var2] = 0;
-            var2++;
-            var5[var2] = 0;
+        int var3 = 0;
+        int var4 = 0;
+        int[] var5 = null;
+        RuntimeException decompiledCaughtException = null;
+        var4 = HoldTheLine.field_D;
+        try {
+          L0: {
+            L1: {
+              var5 = qg.field_d;
+              var1 = var5;
+              var2 = 0;
+              if (param0 >= 76) {
+                break L1;
+              } else {
+                p.a(false);
+                break L1;
+              }
+            }
+            var3 = var5.length;
+            L2: while (true) {
+              if (var2 >= var3) {
+                break L0;
+              } else {
+                int incrementValue$40 = var2;
+                var2++;
+                var5[incrementValue$40] = 0;
+                int incrementValue$41 = var2;
+                var2++;
+                var5[incrementValue$41] = 0;
+                int incrementValue$42 = var2;
+                var2++;
+                var5[incrementValue$42] = 0;
+                int incrementValue$43 = var2;
+                var2++;
+                var5[incrementValue$43] = 0;
+                int incrementValue$44 = var2;
+                var2++;
+                var5[incrementValue$44] = 0;
+                int incrementValue$45 = var2;
+                var2++;
+                var5[incrementValue$45] = 0;
+                int incrementValue$46 = var2;
+                var2++;
+                var5[incrementValue$46] = 0;
+                int incrementValue$47 = var2;
+                var2++;
+                var5[incrementValue$47] = 0;
+                continue L2;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw kk.a((Throwable) (Object) var1_ref, "p.H(" + param0 + 41);
         }
     }
 
@@ -129,7 +162,7 @@ abstract class p {
         if (param0 != -61) {
             return;
         }
-        var3.d(param1, param2, var3.field_o >> 1348586849, var3.field_v >> 1885047969, 64);
+        var3.d(param1, param2, var3.field_o >> 1, var3.field_v >> 1, 64);
     }
 
     static {

@@ -15,27 +15,122 @@ final class hg extends ms {
     static int[] field_m;
 
     final static nj[] a(int param0, int[] param1) {
-        int var6 = Sumoblitz.field_L ? 1 : 0;
-        int var2 = 0 == param1[param1.length - 1] ? 1 : 0;
-        nj[] var3 = new nj[var2 == 0 ? param1.length + 1 : param1.length];
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        nj[] var3 = null;
         int var4 = 0;
-        for (var4 = 0; var4 < param1.length; var4++) {
-            var3[var4] = new nj(param1[var4], 2);
+        int var5 = 0;
+        int var6 = 0;
+        int stackIn_4_0 = 0;
+        int stackIn_7_0 = 0;
+        nj[] stackIn_14_0 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_18_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_3_0 = 0;
+        int stackOut_2_0 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_5_0 = 0;
+        nj[] stackOut_13_0 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        var6 = Sumoblitz.field_L ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              if (0 != param1[param1.length - 1]) {
+                stackOut_3_0 = 0;
+                stackIn_4_0 = stackOut_3_0;
+                break L1;
+              } else {
+                stackOut_2_0 = 1;
+                stackIn_4_0 = stackOut_2_0;
+                break L1;
+              }
+            }
+            L2: {
+              var2_int = stackIn_4_0;
+              if (var2_int != 0) {
+                stackOut_6_0 = param1.length;
+                stackIn_7_0 = stackOut_6_0;
+                break L2;
+              } else {
+                stackOut_5_0 = param1.length + 1;
+                stackIn_7_0 = stackOut_5_0;
+                break L2;
+              }
+            }
+            var3 = new nj[stackIn_7_0];
+            var4 = 0;
+            var4 = 0;
+            L3: while (true) {
+              if (var4 >= param1.length) {
+                L4: {
+                  if (var4 < var3.length) {
+                    var3[var4] = new nj(0, 2);
+                    break L4;
+                  } else {
+                    break L4;
+                  }
+                }
+                var5 = 34 / ((57 - param0) / 53);
+                stackOut_13_0 = (nj[]) var3;
+                stackIn_14_0 = stackOut_13_0;
+                break L0;
+              } else {
+                var3[var4] = new nj(param1[var4], 2);
+                var4++;
+                continue L3;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L5: {
+            var2 = decompiledCaughtException;
+            stackOut_15_0 = (RuntimeException) var2;
+            stackOut_15_1 = new StringBuilder().append("hg.A(").append(param0).append(44);
+            stackIn_17_0 = stackOut_15_0;
+            stackIn_17_1 = stackOut_15_1;
+            stackIn_16_0 = stackOut_15_0;
+            stackIn_16_1 = stackOut_15_1;
+            if (param1 == null) {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "null";
+              stackIn_18_0 = stackOut_17_0;
+              stackIn_18_1 = stackOut_17_1;
+              stackIn_18_2 = stackOut_17_2;
+              break L5;
+            } else {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "{...}";
+              stackIn_18_0 = stackOut_16_0;
+              stackIn_18_1 = stackOut_16_1;
+              stackIn_18_2 = stackOut_16_2;
+              break L5;
+            }
+          }
+          throw qo.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
         }
-        if (!(var4 >= var3.length)) {
-            var3[var4] = new nj(0, 2);
-        }
-        int var5 = 34 / ((57 - param0) / 53);
-        return var3;
+        return stackIn_14_0;
     }
 
     public static void a(byte param0) {
         field_m = null;
         field_l = null;
-        if (param0 != 12) {
-            Object var2 = null;
-            nj[] discarded$0 = hg.a(-33, (int[]) null);
-        }
         field_t = null;
         field_k = null;
         field_o = null;

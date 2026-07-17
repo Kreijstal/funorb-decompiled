@@ -8,47 +8,49 @@ final class pl {
     static String field_b;
 
     final static int a(byte param0) {
-        int var1 = 0;
+        int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
+        int stackIn_4_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackIn_12_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_3_0 = 0;
+        int stackOut_11_0 = 0;
+        int stackOut_8_0 = 0;
         var2 = TombRacer.field_G ? 1 : 0;
-        if (param0 == 64) {
-          if (cm.field_a == null) {
-            return -1;
-          } else {
-            var1 = 0;
-            L0: while (true) {
-              if (cm.field_a.length > var1) {
-                if (!cm.field_a[var1].a((byte) -47)) {
-                  var1++;
-                  continue L0;
+        try {
+          L0: {
+            if (cm.field_a == null) {
+              stackOut_3_0 = -1;
+              stackIn_4_0 = stackOut_3_0;
+              return stackIn_4_0;
+            } else {
+              var1_int = 0;
+              L1: while (true) {
+                if (cm.field_a.length <= var1_int) {
+                  stackOut_11_0 = -1;
+                  stackIn_12_0 = stackOut_11_0;
+                  break L0;
                 } else {
-                  return var1;
+                  if (!cm.field_a[var1_int].a((byte) -47)) {
+                    var1_int++;
+                    continue L1;
+                  } else {
+                    stackOut_8_0 = var1_int;
+                    stackIn_9_0 = stackOut_8_0;
+                    return stackIn_9_0;
+                  }
                 }
-              } else {
-                return -1;
               }
             }
           }
-        } else {
-          pl.a(-48);
-          if (cm.field_a == null) {
-            return -1;
-          } else {
-            var1 = 0;
-            L1: while (true) {
-              if (cm.field_a.length > var1) {
-                if (!cm.field_a[var1].a((byte) -47)) {
-                  var1++;
-                  continue L1;
-                } else {
-                  return var1;
-                }
-              } else {
-                return -1;
-              }
-            }
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw tba.a((Throwable) (Object) var1, "pl.A(" + 64 + 41);
         }
+        return stackIn_12_0;
     }
 
     public final String toString() {

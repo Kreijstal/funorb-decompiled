@@ -55,11 +55,6 @@ abstract class rb {
     }
 
     public static void a(byte param0) {
-        if (param0 >= -71) {
-            boolean discarded$0 = rb.a(-112, -32, -122);
-            field_c = null;
-            return;
-        }
         field_c = null;
     }
 

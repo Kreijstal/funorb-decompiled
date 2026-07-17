@@ -8,10 +8,6 @@ final class bj {
         if (param0 != 50) {
             throw new IllegalArgumentException();
         }
-        if (param1 > -116) {
-            bj.a(-36);
-            return;
-        }
     }
 
     public static void a(int param0) {

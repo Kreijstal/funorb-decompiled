@@ -50,10 +50,6 @@ abstract class dna extends kna {
     }
 
     final static int b(int param0, int param1) {
-        if (param1 != 255) {
-            field_H = null;
-            return 255 & param0;
-        }
         return 255 & param0;
     }
 

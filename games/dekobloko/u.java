@@ -16,28 +16,24 @@ final class u {
         field_g = null;
         field_a = null;
         field_h = null;
-        if (param0 != 23358) {
-          field_e = 32;
-          field_d = null;
-          field_i = null;
-          field_c = null;
-          return;
-        } else {
-          field_d = null;
-          field_i = null;
-          field_c = null;
-          return;
-        }
+        field_d = null;
+        field_i = null;
+        field_c = null;
     }
 
     final static void a(byte param0, String param1, long param2) {
-        ed.field_c = param1;
-        int var4 = -67 % ((73 - param0) / 38);
-        pk.field_r = 2;
-        CharSequence var5 = (CharSequence) (Object) param1;
-        cf.field_c = kf.a(var5, (byte) 2);
-        jg.field_i = true;
-        fm.field_d = param2;
+        CharSequence var5 = null;
+        try {
+            ed.field_c = param1;
+            int var4_int = -67 % ((73 - param0) / 38);
+            pk.field_r = 2;
+            var5 = (CharSequence) (Object) param1;
+            cf.field_c = kf.a(var5, (byte) 2);
+            jg.field_i = true;
+            fm.field_d = param2;
+        } catch (RuntimeException runtimeException) {
+            throw dh.a((Throwable) (Object) runtimeException, "u.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     static {

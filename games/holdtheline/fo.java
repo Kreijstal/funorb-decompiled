@@ -14,9 +14,6 @@ final class fo extends hl {
         field_k = null;
         field_n = null;
         field_m = null;
-        if (param0) {
-            field_m = null;
-        }
     }
 
     fo() {

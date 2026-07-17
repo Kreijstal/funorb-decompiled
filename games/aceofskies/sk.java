@@ -22,7 +22,7 @@ abstract class sk {
 
     void b(int param0) {
         if (param0 > -117) {
-            field_e = (Hashtable) null;
+            field_e = null;
         }
     }
 
@@ -32,13 +32,13 @@ abstract class sk {
 
     public static void a(byte param0) {
         field_e = null;
-        int var1 = -89 % ((0 - param0) / 52);
+        int var1 = 0;
         field_d = null;
     }
 
     void c(int param0) {
         if (param0 != 404277666) {
-            field_e = (Hashtable) null;
+            field_e = null;
         }
     }
 
@@ -47,37 +47,117 @@ abstract class sk {
     abstract void a(boolean param0, byte param1);
 
     final static rm[] a(rk param0, int param1) {
+        RuntimeException var2 = null;
+        int[] var3 = null;
+        rm[] var4 = null;
         int var5 = 0;
         rm var6 = null;
-        int var7 = AceOfSkies.field_G ? 1 : 0;
-        if (!param0.a((byte) 84)) {
-            return new rm[]{};
+        int var7 = 0;
+        en var8 = null;
+        int[] var9 = null;
+        int[] var10 = null;
+        int[] var11 = null;
+        int[] var12 = null;
+        rm[] stackIn_3_0 = null;
+        rm[] stackIn_11_0 = null;
+        rm[] stackIn_16_0 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        String stackIn_20_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        rm[] stackOut_10_0 = null;
+        rm[] stackOut_15_0 = null;
+        rm[] stackOut_2_0 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        var7 = AceOfSkies.field_G ? 1 : 0;
+        try {
+          L0: {
+            if (param0.a((byte) 84)) {
+              var8 = param0.a(255);
+              L1: while (true) {
+                if (var8.field_a != 0) {
+                  if (var8.field_a == 2) {
+                    stackOut_10_0 = new rm[]{};
+                    stackIn_11_0 = stackOut_10_0;
+                    return stackIn_11_0;
+                  } else {
+                    var12 = (int[]) var8.field_f;
+                    var11 = var12;
+                    var10 = var11;
+                    var9 = var10;
+                    var3 = var9;
+                    var4 = new rm[var12.length >> 2];
+                    var5 = 0;
+                    L2: while (true) {
+                      if (var5 >= var4.length) {
+                        stackOut_15_0 = (rm[]) var4;
+                        stackIn_16_0 = stackOut_15_0;
+                        break L0;
+                      } else {
+                        var6 = new rm();
+                        var4[var5] = var6;
+                        var6.field_f = var3[var5 << 2];
+                        var6.field_b = var3[1 + (var5 << 2)];
+                        var6.field_d = var3[(var5 << 2) - -2];
+                        var6.field_a = var3[3 + (var5 << 2)];
+                        var5++;
+                        continue L2;
+                      }
+                    }
+                  }
+                } else {
+                  wf.a(10L, false);
+                  continue L1;
+                }
+              }
+            } else {
+              stackOut_2_0 = new rm[]{};
+              stackIn_3_0 = stackOut_2_0;
+              return stackIn_3_0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2 = decompiledCaughtException;
+            stackOut_17_0 = (RuntimeException) var2;
+            stackOut_17_1 = new StringBuilder().append("sk.M(");
+            stackIn_19_0 = stackOut_17_0;
+            stackIn_19_1 = stackOut_17_1;
+            stackIn_18_0 = stackOut_17_0;
+            stackIn_18_1 = stackOut_17_1;
+            if (param0 == null) {
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "null";
+              stackIn_20_0 = stackOut_19_0;
+              stackIn_20_1 = stackOut_19_1;
+              stackIn_20_2 = stackOut_19_2;
+              break L3;
+            } else {
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "{...}";
+              stackIn_20_0 = stackOut_18_0;
+              stackIn_20_1 = stackOut_18_1;
+              stackIn_20_2 = stackOut_18_2;
+              break L3;
+            }
+          }
+          throw pn.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + 1175069442 + 41);
         }
-        en var8 = param0.a(param1 ^ 1175069693);
-        while (((en) var8).field_a == 0) {
-            wf.a(10L, false);
-        }
-        if (param1 != 1175069442) {
-            return (rm[]) null;
-        }
-        if (!((((en) var8).field_a ^ -1) != -3)) {
-            return new rm[]{};
-        }
-        int[] var12 = (int[]) (int[]) ((en) var8).field_f;
-        int[] var11 = var12;
-        int[] var10 = var11;
-        int[] var9 = var10;
-        int[] var3 = var9;
-        rm[] var4 = new rm[var12.length >> 1175069442];
-        for (var5 = 0; var5 < var4.length; var5++) {
-            var6 = new rm();
-            var4[var5] = var6;
-            var6.field_f = var3[var5 << 1786747298];
-            var6.field_b = var3[1 + (var5 << 404277666)];
-            var6.field_d = var3[(var5 << 376585666) - -2];
-            var6.field_a = var3[3 + (var5 << 99721154)];
-        }
-        return var4;
+        return stackIn_16_0;
     }
 
     void a(int param0) {
@@ -88,13 +168,17 @@ abstract class sk {
 
     void b(byte param0) {
         if (param0 != -25) {
-            jj var3 = (jj) null;
+            Object var3 = null;
             ((sk) this).a(98, 67, (jj) null);
         }
     }
 
     sk(bf param0) {
-        ((sk) this).field_b = param0;
+        try {
+            ((sk) this).field_b = param0;
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) (Object) runtimeException, "sk.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

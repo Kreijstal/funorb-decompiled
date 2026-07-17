@@ -357,7 +357,7 @@ final class na extends nm {
           if (param0.field_m.length == 0) {
             return null;
           } else {
-            return new na(param0, (int)((long)param0.field_n * 256L * (long)param1 / (long)(100 * md.field_l)), param2 << 6);
+            return new na(param0, (int)((long)param0.field_n * 256L * (long)param1 / (long)(100 * md.field_l)), 6144);
           }
         } else {
           return null;

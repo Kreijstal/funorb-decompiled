@@ -7,10 +7,14 @@ final class t extends ni {
     static volatile int field_c;
 
     final void a(byte param0, byte[] param1) {
-        int var3 = 33 % ((param0 - -54) / 63);
-        ((t) this).field_e = java.nio.ByteBuffer.allocateDirect(param1.length);
-        java.nio.Buffer discarded$0 = ((t) this).field_e.position(0);
-        java.nio.ByteBuffer discarded$1 = ((t) this).field_e.put(param1);
+        try {
+            int var3_int = 33 % ((param0 - -54) / 63);
+            ((t) this).field_e = java.nio.ByteBuffer.allocateDirect(param1.length);
+            java.nio.Buffer discarded$0 = ((t) this).field_e.position(0);
+            java.nio.ByteBuffer discarded$1 = ((t) this).field_e.put(param1);
+        } catch (RuntimeException runtimeException) {
+            throw lj.a((Throwable) (Object) runtimeException, "t.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void b(int param0) {
@@ -21,28 +25,16 @@ final class t extends ni {
     }
 
     final static void a(boolean param0, String param1, int param2) {
-        int stackIn_3_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        L0: {
-          wc.field_b = true;
-          if (!param0) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            break L0;
-          } else {
-            stackOut_1_0 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            break L0;
-          }
-        }
-        oh.field_F = stackIn_3_0 != 0;
+        wc.field_b = true;
+        oh.field_F = param0 ? true : false;
         sj.field_h = new rg(mb.field_b, cn.field_g, param1, gd.field_B, oh.field_F);
         if (param2 != 0) {
-          return;
-        } else {
-          mb.field_b.b(1, (fe) (Object) sj.field_h);
-          return;
+            return;
+        }
+        try {
+            mb.field_b.b(1, (fe) (Object) sj.field_h);
+        } catch (RuntimeException runtimeException) {
+            throw lj.a((Throwable) (Object) runtimeException, "t.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
     }
 

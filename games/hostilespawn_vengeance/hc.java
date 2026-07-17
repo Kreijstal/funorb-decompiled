@@ -6,23 +6,15 @@ final class hc {
     private java.awt.DisplayMode field_b;
 
     private final void a(int param0, java.awt.Frame param1) {
-        Throwable var3 = null;
-        Throwable decompiledCaughtException = null;
-        try {
-          L0: {
-            ((hc) this).field_a.setFullScreenWindow((java.awt.Window) (Object) param1);
-            if (param0 > 94) {
-              break L0;
-            } else {
-              ((hc) this).field_a = null;
-              break L0;
-            }
+        L0: {
+          ((hc) this).field_a.setFullScreenWindow((java.awt.Window) (Object) param1);
+          if (param0 > 94) {
+            break L0;
+          } else {
+            ((hc) this).field_a = null;
+            break L0;
           }
-        } catch (java.lang.Throwable decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
-          var3 = decompiledCaughtException;
         }
-        throw (RuntimeException) (Object) var3;
     }
 
     public hc() throws Exception {
@@ -34,18 +26,20 @@ final class hc {
         var1 = java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment();
         ((hc) this).field_a = var1.getDefaultScreenDevice();
         if (((hc) this).field_a.isFullScreenSupported()) {
+          return;
         } else {
           var2 = var1.getScreenDevices();
           var3 = var2;
           var4 = 0;
           L0: while (true) {
             if (var4 >= var3.length) {
-              throw new Exception();
+              throw hc.<RuntimeException>$cfr$sneakyThrow(new Exception());
             } else {
               var5 = var3[var4];
               if (var5 != null) {
                 if (var5.isFullScreenSupported()) {
                   ((hc) this).field_a = var5;
+                  return;
                 } else {
                   var4++;
                   continue L0;
@@ -63,90 +57,84 @@ final class hc {
         int var3 = 0;
         java.awt.DisplayMode[] var4 = ((hc) this).field_a.getDisplayModes();
         java.awt.DisplayMode[] var1 = var4;
-        int[] var2 = new int[var4.length << -1728453310];
+        int[] var2 = new int[var4.length << 2];
         for (var3 = 0; var4.length > var3; var3++) {
-            var2[var3 << 191678274] = var4[var3].getWidth();
-            var2[1 + (var3 << -458200190)] = var4[var3].getHeight();
-            var2[(var3 << -1227143838) + 2] = var4[var3].getBitDepth();
-            var2[3 + (var3 << -877490494)] = var4[var3].getRefreshRate();
+            var2[var3 << 2] = var4[var3].getWidth();
+            var2[1 + (var3 << 2)] = var4[var3].getHeight();
+            var2[(var3 << 2) + 2] = var4[var3].getBitDepth();
+            var2[3 + (var3 << 2)] = var4[var3].getRefreshRate();
         }
         return var2;
     }
 
     public final void enter(java.awt.Frame param0, int param1, int param2, int param3, int param4) {
-        try {
-            int var6 = 0;
-            java.awt.DisplayMode[] var7 = null;
-            int var8 = 0;
-            int var9 = 0;
-            int var10 = 0;
-            ((hc) this).field_b = ((hc) this).field_a.getDisplayMode();
-            if (((hc) this).field_b != null) {
-              L0: {
-                param0.setUndecorated(true);
-                param0.enableInputMethods(false);
-                this.a(120, param0);
-                if (param4 == 0) {
-                  var6 = ((hc) this).field_b.getRefreshRate();
-                  var7 = ((hc) this).field_a.getDisplayModes();
-                  var8 = 0;
-                  var9 = 0;
-                  L1: while (true) {
-                    if (var7.length <= var9) {
-                      if (var8 == 0) {
-                        param4 = var6;
-                        break L0;
-                      } else {
-                        break L0;
-                      }
-                    } else {
-                      if (param1 == var7[var9].getWidth()) {
-                        if (param2 == var7[var9].getHeight()) {
-                          if (var7[var9].getBitDepth() == param3) {
-                            L2: {
-                              var10 = var7[var9].getRefreshRate();
-                              if (var8 == 0) {
-                                break L2;
-                              } else {
-                                if (Math.abs(var10 + -var6) < Math.abs(param4 - var6)) {
-                                  break L2;
-                                } else {
-                                  var9++;
-                                  continue L1;
-                                }
-                              }
-                            }
-                            var8 = 1;
-                            param4 = var10;
-                            var9++;
-                            continue L1;
+        int var6 = 0;
+        java.awt.DisplayMode[] var7 = null;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        ((hc) this).field_b = ((hc) this).field_a.getDisplayMode();
+        if (((hc) this).field_b != null) {
+          L0: {
+            param0.setUndecorated(true);
+            param0.enableInputMethods(false);
+            this.a(120, param0);
+            if (param4 == 0) {
+              var6 = ((hc) this).field_b.getRefreshRate();
+              var7 = ((hc) this).field_a.getDisplayModes();
+              var8 = 0;
+              var9 = 0;
+              L1: while (true) {
+                if (var7.length <= var9) {
+                  if (var8 == 0) {
+                    param4 = var6;
+                    break L0;
+                  } else {
+                    break L0;
+                  }
+                } else {
+                  if (param1 == var7[var9].getWidth()) {
+                    if (param2 == var7[var9].getHeight()) {
+                      if (var7[var9].getBitDepth() == param3) {
+                        L2: {
+                          var10 = var7[var9].getRefreshRate();
+                          if (var8 == 0) {
+                            break L2;
                           } else {
-                            var9++;
-                            continue L1;
+                            if (Math.abs(var10 + -var6) < Math.abs(param4 - var6)) {
+                              break L2;
+                            } else {
+                              var9++;
+                              continue L1;
+                            }
                           }
-                        } else {
-                          var9++;
-                          continue L1;
                         }
+                        var8 = 1;
+                        param4 = var10;
+                        var9++;
+                        continue L1;
                       } else {
                         var9++;
                         continue L1;
                       }
+                    } else {
+                      var9++;
+                      continue L1;
                     }
+                  } else {
+                    var9++;
+                    continue L1;
                   }
-                } else {
-                  break L0;
                 }
               }
-              ((hc) this).field_a.setDisplayMode(new java.awt.DisplayMode(param1, param2, param3, param4));
-              return;
             } else {
-              throw new NullPointerException();
+              break L0;
             }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+          }
+          ((hc) this).field_a.setDisplayMode(new java.awt.DisplayMode(param1, param2, param3, param4));
+          return;
+        } else {
+          throw new NullPointerException();
         }
     }
 
@@ -159,5 +147,10 @@ final class hc {
             ((hc) this).field_b = null;
         }
         this.a(96, (java.awt.Frame) null);
+    }
+
+    @SuppressWarnings("unchecked")
+    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+        throw (T) throwable;
     }
 }

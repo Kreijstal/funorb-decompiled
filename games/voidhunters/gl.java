@@ -16,9 +16,6 @@ final class gl {
     }
 
     public static void a(int param0) {
-        if (param0 != 0) {
-            return;
-        }
         field_b = null;
         field_c = null;
     }

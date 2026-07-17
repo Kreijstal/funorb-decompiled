@@ -22,7 +22,7 @@ abstract class ib {
         var8 = stellarshard.field_B;
         if (param2 == 8) {
           if (!param5) {
-            if (-2 == (param0 ^ -1)) {
+            if (param0 == 1) {
               ((ib) this).a(424, param3);
               rl.field_b = oj.field_b;
               return;
@@ -34,7 +34,7 @@ abstract class ib {
           } else {
             rl.field_b = rl.field_b - 1;
             if (0 >= rl.field_b) {
-              if ((param0 ^ -1) != -2) {
+              if (param0 != 1) {
                 ((ib) this).b(param3, -1);
                 rl.field_b = h.field_b;
                 return;
@@ -106,9 +106,6 @@ abstract class ib {
 
     public static void a(int param0) {
         field_c = null;
-        if (param0 != 0) {
-            return;
-        }
         field_k = null;
         field_h = null;
         field_m = null;
@@ -119,7 +116,7 @@ abstract class ib {
         int var2 = 0;
         int var3 = 0;
         var3 = stellarshard.field_B;
-        if (-1 == (gh.field_c ^ -1)) {
+        if (gh.field_c == 0) {
           L0: {
             if (0 == fb.field_n) {
               ((ib) this).field_f = false;
@@ -127,7 +124,7 @@ abstract class ib {
                 break L0;
               } else {
                 var2 = ((ib) this).a((byte) 59, eb.field_a, ni.field_e);
-                if (0 != (var2 ^ -1)) {
+                if (var2 != -1) {
                   ((ib) this).field_l = var2;
                   ((ib) this).field_n = false;
                   if (!param0) {
@@ -154,7 +151,7 @@ abstract class ib {
             } else {
               if (((ib) this).field_f) {
                 var2 = ((ib) this).field_l;
-                if ((var2 ^ -1) != 0) {
+                if (var2 != -1) {
                   ((ib) this).a(fb.field_n, ni.field_e, (byte) 8, var2, -(var2 * ((ib) this).field_a) + (eb.field_a + -((ib) this).field_b), true);
                   break L0;
                 } else {
@@ -169,7 +166,7 @@ abstract class ib {
                 ((ib) this).field_f = false;
                 if (qc.field_a) {
                   var2 = ((ib) this).a((byte) 59, eb.field_a, ni.field_e);
-                  if (0 != (var2 ^ -1)) {
+                  if (var2 != -1) {
                     ((ib) this).field_l = var2;
                     ((ib) this).field_n = false;
                     if (!param0) {

@@ -31,9 +31,13 @@ final class tc extends mc {
     }
 
     tc(long param0, int param1, byte[] param2) {
-        ((tc) this).field_r = param0;
-        ((tc) this).field_u = param1;
-        ((tc) this).field_o = param2;
+        try {
+            ((tc) this).field_r = param0;
+            ((tc) this).field_u = param1;
+            ((tc) this).field_o = param2;
+        } catch (RuntimeException runtimeException) {
+            throw oi.a((Throwable) (Object) runtimeException, "tc.<init>(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

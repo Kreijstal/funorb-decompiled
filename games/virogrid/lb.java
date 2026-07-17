@@ -203,7 +203,7 @@ final class lb {
                               break L7;
                             }
                           }
-                          if (-1 == (var11_int ^ -1)) {
+                          if (var11_int == 0) {
                             break L6;
                           } else {
                             if (gi.field_a) {
@@ -239,14 +239,14 @@ final class lb {
                         } else {
                           L10: {
                             var11_int = wm.field_B[var9][var10_int];
-                            if ((var7 ^ -1) <= (var11_int ^ -1)) {
+                            if (~var7 <= ~var11_int) {
                               break L10;
                             } else {
                               var7 = var11_int;
                               break L10;
                             }
                           }
-                          if (-1 == (var11_int ^ -1)) {
+                          if (var11_int == 0) {
                             break L9;
                           } else {
                             if (gi.field_a) {
@@ -427,7 +427,7 @@ final class lb {
                           }
                         }
                       }
-                      if (-1 <= (var12.field_Ub ^ -1)) {
+                      if (var12.field_Ub <= 0) {
                         break L20;
                       } else {
                         var20 = "<img=" + (var12.field_Ub - 1) + ">" + var20;
@@ -452,13 +452,13 @@ final class lb {
                                 }
                               }
                             }
-                            if ((var12.field_Vb ^ -1) > (var6 ^ -1)) {
+                            if (~var12.field_Vb > ~var6) {
                               break L24;
                             } else {
                               if (var7 > var12.field_Rb) {
                                 break L24;
                               } else {
-                                if (0 < (var8 & (var12.field_Fb ^ -1))) {
+                                if (0 < (var8 & ~var12.field_Fb)) {
                                   break L24;
                                 } else {
                                   break L23;
@@ -689,7 +689,7 @@ final class lb {
                       }
                     }
                     L40: {
-                      if ((var12.field_nb ^ -1) == -1) {
+                      if (var12.field_nb == 0) {
                         break L40;
                       } else {
                         if (var12.g(0)) {
@@ -700,7 +700,7 @@ final class lb {
                               break L41;
                             } else {
                               L42: {
-                                if (-1 == (var12.field_Mb.field_nb ^ -1)) {
+                                if (var12.field_Mb.field_nb == 0) {
                                   break L42;
                                 } else {
                                   w.a((byte) 74, var12.field_Ob, param1);
@@ -731,7 +731,7 @@ final class lb {
                         if (!var12.g(0)) {
                           L44: {
                             var24 = null;
-                            if ((hh.field_d ^ -1L) == (var12.field_Ob ^ -1L)) {
+                            if (~hh.field_d == ~var12.field_Ob) {
                               L45: {
                                 if (var5_int == 0) {
                                   break L45;
@@ -758,19 +758,19 @@ final class lb {
                                 break L44;
                               } else {
                                 if (var6 <= var12.field_Vb) {
-                                  if (-1 == (var8 & (var12.field_Fb ^ -1) ^ -1)) {
+                                  if ((var8 & ~var12.field_Fb) == 0) {
                                     break L44;
                                   } else {
                                     L47: {
-                                      var25_int = qe.b(-728240159, (var12.field_Fb ^ -1) & var8);
+                                      var25_int = qe.b(-728240159, ~var12.field_Fb & var8);
                                       var24 = (Object) (Object) ke.field_o;
-                                      if ((var25_int ^ -1) >= -1) {
+                                      if (var25_int <= 0) {
                                         break L47;
                                       } else {
                                         if (me.field_a == null) {
                                           break L47;
                                         } else {
-                                          if ((var25_int ^ -1) < (me.field_a.length ^ -1)) {
+                                          if (~var25_int < ~me.field_a.length) {
                                             break L47;
                                           } else {
                                             if (null == me.field_a[-1 + var25_int]) {
@@ -803,11 +803,11 @@ final class lb {
                                   }
                                 }
                               }
-                              if ((var12.field_Rb ^ -1) <= (var7 ^ -1)) {
-                                if ((var12.field_Vb ^ -1) <= (var6 ^ -1)) {
-                                  if (0 != ((var12.field_Fb ^ -1) & var8)) {
+                              if (~var12.field_Rb <= ~var7) {
+                                if (~var12.field_Vb <= ~var6) {
+                                  if (0 != (~var12.field_Fb & var8)) {
                                     L49: {
-                                      var25_int = qe.b(-728240159, var8 & (var12.field_Fb ^ -1));
+                                      var25_int = qe.b(-728240159, var8 & ~var12.field_Fb);
                                       var24 = (Object) (Object) oi.a(new String[1], ci.field_n, 2);
                                       if (var25_int <= 0) {
                                         break L49;
@@ -839,7 +839,7 @@ final class lb {
                               } else {
                                 L50: {
                                   var25_int = var7 - var12.field_Rb;
-                                  if ((var25_int ^ -1) == -2) {
+                                  if (var25_int == 1) {
                                     var24 = (Object) (Object) oi.a(new String[1], gi.field_b, 2);
                                     break L50;
                                   } else {
@@ -896,7 +896,7 @@ final class lb {
                                         if (gg.field_E[var27_int] != null) {
                                           L55: {
                                             var30_int = gg.field_E[var27_int][var28];
-                                            if (-1 == (var30_int ^ -1)) {
+                                            if (var30_int == 0) {
                                               break L55;
                                             } else {
                                               if (gi.field_a) {
@@ -911,7 +911,7 @@ final class lb {
                                               }
                                             }
                                           }
-                                          if ((var12.field_Vb ^ -1) <= (var30_int ^ -1)) {
+                                          if (~var12.field_Vb <= ~var30_int) {
                                             break L54;
                                           } else {
                                             var29 = 1;
@@ -944,7 +944,7 @@ final class lb {
                                               }
                                             }
                                           }
-                                          if ((var30_int ^ -1) < (var12.field_Rb ^ -1)) {
+                                          if (~var30_int < ~var12.field_Rb) {
                                             var29 = 1;
                                             break L56;
                                           } else {
@@ -962,7 +962,7 @@ final class lb {
                                         if (mb.field_db[var27_int] == null) {
                                           break L58;
                                         } else {
-                                          if (((var12.field_Fb ^ -1) & mb.field_db[var27_int][var28]) == 0) {
+                                          if ((~var12.field_Fb & mb.field_db[var27_int][var28]) == 0) {
                                             break L58;
                                           } else {
                                             var29 = 1;

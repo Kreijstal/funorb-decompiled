@@ -15,9 +15,13 @@ final class k {
     static String[] field_a;
 
     k(String param0, String param1, k param2) {
-        ((k) this).field_g = param0;
-        ((k) this).field_d = param2;
-        ((k) this).field_i = param1;
+        try {
+            ((k) this).field_g = param0;
+            ((k) this).field_d = param2;
+            ((k) this).field_i = param1;
+        } catch (RuntimeException runtimeException) {
+            throw vk.a((Throwable) (Object) runtimeException, "k.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static String a(byte param0, int param1, int param2, int param3) {
@@ -41,14 +45,7 @@ final class k {
         field_h = null;
         field_c = null;
         field_e = null;
-        if (!param0) {
-          field_e = null;
-          field_b = null;
-          return;
-        } else {
-          field_b = null;
-          return;
-        }
+        field_b = null;
     }
 
     static {

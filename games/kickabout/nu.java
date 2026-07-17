@@ -91,7 +91,7 @@ final class nu {
             ((nu) this).field_v = sk.a(param1 ^ -19886, 8, 0, 4, param0, 16) - 1;
             var3_int = 0;
             L2: while (true) {
-              if ((var3_int ^ -1) <= (((nu) this).field_I ^ -1)) {
+              if (~var3_int <= ~((nu) this).field_I) {
                 L3: {
                   if (((nu) this).field_u != 0) {
                     break L3;
@@ -105,7 +105,7 @@ final class nu {
                   if (2 != ((nu) this).field_u) {
                     break L4;
                   } else {
-                    ((nu) this).field_C.b(param0, param1 ^ -1);
+                    ((nu) this).field_C.b(param0, ~param1);
                     ((nu) this).field_C.c(param0, param1 + 7);
                     break L4;
                   }
@@ -124,7 +124,7 @@ final class nu {
                     ((nu) this).field_V.b(param0, 4);
                     var3_int = 0;
                     L7: while (true) {
-                      if (-3 >= (var3_int ^ -1)) {
+                      if (var3_int >= 2) {
                         ((nu) this).field_X.b(param0, 4);
                         var3_int = 0;
                         L8: while (true) {
@@ -137,7 +137,7 @@ final class nu {
                           } else {
                             var4 = 0;
                             L9: while (true) {
-                              if (-6 >= (var4 ^ -1)) {
+                              if (var4 >= 5) {
                                 var3_int++;
                                 continue L8;
                               } else {
@@ -240,12 +240,12 @@ final class nu {
         String stackOut_67_2 = null;
         try {
           L0: {
-            if (-5 == (((nu) this).field_u ^ -1)) {
+            if (((nu) this).field_u == 4) {
               L1: {
                 if (null == ((nu) this).field_X) {
                   break L1;
                 } else {
-                  if ((((nu) this).field_X.field_m ^ -1) > -41) {
+                  if (((nu) this).field_X.field_m < 40) {
                     break L1;
                   } else {
                     return;
@@ -276,10 +276,10 @@ final class nu {
               if (((nu) this).field_R[var3_int].d(3511)) {
                 L4: {
                   var5 = ((nu) this).a((byte) 92, var3_int);
-                  if (-2 < (var4 ^ -1)) {
+                  if (var4 < 1) {
                     break L4;
                   } else {
-                    if (-6 > (var4 ^ -1)) {
+                    if (var4 > 5) {
                       break L4;
                     } else {
                       if (!((nu) this).field_h) {
@@ -328,7 +328,7 @@ final class nu {
                 L7: {
                   L8: {
                     L9: {
-                      if ((var4 ^ -1) != -7) {
+                      if (var4 != 6) {
                         break L9;
                       } else {
                         if (!((nu) this).field_y) {
@@ -338,7 +338,7 @@ final class nu {
                         }
                       }
                     }
-                    if (-8 != (var4 ^ -1)) {
+                    if (var4 != 7) {
                       break L7;
                     } else {
                       if (!((nu) this).field_z) {
@@ -357,7 +357,7 @@ final class nu {
                         stackOut_60_0 = (nl) var5;
                         stackIn_63_0 = stackOut_60_0;
                         stackIn_61_0 = stackOut_60_0;
-                        if ((var4 ^ -1) != -8) {
+                        if (var4 != 7) {
                           stackOut_63_0 = (nl) (Object) stackIn_63_0;
                           stackOut_63_1 = 0;
                           stackIn_64_0 = stackOut_63_0;
@@ -434,7 +434,7 @@ final class nu {
           L0: {
             L1: {
               var2_int = 0;
-              if ((((nu) this).field_u ^ -1) == -5) {
+              if (((nu) this).field_u == 4) {
                 var3 = 0;
                 L2: while (true) {
                   if (var3 >= 2) {
@@ -500,7 +500,7 @@ final class nu {
         try {
           L0: {
             L1: {
-              if ((param4 ^ -1) > -3) {
+              if (param4 < 2) {
                 stackOut_4_0 = 0;
                 stackIn_5_0 = stackOut_4_0;
                 break L1;
@@ -513,10 +513,10 @@ final class nu {
             L2: {
               L3: {
                 var7_int = stackIn_5_0;
-                if (-1272878999116L == (param2 ^ -1L)) {
+                if (param2 == 1272878999115L) {
                   break L3;
                 } else {
-                  if ((param2 ^ -1L) != -1272878132286L) {
+                  if (param2 != 1272878132285L) {
                     stackOut_11_0 = 0;
                     stackIn_12_0 = stackOut_11_0;
                     break L2;
@@ -538,7 +538,7 @@ final class nu {
                   if (var7_int == 0) {
                     break L5;
                   } else {
-                    if ((param0 ^ -1) == -12) {
+                    if (param0 == 11) {
                       break L5;
                     } else {
                       break L4;
@@ -548,7 +548,7 @@ final class nu {
                 if (!param1) {
                   var9 = 0;
                   L6: while (true) {
-                    if (-5 >= (var9 ^ -1)) {
+                    if (var9 >= 4) {
                       stackOut_35_0 = 0;
                       stackIn_36_0 = stackOut_35_0;
                       break L0;
@@ -607,7 +607,7 @@ final class nu {
           L0: {
             var3_int = 0;
             L1: while (true) {
-              if ((((nu) this).field_g.length ^ -1) >= (var3_int ^ -1)) {
+              if (~((nu) this).field_g.length >= ~var3_int) {
                 var4 = 120 % ((param0 - -10) / 47);
                 stackOut_14_0 = 0;
                 stackIn_15_0 = stackOut_14_0;
@@ -801,7 +801,7 @@ final class nu {
           if (-1 == ((nu) this).field_O) {
             break L0;
           } else {
-            if ((((nu) this).field_O ^ -1) > (((nu) this).field_v ^ -1)) {
+            if (~((nu) this).field_O > ~((nu) this).field_v) {
               return;
             } else {
               break L0;
@@ -829,11 +829,11 @@ final class nu {
         vl.a((nu) this, (byte) -41);
         var2_int = 0;
         L3: while (true) {
-          if (-3 >= (var2_int ^ -1)) {
+          if (var2_int >= 2) {
             L4: {
               ((nu) this).field_V.a((byte) -97, ((nu) this).field_t, ((nu) this).field_B);
               ((nu) this).field_X.a(((nu) this).field_V, -123);
-              if (-41 == (((nu) this).field_X.field_m ^ -1)) {
+              if (((nu) this).field_X.field_m == 40) {
                 ((nu) this).field_X.field_j[((nu) this).field_X.field_n] = ((nu) this).field_X.field_j[((nu) this).field_X.field_n] + 1;
                 ((nu) this).field_V.field_m = -1;
                 ((nu) this).field_V.field_r = 205;
@@ -845,18 +845,18 @@ final class nu {
               }
             }
             L5: {
-              if ((((nu) this).field_X.field_m ^ -1) > -246) {
+              if (((nu) this).field_X.field_m < 245) {
                 break L5;
               } else {
                 this.a(-((nu) this).field_X.field_n + 1, 0);
                 ((nu) this).field_X.field_m = 0;
                 var2_int = 0;
                 L6: while (true) {
-                  if ((var2_int ^ -1) <= (((nu) this).field_X.field_j.length ^ -1)) {
+                  if (~var2_int <= ~((nu) this).field_X.field_j.length) {
                     break L5;
                   } else {
                     L7: {
-                      if (-100 > (((nu) this).field_X.field_j[var2_int] ^ -1)) {
+                      if (((nu) this).field_X.field_j[var2_int] > 99) {
                         ((nu) this).field_X.field_j[var2_int] = 99;
                         break L7;
                       } else {
@@ -874,7 +874,7 @@ final class nu {
               if (2 <= var2_int) {
                 var2_int = 0;
                 L9: while (true) {
-                  if ((((nu) this).field_I ^ -1) >= (var2_int ^ -1)) {
+                  if (~((nu) this).field_I >= ~var2_int) {
                     L10: {
                       var2 = ((nu) this).b((byte) -96);
                       if (var2 == null) {
@@ -889,14 +889,14 @@ final class nu {
                             } else {
                               var5_int = 0;
                               L12: while (true) {
-                                if ((var5_int ^ -1) <= -6) {
+                                if (var5_int >= 5) {
                                   var4++;
                                   continue L11;
                                 } else {
                                   L13: {
                                     var6_ref_nl = ((nu) this).field_P[var4][var5_int];
                                     var7 = 900;
-                                    if ((var5_int ^ -1) != -1) {
+                                    if (var5_int != 0) {
                                       break L13;
                                     } else {
                                       var8_int = -var6_ref_nl.field_o + 20;
@@ -905,7 +905,7 @@ final class nu {
                                     }
                                   }
                                   L14: {
-                                    if ((var3 ^ -1) < (var7 << 2028798864 ^ -1)) {
+                                    if (~var3 < ~(var7 << 16)) {
                                       break L14;
                                     } else {
                                       if (3 == var6_ref_nl.field_u) {
@@ -917,18 +917,18 @@ final class nu {
                                           if (var6_ref_nl.field_u == 5) {
                                             break L14;
                                           } else {
-                                            if (-8 == (var6_ref_nl.field_u ^ -1)) {
+                                            if (var6_ref_nl.field_u == 7) {
                                               break L14;
                                             } else {
-                                              if ((var6_ref_nl.field_u ^ -1) == -9) {
+                                              if (var6_ref_nl.field_u == 8) {
                                                 break L14;
                                               } else {
-                                                if (-10 == (var6_ref_nl.field_u ^ -1)) {
+                                                if (var6_ref_nl.field_u == 9) {
                                                   break L14;
                                                 } else {
                                                   var8_int = var6_ref_nl.f(-127) - ((nu) this).field_V.a(true);
                                                   var9 = var6_ref_nl.a(true) - ((nu) this).field_V.c(879306160);
-                                                  if ((var9 * var9 + var8_int * var8_int ^ -1) <= -1601) {
+                                                  if (var9 * var9 + var8_int * var8_int >= 1600) {
                                                     break L14;
                                                   } else {
                                                     ((nu) this).field_V.a((mo) (Object) var6_ref_nl, (byte) 84);
@@ -975,14 +975,14 @@ final class nu {
                           } else {
                             L17: {
                               var4_ref_nl = ((nu) this).field_P[var3][0];
-                              if ((var4_ref_nl.field_u ^ -1) == -3) {
+                              if (var4_ref_nl.field_u == 2) {
                                 break L17;
                               } else {
-                                if ((var4_ref_nl.field_u ^ -1) != -4) {
+                                if (var4_ref_nl.field_u != 3) {
                                   var5_int = ((nu) this).field_V.a(true) - var4_ref_nl.f(-102);
                                   var6 = ((nu) this).field_V.c(879306160) - var4_ref_nl.a(true);
                                   var7 = var6 * var6 + var5_int * var5_int;
-                                  if (-785 < (var7 ^ -1)) {
+                                  if (var7 < 784) {
                                     L18: {
                                       var8_int = uv.b(var6, var5_int, (byte) 2);
                                       var9 = 511 & 693 * var4_ref_nl.f(-99);
@@ -995,7 +995,7 @@ final class nu {
                                     }
                                     L19: {
                                       var8_int = 8191 & var8_int - (-8192 - var9);
-                                      if (-6 == (var4_ref_nl.field_u ^ -1)) {
+                                      if (var4_ref_nl.field_u == 5) {
                                         L20: {
                                           if (var3 == 0) {
                                             stackOut_173_0 = 1024;
@@ -1027,11 +1027,11 @@ final class nu {
                                       }
                                     }
                                     ((nu) this).field_V.a((mo) (Object) var4_ref_nl, (byte) 84);
-                                    var10 = pc.a(((nu) this).field_V.e(3), -524289) >> -1020370264;
-                                    ((nu) this).field_V.field_q = (we.a(var8_int, false) >> -1040016728) * var10;
-                                    ((nu) this).field_V.field_h = var10 * (ei.a(var8_int, (byte) -23) >> -1786263928);
+                                    var10 = pc.a(((nu) this).field_V.e(3), -524289) >> 8;
+                                    ((nu) this).field_V.field_q = (we.a(var8_int, false) >> 8) * var10;
+                                    ((nu) this).field_V.field_h = var10 * (ei.a(var8_int, (byte) -23) >> 8);
                                     ((nu) this).field_V.a((byte) -78, ((nu) this).field_t, ((nu) this).field_B);
-                                    if ((var4_ref_nl.field_o ^ -1) > -16) {
+                                    if (var4_ref_nl.field_o < 15) {
                                       var4_ref_nl.field_o = var4_ref_nl.field_o + 1;
                                       break L17;
                                     } else {
@@ -1053,12 +1053,12 @@ final class nu {
                     }
                     var3 = 0;
                     L22: while (true) {
-                      if (-3 >= (var3 ^ -1)) {
+                      if (var3 >= 2) {
                         L23: {
-                          if (0 == (((nu) this).field_V.field_m ^ -1)) {
+                          if (((nu) this).field_V.field_m == -1) {
                             break L23;
                           } else {
-                            if (0 != (((nu) this).field_V.field_s ^ -1)) {
+                            if (((nu) this).field_V.field_s != -1) {
                               break L23;
                             } else {
                               break L23;
@@ -1069,7 +1069,7 @@ final class nu {
                           if (null == ((nu) this).b((byte) -96)) {
                             break L24;
                           } else {
-                            if ((((nu) this).a((byte) 6, ((nu) this).field_V.field_m, ((nu) this).field_V.field_s) ^ -1) != 0) {
+                            if (((nu) this).a((byte) 6, ((nu) this).field_V.field_m, ((nu) this).field_V.field_s) != -1) {
                               ((nu) this).field_V.field_o = ((nu) this).a((byte) 6, ((nu) this).field_V.field_m, ((nu) this).field_V.field_s);
                               break L24;
                             } else {
@@ -1091,17 +1091,17 @@ final class nu {
                         stackIn_187_0 = stackOut_186_0;
                         var4 = stackIn_187_0;
                         L26: while (true) {
-                          if (-6 >= (var4 ^ -1)) {
+                          if (var4 >= 5) {
                             var3++;
                             continue L22;
                           } else {
                             L27: {
                               L28: {
                                 var5 = ((nu) this).field_P[var3][var4];
-                                if (-4 == (var5.field_u ^ -1)) {
+                                if (var5.field_u == 3) {
                                   break L28;
                                 } else {
-                                  if (-14 == (var5.field_u ^ -1)) {
+                                  if (var5.field_u == 13) {
                                     break L28;
                                   } else {
                                     break L27;
@@ -1112,20 +1112,20 @@ final class nu {
                                 if (((nu) this).field_V.field_m != -1) {
                                   break L29;
                                 } else {
-                                  if ((Math.abs(-var5.field_v + ((nu) this).field_V.field_v) >> 1289666544 ^ -1) <= -31) {
+                                  if (Math.abs(-var5.field_v + ((nu) this).field_V.field_v) >> 16 >= 30) {
                                     break L29;
                                   } else {
-                                    if ((((nu) this).field_V.field_r ^ -1) != -1) {
+                                    if (((nu) this).field_V.field_r != 0) {
                                       break L29;
                                     } else {
                                       var6 = var5.f(param0 + -11776) + -((nu) this).field_V.a(true);
                                       var7 = var5.a(true) - ((nu) this).field_V.c(879306160);
                                       var8_int = var7 * var7 + var6 * var6;
-                                      if (-1601 >= (var8_int ^ -1)) {
+                                      if (var8_int >= 1600) {
                                         break L29;
                                       } else {
                                         ((nu) this).field_V.a((mo) (Object) var5, (byte) 84);
-                                        var9 = (4 * var5.field_N.d(var5.field_y, 0) << -1563718448) / 100 + 524288;
+                                        var9 = (4 * var5.field_N.d(var5.field_y, 0) << 16) / 100 + 524288;
                                         var10_long = (long)(var9 + Math.max(var5.field_q, pc.a(((nu) this).field_V.e(-127), -524289)));
                                         ((nu) this).field_V.field_r = 5;
                                         ((nu) this).field_V.field_h = (int)((long)var5.field_m * var10_long / (long)var5.field_q);
@@ -1138,16 +1138,16 @@ final class nu {
                                               if (13 != var5.field_u) {
                                                 break L31;
                                               } else {
-                                                if (-3 != (((nu) this).field_V.field_i ^ -1)) {
+                                                if (((nu) this).field_V.field_i != 2) {
                                                   break L31;
                                                 } else {
-                                                  if ((((nu) this).field_V.field_o ^ -1) == 0) {
+                                                  if (((nu) this).field_V.field_o == -1) {
                                                     break L31;
                                                   } else {
-                                                    if (0 == (var12 ^ -1)) {
+                                                    if (var12 == -1) {
                                                       break L31;
                                                     } else {
-                                                      if ((((nu) this).field_V.field_o ^ -1) != (var12 ^ -1)) {
+                                                      if (~((nu) this).field_V.field_o != ~var12) {
                                                         break L31;
                                                       } else {
                                                         break L31;
@@ -1158,7 +1158,7 @@ final class nu {
                                               }
                                             }
                                             L32: {
-                                              if ((var12 ^ -1) == 0) {
+                                              if (var12 == -1) {
                                                 break L32;
                                               } else {
                                                 ((nu) this).field_V.field_o = var12;
@@ -1169,7 +1169,7 @@ final class nu {
                                               stackOut_219_0 = ((nu) this).field_V;
                                               stackIn_221_0 = stackOut_219_0;
                                               stackIn_220_0 = stackOut_219_0;
-                                              if ((var5.field_u ^ -1) == -14) {
+                                              if (var5.field_u == 13) {
                                                 stackOut_221_0 = (tj) (Object) stackIn_221_0;
                                                 stackOut_221_1 = 2;
                                                 stackIn_222_0 = stackOut_221_0;
@@ -1239,7 +1239,7 @@ final class nu {
                                               }
                                             }
                                             ((ch) (Object) stackIn_225_0).a((byte) stackIn_225_1, stackIn_225_2, stackIn_225_3, stackIn_225_4, stackIn_225_5, stackIn_225_6, var3, (nu) this, var5);
-                                            if (0 != (var5.field_F ^ -1)) {
+                                            if (var5.field_F != -1) {
                                               if (var5.field_u != 13) {
                                                 ((nu) this).field_q[var5.field_F].field_j = ((nu) this).field_q[var5.field_F].field_j + 1;
                                                 break L29;
@@ -1255,7 +1255,7 @@ final class nu {
                                               if (((nu) this).field_g[var12].field_p != var3) {
                                                 break L35;
                                               } else {
-                                                if ((((nu) this).field_R[var12].field_g ^ -1) != (var4 ^ -1)) {
+                                                if (~((nu) this).field_R[var12].field_g != ~var4) {
                                                   break L35;
                                                 } else {
                                                   ((nu) this).field_V.field_j = var12;
@@ -1272,7 +1272,7 @@ final class nu {
                                   }
                                 }
                               }
-                              if ((var5.field_u ^ -1) != -4) {
+                              if (var5.field_u != 3) {
                                 break L27;
                               } else {
                                 var6 = 0;
@@ -1338,7 +1338,7 @@ final class nu {
                                           }
                                           var9 = var5.f(-122) - var8.f(-94);
                                           var10 = var5.a(true) + -var8.a(true);
-                                          if (-1601 >= (var9 * var9 - -(var10 * var10) ^ -1)) {
+                                          if (var9 * var9 - -(var10 * var10) >= 1600) {
                                             break L38;
                                           } else {
                                             if (4 == var8.field_J) {
@@ -1359,7 +1359,7 @@ final class nu {
                                               }
                                               L44: {
                                                 var11 = ((nu) this).a((byte) 6, var6, var7);
-                                                if (0 != (var11 ^ -1)) {
+                                                if (var11 != -1) {
                                                   ((nu) this).field_q[var11].field_a = ((nu) this).field_q[var11].field_a + 1;
                                                   break L44;
                                                 } else {
@@ -1367,14 +1367,14 @@ final class nu {
                                                 }
                                               }
                                               L45: {
-                                                if ((var6 ^ -1) != (((nu) this).field_V.field_m ^ -1)) {
+                                                if (~var6 != ~((nu) this).field_V.field_m) {
                                                   break L45;
                                                 } else {
                                                   if (((nu) this).field_V.field_s == var7) {
                                                     L46: {
                                                       ((nu) this).field_V.field_s = var4;
                                                       ((nu) this).field_V.field_m = var3;
-                                                      if (-1 == (((nu) this).field_V.field_s ^ -1)) {
+                                                      if (((nu) this).field_V.field_s == 0) {
                                                         break L46;
                                                       } else {
                                                         if (((nu) this).a((byte) 6, var3, var4) != -1) {
@@ -1385,7 +1385,7 @@ final class nu {
                                                         }
                                                       }
                                                     }
-                                                    if ((var5.field_F ^ -1) == 0) {
+                                                    if (var5.field_F == -1) {
                                                       break L38;
                                                     } else {
                                                       ((nu) this).field_q[var5.field_F].field_m = ((nu) this).field_q[var5.field_F].field_m + 1;
@@ -1453,13 +1453,13 @@ final class nu {
                       if (var4_ref_nl.field_u != 2) {
                         break L49;
                       } else {
-                        if (-21 != (var4_ref_nl.field_L ^ -1)) {
+                        if (var4_ref_nl.field_L != 20) {
                           break L49;
                         } else {
-                          if ((var2_int ^ -1) != (((nu) this).field_V.field_m ^ -1)) {
+                          if (~var2_int != ~((nu) this).field_V.field_m) {
                             break L49;
                           } else {
-                            if ((var3 ^ -1) != (((nu) this).field_V.field_s ^ -1)) {
+                            if (~var3 != ~((nu) this).field_V.field_s) {
                               break L49;
                             } else {
                               if (var4_ref_nl.field_z >= 0) {
@@ -1469,7 +1469,7 @@ final class nu {
                                 var6_ref_nl = ((nu) this).field_P[-var2_int + 1][0];
                                 ((nu) this).field_N.a((nu) this, 32, ((nu) this).field_v, var2_int, var4_ref_nl, var5_int, var6_ref_nl, ((nu) this).field_V.field_o, var3);
                                 var7 = ((nu) this).a((byte) 6, var2_int, var3);
-                                if (0 == (var7 ^ -1)) {
+                                if (var7 == -1) {
                                   break L49;
                                 } else {
                                   if (var4_ref_nl.field_O) {
@@ -1498,13 +1498,13 @@ final class nu {
                       if (0 == var4_ref_nl.field_u) {
                         break L50;
                       } else {
-                        if (-1 <= (var4_ref_nl.field_L ^ -1)) {
+                        if (var4_ref_nl.field_L <= 0) {
                           L51: {
                             L52: {
                               if (var2_int != ((nu) this).field_V.field_m) {
                                 break L52;
                               } else {
-                                if ((var3 ^ -1) != (((nu) this).field_V.field_s ^ -1)) {
+                                if (~var3 != ~((nu) this).field_V.field_s) {
                                   break L52;
                                 } else {
                                   stackOut_80_0 = 1;
@@ -1518,14 +1518,14 @@ final class nu {
                             break L51;
                           }
                           var5_int = stackIn_82_0;
-                          if (-3 == (var4_ref_nl.field_u ^ -1)) {
+                          if (var4_ref_nl.field_u == 2) {
                             var4_ref_nl.a((byte) -31, 0);
                             break L50;
                           } else {
                             if (var4_ref_nl.field_u != 1) {
                               if (var4_ref_nl.field_u != 5) {
                                 if (7 != var4_ref_nl.field_u) {
-                                  if (-9 != (var4_ref_nl.field_u ^ -1)) {
+                                  if (var4_ref_nl.field_u != 8) {
                                     L53: {
                                       if (var4_ref_nl.field_u != 3) {
                                         break L53;
@@ -1539,7 +1539,7 @@ final class nu {
                                         }
                                       }
                                     }
-                                    if ((var4_ref_nl.field_u ^ -1) == -13) {
+                                    if (var4_ref_nl.field_u == 12) {
                                       var4_ref_nl.a((byte) -31, 10);
                                       if (var5_int != 0) {
                                         break L50;
@@ -1609,7 +1609,7 @@ final class nu {
                     if (((nu) this).field_V.field_m != var2_int) {
                       break L57;
                     } else {
-                      if ((var3 ^ -1) != (((nu) this).field_V.field_s ^ -1)) {
+                      if (~var3 != ~((nu) this).field_V.field_s) {
                         break L57;
                       } else {
                         stackOut_17_0 = 1;
@@ -1729,7 +1729,7 @@ final class nu {
               if (((nu) this).field_I <= var3_int) {
                 var3_int = 0;
                 L2: while (true) {
-                  if ((var3_int ^ -1) <= -3) {
+                  if (var3_int >= 2) {
                     L3: {
                       ((nu) this).field_m = param0.field_m;
                       ((nu) this).field_Z = param0.field_Z;
@@ -1744,7 +1744,7 @@ final class nu {
                     ((nu) this).field_v = param0.field_v;
                     var3_int = 0;
                     L4: while (true) {
-                      if ((((nu) this).field_I ^ -1) >= (var3_int ^ -1)) {
+                      if (~((nu) this).field_I >= ~var3_int) {
                         L5: {
                           if (0 != ((nu) this).field_u) {
                             break L5;
@@ -1783,7 +1783,7 @@ final class nu {
                                 } else {
                                   var4 = 0;
                                   L10: while (true) {
-                                    if ((var4 ^ -1) <= -6) {
+                                    if (var4 >= 5) {
                                       var3_int++;
                                       continue L9;
                                     } else {
@@ -1810,7 +1810,7 @@ final class nu {
                             if (((nu) this).field_q != null) {
                               var3_int = 0;
                               L13: while (true) {
-                                if ((((nu) this).field_q.length ^ -1) >= (var3_int ^ -1)) {
+                                if (~((nu) this).field_q.length >= ~var3_int) {
                                   break L12;
                                 } else {
                                   ((nu) this).field_q[var3_int].a(true, param0.field_q[var3_int]);
@@ -1845,7 +1845,7 @@ final class nu {
                     stackIn_10_0 = stackOut_8_0;
                     var4 = stackIn_10_0;
                     L15: while (true) {
-                      if ((var4 ^ -1) <= -5) {
+                      if (var4 >= 4) {
                         ((nu) this).field_r[var3_int] = param0.field_r[var3_int];
                         ((nu) this).field_H[var3_int] = param0.field_H[var3_int];
                         ((nu) this).field_d[var3_int] = param0.field_d[var3_int];
@@ -1929,7 +1929,7 @@ final class nu {
                     }
                   }
                   L3: while (true) {
-                    if ((var1.length ^ -1) >= (var2 ^ -1)) {
+                    if (~var1.length >= ~var2) {
                       break L0;
                     } else {
                       var3 = var1[var2];
@@ -1999,10 +1999,10 @@ final class nu {
                     var4 = var4 + param0.field_m;
                     var5.a((byte) -85, ((nu) this).field_t, ((nu) this).field_B);
                     if (var7 > 10) {
-                      var9 = -var3_int + var5.field_t >> -363182576;
-                      var10 = var5.field_p + -var4 >> -1079648304;
+                      var9 = -var3_int + var5.field_t >> 16;
+                      var10 = var5.field_p + -var4 >> 16;
                       var11 = var9 * var9 - -(var10 * var10);
-                      if ((var6 ^ -1) >= (var11 ^ -1)) {
+                      if (~var6 >= ~var11) {
                         break L2;
                       } else {
                         var6 = var11;
@@ -2017,7 +2017,7 @@ final class nu {
                 }
               }
               L4: {
-                if (-10001 >= (var6 ^ -1)) {
+                if (var6 >= 10000) {
                   break L4;
                 } else {
                   if (var7 > 1) {
@@ -2031,7 +2031,7 @@ final class nu {
                     } else {
                       if (param0.field_v == 0) {
                         L5: {
-                          param0.field_K = (var9 + (var7 * 26214 * var7 >> 524113633)) / var7;
+                          param0.field_K = (var9 + (var7 * 26214 * var7 >> 1)) / var7;
                           if (458752 < param0.field_K) {
                             param0.field_K = 458752;
                             break L5;
@@ -2040,7 +2040,7 @@ final class nu {
                           }
                         }
                         param0.a((byte) -31, 13);
-                        param0.field_L = (param0.field_K << 568114689) / 26214;
+                        param0.field_L = (param0.field_K << 1) / 26214;
                         break L4;
                       } else {
                         break L4;
@@ -2124,7 +2124,7 @@ final class nu {
                 if (-1 == ((nu) this).field_O) {
                   break L2;
                 } else {
-                  if ((((nu) this).field_v ^ -1) >= (((nu) this).field_O ^ -1)) {
+                  if (~((nu) this).field_v >= ~((nu) this).field_O) {
                     break L2;
                   } else {
                     return;
@@ -2291,11 +2291,11 @@ final class nu {
         String stackOut_86_2 = null;
         try {
           L0: {
-            if ((((nu) this).field_u ^ -1) == -5) {
+            if (((nu) this).field_u == 4) {
               L1: {
                 var3_int = param1.field_v;
                 var4 = ((nu) this).field_R[param1.field_u];
-                if (-1 != (var3_int ^ -1)) {
+                if (var3_int != 0) {
                   break L1;
                 } else {
                   var4.field_l = var4.field_l ^ 1;
@@ -2311,7 +2311,7 @@ final class nu {
                 }
               }
               L3: {
-                if ((var3_int ^ -1) == -3) {
+                if (var3_int == 2) {
                   var4.field_l = var4.field_l ^ 4;
                   break L3;
                 } else {
@@ -2319,7 +2319,7 @@ final class nu {
                 }
               }
               L4: {
-                if ((var3_int ^ -1) == -4) {
+                if (var3_int == 3) {
                   var4.field_l = var4.field_l ^ 8;
                   break L4;
                 } else {
@@ -2327,12 +2327,12 @@ final class nu {
                 }
               }
               L5: {
-                if (-5 == (var3_int ^ -1)) {
+                if (var3_int == 4) {
                   L6: {
                     stackOut_20_0 = ((nu) this).field_V;
                     stackIn_23_0 = stackOut_20_0;
                     stackIn_21_0 = stackOut_20_0;
-                    if (-4 != (((nu) this).field_V.field_l ^ -1)) {
+                    if (((nu) this).field_V.field_l != 3) {
                       stackOut_23_0 = (tj) (Object) stackIn_23_0;
                       stackOut_23_1 = 3;
                       stackIn_24_0 = stackOut_23_0;
@@ -2379,7 +2379,7 @@ final class nu {
                 }
               }
               L9: {
-                if ((var3_int ^ -1) == -7) {
+                if (var3_int == 6) {
                   L10: {
                     stackOut_36_0 = ((nu) this).field_V;
                     stackIn_39_0 = stackOut_36_0;
@@ -2412,7 +2412,7 @@ final class nu {
                     stackOut_42_0 = ((nu) this).field_V;
                     stackIn_47_0 = stackOut_42_0;
                     stackIn_43_0 = stackOut_42_0;
-                    if (-7 == (((nu) this).field_V.field_l ^ -1)) {
+                    if (((nu) this).field_V.field_l == 6) {
                       stackOut_47_0 = (tj) (Object) stackIn_47_0;
                       stackOut_47_1 = mp.field_p[((nu) this).field_t];
                       stackIn_48_0 = stackOut_47_0;
@@ -2441,14 +2441,14 @@ final class nu {
                 }
               }
               L14: {
-                if ((var3_int ^ -1) != -9) {
+                if (var3_int != 8) {
                   break L14;
                 } else {
                   L15: {
                     stackOut_53_0 = ((nu) this).field_V;
                     stackIn_58_0 = stackOut_53_0;
                     stackIn_54_0 = stackOut_53_0;
-                    if ((((nu) this).field_V.field_l ^ -1) != -8) {
+                    if (((nu) this).field_V.field_l != 7) {
                       stackOut_58_0 = (tj) (Object) stackIn_58_0;
                       stackOut_58_1 = 7;
                       stackIn_59_0 = stackOut_58_0;
@@ -2670,7 +2670,7 @@ final class nu {
             L1: while (true) {
               if (var5_int >= ((nu) this).field_I) {
                 L2: {
-                  if (-1 == (((nu) this).field_u ^ -1)) {
+                  if (((nu) this).field_u == 0) {
                     ((nu) this).field_n.a((mo) (Object) param0.field_n, param1, param2, param3 + 61);
                     break L2;
                   } else {
@@ -2678,7 +2678,7 @@ final class nu {
                       ((nu) this).field_C.a((mo) (Object) param0.field_C, param1, param2, 83);
                       break L2;
                     } else {
-                      if ((((nu) this).field_u ^ -1) == -4) {
+                      if (((nu) this).field_u == 3) {
                         ((nu) this).field_o.a((mo) (Object) param0.field_o, param1, param2, 72);
                         break L2;
                       } else {
@@ -2693,7 +2693,7 @@ final class nu {
                             } else {
                               var6 = 0;
                               L4: while (true) {
-                                if ((var6 ^ -1) <= -6) {
+                                if (var6 >= 5) {
                                   var5_int++;
                                   continue L3;
                                 } else {
@@ -2768,7 +2768,7 @@ final class nu {
         Object stackOut_1_0 = null;
         try {
           L0: {
-            if ((((nu) this).field_V.field_m ^ -1) != 0) {
+            if (((nu) this).field_V.field_m != -1) {
               L1: {
                 if (param0 == -96) {
                   break L1;
@@ -2815,7 +2815,7 @@ final class nu {
                 if (((nu) this).field_g[param0].field_p != ((nu) this).field_V.field_m) {
                   break L3;
                 } else {
-                  if ((((nu) this).field_V.field_s ^ -1) != (((nu) this).field_R[param0].field_g ^ -1)) {
+                  if (~((nu) this).field_V.field_s != ~((nu) this).field_R[param0].field_g) {
                     break L3;
                   } else {
                     stackOut_7_0 = 1;
@@ -2886,7 +2886,7 @@ final class nu {
             if (param0 == 5) {
               L1: {
                 var4 = param1.field_v;
-                if ((var4 ^ -1) == -1) {
+                if (var4 == 0) {
                   L2: {
                     ((nu) this).field_R[var3_int].field_v = true;
                     if (((nu) this).field_u < 5) {
@@ -2902,7 +2902,7 @@ final class nu {
                   break L1;
                 } else {
                   if (var4 != 2) {
-                    if (-4 == (var4 ^ -1)) {
+                    if (var4 == 3) {
                       L3: {
                         stackOut_39_0 = ((nu) this).field_R[var3_int];
                         stackIn_44_0 = stackOut_39_0;
@@ -2935,7 +2935,7 @@ final class nu {
                           break L1;
                         }
                       } else {
-                        if (-6 >= (((nu) this).field_u ^ -1)) {
+                        if (((nu) this).field_u >= 5) {
                           break L1;
                         } else {
                           if (((nu) this).field_R[var3_int].field_s) {
@@ -3057,7 +3057,7 @@ final class nu {
                 ((nu) this).field_V.field_m = -1;
                 var3_int = param1;
                 L3: while (true) {
-                  if ((var3_int ^ -1) <= -3) {
+                  if (var3_int >= 2) {
                     ((nu) this).field_E.b(param1 + 22997);
                     break L0;
                   } else {
@@ -3073,7 +3073,7 @@ final class nu {
                           stackOut_35_0 = (nl) var6;
                           stackIn_40_0 = stackOut_35_0;
                           stackIn_36_0 = stackOut_35_0;
-                          if ((var3_int ^ -1) != -1) {
+                          if (var3_int != 0) {
                             stackOut_40_0 = (nl) (Object) stackIn_40_0;
                             stackOut_40_1 = 1;
                             stackIn_41_0 = stackOut_40_0;
@@ -3101,16 +3101,16 @@ final class nu {
               } else {
                 var4_int = 0;
                 L6: while (true) {
-                  if (-6 >= (var4_int ^ -1)) {
+                  if (var4_int >= 5) {
                     var3_int++;
                     continue L2;
                   } else {
                     L7: {
                       L8: {
-                        if ((var3_int ^ -1) != -2) {
+                        if (var3_int != 1) {
                           break L8;
                         } else {
-                          if (-1 == (var4_int ^ -1)) {
+                          if (var4_int == 0) {
                             break L8;
                           } else {
                             stackOut_11_0 = 1;
@@ -3149,8 +3149,8 @@ final class nu {
                             }
                           }
                         }
-                        var6.field_M = ts.a(var4_int, param0, var3_int, 448) << -566502320;
-                        var6.field_w = cp.a((byte) 21, var4_int, var3_int, param0) << 1234384944;
+                        var6.field_M = ts.a(var4_int, param0, var3_int, 448) << 16;
+                        var6.field_w = cp.a((byte) 21, var4_int, var3_int, param0) << 16;
                         break L9;
                       }
                       var6.field_M = sh.a(70, var4_int);
@@ -3203,14 +3203,14 @@ final class nu {
         String stackOut_50_2 = null;
         try {
           L0: {
-            if ((((nu) this).field_u ^ -1) != -5) {
+            if (((nu) this).field_u != 4) {
               return;
             } else {
               L1: {
                 if (null == ((nu) this).field_X) {
                   break L1;
                 } else {
-                  if (-41 < (((nu) this).field_X.field_m ^ -1)) {
+                  if (((nu) this).field_X.field_m < 40) {
                     break L1;
                   } else {
                     return;
@@ -3239,7 +3239,7 @@ final class nu {
                     if (var6 != 0) {
                       break L3;
                     } else {
-                      if (-1 != (var7 ^ -1)) {
+                      if (var7 != 0) {
                         break L3;
                       } else {
                         var6 = var5.field_j;
@@ -3254,14 +3254,14 @@ final class nu {
                       if (var4 == 0) {
                         break L5;
                       } else {
-                        if (-2 == (var5.field_u ^ -1)) {
+                        if (var5.field_u == 1) {
                           L6: {
                             var5.field_P = var7;
                             var5.field_x = var6;
                             var5.field_z = param1.field_v;
                             var8 = var5.d(5339);
                             var9 = uv.a(true, var7, var6);
-                            if ((pq.b(170, var8 ^ var9) ^ -1) >= -2) {
+                            if (pq.b(170, var8 ^ var9) <= 1) {
                               stackOut_40_0 = 0;
                               stackIn_41_0 = stackOut_40_0;
                               break L6;
@@ -3283,10 +3283,10 @@ final class nu {
                             }
                           }
                           var11 = var5.a(var5.field_z, (byte) -68) + -128;
-                          if ((var11 ^ -1) >= -1) {
+                          if (var11 <= 0) {
                             break L4;
                           } else {
-                            var5.field_L = var5.field_L + (16 * var11 >> -2111933561);
+                            var5.field_L = var5.field_L + (16 * var11 >> 7);
                             break L4;
                           }
                         } else {
@@ -3381,25 +3381,25 @@ final class nu {
         String stackOut_11_0 = null;
         try {
           L0: {
-            if (-1 == (((nu) this).field_u ^ -1)) {
+            if (((nu) this).field_u == 0) {
               stackOut_3_0 = "TeamSelection";
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0;
             } else {
               var2_int = -3 / ((-57 - param0) / 49);
-              if ((((nu) this).field_u ^ -1) == -2) {
+              if (((nu) this).field_u == 1) {
                 stackOut_8_0 = "WaitForPlayers";
                 stackIn_9_0 = stackOut_8_0;
                 return stackIn_9_0;
               } else {
-                if (-3 != (((nu) this).field_u ^ -1)) {
-                  if (-4 != (((nu) this).field_u ^ -1)) {
-                    if (-5 == (((nu) this).field_u ^ -1)) {
+                if (((nu) this).field_u != 2) {
+                  if (((nu) this).field_u != 3) {
+                    if (((nu) this).field_u == 4) {
                       stackOut_19_0 = "Playing";
                       stackIn_20_0 = stackOut_19_0;
                       return stackIn_20_0;
                     } else {
-                      if (-6 == (((nu) this).field_u ^ -1)) {
+                      if (((nu) this).field_u == 5) {
                         stackOut_24_0 = "GameOver";
                         stackIn_25_0 = stackOut_24_0;
                         return stackIn_25_0;
@@ -3493,7 +3493,7 @@ final class nu {
             if (param0 == 6) {
               var4_int = 0;
               L1: while (true) {
-                if ((var4_int ^ -1) <= (((nu) this).field_g.length ^ -1)) {
+                if (~var4_int <= ~((nu) this).field_g.length) {
                   stackOut_18_0 = -1;
                   stackIn_19_0 = stackOut_18_0;
                   break L0;
@@ -3540,7 +3540,7 @@ final class nu {
           L0: {
             if (param0 == 10) {
               L1: {
-                if ((((nu) this).field_u ^ -1) != -1) {
+                if (((nu) this).field_u != 0) {
                   if (2 == ((nu) this).field_u) {
                     break L1;
                   } else {
@@ -3603,7 +3603,7 @@ final class nu {
             var5_int = ((nu) this).field_g[param3].field_p;
             var6_int = 0;
             L1: while (true) {
-              if ((((nu) this).field_I ^ -1) >= (var6_int ^ -1)) {
+              if (~((nu) this).field_I >= ~var6_int) {
                 L2: {
                   var7_int = -103 % ((param0 - -39) / 48);
                   if (((nu) this).field_R[param3].field_g == -1) {
@@ -3614,7 +3614,7 @@ final class nu {
                   }
                 }
                 L3: {
-                  if ((((nu) this).field_R[param3].field_g ^ -1) == 0) {
+                  if (((nu) this).field_R[param3].field_g == -1) {
                     break L3;
                   } else {
                     var6 = ((nu) this).field_P[var5_int][((nu) this).field_R[param3].field_g];
@@ -3768,7 +3768,7 @@ final class nu {
               var3_ref = ((nu) this).field_P[((nu) this).field_V.field_m][param0];
               var4 = var3_ref.field_M;
               var5 = var3_ref.field_w;
-              if ((((nu) this).field_V.field_m ^ -1) != -2) {
+              if (((nu) this).field_V.field_m != 1) {
                 break L1;
               } else {
                 if (((nu) this).field_p) {
@@ -3781,8 +3781,8 @@ final class nu {
               }
             }
             L2: {
-              var6 = (var4 - ((nu) this).field_V.field_t) * 3 >> 2081448162;
-              var7 = (var5 - ((nu) this).field_V.field_p) * 3 >> 1577588130;
+              var6 = (var4 - ((nu) this).field_V.field_t) * 3 >> 2;
+              var7 = (var5 - ((nu) this).field_V.field_p) * 3 >> 2;
               var8 = sg.field_d[((nu) this).field_t];
               var10 = var8;
               var12_int = 0;
@@ -3794,16 +3794,16 @@ final class nu {
               }
             }
             L3: while (true) {
-              if ((var12_int ^ -1) <= -71) {
-                var12 = (-var8 + 65536L << 1089405008) / (-var10 + 65536L);
-                ((nu) this).field_V.field_h = (int)((long)var7 * var12 >> -716140208);
+              if (var12_int >= 70) {
+                var12 = (-var8 + 65536L << 16) / (-var10 + 65536L);
+                ((nu) this).field_V.field_h = (int)((long)var7 * var12 >> 16);
                 ((nu) this).field_V.field_n = 573440;
-                ((nu) this).field_V.field_q = (int)((long)var6 * var12 >> 312093840);
+                ((nu) this).field_V.field_q = (int)((long)var6 * var12 >> 16);
                 ((nu) this).field_V.field_r = 10;
                 ((nu) this).field_V.field_m = -1;
                 break L0;
               } else {
-                var10 = var8 * var10 >> 964477520;
+                var10 = var8 * var10 >> 16;
                 var12_int++;
                 continue L3;
               }
@@ -3830,7 +3830,7 @@ final class nu {
         try {
           L0: {
             L1: {
-              var7_int = (393216 * param0 >> -187141240) + 786432;
+              var7_int = (393216 * param0 >> 8) + 786432;
               if (!param1) {
                 stackOut_3_0 = 227;
                 stackIn_4_0 = stackOut_3_0;
@@ -3851,18 +3851,18 @@ final class nu {
               }
             }
             L3: {
-              var9 = (var7_int >> -1306717592) * we.a(var8, false) >> -1901559064;
-              var10 = (var7_int >> -1456886360) * ei.a(var8, (byte) -23) >> -410319384;
+              var9 = (var7_int >> 8) * we.a(var8, false) >> 8;
+              var10 = (var7_int >> 8) * ei.a(var8, (byte) -23) >> 8;
               if (!param2) {
                 break L3;
               } else {
                 if (param1) {
                   break L3;
                 } else {
-                  if ((param0 ^ -1) >= -33) {
+                  if (param0 <= 32) {
                     break L3;
                   } else {
-                    var9 = var9 + ((var9 * 3 >> 1926099745) - -(1280 * param0));
+                    var9 = var9 + ((var9 * 3 >> 1) - -(1280 * param0));
                     ((nu) this).field_V.field_A = 25;
                     break L3;
                   }
@@ -3910,7 +3910,7 @@ final class nu {
         try {
           L0: {
             L1: {
-              if (-1 > (((nu) this).field_v ^ -1)) {
+              if (((nu) this).field_v > 0) {
                 ((nu) this).field_v = ((nu) this).field_v - 1;
                 break L1;
               } else {
@@ -3934,7 +3934,7 @@ final class nu {
               }
             }
             L4: {
-              if (-4 != (((nu) this).field_u ^ -1)) {
+              if (((nu) this).field_u != 3) {
                 break L4;
               } else {
                 ((nu) this).field_o.field_b = ((nu) this).field_o.field_b + 1;
@@ -3957,7 +3957,7 @@ final class nu {
                       } else {
                         var3_int = 0;
                         L8: while (true) {
-                          if ((var3_int ^ -1) <= -6) {
+                          if (var3_int >= 5) {
                             var2_int++;
                             continue L7;
                           } else {
@@ -3977,7 +3977,7 @@ final class nu {
               }
             }
             L9: {
-              if ((((nu) this).field_u ^ -1) != -5) {
+              if (((nu) this).field_u != 4) {
                 break L9;
               } else {
                 this.b(11660);
@@ -3990,13 +3990,13 @@ final class nu {
                       if (((nu) this).field_R[var2_int].field_s) {
                         break L11;
                       } else {
-                        if (-1 < (((nu) this).field_g[var2_int].field_p ^ -1)) {
+                        if (((nu) this).field_g[var2_int].field_p < 0) {
                           break L11;
                         } else {
-                          if ((((nu) this).field_R[var2_int].field_g ^ -1) <= -1) {
+                          if (((nu) this).field_R[var2_int].field_g >= 0) {
                             L12: {
                               var3 = ((nu) this).a((byte) -39, var2_int);
-                              if ((((nu) this).field_g[var2_int].field_p ^ -1) != -1) {
+                              if (((nu) this).field_g[var2_int].field_p != 0) {
                                 break L12;
                               } else {
                                 if (var3.a(true) < 672) {
@@ -4009,7 +4009,7 @@ final class nu {
                             if (((nu) this).field_g[var2_int].field_p != 1) {
                               break L11;
                             } else {
-                              if ((var3.a(true) ^ -1) >= -673) {
+                              if (var3.a(true) <= 672) {
                                 break L11;
                               } else {
                                 break L11;
@@ -4168,28 +4168,28 @@ final class nu {
                     this.a((byte) 60, var2_ref);
                     break L2;
                   } else {
-                    if ((var3 ^ -1) == -2) {
+                    if (var3 == 1) {
                       this.b((byte) 125, var2_ref);
                       break L2;
                     } else {
-                      if ((var3 ^ -1) == -1) {
+                      if (var3 == 0) {
                         this.b(true, var2_ref);
                         break L2;
                       } else {
-                        if ((var3 ^ -1) == -5) {
+                        if (var3 == 4) {
                           this.a(1, var2_ref);
                           break L2;
                         } else {
-                          if (-4 == (var3 ^ -1)) {
+                          if (var3 == 3) {
                             this.b(26214, var2_ref);
                             break L2;
                           } else {
-                            if ((var3 ^ -1) == -6) {
+                            if (var3 == 5) {
                               this.a(var2_ref, (byte) -34);
                               break L2;
                             } else {
                               if (6 != var3) {
-                                if ((var3 ^ -1) != -8) {
+                                if (var3 != 7) {
                                   break L2;
                                 } else {
                                   this.a(false, var2_ref);
@@ -4233,19 +4233,19 @@ final class nu {
             var2_array = new int[]{3, 4, param0, 1};
             var3 = 0;
             L1: while (true) {
-              if ((((nu) this).field_R.length ^ -1) >= (var3 ^ -1)) {
+              if (~((nu) this).field_R.length >= ~var3) {
                 var3 = 0;
                 L2: while (true) {
-                  if ((var3 ^ -1) <= -3) {
+                  if (var3 >= 2) {
                     var3 = 0;
                     L3: while (true) {
-                      if (-3 >= (var3 ^ -1)) {
+                      if (var3 >= 2) {
                         ((nu) this).field_J = 0;
                         break L0;
                       } else {
                         var4 = 1;
                         L4: while (true) {
-                          if (-6 >= (var4 ^ -1)) {
+                          if (var4 >= 5) {
                             var3++;
                             continue L3;
                           } else {
@@ -4267,7 +4267,7 @@ final class nu {
                             break L5;
                           } else {
                             L7: {
-                              if ((var3 ^ -1) != (((nu) this).field_g[var4].field_p ^ -1)) {
+                              if (~var3 != ~((nu) this).field_g[var4].field_p) {
                                 break L7;
                               } else {
                                 if (!((nu) this).field_R[var4].d(3511)) {
@@ -4351,28 +4351,28 @@ final class nu {
               L1: {
                 ((nu) this).field_u = param0;
                 ((nu) this).field_v = cv.field_a[((nu) this).field_u];
-                if (-1 != (((nu) this).field_u ^ -1)) {
+                if (((nu) this).field_u != 0) {
                   if (((nu) this).field_u != 1) {
                     if (((nu) this).field_u != 2) {
                       if (3 == ((nu) this).field_u) {
                         ((nu) this).field_o = new wl(((nu) this).field_e, ((nu) this).field_g, ((nu) this).field_R, ((nu) this).field_i, ((nu) this).field_k, ((nu) this).field_b);
                         break L1;
                       } else {
-                        if ((((nu) this).field_u ^ -1) != -5) {
+                        if (((nu) this).field_u != 4) {
                           break L1;
                         } else {
                           L2: {
                             if (((nu) this).field_q != null) {
                               var3_int = 0;
                               L3: while (true) {
-                                if ((((nu) this).field_g.length ^ -1) >= (var3_int ^ -1)) {
+                                if (~((nu) this).field_g.length >= ~var3_int) {
                                   break L2;
                                 } else {
                                   L4: {
                                     stackOut_29_0 = ((nu) this).field_q[var3_int];
                                     stackIn_34_0 = stackOut_29_0;
                                     stackIn_30_0 = stackOut_29_0;
-                                    if (-1 != (((nu) this).field_g[var3_int].field_p ^ -1)) {
+                                    if (((nu) this).field_g[var3_int].field_p != 0) {
                                       stackOut_34_0 = (jc) (Object) stackIn_34_0;
                                       stackOut_34_1 = 0;
                                       stackIn_35_0 = stackOut_34_0;
@@ -4419,13 +4419,13 @@ final class nu {
                             } else {
                               var4 = 0;
                               L7: while (true) {
-                                if (-6 >= (var4 ^ -1)) {
+                                if (var4 >= 5) {
                                   var3_int++;
                                   continue L6;
                                 } else {
                                   L8: {
                                     var5 = 1;
-                                    if (-1 <= (var4 ^ -1)) {
+                                    if (var4 <= 0) {
                                       break L8;
                                     } else {
                                       var6_int = ((nu) this).field_i[var3_int][-1 + var4];
@@ -4520,7 +4520,7 @@ final class nu {
                 }
               }
               var3_int = ((nu) this).field_g[param1.field_u].field_p;
-              if ((((nu) this).b((byte) 72, var3_int) ^ -1) == (param1.field_u ^ -1)) {
+              if (~((nu) this).b((byte) 72, var3_int) == ~param1.field_u) {
                 ((nu) this).field_C.a(var3_int, 1, param1.field_v);
                 ((nu) this).field_C.a((mo) (Object) ((nu) this).field_g[param1.field_u], (byte) 84);
                 break L0;
@@ -4727,7 +4727,7 @@ final class nu {
                 L7: while (true) {
                   if (var3 >= 2) {
                     L8: {
-                      if (-1 != (((nu) this).field_u ^ -1)) {
+                      if (((nu) this).field_u != 0) {
                         break L8;
                       } else {
                         StringBuilder discarded$37 = var1_ref.append("\t" + ((nu) this).field_n);
@@ -4735,7 +4735,7 @@ final class nu {
                       }
                     }
                     L9: {
-                      if ((((nu) this).field_u ^ -1) == -3) {
+                      if (((nu) this).field_u == 2) {
                         StringBuilder discarded$38 = var1_ref.append("\t" + ((nu) this).field_C);
                         break L9;
                       } else {
@@ -4743,7 +4743,7 @@ final class nu {
                       }
                     }
                     L10: {
-                      if (-4 == (((nu) this).field_u ^ -1)) {
+                      if (((nu) this).field_u == 3) {
                         StringBuilder discarded$39 = var1_ref.append("\t" + ((nu) this).field_o);
                         break L10;
                       } else {
@@ -4751,7 +4751,7 @@ final class nu {
                       }
                     }
                     L11: {
-                      if (-5 == (((nu) this).field_u ^ -1)) {
+                      if (((nu) this).field_u == 4) {
                         StringBuilder discarded$40 = var1_ref.append("\n\t" + ((nu) this).field_X);
                         StringBuilder discarded$41 = var1_ref.append("\n\t" + ((nu) this).field_V);
                         var3 = 0;
@@ -4768,7 +4768,7 @@ final class nu {
                                 L14: {
                                   StringBuilder discarded$42 = var1_ref.append("\n\t" + var3 + "." + var4 + " " + ((nu) this).field_P[var3][var4]);
                                   var5 = ((nu) this).a((byte) 6, var3, var4);
-                                  if ((var5 ^ -1) != 0) {
+                                  if (var5 != -1) {
                                     StringBuilder discarded$43 = var1_ref.append("\n\t\tCTRL=\t" + ((nu) this).field_S[var5]);
                                     break L14;
                                   } else {
@@ -4792,11 +4792,11 @@ final class nu {
                     StringBuilder discarded$44 = var1_ref.append("\tteam " + var3 + ": kit=[" + ((nu) this).field_H[var3] + "," + ((nu) this).field_d[var3] + "," + ((nu) this).field_Q[var3] + "]\tslot_owner=[");
                     var4 = 0;
                     L15: while (true) {
-                      if (-5 >= (var4 ^ -1)) {
+                      if (var4 >= 4) {
                         StringBuilder discarded$45 = var1_ref.append("]\tchosen_player_ids=[");
                         var4 = 0;
                         L16: while (true) {
-                          if (-5 >= (var4 ^ -1)) {
+                          if (var4 >= 4) {
                             L17: {
                               StringBuilder discarded$46 = var1_ref.append("]\tformation=" + ((nu) this).field_r[var3]);
                               if (((nu) this).field_F[var3]) {
@@ -4848,7 +4848,7 @@ final class nu {
                           stackIn_53_1 = stackOut_48_1;
                           stackIn_49_0 = stackOut_48_0;
                           stackIn_49_1 = stackOut_48_1;
-                          if (-4 >= (var4 ^ -1)) {
+                          if (var4 >= 3) {
                             stackOut_53_0 = (StringBuilder) (Object) stackIn_53_0;
                             stackOut_53_1 = (StringBuilder) (Object) stackIn_53_1;
                             stackOut_53_2 = "";
@@ -4988,7 +4988,7 @@ final class nu {
                       if (var4_int >= ((nu) this).field_I) {
                         var4_int = 0;
                         L4: while (true) {
-                          if (-3 >= (var4_int ^ -1)) {
+                          if (var4_int >= 2) {
                             ((nu) this).field_t = param0.l(2, 59);
                             ((nu) this).field_m = param0.l(2, 59);
                             break L2;
@@ -5039,17 +5039,17 @@ final class nu {
                   } else {
                     var4_int = 0;
                     L9: while (true) {
-                      if ((var4_int ^ -1) <= -3) {
+                      if (var4_int >= 2) {
                         param0.l((byte) 121);
                         var4_int = 0;
                         L10: while (true) {
-                          if (-3 >= (var4_int ^ -1)) {
+                          if (var4_int >= 2) {
                             param0.p(-116);
                             break L8;
                           } else {
                             var5 = 0;
                             L11: while (true) {
-                              if (-5 >= (var5 ^ -1)) {
+                              if (var5 >= 4) {
                                 var4_int++;
                                 continue L10;
                               } else {
@@ -5063,7 +5063,7 @@ final class nu {
                       } else {
                         var5 = 0;
                         L12: while (true) {
-                          if (-5 >= (var5 ^ -1)) {
+                          if (var5 >= 4) {
                             var4_int++;
                             continue L9;
                           } else {
@@ -5083,7 +5083,7 @@ final class nu {
                     ((nu) this).field_Z = param0.l(3, 59) + -3;
                     var4_int = 0;
                     L14: while (true) {
-                      if ((((nu) this).field_I ^ -1) >= (var4_int ^ -1)) {
+                      if (~((nu) this).field_I >= ~var4_int) {
                         break L13;
                       } else {
                         L15: {
@@ -5105,7 +5105,7 @@ final class nu {
                               ((nu) this).field_g[var4_int].field_g = param0.l(15, 59);
                               var5 = param0.l(1, 59);
                               ((nu) this).field_g[var4_int].field_k = param0.l(6, 59);
-                              if ((var5 ^ -1) == -2) {
+                              if (var5 == 1) {
                                 ((nu) this).field_g[var4_int].field_k = -((nu) this).field_g[var4_int].field_k;
                                 break L17;
                               } else {
@@ -5114,7 +5114,7 @@ final class nu {
                             }
                             var6 = 0;
                             L18: while (true) {
-                              if ((var6 ^ -1) <= (((nu) this).field_g[var4_int].field_o.length ^ -1)) {
+                              if (~var6 <= ~((nu) this).field_g[var4_int].field_o.length) {
                                 break L15;
                               } else {
                                 ((nu) this).field_g[var4_int].field_o[var6] = param0.l(8, 59);
@@ -5137,7 +5137,7 @@ final class nu {
                   L19: while (true) {
                     if (var4_int >= ((nu) this).field_I) {
                       L20: {
-                        if ((((nu) this).field_u ^ -1) == -1) {
+                        if (((nu) this).field_u == 0) {
                           ((nu) this).field_n.b(param0, 4);
                           ((nu) this).field_n.a(74, param0);
                           break L20;
@@ -5146,7 +5146,7 @@ final class nu {
                         }
                       }
                       L21: {
-                        if ((((nu) this).field_u ^ -1) == -3) {
+                        if (((nu) this).field_u == 2) {
                           ((nu) this).field_C.b(param0, 4);
                           ((nu) this).field_C.c(param0, 2);
                           break L21;
@@ -5168,11 +5168,11 @@ final class nu {
                           ((nu) this).field_V.b(param0, 4);
                           var4_int = 0;
                           L24: while (true) {
-                            if ((var4_int ^ -1) <= -3) {
+                            if (var4_int >= 2) {
                               ((nu) this).field_X.b(param0, param2 ^ 5);
                               var4_int = 0;
                               L25: while (true) {
-                                if (-3 >= (var4_int ^ -1)) {
+                                if (var4_int >= 2) {
                                   ((nu) this).field_V.a(param0, (byte) -124);
                                   ((nu) this).field_X.a(param0, (byte) -84);
                                   ((nu) this).field_J = param0.l(8, 59);
@@ -5181,7 +5181,7 @@ final class nu {
                                 } else {
                                   var5 = 0;
                                   L26: while (true) {
-                                    if (-6 >= (var5 ^ -1)) {
+                                    if (var5 >= 5) {
                                       var4_int++;
                                       continue L25;
                                     } else {
@@ -5214,7 +5214,7 @@ final class nu {
                       break L0;
                     } else {
                       ((nu) this).field_R[var4_int].b(param0, 4);
-                      ((nu) this).field_R[var4_int].c(param0, param2 + 0);
+                      ((nu) this).field_R[var4_int].c(param0, param2);
                       var4_int++;
                       continue L19;
                     }
@@ -5375,7 +5375,7 @@ final class nu {
                     ((nu) this).field_q = new jc[((nu) this).field_I];
                     var10_int = 0;
                     L3: while (true) {
-                      if ((((nu) this).field_I ^ -1) >= (var10_int ^ -1)) {
+                      if (~((nu) this).field_I >= ~var10_int) {
                         break L0;
                       } else {
                         ((nu) this).field_q[var10_int] = new jc();

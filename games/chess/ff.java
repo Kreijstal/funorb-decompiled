@@ -22,7 +22,7 @@ final class ff extends com.ms.dll.Callback {
         if (((ff) this).field_e == param0) {
           if (32 == param1) {
             var5 = param3 & 65535;
-            if (-2 != (var5 ^ -1)) {
+            if (var5 != 1) {
               if (param1 == 101024) {
                 L0: {
                   if (((ff) this).field_a) {

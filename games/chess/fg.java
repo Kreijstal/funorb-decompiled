@@ -175,7 +175,7 @@ final class fg {
                   L6: while (true) {
                     if (var4.field_f != 0) {
                       L7: {
-                        if ((var4.field_f ^ -1) != -2) {
+                        if (var4.field_f != 1) {
                           break L7;
                         } else {
                           var5 = (DataInputStream) var4.field_b;

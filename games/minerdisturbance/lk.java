@@ -3,10 +3,7 @@
  */
 final class lk {
     final static void a(java.applet.Applet param0, String param1, byte param2) throws Throwable {
-        Object discarded$6 = netscape.javascript.JSObject.getWindow(param0).eval(param1);
-        if (param2 != -106) {
-            return;
-        }
+        Object discarded$0 = netscape.javascript.JSObject.getWindow(param0).eval(param1);
     }
 
     final static Object a(String param0, java.applet.Applet param1, int param2, Object[] param3) throws Throwable {

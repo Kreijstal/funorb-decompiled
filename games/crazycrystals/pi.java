@@ -14,29 +14,14 @@ final class pi extends jb {
     byte[][][] field_h;
 
     public static void a(int param0) {
-        if (param0 < 76) {
-            field_o = 112;
-            field_j = null;
-            return;
-        }
         field_j = null;
     }
 
     final static java.awt.Container d(int param0) {
-        if (param0 == 0) {
-          if (null != uc.field_d) {
+        if (null != uc.field_d) {
             return (java.awt.Container) (Object) uc.field_d;
-          } else {
-            return (java.awt.Container) (Object) le.b((byte) -20);
-          }
-        } else {
-          pi.a(32, 84);
-          if (null != uc.field_d) {
-            return (java.awt.Container) (Object) uc.field_d;
-          } else {
-            return (java.awt.Container) (Object) le.b((byte) -20);
-          }
         }
+        return (java.awt.Container) (Object) le.b((byte) -20);
     }
 
     pi() {

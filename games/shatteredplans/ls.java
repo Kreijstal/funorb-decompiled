@@ -25,25 +25,7 @@ final class ls {
     }
 
     final static int a(int param0, int param1) {
-        double stackIn_4_0 = 0.0;
-        double stackOut_3_0 = 0.0;
-        double stackOut_2_0 = 0.0;
-        if (param1 != 2) {
-          return 18;
-        } else {
-          L0: {
-            if (param0 % 2 != 0) {
-              stackOut_3_0 = 0.75 * (200.0 * rh.field_d);
-              stackIn_4_0 = stackOut_3_0;
-              break L0;
-            } else {
-              stackOut_2_0 = 0.25 * (rh.field_d * 200.0);
-              stackIn_4_0 = stackOut_2_0;
-              break L0;
-            }
-          }
-          return (int)(stackIn_4_0 + (double)(param0 / 2) * 1.5 * rh.field_d * 200.0);
-        }
+        return (int)((param0 % 2 == 0 ? 0.25 * (rh.field_d * 200.0) : 0.75 * (200.0 * rh.field_d)) + (double)(param0 / 2) * 1.5 * rh.field_d * 200.0);
     }
 
     static {

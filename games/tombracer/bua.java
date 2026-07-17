@@ -19,7 +19,7 @@ final class bua {
         int var8 = 0;
         var8 = TombRacer.field_G ? 1 : 0;
         ((bua) this).field_f = param5;
-        if ((param4 ^ -1) != param1) {
+        if (~param4 != param1) {
           if (param0 != -1) {
             if (!param3) {
               if (param4 == ((bua) this).field_e) {
@@ -235,7 +235,7 @@ final class bua {
         var5 = kb.a(((bua) this).field_d, param0, param2, param1 + 3, ((bua) this).field_b);
         if (var5 != null) {
           if (null == ((bua) this).field_k) {
-            if ((((bua) this).field_h ^ -1) != -129) {
+            if (((bua) this).field_h != 128) {
               var8 = rga.a(var5, param3, 124);
               if (param1 == -1) {
                 L0: {
@@ -328,11 +328,6 @@ final class bua {
 
     public static void a(byte param0) {
         field_c = null;
-        if (param0 <= 55) {
-            int discarded$0 = bua.a(56, 48);
-            field_g = null;
-            return;
-        }
         field_g = null;
     }
 
@@ -377,14 +372,7 @@ final class bua {
     private final void d(int param0) {
         ((bua) this).field_e = -1;
         ((bua) this).field_k = null;
-        if (param0 <= 97) {
-          field_g = null;
-          ((bua) this).field_j = -1;
-          return;
-        } else {
-          ((bua) this).field_j = -1;
-          return;
-        }
+        ((bua) this).field_j = -1;
     }
 
     final void a(int param0, boolean param1, int param2, int param3, boolean param4) {

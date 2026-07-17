@@ -10,7 +10,7 @@ final class qf {
 
     public static void a(byte param0) {
         field_b = null;
-        int var1 = -26 % ((48 - param0) / 33);
+        int var1 = 0;
         field_c = null;
     }
 

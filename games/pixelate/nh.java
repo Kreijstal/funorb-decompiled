@@ -15,7 +15,7 @@ final class nh {
         ae var5 = null;
         int var6 = 0;
         var6 = Pixelate.field_H ? 1 : 0;
-        var3 = -63 / ((param0 - -27) / 63);
+        var3 = -63;
         L0: while (true) {
           L1: {
             var1 = od.a((byte) 41, 65536, -65536);
@@ -27,7 +27,7 @@ final class nh {
               if (0 != var2) {
                 break L1;
               } else {
-                if (-1 == (var4 ^ -1)) {
+                if (var4 == 0) {
                   continue L0;
                 } else {
                   break L1;
@@ -53,9 +53,6 @@ final class nh {
     final static void a(byte param0) {
         int var1 = rk.field_e.g(16711680);
         int var2 = rk.field_e.g(16777215);
-        if (param0 <= 54) {
-            field_c = null;
-        }
         int var3 = rk.field_e.field_R[0].length;
         rk.field_e.field_R = new int[4][];
         rk.field_e.field_R[0] = new int[var3];
@@ -73,197 +70,236 @@ final class nh {
     }
 
     final static long a(CharSequence param0, int param1) {
-        long var2 = 0L;
+        long var2_long = 0L;
+        RuntimeException var2 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
+        long stackIn_23_0 = 0L;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        String stackIn_27_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        long stackOut_22_0 = 0L;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        RuntimeException stackOut_26_0 = null;
+        StringBuilder stackOut_26_1 = null;
+        String stackOut_26_2 = null;
+        RuntimeException stackOut_25_0 = null;
+        StringBuilder stackOut_25_1 = null;
+        String stackOut_25_2 = null;
         var7 = Pixelate.field_H ? 1 : 0;
-        var2 = 0L;
-        var4 = param0.length();
-        var5 = 0;
-        L0: while (true) {
-          L1: {
-            if (var5 >= var4) {
-              break L1;
-            } else {
+        try {
+          L0: {
+            var2_long = 0L;
+            var4 = param0.length();
+            var5 = 0;
+            L1: while (true) {
               L2: {
-                L3: {
-                  var2 = var2 * 37L;
-                  var6 = param0.charAt(var5);
-                  if (65 > var6) {
-                    break L3;
-                  } else {
-                    if (var6 > 90) {
-                      break L3;
-                    } else {
-                      var2 = var2 + (long)(-65 + var6 + 1);
-                      break L2;
-                    }
-                  }
-                }
-                L4: {
-                  if (var6 < 97) {
-                    break L4;
-                  } else {
-                    if (var6 <= 122) {
-                      var2 = var2 + (long)(-97 + var6 + 1);
-                      break L2;
-                    } else {
-                      break L4;
-                    }
-                  }
-                }
-                if (48 > var6) {
+                if (var5 >= var4) {
                   break L2;
                 } else {
-                  if (57 >= var6) {
-                    var2 = var2 + (long)(-48 + var6 + 27);
-                    break L2;
+                  L3: {
+                    L4: {
+                      var2_long = var2_long * 37L;
+                      var6 = param0.charAt(var5);
+                      if (65 > var6) {
+                        break L4;
+                      } else {
+                        if (var6 > 90) {
+                          break L4;
+                        } else {
+                          var2_long = var2_long + (long)(-65 + var6 + 1);
+                          break L3;
+                        }
+                      }
+                    }
+                    L5: {
+                      if (var6 < 97) {
+                        break L5;
+                      } else {
+                        if (var6 <= 122) {
+                          var2_long = var2_long + (long)(-97 + var6 + 1);
+                          break L3;
+                        } else {
+                          break L5;
+                        }
+                      }
+                    }
+                    if (48 > var6) {
+                      break L3;
+                    } else {
+                      if (57 >= var6) {
+                        var2_long = var2_long + (long)(-48 + var6 + 27);
+                        break L3;
+                      } else {
+                        break L3;
+                      }
+                    }
+                  }
+                  if (var2_long < 177917621779460413L) {
+                    var5++;
+                    continue L1;
                   } else {
                     break L2;
                   }
                 }
               }
-              if (var2 < 177917621779460413L) {
-                var5++;
-                continue L0;
-              } else {
-                break L1;
-              }
-            }
-          }
-          L5: while (true) {
-            L6: {
-              if (0L != var2 % 37L) {
-                break L6;
-              } else {
-                if (0L == var2) {
-                  break L6;
-                } else {
-                  var2 = var2 / 37L;
-                  continue L5;
-                }
-              }
-            }
-            L7: {
-              if (param1 == -29667) {
-                break L7;
-              } else {
-                field_c = null;
-                break L7;
-              }
-            }
-            return var2;
-          }
-        }
-    }
-
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        L0: {
-          var12 = Pixelate.field_H ? 1 : 0;
-          if (param4 >= 99) {
-            break L0;
-          } else {
-            field_d = null;
-            break L0;
-          }
-        }
-        L1: {
-          if (param2 < t.field_e) {
-            param5 = param5 - (t.field_e + -param2);
-            param2 = t.field_e;
-            break L1;
-          } else {
-            break L1;
-          }
-        }
-        L2: {
-          if (param5 + param2 > t.field_h) {
-            param5 = -param2 + t.field_h;
-            break L2;
-          } else {
-            break L2;
-          }
-        }
-        L3: {
-          if (t.field_f > param3) {
-            param0 = param0 - (-param3 + t.field_f);
-            param3 = t.field_f;
-            break L3;
-          } else {
-            break L3;
-          }
-        }
-        L4: {
-          if (param0 + param3 <= t.field_a) {
-            break L4;
-          } else {
-            param0 = t.field_a - param3;
-            break L4;
-          }
-        }
-        if (0 >= param5) {
-          return;
-        } else {
-          if ((param0 ^ -1) < -1) {
-            var6 = param2 - -(param3 * t.field_j);
-            var7 = -param5 + t.field_j;
-            param3 = -param0;
-            L5: while (true) {
-              if ((param3 ^ -1) <= -1) {
-                return;
-              } else {
-                param2 = -param5;
-                L6: while (true) {
-                  if ((param2 ^ -1) <= -1) {
-                    var6 = var6 + var7;
-                    param3++;
-                    continue L5;
+              L6: while (true) {
+                L7: {
+                  if (0L != var2_long % 37L) {
+                    break L7;
                   } else {
-                    var8 = t.field_k[var6];
-                    if ((var8 & 65280) >> 437520040 > param1) {
-                      if ((255 & var8 >> -1960753624) >= (var8 >> -490448752 & 255)) {
-                        L7: {
-                          var9 = ((16711680 & var8) >> 993062639) - 60;
-                          if ((var9 ^ -1) < -256) {
-                            var9 = 255;
-                            break L7;
-                          } else {
-                            break L7;
-                          }
-                        }
-                        var10 = 65280 & var8;
-                        var10 = (var10 >> -165939871) - (var10 >> -664528411) & 65280;
-                        var11 = (255 & var8) >> -734854973;
-                        t.field_k[var6] = bq.a(var11, bq.a(var10, var9 << 901460656));
-                        var6++;
-                        param2++;
-                        continue L6;
-                      } else {
-                        var6++;
-                        param2++;
-                        continue L6;
-                      }
+                    if (0L == var2_long) {
+                      break L7;
                     } else {
-                      var6++;
-                      param2++;
+                      var2_long = var2_long / 37L;
                       continue L6;
                     }
                   }
                 }
+                stackOut_22_0 = var2_long;
+                stackIn_23_0 = stackOut_22_0;
+                break L0;
               }
             }
-          } else {
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L8: {
+            var2 = decompiledCaughtException;
+            stackOut_24_0 = (RuntimeException) var2;
+            stackOut_24_1 = new StringBuilder().append("nh.A(");
+            stackIn_26_0 = stackOut_24_0;
+            stackIn_26_1 = stackOut_24_1;
+            stackIn_25_0 = stackOut_24_0;
+            stackIn_25_1 = stackOut_24_1;
+            if (param0 == null) {
+              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
+              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_2 = "null";
+              stackIn_27_0 = stackOut_26_0;
+              stackIn_27_1 = stackOut_26_1;
+              stackIn_27_2 = stackOut_26_2;
+              break L8;
+            } else {
+              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
+              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_2 = "{...}";
+              stackIn_27_0 = stackOut_25_0;
+              stackIn_27_1 = stackOut_25_1;
+              stackIn_27_2 = stackOut_25_2;
+              break L8;
+            }
+          }
+          throw aa.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 44 + -29667 + 41);
+        }
+        return stackIn_23_0;
+    }
+
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+        RuntimeException var6 = null;
+        int var6_int = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var12 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var12 = Pixelate.field_H ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              if (param4 >= 99) {
+                break L1;
+              } else {
+                field_d = null;
+                break L1;
+              }
+            }
+            L2: {
+              if (param2 < t.field_e) {
+                param5 = param5 - (t.field_e + -param2);
+                param2 = t.field_e;
+                break L2;
+              } else {
+                break L2;
+              }
+            }
+            L3: {
+              if (param5 + param2 > t.field_h) {
+                param5 = -param2 + t.field_h;
+                break L3;
+              } else {
+                break L3;
+              }
+            }
+            L4: {
+              if (t.field_f > param3) {
+                param0 = param0 - (-param3 + t.field_f);
+                param3 = t.field_f;
+                break L4;
+              } else {
+                break L4;
+              }
+            }
+            L5: {
+              if (param0 + param3 <= t.field_a) {
+                break L5;
+              } else {
+                param0 = t.field_a - param3;
+                break L5;
+              }
+            }
+            L6: {
+              if (0 >= param5) {
+                break L6;
+              } else {
+                if (param0 > 0) {
+                  var6_int = param2 - -(param3 * t.field_j);
+                  var7 = -param5 + t.field_j;
+                  param3 = -param0;
+                  L7: while (true) {
+                    if (param3 >= 0) {
+                      break L0;
+                    } else {
+                      param2 = -param5;
+                      L8: while (true) {
+                        if (param2 >= 0) {
+                          var6_int = var6_int + var7;
+                          param3++;
+                          continue L7;
+                        } else {
+                          L9: {
+                            var8 = t.field_k[var6_int];
+                            if ((var8 & 65280) >> 8 <= param1) {
+                              break L9;
+                            } else {
+                              break L9;
+                            }
+                          }
+                          var6_int++;
+                          param2++;
+                          continue L8;
+                        }
+                      }
+                    }
+                  }
+                } else {
+                  break L6;
+                }
+              }
+            }
             return;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = decompiledCaughtException;
+          throw aa.a((Throwable) (Object) var6, "nh.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
     }
 

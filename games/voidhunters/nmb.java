@@ -11,92 +11,68 @@ final class nmb extends hrb {
 
     final int a(int param0, long param1) {
         int var4 = 0;
-        int var5 = VoidHunters.field_G;
-        if (param0 != 0) {
+        int var5 = 0;
+        var5 = VoidHunters.field_G;
+        if (param0 == 0) {
+          if (~((nmb) this).field_g > ~((nmb) this).field_e) {
+            ((nmb) this).field_d = ((nmb) this).field_d + (-((nmb) this).field_g + ((nmb) this).field_e);
+            ((nmb) this).field_g = ((nmb) this).field_g + (-((nmb) this).field_g + ((nmb) this).field_e);
+            ((nmb) this).field_e = ((nmb) this).field_e + param1;
             return 1;
-        }
-        if ((((nmb) this).field_g ^ -1L) <= (((nmb) this).field_e ^ -1L)) {
+          } else {
             var4 = 0;
-            do {
+            L0: while (true) {
+              L1: {
                 var4++;
                 ((nmb) this).field_e = ((nmb) this).field_e + param1;
-                // if_icmpge L66
-            } while (((nmb) this).field_g > ((nmb) this).field_e);
-            if (((nmb) this).field_e < ((nmb) this).field_g) {
-                ((nmb) this).field_e = ((nmb) this).field_g;
+                if (var4 >= 10) {
+                  break L1;
+                } else {
+                  if (((nmb) this).field_g > ((nmb) this).field_e) {
+                    continue L0;
+                  } else {
+                    break L1;
+                  }
+                }
+              }
+              L2: {
+                if (((nmb) this).field_e >= ((nmb) this).field_g) {
+                  break L2;
+                } else {
+                  ((nmb) this).field_e = ((nmb) this).field_g;
+                  break L2;
+                }
+              }
+              return var4;
             }
-            return var4;
+          }
+        } else {
+          return 1;
         }
-        ((nmb) this).field_d = ((nmb) this).field_d + (-((nmb) this).field_g + ((nmb) this).field_e);
-        ((nmb) this).field_g = ((nmb) this).field_g + (-((nmb) this).field_g + ((nmb) this).field_e);
-        ((nmb) this).field_e = ((nmb) this).field_e + param1;
-        return 1;
     }
 
     final static void d(int param0) {
         Object var1 = null;
         Throwable var2 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    if (param0 <= -57) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
+        Throwable decompiledCaughtException = null;
+        if (param0 <= -57) {
+          L0: {
+            if (gha.field_q == null) {
+              break L0;
+            } else {
+              var1 = (Object) (Object) gha.field_q;
+              synchronized (var1) {
+                L1: {
+                  gha.field_q = null;
+                  break L1;
                 }
-                case 1: {
-                    return;
-                }
-                case 2: {
-                    if (gha.field_q == null) {
-                        statePc = 8;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 3: {
-                    var1 = (Object) (Object) gha.field_q;
-                    // monitorenter gha.field_q
-                    statePc = 4;
-                    continue stateLoop;
-                }
-                case 4: {
-                    try {
-                        gha.field_q = null;
-                        // monitorexit var1
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                case 8: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
+              break L0;
             }
+          }
+          return;
+        } else {
+          return;
         }
     }
 
@@ -112,9 +88,69 @@ final class nmb extends hrb {
     }
 
     final static void a(byte param0, ana param1) {
-        kpb.field_q.a((f) (Object) param1.field_e);
-        if (param0 >= -73) {
-            return;
+        RuntimeException var2 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        String stackIn_5_2 = null;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
+        try {
+          L0: {
+            kpb.field_q.a((f) (Object) param1.field_e);
+            if (param0 < -73) {
+              decompiledRegionSelector0 = 0;
+              break L0;
+            } else {
+              decompiledRegionSelector0 = 1;
+              break L0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var2 = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var2;
+            stackOut_2_1 = new StringBuilder().append("nmb.F(").append(param0).append(44);
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
+            if (param1 == null) {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
+            }
+          }
+          throw rta.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+        }
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
     }
 
@@ -151,16 +187,13 @@ final class nmb extends hrb {
         long var4 = var2 + -((nmb) this).field_d;
         ((nmb) this).field_d = var2;
         if (-5000000000L < var4) {
-            if (!(-5000000001L >= (var4 ^ -1L))) {
+            if (!(var4 >= 5000000000L)) {
                 ((nmb) this).field_f[((nmb) this).field_c] = var4;
                 ((nmb) this).field_c = (((nmb) this).field_c + 1) % 10;
-                if ((((nmb) this).field_h ^ -1) > -2) {
+                if (((nmb) this).field_h < 1) {
                     ((nmb) this).field_h = ((nmb) this).field_h + 1;
                 }
             }
-        }
-        if (param0 >= -71) {
-            ((nmb) this).field_g = 79L;
         }
         long var6 = 0L;
         for (var8 = 1; var8 <= ((nmb) this).field_h; var8++) {

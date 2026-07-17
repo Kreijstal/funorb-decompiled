@@ -13,13 +13,10 @@ final class j {
         field_a = null;
         field_c = null;
         field_d = null;
-        if (param0 != -3) {
-            String discarded$0 = j.b(-90);
-        }
     }
 
     final static String b(int param0) {
-        if (-3 >= (rk.field_d ^ -1)) {
+        if (rk.field_d >= 2) {
           if (null == kl.field_b) {
             if (!bf.field_y.b((byte) 110)) {
               return n.field_f;

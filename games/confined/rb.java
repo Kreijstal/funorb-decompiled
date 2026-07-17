@@ -20,16 +20,8 @@ abstract class rb {
         field_i = null;
         field_d = null;
         field_g = null;
-        if (param0 != -90) {
-          field_g = null;
-          field_h = null;
-          field_a = null;
-          return;
-        } else {
-          field_h = null;
-          field_a = null;
-          return;
-        }
+        field_h = null;
+        field_a = null;
     }
 
     final void a(byte param0) {

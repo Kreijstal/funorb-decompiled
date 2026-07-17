@@ -6,9 +6,6 @@ final class vr {
     static String field_a;
 
     final static void c(int param0) {
-        if (param0 != -3) {
-            return;
-        }
         Object var2 = null;
         ui.a(ld.field_a, (byte) 111, (String) null);
     }
@@ -71,25 +68,63 @@ final class vr {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;
+            RuntimeException var2_ref2 = null;
+            RuntimeException stackIn_5_0 = null;
+            StringBuilder stackIn_5_1 = null;
+            RuntimeException stackIn_6_0 = null;
+            StringBuilder stackIn_6_1 = null;
+            RuntimeException stackIn_7_0 = null;
+            StringBuilder stackIn_7_1 = null;
+            String stackIn_7_2 = null;
             Throwable decompiledCaughtException = null;
+            RuntimeException stackOut_4_0 = null;
+            StringBuilder stackOut_4_1 = null;
+            RuntimeException stackOut_6_0 = null;
+            StringBuilder stackOut_6_1 = null;
+            String stackOut_6_2 = null;
+            RuntimeException stackOut_5_0 = null;
+            StringBuilder stackOut_5_1 = null;
+            String stackOut_5_2 = null;
             try {
-              L0: {
+              try {
                 var2 = new java.net.URL(param0.getCodeBase(), "toserverlist.ws");
                 param0.getAppletContext().showDocument(qr.a(param0, var2, 3), "_top");
-                if (param1 == 23607) {
-                  break L0;
-                } else {
-                  field_a = null;
-                  return;
-                }
-              }
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              L1: {
+                return;
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
                 var2_ref = (Exception) (Object) decompiledCaughtException;
                 var2_ref.printStackTrace();
-                break L1;
+                return;
               }
+            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L0: {
+                var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_4_0 = (RuntimeException) var2_ref2;
+                stackOut_4_1 = new StringBuilder().append("vr.C(");
+                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_1 = stackOut_4_1;
+                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_1 = stackOut_4_1;
+                if (param0 == null) {
+                  stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+                  stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+                  stackOut_6_2 = "null";
+                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_1 = stackOut_6_1;
+                  stackIn_7_2 = stackOut_6_2;
+                  break L0;
+                } else {
+                  stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+                  stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+                  stackOut_5_2 = "{...}";
+                  stackIn_7_0 = stackOut_5_0;
+                  stackIn_7_1 = stackOut_5_1;
+                  stackIn_7_2 = stackOut_5_2;
+                  break L0;
+                }
+              }
+              throw nb.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + 23607 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -99,155 +134,78 @@ final class vr {
     }
 
     final static void a(int param0) {
+        RuntimeException var1 = null;
         int var2 = 0;
         he var3 = null;
+        RuntimeException decompiledCaughtException = null;
         var2 = Kickabout.field_G;
-        hw.field_k = false;
-        uv.field_i = null;
-        ow.field_b = null;
-        if (rp.field_B == null) {
-          if (param0 == -2) {
-            pq.field_N = null;
-            if (kq.field_yb == null) {
-              L0: {
-                sr.field_f = null;
-                if (null != lw.field_d) {
-                  lw.field_d.b(param0 ^ -22997);
-                  lw.field_d = null;
-                  break L0;
-                } else {
-                  break L0;
-                }
-              }
-              pu.field_Eb = null;
-              if (null != pq.field_N) {
-                var3 = (he) (Object) pq.field_N.b((byte) 72);
-                L1: while (true) {
-                  if (var3 == null) {
-                    pq.field_N = null;
-                    return;
-                  } else {
-                    var3.f(57);
-                    var3 = (he) (Object) pq.field_N.a(0);
-                    continue L1;
-                  }
-                }
+        try {
+          L0: {
+            L1: {
+              hw.field_k = false;
+              uv.field_i = null;
+              ow.field_b = null;
+              if (rp.field_B == null) {
+                break L1;
               } else {
-                return;
+                rp.field_B.b(param0 + 22999);
+                rp.field_B = null;
+                break L1;
               }
-            } else {
+            }
+            if (param0 == -2) {
               L2: {
-                kq.field_yb.b(param0 ^ -22997);
-                kq.field_yb = null;
+                pq.field_N = null;
+                if (kq.field_yb == null) {
+                  break L2;
+                } else {
+                  kq.field_yb.b(param0 ^ -22997);
+                  kq.field_yb = null;
+                  break L2;
+                }
+              }
+              L3: {
                 sr.field_f = null;
                 if (null != lw.field_d) {
                   lw.field_d.b(param0 ^ -22997);
                   lw.field_d = null;
-                  break L2;
+                  break L3;
                 } else {
-                  break L2;
+                  break L3;
                 }
               }
               pu.field_Eb = null;
               if (null != pq.field_N) {
                 var3 = (he) (Object) pq.field_N.b((byte) 72);
-                L3: while (true) {
+                L4: while (true) {
                   if (var3 == null) {
                     pq.field_N = null;
-                    return;
+                    break L0;
                   } else {
                     var3.f(57);
                     var3 = (he) (Object) pq.field_N.a(0);
-                    continue L3;
-                  }
-                }
-              } else {
-                return;
-              }
-            }
-          } else {
-            return;
-          }
-        } else {
-          rp.field_B.b(param0 + 22999);
-          rp.field_B = null;
-          if (param0 == -2) {
-            pq.field_N = null;
-            if (kq.field_yb != null) {
-              L4: {
-                kq.field_yb.b(param0 ^ -22997);
-                kq.field_yb = null;
-                sr.field_f = null;
-                if (null != lw.field_d) {
-                  lw.field_d.b(param0 ^ -22997);
-                  lw.field_d = null;
-                  break L4;
-                } else {
-                  break L4;
-                }
-              }
-              pu.field_Eb = null;
-              if (null != pq.field_N) {
-                var3 = (he) (Object) pq.field_N.b((byte) 72);
-                L5: while (true) {
-                  if (var3 == null) {
-                    pq.field_N = null;
-                    return;
-                  } else {
-                    var3.f(57);
-                    var3 = (he) (Object) pq.field_N.a(0);
-                    continue L5;
+                    continue L4;
                   }
                 }
               } else {
                 return;
               }
             } else {
-              L6: {
-                sr.field_f = null;
-                if (null != lw.field_d) {
-                  lw.field_d.b(param0 ^ -22997);
-                  lw.field_d = null;
-                  break L6;
-                } else {
-                  break L6;
-                }
-              }
-              pu.field_Eb = null;
-              if (null != pq.field_N) {
-                var3 = (he) (Object) pq.field_N.b((byte) 72);
-                L7: while (true) {
-                  if (var3 == null) {
-                    pq.field_N = null;
-                    return;
-                  } else {
-                    var3.f(57);
-                    var3 = (he) (Object) pq.field_N.a(0);
-                    continue L7;
-                  }
-                }
-              } else {
-                return;
-              }
+              return;
             }
-          } else {
-            return;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw nb.a((Throwable) (Object) var1, "vr.B(" + param0 + 41);
         }
     }
 
     final static void b(byte param0) {
         np.field_Jb.a((gn) (Object) new aw(), 3);
-        if (param0 > -114) {
-            vr.a((byte) -74);
-        }
     }
 
     final static boolean d(int param0) {
-        if (param0 != 1) {
-            int discarded$0 = vr.a(8, 93, (byte) -111);
-            return true;
-        }
         return true;
     }
 
@@ -276,7 +234,7 @@ final class vr {
             }
           }
           L2: {
-            if (-3 != (param1 ^ -1)) {
+            if (param1 != 2) {
               break L2;
             } else {
               var3 = (Object) (Object) "street";
@@ -288,8 +246,8 @@ final class vr {
           if (param2 <= -48) {
             if (bo.field_Cb.a(false, var6)) {
               cv.field_b[param1][param0] = wa.a((byte) 113, var6, bo.field_Cb, "");
-              if ((param1 ^ -1) == -2) {
-                if (-4 == (param0 ^ -1)) {
+              if (param1 == 1) {
+                if (param0 == 3) {
                   nh.a(cv.field_b[param1][param0], 0.0, 1.6, 1.0);
                   return -1;
                 } else {
@@ -305,8 +263,8 @@ final class vr {
             vr.a(22);
             if (bo.field_Cb.a(false, var6)) {
               cv.field_b[param1][param0] = wa.a((byte) 113, var6, bo.field_Cb, "");
-              if ((param1 ^ -1) == -2) {
-                if (-4 == (param0 ^ -1)) {
+              if (param1 == 1) {
+                if (param0 == 3) {
                   nh.a(cv.field_b[param1][param0], 0.0, 1.6, 1.0);
                   return -1;
                 } else {

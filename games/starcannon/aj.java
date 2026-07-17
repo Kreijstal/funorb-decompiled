@@ -109,6 +109,7 @@ final class aj {
           if (var2 >= 10) {
             ((aj) this).field_c = param0.i(-1174051992);
             ((aj) this).field_a = param0.i(-1174051992);
+            return;
           } else {
             var3 = param0.j(7909);
             if (var3 != 0) {

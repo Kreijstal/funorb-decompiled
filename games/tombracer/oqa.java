@@ -31,93 +31,52 @@ final class oqa extends osa {
         field_s = null;
         field_t = null;
         field_v = null;
-        if (param0 == 11683) {
-            return;
-        }
-        String discarded$0 = oqa.a(true, false, -42, false);
     }
 
     final void b(int param0) {
         int var2 = 0;
+        int var5 = TombRacer.field_G ? 1 : 0;
+        if (param0 != 1) {
+            return;
+        }
+        for (var2 = ((oqa) this).field_n.q((byte) -80) - ((oqa) this).e((byte) -43); var2 < 0; var2 += 8192) {
+        }
+        while (var2 > 8192) {
+            var2 -= 8192;
+        }
+        if (4096 < var2) {
+            var2 = var2 + -8192;
+        }
         int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        var5 = TombRacer.field_G ? 1 : 0;
-        if (param0 == 1) {
-          var2 = ((oqa) this).field_n.q((byte) -80) - ((oqa) this).e((byte) -43);
-          L0: while (true) {
-            if ((var2 ^ -1) <= -1) {
-              L1: while (true) {
-                if ((var2 ^ -1) >= -8193) {
-                  L2: {
-                    if (4096 >= var2) {
-                      break L2;
-                    } else {
-                      var2 = var2 + -8192;
-                      break L2;
-                    }
-                  }
-                  var3 = 0;
-                  var4 = ((oqa) this).field_u / 2;
-                  if (var4 >= var2) {
-                    if (-var4 <= var2) {
-                      L3: {
-                        if (-1 != var3) {
-                          ((oqa) this).field_n.c(false, var3);
-                          break L3;
-                        } else {
-                          break L3;
-                        }
-                      }
-                      return;
-                    } else {
-                      L4: {
-                        var3 = -var2 + -var4;
-                        if (-1 != var3) {
-                          ((oqa) this).field_n.c(false, var3);
-                          break L4;
-                        } else {
-                          break L4;
-                        }
-                      }
-                      return;
-                    }
-                  } else {
-                    L5: {
-                      var3 = -var2 + var4;
-                      if (-1 != (var3 ^ -1)) {
-                        ((oqa) this).field_n.c(false, var3);
-                        break L5;
-                      } else {
-                        break L5;
-                      }
-                    }
-                    return;
-                  }
-                } else {
-                  // wide iinc 2 -8192
-                  continue L1;
+        int var4 = ((oqa) this).field_u / 2;
+        if (~var4 <= ~var2) {
+            if (~-var4 >= ~var2) {
+                if (!(var3 == 0)) {
+                    ((oqa) this).field_n.c(false, var3);
                 }
-              }
-            } else {
-              // wide iinc 2 8192
-              continue L0;
+                return;
             }
-          }
-        } else {
-          return;
+            var3 = -var2 + -var4;
+            if (!(var3 == 0)) {
+                ((oqa) this).field_n.c(false, var3);
+            }
+            return;
+        }
+        var3 = -var2 + var4;
+        if (!(var3 == 0)) {
+            ((oqa) this).field_n.c(false, var3);
         }
     }
 
     final void a(kh param0, byte param1) {
-        super.a(param0, (byte) -125);
-        if (param1 > -78) {
-          ((oqa) this).field_u = -70;
-          param0.a((byte) -3, cn.a((byte) -104, ((oqa) this).field_u, 8192, 8), 8);
-          return;
-        } else {
-          param0.a((byte) -3, cn.a((byte) -104, ((oqa) this).field_u, 8192, 8), 8);
-          return;
+        try {
+            super.a(param0, (byte) -125);
+            if (param1 > -78) {
+                ((oqa) this).field_u = -70;
+            }
+            param0.a((byte) -3, cn.a((byte) -104, ((oqa) this).field_u, 8192, 8), 8);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "oqa.R(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
@@ -181,7 +140,11 @@ final class oqa extends osa {
     oqa(la param0, kh param1, boolean param2) {
         super(param0, param1, param2);
         ((oqa) this).field_u = 1024;
-        ((oqa) this).field_u = oo.a(8, 8192, 0, param1.b((byte) 44, 8));
+        try {
+            ((oqa) this).field_u = oo.a(8, 8192, 0, param1.b((byte) 44, 8));
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "oqa.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     static {

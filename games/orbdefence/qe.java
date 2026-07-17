@@ -25,35 +25,19 @@ final class qe implements Iterable {
     }
 
     final void a(o param0, int param1) {
-        if (param1 != 21693) {
-          L0: {
-            boolean discarded$1 = qe.b(92);
-            if (param0.field_g != null) {
-              param0.c(-1);
-              break L0;
-            } else {
-              break L0;
+        try {
+            if (param1 != 21693) {
+                boolean discarded$0 = qe.b(92);
             }
-          }
-          param0.field_f = ((qe) this).field_a;
-          param0.field_g = ((qe) this).field_a.field_g;
-          param0.field_g.field_f = param0;
-          param0.field_f.field_g = param0;
-          return;
-        } else {
-          L1: {
-            if (param0.field_g != null) {
-              param0.c(-1);
-              break L1;
-            } else {
-              break L1;
+            if (!(param0.field_g == null)) {
+                param0.c(-1);
             }
-          }
-          param0.field_f = ((qe) this).field_a;
-          param0.field_g = ((qe) this).field_a.field_g;
-          param0.field_g.field_f = param0;
-          param0.field_f.field_g = param0;
-          return;
+            param0.field_f = ((qe) this).field_a;
+            param0.field_g = ((qe) this).field_a.field_g;
+            param0.field_g.field_f = param0;
+            param0.field_f.field_g = param0;
+        } catch (RuntimeException runtimeException) {
+            throw dd.a((Throwable) (Object) runtimeException, "qe.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 

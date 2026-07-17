@@ -9,8 +9,8 @@ final class en implements java.awt.event.KeyListener, java.awt.event.FocusListen
     static int field_a;
 
     final static void a(byte param0) {
-        hj var1_ref = null;
-        int var1 = 0;
+        hj var1 = null;
+        int var1_int = 0;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -132,7 +132,7 @@ final class en implements java.awt.event.KeyListener, java.awt.event.FocusListen
                       var12.a(-im.field_k.field_u + 18, 241 - im.field_k.field_x);
                       var7 = 0;
                       L1: while (true) {
-                        if ((qh.field_b.length ^ -1) >= (var7 ^ -1)) {
+                        if (~qh.field_b.length >= ~var7) {
                           qh.field_b = null;
                           ek.field_m = hl.field_d.e();
                           ek.field_m.f();
@@ -147,7 +147,7 @@ final class en implements java.awt.event.KeyListener, java.awt.event.FocusListen
                           break L0;
                         } else {
                           lf.field_a[var7].f();
-                          int discarded$6 = an.field_e.a(qh.field_b[var7], 3, 3, lf.field_a[var7].field_s - 6, -6 + lf.field_a[var7].field_y, t.field_n, -1, 1, 1, an.field_e.field_I + an.field_e.field_G);
+                          int discarded$3 = an.field_e.a(qh.field_b[var7], 3, 3, lf.field_a[var7].field_s - 6, -6 + lf.field_a[var7].field_y, t.field_n, -1, 1, 1, an.field_e.field_I + an.field_e.field_G);
                           fh.a(3, lf.field_a[var7].field_y, lf.field_a[var7].field_s, lf.field_a[var7], 0, 0, 1, -24983);
                           var7++;
                           continue L1;
@@ -181,7 +181,7 @@ final class en implements java.awt.event.KeyListener, java.awt.event.FocusListen
                   var7 -= 3;
                   var5 += 6;
                   var6 += 6;
-                  if (-1 < (var7 ^ -1)) {
+                  if (var7 < 0) {
                     var9_int = -var7;
                     ih.field_m = ih.field_m + var9_int;
                     fh.field_e = fh.field_e - var9_int;
@@ -240,13 +240,13 @@ final class en implements java.awt.event.KeyListener, java.awt.event.FocusListen
                 wn.field_a.a();
                 var9 = new hj(wn.field_a.field_o, wn.field_a.field_v);
                 var9.f();
-                int discarded$7 = tk.field_a.a(var14, ih.field_m, cd.field_b, vb.field_d, mj.field_a, 16777215, -1, 1, 1, tk.field_a.field_I + tk.field_a.field_G);
+                int discarded$4 = tk.field_a.a(var14, ih.field_m, cd.field_b, vb.field_d, mj.field_a, 16777215, -1, 1, 1, tk.field_a.field_I + tk.field_a.field_G);
                 fh.a(3, var9.field_v, var9.field_o, var9, 0, 0, 1, -24983);
                 wn.field_a.f();
                 var9.a(0, 0);
                 na.field_t = new hj(640, 480);
                 na.field_t.f();
-                wn.field_a.b((wn.field_a.field_o >> 1679935361) - -fh.field_e, bj.field_G + (wn.field_a.field_v >> 1762513537), bd.field_W, 4096);
+                wn.field_a.b((wn.field_a.field_o >> 1) - -fh.field_e, bj.field_G + (wn.field_a.field_v >> 1), bd.field_W, 4096);
                 wn.field_a = null;
                 na.field_t.c();
                 tc.a(var29, var2, var3);
@@ -272,7 +272,7 @@ final class en implements java.awt.event.KeyListener, java.awt.event.FocusListen
                 var17 = sd.a(gk.field_a, new String[1], true);
                 dl.field_j = null;
                 var16.f();
-                int discarded$8 = an.field_e.a(var17, 3, 3, var16.field_s + -6, -6 + var16.field_y, 16777215, -1, 0, 1, an.field_e.field_G + an.field_e.field_I);
+                int discarded$5 = an.field_e.a(var17, 3, 3, var16.field_s + -6, -6 + var16.field_y, 16777215, -1, 0, 1, an.field_e.field_G + an.field_e.field_I);
                 fh.a(3, var16.field_y, var16.field_s, var16, 0, 0, 1, -24983);
                 lf.field_e.f();
                 var16.a(199 - lf.field_e.field_u, 83 + -lf.field_e.field_x);
@@ -352,20 +352,20 @@ final class en implements java.awt.event.KeyListener, java.awt.event.FocusListen
               if (nc.field_h != null) {
                 L14: {
                   eg.field_c.a(231, 390);
-                  var1_ref = hl.field_d;
-                  if (-1 == (ln.field_k.field_g ^ -1)) {
-                    var1_ref = ek.field_m;
+                  var1 = hl.field_d;
+                  if (ln.field_k.field_g == 0) {
+                    var1 = ek.field_m;
                     break L14;
                   } else {
                     break L14;
                   }
                 }
                 L15: {
-                  var1_ref.a(0, 0);
+                  var1.a(0, 0);
                   stackOut_51_0 = io.field_b;
                   stackIn_53_0 = stackOut_51_0;
                   stackIn_52_0 = stackOut_51_0;
-                  if ((ln.field_k.field_g ^ -1) == -1) {
+                  if (ln.field_k.field_g == 0) {
                     stackOut_53_0 = stackIn_53_0;
                     stackOut_53_1 = 4;
                     stackIn_54_0 = stackOut_53_0;
@@ -380,16 +380,16 @@ final class en implements java.awt.event.KeyListener, java.awt.event.FocusListen
                   }
                 }
                 L16: {
-                  var2 = (oe.a(stackIn_54_0 << stackIn_54_1, 2) * 40 >> -1404581680) + 40;
-                  if (-1 > (var2 ^ -1)) {
+                  var2 = (oe.a(stackIn_54_0 << stackIn_54_1, 2) * 40 >> 16) + 40;
+                  if (var2 > 0) {
                     eg.field_c.b(230, 389, var2);
                     eg.field_c.b(232, 389, var2);
                     eg.field_c.b(232, 391, var2);
                     eg.field_c.b(230, 391, var2);
-                    var1_ref.b(1, 1, var2);
-                    var1_ref.b(-1, 1, var2);
-                    var1_ref.b(1, -1, var2);
-                    var1_ref.b(-1, -1, var2);
+                    var1.b(1, 1, var2);
+                    var1.b(-1, 1, var2);
+                    var1.b(1, -1, var2);
+                    var1.b(-1, -1, var2);
                     break L16;
                   } else {
                     break L16;
@@ -405,7 +405,7 @@ final class en implements java.awt.event.KeyListener, java.awt.event.FocusListen
                   stackIn_58_0 = stackOut_57_0;
                   stackIn_58_1 = stackOut_57_1;
                   stackIn_58_2 = stackOut_57_2;
-                  if ((ln.field_k.field_g ^ -1) != -1) {
+                  if (ln.field_k.field_g != 0) {
                     stackOut_59_0 = stackIn_59_0;
                     stackOut_59_1 = stackIn_59_1;
                     stackOut_59_2 = stackIn_59_2;
@@ -461,7 +461,7 @@ final class en implements java.awt.event.KeyListener, java.awt.event.FocusListen
                   stackIn_67_0 = stackOut_66_0;
                   stackIn_67_1 = stackOut_66_1;
                   stackIn_67_2 = stackOut_66_2;
-                  if (-2 != (ln.field_k.field_g ^ -1)) {
+                  if (ln.field_k.field_g != 1) {
                     stackOut_68_0 = stackIn_68_0;
                     stackOut_68_1 = stackIn_68_1;
                     stackOut_68_2 = stackIn_68_2;
@@ -491,26 +491,26 @@ final class en implements java.awt.event.KeyListener, java.awt.event.FocusListen
           L21: {
             L22: {
               if (nl.field_i != null) {
-                var1 = 357 + -(nl.field_i.field_v / 2);
-                nl.field_i.a(269 - nl.field_i.field_o, var1);
-                oh.field_m.a(586, var1);
-                if (rf.field_X <= var1) {
+                var1_int = 357 + -(nl.field_i.field_v / 2);
+                nl.field_i.a(269 - nl.field_i.field_o, var1_int);
+                oh.field_m.a(586, var1_int);
+                if (rf.field_X <= var1_int) {
                   break L22;
                 } else {
-                  if (nl.field_i.field_y + var1 <= rf.field_X) {
+                  if (nl.field_i.field_y + var1_int <= rf.field_X) {
                     break L22;
                   } else {
-                    var2 = (oe.a(io.field_b << -350496924, 2) * 40 >> 813086544) + 40;
-                    if (-1 > (var2 ^ -1)) {
+                    var2 = (oe.a(io.field_b << 4, 2) * 40 >> 16) + 40;
+                    if (var2 > 0) {
                       L23: {
-                        if ((nc.field_g ^ -1) >= (269 - nl.field_i.field_s ^ -1)) {
+                        if (~nc.field_g >= ~(269 - nl.field_i.field_s)) {
                           break L23;
                         } else {
-                          if ((nc.field_g ^ -1) > -270) {
-                            nl.field_i.b(-1 + (269 + -nl.field_i.field_o), -1 + var1, var2);
-                            nl.field_i.b(1 + (269 - nl.field_i.field_o), var1 + -1, var2);
-                            nl.field_i.b(-1 + (269 + -nl.field_i.field_o), 1 + var1, var2);
-                            nl.field_i.b(269 + (-nl.field_i.field_o + 1), 1 + var1, var2);
+                          if (nc.field_g < 269) {
+                            nl.field_i.b(-1 + (269 + -nl.field_i.field_o), -1 + var1_int, var2);
+                            nl.field_i.b(1 + (269 - nl.field_i.field_o), var1_int + -1, var2);
+                            nl.field_i.b(-1 + (269 + -nl.field_i.field_o), 1 + var1_int, var2);
+                            nl.field_i.b(269 + (-nl.field_i.field_o + 1), 1 + var1_int, var2);
                             break L22;
                           } else {
                             break L23;
@@ -521,10 +521,10 @@ final class en implements java.awt.event.KeyListener, java.awt.event.FocusListen
                         break L22;
                       } else {
                         if (nc.field_g < 586 - -nl.field_i.field_s) {
-                          oh.field_m.b(585, -1 + var1, var2);
-                          oh.field_m.b(587, -1 + var1, var2);
-                          oh.field_m.b(585, 1 + var1, var2);
-                          oh.field_m.b(587, var1 - -1, var2);
+                          oh.field_m.b(585, -1 + var1_int, var2);
+                          oh.field_m.b(587, -1 + var1_int, var2);
+                          oh.field_m.b(585, 1 + var1_int, var2);
+                          oh.field_m.b(587, var1_int - -1, var2);
                           break L22;
                         } else {
                           uk.a(3979);
@@ -552,37 +552,157 @@ final class en implements java.awt.event.KeyListener, java.awt.event.FocusListen
     }
 
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
-        if (!(tf.field_n == null)) {
-            jd.field_J = -1;
+        RuntimeException var2 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (tf.field_n != null) {
+                jd.field_J = -1;
+                break L1;
+              } else {
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_1 = new StringBuilder().append("en.focusLost(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw kk.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
         }
     }
 
     public final void keyTyped(java.awt.event.KeyEvent param0) {
-        int var2 = 0;
+        int var2_int = 0;
         int var3 = 0;
-        if (!(tf.field_n == null)) {
-            var2 = param0.getKeyChar();
-            if (var2 != 0) {
-                if (65535 != var2) {
-                    if (!(!um.a(0, (char) var2))) {
-                        var3 = 1 + lj.field_b & 127;
-                        if (!((var3 ^ -1) == (vj.field_l ^ -1))) {
-                            p.field_a[lj.field_b] = -1;
-                            d.field_b[lj.field_b] = (char)var2;
-                            lj.field_b = var3;
+        try {
+            if (!(tf.field_n == null)) {
+                var2_int = param0.getKeyChar();
+                if (var2_int != 0) {
+                    if (65535 != var2_int) {
+                        if (!(!um.a(0, (char) var2_int))) {
+                            var3 = 1 + lj.field_b & 127;
+                            if (!(var3 == vj.field_l)) {
+                                p.field_a[lj.field_b] = -1;
+                                d.field_b[lj.field_b] = (char)var2_int;
+                                lj.field_b = var3;
+                            }
                         }
                     }
                 }
             }
+            param0.consume();
+        } catch (RuntimeException runtimeException) {
+            throw kk.a((Throwable) (Object) runtimeException, "en.keyTyped(" + (param0 != null ? "{...}" : "null") + 41);
         }
-        param0.consume();
     }
 
     final static String a(int param0, CharSequence param1) {
-        if (param0 != 12260) {
-            field_e = null;
+        RuntimeException var2 = null;
+        String stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        String stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 == 12260) {
+                break L1;
+              } else {
+                field_e = null;
+                break L1;
+              }
+            }
+            stackOut_2_0 = cf.a(param1, (byte) -28, false);
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_1 = new StringBuilder().append("en.A(").append(param0).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param1 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw kk.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
         }
-        return cf.a(param1, (byte) -28, false);
+        return stackIn_3_0;
     }
 
     public static void b(int param0) {
@@ -598,92 +718,143 @@ final class en implements java.awt.event.KeyListener, java.awt.event.FocusListen
     }
 
     public final synchronized void keyPressed(java.awt.event.KeyEvent param0) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
-        L0: {
-          if (tf.field_n == null) {
-            break L0;
-          } else {
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        String stackIn_25_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        String stackOut_24_2 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        String stackOut_23_2 = null;
+        try {
+          L0: {
             L1: {
-              L2: {
-                cb.field_j = 0;
-                var2 = param0.getKeyCode();
-                if ((var2 ^ -1) > -1) {
-                  break L2;
-                } else {
-                  if (qj.field_N.length > var2) {
-                    var2 = qj.field_N[var2];
-                    if ((var2 & 128 ^ -1) != -1) {
-                      var2 = -1;
-                      break L1;
+              if (tf.field_n == null) {
+                break L1;
+              } else {
+                L2: {
+                  L3: {
+                    cb.field_j = 0;
+                    var2_int = param0.getKeyCode();
+                    if (var2_int < 0) {
+                      break L3;
                     } else {
-                      break L1;
+                      if (qj.field_N.length > var2_int) {
+                        var2_int = qj.field_N[var2_int];
+                        if ((var2_int & 128) != -1) {
+                          var2_int = -1;
+                          break L2;
+                        } else {
+                          break L2;
+                        }
+                      } else {
+                        break L3;
+                      }
                     }
+                  }
+                  var2_int = -1;
+                  break L2;
+                }
+                L4: {
+                  if (-1 > jd.field_J) {
+                    break L4;
                   } else {
-                    break L2;
+                    if (var2_int < 0) {
+                      break L4;
+                    } else {
+                      na.field_r[jd.field_J] = var2_int;
+                      jd.field_J = 1 + jd.field_J & 127;
+                      if (jd.field_J != th.field_j) {
+                        break L4;
+                      } else {
+                        jd.field_J = -1;
+                        break L4;
+                      }
+                    }
                   }
                 }
-              }
-              var2 = -1;
-              break L1;
-            }
-            L3: {
-              if (-1 < (jd.field_J ^ -1)) {
-                break L3;
-              } else {
-                if ((var2 ^ -1) > -1) {
-                  break L3;
-                } else {
-                  na.field_r[jd.field_J] = var2;
-                  jd.field_J = 1 + jd.field_J & 127;
-                  if ((jd.field_J ^ -1) != (th.field_j ^ -1)) {
-                    break L3;
-                  } else {
-                    jd.field_J = -1;
-                    break L3;
-                  }
-                }
-              }
-            }
-            L4: {
-              if (0 > var2) {
-                break L4;
-              } else {
-                var3 = 127 & 1 + lj.field_b;
-                if (var3 != vj.field_l) {
-                  p.field_a[lj.field_b] = var2;
-                  d.field_b[lj.field_b] = (char)0;
-                  lj.field_b = var3;
-                  break L4;
-                } else {
-                  break L4;
-                }
-              }
-            }
-            L5: {
-              var3 = param0.getModifiers();
-              if (-1 != (10 & var3 ^ -1)) {
-                break L5;
-              } else {
-                if ((var2 ^ -1) == -86) {
-                  break L5;
-                } else {
-                  if (10 != var2) {
-                    break L0;
-                  } else {
+                L5: {
+                  if (0 > var2_int) {
                     break L5;
+                  } else {
+                    var3 = 127 & 1 + lj.field_b;
+                    if (var3 != vj.field_l) {
+                      p.field_a[lj.field_b] = var2_int;
+                      d.field_b[lj.field_b] = ' ';
+                      lj.field_b = var3;
+                      break L5;
+                    } else {
+                      break L5;
+                    }
                   }
                 }
+                L6: {
+                  var3 = param0.getModifiers();
+                  if ((10 & var3) != 0) {
+                    break L6;
+                  } else {
+                    if (var2_int == 85) {
+                      break L6;
+                    } else {
+                      if (10 != var2_int) {
+                        break L1;
+                      } else {
+                        break L6;
+                      }
+                    }
+                  }
+                }
+                param0.consume();
+                break L1;
               }
             }
-            param0.consume();
             break L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L7: {
+            var2 = decompiledCaughtException;
+            stackOut_22_0 = (RuntimeException) var2;
+            stackOut_22_1 = new StringBuilder().append("en.keyPressed(");
+            stackIn_24_0 = stackOut_22_0;
+            stackIn_24_1 = stackOut_22_1;
+            stackIn_23_0 = stackOut_22_0;
+            stackIn_23_1 = stackOut_22_1;
+            if (param0 == null) {
+              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
+              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_2 = "null";
+              stackIn_25_0 = stackOut_24_0;
+              stackIn_25_1 = stackOut_24_1;
+              stackIn_25_2 = stackOut_24_2;
+              break L7;
+            } else {
+              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_2 = "{...}";
+              stackIn_25_0 = stackOut_23_0;
+              stackIn_25_1 = stackOut_23_1;
+              stackIn_25_2 = stackOut_23_2;
+              break L7;
+            }
+          }
+          throw kk.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
         }
     }
 
     final static void a(byte param0, int param1) {
-        tm.field_c = 1000000000L / (long)param1;
+        tm.field_c = 20000000L;
         if (param0 >= -54) {
             field_e = null;
         }
@@ -694,27 +865,99 @@ final class en implements java.awt.event.KeyListener, java.awt.event.FocusListen
     }
 
     public final synchronized void keyReleased(java.awt.event.KeyEvent param0) {
-        int var2 = 0;
-        if (tf.field_n != null) {
-            cb.field_j = 0;
-            var2 = param0.getKeyCode();
-            if (-1 >= (var2 ^ -1)) {
-                // if_icmpge L43
-                var2 = -129 & qj.field_N[var2];
-            } else {
-                var2 = -1;
-            }
-            if ((jd.field_J ^ -1) <= -1) {
-                if (!(-1 < (var2 ^ -1))) {
-                    na.field_r[jd.field_J] = var2 ^ -1;
-                    jd.field_J = jd.field_J + 1 & 127;
-                    if (!(jd.field_J != th.field_j)) {
-                        jd.field_J = -1;
+        RuntimeException runtimeException = null;
+        int var2_int = 0;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (tf.field_n == null) {
+                break L1;
+              } else {
+                L2: {
+                  L3: {
+                    cb.field_j = 0;
+                    var2_int = param0.getKeyCode();
+                    if (var2_int < 0) {
+                      break L3;
+                    } else {
+                      if (var2_int >= qj.field_N.length) {
+                        break L3;
+                      } else {
+                        var2_int = -129 & qj.field_N[var2_int];
+                        break L2;
+                      }
                     }
+                  }
+                  var2_int = -1;
+                  break L2;
                 }
+                if (jd.field_J < 0) {
+                  break L1;
+                } else {
+                  if (var2_int >= 0) {
+                    na.field_r[jd.field_J] = ~var2_int;
+                    jd.field_J = jd.field_J + 1 & 127;
+                    if (jd.field_J == th.field_j) {
+                      jd.field_J = -1;
+                      break L1;
+                    } else {
+                      break L1;
+                    }
+                  } else {
+                    break L1;
+                  }
+                }
+              }
             }
+            param0.consume();
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            runtimeException = decompiledCaughtException;
+            stackOut_13_0 = (RuntimeException) runtimeException;
+            stackOut_13_1 = new StringBuilder().append("en.keyReleased(");
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
+            if (param0 == null) {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L4;
+            } else {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L4;
+            }
+          }
+          throw kk.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
         }
-        param0.consume();
     }
 
     final static java.applet.Applet a(int param0) {
@@ -728,13 +971,76 @@ final class en implements java.awt.event.KeyListener, java.awt.event.FocusListen
     }
 
     final static void a(int param0, hd[] param1, int param2) {
-        int var3 = 0;
-        int var4 = HoldTheLine.field_D;
-        if (param0 != 5433) {
-            field_c = null;
-        }
-        for (var3 = 1; var3 < param2; var3++) {
-            b.a(param1, (byte) 96, var3);
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        var4 = HoldTheLine.field_D;
+        try {
+          L0: {
+            L1: {
+              if (param0 == 5433) {
+                break L1;
+              } else {
+                field_c = null;
+                break L1;
+              }
+            }
+            var3_int = 1;
+            L2: while (true) {
+              if (var3_int >= param2) {
+                break L0;
+              } else {
+                b.a(param1, (byte) 96, var3_int);
+                var3_int++;
+                continue L2;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var3 = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var3;
+            stackOut_7_1 = new StringBuilder().append("en.B(").append(param0).append(44);
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param1 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L3;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L3;
+            }
+          }
+          throw kk.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param2 + 41);
         }
     }
 

@@ -12,35 +12,19 @@ final class he extends ci {
     private ci field_Kb;
 
     final static void a(o param0, o param1, boolean param2) {
-        if (null == param0.field_c) {
-          param0.field_h = param1;
-          if (!param2) {
-            field_Gb = null;
+        try {
+            if (null != param0.field_c) {
+                param0.c(-2193);
+            }
+            param0.field_h = param1;
+            if (!param2) {
+                field_Gb = null;
+            }
             param0.field_c = param1.field_c;
             param0.field_c.field_h = param0;
             param0.field_h.field_c = param0;
-            return;
-          } else {
-            param0.field_c = param1.field_c;
-            param0.field_c.field_h = param0;
-            param0.field_h.field_c = param0;
-            return;
-          }
-        } else {
-          param0.c(-2193);
-          param0.field_h = param1;
-          if (param2) {
-            param0.field_c = param1.field_c;
-            param0.field_c.field_h = param0;
-            param0.field_h.field_c = param0;
-            return;
-          } else {
-            field_Gb = null;
-            param0.field_c = param1.field_c;
-            param0.field_c.field_h = param0;
-            param0.field_h.field_c = param0;
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "he.C(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
     }
 
@@ -51,25 +35,20 @@ final class he extends ci {
     }
 
     private final void a(int param0, byte param1) {
-        int var3 = 0;
         ((he) this).field_Ib.a(0, ((he) this).field_Ib.e((byte) -101), -2147483648, ((he) this).field_pb, 0);
-        if (param1 != -3) {
-          int discarded$1 = ((he) this).a((byte) 94, -58);
-          var3 = ((he) this).field_Ib.field_M + param0;
-          ((he) this).field_Kb.a(var3, -var3 + ((he) this).field_M, param1 + -2147483645, ((he) this).field_pb, 0);
-          return;
-        } else {
-          var3 = ((he) this).field_Ib.field_M + param0;
-          ((he) this).field_Kb.a(var3, -var3 + ((he) this).field_M, param1 + -2147483645, ((he) this).field_pb, 0);
-          return;
-        }
+        int var3 = ((he) this).field_Ib.field_M + param0;
+        ((he) this).field_Kb.a(var3, -var3 + ((he) this).field_M, -2147483648, ((he) this).field_pb, 0);
     }
 
     final static void a(int param0, java.awt.Component param1) {
-        param1.addMouseListener((java.awt.event.MouseListener) (Object) bj.field_cb);
-        param1.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) bj.field_cb);
-        int var2 = 101 / ((-38 - param0) / 46);
-        param1.addFocusListener((java.awt.event.FocusListener) (Object) bj.field_cb);
+        try {
+            param1.addMouseListener((java.awt.event.MouseListener) (Object) bj.field_cb);
+            param1.addMouseMotionListener((java.awt.event.MouseMotionListener) (Object) bj.field_cb);
+            int var2_int = 101 / ((-38 - param0) / 46);
+            param1.addFocusListener((java.awt.event.FocusListener) (Object) bj.field_cb);
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "he.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void a(boolean param0) {
@@ -78,9 +57,6 @@ final class he extends ci {
         field_Fb = null;
         field_Lb = null;
         field_Eb = null;
-        if (param0) {
-            return;
-        }
         field_Gb = null;
     }
 
@@ -101,19 +77,27 @@ final class he extends ci {
 
     he(long param0, km param1, km param2, int param3, ci param4, String param5) {
         this(param0, (ci) null, param4, param5);
-        ((he) this).field_Ib.field_sb = param1;
-        ((he) this).field_Ib.field_cb = param3;
-        ((he) this).field_Ib.field_jb = param2;
+        try {
+            ((he) this).field_Ib.field_sb = param1;
+            ((he) this).field_Ib.field_cb = param3;
+            ((he) this).field_Ib.field_jb = param2;
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "he.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 41);
+        }
     }
 
     private he(long param0, ci param1, ci param2, String param3) {
         super(param0, (ci) null);
-        ((he) this).field_Ib = new ci(0L, param1);
-        ((he) this).field_Kb = new ci(0L, param2);
-        ((he) this).field_Kb.field_db = param3;
-        ((he) this).a((byte) 123, ((he) this).field_Ib);
-        ((he) this).a((byte) 124, ((he) this).field_Kb);
-        ((he) this).h(0);
+        try {
+            ((he) this).field_Ib = new ci(0L, param1);
+            ((he) this).field_Kb = new ci(0L, param2);
+            ((he) this).field_Kb.field_db = param3;
+            ((he) this).a((byte) 123, ((he) this).field_Ib);
+            ((he) this).a((byte) 124, ((he) this).field_Kb);
+            ((he) this).h(0);
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "he.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

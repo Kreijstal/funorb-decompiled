@@ -10,21 +10,20 @@ final class tk implements bf {
     static int field_a;
 
     final static void a(int param0, o param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        r.field_a = param7;
-        ta.field_a = param2;
-        ka.field_i = param3;
-        cb.field_a = param8;
-        uk.field_b = param1;
-        sl.field_r = param0;
-        if (param6 != 2) {
-          tk.a(-15);
-          jg.field_m = param5;
-          kk.field_xb = param4;
-          return;
-        } else {
-          jg.field_m = param5;
-          kk.field_xb = param4;
-          return;
+        try {
+            r.field_a = param7;
+            ta.field_a = param2;
+            ka.field_i = param3;
+            cb.field_a = 0;
+            uk.field_b = param1;
+            sl.field_r = param0;
+            if (param6 != 2) {
+                tk.a(-15);
+            }
+            jg.field_m = param5;
+            kk.field_xb = param4;
+        } catch (RuntimeException runtimeException) {
+            throw bd.a((Throwable) (Object) runtimeException, "tk.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + 0 + 41);
         }
     }
 
@@ -35,311 +34,129 @@ final class tk implements bf {
     }
 
     public final void a(int param0, int param1, ub param2, boolean param3, boolean param4) {
-        int var6 = 0;
+        RuntimeException var6 = null;
+        int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
+        int stackIn_5_0 = 0;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        String stackIn_23_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_3_0 = 0;
+        int stackOut_4_0 = 0;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        String stackOut_22_2 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
         var11 = wizardrun.field_H;
-        if (!param2.field_v) {
-          if (!param2.d((byte) 53)) {
-            var6 = 2188450;
-            if (param3) {
-              int discarded$6 = ((tk) this).field_d.a("<u=" + Integer.toString(var6, 16) + ">" + param2.field_k + "</u>", param2.field_o + param0, param1 + param2.field_l, param2.field_r, param2.field_n, var6, -1, ((tk) this).field_c, ((tk) this).field_b, ((tk) this).field_d.field_M + ((tk) this).field_d.field_B);
-              if (param2.d((byte) 53)) {
-                L0: {
-                  var7 = ((tk) this).field_d.b(param2.field_k);
-                  var8 = ((tk) this).field_d.field_M - -((tk) this).field_d.field_B;
-                  var9 = param2.field_o + param0;
-                  var10 = param2.field_l + param1;
-                  if (2 == ((tk) this).field_c) {
-                    var9 = var9 + (-var7 + param2.field_r);
-                    break L0;
-                  } else {
-                    if ((((tk) this).field_c ^ -1) != -2) {
-                      break L0;
-                    } else {
-                      var9 = var9 + (param2.field_r + -var7 >> -1136280575);
-                      if (((tk) this).field_b != 2) {
-                        if (1 != ((tk) this).field_b) {
-                          nh.a((byte) 69, 4 + var7, var10 - -2, var8, var9 + -2);
-                          return;
-                        } else {
-                          var10 = var10 + (param2.field_n + -var8 >> -2056119423);
-                          nh.a((byte) 69, 4 + var7, var10 - -2, var8, var9 + -2);
-                          return;
-                        }
-                      } else {
-                        var10 = var10 + (param2.field_n - var8);
-                        nh.a((byte) 69, 4 + var7, var10 - -2, var8, var9 + -2);
-                        return;
-                      }
-                    }
-                  }
-                }
-                if (((tk) this).field_b != 2) {
-                  if (1 != ((tk) this).field_b) {
-                    nh.a((byte) 69, 4 + var7, var10 - -2, var8, var9 + -2);
-                    return;
-                  } else {
-                    var10 = var10 + (param2.field_n + -var8 >> -2056119423);
-                    nh.a((byte) 69, 4 + var7, var10 - -2, var8, var9 + -2);
-                    return;
-                  }
+        try {
+          L0: {
+            L1: {
+              L2: {
+                if (param2.field_v) {
+                  break L2;
                 } else {
-                  var10 = var10 + (param2.field_n - var8);
-                  nh.a((byte) 69, 4 + var7, var10 - -2, var8, var9 + -2);
-                  return;
-                }
-              } else {
-                return;
-              }
-            } else {
-              ((tk) this).field_b = 65;
-              int discarded$7 = ((tk) this).field_d.a("<u=" + Integer.toString(var6, 16) + ">" + param2.field_k + "</u>", param2.field_o + param0, param1 + param2.field_l, param2.field_r, param2.field_n, var6, -1, ((tk) this).field_c, ((tk) this).field_b, ((tk) this).field_d.field_M + ((tk) this).field_d.field_B);
-              if (param2.d((byte) 53)) {
-                L1: {
-                  var7 = ((tk) this).field_d.b(param2.field_k);
-                  var8 = ((tk) this).field_d.field_M - -((tk) this).field_d.field_B;
-                  var9 = param2.field_o + param0;
-                  var10 = param2.field_l + param1;
-                  if (2 == ((tk) this).field_c) {
-                    var9 = var9 + (-var7 + param2.field_r);
+                  if (param2.d((byte) 53)) {
+                    break L2;
+                  } else {
+                    stackOut_3_0 = 2188450;
+                    stackIn_5_0 = stackOut_3_0;
                     break L1;
-                  } else {
-                    if ((((tk) this).field_c ^ -1) != -2) {
-                      break L1;
-                    } else {
-                      L2: {
-                        var9 = var9 + (param2.field_r + -var7 >> -1136280575);
-                        if (((tk) this).field_b != 2) {
-                          if (1 == ((tk) this).field_b) {
-                            var10 = var10 + (param2.field_n + -var8 >> -2056119423);
-                            break L2;
-                          } else {
-                            break L2;
-                          }
-                        } else {
-                          var10 = var10 + (param2.field_n - var8);
-                          break L2;
-                        }
-                      }
-                      nh.a((byte) 69, 4 + var7, var10 - -2, var8, var9 + -2);
-                      return;
-                    }
                   }
                 }
-                if (((tk) this).field_b != 2) {
-                  if (1 != ((tk) this).field_b) {
-                    nh.a((byte) 69, 4 + var7, var10 - -2, var8, var9 + -2);
-                    return;
-                  } else {
-                    var10 = var10 + (param2.field_n + -var8 >> -2056119423);
-                    nh.a((byte) 69, 4 + var7, var10 - -2, var8, var9 + -2);
-                    return;
-                  }
-                } else {
-                  var10 = var10 + (param2.field_n - var8);
-                  nh.a((byte) 69, 4 + var7, var10 - -2, var8, var9 + -2);
-                  return;
-                }
-              } else {
-                return;
               }
+              stackOut_4_0 = 3249872;
+              stackIn_5_0 = stackOut_4_0;
+              break L1;
             }
-          } else {
-            var6 = 3249872;
-            if (param3) {
-              int discarded$8 = ((tk) this).field_d.a("<u=" + Integer.toString(var6, 16) + ">" + param2.field_k + "</u>", param2.field_o + param0, param1 + param2.field_l, param2.field_r, param2.field_n, var6, -1, ((tk) this).field_c, ((tk) this).field_b, ((tk) this).field_d.field_M + ((tk) this).field_d.field_B);
-              if (param2.d((byte) 53)) {
-                L3: {
-                  var7 = ((tk) this).field_d.b(param2.field_k);
-                  var8 = ((tk) this).field_d.field_M - -((tk) this).field_d.field_B;
-                  var9 = param2.field_o + param0;
-                  var10 = param2.field_l + param1;
-                  if (2 == ((tk) this).field_c) {
-                    var9 = var9 + (-var7 + param2.field_r);
-                    break L3;
-                  } else {
-                    if ((((tk) this).field_c ^ -1) != -2) {
-                      break L3;
-                    } else {
-                      var9 = var9 + (param2.field_r + -var7 >> -1136280575);
-                      if (((tk) this).field_b != 2) {
-                        if (1 != ((tk) this).field_b) {
-                          nh.a((byte) 69, 4 + var7, var10 - -2, var8, var9 + -2);
-                          return;
-                        } else {
-                          var10 = var10 + (param2.field_n + -var8 >> -2056119423);
-                          nh.a((byte) 69, 4 + var7, var10 - -2, var8, var9 + -2);
-                          return;
-                        }
-                      } else {
-                        var10 = var10 + (param2.field_n - var8);
-                        nh.a((byte) 69, 4 + var7, var10 - -2, var8, var9 + -2);
-                        return;
-                      }
-                    }
-                  }
-                }
-                if (((tk) this).field_b != 2) {
-                  if (1 != ((tk) this).field_b) {
-                    nh.a((byte) 69, 4 + var7, var10 - -2, var8, var9 + -2);
-                    return;
-                  } else {
-                    var10 = var10 + (param2.field_n + -var8 >> -2056119423);
-                    nh.a((byte) 69, 4 + var7, var10 - -2, var8, var9 + -2);
-                    return;
-                  }
-                } else {
-                  var10 = var10 + (param2.field_n - var8);
-                  nh.a((byte) 69, 4 + var7, var10 - -2, var8, var9 + -2);
-                  return;
-                }
+            L3: {
+              var6_int = stackIn_5_0;
+              if (param3) {
+                break L3;
               } else {
-                return;
-              }
-            } else {
-              L4: {
                 ((tk) this).field_b = 65;
-                int discarded$9 = ((tk) this).field_d.a("<u=" + Integer.toString(var6, 16) + ">" + param2.field_k + "</u>", param2.field_o + param0, param1 + param2.field_l, param2.field_r, param2.field_n, var6, -1, ((tk) this).field_c, ((tk) this).field_b, ((tk) this).field_d.field_M + ((tk) this).field_d.field_B);
-                if (param2.d((byte) 53)) {
-                  L5: {
-                    var7 = ((tk) this).field_d.b(param2.field_k);
-                    var8 = ((tk) this).field_d.field_M - -((tk) this).field_d.field_B;
-                    var9 = param2.field_o + param0;
-                    var10 = param2.field_l + param1;
-                    if (2 == ((tk) this).field_c) {
-                      var9 = var9 + (-var7 + param2.field_r);
-                      break L5;
-                    } else {
-                      if ((((tk) this).field_c ^ -1) != -2) {
-                        break L5;
-                      } else {
-                        var9 = var9 + (param2.field_r + -var7 >> -1136280575);
-                        break L5;
-                      }
-                    }
-                  }
-                  L6: {
-                    if (((tk) this).field_b != 2) {
-                      if (1 == ((tk) this).field_b) {
-                        var10 = var10 + (param2.field_n + -var8 >> -2056119423);
-                        break L6;
-                      } else {
-                        break L6;
-                      }
-                    } else {
-                      var10 = var10 + (param2.field_n - var8);
-                      break L6;
-                    }
-                  }
-                  nh.a((byte) 69, 4 + var7, var10 - -2, var8, var9 + -2);
-                  break L4;
-                } else {
-                  break L4;
-                }
+                break L3;
               }
-              return;
             }
-          }
-        } else {
-          var6 = 3249872;
-          if (param3) {
-            int discarded$10 = ((tk) this).field_d.a("<u=" + Integer.toString(var6, 16) + ">" + param2.field_k + "</u>", param2.field_o + param0, param1 + param2.field_l, param2.field_r, param2.field_n, var6, -1, ((tk) this).field_c, ((tk) this).field_b, ((tk) this).field_d.field_M + ((tk) this).field_d.field_B);
+            int discarded$1 = ((tk) this).field_d.a("<u=" + Integer.toString(var6_int, 16) + ">" + param2.field_k + "</u>", param2.field_o + param0, param1 + param2.field_l, param2.field_r, param2.field_n, var6_int, -1, ((tk) this).field_c, ((tk) this).field_b, ((tk) this).field_d.field_M + ((tk) this).field_d.field_B);
             if (param2.d((byte) 53)) {
-              L7: {
+              L4: {
                 var7 = ((tk) this).field_d.b(param2.field_k);
                 var8 = ((tk) this).field_d.field_M - -((tk) this).field_d.field_B;
                 var9 = param2.field_o + param0;
                 var10 = param2.field_l + param1;
                 if (2 == ((tk) this).field_c) {
                   var9 = var9 + (-var7 + param2.field_r);
-                  break L7;
+                  break L4;
                 } else {
-                  if ((((tk) this).field_c ^ -1) != -2) {
-                    break L7;
+                  if (((tk) this).field_c != 1) {
+                    break L4;
                   } else {
-                    L8: {
-                      var9 = var9 + (param2.field_r + -var7 >> -1136280575);
-                      if (((tk) this).field_b != 2) {
-                        if (1 == ((tk) this).field_b) {
-                          var10 = var10 + (param2.field_n + -var8 >> -2056119423);
-                          break L8;
-                        } else {
-                          break L8;
-                        }
-                      } else {
-                        var10 = var10 + (param2.field_n - var8);
-                        break L8;
-                      }
-                    }
-                    nh.a((byte) 69, 4 + var7, var10 - -2, var8, var9 + -2);
-                    return;
+                    var9 = var9 + (param2.field_r + -var7 >> 1);
+                    break L4;
                   }
                 }
               }
-              if (((tk) this).field_b != 2) {
-                if (1 != ((tk) this).field_b) {
-                  nh.a((byte) 69, 4 + var7, var10 - -2, var8, var9 + -2);
-                  return;
+              L5: {
+                if (((tk) this).field_b != 2) {
+                  if (1 == ((tk) this).field_b) {
+                    var10 = var10 + (param2.field_n + -var8 >> 1);
+                    break L5;
+                  } else {
+                    break L5;
+                  }
                 } else {
-                  var10 = var10 + (param2.field_n + -var8 >> -2056119423);
-                  nh.a((byte) 69, 4 + var7, var10 - -2, var8, var9 + -2);
-                  return;
+                  var10 = var10 + (param2.field_n - var8);
+                  break L5;
                 }
-              } else {
-                var10 = var10 + (param2.field_n - var8);
-                nh.a((byte) 69, 4 + var7, var10 - -2, var8, var9 + -2);
-                return;
               }
+              nh.a((byte) 69, 4 + var7, var10 - -2, var8, var9 + -2);
+              break L0;
             } else {
               return;
             }
-          } else {
-            L9: {
-              ((tk) this).field_b = 65;
-              int discarded$11 = ((tk) this).field_d.a("<u=" + Integer.toString(var6, 16) + ">" + param2.field_k + "</u>", param2.field_o + param0, param1 + param2.field_l, param2.field_r, param2.field_n, var6, -1, ((tk) this).field_c, ((tk) this).field_b, ((tk) this).field_d.field_M + ((tk) this).field_d.field_B);
-              if (param2.d((byte) 53)) {
-                L10: {
-                  var7 = ((tk) this).field_d.b(param2.field_k);
-                  var8 = ((tk) this).field_d.field_M - -((tk) this).field_d.field_B;
-                  var9 = param2.field_o + param0;
-                  var10 = param2.field_l + param1;
-                  if (2 == ((tk) this).field_c) {
-                    var9 = var9 + (-var7 + param2.field_r);
-                    break L10;
-                  } else {
-                    if ((((tk) this).field_c ^ -1) != -2) {
-                      break L10;
-                    } else {
-                      var9 = var9 + (param2.field_r + -var7 >> -1136280575);
-                      break L10;
-                    }
-                  }
-                }
-                L11: {
-                  if (((tk) this).field_b != 2) {
-                    if (1 == ((tk) this).field_b) {
-                      var10 = var10 + (param2.field_n + -var8 >> -2056119423);
-                      break L11;
-                    } else {
-                      break L11;
-                    }
-                  } else {
-                    var10 = var10 + (param2.field_n - var8);
-                    break L11;
-                  }
-                }
-                nh.a((byte) 69, 4 + var7, var10 - -2, var8, var9 + -2);
-                break L9;
-              } else {
-                break L9;
-              }
-            }
-            return;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L6: {
+            var6 = decompiledCaughtException;
+            stackOut_20_0 = (RuntimeException) var6;
+            stackOut_20_1 = new StringBuilder().append("tk.B(").append(param0).append(44).append(param1).append(44);
+            stackIn_22_0 = stackOut_20_0;
+            stackIn_22_1 = stackOut_20_1;
+            stackIn_21_0 = stackOut_20_0;
+            stackIn_21_1 = stackOut_20_1;
+            if (param2 == null) {
+              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_2 = "null";
+              stackIn_23_0 = stackOut_22_0;
+              stackIn_23_1 = stackOut_22_1;
+              stackIn_23_2 = stackOut_22_2;
+              break L6;
+            } else {
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "{...}";
+              stackIn_23_0 = stackOut_21_0;
+              stackIn_23_1 = stackOut_21_1;
+              stackIn_23_2 = stackOut_21_2;
+              break L6;
+            }
+          }
+          throw bd.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
@@ -350,9 +167,13 @@ final class tk implements bf {
     }
 
     tk(vd param0, int param1, int param2) {
-        ((tk) this).field_b = param2;
-        ((tk) this).field_d = param0;
-        ((tk) this).field_c = param1;
+        try {
+            ((tk) this).field_b = param2;
+            ((tk) this).field_d = param0;
+            ((tk) this).field_c = param1;
+        } catch (RuntimeException runtimeException) {
+            throw bd.a((Throwable) (Object) runtimeException, "tk.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     static {

@@ -19,6 +19,7 @@ public class dxVertexLayout extends mna {
           if (var5 >= param1.length) {
             var10.finish();
             ((dxVertexLayout) this).field_e = param0.field_jd.a(var10, (jagdx.IDirect3DVertexDeclaration) null);
+            return;
           } else {
             var6 = 0;
             var7 = param1[var5];
@@ -43,26 +44,30 @@ public class dxVertexLayout extends mna {
                         break L2;
                       } else {
                         if (gj.field_m == var9) {
+                          int incrementValue$4 = var4;
                           var4++;
-                          var10.addElement(var5, 0, 0, 5, var4, var6);
+                          var10.addElement(var5, 0, 0, 5, incrementValue$4, var6);
                           break L2;
                         } else {
                           if (var9 == gj.field_n) {
+                            int incrementValue$5 = var4;
                             var4++;
-                            var10.addElement(var5, 1, 0, 5, var4, var6);
+                            var10.addElement(var5, 1, 0, 5, incrementValue$5, var6);
                             break L2;
                           } else {
                             if (gj.field_k != var9) {
                               if (var9 != gj.field_j) {
                                 break L2;
                               } else {
+                                int incrementValue$6 = var4;
                                 var4++;
-                                var10.addElement(var5, 3, 0, 5, var4, var6);
+                                var10.addElement(var5, 3, 0, 5, incrementValue$6, var6);
                                 break L2;
                               }
                             } else {
+                              int incrementValue$7 = var4;
                               var4++;
-                              var10.addElement(var5, 2, 0, 5, var4, var6);
+                              var10.addElement(var5, 2, 0, 5, incrementValue$7, var6);
                               break L2;
                             }
                           }

@@ -46,10 +46,11 @@ final class cn extends vf {
     }
 
     final void a(byte param0) {
-        if ((((cn) this).field_p ^ -1) > 4095) {
+        if (((cn) this).field_p < -4096) {
             ((cn) this).field_p = -4096;
+            int fieldTemp$0 = ((cn) this).field_m;
             ((cn) this).field_m = ((cn) this).field_m + 1;
-            ((cn) this).field_t[((cn) this).field_m] = (byte)((!((cn) this).field_n ? ((cn) this).field_p : 2048 + (((cn) this).field_p >> -1563006879)) >> 1541234980);
+            ((cn) this).field_t[fieldTemp$0] = (byte)((!((cn) this).field_n ? ((cn) this).field_p : 2048 + (((cn) this).field_p >> 1)) >> 4);
             if (param0 >= -101) {
                 return;
             }
@@ -58,16 +59,18 @@ final class cn extends vf {
         }
         if (((cn) this).field_p > 4096) {
             ((cn) this).field_p = 4096;
+            int fieldTemp$1 = ((cn) this).field_m;
             ((cn) this).field_m = ((cn) this).field_m + 1;
-            ((cn) this).field_t[((cn) this).field_m] = (byte)((!((cn) this).field_n ? ((cn) this).field_p : 2048 + (((cn) this).field_p >> -1563006879)) >> 1541234980);
+            ((cn) this).field_t[fieldTemp$1] = (byte)((!((cn) this).field_n ? ((cn) this).field_p : 2048 + (((cn) this).field_p >> 1)) >> 4);
             if (param0 >= -101) {
                 return;
             }
             ((cn) this).field_p = 0;
             return;
         }
+        int fieldTemp$2 = ((cn) this).field_m;
         ((cn) this).field_m = ((cn) this).field_m + 1;
-        ((cn) this).field_t[((cn) this).field_m] = (byte)((!((cn) this).field_n ? ((cn) this).field_p : 2048 + (((cn) this).field_p >> -1563006879)) >> 1541234980);
+        ((cn) this).field_t[fieldTemp$2] = (byte)((!((cn) this).field_n ? ((cn) this).field_p : 2048 + (((cn) this).field_p >> 1)) >> 4);
         if (param0 >= -101) {
             return;
         }
@@ -94,7 +97,7 @@ final class cn extends vf {
     }
 
     final void b(int param0, int param1, int param2) {
-        ((cn) this).field_p = ((cn) this).field_p + (((cn) this).field_u[param0] * param1 >> 488997228);
+        ((cn) this).field_p = ((cn) this).field_p + (((cn) this).field_u[param0] * param1 >> 12);
         if (param2 != 19699) {
             ((cn) this).field_u = null;
         }
@@ -102,11 +105,6 @@ final class cn extends vf {
 
     public static void f(int param0) {
         field_q = null;
-        if (param0 < 106) {
-            String discarded$0 = cn.e(-21);
-            field_s = null;
-            return;
-        }
         field_s = null;
     }
 

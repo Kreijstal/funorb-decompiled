@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import java.net.URL;
+
 final class uf extends fg {
     private int field_g;
     private int field_j;
@@ -14,12 +16,6 @@ final class uf extends fg {
 
     public static void a(byte param0) {
         field_e = null;
-        if (param0 >= -106) {
-            field_k = null;
-            field_c = null;
-            field_k = null;
-            return;
-        }
         field_c = null;
         field_k = null;
     }
@@ -35,11 +31,11 @@ final class uf extends fg {
         var4 = var2 + -((uf) this).field_h;
         ((uf) this).field_h = var2;
         if (-5000000000L < var4) {
-          if (-5000000001L < (var4 ^ -1L)) {
+          if (var4 < 5000000000L) {
             ((uf) this).field_i[((uf) this).field_j] = var4;
             if (1 <= ((uf) this).field_g) {
               ((uf) this).field_j = (((uf) this).field_j - -1) % 10;
-              var6 = (long)param0;
+              var6 = 0L;
               var8 = 1;
               L0: while (true) {
                 if (((uf) this).field_g < var8) {
@@ -53,7 +49,7 @@ final class uf extends fg {
             } else {
               ((uf) this).field_g = ((uf) this).field_g + 1;
               ((uf) this).field_j = (((uf) this).field_j - -1) % 10;
-              var6 = (long)param0;
+              var6 = 0L;
               var8 = 1;
               L1: while (true) {
                 if (((uf) this).field_g < var8) {
@@ -66,7 +62,7 @@ final class uf extends fg {
               }
             }
           } else {
-            var6 = (long)param0;
+            var6 = 0L;
             var8 = 1;
             L2: while (true) {
               if (((uf) this).field_g < var8) {
@@ -79,7 +75,7 @@ final class uf extends fg {
             }
           }
         } else {
-          var6 = (long)param0;
+          var6 = 0L;
           var8 = 1;
           L3: while (true) {
             if (((uf) this).field_g < var8) {
@@ -104,8 +100,8 @@ final class uf extends fg {
 
     final static int a(int param0, int param1, int param2) {
         int var3 = 76 % ((param0 - -1) / 36);
-        int var4 = param2 >> -398340353 & -1 + param1;
-        return var4 + (param2 - -(param2 >>> -1780228321)) % param1;
+        int var4 = param2 >> 31 & -1 + param1;
+        return var4 + (param2 - -(param2 >>> 31)) % param1;
     }
 
     final int a(long param0, byte param1) {
@@ -113,7 +109,7 @@ final class uf extends fg {
         int var5 = 0;
         var5 = MonkeyPuzzle2.field_F ? 1 : 0;
         if (param1 == 37) {
-          if ((((uf) this).field_f ^ -1L) >= (((uf) this).field_d ^ -1L)) {
+          if (~((uf) this).field_f >= ~((uf) this).field_d) {
             var4 = 0;
             L0: while (true) {
               L1: {
@@ -122,7 +118,7 @@ final class uf extends fg {
                 if (var4 >= 10) {
                   break L1;
                 } else {
-                  if ((((uf) this).field_d ^ -1L) < (((uf) this).field_f ^ -1L)) {
+                  if (~((uf) this).field_d < ~((uf) this).field_f) {
                     continue L0;
                   } else {
                     break L1;
@@ -144,7 +140,7 @@ final class uf extends fg {
           }
         } else {
           field_k = null;
-          if ((((uf) this).field_f ^ -1L) >= (((uf) this).field_d ^ -1L)) {
+          if (~((uf) this).field_f >= ~((uf) this).field_d) {
             var4 = 0;
             L2: while (true) {
               L3: {
@@ -153,7 +149,7 @@ final class uf extends fg {
                 if (var4 >= 10) {
                   break L3;
                 } else {
-                  if ((((uf) this).field_d ^ -1L) < (((uf) this).field_f ^ -1L)) {
+                  if (~((uf) this).field_d < ~((uf) this).field_f) {
                     continue L2;
                   } else {
                     break L3;
@@ -177,51 +173,139 @@ final class uf extends fg {
     }
 
     final static java.net.URL a(java.applet.Applet param0, byte param1, java.net.URL param2) {
-        String var3 = null;
-        String var4 = null;
-        var3 = null;
-        if (param1 > 74) {
+        Object var3 = null;
+        Object var4 = null;
+        Object stackIn_2_0 = null;
+        java.net.URL stackIn_12_0 = null;
+        Object stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        Object stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        Object stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        Object stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        Object stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        Object stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_19_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        java.net.URL stackOut_11_0 = null;
+        Object stackOut_1_0 = null;
+        Object stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        Object stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        Object stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        Object stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        Object stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        Object stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        try {
           L0: {
-            if (e.field_c == null) {
-              break L0;
-            } else {
-              if (!e.field_c.equals((Object) (Object) param0.getParameter("settings"))) {
-                var3 = e.field_c;
-                var4 = var3;
-                var4 = var3;
-                break L0;
-              } else {
-                var4 = null;
-                if (null == kd.field_e) {
-                  return fc.a(var3, param2, var4, -1, 35);
+            var3 = null;
+            if (param1 > 74) {
+              L1: {
+                if (e.field_c == null) {
+                  break L1;
                 } else {
-                  L1: {
-                    if (!kd.field_e.equals((Object) (Object) param0.getParameter("session"))) {
-                      var4 = kd.field_e;
-                      break L1;
-                    } else {
-                      break L1;
-                    }
+                  if (!e.field_c.equals((Object) (Object) param0.getParameter("settings"))) {
+                    var3 = (Object) (Object) e.field_c;
+                    var4 = var3;
+                    var4 = var3;
+                    break L1;
+                  } else {
+                    break L1;
                   }
-                  return fc.a(var3, param2, var4, -1, 35);
                 }
               }
-            }
-          }
-          var4 = null;
-          if (null != kd.field_e) {
-            if (kd.field_e.equals((Object) (Object) param0.getParameter("session"))) {
-              return fc.a(var3, param2, var4, -1, 35);
+              L2: {
+                var4 = null;
+                if (null == kd.field_e) {
+                  break L2;
+                } else {
+                  if (!kd.field_e.equals((Object) (Object) param0.getParameter("session"))) {
+                    var4 = (Object) (Object) kd.field_e;
+                    break L2;
+                  } else {
+                    break L2;
+                  }
+                }
+              }
+              stackOut_11_0 = fc.a((String) var3, param2, (String) var4, -1, 35);
+              stackIn_12_0 = stackOut_11_0;
+              break L0;
             } else {
-              var4 = kd.field_e;
-              return fc.a(var3, param2, var4, -1, 35);
+              stackOut_1_0 = null;
+              stackIn_2_0 = stackOut_1_0;
+              return (java.net.URL) (Object) stackIn_2_0;
             }
-          } else {
-            return fc.a(var3, param2, var4, -1, 35);
           }
-        } else {
-          return null;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var3 = (Object) (Object) decompiledCaughtException;
+            stackOut_13_0 = var3;
+            stackOut_13_1 = new StringBuilder().append("uf.H(");
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
+            if (param0 == null) {
+              stackOut_15_0 = stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L3;
+            } else {
+              stackOut_14_0 = stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L3;
+            }
+          }
+          L4: {
+            stackOut_16_0 = stackIn_16_0;
+            stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44).append(param1).append(44);
+            stackIn_18_0 = stackOut_16_0;
+            stackIn_18_1 = stackOut_16_1;
+            stackIn_17_0 = stackOut_16_0;
+            stackIn_17_1 = stackOut_16_1;
+            if (param2 == null) {
+              stackOut_18_0 = stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "null";
+              stackIn_19_0 = stackOut_18_0;
+              stackIn_19_1 = stackOut_18_1;
+              stackIn_19_2 = stackOut_18_2;
+              break L4;
+            } else {
+              stackOut_17_0 = stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "{...}";
+              stackIn_19_0 = stackOut_17_0;
+              stackIn_19_1 = stackOut_17_1;
+              stackIn_19_2 = stackOut_17_2;
+              break L4;
+            }
+          }
+          throw la.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 41);
         }
+        return stackIn_12_0;
     }
 
     final void a(boolean param0) {

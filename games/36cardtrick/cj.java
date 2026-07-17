@@ -19,19 +19,15 @@ class cj extends he {
     }
 
     final static void a(qk param0, boolean param1, qk param2, qk param3, int param4) {
-        wh.field_a = nk.a(false, "");
-        wh.field_a.a(16511, false);
-        ca.a(param2, param3, param0, -25188);
-        we.a(0);
-        if (param4 < 125) {
-          cj.b((byte) 57);
-          jc.field_P = tj.field_F;
-          ei.field_d = tj.field_F;
-          return;
-        } else {
-          jc.field_P = tj.field_F;
-          ei.field_d = tj.field_F;
-          return;
+        try {
+            wh.field_a = nk.a(false, "");
+            wh.field_a.a(16511, false);
+            ca.a(param2, param3, param0, -25188);
+            we.a(0);
+            jc.field_P = tj.field_F;
+            ei.field_d = tj.field_F;
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) (Object) runtimeException, "cj.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + 126 + 41);
         }
     }
 

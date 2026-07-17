@@ -29,21 +29,48 @@ public class lfb {
     }
 
     public static void a(int param0, int param1, String param2) {
-        if (param1 >= -103) {
-            Object var4 = null;
-            File discarded$0 = lfb.a((String) null, -23, (String) null, -127);
+        Exception exception = null;
+        Object var4 = null;
+        Throwable decompiledCaughtException = null;
+        L0: {
+          if (param1 < -103) {
+            break L0;
+          } else {
+            var4 = null;
+            File discarded$2 = lfb.a((String) null, -23, (String) null, -127);
+            break L0;
+          }
         }
         field_c = param0;
         field_e = param2;
         try {
-            field_b = System.getProperty("user.home");
-            // if_acmpeq L79
-            field_b = field_b + "/";
-        } catch (Exception exception) {
+          L1: {
+            L2: {
+              field_b = System.getProperty("user.home");
+              if (null == field_b) {
+                break L2;
+              } else {
+                field_b = field_b + "/";
+                break L2;
+              }
+            }
+            break L1;
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            exception = (Exception) (Object) decompiledCaughtException;
+            break L3;
+          }
         }
-        field_d = true;
-        if (!(field_b != null)) {
+        L4: {
+          field_d = true;
+          if (field_b == null) {
             field_b = "~/";
+            break L4;
+          } else {
+            break L4;
+          }
         }
     }
 

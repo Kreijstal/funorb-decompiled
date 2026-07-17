@@ -18,12 +18,10 @@ final class lg {
 
     public static void a(int param0) {
         field_j = null;
-        if (param0 != -2) {
-            field_h = 12;
-        }
     }
 
     lg(int param0) {
+        int var2 = 0;
         ((lg) this).field_b = "";
         ((lg) this).field_l = false;
         ((lg) this).field_f = 0;
@@ -36,30 +34,44 @@ final class lg {
         ((lg) this).field_b = pf.field_e[param0];
         ((lg) this).field_k = bd.field_f[param0];
         ((lg) this).field_a = jg.field_jb[param0];
-        int var2 = param0;
-        if (-1 != (var2 ^ -1)) {
-            // if_icmpeq L136
-            // if_icmpeq L166
-            // if_icmpne L221
+        var2 = param0;
+        if (var2 == 0) {
+          ((lg) this).field_l = true;
+          ((lg) this).field_i = ah.field_C;
+          ((lg) this).field_g = 5;
+          return;
         } else {
-            ((lg) this).field_l = true;
-            ((lg) this).field_i = ah.field_C;
-            ((lg) this).field_g = 5;
+          if (var2 == 1) {
             ((lg) this).field_l = true;
             ((lg) this).field_g = 50;
             ((lg) this).field_e = true;
             ((lg) this).field_i = qe.field_j;
             ((lg) this).field_f = 15;
-            ((lg) this).field_f = 20;
-            ((lg) this).field_i = th.field_e;
-            ((lg) this).field_g = 100;
-            ((lg) this).field_e = true;
+            return;
+          } else {
+            if (var2 == 2) {
+              ((lg) this).field_f = 20;
+              ((lg) this).field_i = th.field_e;
+              ((lg) this).field_g = 100;
+              ((lg) this).field_e = true;
+              return;
+            } else {
+              L0: {
+                if (var2 != 3) {
+                  break L0;
+                } else {
+                  ((lg) this).field_i = uj.field_e;
+                  ((lg) this).field_g = 100;
+                  ((lg) this).field_e = true;
+                  ((lg) this).field_d = 50;
+                  ((lg) this).field_f = 25;
+                  break L0;
+                }
+              }
+              return;
+            }
+          }
         }
-        ((lg) this).field_i = uj.field_e;
-        ((lg) this).field_g = 100;
-        ((lg) this).field_e = true;
-        ((lg) this).field_d = 50;
-        ((lg) this).field_f = 25;
     }
 
     static {

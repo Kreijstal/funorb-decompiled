@@ -9,89 +9,139 @@ final class fc extends al {
     static long field_u;
 
     private final void a(int param0, byte param1, sb param2) {
-        int var4 = 0;
+        RuntimeException var4 = null;
+        int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
         bg var7 = null;
         int var8 = 0;
         int var9 = 0;
-        L0: {
-          var9 = MinerDisturbance.field_ab;
-          if (param0 != 1) {
-            if (2 == param0) {
-              var4 = param2.d((byte) -54);
-              ((fc) this).field_y = new int[var4];
-              var5 = 0;
-              L1: while (true) {
-                if (var4 <= var5) {
-                  break L0;
-                } else {
-                  ((fc) this).field_y[var5] = param2.e(-64);
-                  var5++;
-                  continue L1;
-                }
-              }
-            } else {
-              if (-4 != (param0 ^ -1)) {
-                if ((param0 ^ -1) == -5) {
-                  break L0;
-                } else {
-                  break L0;
-                }
-              } else {
-                var4 = param2.d((byte) -54);
-                ((fc) this).field_x = new int[var4];
-                ((fc) this).field_v = new int[var4][];
-                var5 = 0;
-                L2: while (true) {
-                  if (var5 >= var4) {
-                    break L0;
-                  } else {
-                    var6 = param2.e(-103);
-                    var7 = in.a(var6, (byte) 77);
-                    if (var7 != null) {
-                      ((fc) this).field_x[var5] = var6;
-                      ((fc) this).field_v[var5] = new int[var7.field_a];
-                      var8 = 0;
-                      L3: while (true) {
-                        if (var7.field_a > var8) {
-                          ((fc) this).field_v[var5][var8] = param2.e(-55);
-                          var8++;
-                          continue L3;
-                        } else {
-                          var5++;
-                          continue L2;
-                        }
-                      }
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        String stackIn_24_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        String stackOut_23_2 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        String stackOut_22_2 = null;
+        var9 = MinerDisturbance.field_ab;
+        try {
+          L0: {
+            L1: {
+              if (param0 != 1) {
+                if (2 == param0) {
+                  var4_int = param2.d((byte) -54);
+                  ((fc) this).field_y = new int[var4_int];
+                  var5 = 0;
+                  L2: while (true) {
+                    if (var4_int <= var5) {
+                      break L1;
                     } else {
+                      ((fc) this).field_y[var5] = param2.e(-64);
                       var5++;
                       continue L2;
                     }
                   }
+                } else {
+                  if (param0 != 3) {
+                    if (param0 == 4) {
+                      break L1;
+                    } else {
+                      break L1;
+                    }
+                  } else {
+                    var4_int = param2.d((byte) -54);
+                    ((fc) this).field_x = new int[var4_int];
+                    ((fc) this).field_v = new int[var4_int][];
+                    var5 = 0;
+                    L3: while (true) {
+                      if (var5 >= var4_int) {
+                        break L1;
+                      } else {
+                        L4: {
+                          var6 = param2.e(-103);
+                          var7 = in.a(var6, (byte) 77);
+                          if (var7 != null) {
+                            ((fc) this).field_x[var5] = var6;
+                            ((fc) this).field_v[var5] = new int[var7.field_a];
+                            var8 = 0;
+                            L5: while (true) {
+                              if (var7.field_a <= var8) {
+                                break L4;
+                              } else {
+                                ((fc) this).field_v[var5][var8] = param2.e(-55);
+                                var8++;
+                                continue L5;
+                              }
+                            }
+                          } else {
+                            break L4;
+                          }
+                        }
+                        var5++;
+                        continue L3;
+                      }
+                    }
+                  }
                 }
+              } else {
+                ((fc) this).field_w = h.a('<', true, param2.a(false));
+                break L1;
               }
             }
-          } else {
-            ((fc) this).field_w = h.a('<', true, param2.a(false));
+            L6: {
+              if (param1 > 91) {
+                break L6;
+              } else {
+                ((fc) this).field_v = null;
+                break L6;
+              }
+            }
             break L0;
           }
-        }
-        L4: {
-          if (param1 > 91) {
-            break L4;
-          } else {
-            ((fc) this).field_v = null;
-            break L4;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L7: {
+            var4 = decompiledCaughtException;
+            stackOut_21_0 = (RuntimeException) var4;
+            stackOut_21_1 = new StringBuilder().append("fc.C(").append(param0).append(44).append(param1).append(44);
+            stackIn_23_0 = stackOut_21_0;
+            stackIn_23_1 = stackOut_21_1;
+            stackIn_22_0 = stackOut_21_0;
+            stackIn_22_1 = stackOut_21_1;
+            if (param2 == null) {
+              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_2 = "null";
+              stackIn_24_0 = stackOut_23_0;
+              stackIn_24_1 = stackOut_23_1;
+              stackIn_24_2 = stackOut_23_2;
+              break L7;
+            } else {
+              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_2 = "{...}";
+              stackIn_24_0 = stackOut_22_0;
+              stackIn_24_1 = stackOut_22_1;
+              stackIn_24_2 = stackOut_22_2;
+              break L7;
+            }
           }
+          throw lj.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 41);
         }
     }
 
     final static void a(boolean param0) {
         int var1 = 0;
-        if (param0) {
-            String discarded$0 = fc.b((byte) -36);
-        }
-        if ((oc.field_f ^ -1) < -33) {
+        if (oc.field_f > 32) {
             var1 = oc.field_f % 32;
             if (0 == var1) {
                 var1 = 32;
@@ -135,25 +185,75 @@ final class fc extends al {
     }
 
     final void a(int param0, sb param1) {
-        int var3 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
         var4 = MinerDisturbance.field_ab;
-        L0: while (true) {
-          var3 = param1.d((byte) -54);
-          if (var3 != 0) {
-            this.a(var3, (byte) 119, param1);
-            continue L0;
-          } else {
-            L1: {
-              if (param0 == 32768) {
-                break L1;
+        try {
+          L0: {
+            L1: while (true) {
+              var3_int = param1.d((byte) -54);
+              if (var3_int != 0) {
+                this.a(var3_int, (byte) 119, param1);
+                continue L1;
               } else {
-                String discarded$1 = fc.b((byte) -29);
-                break L1;
+                L2: {
+                  if (param0 == 32768) {
+                    break L2;
+                  } else {
+                    String discarded$1 = fc.b((byte) -29);
+                    break L2;
+                  }
+                }
+                break L0;
               }
             }
-            return;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var3 = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var3;
+            stackOut_7_1 = new StringBuilder().append("fc.A(").append(param0).append(44);
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param1 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L3;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L3;
+            }
+          }
+          throw lj.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
         }
     }
 

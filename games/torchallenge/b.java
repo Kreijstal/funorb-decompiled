@@ -62,7 +62,7 @@ abstract class b extends kj {
               return;
             }
           } else {
-            if (-1 != (param3 ^ -1)) {
+            if (param3 != 0) {
               return;
             } else {
               ((b) this).c(103, ((b) this).field_i + param0, param1 + ((b) this).field_m);
@@ -79,38 +79,13 @@ abstract class b extends kj {
         if (param0 != 0) {
           return;
         } else {
-          ((b) this).a((byte) 113, -param2 + TorChallenge.field_G >> 1133512833, param1, param2, -param1 + md.field_h >> -2040608863);
+          ((b) this).a((byte) 113, -param2 + TorChallenge.field_G >> 1, param1, param2, -param1 + md.field_h >> 1);
           return;
         }
     }
 
     private final int i(int param0) {
-        int stackIn_6_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_2_0 = 0;
-        if (param0 != 0) {
-          return 92;
-        } else {
-          L0: {
-            if (((b) this).field_K) {
-              if (this != (Object) (Object) ((b) this).field_L.f((byte) 123)) {
-                stackOut_5_0 = 0;
-                stackIn_6_0 = stackOut_5_0;
-                break L0;
-              } else {
-                stackOut_4_0 = 256;
-                stackIn_6_0 = stackOut_4_0;
-                break L0;
-              }
-            } else {
-              stackOut_2_0 = 0;
-              stackIn_6_0 = stackOut_2_0;
-              break L0;
-            }
-          }
-          return stackIn_6_0;
-        }
+        return !((b) this).field_K ? 0 : this == (Object) (Object) ((b) this).field_L.f((byte) 123) ? 256 : 0;
     }
 
     final static void a(byte param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -310,10 +285,14 @@ abstract class b extends kj {
     }
 
     b(si param0, int param1, int param2) {
-        super(TorChallenge.field_G - param1 >> -715858175, md.field_h - param2 >> -60164767, param1, param2, (j) null);
-        ((b) this).field_P = 0;
-        ((b) this).field_L = param0;
-        ((b) this).field_K = false;
+        super(TorChallenge.field_G - param1 >> 1, md.field_h - param2 >> 1, param1, param2, (j) null);
+        try {
+            ((b) this).field_P = 0;
+            ((b) this).field_L = param0;
+            ((b) this).field_K = false;
+        } catch (RuntimeException runtimeException) {
+            throw oj.a((Throwable) (Object) runtimeException, "b.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     static {

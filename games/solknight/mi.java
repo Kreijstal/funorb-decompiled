@@ -1081,8 +1081,8 @@ final class mi {
         int var5 = 0;
         for (var6 = 0; var6 < 4; var6++) {
             var5 = 128 - (var6 << 5);
-            mi.c(param0 + var6, param1 + param3 + var6, param2, param4, var5);
-            mi.f(param0 + param2 + var6, param1 + var6, param3 + 1, param4, var5);
+            mi.c(param0 + var6, param1 + param3 + var6, param2, 5592405, var5);
+            mi.f(param0 + param2 + var6, param1 + var6, param3 + 1, 5592405, var5);
         }
     }
 
@@ -1513,8 +1513,8 @@ final class mi {
     }
 
     final static void d(int param0, int param1, int param2, int param3, int param4, int param5) {
-        mi.a(field_f, 0, param2 + param3 * field_a, param0, param2, param4, field_a - param4, param5);
-        mi.a(field_f, 0, param2 + param3 * field_a, param1, param3, param5, field_a - param4, param2, param4);
+        mi.a(field_f, 0, param2 + param3 * field_a, param0, param2, param4, field_a - param4, 140);
+        mi.a(field_f, 0, param2 + param3 * field_a, param1, param3, 140, field_a - param4, param2, param4);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -2059,10 +2059,10 @@ final class mi {
                                     break L4;
                                   } else {
                                     if (param1 + var8 < field_e) {
-                                      field_f[var4 - var8] = param3;
-                                      field_f[var4 + var8] = param3;
-                                      field_f[var6] = param3;
-                                      field_f[var7] = param3;
+                                      field_f[var4 - var8] = 16711680;
+                                      field_f[var4 + var8] = 16711680;
+                                      field_f[var6] = 16711680;
+                                      field_f[var7] = 16711680;
                                       L5: while (true) {
                                         L6: {
                                           int incrementValue$2 = var9;
@@ -2081,14 +2081,14 @@ final class mi {
                                           }
                                         }
                                         if (var8 >= var9) {
-                                          field_f[var6 - var9] = param3;
-                                          field_f[var6 + var9] = param3;
-                                          field_f[var4 - var8] = param3;
-                                          field_f[var4 + var8] = param3;
-                                          field_f[var5 - var8] = param3;
-                                          field_f[var5 + var8] = param3;
-                                          field_f[var7 - var9] = param3;
-                                          field_f[var7 + var9] = param3;
+                                          field_f[var6 - var9] = 16711680;
+                                          field_f[var6 + var9] = 16711680;
+                                          field_f[var4 - var8] = 16711680;
+                                          field_f[var4 + var8] = 16711680;
+                                          field_f[var5 - var8] = 16711680;
+                                          field_f[var5 + var8] = 16711680;
+                                          field_f[var7 - var9] = 16711680;
+                                          field_f[var7 + var9] = 16711680;
                                           continue L5;
                                         } else {
                                           break L3;
@@ -2111,7 +2111,7 @@ final class mi {
                                   if (param1 >= field_e) {
                                     break L7;
                                   } else {
-                                    field_f[var4 - var8] = param3;
+                                    field_f[var4 - var8] = 16711680;
                                     break L7;
                                   }
                                 }
@@ -2127,7 +2127,7 @@ final class mi {
                                   if (param1 >= field_e) {
                                     break L8;
                                   } else {
-                                    field_f[var4 + var8] = param3;
+                                    field_f[var4 + var8] = 16711680;
                                     break L8;
                                   }
                                 }
@@ -2144,7 +2144,7 @@ final class mi {
                                     if (param0 >= field_k) {
                                       break L9;
                                     } else {
-                                      field_f[var7] = param3;
+                                      field_f[var7] = 16711680;
                                       break L9;
                                     }
                                   }
@@ -2159,7 +2159,7 @@ final class mi {
                                     if (param0 >= field_k) {
                                       break L9;
                                     } else {
-                                      field_f[var7] = param3;
+                                      field_f[var7] = 16711680;
                                       break L9;
                                     }
                                   }
@@ -2198,7 +2198,7 @@ final class mi {
                                           if (param0 - var9 >= field_k) {
                                             break L13;
                                           } else {
-                                            field_f[var6 - var9] = param3;
+                                            field_f[var6 - var9] = 16711680;
                                             break L13;
                                           }
                                         }
@@ -2209,7 +2209,7 @@ final class mi {
                                         if (param0 + var9 >= field_k) {
                                           break L12;
                                         } else {
-                                          field_f[var6 + var9] = param3;
+                                          field_f[var6 + var9] = 16711680;
                                           break L12;
                                         }
                                       }
@@ -2230,7 +2230,7 @@ final class mi {
                                           if (param0 - var8 >= field_k) {
                                             break L15;
                                           } else {
-                                            field_f[var4 - var8] = param3;
+                                            field_f[var4 - var8] = 16711680;
                                             break L15;
                                           }
                                         }
@@ -2241,7 +2241,7 @@ final class mi {
                                         if (param0 + var8 >= field_k) {
                                           break L14;
                                         } else {
-                                          field_f[var4 + var8] = param3;
+                                          field_f[var4 + var8] = 16711680;
                                           break L14;
                                         }
                                       }
@@ -2262,7 +2262,7 @@ final class mi {
                                           if (param0 - var8 >= field_k) {
                                             break L17;
                                           } else {
-                                            field_f[var5 - var8] = param3;
+                                            field_f[var5 - var8] = 16711680;
                                             break L17;
                                           }
                                         }
@@ -2273,7 +2273,7 @@ final class mi {
                                         if (param0 + var8 >= field_k) {
                                           break L16;
                                         } else {
-                                          field_f[var5 + var8] = param3;
+                                          field_f[var5 + var8] = 16711680;
                                           break L16;
                                         }
                                       }
@@ -2293,7 +2293,7 @@ final class mi {
                                         if (param0 - var9 >= field_k) {
                                           break L18;
                                         } else {
-                                          field_f[var7 - var9] = param3;
+                                          field_f[var7 - var9] = 16711680;
                                           break L18;
                                         }
                                       }
@@ -2304,7 +2304,7 @@ final class mi {
                                       if (param0 + var9 >= field_k) {
                                         continue L10;
                                       } else {
-                                        field_f[var7 + var9] = param3;
+                                        field_f[var7 + var9] = 16711680;
                                         continue L10;
                                       }
                                     }
@@ -2331,7 +2331,7 @@ final class mi {
           }
           return;
         } else {
-          mi.a(param0, param1, param3);
+          mi.a(param0, param1, 16711680);
           return;
         }
     }

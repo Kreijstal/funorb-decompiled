@@ -9,56 +9,118 @@ final class pb {
     static wl field_e;
 
     final static int a(byte param0, dk[] param1) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         dk[] var3 = null;
         int var4 = 0;
         dk var5 = null;
         int var6 = 0;
         int var7 = 0;
+        int stackIn_3_0 = 0;
+        int stackIn_15_0 = 0;
+        int stackIn_17_0 = 0;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        String stackIn_21_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_14_0 = 0;
+        int stackOut_16_0 = 0;
+        int stackOut_2_0 = 0;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
         var7 = EscapeVector.field_A;
-        if (param0 == 2) {
-          var2 = -2147483648;
-          var3 = param1;
-          var4 = 0;
-          L0: while (true) {
-            if (var3.length <= var4) {
-              if (2147483647 == (var2 ^ -1)) {
-                return 0;
-              } else {
-                return var2;
+        try {
+          L0: {
+            if (param0 == 2) {
+              var2_int = -2147483648;
+              var3 = param1;
+              var4 = 0;
+              L1: while (true) {
+                if (var3.length <= var4) {
+                  if (var2_int == -2147483648) {
+                    stackOut_14_0 = 0;
+                    stackIn_15_0 = stackOut_14_0;
+                    return stackIn_15_0;
+                  } else {
+                    stackOut_16_0 = var2_int;
+                    stackIn_17_0 = stackOut_16_0;
+                    break L0;
+                  }
+                } else {
+                  L2: {
+                    var5 = var3[var4];
+                    var6 = var5.field_i + var5.field_l;
+                    if (var2_int >= var6) {
+                      var4++;
+                      break L2;
+                    } else {
+                      var2_int = var6;
+                      var4++;
+                      break L2;
+                    }
+                  }
+                  var4++;
+                  continue L1;
+                }
               }
             } else {
-              var5 = var3[var4];
-              var6 = var5.field_i + var5.field_l;
-              if (var2 < var6) {
-                var2 = var6;
-                var4++;
-                var4++;
-                continue L0;
-              } else {
-                var4++;
-                var4++;
-                continue L0;
-              }
+              stackOut_2_0 = 20;
+              stackIn_3_0 = stackOut_2_0;
+              return stackIn_3_0;
             }
           }
-        } else {
-          return 20;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2 = decompiledCaughtException;
+            stackOut_18_0 = (RuntimeException) var2;
+            stackOut_18_1 = new StringBuilder().append("pb.B(").append(param0).append(44);
+            stackIn_20_0 = stackOut_18_0;
+            stackIn_20_1 = stackOut_18_1;
+            stackIn_19_0 = stackOut_18_0;
+            stackIn_19_1 = stackOut_18_1;
+            if (param1 == null) {
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "null";
+              stackIn_21_0 = stackOut_20_0;
+              stackIn_21_1 = stackOut_20_1;
+              stackIn_21_2 = stackOut_20_2;
+              break L3;
+            } else {
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "{...}";
+              stackIn_21_0 = stackOut_19_0;
+              stackIn_21_1 = stackOut_19_1;
+              stackIn_21_2 = stackOut_19_2;
+              break L3;
+            }
+          }
+          throw t.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 41);
         }
+        return stackIn_17_0;
     }
 
     public static void a(boolean param0) {
         field_e = null;
         field_a = null;
         field_c = null;
-        if (param0) {
-            field_c = null;
-        }
     }
 
     final static void a(int param0) {
         ll.a(70, 8, param0 ^ 12, am.field_k);
-        if (-96 < (am.field_k ^ -1)) {
+        if (am.field_k < 95) {
           if (param0 != 4) {
             field_b = -65;
             return;
@@ -66,7 +128,7 @@ final class pb {
             return;
           }
         } else {
-          if ((am.field_k ^ -1) <= -111) {
+          if (am.field_k >= 110) {
             dg.field_t.e((640 + -dg.field_t.field_A) / 2, fg.field_b);
             if (param0 == 4) {
               return;
@@ -91,7 +153,7 @@ final class pb {
     }
 
     private static void $cfr$clinit() {
-        field_a = new char[]{(char)32, (char)160, (char)95, (char)45, (char)224, (char)225, (char)226, (char)228, (char)227, (char)192, (char)193, (char)194, (char)196, (char)195, (char)232, (char)233, (char)234, (char)235, (char)200, (char)201, (char)202, (char)203, (char)237, (char)238, (char)239, (char)205, (char)206, (char)207, (char)242, (char)243, (char)244, (char)246, (char)245, (char)210, (char)211, (char)212, (char)214, (char)213, (char)249, (char)250, (char)251, (char)252, (char)217, (char)218, (char)219, (char)220, (char)231, (char)199, (char)255, (char)376, (char)241, (char)209, (char)223};
+        field_a = new char[]{' ', ' ', '_', '-', 'à', 'á', 'â', 'ä', 'ã', 'À', 'Á', 'Â', 'Ä', 'Ã', 'è', 'é', 'ê', 'ë', 'È', 'É', 'Ê', 'Ë', 'í', 'î', 'ï', 'Í', 'Î', 'Ï', 'ò', 'ó', 'ô', 'ö', 'õ', 'Ò', 'Ó', 'Ô', 'Ö', 'Õ', 'ù', 'ú', 'û', 'ü', 'Ù', 'Ú', 'Û', 'Ü', 'ç', 'Ç', 'ÿ', 'Ÿ', 'ñ', 'Ñ', 'ß'};
         field_b = 0;
     }
 }

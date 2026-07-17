@@ -7,7 +7,7 @@ final class chb {
     final static void a(int param0, int param1, boolean param2) {
         vu var3 = null;
         hqb var4 = null;
-        String var5_ref = null;
+        String var5_ref_String = null;
         int var5 = 0;
         int var6 = 0;
         if (param0 != 0) {
@@ -17,8 +17,8 @@ final class chb {
             if (var3 != null) {
               cka.field_o.a(false, 115);
               var4 = cka.field_o;
-              var5_ref = esa.field_o;
-              var4.field_i.a(var5_ref, (byte) -53, 5);
+              var5_ref_String = esa.field_o;
+              var4.field_i.a(var5_ref_String, (byte) -53, 5);
               var4 = cka.field_o;
               var5 = oq.field_H;
               var6 = qs.field_a;
@@ -36,8 +36,8 @@ final class chb {
             if (var3 != null) {
               cka.field_o.a(false, 115);
               var4 = cka.field_o;
-              var5_ref = esa.field_o;
-              var4.field_i.a(var5_ref, (byte) -53, 5);
+              var5_ref_String = esa.field_o;
+              var4.field_i.a(var5_ref_String, (byte) -53, 5);
               var4 = cka.field_o;
               var5 = oq.field_H;
               var6 = qs.field_a;
@@ -55,10 +55,10 @@ final class chb {
     final static void a(int param0) {
         if (null == bjb.field_p) {
             bjb.field_p = new qsa[32];
-            hcb.field_p = param0;
+            hcb.field_p = 0;
             return;
         }
-        hcb.field_p = param0;
+        hcb.field_p = 0;
     }
 
     static {

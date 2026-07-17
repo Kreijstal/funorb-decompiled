@@ -50,7 +50,11 @@ final class ve {
     ve(String param0) {
         ((ve) this).field_c = false;
         ((ve) this).field_a = false;
-        ((ve) this).field_b = param0;
+        try {
+            ((ve) this).field_b = param0;
+        } catch (RuntimeException runtimeException) {
+            throw pf.a((Throwable) (Object) runtimeException, "ve.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

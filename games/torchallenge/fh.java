@@ -21,18 +21,9 @@ final class fh {
     }
 
     public static void a(byte param0) {
-        if (param0 > -23) {
-          field_g = false;
-          field_h = null;
-          field_a = null;
-          field_f = null;
-          return;
-        } else {
-          field_h = null;
-          field_a = null;
-          field_f = null;
-          return;
-        }
+        field_h = null;
+        field_a = null;
+        field_f = null;
     }
 
     static {

@@ -262,8 +262,9 @@ final class a implements e {
                   return (ka) (Object) var5;
                 } else {
                   L1: {
-                    var6 = new i(((a) this).field_e);
-                    var5 = new i(((a) this).field_e);
+                    i dupTemp$1 = new i(((a) this).field_e);
+                    var6 = dupTemp$1;
+                    var5 = dupTemp$1;
                     stackOut_21_0 = (i) param0;
                     stackOut_21_1 = (i) var5;
                     stackOut_21_2 = (i) var6;

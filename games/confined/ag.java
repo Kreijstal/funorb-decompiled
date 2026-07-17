@@ -16,16 +16,15 @@ final class ag {
     static boolean field_h;
 
     private final void a(int param0, nd param1) {
-        int var3 = 0;
-        if (param1 != null) {
-          param1.a(true);
-          param1.b(true);
-          ((ag) this).field_i = ((ag) this).field_i + param1.field_t;
-          var3 = 55 / ((-2 - param0) / 52);
-          return;
-        } else {
-          var3 = 55 / ((-2 - param0) / 52);
-          return;
+        try {
+            if (param1 != null) {
+                param1.a(true);
+                param1.b(true);
+                ((ag) this).field_i = ((ag) this).field_i + param1.field_t;
+            }
+            int var3_int = 55 / ((-2 - param0) / 52);
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "ag.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -262,28 +261,25 @@ final class ag {
     }
 
     private final void a(int param0, long param1, Object param2, int param3) {
-        oj var6 = null;
-        nd var6_ref = null;
-        int var7 = 0;
-        var7 = Confined.field_J ? 1 : 0;
-        if (((ag) this).field_c < param0) {
-          throw new IllegalStateException();
-        } else {
-          this.b(-110, param1);
-          ((ag) this).field_i = ((ag) this).field_i - param0;
-          L0: while (true) {
-            if (-1 >= (((ag) this).field_i ^ -1)) {
-              var6 = new oj(param2, param0);
-              ((ag) this).field_f.a((rk) (Object) var6, param1, param3 ^ -1);
-              ((ag) this).field_b.a((jl) (Object) var6, 18425);
-              ((nd) (Object) var6).field_r = (long)param3;
-              return;
-            } else {
-              var6_ref = (nd) (Object) ((ag) this).field_b.a(-29870);
-              this.a(param3 ^ -96, var6_ref);
-              continue L0;
+        nd var6 = null;
+        oj var6_ref = null;
+        int var7 = Confined.field_J ? 1 : 0;
+        try {
+            if (((ag) this).field_c < param0) {
+                throw new IllegalStateException();
             }
-          }
+            this.b(-110, param1);
+            ((ag) this).field_i = ((ag) this).field_i - param0;
+            while (((ag) this).field_i < 0) {
+                var6 = (nd) (Object) ((ag) this).field_b.a(-29870);
+                this.a(param3 ^ -96, var6);
+            }
+            var6_ref = new oj(param2, param0);
+            ((ag) this).field_f.a((rk) (Object) var6_ref, param1, ~param3);
+            ((ag) this).field_b.a((jl) (Object) var6_ref, 18425);
+            ((nd) (Object) var6_ref).field_r = (long)param3;
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "ag.D(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
         }
     }
 
@@ -324,13 +320,13 @@ final class ag {
     }
 
     final void a(byte param0, long param1, Object param2) {
-        if (param0 != -2) {
-          ((ag) this).field_i = -88;
-          this.a(1, param1, param2, param0 + 2);
-          return;
-        } else {
-          this.a(1, param1, param2, param0 + 2);
-          return;
+        try {
+            if (param0 != -2) {
+                ((ag) this).field_i = -88;
+            }
+            this.a(1, param1, param2, param0 + 2);
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "ag.E(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

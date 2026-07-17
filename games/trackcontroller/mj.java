@@ -11,9 +11,6 @@ final class mj {
 
     public static void b(int param0) {
         field_b = null;
-        if (param0 != -2069072125) {
-            return;
-        }
         field_a = null;
         field_e = null;
         field_f = null;
@@ -21,28 +18,41 @@ final class mj {
 
     final static void a(int param0) {
         qj var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
+        qj[] stackIn_5_0 = null;
+        RuntimeException decompiledCaughtException = null;
+        qj[] stackOut_3_0 = null;
+        qj[] stackOut_4_0 = null;
         var4 = TrackController.field_F ? 1 : 0;
-        var1 = ii.field_r[39];
-        var2 = 40;
-        var3 = 0;
-        if (param0 == 208) {
-          L0: while (true) {
-            if (mb.field_d.length <= var3) {
-              ia.field_b.a(-91);
-              return;
-            } else {
-              mb.field_d[var3] = new qj(var2, var2);
-              mb.field_d[var3].a();
-              var1.a(208, 208, var2 << -673407325, var2 << -2069072125, (int)(0.5 + 16384.0 * (double)var3 / 26.0), 4096);
-              var3++;
-              continue L0;
+        try {
+          L0: {
+            var1 = ii.field_r[39];
+            var2 = 40;
+            var3 = 0;
+            stackOut_3_0 = mb.field_d;
+            stackIn_5_0 = stackOut_3_0;
+            L1: while (true) {
+              if (stackIn_5_0.length <= var3) {
+                ia.field_b.a(-91);
+                break L0;
+              } else {
+                mb.field_d[var3] = new qj(var2, var2);
+                mb.field_d[var3].a();
+                var1.a(208, 208, var2 << 3, var2 << 3, (int)(0.5 + 16384.0 * (double)var3 / 26.0), 4096);
+                var3++;
+                stackOut_4_0 = mb.field_d;
+                stackIn_5_0 = stackOut_4_0;
+                continue L1;
+              }
             }
           }
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw sl.a((Throwable) (Object) var1_ref, "mj.A(" + 208 + 41);
         }
     }
 

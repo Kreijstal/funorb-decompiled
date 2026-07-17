@@ -19,62 +19,82 @@ final class cj {
         String var2 = null;
         String var3 = null;
         long var4 = 0L;
-        ed.field_d = true;
-        var2 = "tuhstatbut";
-        var3 = "rvnadlm";
-        if (param0 <= 114) {
-          field_g = 35;
-          var4 = -1L;
-          oh.a(var4, var3, param1, var2, 0);
-          return;
-        } else {
-          var4 = -1L;
-          oh.a(var4, var3, param1, var2, 0);
-          return;
+        try {
+            ed.field_d = true;
+            var2 = "tuhstatbut";
+            var3 = "rvnadlm";
+            if (param0 <= 114) {
+                field_g = 35;
+            }
+            var4 = -1L;
+            oh.a(var4, var3, param1, var2, 0);
+        } catch (RuntimeException runtimeException) {
+            throw oj.a((Throwable) (Object) runtimeException, "cj.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
     final static int a(int param0) {
-        int var1 = 0;
+        int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
+        int stackIn_3_0 = 0;
+        int stackIn_17_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_16_0 = 0;
+        int stackOut_2_0 = 0;
         var3 = TorChallenge.field_F ? 1 : 0;
-        var1 = 0;
-        if (param0 <= 79) {
-          return -73;
-        } else {
-          var2 = 1;
-          L0: while (true) {
-            if (6 <= var2) {
-              L1: {
-                if (!bh.field_p) {
-                  break L1;
-                } else {
-                  if (!aj.field_h) {
-                    break L1;
-                  } else {
-                    pi.field_f = pi.field_f + 128;
-                    var1 = 5;
-                    ae.field_z = ae.field_z + 64;
-                    break L1;
+        try {
+          L0: {
+            var1_int = 0;
+            if (param0 > 79) {
+              var2 = 1;
+              L1: while (true) {
+                if (6 <= var2) {
+                  L2: {
+                    if (!bh.field_p) {
+                      break L2;
+                    } else {
+                      if (!aj.field_h) {
+                        break L2;
+                      } else {
+                        pi.field_f = pi.field_f + 128;
+                        var1_int = 5;
+                        ae.field_z = ae.field_z + 64;
+                        break L2;
+                      }
+                    }
                   }
+                  stackOut_16_0 = var1_int;
+                  stackIn_17_0 = stackOut_16_0;
+                  break L0;
+                } else {
+                  L3: {
+                    if (pa.field_s[ok.field_b][var2]) {
+                      var1_int = var2;
+                      var2++;
+                      break L3;
+                    } else {
+                      var2++;
+                      break L3;
+                    }
+                  }
+                  var2++;
+                  continue L1;
                 }
               }
-              return var1;
             } else {
-              if (pa.field_s[ok.field_b][var2]) {
-                var1 = var2;
-                var2++;
-                var2++;
-                continue L0;
-              } else {
-                var2++;
-                var2++;
-                continue L0;
-              }
+              stackOut_2_0 = -73;
+              stackIn_3_0 = stackOut_2_0;
+              return stackIn_3_0;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw oj.a((Throwable) (Object) var1, "cj.B(" + param0 + 41);
         }
+        return stackIn_17_0;
     }
 
     public static void b(int param0) {
@@ -84,9 +104,6 @@ final class cj {
         field_c = null;
         field_h = null;
         field_f = null;
-        if (param0 != 0) {
-            field_j = -32;
-        }
     }
 
     static {

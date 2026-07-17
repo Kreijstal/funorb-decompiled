@@ -25,31 +25,23 @@ final class wn {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        L0: {
-          var11 = HoldTheLine.field_D;
-          var9 = -1640531527;
-          var7 = -1640531527;
-          var5 = -1640531527;
-          var10 = -1640531527;
-          var6 = -1640531527;
-          var4 = -1640531527;
-          var3 = -1640531527;
-          var8 = -1640531527;
-          if (param0 >= 95) {
-            break L0;
-          } else {
-            wn.b(-110);
-            break L0;
-          }
-        }
+        var11 = HoldTheLine.field_D;
+        var9 = -1640531527;
+        var7 = -1640531527;
+        var5 = -1640531527;
+        var10 = -1640531527;
+        var6 = -1640531527;
+        var4 = -1640531527;
+        var3 = -1640531527;
+        var8 = -1640531527;
         var2 = 0;
-        L1: while (true) {
-          if ((var2 ^ -1) <= -5) {
+        L0: while (true) {
+          if (var2 >= 4) {
             var2 = 0;
-            L2: while (true) {
-              if (-257 >= (var2 ^ -1)) {
+            L1: while (true) {
+              if (var2 >= 256) {
                 var2 = 0;
-                L3: while (true) {
+                L2: while (true) {
                   if (256 <= var2) {
                     this.a(0);
                     ((wn) this).field_i = 256;
@@ -63,28 +55,28 @@ final class wn {
                     var3 = var3 + ((wn) this).field_d[var2];
                     var6 = var6 + ((wn) this).field_d[3 + var2];
                     var9 = var9 + ((wn) this).field_d[6 + var2];
-                    var3 = var3 ^ var4 << 1491633611;
+                    var3 = var3 ^ var4 << 11;
                     var6 = var6 + var3;
                     var4 = var4 + var5;
-                    var4 = var4 ^ var5 >>> 313093282;
+                    var4 = var4 ^ var5 >>> 2;
                     var5 = var5 + var6;
                     var7 = var7 + var4;
-                    var5 = var5 ^ var6 << -1315654712;
+                    var5 = var5 ^ var6 << 8;
                     var8 = var8 + var5;
                     var6 = var6 + var7;
-                    var6 = var6 ^ var7 >>> 1234410896;
+                    var6 = var6 ^ var7 >>> 16;
                     var9 = var9 + var6;
                     var7 = var7 + var8;
-                    var7 = var7 ^ var8 << -197017718;
+                    var7 = var7 ^ var8 << 10;
                     var10 = var10 + var7;
                     var8 = var8 + var9;
-                    var8 = var8 ^ var9 >>> -1287814172;
+                    var8 = var8 ^ var9 >>> 4;
                     var9 = var9 + var10;
                     var3 = var3 + var8;
-                    var9 = var9 ^ var10 << 1767832040;
+                    var9 = var9 ^ var10 << 8;
                     var4 = var4 + var9;
                     var10 = var10 + var3;
-                    var10 = var10 ^ var3 >>> -1110718423;
+                    var10 = var10 ^ var3 >>> 9;
                     var3 = var3 + var4;
                     var5 = var5 + var10;
                     ((wn) this).field_d[var2] = var3;
@@ -96,7 +88,7 @@ final class wn {
                     ((wn) this).field_d[var2 + 6] = var9;
                     ((wn) this).field_d[7 + var2] = var10;
                     var2 += 8;
-                    continue L3;
+                    continue L2;
                   }
                 }
               } else {
@@ -108,28 +100,28 @@ final class wn {
                 var6 = var6 + ((wn) this).field_b[var2 - -3];
                 var5 = var5 + ((wn) this).field_b[var2 + 2];
                 var8 = var8 + ((wn) this).field_b[var2 - -5];
-                var3 = var3 ^ var4 << 208237355;
+                var3 = var3 ^ var4 << 11;
                 var6 = var6 + var3;
                 var4 = var4 + var5;
-                var4 = var4 ^ var5 >>> 1984289154;
+                var4 = var4 ^ var5 >>> 2;
                 var5 = var5 + var6;
                 var7 = var7 + var4;
-                var5 = var5 ^ var6 << -52190168;
+                var5 = var5 ^ var6 << 8;
                 var8 = var8 + var5;
                 var6 = var6 + var7;
-                var6 = var6 ^ var7 >>> -2066332144;
+                var6 = var6 ^ var7 >>> 16;
                 var9 = var9 + var6;
                 var7 = var7 + var8;
-                var7 = var7 ^ var8 << -1922886038;
+                var7 = var7 ^ var8 << 10;
                 var8 = var8 + var9;
                 var10 = var10 + var7;
-                var8 = var8 ^ var9 >>> -2001944636;
+                var8 = var8 ^ var9 >>> 4;
                 var3 = var3 + var8;
                 var9 = var9 + var10;
-                var9 = var9 ^ var10 << 1501071464;
+                var9 = var9 ^ var10 << 8;
                 var10 = var10 + var3;
                 var4 = var4 + var9;
-                var10 = var10 ^ var3 >>> -1215461175;
+                var10 = var10 ^ var3 >>> 9;
                 var3 = var3 + var4;
                 var5 = var5 + var10;
                 ((wn) this).field_d[var2] = var3;
@@ -141,36 +133,36 @@ final class wn {
                 ((wn) this).field_d[var2 + 6] = var9;
                 ((wn) this).field_d[7 + var2] = var10;
                 var2 += 8;
-                continue L2;
+                continue L1;
               }
             }
           } else {
-            var3 = var3 ^ var4 << -1474633749;
+            var3 = var3 ^ var4 << 11;
             var4 = var4 + var5;
             var6 = var6 + var3;
-            var4 = var4 ^ var5 >>> 197602754;
+            var4 = var4 ^ var5 >>> 2;
             var5 = var5 + var6;
             var7 = var7 + var4;
-            var5 = var5 ^ var6 << 1093198632;
+            var5 = var5 ^ var6 << 8;
             var6 = var6 + var7;
             var8 = var8 + var5;
-            var6 = var6 ^ var7 >>> -267836432;
+            var6 = var6 ^ var7 >>> 16;
             var9 = var9 + var6;
             var7 = var7 + var8;
-            var7 = var7 ^ var8 << -1423813334;
+            var7 = var7 ^ var8 << 10;
             var10 = var10 + var7;
             var8 = var8 + var9;
-            var8 = var8 ^ var9 >>> -1207121180;
+            var8 = var8 ^ var9 >>> 4;
             var3 = var3 + var8;
             var9 = var9 + var10;
-            var9 = var9 ^ var10 << -1510898488;
+            var9 = var9 ^ var10 << 8;
             var4 = var4 + var9;
             var10 = var10 + var3;
-            var10 = var10 ^ var3 >>> 1060877545;
+            var10 = var10 ^ var3 >>> 9;
             var5 = var5 + var10;
             var3 = var3 + var4;
             var2++;
-            continue L1;
+            continue L0;
           }
         }
     }
@@ -194,8 +186,9 @@ final class wn {
             this.a(param0 ^ 256);
             ((wn) this).field_i = 256;
         }
+        int fieldTemp$0 = ((wn) this).field_i - 1;
         ((wn) this).field_i = ((wn) this).field_i - 1;
-        return ((wn) this).field_b[((wn) this).field_i - 1];
+        return ((wn) this).field_b[fieldTemp$0];
     }
 
     private final void a(int param0) {
@@ -204,8 +197,9 @@ final class wn {
         int var4 = 0;
         int var5 = 0;
         var5 = HoldTheLine.field_D;
+        int fieldTemp$3 = ((wn) this).field_e + 1;
         ((wn) this).field_e = ((wn) this).field_e + 1;
-        ((wn) this).field_c = ((wn) this).field_c + (((wn) this).field_e + 1);
+        ((wn) this).field_c = ((wn) this).field_c + fieldTemp$3;
         var2 = param0;
         L0: while (true) {
           if (256 <= var2) {
@@ -215,27 +209,29 @@ final class wn {
               var3 = ((wn) this).field_d[var2];
               if (0 == (2 & var2)) {
                 if ((var2 & 1) == 0) {
-                  ((wn) this).field_j = ((wn) this).field_j ^ ((wn) this).field_j << 475688813;
+                  ((wn) this).field_j = ((wn) this).field_j ^ ((wn) this).field_j << 13;
                   break L1;
                 } else {
-                  ((wn) this).field_j = ((wn) this).field_j ^ ((wn) this).field_j >>> 1856628582;
+                  ((wn) this).field_j = ((wn) this).field_j ^ ((wn) this).field_j >>> 6;
                   break L1;
                 }
               } else {
-                if (-1 != (var2 & 1 ^ -1)) {
-                  ((wn) this).field_j = ((wn) this).field_j ^ ((wn) this).field_j >>> 2110021264;
+                if ((var2 & 1) != 0) {
+                  ((wn) this).field_j = ((wn) this).field_j ^ ((wn) this).field_j >>> 16;
                   break L1;
                 } else {
-                  ((wn) this).field_j = ((wn) this).field_j ^ ((wn) this).field_j << -2041396318;
+                  ((wn) this).field_j = ((wn) this).field_j ^ ((wn) this).field_j << 2;
                   break L1;
                 }
               }
             }
             ((wn) this).field_j = ((wn) this).field_j + ((wn) this).field_d[128 + var2 & 255];
-            var4 = ((wn) this).field_c + (((wn) this).field_d[pk.a(var3, 1020) >> -1067987582] + ((wn) this).field_j);
-            ((wn) this).field_d[var2] = ((wn) this).field_c + (((wn) this).field_d[pk.a(var3, 1020) >> -1067987582] + ((wn) this).field_j);
-            ((wn) this).field_c = var3 + ((wn) this).field_d[pk.a(261345, var4) >> -364880856 >> 1364025154];
-            ((wn) this).field_b[var2] = var3 + ((wn) this).field_d[pk.a(261345, var4) >> -364880856 >> 1364025154];
+            int dupTemp$4 = ((wn) this).field_c + (((wn) this).field_d[pk.a(var3, 1020) >> 2] + ((wn) this).field_j);
+            var4 = dupTemp$4;
+            ((wn) this).field_d[var2] = dupTemp$4;
+            int dupTemp$5 = var3 + ((wn) this).field_d[pk.a(261345, var4) >> 8 >> 2];
+            ((wn) this).field_c = dupTemp$5;
+            ((wn) this).field_b[var2] = dupTemp$5;
             var2++;
             continue L0;
           }
@@ -243,13 +239,17 @@ final class wn {
     }
 
     wn(int[] param0) {
-        int var2 = 0;
-        ((wn) this).field_b = new int[256];
-        ((wn) this).field_d = new int[256];
-        for (var2 = 0; var2 < param0.length; var2++) {
-            ((wn) this).field_b[var2] = param0[var2];
+        int var2_int = 0;
+        try {
+            ((wn) this).field_b = new int[256];
+            ((wn) this).field_d = new int[256];
+            for (var2_int = 0; var2_int < param0.length; var2_int++) {
+                ((wn) this).field_b[var2_int] = param0[var2_int];
+            }
+            this.a((byte) 106);
+        } catch (RuntimeException runtimeException) {
+            throw kk.a((Throwable) (Object) runtimeException, "wn.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }
-        this.a((byte) 106);
     }
 
     static {

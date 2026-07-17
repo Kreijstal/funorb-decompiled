@@ -1,6 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
+import javax.sound.sampled.AudioFormat;
+
 final class ug extends tk {
     private javax.sound.sampled.SourceDataLine field_w;
     private boolean field_z;
@@ -55,7 +57,7 @@ final class ug extends tk {
             ((ug) this).field_w.close();
             ((ug) this).field_w = null;
             var1 = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, ((ug) this).field_v, ((ug) this).field_x << (field_r ? 2 : 1));
-            ((ug) this).field_w = (javax.sound.sampled.SourceDataLine) javax.sound.sampled.AudioSystem.getLine((javax.sound.sampled.Line.Info) (Object) var1);
+            ((ug) this).field_w = (javax.sound.sampled.SourceDataLine) (Object) javax.sound.sampled.AudioSystem.getLine((javax.sound.sampled.Line.Info) (Object) var1);
             ((ug) this).field_w.open();
             ((ug) this).field_w.start();
         }
@@ -63,19 +65,12 @@ final class ug extends tk {
 
     final void a(int param0) throws javax.sound.sampled.LineUnavailableException {
         javax.sound.sampled.DataLine.Info var2 = null;
-        try {
+        {
             var2 = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, ((ug) this).field_v, param0 << (field_r ? 2 : 1));
-            ((ug) this).field_w = (javax.sound.sampled.SourceDataLine) javax.sound.sampled.AudioSystem.getLine((javax.sound.sampled.Line.Info) (Object) var2);
+            ((ug) this).field_w = (javax.sound.sampled.SourceDataLine) (Object) javax.sound.sampled.AudioSystem.getLine((javax.sound.sampled.Line.Info) (Object) var2);
             ((ug) this).field_w.open();
             ((ug) this).field_w.start();
             ((ug) this).field_x = param0;
-        } catch (javax.sound.sampled.LineUnavailableException lineUnavailableException) {
-            if (hh.a(0, param0) != 1) {
-                ((ug) this).a(fk.a(param0, 36));
-                return;
-            }
-            ((ug) this).field_w = null;
-            throw lineUnavailableException;
         }
     }
 
@@ -215,8 +210,7 @@ final class ug extends tk {
           }
         }
         L3: {
-          new javax.sound.sampled.AudioFormat(stackIn_13_3, stackIn_13_4, stackIn_13_5, true, false);
-          ((ug) this).field_v = (javax.sound.sampled.AudioFormat) (Object) stackIn_13_1;
+          ((ug) this).field_v = new javax.sound.sampled.AudioFormat(stackIn_13_3, stackIn_13_4, stackIn_13_5, true, false);
           stackOut_13_0 = this;
           stackOut_13_1 = 256;
           stackIn_15_0 = stackOut_13_0;

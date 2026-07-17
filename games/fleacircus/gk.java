@@ -41,20 +41,17 @@ final class gk {
     public static void a(boolean param0) {
         field_G = null;
         field_e = null;
-        if (!param0) {
-            int discarded$0 = gk.a(-115, true, 120);
-        }
     }
 
     final static int a(int param0, boolean param1, int param2) {
         int var3 = 0;
         if (!param1) {
           int discarded$2 = gk.a(-119, true, -99);
-          var3 = param0 - 1 & param2 >> 1223197663;
-          return (param2 + (param2 >>> -2079428609)) % param0 + var3;
+          var3 = param0 - 1 & param2 >> 31;
+          return (param2 + (param2 >>> 31)) % param0 + var3;
         } else {
-          var3 = param0 - 1 & param2 >> 1223197663;
-          return (param2 + (param2 >>> -2079428609)) % param0 + var3;
+          var3 = param0 - 1 & param2 >> 31;
+          return (param2 + (param2 >>> 31)) % param0 + var3;
         }
     }
 
@@ -84,16 +81,13 @@ final class gk {
             return bf.field_f;
         }
         if (!rl.field_d.a("commonui", -114)) {
-            return li.field_e + " - " + rl.field_d.a(param0 + 1851, "commonui") + "%";
-        }
-        if (param0 != -1917) {
-            return null;
+            return li.field_e + " - " + rl.field_d.a(-66, "commonui") + "%";
         }
         if (!oa.field_l.b((byte) -100)) {
             return de.field_j;
         }
-        if (!oa.field_l.a("commonui", param0 + 1793)) {
-            return rg.field_q + " - " + oa.field_l.a(param0 ^ 1851, "commonui") + "%";
+        if (!oa.field_l.a("commonui", -124)) {
+            return rg.field_q + " - " + oa.field_l.a(-72, "commonui") + "%";
         }
         if (!kc.field_d.b((byte) -108)) {
             return li.field_h;

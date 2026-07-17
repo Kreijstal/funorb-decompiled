@@ -6,39 +6,87 @@ final class qi {
     static String field_a;
 
     final static nq a(lu param0, byte param1) {
-        int var2 = 0;
-        if (param1 > 1) {
-          var2 = param0.b(16711935);
-          if (255 == var2) {
-            return null;
-          } else {
-            return new nq(var2 >> 1651991109, var2 & 31);
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        nq stackIn_6_0 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        nq stackOut_5_0 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param1 > 1) {
+                break L1;
+              } else {
+                field_b = null;
+                break L1;
+              }
+            }
+            var2_int = param0.b(16711935);
+            if (255 != var2_int) {
+              stackOut_5_0 = new nq(var2_int >> 5, var2_int & 31);
+              stackIn_6_0 = stackOut_5_0;
+              break L0;
+            } else {
+              return null;
+            }
           }
-        } else {
-          field_b = null;
-          var2 = param0.b(16711935);
-          if (255 == var2) {
-            return null;
-          } else {
-            return new nq(var2 >> 1651991109, var2 & 31);
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var2;
+            stackOut_7_1 = new StringBuilder().append("qi.D(");
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param0 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L2;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L2;
+            }
           }
+          throw pe.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 41);
         }
+        return stackIn_6_0;
     }
 
     public static void a(int param0) {
         field_a = null;
-        if (param0 != 10) {
-            field_a = null;
-            field_b = null;
-            return;
-        }
         field_b = null;
     }
 
     final static void a(byte param0) {
         int var2 = 0;
         var2 = BachelorFridge.field_y;
-        if (-1 == (dj.field_c.field_h.field_h & 1 << dj.field_c.field_n ^ -1)) {
+        if ((dj.field_c.field_h.field_h & 1 << dj.field_c.field_n) == 0) {
           if (0 != dj.field_c.field_h.field_h) {
             lr.field_k[10] = gt.field_r;
             if (param0 < 27) {
@@ -70,74 +118,18 @@ final class qi {
     final static void b(int param0) {
         Object var1 = null;
         Throwable var2 = null;
-        Object var3 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    if (param0 == -1) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    var3 = null;
-                    nq discarded$3 = qi.a((lu) null, (byte) 14);
-                    statePc = 2;
-                    continue stateLoop;
-                }
-                case 2: {
-                    if (null == uc.field_m) {
-                        statePc = 8;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 3: {
-                    var1 = (Object) (Object) uc.field_m;
-                    // monitorenter uc.field_m
-                    statePc = 4;
-                    continue stateLoop;
-                }
-                case 4: {
-                    try {
-                        uc.field_m = null;
-                        // monitorexit var1
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    return;
-                }
-                case 6: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                case 8: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        if (null == uc.field_m) {
+          return;
+        } else {
+          var1 = (Object) (Object) uc.field_m;
+          synchronized (var1) {
+            L0: {
+              uc.field_m = null;
+              break L0;
             }
+          }
+          return;
         }
     }
 

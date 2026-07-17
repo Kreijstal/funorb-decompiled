@@ -6,9 +6,6 @@ final class jk {
 
     public static void a(byte param0) {
         field_a = null;
-        if (param0 != 77) {
-            field_a = null;
-        }
     }
 
     public final String toString() {

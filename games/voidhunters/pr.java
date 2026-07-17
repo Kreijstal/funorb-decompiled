@@ -12,22 +12,23 @@ final class pr {
     static int field_d;
 
     final void a(fh param0, byte param1, long param2) {
-        if (!(null == param0.field_d)) {
-            param0.d((byte) -35);
-        }
-        fh var5 = ((pr) this).field_g[(int)(param2 & (long)(((pr) this).field_f - 1))];
-        param0.field_d = var5.field_d;
-        param0.field_e = var5;
-        if (param1 > -12) {
-            field_d = -43;
+        fh var5 = null;
+        try {
+            if (!(null == param0.field_d)) {
+                param0.d((byte) -35);
+            }
+            var5 = ((pr) this).field_g[(int)(param2 & (long)(((pr) this).field_f - 1))];
+            param0.field_d = var5.field_d;
+            param0.field_e = var5;
+            if (param1 > -12) {
+                field_d = -43;
+            }
             param0.field_d.field_e = param0;
             param0.field_e.field_d = param0;
             param0.field_i = param2;
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "pr.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }
-        param0.field_d.field_e = param0;
-        param0.field_e.field_d = param0;
-        param0.field_i = param2;
     }
 
     final fh e(int param0) {
@@ -39,7 +40,7 @@ final class pr {
         int var2 = 40 % ((param0 - -45) / 39);
         fh var3 = ((pr) this).field_g[(int)((long)(((pr) this).field_f + -1) & ((pr) this).field_b)];
         while (var3 != ((pr) this).field_a) {
-            if (!((((pr) this).field_a.field_i ^ -1L) != (((pr) this).field_b ^ -1L))) {
+            if (!(~((pr) this).field_a.field_i != ~((pr) this).field_b)) {
                 var4 = ((pr) this).field_a;
                 ((pr) this).field_a = ((pr) this).field_a.field_e;
                 return var4;
@@ -51,11 +52,6 @@ final class pr {
     }
 
     public static void b(int param0) {
-        if (param0 != 1) {
-            pr.a(-20);
-            field_c = null;
-            return;
-        }
         field_c = null;
     }
 
@@ -65,7 +61,7 @@ final class pr {
         fh var8 = null;
         fh var11 = null;
         var3 = VoidHunters.field_G;
-        if (param0 > (((pr) this).field_e ^ -1)) {
+        if (param0 > ~((pr) this).field_e) {
           if (((pr) this).field_h != ((pr) this).field_g[-1 + ((pr) this).field_e]) {
             var11 = ((pr) this).field_h;
             ((pr) this).field_h = var11.field_e;
@@ -73,8 +69,9 @@ final class pr {
           } else {
             L0: while (true) {
               if (((pr) this).field_f > ((pr) this).field_e) {
+                int fieldTemp$2 = ((pr) this).field_e;
                 ((pr) this).field_e = ((pr) this).field_e + 1;
-                var8 = ((pr) this).field_g[((pr) this).field_e].field_e;
+                var8 = ((pr) this).field_g[fieldTemp$2].field_e;
                 if (((pr) this).field_g[-1 + ((pr) this).field_e] == var8) {
                   continue L0;
                 } else {
@@ -89,8 +86,9 @@ final class pr {
         } else {
           L1: while (true) {
             if (((pr) this).field_f > ((pr) this).field_e) {
+              int fieldTemp$3 = ((pr) this).field_e;
               ((pr) this).field_e = ((pr) this).field_e + 1;
-              var4 = ((pr) this).field_g[((pr) this).field_e].field_e;
+              var4 = ((pr) this).field_g[fieldTemp$3].field_e;
               if (((pr) this).field_g[-1 + ((pr) this).field_e] == var4) {
                 continue L1;
               } else {
@@ -148,13 +146,15 @@ final class pr {
         var2 = 0;
         L0: while (true) {
           if (var2 < param0) {
-            var3 = new fh();
-            ((pr) this).field_g[var2] = new fh();
+            fh dupTemp$2 = new fh();
+            var3 = dupTemp$2;
+            ((pr) this).field_g[var2] = dupTemp$2;
             var3.field_d = var3;
             var3.field_e = var3;
             var2++;
             continue L0;
           } else {
+            return;
           }
         }
     }

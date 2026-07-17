@@ -12,20 +12,12 @@ final class wd {
         field_d = null;
         field_b = null;
         field_c = null;
-        if (!param0) {
-          field_b = null;
-          field_a = null;
-          field_e = null;
-          return;
-        } else {
-          field_a = null;
-          field_e = null;
-          return;
-        }
+        field_a = null;
+        field_e = null;
     }
 
     final static String b(int param0) {
-        int var1 = 45 / ((0 - param0) / 42);
+        int var1 = 22;
         return pk.field_a;
     }
 
@@ -712,17 +704,10 @@ final class wd {
     }
 
     final static void a(int param0) {
-        if (param0 == 31668) {
-          if (-11 != (cd.field_e ^ -1)) {
-            if (c.b(true)) {
-              sg.field_b = true;
-              return;
-            } else {
-              k.c(-128);
-              cd.field_e = 11;
-              sg.field_b = true;
-              return;
-            }
+        if (cd.field_e != 10) {
+          if (c.b(true)) {
+            sg.field_b = true;
+            return;
           } else {
             k.c(-128);
             cd.field_e = 11;
@@ -730,23 +715,10 @@ final class wd {
             return;
           }
         } else {
-          field_e = null;
-          if (-11 != (cd.field_e ^ -1)) {
-            if (c.b(true)) {
-              sg.field_b = true;
-              return;
-            } else {
-              k.c(-128);
-              cd.field_e = 11;
-              sg.field_b = true;
-              return;
-            }
-          } else {
-            k.c(-128);
-            cd.field_e = 11;
-            sg.field_b = true;
-            return;
-          }
+          k.c(-128);
+          cd.field_e = 11;
+          sg.field_b = true;
+          return;
         }
     }
 

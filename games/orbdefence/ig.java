@@ -53,9 +53,13 @@ final class ig extends dh implements ai {
             wj.a(-108, false, true);
             return;
         }
-        int var6 = -48 % ((-3 - param0) / 62);
-        mh.b((byte) -57);
-        ((ig) this).q(4210752);
+        try {
+            int var6_int = -48 % ((-3 - param0) / 62);
+            mh.b((byte) -57);
+            ((ig) this).q(4210752);
+        } catch (RuntimeException runtimeException) {
+            throw dd.a((Throwable) (Object) runtimeException, "ig.M(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 41);
+        }
     }
 
     public static void r(int param0) {
@@ -68,373 +72,147 @@ final class ig extends dh implements ai {
     }
 
     private final void a(boolean param0, byte param1, qj param2) {
-        String var4 = null;
+        RuntimeException var4 = null;
+        String var4_ref = null;
         ec var5 = null;
         int var6 = 0;
-        String var7 = null;
-        ec var8 = null;
-        String var9 = null;
-        ec var10 = null;
-        String var11 = null;
-        ec var12 = null;
-        ec var13 = null;
-        ec var14 = null;
-        L0: {
-          var6 = OrbDefence.field_D ? 1 : 0;
-          ((ig) this).field_lb = true;
-          if (param2.field_f) {
-            var4 = bd.field_m;
-            break L0;
-          } else {
-            if (param2.field_c != null) {
-              var11 = j.field_c;
-              if (null != ((ig) this).field_jb) {
-                ((ig) this).field_jb.a((byte) -8);
-                if (param1 >= 115) {
-                  var13 = new ec((dh) this, qc.field_b, var11);
-                  var5 = var13;
-                  if (param2.field_f) {
-                    if (param2.field_d) {
-                      ((ig) this).a(false, (pj) (Object) new ob((ig) this));
-                      return;
-                    } else {
-                      s discarded$10 = var13.a(sk.field_C, -34, (ag) this);
-                      ((ig) this).a(false, (pj) (Object) var13);
-                      return;
-                    }
-                  } else {
-                    if (((ig) this).field_kb) {
-                      s discarded$11 = var13.a(sk.field_C, -34, (ag) this);
-                      if (3 != param2.field_b) {
-                        if (6 == param2.field_b) {
-                          var13.a(qf.field_k, 9, -15858);
-                          ((ig) this).a(false, (pj) (Object) var13);
-                          return;
-                        } else {
-                          ((ig) this).a(false, (pj) (Object) var13);
-                          return;
-                        }
-                      } else {
-                        var13.a(vk.field_y, 7, -15858);
-                        ((ig) this).a(false, (pj) (Object) var13);
-                        return;
-                      }
-                    } else {
-                      if ((param2.field_b ^ -1) == -6) {
-                        var13.a(vc.field_n, 11, -15858);
-                        var13.a(ld.field_d, 17, -15858);
-                        if (3 != param2.field_b) {
-                          if (6 == param2.field_b) {
-                            var13.a(qf.field_k, 9, -15858);
-                            ((ig) this).a(false, (pj) (Object) var13);
-                            return;
-                          } else {
-                            ((ig) this).a(false, (pj) (Object) var13);
-                            return;
-                          }
-                        } else {
-                          var13.a(vk.field_y, 7, -15858);
-                          ((ig) this).a(false, (pj) (Object) var13);
-                          return;
-                        }
-                      } else {
-                        var13.a(vc.field_i, -1, -15858);
-                        if (3 != param2.field_b) {
-                          if (6 == param2.field_b) {
-                            var13.a(qf.field_k, 9, -15858);
-                            ((ig) this).a(false, (pj) (Object) var13);
-                            return;
-                          } else {
-                            ((ig) this).a(false, (pj) (Object) var13);
-                            return;
-                          }
-                        } else {
-                          var13.a(vk.field_y, 7, -15858);
-                          ((ig) this).a(false, (pj) (Object) var13);
-                          return;
-                        }
-                      }
-                    }
-                  }
-                } else {
-                  return;
-                }
+        RuntimeException stackIn_32_0 = null;
+        StringBuilder stackIn_32_1 = null;
+        RuntimeException stackIn_33_0 = null;
+        StringBuilder stackIn_33_1 = null;
+        RuntimeException stackIn_34_0 = null;
+        StringBuilder stackIn_34_1 = null;
+        String stackIn_34_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_31_0 = null;
+        StringBuilder stackOut_31_1 = null;
+        RuntimeException stackOut_33_0 = null;
+        StringBuilder stackOut_33_1 = null;
+        String stackOut_33_2 = null;
+        RuntimeException stackOut_32_0 = null;
+        StringBuilder stackOut_32_1 = null;
+        String stackOut_32_2 = null;
+        var6 = OrbDefence.field_D ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              ((ig) this).field_lb = true;
+              if (param2.field_f) {
+                var4_ref = bd.field_m;
+                break L1;
               } else {
-                if (param1 >= 115) {
-                  var12 = new ec((dh) this, qc.field_b, var11);
-                  var5 = var12;
-                  if (param2.field_f) {
-                    if (param2.field_d) {
-                      ((ig) this).a(false, (pj) (Object) new ob((ig) this));
-                      return;
-                    } else {
-                      s discarded$12 = var12.a(sk.field_C, -34, (ag) this);
-                      ((ig) this).a(false, (pj) (Object) var12);
-                      return;
-                    }
+                if (param2.field_c != null) {
+                  var4_ref = j.field_c;
+                  if (null != ((ig) this).field_jb) {
+                    ((ig) this).field_jb.a((byte) -8);
+                    break L1;
                   } else {
-                    if (((ig) this).field_kb) {
-                      s discarded$13 = var12.a(sk.field_C, -34, (ag) this);
-                      if (3 != param2.field_b) {
-                        if (6 == param2.field_b) {
-                          var12.a(qf.field_k, 9, -15858);
-                          ((ig) this).a(false, (pj) (Object) var12);
-                          return;
-                        } else {
-                          ((ig) this).a(false, (pj) (Object) var12);
-                          return;
-                        }
-                      } else {
-                        var12.a(vk.field_y, 7, -15858);
-                        ((ig) this).a(false, (pj) (Object) var12);
-                        return;
-                      }
-                    } else {
-                      if ((param2.field_b ^ -1) == -6) {
-                        var12.a(vc.field_n, 11, -15858);
-                        var12.a(ld.field_d, 17, -15858);
-                        if (3 != param2.field_b) {
-                          if (6 == param2.field_b) {
-                            var12.a(qf.field_k, 9, -15858);
-                            ((ig) this).a(false, (pj) (Object) var12);
-                            return;
-                          } else {
-                            ((ig) this).a(false, (pj) (Object) var12);
-                            return;
-                          }
-                        } else {
-                          var12.a(vk.field_y, 7, -15858);
-                          ((ig) this).a(false, (pj) (Object) var12);
-                          return;
-                        }
-                      } else {
-                        var12.a(vc.field_i, -1, -15858);
-                        if (3 != param2.field_b) {
-                          if (6 == param2.field_b) {
-                            var12.a(qf.field_k, 9, -15858);
-                            ((ig) this).a(false, (pj) (Object) var12);
-                            return;
-                          } else {
-                            ((ig) this).a(false, (pj) (Object) var12);
-                            return;
-                          }
-                        } else {
-                          var12.a(vk.field_y, 7, -15858);
-                          ((ig) this).a(false, (pj) (Object) var12);
-                          return;
-                        }
-                      }
-                    }
+                    break L1;
                   }
                 } else {
-                  return;
-                }
-              }
-            } else {
-              var7 = param2.field_e;
-              if ((param2.field_b ^ -1) == -249) {
-                if (param0) {
-                  var4 = tb.field_a;
-                  ((ig) this).field_kb = true;
-                  break L0;
-                } else {
-                  km.a(16711935);
-                  var9 = tb.field_a;
-                  ((ig) this).field_kb = true;
-                  if (param1 >= 115) {
-                    var10 = new ec((dh) this, qc.field_b, var9);
-                    if (param2.field_f) {
-                      if (param2.field_d) {
-                        ((ig) this).a(false, (pj) (Object) new ob((ig) this));
-                        return;
-                      } else {
-                        s discarded$14 = var10.a(sk.field_C, -34, (ag) this);
-                        ((ig) this).a(false, (pj) (Object) var10);
-                        return;
-                      }
-                    } else {
-                      L1: {
-                        if (((ig) this).field_kb) {
-                          s discarded$15 = var10.a(sk.field_C, -34, (ag) this);
-                          break L1;
-                        } else {
-                          if ((param2.field_b ^ -1) == -6) {
-                            var10.a(vc.field_n, 11, -15858);
-                            var10.a(ld.field_d, 17, -15858);
-                            break L1;
-                          } else {
-                            var10.a(vc.field_i, -1, -15858);
-                            break L1;
-                          }
-                        }
-                      }
-                      if (3 != param2.field_b) {
-                        if (6 == param2.field_b) {
-                          var10.a(qf.field_k, 9, -15858);
-                          ((ig) this).a(false, (pj) (Object) var10);
-                          return;
-                        } else {
-                          ((ig) this).a(false, (pj) (Object) var10);
-                          return;
-                        }
-                      } else {
-                        var10.a(vk.field_y, 7, -15858);
-                        ((ig) this).a(false, (pj) (Object) var10);
-                        return;
-                      }
-                    }
+                  var4_ref = param2.field_e;
+                  if (param2.field_b != 248) {
+                    break L1;
                   } else {
-                    return;
-                  }
-                }
-              } else {
-                if (param1 >= 115) {
-                  var8 = new ec((dh) this, qc.field_b, var7);
-                  var5 = var8;
-                  if (param2.field_f) {
-                    if (param2.field_d) {
-                      ((ig) this).a(false, (pj) (Object) new ob((ig) this));
-                      return;
+                    if (param0) {
+                      var4_ref = tb.field_a;
+                      ((ig) this).field_kb = true;
+                      break L1;
                     } else {
-                      s discarded$16 = var8.a(sk.field_C, -34, (ag) this);
-                      ((ig) this).a(false, (pj) (Object) var8);
-                      return;
-                    }
-                  } else {
-                    if (((ig) this).field_kb) {
-                      s discarded$17 = var8.a(sk.field_C, -34, (ag) this);
-                      if (3 != param2.field_b) {
-                        if (6 == param2.field_b) {
-                          var8.a(qf.field_k, 9, -15858);
-                          ((ig) this).a(false, (pj) (Object) var8);
-                          return;
-                        } else {
-                          ((ig) this).a(false, (pj) (Object) var8);
-                          return;
-                        }
-                      } else {
-                        var8.a(vk.field_y, 7, -15858);
-                        ((ig) this).a(false, (pj) (Object) var8);
-                        return;
-                      }
-                    } else {
-                      if ((param2.field_b ^ -1) == -6) {
-                        var8.a(vc.field_n, 11, -15858);
-                        var8.a(ld.field_d, 17, -15858);
-                        if (3 != param2.field_b) {
-                          if (6 == param2.field_b) {
-                            var8.a(qf.field_k, 9, -15858);
-                            ((ig) this).a(false, (pj) (Object) var8);
-                            return;
-                          } else {
-                            ((ig) this).a(false, (pj) (Object) var8);
-                            return;
-                          }
-                        } else {
-                          var8.a(vk.field_y, 7, -15858);
-                          ((ig) this).a(false, (pj) (Object) var8);
-                          return;
-                        }
-                      } else {
-                        var8.a(vc.field_i, -1, -15858);
-                        if (3 != param2.field_b) {
-                          if (6 == param2.field_b) {
-                            var8.a(qf.field_k, 9, -15858);
-                            ((ig) this).a(false, (pj) (Object) var8);
-                            return;
-                          } else {
-                            ((ig) this).a(false, (pj) (Object) var8);
-                            return;
-                          }
-                        } else {
-                          var8.a(vk.field_y, 7, -15858);
-                          ((ig) this).a(false, (pj) (Object) var8);
-                          return;
-                        }
-                      }
+                      km.a(16711935);
+                      var4_ref = tb.field_a;
+                      ((ig) this).field_kb = true;
+                      break L1;
                     }
                   }
-                } else {
-                  return;
                 }
               }
             }
-          }
-        }
-        if (param1 >= 115) {
-          var14 = new ec((dh) this, qc.field_b, var4);
-          var5 = var14;
-          if (param2.field_f) {
-            if (param2.field_d) {
-              ((ig) this).a(false, (pj) (Object) new ob((ig) this));
-              return;
+            if (param1 >= 115) {
+              L2: {
+                var5 = new ec((dh) this, qc.field_b, var4_ref);
+                if (param2.field_f) {
+                  if (param2.field_d) {
+                    ((ig) this).a(false, (pj) (Object) new ob((ig) this));
+                    return;
+                  } else {
+                    s discarded$2 = var5.a(sk.field_C, -34, (ag) this);
+                    break L2;
+                  }
+                } else {
+                  L3: {
+                    if (((ig) this).field_kb) {
+                      s discarded$3 = var5.a(sk.field_C, -34, (ag) this);
+                      break L3;
+                    } else {
+                      if (param2.field_b == 5) {
+                        var5.a(vc.field_n, 11, -15858);
+                        var5.a(ld.field_d, 17, -15858);
+                        break L3;
+                      } else {
+                        var5.a(vc.field_i, -1, -15858);
+                        break L3;
+                      }
+                    }
+                  }
+                  if (3 != param2.field_b) {
+                    if (6 != param2.field_b) {
+                      break L2;
+                    } else {
+                      var5.a(qf.field_k, 9, -15858);
+                      break L2;
+                    }
+                  } else {
+                    var5.a(vk.field_y, 7, -15858);
+                    break L2;
+                  }
+                }
+              }
+              ((ig) this).a(false, (pj) (Object) var5);
+              break L0;
             } else {
-              s discarded$18 = var14.a(sk.field_C, -34, (ag) this);
-              ((ig) this).a(false, (pj) (Object) var14);
               return;
             }
-          } else {
-            if (((ig) this).field_kb) {
-              s discarded$19 = var14.a(sk.field_C, -34, (ag) this);
-              if (3 != param2.field_b) {
-                if (6 == param2.field_b) {
-                  var14.a(qf.field_k, 9, -15858);
-                  ((ig) this).a(false, (pj) (Object) var14);
-                  return;
-                } else {
-                  ((ig) this).a(false, (pj) (Object) var14);
-                  return;
-                }
-              } else {
-                var14.a(vk.field_y, 7, -15858);
-                ((ig) this).a(false, (pj) (Object) var14);
-                return;
-              }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var4 = decompiledCaughtException;
+            stackOut_31_0 = (RuntimeException) var4;
+            stackOut_31_1 = new StringBuilder().append("ig.N(").append(param0).append(44).append(param1).append(44);
+            stackIn_33_0 = stackOut_31_0;
+            stackIn_33_1 = stackOut_31_1;
+            stackIn_32_0 = stackOut_31_0;
+            stackIn_32_1 = stackOut_31_1;
+            if (param2 == null) {
+              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
+              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
+              stackOut_33_2 = "null";
+              stackIn_34_0 = stackOut_33_0;
+              stackIn_34_1 = stackOut_33_1;
+              stackIn_34_2 = stackOut_33_2;
+              break L4;
             } else {
-              if ((param2.field_b ^ -1) == -6) {
-                var14.a(vc.field_n, 11, -15858);
-                var14.a(ld.field_d, 17, -15858);
-                if (3 != param2.field_b) {
-                  if (6 == param2.field_b) {
-                    var14.a(qf.field_k, 9, -15858);
-                    ((ig) this).a(false, (pj) (Object) var14);
-                    return;
-                  } else {
-                    ((ig) this).a(false, (pj) (Object) var14);
-                    return;
-                  }
-                } else {
-                  var14.a(vk.field_y, 7, -15858);
-                  ((ig) this).a(false, (pj) (Object) var14);
-                  return;
-                }
-              } else {
-                var14.a(vc.field_i, -1, -15858);
-                if (3 != param2.field_b) {
-                  if (6 == param2.field_b) {
-                    var14.a(qf.field_k, 9, -15858);
-                    ((ig) this).a(false, (pj) (Object) var14);
-                    return;
-                  } else {
-                    ((ig) this).a(false, (pj) (Object) var14);
-                    return;
-                  }
-                } else {
-                  var14.a(vk.field_y, 7, -15858);
-                  ((ig) this).a(false, (pj) (Object) var14);
-                  return;
-                }
-              }
+              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
+              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
+              stackOut_32_2 = "{...}";
+              stackIn_34_0 = stackOut_32_0;
+              stackIn_34_1 = stackOut_32_1;
+              stackIn_34_2 = stackOut_32_2;
+              break L4;
             }
           }
-        } else {
-          return;
+          throw dd.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + 41);
         }
     }
 
     ig(sk param0, rf param1) {
         super(param0, qc.field_b, bh.field_f, false, false);
-        ((ig) this).field_jb = param1;
+        try {
+            ((ig) this).field_jb = param1;
+        } catch (RuntimeException runtimeException) {
+            throw dd.a((Throwable) (Object) runtimeException, "ig.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void f(byte param0) {

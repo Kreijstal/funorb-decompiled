@@ -13,31 +13,22 @@ final class om {
 
     final void a(long param0, boolean param1, al param2) {
         al var5 = null;
-        Object var6 = null;
-        L0: {
-          if (null != param2.field_q) {
-            param2.a((byte) -105);
-            break L0;
-          } else {
-            break L0;
-          }
-        }
-        var5 = ((om) this).field_a[(int)(param0 & (long)(-1 + ((om) this).field_e))];
-        param2.field_t = var5;
-        if (!param1) {
-          var6 = null;
-          ((om) this).a(23L, true, (al) null);
-          param2.field_q = var5.field_q;
-          param2.field_q.field_t = param2;
-          param2.field_t.field_q = param2;
-          param2.field_p = param0;
-          return;
-        } else {
-          param2.field_q = var5.field_q;
-          param2.field_q.field_t = param2;
-          param2.field_t.field_q = param2;
-          param2.field_p = param0;
-          return;
+        try {
+            if (!(null == param2.field_q)) {
+                param2.a((byte) -105);
+            }
+            var5 = ((om) this).field_a[(int)(param0 & (long)(-1 + ((om) this).field_e))];
+            param2.field_t = var5;
+            if (!param1) {
+                Object var6 = null;
+                ((om) this).a(23L, true, (al) null);
+            }
+            param2.field_q = var5.field_q;
+            param2.field_q.field_t = param2;
+            param2.field_t.field_q = param2;
+            param2.field_p = param0;
+        } catch (RuntimeException runtimeException) {
+            throw lj.a((Throwable) (Object) runtimeException, "om.E(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -45,16 +36,8 @@ final class om {
         ik.field_N = null;
         cg.field_C = false;
         ce.field_c = null;
-        if (param0 != -22126) {
-          field_g = 40;
-          oe.field_g = null;
-          field_f = null;
-          return;
-        } else {
-          oe.field_g = null;
-          field_f = null;
-          return;
-        }
+        oe.field_g = null;
+        field_f = null;
     }
 
     final al a(int param0, long param1) {
@@ -68,7 +51,7 @@ final class om {
         if (param0 == -7895) {
           L0: while (true) {
             if (var4 != ((om) this).field_b) {
-              if ((((om) this).field_b.field_p ^ -1L) != (param1 ^ -1L)) {
+              if (~((om) this).field_b.field_p != ~param1) {
                 ((om) this).field_b = ((om) this).field_b.field_t;
                 continue L0;
               } else {
@@ -87,48 +70,13 @@ final class om {
     }
 
     final static void a(byte param0) {
-        tm var2 = null;
-        if (param0 > -89) {
-          L0: {
-            field_d = null;
-            var2 = (tm) (Object) ok.field_b.b(94);
-            if (var2 != null) {
-              var2.b((byte) 94);
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          L1: {
-            var2 = (tm) (Object) ec.field_c.b(117);
-            if (var2 != null) {
-              var2.b((byte) 94);
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          return;
-        } else {
-          L2: {
-            var2 = (tm) (Object) ok.field_b.b(94);
-            if (var2 != null) {
-              var2.b((byte) 94);
-              break L2;
-            } else {
-              break L2;
-            }
-          }
-          L3: {
-            var2 = (tm) (Object) ec.field_c.b(117);
-            if (var2 != null) {
-              var2.b((byte) 94);
-              break L3;
-            } else {
-              break L3;
-            }
-          }
-          return;
+        tm var2 = (tm) (Object) ok.field_b.b(94);
+        if (!(var2 == null)) {
+            var2.b((byte) 94);
+        }
+        var2 = (tm) (Object) ec.field_c.b(117);
+        if (!(var2 == null)) {
+            var2.b((byte) 94);
         }
     }
 

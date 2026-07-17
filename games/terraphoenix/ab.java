@@ -19,9 +19,6 @@ final class ab {
     static fa field_a;
 
     final static int b(int param0) {
-        if (param0 != -27737) {
-            return -43;
-        }
         return wf.field_q;
     }
 
@@ -37,60 +34,19 @@ final class ab {
         int var1 = 0;
         Object var2 = null;
         Throwable var3 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var1 = 23 / ((-57 - param0) / 59);
-                    if (null != th.field_g) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    return;
-                }
-                case 2: {
-                    var2 = (Object) (Object) th.field_g;
-                    // monitorenter th.field_g
-                    statePc = 3;
-                    continue stateLoop;
-                }
-                case 3: {
-                    try {
-                        th.field_g = null;
-                        // monitorexit var2
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    return;
-                }
-                case 5: {
-                    try {
-                        var3 = caughtException;
-                        // monitorexit var2
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 5;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    throw (RuntimeException) (Object) var3;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        var1 = 23;
+        if (null != th.field_g) {
+          var2 = (Object) (Object) th.field_g;
+          synchronized (var2) {
+            L0: {
+              th.field_g = null;
+              break L0;
             }
+          }
+          return;
+        } else {
+          return;
         }
     }
 
@@ -101,16 +57,11 @@ final class ab {
         field_g = null;
         field_a = null;
         field_j = null;
-        if (param0 != 0) {
-          return;
-        } else {
-          field_e = null;
-          field_d = null;
-          field_c = null;
-          field_l = null;
-          field_f = null;
-          return;
-        }
+        field_e = null;
+        field_d = null;
+        field_c = null;
+        field_l = null;
+        field_f = null;
     }
 
     static {

@@ -15,9 +15,6 @@ final class ib extends gg {
 
     public static void a(int param0) {
         field_i = null;
-        if (param0 != 0) {
-            field_i = null;
-        }
     }
 
     final static o a(int param0, boolean param1, int param2) {

@@ -11,19 +11,21 @@ class pu extends bia {
     public static void c(byte param0) {
         field_k = null;
         field_j = null;
-        int var1 = -64 % ((param0 - 74) / 49);
+        int var1 = 0;
     }
 
     final static void a(vr param0, vr param1, int param2, vr param3, vr param4) {
         db.field_a = param1;
         if (param2 != -21201) {
-          return;
-        } else {
-          ha.field_i = param4;
-          oaa.field_b = param0;
-          qb.field_l = param3;
-          ai.field_d = new i(qb.field_l, ha.field_i);
-          return;
+            return;
+        }
+        try {
+            ha.field_i = param4;
+            oaa.field_b = param0;
+            qb.field_l = param3;
+            ai.field_d = new i(qb.field_l, ha.field_i);
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "pu.I(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 41);
         }
     }
 

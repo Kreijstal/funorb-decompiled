@@ -10,9 +10,6 @@ final class rn {
     public static void a(boolean param0) {
         field_c = null;
         field_a = null;
-        if (param0) {
-            return;
-        }
         field_b = null;
     }
 

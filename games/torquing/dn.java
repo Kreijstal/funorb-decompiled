@@ -18,9 +18,6 @@ final class dn {
 
     public static void a(byte param0) {
         field_c = null;
-        if (param0 != 10) {
-            return;
-        }
         field_i = null;
         field_f = null;
     }

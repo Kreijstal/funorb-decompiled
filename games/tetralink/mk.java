@@ -91,20 +91,22 @@ final class mk {
     }
 
     final static void a(int param0, String param1, int param2, boolean param3, long param4, int param5) {
-        nd.field_Lb.f(param5, (byte) -92);
-        nd.field_Lb.field_t = nd.field_Lb.field_t + 1;
-        int var7 = nd.field_Lb.field_t;
-        nd.field_Lb.a(-1, param4);
-        nd.field_Lb.a(param1, 0);
-        nd.field_Lb.a(param2, false);
-        if (param0 >= -95) {
-            field_c = null;
+        int var7_int = 0;
+        try {
+            nd.field_Lb.f(param5, (byte) -92);
+            nd.field_Lb.field_t = nd.field_Lb.field_t + 1;
+            var7_int = nd.field_Lb.field_t;
+            nd.field_Lb.a(-1, param4);
+            nd.field_Lb.a(param1, 0);
+            nd.field_Lb.a(param2, false);
+            if (param0 >= -95) {
+                field_c = null;
+            }
             nd.field_Lb.a(param3 ? 1 : 0, false);
-            nd.field_Lb.b(-var7 + nd.field_Lb.field_t, -2);
-            return;
+            nd.field_Lb.b(-var7_int + nd.field_Lb.field_t, -2);
+        } catch (RuntimeException runtimeException) {
+            throw oi.a((Throwable) (Object) runtimeException, "mk.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
-        nd.field_Lb.a(param3 ? 1 : 0, false);
-        nd.field_Lb.b(-var7 + nd.field_Lb.field_t, -2);
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
@@ -145,9 +147,15 @@ final class mk {
     }
 
     mk(String param0, hl param1) {
-        String[] var3 = new String[]{param0, am.field_a, ec.field_g};
-        hl[] var4 = new hl[]{param1, go.field_d, (hl) (Object) fl.field_n};
-        ((mk) this).field_g = new ad(0L, te.field_O, var3, rc.field_S, var4, 0);
+        String[] var3 = null;
+        hl[] var4 = null;
+        try {
+            var3 = new String[]{param0, am.field_a, ec.field_g};
+            var4 = new hl[]{param1, go.field_d, (hl) (Object) fl.field_n};
+            ((mk) this).field_g = new ad(0L, te.field_O, var3, rc.field_S, var4, 0);
+        } catch (RuntimeException runtimeException) {
+            throw oi.a((Throwable) (Object) runtimeException, "mk.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

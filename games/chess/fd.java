@@ -52,16 +52,21 @@ final class fd extends o {
     }
 
     public static void c(byte param0) {
-        int var1 = 123 / ((-58 - param0) / 50);
+        int var1 = -41;
         field_o = null;
         field_l = null;
     }
 
     final static void a(byte param0, um param1) {
-        hi.b(param1.a("headers.packvorbis", 30045, ""));
-        int var3 = -89 / ((-60 - param0) / 43);
-        hi var2 = hi.a(param1, "jagex logo2.packvorbis", "");
-        lm discarded$0 = var2.a();
+        hi var2 = null;
+        try {
+            hi.b(param1.a("headers.packvorbis", 30045, ""));
+            int var3 = -89 / ((-60 - param0) / 43);
+            var2 = hi.a(param1, "jagex logo2.packvorbis", "");
+            lm discarded$0 = var2.a();
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "fd.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     private fd() throws Throwable {

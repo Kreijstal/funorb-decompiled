@@ -42,8 +42,9 @@ final class co {
 
     final int a(int param0) {
         if (((co) this).field_j >= ((co) this).field_h) {
+            int fieldTemp$0 = ((co) this).field_c;
             ((co) this).field_c = ((co) this).field_c + 1;
-            ((co) this).field_k = ((co) this).field_g[((co) this).field_c] << 15;
+            ((co) this).field_k = ((co) this).field_g[fieldTemp$0] << 15;
             if (((co) this).field_c >= ((co) this).field_f) {
                 ((co) this).field_c = ((co) this).field_f - 1;
             }

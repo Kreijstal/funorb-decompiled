@@ -25,9 +25,6 @@ final class mi {
     public static void a(byte param0) {
         field_e = null;
         field_d = null;
-        if (param0 != -67) {
-            field_d = null;
-        }
     }
 
     final String a(int param0) {
@@ -48,7 +45,11 @@ final class mi {
     mi(String param0) {
         ((mi) this).field_a = false;
         ((mi) this).field_b = false;
-        ((mi) this).field_c = param0;
+        try {
+            ((mi) this).field_c = param0;
+        } catch (RuntimeException runtimeException) {
+            throw dd.a((Throwable) (Object) runtimeException, "mi.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

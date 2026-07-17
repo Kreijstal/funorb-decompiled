@@ -77,9 +77,6 @@ abstract class ni {
 
     public static void a(int param0) {
         field_c = null;
-        if (param0 != -66) {
-            return;
-        }
         field_b = null;
     }
 

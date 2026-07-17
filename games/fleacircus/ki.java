@@ -17,11 +17,6 @@ final class ki {
 
     public static void a(byte param0) {
         field_c = null;
-        if (param0 >= -70) {
-            ki.a(-51, 44);
-            field_e = null;
-            return;
-        }
         field_e = null;
     }
 

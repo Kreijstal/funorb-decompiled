@@ -6,9 +6,6 @@ final class mf {
     private static String field_z;
 
     public static void a(byte param0) {
-        if (param0 >= -41) {
-            return;
-        }
         field_a = null;
     }
 

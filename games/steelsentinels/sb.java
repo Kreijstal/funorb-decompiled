@@ -32,12 +32,20 @@ final class sb extends oa {
 
     sb(String param0, tn param1, boolean param2) {
         this(param0, param1);
-        ((sb) this).field_T = param2 ? true : false;
+        try {
+            ((sb) this).field_T = param2 ? true : false;
+        } catch (RuntimeException runtimeException) {
+            throw ci.a((Throwable) (Object) runtimeException, "sb.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     private sb(String param0, qk param1, tn param2) {
         super(param0, param1, param2);
-        ((sb) this).field_p = ad.field_j.field_x;
+        try {
+            ((sb) this).field_p = ad.field_j.field_x;
+        } catch (RuntimeException runtimeException) {
+            throw ci.a((Throwable) (Object) runtimeException, "sb.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void b(int param0, byte param1, int param2, int param3) {
@@ -79,13 +87,17 @@ final class sb extends oa {
     }
 
     final static void a(boolean param0) {
-        nn.a(param0);
+        nn.a(false);
         fg.a(10, db.field_b, dh.field_y[0].field_z, da.field_g, ua.field_G, te.field_b);
     }
 
     private sb(String param0, tn param1) {
         this(param0, ad.field_j.field_f, param1);
-        ((sb) this).field_p = ad.field_j.field_x;
+        try {
+            ((sb) this).field_p = ad.field_j.field_x;
+        } catch (RuntimeException runtimeException) {
+            throw ci.a((Throwable) (Object) runtimeException, "sb.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

@@ -22,7 +22,7 @@ final class ce {
           kj.field_s = pd.field_Eb;
           pm.field_h.field_h = pm.field_h.field_h + 1;
           pd.field_Eb = var2;
-          if ((param1 ^ -1) == -52) {
+          if (param1 == 51) {
             pm.field_h.field_m = 2;
             if (2 > pm.field_h.field_h) {
               L0: {
@@ -36,7 +36,7 @@ final class ce {
                   }
                 }
               }
-              if ((pm.field_h.field_h ^ -1) > -5) {
+              if (pm.field_h.field_h < 4) {
                 return -1;
               } else {
                 return 1;
@@ -56,7 +56,7 @@ final class ce {
                     }
                   }
                 }
-                if ((pm.field_h.field_h ^ -1) > -5) {
+                if (pm.field_h.field_h < 4) {
                   return -1;
                 } else {
                   return 1;
@@ -78,7 +78,7 @@ final class ce {
                     }
                   }
                 }
-                if ((pm.field_h.field_h ^ -1) > -5) {
+                if (pm.field_h.field_h < 4) {
                   return -1;
                 } else {
                   return 1;
@@ -89,14 +89,14 @@ final class ce {
                     if (50 == param1) {
                       return 5;
                     } else {
-                      if ((pm.field_h.field_h ^ -1) > -5) {
+                      if (pm.field_h.field_h < 4) {
                         return -1;
                       } else {
                         return 1;
                       }
                     }
                   } else {
-                    if ((pm.field_h.field_h ^ -1) <= -5) {
+                    if (pm.field_h.field_h >= 4) {
                       return 1;
                     } else {
                       return -1;
@@ -114,7 +114,7 @@ final class ce {
                 } else {
                   if (pm.field_h.field_h >= 2) {
                     if (50 != param1) {
-                      if ((pm.field_h.field_h ^ -1) <= -5) {
+                      if (pm.field_h.field_h >= 4) {
                         return 1;
                       } else {
                         return -1;
@@ -123,7 +123,7 @@ final class ce {
                       return 5;
                     }
                   } else {
-                    if ((pm.field_h.field_h ^ -1) <= -5) {
+                    if (pm.field_h.field_h >= 4) {
                       return 1;
                     } else {
                       return -1;
@@ -133,7 +133,7 @@ final class ce {
               } else {
                 if (pm.field_h.field_h >= 2) {
                   if (50 != param1) {
-                    if ((pm.field_h.field_h ^ -1) <= -5) {
+                    if (pm.field_h.field_h >= 4) {
                       return 1;
                     } else {
                       return -1;
@@ -142,7 +142,7 @@ final class ce {
                     return 5;
                   }
                 } else {
-                  if ((pm.field_h.field_h ^ -1) <= -5) {
+                  if (pm.field_h.field_h >= 4) {
                     return 1;
                   } else {
                     return -1;
@@ -158,9 +158,6 @@ final class ce {
 
     public static void a(boolean param0) {
         field_e = null;
-        if (!param0) {
-            ce.a(true);
-        }
     }
 
     static {

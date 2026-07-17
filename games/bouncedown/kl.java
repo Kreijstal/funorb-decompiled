@@ -29,9 +29,6 @@ final class kl extends ai {
 
     public static void a(int param0) {
         field_m = null;
-        if (param0 != 0) {
-            field_g = -121;
-        }
     }
 
     final void d(int param0) {

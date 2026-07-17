@@ -9,9 +9,6 @@ final class bg {
 
     public static void a(int param0) {
         field_b = null;
-        if (param0 != 15917) {
-            return;
-        }
         field_d = null;
     }
 

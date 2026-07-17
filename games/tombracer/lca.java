@@ -70,22 +70,19 @@ final class lca implements fo {
     }
 
     public final void a(int param0, iq param1) {
-        gr var3 = null;
-        if (param0 > 103) {
-          var3 = ((lca) this).field_a.c(-114);
-          if (var3 != null) {
-            if (var3.a(-50)) {
-              gqa.a(dfa.a(((lca) this).field_e, 2048, -108), -83584144, ((lca) this).c((byte) 97), ((lca) this).b((byte) -92), ((lca) this).field_a.a(false, (lca) this), ((lca) this).e((byte) -110));
-              return;
-            } else {
-              return;
-            }
-          } else {
-            gqa.a(dfa.a(((lca) this).field_e, 2048, -108), -83584144, ((lca) this).c((byte) 97), ((lca) this).b((byte) -92), ((lca) this).field_a.a(false, (lca) this), ((lca) this).e((byte) -110));
+        if (param0 <= 103) {
             return;
-          }
-        } else {
-          return;
+        }
+        gr var3 = ((lca) this).field_a.c(-114);
+        if (var3 != null) {
+            if (!var3.a(-50)) {
+                return;
+            }
+        }
+        try {
+            gqa.a(dfa.a(((lca) this).field_e, 2048, -108), -83584144, ((lca) this).c((byte) 97), ((lca) this).b((byte) -92), ((lca) this).field_a.a(false, (lca) this), ((lca) this).e((byte) -110));
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "lca.DB(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

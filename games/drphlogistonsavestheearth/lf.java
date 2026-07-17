@@ -13,7 +13,7 @@ final class lf {
         field_e = null;
         field_d = null;
         field_f = null;
-        int var1 = 71 % ((param0 - 4) / 55);
+        int var1 = 1;
     }
 
     final static String a(long param0, byte param1) {
@@ -26,7 +26,7 @@ final class lf {
         int var11 = 0;
         int var12 = 0;
         var12 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        if (-1L > (param0 ^ -1L)) {
+        if (param0 > 0L) {
           if (6582952005840035281L > param0) {
             if (param0 % 37L == 0L) {
               return null;
@@ -38,7 +38,7 @@ final class lf {
                 if (var5 == 0L) {
                   var7 = new StringBuilder(var4);
                   L1: while (true) {
-                    if (-1L == (param0 ^ -1L)) {
+                    if (param0 == 0L) {
                       StringBuilder discarded$2 = var7.reverse();
                       var7.setCharAt(0, Character.toUpperCase(var7.charAt(0)));
                       return var7.toString();

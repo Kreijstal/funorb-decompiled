@@ -5,11 +5,71 @@ import java.awt.Canvas;
 
 final class bq extends rqa {
     final nc a(nc[] param0, int param1) {
-        if (param1 > -119) {
-            return null;
+        RuntimeException var3 = null;
+        Object stackIn_2_0 = null;
+        nc stackIn_4_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        nc stackOut_3_0 = null;
+        Object stackOut_1_0 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            if (param1 <= -119) {
+              si.a(232, 62, param0[0].a(79));
+              stackOut_3_0 = new nc((Object) (Object) "void");
+              stackIn_4_0 = stackOut_3_0;
+              break L0;
+            } else {
+              stackOut_1_0 = null;
+              stackIn_2_0 = stackOut_1_0;
+              return (nc) (Object) stackIn_2_0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var3 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_1 = new StringBuilder().append("bq.A(");
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param0 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L1;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L1;
+            }
+          }
+          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
         }
-        si.a(232, 62, param0[0].a(79));
-        return new nc((Object) (Object) "void");
+        return stackIn_4_0;
     }
 
     bq(String param0, Class[] param1, String param2) {
@@ -44,10 +104,10 @@ final class bq extends rqa {
         ufb stackOut_27_0 = null;
         java.awt.Canvas stackOut_26_0 = null;
         var5 = VoidHunters.field_G;
-        uqb.field_h = param2 >> -616830303;
+        uqb.field_h = param2 >> 1;
         if (!param0) {
           bq.a(false, true, -60, -60);
-          stb.field_p = param3 >> 1807941345;
+          stb.field_p = param3 >> 1;
           if (iha.e(0)) {
             L0: {
               if (!param1) {
@@ -63,7 +123,7 @@ final class bq extends rqa {
                     return;
                   } else {
                     L1: {
-                      if ((uqb.field_h ^ -1) != (kc.field_b ^ -1)) {
+                      if (~uqb.field_h != ~kc.field_b) {
                         break L1;
                       } else {
                         if (stb.field_p != uia.field_b) {
@@ -111,7 +171,7 @@ final class bq extends rqa {
                   ujb.field_c = pba.field_o;
                   return;
                 } else {
-                  if ((uqb.field_h ^ -1) == (kc.field_b ^ -1)) {
+                  if (~uqb.field_h == ~kc.field_b) {
                     if (stb.field_p == uia.field_b) {
                       sab.field_o = hu.field_b;
                       ujb.field_c = pba.field_o;
@@ -170,7 +230,7 @@ final class bq extends rqa {
                   return;
                 } else {
                   L5: {
-                    if ((uqb.field_h ^ -1) != (kc.field_b ^ -1)) {
+                    if (~uqb.field_h != ~kc.field_b) {
                       break L5;
                     } else {
                       if (stb.field_p != uia.field_b) {
@@ -213,7 +273,7 @@ final class bq extends rqa {
                 return;
               } else {
                 L7: {
-                  if ((uqb.field_h ^ -1) != (kc.field_b ^ -1)) {
+                  if (~uqb.field_h != ~kc.field_b) {
                     break L7;
                   } else {
                     if (stb.field_p != uia.field_b) {
@@ -256,7 +316,7 @@ final class bq extends rqa {
               return;
             } else {
               L9: {
-                if ((uqb.field_h ^ -1) != (kc.field_b ^ -1)) {
+                if (~uqb.field_h != ~kc.field_b) {
                   break L9;
                 } else {
                   if (stb.field_p != uia.field_b) {
@@ -292,7 +352,7 @@ final class bq extends rqa {
           }
         } else {
           L11: {
-            stb.field_p = param3 >> 1807941345;
+            stb.field_p = param3 >> 1;
             if (!iha.e(0)) {
               break L11;
             } else {
@@ -311,7 +371,7 @@ final class bq extends rqa {
                         break L13;
                       } else {
                         L14: {
-                          if ((uqb.field_h ^ -1) != (kc.field_b ^ -1)) {
+                          if (~uqb.field_h != ~kc.field_b) {
                             break L14;
                           } else {
                             if (stb.field_p != uia.field_b) {
@@ -371,7 +431,7 @@ final class bq extends rqa {
             return;
           } else {
             L16: {
-              if ((uqb.field_h ^ -1) != (kc.field_b ^ -1)) {
+              if (~uqb.field_h != ~kc.field_b) {
                 break L16;
               } else {
                 if (stb.field_p != uia.field_b) {

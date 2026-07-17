@@ -8,121 +8,82 @@ final class tia {
     static String field_b;
 
     final static void a(int param0, java.awt.Component param1) {
-        param1.removeMouseListener((java.awt.event.MouseListener) (Object) wna.field_n);
-        param1.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) wna.field_n);
-        param1.removeFocusListener((java.awt.event.FocusListener) (Object) wna.field_n);
-        tka.field_n = param0;
+        try {
+            param1.removeMouseListener((java.awt.event.MouseListener) (Object) wna.field_n);
+            param1.removeMouseMotionListener((java.awt.event.MouseMotionListener) (Object) wna.field_n);
+            param1.removeFocusListener((java.awt.event.FocusListener) (Object) wna.field_n);
+            tka.field_n = param0;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "tia.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void a(byte param0) {
         field_d = null;
-        if (param0 >= -91) {
-            field_d = null;
-            field_c = null;
-            field_b = null;
-            return;
-        }
         field_c = null;
         field_b = null;
     }
 
     final static int a(int param0, int param1, int param2) {
-        if (param2 == -29543) {
-          if (param1 == -1) {
-            if (0 != param0) {
-              if (param0 >= 0) {
-                return 2048;
-              } else {
-                return -2048;
-              }
-            } else {
-              return 0;
-            }
-          } else {
-            if (param1 <= -1) {
-              if (-1 != param0) {
-                if (-1 > param0) {
-                  return -ska.a(-50, -param0, param1);
-                } else {
-                  return ska.a(123, param0, param1);
+        if (param1 != 0) {
+            if (param1 < 0) {
+                if (!(param0 != 0)) {
+                    return 4096;
                 }
-              } else {
+                if (param0 >= 0) {
+                    return -ska.a(-29, param0, -param1) + 4096;
+                }
+                return ska.a(120, -param0, -param1) - 4096;
+            }
+            if (param0 == 0) {
                 return 0;
-              }
-            } else {
-              if (-1 == param0) {
-                return 4096;
-              } else {
-                if (-1 <= param0) {
-                  return -ska.a(-29, param0, -param1) + 4096;
-                } else {
-                  return ska.a(120, -param0, -param1) - 4096;
-                }
-              }
             }
-          }
-        } else {
-          field_b = null;
-          if (param1 == -1) {
-            if (0 != param0) {
-              if (param0 >= 0) {
-                return 2048;
-              } else {
-                return -2048;
-              }
-            } else {
-              return 0;
+            if (param0 < 0) {
+                return -ska.a(-50, -param0, param1);
             }
-          } else {
-            if (param1 <= -1) {
-              if (-1 != param0) {
-                if (-1 > param0) {
-                  return -ska.a(-50, -param0, param1);
-                } else {
-                  return ska.a(123, param0, param1);
-                }
-              } else {
-                return 0;
-              }
-            } else {
-              if (-1 == param0) {
-                return 4096;
-              } else {
-                if (-1 <= param0) {
-                  return -ska.a(-29, param0, -param1) + 4096;
-                } else {
-                  return ska.a(120, -param0, -param1) - 4096;
-                }
-              }
-            }
-          }
+            return ska.a(123, param0, param1);
         }
+        if (0 != param0) {
+            if (param0 >= 0) {
+                return 2048;
+            }
+            return -2048;
+        }
+        return 0;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, boolean param5) {
-        int var6 = 0;
+        int var6_int = 0;
+        RuntimeException var6 = null;
         int[] var7 = null;
         int var8 = 0;
+        RuntimeException decompiledCaughtException = null;
         var8 = TombRacer.field_G ? 1 : 0;
-        if (param5) {
-          return;
-        } else {
-          param1++;
-          nra.a((byte) -55, param3, param2, vaa.field_a[param1], param4);
-          param0--;
-          nra.a((byte) -55, param3, param2, vaa.field_a[param0], param4);
-          var6 = param1;
-          L0: while (true) {
-            if (param0 < var6) {
-              return;
-            } else {
-              var7 = vaa.field_a[var6];
-              var7[param2] = param3;
-              var7[param4] = param3;
-              var6++;
-              continue L0;
+        try {
+          L0: {
+            int incrementValue$4 = param1;
+            param1++;
+            nra.a((byte) -55, param3, param2, vaa.field_a[incrementValue$4], param4);
+            int incrementValue$5 = param0;
+            param0--;
+            nra.a((byte) -55, param3, param2, vaa.field_a[incrementValue$5], param4);
+            var6_int = param1;
+            L1: while (true) {
+              if (param0 < var6_int) {
+                break L0;
+              } else {
+                var7 = vaa.field_a[var6_int];
+                var7[param2] = param3;
+                var7[param4] = param3;
+                var6_int++;
+                continue L1;
+              }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = decompiledCaughtException;
+          throw tba.a((Throwable) (Object) var6, "tia.E(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + 0 + 41);
         }
     }
 

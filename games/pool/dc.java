@@ -27,19 +27,19 @@ final class dc extends com.ms.dll.Callback {
             var5 = com.ms.win32.User32.GetWindowLong(param0, -4);
             return com.ms.win32.User32.CallWindowProc(var5, param0, param1, param2, param3);
         }
-        if (-33 != (param1 ^ -1)) {
+        if (param1 != 32) {
             if (!(param1 != 101024)) {
                 int discarded$0 = com.ms.win32.User32.SetCursor(!((dc) this).field_d ? 0 : ((dc) this).field_c);
                 return 0;
             }
-            if (!(-2 != (param1 ^ -1))) {
+            if (!(param1 != 1)) {
                 ((dc) this).field_e = 0;
                 ((dc) this).field_d = true;
             }
             return com.ms.win32.User32.CallWindowProc(((dc) this).field_b, param0, param1, param2, param3);
         }
         var5 = 65535 & param3;
-        if ((var5 ^ -1) == -2) {
+        if (var5 == 1) {
             int discarded$1 = com.ms.win32.User32.SetCursor(!((dc) this).field_d ? 0 : ((dc) this).field_c);
             return 0;
         }
@@ -47,7 +47,7 @@ final class dc extends com.ms.dll.Callback {
             int discarded$2 = com.ms.win32.User32.SetCursor(!((dc) this).field_d ? 0 : ((dc) this).field_c);
             return 0;
         }
-        if (!(-2 != (param1 ^ -1))) {
+        if (!(param1 != 1)) {
             ((dc) this).field_e = 0;
             ((dc) this).field_d = true;
         }

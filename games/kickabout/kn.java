@@ -11,9 +11,6 @@ final class kn extends i {
 
     public static void g(int param0) {
         field_J = null;
-        if (param0 != 2) {
-            field_H = null;
-        }
         field_F = null;
         field_G = null;
         field_H = null;
@@ -67,7 +64,7 @@ final class kn extends i {
             if (param3 == 0) {
               break L2;
             } else {
-              if ((param3 ^ -1) == -2) {
+              if (param3 == 1) {
                 break L2;
               } else {
                 if (param2) {
@@ -79,7 +76,7 @@ final class kn extends i {
             }
           }
           if (0 != param0) {
-            if ((param0 ^ -1) != -2) {
+            if (param0 != 1) {
               if (2 == param0) {
                 return 3;
               } else {
@@ -138,7 +135,7 @@ final class kn extends i {
                 on.a(var6.field_F, var6.field_T, var6.field_q, var6.field_mb, 8, 65793, 128);
                 on.f(var6.field_F, var6.field_T, var6.field_q, var6.field_mb, 8, 6710886);
                 qe.field_i[iw.field_e[var6.field_Bb]].c(64 + param1, param2 - -70);
-                un.field_d.d(kw.field_c[var6.field_Bb].toLowerCase(), (qe.field_i[iw.field_e[var6.field_Bb]].field_q >> 348142625) + (64 + param1), 205 + param2, 16777215, -1);
+                un.field_d.d(kw.field_c[var6.field_Bb].toLowerCase(), (qe.field_i[iw.field_e[var6.field_Bb]].field_q >> 1) + (64 + param1), 205 + param2, 16777215, -1);
                 var7 = new String[16];
                 var8 = un.field_d.a(lw.field_a[var6.field_Bb], new int[1], var7);
                 var9 = 0;

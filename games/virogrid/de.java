@@ -13,18 +13,15 @@ final class de extends mb {
         field_ob = null;
         field_pb = null;
         field_sb = null;
-        if (param0) {
-          field_sb = null;
-          field_rb = null;
-          return;
-        } else {
-          field_rb = null;
-          return;
-        }
+        field_rb = null;
     }
 
     final void b(fi param0, byte param1) {
-        super.b(param0, param1);
+        try {
+            super.b(param0, param1);
+        } catch (RuntimeException runtimeException) {
+            throw kg.a((Throwable) (Object) runtimeException, "de.S(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     de(je param0, fi param1) {

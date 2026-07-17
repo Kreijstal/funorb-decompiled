@@ -40,7 +40,7 @@ final class ha extends i {
         if (param0 < 60) {
             return;
         }
-        if (!(-2 != (param1 ^ -1))) {
+        if (!(param1 != 1)) {
             ql.a((byte) 29, true, dg.field_f);
         }
     }
@@ -144,14 +144,14 @@ final class ha extends i {
           var8 = new Random(var6);
           var9 = new up();
           var9.field_c = true;
-          if ((param4 ^ -1) == 0) {
+          if (param4 == -1) {
             L2: {
               var9.field_q = param1 / 2;
-              if (-3 == (var9.field_q ^ -1)) {
+              if (var9.field_q == 2) {
                 var9.field_q = 3;
                 break L2;
               } else {
-                if (-4 != (var9.field_q ^ -1)) {
+                if (var9.field_q != 3) {
                   break L2;
                 } else {
                   var9.field_q = 2;
@@ -174,7 +174,7 @@ final class ha extends i {
               }
             }
             var9.field_h = new int[var11];
-            if (-3 == (var9.field_q ^ -1)) {
+            if (var9.field_q == 2) {
               var9.field_h[0] = 3;
               var12 = 1;
               L4: while (true) {
@@ -198,7 +198,7 @@ final class ha extends i {
                       break L6;
                     } else {
                       L7: {
-                        if ((param1 ^ -1) >= -3) {
+                        if (param1 <= 2) {
                           break L7;
                         } else {
                           if (5 > param1) {
@@ -233,7 +233,7 @@ final class ha extends i {
             L9: {
               var10 = stackIn_6_0;
               var9.field_q = param1 / var10;
-              if ((var9.field_q ^ -1) == -3) {
+              if (var9.field_q == 2) {
                 var9.field_q = 3;
                 break L9;
               } else {
@@ -246,7 +246,7 @@ final class ha extends i {
               }
             }
             L10: {
-              if (-3 >= (param4 ^ -1)) {
+              if (param4 >= 2) {
                 break L10;
               } else {
                 if (var9.field_q != 2) {
@@ -301,7 +301,7 @@ final class ha extends i {
               }
             }
             L13: {
-              if (-4 == (var9.field_q ^ -1)) {
+              if (var9.field_q == 3) {
                 L14: {
                   stackOut_22_0 = (up) var9;
                   stackOut_22_1 = ng.field_d[param4];
@@ -312,7 +312,7 @@ final class ha extends i {
                   stackIn_23_0 = stackOut_22_0;
                   stackIn_23_1 = stackOut_22_1;
                   stackIn_23_2 = stackOut_22_2;
-                  if (-1 == (param4 ^ -1)) {
+                  if (param4 == 0) {
                     stackOut_24_0 = (up) (Object) stackIn_24_0;
                     stackOut_24_1 = stackIn_24_1;
                     stackOut_24_2 = stackIn_24_2;
@@ -400,7 +400,7 @@ final class ha extends i {
             }
             L18: {
               var9.field_r = 0;
-              if (-81 <= (var9.field_o ^ -1)) {
+              if (var9.field_o <= 80) {
                 break L18;
               } else {
                 var9.field_o = 80;
@@ -416,7 +416,7 @@ final class ha extends i {
               }
             }
             L20: {
-              if ((var9.field_n ^ -1) >= -81) {
+              if (var9.field_n <= 80) {
                 break L20;
               } else {
                 var9.field_n = 80;
@@ -425,9 +425,9 @@ final class ha extends i {
             }
             L21: {
               var12 = 0;
-              if ((var9.field_q ^ -1) != -3) {
+              if (var9.field_q != 2) {
                 var12++;
-                if ((param4 ^ -1) > -5) {
+                if (param4 < 4) {
                   break L21;
                 } else {
                   if (dq.a((byte) 89, 2, var8) != 0) {
@@ -464,12 +464,12 @@ final class ha extends i {
                     break L23;
                   } else {
                     L25: {
-                      if ((param4 ^ -1) <= -3) {
+                      if (param4 >= 2) {
                         var14 = dq.a((byte) 122, 100, var8);
                         var17 = 0;
                         var15 = var17;
                         L26: while (true) {
-                          if ((ct.field_v[param4].length ^ -1) >= (var17 ^ -1)) {
+                          if (~ct.field_v[param4].length >= ~var17) {
                             break L25;
                           } else {
                             if (var14 > ct.field_v[param4][var17]) {
@@ -495,17 +495,17 @@ final class ha extends i {
                 var9.field_h[0] = 3;
                 var13 = 1;
                 L27: while (true) {
-                  if ((var9.field_h.length ^ -1) >= (var13 ^ -1)) {
+                  if (~var9.field_h.length >= ~var13) {
                     break L23;
                   } else {
                     var14 = dq.a((byte) -89, 100, var8);
                     var15 = 0;
                     L28: while (true) {
                       L29: {
-                        if ((var15 ^ -1) <= (vo.field_eb[param4].length ^ -1)) {
+                        if (~var15 <= ~vo.field_eb[param4].length) {
                           break L29;
                         } else {
-                          if ((var14 ^ -1) >= (vo.field_eb[param4][var15] ^ -1)) {
+                          if (~var14 >= ~vo.field_eb[param4][var15]) {
                             var9.field_h[var13] = var15;
                             break L29;
                           } else {
@@ -531,8 +531,8 @@ final class ha extends i {
         var11 = dq.a((byte) -114, 3, var8);
         var12 = dq.a((byte) -41, 3, var8);
         var13 = var12;
-        var13 = var13 | var11 << -1613591484;
-        var13 = var13 | var10 << -1836445880;
+        var13 = var13 | var11 << 4;
+        var13 = var13 | var10 << 8;
         var9.field_j = var13;
         return var9;
     }

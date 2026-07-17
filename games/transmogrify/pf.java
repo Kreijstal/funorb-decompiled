@@ -43,14 +43,7 @@ final class pf implements Iterable {
         field_f = null;
         field_a = null;
         field_i = null;
-        if (param0 != 17205) {
-          field_h = null;
-          field_d = null;
-          return;
-        } else {
-          field_d = null;
-          return;
-        }
+        field_d = null;
     }
 
     private pf() throws Throwable {
@@ -58,29 +51,73 @@ final class pf implements Iterable {
     }
 
     final void a(boolean param0, ri param1) {
-        if (null == param1.field_g) {
-          param1.field_g = ((pf) this).field_e.field_g;
-          param1.field_h = ((pf) this).field_e;
-          param1.field_g.field_h = param1;
-          param1.field_h.field_g = param1;
-          if (param0) {
-            ri discarded$4 = ((pf) this).a(true);
-            return;
-          } else {
-            return;
+        RuntimeException var3 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (null == param1.field_g) {
+                break L1;
+              } else {
+                param1.b((byte) -116);
+                break L1;
+              }
+            }
+            param1.field_g = ((pf) this).field_e.field_g;
+            param1.field_h = ((pf) this).field_e;
+            param1.field_g.field_h = param1;
+            param1.field_h.field_g = param1;
+            if (!param0) {
+              break L0;
+            } else {
+              ri discarded$2 = ((pf) this).a(true);
+              return;
+            }
           }
-        } else {
-          param1.b((byte) -116);
-          param1.field_g = ((pf) this).field_e.field_g;
-          param1.field_h = ((pf) this).field_e;
-          param1.field_g.field_h = param1;
-          param1.field_h.field_g = param1;
-          if (!param0) {
-            return;
-          } else {
-            ri discarded$5 = ((pf) this).a(true);
-            return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var3;
+            stackOut_5_1 = new StringBuilder().append("pf.C(").append(param0).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param1 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L2;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L2;
+            }
           }
+          throw ch.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
         }
     }
 

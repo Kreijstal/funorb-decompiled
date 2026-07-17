@@ -178,11 +178,17 @@ final class cka extends ha {
         Exception var3 = null;
         Throwable decompiledCaughtException = null;
         try {
-          ((cka) this).field_l.swapBuffers();
-        } catch (java.lang.Exception decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
+          L0: {
+            ((cka) this).field_l.swapBuffers();
+            break L0;
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var3 = (Exception) (Object) decompiledCaughtException;
+            break L1;
+          }
         }
-        var3 = (Exception) (Object) decompiledCaughtException;
     }
 
     final void U(int param0, int param1, int param2, int param3, int param4) {
@@ -190,7 +196,7 @@ final class cka extends ha {
         ((cka) this).a((byte) 50, param4);
         float var6 = 0.3499999940395355f + (float)param0;
         float var7 = (float)param1 + 0.3499999940395355f;
-        jaggl.OpenGL.glColor4ub((byte)(param3 >> -707746608), (byte)(param3 >> 1087690792), (byte)param3, (byte)(param3 >> -1078207400));
+        jaggl.OpenGL.glColor4ub((byte)(param3 >> 16), (byte)(param3 >> 8), (byte)param3, (byte)(param3 >> 24));
         jaggl.OpenGL.glBegin(1);
         jaggl.OpenGL.glVertex2f(var6, var7);
         jaggl.OpenGL.glVertex2f(var6 + (float)param2, var7);
@@ -205,7 +211,62 @@ final class cka extends ha {
     }
 
     final ka a(oc param0, int param1, int param2, int param3, int param4) {
-        return (ka) (Object) new np((cka) this, param0, param1, param3, param4, param2);
+        RuntimeException var6 = null;
+        np stackIn_1_0 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        np stackOut_0_0 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
+        try {
+          L0: {
+            stackOut_0_0 = new np((cka) this, param0, param1, param3, param4, param2);
+            stackIn_1_0 = stackOut_0_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var6 = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var6;
+            stackOut_2_1 = new StringBuilder().append("cka.MB(");
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
+            if (param0 == null) {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+        }
+        return (ka) (Object) stackIn_1_0;
     }
 
     final void aa(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -215,7 +276,7 @@ final class cka extends ha {
         this.i((byte) -116);
         float var10 = (float)param3 + var8;
         ((cka) this).a((byte) 40, param5);
-        jaggl.OpenGL.glColor4ub((byte)(param4 >> -878910384), (byte)(param4 >> 1424663176), (byte)param4, (byte)(param4 >> 1854935800));
+        jaggl.OpenGL.glColor4ub((byte)(param4 >> 16), (byte)(param4 >> 8), (byte)param4, (byte)(param4 >> 24));
         if (!(!((cka) this).field_S)) {
             jaggl.OpenGL.glDisable(32925);
         }
@@ -311,27 +372,110 @@ final class cka extends ha {
     }
 
     final va a(int param0, byte[] param1, int param2, boolean param3, byte param4) {
-        if (((cka) this).field_Q) {
-            if (param3) {
-                // ifeq L36
+        RuntimeException var6 = null;
+        wo stackIn_5_0 = null;
+        lra stackIn_9_0 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        wo stackOut_4_0 = null;
+        lra stackOut_8_0 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (!((cka) this).field_Q) {
+                break L1;
+              } else {
+                L2: {
+                  if (!param3) {
+                    break L2;
+                  } else {
+                    if (!((cka) this).field_bd) {
+                      break L1;
+                    } else {
+                      break L2;
+                    }
+                  }
+                }
+                stackOut_4_0 = new wo((cka) this, param2, param1, param0, param3);
+                stackIn_5_0 = stackOut_4_0;
+                return (va) (Object) stackIn_5_0;
+              }
             }
-            return (va) (Object) new wo((cka) this, param2, param1, param0, param3);
+            L3: {
+              if (param4 >= 40) {
+                break L3;
+              } else {
+                za discarded$2 = ((cka) this).a(89);
+                break L3;
+              }
+            }
+            stackOut_8_0 = new lra((cka) this, param2, param1, param0);
+            stackIn_9_0 = stackOut_8_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var6 = decompiledCaughtException;
+            stackOut_10_0 = (RuntimeException) var6;
+            stackOut_10_1 = new StringBuilder().append("cka.JC(").append(param0).append(44);
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
+            if (param1 == null) {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L4;
+            } else {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L4;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
-        if (param4 < 40) {
-            za discarded$0 = ((cka) this).a(89);
-        }
-        return (va) (Object) new lra((cka) this, param2, param1, param0);
+        return (va) (Object) stackIn_9_0;
     }
 
     private final void m(byte param0) {
-        if (((cka) this).field_Ac) {
-            // ifne L23
-            jaggl.OpenGL.glEnable(2896);
-        } else {
-            jaggl.OpenGL.glDisable(2896);
-        }
-        if (param0 != -52) {
-            ((cka) this).field_Rc = null;
+        L0: {
+          L1: {
+            if (!((cka) this).field_Ac) {
+              break L1;
+            } else {
+              if (((cka) this).field_v) {
+                break L1;
+              } else {
+                jaggl.OpenGL.glEnable(2896);
+                break L0;
+              }
+            }
+          }
+          jaggl.OpenGL.glDisable(2896);
+          break L0;
         }
     }
 
@@ -342,7 +486,7 @@ final class cka extends ha {
         float var10 = var8 + (float)param3 - 1.0f;
         this.i((byte) -119);
         ((cka) this).a((byte) 21, param5);
-        jaggl.OpenGL.glColor4ub((byte)(param4 >> 1111579376), (byte)(param4 >> 482588904), (byte)param4, (byte)(param4 >> 101935800));
+        jaggl.OpenGL.glColor4ub((byte)(param4 >> 16), (byte)(param4 >> 8), (byte)param4, (byte)(param4 >> 24));
         if (((cka) this).field_S) {
             jaggl.OpenGL.glDisable(32925);
         }
@@ -404,48 +548,99 @@ final class cka extends ha {
 
     final void a(boolean param0, kl param1) {
         kl var3 = null;
+        RuntimeException var3_ref = null;
         int var4 = 0;
-        L0: {
-          var4 = TombRacer.field_G ? 1 : 0;
-          var3 = ((cka) this).field_vc[((cka) this).field_r];
-          if (var3 != param1) {
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_18_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        var4 = TombRacer.field_G ? 1 : 0;
+        try {
+          L0: {
             L1: {
-              if (param1 == null) {
-                jaggl.OpenGL.glDisable(var3.field_e);
+              var3 = ((cka) this).field_vc[((cka) this).field_r];
+              if (var3 != param1) {
+                L2: {
+                  if (param1 == null) {
+                    jaggl.OpenGL.glDisable(var3.field_e);
+                    break L2;
+                  } else {
+                    L3: {
+                      if (var3 != null) {
+                        if (param1.field_e != var3.field_e) {
+                          jaggl.OpenGL.glDisable(var3.field_e);
+                          jaggl.OpenGL.glEnable(param1.field_e);
+                          break L3;
+                        } else {
+                          break L3;
+                        }
+                      } else {
+                        jaggl.OpenGL.glEnable(param1.field_e);
+                        break L3;
+                      }
+                    }
+                    jaggl.OpenGL.glBindTexture(param1.field_e, param1.f(0));
+                    break L2;
+                  }
+                }
+                ((cka) this).field_vc[((cka) this).field_r] = param1;
                 break L1;
               } else {
-                if (var3 != null) {
-                  if (param1.field_e != var3.field_e) {
-                    jaggl.OpenGL.glDisable(var3.field_e);
-                    jaggl.OpenGL.glEnable(param1.field_e);
-                    jaggl.OpenGL.glBindTexture(param1.field_e, param1.f(0));
-                    break L1;
-                  } else {
-                    jaggl.OpenGL.glBindTexture(param1.field_e, param1.f(0));
-                    break L1;
-                  }
-                } else {
-                  jaggl.OpenGL.glEnable(param1.field_e);
-                  jaggl.OpenGL.glDisable(var3.field_e);
-                  jaggl.OpenGL.glEnable(param1.field_e);
-                  break L1;
-                }
+                break L1;
               }
             }
-            ((cka) this).field_vc[((cka) this).field_r] = param1;
-            break L0;
-          } else {
+            L4: {
+              ((cka) this).field_y = ((cka) this).field_y & -2;
+              if (param0) {
+                break L4;
+              } else {
+                ((cka) this).field_Vb = null;
+                break L4;
+              }
+            }
             break L0;
           }
-        }
-        L2: {
-          ((cka) this).field_y = ((cka) this).field_y & -2;
-          if (param0) {
-            break L2;
-          } else {
-            ((cka) this).field_Vb = null;
-            break L2;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L5: {
+            var3_ref = decompiledCaughtException;
+            stackOut_15_0 = (RuntimeException) var3_ref;
+            stackOut_15_1 = new StringBuilder().append("cka.GC(").append(param0).append(44);
+            stackIn_17_0 = stackOut_15_0;
+            stackIn_17_1 = stackOut_15_1;
+            stackIn_16_0 = stackOut_15_0;
+            stackIn_16_1 = stackOut_15_1;
+            if (param1 == null) {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "null";
+              stackIn_18_0 = stackOut_17_0;
+              stackIn_18_1 = stackOut_17_1;
+              stackIn_18_2 = stackOut_17_2;
+              break L5;
+            } else {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "{...}";
+              stackIn_18_0 = stackOut_16_0;
+              stackIn_18_1 = stackOut_16_1;
+              stackIn_18_2 = stackOut_16_2;
+              break L5;
+            }
           }
+          throw tba.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 41);
         }
     }
 
@@ -468,52 +663,126 @@ final class cka extends ha {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        if (((cka) this).field_nc) {
-            if (-1 > (((cka) this).field_Y ^ -1)) {
-                // if_icmpge L30
+        if (!((cka) this).field_nc) {
+          return;
+        } else {
+          L0: {
+            if (((cka) this).field_Y <= 0) {
+              break L0;
             } else {
+              if (((cka) this).field_I <= 0) {
+                break L0;
+              } else {
+                var1 = ((cka) this).field_Ib;
+                var2 = ((cka) this).field_B;
+                var3 = ((cka) this).field_f;
+                var4 = ((cka) this).field_kc;
+                ((cka) this).la();
+                jaggl.OpenGL.glReadBuffer(1028);
+                jaggl.OpenGL.glDrawBuffer(1029);
+                this.s(3682);
+                this.b(16363, false);
+                ((cka) this).a(81, false);
+                this.c(3742, false);
+                this.a(false, 0);
+                ((cka) this).a(true, (kl) null);
+                ((cka) this).c(-2, 32677);
+                ((cka) this).d(1, 1);
+                ((cka) this).a((byte) 57, 0);
+                jaggl.OpenGL.glMatrixMode(5889);
+                jaggl.OpenGL.glLoadIdentity();
+                jaggl.OpenGL.glOrtho(0.0, 1.0, 0.0, 1.0, -1.0, 1.0);
+                jaggl.OpenGL.glMatrixMode(5888);
+                jaggl.OpenGL.glLoadIdentity();
+                jaggl.OpenGL.glRasterPos2i(0, 0);
+                jaggl.OpenGL.glCopyPixels(0, 0, ((cka) this).field_Y, ((cka) this).field_I, 6144);
+                jaggl.OpenGL.glFlush();
+                jaggl.OpenGL.glReadBuffer(1029);
+                jaggl.OpenGL.glDrawBuffer(1029);
+                ((cka) this).KA(var1, var3, var2, var4);
                 return;
+              }
             }
-            var1 = ((cka) this).field_Ib;
-            var2 = ((cka) this).field_B;
-            var3 = ((cka) this).field_f;
-            var4 = ((cka) this).field_kc;
-            ((cka) this).la();
-            jaggl.OpenGL.glReadBuffer(1028);
-            jaggl.OpenGL.glDrawBuffer(1029);
-            this.s(3682);
-            this.b(16363, false);
-            ((cka) this).a(81, false);
-            this.c(3742, false);
-            this.a(false, 0);
-            ((cka) this).a(true, (kl) null);
-            ((cka) this).c(-2, 32677);
-            ((cka) this).d(1, 1);
-            ((cka) this).a((byte) 57, 0);
-            jaggl.OpenGL.glMatrixMode(5889);
-            jaggl.OpenGL.glLoadIdentity();
-            jaggl.OpenGL.glOrtho(0.0, 1.0, 0.0, 1.0, -1.0, 1.0);
-            jaggl.OpenGL.glMatrixMode(5888);
-            jaggl.OpenGL.glLoadIdentity();
-            jaggl.OpenGL.glRasterPos2i(0, 0);
-            jaggl.OpenGL.glCopyPixels(0, 0, ((cka) this).field_Y, ((cka) this).field_I, 6144);
-            jaggl.OpenGL.glFlush();
-            jaggl.OpenGL.glReadBuffer(1029);
-            jaggl.OpenGL.glDrawBuffer(1029);
-            ((cka) this).KA(var1, var3, var2, var4);
-            return;
+          }
+          return;
         }
     }
 
     final void a(int param0, va param1) {
-        if (((cka) this).field_tb != param1) {
-            if (!(!((cka) this).field_Q)) {
-                jaggl.OpenGL.glBindBufferARB(34962, param1.a(true));
+        RuntimeException var3 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (((cka) this).field_tb == param1) {
+                break L1;
+              } else {
+                L2: {
+                  if (((cka) this).field_Q) {
+                    jaggl.OpenGL.glBindBufferARB(34962, param1.a(true));
+                    break L2;
+                  } else {
+                    break L2;
+                  }
+                }
+                ((cka) this).field_tb = param1;
+                break L1;
+              }
             }
-            ((cka) this).field_tb = param1;
-        }
-        if (param0 <= 74) {
-            ((cka) this).field_fc = null;
+            L3: {
+              if (param0 > 74) {
+                break L3;
+              } else {
+                ((cka) this).field_fc = null;
+                break L3;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var3 = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var3;
+            stackOut_8_1 = new StringBuilder().append("cka.IC(").append(param0).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param1 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L4;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L4;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
         }
     }
 
@@ -532,12 +801,68 @@ final class cka extends ha {
     }
 
     final void a(gda param0) {
-        ((cka) this).field_jd.a(param0, 124);
-        ((cka) this).field_j.a((gda) (Object) ((cka) this).field_jd, -66);
-        ((cka) this).field_j.c((byte) 57);
-        ((cka) this).field_Tc.a((gda) (Object) ((cka) this).field_j, (byte) 112);
-        if ((((cka) this).field_e ^ -1) != -2) {
-            this.b(false);
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        try {
+          L0: {
+            L1: {
+              ((cka) this).field_jd.a(param0, 124);
+              ((cka) this).field_j.a((gda) (Object) ((cka) this).field_jd, -66);
+              ((cka) this).field_j.c((byte) 57);
+              ((cka) this).field_Tc.a((gda) (Object) ((cka) this).field_j, (byte) 112);
+              if (((cka) this).field_e == 1) {
+                break L1;
+              } else {
+                this.b(false);
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_1 = new StringBuilder().append("cka.W(");
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param0 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
         }
     }
 
@@ -568,7 +893,6 @@ final class cka extends ha {
         al var7 = null;
         al var8 = null;
         al var9 = null;
-        al var9_ref = null;
         vg var10 = null;
         vg var11 = null;
         al var12 = null;
@@ -586,8 +910,9 @@ final class cka extends ha {
                     break L1;
                   } else {
                     var6 = (al) (Object) ((cka) this).field_K.c(63);
+                    int incrementValue$7 = var2;
                     var2++;
-                    qo.field_k[var2] = (int)var6.field_d;
+                    qo.field_k[incrementValue$7] = (int)var6.field_d;
                     ((cka) this).field_jb = ((cka) this).field_jb - var6.field_i;
                     if (1000 != var2) {
                       continue L2;
@@ -604,8 +929,9 @@ final class cka extends ha {
                     break L1;
                   } else {
                     var6 = (al) (Object) ((cka) this).field_K.c(63);
+                    int incrementValue$8 = var2;
                     var2++;
-                    qo.field_k[var2] = (int)var6.field_d;
+                    qo.field_k[incrementValue$8] = (int)var6.field_d;
                     ((cka) this).field_jb = ((cka) this).field_jb - var6.field_i;
                     if (1000 != var2) {
                       continue L3;
@@ -620,7 +946,7 @@ final class cka extends ha {
             }
             L4: {
               L5: {
-                if (-1 > (var2 ^ -1)) {
+                if (var2 > 0) {
                   jaggl.OpenGL.glDeleteTextures(var2, qo.field_k, 0);
                   var2 = 0;
                   break L5;
@@ -630,8 +956,9 @@ final class cka extends ha {
                       break L4;
                     } else {
                       var7 = (al) (Object) ((cka) this).field_cc.c(-103);
+                      int incrementValue$9 = var2;
                       var2++;
-                      qo.field_k[var2] = var7.field_i;
+                      qo.field_k[incrementValue$9] = var7.field_i;
                       if (var2 != 1000) {
                         continue L6;
                       } else {
@@ -648,8 +975,9 @@ final class cka extends ha {
                   break L4;
                 } else {
                   var7 = (al) (Object) ((cka) this).field_cc.c(-103);
+                  int incrementValue$10 = var2;
                   var2++;
-                  qo.field_k[var2] = var7.field_i;
+                  qo.field_k[incrementValue$10] = var7.field_i;
                   if (var2 == 1000) {
                     jaggl.OpenGL.glDeleteFramebuffersEXT(var2, qo.field_k, 0);
                     var2 = 0;
@@ -672,8 +1000,9 @@ final class cka extends ha {
                       break L8;
                     } else {
                       var8 = (al) (Object) ((cka) this).field_Vb.c(-117);
+                      int incrementValue$11 = var2;
                       var2++;
-                      qo.field_k[var2] = (int)var8.field_d;
+                      qo.field_k[incrementValue$11] = (int)var8.field_d;
                       ((cka) this).field_Tb = ((cka) this).field_Tb - var8.field_i;
                       if (var2 != 1000) {
                         continue L10;
@@ -691,8 +1020,9 @@ final class cka extends ha {
                   break L8;
                 } else {
                   var8 = (al) (Object) ((cka) this).field_Vb.c(-117);
+                  int incrementValue$12 = var2;
                   var2++;
-                  qo.field_k[var2] = (int)var8.field_d;
+                  qo.field_k[incrementValue$12] = (int)var8.field_d;
                   ((cka) this).field_Tb = ((cka) this).field_Tb - var8.field_i;
                   if (var2 == 1000) {
                     jaggl.OpenGL.glDeleteRenderbuffersEXT(var2, qo.field_k, 0);
@@ -710,8 +1040,8 @@ final class cka extends ha {
                 var2 = 0;
                 L13: while (true) {
                   if (!((cka) this).field_Lc.d((byte) 14)) {
-                    var9_ref = (al) (Object) ((cka) this).field_Lc.c(30);
-                    jaggl.OpenGL.glDeleteLists((int)var9_ref.field_d, var9_ref.field_i);
+                    var9 = (al) (Object) ((cka) this).field_Lc.c(30);
+                    jaggl.OpenGL.glDeleteLists((int)var9.field_d, var9.field_i);
                     continue L13;
                   } else {
                     L14: while (true) {
@@ -729,10 +1059,10 @@ final class cka extends ha {
                                 continue L16;
                               } else {
                                 ((cka) this).field_hd.c(-29413);
-                                if ((this.f(-44) ^ -1) >= -100663297) {
+                                if (this.f(-44) <= 100663296) {
                                   break L12;
                                 } else {
-                                  if ((bva.b((byte) -107) ^ -1L) >= (60000L + ((cka) this).field_Lb ^ -1L)) {
+                                  if (~bva.b((byte) -107) >= ~(60000L + ((cka) this).field_Lb)) {
                                     break L12;
                                   } else {
                                     System.gc();
@@ -770,10 +1100,10 @@ final class cka extends ha {
                                 continue L20;
                               } else {
                                 ((cka) this).field_hd.c(-29413);
-                                if ((this.f(-44) ^ -1) >= -100663297) {
+                                if (this.f(-44) <= 100663296) {
                                   break L12;
                                 } else {
-                                  if ((bva.b((byte) -107) ^ -1L) >= (60000L + ((cka) this).field_Lb ^ -1L)) {
+                                  if (~bva.b((byte) -107) >= ~(60000L + ((cka) this).field_Lb)) {
                                     break L12;
                                   } else {
                                     System.gc();
@@ -803,8 +1133,9 @@ final class cka extends ha {
             return;
           } else {
             var5 = (al) (Object) ((cka) this).field_pd.c(-108);
+            int incrementValue$13 = var2;
             var2++;
-            qo.field_k[var2] = (int)var5.field_d;
+            qo.field_k[incrementValue$13] = (int)var5.field_d;
             ((cka) this).field_mb = ((cka) this).field_mb - var5.field_i;
             if (var2 != 1000) {
               continue L0;
@@ -825,7 +1156,7 @@ final class cka extends ha {
         gp.field_d[0] = (float)sea.c(param1, 16711680) / 16711680.0f;
         gp.field_d[1] = (float)sea.c(65280, param1) / 65280.0f;
         gp.field_d[2] = (float)sea.c(255, param1) / 255.0f;
-        gp.field_d[3] = (float)(param1 >>> 1104971864) / 255.0f;
+        gp.field_d[3] = (float)(param1 >>> 24) / 255.0f;
         if (param0 != 1104971864) {
             return;
         }
@@ -833,101 +1164,170 @@ final class cka extends ha {
     }
 
     final void a(za param0) {
+        RuntimeException var2 = null;
         qf var3 = null;
-        L0: {
-          ((cka) this).field_md = ((cp) (Object) param0).field_h;
-          if (null == ((cka) this).field_X) {
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        try {
+          L0: {
             L1: {
-              var3 = new qf(80);
-              if (((cka) this).field_O) {
-                var3.a(17133, -1.0f);
-                var3.a(17133, -1.0f);
-                var3.a(17133, 0.0f);
-                var3.a(17133, 0.0f);
-                var3.a(17133, 1.0f);
-                var3.a(17133, 1.0f);
-                var3.a(17133, -1.0f);
-                var3.a(17133, 0.0f);
-                var3.a(17133, 1.0f);
-                var3.a(17133, 1.0f);
-                var3.a(17133, 1.0f);
-                var3.a(17133, 1.0f);
-                var3.a(17133, 0.0f);
-                var3.a(17133, 1.0f);
-                var3.a(17133, 0.0f);
-                var3.a(17133, -1.0f);
-                var3.a(17133, 1.0f);
-                var3.a(17133, 0.0f);
-                var3.a(17133, 0.0f);
-                var3.a(17133, 0.0f);
+              ((cka) this).field_md = ((cp) (Object) param0).field_h;
+              if (null == ((cka) this).field_X) {
+                L2: {
+                  var3 = new qf(80);
+                  if (((cka) this).field_O) {
+                    var3.a(17133, -1.0f);
+                    var3.a(17133, -1.0f);
+                    var3.a(17133, 0.0f);
+                    var3.a(17133, 0.0f);
+                    var3.a(17133, 1.0f);
+                    var3.a(17133, 1.0f);
+                    var3.a(17133, -1.0f);
+                    var3.a(17133, 0.0f);
+                    var3.a(17133, 1.0f);
+                    var3.a(17133, 1.0f);
+                    var3.a(17133, 1.0f);
+                    var3.a(17133, 1.0f);
+                    var3.a(17133, 0.0f);
+                    var3.a(17133, 1.0f);
+                    var3.a(17133, 0.0f);
+                    var3.a(17133, -1.0f);
+                    var3.a(17133, 1.0f);
+                    var3.a(17133, 0.0f);
+                    var3.a(17133, 0.0f);
+                    var3.a(17133, 0.0f);
+                    break L2;
+                  } else {
+                    var3.a((byte) 114, -1.0f);
+                    var3.a((byte) 114, -1.0f);
+                    var3.a((byte) 114, 0.0f);
+                    var3.a((byte) 114, 0.0f);
+                    var3.a((byte) 114, 1.0f);
+                    var3.a((byte) 114, 1.0f);
+                    var3.a((byte) 114, -1.0f);
+                    var3.a((byte) 114, 0.0f);
+                    var3.a((byte) 114, 1.0f);
+                    var3.a((byte) 114, 1.0f);
+                    var3.a((byte) 114, 1.0f);
+                    var3.a((byte) 114, 1.0f);
+                    var3.a((byte) 114, 0.0f);
+                    var3.a((byte) 114, 1.0f);
+                    var3.a((byte) 114, 0.0f);
+                    var3.a((byte) 114, -1.0f);
+                    var3.a((byte) 114, 1.0f);
+                    var3.a((byte) 114, 0.0f);
+                    var3.a((byte) 114, 0.0f);
+                    var3.a((byte) 114, 0.0f);
+                    break L2;
+                  }
+                }
+                ((cka) this).field_X = ((cka) this).a(var3.field_h, var3.field_g, 20, false, (byte) 108);
+                ((cka) this).field_Bc = new tj(((cka) this).field_X, 5126, 3, 0);
+                ((cka) this).field_Rb = new tj(((cka) this).field_X, 5126, 2, 12);
+                ((cka) this).field_Ec.a(22091, (cka) this);
                 break L1;
               } else {
-                var3.a((byte) 114, -1.0f);
-                var3.a((byte) 114, -1.0f);
-                var3.a((byte) 114, 0.0f);
-                var3.a((byte) 114, 0.0f);
-                var3.a((byte) 114, 1.0f);
-                var3.a((byte) 114, 1.0f);
-                var3.a((byte) 114, -1.0f);
-                var3.a((byte) 114, 0.0f);
-                var3.a((byte) 114, 1.0f);
-                var3.a((byte) 114, 1.0f);
-                var3.a((byte) 114, 1.0f);
-                var3.a((byte) 114, 1.0f);
-                var3.a((byte) 114, 0.0f);
-                var3.a((byte) 114, 1.0f);
-                var3.a((byte) 114, 0.0f);
-                var3.a((byte) 114, -1.0f);
-                var3.a((byte) 114, 1.0f);
-                var3.a((byte) 114, 0.0f);
-                var3.a((byte) 114, 0.0f);
-                var3.a((byte) 114, 0.0f);
                 break L1;
               }
             }
-            ((cka) this).field_X = ((cka) this).a(var3.field_h, var3.field_g, 20, false, (byte) 108);
-            ((cka) this).field_Bc = new tj(((cka) this).field_X, 5126, 3, 0);
-            ((cka) this).field_Rb = new tj(((cka) this).field_X, 5126, 2, 12);
-            ((cka) this).field_Ec.a(22091, (cka) this);
             break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2 = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var2;
+            stackOut_7_1 = new StringBuilder().append("cka.FB(");
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param0 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L3;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L3;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
+        }
+    }
+
+    final void f(int param0, int param1) {
+        L0: {
+          L1: {
+            if (~((cka) this).field_Gc != ~param0) {
+              break L1;
+            } else {
+              if (~param1 != ~((cka) this).field_ob) {
+                break L1;
+              } else {
+                break L0;
+              }
+            }
+          }
+          ((cka) this).field_Gc = param0;
+          ((cka) this).field_ob = param1;
+          this.g(0);
+          this.m(2916);
+          if (((cka) this).field_e != 3) {
+            if (((cka) this).field_e != 2) {
+              break L0;
+            } else {
+              this.l((byte) -37);
+              break L0;
+            }
           } else {
+            this.l(-4709);
             break L0;
           }
         }
     }
 
-    final void f(int param0, int param1) {
-        if (((cka) this).field_Gc == param0) {
-            // if_icmpne L19
-        } else {
-            ((cka) this).field_Gc = param0;
-            ((cka) this).field_ob = param1;
-            this.g(0);
-            this.m(2916);
-            if (((cka) this).field_e == -4) {
-                this.l(-4709);
-            } else {
-                if (-3 == ((cka) this).field_e) {
-                    this.l((byte) -37);
-                }
-            }
-        }
-    }
-
     final void a(int param0, int param1, int param2, sca param3, int param4) {
-        int var6 = param3.c(-1771);
-        param0 = param0 * this.b((byte) -10, var6);
-        if (param2 != -513) {
-            this.r((byte) 90);
+        int var6_int = 0;
+        try {
+            var6_int = param3.c(-1771);
+            param0 = param0 * this.b((byte) -10, var6_int);
+            if (param2 != -513) {
+                this.r((byte) 90);
+            }
+            ((cka) this).a(param3, param2 + 35476);
+            jaggl.OpenGL.glDrawElements(param1, param4, var6_int, (long)param0 + param3.b(19135));
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "cka.TB(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 41);
         }
-        ((cka) this).a(param3, param2 + 35476);
-        jaggl.OpenGL.glDrawElements(param1, param4, var6, (long)param0 + param3.b(19135));
     }
 
     final void a(byte param0, float param1) {
         if (!(param1 == ((cka) this).field_yc)) {
             ((cka) this).field_yc = param1;
-            if (!(-4 != (((cka) this).field_e ^ -1))) {
+            if (!(((cka) this).field_e != 3)) {
                 this.l(param0 ^ -4669);
             }
         }
@@ -937,52 +1337,195 @@ final class cka extends ha {
     }
 
     final jca a(nha param0, mw param1) {
-        return null;
+        RuntimeException var3 = null;
+        Object stackIn_1_0 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        Object stackOut_0_0 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            stackOut_0_0 = null;
+            stackIn_1_0 = stackOut_0_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var3 = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var3;
+            stackOut_2_1 = new StringBuilder().append("cka.NB(");
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
+            if (param0 == null) {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
+            }
+          }
+          L2: {
+            stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param1 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L2;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L2;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
+        }
+        return (jca) (Object) stackIn_1_0;
     }
 
     private final void l(byte param0) {
         jaggl.OpenGL.glMatrixMode(5889);
         jaggl.OpenGL.glLoadMatrixf(((cka) this).field_Bb, 0);
-        if (param0 != -37) {
-            return;
-        }
         jaggl.OpenGL.glMatrixMode(5888);
     }
 
     final void a(ks param0, int param1) {
-        L0: {
-          if (((cka) this).field_A < 0) {
-            break L0;
-          } else {
-            if (param0 == ((cka) this).field_kd[((cka) this).field_A]) {
-              L1: {
-                ((cka) this).field_A = ((cka) this).field_A - 1;
-                ((cka) this).field_kd[((cka) this).field_A] = null;
-                param0.a(4245);
-                if (((cka) this).field_A < 0) {
-                  ((cka) this).field_Qb = null;
-                  break L1;
+        RuntimeException var3 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (((cka) this).field_A < 0) {
+                break L1;
+              } else {
+                if (param0 == ((cka) this).field_kd[((cka) this).field_A]) {
+                  L2: {
+                    int fieldTemp$2 = ((cka) this).field_A;
+                    ((cka) this).field_A = ((cka) this).field_A - 1;
+                    ((cka) this).field_kd[fieldTemp$2] = null;
+                    param0.a(4245);
+                    if (((cka) this).field_A < 0) {
+                      ((cka) this).field_Qb = null;
+                      break L2;
+                    } else {
+                      ((cka) this).field_Qb = ((cka) this).field_kd[((cka) this).field_A];
+                      ((cka) this).field_Qb.c((byte) 111);
+                      break L2;
+                    }
+                  }
+                  L3: {
+                    if (param1 == -1090) {
+                      break L3;
+                    } else {
+                      this.h((byte) -8);
+                      break L3;
+                    }
+                  }
+                  break L0;
                 } else {
-                  ((cka) this).field_Qb = ((cka) this).field_kd[((cka) this).field_A];
-                  ((cka) this).field_Qb.c((byte) 111);
                   break L1;
                 }
               }
-              L2: {
-                if (param1 == -1090) {
-                  break L2;
-                } else {
-                  this.h((byte) -8);
-                  break L2;
-                }
-              }
-              return;
+            }
+            throw new RuntimeException();
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var3 = decompiledCaughtException;
+            stackOut_10_0 = (RuntimeException) var3;
+            stackOut_10_1 = new StringBuilder().append("cka.QC(");
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
+            if (param0 == null) {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L4;
             } else {
-              break L0;
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L4;
             }
           }
+          throw tba.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param1 + 41);
         }
-        throw new RuntimeException();
     }
 
     private final void r(byte param0) {
@@ -1021,9 +1564,6 @@ final class cka extends ha {
             jaggl.OpenGL.glLoadIdentity();
             jaggl.OpenGL.glMatrixMode(5888);
             ((cka) this).field_U = false;
-        }
-        if (param0 != 112) {
-            ((cka) this).field_Gb = true;
         }
     }
 
@@ -1068,7 +1608,62 @@ final class cka extends ha {
     }
 
     final nh a(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
-        return (nh) (Object) new jja((cka) this, param3, param4, param0, param1, param2);
+        RuntimeException var7 = null;
+        jja stackIn_1_0 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        jja stackOut_0_0 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
+        try {
+          L0: {
+            stackOut_0_0 = new jja((cka) this, param3, param4, param0, param1, param2);
+            stackIn_1_0 = stackOut_0_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var7 = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var7;
+            stackOut_2_1 = new StringBuilder().append("cka.C(");
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
+            if (param0 == null) {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+        }
+        return (nh) (Object) stackIn_1_0;
     }
 
     final boolean f() {
@@ -1093,9 +1688,9 @@ final class cka extends ha {
             break L0;
           }
         }
-        if (-2 != (param1 ^ -1)) {
-          if (param1 != -1) {
-            if (-3 != param1) {
+        if (param1 != 1) {
+          if (param1 != 0) {
+            if (param1 != 2) {
               if (3 == param1) {
                 return 260;
               } else {
@@ -1117,7 +1712,7 @@ final class cka extends ha {
     }
 
     final void j(byte param0) {
-        if (!(-17 == (((cka) this).field_y ^ -1))) {
+        if (!(((cka) this).field_y == 16)) {
             this.d((byte) -71);
             this.b(16363, true);
             this.c(3742, true);
@@ -1131,14 +1726,22 @@ final class cka extends ha {
     }
 
     final void a(oba param0, int param1) {
-        jaggl.OpenGL.glLoadMatrixf(param0.e(-45), param1);
+        try {
+            jaggl.OpenGL.glLoadMatrixf(param0.e(-45), param1);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "cka.CC(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     final void K(int[] param0) {
-        param0[3] = ((cka) this).field_kc;
-        param0[1] = ((cka) this).field_f;
-        param0[0] = ((cka) this).field_Ib;
-        param0[2] = ((cka) this).field_B;
+        try {
+            param0[3] = ((cka) this).field_kc;
+            param0[1] = ((cka) this).field_f;
+            param0[0] = ((cka) this).field_Ib;
+            param0[2] = ((cka) this).field_B;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "cka.K(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void s(int param0, int param1, int param2, int param3, int param4) {
@@ -1156,28 +1759,28 @@ final class cka extends ha {
             break L0;
           }
         }
-        if (param2 + param0 < ((cka) this).field_Ib) {
+        if (~(param2 + param0) > ~((cka) this).field_Ib) {
           return;
         } else {
           L1: {
-            if (param0 - param2 > ((cka) this).field_B) {
+            if (~(param0 - param2) < ~((cka) this).field_B) {
               break L1;
             } else {
-              if (((cka) this).field_f > param1 + param2) {
+              if (~((cka) this).field_f < ~(param1 + param2)) {
                 break L1;
               } else {
-                if (((cka) this).field_kc >= -param2 + param1) {
+                if (~((cka) this).field_kc <= ~(-param2 + param1)) {
                   this.i((byte) -112);
                   ((cka) this).a((byte) 94, param4);
-                  jaggl.OpenGL.glColor4ub((byte)(param3 >> -331665008), (byte)(param3 >> 1634555720), (byte)param3, (byte)(param3 >> 394653592));
+                  jaggl.OpenGL.glColor4ub((byte)(param3 >> 16), (byte)(param3 >> 8), (byte)param3, (byte)(param3 >> 24));
                   if (1 < param2) {
                     L2: {
                       var6 = (float)param0 + 0.3499999940395355f;
                       var7 = (float)param1 + 0.3499999940395355f;
                       jaggl.OpenGL.glBegin(2);
                       var8 = 262144 / (6 * param2);
-                      if (-65 > var8) {
-                        if (-513 < var8) {
+                      if (var8 > 64) {
+                        if (var8 > 512) {
                           var8 = 512;
                           break L2;
                         } else {
@@ -1306,15 +1909,7 @@ final class cka extends ha {
           var8[13] = 0.0f;
           break L0;
         }
-        L2: {
-          this.j(param0 ^ 122);
-          if (param0 == 0) {
-            break L2;
-          } else {
-            ((cka) this).field_cd = 0.06654822826385498f;
-            break L2;
-          }
-        }
+        this.j(122);
     }
 
     final void d(int param0, boolean param1) {
@@ -1334,10 +1929,7 @@ final class cka extends ha {
     }
 
     private final void d(byte param0) {
-        if (param0 != -71) {
-            ((cka) this).field_v = true;
-        }
-        if ((((cka) this).field_e ^ -1) != -4) {
+        if (((cka) this).field_e != 3) {
             ((cka) this).field_e = 3;
             this.l(-4709);
             this.b(false);
@@ -1346,9 +1938,6 @@ final class cka extends ha {
     }
 
     private final void a(boolean param0, int param1) {
-        if (param1 != 0) {
-            ((cka) this).field_Zb = 0.5239377021789551f;
-        }
         if (!((!param0 ? 1 : 0) != (((cka) this).field_Nc ? 1 : 0))) {
             ((cka) this).field_Nc = param0 ? true : false;
             this.c((byte) 13);
@@ -1378,44 +1967,198 @@ final class cka extends ha {
           stackIn_4_0 = stackOut_3_0;
           break L0;
         }
-        L2: {
-          jaggl.OpenGL.glDepthMask(stackIn_4_0 != 0);
-          if (param0 == 13) {
-            break L2;
-          } else {
-            ((cka) this).d(-41, 18, -45, -90, 51, -122);
-            break L2;
-          }
-        }
+        jaggl.OpenGL.glDepthMask(stackIn_4_0 != 0);
     }
 
     final void a(sca param0, int param1) {
-        if (((cka) this).field_Rc != param0) {
-            if (((cka) this).field_Q) {
-                jaggl.OpenGL.glBindBufferARB(34963, param0.a(9624));
+        RuntimeException var3 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (((cka) this).field_Rc == param0) {
+                break L1;
+              } else {
+                L2: {
+                  if (!((cka) this).field_Q) {
+                    break L2;
+                  } else {
+                    jaggl.OpenGL.glBindBufferARB(34963, param0.a(9624));
+                    break L2;
+                  }
+                }
+                ((cka) this).field_Rc = param0;
+                break L1;
+              }
             }
-            ((cka) this).field_Rc = param0;
-        }
-        if (param1 != 34963) {
-            za discarded$0 = ((cka) this).a(-127);
+            L3: {
+              if (param1 == 34963) {
+                break L3;
+              } else {
+                za discarded$2 = ((cka) this).a(-127);
+                break L3;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var3 = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var3;
+            stackOut_7_1 = new StringBuilder().append("cka.UA(");
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param0 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L4;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L4;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 41);
         }
     }
 
     private final void k(int param0) {
-        boolean discarded$5 = ((cka) this).field_l.b();
-        if (param0 != 19770) {
-            ((cka) this).a(true, true);
-        }
+        boolean discarded$0 = ((cka) this).field_l.b();
     }
 
     final da a(qla param0, jpa[] param1, boolean param2) {
-        return (da) (Object) new eg((cka) this, param0, param1, param2);
+        RuntimeException var4 = null;
+        eg stackIn_1_0 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        eg stackOut_0_0 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            stackOut_0_0 = new eg((cka) this, param0, param1, param2);
+            stackIn_1_0 = stackOut_0_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var4 = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var4;
+            stackOut_2_1 = new StringBuilder().append("cka.I(");
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
+            if (param0 == null) {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
+            }
+          }
+          L2: {
+            stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param1 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L2;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L2;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param2 + 41);
+        }
+        return (da) (Object) stackIn_1_0;
     }
 
     final void b(oba param0, int param1) {
-        jaggl.OpenGL.glPushMatrix();
-        jaggl.OpenGL.glMultMatrixf(param0.e(96), 0);
-        int var3 = -49 / ((52 - param1) / 47);
+        try {
+            jaggl.OpenGL.glPushMatrix();
+            jaggl.OpenGL.glMultMatrixf(param0.e(96), 0);
+            int var3_int = -49 / ((52 - param1) / 47);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "cka.SC(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     final synchronized void a(byte param0, long param1) {
@@ -1444,14 +2187,6 @@ final class cka extends ha {
           jaggl.OpenGL.glDisable(2912);
           break L0;
         }
-        L2: {
-          if (param0 == -87) {
-            break L2;
-          } else {
-            ((cka) this).DA(90, 39, -12, 39);
-            break L2;
-          }
-        }
     }
 
     private final void v(int param0) {
@@ -1478,10 +2213,10 @@ final class cka extends ha {
             jaggl.OpenGL.glColorMask(true, true, true, true);
             ((cka) this).field_q = true;
             this.b(16363, true);
-            ((cka) this).a(param0 ^ -3082, true);
+            ((cka) this).a(95, true);
             this.c(3742, true);
             this.a(true, 0);
-            this.s(param0 + 6841);
+            this.s(3682);
             ((cka) this).field_l.setSwapInterval(0);
             jaggl.OpenGL.glShadeModel(7425);
             jaggl.OpenGL.glClearDepth(1.0f);
@@ -1496,20 +2231,16 @@ final class cka extends ha {
             var6 = new float[]{0.0f, 0.0f, 0.0f, 1.0f};
             var3 = 0;
             L1: while (true) {
-              if ((var3 ^ -1) <= -9) {
+              if (var3 >= 8) {
                 jaggl.OpenGL.glEnable(16384);
                 jaggl.OpenGL.glEnable(16385);
                 jaggl.OpenGL.glFogf(2914, 0.949999988079071f);
-                if (param0 == -3159) {
-                  jaggl.OpenGL.glFogi(2917, 9729);
-                  jaggl.OpenGL.glHint(3156, 4353);
-                  ((cka) this).field_gc = -1;
-                  ((cka) this).field_ac = -1;
-                  ((cka) this).la();
-                  return;
-                } else {
-                  return;
-                }
+                jaggl.OpenGL.glFogi(2917, 9729);
+                jaggl.OpenGL.glHint(3156, 4353);
+                ((cka) this).field_gc = -1;
+                ((cka) this).field_ac = -1;
+                ((cka) this).la();
+                return;
               } else {
                 var4 = 16384 + var3;
                 jaggl.OpenGL.glLightfv(var4, 4608, var6, 0);
@@ -1540,11 +2271,11 @@ final class cka extends ha {
         this.i((byte) -114);
         ((cka) this).a((byte) 29, param9);
         jaggl.OpenGL.glBegin(4);
-        jaggl.OpenGL.glColor4ub((byte)(param6 >> -427751760), (byte)(param6 >> -781737496), (byte)param6, (byte)(param6 >> -1303777224));
+        jaggl.OpenGL.glColor4ub((byte)(param6 >> 16), (byte)(param6 >> 8), (byte)param6, (byte)(param6 >> 24));
         jaggl.OpenGL.glVertex2f((float)param0 + 0.3499999940395355f, 0.3499999940395355f + (float)param1);
-        jaggl.OpenGL.glColor4ub((byte)(param7 >> -553032784), (byte)(param7 >> 1545725384), (byte)param7, (byte)(param7 >> 2008543416));
+        jaggl.OpenGL.glColor4ub((byte)(param7 >> 16), (byte)(param7 >> 8), (byte)param7, (byte)(param7 >> 24));
         jaggl.OpenGL.glVertex2f(0.3499999940395355f + (float)param2, 0.3499999940395355f + (float)param3);
-        jaggl.OpenGL.glColor4ub((byte)(param8 >> -51364688), (byte)(param8 >> 323599560), (byte)param8, (byte)(param8 >> 1178547032));
+        jaggl.OpenGL.glColor4ub((byte)(param8 >> 16), (byte)(param8 >> 8), (byte)param8, (byte)(param8 >> 24));
         jaggl.OpenGL.glVertex2f((float)param4 + 0.3499999940395355f, (float)param5 + 0.3499999940395355f);
         jaggl.OpenGL.glEnd();
     }
@@ -1554,7 +2285,7 @@ final class cka extends ha {
     }
 
     final void c(boolean param0) {
-        if (-9 != (((cka) this).field_y ^ -1)) {
+        if (((cka) this).field_y != 8) {
             this.a((byte) -10);
             this.b(16363, true);
             this.c(3742, true);
@@ -1583,9 +2314,6 @@ final class cka extends ha {
         int var5 = TombRacer.field_G ? 1 : 0;
         char[] var6 = new char[param1];
         char[] var3 = var6;
-        if (param2 > -13) {
-            return null;
-        }
         for (var4 = 0; param1 > var4; var4++) {
             var6[var4] = param0;
         }
@@ -1650,7 +2378,7 @@ final class cka extends ha {
           if (((cka) this).field_ld != param1) {
             L1: {
               if (1 != param1) {
-                if ((param1 ^ -1) != -3) {
+                if (param1 != 2) {
                   if (128 != param1) {
                     var4 = 0;
                     var5 = 0;
@@ -1785,17 +2513,17 @@ final class cka extends ha {
               }
             }
             L10: {
-              if (((cka) this).field_Jb == var5) {
+              if (~((cka) this).field_Jb == ~var5) {
                 break L10;
               } else {
                 L11: {
-                  if ((var5 ^ -1) != -2) {
-                    if (var5 == -3) {
+                  if (var5 != 1) {
+                    if (var5 == 2) {
                       jaggl.OpenGL.glEnable(3042);
                       jaggl.OpenGL.glBlendFunc(1, 1);
                       break L11;
                     } else {
-                      if (-4 == var5) {
+                      if (var5 == 3) {
                         jaggl.OpenGL.glEnable(3042);
                         jaggl.OpenGL.glBlendFunc(774, 1);
                         break L11;
@@ -1835,6 +2563,7 @@ final class cka extends ha {
         super(param1);
         String var13_ref = null;
         Throwable var4 = null;
+        RuntimeException var4_ref = null;
         int var4_int = 0;
         Throwable var5 = null;
         int var5_int = 0;
@@ -1843,7 +2572,8 @@ final class cka extends ha {
         Object[] var8 = null;
         String[] var8_array = null;
         int var9 = 0;
-        String var10 = null;
+        Object var10 = null;
+        String var10_ref = null;
         Exception var11 = null;
         Object var13 = null;
         int[] var17 = null;
@@ -1853,876 +2583,539 @@ final class cka extends ha {
         CharSequence var21 = null;
         CharSequence var22 = null;
         CharSequence var23 = null;
-        Object stackIn_9_0 = null;
         Object stackIn_10_0 = null;
         Object stackIn_11_0 = null;
-        int stackIn_11_1 = 0;
-        Object stackIn_49_0 = null;
+        Object stackIn_12_0 = null;
+        int stackIn_12_1 = 0;
         Object stackIn_50_0 = null;
         Object stackIn_51_0 = null;
-        int stackIn_51_1 = 0;
-        Object stackOut_8_0 = null;
+        Object stackIn_52_0 = null;
+        int stackIn_52_1 = 0;
+        RuntimeException stackIn_64_0 = null;
+        StringBuilder stackIn_64_1 = null;
+        RuntimeException stackIn_65_0 = null;
+        StringBuilder stackIn_65_1 = null;
+        RuntimeException stackIn_66_0 = null;
+        StringBuilder stackIn_66_1 = null;
+        String stackIn_66_2 = null;
+        RuntimeException stackIn_67_0 = null;
+        StringBuilder stackIn_67_1 = null;
+        RuntimeException stackIn_68_0 = null;
+        StringBuilder stackIn_68_1 = null;
+        RuntimeException stackIn_69_0 = null;
+        StringBuilder stackIn_69_1 = null;
+        String stackIn_69_2 = null;
+        int decompiledRegionSelector0 = 0;
+        Throwable decompiledCaughtException = null;
         Object stackOut_9_0 = null;
-        int stackOut_9_1 = 0;
+        Object stackOut_11_0 = null;
+        int stackOut_11_1 = 0;
         Object stackOut_10_0 = null;
         int stackOut_10_1 = 0;
-        Object stackOut_48_0 = null;
         Object stackOut_49_0 = null;
-        int stackOut_49_1 = 0;
+        Object stackOut_51_0 = null;
+        int stackOut_51_1 = 0;
         Object stackOut_50_0 = null;
         int stackOut_50_1 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
+        RuntimeException stackOut_63_0 = null;
+        StringBuilder stackOut_63_1 = null;
+        RuntimeException stackOut_65_0 = null;
+        StringBuilder stackOut_65_1 = null;
+        String stackOut_65_2 = null;
+        RuntimeException stackOut_64_0 = null;
+        StringBuilder stackOut_64_1 = null;
+        String stackOut_64_2 = null;
+        RuntimeException stackOut_66_0 = null;
+        StringBuilder stackOut_66_1 = null;
+        RuntimeException stackOut_68_0 = null;
+        StringBuilder stackOut_68_1 = null;
+        String stackOut_68_2 = null;
+        RuntimeException stackOut_67_0 = null;
+        StringBuilder stackOut_67_1 = null;
+        String stackOut_67_2 = null;
         var13_ref = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var18 = null;
-                    var19 = null;
-                    var20 = null;
-                    ((cka) this).field_p = new Hashtable();
-                    ((cka) this).field_dc = 128;
-                    ((cka) this).field_Ec = new doa();
-                    ((cka) this).field_fc = new oba();
-                    ((cka) this).field_mc = new oba();
-                    ((cka) this).field_Ob = false;
-                    ((cka) this).field_qb = new vna();
-                    ((cka) this).field_A = -1;
-                    ((cka) this).field_ub = new ks[4];
-                    ((cka) this).field_Zc = -1;
-                    ((cka) this).field_M = new ks[4];
-                    ((cka) this).field_x = -1;
-                    ((cka) this).field_kd = new ks[4];
-                    ((cka) this).field_F = new vj();
-                    ((cka) this).field_Wc = new ji(16);
-                    ((cka) this).field_Lc = new vna();
-                    ((cka) this).field_pd = new vna();
-                    ((cka) this).field_K = new vna();
-                    ((cka) this).field_cc = new vna();
-                    ((cka) this).field_Vb = new vna();
-                    ((cka) this).field_Fc = new vna();
-                    ((cka) this).field_rb = new vna();
-                    ((cka) this).field_jd = new oba();
-                    ((cka) this).field_j = new oba();
-                    ((cka) this).field_Tc = new oba();
-                    ((cka) this).field_Gc = 50;
-                    ((cka) this).field_db = 0;
-                    ((cka) this).field_bc = 1.0f;
-                    ((cka) this).field_wc = 1.0f;
-                    ((cka) this).field_g = 0;
-                    ((cka) this).field_oc = 1.0f;
-                    ((cka) this).field_m = 3584.0f;
-                    ((cka) this).field_ec = 0.0f;
-                    ((cka) this).field_Xc = 0;
-                    ((cka) this).field_Bb = new float[16];
-                    ((cka) this).field_Kb = -1;
-                    ((cka) this).field_vb = -1;
-                    ((cka) this).field_yc = 1.0f;
-                    ((cka) this).field_Ab = new float[4];
-                    ((cka) this).field_xc = -1;
-                    ((cka) this).field_Jc = true;
-                    ((cka) this).field_B = 0;
-                    ((cka) this).field_Sb = -1.0f;
-                    ((cka) this).field_nb = 0;
-                    ((cka) this).field_Wb = new float[4];
-                    ((cka) this).field_Ib = 0;
-                    ((cka) this).field_uc = 8448;
-                    ((cka) this).field_cd = -1.0f;
-                    ((cka) this).field_ib = new float[4];
-                    ((cka) this).field_ac = -1;
-                    ((cka) this).field_Dc = new ob[tj.field_a];
-                    ((cka) this).field_Pc = 0;
-                    ((cka) this).field_kb = 512;
-                    ((cka) this).field_hb = false;
-                    ((cka) this).field_ob = 3584;
-                    ((cka) this).field_Fb = 1.0f;
-                    ((cka) this).field_f = 0;
-                    ((cka) this).field_Cb = -1.0f;
-                    ((cka) this).field_gd = 8448;
-                    ((cka) this).field_W = 512;
-                    ((cka) this).field_o = 0;
-                    ((cka) this).field_u = 3584.0f;
-                    ((cka) this).field_Qc = -1.0f;
-                    ((cka) this).field_kc = 0;
-                    ((cka) this).field_gc = -1;
-                    ((cka) this).field_Pb = new float[4];
-                    ((cka) this).field_cb = new qf(8192);
-                    ((cka) this).field_gb = param2;
-                    ((cka) this).field_ad = param0;
-                    if (in.a("jaclib", 480)) {
-                        statePc = 2;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    throw new RuntimeException("");
-                }
-                case 2: {
-                    if (in.a("jaggl", 480)) {
-                        statePc = 4;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 3: {
-                    throw new RuntimeException("");
-                }
-                case 4: {
-                    try {
-                        ((cka) this).field_l = new jaggl.OpenGL();
-                        ((cka) this).field_dd = ((cka) this).field_l.init(param0, 8, 8, 8, 24, 0, ((cka) this).field_gb);
-                        ((cka) this).field_n = ((cka) this).field_l.init(param0, 8, 8, 8, 24, 0, ((cka) this).field_gb);
-                        if (((cka) this).field_dd != 0L) {
-                            statePc = 6;
-                        } else {
-                            statePc = 5;
+        var18 = null;
+        var19 = null;
+        var20 = null;
+        ((cka) this).field_p = new Hashtable();
+        ((cka) this).field_dc = 128;
+        ((cka) this).field_Ec = new doa();
+        ((cka) this).field_fc = new oba();
+        ((cka) this).field_mc = new oba();
+        ((cka) this).field_Ob = false;
+        ((cka) this).field_qb = new vna();
+        ((cka) this).field_A = -1;
+        ((cka) this).field_ub = new ks[4];
+        ((cka) this).field_Zc = -1;
+        ((cka) this).field_M = new ks[4];
+        ((cka) this).field_x = -1;
+        ((cka) this).field_kd = new ks[4];
+        ((cka) this).field_F = new vj();
+        ((cka) this).field_Wc = new ji(16);
+        ((cka) this).field_Lc = new vna();
+        ((cka) this).field_pd = new vna();
+        ((cka) this).field_K = new vna();
+        ((cka) this).field_cc = new vna();
+        ((cka) this).field_Vb = new vna();
+        ((cka) this).field_Fc = new vna();
+        ((cka) this).field_rb = new vna();
+        ((cka) this).field_jd = new oba();
+        ((cka) this).field_j = new oba();
+        ((cka) this).field_Tc = new oba();
+        ((cka) this).field_Gc = 50;
+        ((cka) this).field_db = 0;
+        ((cka) this).field_bc = 1.0f;
+        ((cka) this).field_wc = 1.0f;
+        ((cka) this).field_g = 0;
+        ((cka) this).field_oc = 1.0f;
+        ((cka) this).field_m = 3584.0f;
+        ((cka) this).field_ec = 0.0f;
+        ((cka) this).field_Xc = 0;
+        ((cka) this).field_Bb = new float[16];
+        ((cka) this).field_Kb = -1;
+        ((cka) this).field_vb = -1;
+        ((cka) this).field_yc = 1.0f;
+        ((cka) this).field_Ab = new float[4];
+        ((cka) this).field_xc = -1;
+        ((cka) this).field_Jc = true;
+        ((cka) this).field_B = 0;
+        ((cka) this).field_Sb = -1.0f;
+        ((cka) this).field_nb = 0;
+        ((cka) this).field_Wb = new float[4];
+        ((cka) this).field_Ib = 0;
+        ((cka) this).field_uc = 8448;
+        ((cka) this).field_cd = -1.0f;
+        ((cka) this).field_ib = new float[4];
+        ((cka) this).field_ac = -1;
+        ((cka) this).field_Dc = new ob[tj.field_a];
+        ((cka) this).field_Pc = 0;
+        ((cka) this).field_kb = 512;
+        ((cka) this).field_hb = false;
+        ((cka) this).field_ob = 3584;
+        ((cka) this).field_Fb = 1.0f;
+        ((cka) this).field_f = 0;
+        ((cka) this).field_Cb = -1.0f;
+        ((cka) this).field_gd = 8448;
+        ((cka) this).field_W = 512;
+        ((cka) this).field_o = 0;
+        ((cka) this).field_u = 3584.0f;
+        ((cka) this).field_Qc = -1.0f;
+        ((cka) this).field_kc = 0;
+        ((cka) this).field_gc = -1;
+        ((cka) this).field_Pb = new float[4];
+        ((cka) this).field_cb = new qf(8192);
+        try {
+          L0: {
+            ((cka) this).field_gb = param2;
+            ((cka) this).field_ad = param0;
+            if (in.a("jaclib", 480)) {
+              if (in.a("jaggl", 480)) {
+                try {
+                  L1: {
+                    ((cka) this).field_l = new jaggl.OpenGL();
+                    long dupTemp$1 = ((cka) this).field_l.init(param0, 8, 8, 8, 24, 0, ((cka) this).field_gb);
+                    ((cka) this).field_dd = dupTemp$1;
+                    ((cka) this).field_n = dupTemp$1;
+                    if (((cka) this).field_dd != 0L) {
+                      this.f((byte) -68);
+                      var4_int = this.k((byte) 108);
+                      if (var4_int == 0) {
+                        L2: {
+                          stackOut_9_0 = this;
+                          stackIn_11_0 = stackOut_9_0;
+                          stackIn_10_0 = stackOut_9_0;
+                          if (!((cka) this).field_O) {
+                            stackOut_11_0 = this;
+                            stackOut_11_1 = 5121;
+                            stackIn_12_0 = stackOut_11_0;
+                            stackIn_12_1 = stackOut_11_1;
+                            break L2;
+                          } else {
+                            stackOut_10_0 = this;
+                            stackOut_10_1 = 33639;
+                            stackIn_12_0 = stackOut_10_0;
+                            stackIn_12_1 = stackOut_10_1;
+                            break L2;
+                          }
                         }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 61;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        throw new RuntimeException("");
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 61;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        this.f((byte) -68);
-                        var4_int = this.k((byte) 108);
-                        if (var4_int == 0) {
-                            statePc = 8;
-                        } else {
-                            statePc = 7;
+                        L3: {
+                          ((cka) this).field_P = stackIn_12_1;
+                          if (-1 == ((cka) this).field_h.indexOf("radeon")) {
+                            break L3;
+                          } else {
+                            var5_int = 0;
+                            var6 = 0;
+                            var7 = 0;
+                            var8_array = rga.a(32287, ((cka) this).field_h.replace('/', ' '), ' ');
+                            var9 = 0;
+                            L4: while (true) {
+                              L5: {
+                                if (var9 >= var8_array.length) {
+                                  break L5;
+                                } else {
+                                  var13_ref = var8_array[var9];
+                                  var10_ref = var13_ref;
+                                  var10_ref = var13_ref;
+                                  try {
+                                    L6: {
+                                      L7: {
+                                        if (var13_ref.length() <= 0) {
+                                          break L7;
+                                        } else {
+                                          L8: {
+                                            if (var13_ref.charAt(0) != 120) {
+                                              break L8;
+                                            } else {
+                                              if (var13_ref.length() < 3) {
+                                                break L8;
+                                              } else {
+                                                var21 = (CharSequence) (Object) var13_ref.substring(1, 3);
+                                                if (!sqa.a(var21, -3)) {
+                                                  break L8;
+                                                } else {
+                                                  var10_ref = var13_ref.substring(1);
+                                                  var7 = 1;
+                                                  break L8;
+                                                }
+                                              }
+                                            }
+                                          }
+                                          if (var10_ref.equals((Object) (Object) "hd")) {
+                                            var6 = 1;
+                                            break L7;
+                                          } else {
+                                            L9: {
+                                              if (!var10_ref.startsWith("hd")) {
+                                                break L9;
+                                              } else {
+                                                var6 = 1;
+                                                var10_ref = var10_ref.substring(2);
+                                                break L9;
+                                              }
+                                            }
+                                            if (var10_ref.length() < 4) {
+                                              break L7;
+                                            } else {
+                                              var22 = (CharSequence) (Object) var10_ref.substring(0, 4);
+                                              if (!sqa.a(var22, -3)) {
+                                                break L7;
+                                              } else {
+                                                var23 = (CharSequence) (Object) var10_ref.substring(0, 4);
+                                                var5_int = jb.a(var23, (byte) 70);
+                                                decompiledRegionSelector0 = 1;
+                                                break L6;
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                      decompiledRegionSelector0 = 0;
+                                      break L6;
+                                    }
+                                  } catch (java.lang.Exception decompiledCaughtParameter0) {
+                                    decompiledCaughtException = decompiledCaughtParameter0;
+                                    L10: {
+                                      var11 = (Exception) (Object) decompiledCaughtException;
+                                      decompiledRegionSelector0 = 0;
+                                      break L10;
+                                    }
+                                  }
+                                  if (decompiledRegionSelector0 == 0) {
+                                    var9++;
+                                    continue L4;
+                                  } else {
+                                    break L5;
+                                  }
+                                }
+                              }
+                              L11: {
+                                L12: {
+                                  if (var6 == 0) {
+                                    break L12;
+                                  } else {
+                                    if (var5_int >= 4000) {
+                                      break L11;
+                                    } else {
+                                      break L12;
+                                    }
+                                  }
+                                }
+                                ((cka) this).field_z = false;
+                                break L11;
+                              }
+                              L13: {
+                                if (var7 != 0) {
+                                  break L13;
+                                } else {
+                                  if (var6 != 0) {
+                                    break L13;
+                                  } else {
+                                    L14: {
+                                      if (var5_int < 7000) {
+                                        break L14;
+                                      } else {
+                                        if (var5_int > 7999) {
+                                          break L14;
+                                        } else {
+                                          ((cka) this).field_Q = false;
+                                          break L14;
+                                        }
+                                      }
+                                    }
+                                    if (7000 > var5_int) {
+                                      break L13;
+                                    } else {
+                                      if (var5_int > 9250) {
+                                        break L13;
+                                      } else {
+                                        ((cka) this).field_V = false;
+                                        break L13;
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                              ((cka) this).field_Cc = ((cka) this).field_Cc & ((cka) this).field_l.a("GL_ARB_half_float_pixel");
+                              ((cka) this).field_bd = ((cka) this).field_Q;
+                              break L3;
+                            }
+                          }
                         }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 61;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        throw new RuntimeException("");
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 61;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        stackOut_8_0 = this;
-                        stackIn_10_0 = stackOut_8_0;
-                        stackIn_9_0 = stackOut_8_0;
-                        if (!((cka) this).field_O) {
-                            statePc = 10;
-                        } else {
-                            statePc = 9;
+                        L15: {
+                          if (((cka) this).field_k.indexOf("intel") == -1) {
+                            break L15;
+                          } else {
+                            ((cka) this).field_id = false;
+                            break L15;
+                          }
                         }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 61;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    try {
-                        stackOut_9_0 = this;
-                        stackOut_9_1 = 33639;
-                        stackIn_11_0 = stackOut_9_0;
-                        stackIn_11_1 = stackOut_9_1;
-                        statePc = 11;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 61;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    try {
-                        stackOut_10_0 = this;
-                        stackOut_10_1 = 5121;
-                        stackIn_11_0 = stackOut_10_0;
-                        stackIn_11_1 = stackOut_10_1;
-                        statePc = 11;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 61;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    try {
-                        ((cka) this).field_P = stackIn_11_1;
-                        if (-1 == ((cka) this).field_h.indexOf("radeon")) {
-                            statePc = 46;
-                        } else {
-                            statePc = 12;
+                        L16: {
+                          stackOut_49_0 = this;
+                          stackIn_51_0 = stackOut_49_0;
+                          stackIn_50_0 = stackOut_49_0;
+                          if (((cka) this).field_k.equals((Object) (Object) "s3 graphics")) {
+                            stackOut_51_0 = this;
+                            stackOut_51_1 = 0;
+                            stackIn_52_0 = stackOut_51_0;
+                            stackIn_52_1 = stackOut_51_1;
+                            break L16;
+                          } else {
+                            stackOut_50_0 = this;
+                            stackOut_50_1 = 1;
+                            stackIn_52_0 = stackOut_50_0;
+                            stackIn_52_1 = stackOut_50_1;
+                            break L16;
+                          }
                         }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_11) {
-                        caughtException = stateCaught_11;
-                        statePc = 61;
-                        continue stateLoop;
-                    }
-                }
-                case 12: {
-                    try {
-                        var5_int = 0;
-                        var6 = 0;
-                        var7 = 0;
-                        var8_array = rga.a(32287, ((cka) this).field_h.replace('/', ' '), ' ');
-                        var9 = 0;
-                        statePc = 13;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_12) {
-                        caughtException = stateCaught_12;
-                        statePc = 61;
-                        continue stateLoop;
-                    }
-                }
-                case 13: {
-                    try {
-                        if (var9 >= var8_array.length) {
-                            statePc = 34;
-                        } else {
-                            statePc = 14;
+                        L17: {
+                          ((cka) this).field_nc = stackIn_52_1 != 0;
+                          if (((cka) this).field_Q) {
+                            try {
+                              L18: {
+                                var17 = new int[1];
+                                jaggl.OpenGL.glGenBuffersARB(1, var17, 0);
+                                break L18;
+                              }
+                            } catch (java.lang.Throwable decompiledCaughtParameter1) {
+                              decompiledCaughtException = decompiledCaughtParameter1;
+                              var5 = decompiledCaughtException;
+                              throw new RuntimeException("");
+                            }
+                            break L17;
+                          } else {
+                            break L17;
+                          }
                         }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_13) {
-                        caughtException = stateCaught_13;
-                        statePc = 61;
-                        continue stateLoop;
-                    }
-                }
-                case 14: {
-                    try {
-                        var13_ref = var8_array[var9];
-                        var10 = var13_ref;
-                        var10 = var13_ref;
-                        statePc = 15;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_14) {
-                        caughtException = stateCaught_14;
-                        statePc = 61;
-                        continue stateLoop;
-                    }
-                }
-                case 15: {
-                    try {
-                        if (var13_ref.length() <= 0) {
-                            statePc = 33;
-                        } else {
-                            statePc = 16;
+                        L19: {
+                          ija.a(true, (byte) 99, false);
+                          ((cka) this).field_Ob = true;
+                          ((cka) this).field_hd = new hsa((cka) this, ((cka) this).field_c);
+                          this.o((byte) 124);
+                          ((cka) this).field_zc = new mq((cka) this);
+                          ((cka) this).field_L = new cw((cka) this);
+                          if (!((cka) this).field_L.b((byte) -43)) {
+                            break L19;
+                          } else {
+                            ((cka) this).field_T = new uv((cka) this);
+                            if (((cka) this).field_T.e(34842)) {
+                              break L19;
+                            } else {
+                              ((cka) this).field_T.d((byte) -60);
+                              ((cka) this).field_T = null;
+                              break L19;
+                            }
+                          }
                         }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_15) {
-                        caughtException = stateCaught_15;
-                        statePc = (stateCaught_15 instanceof Exception ? 32 : 61);
-                        continue stateLoop;
-                    }
-                }
-                case 16: {
-                    try {
-                        statePc = 18;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_16) {
-                        caughtException = stateCaught_16;
-                        statePc = (stateCaught_16 instanceof Exception ? 32 : 61);
-                        continue stateLoop;
-                    }
-                }
-                case 18: {
-                    try {
-                        if (var13_ref.charAt(0) != 120) {
-                            statePc = 22;
-                        } else {
-                            statePc = 19;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_18) {
-                        caughtException = stateCaught_18;
-                        statePc = (stateCaught_18 instanceof Exception ? 32 : 61);
-                        continue stateLoop;
-                    }
-                }
-                case 19: {
-                    try {
-                        if (-4 < (var13_ref.length() ^ -1)) {
-                            statePc = 22;
-                        } else {
-                            statePc = 20;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_19) {
-                        caughtException = stateCaught_19;
-                        statePc = (stateCaught_19 instanceof Exception ? 32 : 61);
-                        continue stateLoop;
-                    }
-                }
-                case 20: {
-                    try {
-                        var21 = (CharSequence) (Object) var13_ref.substring(1, 3);
-                        if (!sqa.a(var21, -3)) {
-                            statePc = 22;
-                        } else {
-                            statePc = 21;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_20) {
-                        caughtException = stateCaught_20;
-                        statePc = (stateCaught_20 instanceof Exception ? 32 : 61);
-                        continue stateLoop;
-                    }
-                }
-                case 21: {
-                    try {
-                        var10 = var13_ref.substring(1);
-                        var7 = 1;
-                        statePc = 22;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_21) {
-                        caughtException = stateCaught_21;
-                        statePc = (stateCaught_21 instanceof Exception ? 32 : 61);
-                        continue stateLoop;
-                    }
-                }
-                case 22: {
-                    try {
-                        if (var10.equals((Object) (Object) "hd")) {
-                            statePc = 24;
-                        } else {
-                            statePc = 23;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_22) {
-                        caughtException = stateCaught_22;
-                        statePc = (stateCaught_22 instanceof Exception ? 32 : 61);
-                        continue stateLoop;
-                    }
-                }
-                case 23: {
-                    try {
-                        statePc = 26;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_23) {
-                        caughtException = stateCaught_23;
-                        statePc = (stateCaught_23 instanceof Exception ? 32 : 61);
-                        continue stateLoop;
-                    }
-                }
-                case 24: {
-                    try {
-                        var6 = 1;
-                        statePc = 25;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_24) {
-                        caughtException = stateCaught_24;
-                        statePc = (stateCaught_24 instanceof Exception ? 32 : 61);
-                        continue stateLoop;
-                    }
-                }
-                case 25: {
-                    try {
-                        statePc = 33;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_25) {
-                        caughtException = stateCaught_25;
-                        statePc = 61;
-                        continue stateLoop;
-                    }
-                }
-                case 26: {
-                    try {
-                        if (!var10.startsWith("hd")) {
-                            statePc = 28;
-                        } else {
-                            statePc = 27;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_26) {
-                        caughtException = stateCaught_26;
-                        statePc = (stateCaught_26 instanceof Exception ? 32 : 61);
-                        continue stateLoop;
-                    }
-                }
-                case 27: {
-                    try {
-                        var6 = 1;
-                        var10 = var10.substring(2);
-                        statePc = 28;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_27) {
-                        caughtException = stateCaught_27;
-                        statePc = (stateCaught_27 instanceof Exception ? 32 : 61);
-                        continue stateLoop;
-                    }
-                }
-                case 28: {
-                    try {
-                        if (-5 < (var10.length() ^ -1)) {
-                            statePc = 33;
-                        } else {
-                            statePc = 29;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_28) {
-                        caughtException = stateCaught_28;
-                        statePc = (stateCaught_28 instanceof Exception ? 32 : 61);
-                        continue stateLoop;
-                    }
-                }
-                case 29: {
-                    try {
-                        var22 = (CharSequence) (Object) var10.substring(0, 4);
-                        if (!sqa.a(var22, -3)) {
-                            statePc = 33;
-                        } else {
-                            statePc = 30;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_29) {
-                        caughtException = stateCaught_29;
-                        statePc = (stateCaught_29 instanceof Exception ? 32 : 61);
-                        continue stateLoop;
-                    }
-                }
-                case 30: {
-                    try {
-                        var23 = (CharSequence) (Object) var10.substring(0, 4);
-                        var5_int = jb.a(var23, (byte) 70);
-                        statePc = 31;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_30) {
-                        caughtException = stateCaught_30;
-                        statePc = (stateCaught_30 instanceof Exception ? 32 : 61);
-                        continue stateLoop;
-                    }
-                }
-                case 31: {
-                    try {
-                        statePc = 34;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_31) {
-                        caughtException = stateCaught_31;
-                        statePc = 61;
-                        continue stateLoop;
-                    }
-                }
-                case 32: {
-                    try {
-                        var11 = (Exception) (Object) caughtException;
-                        statePc = 33;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_32) {
-                        caughtException = stateCaught_32;
-                        statePc = 61;
-                        continue stateLoop;
-                    }
-                }
-                case 33: {
-                    try {
-                        var9++;
-                        statePc = 13;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_33) {
-                        caughtException = stateCaught_33;
-                        statePc = 61;
-                        continue stateLoop;
-                    }
-                }
-                case 34: {
-                    try {
-                        if (var6 == 0) {
-                            statePc = 36;
-                        } else {
-                            statePc = 35;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_34) {
-                        caughtException = stateCaught_34;
-                        statePc = 61;
-                        continue stateLoop;
-                    }
-                }
-                case 35: {
-                    try {
-                        if (var5_int >= 4000) {
-                            statePc = 37;
-                        } else {
-                            statePc = 36;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_35) {
-                        caughtException = stateCaught_35;
-                        statePc = 61;
-                        continue stateLoop;
-                    }
-                }
-                case 36: {
-                    try {
-                        ((cka) this).field_z = false;
-                        statePc = 37;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_36) {
-                        caughtException = stateCaught_36;
-                        statePc = 61;
-                        continue stateLoop;
-                    }
-                }
-                case 37: {
-                    try {
-                        if (var7 != 0) {
-                            statePc = 45;
-                        } else {
-                            statePc = 38;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_37) {
-                        caughtException = stateCaught_37;
-                        statePc = 61;
-                        continue stateLoop;
-                    }
-                }
-                case 38: {
-                    try {
-                        if (var6 != 0) {
-                            statePc = 45;
-                        } else {
-                            statePc = 39;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_38) {
-                        caughtException = stateCaught_38;
-                        statePc = 61;
-                        continue stateLoop;
-                    }
-                }
-                case 39: {
-                    try {
-                        if (var5_int > -7001) {
-                            statePc = 42;
-                        } else {
-                            statePc = 40;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_39) {
-                        caughtException = stateCaught_39;
-                        statePc = 61;
-                        continue stateLoop;
-                    }
-                }
-                case 40: {
-                    try {
-                        if (-8000 < var5_int) {
-                            statePc = 42;
-                        } else {
-                            statePc = 41;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_40) {
-                        caughtException = stateCaught_40;
-                        statePc = 61;
-                        continue stateLoop;
-                    }
-                }
-                case 41: {
-                    try {
-                        ((cka) this).field_Q = false;
-                        statePc = 42;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_41) {
-                        caughtException = stateCaught_41;
-                        statePc = 61;
-                        continue stateLoop;
-                    }
-                }
-                case 42: {
-                    try {
-                        if (7000 > var5_int) {
-                            statePc = 45;
-                        } else {
-                            statePc = 43;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_42) {
-                        caughtException = stateCaught_42;
-                        statePc = 61;
-                        continue stateLoop;
-                    }
-                }
-                case 43: {
-                    try {
-                        if ((var5_int ^ -1) < -9251) {
-                            statePc = 45;
-                        } else {
-                            statePc = 44;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_43) {
-                        caughtException = stateCaught_43;
-                        statePc = 61;
-                        continue stateLoop;
-                    }
-                }
-                case 44: {
-                    try {
-                        ((cka) this).field_V = false;
-                        statePc = 45;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_44) {
-                        caughtException = stateCaught_44;
-                        statePc = 61;
-                        continue stateLoop;
-                    }
-                }
-                case 45: {
-                    try {
-                        ((cka) this).field_Cc = ((cka) this).field_Cc & ((cka) this).field_l.a("GL_ARB_half_float_pixel");
-                        ((cka) this).field_bd = ((cka) this).field_Q;
-                        statePc = 46;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_45) {
-                        caughtException = stateCaught_45;
-                        statePc = 61;
-                        continue stateLoop;
-                    }
-                }
-                case 46: {
-                    try {
-                        if ((((cka) this).field_k.indexOf("intel") ^ -1) == 0) {
-                            statePc = 48;
-                        } else {
-                            statePc = 47;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_46) {
-                        caughtException = stateCaught_46;
-                        statePc = 61;
-                        continue stateLoop;
-                    }
-                }
-                case 47: {
-                    try {
-                        ((cka) this).field_id = false;
-                        statePc = 48;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_47) {
-                        caughtException = stateCaught_47;
-                        statePc = 61;
-                        continue stateLoop;
-                    }
-                }
-                case 48: {
-                    try {
-                        stackOut_48_0 = this;
-                        stackIn_50_0 = stackOut_48_0;
-                        stackIn_49_0 = stackOut_48_0;
-                        if (((cka) this).field_k.equals((Object) (Object) "s3 graphics")) {
-                            statePc = 50;
-                        } else {
-                            statePc = 49;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_48) {
-                        caughtException = stateCaught_48;
-                        statePc = 61;
-                        continue stateLoop;
-                    }
-                }
-                case 49: {
-                    try {
-                        stackOut_49_0 = this;
-                        stackOut_49_1 = 1;
-                        stackIn_51_0 = stackOut_49_0;
-                        stackIn_51_1 = stackOut_49_1;
-                        statePc = 51;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_49) {
-                        caughtException = stateCaught_49;
-                        statePc = 61;
-                        continue stateLoop;
-                    }
-                }
-                case 50: {
-                    try {
-                        stackOut_50_0 = this;
-                        stackOut_50_1 = 0;
-                        stackIn_51_0 = stackOut_50_0;
-                        stackIn_51_1 = stackOut_50_1;
-                        statePc = 51;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_50) {
-                        caughtException = stateCaught_50;
-                        statePc = 61;
-                        continue stateLoop;
-                    }
-                }
-                case 51: {
-                    try {
-                        ((cka) this).field_nc = stackIn_51_1 != 0;
-                        if (((cka) this).field_Q) {
-                            statePc = 53;
-                        } else {
-                            statePc = 52;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_51) {
-                        caughtException = stateCaught_51;
-                        statePc = 61;
-                        continue stateLoop;
-                    }
-                }
-                case 52: {
-                    try {
-                        statePc = 56;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_52) {
-                        caughtException = stateCaught_52;
-                        statePc = 61;
-                        continue stateLoop;
-                    }
-                }
-                case 53: {
-                    try {
-                        var17 = new int[1];
-                        jaggl.OpenGL.glGenBuffersARB(1, var17, 0);
-                        statePc = 54;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_53) {
-                        caughtException = stateCaught_53;
-                        statePc = 55;
-                        continue stateLoop;
-                    }
-                }
-                case 54: {
-                    try {
-                        statePc = 56;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_54) {
-                        caughtException = stateCaught_54;
-                        statePc = 61;
-                        continue stateLoop;
-                    }
-                }
-                case 55: {
-                    try {
-                        var5 = caughtException;
-                        throw new RuntimeException("");
-                    } catch (Throwable stateCaught_55) {
-                        caughtException = stateCaught_55;
-                        statePc = 61;
-                        continue stateLoop;
-                    }
-                }
-                case 56: {
-                    try {
-                        ija.a(true, (byte) 99, false);
-                        ((cka) this).field_Ob = true;
-                        ((cka) this).field_hd = new hsa((cka) this, ((cka) this).field_c);
-                        this.o((byte) 124);
-                        ((cka) this).field_zc = new mq((cka) this);
-                        ((cka) this).field_L = new cw((cka) this);
-                        if (!((cka) this).field_L.b((byte) -43)) {
-                            statePc = 59;
-                        } else {
-                            statePc = 57;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_56) {
-                        caughtException = stateCaught_56;
-                        statePc = 61;
-                        continue stateLoop;
-                    }
-                }
-                case 57: {
-                    try {
-                        ((cka) this).field_T = new uv((cka) this);
-                        if (((cka) this).field_T.e(34842)) {
-                            statePc = 59;
-                        } else {
-                            statePc = 58;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_57) {
-                        caughtException = stateCaught_57;
-                        statePc = 61;
-                        continue stateLoop;
-                    }
-                }
-                case 58: {
-                    try {
-                        ((cka) this).field_T.d((byte) -60);
-                        ((cka) this).field_T = null;
-                        statePc = 59;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_58) {
-                        caughtException = stateCaught_58;
-                        statePc = 61;
-                        continue stateLoop;
-                    }
-                }
-                case 59: {
-                    try {
                         ((cka) this).field_Hb = new uua((cka) this);
                         this.v(-3159);
                         this.b((byte) -99);
                         ((cka) this).a();
-                        statePc = 62;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_59) {
-                        caughtException = stateCaught_59;
-                        statePc = 61;
-                        continue stateLoop;
+                        break L1;
+                      } else {
+                        throw new RuntimeException("");
+                      }
+                    } else {
+                      throw new RuntimeException("");
                     }
+                  }
+                } catch (java.lang.Throwable decompiledCaughtParameter2) {
+                  decompiledCaughtException = decompiledCaughtParameter2;
+                  var4 = decompiledCaughtException;
+                  var4.printStackTrace();
+                  ((cka) this).k();
+                  throw new RuntimeException("");
                 }
-                case 61: {
-                    var4 = caughtException;
-                    var4.printStackTrace();
-                    ((cka) this).k();
-                    throw new RuntimeException("");
-                }
-                case 62: {
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+                break L0;
+              } else {
+                throw new RuntimeException("");
+              }
+            } else {
+              throw new RuntimeException("");
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
+          decompiledCaughtException = decompiledCaughtParameter3;
+          L20: {
+            var4_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackOut_63_0 = (RuntimeException) var4_ref;
+            stackOut_63_1 = new StringBuilder().append("cka.<init>(");
+            stackIn_65_0 = stackOut_63_0;
+            stackIn_65_1 = stackOut_63_1;
+            stackIn_64_0 = stackOut_63_0;
+            stackIn_64_1 = stackOut_63_1;
+            if (param0 == null) {
+              stackOut_65_0 = (RuntimeException) (Object) stackIn_65_0;
+              stackOut_65_1 = (StringBuilder) (Object) stackIn_65_1;
+              stackOut_65_2 = "null";
+              stackIn_66_0 = stackOut_65_0;
+              stackIn_66_1 = stackOut_65_1;
+              stackIn_66_2 = stackOut_65_2;
+              break L20;
+            } else {
+              stackOut_64_0 = (RuntimeException) (Object) stackIn_64_0;
+              stackOut_64_1 = (StringBuilder) (Object) stackIn_64_1;
+              stackOut_64_2 = "{...}";
+              stackIn_66_0 = stackOut_64_0;
+              stackIn_66_1 = stackOut_64_1;
+              stackIn_66_2 = stackOut_64_2;
+              break L20;
+            }
+          }
+          L21: {
+            stackOut_66_0 = (RuntimeException) (Object) stackIn_66_0;
+            stackOut_66_1 = ((StringBuilder) (Object) stackIn_66_1).append(stackIn_66_2).append(44);
+            stackIn_68_0 = stackOut_66_0;
+            stackIn_68_1 = stackOut_66_1;
+            stackIn_67_0 = stackOut_66_0;
+            stackIn_67_1 = stackOut_66_1;
+            if (param1 == null) {
+              stackOut_68_0 = (RuntimeException) (Object) stackIn_68_0;
+              stackOut_68_1 = (StringBuilder) (Object) stackIn_68_1;
+              stackOut_68_2 = "null";
+              stackIn_69_0 = stackOut_68_0;
+              stackIn_69_1 = stackOut_68_1;
+              stackIn_69_2 = stackOut_68_2;
+              break L21;
+            } else {
+              stackOut_67_0 = (RuntimeException) (Object) stackIn_67_0;
+              stackOut_67_1 = (StringBuilder) (Object) stackIn_67_1;
+              stackOut_67_2 = "{...}";
+              stackIn_69_0 = stackOut_67_0;
+              stackIn_69_1 = stackOut_67_1;
+              stackIn_69_2 = stackOut_67_2;
+              break L21;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_69_0, stackIn_69_2 + 44 + param2 + 41);
         }
     }
 
     final void b(ks param0, byte param1) {
-        if (param1 != 81) {
-            this.j(-22);
-        }
-        if (((cka) this).field_hc) {
-            ((cka) this).c(param0, -4);
-            ((cka) this).a(0, param0);
-        } else {
-            if ((((cka) this).field_x ^ -1) <= -4) {
-                throw new RuntimeException();
+        RuntimeException var3 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param1 == 81) {
+                break L1;
+              } else {
+                this.j(-22);
+                break L1;
+              }
             }
-            if ((((cka) this).field_x ^ -1) <= -1) {
-                ((cka) this).field_ub[((cka) this).field_x].b((byte) -36);
+            L2: {
+              if (!((cka) this).field_hc) {
+                if (((cka) this).field_x < 3) {
+                  L3: {
+                    if (((cka) this).field_x < 0) {
+                      break L3;
+                    } else {
+                      ((cka) this).field_ub[((cka) this).field_x].b((byte) -36);
+                      break L3;
+                    }
+                  }
+                  int fieldTemp$2 = ((cka) this).field_x + 1;
+                  ((cka) this).field_x = ((cka) this).field_x + 1;
+                  ((cka) this).field_ub[fieldTemp$2] = param0;
+                  ((cka) this).field_Qb = param0;
+                  ((cka) this).field_t = param0;
+                  ((cka) this).field_t.b(13109);
+                  break L2;
+                } else {
+                  throw new RuntimeException();
+                }
+              } else {
+                ((cka) this).c(param0, -4);
+                ((cka) this).a(0, param0);
+                break L2;
+              }
             }
-            ((cka) this).field_x = ((cka) this).field_x + 1;
-            ((cka) this).field_ub[((cka) this).field_x + 1] = param0;
-            ((cka) this).field_Qb = param0;
-            ((cka) this).field_t = param0;
-            ((cka) this).field_t.b(13109);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var3 = decompiledCaughtException;
+            stackOut_10_0 = (RuntimeException) var3;
+            stackOut_10_1 = new StringBuilder().append("cka.VC(");
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
+            if (param0 == null) {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L4;
+            } else {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L4;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param1 + 41);
         }
     }
 
@@ -2752,7 +3145,7 @@ final class cka extends ha {
           var8 = var8 * var9;
           break L0;
         }
-        jaggl.OpenGL.glColor4ub((byte)(param4 >> 1674612080), (byte)(param4 >> 2051948840), (byte)param4, (byte)(param4 >> 474632600));
+        jaggl.OpenGL.glColor4ub((byte)(param4 >> 16), (byte)(param4 >> 8), (byte)param4, (byte)(param4 >> 24));
         jaggl.OpenGL.glBegin(1);
         jaggl.OpenGL.glVertex2f((float)param0 + 0.3499999940395355f, (float)param1 + 0.3499999940395355f);
         jaggl.OpenGL.glVertex2f((float)param2 + var7 + 0.3499999940395355f, 0.3499999940395355f + ((float)param3 + var8));
@@ -2760,23 +3153,25 @@ final class cka extends ha {
     }
 
     private final int f(int param0) {
-        if (param0 >= -13) {
-            return -118;
-        }
         return ((cka) this).field_jb + (((cka) this).field_mb + ((cka) this).field_Tb);
     }
 
     final void c(ks param0, int param1) {
-        if (param1 >= (((cka) this).field_Zc ^ -1)) {
-            throw new RuntimeException();
+        try {
+            if (param1 >= ~((cka) this).field_Zc) {
+                throw new RuntimeException();
+            }
+            if (((cka) this).field_Zc >= 0) {
+                ((cka) this).field_M[((cka) this).field_Zc].d((byte) 93);
+            }
+            int fieldTemp$0 = ((cka) this).field_Zc + 1;
+            ((cka) this).field_Zc = ((cka) this).field_Zc + 1;
+            ((cka) this).field_M[fieldTemp$0] = param0;
+            ((cka) this).field_t = param0;
+            ((cka) this).field_t.a((byte) -120);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "cka.GE(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
-        if ((((cka) this).field_Zc ^ -1) <= -1) {
-            ((cka) this).field_M[((cka) this).field_Zc].d((byte) 93);
-        }
-        ((cka) this).field_Zc = ((cka) this).field_Zc + 1;
-        ((cka) this).field_M[((cka) this).field_Zc + 1] = param0;
-        ((cka) this).field_t = param0;
-        ((cka) this).field_t.a((byte) -120);
     }
 
     final ob a(int param0, int param1, int param2, int param3, int param4, float param5) {
@@ -2791,10 +3186,6 @@ final class cka extends ha {
     }
 
     private final void r(int param0) {
-        if (param0 != 0) {
-            Object var3 = null;
-            ((cka) this).a((ks) null, 54);
-        }
         if (-2 != ((cka) this).field_e) {
             jaggl.OpenGL.glMatrixMode(5889);
             jaggl.OpenGL.glLoadIdentity();
@@ -2821,20 +3212,7 @@ final class cka extends ha {
         var2 = 0;
         L0: while (true) {
           if (((cka) this).field_sb <= var2) {
-            if (param0 == -1) {
-              L1: while (true) {
-                if (((cka) this).field_pc <= var2) {
-                  ((cka) this).field_pc = ((cka) this).field_sb;
-                  return;
-                } else {
-                  jaggl.OpenGL.glDisable(16386 + var2);
-                  var2++;
-                  continue L1;
-                }
-              }
-            } else {
-              return;
-            }
+            return;
           } else {
             var3 = ((cka) this).field_Dc[var2];
             vh.field_h[0] = (float)var3.d(13437);
@@ -2843,10 +3221,10 @@ final class cka extends ha {
             vh.field_h[2] = (float)var3.b((byte) 11);
             vh.field_h[3] = 1.0f;
             jaggl.OpenGL.glLightfv(var4, 4611, vh.field_h, 0);
-            var5 = var3.c(param0 ^ 123);
+            var5 = var3.c(-124);
             var6 = var3.b(0) / 255.0f;
-            vh.field_h[1] = (float)(sea.c(65532, var5) >> 2072193736) * var6;
-            vh.field_h[0] = var6 * (float)sea.c(var5 >> -1803001232, 255);
+            vh.field_h[1] = (float)(sea.c(65532, var5) >> 8) * var6;
+            vh.field_h[0] = var6 * (float)sea.c(var5 >> 16, 255);
             vh.field_h[2] = (float)sea.c(255, var5) * var6;
             jaggl.OpenGL.glLightfv(var4, 4609, vh.field_h, 0);
             jaggl.OpenGL.glLightf(var4, 4617, 1.0f / (float)(var3.a((byte) -126) * var3.a((byte) -126)));
@@ -2875,7 +3253,7 @@ final class cka extends ha {
     }
 
     private final void a(int param0, boolean param1, boolean param2, int param3) {
-        rt var5 = null;
+        Object var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -2924,7 +3302,7 @@ final class cka extends ha {
             if (0 <= param0) {
               L4: {
                 L5: {
-                  var5 = ((cka) this).field_hd.a(param0, 0);
+                  var5 = (Object) (Object) ((cka) this).field_hd.a(param0, 0);
                   var10 = ((cka) this).field_c.a((byte) 14, param0);
                   if (var10.field_s != 0) {
                     break L5;
@@ -2972,8 +3350,8 @@ final class cka extends ha {
           }
           L8: {
             ((cka) this).field_Hb.a(param3 ^ -71, var8, param1, param2, var7, var9);
-            if (!((cka) this).field_Hb.a(var6, 9, (kl) (Object) var5)) {
-              ((cka) this).a(true, (kl) (Object) var5);
+            if (!((cka) this).field_Hb.a(var6, 9, (kl) var5)) {
+              ((cka) this).a(true, (kl) var5);
               ((cka) this).d(param3 ^ -2, var6);
               break L8;
             } else {
@@ -3011,210 +3389,147 @@ final class cka extends ha {
         int[] var15 = null;
         int stackIn_27_0 = 0;
         Throwable decompiledCaughtException = null;
-        int stackOut_25_0 = 0;
         int stackOut_26_0 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    ((cka) this).field_k = jaggl.OpenGL.glGetString(7936).toLowerCase();
-                    var2 = 0;
-                    ((cka) this).field_h = jaggl.OpenGL.glGetString(7937).toLowerCase();
-                    if ((((cka) this).field_k.indexOf("microsoft") ^ -1) != 0) {
-                        statePc = 2;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 2: {
-                    var2 = var2 | 1;
-                    statePc = 3;
-                    continue stateLoop;
-                }
-                case 3: {
-                    if (((cka) this).field_k.indexOf("brian paul") != -1) {
-                        statePc = 6;
-                    } else {
-                        statePc = 4;
-                    }
-                    continue stateLoop;
-                }
-                case 4: {
-                    if ((((cka) this).field_k.indexOf("mesa") ^ -1) == 0) {
-                        statePc = 7;
-                    } else {
-                        statePc = 6;
-                    }
-                    continue stateLoop;
-                }
-                case 6: {
-                    var2 = var2 | 1;
-                    statePc = 7;
-                    continue stateLoop;
-                }
-                case 7: {
-                    var3 = jaggl.OpenGL.glGetString(7938);
-                    var4 = rga.a(32287, var3.replace('.', ' '), ' ');
-                    if (var4.length < 2) {
-                        statePc = 11;
-                    } else {
-                        statePc = 8;
-                    }
-                    continue stateLoop;
-                }
-                case 8: {
-                    try {
-                        var5_int = jb.a((CharSequence) (Object) var4[0], (byte) 70);
-                        var6 = jb.a((CharSequence) (Object) var4[1], (byte) 70);
-                        ((cka) this).field_fb = var6 + 10 * var5_int;
-                        statePc = 12;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    var5 = (NumberFormatException) (Object) caughtException;
-                    var2 = var2 | 4;
-                    statePc = 12;
-                    continue stateLoop;
-                }
-                case 11: {
-                    var2 = var2 | 4;
-                    statePc = 12;
-                    continue stateLoop;
-                }
-                case 12: {
-                    if ((((cka) this).field_fb ^ -1) <= -13) {
-                        statePc = 14;
-                    } else {
-                        statePc = 13;
-                    }
-                    continue stateLoop;
-                }
-                case 13: {
-                    var2 = var2 | 2;
-                    statePc = 14;
-                    continue stateLoop;
-                }
-                case 14: {
-                    if (((cka) this).field_l.a("GL_ARB_multitexture")) {
-                        statePc = 16;
-                    } else {
-                        statePc = 15;
-                    }
-                    continue stateLoop;
-                }
-                case 15: {
-                    var2 = var2 | 8;
-                    statePc = 16;
-                    continue stateLoop;
-                }
-                case 16: {
-                    if (!((cka) this).field_l.a("GL_ARB_texture_env_combine")) {
-                        statePc = 18;
-                    } else {
-                        statePc = 19;
-                    }
-                    continue stateLoop;
-                }
-                case 18: {
-                    var2 = var2 | 32;
-                    statePc = 19;
-                    continue stateLoop;
-                }
-                case 19: {
-                    var14 = new int[1];
-                    var12 = var14;
-                    var10 = var12;
-                    var8 = var10;
-                    var7 = var8;
-                    var15 = var7;
-                    jaggl.OpenGL.glGetIntegerv(34018, var14, 0);
-                    ((cka) this).field_Ic = var14[0];
-                    jaggl.OpenGL.glGetIntegerv(34929, var14, 0);
-                    ((cka) this).field_J = var14[0];
-                    jaggl.OpenGL.glGetIntegerv(34930, var15, 0);
-                    var6 = -109 % ((-49 - param0) / 48);
-                    ((cka) this).field_Hc = var14[0];
-                    if (2 > ((cka) this).field_Ic) {
-                        statePc = 23;
-                    } else {
-                        statePc = 20;
-                    }
-                    continue stateLoop;
-                }
-                case 20: {
-                    if (-3 < (((cka) this).field_J ^ -1)) {
-                        statePc = 23;
-                    } else {
-                        statePc = 21;
-                    }
-                    continue stateLoop;
-                }
-                case 21: {
-                    if ((((cka) this).field_Hc ^ -1) <= -3) {
-                        statePc = 24;
-                    } else {
-                        statePc = 23;
-                    }
-                    continue stateLoop;
-                }
-                case 23: {
-                    var2 = var2 | 16;
-                    statePc = 24;
-                    continue stateLoop;
-                }
-                case 24: {
-                    ((cka) this).field_O = jaclib.memory.Stream.b();
-                    ((cka) this).field_Yc = ((cka) this).field_l.arePbuffersAvailable();
-                    ((cka) this).field_Q = ((cka) this).field_l.a("GL_ARB_vertex_buffer_object");
-                    ((cka) this).field_S = ((cka) this).field_l.a("GL_ARB_multisample");
-                    ((cka) this).field_G = ((cka) this).field_l.a("GL_ARB_vertex_program");
-                    boolean discarded$2 = ((cka) this).field_l.a("GL_ARB_fragment_program");
-                    ((cka) this).field_wb = ((cka) this).field_l.a("GL_ARB_vertex_shader");
-                    ((cka) this).field_Vc = ((cka) this).field_l.a("GL_ARB_fragment_shader");
-                    ((cka) this).field_V = ((cka) this).field_l.a("GL_EXT_texture3D");
-                    ((cka) this).field_Cc = ((cka) this).field_l.a("GL_ARB_texture_rectangle");
-                    ((cka) this).field_Kc = ((cka) this).field_l.a("GL_ARB_texture_cube_map");
-                    ((cka) this).field_z = ((cka) this).field_l.a("GL_ARB_texture_float");
-                    ((cka) this).field_Gb = false;
-                    ((cka) this).field_id = ((cka) this).field_l.a("GL_EXT_framebuffer_object");
-                    ((cka) this).field_hc = ((cka) this).field_l.a("GL_EXT_framebuffer_blit");
-                    ((cka) this).field_ed = ((cka) this).field_l.a("GL_EXT_framebuffer_multisample");
-                    ((cka) this).field_Eb = oj.field_vb.startsWith("mac");
-                    jaggl.OpenGL.glGetFloatv(2834, gp.field_d, 0);
-                    ((cka) this).field_Cb = gp.field_d[1];
-                    ((cka) this).field_Qc = gp.field_d[0];
-                    if (0 == var2) {
-                        statePc = 26;
-                    } else {
-                        statePc = 25;
-                    }
-                    continue stateLoop;
-                }
-                case 25: {
-                    stackOut_25_0 = var2;
-                    stackIn_27_0 = stackOut_25_0;
-                    statePc = 27;
-                    continue stateLoop;
-                }
-                case 26: {
-                    stackOut_26_0 = 0;
-                    stackIn_27_0 = stackOut_26_0;
-                    statePc = 27;
-                    continue stateLoop;
-                }
-                case 27: {
-                    return stackIn_27_0;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
-            }
+        int stackOut_25_0 = 0;
+        L0: {
+          ((cka) this).field_k = jaggl.OpenGL.glGetString(7936).toLowerCase();
+          var2 = 0;
+          ((cka) this).field_h = jaggl.OpenGL.glGetString(7937).toLowerCase();
+          if (((cka) this).field_k.indexOf("microsoft") != -1) {
+            var2 = var2 | 1;
+            break L0;
+          } else {
+            break L0;
+          }
         }
+        L1: {
+          L2: {
+            if (((cka) this).field_k.indexOf("brian paul") != -1) {
+              break L2;
+            } else {
+              if (((cka) this).field_k.indexOf("mesa") == -1) {
+                break L1;
+              } else {
+                break L2;
+              }
+            }
+          }
+          var2 = var2 | 1;
+          break L1;
+        }
+        L3: {
+          var3 = jaggl.OpenGL.glGetString(7938);
+          var4 = rga.a(32287, var3.replace('.', ' '), ' ');
+          if (var4.length < 2) {
+            var2 = var2 | 4;
+            break L3;
+          } else {
+            try {
+              L4: {
+                var5_int = jb.a((CharSequence) (Object) var4[0], (byte) 70);
+                var6 = jb.a((CharSequence) (Object) var4[1], (byte) 70);
+                ((cka) this).field_fb = var6 + 10 * var5_int;
+                break L4;
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L5: {
+                var5 = (NumberFormatException) (Object) decompiledCaughtException;
+                var2 = var2 | 4;
+                break L5;
+              }
+            }
+            break L3;
+          }
+        }
+        L6: {
+          if (((cka) this).field_fb >= 12) {
+            break L6;
+          } else {
+            var2 = var2 | 2;
+            break L6;
+          }
+        }
+        L7: {
+          if (((cka) this).field_l.a("GL_ARB_multitexture")) {
+            break L7;
+          } else {
+            var2 = var2 | 8;
+            break L7;
+          }
+        }
+        L8: {
+          if (!((cka) this).field_l.a("GL_ARB_texture_env_combine")) {
+            var2 = var2 | 32;
+            break L8;
+          } else {
+            break L8;
+          }
+        }
+        L9: {
+          L10: {
+            var14 = new int[1];
+            var12 = var14;
+            var10 = var12;
+            var8 = var10;
+            var7 = var8;
+            var15 = var7;
+            jaggl.OpenGL.glGetIntegerv(34018, var14, 0);
+            ((cka) this).field_Ic = var14[0];
+            jaggl.OpenGL.glGetIntegerv(34929, var14, 0);
+            ((cka) this).field_J = var14[0];
+            jaggl.OpenGL.glGetIntegerv(34930, var15, 0);
+            var6 = -1;
+            ((cka) this).field_Hc = var14[0];
+            if (2 > ((cka) this).field_Ic) {
+              break L10;
+            } else {
+              if (((cka) this).field_J < 2) {
+                break L10;
+              } else {
+                if (((cka) this).field_Hc >= 2) {
+                  break L9;
+                } else {
+                  break L10;
+                }
+              }
+            }
+          }
+          var2 = var2 | 16;
+          break L9;
+        }
+        L11: {
+          ((cka) this).field_O = jaclib.memory.Stream.b();
+          ((cka) this).field_Yc = ((cka) this).field_l.arePbuffersAvailable();
+          ((cka) this).field_Q = ((cka) this).field_l.a("GL_ARB_vertex_buffer_object");
+          ((cka) this).field_S = ((cka) this).field_l.a("GL_ARB_multisample");
+          ((cka) this).field_G = ((cka) this).field_l.a("GL_ARB_vertex_program");
+          boolean discarded$1 = ((cka) this).field_l.a("GL_ARB_fragment_program");
+          ((cka) this).field_wb = ((cka) this).field_l.a("GL_ARB_vertex_shader");
+          ((cka) this).field_Vc = ((cka) this).field_l.a("GL_ARB_fragment_shader");
+          ((cka) this).field_V = ((cka) this).field_l.a("GL_EXT_texture3D");
+          ((cka) this).field_Cc = ((cka) this).field_l.a("GL_ARB_texture_rectangle");
+          ((cka) this).field_Kc = ((cka) this).field_l.a("GL_ARB_texture_cube_map");
+          ((cka) this).field_z = ((cka) this).field_l.a("GL_ARB_texture_float");
+          ((cka) this).field_Gb = false;
+          ((cka) this).field_id = ((cka) this).field_l.a("GL_EXT_framebuffer_object");
+          ((cka) this).field_hc = ((cka) this).field_l.a("GL_EXT_framebuffer_blit");
+          ((cka) this).field_ed = ((cka) this).field_l.a("GL_EXT_framebuffer_multisample");
+          ((cka) this).field_Eb = oj.field_vb.startsWith("mac");
+          jaggl.OpenGL.glGetFloatv(2834, gp.field_d, 0);
+          ((cka) this).field_Cb = gp.field_d[1];
+          ((cka) this).field_Qc = gp.field_d[0];
+          if (0 == var2) {
+            stackOut_26_0 = 0;
+            stackIn_27_0 = stackOut_26_0;
+            break L11;
+          } else {
+            stackOut_25_0 = var2;
+            stackIn_27_0 = stackOut_25_0;
+            break L11;
+          }
+        }
+        return stackIn_27_0;
     }
 
     private final void g(byte param0) {
@@ -3223,9 +3538,6 @@ final class cka extends ha {
         gp.field_d[0] = ((cka) this).field_cd * ((cka) this).field_wc;
         gp.field_d[2] = ((cka) this).field_cd * ((cka) this).field_bc;
         jaggl.OpenGL.glLightfv(16384, 4609, gp.field_d, 0);
-        if (param0 != -30) {
-            ((cka) this).field_S = true;
-        }
         gp.field_d[2] = -((cka) this).field_Sb * ((cka) this).field_bc;
         gp.field_d[1] = -((cka) this).field_Sb * ((cka) this).field_Fb;
         gp.field_d[0] = ((cka) this).field_wc * -((cka) this).field_Sb;
@@ -3242,7 +3554,7 @@ final class cka extends ha {
     }
 
     private final void p(int param0) {
-        jaggl.OpenGL.glLightfv(16384, 4611, ((cka) this).field_Wb, param0);
+        jaggl.OpenGL.glLightfv(16384, 4611, ((cka) this).field_Wb, 0);
         jaggl.OpenGL.glLightfv(16385, 4611, ((cka) this).field_Ab, 0);
     }
 
@@ -3258,75 +3570,126 @@ final class cka extends ha {
     }
 
     final void HA(int param0, int param1, int param2, int param3, int[] param4) {
-        float var6 = 0.0f;
+        float var6_float = 0.0f;
+        RuntimeException var6 = null;
         int[] var7_ref_int__ = null;
         int var7 = 0;
         int[] var8_ref_int__ = null;
         int var8 = 0;
         int[] var9 = null;
         int[] var10 = null;
-        L0: {
-          var6 = ((cka) this).field_jd.field_q * (float)param2 + (((cka) this).field_jd.field_j * (float)param0 + ((cka) this).field_jd.field_h * (float)param1) + ((cka) this).field_jd.field_o;
-          if (var6 < (float)((cka) this).field_Gc) {
-            break L0;
-          } else {
-            if ((float)((cka) this).field_ob >= var6) {
-              L1: {
-                L2: {
-                  var7 = (int)((float)((cka) this).field_W * (((cka) this).field_jd.field_m + (((cka) this).field_jd.field_s * (float)param2 + ((float)param1 * ((cka) this).field_jd.field_k + (float)param0 * ((cka) this).field_jd.field_l))) / (float)param3);
-                  var8 = (int)((float)((cka) this).field_kb * ((float)param2 * ((cka) this).field_jd.field_g + (((cka) this).field_jd.field_i * (float)param0 + (float)param1 * ((cka) this).field_jd.field_r) + ((cka) this).field_jd.field_p) / (float)param3);
-                  if (((cka) this).field_s > (float)var7) {
-                    break L2;
-                  } else {
-                    if (((cka) this).field_od < (float)var7) {
-                      break L2;
-                    } else {
-                      if (((cka) this).field_nd > (float)var8) {
-                        break L2;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        try {
+          L0: {
+            L1: {
+              var6_float = ((cka) this).field_jd.field_q * (float)param2 + (((cka) this).field_jd.field_j * (float)param0 + ((cka) this).field_jd.field_h * (float)param1) + ((cka) this).field_jd.field_o;
+              if (var6_float < (float)((cka) this).field_Gc) {
+                break L1;
+              } else {
+                if ((float)((cka) this).field_ob >= var6_float) {
+                  L2: {
+                    L3: {
+                      var7 = (int)((float)((cka) this).field_W * (((cka) this).field_jd.field_m + (((cka) this).field_jd.field_s * (float)param2 + ((float)param1 * ((cka) this).field_jd.field_k + (float)param0 * ((cka) this).field_jd.field_l))) / (float)param3);
+                      var8 = (int)((float)((cka) this).field_kb * ((float)param2 * ((cka) this).field_jd.field_g + (((cka) this).field_jd.field_i * (float)param0 + (float)param1 * ((cka) this).field_jd.field_r) + ((cka) this).field_jd.field_p) / (float)param3);
+                      if (((cka) this).field_s > (float)var7) {
+                        break L3;
                       } else {
-                        if ((float)var8 <= ((cka) this).field_Db) {
-                          param4[1] = (int)(-((cka) this).field_nd + (float)var8);
-                          param4[0] = (int)((float)var7 - ((cka) this).field_s);
-                          param4[2] = (int)var6;
-                          break L1;
+                        if (((cka) this).field_od < (float)var7) {
+                          break L3;
                         } else {
-                          break L2;
+                          if (((cka) this).field_nd > (float)var8) {
+                            break L3;
+                          } else {
+                            if ((float)var8 <= ((cka) this).field_Db) {
+                              param4[1] = (int)(-((cka) this).field_nd + (float)var8);
+                              param4[0] = (int)((float)var7 - ((cka) this).field_s);
+                              param4[2] = (int)var6_float;
+                              break L2;
+                            } else {
+                              break L3;
+                            }
+                          }
                         }
                       }
                     }
+                    var9 = param4;
+                    param4[2] = -1;
+                    var10 = param4;
+                    var10[1] = -1;
+                    var9[0] = -1;
+                    break L2;
                   }
+                  break L0;
+                } else {
+                  break L1;
                 }
-                var9 = param4;
-                param4[2] = -1;
-                var10 = param4;
-                var10[1] = -1;
-                var9[0] = -1;
-                break L1;
               }
-              return;
+            }
+            var7_ref_int__ = param4;
+            param4[2] = -1;
+            var8_ref_int__ = param4;
+            var8_ref_int__[1] = -1;
+            var7_ref_int__[0] = -1;
+            return;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var6 = decompiledCaughtException;
+            stackOut_13_0 = (RuntimeException) var6;
+            stackOut_13_1 = new StringBuilder().append("cka.HA(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
+            if (param4 == null) {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L4;
             } else {
-              break L0;
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L4;
             }
           }
+          throw tba.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
         }
-        var7_ref_int__ = param4;
-        param4[2] = -1;
-        var8_ref_int__ = param4;
-        var8_ref_int__[1] = -1;
-        var7_ref_int__[0] = -1;
     }
 
     final void KA(int param0, int param1, int param2, int param3) {
-        if (!(param0 <= -1)) {
+        if (!(param0 >= 0)) {
             param0 = 0;
         }
-        if (-1 > param1) {
+        if (param1 < 0) {
             param1 = 0;
         }
         if (!(((cka) this).field_I >= param3)) {
             param3 = ((cka) this).field_I;
         }
-        if (!(param2 <= ((cka) this).field_Y)) {
+        if (!(~param2 >= ~((cka) this).field_Y)) {
             param2 = ((cka) this).field_Y;
         }
         ((cka) this).field_kc = param3;
@@ -3346,14 +3709,14 @@ final class cka extends ha {
         var4 = TombRacer.field_G ? 1 : 0;
         if (param0 == 1) {
           L0: {
-            if (-2 != (param1 ^ -1)) {
+            if (param1 != 1) {
               if (param1 == 0) {
                 ((cka) this).b(8448, 8960, 8448);
                 break L0;
               } else {
                 if (param1 != 2) {
                   if (param1 != 3) {
-                    if ((param1 ^ -1) != -5) {
+                    if (param1 != 4) {
                       break L0;
                     } else {
                       ((cka) this).b(34023, param0 + 8959, 34023);
@@ -3380,6 +3743,7 @@ final class cka extends ha {
     }
 
     final void k() {
+        Enumeration var1_ref = null;
         java.awt.Canvas var2 = null;
         Long var3 = null;
         int var4 = TombRacer.field_G ? 1 : 0;
@@ -3393,9 +3757,9 @@ final class cka extends ha {
         }
         if (((cka) this).field_l != null) {
             this.k(19770);
-            var1 = (vg) (Object) ((cka) this).field_p.keys();
-            while (((Enumeration) (Object) var1).hasMoreElements()) {
-                var2 = (java.awt.Canvas) ((Enumeration) (Object) var1).nextElement();
+            var1_ref = ((cka) this).field_p.keys();
+            while (var1_ref.hasMoreElements()) {
+                var2 = (java.awt.Canvas) var1_ref.nextElement();
                 var3 = (Long) ((cka) this).field_p.get((Object) (Object) var2);
                 ((cka) this).field_l.releaseSurface(var2, var3.longValue());
             }
@@ -3494,62 +3858,113 @@ final class cka extends ha {
     }
 
     final void da(int param0, int param1, int param2, int[] param3) {
-        float var5 = 0.0f;
+        float var5_float = 0.0f;
+        RuntimeException var5 = null;
         int[] var6_ref_int__ = null;
         int var6 = 0;
         int[] var7_ref_int__ = null;
         int var7 = 0;
         int[] var8 = null;
         int[] var9 = null;
-        L0: {
-          var5 = ((cka) this).field_jd.field_o + ((float)param2 * ((cka) this).field_jd.field_q + (((cka) this).field_jd.field_h * (float)param1 + ((cka) this).field_jd.field_j * (float)param0));
-          if ((float)((cka) this).field_Gc > var5) {
-            break L0;
-          } else {
-            if (var5 <= (float)((cka) this).field_ob) {
-              L1: {
-                L2: {
-                  var6 = (int)((float)((cka) this).field_W * (((cka) this).field_jd.field_l * (float)param0 + (float)param1 * ((cka) this).field_jd.field_k + ((cka) this).field_jd.field_s * (float)param2 + ((cka) this).field_jd.field_m) / var5);
-                  var7 = (int)((float)((cka) this).field_kb * (((cka) this).field_jd.field_g * (float)param2 + ((float)param0 * ((cka) this).field_jd.field_i + (float)param1 * ((cka) this).field_jd.field_r) + ((cka) this).field_jd.field_p) / var5);
-                  if (((cka) this).field_s > (float)var6) {
-                    break L2;
-                  } else {
-                    if (((cka) this).field_od < (float)var6) {
-                      break L2;
-                    } else {
-                      if ((float)var7 < ((cka) this).field_nd) {
-                        break L2;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        try {
+          L0: {
+            L1: {
+              var5_float = ((cka) this).field_jd.field_o + ((float)param2 * ((cka) this).field_jd.field_q + (((cka) this).field_jd.field_h * (float)param1 + ((cka) this).field_jd.field_j * (float)param0));
+              if ((float)((cka) this).field_Gc > var5_float) {
+                break L1;
+              } else {
+                if (var5_float <= (float)((cka) this).field_ob) {
+                  L2: {
+                    L3: {
+                      var6 = (int)((float)((cka) this).field_W * (((cka) this).field_jd.field_l * (float)param0 + (float)param1 * ((cka) this).field_jd.field_k + ((cka) this).field_jd.field_s * (float)param2 + ((cka) this).field_jd.field_m) / var5_float);
+                      var7 = (int)((float)((cka) this).field_kb * (((cka) this).field_jd.field_g * (float)param2 + ((float)param0 * ((cka) this).field_jd.field_i + (float)param1 * ((cka) this).field_jd.field_r) + ((cka) this).field_jd.field_p) / var5_float);
+                      if (((cka) this).field_s > (float)var6) {
+                        break L3;
                       } else {
-                        if (((cka) this).field_Db >= (float)var7) {
-                          param3[1] = (int)((float)var7 - ((cka) this).field_nd);
-                          param3[2] = (int)var5;
-                          param3[0] = (int)((float)var6 - ((cka) this).field_s);
-                          break L1;
+                        if (((cka) this).field_od < (float)var6) {
+                          break L3;
                         } else {
-                          break L2;
+                          if ((float)var7 < ((cka) this).field_nd) {
+                            break L3;
+                          } else {
+                            if (((cka) this).field_Db >= (float)var7) {
+                              param3[1] = (int)((float)var7 - ((cka) this).field_nd);
+                              param3[2] = (int)var5_float;
+                              param3[0] = (int)((float)var6 - ((cka) this).field_s);
+                              break L2;
+                            } else {
+                              break L3;
+                            }
+                          }
                         }
                       }
                     }
+                    var8 = param3;
+                    param3[2] = -1;
+                    var9 = param3;
+                    var8[0] = -1;
+                    var9[1] = -1;
+                    break L2;
                   }
+                  break L0;
+                } else {
+                  break L1;
                 }
-                var8 = param3;
-                param3[2] = -1;
-                var9 = param3;
-                var8[0] = -1;
-                var9[1] = -1;
-                break L1;
               }
-              return;
+            }
+            var6_ref_int__ = param3;
+            param3[2] = -1;
+            var7_ref_int__ = param3;
+            var7_ref_int__[1] = -1;
+            var6_ref_int__[0] = -1;
+            return;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var5 = decompiledCaughtException;
+            stackOut_13_0 = (RuntimeException) var5;
+            stackOut_13_1 = new StringBuilder().append("cka.da(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
+            if (param3 == null) {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L4;
             } else {
-              break L0;
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L4;
             }
           }
+          throw tba.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
         }
-        var6_ref_int__ = param3;
-        param3[2] = -1;
-        var7_ref_int__ = param3;
-        var7_ref_int__[1] = -1;
-        var6_ref_int__[0] = -1;
     }
 
     private final void b(int param0, boolean param1) {
@@ -3564,39 +3979,90 @@ final class cka extends ha {
     }
 
     final void a(ks param0, byte param1) {
-        L0: {
-          if (0 > ((cka) this).field_Zc) {
-            break L0;
-          } else {
-            if (((cka) this).field_M[((cka) this).field_Zc] == param0) {
-              L1: {
-                ((cka) this).field_Zc = ((cka) this).field_Zc - 1;
-                ((cka) this).field_M[((cka) this).field_Zc] = null;
-                param0.d((byte) 60);
-                if ((((cka) this).field_Zc ^ -1) <= -1) {
-                  ((cka) this).field_t = ((cka) this).field_M[((cka) this).field_Zc];
-                  ((cka) this).field_t.a((byte) -124);
-                  break L1;
+        RuntimeException var3 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (0 > ((cka) this).field_Zc) {
+                break L1;
+              } else {
+                if (((cka) this).field_M[((cka) this).field_Zc] == param0) {
+                  L2: {
+                    int fieldTemp$2 = ((cka) this).field_Zc;
+                    ((cka) this).field_Zc = ((cka) this).field_Zc - 1;
+                    ((cka) this).field_M[fieldTemp$2] = null;
+                    param0.d((byte) 60);
+                    if (((cka) this).field_Zc >= 0) {
+                      ((cka) this).field_t = ((cka) this).field_M[((cka) this).field_Zc];
+                      ((cka) this).field_t.a((byte) -124);
+                      break L2;
+                    } else {
+                      ((cka) this).field_t = null;
+                      break L2;
+                    }
+                  }
+                  L3: {
+                    if (param1 == -38) {
+                      break L3;
+                    } else {
+                      ((cka) this).field_l = null;
+                      break L3;
+                    }
+                  }
+                  break L0;
                 } else {
-                  ((cka) this).field_t = null;
                   break L1;
                 }
               }
-              L2: {
-                if (param1 == -38) {
-                  break L2;
-                } else {
-                  ((cka) this).field_l = null;
-                  break L2;
-                }
-              }
-              return;
+            }
+            throw new RuntimeException();
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var3 = decompiledCaughtException;
+            stackOut_10_0 = (RuntimeException) var3;
+            stackOut_10_1 = new StringBuilder().append("cka.KC(");
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
+            if (param0 == null) {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L4;
             } else {
-              break L0;
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L4;
             }
           }
+          throw tba.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 44 + param1 + 41);
         }
-        throw new RuntimeException();
     }
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -3605,26 +4071,48 @@ final class cka extends ha {
 
     final void b(int param0, int param1, int param2) {
         int var4 = 0;
-        if (-1 == (((cka) this).field_r ^ -1)) {
-            var4 = 0;
-            if (param0 != ((cka) this).field_gd) {
+        L0: {
+          if (((cka) this).field_r != 0) {
+            jaggl.OpenGL.glTexEnvi(8960, 34161, param0);
+            jaggl.OpenGL.glTexEnvi(8960, 34162, param2);
+            break L0;
+          } else {
+            L1: {
+              var4 = 0;
+              if (param0 == ((cka) this).field_gd) {
+                break L1;
+              } else {
                 jaggl.OpenGL.glTexEnvi(8960, 34161, param0);
                 ((cka) this).field_gd = param0;
                 var4 = 1;
+                break L1;
+              }
             }
-            if (!(((cka) this).field_uc == param2)) {
+            L2: {
+              if (((cka) this).field_uc != param2) {
                 jaggl.OpenGL.glTexEnvi(8960, 34162, param2);
                 var4 = 1;
                 ((cka) this).field_uc = param2;
+                break L2;
+              } else {
+                break L2;
+              }
             }
-            // ifeq L110
-            ((cka) this).field_y = ((cka) this).field_y & -30;
-        } else {
-            jaggl.OpenGL.glTexEnvi(8960, 34161, param0);
-            jaggl.OpenGL.glTexEnvi(8960, 34162, param2);
+            if (var4 == 0) {
+              break L0;
+            } else {
+              ((cka) this).field_y = ((cka) this).field_y & -30;
+              break L0;
+            }
+          }
         }
-        if (param1 != 8960) {
+        L3: {
+          if (param1 == 8960) {
+            break L3;
+          } else {
             ((cka) this).field_Tc = null;
+            break L3;
+          }
         }
     }
 
@@ -3637,12 +4125,10 @@ final class cka extends ha {
     private final void f(byte param0) {
         int var3 = TombRacer.field_G ? 1 : 0;
         int var2 = 0;
-        if (param0 != -68) {
-            return;
-        }
         while (!((cka) this).field_l.a()) {
+            int incrementValue$0 = var2;
             var2++;
-            if (!(5 >= var2)) {
+            if (!(5 >= incrementValue$0)) {
                 throw new RuntimeException("");
             }
             vja.a(0, 1000L);
@@ -3650,56 +4136,226 @@ final class cka extends ha {
     }
 
     final void a(tj param0, tj param1, tj param2, int param3, tj param4) {
+        RuntimeException var6 = null;
         int var7 = 0;
-        L0: {
-          var7 = TombRacer.field_G ? 1 : 0;
-          if (param4 == null) {
-            jaggl.OpenGL.glDisableClientState(32884);
-            break L0;
-          } else {
-            ((cka) this).a(91, param4.field_d);
-            jaggl.OpenGL.glVertexPointer((int) param4.field_f, (int) param4.field_e, ((cka) this).field_tb.a(26653), ((cka) this).field_tb.b(121) + (long)param4.field_g);
-            jaggl.OpenGL.glEnableClientState(32884);
-            break L0;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_19_2 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        String stackIn_22_2 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        String stackIn_25_2 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        RuntimeException stackIn_28_0 = null;
+        StringBuilder stackIn_28_1 = null;
+        String stackIn_28_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        String stackOut_24_2 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        String stackOut_23_2 = null;
+        RuntimeException stackOut_25_0 = null;
+        StringBuilder stackOut_25_1 = null;
+        RuntimeException stackOut_27_0 = null;
+        StringBuilder stackOut_27_1 = null;
+        String stackOut_27_2 = null;
+        RuntimeException stackOut_26_0 = null;
+        StringBuilder stackOut_26_1 = null;
+        String stackOut_26_2 = null;
+        var7 = TombRacer.field_G ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              if (param4 == null) {
+                jaggl.OpenGL.glDisableClientState(32884);
+                break L1;
+              } else {
+                ((cka) this).a(91, param4.field_d);
+                jaggl.OpenGL.glVertexPointer((int) param4.field_f, (int) param4.field_e, ((cka) this).field_tb.a(26653), ((cka) this).field_tb.b(121) + (long)param4.field_g);
+                jaggl.OpenGL.glEnableClientState(32884);
+                break L1;
+              }
+            }
+            L2: {
+              if (param2 != null) {
+                ((cka) this).a(126, param2.field_d);
+                jaggl.OpenGL.glNormalPointer((int) param2.field_e, ((cka) this).field_tb.a(26653), ((cka) this).field_tb.b(-82) - -(long)param2.field_g);
+                jaggl.OpenGL.glEnableClientState(32885);
+                break L2;
+              } else {
+                jaggl.OpenGL.glDisableClientState(32885);
+                break L2;
+              }
+            }
+            if (param3 <= -102) {
+              L3: {
+                if (param0 == null) {
+                  jaggl.OpenGL.glDisableClientState(32886);
+                  break L3;
+                } else {
+                  ((cka) this).a(105, param0.field_d);
+                  jaggl.OpenGL.glColorPointer((int) param0.field_f, (int) param0.field_e, ((cka) this).field_tb.a(26653), ((cka) this).field_tb.b(-115) + (long)param0.field_g);
+                  jaggl.OpenGL.glEnableClientState(32886);
+                  break L3;
+                }
+              }
+              L4: {
+                if (param1 == null) {
+                  jaggl.OpenGL.glDisableClientState(32888);
+                  break L4;
+                } else {
+                  ((cka) this).a(87, param1.field_d);
+                  jaggl.OpenGL.glTexCoordPointer((int) param1.field_f, (int) param1.field_e, ((cka) this).field_tb.a(26653), ((cka) this).field_tb.b(89) - -(long)param1.field_g);
+                  jaggl.OpenGL.glEnableClientState(32888);
+                  break L4;
+                }
+              }
+              break L0;
+            } else {
+              return;
+            }
           }
-        }
-        L1: {
-          if (param2 != null) {
-            ((cka) this).a(126, param2.field_d);
-            jaggl.OpenGL.glNormalPointer((int) param2.field_e, ((cka) this).field_tb.a(26653), ((cka) this).field_tb.b(-82) - -(long)param2.field_g);
-            jaggl.OpenGL.glEnableClientState(32885);
-            break L1;
-          } else {
-            jaggl.OpenGL.glDisableClientState(32885);
-            break L1;
-          }
-        }
-        if (param3 <= -102) {
-          L2: {
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L5: {
+            var6 = decompiledCaughtException;
+            stackOut_16_0 = (RuntimeException) var6;
+            stackOut_16_1 = new StringBuilder().append("cka.HC(");
+            stackIn_18_0 = stackOut_16_0;
+            stackIn_18_1 = stackOut_16_1;
+            stackIn_17_0 = stackOut_16_0;
+            stackIn_17_1 = stackOut_16_1;
             if (param0 == null) {
-              jaggl.OpenGL.glDisableClientState(32886);
-              break L2;
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "null";
+              stackIn_19_0 = stackOut_18_0;
+              stackIn_19_1 = stackOut_18_1;
+              stackIn_19_2 = stackOut_18_2;
+              break L5;
             } else {
-              ((cka) this).a(105, param0.field_d);
-              jaggl.OpenGL.glColorPointer((int) param0.field_f, (int) param0.field_e, ((cka) this).field_tb.a(26653), ((cka) this).field_tb.b(-115) + (long)param0.field_g);
-              jaggl.OpenGL.glEnableClientState(32886);
-              break L2;
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "{...}";
+              stackIn_19_0 = stackOut_17_0;
+              stackIn_19_1 = stackOut_17_1;
+              stackIn_19_2 = stackOut_17_2;
+              break L5;
             }
           }
-          L3: {
+          L6: {
+            stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(44);
+            stackIn_21_0 = stackOut_19_0;
+            stackIn_21_1 = stackOut_19_1;
+            stackIn_20_0 = stackOut_19_0;
+            stackIn_20_1 = stackOut_19_1;
             if (param1 == null) {
-              jaggl.OpenGL.glDisableClientState(32888);
-              break L3;
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "null";
+              stackIn_22_0 = stackOut_21_0;
+              stackIn_22_1 = stackOut_21_1;
+              stackIn_22_2 = stackOut_21_2;
+              break L6;
             } else {
-              ((cka) this).a(87, param1.field_d);
-              jaggl.OpenGL.glTexCoordPointer((int) param1.field_f, (int) param1.field_e, ((cka) this).field_tb.a(26653), ((cka) this).field_tb.b(89) - -(long)param1.field_g);
-              jaggl.OpenGL.glEnableClientState(32888);
-              break L3;
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "{...}";
+              stackIn_22_0 = stackOut_20_0;
+              stackIn_22_1 = stackOut_20_1;
+              stackIn_22_2 = stackOut_20_2;
+              break L6;
             }
           }
-          return;
-        } else {
-          return;
+          L7: {
+            stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+            stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(44);
+            stackIn_24_0 = stackOut_22_0;
+            stackIn_24_1 = stackOut_22_1;
+            stackIn_23_0 = stackOut_22_0;
+            stackIn_23_1 = stackOut_22_1;
+            if (param2 == null) {
+              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
+              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_2 = "null";
+              stackIn_25_0 = stackOut_24_0;
+              stackIn_25_1 = stackOut_24_1;
+              stackIn_25_2 = stackOut_24_2;
+              break L7;
+            } else {
+              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_2 = "{...}";
+              stackIn_25_0 = stackOut_23_0;
+              stackIn_25_1 = stackOut_23_1;
+              stackIn_25_2 = stackOut_23_2;
+              break L7;
+            }
+          }
+          L8: {
+            stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
+            stackOut_25_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_25_2).append(44).append(param3).append(44);
+            stackIn_27_0 = stackOut_25_0;
+            stackIn_27_1 = stackOut_25_1;
+            stackIn_26_0 = stackOut_25_0;
+            stackIn_26_1 = stackOut_25_1;
+            if (param4 == null) {
+              stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
+              stackOut_27_1 = (StringBuilder) (Object) stackIn_27_1;
+              stackOut_27_2 = "null";
+              stackIn_28_0 = stackOut_27_0;
+              stackIn_28_1 = stackOut_27_1;
+              stackIn_28_2 = stackOut_27_2;
+              break L8;
+            } else {
+              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
+              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_2 = "{...}";
+              stackIn_28_0 = stackOut_26_0;
+              stackIn_28_1 = stackOut_26_1;
+              stackIn_28_2 = stackOut_26_2;
+              break L8;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_28_0, stackIn_28_2 + 41);
         }
     }
 
@@ -3714,7 +4370,7 @@ final class cka extends ha {
         ((cka) this).c(-2, 32677);
         ((cka) this).d(1, 1);
         ((cka) this).a((byte) 91, param8);
-        jaggl.OpenGL.glColor4ub((byte)(param7 >> 597764880), (byte)(param7 >> -599658808), (byte)param7, (byte)(param7 >> -1164258088));
+        jaggl.OpenGL.glColor4ub((byte)(param7 >> 16), (byte)(param7 >> 8), (byte)param7, (byte)(param7 >> 24));
         jaggl.OpenGL.glBegin(1);
         jaggl.OpenGL.glVertex3f((float)param0, (float)param1, (float)param2);
         jaggl.OpenGL.glVertex3f((float)param3, (float)param4, (float)param5);
@@ -3724,9 +4380,6 @@ final class cka extends ha {
     public static void t(int param0) {
         field_fd = null;
         field_Mc = null;
-        if (param0 != 7312) {
-            field_H = -15;
-        }
     }
 
     final void q(int param0) {
@@ -3755,7 +4408,7 @@ final class cka extends ha {
     }
 
     final void a(nh param0, boolean param1) {
-        cla var3 = null;
+        RuntimeException var3 = null;
         cla var3_ref = null;
         kba var3_ref2 = null;
         od var4 = null;
@@ -3764,111 +4417,161 @@ final class cka extends ha {
         cla var8 = null;
         kba var9 = null;
         kba var10 = null;
-        L0: {
-          var6 = TombRacer.field_G ? 1 : 0;
-          ((cka) this).field_Mb = (jja) (Object) param0;
-          if (((cka) this).field_id) {
+        RuntimeException stackIn_32_0 = null;
+        StringBuilder stackIn_32_1 = null;
+        RuntimeException stackIn_33_0 = null;
+        StringBuilder stackIn_33_1 = null;
+        RuntimeException stackIn_34_0 = null;
+        StringBuilder stackIn_34_1 = null;
+        String stackIn_34_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_31_0 = null;
+        StringBuilder stackOut_31_1 = null;
+        RuntimeException stackOut_33_0 = null;
+        StringBuilder stackOut_33_1 = null;
+        String stackOut_33_2 = null;
+        RuntimeException stackOut_32_0 = null;
+        StringBuilder stackOut_32_1 = null;
+        String stackOut_32_2 = null;
+        var6 = TombRacer.field_G ? 1 : 0;
+        try {
+          L0: {
             L1: {
-              if (null == ((cka) this).field_bb) {
-                ((cka) this).field_bb = new cb((cka) this);
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            if ((Object) (Object) ((cka) this).field_bb == (Object) (Object) ((cka) this).field_Qb) {
-              throw new RuntimeException();
-            } else {
-              L2: {
-                ((cka) this).b((ks) (Object) ((cka) this).field_bb, (byte) 81);
-                if (!param1) {
-                  break L2;
+              ((cka) this).field_Mb = (jja) (Object) param0;
+              if (((cka) this).field_id) {
+                L2: {
+                  if (null == ((cka) this).field_bb) {
+                    ((cka) this).field_bb = new cb((cka) this);
+                    break L2;
+                  } else {
+                    break L2;
+                  }
+                }
+                if ((Object) (Object) ((cka) this).field_bb == (Object) (Object) ((cka) this).field_Qb) {
+                  throw new RuntimeException();
                 } else {
                   L3: {
-                    var3_ref2 = (kba) (Object) ((cka) this).field_Wc.a((byte) -106, (long)(((cka) this).field_Mb.a() << 538462544 | ((cka) this).field_Mb.c()));
-                    if (var3_ref2 == null) {
-                      var9 = new kba((cka) this, 6402, ((cka) this).field_Mb.a(), ((cka) this).field_Mb.c());
-                      var3_ref = (cla) (Object) var9;
-                      ((cka) this).field_rc = ((cka) this).field_rc + var9.field_o;
-                      L4: while (true) {
-                        L5: {
-                          if (-2097153 <= (((cka) this).field_rc ^ -1)) {
-                            break L5;
-                          } else {
-                            var4 = ((cka) this).field_F.b(-125);
-                            if (var4 != null) {
-                              var10 = (kba) (Object) var4;
-                              var10.c(-7975);
-                              var10.p(125);
-                              var10.g(77);
-                              ((cka) this).field_rc = ((cka) this).field_rc - var10.field_o;
-                              continue L4;
-                            } else {
-                              break L5;
-                            }
-                          }
-                        }
-                        ((cka) this).field_Wc.a((long)(((cka) this).field_Mb.a() << 534113712 | ((cka) this).field_Mb.c()), 124, (vg) (Object) var9);
-                        break L3;
-                      }
+                    ((cka) this).b((ks) (Object) ((cka) this).field_bb, (byte) 81);
+                    if (!param1) {
+                      break L3;
                     } else {
+                      L4: {
+                        var3_ref2 = (kba) (Object) ((cka) this).field_Wc.a((byte) -106, (long)(((cka) this).field_Mb.a() << 16 | ((cka) this).field_Mb.c()));
+                        if (var3_ref2 == null) {
+                          var9 = new kba((cka) this, 6402, ((cka) this).field_Mb.a(), ((cka) this).field_Mb.c());
+                          var3_ref2 = var9;
+                          ((cka) this).field_rc = ((cka) this).field_rc + var9.field_o;
+                          L5: while (true) {
+                            L6: {
+                              if (((cka) this).field_rc <= 2097152) {
+                                break L6;
+                              } else {
+                                var4 = ((cka) this).field_F.b(-125);
+                                if (var4 != null) {
+                                  var10 = (kba) (Object) var4;
+                                  var10.c(-7975);
+                                  var10.p(125);
+                                  var10.g(77);
+                                  ((cka) this).field_rc = ((cka) this).field_rc - var10.field_o;
+                                  continue L5;
+                                } else {
+                                  break L6;
+                                }
+                              }
+                            }
+                            ((cka) this).field_Wc.a((long)(((cka) this).field_Mb.a() << 16 | ((cka) this).field_Mb.c()), 124, (vg) (Object) var9);
+                            break L4;
+                          }
+                        } else {
+                          break L4;
+                        }
+                      }
+                      ((cka) this).field_F.a(97, (od) (Object) var3_ref2);
+                      ((cka) this).field_bb.a(8, var3_ref2, true);
                       break L3;
                     }
                   }
-                  ((cka) this).field_F.a(97, (od) (Object) var3_ref);
-                  ((cka) this).field_bb.a(8, (kba) (Object) var3_ref, true);
-                  break L2;
+                  ((cka) this).field_bb.a(true, (rt) (Object) ((cka) this).field_Mb.field_a, 0);
+                  break L1;
                 }
-              }
-              ((cka) this).field_bb.a(true, (rt) (Object) ((cka) this).field_Mb.field_a, 0);
-              break L0;
-            }
-          } else {
-            if (((cka) this).field_Yc) {
-              L6: {
-                var3 = (cla) (Object) ((cka) this).field_Wc.a((byte) -109, (long)(((cka) this).field_Mb.a() << 1113319248 | ((cka) this).field_Mb.c()));
-                if (var3 != null) {
-                  break L6;
-                } else {
-                  var7 = new cla((cka) this, ((cka) this).field_Mb.a(), ((cka) this).field_Mb.c());
-                  var3_ref = var7;
-                  ((cka) this).field_rc = ((cka) this).field_rc + 4 * var7.field_p;
-                  L7: while (true) {
-                    L8: {
-                      if (2097152 >= ((cka) this).field_rc) {
-                        break L8;
-                      } else {
-                        var4 = ((cka) this).field_F.b(-119);
-                        if (var4 != null) {
-                          var8 = (cla) (Object) var4;
-                          var8.c(-7975);
-                          var8.p(21);
-                          ((cka) this).field_l.releasePbuffer(var8.a((byte) 101));
-                          ((cka) this).field_rc = ((cka) this).field_rc - var8.field_p;
-                          continue L7;
-                        } else {
-                          break L8;
+              } else {
+                if (((cka) this).field_Yc) {
+                  L7: {
+                    var3_ref = (cla) (Object) ((cka) this).field_Wc.a((byte) -109, (long)(((cka) this).field_Mb.a() << 16 | ((cka) this).field_Mb.c()));
+                    if (var3_ref != null) {
+                      break L7;
+                    } else {
+                      var7 = new cla((cka) this, ((cka) this).field_Mb.a(), ((cka) this).field_Mb.c());
+                      var3_ref = var7;
+                      ((cka) this).field_rc = ((cka) this).field_rc + 4 * var7.field_p;
+                      L8: while (true) {
+                        L9: {
+                          if (2097152 >= ((cka) this).field_rc) {
+                            break L9;
+                          } else {
+                            var4 = ((cka) this).field_F.b(-119);
+                            if (var4 != null) {
+                              var8 = (cla) (Object) var4;
+                              var8.c(-7975);
+                              var8.p(21);
+                              ((cka) this).field_l.releasePbuffer(var8.a((byte) 101));
+                              ((cka) this).field_rc = ((cka) this).field_rc - var8.field_p;
+                              continue L8;
+                            } else {
+                              break L9;
+                            }
+                          }
                         }
+                        ((cka) this).field_Wc.a((long)(((cka) this).field_Mb.a() << 16 | ((cka) this).field_Mb.c()), 112, (vg) (Object) var7);
+                        break L7;
                       }
                     }
-                    ((cka) this).field_Wc.a((long)(((cka) this).field_Mb.a() << 1671997200 | ((cka) this).field_Mb.c()), 112, (vg) (Object) var7);
-                    break L6;
                   }
+                  ((cka) this).field_F.a(75, (od) (Object) var3_ref);
+                  ((cka) this).field_l.setPbuffer(var3_ref.a((byte) 101));
+                  break L1;
+                } else {
+                  throw new RuntimeException("");
                 }
               }
-              ((cka) this).field_F.a(75, (od) (Object) var3_ref);
-              ((cka) this).field_l.setPbuffer(var3_ref.a((byte) 101));
-              break L0;
+            }
+            ((cka) this).field_Y = param0.a();
+            ((cka) this).field_I = param0.c();
+            this.s(3682);
+            this.h((byte) 115);
+            ((cka) this).la();
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L10: {
+            var3 = decompiledCaughtException;
+            stackOut_31_0 = (RuntimeException) var3;
+            stackOut_31_1 = new StringBuilder().append("cka.AE(");
+            stackIn_33_0 = stackOut_31_0;
+            stackIn_33_1 = stackOut_31_1;
+            stackIn_32_0 = stackOut_31_0;
+            stackIn_32_1 = stackOut_31_1;
+            if (param0 == null) {
+              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
+              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
+              stackOut_33_2 = "null";
+              stackIn_34_0 = stackOut_33_0;
+              stackIn_34_1 = stackOut_33_1;
+              stackIn_34_2 = stackOut_33_2;
+              break L10;
             } else {
-              throw new RuntimeException("");
+              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
+              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
+              stackOut_32_2 = "{...}";
+              stackIn_34_0 = stackOut_32_0;
+              stackIn_34_1 = stackOut_32_1;
+              stackIn_34_2 = stackOut_32_2;
+              break L10;
             }
           }
+          throw tba.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + 44 + param1 + 41);
         }
-        ((cka) this).field_Y = param0.a();
-        ((cka) this).field_I = param0.c();
-        this.s(3682);
-        this.h((byte) 115);
-        ((cka) this).la();
     }
 
     final int XA() {
@@ -3877,9 +4580,6 @@ final class cka extends ha {
 
     private final void b(boolean param0) {
         jaggl.OpenGL.glLoadIdentity();
-        if (param0) {
-            this.r((byte) 74);
-        }
         jaggl.OpenGL.glMultMatrixf(((cka) this).field_j.e(-112), 0);
         if (((cka) this).field_hb) {
             ((cka) this).field_Hb.field_h.a((byte) -120);
@@ -3898,16 +4598,21 @@ final class cka extends ha {
     }
 
     final void a(int param0, ks param1) {
-        if (3 <= ((cka) this).field_A) {
-            throw new RuntimeException();
+        try {
+            if (3 <= ((cka) this).field_A) {
+                throw new RuntimeException();
+            }
+            if (param0 <= ((cka) this).field_A) {
+                ((cka) this).field_kd[((cka) this).field_A].a(4245);
+            }
+            int fieldTemp$0 = ((cka) this).field_A + 1;
+            ((cka) this).field_A = ((cka) this).field_A + 1;
+            ((cka) this).field_kd[fieldTemp$0] = param1;
+            ((cka) this).field_Qb = param1;
+            ((cka) this).field_Qb.c((byte) 86);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "cka.MC(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        if (param0 <= ((cka) this).field_A) {
-            ((cka) this).field_kd[((cka) this).field_A].a(4245);
-        }
-        ((cka) this).field_A = ((cka) this).field_A + 1;
-        ((cka) this).field_kd[((cka) this).field_A + 1] = param1;
-        ((cka) this).field_Qb = param1;
-        ((cka) this).field_Qb.c((byte) 86);
     }
 
     private final void m(int param0) {
@@ -3917,7 +4622,7 @@ final class cka extends ha {
             ((cka) this).field_Uc = (float)((cka) this).field_Gc;
         }
         jaggl.OpenGL.glFogf(2915, ((cka) this).field_Uc);
-        jaggl.OpenGL.glFogf(param0, ((cka) this).field_xb);
+        jaggl.OpenGL.glFogf(2916, ((cka) this).field_xb);
         gp.field_d[0] = (float)sea.c(((cka) this).field_gc, 16711680) / 16711680.0f;
         gp.field_d[1] = (float)sea.c(65280, ((cka) this).field_gc) / 65280.0f;
         gp.field_d[2] = (float)sea.c(255, ((cka) this).field_gc) / 255.0f;
@@ -3958,7 +4663,7 @@ final class cka extends ha {
         int var11 = 0;
         L0: {
           var11 = TombRacer.field_G ? 1 : 0;
-          if ((param2 ^ -1) > -1) {
+          if (param2 < 0) {
             param2 = -param2;
             break L0;
           } else {
@@ -3978,10 +4683,10 @@ final class cka extends ha {
                 if (param1 - param2 <= ((cka) this).field_kc) {
                   this.i((byte) -110);
                   ((cka) this).a((byte) 120, param4);
-                  jaggl.OpenGL.glColor4ub((byte)(param3 >> -1754086704), (byte)(param3 >> -371442520), (byte)param3, (byte)(param3 >> 1070784312));
+                  jaggl.OpenGL.glColor4ub((byte)(param3 >> 16), (byte)(param3 >> 8), (byte)param3, (byte)(param3 >> 24));
                   var6 = 0.3499999940395355f + (float)param0;
                   var7 = (float)param1 + 0.3499999940395355f;
-                  var8 = param2 << 1461435009;
+                  var8 = param2 << 1;
                   if ((float)var8 < ((cka) this).field_Qc) {
                     jaggl.OpenGL.glBegin(7);
                     jaggl.OpenGL.glVertex2f(var6 + 1.0f, 1.0f + var7);
@@ -4006,7 +4711,7 @@ final class cka extends ha {
                           jaggl.OpenGL.glVertex2f(var6, var7);
                           var9 = 262144 / (6 * param2);
                           if (var9 > 64) {
-                            if (-513 <= (var9 ^ -1)) {
+                            if (var9 <= 512) {
                               break L3;
                             } else {
                               var9 = 512;
@@ -4056,44 +4761,95 @@ final class cka extends ha {
     }
 
     final void b(ks param0, int param1) {
+        RuntimeException var3 = null;
         int var4 = 0;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
         var4 = TombRacer.field_G ? 1 : 0;
-        if (param1 == 0) {
+        try {
           L0: {
-            if (((cka) this).field_hc) {
-              ((cka) this).a(param0, (byte) -38);
-              ((cka) this).a(param0, param1 + -1090);
-              break L0;
-            } else {
+            if (param1 == 0) {
               L1: {
-                if (0 > ((cka) this).field_x) {
+                if (((cka) this).field_hc) {
+                  ((cka) this).a(param0, (byte) -38);
+                  ((cka) this).a(param0, param1 + -1090);
                   break L1;
                 } else {
-                  if (param0 == ((cka) this).field_ub[((cka) this).field_x]) {
-                    ((cka) this).field_x = ((cka) this).field_x - 1;
-                    ((cka) this).field_ub[((cka) this).field_x] = null;
-                    param0.b((byte) -36);
-                    if (-1 >= (((cka) this).field_x ^ -1)) {
-                      ((cka) this).field_Qb = ((cka) this).field_ub[((cka) this).field_x];
-                      ((cka) this).field_t = ((cka) this).field_ub[((cka) this).field_x];
-                      ((cka) this).field_t.b(param1 + 13109);
-                      break L0;
+                  L2: {
+                    if (0 > ((cka) this).field_x) {
+                      break L2;
                     } else {
-                      ((cka) this).field_Qb = null;
-                      ((cka) this).field_t = null;
-                      break L0;
+                      if (param0 == ((cka) this).field_ub[((cka) this).field_x]) {
+                        int fieldTemp$5 = ((cka) this).field_x;
+                        ((cka) this).field_x = ((cka) this).field_x - 1;
+                        ((cka) this).field_ub[fieldTemp$5] = null;
+                        param0.b((byte) -36);
+                        if (((cka) this).field_x >= 0) {
+                          ((cka) this).field_Qb = ((cka) this).field_ub[((cka) this).field_x];
+                          ((cka) this).field_t = ((cka) this).field_ub[((cka) this).field_x];
+                          ((cka) this).field_t.b(param1 + 13109);
+                          break L1;
+                        } else {
+                          ((cka) this).field_Qb = null;
+                          ((cka) this).field_t = null;
+                          break L1;
+                        }
+                      } else {
+                        break L2;
+                      }
                     }
-                  } else {
-                    break L1;
                   }
+                  throw new RuntimeException();
                 }
               }
-              throw new RuntimeException();
+              break L0;
+            } else {
+              return;
             }
           }
-          return;
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var3 = decompiledCaughtException;
+            stackOut_13_0 = (RuntimeException) var3;
+            stackOut_13_1 = new StringBuilder().append("cka.TC(");
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
+            if (param0 == null) {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L3;
+            } else {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L3;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param1 + 41);
         }
     }
 
@@ -4107,7 +4863,7 @@ final class cka extends ha {
         ((cka) this).c(-2, 32677);
         ((cka) this).d(1, 1);
         ((cka) this).a((byte) 44, param7);
-        jaggl.OpenGL.glColor4ub((byte)(param6 >> -665931888), (byte)(param6 >> -1357513624), (byte)param6, (byte)(param6 >> -980684808));
+        jaggl.OpenGL.glColor4ub((byte)(param6 >> 16), (byte)(param6 >> 8), (byte)param6, (byte)(param6 >> 24));
         jaggl.OpenGL.glBegin(1);
         jaggl.OpenGL.glVertex3f((float)param0, (float)param1, (float)param2);
         jaggl.OpenGL.glVertex3f((float)param3, (float)param4, (float)param5);
@@ -4122,27 +4878,37 @@ final class cka extends ha {
     }
 
     final void L(int param0, int param1, int param2) {
-        if (((cka) this).field_gc == param0) {
-            if (param1 == ((cka) this).field_Kb) {
-                // if_icmpeq L58
+        L0: {
+          L1: {
+            if (((cka) this).field_gc != param0) {
+              break L1;
+            } else {
+              if (param1 != ((cka) this).field_Kb) {
+                break L1;
+              } else {
+                if (param2 == ((cka) this).field_Xc) {
+                  break L0;
+                } else {
+                  break L1;
+                }
+              }
             }
+          }
+          ((cka) this).field_gc = param0;
+          ((cka) this).field_Xc = param2;
+          ((cka) this).field_Kb = param1;
+          this.m(2916);
+          this.p((byte) -87);
+          break L0;
         }
-        ((cka) this).field_gc = param0;
-        ((cka) this).field_Xc = param2;
-        ((cka) this).field_Kb = param1;
-        this.m(2916);
-        this.p((byte) -87);
     }
 
     private final void a(byte param0) {
-        if (!((((cka) this).field_e ^ -1) == -3)) {
+        if (!(((cka) this).field_e == 2)) {
             ((cka) this).field_e = 2;
             this.l((byte) -37);
             this.b(false);
             ((cka) this).field_y = ((cka) this).field_y & -8;
-        }
-        if (param0 != -10) {
-            int discarded$0 = ((cka) this).i();
         }
     }
 
@@ -4156,31 +4922,31 @@ final class cka extends ha {
           }
         }
         L1: {
-          if (param0 == -6407) {
+          if (param0 == 6406) {
             break L1;
           } else {
-            if (-6410 == param0) {
+            if (param0 == 6409) {
               break L1;
             } else {
               L2: {
-                if (-6411 == (param0 ^ -1)) {
+                if (param0 == 6410) {
                   break L2;
                 } else {
-                  if (param0 == -34847) {
+                  if (param0 == 34846) {
                     break L2;
                   } else {
                     if (34844 != param0) {
-                      if (-6408 == param0) {
+                      if (param0 == 6407) {
                         return 3;
                       } else {
                         L3: {
                           if (param0 == 6408) {
                             break L3;
                           } else {
-                            if (param0 != -34848) {
+                            if (param0 != 34847) {
                               if (param0 != 34843) {
-                                if (-34843 != param0) {
-                                  if ((param0 ^ -1) == -6403) {
+                                if (param0 != 34842) {
+                                  if (param0 == 6402) {
                                     return 3;
                                   } else {
                                     if (param0 != 6401) {
@@ -4216,14 +4982,77 @@ final class cka extends ha {
     }
 
     final void a(int param0, ob[] param1) {
-        int var3 = 0;
-        int var4 = TombRacer.field_G ? 1 : 0;
-        for (var3 = 0; var3 < param0; var3++) {
-            ((cka) this).field_Dc[var3] = param1[var3];
-        }
-        ((cka) this).field_sb = param0;
-        if (!(((cka) this).field_e == 1)) {
-            this.d(-1);
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        var4 = TombRacer.field_G ? 1 : 0;
+        try {
+          L0: {
+            var3_int = 0;
+            L1: while (true) {
+              if (var3_int >= param0) {
+                L2: {
+                  ((cka) this).field_sb = param0;
+                  if (((cka) this).field_e != 1) {
+                    this.d(-1);
+                    break L2;
+                  } else {
+                    break L2;
+                  }
+                }
+                break L0;
+              } else {
+                ((cka) this).field_Dc[var3_int] = param1[var3_int];
+                var3_int++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var3 = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var3;
+            stackOut_8_1 = new StringBuilder().append("cka.JB(").append(param0).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param1 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L3;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L3;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
         }
     }
 
@@ -4251,9 +5080,6 @@ final class cka extends ha {
             this.h((byte) -117);
         }
         this.s(3682);
-        if (param0 > -68) {
-            return;
-        }
         ((cka) this).la();
     }
 
@@ -4271,22 +5097,22 @@ final class cka extends ha {
         if (param1 == 5121) {
           return 1;
         } else {
-          if (-5121 != param1) {
+          if (param1 != 5120) {
             L0: {
-              if (-5124 == param1) {
+              if (param1 == 5123) {
                 break L0;
               } else {
-                if ((param1 ^ -1) == -5123) {
+                if (param1 == 5122) {
                   break L0;
                 } else {
                   L1: {
-                    if (param1 == -5126) {
+                    if (param1 == 5125) {
                       break L1;
                     } else {
-                      if (-5125 == param1) {
+                      if (param1 == 5124) {
                         break L1;
                       } else {
-                        if ((param1 ^ -1) != -5127) {
+                        if (param1 != 5126) {
                           L2: {
                             if (param0 == -10) {
                               break L2;
@@ -4331,14 +5157,18 @@ final class cka extends ha {
     }
 
     final void SA(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {
-        this.r(0);
-        ((cka) this).a(true, (kl) null);
-        ((cka) this).a((byte) 44, 0);
-        jaggl.OpenGL.glPixelZoom(1.0f, -1.0f);
-        jaggl.OpenGL.glRasterPos2i(param0, param1);
-        jaggl.OpenGL.glDrawPixelsi(param2, param3, 32993, ((cka) this).field_P, param4, param5);
-        jaggl.OpenGL.glRasterPos2i(0, 0);
-        jaggl.OpenGL.glPixelZoom(1.0f, 1.0f);
+        try {
+            this.r(0);
+            ((cka) this).a(true, (kl) null);
+            ((cka) this).a((byte) 44, 0);
+            jaggl.OpenGL.glPixelZoom(1.0f, -1.0f);
+            jaggl.OpenGL.glRasterPos2i(param0, param1);
+            jaggl.OpenGL.glDrawPixelsi(param2, param3, 32993, ((cka) this).field_P, param4, param5);
+            jaggl.OpenGL.glRasterPos2i(0, 0);
+            jaggl.OpenGL.glPixelZoom(1.0f, 1.0f);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "cka.SA(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 44 + param6 + 41);
+        }
     }
 
     final int[] Y() {
@@ -4347,12 +5177,13 @@ final class cka extends ha {
 
     final void GA(int param0) {
         ((cka) this).a((byte) 65, 0);
-        jaggl.OpenGL.glClearColor((float)(16711680 & param0) / 16711680.0f, (float)(65280 & param0) / 65280.0f, (float)(param0 & 255) / 255.0f, (float)(param0 >>> -23781544) / 255.0f);
+        jaggl.OpenGL.glClearColor((float)(16711680 & param0) / 16711680.0f, (float)(65280 & param0) / 65280.0f, (float)(param0 & 255) / 255.0f, (float)(param0 >>> 24) / 255.0f);
         jaggl.OpenGL.glClear(16384);
     }
 
     final nh a(jpa param0, boolean param1) {
-        int[] var3 = null;
+        RuntimeException var3 = null;
+        int[] var3_array = null;
         int var4 = 0;
         int var5 = 0;
         int var6_int = 0;
@@ -4365,104 +5196,161 @@ final class cka extends ha {
         int[] var12 = null;
         int[] var13 = null;
         int[] var14 = null;
-        int[] stackIn_6_0 = null;
-        int stackIn_6_1 = 0;
         int[] stackIn_7_0 = null;
         int stackIn_7_1 = 0;
         int[] stackIn_8_0 = null;
         int stackIn_8_1 = 0;
-        int stackIn_8_2 = 0;
-        int[] stackOut_5_0 = null;
-        int stackOut_5_1 = 0;
+        int[] stackIn_9_0 = null;
+        int stackIn_9_1 = 0;
+        int stackIn_9_2 = 0;
+        nh stackIn_18_0 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        String stackIn_22_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int[] stackOut_6_0 = null;
+        int stackOut_6_1 = 0;
+        int[] stackOut_8_0 = null;
+        int stackOut_8_1 = 0;
+        int stackOut_8_2 = 0;
         int[] stackOut_7_0 = null;
         int stackOut_7_1 = 0;
         int stackOut_7_2 = 0;
-        int[] stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        int stackOut_6_2 = 0;
-        L0: {
-          var9 = TombRacer.field_G ? 1 : 0;
-          var10 = new int[param0.field_a * param0.field_i];
-          var14 = var10;
-          var13 = var14;
-          var12 = var13;
-          var11 = var12;
-          var3 = var11;
-          var4 = 0;
-          var5 = 0;
-          if (param0.field_h != null) {
-            var6_int = 0;
-            L1: while (true) {
-              if (param0.field_a <= var6_int) {
-                break L0;
-              } else {
-                var7 = 0;
+        nh stackOut_17_0 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
+        var9 = TombRacer.field_G ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              var10 = new int[param0.field_a * param0.field_i];
+              var14 = var10;
+              var13 = var14;
+              var12 = var13;
+              var11 = var12;
+              var3_array = var11;
+              var4 = 0;
+              var5 = 0;
+              if (param0.field_h != null) {
+                var6_int = 0;
                 L2: while (true) {
-                  if (param0.field_i <= var7) {
-                    var6_int++;
-                    continue L1;
+                  if (param0.field_a <= var6_int) {
+                    break L1;
                   } else {
-                    var5++;
-                    var3[var5] = fh.a(param0.field_h[var4] << 957572024, param0.field_g[sea.c((int) param0.field_f[var4], 255)]);
-                    var4++;
-                    var7++;
-                    continue L2;
-                  }
-                }
-              }
-            }
-          } else {
-            var6_int = 0;
-            L3: while (true) {
-              if (param0.field_a <= var6_int) {
-                break L0;
-              } else {
-                var7 = 0;
-                L4: while (true) {
-                  if (var7 >= param0.field_i) {
-                    var6_int++;
-                    continue L3;
-                  } else {
-                    L5: {
-                      var4++;
-                      var8 = param0.field_g[255 & param0.field_f[var4]];
-                      var5++;
-                      stackOut_5_0 = (int[]) var10;
-                      stackOut_5_1 = var5;
-                      stackIn_7_0 = stackOut_5_0;
-                      stackIn_7_1 = stackOut_5_1;
-                      stackIn_6_0 = stackOut_5_0;
-                      stackIn_6_1 = stackOut_5_1;
-                      if (0 != var8) {
-                        stackOut_7_0 = (int[]) (Object) stackIn_7_0;
-                        stackOut_7_1 = stackIn_7_1;
-                        stackOut_7_2 = fh.a(-16777216, var8);
-                        stackIn_8_0 = stackOut_7_0;
-                        stackIn_8_1 = stackOut_7_1;
-                        stackIn_8_2 = stackOut_7_2;
-                        break L5;
+                    var7 = 0;
+                    L3: while (true) {
+                      if (param0.field_i <= var7) {
+                        var6_int++;
+                        continue L2;
                       } else {
-                        stackOut_6_0 = (int[]) (Object) stackIn_6_0;
-                        stackOut_6_1 = stackIn_6_1;
-                        stackOut_6_2 = 0;
-                        stackIn_8_0 = stackOut_6_0;
-                        stackIn_8_1 = stackOut_6_1;
-                        stackIn_8_2 = stackOut_6_2;
-                        break L5;
+                        int incrementValue$3 = var5;
+                        var5++;
+                        var3_array[incrementValue$3] = fh.a(param0.field_h[var4] << 24, param0.field_g[sea.c((int) param0.field_f[var4], 255)]);
+                        var4++;
+                        var7++;
+                        continue L3;
                       }
                     }
-                    stackIn_8_0[stackIn_8_1] = stackIn_8_2;
-                    var7++;
-                    continue L4;
+                  }
+                }
+              } else {
+                var6_int = 0;
+                L4: while (true) {
+                  if (param0.field_a <= var6_int) {
+                    break L1;
+                  } else {
+                    var7 = 0;
+                    L5: while (true) {
+                      if (var7 >= param0.field_i) {
+                        var6_int++;
+                        continue L4;
+                      } else {
+                        L6: {
+                          int incrementValue$4 = var4;
+                          var4++;
+                          var8 = param0.field_g[255 & param0.field_f[incrementValue$4]];
+                          int incrementValue$5 = var5;
+                          var5++;
+                          stackOut_6_0 = (int[]) var10;
+                          stackOut_6_1 = incrementValue$5;
+                          stackIn_8_0 = stackOut_6_0;
+                          stackIn_8_1 = stackOut_6_1;
+                          stackIn_7_0 = stackOut_6_0;
+                          stackIn_7_1 = stackOut_6_1;
+                          if (0 != var8) {
+                            stackOut_8_0 = (int[]) (Object) stackIn_8_0;
+                            stackOut_8_1 = stackIn_8_1;
+                            stackOut_8_2 = fh.a(-16777216, var8);
+                            stackIn_9_0 = stackOut_8_0;
+                            stackIn_9_1 = stackOut_8_1;
+                            stackIn_9_2 = stackOut_8_2;
+                            break L6;
+                          } else {
+                            stackOut_7_0 = (int[]) (Object) stackIn_7_0;
+                            stackOut_7_1 = stackIn_7_1;
+                            stackOut_7_2 = 0;
+                            stackIn_9_0 = stackOut_7_0;
+                            stackIn_9_1 = stackOut_7_1;
+                            stackIn_9_2 = stackOut_7_2;
+                            break L6;
+                          }
+                        }
+                        stackIn_9_0[stackIn_9_1] = stackIn_9_2;
+                        var7++;
+                        continue L5;
+                      }
+                    }
                   }
                 }
               }
             }
+            var6 = ((cka) this).a(var14, param0.field_a, 96, param0.field_i, param0.field_i, 0);
+            var6.b(param0.field_d, param0.field_c, param0.field_b, param0.field_e);
+            stackOut_17_0 = (nh) var6;
+            stackIn_18_0 = stackOut_17_0;
+            break L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L7: {
+            var3 = decompiledCaughtException;
+            stackOut_19_0 = (RuntimeException) var3;
+            stackOut_19_1 = new StringBuilder().append("cka.EB(");
+            stackIn_21_0 = stackOut_19_0;
+            stackIn_21_1 = stackOut_19_1;
+            stackIn_20_0 = stackOut_19_0;
+            stackIn_20_1 = stackOut_19_1;
+            if (param0 == null) {
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "null";
+              stackIn_22_0 = stackOut_21_0;
+              stackIn_22_1 = stackOut_21_1;
+              stackIn_22_2 = stackOut_21_2;
+              break L7;
+            } else {
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "{...}";
+              stackIn_22_0 = stackOut_20_0;
+              stackIn_22_1 = stackOut_20_1;
+              stackIn_22_2 = stackOut_20_2;
+              break L7;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + param1 + 41);
         }
-        var6 = ((cka) this).a(var14, param0.field_a, 96, param0.field_i, param0.field_i, 0);
-        var6.b(param0.field_d, param0.field_c, param0.field_b, param0.field_e);
-        return var6;
+        return stackIn_18_0;
     }
 
     private final void o(byte param0) {
@@ -4490,17 +5378,92 @@ final class cka extends ha {
     }
 
     final sca a(int param0, int param1, int param2, boolean param3, byte[] param4) {
-        if (param0 > -49) {
-            return null;
-        }
-        if (((cka) this).field_Q) {
-            if (param3) {
-                // ifne L33
+        RuntimeException var6 = null;
+        Object stackIn_2_0 = null;
+        nm stackIn_8_0 = null;
+        o stackIn_10_0 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        nm stackOut_7_0 = null;
+        o stackOut_9_0 = null;
+        Object stackOut_1_0 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        try {
+          L0: {
+            if (param0 <= -49) {
+              L1: {
+                if (!((cka) this).field_Q) {
+                  break L1;
+                } else {
+                  L2: {
+                    if (!param3) {
+                      break L2;
+                    } else {
+                      if (((cka) this).field_bd) {
+                        break L2;
+                      } else {
+                        break L1;
+                      }
+                    }
+                  }
+                  stackOut_7_0 = new nm((cka) this, param2, param4, param1, param3);
+                  stackIn_8_0 = stackOut_7_0;
+                  return (sca) (Object) stackIn_8_0;
+                }
+              }
+              stackOut_9_0 = new o((cka) this, param2, param4, param1);
+              stackIn_10_0 = stackOut_9_0;
+              break L0;
             } else {
-                return (sca) (Object) new nm((cka) this, param2, param4, param1, param3);
+              stackOut_1_0 = null;
+              stackIn_2_0 = stackOut_1_0;
+              return (sca) (Object) stackIn_2_0;
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var6 = decompiledCaughtException;
+            stackOut_11_0 = (RuntimeException) var6;
+            stackOut_11_1 = new StringBuilder().append("cka.LA(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
+            if (param4 == null) {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L3;
+            } else {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L3;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
         }
-        return (sca) (Object) new o((cka) this, param2, param4, param1);
+        return (sca) (Object) stackIn_10_0;
     }
 
     final void a(float param0, boolean param1, float param2) {

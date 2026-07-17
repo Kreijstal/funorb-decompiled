@@ -72,7 +72,7 @@ final class nk extends dg {
           on.b(var13);
           var7 = 0;
           L0: while (true) {
-            if ((var7 ^ -1) <= -3) {
+            if (var7 >= 2) {
               return;
             } else {
               on.e(var7 + param0, var7 + param2, -var7 + -var7 + param3, param1 + -var7 - var7, 65793);
@@ -87,7 +87,7 @@ final class nk extends dg {
           on.b(var13);
           var7 = 0;
           L1: while (true) {
-            if ((var7 ^ -1) <= -3) {
+            if (var7 >= 2) {
               return;
             } else {
               on.e(var7 + param0, var7 + param2, -var7 + -var7 + param3, param1 + -var7 - var7, 65793);
@@ -109,25 +109,32 @@ final class nk extends dg {
     }
 
     final static void c(byte param0) {
-        int var3 = Kickabout.field_G;
-        if (!(!la.a(param0 + 156))) {
-            wk.a(50);
-            return;
+        RuntimeException var1 = null;
+        int var3 = 0;
+        int decompiledRegionSelector0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var3 = Kickabout.field_G;
+        try {
+          L0: {
+            if (la.a(100)) {
+              wk.a(50);
+              decompiledRegionSelector0 = 1;
+              break L0;
+            } else {
+              decompiledRegionSelector0 = 0;
+              break L0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw nb.a((Throwable) (Object) var1, "nk.F(" + -56 + 41);
         }
-        if (param0 != -56) {
-            return;
+        if (decompiledRegionSelector0 == 0) {
+          return;
+        } else {
+          return;
         }
-        or.field_d.b(81, (byte) 99);
-        or.field_d.field_n = or.field_d.field_n + 2;
-        int var1 = or.field_d.field_n;
-        or.field_d.a(109, da.field_h.a(false));
-        hn var2 = (hn) (Object) da.field_h.g(param0 + 24065);
-        while (var2 != null) {
-            var2.a(1, (iw) (Object) or.field_d);
-            var2 = (hn) (Object) da.field_h.c(param0 ^ -23);
-        }
-        or.field_d.d(or.field_d.field_n - var1, param0 + 118);
-        da.field_h.b(param0 + 23053);
     }
 
     static {

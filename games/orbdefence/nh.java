@@ -209,44 +209,48 @@ final class nh {
         } else {
             var4 = ((nh) this).field_d.b(1, false, param1);
         }
-        oe var3_ref = new oe();
+        var3 = new oe();
         if (!(var4 == null)) {
-            var3_ref.a((byte) 67, new mg(var4));
+            var3.a((byte) 67, new mg(var4));
         }
-        if (!(-32769 < (param1 ^ -1))) {
-            var3_ref.b((byte) -77);
+        if (!(param1 < 32768)) {
+            var3.b((byte) -77);
         }
-        ((nh) this).field_f.a((Object) (Object) var3_ref, (byte) -100, (long)param1);
-        return var3_ref;
+        ((nh) this).field_f.a((Object) (Object) var3, (byte) -100, (long)param1);
+        return var3;
     }
 
     final static void a(int param0, int param1) {
         d var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
+        RuntimeException decompiledCaughtException = null;
         var3 = OrbDefence.field_D ? 1 : 0;
-        if (param0 == 15968) {
-          var2 = (d) (Object) md.field_h.b((byte) -25);
-          L0: while (true) {
-            if (var2 == null) {
-              return;
-            } else {
-              fa.a(var2, param1, param0 ^ 15999);
-              var2 = (d) (Object) md.field_h.d(853);
-              continue L0;
+        try {
+          L0: {
+            L1: {
+              if (param0 == 15968) {
+                break L1;
+              } else {
+                nh.a((byte) 53);
+                break L1;
+              }
+            }
+            var2 = (d) (Object) md.field_h.b((byte) -25);
+            L2: while (true) {
+              if (var2 == null) {
+                break L0;
+              } else {
+                fa.a(var2, 7, param0 ^ 15999);
+                var2 = (d) (Object) md.field_h.d(853);
+                continue L2;
+              }
             }
           }
-        } else {
-          nh.a((byte) 53);
-          var2 = (d) (Object) md.field_h.b((byte) -25);
-          L1: while (true) {
-            if (var2 == null) {
-              return;
-            } else {
-              fa.a(var2, param1, param0 ^ 15999);
-              var2 = (d) (Object) md.field_h.d(853);
-              continue L1;
-            }
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          throw dd.a((Throwable) (Object) var2_ref, "nh.C(" + param0 + 44 + 7 + 41);
         }
     }
 

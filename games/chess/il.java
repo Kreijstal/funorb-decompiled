@@ -6,144 +6,28 @@ final class il {
     static int[][] field_b;
 
     public static void a(int param0) {
-        if (param0 < 61) {
-            return;
-        }
         field_b = null;
     }
 
     final static void a(ci param0, ci param1, byte param2) {
-        L0: {
-          if (param0.field_I == null) {
-            param0.field_I = new jc();
-            break L0;
-          } else {
-            break L0;
-          }
-        }
-        if (param1.field_I != null) {
-          if (null != bf.field_M) {
-            if (param2 == 15) {
-              if (r.field_Ib != null) {
-                me.field_e = param0.field_I;
-                cl.field_e = param1.field_I;
-                ab.d((byte) -42);
-                return;
-              } else {
-                r.field_Ib = new dk(64);
-                me.field_e = param0.field_I;
-                cl.field_e = param1.field_I;
-                ab.d((byte) -42);
-                return;
-              }
-            } else {
-              field_a = 90;
-              if (r.field_Ib != null) {
-                me.field_e = param0.field_I;
-                cl.field_e = param1.field_I;
-                ab.d((byte) -42);
-                return;
-              } else {
-                r.field_Ib = new dk(64);
-                me.field_e = param0.field_I;
-                cl.field_e = param1.field_I;
-                ab.d((byte) -42);
-                return;
-              }
+        try {
+            if (!(param0.field_I != null)) {
+                param0.field_I = new jc();
             }
-          } else {
-            bf.field_M = new dk(64);
-            if (param2 == 15) {
-              if (r.field_Ib != null) {
-                me.field_e = param0.field_I;
-                cl.field_e = param1.field_I;
-                ab.d((byte) -42);
-                return;
-              } else {
-                r.field_Ib = new dk(64);
-                me.field_e = param0.field_I;
-                cl.field_e = param1.field_I;
-                ab.d((byte) -42);
-                return;
-              }
-            } else {
-              field_a = 90;
-              if (r.field_Ib != null) {
-                me.field_e = param0.field_I;
-                cl.field_e = param1.field_I;
-                ab.d((byte) -42);
-                return;
-              } else {
-                r.field_Ib = new dk(64);
-                me.field_e = param0.field_I;
-                cl.field_e = param1.field_I;
-                ab.d((byte) -42);
-                return;
-              }
+            if (param1.field_I == null) {
+                param1.field_I = new jc();
             }
-          }
-        } else {
-          param1.field_I = new jc();
-          if (null == bf.field_M) {
-            bf.field_M = new dk(64);
-            if (param2 != 15) {
-              field_a = 90;
-              if (r.field_Ib != null) {
-                me.field_e = param0.field_I;
-                cl.field_e = param1.field_I;
-                ab.d((byte) -42);
-                return;
-              } else {
-                r.field_Ib = new dk(64);
-                me.field_e = param0.field_I;
-                cl.field_e = param1.field_I;
-                ab.d((byte) -42);
-                return;
-              }
-            } else {
-              if (r.field_Ib != null) {
-                me.field_e = param0.field_I;
-                cl.field_e = param1.field_I;
-                ab.d((byte) -42);
-                return;
-              } else {
-                r.field_Ib = new dk(64);
-                me.field_e = param0.field_I;
-                cl.field_e = param1.field_I;
-                ab.d((byte) -42);
-                return;
-              }
+            if (null == bf.field_M) {
+                bf.field_M = new dk(64);
             }
-          } else {
-            if (param2 == 15) {
-              if (r.field_Ib != null) {
-                me.field_e = param0.field_I;
-                cl.field_e = param1.field_I;
-                ab.d((byte) -42);
-                return;
-              } else {
+            if (r.field_Ib == null) {
                 r.field_Ib = new dk(64);
-                me.field_e = param0.field_I;
-                cl.field_e = param1.field_I;
-                ab.d((byte) -42);
-                return;
-              }
-            } else {
-              field_a = 90;
-              if (r.field_Ib != null) {
-                me.field_e = param0.field_I;
-                cl.field_e = param1.field_I;
-                ab.d((byte) -42);
-                return;
-              } else {
-                r.field_Ib = new dk(64);
-                me.field_e = param0.field_I;
-                cl.field_e = param1.field_I;
-                ab.d((byte) -42);
-                return;
-              }
             }
-          }
+            me.field_e = param0.field_I;
+            cl.field_e = param1.field_I;
+            ab.d((byte) -42);
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "il.B(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + 15 + 41);
         }
     }
 

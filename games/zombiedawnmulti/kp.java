@@ -9,69 +9,112 @@ final class kp extends nc {
     static int field_l;
 
     final static void a(int param0, int param1, int param2, boolean param3) {
-        if (param3) {
-          L0: {
-            if (param0 != 0) {
-              break L0;
-            } else {
-              if (li.field_C == param2) {
+        if (param0 == 0) {
+          if (~li.field_C != ~param2) {
+            L0: {
+              bn.field_b = true;
+              li.field_C = param2;
+              l.a(param1, (byte) -122);
+              if (param0 != 1) {
                 break L0;
               } else {
-                L1: {
+                if (~param2 != ~qe.field_g) {
+                  qe.field_g = param2;
                   bn.field_b = true;
-                  li.field_C = param2;
-                  l.a(param1, (byte) -122);
-                  if (param0 != 1) {
-                    break L1;
-                  } else {
-                    if (param2 != qe.field_g) {
-                      qe.field_g = param2;
-                      bn.field_b = true;
-                      l.a(param1, (byte) -74);
+                  l.a(param1, (byte) -74);
+                  break L0;
+                } else {
+                  L1: {
+                    if (param0 != 2) {
                       break L1;
                     } else {
-                      if (-3 == (param0 ^ -1)) {
-                        if (param2 == ba.field_q) {
-                          return;
-                        } else {
-                          ba.field_q = param2;
-                          bn.field_b = true;
-                          l.a(param1, (byte) -51);
-                          return;
-                        }
+                      if (~param2 == ~ba.field_q) {
+                        break L1;
                       } else {
+                        ba.field_q = param2;
+                        bn.field_b = true;
+                        l.a(param1, (byte) -51);
                         return;
                       }
                     }
                   }
-                }
-                if (-3 == (param0 ^ -1)) {
-                  if (param2 == ba.field_q) {
-                    return;
-                  } else {
-                    ba.field_q = param2;
-                    bn.field_b = true;
-                    l.a(param1, (byte) -51);
-                    return;
-                  }
-                } else {
                   return;
                 }
               }
             }
+            L2: {
+              if (param0 != 2) {
+                break L2;
+              } else {
+                if (~param2 == ~ba.field_q) {
+                  break L2;
+                } else {
+                  ba.field_q = param2;
+                  bn.field_b = true;
+                  l.a(param1, (byte) -51);
+                  return;
+                }
+              }
+            }
+            return;
+          } else {
+            L3: {
+              if (param0 != 1) {
+                break L3;
+              } else {
+                if (~param2 != ~qe.field_g) {
+                  qe.field_g = param2;
+                  bn.field_b = true;
+                  l.a(param1, (byte) -74);
+                  break L3;
+                } else {
+                  L4: {
+                    if (param0 != 2) {
+                      break L4;
+                    } else {
+                      if (~param2 == ~ba.field_q) {
+                        break L4;
+                      } else {
+                        ba.field_q = param2;
+                        bn.field_b = true;
+                        l.a(param1, (byte) -51);
+                        return;
+                      }
+                    }
+                  }
+                  return;
+                }
+              }
+            }
+            L5: {
+              if (param0 != 2) {
+                break L5;
+              } else {
+                if (~param2 == ~ba.field_q) {
+                  break L5;
+                } else {
+                  ba.field_q = param2;
+                  bn.field_b = true;
+                  l.a(param1, (byte) -51);
+                  return;
+                }
+              }
+            }
+            return;
           }
-          L2: {
+        } else {
+          L6: {
             if (param0 != 1) {
-              break L2;
+              break L6;
             } else {
-              if (param2 != qe.field_g) {
+              if (~param2 != ~qe.field_g) {
                 qe.field_g = param2;
                 bn.field_b = true;
                 l.a(param1, (byte) -74);
-                break L2;
+                break L6;
               } else {
-                if (-3 == (param0 ^ -1)) {
-                  if (param2 != ba.field_q) {
+                if (param0 == 2) {
+                  if (~param2 != ~ba.field_q) {
                     ba.field_q = param2;
                     bn.field_b = true;
                     l.a(param1, (byte) -51);
@@ -85,145 +128,17 @@ final class kp extends nc {
               }
             }
           }
-          if (-3 == (param0 ^ -1)) {
-            if (param2 == ba.field_q) {
-              return;
-            } else {
+          if (param0 == 2) {
+            if (~param2 != ~ba.field_q) {
               ba.field_q = param2;
               bn.field_b = true;
               l.a(param1, (byte) -51);
               return;
-            }
-          } else {
-            return;
-          }
-        } else {
-          kp.e(-1);
-          if (param0 == -1) {
-            if (li.field_C != param2) {
-              L3: {
-                bn.field_b = true;
-                li.field_C = param2;
-                l.a(param1, (byte) -122);
-                if (param0 != 1) {
-                  break L3;
-                } else {
-                  if (param2 != qe.field_g) {
-                    qe.field_g = param2;
-                    bn.field_b = true;
-                    l.a(param1, (byte) -74);
-                    break L3;
-                  } else {
-                    if (-3 == (param0 ^ -1)) {
-                      if (param2 != ba.field_q) {
-                        ba.field_q = param2;
-                        bn.field_b = true;
-                        l.a(param1, (byte) -51);
-                        return;
-                      } else {
-                        return;
-                      }
-                    } else {
-                      return;
-                    }
-                  }
-                }
-              }
-              if (-3 == (param0 ^ -1)) {
-                if (param2 != ba.field_q) {
-                  ba.field_q = param2;
-                  bn.field_b = true;
-                  l.a(param1, (byte) -51);
-                  return;
-                } else {
-                  return;
-                }
-              } else {
-                return;
-              }
-            } else {
-              L4: {
-                if (param0 != 1) {
-                  break L4;
-                } else {
-                  if (param2 != qe.field_g) {
-                    qe.field_g = param2;
-                    bn.field_b = true;
-                    l.a(param1, (byte) -74);
-                    break L4;
-                  } else {
-                    L5: {
-                      if (-3 != (param0 ^ -1)) {
-                        break L5;
-                      } else {
-                        if (param2 == ba.field_q) {
-                          break L5;
-                        } else {
-                          ba.field_q = param2;
-                          bn.field_b = true;
-                          l.a(param1, (byte) -51);
-                          break L5;
-                        }
-                      }
-                    }
-                    return;
-                  }
-                }
-              }
-              if (-3 == (param0 ^ -1)) {
-                if (param2 == ba.field_q) {
-                  return;
-                } else {
-                  ba.field_q = param2;
-                  bn.field_b = true;
-                  l.a(param1, (byte) -51);
-                  return;
-                }
-              } else {
-                return;
-              }
-            }
-          } else {
-            L6: {
-              if (param0 != 1) {
-                break L6;
-              } else {
-                if (param2 != qe.field_g) {
-                  qe.field_g = param2;
-                  bn.field_b = true;
-                  l.a(param1, (byte) -74);
-                  break L6;
-                } else {
-                  L7: {
-                    if (-3 != param0) {
-                      break L7;
-                    } else {
-                      if (param2 == ba.field_q) {
-                        break L7;
-                      } else {
-                        ba.field_q = param2;
-                        bn.field_b = true;
-                        l.a(param1, (byte) -51);
-                        break L7;
-                      }
-                    }
-                  }
-                  return;
-                }
-              }
-            }
-            if (-3 == (param0 ^ -1)) {
-              if (param2 != ba.field_q) {
-                ba.field_q = param2;
-                bn.field_b = true;
-                l.a(param1, (byte) -51);
-                return;
-              } else {
-                return;
-              }
             } else {
               return;
             }
+          } else {
+            return;
           }
         }
     }

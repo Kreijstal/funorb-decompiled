@@ -8,7 +8,7 @@ final class im {
 
     public static void a(byte param0) {
         field_a = null;
-        int var1 = -48 / ((34 - param0) / 57);
+        int var1 = -48;
         field_c = null;
         field_b = null;
     }
@@ -186,22 +186,78 @@ final class im {
     }
 
     final static pp a(int param0, lu param1) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         Object var5 = null;
-        var2 = param1.e((byte) 73);
-        if (param0 != -22833) {
-          var5 = null;
-          pp discarded$2 = im.a(9, (lu) null);
-          var3 = param1.b(param0 ^ -16734672);
-          var4 = param1.b(16711935);
-          return (pp) (Object) new sl(var2, var3, var4);
-        } else {
-          var3 = param1.b(param0 ^ -16734672);
-          var4 = param1.b(16711935);
-          return (pp) (Object) new sl(var2, var3, var4);
+        sl stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        sl stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              var2_int = param1.e((byte) 73);
+              if (param0 == -22833) {
+                break L1;
+              } else {
+                var5 = null;
+                pp discarded$2 = im.a(9, (lu) null);
+                break L1;
+              }
+            }
+            var3 = param1.b(param0 ^ -16734672);
+            var4 = param1.b(16711935);
+            stackOut_2_0 = new sl(var2_int, var3, var4);
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_1 = new StringBuilder().append("im.A(").append(param0).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param1 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw pe.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
         }
+        return (pp) (Object) stackIn_3_0;
     }
 
     static {

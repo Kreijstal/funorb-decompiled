@@ -5,13 +5,13 @@ class gk extends eg {
     static bg field_s;
 
     public final void a(int param0, int param1, fe param2, int param3, boolean param4) {
-        if (param4) {
-          ng.a(param2.field_q, param2.field_v, param0 + -12153, param1 - -param2.field_u, param3 - -param2.field_t);
-          super.a(param0, param1, param2, param3, param4);
-          return;
-        } else {
-          super.a(param0, param1, param2, param3, param4);
-          return;
+        try {
+            if (param4) {
+                ng.a(param2.field_q, param2.field_v, param0 + -12153, param1 - -param2.field_u, param3 - -param2.field_t);
+            }
+            super.a(param0, param1, param2, param3, param4);
+        } catch (RuntimeException runtimeException) {
+            throw lj.a((Throwable) (Object) runtimeException, "gk.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 41);
         }
     }
 
@@ -21,22 +21,17 @@ class gk extends eg {
           ki discarded$2 = gk.b(-117, -125);
           var2 = new ki();
           on.field_v.a((byte) 103, (pi) (Object) var2);
-          tc.a(param1 + 0, param0);
+          tc.a(param1, param0);
           return var2;
         } else {
           var2 = new ki();
           on.field_v.a((byte) 103, (pi) (Object) var2);
-          tc.a(param1 + 0, param0);
+          tc.a(param1, param0);
           return var2;
         }
     }
 
     public static void a(byte param0) {
-        if (param0 > -49) {
-            field_s = null;
-            field_s = null;
-            return;
-        }
         field_s = null;
     }
 
@@ -65,7 +60,7 @@ class gk extends eg {
           } else {
             var5 = new lc();
             var5.field_q = param2;
-            var5.field_r = param4;
+            var5.field_r = 10;
             var5.field_v = param1;
             sj.field_g.a((byte) -94, (pi) (Object) var5);
             var6 = 51 / ((50 - param3) / 50);

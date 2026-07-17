@@ -54,7 +54,7 @@ final class eb extends wj {
     final void b(int param0) {
         L0: {
           ((eb) this).field_c = 0L;
-          if ((((eb) this).field_d ^ -1L) < (((eb) this).field_e ^ -1L)) {
+          if (~((eb) this).field_d < ~((eb) this).field_e) {
             ((eb) this).field_e = ((eb) this).field_e + (((eb) this).field_d + -((eb) this).field_e);
             break L0;
           } else {
@@ -80,7 +80,7 @@ final class eb extends wj {
           var4 = var2 - ((eb) this).field_c;
           ((eb) this).field_c = var2;
           if (var4 > -5000000000L) {
-            if (-5000000001L >= (var4 ^ -1L)) {
+            if (var4 >= 5000000000L) {
               var6 = 0L;
               var8 = 1;
               L0: while (true) {
@@ -95,7 +95,7 @@ final class eb extends wj {
             } else {
               L1: {
                 ((eb) this).field_g[((eb) this).field_f] = var4;
-                if (-2 < (((eb) this).field_h ^ -1)) {
+                if (((eb) this).field_h < 1) {
                   ((eb) this).field_h = ((eb) this).field_h + 1;
                   break L1;
                 } else {
@@ -146,10 +146,10 @@ final class eb extends wj {
             }
           } else {
             L5: {
-              if (-5000000001L < (var4 ^ -1L)) {
+              if (var4 < 5000000000L) {
                 L6: {
                   ((eb) this).field_g[((eb) this).field_f] = var4;
-                  if (-2 < (((eb) this).field_h ^ -1)) {
+                  if (((eb) this).field_h < 1) {
                     ((eb) this).field_h = ((eb) this).field_h + 1;
                     break L6;
                   } else {
@@ -198,7 +198,7 @@ final class eb extends wj {
                   }
                 }
               }
-              if ((((eb) this).field_e ^ -1L) < (((eb) this).field_d ^ -1L)) {
+              if (~((eb) this).field_e < ~((eb) this).field_d) {
                 ((eb) this).field_d = ((eb) this).field_e;
                 return var4;
               } else {
@@ -229,7 +229,7 @@ final class eb extends wj {
                   }
                 }
               }
-              if ((((eb) this).field_e ^ -1L) >= (((eb) this).field_d ^ -1L)) {
+              if (~((eb) this).field_e >= ~((eb) this).field_d) {
                 return var4;
               } else {
                 ((eb) this).field_d = ((eb) this).field_e;
@@ -249,13 +249,13 @@ final class eb extends wj {
         if (param0 != -27042) {
             ((eb) this).b(120);
             ((eb) this).field_e = ((eb) this).field_e + this.d(-14942);
-            if (!((((eb) this).field_e ^ -1L) <= (((eb) this).field_d ^ -1L))) {
+            if (!(~((eb) this).field_e <= ~((eb) this).field_d)) {
                 return (((eb) this).field_d - ((eb) this).field_e) / 1000000L;
             }
             return 0L;
         }
         ((eb) this).field_e = ((eb) this).field_e + this.d(-14942);
-        if (!((((eb) this).field_e ^ -1L) <= (((eb) this).field_d ^ -1L))) {
+        if (!(~((eb) this).field_e <= ~((eb) this).field_d)) {
             return (((eb) this).field_d - ((eb) this).field_e) / 1000000L;
         }
         return 0L;

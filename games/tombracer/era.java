@@ -17,9 +17,6 @@ final class era {
         field_g = null;
         field_e = null;
         field_d = null;
-        if (param0 <= 110) {
-            field_e = null;
-        }
     }
 
     static {

@@ -11,52 +11,126 @@ class f extends kc {
     static lk field_i;
 
     final static void a(int param0, byte param1) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         Object var7 = null;
+        RuntimeException decompiledCaughtException = null;
         var6 = MonkeyPuzzle2.field_F ? 1 : 0;
-        var2 = param0 * 16 / 50;
-        var3 = 0;
-        L0: while (true) {
-          if ((var3 ^ -1) <= -301) {
-            L1: {
-              ge.b();
-              if (param1 > 69) {
-                break L1;
+        try {
+          L0: {
+            var2_int = param0 * 16 / 50;
+            var3 = 0;
+            L1: while (true) {
+              if (var3 >= 300) {
+                L2: {
+                  ge.b();
+                  if (param1 > 69) {
+                    break L2;
+                  } else {
+                    var7 = null;
+                    boolean discarded$2 = f.a(-43, (String) null);
+                    break L2;
+                  }
+                }
+                break L0;
               } else {
-                var7 = null;
-                boolean discarded$1 = f.a(-43, (String) null);
-                break L1;
+                L3: {
+                  if (var2_int > sc.field_h[var3]) {
+                    var4 = var3 / 20;
+                    var5 = 32 * (var3 - var4 * 20);
+                    var4 = var4 * 32;
+                    ge.h(var5, var4, var5 + 32, var4 + 32);
+                    ke.field_i.a(0, 0);
+                    break L3;
+                  } else {
+                    break L3;
+                  }
+                }
+                var3++;
+                continue L1;
               }
             }
-            return;
-          } else {
-            if (var2 > sc.field_h[var3]) {
-              var4 = var3 / 20;
-              var5 = 32 * (var3 - var4 * 20);
-              var4 = var4 * 32;
-              ge.h(var5, var4, var5 + 32, var4 + 32);
-              ke.field_i.a(0, 0);
-              var3++;
-              continue L0;
-            } else {
-              var3++;
-              continue L0;
-            }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw la.a((Throwable) (Object) var2, "f.F(" + param0 + 44 + param1 + 41);
         }
     }
 
     final static boolean a(int param0, String param1) {
-        if (param0 != -15189) {
-            Object var3 = null;
-            boolean discarded$0 = f.a(-28, (String) null);
+        RuntimeException var2 = null;
+        Object var3 = null;
+        CharSequence var4 = null;
+        boolean stackIn_3_0 = false;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        boolean stackOut_2_0 = false;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 == -15189) {
+                break L1;
+              } else {
+                var3 = null;
+                boolean discarded$2 = f.a(-28, (String) null);
+                break L1;
+              }
+            }
+            var4 = (CharSequence) (Object) param1;
+            stackOut_2_0 = uj.field_f.equals((Object) (Object) pl.a((byte) 104, var4));
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_1 = new StringBuilder().append("f.J(").append(param0).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param1 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw la.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
         }
-        CharSequence var4 = (CharSequence) (Object) param1;
-        return uj.field_f.equals((Object) (Object) pl.a((byte) 104, var4));
+        return stackIn_3_0;
     }
 
     fk a(boolean param0) {
@@ -71,10 +145,6 @@ class f extends kc {
         field_j = null;
         field_g = null;
         field_f = null;
-        if (param0 != -77) {
-            Object var2 = null;
-            boolean discarded$0 = f.a(-123, (String) null);
-        }
         field_i = null;
     }
 
@@ -89,14 +159,22 @@ class f extends kc {
     }
 
     f(long param0, String param1) {
-        ((f) this).field_h = param0;
-        ((f) this).field_k = param1;
+        try {
+            ((f) this).field_h = param0;
+            ((f) this).field_k = param1;
+        } catch (RuntimeException runtimeException) {
+            throw la.a((Throwable) (Object) runtimeException, "f.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void a(int param0, gk param1) {
-        param1.a(((f) this).field_h, (byte) 117);
-        int var3 = 37 / ((-34 - param0) / 53);
-        param1.a(((f) this).field_k, (byte) 90);
+        try {
+            param1.a(((f) this).field_h, (byte) 117);
+            int var3_int = 37 / ((-34 - param0) / 53);
+            param1.a(((f) this).field_k, (byte) 90);
+        } catch (RuntimeException runtimeException) {
+            throw la.a((Throwable) (Object) runtimeException, "f.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

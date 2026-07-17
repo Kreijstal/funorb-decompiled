@@ -5,19 +5,14 @@ final class sa {
     static int[] field_a;
 
     final static void a(int param0, int param1) {
-        if (param1 == 23820) {
-          if (2 < param0) {
-            if (!a.field_a) {
-              if (wk.a(80)) {
-                kd.field_C = 0;
-                return;
-              } else {
-                kd.field_C = param0;
-                m.field_f = ra.a(1, na.field_d, jl.field_d, (ia.field_k << -268291678) - -nf.field_l, new int[1], param1 + -23899, fc.field_e, 65534, 3);
-                return;
-              }
-            } else {
+        if (2 < param0) {
+          if (!a.field_a) {
+            if (wk.a(80)) {
               kd.field_C = 0;
+              return;
+            } else {
+              kd.field_C = param0;
+              m.field_f = ra.a(1, na.field_d, jl.field_d, (ia.field_k << 2) - -nf.field_l, new int[1], -79, fc.field_e, 65534, 3);
               return;
             }
           } else {
@@ -25,6 +20,7 @@ final class sa {
             return;
           }
         } else {
+          kd.field_C = 0;
           return;
         }
     }
@@ -80,9 +76,6 @@ final class sa {
 
     public static void a(int param0) {
         field_a = null;
-        if (param0 != 30334) {
-            field_a = null;
-        }
     }
 
     static {

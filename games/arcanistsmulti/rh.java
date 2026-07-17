@@ -42,8 +42,9 @@ final class rh {
 
     final int a(int param0) {
         if (((rh) this).field_b >= ((rh) this).field_i) {
+            int fieldTemp$0 = ((rh) this).field_d;
             ((rh) this).field_d = ((rh) this).field_d + 1;
-            ((rh) this).field_j = ((rh) this).field_a[((rh) this).field_d] << 15;
+            ((rh) this).field_j = ((rh) this).field_a[fieldTemp$0] << 15;
             if (((rh) this).field_d >= ((rh) this).field_c) {
                 ((rh) this).field_d = ((rh) this).field_c - 1;
             }

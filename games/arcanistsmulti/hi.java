@@ -14,42 +14,39 @@ final class hi {
     public static void a(byte param0) {
         field_e = null;
         field_b = null;
-        if (param0 < 16) {
-            return;
-        }
         field_c = null;
         field_f = null;
         field_h = null;
     }
 
     final static void a(int param0, boolean param1) {
-        rd var2 = null;
+        Object var2 = null;
         if (param0 >= -45) {
           L0: {
             hi.a(23, true);
             var2 = null;
             if (param1) {
-              var2 = (rd) (Object) new wd();
+              var2 = (Object) (Object) new wd();
               break L0;
             } else {
-              var2 = new rd();
+              var2 = (Object) (Object) new rd();
               break L0;
             }
           }
-          jk.a(-113, new v((qi) (Object) var2));
+          jk.a(-113, new v((qi) var2));
           return;
         } else {
           L1: {
             var2 = null;
             if (param1) {
-              var2 = (rd) (Object) new wd();
+              var2 = (Object) (Object) new wd();
               break L1;
             } else {
-              var2 = new rd();
+              var2 = (Object) (Object) new rd();
               break L1;
             }
           }
-          jk.a(-113, new v((qi) (Object) var2));
+          jk.a(-113, new v((qi) var2));
           return;
         }
     }

@@ -9,9 +9,6 @@ final class rh {
     }
 
     final static void a(int param0) {
-        if (param0 >= -3) {
-            field_a = 45;
-        }
     }
 
     static {

@@ -37,11 +37,11 @@ final class re {
           if (4 <= var2) {
             var2 = 0;
             L1: while (true) {
-              if ((var2 ^ -1) <= -257) {
-                var11 = -97 / ((param0 - 3) / 50);
+              if (var2 >= 256) {
+                var11 = -97;
                 var2 = 0;
                 L2: while (true) {
-                  if ((var2 ^ -1) <= -257) {
+                  if (var2 >= 256) {
                     this.a((byte) 122);
                     ((re) this).field_c = 256;
                     return;
@@ -54,28 +54,28 @@ final class re {
                     var8 = var8 + ((re) this).field_a[var2 - -5];
                     var7 = var7 + ((re) this).field_a[4 + var2];
                     var4 = var4 + ((re) this).field_a[1 + var2];
-                    var3 = var3 ^ var4 << 2144811691;
+                    var3 = var3 ^ var4 << 11;
                     var6 = var6 + var3;
                     var4 = var4 + var5;
-                    var4 = var4 ^ var5 >>> -312752702;
+                    var4 = var4 ^ var5 >>> 2;
                     var7 = var7 + var4;
                     var5 = var5 + var6;
-                    var5 = var5 ^ var6 << 381529576;
+                    var5 = var5 ^ var6 << 8;
                     var8 = var8 + var5;
                     var6 = var6 + var7;
-                    var6 = var6 ^ var7 >>> -1692030064;
+                    var6 = var6 ^ var7 >>> 16;
                     var7 = var7 + var8;
                     var9 = var9 + var6;
-                    var7 = var7 ^ var8 << 2049751370;
+                    var7 = var7 ^ var8 << 10;
                     var10 = var10 + var7;
                     var8 = var8 + var9;
-                    var8 = var8 ^ var9 >>> -744832892;
+                    var8 = var8 ^ var9 >>> 4;
                     var9 = var9 + var10;
                     var3 = var3 + var8;
-                    var9 = var9 ^ var10 << 833802664;
+                    var9 = var9 ^ var10 << 8;
                     var4 = var4 + var9;
                     var10 = var10 + var3;
-                    var10 = var10 ^ var3 >>> 1952118441;
+                    var10 = var10 ^ var3 >>> 9;
                     var5 = var5 + var10;
                     var3 = var3 + var4;
                     ((re) this).field_a[var2] = var3;
@@ -99,28 +99,28 @@ final class re {
                 var10 = var10 + ((re) this).field_b[7 + var2];
                 var5 = var5 + ((re) this).field_b[2 + var2];
                 var8 = var8 + ((re) this).field_b[5 + var2];
-                var3 = var3 ^ var4 << 1804709163;
+                var3 = var3 ^ var4 << 11;
                 var6 = var6 + var3;
                 var4 = var4 + var5;
-                var4 = var4 ^ var5 >>> -1735692478;
+                var4 = var4 ^ var5 >>> 2;
                 var5 = var5 + var6;
                 var7 = var7 + var4;
-                var5 = var5 ^ var6 << -2091789144;
+                var5 = var5 ^ var6 << 8;
                 var8 = var8 + var5;
                 var6 = var6 + var7;
-                var6 = var6 ^ var7 >>> -1580576816;
+                var6 = var6 ^ var7 >>> 16;
                 var7 = var7 + var8;
                 var9 = var9 + var6;
-                var7 = var7 ^ var8 << -569356086;
+                var7 = var7 ^ var8 << 10;
                 var8 = var8 + var9;
                 var10 = var10 + var7;
-                var8 = var8 ^ var9 >>> 436163012;
+                var8 = var8 ^ var9 >>> 4;
                 var3 = var3 + var8;
                 var9 = var9 + var10;
-                var9 = var9 ^ var10 << 806583368;
+                var9 = var9 ^ var10 << 8;
                 var4 = var4 + var9;
                 var10 = var10 + var3;
-                var10 = var10 ^ var3 >>> 314337065;
+                var10 = var10 ^ var3 >>> 9;
                 var3 = var3 + var4;
                 var5 = var5 + var10;
                 ((re) this).field_a[var2] = var3;
@@ -136,28 +136,28 @@ final class re {
               }
             }
           } else {
-            var3 = var3 ^ var4 << 1801650827;
+            var3 = var3 ^ var4 << 11;
             var4 = var4 + var5;
             var6 = var6 + var3;
-            var4 = var4 ^ var5 >>> -310078782;
+            var4 = var4 ^ var5 >>> 2;
             var5 = var5 + var6;
             var7 = var7 + var4;
-            var5 = var5 ^ var6 << -2038878872;
+            var5 = var5 ^ var6 << 8;
             var6 = var6 + var7;
             var8 = var8 + var5;
-            var6 = var6 ^ var7 >>> -760076432;
+            var6 = var6 ^ var7 >>> 16;
             var9 = var9 + var6;
             var7 = var7 + var8;
-            var7 = var7 ^ var8 << -1770921366;
+            var7 = var7 ^ var8 << 10;
             var10 = var10 + var7;
             var8 = var8 + var9;
-            var8 = var8 ^ var9 >>> -123761468;
+            var8 = var8 ^ var9 >>> 4;
             var9 = var9 + var10;
             var3 = var3 + var8;
-            var9 = var9 ^ var10 << -1957349912;
+            var9 = var9 ^ var10 << 8;
             var10 = var10 + var3;
             var4 = var4 + var9;
-            var10 = var10 ^ var3 >>> -1161653559;
+            var10 = var10 ^ var3 >>> 9;
             var3 = var3 + var4;
             var5 = var5 + var10;
             var2++;
@@ -168,9 +168,6 @@ final class re {
 
     public static void c(byte param0) {
         field_g = null;
-        if (param0 > -62) {
-            field_f = null;
-        }
         field_f = null;
     }
 
@@ -182,8 +179,9 @@ final class re {
         if (param0 != 128) {
             ((re) this).field_d = -48;
         }
+        int fieldTemp$0 = ((re) this).field_c - 1;
         ((re) this).field_c = ((re) this).field_c - 1;
-        return ((re) this).field_b[((re) this).field_c - 1];
+        return ((re) this).field_b[fieldTemp$0];
     }
 
     private final void a(byte param0) {
@@ -196,12 +194,13 @@ final class re {
           if (param0 >= 118) {
             break L0;
           } else {
-            int discarded$1 = ((re) this).a(92);
+            int discarded$4 = ((re) this).a(92);
             break L0;
           }
         }
+        int fieldTemp$5 = ((re) this).field_h + 1;
         ((re) this).field_h = ((re) this).field_h + 1;
-        ((re) this).field_e = ((re) this).field_e + (((re) this).field_h + 1);
+        ((re) this).field_e = ((re) this).field_e + fieldTemp$5;
         var2 = 0;
         L1: while (true) {
           if (256 <= var2) {
@@ -209,29 +208,31 @@ final class re {
           } else {
             L2: {
               var3 = ((re) this).field_a[var2];
-              if (-1 != (var2 & 2 ^ -1)) {
+              if ((var2 & 2) != 0) {
                 if ((var2 & 1) == 0) {
-                  ((re) this).field_d = ((re) this).field_d ^ ((re) this).field_d << -114091742;
+                  ((re) this).field_d = ((re) this).field_d ^ ((re) this).field_d << 2;
                   break L2;
                 } else {
-                  ((re) this).field_d = ((re) this).field_d ^ ((re) this).field_d >>> 1507026576;
+                  ((re) this).field_d = ((re) this).field_d ^ ((re) this).field_d >>> 16;
                   break L2;
                 }
               } else {
                 if ((1 & var2) != 0) {
-                  ((re) this).field_d = ((re) this).field_d ^ ((re) this).field_d >>> 330912006;
+                  ((re) this).field_d = ((re) this).field_d ^ ((re) this).field_d >>> 6;
                   break L2;
                 } else {
-                  ((re) this).field_d = ((re) this).field_d ^ ((re) this).field_d << -1089389779;
+                  ((re) this).field_d = ((re) this).field_d ^ ((re) this).field_d << 13;
                   break L2;
                 }
               }
             }
             ((re) this).field_d = ((re) this).field_d + ((re) this).field_a[128 + var2 & 255];
-            var4 = ((re) this).field_a[vi.a(var3 >> 352516226, 255)] + (((re) this).field_d + ((re) this).field_e);
-            ((re) this).field_a[var2] = ((re) this).field_a[vi.a(var3 >> 352516226, 255)] + (((re) this).field_d + ((re) this).field_e);
-            ((re) this).field_e = var3 + ((re) this).field_a[vi.a(var4 >> -539804984 >> -2070968158, 255)];
-            ((re) this).field_b[var2] = var3 + ((re) this).field_a[vi.a(var4 >> -539804984 >> -2070968158, 255)];
+            int dupTemp$6 = ((re) this).field_a[vi.a(var3 >> 2, 255)] + (((re) this).field_d + ((re) this).field_e);
+            var4 = dupTemp$6;
+            ((re) this).field_a[var2] = dupTemp$6;
+            int dupTemp$7 = var3 + ((re) this).field_a[vi.a(var4 >> 8 >> 2, 255)];
+            ((re) this).field_e = dupTemp$7;
+            ((re) this).field_b[var2] = dupTemp$7;
             var2++;
             continue L1;
           }
@@ -239,13 +240,17 @@ final class re {
     }
 
     re(int[] param0) {
-        int var2 = 0;
-        ((re) this).field_b = new int[256];
-        ((re) this).field_a = new int[256];
-        for (var2 = 0; var2 < param0.length; var2++) {
-            ((re) this).field_b[var2] = param0[var2];
+        int var2_int = 0;
+        try {
+            ((re) this).field_b = new int[256];
+            ((re) this).field_a = new int[256];
+            for (var2_int = 0; var2_int < param0.length; var2_int++) {
+                ((re) this).field_b[var2_int] = param0[var2_int];
+            }
+            this.b((byte) 92);
+        } catch (RuntimeException runtimeException) {
+            throw dd.a((Throwable) (Object) runtimeException, "re.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }
-        this.b((byte) 92);
     }
 
     static {

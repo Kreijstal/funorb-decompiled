@@ -31,13 +31,13 @@ final class o extends pg {
     int field_B;
 
     final static void a(ll param0, byte param1, int param2, byte param3, int param4, int param5, nf param6) {
-        if (param1 != -47) {
-          field_o = null;
-          sn.a(param5, param0, param2, -19, param6, true, param4, param3);
-          return;
-        } else {
-          sn.a(param5, param0, param2, -19, param6, true, param4, param3);
-          return;
+        try {
+            if (param1 != -47) {
+                field_o = null;
+            }
+            sn.a(param5, param0, param2, -19, param6, true, param4, param3);
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "o.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -61,9 +61,6 @@ final class o extends pg {
     final static void a(byte param0) {
         jl.field_c.field_i = 0;
         jl.field_c.field_o = 0;
-        if (param0 != -34) {
-            o.c(false);
-        }
     }
 
     public static void c(boolean param0) {

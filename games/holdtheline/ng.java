@@ -10,7 +10,6 @@ final class ng {
 
     final on a(int param0, int param1) {
         on var3 = null;
-        on var3_ref = null;
         byte[] var4 = null;
         var3 = (on) ((ng) this).field_c.a((long)param0, -113);
         if (var3 == null) {
@@ -25,21 +24,21 @@ final class ng {
           }
           if (param1 == 1) {
             L1: {
-              var3_ref = new on();
+              var3 = new on();
               if (var4 != null) {
-                var3_ref.a(120, new th(var4));
+                var3.a(120, new th(var4));
                 break L1;
               } else {
                 break L1;
               }
             }
-            if ((param0 ^ -1) <= -32769) {
-              var3_ref.g(-111);
-              ((ng) this).field_c.a((long)param0, (Object) (Object) var3_ref, false);
-              return var3_ref;
+            if (param0 >= 32768) {
+              var3.g(-111);
+              ((ng) this).field_c.a((long)param0, (Object) (Object) var3, false);
+              return var3;
             } else {
-              ((ng) this).field_c.a((long)param0, (Object) (Object) var3_ref, false);
-              return var3_ref;
+              ((ng) this).field_c.a((long)param0, (Object) (Object) var3, false);
+              return var3;
             }
           } else {
             return null;
@@ -51,7 +50,7 @@ final class ng {
 
     public static void a(byte param0) {
         field_e = null;
-        int var1 = -98 % ((param0 - 29) / 59);
+        int var1 = 0;
         field_b = null;
     }
 

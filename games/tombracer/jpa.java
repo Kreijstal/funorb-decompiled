@@ -37,16 +37,19 @@ final class jpa {
                     var3++;
                     continue L1;
                   } else {
+                    int incrementValue$12 = var4;
                     var4++;
-                    var7 = ((jpa) this).field_g[((jpa) this).field_f[var4] & 255];
+                    var7 = ((jpa) this).field_g[((jpa) this).field_f[incrementValue$12] & 255];
                     if (var7 == 0) {
+                      int incrementValue$13 = var5;
                       var5++;
-                      var2[var5] = 0;
+                      var2[incrementValue$13] = 0;
                       var6++;
                       continue L2;
                     } else {
+                      int incrementValue$14 = var5;
                       var5++;
-                      var2[var5] = -16777216 | var7;
+                      var2[incrementValue$14] = -16777216 | var7;
                       var6++;
                       continue L2;
                     }
@@ -68,8 +71,9 @@ final class jpa {
                     var3++;
                     continue L3;
                   } else {
+                    int incrementValue$15 = var5;
                     var5++;
-                    var2[var5] = ((jpa) this).field_h[var4] << 24 | ((jpa) this).field_g[((jpa) this).field_f[var4] & 255];
+                    var2[incrementValue$15] = ((jpa) this).field_h[var4] << 24 | ((jpa) this).field_g[((jpa) this).field_f[var4] & 255];
                     var4++;
                     var6++;
                     continue L4;
@@ -226,8 +230,9 @@ final class jpa {
                                                               continue L11;
                                                             } else {
                                                               L13: {
-                                                                var9.field_h[var13 + var14 * var9.field_i] = var1.c((byte) 106);
-                                                                var15 = var1.c((byte) 106);
+                                                                byte dupTemp$2 = var1.c((byte) 106);
+                                                                var9.field_h[var13 + var14 * var9.field_i] = dupTemp$2;
+                                                                var15 = dupTemp$2;
                                                                 stackOut_61_0 = var12;
                                                                 stackIn_63_0 = stackOut_61_0;
                                                                 stackIn_62_0 = stackOut_61_0;
@@ -276,8 +281,9 @@ final class jpa {
                                                           break L9;
                                                         } else {
                                                           L17: {
-                                                            var9.field_h[var13] = var1.c((byte) 46);
-                                                            var14 = var1.c((byte) 46);
+                                                            byte dupTemp$3 = var1.c((byte) 46);
+                                                            var9.field_h[var13] = dupTemp$3;
+                                                            var14 = dupTemp$3;
                                                             stackOut_47_0 = var12;
                                                             stackIn_49_0 = stackOut_47_0;
                                                             stackIn_48_0 = stackOut_47_0;
@@ -419,7 +425,7 @@ final class jpa {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        int var7 = 0;
+        byte[] var7 = null;
         byte[] var8 = null;
         byte[] var9 = null;
         byte[] var10 = null;
@@ -427,40 +433,38 @@ final class jpa {
         byte[] var12 = null;
         byte[] var13 = null;
         byte[] var14 = null;
-        byte[] var15 = null;
         L0: {
-          var14 = ((jpa) this).field_f;
-          var12 = var14;
-          var10 = var12;
-          var8 = var10;
-          var2 = var8;
+          var13 = ((jpa) this).field_f;
+          var11 = var13;
+          var9 = var11;
+          var7 = var9;
+          var2 = var7;
           if (((jpa) this).field_h != null) {
-            var15 = ((jpa) this).field_h;
-            var13 = var15;
-            var11 = var13;
-            var9 = var11;
-            var3_ref_byte__ = var9;
+            var14 = ((jpa) this).field_h;
+            var12 = var14;
+            var10 = var12;
+            var8 = var10;
+            var3_ref_byte__ = var8;
             var4 = ((jpa) this).field_a - 1;
             L1: while (true) {
               if (var4 < 0) {
                 break L0;
               } else {
-                var7 = var4 * ((jpa) this).field_i;
-                var5 = var7;
+                var5 = var4 * ((jpa) this).field_i;
                 var6 = (var4 + 1) * ((jpa) this).field_i;
                 L2: while (true) {
-                  if (var7 >= var6) {
+                  if (var5 >= var6) {
                     var4--;
                     continue L1;
                   } else {
                     var6--;
-                    var1 = var14[var7];
-                    var2[var7] = var14[var6];
+                    var1 = var13[var5];
+                    var2[var5] = var13[var6];
                     var2[var6] = (byte)var1;
-                    var1 = var15[var7];
-                    var3_ref_byte__[var7] = var15[var6];
+                    var1 = var14[var5];
+                    var3_ref_byte__[var5] = var14[var6];
                     var3_ref_byte__[var6] = (byte)var1;
-                    var7++;
+                    var5++;
                     continue L2;
                   }
                 }
@@ -480,8 +484,8 @@ final class jpa {
                     continue L3;
                   } else {
                     var5--;
-                    var1 = var14[var4];
-                    var2[var4] = var14[var5];
+                    var1 = var13[var4];
+                    var2[var4] = var13[var5];
                     var2[var5] = (byte)var1;
                     var4++;
                     continue L4;
@@ -539,9 +543,11 @@ final class jpa {
                     var4++;
                     continue L2;
                   } else {
+                    int incrementValue$4 = var6;
                     var6++;
+                    int incrementValue$5 = var5;
                     var5++;
-                    var3[var6] = ((jpa) this).field_f[var5];
+                    var3[incrementValue$4] = ((jpa) this).field_f[incrementValue$5];
                     var7++;
                     continue L3;
                   }
@@ -565,9 +571,11 @@ final class jpa {
                     continue L4;
                   } else {
                     var3[var7] = ((jpa) this).field_f[var6];
+                    int incrementValue$6 = var7;
                     var7++;
+                    int incrementValue$7 = var6;
                     var6++;
-                    var4_ref_byte__[var7] = ((jpa) this).field_h[var6];
+                    var4_ref_byte__[incrementValue$6] = ((jpa) this).field_h[incrementValue$7];
                     var8++;
                     continue L5;
                   }

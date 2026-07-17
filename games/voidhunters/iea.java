@@ -9,7 +9,7 @@ final class iea extends ksa {
     }
 
     final static boolean a(int param0, int param1, byte param2) {
-        int var3 = 50 % ((73 - param2) / 32);
+        int var3 = 0;
         return plb.a(param0, false, param1) & eta.a(param1, -1104, param0);
     }
 

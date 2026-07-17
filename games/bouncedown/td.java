@@ -8,30 +8,22 @@ abstract class td {
     abstract byte[] a(int param0, boolean param1);
 
     final static void a(int param0, gk param1, gk param2, gk param3, boolean param4) {
-        if (param0 != 1) {
-          field_b = 63;
-          pb.field_k = kg.a(2, "");
-          pb.field_k.a(false, (byte) -48);
-          uc.a(param2, 118, param3, param1);
-          tk.a(param0 ^ 127);
-          vc.field_F = wj.field_a;
-          fh.field_B = wj.field_a;
-          return;
-        } else {
-          pb.field_k = kg.a(2, "");
-          pb.field_k.a(false, (byte) -48);
-          uc.a(param2, 118, param3, param1);
-          tk.a(param0 ^ 127);
-          vc.field_F = wj.field_a;
-          fh.field_B = wj.field_a;
-          return;
+        try {
+            if (param0 != 1) {
+                field_b = 63;
+            }
+            pb.field_k = kg.a(2, "");
+            pb.field_k.a(false, (byte) -48);
+            uc.a(param2, 118, param3, param1);
+            tk.a(param0 ^ 127);
+            vc.field_F = wj.field_a;
+            fh.field_B = wj.field_a;
+        } catch (RuntimeException runtimeException) {
+            throw ii.a((Throwable) (Object) runtimeException, "td.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 41);
         }
     }
 
     final static boolean a(int param0) {
-        if (param0 != 1) {
-            return true;
-        }
         return fe.field_g;
     }
 
@@ -53,10 +45,10 @@ abstract class td {
         if (wg.b(true)) {
           hh.field_p.a(true, 1);
           jj.a(0, true);
-          kc.a(param0);
+          kc.a((byte) 18);
           return;
         } else {
-          kc.a(param0);
+          kc.a((byte) 18);
           return;
         }
     }

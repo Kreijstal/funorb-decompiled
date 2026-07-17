@@ -50,7 +50,7 @@ final class in {
                   var7 = 0;
                   L2: while (true) {
                     if (var7 >= var4) {
-                      ((in) this).field_d[var6] = var3 ^ -1;
+                      ((in) this).field_d[var6] = ~var3;
                       if (var6 >= var2) {
                         var2 = var6 + 1;
                         var3++;
@@ -181,7 +181,7 @@ final class in {
         while (((in) this).field_d[var1] >= 0) {
             var1 = qs.a() != 0 ? ((in) this).field_d[var1] : var1 + 1;
         }
-        return ((in) this).field_d[var1] ^ -1;
+        return ~((in) this).field_d[var1];
     }
 
     final float[] a() {
@@ -216,7 +216,7 @@ final class in {
         int stackOut_22_0 = 0;
         int stackOut_21_0 = 0;
         L0: {
-          int discarded$1 = qs.a(24);
+          int discarded$2 = qs.a(24);
           ((in) this).field_b = qs.a(16);
           ((in) this).field_f = qs.a(24);
           ((in) this).field_c = new int[((in) this).field_f];
@@ -283,8 +283,9 @@ final class in {
                     var3_int++;
                     continue L5;
                   } else {
+                    int incrementValue$3 = var2;
                     var2++;
-                    ((in) this).field_c[var2] = var3_int;
+                    ((in) this).field_c[incrementValue$3] = var3_int;
                     var5++;
                     continue L6;
                   }

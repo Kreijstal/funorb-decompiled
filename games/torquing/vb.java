@@ -257,7 +257,7 @@ final class vb {
                           uf.field_n = new byte[mf.field_w];
                           var8 = 0;
                           L16: while (true) {
-                            if ((mf.field_w ^ -1) >= (var8 ^ -1)) {
+                            if (~mf.field_w >= ~var8) {
                               break L15;
                             } else {
                               uf.field_n[var8] = kj.field_d.f((byte) 111);
@@ -295,7 +295,7 @@ final class vb {
                       }
                       L19: {
                         L20: {
-                          if (-1 > (wp.field_w ^ -1)) {
+                          if (wp.field_w > 0) {
                             break L20;
                           } else {
                             if (!fj.field_l) {
@@ -332,7 +332,7 @@ final class vb {
                         break L19;
                       }
                       L25: {
-                        if (-1 > (wp.field_w ^ -1)) {
+                        if (wp.field_w > 0) {
                           ao.field_b = true;
                           break L25;
                         } else {
@@ -381,7 +381,7 @@ final class vb {
                         }
                       }
                       L29: {
-                        if ((fa.field_e ^ -1) != -8) {
+                        if (fa.field_e != 7) {
                           break L29;
                         } else {
                           fa.field_e = 3;
@@ -522,7 +522,7 @@ final class vb {
             var2_int = param1.length();
             var3 = 0;
             L1: while (true) {
-              if ((var3 ^ -1) <= (var2_int ^ -1)) {
+              if (~var3 <= ~var2_int) {
                 L2: {
                   if (param0 == 4) {
                     break L2;
@@ -540,7 +540,7 @@ final class vb {
                   if (48 > var4) {
                     break L3;
                   } else {
-                    if (-58 <= (var4 ^ -1)) {
+                    if (var4 <= 57) {
                       var3++;
                       continue L1;
                     } else {
@@ -684,30 +684,30 @@ final class vb {
             L1: {
               var7_int = 2147483647;
               var8 = -2147483648;
-              var21 = param3[3] >> 517023714;
-              var22 = param3[4] >> 111208226;
-              var23 = param3[5] >> 772715554;
-              var24 = param3[6] >> -922600190;
-              var25 = param3[7] >> 1997382626;
-              var26 = param3[8] >> 2007497762;
-              var27 = param3[9] >> 1683189730;
-              var28 = param3[10] >> 2119630434;
-              var29 = param3[11] >> 1190166498;
-              var13 = var24 * param4[3] - (-(param4[4] * var25) - param4[5] * var26) >> 1870256750;
-              var12 = var23 * param4[5] + var22 * param4[4] + var21 * param4[3] >> 736439694;
-              var19 = var26 * param4[11] + param4[10] * var25 + param4[9] * var24 >> -843360722;
-              var18 = var22 * param4[10] + var21 * param4[9] + param4[11] * var23 >> 801816878;
-              var20 = var27 * param4[9] + (param4[10] * var28 + param4[11] * var29) >> -1199575442;
-              var16 = var26 * param4[8] + var25 * param4[7] + param4[6] * var24 >> -332738642;
-              var17 = param4[8] * var29 + (var28 * param4[7] + var27 * param4[6]) >> -1952218962;
-              var14 = param4[4] * var28 + (var27 * param4[3] - -(param4[5] * var29)) >> 1936421230;
-              var15 = var22 * param4[7] + var21 * param4[6] - -(var23 * param4[8]) >> 301812238;
+              var21 = param3[3] >> 2;
+              var22 = param3[4] >> 2;
+              var23 = param3[5] >> 2;
+              var24 = param3[6] >> 2;
+              var25 = param3[7] >> 2;
+              var26 = param3[8] >> 2;
+              var27 = param3[9] >> 2;
+              var28 = param3[10] >> 2;
+              var29 = param3[11] >> 2;
+              var13 = var24 * param4[3] - (-(param4[4] * var25) - param4[5] * var26) >> 14;
+              var12 = var23 * param4[5] + var22 * param4[4] + var21 * param4[3] >> 14;
+              var19 = var26 * param4[11] + param4[10] * var25 + param4[9] * var24 >> 14;
+              var18 = var22 * param4[10] + var21 * param4[9] + param4[11] * var23 >> 14;
+              var20 = var27 * param4[9] + (param4[10] * var28 + param4[11] * var29) >> 14;
+              var16 = var26 * param4[8] + var25 * param4[7] + param4[6] * var24 >> 14;
+              var17 = param4[8] * var29 + (var28 * param4[7] + var27 * param4[6]) >> 14;
+              var14 = param4[4] * var28 + (var27 * param4[3] - -(param4[5] * var29)) >> 14;
+              var15 = var22 * param4[7] + var21 * param4[6] - -(var23 * param4[8]) >> 14;
               var21 = -param3[0] + param4[0];
               var22 = param4[1] + -param3[1];
               var23 = -param3[2] + param4[2];
               var9 = var23 * param3[5] + (var21 * param3[3] - -(param3[4] * var22)) >> -oe.field_b + 16;
               var10 = param3[8] * var23 + (param3[7] * var22 + param3[6] * var21) >> -oe.field_b + 16;
-              var11 = param3[9] * var21 - (-(var22 * param3[10]) + -(var23 * param3[11])) >> 1702762960;
+              var11 = param3[9] * var21 - (-(var22 * param3[10]) + -(var23 * param3[11])) >> 16;
               if (param1 == -77) {
                 break L1;
               } else {
@@ -719,7 +719,7 @@ final class vb {
             var22 = be.field_b;
             var23 = 0;
             L2: while (true) {
-              if ((param0.field_f ^ -1) >= (var23 ^ -1)) {
+              if (~param0.field_f >= ~var23) {
                 L3: {
                   if (null == param0.field_N) {
                     break L3;
@@ -756,21 +756,21 @@ final class vb {
                                         var24 = param0.field_N[var23];
                                         var25 = param0.field_v[var23];
                                         var26 = param0.field_w[var23];
-                                        in.field_b[var23] = (var18 * var26 + var12 * var24 + var25 * var15 >> -1842954800) + var9;
-                                        io.field_s[var23] = var10 - -(var19 * var26 + (var25 * var16 + var13 * var24) >> 2061036144);
-                                        vk.field_z[var23] = var11 + (var24 * var14 - -(var25 * var17) + var26 * var20 >> -604297040);
+                                        in.field_b[var23] = (var18 * var26 + var12 * var24 + var25 * var15 >> 16) + var9;
+                                        io.field_s[var23] = var10 - -(var19 * var26 + (var25 * var16 + var13 * var24) >> 16);
+                                        vk.field_z[var23] = var11 + (var24 * var14 - -(var25 * var17) + var26 * var20 >> 16);
                                         var24 = param0.field_L[var23];
                                         var25 = param0.field_k[var23];
                                         var26 = param0.field_h[var23];
-                                        pc.field_d[var23] = (var26 * var18 + (var24 * var12 - -(var15 * var25)) >> 1707507280) + var9;
-                                        no.field_j[var23] = (var16 * var25 + (var24 * var13 + var19 * var26) >> 1511937968) + var10;
-                                        up.field_b[var23] = var11 - -(var20 * var26 + var25 * var17 + var14 * var24 >> -1364043856);
+                                        pc.field_d[var23] = (var26 * var18 + (var24 * var12 - -(var15 * var25)) >> 16) + var9;
+                                        no.field_j[var23] = (var16 * var25 + (var24 * var13 + var19 * var26) >> 16) + var10;
+                                        up.field_b[var23] = var11 - -(var20 * var26 + var25 * var17 + var14 * var24 >> 16);
                                         var24 = param0.field_K[var23];
                                         var25 = param0.field_D[var23];
                                         var26 = param0.field_n[var23];
-                                        ok.field_D[var23] = var9 + (var18 * var26 + (var12 * var24 + var15 * var25) >> 266460432);
-                                        hm.field_s[var23] = var10 - -(var16 * var25 + (var24 * var13 - -(var19 * var26)) >> -226659344);
-                                        uf.field_r[var23] = (var26 * var20 + var25 * var17 + var14 * var24 >> 730965488) + var11;
+                                        ok.field_D[var23] = var9 + (var18 * var26 + (var12 * var24 + var15 * var25) >> 16);
+                                        hm.field_s[var23] = var10 - -(var16 * var25 + (var24 * var13 - -(var19 * var26)) >> 16);
+                                        uf.field_r[var23] = (var26 * var20 + var25 * var17 + var14 * var24 >> 16) + var11;
                                         var23++;
                                         continue L4;
                                       }
@@ -798,18 +798,18 @@ final class vb {
                     var17 = param4[11];
                     var18 = 0;
                     L6: while (true) {
-                      if ((var18 ^ -1) <= (param0.field_C ^ -1)) {
+                      if (~var18 <= ~param0.field_C) {
                         break L5;
                       } else {
-                        if ((m.field_c.length ^ -1) >= (var18 ^ -1)) {
+                        if (~m.field_c.length >= ~var18) {
                           break L5;
                         } else {
                           var19 = param0.field_q[var18];
                           var20 = param0.field_P[var18];
                           var21 = param0.field_a[var18];
-                          m.field_c[var18] = var20 * var12 + (var9 * var19 - -(var15 * var21)) >> 999459088;
-                          pm.field_s[var18] = var13 * var20 + var19 * var10 + var21 * var16 >> -1169515184;
-                          tm.field_e[var18] = var21 * var17 + var11 * var19 - -(var14 * var20) >> -1820118576;
+                          m.field_c[var18] = var20 * var12 + (var9 * var19 - -(var15 * var21)) >> 16;
+                          pm.field_s[var18] = var13 * var20 + var19 * var10 + var21 * var16 >> 16;
+                          tm.field_e[var18] = var21 * var17 + var11 * var19 - -(var14 * var20) >> 16;
                           var18++;
                           continue L6;
                         }
@@ -828,7 +828,7 @@ final class vb {
                   var26 = param0.field_d[var23];
                   var27 = var9 + (var15 * var25 + var12 * var24 + var26 * var18 >> 16 - oe.field_b);
                   var28 = var10 + (var25 * var16 + (var24 * var13 - -(var19 * var26)) >> 16 - oe.field_b);
-                  var29 = (var26 * var20 + var25 * var17 + var14 * var24 >> 1108730512) + var11;
+                  var29 = (var26 * var20 + var25 * var17 + var14 * var24 >> 16) + var11;
                   if (var29 < 50) {
                     hl.field_b[var23] = -2147483648;
                     break L7;
@@ -970,11 +970,11 @@ final class vb {
               break L0;
             }
           }
-          var3_int = (((vb) this).field_a.length >> 590681601) + -1;
+          var3_int = (((vb) this).field_a.length >> 1) + -1;
           var4 = param0 & var3_int;
           L1: while (true) {
             var5 = ((vb) this).field_a[var4 + (var4 + 1)];
-            if ((var5 ^ -1) != 0) {
+            if (var5 != -1) {
               if (param0 == ((vb) this).field_a[var4 + var4]) {
                 stackOut_11_0 = var5;
                 stackIn_12_0 = stackOut_11_0;
@@ -1144,11 +1144,11 @@ final class vb {
           L0: {
             var2_int = 1;
             L1: while (true) {
-              if (var2_int > param0.length - -(param0.length >> 1985557825)) {
+              if (var2_int > param0.length - -(param0.length >> 1)) {
                 ((vb) this).field_a = new int[var2_int + var2_int];
                 var3 = 0;
                 L2: while (true) {
-                  if ((var3 ^ -1) <= (var2_int + var2_int ^ -1)) {
+                  if (~var3 <= ~(var2_int + var2_int)) {
                     var3 = 0;
                     L3: while (true) {
                       if (param0.length <= var3) {
@@ -1156,7 +1156,7 @@ final class vb {
                       } else {
                         var4 = var2_int - 1 & param0[var3];
                         L4: while (true) {
-                          if ((((vb) this).field_a[1 + (var4 + var4)] ^ -1) == 0) {
+                          if (((vb) this).field_a[1 + (var4 + var4)] == -1) {
                             ((vb) this).field_a[var4 + var4] = param0[var3];
                             ((vb) this).field_a[var4 + (var4 + 1)] = var3;
                             var3++;

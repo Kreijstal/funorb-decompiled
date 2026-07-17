@@ -26,7 +26,7 @@ final class al extends com.ms.dll.Callback {
           if (param1 == 32) {
             var5 = 65535 & param3;
             if (1 != var5) {
-              if (-101025 == (param1 ^ -1)) {
+              if (param1 == 101024) {
                 L0: {
                   if (((al) this).field_b) {
                     stackOut_26_0 = ((al) this).field_d;
@@ -68,7 +68,7 @@ final class al extends com.ms.dll.Callback {
               return 0;
             }
           } else {
-            if (-101025 == (param1 ^ -1)) {
+            if (param1 == 101024) {
               L3: {
                 if (((al) this).field_b) {
                   stackOut_11_0 = ((al) this).field_d;

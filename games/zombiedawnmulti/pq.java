@@ -28,45 +28,98 @@ final class pq extends br {
     }
 
     final void a(int param0, nm param1) {
-        int var3 = 0;
+        RuntimeException runtimeException = null;
+        int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
-        int stackIn_10_0 = 0;
-        int stackOut_9_0 = 0;
+        int stackIn_9_0 = 0;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int stackOut_8_0 = 0;
-        var3 = param1.c(((pq) this).field_g, -20126);
-        var4 = param1.d(((pq) this).field_l, param0 ^ 130);
-        ((pq) this).field_q.h(sd.b(12, var4, var3));
-        if (param0 >= var3) {
-          if (255 <= var4) {
-            if (var3 <= 896) {
-              if (var4 > 736) {
-                return;
+        int stackOut_7_0 = 0;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        try {
+          L0: {
+            L1: {
+              var3_int = param1.c(((pq) this).field_g, -20126);
+              var4 = param1.d(((pq) this).field_l, param0 ^ 130);
+              ((pq) this).field_q.h(sd.b(12, var4, var3_int));
+              if (param0 < var3_int) {
+                break L1;
               } else {
-                L0: {
-                  if ((((pq) this).field_j ^ -1) > -257) {
-                    stackOut_9_0 = (-((pq) this).field_h + 256) * ((pq) this).field_j >> -259386166;
-                    stackIn_10_0 = stackOut_9_0;
-                    break L0;
+                if (255 > var4) {
+                  break L1;
+                } else {
+                  if (var3_int > 896) {
+                    break L1;
                   } else {
-                    stackOut_8_0 = 256 + -((pq) this).field_h >> -240152286;
-                    stackIn_10_0 = stackOut_8_0;
-                    break L0;
+                    if (var4 > 736) {
+                      break L1;
+                    } else {
+                      L2: {
+                        if (((pq) this).field_j < 256) {
+                          stackOut_8_0 = (-((pq) this).field_h + 256) * ((pq) this).field_j >> 10;
+                          stackIn_9_0 = stackOut_8_0;
+                          break L2;
+                        } else {
+                          stackOut_7_0 = 256 + -((pq) this).field_h >> 2;
+                          stackIn_9_0 = stackOut_7_0;
+                          break L2;
+                        }
+                      }
+                      var5 = stackIn_9_0;
+                      oo.d(var3_int, var4, ((pq) this).field_h, 0, var5);
+                      g.a(ud.field_P, var3_int + -256, -256 + var4, ((pq) this).field_j);
+                      break L0;
+                    }
                   }
                 }
-                var5 = stackIn_10_0;
-                oo.d(var3, var4, ((pq) this).field_h, 0, var5);
-                g.a(ud.field_P, var3 + -256, -256 + var4, ((pq) this).field_j);
-                return;
               }
-            } else {
-              return;
             }
-          } else {
             return;
           }
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            runtimeException = decompiledCaughtException;
+            stackOut_11_0 = (RuntimeException) runtimeException;
+            stackOut_11_1 = new StringBuilder().append("pq.F(").append(param0).append(44);
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
+            if (param1 == null) {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L3;
+            } else {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L3;
+            }
+          }
+          throw fa.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
         }
     }
 
@@ -123,9 +176,6 @@ final class pq extends br {
 
     final static void b(boolean param0) {
         ia.field_x = new hn[]{};
-        if (param0) {
-            field_f = -55;
-        }
     }
 
     public static void a(byte param0) {
@@ -149,7 +199,7 @@ final class pq extends br {
               if (((pq) this).field_j >= 256) {
                 var2 = 2 / ((53 - param0) / 35);
                 if (256 >= ((pq) this).field_j) {
-                  if ((((pq) this).field_j ^ -1) <= -1) {
+                  if (((pq) this).field_j >= 0) {
                     return;
                   } else {
                     ((pq) this).field_j = 0;
@@ -157,7 +207,7 @@ final class pq extends br {
                   }
                 } else {
                   ((pq) this).field_j = 256;
-                  if ((((pq) this).field_j ^ -1) <= -1) {
+                  if (((pq) this).field_j >= 0) {
                     return;
                   } else {
                     ((pq) this).field_j = 0;
@@ -168,7 +218,7 @@ final class pq extends br {
                 ((pq) this).field_j = ((pq) this).field_j + ((pq) this).field_n;
                 var2 = 2 / ((53 - param0) / 35);
                 if (256 >= ((pq) this).field_j) {
-                  if ((((pq) this).field_j ^ -1) <= -1) {
+                  if (((pq) this).field_j >= 0) {
                     return;
                   } else {
                     ((pq) this).field_j = 0;
@@ -176,7 +226,7 @@ final class pq extends br {
                   }
                 } else {
                   ((pq) this).field_j = 256;
-                  if ((((pq) this).field_j ^ -1) <= -1) {
+                  if (((pq) this).field_j >= 0) {
                     return;
                   } else {
                     ((pq) this).field_j = 0;
@@ -188,7 +238,7 @@ final class pq extends br {
               ((pq) this).field_j = ((pq) this).field_j - ((pq) this).field_n;
               var2 = 2 / ((53 - param0) / 35);
               if (256 >= ((pq) this).field_j) {
-                if ((((pq) this).field_j ^ -1) > -1) {
+                if (((pq) this).field_j < 0) {
                   ((pq) this).field_j = 0;
                   return;
                 } else {
@@ -196,7 +246,7 @@ final class pq extends br {
                 }
               } else {
                 ((pq) this).field_j = 256;
-                if ((((pq) this).field_j ^ -1) > -1) {
+                if (((pq) this).field_j < 0) {
                   ((pq) this).field_j = 0;
                   return;
                 } else {
@@ -213,14 +263,14 @@ final class pq extends br {
                 var2 = 2 / ((53 - param0) / 35);
                 if (256 < ((pq) this).field_j) {
                   ((pq) this).field_j = 256;
-                  if ((((pq) this).field_j ^ -1) > -1) {
+                  if (((pq) this).field_j < 0) {
                     ((pq) this).field_j = 0;
                     return;
                   } else {
                     return;
                   }
                 } else {
-                  if ((((pq) this).field_j ^ -1) > -1) {
+                  if (((pq) this).field_j < 0) {
                     ((pq) this).field_j = 0;
                     return;
                   } else {
@@ -230,7 +280,7 @@ final class pq extends br {
               } else {
                 var2 = 2 / ((53 - param0) / 35);
                 if (256 >= ((pq) this).field_j) {
-                  if ((((pq) this).field_j ^ -1) > -1) {
+                  if (((pq) this).field_j < 0) {
                     ((pq) this).field_j = 0;
                     return;
                   } else {
@@ -238,7 +288,7 @@ final class pq extends br {
                   }
                 } else {
                   ((pq) this).field_j = 256;
-                  if ((((pq) this).field_j ^ -1) > -1) {
+                  if (((pq) this).field_j < 0) {
                     ((pq) this).field_j = 0;
                     return;
                   } else {
@@ -251,14 +301,14 @@ final class pq extends br {
               var2 = 2 / ((53 - param0) / 35);
               if (256 < ((pq) this).field_j) {
                 ((pq) this).field_j = 256;
-                if ((((pq) this).field_j ^ -1) > -1) {
+                if (((pq) this).field_j < 0) {
                   ((pq) this).field_j = 0;
                   return;
                 } else {
                   return;
                 }
               } else {
-                if ((((pq) this).field_j ^ -1) > -1) {
+                if (((pq) this).field_j < 0) {
                   ((pq) this).field_j = 0;
                   return;
                 } else {

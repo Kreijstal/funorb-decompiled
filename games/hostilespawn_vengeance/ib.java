@@ -11,166 +11,116 @@ final class ib {
     final static boolean a(byte param0) {
         RuntimeException var1 = null;
         int stackIn_2_0 = 0;
-        int stackIn_5_0 = 0;
-        int stackIn_11_0 = 0;
+        int stackIn_10_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_7_0 = 0;
+        int stackOut_9_0 = 0;
         int stackOut_1_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_10_0 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    try {
-                        if (param0 == -72) {
-                            statePc = 3;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_0) {
-                        caughtException = stateCaught_0;
-                        statePc = 12;
-                        continue stateLoop;
+        try {
+          L0: {
+            if (param0 == -72) {
+              L1: {
+                L2: {
+                  if (ta.p(3)) {
+                    break L2;
+                  } else {
+                    if (wb.field_S <= 0) {
+                      break L2;
+                    } else {
+                      stackOut_7_0 = 1;
+                      stackIn_10_0 = stackOut_7_0;
+                      break L1;
                     }
+                  }
                 }
-                case 1: {
-                    try {
-                        stackOut_1_0 = 1;
-                        stackIn_2_0 = stackOut_1_0;
-                        statePc = 2;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    return stackIn_2_0 != 0;
-                }
-                case 3: {
-                    try {
-                        if (ta.p(3)) {
-                            statePc = 10;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        stackOut_4_0 = wb.field_S;
-                        stackIn_5_0 = stackOut_4_0;
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        if (stackIn_5_0 <= 0) {
-                            statePc = 10;
-                        } else {
-                            statePc = 6;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        stackOut_8_0 = 1;
-                        stackIn_11_0 = stackOut_8_0;
-                        statePc = 11;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    try {
-                        throw (RuntimeException) (Object) caughtException;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    try {
-                        stackOut_10_0 = 0;
-                        stackIn_11_0 = stackOut_10_0;
-                        statePc = 11;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    return stackIn_11_0 != 0;
-                }
-                case 12: {
-                    var1 = (RuntimeException) (Object) caughtException;
-                    throw wg.a((Throwable) (Object) var1, "ib.D(" + param0 + 41);
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+                stackOut_9_0 = 0;
+                stackIn_10_0 = stackOut_9_0;
+                break L1;
+              }
+              break L0;
+            } else {
+              stackOut_1_0 = 1;
+              stackIn_2_0 = stackOut_1_0;
+              return stackIn_2_0 != 0;
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw wg.a((Throwable) (Object) var1, "ib.D(" + param0 + 41);
         }
+        return stackIn_10_0 != 0;
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
+        RuntimeException runtimeException = null;
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
-        // ifne L10
-        if (param3 <= 92) {
-            ib.a(-63);
-        }
-        if (ta.p(3)) {
-            return;
-        }
+        int stackIn_14_0 = 0;
+        int stackIn_18_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_13_0 = 0;
+        int stackOut_11_0 = 0;
+        int stackOut_17_0 = 0;
+        int stackOut_15_0 = 0;
         try {
-            var4_int = 20 * (11 * param1 - -param2) - -fl.d(-78);
-            tf.field_a = var4_int;
-            // if_icmpeq L75
-            var5 = 1;
-            // ifne L88
-            var6 = 65532;
-            ch.field_h = oa.a(new int[1], 3, var5, ei.field_l, ja.field_d, false, var6, var4_int + u.field_e, w.field_r + qb.field_k);
-            ld.a(false, param0);
-            param1 = 0;
-            u.field_e = u.field_e - (ja.field_d + w.field_r);
-            ei.field_l = ei.field_l + 1;
-            w.field_r = 0;
-        } catch (RuntimeException runtimeException) {
-            throw wg.a((Throwable) (Object) runtimeException, "ib.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+          L0: {
+            if (ii.field_g) {
+              ld.a(false, param0);
+              return;
+            } else {
+              L1: {
+                if (param3 > 92) {
+                  break L1;
+                } else {
+                  ib.a(-63);
+                  break L1;
+                }
+              }
+              if (!ta.p(3)) {
+                L2: {
+                  var4_int = 20 * (11 * param1 - -param2) - -fl.d(-78);
+                  tf.field_a = var4_int;
+                  if (param0 == 0) {
+                    stackOut_13_0 = 3;
+                    stackIn_14_0 = stackOut_13_0;
+                    break L2;
+                  } else {
+                    stackOut_11_0 = 1;
+                    stackIn_14_0 = stackOut_11_0;
+                    break L2;
+                  }
+                }
+                L3: {
+                  var5 = stackIn_14_0;
+                  if (param0 != 0) {
+                    stackOut_17_0 = 65534;
+                    stackIn_18_0 = stackOut_17_0;
+                    break L3;
+                  } else {
+                    stackOut_15_0 = 65532;
+                    stackIn_18_0 = stackOut_15_0;
+                    break L3;
+                  }
+                }
+                var6 = stackIn_18_0;
+                ch.field_h = oa.a(new int[1], 3, var5, ei.field_l, ja.field_d, false, var6, var4_int + u.field_e, w.field_r + qb.field_k);
+                ld.a(false, param0);
+                param1 = 0;
+                u.field_e = u.field_e - (ja.field_d + w.field_r);
+                ei.field_l = ei.field_l + 1;
+                w.field_r = 0;
+                break L0;
+              } else {
+                return;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          runtimeException = decompiledCaughtException;
+          throw wg.a((Throwable) (Object) runtimeException, "ib.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }
     }
 
@@ -3627,24 +3577,24 @@ final class ib {
         RuntimeException var1 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          try {
-            L0: {
+          L0: {
+            L1: {
               if (param0 > 50) {
-                break L0;
+                break L1;
               } else {
                 field_d = 83L;
-                break L0;
+                break L1;
               }
             }
-          } catch (java.lang.RuntimeException decompiledCaughtParameter) {
-            decompiledCaughtException = decompiledCaughtParameter;
+            field_e = null;
+            field_a = null;
+            field_b = null;
+            break L0;
           }
-          throw decompiledCaughtException;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter) {
-          decompiledCaughtException = decompiledCaughtParameter;
-          field_e = null;
-          field_a = null;
-          field_b = null;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw wg.a((Throwable) (Object) var1, "ib.C(" + param0 + 41);
         }
     }
 

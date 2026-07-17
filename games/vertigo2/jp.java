@@ -51,9 +51,6 @@ final class jp {
         field_n = null;
         field_R = null;
         field_u = null;
-        if (!param0) {
-            return;
-        }
         field_j = null;
     }
 
@@ -156,22 +153,30 @@ final class jp {
     }
 
     final static char a(boolean param0, char param1) {
-        if (param1 != 181) {
-            // if_icmpeq L18
-        } else {
-            return param1;
+        L0: {
+          if (param1 == 181) {
+            break L0;
+          } else {
+            if (param1 == 402) {
+              break L0;
+            } else {
+              L1: {
+                if (param0) {
+                  break L1;
+                } else {
+                  char discarded$2 = jp.a(true, 'f');
+                  break L1;
+                }
+              }
+              return Character.toTitleCase(param1);
+            }
+          }
         }
-        if (!param0) {
-            char discarded$0 = jp.a(true, 'f');
-        }
-        return Character.toTitleCase(param1);
+        return param1;
     }
 
     private final void b(boolean param0) {
         ((jp) this).field_i = false;
-        if (!param0) {
-            ((jp) this).field_O = null;
-        }
     }
 
     final void a(int param0, byte param1, int param2, int param3, int param4) {

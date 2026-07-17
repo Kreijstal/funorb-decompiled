@@ -14,12 +14,6 @@ final class cc extends af {
     }
 
     final static void f(int param0) {
-        if (param0 != 967) {
-            field_G = false;
-            qa.e((byte) -95);
-            bd.a(4, true);
-            return;
-        }
         qa.e((byte) -95);
         bd.a(4, true);
     }

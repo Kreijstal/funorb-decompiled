@@ -15,10 +15,14 @@ class ng extends fd {
     }
 
     public final void a(int param0, gl param1, int param2, int param3, boolean param4) {
-        if (!(!param4)) {
-            ah.a(param1.field_n, 128, param1.field_p, param2 - -param1.field_w, param1.field_u + param0);
+        try {
+            if (!(!param4)) {
+                ah.a(param1.field_n, 128, param1.field_p, param2 - -param1.field_w, param1.field_u + param0);
+            }
+            super.a(param0, param1, param2, param3, param4);
+        } catch (RuntimeException runtimeException) {
+            throw qk.a((Throwable) (Object) runtimeException, "ng.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
-        super.a(param0, param1, param2, param3, param4);
     }
 
     public static void e(int param0) {

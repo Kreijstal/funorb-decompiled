@@ -60,15 +60,12 @@ class ch {
         field_h = null;
         field_b = null;
         field_p = null;
-        if (param0) {
-            return;
-        }
         field_k = null;
     }
 
     final void a(int param0, int param1) {
         if (0.0 == ((ch) this).field_l) {
-          if (-1 != (((ch) this).field_m ^ -1)) {
+          if (((ch) this).field_m != 0) {
             if (param1 != 8000) {
               ((ch) this).a(97);
               ((ch) this).field_m = 0;
@@ -113,18 +110,11 @@ class ch {
         re.field_k = false;
         qh.field_q = -1;
         eb.field_d = null;
-        if (param0 < 84) {
-            return;
-        }
         l.field_d = -1;
         fb.field_l = 0;
     }
 
     private final mn a(int param0, byte param1) {
-        if (param1 != 55) {
-            field_d = null;
-            return ((ch) this).field_g[param0];
-        }
         return ((ch) this).field_g[param0];
     }
 
@@ -132,8 +122,12 @@ class ch {
         ((ch) this).field_o = 8000;
         ((ch) this).field_c = 0L;
         ((ch) this).field_j = 100;
-        ((ch) this).field_n = param0;
-        ((ch) this).field_g = param1;
+        try {
+            ((ch) this).field_n = param0;
+            ((ch) this).field_g = param1;
+        } catch (RuntimeException runtimeException) {
+            throw wg.a((Throwable) (Object) runtimeException, "ch.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final boolean b(int param0, byte param1) {

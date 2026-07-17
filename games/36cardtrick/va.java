@@ -28,31 +28,19 @@ final class va implements Iterable {
     }
 
     final void a(int param0, he param1) {
-        if (null == param1.field_i) {
-          param1.field_h = ((va) this).field_a;
-          param1.field_i = ((va) this).field_a.field_i;
-          param1.field_i.field_h = param1;
-          if (param0 > -66) {
-            ((va) this).field_a = null;
+        try {
+            if (null != param1.field_i) {
+                param1.d(12);
+            }
+            param1.field_h = ((va) this).field_a;
+            param1.field_i = ((va) this).field_a.field_i;
+            param1.field_i.field_h = param1;
+            if (param0 > -66) {
+                ((va) this).field_a = null;
+            }
             param1.field_h.field_i = param1;
-            return;
-          } else {
-            param1.field_h.field_i = param1;
-            return;
-          }
-        } else {
-          param1.d(12);
-          param1.field_h = ((va) this).field_a;
-          param1.field_i = ((va) this).field_a.field_i;
-          param1.field_i.field_h = param1;
-          if (param0 <= -66) {
-            param1.field_h.field_i = param1;
-            return;
-          } else {
-            ((va) this).field_a = null;
-            param1.field_h.field_i = param1;
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) (Object) runtimeException, "va.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -61,9 +49,6 @@ final class va implements Iterable {
     }
 
     final static int a(int param0) {
-        if (param0 != 22018) {
-            return 36;
-        }
         return (int)(1000000000L / qb.field_f);
     }
 

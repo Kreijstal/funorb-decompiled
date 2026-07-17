@@ -26,7 +26,7 @@ final class gh {
         if (param1 == 32767) {
           if (var3 == null) {
             L0: {
-              if ((param0 ^ -1) <= -32769) {
+              if (param0 >= 32768) {
                 var4 = ((gh) this).field_e.a(1, 100, param0 & 32767);
                 break L0;
               } else {
@@ -62,7 +62,7 @@ final class gh {
           ((gh) this).field_e = null;
           if (var3 == null) {
             L1: {
-              if ((param0 ^ -1) <= -32769) {
+              if (param0 >= 32768) {
                 var4 = ((gh) this).field_e.a(1, 100, param0 & 32767);
                 break L1;
               } else {
@@ -103,12 +103,6 @@ final class gh {
     }
 
     public static void a(int param0) {
-        if (param0 <= 104) {
-            gh.b(29);
-            field_b = null;
-            field_a = null;
-            return;
-        }
         field_b = null;
         field_a = null;
     }

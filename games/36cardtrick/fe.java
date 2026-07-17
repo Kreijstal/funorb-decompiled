@@ -10,90 +10,145 @@ final class fe {
     static String field_d;
 
     final static long a(CharSequence param0, int param1) {
-        long var2 = 0L;
+        long var2_long = 0L;
+        RuntimeException var2 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
+        long stackIn_21_0 = 0L;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        String stackIn_25_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        long stackOut_20_0 = 0L;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        String stackOut_24_2 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        String stackOut_23_2 = null;
         var7 = Main.field_T;
-        var2 = 0L;
-        var4 = param0.length();
-        var5 = 0;
-        L0: while (true) {
-          L1: {
-            if (var5 >= var4) {
-              break L1;
-            } else {
+        try {
+          L0: {
+            var2_long = 0L;
+            var4 = param0.length();
+            var5 = 0;
+            L1: while (true) {
               L2: {
-                L3: {
-                  var2 = var2 * 37L;
-                  var6 = param0.charAt(var5);
-                  if (65 > var6) {
-                    break L3;
-                  } else {
-                    if (90 < var6) {
-                      break L3;
-                    } else {
-                      var2 = var2 + (long)(-65 + (var6 + 1));
-                      break L2;
-                    }
-                  }
-                }
-                L4: {
-                  if (97 > var6) {
-                    break L4;
-                  } else {
-                    if (122 >= var6) {
-                      var2 = var2 + (long)(-97 + (var6 + 1));
-                      break L2;
-                    } else {
-                      break L4;
-                    }
-                  }
-                }
-                if (var6 < 48) {
+                if (var5 >= var4) {
                   break L2;
                 } else {
-                  if (57 < var6) {
+                  L3: {
+                    L4: {
+                      var2_long = var2_long * 37L;
+                      var6 = param0.charAt(var5);
+                      if (65 > var6) {
+                        break L4;
+                      } else {
+                        if (90 < var6) {
+                          break L4;
+                        } else {
+                          var2_long = var2_long + (long)(-65 + (var6 + 1));
+                          break L3;
+                        }
+                      }
+                    }
+                    L5: {
+                      if (97 > var6) {
+                        break L5;
+                      } else {
+                        if (122 >= var6) {
+                          var2_long = var2_long + (long)(-97 + (var6 + 1));
+                          break L3;
+                        } else {
+                          break L5;
+                        }
+                      }
+                    }
+                    if (var6 < 48) {
+                      break L3;
+                    } else {
+                      if (57 < var6) {
+                        break L3;
+                      } else {
+                        var2_long = var2_long + (long)(-21 + var6);
+                        break L3;
+                      }
+                    }
+                  }
+                  if (var2_long >= 177917621779460413L) {
                     break L2;
                   } else {
-                    var2 = var2 + (long)(-21 + var6);
-                    break L2;
+                    var5++;
+                    continue L1;
                   }
                 }
               }
-              if (var2 >= 177917621779460413L) {
-                break L1;
-              } else {
-                var5++;
-                continue L0;
-              }
-            }
-          }
-          L5: {
-            if (param1 > 57) {
-              break L5;
-            } else {
-              fe.a((byte) 61, -85);
-              break L5;
-            }
-          }
-          L6: while (true) {
-            L7: {
-              if (0L != var2 % 37L) {
-                break L7;
-              } else {
-                if ((var2 ^ -1L) == -1L) {
-                  break L7;
+              L6: {
+                if (param1 > 57) {
+                  break L6;
                 } else {
-                  var2 = var2 / 37L;
-                  continue L6;
+                  fe.a((byte) 61, -85);
+                  break L6;
                 }
               }
+              L7: while (true) {
+                L8: {
+                  if (0L != var2_long % 37L) {
+                    break L8;
+                  } else {
+                    if (var2_long == 0L) {
+                      break L8;
+                    } else {
+                      var2_long = var2_long / 37L;
+                      continue L7;
+                    }
+                  }
+                }
+                stackOut_20_0 = var2_long;
+                stackIn_21_0 = stackOut_20_0;
+                break L0;
+              }
             }
-            return var2;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L9: {
+            var2 = decompiledCaughtException;
+            stackOut_22_0 = (RuntimeException) var2;
+            stackOut_22_1 = new StringBuilder().append("fe.A(");
+            stackIn_24_0 = stackOut_22_0;
+            stackIn_24_1 = stackOut_22_1;
+            stackIn_23_0 = stackOut_22_0;
+            stackIn_23_1 = stackOut_22_1;
+            if (param0 == null) {
+              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
+              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_2 = "null";
+              stackIn_25_0 = stackOut_24_0;
+              stackIn_25_1 = stackOut_24_1;
+              stackIn_25_2 = stackOut_24_2;
+              break L9;
+            } else {
+              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_2 = "{...}";
+              stackIn_25_0 = stackOut_23_0;
+              stackIn_25_1 = stackOut_23_1;
+              stackIn_25_2 = stackOut_23_2;
+              break L9;
+            }
+          }
+          throw ma.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + param1 + 41);
         }
+        return stackIn_21_0;
     }
 
     public final String toString() {
@@ -154,18 +209,11 @@ final class fe {
                 if (na.field_r.field_i <= 0) {
                   break L2;
                 } else {
-                  try {
+                  {
                     L3: {
                       cb.field_j.a(0, (byte) -89, na.field_r.field_i, na.field_r.field_g);
                       ua.field_E = id.a(125);
                       break L3;
-                    }
-                  } catch (java.io.IOException decompiledCaughtParameter0) {
-                    decompiledCaughtException = decompiledCaughtParameter0;
-                    L4: {
-                      var2 = (IOException) (Object) decompiledCaughtException;
-                      mc.a((byte) -126);
-                      break L4;
                     }
                   }
                   na.field_r.field_i = 0;
@@ -188,9 +236,6 @@ final class fe {
     public static void a(int param0) {
         field_d = null;
         field_c = null;
-        if (param0 != 17449) {
-            fe.a((byte) 108, 62);
-        }
     }
 
     static {

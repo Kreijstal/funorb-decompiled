@@ -12,233 +12,196 @@ final class ska extends nv implements mra {
     static String[] field_q;
 
     final void a(boolean param0, fsa param1) {
-        if (!param0) {
-            ((ska) this).field_p = false;
+        try {
+            if (!param0) {
+                ((ska) this).field_p = false;
+            }
             super.a(param0, param1);
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "ska.Q(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        super.a(param0, param1);
     }
 
     final static mi a(int param0, in param1) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         StringBuilder var3 = null;
         int var4 = 0;
+        String var5 = null;
         int var6 = 0;
-        StringBuilder var7 = null;
-        String var8 = null;
-        String var12 = null;
-        StringBuilder var22 = null;
-        String var23 = null;
-        String var26 = null;
+        mi stackIn_21_0 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        String stackIn_25_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        mi stackOut_20_0 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        String stackOut_24_2 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        String stackOut_23_2 = null;
         var6 = TombRacer.field_G ? 1 : 0;
-        if (param0 == -45) {
-          param1.field_b = param1.field_b - 1;
-          var2 = param1.field_b - 1;
-          var7 = new StringBuilder();
-          var3 = var7;
-          L0: while (true) {
-            if (!param1.a(0)) {
-              L1: {
-                var4 = param1.b(param0 + 21143);
-                if (Character.isWhitespace((char) var4)) {
-                  break L1;
-                } else {
-                  if (var4 == 44) {
-                    break L1;
-                  } else {
-                    if (var4 == 40) {
-                      break L1;
-                    } else {
-                      if (41 != var4) {
-                        StringBuilder discarded$2 = var7.append(var4);
-                        continue L0;
-                      } else {
-                        break L1;
-                      }
-                    }
-                  }
-                }
-              }
-              param1.field_b = param1.field_b - 1;
-              var12 = var7.toString();
-              if (!var12.equals((Object) (Object) "true")) {
-                if (!var12.equals((Object) (Object) "false")) {
-                  if (45 != var12.charAt(0)) {
-                    if (Character.isDigit(var12.charAt(0))) {
-                      var4 = dc.field_o;
-                      return new mi(var4, var2, var12);
-                    } else {
-                      var4 = tr.field_f;
-                      return new mi(var4, var2, var12);
-                    }
-                  } else {
-                    var4 = dc.field_o;
-                    return new mi(var4, var2, var12);
-                  }
-                } else {
-                  var4 = dja.field_r;
-                  return new mi(var4, var2, var12);
-                }
+        try {
+          L0: {
+            L1: {
+              if (param0 == -45) {
+                break L1;
               } else {
-                var4 = dja.field_r;
-                return new mi(var4, var2, var12);
+                field_r = null;
+                break L1;
               }
-            } else {
-              L2: {
-                L3: {
-                  var8 = var7.toString();
-                  if (var8.equals((Object) (Object) "true")) {
-                    break L3;
-                  } else {
-                    if (!var8.equals((Object) (Object) "false")) {
-                      L4: {
-                        if (45 == var8.charAt(0)) {
+            }
+            int fieldTemp$4 = param1.field_b - 1;
+            param1.field_b = param1.field_b - 1;
+            var2_int = fieldTemp$4;
+            var3 = new StringBuilder();
+            L2: while (true) {
+              L3: {
+                if (param1.a(0)) {
+                  break L3;
+                } else {
+                  L4: {
+                    var4 = param1.b(param0 + 21143);
+                    if (Character.isWhitespace((char) var4)) {
+                      break L4;
+                    } else {
+                      if (var4 == 44) {
+                        break L4;
+                      } else {
+                        if (var4 == 40) {
                           break L4;
                         } else {
-                          if (Character.isDigit(var8.charAt(0))) {
+                          if (41 != var4) {
+                            StringBuilder discarded$5 = var3.append(var4);
+                            continue L2;
+                          } else {
                             break L4;
-                          } else {
-                            var4 = tr.field_f;
-                            break L2;
                           }
                         }
                       }
-                      var4 = dc.field_o;
-                      break L2;
-                    } else {
-                      break L3;
                     }
                   }
-                }
-                var4 = dja.field_r;
-                break L2;
-              }
-              return new mi(var4, var2, var8);
-            }
-          }
-        } else {
-          field_r = null;
-          param1.field_b = param1.field_b - 1;
-          var2 = param1.field_b - 1;
-          var22 = new StringBuilder();
-          var3 = var22;
-          L5: while (true) {
-            if (param1.a(0)) {
-              var26 = var22.toString();
-              if (var26.equals((Object) (Object) "true")) {
-                var4 = dja.field_r;
-                return new mi(var4, var2, var26);
-              } else {
-                if (!var26.equals((Object) (Object) "false")) {
-                  L6: {
-                    if (45 == var26.charAt(0)) {
-                      break L6;
-                    } else {
-                      if (Character.isDigit(var26.charAt(0))) {
-                        break L6;
-                      } else {
-                        var4 = tr.field_f;
-                        return new mi(var4, var2, var26);
-                      }
-                    }
-                  }
-                  var4 = dc.field_o;
-                  return new mi(var4, var2, var26);
-                } else {
-                  var4 = dja.field_r;
-                  return new mi(var4, var2, var26);
-                }
-              }
-            } else {
-              L7: {
-                var4 = param1.b(param0 + 21143);
-                if (Character.isWhitespace((char) var4)) {
-                  break L7;
-                } else {
-                  if (var4 == 44) {
-                    break L7;
-                  } else {
-                    if (var4 == 40) {
-                      break L7;
-                    } else {
-                      if (41 != var4) {
-                        StringBuilder discarded$3 = var22.append(var4);
-                        continue L5;
-                      } else {
-                        break L7;
-                      }
-                    }
-                  }
-                }
-              }
-              L8: {
-                L9: {
                   param1.field_b = param1.field_b - 1;
-                  var23 = var22.toString();
-                  if (var23.equals((Object) (Object) "true")) {
-                    break L9;
+                  break L3;
+                }
+              }
+              L5: {
+                L6: {
+                  var5 = var3.toString();
+                  if (var5.equals((Object) (Object) "true")) {
+                    break L6;
                   } else {
-                    if (!var23.equals((Object) (Object) "false")) {
-                      L10: {
-                        if (45 == var23.charAt(0)) {
-                          break L10;
+                    if (!var5.equals((Object) (Object) "false")) {
+                      L7: {
+                        if (45 == var5.charAt(0)) {
+                          break L7;
                         } else {
-                          if (Character.isDigit(var23.charAt(0))) {
-                            break L10;
+                          if (Character.isDigit(var5.charAt(0))) {
+                            break L7;
                           } else {
                             var4 = tr.field_f;
-                            break L8;
+                            break L5;
                           }
                         }
                       }
                       var4 = dc.field_o;
-                      break L8;
+                      break L5;
                     } else {
-                      break L9;
+                      break L6;
                     }
                   }
                 }
                 var4 = dja.field_r;
-                break L8;
+                break L5;
               }
-              return new mi(var4, var2, var23);
+              stackOut_20_0 = new mi(var4, var2_int, var5);
+              stackIn_21_0 = stackOut_20_0;
+              break L0;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L8: {
+            var2 = decompiledCaughtException;
+            stackOut_22_0 = (RuntimeException) var2;
+            stackOut_22_1 = new StringBuilder().append("ska.V(").append(param0).append(44);
+            stackIn_24_0 = stackOut_22_0;
+            stackIn_24_1 = stackOut_22_1;
+            stackIn_23_0 = stackOut_22_0;
+            stackIn_23_1 = stackOut_22_1;
+            if (param1 == null) {
+              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
+              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_2 = "null";
+              stackIn_25_0 = stackOut_24_0;
+              stackIn_25_1 = stackOut_24_1;
+              stackIn_25_2 = stackOut_24_2;
+              break L8;
+            } else {
+              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_2 = "{...}";
+              stackIn_25_0 = stackOut_23_0;
+              stackIn_25_1 = stackOut_23_1;
+              stackIn_25_2 = stackOut_23_2;
+              break L8;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 41);
         }
+        return stackIn_21_0;
     }
 
     final void a(roa param0, byte param1) {
-        if (param1 < 40) {
-            int discarded$0 = ((ska) this).a(true);
+        try {
+            if (param1 < 40) {
+                int discarded$0 = ((ska) this).a(true);
+            }
             ((ska) this).field_u = param0;
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "ska.U(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
-        ((ska) this).field_u = param0;
     }
 
     public final void a(int param0, mg param1) {
-        if (param0 < 81) {
-            roa discarded$0 = ((ska) this).l(-69);
+        try {
+            if (param0 < 81) {
+                roa discarded$0 = ((ska) this).l(-69);
+            }
             ((ska) this).field_n = param1;
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "ska.H(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        ((ska) this).field_n = param1;
     }
 
     ska(la param0, boolean param1) {
         super(param0, param1);
         ((ska) this).field_o = true;
-        ((ska) this).field_n = new mg();
-        ((ska) this).field_u = ci.a(0, -1);
+        try {
+            ((ska) this).field_n = new mg();
+            ((ska) this).field_u = ci.a(0, -1);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "ska.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     final void a(boolean param0, kh param1) {
-        super.a(param0, param1);
-        ((ska) this).field_n.a(15637, param1);
-        ((ska) this).field_u.a(param1, (byte) 84);
-        param1.a((byte) -128, ((ska) this).field_o ? 1 : 0, 1);
-        param1.a((byte) -128, ((ska) this).field_p ? 1 : 0, 1);
+        try {
+            super.a(param0, param1);
+            ((ska) this).field_n.a(15637, param1);
+            ((ska) this).field_u.a(param1, (byte) 84);
+            param1.a((byte) -128, ((ska) this).field_o ? 1 : 0, 1);
+            param1.a((byte) -128, ((ska) this).field_p ? 1 : 0, 1);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "ska.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void c(int param0) {
@@ -283,9 +246,9 @@ final class ska extends nv implements mra {
         int var3 = 0;
         var3 = 31 / ((59 - param0) / 41);
         if (param1 <= param2) {
-          return rra.a(false, (param1 << 884207088) / param2);
+          return rra.a(false, (param1 << 16) / param2);
         } else {
-          return 2048 + -rra.a(false, (param2 << 1344739600) / param1);
+          return 2048 + -rra.a(false, (param2 << 16) / param1);
         }
     }
 
@@ -341,13 +304,163 @@ final class ska extends nv implements mra {
 
     ska(la param0, kh param1, boolean param2) {
         super(param0, param1, param2);
+        RuntimeException runtimeException = null;
+        Object stackIn_2_0 = null;
+        Object stackIn_3_0 = null;
+        Object stackIn_4_0 = null;
+        int stackIn_4_1 = 0;
+        Object stackIn_6_0 = null;
+        Object stackIn_7_0 = null;
+        Object stackIn_8_0 = null;
+        int stackIn_8_1 = 0;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        Object stackOut_1_0 = null;
+        Object stackOut_3_0 = null;
+        int stackOut_3_1 = 0;
+        Object stackOut_2_0 = null;
+        int stackOut_2_1 = 0;
+        Object stackOut_5_0 = null;
+        Object stackOut_7_0 = null;
+        int stackOut_7_1 = 0;
+        Object stackOut_6_0 = null;
+        int stackOut_6_1 = 0;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
         ((ska) this).field_o = true;
-        ((ska) this).field_n = new mg(param0.field_E, param1);
-        ((ska) this).field_u = jl.a(param0, true, param1);
-        ((ska) this).field_o = param1.b((byte) 44, 1) == -2 ? true : false;
-        ((ska) this).field_u.a(90, ((ska) this).field_o);
-        if (-9 <= param0.field_E) {
-            ((ska) this).field_p = (param1.b((byte) 44, 1) ^ -1) == -2 ? true : false;
+        try {
+          L0: {
+            L1: {
+              ((ska) this).field_n = new mg(param0.field_E, param1);
+              ((ska) this).field_u = jl.a(param0, true, param1);
+              stackOut_1_0 = this;
+              stackIn_3_0 = stackOut_1_0;
+              stackIn_2_0 = stackOut_1_0;
+              if (param1.b((byte) 44, 1) != -2) {
+                stackOut_3_0 = this;
+                stackOut_3_1 = 0;
+                stackIn_4_0 = stackOut_3_0;
+                stackIn_4_1 = stackOut_3_1;
+                break L1;
+              } else {
+                stackOut_2_0 = this;
+                stackOut_2_1 = 1;
+                stackIn_4_0 = stackOut_2_0;
+                stackIn_4_1 = stackOut_2_1;
+                break L1;
+              }
+            }
+            L2: {
+              ((ska) this).field_o = stackIn_4_1 != 0;
+              ((ska) this).field_u.a(90, ((ska) this).field_o);
+              if (-9 > param0.field_E) {
+                break L2;
+              } else {
+                L3: {
+                  stackOut_5_0 = this;
+                  stackIn_7_0 = stackOut_5_0;
+                  stackIn_6_0 = stackOut_5_0;
+                  if (param1.b((byte) 44, 1) != 1) {
+                    stackOut_7_0 = this;
+                    stackOut_7_1 = 0;
+                    stackIn_8_0 = stackOut_7_0;
+                    stackIn_8_1 = stackOut_7_1;
+                    break L3;
+                  } else {
+                    stackOut_6_0 = this;
+                    stackOut_6_1 = 1;
+                    stackIn_8_0 = stackOut_6_0;
+                    stackIn_8_1 = stackOut_6_1;
+                    break L3;
+                  }
+                }
+                ((ska) this).field_p = stackIn_8_1 != 0;
+                break L2;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            runtimeException = decompiledCaughtException;
+            stackOut_10_0 = (RuntimeException) runtimeException;
+            stackOut_10_1 = new StringBuilder().append("ska.<init>(");
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
+            if (param0 == null) {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L4;
+            } else {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L4;
+            }
+          }
+          L5: {
+            stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+            stackOut_13_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_13_2).append(44);
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
+            if (param1 == null) {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L5;
+            } else {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L5;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param2 + 41);
         }
     }
 
@@ -402,7 +515,7 @@ final class ska extends nv implements mra {
                 ((ska) this).field_t = false;
                 if (param0 == 5418) {
                   if (((ska) this).field_s) {
-                    ((ska) this).field_t = ((ska) this).field_u.a(((ska) this).field_g.g(-25787), ((ska) this).field_g.P(param0 + -5418) << -2002197072, (gma) (Object) ((ska) this).e(param0 + -5412), ((ska) this).field_g.d(3), ((ska) this).field_g.e(param0 + 4230), ((ska) this).b(true), 0, 0, et.b(((ska) this).field_g.a((byte) 55), ((ska) this).field_g.c(param0 ^ -5478), 123) / 2, false);
+                    ((ska) this).field_t = ((ska) this).field_u.a(((ska) this).field_g.g(-25787), ((ska) this).field_g.P(param0 + -5418) << 16, (gma) (Object) ((ska) this).e(param0 + -5412), ((ska) this).field_g.d(3), ((ska) this).field_g.e(param0 + 4230), ((ska) this).b(true), 0, 0, et.b(((ska) this).field_g.a((byte) 55), ((ska) this).field_g.c(param0 ^ -5478), 123) / 2, false);
                     if (((ska) this).field_u.a(12111)) {
                       return;
                     } else {
@@ -418,7 +531,7 @@ final class ska extends nv implements mra {
                     if (!((ska) this).field_s) {
                       break L2;
                     } else {
-                      ((ska) this).field_t = ((ska) this).field_u.a(((ska) this).field_g.g(-25787), ((ska) this).field_g.P(param0 + -5418) << -2002197072, (gma) (Object) ((ska) this).e(param0 + -5412), ((ska) this).field_g.d(3), ((ska) this).field_g.e(param0 + 4230), ((ska) this).b(true), 0, 0, et.b(((ska) this).field_g.a((byte) 55), ((ska) this).field_g.c(param0 ^ -5478), 123) / 2, false);
+                      ((ska) this).field_t = ((ska) this).field_u.a(((ska) this).field_g.g(-25787), ((ska) this).field_g.P(param0 + -5418) << 16, (gma) (Object) ((ska) this).e(param0 + -5412), ((ska) this).field_g.d(3), ((ska) this).field_g.e(param0 + 4230), ((ska) this).b(true), 0, 0, et.b(((ska) this).field_g.a((byte) 55), ((ska) this).field_g.c(param0 ^ -5478), 123) / 2, false);
                       if (!((ska) this).field_u.a(12111)) {
                         ((ska) this).c(false);
                         break L2;
@@ -436,7 +549,7 @@ final class ska extends nv implements mra {
           ((ska) this).field_t = false;
           if (param0 == 5418) {
             if (((ska) this).field_s) {
-              ((ska) this).field_t = ((ska) this).field_u.a(((ska) this).field_g.g(-25787), ((ska) this).field_g.P(param0 + -5418) << -2002197072, (gma) (Object) ((ska) this).e(param0 + -5412), ((ska) this).field_g.d(3), ((ska) this).field_g.e(param0 + 4230), ((ska) this).b(true), 0, 0, et.b(((ska) this).field_g.a((byte) 55), ((ska) this).field_g.c(param0 ^ -5478), 123) / 2, false);
+              ((ska) this).field_t = ((ska) this).field_u.a(((ska) this).field_g.g(-25787), ((ska) this).field_g.P(param0 + -5418) << 16, (gma) (Object) ((ska) this).e(param0 + -5412), ((ska) this).field_g.d(3), ((ska) this).field_g.e(param0 + 4230), ((ska) this).b(true), 0, 0, et.b(((ska) this).field_g.a((byte) 55), ((ska) this).field_g.c(param0 ^ -5478), 123) / 2, false);
               if (!((ska) this).field_u.a(12111)) {
                 ((ska) this).c(false);
                 return;
@@ -449,7 +562,7 @@ final class ska extends nv implements mra {
           } else {
             field_r = null;
             if (((ska) this).field_s) {
-              ((ska) this).field_t = ((ska) this).field_u.a(((ska) this).field_g.g(-25787), ((ska) this).field_g.P(param0 + -5418) << -2002197072, (gma) (Object) ((ska) this).e(param0 + -5412), ((ska) this).field_g.d(3), ((ska) this).field_g.e(param0 + 4230), ((ska) this).b(true), 0, 0, et.b(((ska) this).field_g.a((byte) 55), ((ska) this).field_g.c(param0 ^ -5478), 123) / 2, false);
+              ((ska) this).field_t = ((ska) this).field_u.a(((ska) this).field_g.g(-25787), ((ska) this).field_g.P(param0 + -5418) << 16, (gma) (Object) ((ska) this).e(param0 + -5412), ((ska) this).field_g.d(3), ((ska) this).field_g.e(param0 + 4230), ((ska) this).b(true), 0, 0, et.b(((ska) this).field_g.a((byte) 55), ((ska) this).field_g.c(param0 ^ -5478), 123) / 2, false);
               if (((ska) this).field_u.a(12111)) {
                 return;
               } else {
@@ -503,7 +616,7 @@ final class ska extends nv implements mra {
                     if (!((ska) this).field_s) {
                       break L6;
                     } else {
-                      ((ska) this).field_t = ((ska) this).field_u.a(((ska) this).field_g.g(-25787), ((ska) this).field_g.P(param0 + -5418) << -2002197072, (gma) (Object) ((ska) this).e(param0 + -5412), ((ska) this).field_g.d(3), ((ska) this).field_g.e(param0 + 4230), ((ska) this).b(true), 0, 0, et.b(((ska) this).field_g.a((byte) 55), ((ska) this).field_g.c(param0 ^ -5478), 123) / 2, false);
+                      ((ska) this).field_t = ((ska) this).field_u.a(((ska) this).field_g.g(-25787), ((ska) this).field_g.P(param0 + -5418) << 16, (gma) (Object) ((ska) this).e(param0 + -5412), ((ska) this).field_g.d(3), ((ska) this).field_g.e(param0 + 4230), ((ska) this).b(true), 0, 0, et.b(((ska) this).field_g.a((byte) 55), ((ska) this).field_g.c(param0 ^ -5478), 123) / 2, false);
                       if (!((ska) this).field_u.a(12111)) {
                         ((ska) this).c(false);
                         break L6;
@@ -520,7 +633,7 @@ final class ska extends nv implements mra {
             ((ska) this).field_t = false;
             if (param0 == 5418) {
               if (((ska) this).field_s) {
-                ((ska) this).field_t = ((ska) this).field_u.a(((ska) this).field_g.g(-25787), ((ska) this).field_g.P(param0 + -5418) << -2002197072, (gma) (Object) ((ska) this).e(param0 + -5412), ((ska) this).field_g.d(3), ((ska) this).field_g.e(param0 + 4230), ((ska) this).b(true), 0, 0, et.b(((ska) this).field_g.a((byte) 55), ((ska) this).field_g.c(param0 ^ -5478), 123) / 2, false);
+                ((ska) this).field_t = ((ska) this).field_u.a(((ska) this).field_g.g(-25787), ((ska) this).field_g.P(param0 + -5418) << 16, (gma) (Object) ((ska) this).e(param0 + -5412), ((ska) this).field_g.d(3), ((ska) this).field_g.e(param0 + 4230), ((ska) this).b(true), 0, 0, et.b(((ska) this).field_g.a((byte) 55), ((ska) this).field_g.c(param0 ^ -5478), 123) / 2, false);
                 if (((ska) this).field_u.a(12111)) {
                   return;
                 } else {
@@ -536,7 +649,7 @@ final class ska extends nv implements mra {
                 if (!((ska) this).field_s) {
                   break L7;
                 } else {
-                  ((ska) this).field_t = ((ska) this).field_u.a(((ska) this).field_g.g(-25787), ((ska) this).field_g.P(param0 + -5418) << -2002197072, (gma) (Object) ((ska) this).e(param0 + -5412), ((ska) this).field_g.d(3), ((ska) this).field_g.e(param0 + 4230), ((ska) this).b(true), 0, 0, et.b(((ska) this).field_g.a((byte) 55), ((ska) this).field_g.c(param0 ^ -5478), 123) / 2, false);
+                  ((ska) this).field_t = ((ska) this).field_u.a(((ska) this).field_g.g(-25787), ((ska) this).field_g.P(param0 + -5418) << 16, (gma) (Object) ((ska) this).e(param0 + -5412), ((ska) this).field_g.d(3), ((ska) this).field_g.e(param0 + 4230), ((ska) this).b(true), 0, 0, et.b(((ska) this).field_g.a((byte) 55), ((ska) this).field_g.c(param0 ^ -5478), 123) / 2, false);
                   if (!((ska) this).field_u.a(12111)) {
                     ((ska) this).c(false);
                     break L7;

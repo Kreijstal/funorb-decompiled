@@ -14,7 +14,7 @@ final class wb {
         while (((wb) this).field_f[var1] >= 0) {
             var1 = sf.b() != 0 ? ((wb) this).field_f[var1] : var1 + 1;
         }
-        return ((wb) this).field_f[var1] ^ -1;
+        return ~((wb) this).field_f[var1];
     }
 
     private final static int a(int param0, int param1) {
@@ -56,7 +56,7 @@ final class wb {
         int stackOut_22_0 = 0;
         int stackOut_21_0 = 0;
         L0: {
-          int discarded$1 = sf.f(24);
+          int discarded$2 = sf.f(24);
           ((wb) this).field_e = sf.f(16);
           ((wb) this).field_b = sf.f(24);
           ((wb) this).field_a = new int[((wb) this).field_b];
@@ -123,8 +123,9 @@ final class wb {
                     var3_int++;
                     continue L5;
                   } else {
+                    int incrementValue$3 = var2;
                     var2++;
-                    ((wb) this).field_a[var2] = var3_int;
+                    ((wb) this).field_a[incrementValue$3] = var3_int;
                     var5++;
                     continue L6;
                   }
@@ -282,7 +283,7 @@ final class wb {
                   var7 = 0;
                   L2: while (true) {
                     if (var7 >= var4) {
-                      ((wb) this).field_f[var6] = var3 ^ -1;
+                      ((wb) this).field_f[var6] = ~var3;
                       if (var6 >= var2) {
                         var2 = var6 + 1;
                         var3++;

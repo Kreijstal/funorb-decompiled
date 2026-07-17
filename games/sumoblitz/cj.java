@@ -11,39 +11,39 @@ final class cj {
     private int field_b;
 
     public static void a(int param0) {
-        if (param0 != 0) {
-            return;
-        }
         field_e = null;
         field_c = null;
     }
 
     final void a(bk param0, int param1) {
-        ha var4 = param0.field_g;
-        ha var3 = var4;
-        var4.KA(((cj) this).field_g[0], ((cj) this).field_g[1], ((cj) this).field_g[2], ((cj) this).field_g[param1]);
-        var4.DA(((cj) this).field_d[0], ((cj) this).field_d[1], ((cj) this).field_d[2], ((cj) this).field_d[3]);
-        var3.f(((cj) this).field_b, ((cj) this).field_a);
-        param0.field_f = ((cj) this).field_f;
+        ha var4 = null;
+        ha var3 = null;
+        try {
+            var4 = param0.field_g;
+            var3 = var4;
+            var4.KA(((cj) this).field_g[0], ((cj) this).field_g[1], ((cj) this).field_g[2], ((cj) this).field_g[param1]);
+            var4.DA(((cj) this).field_d[0], ((cj) this).field_d[1], ((cj) this).field_d[2], ((cj) this).field_d[3]);
+            var3.f(((cj) this).field_b, ((cj) this).field_a);
+            param0.field_f = ((cj) this).field_f;
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "cj.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     final void a(int param0, bk param1) {
         ha var3 = null;
-        var3 = param1.field_g;
-        var3.K(((cj) this).field_g);
-        if (param0 >= -106) {
-          ((cj) this).field_a = -2;
-          ((cj) this).field_d = var3.Y();
-          ((cj) this).field_b = var3.i();
-          ((cj) this).field_a = var3.XA();
-          ((cj) this).field_f = param1.field_f;
-          return;
-        } else {
-          ((cj) this).field_d = var3.Y();
-          ((cj) this).field_b = var3.i();
-          ((cj) this).field_a = var3.XA();
-          ((cj) this).field_f = param1.field_f;
-          return;
+        try {
+            var3 = param1.field_g;
+            var3.K(((cj) this).field_g);
+            if (param0 >= -106) {
+                ((cj) this).field_a = -2;
+            }
+            ((cj) this).field_d = var3.Y();
+            ((cj) this).field_b = var3.i();
+            ((cj) this).field_a = var3.XA();
+            ((cj) this).field_f = param1.field_f;
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "cj.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

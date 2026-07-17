@@ -9,7 +9,7 @@ abstract class ob {
 
     public static void a(byte param0) {
         field_b = null;
-        int var1 = -26 / ((param0 - 63) / 44);
+        int var1 = -26;
         field_c = null;
         field_a = null;
         field_d = null;

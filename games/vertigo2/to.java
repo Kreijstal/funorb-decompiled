@@ -10,81 +10,84 @@ final class to {
     static String field_d;
 
     final static void a(byte param0) {
+        RuntimeException var1 = null;
         int var2 = 0;
         j var3_ref_j = null;
         int var3 = 0;
-        hn var4 = null;
         int var4_int = 0;
+        hn var4 = null;
         Object var5 = null;
         int var6 = 0;
         mi var8 = null;
         byte[] var12 = null;
+        RuntimeException decompiledCaughtException = null;
         var6 = Vertigo2.field_L ? 1 : 0;
-        if (param0 <= -40) {
-          var8 = id.field_f;
-          var2 = var8.h(-11);
-          if (var2 != 0) {
-            if (1 == var2) {
-              var3 = var8.b(true);
-              var4 = (hn) (Object) qo.field_B.a((byte) 100);
-              L0: while (true) {
-                if (var4 != null) {
-                  if (var3 != var4.field_q) {
-                    var4 = (hn) (Object) qo.field_B.b(29);
-                    continue L0;
-                  } else {
+        try {
+          L0: {
+            var8 = id.field_f;
+            var2 = var8.h(-11);
+            if (var2 != 0) {
+              if (1 != var2) {
+                ke.a((Throwable) null, "A1: " + or.a(122), 0);
+                rm.b((byte) 117);
+                break L0;
+              } else {
+                var3 = var8.b(true);
+                var4 = (hn) (Object) qo.field_B.a((byte) 100);
+                L1: while (true) {
+                  L2: {
                     if (var4 == null) {
-                      rm.b((byte) 87);
-                      return;
+                      break L2;
                     } else {
-                      var4.c(2);
-                      return;
+                      if (var3 == var4.field_q) {
+                        break L2;
+                      } else {
+                        var4 = (hn) (Object) qo.field_B.b(29);
+                        continue L1;
+                      }
                     }
                   }
-                } else {
-                  if (var4 == null) {
-                    rm.b((byte) 87);
+                  if (var4 != null) {
+                    var4.c(2);
                     return;
                   } else {
-                    var4.c(2);
+                    rm.b((byte) 87);
                     return;
                   }
                 }
               }
             } else {
-              ke.a((Throwable) null, "A1: " + or.a(122), 0);
-              rm.b((byte) 117);
-              return;
-            }
-          } else {
-            var3_ref_j = (j) (Object) vf.field_C.a((byte) 100);
-            if (var3_ref_j != null) {
-              L1: {
-                var4_int = var8.h(-11);
-                if (var4_int != 0) {
-                  var12 = new byte[var4_int];
-                  var8.a(0, var12, var4_int, -89);
-                  break L1;
-                } else {
-                  var5 = null;
-                  break L1;
+              var3_ref_j = (j) (Object) vf.field_C.a((byte) 100);
+              if (var3_ref_j != null) {
+                L3: {
+                  var4_int = var8.h(-11);
+                  if (var4_int != 0) {
+                    var12 = new byte[var4_int];
+                    var8.a(0, var12, var4_int, -89);
+                    break L3;
+                  } else {
+                    var5 = null;
+                    break L3;
+                  }
                 }
-              }
-              var8.field_u = var8.field_u + 4;
-              if (!var8.o(-4111)) {
-                rm.b((byte) 94);
-                return;
+                var8.field_u = var8.field_u + 4;
+                if (!var8.o(-4111)) {
+                  rm.b((byte) 94);
+                  return;
+                } else {
+                  var3_ref_j.c(2);
+                  return;
+                }
               } else {
-                var3_ref_j.c(2);
+                rm.b((byte) -61);
                 return;
               }
-            } else {
-              rm.b((byte) -61);
-              return;
             }
           }
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw wn.a((Throwable) (Object) var1, "to.A(" + -99 + 41);
         }
     }
 
@@ -92,11 +95,6 @@ final class to {
         field_f = null;
         field_b = null;
         field_d = null;
-        if (param0 <= 73) {
-            field_d = null;
-            field_a = null;
-            return;
-        }
         field_a = null;
     }
 

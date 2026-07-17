@@ -42,52 +42,39 @@ final class ck {
 
     public static void a(int param0) {
         field_C = null;
-        if (param0 != -665) {
-            return;
-        }
         field_y = null;
         field_o = null;
         field_u = null;
     }
 
     final static boolean a(int param0, int param1) {
-        int var2 = 0;
-        int var3 = 0;
-        var2 = -41 % ((param0 - 36) / 54);
-        if (0 <= param1) {
-          if (param1 < ln.field_a.field_o.length) {
-            var3 = ln.field_a.field_o[param1];
-            if (var3 >= 0) {
-              if (512 != var3) {
-                if (var3 != -665) {
-                  if (-697 != var3) {
-                    if ((var3 ^ -1) != -680) {
-                      if (var3 == 681) {
-                        return false;
-                      } else {
-                        return true;
-                      }
-                    } else {
-                      return false;
-                    }
-                  } else {
-                    return false;
-                  }
-                } else {
-                  return false;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return false;
-            }
-          } else {
+        int var2 = -41 % ((param0 - 36) / 54);
+        if (0 > param1) {
             return false;
-          }
-        } else {
-          return false;
         }
+        if (param1 >= ln.field_a.field_o.length) {
+            return false;
+        }
+        int var3 = ln.field_a.field_o[param1];
+        if (var3 < 0) {
+            return false;
+        }
+        if (512 == var3) {
+            return false;
+        }
+        if (var3 == 664) {
+            return false;
+        }
+        if (var3 == 696) {
+            return false;
+        }
+        if (var3 == 679) {
+            return false;
+        }
+        if (var3 == 681) {
+            return false;
+        }
+        return true;
     }
 
     ck() {

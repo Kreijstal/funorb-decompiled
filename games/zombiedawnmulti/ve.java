@@ -18,11 +18,15 @@ final class ve {
     static ja field_b;
 
     final static void a(long param0, int param1, String param2, tq param3, String param4, cj param5, int param6, int[] param7, int param8) {
-        vc.field_d = param3;
-        if (param1 != 196) {
-            ve.a((byte) 2);
+        try {
+            vc.field_d = param3;
+            if (param1 != 196) {
+                ve.a((byte) 2);
+            }
+            pk.field_b = new jb(param5, param0, param4, param2, param8, param6, param7);
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) (Object) runtimeException, "ve.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 44 + param6 + 44 + (param7 != null ? "{...}" : "null") + 44 + param8 + 41);
         }
-        pk.field_b = new jb(param5, param0, param4, param2, param8, param6, param7);
     }
 
     final void a(int param0, int param1, boolean param2, int param3, int param4, int param5) {
@@ -34,16 +38,16 @@ final class ve {
         int var12 = 0;
         var12 = ZombieDawnMulti.field_E ? 1 : 0;
         ((ve) this).field_l.setSeed((long)((ve) this).field_k);
-        var8 = (65454 & param0) >> 2037672744;
-        var7 = param0 >> 789514224;
+        var8 = (65454 & param0) >> 8;
+        var7 = param0 >> 16;
         var9 = 255 & param0;
         if (param5 == -1963) {
           var10 = 0;
           L0: while (true) {
-            if ((var10 ^ -1) <= -256) {
+            if (var10 >= 255) {
               L1: {
                 if (param2) {
-                  oo.a(param1 << -1904160444, param3 << 899003428, ((ve) this).field_i * 2 << 890753444, 254, ((ve) this).field_c);
+                  oo.a(param1 << 4, param3 << 4, ((ve) this).field_i * 2 << 4, 254, ((ve) this).field_c);
                   break L1;
                 } else {
                   break L1;
@@ -58,13 +62,13 @@ final class ve {
                     if (!param2) {
                       break L3;
                     } else {
-                      oo.a(param1 << 332843588, param3 << 1236931428, ((ve) this).field_i * var10 << -306831324, 254 / (var10 + 1), ((ve) this).field_c);
+                      oo.a(param1 << 4, param3 << 4, ((ve) this).field_i * var10 << 4, 254 / (var10 + 1), ((ve) this).field_c);
                       break L3;
                     }
                   }
                   L4: {
                     if (param2) {
-                      oo.a(param1 << 1803153860, param3 << -151686780, ((ve) this).field_i * var10 << 1643550564, 196 / (1 + var10), ((ve) this).field_c);
+                      oo.a(param1 << 4, param3 << 4, ((ve) this).field_i * var10 << 4, 196 / (1 + var10), ((ve) this).field_c);
                       break L4;
                     } else {
                       break L4;
@@ -77,7 +81,7 @@ final class ve {
               }
             } else {
               var11 = (int)(Math.pow((double)var10, 1.5) / 16.0);
-              ((ve) this).field_c[var10] = cr.b(cr.b(var11 * var8 >> 1326367176 << -1295872824, var11 * var7 >> -1767996728 << 34601040), var9 * var11 >> -1849364120);
+              ((ve) this).field_c[var10] = cr.b(cr.b(var11 * var8 >> 8 << 8, var11 * var7 >> 8 << 16), var9 * var11 >> 8);
               var10++;
               continue L0;
             }
@@ -88,10 +92,6 @@ final class ve {
     }
 
     private final double a(boolean param0) {
-        if (!param0) {
-            Object var3 = null;
-            ve.a(-109L, -96, (String) null, (tq) null, (String) null, (cj) null, 73, (int[]) null, 6);
-        }
         return (double)hp.a((byte) 115, ((ve) this).field_l, 1000) / 1000.0;
     }
 
@@ -107,7 +107,7 @@ final class ve {
           if (param8 > 5) {
             break L0;
           } else {
-            if ((param2 ^ -1) > -2) {
+            if (param2 < 1) {
               break L0;
             } else {
               L1: {
@@ -118,8 +118,8 @@ final class ve {
                 if (!param0) {
                   break L1;
                 } else {
-                  oo.a(var11 << -637848540, var12 << 125549764, param2 << 356293060, var14, ((ve) this).field_c);
-                  oo.a(var11 << 1805620548, var12 << -1544182876, param2 << 1823212323, var14 / 2, ((ve) this).field_c);
+                  oo.a(var11 << 4, var12 << 4, param2 << 4, var14, ((ve) this).field_c);
+                  oo.a(var11 << 4, var12 << 4, param2 << 3, var14 / 2, ((ve) this).field_c);
                   break L1;
                 }
               }

@@ -456,10 +456,10 @@ final class a extends cc {
                       break L6;
                     }
                   }
-                  if ((param1 ^ -1) == -257) {
+                  if (param1 == 256) {
                     break L1;
                   } else {
-                    if (-11 != (param1 ^ -1)) {
+                    if (param1 != 10) {
                       if (kb.field_c) {
                         break L1;
                       } else {

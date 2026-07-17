@@ -71,14 +71,19 @@ final class ei extends dg {
     }
 
     final void a(byte param0, rj param1) {
-        if (!(param1 instanceof ui)) {
-            throw new IllegalArgumentException();
+        ui var4 = null;
+        try {
+            if (!(param1 instanceof ui)) {
+                throw new IllegalArgumentException();
+            }
+            int var3_int = 32 / ((-36 - param0) / 50);
+            var4 = (ui) (Object) param1;
+            ((ei) this).field_C.a(-1, (gg) (Object) var4);
+            var4.field_G = true;
+            boolean discarded$0 = var4.a(-2147483648, (rj) this);
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) (Object) runtimeException, "ei.K(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        int var3 = 32 / ((-36 - param0) / 50);
-        ui var4 = (ui) (Object) param1;
-        ((ei) this).field_C.a(-1, (gg) (Object) var4);
-        var4.field_G = true;
-        boolean discarded$0 = var4.a(-2147483648, (rj) this);
     }
 
     final void a(int param0, byte param1, int param2, int param3) {
@@ -145,8 +150,64 @@ final class ei extends dg {
     }
 
     final static String a(CharSequence[] param0, byte param1) {
-        int var2 = 114 % ((param1 - 64) / 58);
-        return ge.a((byte) -50, param0, 0, param0.length);
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        String stackIn_1_0 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        String stackOut_0_0 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
+        try {
+          L0: {
+            var2_int = 114 % ((param1 - 64) / 58);
+            stackOut_0_0 = ge.a((byte) -50, param0, 0, param0.length);
+            stackIn_1_0 = stackOut_0_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var2 = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var2;
+            stackOut_2_1 = new StringBuilder().append("ei.S(");
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
+            if (param0 == null) {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
+            }
+          }
+          throw ma.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 41);
+        }
+        return stackIn_1_0;
     }
 
     public ei() {

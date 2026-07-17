@@ -31,129 +31,43 @@ final class ha extends br {
         int var1_int = 0;
         IllegalArgumentException var1 = null;
         ob var2 = null;
-        Object stackIn_2_0 = null;
-        ig stackIn_5_0 = null;
-        ob stackIn_8_0 = null;
+        ig stackIn_4_0 = null;
+        ob stackIn_7_0 = null;
         Throwable decompiledCaughtException = null;
-        ig stackOut_4_0 = null;
-        ob stackOut_7_0 = null;
+        ig stackOut_2_0 = null;
+        ob stackOut_6_0 = null;
         ig stackOut_3_0 = null;
-        Object stackOut_1_0 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    try {
-                        var1_int = 0;
-                        if (!param0) {
-                            statePc = 3;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_0) {
-                        caughtException = stateCaught_0;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 1: {
-                    try {
-                        stackOut_1_0 = null;
-                        stackIn_2_0 = stackOut_1_0;
-                        statePc = 2;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    return (ob) (Object) stackIn_2_0;
-                }
-                case 3: {
-                    stackOut_3_0 = ok.field_p;
-                    stackIn_5_0 = stackOut_3_0;
-                    statePc = 5;
-                    continue stateLoop;
-                }
-                case 4: {
-                    try {
-                        stackOut_4_0 = ok.field_p;
-                        stackIn_5_0 = stackOut_4_0;
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        var2 = ((ig) (Object) stackIn_5_0).a(var1_int, 32767);
-                        if (var2.field_y) {
-                            statePc = 7;
-                        } else {
-                            statePc = 6;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        statePc = 9;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        stackOut_7_0 = (ob) var2;
-                        stackIn_8_0 = stackOut_7_0;
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    return stackIn_8_0;
-                }
-                case 9: {
-                    try {
-                        var1_int++;
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 10;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    var1 = (IllegalArgumentException) (Object) caughtException;
-                    return null;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        try {
+          var1_int = 0;
+          stackOut_2_0 = ok.field_p;
+          stackIn_4_0 = stackOut_2_0;
+          L0: while (true) {
+            var2 = ((ig) (Object) stackIn_4_0).a(var1_int, 32767);
+            if (var2.field_y) {
+              stackOut_6_0 = (ob) var2;
+              stackIn_7_0 = stackOut_6_0;
+              return stackIn_7_0;
+            } else {
+              var1_int++;
+              stackOut_3_0 = ok.field_p;
+              stackIn_4_0 = stackOut_3_0;
+              continue L0;
             }
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = (IllegalArgumentException) (Object) decompiledCaughtException;
+          return null;
         }
     }
 
     ha(ek param0, int param1) {
-        ((ha) this).field_m = param0;
-        ((ha) this).field_f = param1;
+        try {
+            ((ha) this).field_m = param0;
+            ((ha) this).field_f = param1;
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) (Object) runtimeException, "ha.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     static {

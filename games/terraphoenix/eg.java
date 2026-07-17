@@ -16,9 +16,6 @@ final class eg extends uf {
     public static void c(byte param0) {
         field_n = null;
         field_k = null;
-        if (param0 != 29) {
-            field_p = 89;
-        }
     }
 
     eg(int param0, int param1, int param2, int param3, int param4, int param5) {

@@ -8,21 +8,15 @@ final class uc {
     static int field_a;
 
     final static kc b(int param0) {
-        int var1 = 103 % ((param0 - 47) / 39);
+        int var1 = 0;
         return nl.field_Gb.field_Eb;
     }
 
     final static void a(int param0, byte param1) {
-        ab var2 = null;
-        var2 = he.field_e;
+        ab var2 = he.field_e;
         var2.b((byte) -81, param0);
         var2.f(1, (byte) -101);
-        if (param1 != -96) {
-          return;
-        } else {
-          var2.f(3, (byte) -48);
-          return;
-        }
+        var2.f(3, (byte) -48);
     }
 
     final static void a(int param0) {
@@ -34,17 +28,13 @@ final class uc {
 
     final static void c(int param0) {
         if (!(!oj.field_i)) {
-            gb.a(param0 + 11);
-        }
-        if (param0 != 3) {
-            uc.a(-77);
-            return;
+            gb.a(14);
         }
     }
 
     public static void a(byte param0) {
         field_c = null;
-        int var1 = -58 % ((param0 - -15) / 35);
+        int var1 = 0;
         field_d = null;
     }
 

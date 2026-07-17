@@ -18,6 +18,7 @@ final class hb implements dh {
     static dm[] field_d;
 
     public final void a(int param0, int param1, int param2, boolean param3, el param4) {
+        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         double var9 = 0.0;
@@ -26,60 +27,109 @@ final class hb implements dh {
         int var13 = 0;
         qb var14 = null;
         el stackIn_3_0 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
         Object stackOut_2_0 = null;
         el stackOut_1_0 = null;
-        L0: {
-          if (!(param4 instanceof qb)) {
-            stackOut_2_0 = null;
-            stackIn_3_0 = (el) (Object) stackOut_2_0;
-            break L0;
-          } else {
-            stackOut_1_0 = (el) param4;
-            stackIn_3_0 = stackOut_1_0;
-            break L0;
-          }
-        }
-        L1: {
-          var14 = (qb) (Object) stackIn_3_0;
-          vb.a(param0 - -param4.field_v, param4.field_m + param2, param4.field_r, param4.field_h, ((hb) this).field_f);
-          if (var14 == null) {
-            break L1;
-          } else {
-            break L1;
-          }
-        }
-        L2: {
-          var7 = param4.field_v + param0 - -var14.field_E;
-          var8 = param4.field_m + param2 - -var14.field_O;
-          vb.d(var7, var8, var14.field_K, ((hb) this).field_e);
-          if (var14.field_J == -1) {
-            break L2;
-          } else {
-            var9 = (double)var14.field_J * 3.141592653589793 * 2.0 / (double)var14.field_H;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (!(param4 instanceof qb)) {
+                stackOut_2_0 = null;
+                stackIn_3_0 = (el) (Object) stackOut_2_0;
+                break L1;
+              } else {
+                stackOut_1_0 = (el) param4;
+                stackIn_3_0 = stackOut_1_0;
+                break L1;
+              }
+            }
+            L2: {
+              var14 = (qb) (Object) stackIn_3_0;
+              vb.a(param0 - -param4.field_v, param4.field_m + param2, param4.field_r, param4.field_h, ((hb) this).field_f);
+              if (var14 == null) {
+                break L2;
+              } else {
+                break L2;
+              }
+            }
+            L3: {
+              var7 = param4.field_v + param0 - -var14.field_E;
+              var8 = param4.field_m + param2 - -var14.field_O;
+              vb.d(var7, var8, var14.field_K, ((hb) this).field_e);
+              if (var14.field_J == -1) {
+                break L3;
+              } else {
+                var9 = (double)var14.field_J * 3.141592653589793 * 2.0 / (double)var14.field_H;
+                var11 = (int)(-Math.sin(var9) * (double)var14.field_K);
+                var12 = (int)(Math.cos(var9) * (double)var14.field_K);
+                vb.d(var7 + var11, var8 - -var12, 1, ((hb) this).field_g);
+                break L3;
+              }
+            }
+            vb.d(var7, var8, 2, 1);
+            var9 = 2.0 * (3.141592653589793 * (double)var14.field_I) / (double)var14.field_H;
             var11 = (int)(-Math.sin(var9) * (double)var14.field_K);
             var12 = (int)(Math.cos(var9) * (double)var14.field_K);
-            vb.d(var7 + var11, var8 - -var12, 1, ((hb) this).field_g);
-            break L2;
-          }
-        }
-        vb.d(var7, var8, 2, 1);
-        var9 = 2.0 * (3.141592653589793 * (double)var14.field_I) / (double)var14.field_H;
-        var11 = (int)(-Math.sin(var9) * (double)var14.field_K);
-        var12 = (int)(Math.cos(var9) * (double)var14.field_K);
-        if (param1 > -5) {
-          return;
-        } else {
-          L3: {
-            vb.g(var7, var8, var11 + var7, var12 + var8, 1);
-            if (((hb) this).field_a == null) {
-              break L3;
+            if (param1 <= -5) {
+              L4: {
+                vb.g(var7, var8, var11 + var7, var12 + var8, 1);
+                if (((hb) this).field_a == null) {
+                  break L4;
+                } else {
+                  var13 = ((hb) this).field_c + (var14.field_E - -var14.field_K);
+                  int discarded$1 = ((hb) this).field_a.a(param4.field_s, var13 + (param0 + param4.field_v), param2 - -param4.field_m - -((hb) this).field_i, param4.field_r - (((hb) this).field_c + var13), -(((hb) this).field_c << 1) + param4.field_h, ((hb) this).field_m, ((hb) this).field_k, 1, 1, 0);
+                  break L4;
+                }
+              }
+              break L0;
             } else {
-              var13 = ((hb) this).field_c + (var14.field_E - -var14.field_K);
-              int discarded$1 = ((hb) this).field_a.a(param4.field_s, var13 + (param0 + param4.field_v), param2 - -param4.field_m - -((hb) this).field_i, param4.field_r - (((hb) this).field_c + var13), -(((hb) this).field_c << 1444492961) + param4.field_h, ((hb) this).field_m, ((hb) this).field_k, 1, 1, 0);
-              break L3;
+              return;
             }
           }
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L5: {
+            var6 = decompiledCaughtException;
+            stackOut_11_0 = (RuntimeException) var6;
+            stackOut_11_1 = new StringBuilder().append("hb.E(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
+            if (param4 == null) {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L5;
+            } else {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L5;
+            }
+          }
+          throw t.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
         }
     }
 
@@ -101,14 +151,18 @@ final class hb implements dh {
     }
 
     hb(m param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        ((hb) this).field_e = param5;
-        ((hb) this).field_f = param7;
-        ((hb) this).field_m = param3;
-        ((hb) this).field_a = param0;
-        ((hb) this).field_c = param1;
-        ((hb) this).field_k = param4;
-        ((hb) this).field_g = param6;
-        ((hb) this).field_i = param2;
+        try {
+            ((hb) this).field_e = param5;
+            ((hb) this).field_f = param7;
+            ((hb) this).field_m = param3;
+            ((hb) this).field_a = param0;
+            ((hb) this).field_c = param1;
+            ((hb) this).field_k = param4;
+            ((hb) this).field_g = param6;
+            ((hb) this).field_i = param2;
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) (Object) runtimeException, "hb.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
+        }
     }
 
     static {

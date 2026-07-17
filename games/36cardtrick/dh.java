@@ -16,76 +16,41 @@ final class dh extends qb {
     public static void b(byte param0) {
         field_o = null;
         field_g = null;
-        if (param0 != -36) {
-            field_m = -63L;
-        }
     }
 
     final static String a(boolean param0, byte param1, boolean param2, boolean param3) {
         int var4 = 0;
         var4 = 0;
         if (!param0) {
-          if (!param3) {
-            if (param1 > -86) {
-              return null;
-            } else {
-              L0: {
-                if (param2) {
-                  var4++;
-                  break L0;
-                } else {
-                  break L0;
-                }
-              }
-              return ek.field_a[var4];
-            }
+          var4 += 2;
+          if (param1 > -86) {
+            return null;
           } else {
-            var4 += 2;
-            if (param1 > -86) {
-              return null;
-            } else {
-              L1: {
-                if (param2) {
-                  var4++;
-                  break L1;
-                } else {
-                  break L1;
-                }
+            L0: {
+              if (param2) {
+                var4++;
+                break L0;
+              } else {
+                break L0;
               }
-              return ek.field_a[var4];
             }
+            return ek.field_a[var4];
           }
         } else {
           var4 += 4;
-          if (param3) {
-            var4 += 2;
-            if (param1 > -86) {
-              return null;
-            } else {
-              L2: {
-                if (param2) {
-                  var4++;
-                  break L2;
-                } else {
-                  break L2;
-                }
-              }
-              return ek.field_a[var4];
-            }
+          var4 += 2;
+          if (param1 > -86) {
+            return null;
           } else {
-            if (param1 > -86) {
-              return null;
-            } else {
-              L3: {
-                if (param2) {
-                  var4++;
-                  break L3;
-                } else {
-                  break L3;
-                }
+            L1: {
+              if (param2) {
+                var4++;
+                break L1;
+              } else {
+                break L1;
               }
-              return ek.field_a[var4];
             }
+            return ek.field_a[var4];
           }
         }
     }

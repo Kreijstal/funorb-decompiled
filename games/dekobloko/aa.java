@@ -12,18 +12,9 @@ final class aa {
     public static void a(boolean param0) {
         field_f = null;
         field_a = null;
-        if (!param0) {
-          String discarded$2 = aa.a(73);
-          field_c = null;
-          field_d = null;
-          field_e = null;
-          return;
-        } else {
-          field_c = null;
-          field_d = null;
-          field_e = null;
-          return;
-        }
+        field_c = null;
+        field_d = null;
+        field_e = null;
     }
 
     final static String a(int param0) {

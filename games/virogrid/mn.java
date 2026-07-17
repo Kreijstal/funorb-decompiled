@@ -12,40 +12,25 @@ final class mn {
         field_b = null;
         field_c = null;
         field_d = null;
-        if (param0 != 0) {
-            field_a = -13;
-        }
     }
 
     final static void a(boolean param0) {
         int var2 = 0;
         var2 = Virogrid.field_F ? 1 : 0;
-        if (-1 == (vg.field_I.field_C.field_D & 1 << vg.field_I.field_e ^ -1)) {
-          if (vg.field_I.field_C.field_D == 0) {
-            de.field_pb[10] = cf.field_a;
-            if (param0) {
-              field_c = null;
-              return;
-            } else {
-              return;
-            }
-          } else {
+        if ((vg.field_I.field_C.field_D & 1 << vg.field_I.field_e) == 0) {
+          if (vg.field_I.field_C.field_D != 0) {
             de.field_pb[10] = of.field_c;
-            if (!param0) {
-              return;
-            } else {
-              field_c = null;
-              return;
-            }
-          }
-        } else {
-          de.field_pb[10] = je.field_E;
-          if (!param0) {
+            field_c = null;
             return;
           } else {
+            de.field_pb[10] = cf.field_a;
             field_c = null;
             return;
           }
+        } else {
+          de.field_pb[10] = je.field_E;
+          field_c = null;
+          return;
         }
     }
 

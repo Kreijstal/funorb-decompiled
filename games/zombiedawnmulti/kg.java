@@ -13,22 +13,11 @@ final class kg extends br {
 
     public static void a(int param0) {
         field_j = null;
-        if (param0 != 360) {
-          kg.a(false, (byte) 79);
-          field_f = null;
-          field_l = null;
-          field_i = null;
-          field_k = null;
-          field_m = null;
-          return;
-        } else {
-          field_f = null;
-          field_l = null;
-          field_i = null;
-          field_k = null;
-          field_m = null;
-          return;
-        }
+        field_f = null;
+        field_l = null;
+        field_i = null;
+        field_k = null;
+        field_m = null;
     }
 
     final static void a(boolean param0, byte param1) {
@@ -39,7 +28,11 @@ final class kg extends br {
     }
 
     kg(byte[] param0) {
-        ((kg) this).field_h = param0;
+        try {
+            ((kg) this).field_h = param0;
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) (Object) runtimeException, "kg.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

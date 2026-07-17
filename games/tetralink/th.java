@@ -78,46 +78,113 @@ abstract class th {
     public static void a(int param0) {
         field_p = null;
         field_i = null;
-        if (param0 <= 110) {
-            field_l = -119;
-            field_e = null;
-            return;
-        }
         field_e = null;
     }
 
     abstract void a(Object param0, boolean param1, byte param2);
 
     final static mh a(int param0, String param1) {
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        String var3 = null;
         String var4 = null;
         mh var5 = null;
-        if (param1 == null) {
-            return ec.field_a;
-        }
-        if (0 == param1.length()) {
-            return ec.field_a;
-        }
-        int var2 = param1.indexOf('@');
-        if (-1 == var2) {
-            return c.field_o;
-        }
-        String var3 = param1.substring(0, var2);
-        if (param0 > -98) {
-            Object var6 = null;
-            mh discarded$0 = th.a(-51, (String) null);
-            var4 = param1.substring(1 + var2);
-            var5 = cf.a(var3, (byte) -124);
-            if (!(var5 == null)) {
-                return var5;
+        Object var6 = null;
+        mh stackIn_4_0 = null;
+        mh stackIn_7_0 = null;
+        mh stackIn_13_0 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        mh stackOut_12_0 = null;
+        mh stackOut_6_0 = null;
+        mh stackOut_3_0 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param1 == null) {
+                break L1;
+              } else {
+                if (0 != param1.length()) {
+                  var2_int = param1.indexOf('@');
+                  if (-1 != var2_int) {
+                    L2: {
+                      var3 = param1.substring(0, var2_int);
+                      if (param0 <= -98) {
+                        break L2;
+                      } else {
+                        var6 = null;
+                        mh discarded$2 = th.a(-51, (String) null);
+                        break L2;
+                      }
+                    }
+                    var4 = param1.substring(1 + var2_int);
+                    var5 = cf.a(var3, (byte) -124);
+                    if (var5 != null) {
+                      stackOut_12_0 = (mh) var5;
+                      stackIn_13_0 = stackOut_12_0;
+                      break L0;
+                    } else {
+                      return rh.b(2, var4);
+                    }
+                  } else {
+                    stackOut_6_0 = c.field_o;
+                    stackIn_7_0 = stackOut_6_0;
+                    return stackIn_7_0;
+                  }
+                } else {
+                  break L1;
+                }
+              }
             }
-            return rh.b(2, var4);
+            stackOut_3_0 = ec.field_a;
+            stackIn_4_0 = stackOut_3_0;
+            return stackIn_4_0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2 = decompiledCaughtException;
+            stackOut_14_0 = (RuntimeException) var2;
+            stackOut_14_1 = new StringBuilder().append("th.N(").append(param0).append(44);
+            stackIn_16_0 = stackOut_14_0;
+            stackIn_16_1 = stackOut_14_1;
+            stackIn_15_0 = stackOut_14_0;
+            stackIn_15_1 = stackOut_14_1;
+            if (param1 == null) {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "null";
+              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_1 = stackOut_16_1;
+              stackIn_17_2 = stackOut_16_2;
+              break L3;
+            } else {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "{...}";
+              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_1 = stackOut_15_1;
+              stackIn_17_2 = stackOut_15_2;
+              break L3;
+            }
+          }
+          throw oi.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
         }
-        var4 = param1.substring(1 + var2);
-        var5 = cf.a(var3, (byte) -124);
-        if (!(var5 == null)) {
-            return var5;
-        }
-        return rh.b(2, var4);
+        return stackIn_13_0;
     }
 
     final boolean b(byte param0) {
@@ -161,7 +228,7 @@ abstract class th {
 
     final rh a(boolean param0, int param1, byte param2, int param3, boolean param4) {
         rh var8 = null;
-        long var6 = (long)param3 + ((long)param1 << -1983421408);
+        long var6 = (long)param3 + ((long)param1 << 32);
         if (param0) {
             field_l = -80;
             var8 = new rh();
@@ -174,7 +241,7 @@ abstract class th {
                 }
                 ((th) this).field_o.a((gb) (Object) var8, 0);
             } else {
-                if (!(-21 < (((th) this).c((byte) -100) ^ -1))) {
+                if (!(((th) this).c((byte) -100) < 20)) {
                     throw new RuntimeException();
                 }
                 ((th) this).field_k.a((gb) (Object) var8, 0);
@@ -191,7 +258,7 @@ abstract class th {
             }
             ((th) this).field_o.a((gb) (Object) var8, 0);
         } else {
-            if (!(-21 < (((th) this).c((byte) -100) ^ -1))) {
+            if (!(((th) this).c((byte) -100) < 20)) {
                 throw new RuntimeException();
             }
             ((th) this).field_k.a((gb) (Object) var8, 0);

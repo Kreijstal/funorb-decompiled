@@ -22,7 +22,7 @@ final class u {
               }
             }
             L2: {
-              if (-251 <= (im.field_fc ^ -1)) {
+              if (im.field_fc <= 250) {
                 stackOut_6_0 = 0;
                 stackIn_7_0 = stackOut_6_0;
                 break L2;
@@ -106,7 +106,7 @@ final class u {
             if (wh.field_j == null) {
               break L1;
             } else {
-              if ((wh.field_j.length ^ -1) > (param22 ^ -1)) {
+              if (~wh.field_j.length > ~param22) {
                 break L1;
               } else {
                 break L0;
@@ -165,7 +165,7 @@ final class u {
             if (qp.field_Yb == null) {
               break L7;
             } else {
-              if ((qp.field_Yb.length ^ -1) <= (param22 ^ -1)) {
+              if (~qp.field_Yb.length <= ~param22) {
                 break L6;
               } else {
                 break L7;
@@ -182,7 +182,7 @@ final class u {
             if (null == hi.field_k) {
               break L9;
             } else {
-              if ((param12 ^ -1) >= (hi.field_k.length ^ -1)) {
+              if (~param12 >= ~hi.field_k.length) {
                 break L8;
               } else {
                 break L9;
@@ -276,7 +276,7 @@ final class u {
         var33 = 0;
         L18: while (true) {
           L19: {
-            if ((param22 ^ -1) >= (var33 ^ -1)) {
+            if (~param22 >= ~var33) {
               break L19;
             } else {
               var24[var33] = -1;
@@ -292,7 +292,7 @@ final class u {
           var33 = 0;
           L20: while (true) {
             L21: {
-              if ((var33 ^ -1) <= (param22 ^ -1)) {
+              if (~var33 <= ~param22) {
                 break L21;
               } else {
                 var25[var33] = -1;
@@ -329,7 +329,7 @@ final class u {
                     var51 = (var44 + -param1) * param17 + (param8 * (-param0 + var43) + (var42 - param11) * param2);
                     var52 = param2 * (-param11 + var45) + ((-param0 + var46) * param8 + param17 * (-param1 + var47));
                     var53 = (-param1 + var50) * param17 + (-param0 + var49) * param8 + param2 * (var48 + -param11);
-                    stackOut_50_0 = (var53 | (var51 | var52)) ^ -1;
+                    stackOut_50_0 = ~(var53 | (var51 | var52));
                     stackOut_50_1 = -1;
                     stackIn_197_0 = stackOut_50_0;
                     stackIn_197_1 = stackOut_50_1;
@@ -364,7 +364,7 @@ final class u {
                                   }
                                 }
                                 L29: {
-                                  if ((4 + (var31 + param22) ^ -1) < (eh.field_w.length ^ -1)) {
+                                  if (~(4 + (var31 + param22)) < ~eh.field_w.length) {
                                     var54 = new int[104 + (var31 + param22)];
                                     qn.a(eh.field_w, 0, var54, 0, de.field_a);
                                     eh.field_w = var54;
@@ -394,7 +394,7 @@ final class u {
                                         } else {
                                           L33: {
                                             L34: {
-                                              if (0 == (param20[var38] ^ -1)) {
+                                              if (param20[var38] == -1) {
                                                 break L34;
                                               } else {
                                                 if (param20[var38] == -2) {
@@ -427,7 +427,7 @@ final class u {
                                     }
                                   }
                                   L35: {
-                                    if (-1 != (1 & param14[var38] ^ -1)) {
+                                    if ((1 & param14[var38]) != 0) {
                                       stackOut_76_0 = 0;
                                       stackIn_77_0 = stackOut_76_0;
                                       break L35;
@@ -465,10 +465,10 @@ final class u {
                                   }
                                 }
                                 L38: {
-                                  if (-1 >= (var51 ^ -1)) {
+                                  if (var51 >= 0) {
                                     L39: {
                                       var34 = var24[var39];
-                                      if ((var34 ^ -1) > -1) {
+                                      if (var34 < 0) {
                                         int incrementValue$47 = var55;
                                         var55++;
                                         var34 = incrementValue$47;
@@ -481,7 +481,7 @@ final class u {
                                         break L39;
                                       }
                                     }
-                                    var26[var57 + 0] = var34;
+                                    var26[var57] = var34;
                                     var26[var57 + 8] = var35;
                                     var57++;
                                     break L38;
@@ -490,10 +490,10 @@ final class u {
                                   }
                                 }
                                 L40: {
-                                  if (-1 <= (var51 ^ -1)) {
+                                  if (var51 <= 0) {
                                     L41: {
                                       var34 = var25[var39];
-                                      if (-1 >= (var34 ^ -1)) {
+                                      if (var34 >= 0) {
                                         break L41;
                                       } else {
                                         int incrementValue$48 = var56;
@@ -515,10 +515,10 @@ final class u {
                                   }
                                 }
                                 L42: {
-                                  if (-1 == (var51 ^ -1)) {
+                                  if (var51 == 0) {
                                     break L42;
                                   } else {
-                                    if (-1 == (var52 ^ -1)) {
+                                    if (var52 == 0) {
                                       break L42;
                                     } else {
                                       if (0 > (var52 ^ var51)) {
@@ -533,7 +533,7 @@ final class u {
                                         qp.field_Yb[var34] = var59;
                                         sa.field_r[var34] = var60;
                                         ro.field_d[var34] = var61;
-                                        var26[var57 + 0] = var34;
+                                        var26[var57] = var34;
                                         var26[var57 + 8] = var62;
                                         var57++;
                                         int incrementValue$50 = var56;
@@ -553,7 +553,7 @@ final class u {
                                   }
                                 }
                                 L43: {
-                                  if ((var52 ^ -1) > -1) {
+                                  if (var52 < 0) {
                                     break L43;
                                   } else {
                                     L44: {
@@ -571,19 +571,19 @@ final class u {
                                         break L44;
                                       }
                                     }
-                                    var26[var57 + 0] = var34;
+                                    var26[var57] = var34;
                                     var26[8 + var57] = var36;
                                     var57++;
                                     break L43;
                                   }
                                 }
                                 L45: {
-                                  if ((var52 ^ -1) < -1) {
+                                  if (var52 > 0) {
                                     break L45;
                                   } else {
                                     L46: {
                                       var34 = var25[var40];
-                                      if ((var34 ^ -1) > -1) {
+                                      if (var34 < 0) {
                                         int incrementValue$52 = var56;
                                         var56++;
                                         var34 = incrementValue$52;
@@ -603,10 +603,10 @@ final class u {
                                   }
                                 }
                                 L47: {
-                                  if (-1 == (var52 ^ -1)) {
+                                  if (var52 == 0) {
                                     break L47;
                                   } else {
-                                    if ((var53 ^ -1) == -1) {
+                                    if (var53 == 0) {
                                       break L47;
                                     } else {
                                       if ((var53 ^ var52) < 0) {
@@ -621,7 +621,7 @@ final class u {
                                         qp.field_Yb[var34] = var59;
                                         sa.field_r[var34] = var60;
                                         ro.field_d[var34] = var61;
-                                        var26[0 + var57] = var34;
+                                        var26[var57] = var34;
                                         var26[var57 + 8] = var62;
                                         int incrementValue$54 = var56;
                                         var56++;
@@ -659,14 +659,14 @@ final class u {
                                         break L49;
                                       }
                                     }
-                                    var26[var57 + 0] = var34;
+                                    var26[var57] = var34;
                                     var26[8 + var57] = var37;
                                     var57++;
                                     break L48;
                                   }
                                 }
                                 L50: {
-                                  if ((var53 ^ -1) < -1) {
+                                  if (var53 > 0) {
                                     break L50;
                                   } else {
                                     L51: {
@@ -691,10 +691,10 @@ final class u {
                                   }
                                 }
                                 L52: {
-                                  if (-1 == ((var51 | var53) ^ -1)) {
+                                  if ((var51 | var53) == 0) {
                                     break L52;
                                   } else {
-                                    if ((var53 ^ var51 ^ -1) > -1) {
+                                    if ((var53 ^ var51) < 0) {
                                       var63 = var51 - var53;
                                       var59 = (-(var42 * var53) + var48 * var51) / var63;
                                       var61 = (-(var44 * var53) + var50 * var51) / var63;
@@ -706,7 +706,7 @@ final class u {
                                       qp.field_Yb[var34] = var59;
                                       sa.field_r[var34] = var60;
                                       ro.field_d[var34] = var61;
-                                      var26[0 + var57] = var34;
+                                      var26[var57] = var34;
                                       var26[8 - -var57] = var62;
                                       var57++;
                                       int incrementValue$58 = var56;
@@ -728,7 +728,7 @@ final class u {
                                   var29 = var29 + (var55 + -nk.field_a);
                                   var33 = uf.field_W;
                                   nk.field_a = var55;
-                                  if ((hi.field_k.length ^ -1) <= (-2 + (var30 + param12 - -var57) ^ -1)) {
+                                  if (~hi.field_k.length <= ~(-2 + (var30 + param12 - -var57))) {
                                     break L53;
                                   } else {
                                     var54 = new int[98 + param12 - (-var30 - var57)];
@@ -827,7 +827,7 @@ final class u {
                                   uf.field_W = var33;
                                   de.field_a = var56;
                                   var33 = eq.field_R;
-                                  if ((wn.field_d.length ^ -1) > (-2 + var58 + param12 + var32 ^ -1)) {
+                                  if (~wn.field_d.length > ~(-2 + var58 + param12 + var32)) {
                                     var54 = new int[param12 + (var32 - -var58 - -98)];
                                     qn.a(wn.field_d, 0, var54, 0, var33);
                                     wn.field_d = var54;
@@ -885,7 +885,7 @@ final class u {
                                   int incrementValue$61 = var33;
                                   var33++;
                                   var28[incrementValue$61] = var38;
-                                  if (-5 == (var58 ^ -1)) {
+                                  if (var58 == 4) {
                                     L63: {
                                       wn.field_d[var33] = var26[6];
                                       f.field_b[var33] = var26[7];
@@ -950,7 +950,7 @@ final class u {
                             L66: {
                               wn.field_d[var33] = var34;
                               var34 = var25[var40];
-                              if ((var34 ^ -1) > -1) {
+                              if (var34 < 0) {
                                 int fieldTemp$65 = de.field_a;
                                 de.field_a = de.field_a + 1;
                                 var34 = fieldTemp$65;
@@ -1076,7 +1076,7 @@ final class u {
                 vk.field_bb = de.field_a;
                 nj.field_d = nk.field_a;
                 stackOut_196_0 = -1;
-                stackOut_196_1 = param19 ^ -1;
+                stackOut_196_1 = ~param19;
                 stackIn_197_0 = stackOut_196_0;
                 stackIn_197_1 = stackOut_196_1;
                 break L23;
@@ -1139,7 +1139,7 @@ final class u {
                                 } else {
                                   L83: {
                                     L84: {
-                                      if (-1 != (param21.field_o[var38] ^ -1)) {
+                                      if (param21.field_o[var38] != 0) {
                                         break L84;
                                       } else {
                                         L85: {
@@ -1161,7 +1161,7 @@ final class u {
                                         L86: {
                                           gn.field_e.field_p[var38] = (short)var34;
                                           var34 = var25[var33];
-                                          if ((var34 ^ -1) > -1) {
+                                          if (var34 < 0) {
                                             int fieldTemp$73 = de.field_a;
                                             de.field_a = de.field_a + 1;
                                             var34 = fieldTemp$73;
@@ -1178,7 +1178,7 @@ final class u {
                                           kp.field_h.field_p[var38] = (short)var34;
                                           var33 = param21.field_H[var38];
                                           var34 = var24[var33];
-                                          if ((var34 ^ -1) > -1) {
+                                          if (var34 < 0) {
                                             int fieldTemp$74 = nk.field_a;
                                             nk.field_a = nk.field_a + 1;
                                             var34 = fieldTemp$74;
@@ -1194,7 +1194,7 @@ final class u {
                                         L88: {
                                           gn.field_e.field_H[var38] = (short)var34;
                                           var34 = var25[var33];
-                                          if ((var34 ^ -1) > -1) {
+                                          if (var34 < 0) {
                                             int fieldTemp$75 = de.field_a;
                                             de.field_a = de.field_a + 1;
                                             var34 = fieldTemp$75;
@@ -1211,7 +1211,7 @@ final class u {
                                           kp.field_h.field_H[var38] = (short)var34;
                                           var33 = param21.field_C[var38];
                                           var34 = var24[var33];
-                                          if ((var34 ^ -1) > -1) {
+                                          if (var34 < 0) {
                                             int fieldTemp$76 = nk.field_a;
                                             nk.field_a = nk.field_a + 1;
                                             var34 = fieldTemp$76;
@@ -1227,7 +1227,7 @@ final class u {
                                         L90: {
                                           gn.field_e.field_C[var38] = (short)var34;
                                           var34 = var25[var33];
-                                          if (-1 >= (var34 ^ -1)) {
+                                          if (var34 >= 0) {
                                             break L90;
                                           } else {
                                             int fieldTemp$77 = de.field_a;
@@ -1304,7 +1304,7 @@ final class u {
                         if (ve.field_w == null) {
                           break L92;
                         } else {
-                          if ((param19 ^ -1) < (ve.field_w.length ^ -1)) {
+                          if (~param19 < ~ve.field_w.length) {
                             break L92;
                           } else {
                             break L91;
@@ -1335,7 +1335,7 @@ final class u {
                     }
                     var38 = 0;
                     L95: while (true) {
-                      if ((param19 ^ -1) >= (var38 ^ -1)) {
+                      if (~param19 >= ~var38) {
                         break L74;
                       } else {
                         var33 = param9[var38];
@@ -1344,7 +1344,7 @@ final class u {
                           break L73;
                         } else {
                           L96: {
-                            if ((var34 ^ -1) <= -1) {
+                            if (var34 >= 0) {
                               break L96;
                             } else {
                               int fieldTemp$86 = nk.field_a;
@@ -1377,7 +1377,7 @@ final class u {
                             dp.field_e[var38] = var34;
                             var33 = param4[var38];
                             var34 = var24[var33];
-                            if (-1 >= (var34 ^ -1)) {
+                            if (var34 >= 0) {
                               break L98;
                             } else {
                               int fieldTemp$88 = nk.field_a;
@@ -1393,7 +1393,7 @@ final class u {
                           L99: {
                             kc.field_e[var38] = var34;
                             var34 = var25[var33];
-                            if ((var34 ^ -1) <= -1) {
+                            if (var34 >= 0) {
                               break L99;
                             } else {
                               int fieldTemp$89 = de.field_a;
@@ -1426,7 +1426,7 @@ final class u {
                           L101: {
                             jk.field_h[var38] = var34;
                             var34 = var25[var33];
-                            if ((var34 ^ -1) <= -1) {
+                            if (var34 >= 0) {
                               break L101;
                             } else {
                               int fieldTemp$91 = de.field_a;

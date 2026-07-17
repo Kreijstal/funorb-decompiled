@@ -28,27 +28,36 @@ final class lf {
         int var0 = 0;
         int var1 = field_f * field_a - 7;
         while (var0 < var1) {
+            int incrementValue$0 = var0;
             var0++;
-            field_b[var0] = 0;
+            field_b[incrementValue$0] = 0;
+            int incrementValue$1 = var0;
             var0++;
-            field_b[var0] = 0;
+            field_b[incrementValue$1] = 0;
+            int incrementValue$2 = var0;
             var0++;
-            field_b[var0] = 0;
+            field_b[incrementValue$2] = 0;
+            int incrementValue$3 = var0;
             var0++;
-            field_b[var0] = 0;
+            field_b[incrementValue$3] = 0;
+            int incrementValue$4 = var0;
             var0++;
-            field_b[var0] = 0;
+            field_b[incrementValue$4] = 0;
+            int incrementValue$5 = var0;
             var0++;
-            field_b[var0] = 0;
+            field_b[incrementValue$5] = 0;
+            int incrementValue$6 = var0;
             var0++;
-            field_b[var0] = 0;
+            field_b[incrementValue$6] = 0;
+            int incrementValue$7 = var0;
             var0++;
-            field_b[var0] = 0;
+            field_b[incrementValue$7] = 0;
         }
         var1 += 7;
         while (var0 < var1) {
+            int incrementValue$8 = var0;
             var0++;
-            field_b[var0] = 0;
+            field_b[incrementValue$8] = 0;
         }
     }
 
@@ -124,8 +133,9 @@ final class lf {
             L5: while (true) {
               if (var19 >= var12) {
                 var18 = var18 + var11;
+                int incrementValue$6 = param2;
                 param2++;
-                param0[param2] = (var14 / var20 << 16) + (var15 / var20 << 8) + var16 / var20;
+                param0[incrementValue$6] = (var14 / var20 << 16) + (var15 / var20 << 8) + var16 / var20;
                 var19 = 1 - param5;
                 L6: while (true) {
                   if (var19 >= var9) {
@@ -138,8 +148,9 @@ final class lf {
                             continue L3;
                           } else {
                             L9: {
+                              int incrementValue$7 = var18;
                               var18++;
-                              param1 = param0[var18];
+                              param1 = param0[incrementValue$7];
                               var14 = var14 - (param1 >> 16 & 255);
                               var15 = var15 - (param1 >> 8 & 255);
                               var16 = var16 - (param1 & 255);
@@ -185,16 +196,18 @@ final class lf {
                                 break L11;
                               }
                             }
+                            int incrementValue$8 = param2;
                             param2++;
-                            param0[param2] = (var21 << 16) + (var22 << 8) + var23;
+                            param0[incrementValue$8] = (var21 << 16) + (var22 << 8) + var23;
                             var19++;
                             continue L8;
                           }
                         }
                       } else {
                         L12: {
+                          int incrementValue$9 = var18;
                           var18++;
-                          param1 = param0[var18];
+                          param1 = param0[incrementValue$9];
                           var14 = var14 - (param1 >> 16 & 255);
                           if (var14 >= 0) {
                             break L12;
@@ -253,8 +266,9 @@ final class lf {
                             break L17;
                           }
                         }
+                        int incrementValue$10 = param2;
                         param2++;
-                        param0[param2] = (var21 << 16) + (var22 << 8) + var23;
+                        param0[incrementValue$10] = (var21 << 16) + (var22 << 8) + var23;
                         var19++;
                         continue L7;
                       }
@@ -277,8 +291,9 @@ final class lf {
                     var21 = var14 / var20;
                     var22 = var15 / var20;
                     var23 = var16 / var20;
+                    int incrementValue$11 = param2;
                     param2++;
-                    param0[param2] = (var21 << 16) + (var22 << 8) + var23;
+                    param0[incrementValue$11] = (var21 << 16) + (var22 << 8) + var23;
                     var19++;
                     continue L6;
                   }
@@ -361,8 +376,9 @@ final class lf {
                     var9 = var7 >> 8 & 255;
                     var10 = var7 & 255;
                     var11 = (var10 + var8) / 3 + var9 >> 1;
+                    int incrementValue$0 = var4;
                     var4++;
-                    field_b[var4] = (var11 << 16) + (var11 << 8) + var11;
+                    field_b[incrementValue$0] = (var11 << 16) + (var11 << 8) + var11;
                 }
                 var4 = var4 + (field_f - param2);
             }
@@ -371,8 +387,8 @@ final class lf {
     }
 
     final static void d(int param0, int param1, int param2, int param3, int param4, int param5) {
-        lf.a(field_b, 0, param2 + param3 * field_f, param0, param2, param4, field_f - param4, param5);
-        lf.a(field_b, 0, param2 + param3 * field_f, param1, param3, param5, field_f - param4, param2, param4);
+        lf.a(field_b, 0, param2 + param3 * field_f, param0, param2, param4, field_f - param4, 140);
+        lf.a(field_b, 0, param2 + param3 * field_f, param1, param3, 140, field_f - param4, param2, param4);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
@@ -396,8 +412,9 @@ final class lf {
         int var6 = param0 + param1 * field_f;
         for (var7 = -param3; var7 < 0; var7++) {
             for (var8 = -param2; var8 < 0; var8++) {
+                int incrementValue$0 = var6;
                 var6++;
-                field_b[var6] = param4;
+                field_b[incrementValue$0] = param4;
             }
             var6 = var6 + var5;
         }
@@ -493,8 +510,9 @@ final class lf {
                                                     if (var22 > var17) {
                                                       L9: while (true) {
                                                         L10: {
+                                                          int incrementValue$2 = var19;
                                                           var19++;
-                                                          var21 = var21 + (var19 + var19);
+                                                          var21 = var21 + (incrementValue$2 + var19);
                                                           var12 = var12 - field_f;
                                                           var13 = var13 - field_f;
                                                           var14 = var14 + field_f;
@@ -512,39 +530,39 @@ final class lf {
                                                           }
                                                         }
                                                         if (var18 >= var19) {
-                                                          field_b[var10 - var19] = param5;
-                                                          field_b[var11 + var19] = param5;
-                                                          field_b[var12 - var18] = param5;
-                                                          field_b[var13 + var18] = param5;
-                                                          field_b[var14 - var18] = param5;
-                                                          field_b[var15 + var18] = param5;
-                                                          field_b[var16 - var19] = param5;
-                                                          field_b[var17 + var19] = param5;
+                                                          field_b[var10 - var19] = 12845056;
+                                                          field_b[var11 + var19] = 12845056;
+                                                          field_b[var12 - var18] = 12845056;
+                                                          field_b[var13 + var18] = 12845056;
+                                                          field_b[var14 - var18] = 12845056;
+                                                          field_b[var15 + var18] = 12845056;
+                                                          field_b[var16 - var19] = 12845056;
+                                                          field_b[var17 + var19] = 12845056;
                                                           continue L9;
                                                         } else {
                                                           break L3;
                                                         }
                                                       }
                                                     } else {
-                                                      field_b[var22] = param5;
+                                                      field_b[var22] = 12845056;
                                                       var22++;
                                                       continue L8;
                                                     }
                                                   }
                                                 } else {
-                                                  field_b[var22] = param5;
+                                                  field_b[var22] = 12845056;
                                                   var22++;
                                                   continue L7;
                                                 }
                                               }
                                             } else {
-                                              field_b[var22 + var18] = param5;
+                                              field_b[var22 + var18] = 12845056;
                                               var22 = var22 + field_f;
                                               continue L6;
                                             }
                                           }
                                         } else {
-                                          field_b[var22 - var18] = param5;
+                                          field_b[var22 - var18] = 12845056;
                                           var22 = var22 + field_f;
                                           continue L5;
                                         }
@@ -556,14 +574,15 @@ final class lf {
                                 }
                               }
                             }
-                            lf.e(param0, param1 + var18, param3 - var18 - var18, param5);
-                            lf.e(param0 + param2 - 1, param1 + var18, param3 - var18 - var18, param5);
-                            lf.a(param0 + var18, param1, param2 - var18 - var18, param5);
-                            lf.a(param0 + var18, param1 + param3 - 1, param2 - var18 - var18, param5);
+                            lf.e(param0, param1 + var18, param3 - var18 - var18, 12845056);
+                            lf.e(param0 + param2 - 1, param1 + var18, param3 - var18 - var18, 12845056);
+                            lf.a(param0 + var18, param1, param2 - var18 - var18, 12845056);
+                            lf.a(param0 + var18, param1 + param3 - 1, param2 - var18 - var18, 12845056);
                             L11: while (true) {
                               L12: {
+                                int incrementValue$3 = var19;
                                 var19++;
-                                var21 = var21 + (var19 + var19);
+                                var21 = var21 + (incrementValue$3 + var19);
                                 var12 = var12 - field_f;
                                 var13 = var13 - field_f;
                                 var14 = var14 + field_f;
@@ -595,7 +614,7 @@ final class lf {
                                           if (var6 - var19 >= field_e) {
                                             break L14;
                                           } else {
-                                            field_b[var10 - var19] = param5;
+                                            field_b[var10 - var19] = 12845056;
                                             break L14;
                                           }
                                         }
@@ -606,7 +625,7 @@ final class lf {
                                         if (var8 + var19 >= field_e) {
                                           break L13;
                                         } else {
-                                          field_b[var11 + var19] = param5;
+                                          field_b[var11 + var19] = 12845056;
                                           break L13;
                                         }
                                       }
@@ -627,7 +646,7 @@ final class lf {
                                           if (var6 - var18 >= field_e) {
                                             break L16;
                                           } else {
-                                            field_b[var12 - var18] = param5;
+                                            field_b[var12 - var18] = 12845056;
                                             break L16;
                                           }
                                         }
@@ -638,7 +657,7 @@ final class lf {
                                         if (var8 + var18 >= field_e) {
                                           break L15;
                                         } else {
-                                          field_b[var13 + var18] = param5;
+                                          field_b[var13 + var18] = 12845056;
                                           break L15;
                                         }
                                       }
@@ -659,7 +678,7 @@ final class lf {
                                           if (var6 - var18 >= field_e) {
                                             break L18;
                                           } else {
-                                            field_b[var14 - var18] = param5;
+                                            field_b[var14 - var18] = 12845056;
                                             break L18;
                                           }
                                         }
@@ -670,7 +689,7 @@ final class lf {
                                         if (var8 + var18 >= field_e) {
                                           break L17;
                                         } else {
-                                          field_b[var15 + var18] = param5;
+                                          field_b[var15 + var18] = 12845056;
                                           break L17;
                                         }
                                       }
@@ -690,7 +709,7 @@ final class lf {
                                         if (var6 - var19 >= field_e) {
                                           break L19;
                                         } else {
-                                          field_b[var16 - var19] = param5;
+                                          field_b[var16 - var19] = 12845056;
                                           break L19;
                                         }
                                       }
@@ -701,7 +720,7 @@ final class lf {
                                       if (var8 + var19 >= field_e) {
                                         continue L11;
                                       } else {
-                                        field_b[var17 + var19] = param5;
+                                        field_b[var17 + var19] = 12845056;
                                         continue L11;
                                       }
                                     }
@@ -728,7 +747,7 @@ final class lf {
           }
           return;
         } else {
-          lf.c(param0, param1, param2, param3, param5);
+          lf.c(param0, param1, param2, param3, 12845056);
           return;
         }
     }
@@ -777,8 +796,8 @@ final class lf {
         int var5 = 0;
         for (var6 = 0; var6 < 4; var6++) {
             var5 = 128 - (var6 << 5);
-            lf.e(param0 + var6, param1 + param3 + var6, param2, param4, var5);
-            lf.f(param0 + param2 + var6, param1 + var6, param3 + 1, param4, var5);
+            lf.e(param0 + var6, param1 + param3 + var6, param2, 5592405, var5);
+            lf.f(param0 + param2 + var6, param1 + var6, param3 + 1, 5592405, var5);
         }
     }
 
@@ -834,8 +853,9 @@ final class lf {
                 var10 = (field_b[var12] >> 8 & 255) * var5;
                 var11 = (field_b[var12] & 255) * var5;
                 var14 = (var6 + var9 >> 8 << 16) + (var7 + var10 >> 8 << 8) + (var8 + var11 >> 8);
+                int incrementValue$0 = var12;
                 var12++;
-                field_b[var12] = var14;
+                field_b[incrementValue$0] = var14;
             }
             return;
         }
@@ -1009,8 +1029,9 @@ final class lf {
             for (var10 = -param2; var10 < 0; var10++) {
                 var11 = field_b[var8];
                 var11 = ((var11 & 16711935) * var6 >> 8 & 16711935) + ((var11 & 65280) * var6 >> 8 & 65280);
+                int incrementValue$0 = var8;
                 var8++;
-                field_b[var8] = param4 + var11;
+                field_b[incrementValue$0] = param4 + var11;
             }
             var8 = var8 + var7;
         }
@@ -1080,7 +1101,7 @@ final class lf {
           } else {
             var11 = 65536 - var6 >> 8;
             var12 = var6 >> 8;
-            var13 = ((param4 & 16711935) * var11 + (param5 & 16711935) * var12 & -16711936) + ((param4 & 65280) * var11 + (param5 & 65280) * var12 & 16711680) >>> 8;
+            var13 = ((param4 & 16711935) * var11 + 0 * var12 & -16711936) + ((param4 & 65280) * var11 + 0 * var12 & 16711680) >>> 8;
             var14 = -param2;
             L5: while (true) {
               if (var14 >= 0) {
@@ -1089,8 +1110,9 @@ final class lf {
                 var10++;
                 continue L4;
               } else {
+                int incrementValue$1 = var9;
                 var9++;
-                field_b[var9] = var13;
+                field_b[incrementValue$1] = var13;
                 var14++;
                 continue L5;
               }
@@ -1172,8 +1194,9 @@ final class lf {
                         if (var10 <= var7) {
                           break L7;
                         } else {
+                          int incrementValue$6 = var8;
                           var8--;
-                          var11 = var11 - (var8 + var8);
+                          var11 = var11 - (incrementValue$6 + var8);
                           var10 = var10 - (var8 + var8);
                           continue L6;
                         }
@@ -1203,12 +1226,14 @@ final class lf {
                       if (var15 > var13) {
                         var6++;
                         var11 = var11 + (var9 + var9);
+                        int incrementValue$7 = var9;
                         var9++;
-                        var10 = var10 + (var9 + var9);
+                        var10 = var10 + (incrementValue$7 + var9);
                         continue L5;
                       } else {
+                        int incrementValue$8 = var14;
                         var14++;
-                        field_b[var14] = param3;
+                        field_b[incrementValue$8] = param3;
                         var15++;
                         continue L10;
                       }
@@ -1246,13 +1271,15 @@ final class lf {
                       L15: while (true) {
                         if (var15 >= var13) {
                           var6++;
+                          int incrementValue$9 = var9;
                           var9--;
-                          var10 = var10 - (var9 + var9);
+                          var10 = var10 - (incrementValue$9 + var9);
                           var11 = var11 - (var9 + var9);
                           continue L4;
                         } else {
+                          int incrementValue$10 = var14;
                           var14++;
-                          field_b[var14] = param3;
+                          field_b[incrementValue$10] = param3;
                           var15++;
                           continue L15;
                         }
@@ -1263,8 +1290,9 @@ final class lf {
                   }
                 }
                 var10 = var10 + (var8 + var8);
+                int incrementValue$11 = var8;
                 var8++;
-                var11 = var11 + (var8 + var8);
+                var11 = var11 + (incrementValue$11 + var8);
                 continue L11;
               }
             }
@@ -1634,15 +1662,17 @@ final class lf {
                                         break L16;
                                       }
                                     }
+                                    int incrementValue$9 = param2;
                                     param2++;
-                                    param0[param2] = (var21 << 16) + (var22 << 8) + var23;
+                                    param0[incrementValue$9] = (var21 << 16) + (var22 << 8) + var23;
                                     var20++;
                                     continue L13;
                                   }
                                 }
                               } else {
+                                int incrementValue$10 = var19;
                                 var19++;
-                                param1 = param0[var19];
+                                param1 = param0[incrementValue$10];
                                 var9[var20] = var9[var20] - (param1 >> 16 & 255);
                                 var10[var20] = var10[var20] - (param1 >> 8 & 255);
                                 var11[var20] = var11[var20] - (param1 & 255);
@@ -1695,15 +1725,17 @@ final class lf {
                                         break L22;
                                       }
                                     }
+                                    int incrementValue$11 = param2;
                                     param2++;
-                                    param0[param2] = (var21 << 16) + (var22 << 8) + var23;
+                                    param0[incrementValue$11] = (var21 << 16) + (var22 << 8) + var23;
                                     var20++;
                                     continue L19;
                                   }
                                 }
                               } else {
+                                int incrementValue$12 = var14;
                                 var14++;
-                                param1 = param0[var14];
+                                param1 = param0[incrementValue$12];
                                 var9[var20] = var9[var20] + (param1 >> 16 & 255);
                                 var10[var20] = var10[var20] + (param1 >> 8 & 255);
                                 var11[var20] = var11[var20] + (param1 & 255);
@@ -1713,8 +1745,9 @@ final class lf {
                             }
                           } else {
                             L23: {
+                              int incrementValue$13 = var19;
                               var19++;
-                              param1 = param0[var19];
+                              param1 = param0[incrementValue$13];
                               var21 = var33[var20] - (param1 >> 16 & 255);
                               stackOut_36_0 = (int[]) var9;
                               stackOut_36_1 = var20;
@@ -1814,8 +1847,9 @@ final class lf {
                             var17++;
                             break L26;
                           } else {
+                            int incrementValue$14 = var14;
                             var14++;
-                            param1 = param0[var14];
+                            param1 = param0[incrementValue$14];
                             var9[var20] = var9[var20] + (param1 >> 16 & 255);
                             var10[var20] = var10[var20] + (param1 >> 8 & 255);
                             var11[var20] = var11[var20] + (param1 & 255);
@@ -1835,8 +1869,9 @@ final class lf {
                         var21 = var33[var20] / var17;
                         var22 = var34[var20] / var17;
                         var23 = var35[var20] / var17;
+                        int incrementValue$15 = param2;
                         param2++;
-                        param0[param2] = (var21 << 16) + (var22 << 8) + var23;
+                        param0[incrementValue$15] = (var21 << 16) + (var22 << 8) + var23;
                         var20++;
                         continue L28;
                       }
@@ -1844,8 +1879,9 @@ final class lf {
                   }
                 }
               } else {
+                int incrementValue$16 = param2;
                 param2++;
-                param0[param2] = (var33[var18] / var17 << 16) + (var34[var18] / var17 << 8) + var35[var18] / var17;
+                param0[incrementValue$16] = (var33[var18] / var17 << 16) + (var34[var18] / var17 << 8) + var35[var18] / var17;
                 var18++;
                 continue L5;
               }
@@ -1858,8 +1894,9 @@ final class lf {
                 var13++;
                 continue L4;
               } else {
+                int incrementValue$17 = var14;
                 var14++;
-                param1 = param0[var14];
+                param1 = param0[incrementValue$17];
                 var9[var18] = var9[var18] + (param1 >> 16 & 255);
                 var10[var18] = var10[var18] + (param1 >> 8 & 255);
                 var11[var18] = var11[var18] + (param1 & 255);

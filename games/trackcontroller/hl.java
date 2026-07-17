@@ -38,11 +38,15 @@ abstract class hl extends td {
     }
 
     final static void a(int param0, be param1, int param2, int param3, int param4) {
-        param1.a(12, (byte) -69);
-        param1.b(param2, (byte) -123);
-        param1.b(param3, (byte) -120);
-        param1.b(param0, (byte) -119);
-        param1.a(param4, (byte) -59);
+        try {
+            param1.a(12, (byte) -69);
+            param1.b(param2, (byte) -123);
+            param1.b(param3, (byte) -120);
+            param1.b(param0, (byte) -119);
+            param1.a(param4, (byte) -59);
+        } catch (RuntimeException runtimeException) {
+            throw sl.a((Throwable) (Object) runtimeException, "hl.SB(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+        }
     }
 
     final static void m(int param0) {
@@ -57,54 +61,7 @@ abstract class hl extends td {
     }
 
     private final int n(int param0) {
-        int stackIn_6_0 = 0;
-        int stackIn_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_8_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_2_0 = 0;
-        if (param0 <= 126) {
-          L0: {
-            field_C = null;
-            if (((hl) this).field_E) {
-              if (this == (Object) (Object) ((hl) this).field_D.j(-6121)) {
-                stackOut_11_0 = 256;
-                stackIn_12_0 = stackOut_11_0;
-                break L0;
-              } else {
-                stackOut_10_0 = 0;
-                stackIn_12_0 = stackOut_10_0;
-                break L0;
-              }
-            } else {
-              stackOut_8_0 = 0;
-              stackIn_12_0 = stackOut_8_0;
-              break L0;
-            }
-          }
-          return stackIn_12_0;
-        } else {
-          L1: {
-            if (((hl) this).field_E) {
-              if (this == (Object) (Object) ((hl) this).field_D.j(-6121)) {
-                stackOut_5_0 = 256;
-                stackIn_6_0 = stackOut_5_0;
-                break L1;
-              } else {
-                stackOut_4_0 = 0;
-                stackIn_6_0 = stackOut_4_0;
-                break L1;
-              }
-            } else {
-              stackOut_2_0 = 0;
-              stackIn_6_0 = stackOut_2_0;
-              break L1;
-            }
-          }
-          return stackIn_6_0;
-        }
+        return !((hl) this).field_E ? 0 : this != (Object) (Object) ((hl) this).field_D.j(-6121) ? 0 : 256;
     }
 
     abstract void b(int param0, int param1, int param2);
@@ -121,22 +78,22 @@ abstract class hl extends td {
     }
 
     hl(vl param0, int param1, int param2) {
-        super(-param1 + jf.field_j >> 1907930177, -param2 + kg.field_c >> 2108436801, param1, param2, (t) null);
-        ((hl) this).field_E = false;
-        ((hl) this).field_D = param0;
-        ((hl) this).field_G = 0;
+        super(-param1 + jf.field_j >> 1, -param2 + kg.field_c >> 1, param1, param2, (t) null);
+        try {
+            ((hl) this).field_E = false;
+            ((hl) this).field_D = param0;
+            ((hl) this).field_G = 0;
+        } catch (RuntimeException runtimeException) {
+            throw sl.a((Throwable) (Object) runtimeException, "hl.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     final static void a(int param0, int param1) {
-        if (param1 == 0) {
-          if (null != uh.field_b[param0]) {
-            if (!uh.field_b[param0].b(param1 ^ 10000536)) {
-              return;
-            } else {
-              fe.a(uh.field_b[param0], 2);
-              return;
-            }
+        if (null != uh.field_b[param0]) {
+          if (!uh.field_b[param0].b(10000536)) {
+            return;
           } else {
+            fe.a(uh.field_b[param0], 2);
             return;
           }
         } else {
@@ -147,18 +104,18 @@ abstract class hl extends td {
     final void a(int param0, byte param1, int param2) {
         if (param1 >= -51) {
           hl.l(54);
-          ((hl) this).a(param2, -3050, kg.field_c + -param2 >> -1811072703, param0, -param0 + jf.field_j >> -1217366687);
+          ((hl) this).a(param2, -3050, kg.field_c + -param2 >> 1, param0, -param0 + jf.field_j >> 1);
           return;
         } else {
-          ((hl) this).a(param2, -3050, kg.field_c + -param2 >> -1811072703, param0, -param0 + jf.field_j >> -1217366687);
+          ((hl) this).a(param2, -3050, kg.field_c + -param2 >> 1, param0, -param0 + jf.field_j >> 1);
           return;
         }
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        if ((((hl) this).field_G ^ -1) != -1) {
-          if (-257 >= (((hl) this).field_G ^ -1)) {
-            if ((param0 ^ -1) == -1) {
+        if (((hl) this).field_G != 0) {
+          if (((hl) this).field_G >= 256) {
+            if (param0 == 0) {
               ((hl) this).b(((hl) this).field_p + param1, param3 ^ 29233, param2 - -((hl) this).field_m);
               super.a(param0, param1, param2, 29221);
               return;
@@ -176,7 +133,7 @@ abstract class hl extends td {
               gd.field_p.d(param1 - -((hl) this).field_p, param2 - -((hl) this).field_m, ((hl) this).field_G);
               return;
             } else {
-              if ((((hl) this).field_x ^ -1) < (gd.field_p.field_t ^ -1)) {
+              if (~((hl) this).field_x < ~gd.field_p.field_t) {
                 gd.field_p = new qj(((hl) this).field_x, ((hl) this).field_u);
                 mb.a((byte) -116, gd.field_p);
                 ll.a();

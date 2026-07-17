@@ -9,20 +9,10 @@ final class ga {
     private static String field_z;
 
     public static void a(int param0) {
-        if (param0 != 7151) {
-          field_a = null;
-          field_b = null;
-          field_a = null;
-          field_c = null;
-          field_d = null;
-          return;
-        } else {
-          field_b = null;
-          field_a = null;
-          field_c = null;
-          field_d = null;
-          return;
-        }
+        field_b = null;
+        field_a = null;
+        field_c = null;
+        field_d = null;
     }
 
     static {

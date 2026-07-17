@@ -7,9 +7,6 @@ final class wk implements rs {
 
     public static void a(byte param0) {
         field_b = null;
-        if (param0 != 80) {
-            field_b = null;
-        }
     }
 
     final static void a(float param0, float param1, int param2, int param3, float param4, int param5, float param6, float param7) {
@@ -52,7 +49,7 @@ final class wk implements rs {
           var22 = (int)param6;
           var23 = (int)(param4 - var10);
           var24 = (int)(param6 - var11);
-          var25 = param2 | param3 << -1520350600;
+          var25 = param2 | param3 << 24;
           hcb.a(8, var22, 1, var25, var13, var21, var16, var14, param2, var15, var25);
           hcb.a(8, var20, 1, var25, var13, var19, var22, var14, param2, var21, param2);
           hcb.a(8, var24, 1, param2, var15, var23, var18, var16, var25, var17, param2);
@@ -74,7 +71,7 @@ final class wk implements rs {
           var22 = (int)param6;
           var23 = (int)(param4 - var10);
           var24 = (int)(param6 - var11);
-          var25 = param2 | param3 << -1520350600;
+          var25 = param2 | param3 << 24;
           hcb.a(8, var22, 1, var25, var13, var21, var16, var14, param2, var15, var25);
           hcb.a(8, var20, 1, var25, var13, var19, var22, var14, param2, var21, param2);
           hcb.a(8, var24, 1, param2, var15, var23, var18, var16, var25, var17, param2);

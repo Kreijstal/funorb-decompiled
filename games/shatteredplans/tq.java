@@ -18,36 +18,36 @@ final class tq {
         int var3 = 0;
         int var4 = 0;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
-        if (param1 == 231) {
-          var3 = ((tq) this).field_d.length;
-          L0: while (true) {
-            if (var3 > param0) {
-              return var3;
-            } else {
-              if (((tq) this).field_c) {
-                if (var3 != 0) {
-                  var3 = var3 * ((tq) this).field_h;
-                  continue L0;
-                } else {
-                  var3 = 1;
-                  continue L0;
-                }
+        var3 = ((tq) this).field_d.length;
+        L0: while (true) {
+          if (var3 > param0) {
+            return var3;
+          } else {
+            if (((tq) this).field_c) {
+              if (var3 != 0) {
+                var3 = var3 * ((tq) this).field_h;
+                continue L0;
               } else {
-                var3 = var3 + ((tq) this).field_h;
+                var3 = 1;
                 continue L0;
               }
+            } else {
+              var3 = var3 + ((tq) this).field_h;
+              continue L0;
             }
           }
-        } else {
-          return -32;
         }
     }
 
     final void a(String param0, int param1) {
-        if (param1 >= -122) {
-            ((tq) this).field_c = false;
+        try {
+            if (param1 >= -122) {
+                ((tq) this).field_c = false;
+            }
+            this.a(95, ((tq) this).field_e - -1, param0);
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "tq.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
-        this.a(95, ((tq) this).field_e - -1, param0);
     }
 
     private final void a(int param0, int param1, String param2) {
@@ -60,7 +60,11 @@ final class tq {
         if (param0 != 95) {
             return;
         }
-        ((tq) this).field_d[param1] = param2;
+        try {
+            ((tq) this).field_d[param1] = param2;
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "tq.D(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public final String toString() {
@@ -126,7 +130,7 @@ final class tq {
         field_a = "You are invited to <%0>'s game.";
         field_i = "Year of <%0>";
         field_b = null;
-        field_g = new char[]{(char)32, (char)160, (char)95, (char)45, (char)224, (char)225, (char)226, (char)228, (char)227, (char)192, (char)193, (char)194, (char)196, (char)195, (char)232, (char)233, (char)234, (char)235, (char)200, (char)201, (char)202, (char)203, (char)237, (char)238, (char)239, (char)205, (char)206, (char)207, (char)242, (char)243, (char)244, (char)246, (char)245, (char)210, (char)211, (char)212, (char)214, (char)213, (char)249, (char)250, (char)251, (char)252, (char)217, (char)218, (char)219, (char)220, (char)231, (char)199, (char)255, (char)376, (char)241, (char)209, (char)223};
+        field_g = new char[]{' ', ' ', '_', '-', 'à', 'á', 'â', 'ä', 'ã', 'À', 'Á', 'Â', 'Ä', 'Ã', 'è', 'é', 'ê', 'ë', 'È', 'É', 'Ê', 'Ë', 'í', 'î', 'ï', 'Í', 'Î', 'Ï', 'ò', 'ó', 'ô', 'ö', 'õ', 'Ò', 'Ó', 'Ô', 'Ö', 'Õ', 'ù', 'ú', 'û', 'ü', 'Ù', 'Ú', 'Û', 'Ü', 'ç', 'Ç', 'ÿ', 'Ÿ', 'ñ', 'Ñ', 'ß'};
         field_k = "Respect";
     }
 }

@@ -17,15 +17,15 @@ final class ol extends km {
         var5 = BrickABrac.field_J ? 1 : 0;
         if (param0 == -120) {
           L0: {
-            if ((((ol) this).field_h.field_j ^ -1) <= -1) {
+            if (((ol) this).field_h.field_j >= 0) {
               L1: {
                 if (param1 == 98) {
                   break L1;
                 } else {
                   if (param1 != 99) {
-                    if (-97 == param1) {
+                    if (param1 == 96) {
                       if (1 != ((ol) this).field_h.field_j) {
-                        if (-3 != (((ol) this).field_h.field_j ^ -1)) {
+                        if (((ol) this).field_h.field_j != 2) {
                           break L0;
                         } else {
                           ((ol) this).field_h.a(false, 1);
@@ -36,12 +36,12 @@ final class ol extends km {
                         break L0;
                       }
                     } else {
-                      if (param1 == -98) {
+                      if (param1 == 97) {
                         if (((ol) this).field_h.field_j == 2) {
                           ((ol) this).field_h.a(false, 1);
                           break L0;
                         } else {
-                          if (-2 != ((ol) this).field_h.field_j) {
+                          if (((ol) this).field_h.field_j != 1) {
                             break L0;
                           } else {
                             ((ol) this).field_h.a(false, 2);
@@ -57,7 +57,7 @@ final class ol extends km {
                   }
                 }
               }
-              if (((ol) this).field_h.field_j == -1) {
+              if (((ol) this).field_h.field_j == 0) {
                 ((ol) this).field_h.a(false, 1);
                 break L0;
               } else {
@@ -84,7 +84,7 @@ final class ol extends km {
           var4 = ((ol) this).field_m[param0].field_f;
           var5 = var4;
           if (var5 != 40) {
-            if ((var5 ^ -1) != -42) {
+            if (var5 != 41) {
               return super.a(param0, param1, (byte) 123);
             } else {
               if (!((ol) this).field_h.a((byte) 113)) {
@@ -115,9 +115,6 @@ final class ol extends km {
         field_r = null;
         field_v = null;
         field_x = null;
-        if (param0 != 14529) {
-            field_z = null;
-        }
         field_z = null;
     }
 
@@ -135,8 +132,8 @@ final class ol extends km {
         q var11 = null;
         q var12 = null;
         String stackIn_7_0 = null;
-        String stackOut_6_0;
-        String stackOut_5_0;
+        String stackOut_6_0 = null;
+        String stackOut_5_0 = null;
         var6 = BrickABrac.field_J ? 1 : 0;
         if (param0) {
           var2 = 0;
@@ -183,10 +180,11 @@ final class ol extends km {
                   break L2;
                 }
               }
-              var10 = (String) (Object) stackIn_7_0;
+              var10 = stackIn_7_0;
               var5_ref = var10;
-              var9.field_j = nn.field_g.c(var10) - -30;
-              var2 = var2 + (nn.field_g.c(var10) - -30);
+              int dupTemp$1 = nn.field_g.c(var10) - -30;
+              var9.field_j = dupTemp$1;
+              var2 = var2 + dupTemp$1;
               if (var3 > 0) {
                 var2 += 10;
                 var3++;

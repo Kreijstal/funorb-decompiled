@@ -7,12 +7,6 @@ final class tea {
     private static String field_z;
 
     public static void a(byte param0) {
-        if (param0 >= -122) {
-            field_b = null;
-            field_a = null;
-            field_b = null;
-            return;
-        }
         field_a = null;
         field_b = null;
     }

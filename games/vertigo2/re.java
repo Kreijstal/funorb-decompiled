@@ -25,17 +25,10 @@ final class re {
     }
 
     private final void b(int param0, byte param1) {
-        int[] var3 = null;
-        int[] var4 = null;
-        if (param1 <= 59) {
-          return;
-        } else {
-          var4 = new int[this.a(param0, (byte) 120)];
-          var3 = var4;
-          qq.a(((re) this).field_i, 0, var4, 0, ((re) this).field_i.length);
-          ((re) this).field_i = var4;
-          return;
-        }
+        int[] var4 = new int[this.a(param0, (byte) 120)];
+        int[] var3 = var4;
+        qq.a(((re) this).field_i, 0, var4, 0, ((re) this).field_i.length);
+        ((re) this).field_i = var4;
     }
 
     private final int a(int param0, byte param1) {
@@ -98,10 +91,6 @@ final class re {
         field_a = null;
         field_f = null;
         field_c = null;
-        if (param0 < -41) {
-            return;
-        }
-        field_j = 39;
     }
 
     private final void a(byte param0, int param1, int param2) {
@@ -144,9 +133,6 @@ final class re {
     }
 
     final static cr c(int param0) {
-        if (param0 != -1087) {
-            return null;
-        }
         return tf.b((byte) 98);
     }
 

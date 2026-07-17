@@ -8,251 +8,376 @@ final class ul {
     private int[] field_c;
 
     final static void a(int param0) {
-        int var1 = 0;
+        int var1_int = 0;
+        RuntimeException var1 = null;
         double var2 = 0.0;
-        int var4 = MinerDisturbance.field_ab;
-        dj.a();
-        ml.field_d = 11;
-        w.field_R = new int[260];
-        for (var1 = 0; (var1 ^ -1) > -257; var1++) {
-            var2 = 15.0;
-            w.field_R[var1] = (int)(255.0 * Math.pow((double)((float)var1 / 256.0f), var2));
-        }
-        if (param0 != 8) {
-            ul.a((byte) 48);
-        }
-        int var5 = 256;
-        var1 = var5;
-        while (var5 < w.field_R.length) {
-            w.field_R[var5] = 255;
-            var5++;
+        int var4 = 0;
+        int var5 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var4 = MinerDisturbance.field_ab;
+        try {
+          L0: {
+            dj.a();
+            ml.field_d = 11;
+            w.field_R = new int[260];
+            var1_int = 0;
+            L1: while (true) {
+              if (var1_int >= 256) {
+                var5 = 256;
+                var1_int = var5;
+                L2: while (true) {
+                  if (var5 >= w.field_R.length) {
+                    break L0;
+                  } else {
+                    w.field_R[var5] = 255;
+                    var5++;
+                    continue L2;
+                  }
+                }
+              } else {
+                var2 = 15.0;
+                w.field_R[var1_int] = (int)(255.0 * Math.pow((double)((float)var1_int / 256.0f), var2));
+                var1_int++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw lj.a((Throwable) (Object) var1, "ul.C(" + 8 + 41);
         }
     }
 
     final int a(int param0, int param1, int param2, byte[] param3, byte[] param4, int param5) {
-        int var7 = 0;
+        RuntimeException var7 = null;
+        int var7_int = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
+        int stackIn_3_0 = 0;
+        int stackIn_6_0 = 0;
+        int stackIn_67_0 = 0;
+        RuntimeException stackIn_69_0 = null;
+        StringBuilder stackIn_69_1 = null;
+        RuntimeException stackIn_70_0 = null;
+        StringBuilder stackIn_70_1 = null;
+        RuntimeException stackIn_71_0 = null;
+        StringBuilder stackIn_71_1 = null;
+        String stackIn_71_2 = null;
+        RuntimeException stackIn_72_0 = null;
+        StringBuilder stackIn_72_1 = null;
+        RuntimeException stackIn_73_0 = null;
+        StringBuilder stackIn_73_1 = null;
+        RuntimeException stackIn_74_0 = null;
+        StringBuilder stackIn_74_1 = null;
+        String stackIn_74_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_66_0 = 0;
+        int stackOut_5_0 = 0;
+        int stackOut_2_0 = 0;
+        RuntimeException stackOut_68_0 = null;
+        StringBuilder stackOut_68_1 = null;
+        RuntimeException stackOut_70_0 = null;
+        StringBuilder stackOut_70_1 = null;
+        String stackOut_70_2 = null;
+        RuntimeException stackOut_69_0 = null;
+        StringBuilder stackOut_69_1 = null;
+        String stackOut_69_2 = null;
+        RuntimeException stackOut_71_0 = null;
+        StringBuilder stackOut_71_1 = null;
+        RuntimeException stackOut_73_0 = null;
+        StringBuilder stackOut_73_1 = null;
+        String stackOut_73_2 = null;
+        RuntimeException stackOut_72_0 = null;
+        StringBuilder stackOut_72_1 = null;
+        String stackOut_72_2 = null;
         var11 = MinerDisturbance.field_ab;
-        if (param5 == 256) {
-          if (param2 != 0) {
-            var7 = 0;
-            param2 = param2 + param1;
-            var8 = param0;
-            L0: while (true) {
-              L1: {
-                var9 = param3[var8];
-                if (0 <= var9) {
-                  var7++;
-                  break L1;
-                } else {
-                  var7 = ((ul) this).field_c[var7];
-                  break L1;
-                }
-              }
-              L2: {
-                L3: {
-                  var10 = ((ul) this).field_c[var7];
-                  if (((ul) this).field_c[var7] < 0) {
-                    int incrementValue$8 = param1;
-                    param1++;
-                    param4[incrementValue$8] = (byte)(var10 ^ -1);
-                    if (param2 > param1) {
-                      var7 = 0;
-                      break L3;
-                    } else {
-                      break L2;
-                    }
-                  } else {
-                    break L3;
-                  }
-                }
-                L4: {
-                  if (0 == (var9 & 64)) {
-                    var7++;
-                    break L4;
-                  } else {
-                    var7 = ((ul) this).field_c[var7];
-                    break L4;
-                  }
-                }
-                L5: {
-                  var10 = ((ul) this).field_c[var7];
-                  if (((ul) this).field_c[var7] >= 0) {
-                    break L5;
-                  } else {
-                    int incrementValue$9 = param1;
-                    param1++;
-                    param4[incrementValue$9] = (byte)(var10 ^ -1);
-                    if (param2 <= param1) {
+        try {
+          L0: {
+            if (param5 == 256) {
+              if (param2 != 0) {
+                var7_int = 0;
+                param2 = param2 + param1;
+                var8 = param0;
+                L1: while (true) {
+                  L2: {
+                    var9 = param3[var8];
+                    if (0 <= var9) {
+                      var7_int++;
                       break L2;
                     } else {
-                      var7 = 0;
-                      break L5;
-                    }
-                  }
-                }
-                L6: {
-                  if ((32 & var9) == 0) {
-                    var7++;
-                    break L6;
-                  } else {
-                    var7 = ((ul) this).field_c[var7];
-                    break L6;
-                  }
-                }
-                L7: {
-                  var10 = ((ul) this).field_c[var7];
-                  if (((ul) this).field_c[var7] < 0) {
-                    int incrementValue$10 = param1;
-                    param1++;
-                    param4[incrementValue$10] = (byte)(var10 ^ -1);
-                    if (param1 >= param2) {
+                      var7_int = ((ul) this).field_c[var7_int];
                       break L2;
-                    } else {
-                      var7 = 0;
-                      break L7;
                     }
-                  } else {
-                    break L7;
                   }
-                }
-                L8: {
-                  if ((var9 & 16) == 0) {
-                    var7++;
-                    break L8;
-                  } else {
-                    var7 = ((ul) this).field_c[var7];
-                    break L8;
-                  }
-                }
-                L9: {
-                  var10 = ((ul) this).field_c[var7];
-                  if (((ul) this).field_c[var7] < 0) {
-                    int incrementValue$11 = param1;
-                    param1++;
-                    param4[incrementValue$11] = (byte)(var10 ^ -1);
-                    if (param1 >= param2) {
-                      break L2;
-                    } else {
-                      var7 = 0;
-                      break L9;
+                  L3: {
+                    L4: {
+                      var10 = ((ul) this).field_c[var7_int];
+                      if (((ul) this).field_c[var7_int] < 0) {
+                        int incrementValue$8 = param1;
+                        param1++;
+                        param4[incrementValue$8] = (byte)(~var10);
+                        if (param2 > param1) {
+                          var7_int = 0;
+                          break L4;
+                        } else {
+                          break L3;
+                        }
+                      } else {
+                        break L4;
+                      }
                     }
-                  } else {
-                    break L9;
-                  }
-                }
-                L10: {
-                  if ((8 & var9) == 0) {
-                    var7++;
-                    break L10;
-                  } else {
-                    var7 = ((ul) this).field_c[var7];
-                    break L10;
-                  }
-                }
-                L11: {
-                  var10 = ((ul) this).field_c[var7];
-                  if (((ul) this).field_c[var7] < 0) {
-                    int incrementValue$12 = param1;
-                    param1++;
-                    param4[incrementValue$12] = (byte)(var10 ^ -1);
-                    if (param1 >= param2) {
-                      break L2;
-                    } else {
-                      var7 = 0;
-                      break L11;
+                    L5: {
+                      if (0 == (var9 & 64)) {
+                        var7_int++;
+                        break L5;
+                      } else {
+                        var7_int = ((ul) this).field_c[var7_int];
+                        break L5;
+                      }
                     }
-                  } else {
-                    break L11;
-                  }
-                }
-                L12: {
-                  if ((var9 & 4) == 0) {
-                    var7++;
-                    break L12;
-                  } else {
-                    var7 = ((ul) this).field_c[var7];
-                    break L12;
-                  }
-                }
-                L13: {
-                  var10 = ((ul) this).field_c[var7];
-                  if (((ul) this).field_c[var7] < 0) {
-                    int incrementValue$13 = param1;
-                    param1++;
-                    param4[incrementValue$13] = (byte)(var10 ^ -1);
-                    if (param1 < param2) {
-                      var7 = 0;
-                      break L13;
-                    } else {
-                      return var8 - -1 - param0;
+                    L6: {
+                      var10 = ((ul) this).field_c[var7_int];
+                      if (((ul) this).field_c[var7_int] >= 0) {
+                        break L6;
+                      } else {
+                        int incrementValue$9 = param1;
+                        param1++;
+                        param4[incrementValue$9] = (byte)(~var10);
+                        if (param2 <= param1) {
+                          break L3;
+                        } else {
+                          var7_int = 0;
+                          break L6;
+                        }
+                      }
                     }
-                  } else {
-                    break L13;
-                  }
-                }
-                L14: {
-                  if ((var9 & 2) != 0) {
-                    var7 = ((ul) this).field_c[var7];
-                    break L14;
-                  } else {
-                    var7++;
-                    break L14;
-                  }
-                }
-                L15: {
-                  var10 = ((ul) this).field_c[var7];
-                  if (0 > ((ul) this).field_c[var7]) {
-                    int incrementValue$14 = param1;
-                    param1++;
-                    param4[incrementValue$14] = (byte)(var10 ^ -1);
-                    if (param2 <= param1) {
-                      break L2;
-                    } else {
-                      var7 = 0;
-                      break L15;
+                    L7: {
+                      if ((32 & var9) == 0) {
+                        var7_int++;
+                        break L7;
+                      } else {
+                        var7_int = ((ul) this).field_c[var7_int];
+                        break L7;
+                      }
                     }
-                  } else {
-                    break L15;
-                  }
-                }
-                L16: {
-                  if (0 != (1 & var9)) {
-                    var7 = ((ul) this).field_c[var7];
-                    break L16;
-                  } else {
-                    var7++;
-                    break L16;
-                  }
-                }
-                var10 = ((ul) this).field_c[var7];
-                if (((ul) this).field_c[var7] < 0) {
-                  int incrementValue$15 = param1;
-                  param1++;
-                  param4[incrementValue$15] = (byte)(var10 ^ -1);
-                  if (param1 >= param2) {
-                    break L2;
-                  } else {
-                    var7 = 0;
+                    L8: {
+                      var10 = ((ul) this).field_c[var7_int];
+                      if (((ul) this).field_c[var7_int] < 0) {
+                        int incrementValue$10 = param1;
+                        param1++;
+                        param4[incrementValue$10] = (byte)(~var10);
+                        if (param1 >= param2) {
+                          break L3;
+                        } else {
+                          var7_int = 0;
+                          break L8;
+                        }
+                      } else {
+                        break L8;
+                      }
+                    }
+                    L9: {
+                      if ((var9 & 16) == 0) {
+                        var7_int++;
+                        break L9;
+                      } else {
+                        var7_int = ((ul) this).field_c[var7_int];
+                        break L9;
+                      }
+                    }
+                    L10: {
+                      var10 = ((ul) this).field_c[var7_int];
+                      if (((ul) this).field_c[var7_int] < 0) {
+                        int incrementValue$11 = param1;
+                        param1++;
+                        param4[incrementValue$11] = (byte)(~var10);
+                        if (param1 >= param2) {
+                          break L3;
+                        } else {
+                          var7_int = 0;
+                          break L10;
+                        }
+                      } else {
+                        break L10;
+                      }
+                    }
+                    L11: {
+                      if ((8 & var9) == 0) {
+                        var7_int++;
+                        break L11;
+                      } else {
+                        var7_int = ((ul) this).field_c[var7_int];
+                        break L11;
+                      }
+                    }
+                    L12: {
+                      var10 = ((ul) this).field_c[var7_int];
+                      if (((ul) this).field_c[var7_int] < 0) {
+                        int incrementValue$12 = param1;
+                        param1++;
+                        param4[incrementValue$12] = (byte)(~var10);
+                        if (param1 >= param2) {
+                          break L3;
+                        } else {
+                          var7_int = 0;
+                          break L12;
+                        }
+                      } else {
+                        break L12;
+                      }
+                    }
+                    L13: {
+                      if ((var9 & 4) == 0) {
+                        var7_int++;
+                        break L13;
+                      } else {
+                        var7_int = ((ul) this).field_c[var7_int];
+                        break L13;
+                      }
+                    }
+                    L14: {
+                      var10 = ((ul) this).field_c[var7_int];
+                      if (((ul) this).field_c[var7_int] < 0) {
+                        int incrementValue$13 = param1;
+                        param1++;
+                        param4[incrementValue$13] = (byte)(~var10);
+                        if (param1 < param2) {
+                          var7_int = 0;
+                          break L14;
+                        } else {
+                          return var8 - -1 - param0;
+                        }
+                      } else {
+                        break L14;
+                      }
+                    }
+                    L15: {
+                      if ((var9 & 2) != 0) {
+                        var7_int = ((ul) this).field_c[var7_int];
+                        break L15;
+                      } else {
+                        var7_int++;
+                        break L15;
+                      }
+                    }
+                    L16: {
+                      var10 = ((ul) this).field_c[var7_int];
+                      if (0 > ((ul) this).field_c[var7_int]) {
+                        int incrementValue$14 = param1;
+                        param1++;
+                        param4[incrementValue$14] = (byte)(~var10);
+                        if (param2 <= param1) {
+                          break L3;
+                        } else {
+                          var7_int = 0;
+                          break L16;
+                        }
+                      } else {
+                        break L16;
+                      }
+                    }
+                    L17: {
+                      if (0 != (1 & var9)) {
+                        var7_int = ((ul) this).field_c[var7_int];
+                        break L17;
+                      } else {
+                        var7_int++;
+                        break L17;
+                      }
+                    }
+                    L18: {
+                      var10 = ((ul) this).field_c[var7_int];
+                      if (((ul) this).field_c[var7_int] < 0) {
+                        int incrementValue$15 = param1;
+                        param1++;
+                        param4[incrementValue$15] = (byte)(~var10);
+                        if (param1 >= param2) {
+                          break L3;
+                        } else {
+                          var7_int = 0;
+                          break L18;
+                        }
+                      } else {
+                        break L18;
+                      }
+                    }
                     var8++;
-                    continue L0;
+                    continue L1;
                   }
-                } else {
-                  var8++;
-                  continue L0;
+                  stackOut_66_0 = var8 - -1 - param0;
+                  stackIn_67_0 = stackOut_66_0;
+                  break L0;
                 }
+              } else {
+                stackOut_5_0 = 0;
+                stackIn_6_0 = stackOut_5_0;
+                return stackIn_6_0;
               }
-              return var8 - -1 - param0;
+            } else {
+              stackOut_2_0 = 94;
+              stackIn_3_0 = stackOut_2_0;
+              return stackIn_3_0;
             }
-          } else {
-            return 0;
           }
-        } else {
-          return 94;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L19: {
+            var7 = decompiledCaughtException;
+            stackOut_68_0 = (RuntimeException) var7;
+            stackOut_68_1 = new StringBuilder().append("ul.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackIn_70_0 = stackOut_68_0;
+            stackIn_70_1 = stackOut_68_1;
+            stackIn_69_0 = stackOut_68_0;
+            stackIn_69_1 = stackOut_68_1;
+            if (param3 == null) {
+              stackOut_70_0 = (RuntimeException) (Object) stackIn_70_0;
+              stackOut_70_1 = (StringBuilder) (Object) stackIn_70_1;
+              stackOut_70_2 = "null";
+              stackIn_71_0 = stackOut_70_0;
+              stackIn_71_1 = stackOut_70_1;
+              stackIn_71_2 = stackOut_70_2;
+              break L19;
+            } else {
+              stackOut_69_0 = (RuntimeException) (Object) stackIn_69_0;
+              stackOut_69_1 = (StringBuilder) (Object) stackIn_69_1;
+              stackOut_69_2 = "{...}";
+              stackIn_71_0 = stackOut_69_0;
+              stackIn_71_1 = stackOut_69_1;
+              stackIn_71_2 = stackOut_69_2;
+              break L19;
+            }
+          }
+          L20: {
+            stackOut_71_0 = (RuntimeException) (Object) stackIn_71_0;
+            stackOut_71_1 = ((StringBuilder) (Object) stackIn_71_1).append(stackIn_71_2).append(44);
+            stackIn_73_0 = stackOut_71_0;
+            stackIn_73_1 = stackOut_71_1;
+            stackIn_72_0 = stackOut_71_0;
+            stackIn_72_1 = stackOut_71_1;
+            if (param4 == null) {
+              stackOut_73_0 = (RuntimeException) (Object) stackIn_73_0;
+              stackOut_73_1 = (StringBuilder) (Object) stackIn_73_1;
+              stackOut_73_2 = "null";
+              stackIn_74_0 = stackOut_73_0;
+              stackIn_74_1 = stackOut_73_1;
+              stackIn_74_2 = stackOut_73_2;
+              break L20;
+            } else {
+              stackOut_72_0 = (RuntimeException) (Object) stackIn_72_0;
+              stackOut_72_1 = (StringBuilder) (Object) stackIn_72_1;
+              stackOut_72_2 = "{...}";
+              stackIn_74_0 = stackOut_72_0;
+              stackIn_74_1 = stackOut_72_1;
+              stackIn_74_2 = stackOut_72_2;
+              break L20;
+            }
+          }
+          throw lj.a((Throwable) (Object) stackIn_74_0, stackIn_74_2 + 44 + param5 + 41);
         }
+        return stackIn_67_0;
     }
 
     public static void a(byte param0) {

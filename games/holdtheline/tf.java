@@ -25,7 +25,7 @@ final class tf extends tj {
         int var3 = 0;
         L0: {
           var3 = HoldTheLine.field_D;
-          if ((((tf) this).field_y ^ -1) >= -1) {
+          if (((tf) this).field_y <= 0) {
             if (1048576 <= ((tf) this).field_y) {
               break L0;
             } else {
@@ -59,7 +59,7 @@ final class tf extends tj {
           }
         }
         L1: {
-          if (-1 <= (((tf) this).field_s ^ -1)) {
+          if (((tf) this).field_s <= 0) {
             break L1;
           } else {
             if (null != ((tf) this).field_t) {
@@ -88,7 +88,7 @@ final class tf extends tj {
                 }
               }
             }
-            if ((((tf) this).field_D ^ -1) <= -1) {
+            if (((tf) this).field_D >= 0) {
               break L2;
             } else {
               if (!((tf) this).field_C.c((byte) 39)) {
@@ -159,46 +159,162 @@ final class tf extends tj {
     }
 
     final static hj[] a(int param0, gn param1, int param2, boolean param3) {
-        if (!qg.a(param2, param0, (byte) -27, param1)) {
-            return null;
+        RuntimeException var4 = null;
+        Object stackIn_2_0 = null;
+        hj[] stackIn_6_0 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        hj[] stackOut_5_0 = null;
+        Object stackOut_1_0 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        try {
+          L0: {
+            if (qg.a(param2, param0, (byte) -27, param1)) {
+              L1: {
+                if (!param3) {
+                  break L1;
+                } else {
+                  java.awt.Container discarded$2 = tf.e(-27);
+                  break L1;
+                }
+              }
+              stackOut_5_0 = jd.h(-128);
+              stackIn_6_0 = stackOut_5_0;
+              break L0;
+            } else {
+              stackOut_1_0 = null;
+              stackIn_2_0 = stackOut_1_0;
+              return (hj[]) (Object) stackIn_2_0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var4 = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var4;
+            stackOut_7_1 = new StringBuilder().append("tf.F(").append(param0).append(44);
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param1 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L2;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L2;
+            }
+          }
+          throw kk.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param2 + 44 + param3 + 41);
         }
-        if (param3) {
-            java.awt.Container discarded$0 = tf.e(-27);
-        }
-        return jd.h(-128);
+        return stackIn_6_0;
     }
 
     final boolean a(int param0, vi param1) {
+        RuntimeException var3 = null;
         Object var4 = null;
         int stackIn_7_0 = 0;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int stackOut_6_0 = 0;
         int stackOut_5_0 = 0;
-        L0: {
-          if (param0 < -11) {
-            break L0;
-          } else {
-            var4 = null;
-            boolean discarded$2 = ((tf) this).a(-93, (vi) null);
-            break L0;
-          }
-        }
-        L1: {
-          L2: {
-            if (param1 == ((tf) this).field_z) {
-              break L2;
-            } else {
-              if (((tf) this).field_m != param1) {
-                stackOut_6_0 = 0;
-                stackIn_7_0 = stackOut_6_0;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 < -11) {
                 break L1;
               } else {
-                break L2;
+                var4 = null;
+                boolean discarded$2 = ((tf) this).a(-93, (vi) null);
+                break L1;
               }
             }
+            L2: {
+              L3: {
+                if (param1 == ((tf) this).field_z) {
+                  break L3;
+                } else {
+                  if (((tf) this).field_m != param1) {
+                    stackOut_6_0 = 0;
+                    stackIn_7_0 = stackOut_6_0;
+                    break L2;
+                  } else {
+                    break L3;
+                  }
+                }
+              }
+              stackOut_5_0 = 1;
+              stackIn_7_0 = stackOut_5_0;
+              break L2;
+            }
+            break L0;
           }
-          stackOut_5_0 = 1;
-          stackIn_7_0 = stackOut_5_0;
-          break L1;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var3 = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var3;
+            stackOut_8_1 = new StringBuilder().append("tf.J(").append(param0).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param1 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L4;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L4;
+            }
+          }
+          throw kk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
         }
         return stackIn_7_0 != 0;
     }
@@ -212,7 +328,8 @@ final class tf extends tj {
     }
 
     final void b(int[] param0, int param1, int param2) {
-        int var4 = 0;
+        RuntimeException var4 = null;
+        int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -220,252 +337,293 @@ final class tf extends tj {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        int stackIn_32_0 = 0;
-        int stackIn_46_0 = 0;
-        int stackIn_59_0 = 0;
-        int stackOut_31_0 = 0;
-        int stackOut_30_0 = 0;
-        int stackOut_45_0 = 0;
-        int stackOut_44_0 = 0;
-        int stackOut_58_0 = 0;
-        int stackOut_57_0 = 0;
+        int stackIn_30_0 = 0;
+        int stackIn_44_0 = 0;
+        int stackIn_57_0 = 0;
+        RuntimeException stackIn_62_0 = null;
+        StringBuilder stackIn_62_1 = null;
+        RuntimeException stackIn_63_0 = null;
+        StringBuilder stackIn_63_1 = null;
+        RuntimeException stackIn_64_0 = null;
+        StringBuilder stackIn_64_1 = null;
+        String stackIn_64_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_29_0 = 0;
+        int stackOut_28_0 = 0;
+        int stackOut_43_0 = 0;
+        int stackOut_42_0 = 0;
+        int stackOut_56_0 = 0;
+        int stackOut_55_0 = 0;
+        RuntimeException stackOut_61_0 = null;
+        StringBuilder stackOut_61_1 = null;
+        RuntimeException stackOut_63_0 = null;
+        StringBuilder stackOut_63_1 = null;
+        String stackOut_63_2 = null;
+        RuntimeException stackOut_62_0 = null;
+        StringBuilder stackOut_62_1 = null;
+        String stackOut_62_2 = null;
         var11 = HoldTheLine.field_D;
-        if (((tf) this).field_B <= 0) {
-          ((tf) this).a(param2);
-          return;
-        } else {
+        try {
           L0: {
-            if (((tf) this).field_x) {
-              if (0 < ((tf) this).field_D) {
-                if (!((tf) this).field_q.c((byte) -127)) {
-                  ((tf) this).field_D = -((tf) this).field_D;
-                  ((tf) this).field_x = false;
-                  ((tf) this).field_z = null;
-                  break L0;
-                } else {
-                  if (-1 >= (((tf) this).field_D ^ -1)) {
-                    break L0;
+            if (((tf) this).field_B <= 0) {
+              ((tf) this).a(param2);
+              return;
+            } else {
+              L1: {
+                if (((tf) this).field_x) {
+                  L2: {
+                    if (0 >= ((tf) this).field_D) {
+                      break L2;
+                    } else {
+                      if (((tf) this).field_q.c((byte) -127)) {
+                        break L2;
+                      } else {
+                        ((tf) this).field_D = -((tf) this).field_D;
+                        ((tf) this).field_x = false;
+                        ((tf) this).field_z = null;
+                        break L1;
+                      }
+                    }
+                  }
+                  if (((tf) this).field_D >= 0) {
+                    break L1;
                   } else {
                     if (((tf) this).field_C.c((byte) 101)) {
-                      break L0;
+                      break L1;
                     } else {
                       ((tf) this).field_D = -((tf) this).field_D;
                       ((tf) this).field_x = false;
                       ((tf) this).field_m = null;
-                      break L0;
+                      break L1;
+                    }
+                  }
+                } else {
+                  break L1;
+                }
+              }
+              L3: {
+                var4_int = (((tf) this).field_y >> 12) * ((tf) this).field_B / 256;
+                var5 = ((tf) this).field_B + -var4_int;
+                if (((tf) this).field_D == 0) {
+                  break L3;
+                } else {
+                  ((tf) this).field_y = ((tf) this).field_y + param2 * ((tf) this).field_D;
+                  if (((tf) this).field_y < 1048576) {
+                    if (0 < ((tf) this).field_y) {
+                      break L3;
+                    } else {
+                      ((tf) this).field_y = 0;
+                      if (((tf) this).field_x) {
+                        break L3;
+                      } else {
+                        ((tf) this).field_D = 0;
+                        if (((tf) this).field_w) {
+                          break L3;
+                        } else {
+                          L4: {
+                            if (((tf) this).field_z != null) {
+                              ((tf) this).field_q.f(-124);
+                              break L4;
+                            } else {
+                              break L4;
+                            }
+                          }
+                          ((tf) this).field_z = null;
+                          break L3;
+                        }
+                      }
+                    }
+                  } else {
+                    ((tf) this).field_y = 1048576;
+                    if (((tf) this).field_x) {
+                      break L3;
+                    } else {
+                      ((tf) this).field_D = 0;
+                      if (((tf) this).field_w) {
+                        break L3;
+                      } else {
+                        L5: {
+                          if (null == ((tf) this).field_m) {
+                            break L5;
+                          } else {
+                            ((tf) this).field_C.f(-127);
+                            break L5;
+                          }
+                        }
+                        ((tf) this).field_m = null;
+                        break L3;
+                      }
                     }
                   }
                 }
-              } else {
-                if (-1 >= (((tf) this).field_D ^ -1)) {
-                  break L0;
+              }
+              L6: {
+                if (!lo.field_t) {
+                  stackOut_29_0 = param2;
+                  stackIn_30_0 = stackOut_29_0;
+                  break L6;
                 } else {
-                  if (((tf) this).field_C.c((byte) 101)) {
-                    break L0;
+                  stackOut_28_0 = param2 << 1;
+                  stackIn_30_0 = stackOut_28_0;
+                  break L6;
+                }
+              }
+              L7: {
+                var6 = stackIn_30_0;
+                if (((tf) this).field_s >= 256) {
+                  break L7;
+                } else {
+                  L8: {
+                    if (((tf) this).field_z != null) {
+                      break L8;
+                    } else {
+                      if (((tf) this).field_m != null) {
+                        break L8;
+                      } else {
+                        break L7;
+                      }
+                    }
+                  }
+                  if (var4_int != 256) {
+                    if (var5 == 256) {
+                      ((tf) this).field_C.b(param0, param1, param2);
+                      break L7;
+                    } else {
+                      L9: {
+                        L10: {
+                          if (null == ((tf) this).field_v) {
+                            break L10;
+                          } else {
+                            if (var6 > ((tf) this).field_v.length) {
+                              break L10;
+                            } else {
+                              bc.a(((tf) this).field_v, 0, var6);
+                              bc.a(((tf) this).field_u, 0, var6);
+                              break L9;
+                            }
+                          }
+                        }
+                        ((tf) this).field_u = new int[var6];
+                        ((tf) this).field_v = new int[var6];
+                        break L9;
+                      }
+                      L11: {
+                        ((tf) this).field_q.b(((tf) this).field_v, 0, param2);
+                        ((tf) this).field_C.b(((tf) this).field_u, 0, param2);
+                        if (lo.field_t) {
+                          param1 = param1 << 1;
+                          stackOut_43_0 = param1 << 1;
+                          stackIn_44_0 = stackOut_43_0;
+                          break L11;
+                        } else {
+                          stackOut_42_0 = param1;
+                          stackIn_44_0 = stackOut_42_0;
+                          break L11;
+                        }
+                      }
+                      var7 = stackIn_44_0;
+                      var8 = 0;
+                      L12: while (true) {
+                        if (var8 >= var6) {
+                          break L7;
+                        } else {
+                          param0[var8 + var7] = param0[var8 + var7] + (((tf) this).field_v[var8] * var4_int + var5 * ((tf) this).field_u[var8] >> 8);
+                          var8++;
+                          continue L12;
+                        }
+                      }
+                    }
                   } else {
-                    ((tf) this).field_D = -((tf) this).field_D;
-                    ((tf) this).field_x = false;
-                    ((tf) this).field_m = null;
-                    break L0;
+                    ((tf) this).field_q.b(param0, param1, param2);
+                    break L7;
                   }
                 }
               }
-            } else {
+              L13: {
+                if (((tf) this).field_t == null) {
+                  break L13;
+                } else {
+                  if (0 == ((tf) this).field_s) {
+                    break L13;
+                  } else {
+                    L14: {
+                      L15: {
+                        if (((tf) this).field_v == null) {
+                          break L15;
+                        } else {
+                          if (((tf) this).field_v.length < var6) {
+                            break L15;
+                          } else {
+                            bc.a(((tf) this).field_v, 0, var6);
+                            break L14;
+                          }
+                        }
+                      }
+                      ((tf) this).field_u = new int[var6];
+                      ((tf) this).field_v = new int[var6];
+                      break L14;
+                    }
+                    L16: {
+                      ((tf) this).field_p.b(((tf) this).field_v, 0, param2);
+                      if (!lo.field_t) {
+                        stackOut_56_0 = param1;
+                        stackIn_57_0 = stackOut_56_0;
+                        break L16;
+                      } else {
+                        param1 = param1 << 1;
+                        stackOut_55_0 = param1 << 1;
+                        stackIn_57_0 = stackOut_55_0;
+                        break L16;
+                      }
+                    }
+                    var7 = stackIn_57_0;
+                    var8 = ((tf) this).field_s * ((tf) this).field_B / 256;
+                    var9 = -var8 + ((tf) this).field_B;
+                    var10 = 0;
+                    L17: while (true) {
+                      if (var10 >= var6) {
+                        break L13;
+                      } else {
+                        param0[var10 + var7] = var9 * param0[var10 + var7] + var8 * ((tf) this).field_v[var10] >> 8;
+                        var10++;
+                        continue L17;
+                      }
+                    }
+                  }
+                }
+              }
               break L0;
             }
           }
-          L1: {
-            var4 = (((tf) this).field_y >> 172353900) * ((tf) this).field_B / 256;
-            var5 = ((tf) this).field_B + -var4;
-            if (((tf) this).field_D == 0) {
-              break L1;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L18: {
+            var4 = decompiledCaughtException;
+            stackOut_61_0 = (RuntimeException) var4;
+            stackOut_61_1 = new StringBuilder().append("tf.A(");
+            stackIn_63_0 = stackOut_61_0;
+            stackIn_63_1 = stackOut_61_1;
+            stackIn_62_0 = stackOut_61_0;
+            stackIn_62_1 = stackOut_61_1;
+            if (param0 == null) {
+              stackOut_63_0 = (RuntimeException) (Object) stackIn_63_0;
+              stackOut_63_1 = (StringBuilder) (Object) stackIn_63_1;
+              stackOut_63_2 = "null";
+              stackIn_64_0 = stackOut_63_0;
+              stackIn_64_1 = stackOut_63_1;
+              stackIn_64_2 = stackOut_63_2;
+              break L18;
             } else {
-              ((tf) this).field_y = ((tf) this).field_y + param2 * ((tf) this).field_D;
-              if (((tf) this).field_y < 1048576) {
-                if (0 < ((tf) this).field_y) {
-                  break L1;
-                } else {
-                  ((tf) this).field_y = 0;
-                  if (((tf) this).field_x) {
-                    break L1;
-                  } else {
-                    ((tf) this).field_D = 0;
-                    if (((tf) this).field_w) {
-                      break L1;
-                    } else {
-                      L2: {
-                        if (((tf) this).field_z != null) {
-                          ((tf) this).field_q.f(-124);
-                          break L2;
-                        } else {
-                          break L2;
-                        }
-                      }
-                      ((tf) this).field_z = null;
-                      break L1;
-                    }
-                  }
-                }
-              } else {
-                ((tf) this).field_y = 1048576;
-                if (((tf) this).field_x) {
-                  break L1;
-                } else {
-                  ((tf) this).field_D = 0;
-                  if (((tf) this).field_w) {
-                    break L1;
-                  } else {
-                    L3: {
-                      if (null == ((tf) this).field_m) {
-                        break L3;
-                      } else {
-                        ((tf) this).field_C.f(-127);
-                        break L3;
-                      }
-                    }
-                    ((tf) this).field_m = null;
-                    break L1;
-                  }
-                }
-              }
+              stackOut_62_0 = (RuntimeException) (Object) stackIn_62_0;
+              stackOut_62_1 = (StringBuilder) (Object) stackIn_62_1;
+              stackOut_62_2 = "{...}";
+              stackIn_64_0 = stackOut_62_0;
+              stackIn_64_1 = stackOut_62_1;
+              stackIn_64_2 = stackOut_62_2;
+              break L18;
             }
           }
-          L4: {
-            if (!lo.field_t) {
-              stackOut_31_0 = param2;
-              stackIn_32_0 = stackOut_31_0;
-              break L4;
-            } else {
-              stackOut_30_0 = param2 << -596116767;
-              stackIn_32_0 = stackOut_30_0;
-              break L4;
-            }
-          }
-          L5: {
-            var6 = stackIn_32_0;
-            if (-257 >= (((tf) this).field_s ^ -1)) {
-              break L5;
-            } else {
-              L6: {
-                if (((tf) this).field_z != null) {
-                  break L6;
-                } else {
-                  if (((tf) this).field_m != null) {
-                    break L6;
-                  } else {
-                    break L5;
-                  }
-                }
-              }
-              if (var4 != 256) {
-                if ((var5 ^ -1) == -257) {
-                  ((tf) this).field_C.b(param0, param1, param2);
-                  break L5;
-                } else {
-                  L7: {
-                    L8: {
-                      if (null == ((tf) this).field_v) {
-                        break L8;
-                      } else {
-                        if (var6 > ((tf) this).field_v.length) {
-                          break L8;
-                        } else {
-                          bc.a(((tf) this).field_v, 0, var6);
-                          bc.a(((tf) this).field_u, 0, var6);
-                          break L7;
-                        }
-                      }
-                    }
-                    ((tf) this).field_u = new int[var6];
-                    ((tf) this).field_v = new int[var6];
-                    break L7;
-                  }
-                  L9: {
-                    ((tf) this).field_q.b(((tf) this).field_v, 0, param2);
-                    ((tf) this).field_C.b(((tf) this).field_u, 0, param2);
-                    if (lo.field_t) {
-                      param1 = param1 << 1;
-                      stackOut_45_0 = param1 << 1;
-                      stackIn_46_0 = stackOut_45_0;
-                      break L9;
-                    } else {
-                      stackOut_44_0 = param1;
-                      stackIn_46_0 = stackOut_44_0;
-                      break L9;
-                    }
-                  }
-                  var7 = stackIn_46_0;
-                  var8 = 0;
-                  L10: while (true) {
-                    if (var8 >= var6) {
-                      break L5;
-                    } else {
-                      param0[var8 + var7] = param0[var8 + var7] + (((tf) this).field_v[var8] * var4 + var5 * ((tf) this).field_u[var8] >> 1418724520);
-                      var8++;
-                      continue L10;
-                    }
-                  }
-                }
-              } else {
-                ((tf) this).field_q.b(param0, param1, param2);
-                break L5;
-              }
-            }
-          }
-          L11: {
-            if (((tf) this).field_t == null) {
-              break L11;
-            } else {
-              if (0 == ((tf) this).field_s) {
-                break L11;
-              } else {
-                L12: {
-                  L13: {
-                    if (((tf) this).field_v == null) {
-                      break L13;
-                    } else {
-                      if (((tf) this).field_v.length < var6) {
-                        break L13;
-                      } else {
-                        bc.a(((tf) this).field_v, 0, var6);
-                        break L12;
-                      }
-                    }
-                  }
-                  ((tf) this).field_u = new int[var6];
-                  ((tf) this).field_v = new int[var6];
-                  break L12;
-                }
-                L14: {
-                  ((tf) this).field_p.b(((tf) this).field_v, 0, param2);
-                  if (!lo.field_t) {
-                    stackOut_58_0 = param1;
-                    stackIn_59_0 = stackOut_58_0;
-                    break L14;
-                  } else {
-                    param1 = param1 << 1;
-                    stackOut_57_0 = param1 << 1;
-                    stackIn_59_0 = stackOut_57_0;
-                    break L14;
-                  }
-                }
-                var7 = stackIn_59_0;
-                var8 = ((tf) this).field_s * ((tf) this).field_B / 256;
-                var9 = -var8 + ((tf) this).field_B;
-                var10 = 0;
-                L15: while (true) {
-                  if (var10 >= var6) {
-                    break L11;
-                  } else {
-                    param0[var10 + var7] = var9 * param0[var10 + var7] + var8 * ((tf) this).field_v[var10] >> -758450424;
-                    var10++;
-                    continue L15;
-                  }
-                }
-              }
-            }
-          }
-          return;
+          throw kk.a((Throwable) (Object) stackIn_64_0, stackIn_64_2 + 44 + param1 + 44 + param2 + 41);
         }
     }
 
@@ -492,326 +650,459 @@ final class tf extends tj {
 
     public static void f(int param0) {
         field_r = null;
-        int var1 = 38 / ((param0 - -51) / 59);
+        int var1 = 19;
         field_n = null;
         field_A = null;
         field_o = null;
     }
 
     final static float a(byte param0, float param1, wc[] param2) {
+        float var3_float = 0.0f;
+        RuntimeException var3 = null;
+        int var4 = 0;
         int var5 = 0;
-        int var6 = HoldTheLine.field_D;
-        float var3 = 0.0f;
-        int var4 = (int)param1;
-        if (param0 <= 74) {
-            Object var7 = null;
-            hj[] discarded$0 = tf.a(115, (gn) null, 72, true);
+        int var6 = 0;
+        Object var7 = null;
+        float stackIn_9_0 = 0.0f;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        float stackOut_8_0 = 0.0f;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        var6 = HoldTheLine.field_D;
+        try {
+          L0: {
+            L1: {
+              var3_float = 0.0f;
+              var4 = (int)param1;
+              if (param0 > 74) {
+                break L1;
+              } else {
+                var7 = null;
+                hj[] discarded$2 = tf.a(115, (gn) null, 72, true);
+                break L1;
+              }
+            }
+            var5 = 0;
+            L2: while (true) {
+              if (var5 >= var4) {
+                L3: {
+                  if (param1 == (float)var4) {
+                    break L3;
+                  } else {
+                    var3_float = var3_float + param2[var4].f(50) * ((float)(-var4) + param1);
+                    break L3;
+                  }
+                }
+                stackOut_8_0 = var3_float;
+                stackIn_9_0 = stackOut_8_0;
+                break L0;
+              } else {
+                var3_float = var3_float + param2[var5].f(50);
+                var5++;
+                continue L2;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var3 = decompiledCaughtException;
+            stackOut_10_0 = (RuntimeException) var3;
+            stackOut_10_1 = new StringBuilder().append("tf.E(").append(param0).append(44).append(param1).append(44);
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
+            if (param2 == null) {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L4;
+            } else {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L4;
+            }
+          }
+          throw kk.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
         }
-        for (var5 = 0; var5 < var4; var5++) {
-            var3 = var3 + param2[var5].f(50);
-        }
-        if (param1 != (float)var4) {
-            var3 = var3 + param2[var4].f(50) * ((float)(-var4) + param1);
-        }
-        return var3;
+        return stackIn_9_0;
     }
 
     private final void a(kf param0, byte param1, kf param2) {
-        ((tf) this).field_q = param0;
-        ((tf) this).field_y = 1048576;
-        int var4 = 91 / ((param1 - 21) / 54);
-        ((tf) this).field_C = param2;
+        try {
+            ((tf) this).field_q = param0;
+            ((tf) this).field_y = 1048576;
+            int var4_int = 91 / ((param1 - 21) / 54);
+            ((tf) this).field_C = param2;
+        } catch (RuntimeException runtimeException) {
+            throw kk.a((Throwable) (Object) runtimeException, "tf.K(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     private final void a(int param0, kf param1, int param2, int param3) {
-        param1.a((byte) 108, -1, param3);
-        if (param2 != 17945) {
-            ((tf) this).field_y = 96;
+        try {
+            param1.a((byte) 108, -1, param3);
+            if (param2 != 17945) {
+                ((tf) this).field_y = 96;
+            }
+            param1.b(param0, param2 + -17943);
+        } catch (RuntimeException runtimeException) {
+            throw kk.a((Throwable) (Object) runtimeException, "tf.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 41);
         }
-        param1.b(param0, param2 + -17943);
     }
 
     final synchronized void a(int param0, int param1, vi param2, byte param3, boolean param4, int param5) {
-        int var7 = 0;
+        RuntimeException var7 = null;
+        int var7_int = 0;
         int var8 = 0;
         Object var9 = null;
-        Object stackIn_16_0 = null;
         Object stackIn_17_0 = null;
         Object stackIn_18_0 = null;
-        int stackIn_18_1 = 0;
-        int stackIn_31_0 = 0;
-        kf stackIn_38_0 = null;
-        int stackIn_38_1 = 0;
-        vi stackIn_38_2 = null;
-        kf stackIn_39_0 = null;
-        int stackIn_39_1 = 0;
-        vi stackIn_39_2 = null;
-        kf stackIn_40_0 = null;
-        int stackIn_40_1 = 0;
-        vi stackIn_40_2 = null;
-        int stackIn_40_3 = 0;
-        kf stackIn_48_0 = null;
-        int stackIn_48_1 = 0;
-        vi stackIn_48_2 = null;
-        kf stackIn_49_0 = null;
-        int stackIn_49_1 = 0;
-        vi stackIn_49_2 = null;
-        kf stackIn_50_0 = null;
-        int stackIn_50_1 = 0;
-        vi stackIn_50_2 = null;
-        int stackIn_50_3 = 0;
-        Object stackOut_15_0 = null;
+        Object stackIn_19_0 = null;
+        int stackIn_19_1 = 0;
+        int stackIn_34_0 = 0;
+        kf stackIn_41_0 = null;
+        int stackIn_41_1 = 0;
+        vi stackIn_41_2 = null;
+        kf stackIn_42_0 = null;
+        int stackIn_42_1 = 0;
+        vi stackIn_42_2 = null;
+        kf stackIn_43_0 = null;
+        int stackIn_43_1 = 0;
+        vi stackIn_43_2 = null;
+        int stackIn_43_3 = 0;
+        kf stackIn_51_0 = null;
+        int stackIn_51_1 = 0;
+        vi stackIn_51_2 = null;
+        kf stackIn_52_0 = null;
+        int stackIn_52_1 = 0;
+        vi stackIn_52_2 = null;
+        kf stackIn_53_0 = null;
+        int stackIn_53_1 = 0;
+        vi stackIn_53_2 = null;
+        int stackIn_53_3 = 0;
+        RuntimeException stackIn_57_0 = null;
+        StringBuilder stackIn_57_1 = null;
+        RuntimeException stackIn_58_0 = null;
+        StringBuilder stackIn_58_1 = null;
+        RuntimeException stackIn_59_0 = null;
+        StringBuilder stackIn_59_1 = null;
+        String stackIn_59_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        Object stackOut_16_0 = null;
+        Object stackOut_18_0 = null;
+        int stackOut_18_1 = 0;
         Object stackOut_17_0 = null;
         int stackOut_17_1 = 0;
-        Object stackOut_16_0 = null;
-        int stackOut_16_1 = 0;
-        int stackOut_30_0 = 0;
-        int stackOut_29_0 = 0;
-        kf stackOut_47_0 = null;
-        int stackOut_47_1 = 0;
-        vi stackOut_47_2 = null;
-        kf stackOut_49_0 = null;
-        int stackOut_49_1 = 0;
-        vi stackOut_49_2 = null;
-        int stackOut_49_3 = 0;
-        kf stackOut_48_0 = null;
-        int stackOut_48_1 = 0;
-        vi stackOut_48_2 = null;
-        int stackOut_48_3 = 0;
-        kf stackOut_37_0 = null;
-        int stackOut_37_1 = 0;
-        vi stackOut_37_2 = null;
-        kf stackOut_39_0 = null;
-        int stackOut_39_1 = 0;
-        vi stackOut_39_2 = null;
-        int stackOut_39_3 = 0;
-        kf stackOut_38_0 = null;
-        int stackOut_38_1 = 0;
-        vi stackOut_38_2 = null;
-        int stackOut_38_3 = 0;
-        L0: {
-          var8 = HoldTheLine.field_D;
-          if (!((tf) this).field_x) {
-            break L0;
-          } else {
-            if (param4) {
-              L1: {
-                if (((tf) this).field_D > 0) {
+        int stackOut_33_0 = 0;
+        int stackOut_32_0 = 0;
+        kf stackOut_50_0 = null;
+        int stackOut_50_1 = 0;
+        vi stackOut_50_2 = null;
+        kf stackOut_52_0 = null;
+        int stackOut_52_1 = 0;
+        vi stackOut_52_2 = null;
+        int stackOut_52_3 = 0;
+        kf stackOut_51_0 = null;
+        int stackOut_51_1 = 0;
+        vi stackOut_51_2 = null;
+        int stackOut_51_3 = 0;
+        kf stackOut_40_0 = null;
+        int stackOut_40_1 = 0;
+        vi stackOut_40_2 = null;
+        kf stackOut_42_0 = null;
+        int stackOut_42_1 = 0;
+        vi stackOut_42_2 = null;
+        int stackOut_42_3 = 0;
+        kf stackOut_41_0 = null;
+        int stackOut_41_1 = 0;
+        vi stackOut_41_2 = null;
+        int stackOut_41_3 = 0;
+        RuntimeException stackOut_56_0 = null;
+        StringBuilder stackOut_56_1 = null;
+        RuntimeException stackOut_58_0 = null;
+        StringBuilder stackOut_58_1 = null;
+        String stackOut_58_2 = null;
+        RuntimeException stackOut_57_0 = null;
+        StringBuilder stackOut_57_1 = null;
+        String stackOut_57_2 = null;
+        var8 = HoldTheLine.field_D;
+        try {
+          L0: {
+            L1: {
+              if (!((tf) this).field_x) {
+                break L1;
+              } else {
+                if (param4) {
                   L2: {
-                    if (((tf) this).field_z != null) {
-                      ((tf) this).field_q.f(-127);
-                      break L2;
+                    if (((tf) this).field_D > 0) {
+                      L3: {
+                        if (((tf) this).field_z != null) {
+                          ((tf) this).field_q.f(-127);
+                          break L3;
+                        } else {
+                          break L3;
+                        }
+                      }
+                      ((tf) this).field_z = param2;
+                      if (param2 == null) {
+                        break L2;
+                      } else {
+                        ((tf) this).field_q.a(param3 + -2128026886, param2, false);
+                        this.a(param1, ((tf) this).field_q, 17945, param5);
+                        break L2;
+                      }
                     } else {
-                      break L2;
+                      L4: {
+                        if (((tf) this).field_m != null) {
+                          ((tf) this).field_C.f(-125);
+                          break L4;
+                        } else {
+                          break L4;
+                        }
+                      }
+                      ((tf) this).field_m = param2;
+                      if (param2 == null) {
+                        break L2;
+                      } else {
+                        ((tf) this).field_C.a(-2128027000, param2, false);
+                        this.a(param1, ((tf) this).field_C, 17945, param5);
+                        break L2;
+                      }
                     }
                   }
-                  ((tf) this).field_z = param2;
-                  if (param2 == null) {
-                    break L1;
-                  } else {
-                    ((tf) this).field_q.a(param3 + -2128026886, param2, false);
-                    this.a(param1, ((tf) this).field_q, 17945, param5);
-                    break L1;
-                  }
+                  return;
                 } else {
-                  L3: {
-                    if (((tf) this).field_m != null) {
-                      ((tf) this).field_C.f(-125);
-                      break L3;
-                    } else {
-                      break L3;
-                    }
-                  }
-                  ((tf) this).field_m = param2;
-                  if (param2 == null) {
-                    break L1;
-                  } else {
-                    ((tf) this).field_C.a(-2128027000, param2, false);
-                    this.a(param1, ((tf) this).field_C, 17945, param5);
-                    break L1;
-                  }
+                  break L1;
                 }
               }
-              return;
-            } else {
-              break L0;
             }
-          }
-        }
-        L4: {
-          stackOut_15_0 = this;
-          stackIn_17_0 = stackOut_15_0;
-          stackIn_16_0 = stackOut_15_0;
-          if (!param4) {
-            stackOut_17_0 = this;
-            stackOut_17_1 = 0;
-            stackIn_18_0 = stackOut_17_0;
-            stackIn_18_1 = stackOut_17_1;
-            break L4;
-          } else {
-            stackOut_16_0 = this;
-            stackOut_16_1 = 1;
-            stackIn_18_0 = stackOut_16_0;
-            stackIn_18_1 = stackOut_16_1;
-            break L4;
-          }
-        }
-        ((tf) this).field_x = stackIn_18_1 != 0;
-        if (((tf) this).field_z != param2) {
-          if (param2 == ((tf) this).field_m) {
-            ((tf) this).field_D = -param0;
-            this.a(param1, ((tf) this).field_C, 17945, param5);
-            return;
-          } else {
             L5: {
-              if (param3 == -114) {
+              stackOut_16_0 = this;
+              stackIn_18_0 = stackOut_16_0;
+              stackIn_17_0 = stackOut_16_0;
+              if (!param4) {
+                stackOut_18_0 = this;
+                stackOut_18_1 = 0;
+                stackIn_19_0 = stackOut_18_0;
+                stackIn_19_1 = stackOut_18_1;
                 break L5;
               } else {
-                var9 = null;
-                ((tf) this).a(85, 112, (vi) null, (byte) -26, false, -91);
+                stackOut_17_0 = this;
+                stackOut_17_1 = 1;
+                stackIn_19_0 = stackOut_17_0;
+                stackIn_19_1 = stackOut_17_1;
                 break L5;
               }
             }
-            L6: {
-              if (((tf) this).field_z == null) {
-                var7 = 1;
-                break L6;
+            ((tf) this).field_x = stackIn_19_1 != 0;
+            if (((tf) this).field_z != param2) {
+              if (param2 == ((tf) this).field_m) {
+                ((tf) this).field_D = -param0;
+                this.a(param1, ((tf) this).field_C, 17945, param5);
+                return;
               } else {
-                if (((tf) this).field_m != null) {
-                  L7: {
-                    if (((tf) this).field_y >= 524288) {
-                      stackOut_30_0 = 0;
-                      stackIn_31_0 = stackOut_30_0;
+                L6: {
+                  if (param3 == -114) {
+                    break L6;
+                  } else {
+                    var9 = null;
+                    ((tf) this).a(85, 112, (vi) null, (byte) -26, false, -91);
+                    break L6;
+                  }
+                }
+                L7: {
+                  if (((tf) this).field_z == null) {
+                    var7_int = 1;
+                    break L7;
+                  } else {
+                    if (((tf) this).field_m != null) {
+                      L8: {
+                        if (((tf) this).field_y >= 524288) {
+                          stackOut_33_0 = 0;
+                          stackIn_34_0 = stackOut_33_0;
+                          break L8;
+                        } else {
+                          stackOut_32_0 = 1;
+                          stackIn_34_0 = stackOut_32_0;
+                          break L8;
+                        }
+                      }
+                      var7_int = stackIn_34_0;
                       break L7;
                     } else {
-                      stackOut_29_0 = 1;
-                      stackIn_31_0 = stackOut_29_0;
+                      var7_int = 0;
                       break L7;
                     }
                   }
-                  var7 = stackIn_31_0;
-                  break L6;
-                } else {
-                  var7 = 0;
-                  break L6;
                 }
-              }
-            }
-            L8: {
-              if (var7 == 0) {
                 L9: {
-                  if (((tf) this).field_m != null) {
-                    ((tf) this).field_C.f(-125);
-                    break L9;
-                  } else {
-                    break L9;
-                  }
-                }
-                L10: {
-                  ((tf) this).field_m = param2;
-                  if (param2 != null) {
+                  if (var7_int == 0) {
+                    L10: {
+                      if (((tf) this).field_m != null) {
+                        ((tf) this).field_C.f(-125);
+                        break L10;
+                      } else {
+                        break L10;
+                      }
+                    }
                     L11: {
-                      stackOut_47_0 = ((tf) this).field_C;
-                      stackOut_47_1 = -2128027000;
-                      stackOut_47_2 = (vi) param2;
-                      stackIn_49_0 = stackOut_47_0;
-                      stackIn_49_1 = stackOut_47_1;
-                      stackIn_49_2 = stackOut_47_2;
-                      stackIn_48_0 = stackOut_47_0;
-                      stackIn_48_1 = stackOut_47_1;
-                      stackIn_48_2 = stackOut_47_2;
-                      if (param4) {
-                        stackOut_49_0 = (kf) (Object) stackIn_49_0;
-                        stackOut_49_1 = stackIn_49_1;
-                        stackOut_49_2 = (vi) (Object) stackIn_49_2;
-                        stackOut_49_3 = 0;
-                        stackIn_50_0 = stackOut_49_0;
-                        stackIn_50_1 = stackOut_49_1;
-                        stackIn_50_2 = stackOut_49_2;
-                        stackIn_50_3 = stackOut_49_3;
+                      ((tf) this).field_m = param2;
+                      if (param2 != null) {
+                        L12: {
+                          stackOut_50_0 = ((tf) this).field_C;
+                          stackOut_50_1 = -2128027000;
+                          stackOut_50_2 = (vi) param2;
+                          stackIn_52_0 = stackOut_50_0;
+                          stackIn_52_1 = stackOut_50_1;
+                          stackIn_52_2 = stackOut_50_2;
+                          stackIn_51_0 = stackOut_50_0;
+                          stackIn_51_1 = stackOut_50_1;
+                          stackIn_51_2 = stackOut_50_2;
+                          if (param4) {
+                            stackOut_52_0 = (kf) (Object) stackIn_52_0;
+                            stackOut_52_1 = stackIn_52_1;
+                            stackOut_52_2 = (vi) (Object) stackIn_52_2;
+                            stackOut_52_3 = 0;
+                            stackIn_53_0 = stackOut_52_0;
+                            stackIn_53_1 = stackOut_52_1;
+                            stackIn_53_2 = stackOut_52_2;
+                            stackIn_53_3 = stackOut_52_3;
+                            break L12;
+                          } else {
+                            stackOut_51_0 = (kf) (Object) stackIn_51_0;
+                            stackOut_51_1 = stackIn_51_1;
+                            stackOut_51_2 = (vi) (Object) stackIn_51_2;
+                            stackOut_51_3 = 1;
+                            stackIn_53_0 = stackOut_51_0;
+                            stackIn_53_1 = stackOut_51_1;
+                            stackIn_53_2 = stackOut_51_2;
+                            stackIn_53_3 = stackOut_51_3;
+                            break L12;
+                          }
+                        }
+                        ((kf) (Object) stackIn_53_0).a(stackIn_53_1, stackIn_53_2, stackIn_53_3 != 0);
+                        this.a(param1, ((tf) this).field_C, 17945, param5);
                         break L11;
                       } else {
-                        stackOut_48_0 = (kf) (Object) stackIn_48_0;
-                        stackOut_48_1 = stackIn_48_1;
-                        stackOut_48_2 = (vi) (Object) stackIn_48_2;
-                        stackOut_48_3 = 1;
-                        stackIn_50_0 = stackOut_48_0;
-                        stackIn_50_1 = stackOut_48_1;
-                        stackIn_50_2 = stackOut_48_2;
-                        stackIn_50_3 = stackOut_48_3;
                         break L11;
                       }
                     }
-                    ((kf) (Object) stackIn_50_0).a(stackIn_50_1, stackIn_50_2, stackIn_50_3 != 0);
-                    this.a(param1, ((tf) this).field_C, 17945, param5);
-                    break L10;
+                    ((tf) this).field_D = -param0;
+                    break L9;
                   } else {
-                    break L10;
-                  }
-                }
-                ((tf) this).field_D = -param0;
-                break L8;
-              } else {
-                L12: {
-                  if (null == ((tf) this).field_z) {
-                    break L12;
-                  } else {
-                    ((tf) this).field_q.f(param3 ^ 13);
-                    break L12;
-                  }
-                }
-                L13: {
-                  ((tf) this).field_z = param2;
-                  if (param2 == null) {
-                    break L13;
-                  } else {
+                    L13: {
+                      if (null == ((tf) this).field_z) {
+                        break L13;
+                      } else {
+                        ((tf) this).field_q.f(param3 ^ 13);
+                        break L13;
+                      }
+                    }
                     L14: {
-                      stackOut_37_0 = ((tf) this).field_q;
-                      stackOut_37_1 = -2128027000;
-                      stackOut_37_2 = (vi) param2;
-                      stackIn_39_0 = stackOut_37_0;
-                      stackIn_39_1 = stackOut_37_1;
-                      stackIn_39_2 = stackOut_37_2;
-                      stackIn_38_0 = stackOut_37_0;
-                      stackIn_38_1 = stackOut_37_1;
-                      stackIn_38_2 = stackOut_37_2;
-                      if (param4) {
-                        stackOut_39_0 = (kf) (Object) stackIn_39_0;
-                        stackOut_39_1 = stackIn_39_1;
-                        stackOut_39_2 = (vi) (Object) stackIn_39_2;
-                        stackOut_39_3 = 0;
-                        stackIn_40_0 = stackOut_39_0;
-                        stackIn_40_1 = stackOut_39_1;
-                        stackIn_40_2 = stackOut_39_2;
-                        stackIn_40_3 = stackOut_39_3;
+                      ((tf) this).field_z = param2;
+                      if (param2 == null) {
                         break L14;
                       } else {
-                        stackOut_38_0 = (kf) (Object) stackIn_38_0;
-                        stackOut_38_1 = stackIn_38_1;
-                        stackOut_38_2 = (vi) (Object) stackIn_38_2;
-                        stackOut_38_3 = 1;
-                        stackIn_40_0 = stackOut_38_0;
-                        stackIn_40_1 = stackOut_38_1;
-                        stackIn_40_2 = stackOut_38_2;
-                        stackIn_40_3 = stackOut_38_3;
+                        L15: {
+                          stackOut_40_0 = ((tf) this).field_q;
+                          stackOut_40_1 = -2128027000;
+                          stackOut_40_2 = (vi) param2;
+                          stackIn_42_0 = stackOut_40_0;
+                          stackIn_42_1 = stackOut_40_1;
+                          stackIn_42_2 = stackOut_40_2;
+                          stackIn_41_0 = stackOut_40_0;
+                          stackIn_41_1 = stackOut_40_1;
+                          stackIn_41_2 = stackOut_40_2;
+                          if (param4) {
+                            stackOut_42_0 = (kf) (Object) stackIn_42_0;
+                            stackOut_42_1 = stackIn_42_1;
+                            stackOut_42_2 = (vi) (Object) stackIn_42_2;
+                            stackOut_42_3 = 0;
+                            stackIn_43_0 = stackOut_42_0;
+                            stackIn_43_1 = stackOut_42_1;
+                            stackIn_43_2 = stackOut_42_2;
+                            stackIn_43_3 = stackOut_42_3;
+                            break L15;
+                          } else {
+                            stackOut_41_0 = (kf) (Object) stackIn_41_0;
+                            stackOut_41_1 = stackIn_41_1;
+                            stackOut_41_2 = (vi) (Object) stackIn_41_2;
+                            stackOut_41_3 = 1;
+                            stackIn_43_0 = stackOut_41_0;
+                            stackIn_43_1 = stackOut_41_1;
+                            stackIn_43_2 = stackOut_41_2;
+                            stackIn_43_3 = stackOut_41_3;
+                            break L15;
+                          }
+                        }
+                        ((kf) (Object) stackIn_43_0).a(stackIn_43_1, stackIn_43_2, stackIn_43_3 != 0);
+                        this.a(param1, ((tf) this).field_q, param3 ^ -18025, param5);
                         break L14;
                       }
                     }
-                    ((kf) (Object) stackIn_40_0).a(stackIn_40_1, stackIn_40_2, stackIn_40_3 != 0);
-                    this.a(param1, ((tf) this).field_q, param3 ^ -18025, param5);
-                    break L13;
+                    ((tf) this).field_D = param0;
+                    break L9;
                   }
                 }
-                ((tf) this).field_D = param0;
-                break L8;
+                break L0;
               }
+            } else {
+              ((tf) this).field_D = param0;
+              this.a(param1, ((tf) this).field_q, 17945, param5);
+              return;
             }
-            return;
           }
-        } else {
-          ((tf) this).field_D = param0;
-          this.a(param1, ((tf) this).field_q, 17945, param5);
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L16: {
+            var7 = decompiledCaughtException;
+            stackOut_56_0 = (RuntimeException) var7;
+            stackOut_56_1 = new StringBuilder().append("tf.B(").append(param0).append(44).append(param1).append(44);
+            stackIn_58_0 = stackOut_56_0;
+            stackIn_58_1 = stackOut_56_1;
+            stackIn_57_0 = stackOut_56_0;
+            stackIn_57_1 = stackOut_56_1;
+            if (param2 == null) {
+              stackOut_58_0 = (RuntimeException) (Object) stackIn_58_0;
+              stackOut_58_1 = (StringBuilder) (Object) stackIn_58_1;
+              stackOut_58_2 = "null";
+              stackIn_59_0 = stackOut_58_0;
+              stackIn_59_1 = stackOut_58_1;
+              stackIn_59_2 = stackOut_58_2;
+              break L16;
+            } else {
+              stackOut_57_0 = (RuntimeException) (Object) stackIn_57_0;
+              stackOut_57_1 = (StringBuilder) (Object) stackIn_57_1;
+              stackOut_57_2 = "{...}";
+              stackIn_59_0 = stackOut_57_0;
+              stackIn_59_1 = stackOut_57_1;
+              stackIn_59_2 = stackOut_57_2;
+              break L16;
+            }
+          }
+          throw kk.a((Throwable) (Object) stackIn_59_0, stackIn_59_2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
     }
 

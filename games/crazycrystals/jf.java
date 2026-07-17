@@ -7,9 +7,6 @@ final class jf {
 
     public static void a(int param0) {
         field_b = null;
-        if (param0 != 0) {
-            field_a = 1;
-        }
     }
 
     final static wm a(int param0, int param1, int param2, int param3, int param4) {

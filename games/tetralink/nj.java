@@ -18,7 +18,7 @@ final class nj {
               if (b.a(0)) {
                 return true;
               } else {
-                if (ld.b(param3, param0 ^ -1885068379, param1, param2)) {
+                if (ld.b(15, param0 ^ -1885068379, param1, param2)) {
                   return true;
                 } else {
                   return false;
@@ -29,7 +29,7 @@ final class nj {
               if (b.a(0)) {
                 return true;
               } else {
-                if (ld.b(param3, param0 ^ -1885068379, param1, param2)) {
+                if (ld.b(15, param0 ^ -1885068379, param1, param2)) {
                   return true;
                 } else {
                   return false;
@@ -42,7 +42,7 @@ final class nj {
                 if (b.a(0)) {
                   return true;
                 } else {
-                  if (ld.b(param3, param0 ^ -1885068379, param1, param2)) {
+                  if (ld.b(15, param0 ^ -1885068379, param1, param2)) {
                     return true;
                   } else {
                     return false;
@@ -53,7 +53,7 @@ final class nj {
                 if (b.a(0)) {
                   return true;
                 } else {
-                  if (ld.b(param3, param0 ^ -1885068379, param1, param2)) {
+                  if (ld.b(15, param0 ^ -1885068379, param1, param2)) {
                     return true;
                   } else {
                     return false;
@@ -79,7 +79,7 @@ final class nj {
                   if (b.a(0)) {
                     return true;
                   } else {
-                    if (ld.b(param3, param0 ^ -1885068379, param1, param2)) {
+                    if (ld.b(15, param0 ^ -1885068379, param1, param2)) {
                       return true;
                     } else {
                       return false;
@@ -89,7 +89,7 @@ final class nj {
                   if (b.a(0)) {
                     return true;
                   } else {
-                    if (ld.b(param3, param0 ^ -1885068379, param1, param2)) {
+                    if (ld.b(15, param0 ^ -1885068379, param1, param2)) {
                       return true;
                     } else {
                       return false;
@@ -102,7 +102,7 @@ final class nj {
                 if (b.a(0)) {
                   return true;
                 } else {
-                  if (ld.b(param3, param0 ^ -1885068379, param1, param2)) {
+                  if (ld.b(15, param0 ^ -1885068379, param1, param2)) {
                     return true;
                   } else {
                     return false;
@@ -113,7 +113,7 @@ final class nj {
                 if (b.a(0)) {
                   return true;
                 } else {
-                  if (!ld.b(param3, param0 ^ -1885068379, param1, param2)) {
+                  if (!ld.b(15, param0 ^ -1885068379, param1, param2)) {
                     return false;
                   } else {
                     return true;
@@ -132,10 +132,10 @@ final class nj {
         Object var1 = null;
         Throwable var2 = null;
         int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
+        int stackIn_6_0 = 0;
         Throwable decompiledCaughtException = null;
         int stackOut_3_0 = 0;
-        int stackOut_7_0 = 0;
+        int stackOut_5_0 = 0;
         var1 = (Object) (Object) vi.field_a;
         synchronized (var1) {
           L0: {
@@ -144,60 +144,43 @@ final class nj {
               stackIn_4_0 = stackOut_3_0;
               return stackIn_4_0 != 0;
             } else {
-              L1: {
-                dg.field_e = af.field_e[dh.field_m];
-                tb.field_m = fm.field_c[dh.field_m];
-                if (param0 == 28) {
-                  break L1;
-                } else {
-                  field_g = -102;
-                  break L1;
-                }
-              }
+              dg.field_e = af.field_e[dh.field_m];
+              tb.field_m = fm.field_c[dh.field_m];
               dh.field_m = dh.field_m + 1 & 127;
-              stackOut_7_0 = 1;
-              stackIn_8_0 = stackOut_7_0;
+              stackOut_5_0 = 1;
+              stackIn_6_0 = stackOut_5_0;
               break L0;
             }
           }
         }
-        return stackIn_8_0 != 0;
+        return stackIn_6_0 != 0;
     }
 
     final static void a(String param0, byte param1, String param2, int param3, int param4) {
         in.field_g.field_Hb = in.field_g.field_Hb + ba.field_L.field_Hb;
         if (param1 != -48) {
-          return;
-        } else {
-          in.field_g.field_N = param3;
-          in.field_g.field_O = param2;
-          in.field_g.field_jb = param0;
-          ba.field_L.field_M = ba.field_L.field_M + ba.field_L.field_Hb;
-          ba.field_L.field_Hb = param4;
-          in.field_g.field_Hb = in.field_g.field_Hb - ba.field_L.field_Hb;
-          ba.field_L.field_M = ba.field_L.field_M - ba.field_L.field_Hb;
-          return;
+            return;
+        }
+        try {
+            in.field_g.field_N = param3;
+            in.field_g.field_O = param2;
+            in.field_g.field_jb = param0;
+            ba.field_L.field_M = ba.field_L.field_M + ba.field_L.field_Hb;
+            ba.field_L.field_Hb = param4;
+            in.field_g.field_Hb = in.field_g.field_Hb - ba.field_L.field_Hb;
+            ba.field_L.field_M = ba.field_L.field_M - ba.field_L.field_Hb;
+        } catch (RuntimeException runtimeException) {
+            throw oi.a((Throwable) (Object) runtimeException, "nj.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 41);
         }
     }
 
     public static void a(byte param0) {
-        Object var2 = null;
         field_e = null;
         field_h = null;
         field_b = null;
-        if (param0 <= 93) {
-          var2 = null;
-          nj.a((String) null, (byte) -11, (String) null, -21, -123);
-          field_f = null;
-          field_a = null;
-          field_c = null;
-          return;
-        } else {
-          field_f = null;
-          field_a = null;
-          field_c = null;
-          return;
-        }
+        field_f = null;
+        field_a = null;
+        field_c = null;
     }
 
     static {

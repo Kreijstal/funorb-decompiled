@@ -12,9 +12,6 @@ final class qk extends k {
 
     public static void d(int param0) {
         field_q = null;
-        if (param0 < 66) {
-            return;
-        }
         field_m = null;
         field_k = null;
         field_p = null;
@@ -61,12 +58,12 @@ final class qk extends k {
                 L1: {
                   var8 = ((qk) this).field_o * (-var20[var7] + var21[var7]);
                   var9 = (-var5[-1 + var7 & wp.field_r] + var5[1 + var7 & wp.field_r]) * ((qk) this).field_o;
-                  var10 = var9 >> 2133613836;
-                  var11 = var8 >> 1835324652;
-                  var12 = var10 * var10 >> 345903020;
-                  var13 = var11 * var11 >> -153846100;
+                  var10 = var9 >> 12;
+                  var11 = var8 >> 12;
+                  var12 = var10 * var10 >> 12;
+                  var13 = var11 * var11 >> 12;
                   var14 = (int)(4096.0 * Math.sqrt((double)((float)(4096 + (var12 + var13)) / 4096.0f)));
-                  if (-1 == (var14 ^ -1)) {
+                  if (var14 == 0) {
                     stackOut_16_0 = 0;
                     stackIn_17_0 = stackOut_16_0;
                     break L1;
@@ -101,12 +98,12 @@ final class qk extends k {
                 L3: {
                   var8 = ((qk) this).field_o * (-var20[var7] + var21[var7]);
                   var9 = (-var5[-1 + var7 & wp.field_r] + var5[1 + var7 & wp.field_r]) * ((qk) this).field_o;
-                  var10 = var9 >> 2133613836;
-                  var11 = var8 >> 1835324652;
-                  var12 = var10 * var10 >> 345903020;
-                  var13 = var11 * var11 >> -153846100;
+                  var10 = var9 >> 12;
+                  var11 = var8 >> 12;
+                  var12 = var10 * var10 >> 12;
+                  var13 = var11 * var11 >> 12;
                   var14 = (int)(4096.0 * Math.sqrt((double)((float)(4096 + (var12 + var13)) / 4096.0f)));
-                  if (-1 == (var14 ^ -1)) {
+                  if (var14 == 0) {
                     stackOut_6_0 = 0;
                     stackIn_7_0 = stackOut_6_0;
                     break L3;
@@ -132,21 +129,69 @@ final class qk extends k {
     }
 
     final void a(byte param0, lu param1, int param2) {
-        if (param0 == -71) {
-          if (param2 == 0) {
-            ((qk) this).field_o = param1.e((byte) 47);
-            return;
-          } else {
-            return;
+        RuntimeException var4 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 == -71) {
+                break L1;
+              } else {
+                field_m = null;
+                break L1;
+              }
+            }
+            if (param2 != 0) {
+              break L0;
+            } else {
+              ((qk) this).field_o = param1.e((byte) 47);
+              return;
+            }
           }
-        } else {
-          field_m = null;
-          if (param2 != 0) {
-            return;
-          } else {
-            ((qk) this).field_o = param1.e((byte) 47);
-            return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var4 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var4;
+            stackOut_5_1 = new StringBuilder().append("qk.E(").append(param0).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param1 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L2;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L2;
+            }
           }
+          throw pe.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param2 + 41);
         }
     }
 

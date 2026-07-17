@@ -9,9 +9,6 @@ final class uf {
     static int[] field_d;
 
     final static boolean a(boolean param0) {
-        if (param0) {
-            return true;
-        }
         if (aj.field_s == null) {
             return false;
         }
@@ -25,17 +22,21 @@ final class uf {
         field_b = null;
         field_e = null;
         field_d = null;
-        int var1 = 39 / ((33 - param0) / 45);
+        int var1 = 19;
     }
 
     protected final void finalize() throws Throwable {
         ((uf) this).field_c.d(-124, ((uf) this).field_a);
-        this.finalize();
+        super.finalize();
     }
 
     uf(wl param0, int param1, int param2) {
-        ((uf) this).field_a = param2;
-        ((uf) this).field_c = param0;
+        try {
+            ((uf) this).field_a = param2;
+            ((uf) this).field_c = param0;
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) (Object) runtimeException, "uf.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     static {

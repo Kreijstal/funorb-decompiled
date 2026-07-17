@@ -7,15 +7,12 @@ final class ag {
     static int[] field_c;
 
     final static void a(int param0, int param1) {
-        int var2 = -12 % ((param1 - -24) / 61);
+        int var2 = 0;
         hk.field_e = 1000000000L / (long)param0;
     }
 
     public static void a(int param0) {
         field_b = null;
-        if (param0 != 16760896) {
-            return;
-        }
         field_c = null;
     }
 

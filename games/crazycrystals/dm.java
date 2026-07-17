@@ -7,7 +7,11 @@ final class dm extends jb {
     static ra field_f;
 
     dm(byte[] param0) {
-        ((dm) this).field_g = param0;
+        try {
+            ((dm) this).field_g = param0;
+        } catch (RuntimeException runtimeException) {
+            throw dn.a((Throwable) (Object) runtimeException, "dm.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void a(int param0) {

@@ -11,70 +11,56 @@ final class qk {
     int field_f;
 
     final static boolean a(char param0, byte param1) {
-        int stackIn_27_0 = 0;
-        int stackIn_30_0 = 0;
-        int stackOut_28_0 = 0;
-        int stackOut_25_0 = 0;
+        int stackIn_25_0 = 0;
+        int stackIn_28_0 = 0;
         int stackOut_26_0 = 0;
-        if (param1 == -110) {
-          if (param0 < 48) {
-            if (65 > param0) {
-              L0: {
-                if (param0 < 97) {
-                  break L0;
-                } else {
-                  if (122 < param0) {
-                    break L0;
-                  } else {
-                    return true;
-                  }
-                }
-              }
-              return false;
-            } else {
-              if (param0 <= 90) {
-                stackOut_28_0 = 1;
-                stackIn_30_0 = stackOut_28_0;
-                return stackIn_30_0 != 0;
+        int stackOut_23_0 = 0;
+        int stackOut_24_0 = 0;
+        if (param0 < 48) {
+          if (65 > param0) {
+            L0: {
+              if (param0 < 97) {
+                break L0;
               } else {
-                L1: {
-                  L2: {
-                    if (param0 < 97) {
-                      break L2;
-                    } else {
-                      if (122 < param0) {
-                        break L2;
-                      } else {
-                        stackOut_25_0 = 1;
-                        stackIn_27_0 = stackOut_25_0;
-                        break L1;
-                      }
-                    }
-                  }
-                  stackOut_26_0 = 0;
-                  stackIn_27_0 = stackOut_26_0;
-                  break L1;
-                }
-                return stackIn_27_0 != 0;
-              }
-            }
-          } else {
-            if (param0 > 57) {
-              if (65 <= param0) {
-                if (param0 > 90) {
-                  if (param0 >= 97) {
-                    if (122 < param0) {
-                      return false;
-                    } else {
-                      return true;
-                    }
-                  } else {
-                    return false;
-                  }
+                if (122 < param0) {
+                  break L0;
                 } else {
                   return true;
                 }
-              } else {
+              }
+            }
+            return false;
+          } else {
+            if (param0 <= 90) {
+              stackOut_26_0 = 1;
+              stackIn_28_0 = stackOut_26_0;
+              return stackIn_28_0 != 0;
+            } else {
+              L1: {
+                L2: {
+                  if (param0 < 97) {
+                    break L2;
+                  } else {
+                    if (122 < param0) {
+                      break L2;
+                    } else {
+                      stackOut_23_0 = 1;
+                      stackIn_25_0 = stackOut_23_0;
+                      break L1;
+                    }
+                  }
+                }
+                stackOut_24_0 = 0;
+                stackIn_25_0 = stackOut_24_0;
+                break L1;
+              }
+              return stackIn_25_0 != 0;
+            }
+          }
+        } else {
+          if (param0 > 57) {
+            if (65 <= param0) {
+              if (param0 > 90) {
                 if (param0 >= 97) {
                   if (122 < param0) {
                     return false;
@@ -84,19 +70,29 @@ final class qk {
                 } else {
                   return false;
                 }
+              } else {
+                return true;
               }
             } else {
-              return true;
+              if (param0 >= 97) {
+                if (122 < param0) {
+                  return false;
+                } else {
+                  return true;
+                }
+              } else {
+                return false;
+              }
             }
+          } else {
+            return true;
           }
-        } else {
-          return true;
         }
     }
 
     public static void a(byte param0) {
         field_c = null;
-        int var1 = -39 / ((2 - param0) / 42);
+        int var1 = -19;
         field_e = null;
     }
 

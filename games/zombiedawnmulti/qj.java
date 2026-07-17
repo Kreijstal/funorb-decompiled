@@ -16,31 +16,76 @@ final class qj extends br {
     int field_n;
 
     final static void a(String param0, boolean param1, int param2) {
-        bl.field_h = param1 ? true : false;
-        nj.field_f = true;
-        h.field_L = new ne(nb.field_a, ci.field_d, param0, ch.field_e, bl.field_h);
-        nb.field_a.b(3016, (cf) (Object) h.field_L);
-        if (param2 <= 89) {
-            field_j = null;
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        try {
+          L0: {
+            L1: {
+              bl.field_h = param1;
+              nj.field_f = true;
+              h.field_L = new ne(nb.field_a, ci.field_d, param0, ch.field_e, bl.field_h);
+              nb.field_a.b(3016, (cf) (Object) h.field_L);
+              if (param2 > 89) {
+                break L1;
+              } else {
+                field_j = null;
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_1 = new StringBuilder().append("qj.A(");
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param0 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
+            }
+          }
+          throw fa.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 44 + param2 + 41);
         }
     }
 
     public static void b(boolean param0) {
-        Object var2 = null;
         field_j = null;
-        if (param0) {
-          var2 = null;
-          qj.a((String) null, false, 17);
-          field_m = null;
-          field_o = null;
-          field_l = null;
-          return;
-        } else {
-          field_m = null;
-          field_o = null;
-          field_l = null;
-          return;
-        }
+        field_m = null;
+        field_o = null;
+        field_l = null;
     }
 
     qj(int param0, int param1, int param2, int param3, int param4, int param5) {

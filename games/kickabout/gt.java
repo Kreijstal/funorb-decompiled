@@ -34,7 +34,7 @@ final class gt extends mo {
             var5 = ws.field_c[param3][-1 + param0][3];
             var6 = var4 * ql.field_a[0] / 896;
             var7 = var5 * ql.field_a[1] / 1344;
-            if ((param1 ^ -1) != -1) {
+            if (param1 != 0) {
               var9 = var7 + (-var5 + 1344 + -ws.field_c[param3][-1 + param0][1]);
               var8 = var6 + -var4 + (896 - ws.field_c[param3][param0 - 1][0]);
               break L0;
@@ -54,7 +54,7 @@ final class gt extends mo {
             var5 = ws.field_c[param3][-1 + param0][3];
             var6 = var4 * ql.field_a[0] / 896;
             var7 = var5 * ql.field_a[1] / 1344;
-            if ((param1 ^ -1) != -1) {
+            if (param1 != 0) {
               var9 = var7 + (-var5 + 1344 + -ws.field_c[param3][-1 + param0][1]);
               var8 = var6 + -var4 + (896 - ws.field_c[param3][param0 - 1][0]);
               break L1;
@@ -71,9 +71,6 @@ final class gt extends mo {
     }
 
     final static ak c(int param0) {
-        if (param0 != 0) {
-            return null;
-        }
         ak var2 = new ak(5);
         ak var1 = var2;
         var2.field_e = ((ot) (Object) lu.field_p[2]).h();
@@ -104,16 +101,20 @@ final class gt extends mo {
         if (!mu.a(param0, (byte) -39)) {
             return;
         }
-        ((gt) this).field_g = -1 + param0.l(3, 59);
-        ((gt) this).field_p = param0.l(3, param1 ^ 58) - param1;
-        ((gt) this).field_k = mu.a(param0, (byte) -39);
-        ((gt) this).field_q = mu.a(param0, (byte) -39);
-        ((gt) this).field_s = mu.a(param0, (byte) -39);
-        ((gt) this).field_v = mu.a(param0, (byte) -39);
-        ((gt) this).field_i = mu.a(param0, (byte) -39);
-        ((gt) this).field_n = mu.a(param0, (byte) -39);
-        ((gt) this).field_u = mu.a(param0, (byte) -39);
-        ((gt) this).field_l = param0.l(8, 59);
+        try {
+            ((gt) this).field_g = -1 + param0.l(3, 59);
+            ((gt) this).field_p = param0.l(3, param1 ^ 58) - param1;
+            ((gt) this).field_k = mu.a(param0, (byte) -39);
+            ((gt) this).field_q = mu.a(param0, (byte) -39);
+            ((gt) this).field_s = mu.a(param0, (byte) -39);
+            ((gt) this).field_v = mu.a(param0, (byte) -39);
+            ((gt) this).field_i = mu.a(param0, (byte) -39);
+            ((gt) this).field_n = mu.a(param0, (byte) -39);
+            ((gt) this).field_u = mu.a(param0, (byte) -39);
+            ((gt) this).field_l = param0.l(8, 59);
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "gt.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     final static wh a(boolean param0, int param1, byte param2, int param3) {
@@ -122,47 +123,29 @@ final class gt extends mo {
     }
 
     final void a(byte param0, mo param1) {
-        gt var4 = null;
-        if (param0 >= -52) {
-            ((gt) this).field_g = -97;
-            var4 = (gt) (Object) param1;
-            ((gt) this).field_q = var4.field_q;
-            ((gt) this).field_l = var4.field_l;
-            ((gt) this).field_i = var4.field_i;
-            ((gt) this).field_v = var4.field_v;
-            ((gt) this).field_s = var4.field_s;
-            ((gt) this).field_g = var4.field_g;
-            ((gt) this).field_k = var4.field_k;
-            ((gt) this).field_p = var4.field_p;
-            ((gt) this).field_n = var4.field_n;
-            ((gt) this).field_u = var4.field_u;
-            return;
+        gt var3 = null;
+        try {
+            if (param0 >= -52) {
+                ((gt) this).field_g = -97;
+            }
+            var3 = (gt) (Object) param1;
+            ((gt) this).field_q = var3.field_q;
+            ((gt) this).field_l = var3.field_l;
+            ((gt) this).field_i = var3.field_i;
+            ((gt) this).field_v = var3.field_v;
+            ((gt) this).field_s = var3.field_s;
+            ((gt) this).field_g = var3.field_g;
+            ((gt) this).field_k = var3.field_k;
+            ((gt) this).field_p = var3.field_p;
+            ((gt) this).field_n = var3.field_n;
+            ((gt) this).field_u = var3.field_u;
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "gt.R(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        gt var5 = (gt) (Object) param1;
-        ((gt) this).field_q = var5.field_q;
-        ((gt) this).field_l = var5.field_l;
-        ((gt) this).field_i = var5.field_i;
-        ((gt) this).field_v = var5.field_v;
-        ((gt) this).field_s = var5.field_s;
-        ((gt) this).field_g = var5.field_g;
-        ((gt) this).field_k = var5.field_k;
-        ((gt) this).field_p = var5.field_p;
-        ((gt) this).field_n = var5.field_n;
-        ((gt) this).field_u = var5.field_u;
     }
 
     public static void a(boolean param0) {
         field_r = null;
-        if (!param0) {
-            wh discarded$0 = gt.a(false, -40, (byte) 99, -28);
-            field_t = null;
-            field_j = null;
-            field_h = null;
-            field_f = null;
-            field_o = null;
-            field_m = null;
-            return;
-        }
         field_t = null;
         field_j = null;
         field_h = null;
@@ -179,13 +162,207 @@ final class gt extends mo {
     final static void a(boolean param0, int param1) {
         int var3 = 0;
         var3 = Kickabout.field_G;
-        if (param1 == 1) {
+        if (param0) {
+          td.field_b = false;
           if (param0) {
-            td.field_b = false;
-            if (param0) {
-              if (-1 <= (ns.field_a ^ -1)) {
+            if (ns.field_a <= 0) {
+              if (fj.field_a <= 0) {
+                if (ee.field_b > 0) {
+                  ee.field_b = ee.field_b - 1;
+                  return;
+                } else {
+                  return;
+                }
+              } else {
+                fj.field_a = fj.field_a - 1;
+                return;
+              }
+            } else {
+              ns.field_a = ns.field_a - 1;
+              return;
+            }
+          } else {
+            if (uv.field_i == null) {
+              if (null == ow.field_b) {
+                td.field_b = false;
                 if (fj.field_a <= 0) {
-                  if (-1 <= (ee.field_b ^ -1)) {
+                  if (0 < ee.field_b) {
+                    ee.field_b = ee.field_b - 1;
+                    return;
+                  } else {
+                    if (ns.field_a < rb.field_Bb) {
+                      if (ns.field_a != 0) {
+                        ns.field_a = ns.field_a + 1;
+                        return;
+                      } else {
+                        na.h(0);
+                        ns.field_a = ns.field_a + 1;
+                        return;
+                      }
+                    } else {
+                      return;
+                    }
+                  }
+                } else {
+                  fj.field_a = fj.field_a - 1;
+                  return;
+                }
+              } else {
+                if (ns.field_a > 0) {
+                  ns.field_a = ns.field_a - 1;
+                  return;
+                } else {
+                  if (ee.field_b > 0) {
+                    ee.field_b = ee.field_b - 1;
+                    return;
+                  } else {
+                    if (rb.field_Bb > fj.field_a) {
+                      if (fj.field_a != 0) {
+                        fj.field_a = fj.field_a + 1;
+                        return;
+                      } else {
+                        pg.a(-35, true);
+                        fj.field_a = fj.field_a + 1;
+                        return;
+                      }
+                    } else {
+                      return;
+                    }
+                  }
+                }
+              }
+            } else {
+              if (0 < ns.field_a) {
+                ns.field_a = ns.field_a - 1;
+                return;
+              } else {
+                if (0 >= fj.field_a) {
+                  if (~ee.field_b > ~rb.field_Bb) {
+                    L0: {
+                      if (0 == ee.field_b) {
+                        pg.a(-35, false);
+                        break L0;
+                      } else {
+                        break L0;
+                      }
+                    }
+                    ee.field_b = ee.field_b + 1;
+                    return;
+                  } else {
+                    return;
+                  }
+                } else {
+                  fj.field_a = fj.field_a - 1;
+                  return;
+                }
+              }
+            }
+          }
+        } else {
+          if (null == uv.field_i) {
+            L1: {
+              td.field_b = false;
+              if (param0) {
+                if (ns.field_a <= 0) {
+                  if (fj.field_a <= 0) {
+                    if (ee.field_b <= 0) {
+                      break L1;
+                    } else {
+                      ee.field_b = ee.field_b - 1;
+                      return;
+                    }
+                  } else {
+                    fj.field_a = fj.field_a - 1;
+                    return;
+                  }
+                } else {
+                  ns.field_a = ns.field_a - 1;
+                  return;
+                }
+              } else {
+                if (uv.field_i == null) {
+                  if (null == ow.field_b) {
+                    td.field_b = false;
+                    if (fj.field_a <= 0) {
+                      if (0 < ee.field_b) {
+                        ee.field_b = ee.field_b - 1;
+                        return;
+                      } else {
+                        if (ns.field_a < rb.field_Bb) {
+                          if (ns.field_a != 0) {
+                            ns.field_a = ns.field_a + 1;
+                            return;
+                          } else {
+                            na.h(0);
+                            ns.field_a = ns.field_a + 1;
+                            return;
+                          }
+                        } else {
+                          return;
+                        }
+                      }
+                    } else {
+                      fj.field_a = fj.field_a - 1;
+                      return;
+                    }
+                  } else {
+                    if (ns.field_a > 0) {
+                      ns.field_a = ns.field_a - 1;
+                      return;
+                    } else {
+                      if (ee.field_b > 0) {
+                        ee.field_b = ee.field_b - 1;
+                        return;
+                      } else {
+                        if (rb.field_Bb <= fj.field_a) {
+                          break L1;
+                        } else {
+                          if (fj.field_a != 0) {
+                            fj.field_a = fj.field_a + 1;
+                            return;
+                          } else {
+                            pg.a(-35, true);
+                            fj.field_a = fj.field_a + 1;
+                            return;
+                          }
+                        }
+                      }
+                    }
+                  }
+                } else {
+                  if (0 < ns.field_a) {
+                    ns.field_a = ns.field_a - 1;
+                    return;
+                  } else {
+                    if (0 >= fj.field_a) {
+                      if (~ee.field_b > ~rb.field_Bb) {
+                        L2: {
+                          if (0 == ee.field_b) {
+                            pg.a(-35, false);
+                            break L2;
+                          } else {
+                            break L2;
+                          }
+                        }
+                        ee.field_b = ee.field_b + 1;
+                        return;
+                      } else {
+                        return;
+                      }
+                    } else {
+                      fj.field_a = fj.field_a - 1;
+                      return;
+                    }
+                  }
+                }
+              }
+            }
+            return;
+          } else {
+            if (param0) {
+              if (ns.field_a <= 0) {
+                if (fj.field_a <= 0) {
+                  if (ee.field_b <= 0) {
                     return;
                   } else {
                     ee.field_b = ee.field_b - 1;
@@ -203,17 +380,17 @@ final class gt extends mo {
               if (uv.field_i == null) {
                 if (null == ow.field_b) {
                   td.field_b = false;
-                  if (-1 <= (fj.field_a ^ -1)) {
+                  if (fj.field_a <= 0) {
                     if (0 < ee.field_b) {
                       ee.field_b = ee.field_b - 1;
                       return;
                     } else {
                       if (ns.field_a < rb.field_Bb) {
-                        if ((ns.field_a ^ -1) != -1) {
+                        if (ns.field_a != 0) {
                           ns.field_a = ns.field_a + 1;
                           return;
                         } else {
-                          na.h(param1 + -1);
+                          na.h(0);
                           ns.field_a = ns.field_a + 1;
                           return;
                         }
@@ -226,23 +403,25 @@ final class gt extends mo {
                     return;
                   }
                 } else {
-                  if ((ns.field_a ^ -1) < -1) {
+                  if (ns.field_a > 0) {
                     ns.field_a = ns.field_a - 1;
                     return;
                   } else {
-                    if ((ee.field_b ^ -1) < -1) {
+                    if (ee.field_b > 0) {
                       ee.field_b = ee.field_b - 1;
                       return;
                     } else {
                       if (rb.field_Bb > fj.field_a) {
-                        if (-1 != (fj.field_a ^ -1)) {
-                          fj.field_a = fj.field_a + 1;
-                          return;
-                        } else {
-                          pg.a(-35, true);
-                          fj.field_a = fj.field_a + 1;
-                          return;
+                        L3: {
+                          if (fj.field_a != 0) {
+                            break L3;
+                          } else {
+                            pg.a(-35, true);
+                            break L3;
+                          }
                         }
+                        fj.field_a = fj.field_a + 1;
+                        return;
                       } else {
                         return;
                       }
@@ -255,13 +434,13 @@ final class gt extends mo {
                   return;
                 } else {
                   if (0 >= fj.field_a) {
-                    if ((ee.field_b ^ -1) > (rb.field_Bb ^ -1)) {
-                      L0: {
+                    if (~ee.field_b > ~rb.field_Bb) {
+                      L4: {
                         if (0 == ee.field_b) {
                           pg.a(-35, false);
-                          break L0;
+                          break L4;
                         } else {
-                          break L0;
+                          break L4;
                         }
                       }
                       ee.field_b = ee.field_b + 1;
@@ -276,210 +455,7 @@ final class gt extends mo {
                 }
               }
             }
-          } else {
-            if (null == uv.field_i) {
-              L1: {
-                td.field_b = false;
-                if (param0) {
-                  if (-1 <= (ns.field_a ^ -1)) {
-                    if (fj.field_a <= 0) {
-                      if (-1 <= (ee.field_b ^ -1)) {
-                        break L1;
-                      } else {
-                        ee.field_b = ee.field_b - 1;
-                        return;
-                      }
-                    } else {
-                      fj.field_a = fj.field_a - 1;
-                      return;
-                    }
-                  } else {
-                    ns.field_a = ns.field_a - 1;
-                    return;
-                  }
-                } else {
-                  if (uv.field_i == null) {
-                    if (null == ow.field_b) {
-                      td.field_b = false;
-                      if (-1 <= (fj.field_a ^ -1)) {
-                        if (0 < ee.field_b) {
-                          ee.field_b = ee.field_b - 1;
-                          return;
-                        } else {
-                          if (ns.field_a < rb.field_Bb) {
-                            if ((ns.field_a ^ -1) != -1) {
-                              ns.field_a = ns.field_a + 1;
-                              return;
-                            } else {
-                              na.h(param1 + -1);
-                              ns.field_a = ns.field_a + 1;
-                              return;
-                            }
-                          } else {
-                            return;
-                          }
-                        }
-                      } else {
-                        fj.field_a = fj.field_a - 1;
-                        return;
-                      }
-                    } else {
-                      if ((ns.field_a ^ -1) < -1) {
-                        ns.field_a = ns.field_a - 1;
-                        return;
-                      } else {
-                        if ((ee.field_b ^ -1) < -1) {
-                          ee.field_b = ee.field_b - 1;
-                          return;
-                        } else {
-                          if (rb.field_Bb <= fj.field_a) {
-                            break L1;
-                          } else {
-                            if (-1 != (fj.field_a ^ -1)) {
-                              fj.field_a = fj.field_a + 1;
-                              return;
-                            } else {
-                              pg.a(-35, true);
-                              fj.field_a = fj.field_a + 1;
-                              return;
-                            }
-                          }
-                        }
-                      }
-                    }
-                  } else {
-                    if (0 < ns.field_a) {
-                      ns.field_a = ns.field_a - 1;
-                      return;
-                    } else {
-                      if (0 >= fj.field_a) {
-                        if ((ee.field_b ^ -1) > (rb.field_Bb ^ -1)) {
-                          L2: {
-                            if (0 == ee.field_b) {
-                              pg.a(-35, false);
-                              break L2;
-                            } else {
-                              break L2;
-                            }
-                          }
-                          ee.field_b = ee.field_b + 1;
-                          return;
-                        } else {
-                          return;
-                        }
-                      } else {
-                        fj.field_a = fj.field_a - 1;
-                        return;
-                      }
-                    }
-                  }
-                }
-              }
-              return;
-            } else {
-              if (param0) {
-                if (-1 <= (ns.field_a ^ -1)) {
-                  if (fj.field_a <= 0) {
-                    if (-1 > (ee.field_b ^ -1)) {
-                      ee.field_b = ee.field_b - 1;
-                      return;
-                    } else {
-                      return;
-                    }
-                  } else {
-                    fj.field_a = fj.field_a - 1;
-                    return;
-                  }
-                } else {
-                  ns.field_a = ns.field_a - 1;
-                  return;
-                }
-              } else {
-                L3: {
-                  if (uv.field_i == null) {
-                    if (null == ow.field_b) {
-                      td.field_b = false;
-                      if (-1 <= (fj.field_a ^ -1)) {
-                        if (0 < ee.field_b) {
-                          ee.field_b = ee.field_b - 1;
-                          return;
-                        } else {
-                          if (ns.field_a < rb.field_Bb) {
-                            if ((ns.field_a ^ -1) != -1) {
-                              ns.field_a = ns.field_a + 1;
-                              return;
-                            } else {
-                              na.h(param1 + -1);
-                              ns.field_a = ns.field_a + 1;
-                              return;
-                            }
-                          } else {
-                            return;
-                          }
-                        }
-                      } else {
-                        fj.field_a = fj.field_a - 1;
-                        return;
-                      }
-                    } else {
-                      if ((ns.field_a ^ -1) < -1) {
-                        ns.field_a = ns.field_a - 1;
-                        return;
-                      } else {
-                        if ((ee.field_b ^ -1) < -1) {
-                          ee.field_b = ee.field_b - 1;
-                          return;
-                        } else {
-                          if (rb.field_Bb > fj.field_a) {
-                            L4: {
-                              if (-1 != (fj.field_a ^ -1)) {
-                                break L4;
-                              } else {
-                                pg.a(-35, true);
-                                break L4;
-                              }
-                            }
-                            fj.field_a = fj.field_a + 1;
-                            break L3;
-                          } else {
-                            return;
-                          }
-                        }
-                      }
-                    }
-                  } else {
-                    if (0 < ns.field_a) {
-                      ns.field_a = ns.field_a - 1;
-                      break L3;
-                    } else {
-                      if (0 >= fj.field_a) {
-                        if ((ee.field_b ^ -1) > (rb.field_Bb ^ -1)) {
-                          L5: {
-                            if (0 == ee.field_b) {
-                              pg.a(-35, false);
-                              break L5;
-                            } else {
-                              break L5;
-                            }
-                          }
-                          ee.field_b = ee.field_b + 1;
-                          break L3;
-                        } else {
-                          return;
-                        }
-                      } else {
-                        fj.field_a = fj.field_a - 1;
-                        break L3;
-                      }
-                    }
-                  }
-                }
-                return;
-              }
-            }
           }
-        } else {
-          return;
         }
     }
 

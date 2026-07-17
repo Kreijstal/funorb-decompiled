@@ -32,9 +32,6 @@ final class dl {
     }
 
     public static void b(int param0) {
-        if (param0 != 7) {
-            field_h = null;
-        }
         field_m = null;
         field_h = null;
         field_j = null;

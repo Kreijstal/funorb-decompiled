@@ -15,17 +15,21 @@ final class oi {
     static String field_e;
 
     final static void a(int param0) {
-        int var1 = 21 % ((27 - param0) / 47);
+        int var1 = 0;
         fb.a(17, 115);
     }
 
     final static void a(String param0, boolean param1, byte param2, boolean param3) {
-        al.j(-1);
-        nb.field_a.h(-92);
-        b.field_c = new qm(fa.field_Ib, (String) null, ch.field_e, param1, param3);
-        wj.field_i = new ub(nb.field_a, (cf) (Object) b.field_c);
-        int var4 = 120 / ((64 - param2) / 61);
-        nb.field_a.b(3016, (cf) (Object) wj.field_i);
+        try {
+            al.j(-1);
+            nb.field_a.h(-92);
+            b.field_c = new qm(fa.field_Ib, (String) null, ch.field_e, param1, param3);
+            wj.field_i = new ub(nb.field_a, (cf) (Object) b.field_c);
+            int var4_int = 120 / ((64 - param2) / 61);
+            nb.field_a.b(3016, (cf) (Object) wj.field_i);
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) (Object) runtimeException, "oi.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+        }
     }
 
     public static void b(int param0) {
@@ -35,14 +39,7 @@ final class oi {
         field_h = null;
         field_b = null;
         field_k = null;
-        if (param0 != 5378) {
-          field_h = null;
-          field_f = null;
-          return;
-        } else {
-          field_f = null;
-          return;
-        }
+        field_f = null;
     }
 
     static {

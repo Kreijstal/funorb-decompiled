@@ -8,11 +8,6 @@ final class lsa {
     private static String field_z;
 
     public static void a(byte param0) {
-        if (param0 < 13) {
-            field_a = 78;
-            field_c = null;
-            return;
-        }
         field_c = null;
     }
 

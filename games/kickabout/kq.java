@@ -18,15 +18,20 @@ final class kq extends hd {
     boolean field_zb;
 
     final void a(byte param0, gr param1, int param2) {
-        cq var4 = param1.b((byte) 43, param2);
-        if (var4 == null) {
-            ((kq) this).field_Fb = null;
-            ((kq) this).field_Gb = false;
-        } else {
-            ((kq) this).field_Fb = (ut) (Object) (param1.a(1, var4.field_i) ? eq.field_h : ml.field_q);
-            ((kq) this).field_Gb = true;
+        cq var4 = null;
+        try {
+            var4 = param1.b((byte) 43, param2);
+            if (var4 == null) {
+                ((kq) this).field_Fb = null;
+                ((kq) this).field_Gb = false;
+            } else {
+                ((kq) this).field_Fb = param1.a(1, var4.field_i) ? (ut) (Object) eq.field_h : (ut) (Object) ml.field_q;
+                ((kq) this).field_Gb = true;
+            }
+            int var5 = -66 / ((-50 - param0) / 34);
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "kq.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
-        int var5 = -66 / ((-50 - param0) / 34);
     }
 
     final void h(byte param0) {
@@ -38,7 +43,7 @@ final class kq extends hd {
         int[] var7 = null;
         if (!((kq) this).field_Eb.c(-2)) {
           if (null == ((kq) this).field_Db) {
-            jr.a(((kq) this).field_F - -(((kq) this).field_q >> 1357484641), -36, (((kq) this).field_mb >> -290474335) + ((kq) this).field_T);
+            jr.a(((kq) this).field_F - -(((kq) this).field_q >> 1), -36, (((kq) this).field_mb >> 1) + ((kq) this).field_T);
             if (!((kq) this).field_Hb) {
               if (param0 < -114) {
                 if (((kq) this).field_Fb != null) {
@@ -94,7 +99,7 @@ final class kq extends hd {
               var7[3] = 1260;
               var7[2] = 1400;
               var7[1] = 1400;
-              ((kq) this).field_Db.a(var3[((kq) this).field_Eb.field_q], 0, on.field_g >> 866110081, on.field_f - 8, (byte) -122);
+              ((kq) this).field_Db.a(var3[((kq) this).field_Eb.field_q], 0, on.field_g >> 1, on.field_f - 8, (byte) -122);
               ta.e(117);
               if (((kq) this).field_zb) {
                 eo.a(dc.field_b, 1);
@@ -202,119 +207,57 @@ final class kq extends hd {
     }
 
     public static void i(byte param0) {
-        if (param0 != -123) {
-            return;
-        }
         field_Ib = null;
         field_yb = null;
         field_Bb = null;
     }
 
     final void a(int param0, int param1, byte param2, int param3, up param4) {
-        if (param4.b((byte) -98, ((kq) this).field_Eb)) {
-          if (param2 >= 124) {
-            L0: {
-              if (((kq) this).field_Eb.c(-2)) {
-                break L0;
+        RuntimeException var6 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_19_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param4.b((byte) -98, ((kq) this).field_Eb)) {
+                break L1;
               } else {
-                if (!((kq) this).field_gb) {
-                  break L0;
-                } else {
-                  if (0 == ((kq) this).field_qb) {
-                    io.a(param1, 0, ((kq) this).field_Cb, param0, ((kq) this).field_Eb, ((kq) this).field_Lb, param3);
-                    break L0;
-                  } else {
-                    if (null == ((kq) this).field_Db) {
-                      if (!((kq) this).field_Eb.c(-2)) {
-                        if (null != ra.field_G) {
-                          return;
-                        } else {
-                          ((kq) this).field_Db = pg.a(param0, param1, ((kq) this).field_Eb, -79, param3);
-                          return;
-                        }
-                      } else {
-                        return;
-                      }
-                    } else {
-                      ((kq) this).field_Db.a(2, (la[]) null, false, false);
-                      ((kq) this).field_Db.g((byte) 127);
-                      return;
-                    }
-                  }
-                }
+                ((kq) this).field_Eb.a((byte) -95, param4);
+                ((kq) this).field_Db = null;
+                break L1;
               }
             }
-            if (null == ((kq) this).field_Db) {
-              if (!((kq) this).field_Eb.c(-2)) {
-                if (null != ra.field_G) {
-                  return;
+            if (param2 >= 124) {
+              L2: {
+                if (((kq) this).field_Eb.c(-2)) {
+                  break L2;
                 } else {
-                  ((kq) this).field_Db = pg.a(param0, param1, ((kq) this).field_Eb, -79, param3);
-                  return;
-                }
-              } else {
-                return;
-              }
-            } else {
-              ((kq) this).field_Db.a(2, (la[]) null, false, false);
-              ((kq) this).field_Db.g((byte) 127);
-              return;
-            }
-          } else {
-            return;
-          }
-        } else {
-          ((kq) this).field_Eb.a((byte) -95, param4);
-          ((kq) this).field_Db = null;
-          if (param2 >= 124) {
-            if (!((kq) this).field_Eb.c(-2)) {
-              if (((kq) this).field_gb) {
-                L1: {
-                  if (0 == ((kq) this).field_qb) {
-                    io.a(param1, 0, ((kq) this).field_Cb, param0, ((kq) this).field_Eb, ((kq) this).field_Lb, param3);
-                    break L1;
+                  if (!((kq) this).field_gb) {
+                    break L2;
                   } else {
-                    break L1;
-                  }
-                }
-                if (null == ((kq) this).field_Db) {
-                  if (!((kq) this).field_Eb.c(-2)) {
-                    if (null != ra.field_G) {
-                      return;
-                    } else {
-                      ((kq) this).field_Db = pg.a(param0, param1, ((kq) this).field_Eb, -79, param3);
-                      return;
-                    }
-                  } else {
-                    return;
-                  }
-                } else {
-                  ((kq) this).field_Db.a(2, (la[]) null, false, false);
-                  ((kq) this).field_Db.g((byte) 127);
-                  return;
-                }
-              } else {
-                L2: {
-                  if (null == ((kq) this).field_Db) {
-                    if (((kq) this).field_Eb.c(-2)) {
+                    if (0 == ((kq) this).field_qb) {
+                      io.a(param1, 0, ((kq) this).field_Cb, param0, ((kq) this).field_Eb, ((kq) this).field_Lb, param3);
                       break L2;
                     } else {
-                      if (null == ra.field_G) {
-                        ((kq) this).field_Db = pg.a(param0, param1, ((kq) this).field_Eb, -79, param3);
-                        break L2;
-                      } else {
-                        break L2;
-                      }
+                      break L2;
                     }
-                  } else {
-                    ((kq) this).field_Db.a(2, (la[]) null, false, false);
-                    ((kq) this).field_Db.g((byte) 127);
-                    break L2;
                   }
                 }
-                return;
               }
-            } else {
               L3: {
                 if (null == ((kq) this).field_Db) {
                   if (((kq) this).field_Eb.c(-2)) {
@@ -333,11 +276,40 @@ final class kq extends hd {
                   break L3;
                 }
               }
+              break L0;
+            } else {
               return;
             }
-          } else {
-            return;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var6 = decompiledCaughtException;
+            stackOut_16_0 = (RuntimeException) var6;
+            stackOut_16_1 = new StringBuilder().append("kq.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackIn_18_0 = stackOut_16_0;
+            stackIn_18_1 = stackOut_16_1;
+            stackIn_17_0 = stackOut_16_0;
+            stackIn_17_1 = stackOut_16_1;
+            if (param4 == null) {
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "null";
+              stackIn_19_0 = stackOut_18_0;
+              stackIn_19_1 = stackOut_18_1;
+              stackIn_19_2 = stackOut_18_2;
+              break L4;
+            } else {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "{...}";
+              stackIn_19_0 = stackOut_17_0;
+              stackIn_19_1 = stackOut_17_1;
+              stackIn_19_2 = stackOut_17_2;
+              break L4;
+            }
+          }
+          throw nb.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 41);
         }
     }
 

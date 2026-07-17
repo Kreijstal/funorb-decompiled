@@ -30,30 +30,77 @@ final class sr implements Iterable {
 
     public static void a(boolean param0) {
         field_d = null;
-        if (!param0) {
-            return;
-        }
         field_c = null;
     }
 
     final void a(byte param0, gp param1) {
-        L0: {
-          if (param1.field_o != null) {
-            param1.a(-120);
-            break L0;
-          } else {
-            break L0;
+        RuntimeException var3 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param1.field_o != null) {
+                param1.a(-120);
+                break L1;
+              } else {
+                break L1;
+              }
+            }
+            param1.field_p = ((sr) this).field_b;
+            param1.field_o = ((sr) this).field_b.field_o;
+            param1.field_o.field_p = param1;
+            param1.field_p.field_o = param1;
+            if (param0 >= 7) {
+              break L0;
+            } else {
+              Iterator discarded$2 = ((sr) this).iterator();
+              return;
+            }
           }
-        }
-        param1.field_p = ((sr) this).field_b;
-        param1.field_o = ((sr) this).field_b.field_o;
-        param1.field_o.field_p = param1;
-        param1.field_p.field_o = param1;
-        if (param0 < 7) {
-          Iterator discarded$2 = ((sr) this).iterator();
-          return;
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var3;
+            stackOut_6_1 = new StringBuilder().append("sr.C(").append(param0).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param1 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L2;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L2;
+            }
+          }
+          throw wn.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
         }
     }
 

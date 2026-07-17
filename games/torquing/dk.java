@@ -1051,34 +1051,34 @@ final class dk {
         while (param1 < param2) {
             int incrementValue$0 = param1;
             param1++;
-            param0[incrementValue$0] = (byte)param3;
+            param0[incrementValue$0] = (byte) -128;
             int incrementValue$1 = param1;
             param1++;
-            param0[incrementValue$1] = (byte)param3;
+            param0[incrementValue$1] = (byte) -128;
             int incrementValue$2 = param1;
             param1++;
-            param0[incrementValue$2] = (byte)param3;
+            param0[incrementValue$2] = (byte) -128;
             int incrementValue$3 = param1;
             param1++;
-            param0[incrementValue$3] = (byte)param3;
+            param0[incrementValue$3] = (byte) -128;
             int incrementValue$4 = param1;
             param1++;
-            param0[incrementValue$4] = (byte)param3;
+            param0[incrementValue$4] = (byte) -128;
             int incrementValue$5 = param1;
             param1++;
-            param0[incrementValue$5] = (byte)param3;
+            param0[incrementValue$5] = (byte) -128;
             int incrementValue$6 = param1;
             param1++;
-            param0[incrementValue$6] = (byte)param3;
+            param0[incrementValue$6] = (byte) -128;
             int incrementValue$7 = param1;
             param1++;
-            param0[incrementValue$7] = (byte)param3;
+            param0[incrementValue$7] = (byte) -128;
         }
         param2 += 7;
         while (param1 < param2) {
             int incrementValue$8 = param1;
             param1++;
-            param0[incrementValue$8] = (byte)param3;
+            param0[incrementValue$8] = (byte) -128;
         }
     }
 

@@ -135,7 +135,7 @@ final class jia implements ms {
               var2 = ((jia) this).field_b.a((byte) -120);
               var3 = ((jia) this).field_b.a(param0 ^ -7082);
               var4 = 0;
-              if (-1 < (var2 ^ -1)) {
+              if (var2 < 0) {
                 var2 = 0;
                 var4 = 1;
                 break L2;
@@ -187,9 +187,9 @@ final class jia implements ms {
             jia.a((byte) -91);
         }
         if (ica.field_a) {
-            tga.field_a.v(param4 >> -314275922, -param2 >> 1588050638, -param6 >> -2051801074, param0 >> 2090526094, -param8 >> 1559144270, -param7 >> 1600498158, jg.a(param1, (byte) -60, param3), 1);
+            tga.field_a.v(param4 >> 14, -param2 >> 14, -param6 >> 14, param0 >> 14, -param8 >> 14, -param7 >> 14, jg.a(param1, (byte) -60, param3), 1);
         } else {
-            tga.field_a.ea(param4 >> -1130138354, -param2 >> -465189650, -param6 >> -1995171346, param0 >> 1847811534, -param8 >> -792386290, -param7 >> -714847058, 2048, jg.a(param1, (byte) -107, param3), 1);
+            tga.field_a.ea(param4 >> 14, -param2 >> 14, -param6 >> 14, param0 >> 14, -param8 >> 14, -param7 >> 14, 2048, jg.a(param1, (byte) -107, param3), 1);
         }
     }
 

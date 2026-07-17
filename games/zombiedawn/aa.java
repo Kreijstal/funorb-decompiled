@@ -19,10 +19,10 @@ final class aa {
         if (param0 <= -64) {
           if (!((aa) this).field_h) {
             L0: {
-              if ((((aa) this).field_j ^ -1) != -3) {
+              if (((aa) this).field_j != 2) {
                 break L0;
               } else {
-                if ((((aa) this).field_l ^ -1) >= -1) {
+                if (((aa) this).field_l <= 0) {
                   break L0;
                 } else {
                   return 2;
@@ -30,7 +30,7 @@ final class aa {
               }
             }
             if (((aa) this).field_d != oc.field_b) {
-              if ((w.field_b ^ -1) == -3) {
+              if (w.field_b == 2) {
                 if (mc.a(((aa) this).field_c, true)) {
                   return 1;
                 } else {
@@ -48,10 +48,10 @@ final class aa {
         } else {
           ((aa) this).field_e = null;
           if (!((aa) this).field_h) {
-            if ((((aa) this).field_j ^ -1) == -3) {
-              if ((((aa) this).field_l ^ -1) >= -1) {
+            if (((aa) this).field_j == 2) {
+              if (((aa) this).field_l <= 0) {
                 if (((aa) this).field_d != oc.field_b) {
-                  if ((w.field_b ^ -1) == -3) {
+                  if (w.field_b == 2) {
                     if (mc.a(((aa) this).field_c, true)) {
                       return 1;
                     } else {
@@ -68,7 +68,7 @@ final class aa {
               }
             } else {
               if (((aa) this).field_d != oc.field_b) {
-                if ((w.field_b ^ -1) == -3) {
+                if (w.field_b == 2) {
                   if (mc.a(((aa) this).field_c, true)) {
                     return 1;
                   } else {
@@ -98,51 +98,98 @@ final class aa {
     }
 
     final static void a(de param0, int param1) {
-        int var2 = 0;
-        sn.field_e = param0.f(2) << 1563063301;
-        var2 = param0.d((byte) -119);
-        rj.field_E = (7 & var2) << -703928878;
-        sn.field_e = sn.field_e + (var2 >> -2008296413);
-        if (param1 > -93) {
-          field_g = null;
-          rj.field_E = rj.field_E + (param0.f(2) << -7891006);
-          var2 = param0.d((byte) -117);
-          ii.field_d = (var2 & 63) << 436222447;
-          rj.field_E = rj.field_E + (var2 >> 410594342);
-          ii.field_d = ii.field_d + (param0.d((byte) -127) << 245029319);
-          var2 = param0.d((byte) -120);
-          e.field_H = (1 & var2) << -116975600;
-          ii.field_d = ii.field_d + (var2 >> -1617515455);
-          e.field_H = e.field_H + param0.f(2);
-          return;
-        } else {
-          rj.field_E = rj.field_E + (param0.f(2) << -7891006);
-          var2 = param0.d((byte) -117);
-          ii.field_d = (var2 & 63) << 436222447;
-          rj.field_E = rj.field_E + (var2 >> 410594342);
-          ii.field_d = ii.field_d + (param0.d((byte) -127) << 245029319);
-          var2 = param0.d((byte) -120);
-          e.field_H = (1 & var2) << -116975600;
-          ii.field_d = ii.field_d + (var2 >> -1617515455);
-          e.field_H = e.field_H + param0.f(2);
-          return;
+        int var2_int = 0;
+        try {
+            sn.field_e = param0.f(2) << 5;
+            var2_int = param0.d((byte) -119);
+            rj.field_E = (7 & var2_int) << 18;
+            sn.field_e = sn.field_e + (var2_int >> 3);
+            if (param1 > -93) {
+                field_g = null;
+            }
+            rj.field_E = rj.field_E + (param0.f(2) << 2);
+            var2_int = param0.d((byte) -117);
+            ii.field_d = (var2_int & 63) << 15;
+            rj.field_E = rj.field_E + (var2_int >> 6);
+            ii.field_d = ii.field_d + (param0.d((byte) -127) << 7);
+            var2_int = param0.d((byte) -120);
+            e.field_H = (1 & var2_int) << 16;
+            ii.field_d = ii.field_d + (var2_int >> 1);
+            e.field_H = e.field_H + param0.f(2);
+        } catch (RuntimeException runtimeException) {
+            throw sh.a((Throwable) (Object) runtimeException, "aa.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
     final static hn a(int param0, fn param1) {
         hn var2 = null;
-        if (param0 <= 4) {
-          aa.a(31);
-          var2 = new hn(param1, (le) (Object) param1);
-          fj.field_i.a(0, (le) (Object) var2);
-          t.field_i.b((sp) (Object) param1);
-          return var2;
-        } else {
-          var2 = new hn(param1, (le) (Object) param1);
-          fj.field_i.a(0, (le) (Object) var2);
-          t.field_i.b((sp) (Object) param1);
-          return var2;
+        RuntimeException var2_ref = null;
+        hn stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        hn stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 > 4) {
+                break L1;
+              } else {
+                aa.a(31);
+                break L1;
+              }
+            }
+            var2 = new hn(param1, (le) (Object) param1);
+            fj.field_i.a(0, (le) (Object) var2);
+            t.field_i.b((sp) (Object) param1);
+            stackOut_2_0 = (hn) var2;
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2_ref = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var2_ref;
+            stackOut_4_1 = new StringBuilder().append("aa.A(").append(param0).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param1 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw sh.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
         }
+        return stackIn_3_0;
     }
 
     final static String a(long param0, int param1) {
@@ -155,9 +202,9 @@ final class aa {
         StringBuilder var12 = null;
         StringBuilder var13 = null;
         var11 = ZombieDawn.field_J;
-        if (-1L > (param0 ^ -1L)) {
-          if ((param0 ^ -1L) > -6582952005840035282L) {
-            if (-1L != (param0 % 37L ^ -1L)) {
+        if (param0 > 0L) {
+          if (param0 < 6582952005840035281L) {
+            if (param0 % 37L != 0L) {
               var3 = 0;
               var4 = param0;
               if (param1 == -27513) {

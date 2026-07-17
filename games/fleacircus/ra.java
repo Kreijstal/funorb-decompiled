@@ -26,7 +26,7 @@ final class ra extends com.ms.dll.Callback {
           if (param1 == 32) {
             var5 = param3 & 65535;
             if (var5 != 1) {
-              if ((param1 ^ -1) == -101025) {
+              if (param1 == 101024) {
                 L0: {
                   if (!((ra) this).field_a) {
                     stackOut_23_0 = 0;
@@ -65,7 +65,7 @@ final class ra extends com.ms.dll.Callback {
               return 0;
             }
           } else {
-            if ((param1 ^ -1) == -101025) {
+            if (param1 == 101024) {
               L2: {
                 if (!((ra) this).field_a) {
                   stackOut_8_0 = 0;
@@ -200,7 +200,7 @@ final class ra extends com.ms.dll.Callback {
         }
         if (var5 != ((ra) this).field_c) {
           L5: {
-            if (-1 != (((ra) this).field_c ^ -1)) {
+            if (((ra) this).field_c != 0) {
               ((ra) this).field_a = true;
               int discarded$6 = com.ms.win32.User32.SendMessage(var5, 101024, 0, 0);
               var6 = this;

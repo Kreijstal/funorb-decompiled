@@ -10,16 +10,10 @@ final class ol {
     static rk field_f;
 
     final static ad a(int param0) {
-        if (param0 >= -98) {
-            return null;
-        }
         return new ad(ti.a((byte) -120), rl.a(true));
     }
 
     public static void a(boolean param0) {
-        if (!param0) {
-            field_a = null;
-        }
         field_b = null;
         field_a = null;
         field_d = null;
@@ -29,95 +23,156 @@ final class ol {
     }
 
     final static hm a(String param0, int param1, int param2) {
-        if (param1 <= 55) {
-            Object var4 = null;
-            hm discarded$0 = ol.a((String) null, 81, 32);
+        jk var3 = null;
+        RuntimeException var3_ref = null;
+        Object var4 = null;
+        jk stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        jk stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param1 > 55) {
+                break L1;
+              } else {
+                var4 = null;
+                hm discarded$2 = ol.a((String) null, 81, 32);
+                break L1;
+              }
+            }
+            var3 = new jk();
+            ((hm) (Object) var3).field_a = param0;
+            ((hm) (Object) var3).field_e = param2;
+            stackOut_2_0 = (jk) var3;
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3_ref = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var3_ref;
+            stackOut_4_1 = new StringBuilder().append("ol.A(");
+            stackIn_7_0 = stackOut_4_0;
+            stackIn_7_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_8_0 = stackOut_5_0;
+              stackIn_8_1 = stackOut_5_1;
+              stackIn_8_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw pf.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 44 + param2 + 41);
         }
-        jk var3 = new jk();
-        ((hm) (Object) var3).field_a = param0;
-        ((hm) (Object) var3).field_e = param2;
-        return (hm) (Object) var3;
+        return (hm) (Object) stackIn_3_0;
     }
 
     final static boolean a(char param0, int param1) {
-        char[] var2 = null;
+        RuntimeException var2 = null;
+        char[] var2_array = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         char[] var6 = null;
-        L0: {
-          L1: {
-            var5 = fleas.field_A ? 1 : 0;
-            if (param0 <= 0) {
-              break L1;
-            } else {
-              if (param0 < 128) {
-                break L0;
-              } else {
-                break L1;
-              }
-            }
-          }
-          L2: {
-            if (param0 < 160) {
-              if (param1 < -84) {
-                if (param0 == 0) {
+        int stackIn_10_0 = 0;
+        int stackIn_21_0 = 0;
+        int stackIn_24_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_20_0 = 0;
+        int stackOut_23_0 = 0;
+        int stackOut_9_0 = 0;
+        var5 = fleas.field_A ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              L2: {
+                if (param0 <= 0) {
                   break L2;
                 } else {
+                  if (param0 < 128) {
+                    break L1;
+                  } else {
+                    break L2;
+                  }
+                }
+              }
+              L3: {
+                if (param0 < 160) {
+                  break L3;
+                } else {
+                  if (param0 <= 255) {
+                    break L1;
+                  } else {
+                    break L3;
+                  }
+                }
+              }
+              L4: {
+                if (param0 == 0) {
+                  break L4;
+                } else {
                   var6 = fh.field_e;
-                  var2 = var6;
+                  var2_array = var6;
                   var3 = 0;
-                  L3: while (true) {
+                  L5: while (true) {
                     if (var3 >= var6.length) {
-                      break L2;
+                      break L4;
                     } else {
                       var4 = var6[var3];
                       if (var4 == param0) {
-                        return true;
+                        stackOut_20_0 = 1;
+                        stackIn_21_0 = stackOut_20_0;
+                        return stackIn_21_0 != 0;
                       } else {
                         var3++;
-                        continue L3;
+                        continue L5;
                       }
                     }
                   }
                 }
-              } else {
-                return true;
               }
-            } else {
-              if (param0 <= 255) {
-                break L0;
-              } else {
-                if (param1 < -84) {
-                  if (param0 == 0) {
-                    break L2;
-                  } else {
-                    var6 = fh.field_e;
-                    var2 = var6;
-                    var3 = 0;
-                    L4: while (true) {
-                      if (var3 >= var6.length) {
-                        break L2;
-                      } else {
-                        var4 = var6[var3];
-                        if (var4 == param0) {
-                          return true;
-                        } else {
-                          var3++;
-                          continue L4;
-                        }
-                      }
-                    }
-                  }
-                } else {
-                  return true;
-                }
-              }
+              stackOut_23_0 = 0;
+              stackIn_24_0 = stackOut_23_0;
+              break L0;
             }
+            stackOut_9_0 = 1;
+            stackIn_10_0 = stackOut_9_0;
+            return stackIn_10_0 != 0;
           }
-          return false;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw pf.a((Throwable) (Object) var2, "ol.B(" + param0 + 44 + -103 + 41);
         }
-        return true;
+        return stackIn_24_0 != 0;
     }
 
     static {

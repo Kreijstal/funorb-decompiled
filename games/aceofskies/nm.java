@@ -13,72 +13,45 @@ final class nm {
         int var2 = 0;
         int var3 = 0;
         var2 = param0 & 255;
-        if (param1 == 29337) {
-          if (var2 == 0) {
-            throw new IllegalArgumentException("" + Integer.toString(var2, 16));
-          } else {
-            if (128 <= var2) {
-              if (var2 >= 160) {
-                return (char)var2;
-              } else {
-                L0: {
-                  var3 = te.field_e[-128 + var2];
-                  if (var3 == 0) {
-                    var3 = 63;
-                    break L0;
-                  } else {
-                    break L0;
-                  }
-                }
-                var2 = var3;
-                return (char)var2;
-              }
-            } else {
-              return (char)var2;
-            }
-          }
+        if (var2 == 0) {
+          throw new IllegalArgumentException("" + Integer.toString(var2, 16));
         } else {
-          field_b = 43;
-          if (var2 == 0) {
-            throw new IllegalArgumentException("" + Integer.toString(var2, 16));
-          } else {
-            if (128 > var2) {
+          if (128 <= var2) {
+            if (var2 >= 160) {
               return (char)var2;
             } else {
-              L1: {
-                if (var2 < 160) {
-                  L2: {
-                    var3 = te.field_e[-128 + var2];
-                    if (var3 == 0) {
-                      var3 = 63;
-                      break L2;
-                    } else {
-                      break L2;
-                    }
-                  }
-                  var2 = var3;
-                  break L1;
+              L0: {
+                var3 = te.field_e[-128 + var2];
+                if (var3 == 0) {
+                  var3 = 63;
+                  break L0;
                 } else {
-                  break L1;
+                  break L0;
                 }
               }
+              var2 = var3;
               return (char)var2;
             }
+          } else {
+            return (char)var2;
           }
         }
     }
 
     final static void a(byte param0, int param1, File param2, byte[] param3) throws IOException {
-        DataInputStream var4 = new DataInputStream((InputStream) (Object) new BufferedInputStream((InputStream) (Object) new FileInputStream(param2)));
-        if (param0 > -64) {
-            nm.a(115);
-        }
+        DataInputStream var4 = null;
         try {
-            if (false) throw (EOFException) null;
-            var4.readFully(param3, 0, param1);
-        } catch (EOFException eOFException) {
+            var4 = new DataInputStream((InputStream) (Object) new BufferedInputStream((InputStream) (Object) new FileInputStream(param2)));
+            if (param0 > -64) {
+                nm.a(115);
+            }
+            {
+                var4.readFully(param3, 0, param1);
+            }
+            var4.close();
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) (Object) runtimeException, "nm.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
-        var4.close();
     }
 
     public static void a(int param0) {
@@ -94,11 +67,11 @@ final class nm {
         int var4 = 0;
         int var5 = 0;
         if (!param0) {
-          var3 = -1 + (((nm) this).field_d.length >> -1954690687);
+          var3 = -1 + (((nm) this).field_d.length >> 1);
           var4 = param1 & var3;
           L0: while (true) {
             var5 = ((nm) this).field_d[var4 + (var4 + 1)];
-            if ((var5 ^ -1) == 0) {
+            if (var5 == -1) {
               return -1;
             } else {
               if (((nm) this).field_d[var4 + var4] == param1) {
@@ -110,12 +83,12 @@ final class nm {
             }
           }
         } else {
-          field_c = (dl) null;
-          var3 = -1 + (((nm) this).field_d.length >> -1954690687);
+          field_c = null;
+          var3 = -1 + (((nm) this).field_d.length >> 1);
           var4 = param1 & var3;
           L1: while (true) {
             var5 = ((nm) this).field_d[var4 + (var4 + 1)];
-            if ((var5 ^ -1) == 0) {
+            if (var5 == -1) {
               return -1;
             } else {
               if (((nm) this).field_d[var4 + var4] == param1) {
@@ -130,44 +103,95 @@ final class nm {
     }
 
     nm(int[] param0) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        var2 = 1;
-        L0: while (true) {
-          if (var2 > (param0.length >> 1673096769) + param0.length) {
-            ((nm) this).field_d = new int[var2 - -var2];
-            var3 = 0;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        try {
+          L0: {
+            var2_int = 1;
             L1: while (true) {
-              if (var2 - -var2 <= var3) {
+              if (var2_int > (param0.length >> 1) + param0.length) {
+                ((nm) this).field_d = new int[var2_int - -var2_int];
                 var3 = 0;
                 L2: while (true) {
-                  if (param0.length > var3) {
-                    var4 = -1 + var2 & param0[var3];
+                  if (var2_int - -var2_int <= var3) {
+                    var3 = 0;
                     L3: while (true) {
-                      if ((((nm) this).field_d[1 + var4 + var4] ^ -1) == 0) {
-                        ((nm) this).field_d[var4 - -var4] = param0[var3];
-                        ((nm) this).field_d[1 + (var4 - -var4)] = var3;
-                        var3++;
-                        continue L2;
+                      if (param0.length <= var3) {
+                        break L0;
                       } else {
-                        var4 = -1 + var2 & var4 - -1;
-                        continue L3;
+                        var4 = -1 + var2_int & param0[var3];
+                        L4: while (true) {
+                          if (((nm) this).field_d[1 + var4 + var4] == -1) {
+                            ((nm) this).field_d[var4 - -var4] = param0[var3];
+                            ((nm) this).field_d[1 + (var4 - -var4)] = var3;
+                            var3++;
+                            continue L3;
+                          } else {
+                            var4 = -1 + var2_int & var4 - -1;
+                            continue L4;
+                          }
+                        }
                       }
                     }
                   } else {
+                    ((nm) this).field_d[var3] = -1;
+                    var3++;
+                    continue L2;
                   }
                 }
               } else {
-                ((nm) this).field_d[var3] = -1;
-                var3++;
+                var2_int = var2_int << 1;
                 continue L1;
               }
             }
-          } else {
-            var2 = var2 << 1;
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L5: {
+            var2 = decompiledCaughtException;
+            stackOut_14_0 = (RuntimeException) var2;
+            stackOut_14_1 = new StringBuilder().append("nm.<init>(");
+            stackIn_16_0 = stackOut_14_0;
+            stackIn_16_1 = stackOut_14_1;
+            stackIn_15_0 = stackOut_14_0;
+            stackIn_15_1 = stackOut_14_1;
+            if (param0 == null) {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "null";
+              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_1 = stackOut_16_1;
+              stackIn_17_2 = stackOut_16_2;
+              break L5;
+            } else {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "{...}";
+              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_1 = stackOut_15_1;
+              stackIn_17_2 = stackOut_15_2;
+              break L5;
+            }
+          }
+          throw pn.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
         }
     }
 

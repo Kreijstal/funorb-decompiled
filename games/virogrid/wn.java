@@ -65,45 +65,22 @@ final class wn extends l {
         field_n = null;
         field_i = null;
         field_z = null;
-        if (param0 < 71) {
-          field_z = null;
-          field_m = null;
-          return;
-        } else {
-          field_m = null;
-          return;
-        }
+        field_m = null;
     }
 
     final static void a(byte param0) {
         ji.a((byte) -51, af.field_a, 6);
-        if (param0 > 95) {
-          ji.a((byte) -82, el.field_h, 8);
-          if (!pg.a((byte) -126)) {
-            ji.a((byte) -87, kb.field_d, 2);
-            ji.a((byte) -74, sb.field_c, 3);
-            ji.a((byte) -53, nb.field_u, 4);
-            ji.a((byte) -124, ak.field_f, 5);
-            ag.field_f[8] = ag.field_f[8] + 32;
-            return;
-          } else {
-            ag.field_f[8] = ag.field_f[8] + 32;
-            return;
-          }
+        ji.a((byte) -82, el.field_h, 8);
+        if (!pg.a((byte) -126)) {
+          ji.a((byte) -87, kb.field_d, 2);
+          ji.a((byte) -74, sb.field_c, 3);
+          ji.a((byte) -53, nb.field_u, 4);
+          ji.a((byte) -124, ak.field_f, 5);
+          ag.field_f[8] = ag.field_f[8] + 32;
+          return;
         } else {
-          field_n = null;
-          ji.a((byte) -82, el.field_h, 8);
-          if (pg.a((byte) -126)) {
-            ag.field_f[8] = ag.field_f[8] + 32;
-            return;
-          } else {
-            ji.a((byte) -87, kb.field_d, 2);
-            ji.a((byte) -74, sb.field_c, 3);
-            ji.a((byte) -53, nb.field_u, 4);
-            ji.a((byte) -124, ak.field_f, 5);
-            ag.field_f[8] = ag.field_f[8] + 32;
-            return;
-          }
+          ag.field_f[8] = ag.field_f[8] + 32;
+          return;
         }
     }
 

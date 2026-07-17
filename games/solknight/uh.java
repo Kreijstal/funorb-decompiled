@@ -47,7 +47,7 @@ final class uh {
     static int field_d;
 
     private final void a(boolean param0) {
-        ((uh) this).field_f = param0 ? true : false;
+        ((uh) this).field_f = false;
     }
 
     final void b(int param0) {
@@ -141,9 +141,6 @@ final class uh {
     }
 
     public static void a(int param0) {
-        if (param0 != -18662) {
-            field_d = -118;
-        }
         field_l = null;
         field_r = null;
         field_P = null;

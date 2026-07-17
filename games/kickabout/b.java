@@ -63,7 +63,7 @@ final class b extends ta {
         if (param0 != 84) {
             ((b) this).field_R = null;
         }
-        if ((((b) this).field_L.field_Fb ^ -1) != 0) {
+        if (((b) this).field_L.field_Fb != -1) {
             if (!(!((b) this).field_L.j((byte) 21).field_Eb.c(-2))) {
                 ((b) this).field_L.field_Fb = -1;
             }
@@ -75,16 +75,13 @@ final class b extends ta {
         if (param0 >= -15) {
             field_N = null;
         }
-        return ((int)((double)hw.field_i * (-hd.field_K + (double)param1)) >> 642761960) + 320;
+        return ((int)((double)hw.field_i * (-hd.field_K + (double)param1)) >> 8) + 320;
     }
 
     public static void f(int param0) {
         field_O = null;
         field_F = null;
         field_M = null;
-        if (param0 != -2010043359) {
-            return;
-        }
         field_U = null;
         field_H = null;
         field_N = null;
@@ -344,7 +341,7 @@ final class b extends ta {
                   var8 = -36 + ((b) this).field_I.field_F + ((b) this).field_I.field_q;
                   var9 = ((b) this).field_I.field_T - -40;
                   if (var7 != null) {
-                    ((ut) (Object) var7).c(var8 + -(((ut) (Object) var7).field_o >> -467939135), -(((ut) (Object) var7).field_v >> 1511364385) + var9);
+                    ((ut) (Object) var7).c(var8 + -(((ut) (Object) var7).field_o >> 1), -(((ut) (Object) var7).field_v >> 1) + var9);
                     break L5;
                   } else {
                     jr.a(var8, param0 + -94, var9);
@@ -362,20 +359,20 @@ final class b extends ta {
                     var5.c(hg.field_H, var10, var11, 268435455, -1);
                     var5.a(uf.field_e[var26.field_q], var10 - -var12, var11, 268435455, -1);
                     var11 = -10 + (((b) this).field_I.field_T + ((b) this).field_I.field_mb);
-                    var13 = ((b) this).field_W.field_F - -(-100 + ((b) this).field_W.field_q >> -1264520831);
+                    var13 = ((b) this).field_W.field_F - -(-100 + ((b) this).field_W.field_q >> 1);
                     var14 = ((b) this).field_W.field_T - -32;
                     eo.a(var13, var14, var26.field_n, 0, true, var26.c(true, oi.b(param0 + -73)));
                     var14 += 18;
                     eo.a(var13, var14, var26.field_g, 1, true, var26.a(param0 + 5210, oi.b(-89)));
                     var14 += 18;
                     eo.a(var13, var14, var26.field_o, 2, true, var26.b((byte) 108, oi.b(param0 ^ 95)));
-                    if ((var26.field_n ^ -1) != -101) {
+                    if (var26.field_n != 100) {
                       break L7;
                     } else {
                       if (100 != var26.field_o) {
                         break L7;
                       } else {
-                        if ((var26.field_g ^ -1) == -101) {
+                        if (var26.field_g == 100) {
                           int discarded$8 = var5.a(ae.field_M, ((b) this).field_P.field_F - -10, ((b) this).field_P.field_T - -31, -20 + ((b) this).field_P.field_q, -60 + ((b) this).field_P.field_mb, 11184810, -1, 0, 1, 16);
                           break L6;
                         } else {
@@ -384,7 +381,7 @@ final class b extends ta {
                       }
                     }
                   }
-                  var15_int = ((b) this).field_P.field_F + (-100 + ((b) this).field_P.field_q >> 1734696353);
+                  var15_int = ((b) this).field_P.field_F + (-100 + ((b) this).field_P.field_q >> 1);
                   var16 = 36 + ((b) this).field_P.field_T;
                   eo.a(var15_int, var16, var26.field_r, 3, true, 0);
                   if (((b) this).field_Q.e((byte) -113)) {
@@ -409,7 +406,7 @@ final class b extends ta {
                 L9: {
                   L10: {
                     var14 += 18;
-                    if (-1 != (var26.field_h.length ^ -1)) {
+                    if (var26.field_h.length != 0) {
                       break L10;
                     } else {
                       if (jd.f(param0 + 4)) {
@@ -429,7 +426,7 @@ final class b extends ta {
                     } else {
                       var24 = var23[var16];
                       var27 = var24;
-                      q.field_d.d(rv.field_b[var24.field_Bb.field_h], var27.field_F - -(var27.field_q >> -468900831), var27.field_mb + var27.field_T - -14, 16777215, -1);
+                      q.field_d.d(rv.field_b[var24.field_Bb.field_h], var27.field_F - -(var27.field_q >> 1), var27.field_mb + var27.field_T - -14, 16777215, -1);
                       var16++;
                       continue L11;
                     }
@@ -463,11 +460,11 @@ final class b extends ta {
                               break L1;
                             } else {
                               L15: {
-                                var18 = ((b) this).field_G.field_F + (((b) this).field_G.field_q >> 1382036929);
+                                var18 = ((b) this).field_G.field_F + (((b) this).field_G.field_q >> 1);
                                 var19 = 46 + ((b) this).field_G.field_T - -(var17_int * 18);
                                 var21 = 16777215;
-                                if (-1 == (var17_int ^ -1)) {
-                                  if ((var16 ^ -1) == 0) {
+                                if (var17_int == 0) {
+                                  if (var16 == -1) {
                                     var20 = gd.field_d;
                                     var21 = 13421772;
                                     break L15;
@@ -476,7 +473,7 @@ final class b extends ta {
                                     break L15;
                                   }
                                 } else {
-                                  if ((var17_int ^ -1) != -2) {
+                                  if (var17_int != 1) {
                                     var20 = ql.field_c[var28.field_s];
                                     break L15;
                                   } else {
@@ -498,7 +495,7 @@ final class b extends ta {
                             }
                           }
                         } else {
-                          jr.a(((b) this).field_G.field_F - -(((b) this).field_G.field_q >> -701462623), -32, (((b) this).field_G.field_mb >> -2010043359) + ((b) this).field_G.field_T);
+                          jr.a(((b) this).field_G.field_F - -(((b) this).field_G.field_q >> 1), -32, (((b) this).field_G.field_mb >> 1) + ((b) this).field_G.field_T);
                           break L1;
                         }
                       } else {
@@ -521,7 +518,7 @@ final class b extends ta {
               } else {
                 if (jd.f(-1)) {
                   L17: {
-                    if (-1 <= (((b) this).field_L.j((byte) 21).field_Eb.field_h.length ^ -1)) {
+                    if (((b) this).field_L.j((byte) 21).field_Eb.field_h.length <= 0) {
                       break L17;
                     } else {
                       eo.d(((b) this).field_X.field_F, ((b) this).field_X.field_T, ((b) this).field_X.field_q, ((b) this).field_X.field_mb);
@@ -534,7 +531,7 @@ final class b extends ta {
                 } else {
                   if (var4.field_Gb) {
                     var6 = dt.field_e;
-                    var5.d(var6, (((b) this).field_X.field_q >> 95798209) + ((b) this).field_X.field_F, 109 + ((b) this).field_X.field_T, 11184810, -1);
+                    var5.d(var6, (((b) this).field_X.field_q >> 1) + ((b) this).field_X.field_F, 109 + ((b) this).field_X.field_T, 11184810, -1);
                     break L16;
                   } else {
                     break L16;
@@ -587,7 +584,7 @@ final class b extends ta {
           } else {
             L1: {
               var4 = var13.field_Eb;
-              if (-101 < (var4.field_r ^ -1)) {
+              if (var4.field_r < 100) {
                 break L1;
               } else {
                 L2: {
@@ -631,7 +628,7 @@ final class b extends ta {
             var5 = var13.field_Eb;
             ((b) this).field_K = new hd[var5.field_h.length];
             ((b) this).field_T = new pu[var5.field_h.length];
-            var6 = ((b) this).field_X.field_q - 150 * (-1 + var5.field_h.length) >> 960550721;
+            var6 = ((b) this).field_X.field_q - 150 * (-1 + var5.field_h.length) >> 1;
             var7 = 0;
             L4: while (true) {
               if (var7 >= ((b) this).field_K.length) {
@@ -653,10 +650,10 @@ final class b extends ta {
                 var10 = stackIn_15_0;
                 ((b) this).field_K[var7] = eo.a(var10, 7126504);
                 var11 = var6 - -(var7 * 150);
-                var9.field_s = var11 + -(var9.field_q >> 1350627489);
+                var9.field_s = var11 + -(var9.field_q >> 1);
                 var9.field_J = 36;
                 ((b) this).field_X.a((byte) -113, (hd) (Object) var9);
-                ((b) this).field_K[var7].field_s = -(((b) this).field_K[var7].field_q >> 1220085345) + var11;
+                ((b) this).field_K[var7].field_s = -(((b) this).field_K[var7].field_q >> 1) + var11;
                 ((b) this).field_K[var7].field_J = 90;
                 ((b) this).field_T[var7] = var9;
                 ((b) this).field_X.a((byte) -117, (hd) (Object) ((b) this).field_T[var7]);
@@ -710,7 +707,7 @@ final class b extends ta {
         ((b) this).field_Q = eo.a(ov.field_c, 7126504);
         ((b) this).field_K = new hd[]{};
         ((b) this).field_T = new pu[]{};
-        ((b) this).field_Q.field_s = -((b) this).field_Q.field_q + ((b) this).field_P.field_q >> -1974702431;
+        ((b) this).field_Q.field_s = -((b) this).field_Q.field_q + ((b) this).field_P.field_q >> 1;
         ((b) this).field_Q.field_J = 66;
         ((b) this).field_Y.a((byte) -115, ((b) this).field_X);
         ((b) this).field_Y.a((byte) -109, ((b) this).field_I);
@@ -727,7 +724,7 @@ final class b extends ta {
         if (param1 != -22667) {
             ((b) this).field_V = null;
         }
-        return (param0 ^ -1) != -2 ? 320 : 600;
+        return param0 != 1 ? 320 : 600;
     }
 
     static {

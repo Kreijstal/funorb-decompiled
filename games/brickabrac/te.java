@@ -50,7 +50,7 @@ final class te {
                   var7 = 0;
                   L2: while (true) {
                     if (var7 >= var4) {
-                      ((te) this).field_f[var6] = var3 ^ -1;
+                      ((te) this).field_f[var6] = ~var3;
                       if (var6 >= var2) {
                         var2 = var6 + 1;
                         var3++;
@@ -178,7 +178,7 @@ final class te {
         while (((te) this).field_f[var1] >= 0) {
             var1 = bk.b() != 0 ? ((te) this).field_f[var1] : var1 + 1;
         }
-        return ((te) this).field_f[var1] ^ -1;
+        return ~((te) this).field_f[var1];
     }
 
     private final static int a(int param0, int param1) {
@@ -209,14 +209,14 @@ final class te {
         int stackIn_3_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_23_0 = 0;
-        int stackOut_2_0;
-        int stackOut_1_0;
-        int stackOut_12_0;
-        int stackOut_11_0;
-        int stackOut_22_0;
-        int stackOut_21_0;
+        int stackOut_2_0 = 0;
+        int stackOut_1_0 = 0;
+        int stackOut_12_0 = 0;
+        int stackOut_11_0 = 0;
+        int stackOut_22_0 = 0;
+        int stackOut_21_0 = 0;
         L0: {
-          int discarded$1 = bk.c(24);
+          int discarded$2 = bk.c(24);
           ((te) this).field_b = bk.c(16);
           ((te) this).field_c = bk.c(24);
           ((te) this).field_d = new int[((te) this).field_c];
@@ -283,8 +283,9 @@ final class te {
                     var3_int++;
                     continue L5;
                   } else {
+                    int incrementValue$3 = var2;
                     var2++;
-                    ((te) this).field_d[var2] = var3_int;
+                    ((te) this).field_d[incrementValue$3] = var3_int;
                     var5++;
                     continue L6;
                   }

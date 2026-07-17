@@ -12,16 +12,8 @@ final class m {
     public static void b(int param0) {
         field_d = null;
         field_a = null;
-        if (param0 >= -32) {
-          m.a((byte) -98, true, -18, -57);
-          field_b = null;
-          field_f = null;
-          return;
-        } else {
-          field_b = null;
-          field_f = null;
-          return;
-        }
+        field_b = null;
+        field_f = null;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, byte param6, int param7) {

@@ -18,7 +18,7 @@ final class pa {
         while (((pa) this).field_f[var1] >= 0) {
             var1 = ag.c() != 0 ? ((pa) this).field_f[var1] : var1 + 1;
         }
-        return ((pa) this).field_f[var1] ^ -1;
+        return ~((pa) this).field_f[var1];
     }
 
     private final static int a(int param0, int param1) {
@@ -69,7 +69,7 @@ final class pa {
                   var7 = 0;
                   L2: while (true) {
                     if (var7 >= var4) {
-                      ((pa) this).field_f[var6] = var3 ^ -1;
+                      ((pa) this).field_f[var6] = ~var3;
                       if (var6 >= var2) {
                         var2 = var6 + 1;
                         var3++;

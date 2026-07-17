@@ -68,10 +68,14 @@ final class im {
         if (param0 >= -68) {
             return;
         }
-        param1.field_c = ((im) this).field_d.field_c;
-        param1.field_e = ((im) this).field_d;
-        param1.field_c.field_e = param1;
-        param1.field_e.field_c = param1;
+        try {
+            param1.field_c = ((im) this).field_d.field_c;
+            param1.field_e = ((im) this).field_d;
+            param1.field_c.field_e = param1;
+            param1.field_e.field_c = param1;
+        } catch (RuntimeException runtimeException) {
+            throw dd.a((Throwable) (Object) runtimeException, "im.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static String a(char param0, int param1, int param2) {
@@ -101,9 +105,6 @@ final class im {
     }
 
     public static void a(int param0) {
-        if (param0 != 9) {
-            String discarded$0 = im.a('O', 32, 30);
-        }
         field_b = null;
         field_a = null;
     }
@@ -134,10 +135,14 @@ final class im {
         if (param1 != 9) {
             return;
         }
-        param0.field_e = ((im) this).field_d.field_e;
-        param0.field_c = ((im) this).field_d;
-        param0.field_c.field_e = param0;
-        param0.field_e.field_c = param0;
+        try {
+            param0.field_e = ((im) this).field_d.field_e;
+            param0.field_c = ((im) this).field_d;
+            param0.field_c.field_e = param0;
+            param0.field_e.field_c = param0;
+        } catch (RuntimeException runtimeException) {
+            throw dd.a((Throwable) (Object) runtimeException, "im.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     final void a(boolean param0) {

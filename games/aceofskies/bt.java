@@ -11,7 +11,7 @@ final class bt {
     public static void b(int param0) {
         field_a = null;
         field_c = null;
-        int var1 = 0 / ((63 - param0) / 34);
+        int var1 = 0;
         field_b = null;
     }
 
@@ -28,7 +28,7 @@ final class bt {
         var4 = qs.field_a.get(5);
         var5 = qs.field_a.get(2);
         if (param0) {
-          return (String) null;
+          return null;
         } else {
           var6 = qs.field_a.get(1);
           var7 = qs.field_a.get(11);
@@ -39,27 +39,15 @@ final class bt {
     }
 
     final static void a(int param0) {
-        if (null == ml.field_m) {
-          fd.field_f = new ep();
-          if (param0 != 10) {
-            field_a = (pt) null;
-            ak.field_d.d((ea) (Object) fd.field_f, -30244);
-            return;
-          } else {
-            ak.field_d.d((ea) (Object) fd.field_f, -30244);
-            return;
-          }
-        } else {
+        if (null != ml.field_m) {
           ml.field_m.h((byte) -23);
           fd.field_f = new ep();
-          if (param0 == 10) {
-            ak.field_d.d((ea) (Object) fd.field_f, -30244);
-            return;
-          } else {
-            field_a = (pt) null;
-            ak.field_d.d((ea) (Object) fd.field_f, -30244);
-            return;
-          }
+          ak.field_d.d((ea) (Object) fd.field_f, -30244);
+          return;
+        } else {
+          fd.field_f = new ep();
+          ak.field_d.d((ea) (Object) fd.field_f, -30244);
+          return;
         }
     }
 

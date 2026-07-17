@@ -65,19 +65,12 @@ final class pk extends oa {
 
     final void b(int param0) throws javax.sound.sampled.LineUnavailableException {
         javax.sound.sampled.DataLine.Info var2 = null;
-        try {
+        {
             var2 = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, ((pk) this).field_y, param0 << (field_k ? 2 : 1));
             ((pk) this).field_v = (javax.sound.sampled.SourceDataLine) (Object) javax.sound.sampled.AudioSystem.getLine((javax.sound.sampled.Line.Info) (Object) var2);
             ((pk) this).field_v.open();
             ((pk) this).field_v.start();
             ((pk) this).field_x = param0;
-        } catch (javax.sound.sampled.LineUnavailableException lineUnavailableException) {
-            if (sc.a(param0, -1) != 1) {
-                ((pk) this).b(bc.a(param0, -93));
-                return;
-            }
-            ((pk) this).field_v = null;
-            throw lineUnavailableException;
         }
     }
 

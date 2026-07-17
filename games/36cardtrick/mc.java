@@ -6,12 +6,6 @@ final class mc {
     static String field_a;
 
     public static void a(int param0) {
-        if (param0 != 8192) {
-            mc.a((byte) 46);
-            field_a = null;
-            field_b = null;
-            return;
-        }
         field_a = null;
         field_b = null;
     }

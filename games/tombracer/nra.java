@@ -29,10 +29,12 @@ final class nra implements bo {
         param1.a(1736565456, ((nra) this).field_n);
         param1.a(param0 ^ 1736565272, ((nra) this).field_b);
         if (param0 != 200) {
-          return;
-        } else {
-          param1.a(param0 ^ 1736565272, ((nra) this).field_l);
-          return;
+            return;
+        }
+        try {
+            param1.a(param0 ^ 1736565272, ((nra) this).field_l);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "nra.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -41,70 +43,119 @@ final class nra implements bo {
         ((nra) this).field_m = param0.d(122);
         ((nra) this).field_f = param0.h(param1 + 274);
         if (param1 != -19) {
-          return;
-        } else {
-          ((nra) this).field_h = param0.e(-126);
-          ((nra) this).field_d = param0.e(-51);
-          ((nra) this).field_i = param0.e(-25);
-          ((nra) this).field_k = param0.e(100);
-          ((nra) this).field_e = param0.b(290646880);
-          ((nra) this).field_n = param0.b(param1 + 290646899);
-          ((nra) this).field_b = param0.b(param1 ^ -290646899);
-          ((nra) this).field_l = param0.b(290646880);
-          return;
+            return;
+        }
+        try {
+            ((nra) this).field_h = param0.e(-126);
+            ((nra) this).field_d = param0.e(-51);
+            ((nra) this).field_i = param0.e(-25);
+            ((nra) this).field_k = param0.e(100);
+            ((nra) this).field_e = param0.b(290646880);
+            ((nra) this).field_n = param0.b(param1 + 290646899);
+            ((nra) this).field_b = param0.b(param1 ^ -290646899);
+            ((nra) this).field_l = param0.b(290646880);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "nra.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
     public static void a(byte param0) {
         field_a = null;
-        if (param0 <= 27) {
-            return;
-        }
         field_g = null;
         field_c = null;
     }
 
     final static void a(byte param0, int param1, int param2, int[] param3, int param4) {
-        int var5 = 0;
+        int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
         var6 = TombRacer.field_G ? 1 : 0;
-        param4--;
-        param2--;
-        var5 = param2 + -7;
-        if (param0 == -55) {
-          L0: while (true) {
-            if (param4 < var5) {
-              param4++;
-              param3[param4] = param1;
-              param4++;
-              param3[param4] = param1;
-              param4++;
-              param3[param4] = param1;
-              param4++;
-              param3[param4] = param1;
-              param4++;
-              param3[param4] = param1;
-              param4++;
-              param3[param4] = param1;
-              param4++;
-              param3[param4] = param1;
-              param4++;
-              param3[param4] = param1;
-              continue L0;
-            } else {
+        try {
+          L0: {
+            param4--;
+            param2--;
+            var5_int = param2 + -7;
+            if (param0 == -55) {
               L1: while (true) {
-                if (param4 >= param2) {
-                  return;
+                if (param4 >= var5_int) {
+                  L2: while (true) {
+                    if (param4 >= param2) {
+                      break L0;
+                    } else {
+                      param4++;
+                      param3[param4] = param1;
+                      continue L2;
+                    }
+                  }
                 } else {
+                  param4++;
+                  param3[param4] = param1;
+                  param4++;
+                  param3[param4] = param1;
+                  param4++;
+                  param3[param4] = param1;
+                  param4++;
+                  param3[param4] = param1;
+                  param4++;
+                  param3[param4] = param1;
+                  param4++;
+                  param3[param4] = param1;
+                  param4++;
+                  param3[param4] = param1;
                   param4++;
                   param3[param4] = param1;
                   continue L1;
                 }
               }
+            } else {
+              return;
             }
           }
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var5 = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var5;
+            stackOut_8_1 = new StringBuilder().append("nra.F(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param3 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L3;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L3;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param4 + 41);
         }
     }
 

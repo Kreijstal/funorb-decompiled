@@ -24,13 +24,13 @@ final class le extends cf {
         int var4 = 0;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         if (param0 != 0) {
-          var2 = 81 / ((-3 - param1) / 39);
+          var2 = 81;
           if (0 <= param0) {
-            if ((param0 ^ -1) > -32769) {
+            if (param0 < 32768) {
               L0: {
-                if (-129 >= param0) {
-                  if ((param0 ^ -1) > -2049) {
-                    if ((param0 ^ -1) > -513) {
+                if (param0 >= 128) {
+                  if (param0 < 2048) {
+                    if (param0 < 512) {
                       var3 = 4;
                       break L0;
                     } else {
@@ -47,15 +47,15 @@ final class le extends cf {
                     }
                   }
                 } else {
-                  if (-9 > param0) {
-                    if ((param0 ^ -1) > -3) {
+                  if (param0 < 8) {
+                    if (param0 < 2) {
                       return 256;
                     } else {
                       var3 = 7;
                       break L0;
                     }
                   } else {
-                    if ((param0 ^ -1) <= -33) {
+                    if (param0 >= 32) {
                       var3 = 5;
                       break L0;
                     } else {
@@ -65,14 +65,14 @@ final class le extends cf {
                   }
                 }
               }
-              param0 = param0 << (var3 << -465331295);
+              param0 = param0 << (var3 << 1);
               return pk.field_a[-32768 + param0] >> var3;
             } else {
-              if (param0 <= -131073) {
+              if (param0 >= 131072) {
                 L1: {
                   if (param0 < 33554432) {
                     if (param0 >= 2097152) {
-                      if ((param0 ^ -1) > -8388609) {
+                      if (param0 < 8388608) {
                         var3 = 3;
                         break L1;
                       } else {
@@ -89,7 +89,7 @@ final class le extends cf {
                       }
                     }
                   } else {
-                    if (-536870913 > param0) {
+                    if (param0 < 536870912) {
                       if (param0 < 134217728) {
                         var3 = 5;
                         break L1;
@@ -103,7 +103,7 @@ final class le extends cf {
                     }
                   }
                 }
-                param0 = param0 >> (var3 << 1609769889);
+                param0 = param0 >> (var3 << 1);
                 return pk.field_a[-32768 + param0] << var3;
               } else {
                 return pk.field_a[param0 + -32768];
@@ -124,7 +124,7 @@ final class le extends cf {
         if (param1 != -70) {
             field_I = null;
         }
-        return -1 != (1 << param0 & pb.field_d ^ -1) ? true : false;
+        return (1 << param0 & pb.field_d) != 0 ? true : false;
     }
 
     private final ja b(int param0, int param1, int param2) {
@@ -148,7 +148,7 @@ final class le extends cf {
         var14 = new ja(2 * ((le) this).field_D, ((le) this).field_w);
         if (param0 == -16711936) {
           r.a(0, var14);
-          var5 = ((le) this).field_w >> 639813409;
+          var5 = ((le) this).field_w >> 1;
           var6 = 0;
           L0: while (true) {
             if (var6 >= ((le) this).field_w) {
@@ -156,7 +156,7 @@ final class le extends cf {
               return var14;
             } else {
               L1: {
-                var7 = (var6 >> 1565101665) * (2 * ((le) this).field_D - 1) % (2 * ((le) this).field_D);
+                var7 = (var6 >> 1) * (2 * ((le) this).field_D - 1) % (2 * ((le) this).field_D);
                 var8 = 16711935 & param2;
                 var9 = param2 & 65280;
                 var10 = var6 + -var5;
@@ -166,7 +166,7 @@ final class le extends cf {
                   stackIn_7_0 = stackOut_6_0;
                   break L1;
                 } else {
-                  stackOut_5_0 = (var11 * var9 & 16711680 | -16711936 & var11 * var8) >>> 408378376;
+                  stackOut_5_0 = (var11 * var9 & 16711680 | -16711936 & var11 * var8) >>> 8;
                   stackIn_7_0 = stackOut_5_0;
                   break L1;
                 }
@@ -178,7 +178,7 @@ final class le extends cf {
                 var9 = 65280 & param1;
                 oo.b(var7 + -(((le) this).field_D * 2), var6, ((le) this).field_D, var12);
                 if (var11 < 256) {
-                  stackOut_9_0 = (var11 * var8 & -16711936 | var9 * var11 & 16711680) >>> -947853752;
+                  stackOut_9_0 = (var11 * var8 & -16711936 | var9 * var11 & 16711680) >>> 8;
                   stackIn_10_0 = stackOut_9_0;
                   break L2;
                 } else {
@@ -205,7 +205,7 @@ final class le extends cf {
         double var6 = 0.0;
         int var8 = 0;
         int var9 = ZombieDawnMulti.field_E ? 1 : 0;
-        int var2 = ((le) this).field_w >> -1128159583;
+        int var2 = ((le) this).field_w >> 1;
         ja var3 = new ja(var2, ((le) this).field_w);
         r.a(0, var3);
         for (var4 = 0; var4 < ((le) this).field_w; var4++) {
@@ -216,7 +216,7 @@ final class le extends cf {
                     var6 = Math.sqrt(1.0 - var6);
                     var8 = var6 < 1.0 ? (int)(255.0 * var6) : 255;
                 }
-                oo.a(var5, var4, var8 << -136884464 | (var8 << -2145973016 | var8));
+                oo.a(var5, var4, var8 << 16 | (var8 << 8 | var8));
             }
         }
         var5 = 121 % ((45 - param0) / 54);
@@ -227,9 +227,6 @@ final class le extends cf {
     public static void a(int param0) {
         field_G = null;
         field_I = null;
-        if (param0 != 0) {
-            boolean discarded$0 = le.b(67, (byte) 68);
-        }
         field_P = null;
     }
 
@@ -239,14 +236,77 @@ final class le extends cf {
     }
 
     final void a(int param0, cf param1, int param2, int param3) {
-        if (!(!((le) this).field_L)) {
-            ((le) this).field_J = ((le) this).field_J + 1;
-            if (!(((le) this).field_D * 2 >= ((le) this).field_J)) {
-                ((le) this).field_J = ((le) this).field_J - ((le) this).field_D * 2;
+        RuntimeException var5 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (((le) this).field_L) {
+                ((le) this).field_J = ((le) this).field_J + 1;
+                if (((le) this).field_D * 2 < ((le) this).field_J) {
+                  ((le) this).field_J = ((le) this).field_J - ((le) this).field_D * 2;
+                  break L1;
+                } else {
+                  break L1;
+                }
+              } else {
+                break L1;
+              }
             }
-        }
-        if (param0 != -5407) {
-            ((le) this).b(-97, -4, 31, 91, 52);
+            L2: {
+              if (param0 == -5407) {
+                break L2;
+              } else {
+                ((le) this).b(-97, -4, 31, 91, 52);
+                break L2;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var5 = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var5;
+            stackOut_8_1 = new StringBuilder().append("le.T(").append(param0).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param1 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L3;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L3;
+            }
+          }
+          throw fa.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param2 + 44 + param3 + 41);
         }
     }
 
@@ -260,86 +320,136 @@ final class le extends cf {
         }
         int var6 = ((le) this).field_i + param1;
         this.a((byte) 116, ((le) this).field_F[0], var5, var6);
-        if (-65537 < (((le) this).field_B ^ -1)) {
-            nm.a(var5 + (((le) this).field_n * ((le) this).field_B >> -1947480464), ((le) this).field_w + var6, (byte) 105, ((le) this).field_n + var5, var6);
+        if (((le) this).field_B < 65536) {
+            nm.a(var5 + (((le) this).field_n * ((le) this).field_B >> 16), ((le) this).field_w + var6, (byte) 105, ((le) this).field_n + var5, var6);
             this.a((byte) 116, ((le) this).field_F[1], var5, var6);
             ql.a(true);
         }
     }
 
     le(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        this(param0, param1, param2, param3, param4, param5, param6, (param5 & 16711422) >> -158222623, 8355711 & param6 >> 947786721);
+        this(param0, param1, param2, param3, param4, param5, param6, (param5 & 16711422) >> 1, 8355711 & param6 >> 1);
     }
 
     final void a(int param0, int param1, byte param2) {
         int var4 = 17 / ((55 - param2) / 61);
-        ((le) this).field_H = (param1 & 16711422) >> -2031915327;
+        ((le) this).field_H = (param1 & 16711422) >> 1;
         ((le) this).field_E = param1;
         ((le) this).field_N = param0;
-        ((le) this).field_K = param0 >> -146639327 & 8355711;
+        ((le) this).field_K = param0 >> 1 & 8355711;
         this.f(-506198655);
     }
 
     private final void a(byte param0, ja param1, int param2, int param3) {
-        int var5 = 0;
+        RuntimeException var5 = null;
+        int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        L0: {
-          var8 = ZombieDawnMulti.field_E ? 1 : 0;
-          var5 = param2 + ((le) this).field_n;
-          if (param0 == 116) {
-            break L0;
-          } else {
-            ((le) this).field_N = -99;
-            break L0;
-          }
-        }
-        nm.a(param2 + ((le) this).field_M.field_x, ((le) this).field_w + param3, (byte) 105, -((le) this).field_M.field_x + var5, param3);
-        var6 = param2 - ((le) this).field_J;
-        L1: while (true) {
-          if (var6 >= var5) {
-            L2: {
-              ql.a(true);
-              if (oo.field_f > ((le) this).field_M.field_x + param2) {
-                break L2;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_18_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        var8 = ZombieDawnMulti.field_E ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              var5_int = param2 + ((le) this).field_n;
+              if (param0 == 116) {
+                break L1;
               } else {
-                r.a(0, ((le) this).field_C);
-                param1.g(-((le) this).field_J, 0);
-                param1.g(((le) this).field_D * 2 + -((le) this).field_J, 0);
-                ((le) this).field_O.e(0, 0);
-                ql.a(true);
-                ((le) this).field_C.g(param2, param3);
-                break L2;
+                ((le) this).field_N = -99;
+                break L1;
               }
             }
-            L3: {
-              if (oo.field_g >= -((le) this).field_M.field_x + var5) {
-                r.a(0, ((le) this).field_C);
-                var7 = -((le) this).field_M.field_x + ((le) this).field_n + ((le) this).field_J;
-                L4: while (true) {
-                  if (((le) this).field_D * 2 >= var7) {
-                    param1.g(-var7, 0);
-                    param1.g(2 * ((le) this).field_D - var7, 0);
-                    ((le) this).field_M.e(0, 0);
-                    ql.a(true);
-                    ((le) this).field_C.g(var5 + -((le) this).field_M.field_x, param3);
+            nm.a(param2 + ((le) this).field_M.field_x, ((le) this).field_w + param3, (byte) 105, -((le) this).field_M.field_x + var5_int, param3);
+            var6 = param2 - ((le) this).field_J;
+            L2: while (true) {
+              if (var6 >= var5_int) {
+                L3: {
+                  ql.a(true);
+                  if (oo.field_f > ((le) this).field_M.field_x + param2) {
                     break L3;
                   } else {
-                    var7 = var7 - 2 * ((le) this).field_D;
-                    continue L4;
+                    r.a(0, ((le) this).field_C);
+                    param1.g(-((le) this).field_J, 0);
+                    param1.g(((le) this).field_D * 2 + -((le) this).field_J, 0);
+                    ((le) this).field_O.e(0, 0);
+                    ql.a(true);
+                    ((le) this).field_C.g(param2, param3);
+                    break L3;
                   }
                 }
+                L4: {
+                  if (oo.field_g >= -((le) this).field_M.field_x + var5_int) {
+                    r.a(0, ((le) this).field_C);
+                    var7 = -((le) this).field_M.field_x + ((le) this).field_n + ((le) this).field_J;
+                    L5: while (true) {
+                      if (((le) this).field_D * 2 >= var7) {
+                        param1.g(-var7, 0);
+                        param1.g(2 * ((le) this).field_D - var7, 0);
+                        ((le) this).field_M.e(0, 0);
+                        ql.a(true);
+                        ((le) this).field_C.g(var5_int + -((le) this).field_M.field_x, param3);
+                        break L4;
+                      } else {
+                        var7 = var7 - 2 * ((le) this).field_D;
+                        continue L5;
+                      }
+                    }
+                  } else {
+                    break L4;
+                  }
+                }
+                break L0;
               } else {
-                break L3;
+                param1.g(var6, param3);
+                var6 = var6 + param1.field_x;
+                continue L2;
               }
             }
-            return;
-          } else {
-            param1.g(var6, param3);
-            var6 = var6 + param1.field_x;
-            continue L1;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L6: {
+            var5 = decompiledCaughtException;
+            stackOut_15_0 = (RuntimeException) var5;
+            stackOut_15_1 = new StringBuilder().append("le.A(").append(param0).append(44);
+            stackIn_17_0 = stackOut_15_0;
+            stackIn_17_1 = stackOut_15_1;
+            stackIn_16_0 = stackOut_15_0;
+            stackIn_16_1 = stackOut_15_1;
+            if (param1 == null) {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "null";
+              stackIn_18_0 = stackOut_17_0;
+              stackIn_18_1 = stackOut_17_1;
+              stackIn_18_2 = stackOut_17_2;
+              break L6;
+            } else {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "{...}";
+              stackIn_18_0 = stackOut_16_0;
+              stackIn_18_1 = stackOut_16_1;
+              stackIn_18_2 = stackOut_16_2;
+              break L6;
+            }
+          }
+          throw fa.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + param2 + 44 + param3 + 41);
         }
     }
 
@@ -353,13 +463,10 @@ final class le extends cf {
     }
 
     private final void f(int param0) {
-        ((le) this).field_F = new ja[]{this.b(param0 + 489486719, ((le) this).field_N, ((le) this).field_E), this.b(-16711936, ((le) this).field_K, ((le) this).field_H)};
-        ((le) this).field_M = this.g(param0 ^ -506198544);
+        ((le) this).field_F = new ja[]{this.b(-16711936, ((le) this).field_N, ((le) this).field_E), this.b(-16711936, ((le) this).field_K, ((le) this).field_H)};
+        ((le) this).field_M = this.g(113);
         ((le) this).field_O = ((le) this).field_M.f();
-        ((le) this).field_C = new ja(((le) this).field_w >> -506198655, ((le) this).field_w);
-        if (param0 != -506198655) {
-            ((le) this).b(-93, 112, 105, 48, -63);
-        }
+        ((le) this).field_C = new ja(((le) this).field_w >> 1, ((le) this).field_w);
     }
 
     static {

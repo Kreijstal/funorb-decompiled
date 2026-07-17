@@ -31,7 +31,11 @@ final class an extends nk {
 
     an(int param0, int param1, String param2, int param3, String param4) {
         super(param0, param1, param2, param3);
-        ((an) this).field_p = param4;
+        try {
+            ((an) this).field_p = param4;
+        } catch (RuntimeException runtimeException) {
+            throw dn.a((Throwable) (Object) runtimeException, "an.<init>(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void a(boolean param0, int param1, int param2) {

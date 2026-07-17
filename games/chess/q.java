@@ -832,7 +832,7 @@ final class q {
             L1: {
               var2_int = param0.length();
               var3 = -67 / ((param1 - 58) / 59);
-              if (-21 > (var2_int ^ -1)) {
+              if (var2_int > 20) {
                 var2_int = 20;
                 break L1;
               } else {
@@ -867,7 +867,7 @@ final class q {
                     L6: {
                       L7: {
                         L8: {
-                          if ((var6 ^ -1) > -98) {
+                          if (var6 < 97) {
                             break L8;
                           } else {
                             if (122 >= var6) {
@@ -880,7 +880,7 @@ final class q {
                         if (var6 < 48) {
                           break L6;
                         } else {
-                          if ((var6 ^ -1) < -58) {
+                          if (var6 > 57) {
                             break L6;
                           } else {
                             break L7;
@@ -1111,7 +1111,7 @@ final class q {
               }
             }
             L2: {
-              if ((ug.field_b ^ -1) < (da.field_F ^ -1)) {
+              if (~ug.field_b < ~da.field_F) {
                 da.field_F = da.field_F + 1;
                 break L2;
               } else {
@@ -1153,7 +1153,7 @@ final class q {
               L6: while (true) {
                 L7: {
                   L8: {
-                    if (-6 >= (var4_int ^ -1)) {
+                    if (var4_int >= 5) {
                       break L8;
                     } else {
                       var5 = g.field_d[var4_int];
@@ -1168,7 +1168,7 @@ final class q {
                             break L9;
                           } else {
                             L10: {
-                              if ((var5.field_L ^ -1) == -1) {
+                              if (var5.field_L == 0) {
                                 break L10;
                               } else {
                                 qf.a(var4_int, var5, (byte) 62);
@@ -1195,7 +1195,7 @@ final class q {
                   break L7;
                 }
                 L11: {
-                  if ((stackIn_36_0.field_L ^ -1) == -1) {
+                  if (stackIn_36_0.field_L == 0) {
                     break L11;
                   } else {
                     pj.field_h = new pc(bj.field_jb.field_U, bj.field_jb.field_wb, bj.field_jb.field_M, bj.field_jb.field_pb, param3, ki.field_P, dc.field_s, gd.field_b, qn.field_P, kj.field_g, sj.field_k, (String) null, 0L);

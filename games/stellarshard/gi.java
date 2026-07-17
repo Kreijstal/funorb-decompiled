@@ -14,43 +14,94 @@ final class gi {
 
     final boolean a(byte[] param0, int param1, int param2, int param3) {
         Object var5 = null;
+        RuntimeException var5_ref = null;
         int var6 = 0;
         Throwable var7 = null;
-        int stackIn_11_0 = 0;
+        int stackIn_2_0 = 0;
+        int stackIn_12_0 = 0;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_18_2 = null;
         Throwable decompiledCaughtException = null;
-        int stackOut_10_0 = 0;
-        if (param2 == 5) {
-          var5 = (Object) (Object) ((gi) this).field_e;
-          synchronized (var5) {
-            L0: {
-              L1: {
-                if (-1 < (param1 ^ -1)) {
-                  break L1;
-                } else {
-                  if (param1 > ((gi) this).field_a) {
+        int stackOut_11_0 = 0;
+        int stackOut_1_0 = 0;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        try {
+          if (param2 == 5) {
+            var5 = (Object) (Object) ((gi) this).field_e;
+            synchronized (var5) {
+              L0: {
+                L1: {
+                  if (param1 < 0) {
                     break L1;
                   } else {
-                    L2: {
-                      var6 = this.a(param3, param1, true, param2 + -5, param0) ? 1 : 0;
-                      if (var6 == 0) {
-                        var6 = this.a(param3, param1, false, 0, param0) ? 1 : 0;
-                        break L2;
-                      } else {
-                        break L2;
+                    if (param1 > ((gi) this).field_a) {
+                      break L1;
+                    } else {
+                      L2: {
+                        var6 = this.a(param3, param1, true, param2 + -5, param0) ? 1 : 0;
+                        if (var6 == 0) {
+                          var6 = this.a(param3, param1, false, 0, param0) ? 1 : 0;
+                          break L2;
+                        } else {
+                          break L2;
+                        }
                       }
+                      stackOut_11_0 = var6;
+                      stackIn_12_0 = stackOut_11_0;
+                      break L0;
                     }
-                    stackOut_10_0 = var6;
-                    stackIn_11_0 = stackOut_10_0;
-                    break L0;
                   }
                 }
+                throw new IllegalArgumentException();
               }
-              throw new IllegalArgumentException();
+            }
+            return stackIn_12_0 != 0;
+          } else {
+            stackOut_1_0 = 1;
+            stackIn_2_0 = stackOut_1_0;
+            return stackIn_2_0 != 0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var5_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackOut_15_0 = (RuntimeException) var5_ref;
+            stackOut_15_1 = new StringBuilder().append("gi.C(");
+            stackIn_17_0 = stackOut_15_0;
+            stackIn_17_1 = stackOut_15_1;
+            stackIn_16_0 = stackOut_15_0;
+            stackIn_16_1 = stackOut_15_1;
+            if (param0 == null) {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "null";
+              stackIn_18_0 = stackOut_17_0;
+              stackIn_18_1 = stackOut_17_1;
+              stackIn_18_2 = stackOut_17_2;
+              break L3;
+            } else {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "{...}";
+              stackIn_18_0 = stackOut_16_0;
+              stackIn_18_1 = stackOut_16_1;
+              stackIn_18_2 = stackOut_16_2;
+              break L3;
             }
           }
-          return stackIn_11_0 != 0;
-        } else {
-          return true;
+          throw ma.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }
     }
 
@@ -108,9 +159,9 @@ final class gi {
                   if (((gi) this).field_d.c(117) >= (long)(6 * param1 + 6)) {
                     ((gi) this).field_d.a((long)(6 * param1), 0);
                     ((gi) this).field_d.a(6, (byte) -93, 0, gg.field_e);
-                    var4_int = (gg.field_e[0] << 1210422640 & 16711680) - -((gg.field_e[1] & 255) << 664084264) - -(255 & gg.field_e[2]);
-                    var5 = (gg.field_e[5] & 255) + ((255 & gg.field_e[3]) << -1703361584) - -((gg.field_e[4] & 255) << -1648006776);
-                    if (-1 >= (var4_int ^ -1)) {
+                    var4_int = (gg.field_e[0] << 16 & 16711680) - -((gg.field_e[1] & 255) << 8) - -(255 & gg.field_e[2]);
+                    var5 = (gg.field_e[5] & 255) + ((255 & gg.field_e[3]) << 16) - -((gg.field_e[4] & 255) << 8);
+                    if (var4_int >= 0) {
                       if (var4_int <= ((gi) this).field_a) {
                         if (var5 > 0) {
                           if ((long)var5 <= ((gi) this).field_e.c(70) / 520L) {
@@ -126,7 +177,7 @@ final class gi {
                                   stackIn_55_0 = stackOut_54_0;
                                   break L0;
                                 } else {
-                                  if (-1 != (var5 ^ -1)) {
+                                  if (var5 != 0) {
                                     L2: {
                                       ((gi) this).field_e.a((long)(520 * var5), 0);
                                       var9 = var4_int - var7;
@@ -141,9 +192,9 @@ final class gi {
                                         }
                                         var14 = 8;
                                         ((gi) this).field_e.a(var14 + var9, (byte) -93, 0, gg.field_e);
-                                        var10 = ((255 & gg.field_e[0]) << 1105986920) + (255 & gg.field_e[1]);
-                                        var12 = (16711680 & gg.field_e[4] << 1430988752) + (65280 & gg.field_e[5] << -1722203096) - -(255 & gg.field_e[6]);
-                                        var11 = (255 & gg.field_e[3]) + (gg.field_e[2] << -421637432 & 65280);
+                                        var10 = ((255 & gg.field_e[0]) << 8) + (255 & gg.field_e[1]);
+                                        var12 = (16711680 & gg.field_e[4] << 16) + (65280 & gg.field_e[5] << 8) - -(255 & gg.field_e[6]);
+                                        var11 = (255 & gg.field_e[3]) + (gg.field_e[2] << 8 & 65280);
                                         var13 = gg.field_e[7] & 255;
                                         break L2;
                                       } else {
@@ -158,9 +209,9 @@ final class gi {
                                         var14 = 10;
                                         ((gi) this).field_e.a(var9 + var14, (byte) -93, 0, gg.field_e);
                                         var13 = 255 & gg.field_e[9];
-                                        var12 = (255 & gg.field_e[8]) + (((255 & gg.field_e[6]) << 1266042128) + (65280 & gg.field_e[7] << 982381032));
-                                        var10 = (gg.field_e[3] & 255) + ((65280 & gg.field_e[2] << 1463103944) + (((gg.field_e[0] & 255) << 1279313816) + ((255 & gg.field_e[1]) << -617181968)));
-                                        var11 = (255 & gg.field_e[5]) + ((255 & gg.field_e[4]) << -245681016);
+                                        var12 = (255 & gg.field_e[8]) + (((255 & gg.field_e[6]) << 16) + (65280 & gg.field_e[7] << 8));
+                                        var10 = (gg.field_e[3] & 255) + ((65280 & gg.field_e[2] << 8) + (((gg.field_e[0] & 255) << 24) + ((255 & gg.field_e[1]) << 16)));
+                                        var11 = (255 & gg.field_e[5]) + ((255 & gg.field_e[4]) << 8);
                                         break L2;
                                       }
                                     }
@@ -262,6 +313,8 @@ final class gi {
     private final boolean a(int param0, int param1, boolean param2, int param3, byte[] param4) {
         try {
             Object var6 = null;
+            RuntimeException var6_ref = null;
+            Object var6_ref2 = null;
             IOException var7 = null;
             int var7_int = 0;
             int var8 = 0;
@@ -273,285 +326,331 @@ final class gi {
             EOFException var14 = null;
             Throwable var15 = null;
             int var16 = 0;
-            int stackIn_7_0 = 0;
             int stackIn_8_0 = 0;
-            int stackIn_13_0 = 0;
+            int stackIn_9_0 = 0;
             int stackIn_14_0 = 0;
-            int stackIn_33_0 = 0;
+            int stackIn_15_0 = 0;
             int stackIn_34_0 = 0;
-            int stackIn_39_0 = 0;
+            int stackIn_35_0 = 0;
             int stackIn_40_0 = 0;
-            int stackIn_61_0 = 0;
+            int stackIn_41_0 = 0;
             int stackIn_62_0 = 0;
-            int stackIn_64_0 = 0;
+            int stackIn_63_0 = 0;
+            int stackIn_65_0 = 0;
+            RuntimeException stackIn_69_0 = null;
+            StringBuilder stackIn_69_1 = null;
+            RuntimeException stackIn_70_0 = null;
+            StringBuilder stackIn_70_1 = null;
+            RuntimeException stackIn_71_0 = null;
+            StringBuilder stackIn_71_1 = null;
+            String stackIn_71_2 = null;
             int decompiledRegionSelector0 = 0;
             int decompiledRegionSelector1 = 0;
             Throwable decompiledCaughtException = null;
-            int stackOut_6_0 = 0;
             int stackOut_7_0 = 0;
-            int stackOut_12_0 = 0;
+            int stackOut_8_0 = 0;
             int stackOut_13_0 = 0;
-            int stackOut_38_0 = 0;
+            int stackOut_14_0 = 0;
             int stackOut_39_0 = 0;
-            int stackOut_32_0 = 0;
+            int stackOut_40_0 = 0;
             int stackOut_33_0 = 0;
-            int stackOut_60_0 = 0;
+            int stackOut_34_0 = 0;
             int stackOut_61_0 = 0;
-            int stackOut_63_0 = 0;
+            int stackOut_62_0 = 0;
+            int stackOut_64_0 = 0;
+            RuntimeException stackOut_68_0 = null;
+            StringBuilder stackOut_68_1 = null;
+            RuntimeException stackOut_70_0 = null;
+            StringBuilder stackOut_70_1 = null;
+            String stackOut_70_2 = null;
+            RuntimeException stackOut_69_0 = null;
+            StringBuilder stackOut_69_1 = null;
+            String stackOut_69_2 = null;
             var16 = stellarshard.field_B;
-            var6 = (Object) (Object) ((gi) this).field_e;
-            synchronized (var6) {
-              try {
-                L0: {
-                  L1: {
-                    if (param2) {
-                      if (((long)(6 + 6 * param0) ^ -1L) < (((gi) this).field_d.c(61) ^ -1L)) {
-                        stackOut_6_0 = 0;
-                        stackIn_7_0 = stackOut_6_0;
-                        stackOut_7_0 = stackIn_7_0;
-                        stackIn_8_0 = stackOut_7_0;
-                        return stackIn_8_0 != 0;
-                      } else {
-                        L2: {
-                          ((gi) this).field_d.a((long)(6 * param0), param3 + 0);
-                          ((gi) this).field_d.a(6, (byte) -93, 0, gg.field_e);
-                          var7_int = (gg.field_e[5] & 255) + ((65280 & gg.field_e[4] << -1831552536) + (16711680 & gg.field_e[3] << -120345648));
-                          if (0 >= var7_int) {
-                            break L2;
-                          } else {
-                            if ((long)var7_int <= ((gi) this).field_e.c(110) / 520L) {
-                              break L1;
-                            } else {
+            try {
+              var6_ref2 = (Object) (Object) ((gi) this).field_e;
+              synchronized (var6_ref2) {
+                try {
+                  L0: {
+                    L1: {
+                      if (param2) {
+                        if (~(long)(6 + 6 * param0) < ~((gi) this).field_d.c(61)) {
+                          stackOut_7_0 = 0;
+                          stackIn_8_0 = stackOut_7_0;
+                          stackOut_8_0 = stackIn_8_0;
+                          stackIn_9_0 = stackOut_8_0;
+                          return stackIn_9_0 != 0;
+                        } else {
+                          L2: {
+                            ((gi) this).field_d.a((long)(6 * param0), param3);
+                            ((gi) this).field_d.a(6, (byte) -93, 0, gg.field_e);
+                            var7_int = (gg.field_e[5] & 255) + ((65280 & gg.field_e[4] << 8) + (16711680 & gg.field_e[3] << 16));
+                            if (0 >= var7_int) {
                               break L2;
-                            }
-                          }
-                        }
-                        stackOut_12_0 = 0;
-                        stackIn_13_0 = stackOut_12_0;
-                        stackOut_13_0 = stackIn_13_0;
-                        stackIn_14_0 = stackOut_13_0;
-                        return stackIn_14_0 != 0;
-                      }
-                    } else {
-                      var7_int = (int)((((gi) this).field_e.c(param3 + 98) - -519L) / 520L);
-                      if (var7_int != 0) {
-                        break L1;
-                      } else {
-                        var7_int = 1;
-                        break L1;
-                      }
-                    }
-                  }
-                  gg.field_e[5] = (byte)var7_int;
-                  gg.field_e[4] = (byte)(var7_int >> 2125415784);
-                  gg.field_e[3] = (byte)(var7_int >> -69284944);
-                  gg.field_e[2] = (byte)param1;
-                  gg.field_e[1] = (byte)(param1 >> -426599032);
-                  gg.field_e[param3] = (byte)(param1 >> 1647562128);
-                  ((gi) this).field_d.a((long)(param0 * 6), 0);
-                  ((gi) this).field_d.a(6, 0, -1, gg.field_e);
-                  var8 = 0;
-                  var9 = 0;
-                  L3: while (true) {
-                    L4: {
-                      if (param1 <= var8) {
-                        break L4;
-                      } else {
-                        L5: {
-                          var10 = 0;
-                          if (!param2) {
-                            break L5;
-                          } else {
-                            L6: {
-                              ((gi) this).field_e.a((long)(520 * var7_int), 0);
-                              if (65535 >= param0) {
-                                try {
-                                  L7: {
-                                    ((gi) this).field_e.a(8, (byte) -93, 0, gg.field_e);
-                                    decompiledRegionSelector1 = 0;
-                                    break L7;
-                                  }
-                                } catch (java.lang.Exception decompiledCaughtParameter0) {
-                                  decompiledCaughtException = decompiledCaughtParameter0;
-                                  L8: {
-                                    var14 = (EOFException) (Object) decompiledCaughtException;
-                                    decompiledRegionSelector1 = 1;
-                                    break L8;
-                                  }
-                                }
-                                if (decompiledRegionSelector1 == 0) {
-                                  var13 = gg.field_e[7] & 255;
-                                  var10 = (255 & gg.field_e[6]) + (((gg.field_e[4] & 255) << 409243728) + ((255 & gg.field_e[5]) << 1757173128));
-                                  var11 = ((gg.field_e[0] & 255) << 291160648) + (gg.field_e[1] & 255);
-                                  var12 = (65280 & gg.field_e[2] << 436280456) - -(255 & gg.field_e[3]);
-                                  break L6;
-                                } else {
-                                  break L4;
-                                }
+                            } else {
+                              if ((long)var7_int <= ((gi) this).field_e.c(110) / 520L) {
+                                break L1;
                               } else {
-                                try {
-                                  L9: {
-                                    ((gi) this).field_e.a(10, (byte) -93, 0, gg.field_e);
-                                    decompiledRegionSelector0 = 0;
-                                    break L9;
-                                  }
-                                } catch (java.lang.Exception decompiledCaughtParameter1) {
-                                  decompiledCaughtException = decompiledCaughtParameter1;
-                                  L10: {
-                                    var14 = (EOFException) (Object) decompiledCaughtException;
-                                    decompiledRegionSelector0 = 1;
-                                    break L10;
-                                  }
-                                }
-                                if (decompiledRegionSelector0 == 0) {
-                                  var12 = (gg.field_e[5] & 255) + ((255 & gg.field_e[4]) << 1787385768);
-                                  var13 = gg.field_e[9] & 255;
-                                  var11 = ((255 & gg.field_e[2]) << 1171120840) + ((gg.field_e[0] & 255) << 647322616) + ((gg.field_e[1] << -521759920 & 16711680) + (255 & gg.field_e[3]));
-                                  var10 = (255 & gg.field_e[8]) + (((gg.field_e[7] & 255) << 1067321128) + (gg.field_e[6] << -1900519760 & 16711680));
-                                  break L6;
-                                } else {
-                                  break L4;
-                                }
+                                break L2;
                               }
                             }
-                            L11: {
-                              if (param0 != var11) {
-                                break L11;
-                              } else {
-                                if (var12 != var9) {
+                          }
+                          stackOut_13_0 = 0;
+                          stackIn_14_0 = stackOut_13_0;
+                          stackOut_14_0 = stackIn_14_0;
+                          stackIn_15_0 = stackOut_14_0;
+                          return stackIn_15_0 != 0;
+                        }
+                      } else {
+                        var7_int = (int)((((gi) this).field_e.c(param3 + 98) - -519L) / 520L);
+                        if (var7_int != 0) {
+                          break L1;
+                        } else {
+                          var7_int = 1;
+                          break L1;
+                        }
+                      }
+                    }
+                    gg.field_e[5] = (byte)var7_int;
+                    gg.field_e[4] = (byte)(var7_int >> 8);
+                    gg.field_e[3] = (byte)(var7_int >> 16);
+                    gg.field_e[2] = (byte)param1;
+                    gg.field_e[1] = (byte)(param1 >> 8);
+                    gg.field_e[param3] = (byte)(param1 >> 16);
+                    ((gi) this).field_d.a((long)(param0 * 6), 0);
+                    ((gi) this).field_d.a(6, 0, -1, gg.field_e);
+                    var8 = 0;
+                    var9 = 0;
+                    L3: while (true) {
+                      L4: {
+                        if (param1 <= var8) {
+                          break L4;
+                        } else {
+                          L5: {
+                            var10 = 0;
+                            if (!param2) {
+                              break L5;
+                            } else {
+                              L6: {
+                                ((gi) this).field_e.a((long)(520 * var7_int), 0);
+                                if (65535 >= param0) {
+                                  try {
+                                    L7: {
+                                      ((gi) this).field_e.a(8, (byte) -93, 0, gg.field_e);
+                                      decompiledRegionSelector1 = 0;
+                                      break L7;
+                                    }
+                                  } catch (java.lang.Exception decompiledCaughtParameter0) {
+                                    decompiledCaughtException = decompiledCaughtParameter0;
+                                    L8: {
+                                      var14 = (EOFException) (Object) decompiledCaughtException;
+                                      decompiledRegionSelector1 = 1;
+                                      break L8;
+                                    }
+                                  }
+                                  if (decompiledRegionSelector1 == 0) {
+                                    var13 = gg.field_e[7] & 255;
+                                    var10 = (255 & gg.field_e[6]) + (((gg.field_e[4] & 255) << 16) + ((255 & gg.field_e[5]) << 8));
+                                    var11 = ((gg.field_e[0] & 255) << 8) + (gg.field_e[1] & 255);
+                                    var12 = (65280 & gg.field_e[2] << 8) - -(255 & gg.field_e[3]);
+                                    break L6;
+                                  } else {
+                                    break L4;
+                                  }
+                                } else {
+                                  try {
+                                    L9: {
+                                      ((gi) this).field_e.a(10, (byte) -93, 0, gg.field_e);
+                                      decompiledRegionSelector0 = 0;
+                                      break L9;
+                                    }
+                                  } catch (java.lang.Exception decompiledCaughtParameter1) {
+                                    decompiledCaughtException = decompiledCaughtParameter1;
+                                    L10: {
+                                      var14 = (EOFException) (Object) decompiledCaughtException;
+                                      decompiledRegionSelector0 = 1;
+                                      break L10;
+                                    }
+                                  }
+                                  if (decompiledRegionSelector0 == 0) {
+                                    var12 = (gg.field_e[5] & 255) + ((255 & gg.field_e[4]) << 8);
+                                    var13 = gg.field_e[9] & 255;
+                                    var11 = ((255 & gg.field_e[2]) << 8) + ((gg.field_e[0] & 255) << 24) + ((gg.field_e[1] << 16 & 16711680) + (255 & gg.field_e[3]));
+                                    var10 = (255 & gg.field_e[8]) + (((gg.field_e[7] & 255) << 8) + (gg.field_e[6] << 16 & 16711680));
+                                    break L6;
+                                  } else {
+                                    break L4;
+                                  }
+                                }
+                              }
+                              L11: {
+                                if (param0 != var11) {
                                   break L11;
                                 } else {
-                                  if (((gi) this).field_b != var13) {
+                                  if (var12 != var9) {
                                     break L11;
                                   } else {
-                                    L12: {
-                                      if (-1 < (var10 ^ -1)) {
-                                        break L12;
-                                      } else {
-                                        if (((gi) this).field_e.c(102) / 520L < (long)var10) {
+                                    if (((gi) this).field_b != var13) {
+                                      break L11;
+                                    } else {
+                                      L12: {
+                                        if (var10 < 0) {
                                           break L12;
                                         } else {
-                                          break L5;
+                                          if (((gi) this).field_e.c(102) / 520L < (long)var10) {
+                                            break L12;
+                                          } else {
+                                            break L5;
+                                          }
                                         }
                                       }
+                                      stackOut_39_0 = 0;
+                                      stackIn_40_0 = stackOut_39_0;
+                                      stackOut_40_0 = stackIn_40_0;
+                                      stackIn_41_0 = stackOut_40_0;
+                                      return stackIn_41_0 != 0;
                                     }
-                                    stackOut_38_0 = 0;
-                                    stackIn_39_0 = stackOut_38_0;
-                                    stackOut_39_0 = stackIn_39_0;
-                                    stackIn_40_0 = stackOut_39_0;
-                                    return stackIn_40_0 != 0;
                                   }
                                 }
                               }
+                              stackOut_33_0 = 0;
+                              stackIn_34_0 = stackOut_33_0;
+                              stackOut_34_0 = stackIn_34_0;
+                              stackIn_35_0 = stackOut_34_0;
+                              return stackIn_35_0 != 0;
                             }
-                            stackOut_32_0 = 0;
-                            stackIn_33_0 = stackOut_32_0;
-                            stackOut_33_0 = stackIn_33_0;
-                            stackIn_34_0 = stackOut_33_0;
-                            return stackIn_34_0 != 0;
                           }
-                        }
-                        L13: {
-                          if (0 != var10) {
-                            break L13;
-                          } else {
-                            L14: {
-                              var10 = (int)((((gi) this).field_e.c(127) + 519L) / 520L);
-                              param2 = false;
-                              if (var10 == 0) {
-                                var10++;
-                                break L14;
-                              } else {
-                                break L14;
-                              }
-                            }
-                            if (var10 == var7_int) {
-                              var10++;
+                          L13: {
+                            if (0 != var10) {
                               break L13;
                             } else {
-                              break L13;
-                            }
-                          }
-                        }
-                        L15: {
-                          if (512 >= -var8 + param1) {
-                            var10 = 0;
-                            break L15;
-                          } else {
-                            break L15;
-                          }
-                        }
-                        L16: {
-                          if ((param0 ^ -1) >= -65536) {
-                            L17: {
-                              gg.field_e[0] = (byte)(param0 >> -777997784);
-                              gg.field_e[5] = (byte)(var10 >> 2077785416);
-                              gg.field_e[1] = (byte)param0;
-                              gg.field_e[6] = (byte)var10;
-                              gg.field_e[3] = (byte)var9;
-                              gg.field_e[4] = (byte)(var10 >> -1726795888);
-                              gg.field_e[7] = (byte)((gi) this).field_b;
-                              gg.field_e[2] = (byte)(var9 >> -67533112);
-                              ((gi) this).field_e.a((long)(520 * var7_int), param3 + 0);
-                              ((gi) this).field_e.a(8, 0, param3, gg.field_e);
-                              var11 = -var8 + param1;
-                              if (-513 < var11) {
-                                var11 = 512;
-                                break L17;
+                              L14: {
+                                var10 = (int)((((gi) this).field_e.c(127) + 519L) / 520L);
+                                param2 = false;
+                                if (var10 == 0) {
+                                  var10++;
+                                  break L14;
+                                } else {
+                                  break L14;
+                                }
+                              }
+                              if (var10 == var7_int) {
+                                var10++;
+                                break L13;
                               } else {
-                                break L17;
+                                break L13;
                               }
                             }
-                            ((gi) this).field_e.a(var11, var8, param3 ^ -1, param4);
-                            var8 = var8 + var11;
-                            break L16;
-                          } else {
-                            L18: {
-                              gg.field_e[6] = (byte)(var10 >> 1758895024);
-                              gg.field_e[3] = (byte)param0;
-                              gg.field_e[5] = (byte)var9;
-                              gg.field_e[2] = (byte)(param0 >> -2084443544);
-                              gg.field_e[0] = (byte)(param0 >> 335518584);
-                              gg.field_e[7] = (byte)(var10 >> -1521881528);
-                              gg.field_e[4] = (byte)(var9 >> -378329848);
-                              gg.field_e[1] = (byte)(param0 >> 784378000);
-                              gg.field_e[9] = (byte)((gi) this).field_b;
-                              gg.field_e[8] = (byte)var10;
-                              ((gi) this).field_e.a((long)(520 * var7_int), 0);
-                              ((gi) this).field_e.a(10, 0, -1, gg.field_e);
-                              var11 = param1 + -var8;
-                              if (510 >= var11) {
-                                break L18;
-                              } else {
-                                var11 = 510;
-                                break L18;
-                              }
-                            }
-                            ((gi) this).field_e.a(var11, var8, -1, param4);
-                            var8 = var8 + var11;
-                            break L16;
                           }
+                          L15: {
+                            if (512 >= -var8 + param1) {
+                              var10 = 0;
+                              break L15;
+                            } else {
+                              break L15;
+                            }
+                          }
+                          L16: {
+                            if (param0 <= 65535) {
+                              L17: {
+                                gg.field_e[0] = (byte)(param0 >> 8);
+                                gg.field_e[5] = (byte)(var10 >> 8);
+                                gg.field_e[1] = (byte)param0;
+                                gg.field_e[6] = (byte)var10;
+                                gg.field_e[3] = (byte)var9;
+                                gg.field_e[4] = (byte)(var10 >> 16);
+                                gg.field_e[7] = (byte)((gi) this).field_b;
+                                gg.field_e[2] = (byte)(var9 >> 8);
+                                ((gi) this).field_e.a((long)(520 * var7_int), param3);
+                                ((gi) this).field_e.a(8, 0, param3, gg.field_e);
+                                var11 = -var8 + param1;
+                                if (-513 < var11) {
+                                  var11 = 512;
+                                  break L17;
+                                } else {
+                                  break L17;
+                                }
+                              }
+                              ((gi) this).field_e.a(var11, var8, ~param3, param4);
+                              var8 = var8 + var11;
+                              break L16;
+                            } else {
+                              L18: {
+                                gg.field_e[6] = (byte)(var10 >> 16);
+                                gg.field_e[3] = (byte)param0;
+                                gg.field_e[5] = (byte)var9;
+                                gg.field_e[2] = (byte)(param0 >> 8);
+                                gg.field_e[0] = (byte)(param0 >> 24);
+                                gg.field_e[7] = (byte)(var10 >> 8);
+                                gg.field_e[4] = (byte)(var9 >> 8);
+                                gg.field_e[1] = (byte)(param0 >> 16);
+                                gg.field_e[9] = (byte)((gi) this).field_b;
+                                gg.field_e[8] = (byte)var10;
+                                ((gi) this).field_e.a((long)(520 * var7_int), 0);
+                                ((gi) this).field_e.a(10, 0, -1, gg.field_e);
+                                var11 = param1 + -var8;
+                                if (510 >= var11) {
+                                  break L18;
+                                } else {
+                                  var11 = 510;
+                                  break L18;
+                                }
+                              }
+                              ((gi) this).field_e.a(var11, var8, -1, param4);
+                              var8 = var8 + var11;
+                              break L16;
+                            }
+                          }
+                          var9++;
+                          var7_int = var10;
+                          continue L3;
                         }
-                        var9++;
-                        var7_int = var10;
-                        continue L3;
                       }
+                      stackOut_61_0 = 1;
+                      stackIn_62_0 = stackOut_61_0;
+                      stackOut_62_0 = stackIn_62_0;
+                      stackIn_63_0 = stackOut_62_0;
+                      break L0;
                     }
-                    stackOut_60_0 = 1;
-                    stackIn_61_0 = stackOut_60_0;
-                    stackOut_61_0 = stackIn_61_0;
-                    stackIn_62_0 = stackOut_61_0;
-                    break L0;
                   }
+                } catch (java.io.IOException decompiledCaughtParameter2) {
+                  decompiledCaughtException = decompiledCaughtParameter2;
+                  var7 = (IOException) (Object) decompiledCaughtException;
+                  stackOut_64_0 = 0;
+                  stackIn_65_0 = stackOut_64_0;
+                  return stackIn_65_0 != 0;
                 }
-              } catch (java.io.IOException decompiledCaughtParameter2) {
-                decompiledCaughtException = decompiledCaughtParameter2;
-                var7 = (IOException) (Object) decompiledCaughtException;
-                stackOut_63_0 = 0;
-                stackIn_64_0 = stackOut_63_0;
-                return stackIn_64_0 != 0;
+                return stackIn_63_0 != 0;
               }
-              return stackIn_62_0 != 0;
+            } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
+              decompiledCaughtException = decompiledCaughtParameter3;
+              L19: {
+                var6_ref = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_68_0 = (RuntimeException) var6_ref;
+                stackOut_68_1 = new StringBuilder().append("gi.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+                stackIn_70_0 = stackOut_68_0;
+                stackIn_70_1 = stackOut_68_1;
+                stackIn_69_0 = stackOut_68_0;
+                stackIn_69_1 = stackOut_68_1;
+                if (param4 == null) {
+                  stackOut_70_0 = (RuntimeException) (Object) stackIn_70_0;
+                  stackOut_70_1 = (StringBuilder) (Object) stackIn_70_1;
+                  stackOut_70_2 = "null";
+                  stackIn_71_0 = stackOut_70_0;
+                  stackIn_71_1 = stackOut_70_1;
+                  stackIn_71_2 = stackOut_70_2;
+                  break L19;
+                } else {
+                  stackOut_69_0 = (RuntimeException) (Object) stackIn_69_0;
+                  stackOut_69_1 = (StringBuilder) (Object) stackIn_69_1;
+                  stackOut_69_2 = "{...}";
+                  stackIn_71_0 = stackOut_69_0;
+                  stackIn_71_1 = stackOut_69_1;
+                  stackIn_71_2 = stackOut_69_2;
+                  break L19;
+                }
+              }
+              throw ma.a((Throwable) (Object) stackIn_71_0, stackIn_71_2 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -568,10 +667,14 @@ final class gi {
         ((gi) this).field_d = null;
         ((gi) this).field_e = null;
         ((gi) this).field_a = 65000;
-        ((gi) this).field_a = param3;
-        ((gi) this).field_d = param2;
-        ((gi) this).field_b = param0;
-        ((gi) this).field_e = param1;
+        try {
+            ((gi) this).field_a = param3;
+            ((gi) this).field_d = param2;
+            ((gi) this).field_b = param0;
+            ((gi) this).field_e = param1;
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) (Object) runtimeException, "gi.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 41);
+        }
     }
 
     static {

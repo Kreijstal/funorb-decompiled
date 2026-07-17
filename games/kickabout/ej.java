@@ -9,7 +9,7 @@ final class ej extends hd {
 
     final void a(boolean param0, int param1) {
         Object var4 = null;
-        if (-2 == (((ej) this).field_sb ^ -1)) {
+        if (((ej) this).field_sb == 1) {
           if (pt.field_e == ((ej) this).field_Bb) {
             pt.field_e = -1;
             if (!((ej) this).field_gb) {
@@ -81,7 +81,7 @@ final class ej extends hd {
         var4.field_z = param3;
         int var5 = var4.d(5339);
         int var6 = uv.a(true, param2, param0);
-        int var7 = param1 > (pq.b(param1 ^ -172, var6 ^ var5) ^ -1) ? 1 : 0;
+        int var7 = param1 > ~pq.b(param1 ^ -172, var6 ^ var5) ? 1 : 0;
         var4.field_h = var6;
         var4.a((byte) -31, 2);
         var4.a(var4.field_h, 26214);
@@ -92,10 +92,14 @@ final class ej extends hd {
     }
 
     final static void a(java.awt.Component param0, int param1) {
-        int var2 = 2 % ((-26 - param1) / 58);
-        param0.setFocusTraversalKeysEnabled(false);
-        param0.addKeyListener((java.awt.event.KeyListener) (Object) nr.field_q);
-        param0.addFocusListener((java.awt.event.FocusListener) (Object) nr.field_q);
+        try {
+            int var2_int = 2 % ((-26 - param1) / 58);
+            param0.setFocusTraversalKeysEnabled(false);
+            param0.addKeyListener((java.awt.event.KeyListener) (Object) nr.field_q);
+            param0.addFocusListener((java.awt.event.FocusListener) (Object) nr.field_q);
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "ej.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     final void c(boolean param0) {

@@ -35,12 +35,12 @@ final class tva extends qe {
         var5 = TombRacer.field_G ? 1 : 0;
         if (param0 == -2) {
           var4 = param3;
-          if (var4 != -1) {
-            if (-2 != var4) {
-              if (3 != var4) {
-                throw new IllegalArgumentException("Animation category not recognised");
-              } else {
+          if (var4 != 0) {
+            if (var4 != 1) {
+              if (3 == var4) {
                 return jf.field_p[param1];
+              } else {
+                throw new IllegalArgumentException("Animation category not recognised");
               }
             } else {
               return qja.field_f[param1];
@@ -69,15 +69,14 @@ final class tva extends qe {
     }
 
     final void a(int param0, int param1, kl param2) {
-        if (param1 != 32221) {
-          tva.c(66);
-          ((tva) this).field_a.a(true, param2);
-          ((tva) this).field_a.d(1, param0);
-          return;
-        } else {
-          ((tva) this).field_a.a(true, param2);
-          ((tva) this).field_a.d(1, param0);
-          return;
+        try {
+            if (param1 != 32221) {
+                tva.c(66);
+            }
+            ((tva) this).field_a.a(true, param2);
+            ((tva) this).field_a.d(1, param0);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "tva.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

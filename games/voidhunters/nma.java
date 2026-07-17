@@ -20,9 +20,6 @@ final class nma implements dja {
 
     public static void b(byte param0) {
         field_b = null;
-        if (param0 != -4) {
-            field_a = 33;
-        }
     }
 
     static {

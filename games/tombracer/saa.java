@@ -4,22 +4,76 @@
 final class saa extends kna {
     final fsa a(boolean param0, int param1, la param2) {
         fsa var4 = null;
+        RuntimeException var4_ref = null;
         Object var5 = null;
-        if (param1 != 3) {
-          var5 = null;
-          ((saa) this).a(true, (kh) null);
-          var4 = new fsa(param2, param0);
-          var4.b((byte) -11, ((saa) this).field_k, ((saa) this).field_l);
-          var4.l(1, 146366800);
-          var4.a((byte) 83, (nv) (Object) new sea(param2, false));
-          return var4;
-        } else {
-          var4 = new fsa(param2, param0);
-          var4.b((byte) -11, ((saa) this).field_k, ((saa) this).field_l);
-          var4.l(1, 146366800);
-          var4.a((byte) 83, (nv) (Object) new sea(param2, false));
-          return var4;
+        fsa stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        fsa stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param1 == 3) {
+                break L1;
+              } else {
+                var5 = null;
+                ((saa) this).a(true, (kh) null);
+                break L1;
+              }
+            }
+            var4 = new fsa(param2, param0);
+            var4.b((byte) -11, ((saa) this).field_k, ((saa) this).field_l);
+            var4.l(1, 146366800);
+            var4.a((byte) 83, (nv) (Object) new sea(param2, false));
+            stackOut_2_0 = (fsa) var4;
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var4_ref = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var4_ref;
+            stackOut_4_1 = new StringBuilder().append("saa.AC(").append(param0).append(44).append(param1).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param2 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
         }
+        return stackIn_3_0;
     }
 
     final boolean n(byte param0) {
@@ -31,7 +85,11 @@ final class saa extends kna {
     }
 
     final void a(boolean param0, kh param1) {
-        super.a(param0, param1);
+        try {
+            super.a(param0, param1);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "saa.V(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final boolean s(int param0) {

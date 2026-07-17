@@ -9,23 +9,13 @@ final class mj extends lg {
     static int field_j;
 
     private final void c(byte param0) {
-        if (param0 != -51) {
-          return;
-        } else {
-          ((mj) this).field_a.field_z = null;
-          ((mj) this).a(hea.field_s, 40, param0 ^ 4571, 72, 334, 366);
-          return;
-        }
+        ((mj) this).field_a.field_z = null;
+        ((mj) this).a(hea.field_s, 40, -4586, 72, 334, 366);
     }
 
     public static void b(byte param0) {
         field_l = null;
         field_h = null;
-        if (param0 <= 29) {
-            field_l = null;
-            field_k = null;
-            return;
-        }
         field_k = null;
     }
 
@@ -40,7 +30,11 @@ final class mj extends lg {
 
     mj(int param0, int param1, int param2, int param3, String param4) {
         super(param0, param1, param2, param3, 0, param4);
-        this.c((byte) -51);
+        try {
+            this.c((byte) -51);
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "mj.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

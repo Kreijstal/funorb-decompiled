@@ -34,9 +34,6 @@ class pj extends ms {
     public static void d(int param0) {
         field_n = null;
         field_k = null;
-        if (param0 <= 27) {
-            return;
-        }
         field_q = null;
     }
 

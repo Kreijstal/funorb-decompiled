@@ -19,9 +19,6 @@ final class rv {
 
     public static void a(boolean param0) {
         field_a = null;
-        if (!param0) {
-            return;
-        }
         field_b = null;
     }
 

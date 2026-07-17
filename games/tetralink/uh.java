@@ -10,20 +10,78 @@ abstract class uh {
     static String field_a;
 
     final static oh[] a(int param0, int param1, ah param2, int param3) {
-        if (param1 == 0) {
-          if (!ia.a(param0, param2, param3, -60)) {
-            return null;
-          } else {
-            return gd.e((byte) 76);
+        RuntimeException var4 = null;
+        Object stackIn_4_0 = null;
+        oh[] stackIn_6_0 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        oh[] stackOut_5_0 = null;
+        Object stackOut_3_0 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param1 == 0) {
+                break L1;
+              } else {
+                field_e = null;
+                break L1;
+              }
+            }
+            if (ia.a(param0, param2, param3, -60)) {
+              stackOut_5_0 = gd.e((byte) 76);
+              stackIn_6_0 = stackOut_5_0;
+              break L0;
+            } else {
+              stackOut_3_0 = null;
+              stackIn_4_0 = stackOut_3_0;
+              return (oh[]) (Object) stackIn_4_0;
+            }
           }
-        } else {
-          field_e = null;
-          if (!ia.a(param0, param2, param3, -60)) {
-            return null;
-          } else {
-            return gd.e((byte) 76);
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var4 = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var4;
+            stackOut_7_1 = new StringBuilder().append("uh.G(").append(param0).append(44).append(param1).append(44);
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param2 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L2;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L2;
+            }
           }
+          throw oi.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param3 + 41);
         }
+        return stackIn_6_0;
     }
 
     final int a(byte param0, long param1) {
@@ -69,24 +127,12 @@ abstract class uh {
     abstract int a(long param0, byte param1);
 
     public static void a(byte param0) {
-        if (param0 != 41) {
-          hl discarded$2 = uh.b(-116);
-          field_b = null;
-          field_c = null;
-          field_e = null;
-          field_f = null;
-          field_d = null;
-          field_a = null;
-          return;
-        } else {
-          field_b = null;
-          field_c = null;
-          field_e = null;
-          field_f = null;
-          field_d = null;
-          field_a = null;
-          return;
-        }
+        field_b = null;
+        field_c = null;
+        field_e = null;
+        field_f = null;
+        field_d = null;
+        field_a = null;
     }
 
     static {

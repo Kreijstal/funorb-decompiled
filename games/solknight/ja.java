@@ -5,168 +5,90 @@ final class ja {
     static o field_a;
 
     final static void b(int param0) {
-        Object var1 = null;
-        ud var1_ref = null;
+        ud var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
-        var1 = null;
+        RuntimeException decompiledCaughtException = null;
         var2 = SolKnight.field_L ? 1 : 0;
-        kj.field_P.b();
-        ql.field_r.b();
-        vg.field_M = vg.field_M - 1;
-        if (param0 == 200) {
-          if (vg.field_M == 0) {
-            vg.field_M = 200;
-            var1_ref = (ud) (Object) uc.field_j.a((byte) 51);
-            L0: while (true) {
-              if (var1_ref == null) {
-                L1: {
-                  if (null == la.field_j) {
-                    break L1;
+        try {
+          L0: {
+            L1: {
+              kj.field_P.b();
+              ql.field_r.b();
+              vg.field_M = vg.field_M - 1;
+              if (param0 == 200) {
+                break L1;
+              } else {
+                ja.a((byte) -48);
+                break L1;
+              }
+            }
+            L2: {
+              if (vg.field_M == 0) {
+                vg.field_M = 200;
+                var1 = (ud) (Object) uc.field_j.a((byte) 51);
+                L3: while (true) {
+                  if (var1 == null) {
+                    if (null == la.field_j) {
+                      break L2;
+                    } else {
+                      var1 = (ud) (Object) la.field_j.a((byte) 51);
+                      L4: while (true) {
+                        if (var1 == null) {
+                          break L2;
+                        } else {
+                          L5: {
+                            if (var1.field_m.a(false)) {
+                              break L5;
+                            } else {
+                              var1.c(10);
+                              break L5;
+                            }
+                          }
+                          var1 = (ud) (Object) la.field_j.b(-46);
+                          continue L4;
+                        }
+                      }
+                    }
                   } else {
-                    var1_ref = (ud) (Object) la.field_j.a((byte) 51);
-                    L2: while (true) {
-                      if (var1_ref == null) {
-                        break L1;
+                    L6: {
+                      if (var1.field_m.a(false)) {
+                        break L6;
                       } else {
-                        L3: {
-                          if (var1_ref.field_m.a(false)) {
-                            break L3;
-                          } else {
-                            var1_ref.c(10);
-                            break L3;
-                          }
-                        }
-                        var1_ref = (ud) (Object) la.field_j.b(-46);
-                        continue L2;
+                        var1.c(param0 ^ 194);
+                        break L6;
                       }
                     }
+                    var1 = (ud) (Object) uc.field_j.b(-105);
+                    continue L3;
                   }
                 }
-                L4: {
-                  if (null == ua.field_I) {
-                    break L4;
-                  } else {
-                    if (ua.field_I.d(144)) {
-                      break L4;
-                    } else {
-                      dj.field_j = null;
-                      return;
-                    }
-                  }
-                }
-                return;
               } else {
-                L5: {
-                  if (var1_ref.field_m.a(false)) {
-                    break L5;
-                  } else {
-                    var1_ref.c(param0 ^ 194);
-                    break L5;
-                  }
-                }
-                var1_ref = (ud) (Object) uc.field_j.b(-105);
-                continue L0;
+                break L2;
               }
             }
-          } else {
-            L6: {
+            L7: {
               if (null == ua.field_I) {
-                break L6;
+                break L7;
               } else {
                 if (ua.field_I.d(144)) {
-                  break L6;
+                  break L7;
                 } else {
                   dj.field_j = null;
                   return;
                 }
               }
             }
-            return;
+            break L0;
           }
-        } else {
-          ja.a((byte) -48);
-          if (vg.field_M == 0) {
-            vg.field_M = 200;
-            var1_ref = (ud) (Object) uc.field_j.a((byte) 51);
-            L7: while (true) {
-              if (var1_ref == null) {
-                if (null != la.field_j) {
-                  var1_ref = (ud) (Object) la.field_j.a((byte) 51);
-                  L8: while (true) {
-                    if (var1_ref != null) {
-                      L9: {
-                        if (var1_ref.field_m.a(false)) {
-                          break L9;
-                        } else {
-                          var1_ref.c(10);
-                          break L9;
-                        }
-                      }
-                      var1_ref = (ud) (Object) la.field_j.b(-46);
-                      continue L8;
-                    } else {
-                      L10: {
-                        if (null == ua.field_I) {
-                          break L10;
-                        } else {
-                          if (ua.field_I.d(144)) {
-                            break L10;
-                          } else {
-                            dj.field_j = null;
-                            break L10;
-                          }
-                        }
-                      }
-                      return;
-                    }
-                  }
-                } else {
-                  if (null != ua.field_I) {
-                    if (!ua.field_I.d(144)) {
-                      dj.field_j = null;
-                      return;
-                    } else {
-                      return;
-                    }
-                  } else {
-                    return;
-                  }
-                }
-              } else {
-                L11: {
-                  if (var1_ref.field_m.a(false)) {
-                    break L11;
-                  } else {
-                    var1_ref.c(param0 ^ 194);
-                    break L11;
-                  }
-                }
-                var1_ref = (ud) (Object) uc.field_j.b(-105);
-                continue L7;
-              }
-            }
-          } else {
-            L12: {
-              if (null == ua.field_I) {
-                break L12;
-              } else {
-                if (ua.field_I.d(144)) {
-                  break L12;
-                } else {
-                  dj.field_j = null;
-                  return;
-                }
-              }
-            }
-            return;
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw fc.a((Throwable) (Object) var1_ref, "ja.A(" + param0 + 41);
         }
     }
 
     final static void a(int param0, int param1, byte param2) {
-        if (param2 != -41) {
-            return;
-        }
         ql.field_v = param0;
         ch.field_b = param1;
     }
@@ -179,36 +101,56 @@ final class ja {
     }
 
     final static void a(int param0) {
-        int var4 = SolKnight.field_L ? 1 : 0;
-        int[] var5 = md.field_t;
-        int[] var1 = var5;
-        int var2 = param0;
-        int var3 = var5.length;
-        while (var2 < var3) {
-            int incrementValue$0 = var2;
-            var2++;
-            var5[incrementValue$0] = 0;
-            int incrementValue$1 = var2;
-            var2++;
-            var5[incrementValue$1] = 0;
-            int incrementValue$2 = var2;
-            var2++;
-            var5[incrementValue$2] = 0;
-            int incrementValue$3 = var2;
-            var2++;
-            var5[incrementValue$3] = 0;
-            int incrementValue$4 = var2;
-            var2++;
-            var5[incrementValue$4] = 0;
-            int incrementValue$5 = var2;
-            var2++;
-            var5[incrementValue$5] = 0;
-            int incrementValue$6 = var2;
-            var2++;
-            var5[incrementValue$6] = 0;
-            int incrementValue$7 = var2;
-            var2++;
-            var5[incrementValue$7] = 0;
+        int[] var1 = null;
+        RuntimeException var1_ref = null;
+        int var2 = 0;
+        int var3 = 0;
+        int var4 = 0;
+        int[] var5 = null;
+        RuntimeException decompiledCaughtException = null;
+        var4 = SolKnight.field_L ? 1 : 0;
+        try {
+          L0: {
+            var5 = md.field_t;
+            var1 = var5;
+            var2 = 0;
+            var3 = var5.length;
+            L1: while (true) {
+              if (var2 >= var3) {
+                break L0;
+              } else {
+                int incrementValue$40 = var2;
+                var2++;
+                var5[incrementValue$40] = 0;
+                int incrementValue$41 = var2;
+                var2++;
+                var5[incrementValue$41] = 0;
+                int incrementValue$42 = var2;
+                var2++;
+                var5[incrementValue$42] = 0;
+                int incrementValue$43 = var2;
+                var2++;
+                var5[incrementValue$43] = 0;
+                int incrementValue$44 = var2;
+                var2++;
+                var5[incrementValue$44] = 0;
+                int incrementValue$45 = var2;
+                var2++;
+                var5[incrementValue$45] = 0;
+                int incrementValue$46 = var2;
+                var2++;
+                var5[incrementValue$46] = 0;
+                int incrementValue$47 = var2;
+                var2++;
+                var5[incrementValue$47] = 0;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw fc.a((Throwable) (Object) var1_ref, "ja.D(" + 0 + 41);
         }
     }
 

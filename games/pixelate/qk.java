@@ -17,7 +17,7 @@ final class qk {
     final void b(int param0) {
         int var2 = 0;
         L0: {
-          if ((((qk) this).field_f ^ -1) > -13) {
+          if (((qk) this).field_f < 12) {
             var2 = 120 - ((qk) this).field_f * 10;
             vk.field_tb[((qk) this).field_b].a(42 * ((qk) this).field_h + 148, 42 * (-1 + ((qk) this).field_a) + -126, var2);
             break L0;

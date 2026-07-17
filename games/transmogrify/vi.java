@@ -32,39 +32,118 @@ final class vi implements Iterable {
     }
 
     final void a(wf param0, byte param1, long param2) {
-        if (param0.field_f != null) {
-            param0.c(5);
+        wf var5 = null;
+        try {
+            if (param0.field_f != null) {
+                param0.c(5);
+            }
+            var5 = ((vi) this).field_d[(int)((long)(-1 + ((vi) this).field_c) & param2)];
+            param0.field_f = var5.field_f;
+            param0.field_b = var5;
+            param0.field_f.field_b = param0;
+            if (param1 < 60) {
+                Object var6 = null;
+                String[] discarded$0 = vi.a('X', (String) null, -67);
+            }
+            param0.field_b.field_f = param0;
+            param0.field_c = param2;
+        } catch (RuntimeException runtimeException) {
+            throw ch.a((Throwable) (Object) runtimeException, "vi.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }
-        wf var5 = ((vi) this).field_d[(int)((long)(-1 + ((vi) this).field_c) & param2)];
-        param0.field_f = var5.field_f;
-        param0.field_b = var5;
-        param0.field_f.field_b = param0;
-        if (param1 < 60) {
-            Object var6 = null;
-            String[] discarded$0 = vi.a('X', (String) null, -67);
-        }
-        param0.field_b.field_f = param0;
-        param0.field_c = param2;
     }
 
     final static String[] a(char param0, String param1, int param2) {
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        String[] var4 = null;
+        int var5 = 0;
+        int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int var9 = Transmogrify.field_A ? 1 : 0;
-        CharSequence var10 = (CharSequence) (Object) param1;
-        int var3 = lj.a(param2 ^ 126, param0, var10);
-        String[] var4 = new String[1 + var3];
-        int var5 = param2;
-        int var6 = 0;
-        for (var7 = 0; var7 < var3; var7++) {
-            for (var8 = var6; param0 != param1.charAt(var8); var8++) {
+        int var9 = 0;
+        CharSequence var10 = null;
+        String[] stackIn_8_0 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        String[] stackOut_7_0 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        var9 = Transmogrify.field_A ? 1 : 0;
+        try {
+          L0: {
+            var10 = (CharSequence) (Object) param1;
+            var3_int = lj.a(param2 ^ 126, param0, var10);
+            var4 = new String[1 + var3_int];
+            var5 = param2;
+            var6 = 0;
+            var7 = 0;
+            L1: while (true) {
+              if (var7 >= var3_int) {
+                var4[var3_int] = param1.substring(var6);
+                stackOut_7_0 = (String[]) var4;
+                stackIn_8_0 = stackOut_7_0;
+                break L0;
+              } else {
+                var8 = var6;
+                L2: while (true) {
+                  if (param0 == param1.charAt(var8)) {
+                    int incrementValue$2 = var5;
+                    var5++;
+                    var4[incrementValue$2] = param1.substring(var6, var8);
+                    var6 = var8 + 1;
+                    var7++;
+                    continue L1;
+                  } else {
+                    var8++;
+                    continue L2;
+                  }
+                }
+              }
             }
-            var5++;
-            var4[var5] = param1.substring(var6, var8);
-            var6 = var8 + 1;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var3 = decompiledCaughtException;
+            stackOut_9_0 = (RuntimeException) var3;
+            stackOut_9_1 = new StringBuilder().append("vi.D(").append(param0).append(44);
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
+            if (param1 == null) {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
+              break L3;
+            } else {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
+              break L3;
+            }
+          }
+          throw ch.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param2 + 41);
         }
-        var4[var3] = param1.substring(var6);
-        return var4;
+        return stackIn_8_0;
     }
 
     public final Iterator iterator() {
@@ -79,58 +158,23 @@ final class vi implements Iterable {
         int var1 = 0;
         Object var2 = null;
         Throwable var3 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var1 = 102 / ((param0 - 31) / 59);
-                    var2 = (Object) (Object) hi.field_e;
-                    // monitorenter hi.field_e
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        b.field_k = cg.field_k;
-                        gj.field_l = gj.field_l + 1;
-                        oa.field_j = fc.field_g;
-                        bk.field_a = uj.field_i;
-                        tl.field_a = li.field_j;
-                        li.field_j = false;
-                        tg.field_d = ad.field_b;
-                        ol.field_b = dh.field_w;
-                        nk.field_c = ga.field_b;
-                        ad.field_b = 0;
-                        // monitorexit var2
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        var3 = caughtException;
-                        // monitorexit var2
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    throw (RuntimeException) (Object) var3;
-                }
-                case 5: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
-            }
+        Throwable decompiledCaughtException = null;
+        var1 = 102;
+        var2 = (Object) (Object) hi.field_e;
+        synchronized (var2) {
+          L0: {
+            b.field_k = cg.field_k;
+            gj.field_l = gj.field_l + 1;
+            oa.field_j = fc.field_g;
+            bk.field_a = uj.field_i;
+            tl.field_a = li.field_j;
+            li.field_j = false;
+            tg.field_d = ad.field_b;
+            ol.field_b = dh.field_w;
+            nk.field_c = ga.field_b;
+            ad.field_b = 0;
+            break L0;
+          }
         }
     }
 

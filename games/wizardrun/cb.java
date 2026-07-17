@@ -27,7 +27,7 @@ final class cb {
         int var14 = 0;
         int var15 = 0;
         var15 = wizardrun.field_H;
-        var9 = param2 + (param4 + param8);
+        var9 = param2 + (param4 + 1);
         var10 = new o[]{new o(var9, var9), new o(param6, var9), new o(var9, var9), new o(var9, param6), new o(64, 64), new o(var9, param6), new o(var9, var9), new o(param6, var9), new o(var9, var9)};
         var11_ref_o__ = var10;
         var12 = 0;
@@ -43,16 +43,16 @@ final class cb {
             }
             var11 = 0;
             L2: while (true) {
-              if (param8 <= var11) {
+              if (var11 >= 1) {
                 var11 = 0;
                 L3: while (true) {
-                  if (param8 <= var11) {
+                  if (1 <= var11) {
                     var11 = 0;
                     L4: while (true) {
                       if (var11 >= param6) {
                         var11 = 0;
                         L5: while (true) {
-                          if (param6 >> 1482337473 <= var11) {
+                          if (param6 >> 1 <= var11) {
                             return var10;
                           } else {
                             var12 = 0;
@@ -74,7 +74,7 @@ final class cb {
                       } else {
                         var12 = 0;
                         L7: while (true) {
-                          if (param8 > var12) {
+                          if (1 > var12) {
                             var10[7].field_B[var11 + (var9 + (-var12 - 1)) * param6] = param5;
                             var10[5].field_B[-1 + var9 - (var12 - var9 * var11)] = param5;
                             var10[1].field_B[var11 + param6 * var12] = param7;

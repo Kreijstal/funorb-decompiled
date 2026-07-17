@@ -18,65 +18,27 @@ final class vm {
         field_e = null;
         field_a = null;
         field_d = null;
-        if (param0 != -75) {
-            field_c = null;
-        }
     }
 
     final static void a(int param0) {
         Object var1 = null;
         Throwable var2 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var1 = (Object) (Object) ob.field_hb;
-                    // monitorenter ob.field_hb
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        wk.field_m = rk.field_K;
-                        rf.field_o = rf.field_o + 1;
-                        an.field_g = j.field_g;
-                        me.field_I = dd.field_i;
-                        tl.field_d = qa.field_g;
-                        qa.field_g = false;
-                        re.field_r = eh.field_c;
-                        pb.field_h = bo.field_e;
-                        ja.field_s = wd.field_j;
-                        eh.field_c = param0;
-                        // monitorexit var1
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1
-                        statePc = 4;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                case 5: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
-            }
+        Throwable decompiledCaughtException = null;
+        var1 = (Object) (Object) ob.field_hb;
+        synchronized (var1) {
+          L0: {
+            wk.field_m = rk.field_K;
+            rf.field_o = rf.field_o + 1;
+            an.field_g = j.field_g;
+            me.field_I = dd.field_i;
+            tl.field_d = qa.field_g;
+            qa.field_g = false;
+            re.field_r = eh.field_c;
+            pb.field_h = bo.field_e;
+            ja.field_s = wd.field_j;
+            eh.field_c = 0;
+            break L0;
+          }
         }
     }
 

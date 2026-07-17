@@ -19,23 +19,93 @@ abstract class dc extends gg {
     final static void a(int param0, java.applet.Applet param1) {
         try {
             String var2 = null;
+            Exception var2_ref = null;
+            RuntimeException var2_ref2 = null;
             int var3 = 0;
             String var4 = null;
             java.net.URL var5 = null;
+            RuntimeException stackIn_10_0 = null;
+            StringBuilder stackIn_10_1 = null;
+            RuntimeException stackIn_11_0 = null;
+            StringBuilder stackIn_11_1 = null;
+            RuntimeException stackIn_12_0 = null;
+            StringBuilder stackIn_12_1 = null;
+            String stackIn_12_2 = null;
+            Throwable decompiledCaughtException = null;
+            RuntimeException stackOut_9_0 = null;
+            StringBuilder stackOut_9_1 = null;
+            RuntimeException stackOut_11_0 = null;
+            StringBuilder stackOut_11_1 = null;
+            String stackOut_11_2 = null;
+            RuntimeException stackOut_10_0 = null;
+            StringBuilder stackOut_10_1 = null;
+            String stackOut_10_2 = null;
             try {
-                var2 = param1.getDocumentBase().getFile();
-                if (param0 != -11670) {
-                    field_V = null;
+              L0: {
+                try {
+                  L1: {
+                    L2: {
+                      var2 = param1.getDocumentBase().getFile();
+                      if (param0 == -11670) {
+                        break L2;
+                      } else {
+                        field_V = null;
+                        break L2;
+                      }
+                    }
+                    L3: {
+                      var3 = var2.indexOf('?');
+                      var4 = "reload.ws";
+                      if (0 <= var3) {
+                        var4 = var4 + var2.substring(var3);
+                        break L3;
+                      } else {
+                        break L3;
+                      }
+                    }
+                    var5 = new java.net.URL(param1.getCodeBase(), var4);
+                    param1.getAppletContext().showDocument(og.a(param0 ^ 11669, param1, var5), "_self");
+                    break L1;
+                  }
+                } catch (java.lang.Exception decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  L4: {
+                    var2_ref = (Exception) (Object) decompiledCaughtException;
+                    var2_ref.printStackTrace();
+                    break L4;
+                  }
                 }
-                var3 = var2.indexOf('?');
-                var4 = "reload.ws";
-                if (!(0 > var3)) {
-                    var4 = var4 + var2.substring(var3);
+                break L0;
+              }
+            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L5: {
+                var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_9_0 = (RuntimeException) var2_ref2;
+                stackOut_9_1 = new StringBuilder().append("dc.B(").append(param0).append(44);
+                stackIn_11_0 = stackOut_9_0;
+                stackIn_11_1 = stackOut_9_1;
+                stackIn_10_0 = stackOut_9_0;
+                stackIn_10_1 = stackOut_9_1;
+                if (param1 == null) {
+                  stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+                  stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+                  stackOut_11_2 = "null";
+                  stackIn_12_0 = stackOut_11_0;
+                  stackIn_12_1 = stackOut_11_1;
+                  stackIn_12_2 = stackOut_11_2;
+                  break L5;
+                } else {
+                  stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+                  stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+                  stackOut_10_2 = "{...}";
+                  stackIn_12_0 = stackOut_10_0;
+                  stackIn_12_1 = stackOut_10_1;
+                  stackIn_12_2 = stackOut_10_2;
+                  break L5;
                 }
-                var5 = new java.net.URL(param1.getCodeBase(), var4);
-                param1.getAppletContext().showDocument(og.a(param0 ^ 11669, param1, var5), "_self");
-            } catch (Exception exception) {
-                exception.printStackTrace();
+              }
+              throw kg.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -46,7 +116,7 @@ abstract class dc extends gg {
 
     public static void h(int param0) {
         field_R = null;
-        int var1 = -67 % ((-62 - param0) / 53);
+        int var1 = 0;
         field_V = null;
         field_Z = null;
         field_Q = null;
@@ -54,24 +124,29 @@ abstract class dc extends gg {
     }
 
     final static void f(byte param0) {
+        wb var1 = null;
         int var3 = Virogrid.field_F ? 1 : 0;
-        sg.field_j = 0;
-        mj.field_z = 0;
-        wl.field_a = null;
-        co.field_f.a(false);
-        bd.field_c.a(false);
-        wb var1 = oa.field_h.a(true);
-        int var2 = 57 / ((35 - param0) / 36);
-        while (var1 != null) {
-            var1.c(100);
-            var1 = oa.field_h.b(-1);
+        try {
+            sg.field_j = 0;
+            mj.field_z = 0;
+            wl.field_a = null;
+            co.field_f.a(false);
+            bd.field_c.a(false);
+            var1 = oa.field_h.a(true);
+            int var2 = 57 / ((35 - param0) / 36);
+            while (var1 != null) {
+                var1.c(100);
+                var1 = oa.field_h.b(-1);
+            }
+            var1 = ie.field_a.a(true);
+            while (var1 != null) {
+                var1.c(91);
+                var1 = ie.field_a.b(-1);
+            }
+            oa.field_q = 0;
+        } catch (RuntimeException runtimeException) {
+            throw kg.a((Throwable) (Object) runtimeException, "dc.N(" + param0 + 41);
         }
-        var1 = ie.field_a.a(true);
-        while (var1 != null) {
-            var1.c(91);
-            var1 = ie.field_a.b(-1);
-        }
-        oa.field_q = 0;
     }
 
     dc(je param0, int param1, int param2) {
@@ -117,7 +192,7 @@ abstract class dc extends gg {
             var7 = 0;
             var8 = 35 + param0;
             L2: while (true) {
-              if ((var4 ^ -1) >= (var7 ^ -1)) {
+              if (~var4 >= ~var7) {
                 ed.field_d.d(-90 + ((dc) this).field_g + param2, param0 + 10);
                 mb.a(-10 + ((dc) this).field_g, (byte) -117, qm.field_Kb, param2 - -5, 35 + param0);
                 mb.a(((dc) this).field_g, (byte) -117, qg.field_j, param2, param0 - -((dc) this).field_m - 22);
@@ -127,11 +202,11 @@ abstract class dc extends gg {
                 var7 = 0;
                 var8 = param0 - -57;
                 L3: while (true) {
-                  if ((var7 ^ -1) <= (var4 ^ -1)) {
+                  if (~var7 <= ~var4) {
                     return;
                   } else {
                     var9 = var7 * (-var5 + var6) / var4 + var5;
-                    var9 = var9 | (var9 << 1895828744 | var9 << 317127568);
+                    var9 = var9 | (var9 << 8 | var9 << 16);
                     df.b(param2, var8, 6, var9);
                     df.b(((dc) this).field_g + param2 - 6, var8, 6, var9);
                     var7++;
@@ -141,7 +216,7 @@ abstract class dc extends gg {
                 }
               } else {
                 var9 = (-var5 + var6) * var7 / var4 + var5;
-                var9 = var9 | (var9 << 1619799824 | var9 << -424595384);
+                var9 = var9 | (var9 << 16 | var9 << 8);
                 df.b(param2, var8, 6, var9);
                 df.b(((dc) this).field_g + (param2 - 6), var8, 6, var9);
                 var8++;
@@ -159,19 +234,19 @@ abstract class dc extends gg {
                     var9 = var7 * (-var5 + var6) / var4 + var5;
                     var10 = 0;
                     var11 = ((dc) this).field_g;
-                    if ((var7 ^ -1) >= -21) {
+                    if (var7 <= 20) {
                       L6: while (true) {
                         if (var10 > 20) {
                           break L5;
                         } else {
                           L7: {
                             var12 = (20 - var7) * (20 + -var7) - -((-var10 + 20) * (20 + -var10));
-                            if (-463 <= (var12 ^ -1)) {
-                              if (-421 < (var12 ^ -1)) {
+                            if (var12 <= 462) {
+                              if (var12 < 420) {
                                 break L5;
                               } else {
                                 var13 = var9 * (-var12 + 462) / 42;
-                                var13 = var13 | (var13 << 917519984 | var13 << -1904019064);
+                                var13 = var13 | (var13 << 16 | var13 << 8);
                                 df.field_d[param2 + df.field_e * var8 + var10] = var13;
                                 break L7;
                               }
@@ -188,7 +263,7 @@ abstract class dc extends gg {
                     }
                   }
                   L8: {
-                    if ((var7 ^ -1) < -21) {
+                    if (var7 > 20) {
                       break L8;
                     } else {
                       var12 = var11;
@@ -202,9 +277,9 @@ abstract class dc extends gg {
                             var14 = (-var7 + 20) * (20 - var7) - -(var13 * var13);
                             if (462 >= var14) {
                               L11: {
-                                if ((var14 ^ -1) <= -421) {
+                                if (var14 >= 420) {
                                   var15 = (462 + -var14) * var9 / 42;
-                                  var15 = var15 | (var15 << -1900814232 | var15 << -606833808);
+                                  var15 = var15 | (var15 << 8 | var15 << 16);
                                   df.field_d[var8 * df.field_e - -param2 - -var11] = var15;
                                   break L11;
                                 } else {
@@ -225,7 +300,7 @@ abstract class dc extends gg {
                       }
                     }
                   }
-                  var9 = var9 | (var9 << -1504501360 | var9 << 1959742024);
+                  var9 = var9 | (var9 << 16 | var9 << 8);
                   df.b(param2 + var10, var8, -var10 + var11, var9);
                   break L4;
                 } else {
@@ -257,7 +332,7 @@ abstract class dc extends gg {
         int var3 = 0;
         int var5 = 0;
         int var4 = 0;
-        if ((((dc) this).field_T ^ -1) < -1) {
+        if (((dc) this).field_T > 0) {
             var2 = ((dc) this).field_X;
             var3 = ((dc) this).field_S;
             int fieldTemp$0 = ((dc) this).field_ab + 1;
@@ -272,10 +347,6 @@ abstract class dc extends gg {
                 ((dc) this).i(90);
             }
             ((dc) this).c(var3, 109, var2);
-        }
-        if (param0 != 3) {
-            Object var6 = null;
-            dc.a(119, (java.applet.Applet) null);
         }
         return super.f(3);
     }
@@ -294,7 +365,7 @@ abstract class dc extends gg {
     }
 
     void j(int param0) {
-        if ((((dc) this).field_T ^ -1) >= -1) {
+        if (((dc) this).field_T <= 0) {
             return;
         }
         ((dc) this).c(((dc) this).field_S, 124, ((dc) this).field_X);

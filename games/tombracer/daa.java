@@ -17,7 +17,7 @@ final class daa {
         var7 = TombRacer.field_G ? 1 : 0;
         if (param0 < -13) {
           var4 = ((daa) this).a(0, param2);
-          if (0 != (var4 ^ -1)) {
+          if (var4 != -1) {
             return;
           } else {
             L0: {
@@ -87,16 +87,17 @@ final class daa {
     }
 
     daa(ff param0) {
-        ((daa) this).field_a = param0;
+        try {
+            ((daa) this).field_a = param0;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "daa.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void b(int param0) {
         field_f = null;
         field_c = null;
         field_d = null;
-        if (param0 != -12224) {
-            field_f = null;
-        }
     }
 
     final boolean a(boolean param0) {

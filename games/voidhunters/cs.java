@@ -19,49 +19,18 @@ final class cs {
     }
 
     final static boolean a(char param0, int param1) {
-        if (param1 == 0) {
-          if (param0 < 65) {
-            if (97 <= param0) {
-              if (param0 > 122) {
-                return false;
-              } else {
-                return true;
-              }
+        if (param0 < 65) {
+          if (97 <= param0) {
+            if (param0 <= 122) {
+              return true;
             } else {
               return false;
             }
           } else {
-            if (param0 > 90) {
-              if (97 <= param0) {
-                if (param0 > 122) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return true;
-            }
+            return false;
           }
         } else {
-          field_a = null;
-          if (param0 >= 65) {
-            if (param0 > 90) {
-              if (97 <= param0) {
-                if (param0 > 122) {
-                  return false;
-                } else {
-                  return true;
-                }
-              } else {
-                return false;
-              }
-            } else {
-              return true;
-            }
-          } else {
+          if (param0 > 90) {
             if (97 <= param0) {
               if (param0 > 122) {
                 return false;
@@ -71,23 +40,16 @@ final class cs {
             } else {
               return false;
             }
+          } else {
+            return true;
           }
         }
     }
 
     public static void a(byte param0) {
-        if (param0 != 111) {
-          cs.b((byte) -34);
-          field_c = null;
-          field_b = null;
-          field_a = null;
-          return;
-        } else {
-          field_c = null;
-          field_b = null;
-          field_a = null;
-          return;
-        }
+        field_c = null;
+        field_b = null;
+        field_a = null;
     }
 
     static {

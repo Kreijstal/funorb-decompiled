@@ -79,7 +79,7 @@ final class rf {
         int var2 = (eb.field_f - 640) / 2;
         int var3 = ve.field_t * ve.field_t;
         int var4 = var3 - param0 * param0;
-        ao.field_Eb.a(var2 - var4 * 199 / var3, -90 + (param1 + df.field_f) + -120, 199, (byte) -67, 90);
+        ao.field_Eb.a(var2 - var4 * 199 / var3, -90 + (-4 + df.field_f) + -120, 199, (byte) -67, 90);
         dm.field_r.a(var2 + 202 + 438 * var4 / var3, -124 + df.field_f, 438, (byte) -95, 0);
     }
 
@@ -88,9 +88,6 @@ final class rf {
         field_i = null;
         field_a = null;
         field_f = null;
-        if (param0 != -24750) {
-            return;
-        }
         field_g = null;
         field_d = null;
     }

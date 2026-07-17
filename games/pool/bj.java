@@ -8,7 +8,8 @@ final class bj extends ma {
     int field_n;
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        int var5 = 0;
+        RuntimeException var5 = null;
+        int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -17,523 +18,166 @@ final class bj extends ma {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        int stackIn_5_0 = 0;
-        int stackIn_8_0 = 0;
-        int stackIn_11_0 = 0;
-        int stackIn_14_0 = 0;
+        int stackIn_6_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackIn_12_0 = 0;
+        int stackIn_15_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_5_0 = 0;
         int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
+        int stackOut_8_0 = 0;
         int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
+        int stackOut_11_0 = 0;
         int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
+        int stackOut_14_0 = 0;
         int stackOut_13_0 = 0;
-        int stackOut_12_0 = 0;
         var13 = Pool.field_O;
-        if (param4 == 2187) {
+        try {
           L0: {
-            var5 = param3 + param2;
-            var6 = param0 - -param1;
-            if (param3 > qh.field_b) {
-              stackOut_4_0 = param3;
-              stackIn_5_0 = stackOut_4_0;
-              break L0;
-            } else {
-              stackOut_3_0 = qh.field_b;
-              stackIn_5_0 = stackOut_3_0;
-              break L0;
-            }
-          }
-          L1: {
-            var7 = stackIn_5_0;
-            if (param0 > qh.field_c) {
-              stackOut_7_0 = param0;
-              stackIn_8_0 = stackOut_7_0;
-              break L1;
-            } else {
-              stackOut_6_0 = qh.field_c;
-              stackIn_8_0 = stackOut_6_0;
-              break L1;
-            }
-          }
-          L2: {
-            var8 = stackIn_8_0;
-            if (qh.field_j > var5) {
-              stackOut_10_0 = var5;
-              stackIn_11_0 = stackOut_10_0;
-              break L2;
-            } else {
-              stackOut_9_0 = qh.field_j;
-              stackIn_11_0 = stackOut_9_0;
-              break L2;
-            }
-          }
-          L3: {
-            var9 = stackIn_11_0;
-            if (var6 >= qh.field_g) {
-              stackOut_13_0 = qh.field_g;
-              stackIn_14_0 = stackOut_13_0;
-              break L3;
-            } else {
-              stackOut_12_0 = var6;
-              stackIn_14_0 = stackOut_12_0;
-              break L3;
-            }
-          }
-          var10 = stackIn_14_0;
-          if (qh.field_b <= param3) {
-            if (param3 < qh.field_j) {
-              var11 = var8 * qh.field_l + param3;
-              var12 = var10 + (1 - var8) >> 873940705;
-              L4: while (true) {
-                var12--;
-                if (-1 < (var12 ^ -1)) {
-                  if (param0 >= qh.field_c) {
-                    if (var6 >= qh.field_g) {
-                      L5: {
-                        if (var5 < qh.field_b) {
-                          break L5;
-                        } else {
-                          if (qh.field_j <= var5) {
-                            break L5;
-                          } else {
-                            var11 = var5 + qh.field_l * (var8 - -(1 & -param3 + var5));
-                            var12 = -var8 + 1 + var10 >> 2107416833;
-                            L6: while (true) {
-                              var12--;
-                              if ((var12 ^ -1) > -1) {
-                                break L5;
-                              } else {
-                                qh.field_d[var11] = 16777215;
-                                var11 = var11 + 2 * qh.field_l;
-                                continue L6;
-                              }
-                            }
-                          }
-                        }
-                      }
-                      L7: {
-                        if (param0 < qh.field_c) {
-                          break L7;
-                        } else {
-                          if (var6 >= qh.field_g) {
-                            break L7;
-                          } else {
-                            var11 = qh.field_l * var6 - -var7 + (1 & -param0 + var6);
-                            var12 = -var7 + 1 - -var9 >> -1897160799;
-                            L8: while (true) {
-                              var12--;
-                              if (-1 < (var12 ^ -1)) {
-                                break L7;
-                              } else {
-                                qh.field_d[var11] = 16777215;
-                                var11 += 2;
-                                continue L8;
-                              }
-                            }
-                          }
-                        }
-                      }
-                      return;
-                    } else {
-                      var11 = qh.field_l * param0 + var7;
-                      var12 = 1 + (var9 + -var7) >> 885021473;
-                      L9: while (true) {
-                        var12--;
-                        if (-1 < (var12 ^ -1)) {
-                          L10: {
-                            if (var5 < qh.field_b) {
-                              break L10;
-                            } else {
-                              if (qh.field_j <= var5) {
-                                break L10;
-                              } else {
-                                var11 = var5 + qh.field_l * (var8 - -(1 & -param3 + var5));
-                                var12 = -var8 + 1 + var10 >> 2107416833;
-                                L11: while (true) {
-                                  var12--;
-                                  if ((var12 ^ -1) > -1) {
-                                    break L10;
-                                  } else {
-                                    qh.field_d[var11] = 16777215;
-                                    var11 = var11 + 2 * qh.field_l;
-                                    continue L11;
-                                  }
-                                }
-                              }
-                            }
-                          }
-                          L12: {
-                            if (param0 < qh.field_c) {
-                              break L12;
-                            } else {
-                              if (var6 >= qh.field_g) {
-                                break L12;
-                              } else {
-                                var11 = qh.field_l * var6 - -var7 + (1 & -param0 + var6);
-                                var12 = -var7 + 1 - -var9 >> -1897160799;
-                                L13: while (true) {
-                                  var12--;
-                                  if (-1 < (var12 ^ -1)) {
-                                    break L12;
-                                  } else {
-                                    qh.field_d[var11] = 16777215;
-                                    var11 += 2;
-                                    continue L13;
-                                  }
-                                }
-                              }
-                            }
-                          }
-                          return;
-                        } else {
-                          qh.field_d[var11] = 16777215;
-                          var11 += 2;
-                          continue L9;
-                        }
-                      }
-                    }
-                  } else {
-                    L14: {
-                      if (var5 < qh.field_b) {
-                        break L14;
-                      } else {
-                        if (qh.field_j <= var5) {
-                          break L14;
-                        } else {
-                          var11 = var5 + qh.field_l * (var8 - -(1 & -param3 + var5));
-                          var12 = -var8 + 1 + var10 >> 2107416833;
-                          L15: while (true) {
-                            var12--;
-                            if ((var12 ^ -1) > -1) {
-                              break L14;
-                            } else {
-                              qh.field_d[var11] = 16777215;
-                              var11 = var11 + 2 * qh.field_l;
-                              continue L15;
-                            }
-                          }
-                        }
-                      }
-                    }
-                    L16: {
-                      if (param0 < qh.field_c) {
-                        break L16;
-                      } else {
-                        if (var6 >= qh.field_g) {
-                          break L16;
-                        } else {
-                          var11 = qh.field_l * var6 - -var7 + (1 & -param0 + var6);
-                          var12 = -var7 + 1 - -var9 >> -1897160799;
-                          L17: while (true) {
-                            var12--;
-                            if (-1 < (var12 ^ -1)) {
-                              break L16;
-                            } else {
-                              qh.field_d[var11] = 16777215;
-                              var11 += 2;
-                              continue L17;
-                            }
-                          }
-                        }
-                      }
-                    }
-                    return;
-                  }
-                } else {
-                  qh.field_d[var11] = 16777215;
-                  var11 = var11 + 2 * qh.field_l;
-                  continue L4;
-                }
-              }
-            } else {
-              if (param0 >= qh.field_c) {
-                if (var6 >= qh.field_g) {
-                  if (var5 >= qh.field_b) {
-                    L18: {
-                      if (qh.field_j <= var5) {
-                        break L18;
-                      } else {
-                        var11 = var5 + qh.field_l * (var8 - -(1 & -param3 + var5));
-                        var12 = -var8 + 1 + var10 >> 2107416833;
-                        L19: while (true) {
-                          var12--;
-                          if ((var12 ^ -1) > -1) {
-                            break L18;
-                          } else {
-                            qh.field_d[var11] = 16777215;
-                            var11 = var11 + 2 * qh.field_l;
-                            continue L19;
-                          }
-                        }
-                      }
-                    }
-                    L20: {
-                      if (param0 < qh.field_c) {
-                        break L20;
-                      } else {
-                        if (var6 >= qh.field_g) {
-                          break L20;
-                        } else {
-                          var11 = qh.field_l * var6 - -var7 + (1 & -param0 + var6);
-                          var12 = -var7 + 1 - -var9 >> -1897160799;
-                          L21: while (true) {
-                            var12--;
-                            if (-1 < (var12 ^ -1)) {
-                              break L20;
-                            } else {
-                              qh.field_d[var11] = 16777215;
-                              var11 += 2;
-                              continue L21;
-                            }
-                          }
-                        }
-                      }
-                    }
-                    return;
-                  } else {
-                    L22: {
-                      if (param0 < qh.field_c) {
-                        break L22;
-                      } else {
-                        if (var6 >= qh.field_g) {
-                          break L22;
-                        } else {
-                          var11 = qh.field_l * var6 - -var7 + (1 & -param0 + var6);
-                          var12 = -var7 + 1 - -var9 >> -1897160799;
-                          L23: while (true) {
-                            var12--;
-                            if (-1 < var12) {
-                              break L22;
-                            } else {
-                              qh.field_d[var11] = 16777215;
-                              var11 += 2;
-                              continue L23;
-                            }
-                          }
-                        }
-                      }
-                    }
-                    return;
-                  }
-                } else {
-                  var11 = qh.field_l * param0 + var7;
-                  var12 = 1 + (var9 + -var7) >> 885021473;
-                  L24: while (true) {
-                    var12--;
-                    if (-1 < (var12 ^ -1)) {
-                      L25: {
-                        if (var5 < qh.field_b) {
-                          break L25;
-                        } else {
-                          if (qh.field_j <= var5) {
-                            break L25;
-                          } else {
-                            var11 = var5 + qh.field_l * (var8 - -(1 & -param3 + var5));
-                            var12 = -var8 + 1 + var10 >> 2107416833;
-                            L26: while (true) {
-                              var12--;
-                              if ((var12 ^ -1) > -1) {
-                                break L25;
-                              } else {
-                                qh.field_d[var11] = 16777215;
-                                var11 = var11 + 2 * qh.field_l;
-                                continue L26;
-                              }
-                            }
-                          }
-                        }
-                      }
-                      L27: {
-                        if (param0 < qh.field_c) {
-                          break L27;
-                        } else {
-                          if (var6 >= qh.field_g) {
-                            break L27;
-                          } else {
-                            var11 = qh.field_l * var6 - -var7 + (1 & -param0 + var6);
-                            var12 = -var7 + 1 - -var9 >> -1897160799;
-                            L28: while (true) {
-                              var12--;
-                              if (-1 < (var12 ^ -1)) {
-                                break L27;
-                              } else {
-                                qh.field_d[var11] = 16777215;
-                                var11 += 2;
-                                continue L28;
-                              }
-                            }
-                          }
-                        }
-                      }
-                      return;
-                    } else {
-                      qh.field_d[var11] = 16777215;
-                      var11 += 2;
-                      continue L24;
-                    }
-                  }
-                }
+            L1: {
+              var5_int = param3 + param2;
+              var6 = param0 - -param1;
+              if (param3 > qh.field_b) {
+                stackOut_5_0 = param3;
+                stackIn_6_0 = stackOut_5_0;
+                break L1;
               } else {
-                L29: {
-                  if (var5 < qh.field_b) {
-                    break L29;
-                  } else {
-                    if (qh.field_j <= var5) {
-                      break L29;
-                    } else {
-                      var11 = var5 + qh.field_l * (var8 - -(1 & -param3 + var5));
-                      var12 = -var8 + 1 + var10 >> 2107416833;
-                      L30: while (true) {
-                        var12--;
-                        if ((var12 ^ -1) > -1) {
-                          break L29;
-                        } else {
-                          qh.field_d[var11] = 16777215;
-                          var11 = var11 + 2 * qh.field_l;
-                          continue L30;
-                        }
-                      }
-                    }
-                  }
-                }
-                L31: {
-                  if (param0 < qh.field_c) {
-                    break L31;
-                  } else {
-                    if (var6 >= qh.field_g) {
-                      break L31;
-                    } else {
-                      var11 = qh.field_l * var6 - -var7 + (1 & -param0 + var6);
-                      var12 = -var7 + 1 - -var9 >> -1897160799;
-                      L32: while (true) {
-                        var12--;
-                        if (-1 < var12) {
-                          break L31;
-                        } else {
-                          qh.field_d[var11] = 16777215;
-                          var11 += 2;
-                          continue L32;
-                        }
-                      }
-                    }
-                  }
-                }
-                return;
+                stackOut_4_0 = qh.field_b;
+                stackIn_6_0 = stackOut_4_0;
+                break L1;
               }
             }
-          } else {
-            L33: {
-              if (param0 < qh.field_c) {
-                break L33;
+            L2: {
+              var7 = stackIn_6_0;
+              if (param0 > qh.field_c) {
+                stackOut_8_0 = param0;
+                stackIn_9_0 = stackOut_8_0;
+                break L2;
               } else {
-                if (var6 < qh.field_g) {
-                  var11 = qh.field_l * param0 + var7;
-                  var12 = 1 + (var9 + -var7) >> 885021473;
-                  L34: while (true) {
-                    var12--;
-                    if (-1 < (var12 ^ -1)) {
-                      break L33;
-                    } else {
-                      qh.field_d[var11] = 16777215;
-                      var11 += 2;
-                      continue L34;
-                    }
-                  }
-                } else {
-                  L35: {
-                    if (var5 < qh.field_b) {
-                      break L35;
-                    } else {
-                      if (qh.field_j <= var5) {
-                        break L35;
-                      } else {
-                        var11 = var5 + qh.field_l * (var8 - -(1 & -param3 + var5));
-                        var12 = -var8 + 1 + var10 >> 2107416833;
-                        L36: while (true) {
-                          var12--;
-                          if ((var12 ^ -1) > -1) {
-                            break L35;
-                          } else {
-                            qh.field_d[var11] = 16777215;
-                            var11 = var11 + 2 * qh.field_l;
-                            continue L36;
-                          }
-                        }
-                      }
-                    }
-                  }
-                  L37: {
-                    if (param0 < qh.field_c) {
-                      break L37;
-                    } else {
-                      if (var6 >= qh.field_g) {
-                        break L37;
-                      } else {
-                        var11 = qh.field_l * var6 - -var7 + (1 & -param0 + var6);
-                        var12 = -var7 + 1 - -var9 >> -1897160799;
-                        L38: while (true) {
-                          var12--;
-                          if (-1 < (var12 ^ -1)) {
-                            break L37;
-                          } else {
-                            qh.field_d[var11] = 16777215;
-                            var11 += 2;
-                            continue L38;
-                          }
-                        }
-                      }
-                    }
-                  }
-                  return;
-                }
+                stackOut_7_0 = qh.field_c;
+                stackIn_9_0 = stackOut_7_0;
+                break L2;
               }
             }
-            L39: {
-              if (var5 < qh.field_b) {
-                break L39;
+            L3: {
+              var8 = stackIn_9_0;
+              if (qh.field_j > var5_int) {
+                stackOut_11_0 = var5_int;
+                stackIn_12_0 = stackOut_11_0;
+                break L3;
               } else {
-                if (qh.field_j <= var5) {
-                  break L39;
+                stackOut_10_0 = qh.field_j;
+                stackIn_12_0 = stackOut_10_0;
+                break L3;
+              }
+            }
+            L4: {
+              var9 = stackIn_12_0;
+              if (var6 >= qh.field_g) {
+                stackOut_14_0 = qh.field_g;
+                stackIn_15_0 = stackOut_14_0;
+                break L4;
+              } else {
+                stackOut_13_0 = var6;
+                stackIn_15_0 = stackOut_13_0;
+                break L4;
+              }
+            }
+            L5: {
+              var10 = stackIn_15_0;
+              if (qh.field_b > param3) {
+                break L5;
+              } else {
+                if (param3 >= qh.field_j) {
+                  break L5;
                 } else {
-                  var11 = var5 + qh.field_l * (var8 - -(1 & -param3 + var5));
-                  var12 = -var8 + 1 + var10 >> 2107416833;
-                  L40: while (true) {
+                  var11 = var8 * qh.field_l + param3;
+                  var12 = var10 + (1 - var8) >> 1;
+                  L6: while (true) {
                     var12--;
-                    if ((var12 ^ -1) > -1) {
-                      break L39;
+                    if (var12 < 0) {
+                      break L5;
                     } else {
                       qh.field_d[var11] = 16777215;
                       var11 = var11 + 2 * qh.field_l;
-                      continue L40;
+                      continue L6;
                     }
                   }
                 }
               }
             }
-            if (param0 >= qh.field_c) {
-              if (var6 >= qh.field_g) {
-                return;
+            L7: {
+              if (param0 < qh.field_c) {
+                break L7;
               } else {
-                var11 = qh.field_l * var6 - -var7 + (1 & -param0 + var6);
-                var12 = -var7 + 1 - -var9 >> -1897160799;
-                L41: while (true) {
-                  var12--;
-                  if (-1 < (var12 ^ -1)) {
-                    return;
-                  } else {
-                    qh.field_d[var11] = 16777215;
-                    var11 += 2;
-                    continue L41;
+                if (var6 < qh.field_g) {
+                  var11 = qh.field_l * param0 + var7;
+                  var12 = 1 + (var9 + -var7) >> 1;
+                  L8: while (true) {
+                    var12--;
+                    if (var12 < 0) {
+                      break L7;
+                    } else {
+                      qh.field_d[var11] = 16777215;
+                      var11 += 2;
+                      continue L8;
+                    }
+                  }
+                } else {
+                  break L7;
+                }
+              }
+            }
+            L9: {
+              if (var5_int < qh.field_b) {
+                break L9;
+              } else {
+                if (qh.field_j <= var5_int) {
+                  break L9;
+                } else {
+                  var11 = var5_int + qh.field_l * (var8 - -(1 & -param3 + var5_int));
+                  var12 = -var8 + 1 + var10 >> 1;
+                  L10: while (true) {
+                    var12--;
+                    if (var12 < 0) {
+                      break L9;
+                    } else {
+                      qh.field_d[var11] = 16777215;
+                      var11 = var11 + 2 * qh.field_l;
+                      continue L10;
+                    }
                   }
                 }
               }
-            } else {
-              return;
             }
+            L11: {
+              if (param0 < qh.field_c) {
+                break L11;
+              } else {
+                if (var6 >= qh.field_g) {
+                  break L11;
+                } else {
+                  var11 = qh.field_l * var6 - -var7 + (1 & -param0 + var6);
+                  var12 = -var7 + 1 - -var9 >> 1;
+                  L12: while (true) {
+                    var12--;
+                    if (var12 < 0) {
+                      break L11;
+                    } else {
+                      qh.field_d[var11] = 16777215;
+                      var11 += 2;
+                      continue L12;
+                    }
+                  }
+                }
+              }
+            }
+            break L0;
           }
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          throw wm.a((Throwable) (Object) var5, "bj.C(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + 2187 + 41);
         }
     }
 

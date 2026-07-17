@@ -13,22 +13,17 @@ final class ol {
     private ln field_c;
 
     final void a(int param0, ln param1) {
-        int var3 = 0;
-        if (param1.field_l != null) {
-          param1.a((byte) -42);
-          param1.field_n = ((ol) this).field_e;
-          param1.field_l = ((ol) this).field_e.field_l;
-          var3 = 36 / ((param0 - 35) / 56);
-          param1.field_l.field_n = param1;
-          param1.field_n.field_l = param1;
-          return;
-        } else {
-          param1.field_n = ((ol) this).field_e;
-          param1.field_l = ((ol) this).field_e.field_l;
-          var3 = 36 / ((param0 - 35) / 56);
-          param1.field_l.field_n = param1;
-          param1.field_n.field_l = param1;
-          return;
+        try {
+            if (param1.field_l != null) {
+                param1.a((byte) -42);
+            }
+            param1.field_n = ((ol) this).field_e;
+            param1.field_l = ((ol) this).field_e.field_l;
+            int var3_int = 36 / ((param0 - 35) / 56);
+            param1.field_l.field_n = param1;
+            param1.field_n.field_l = param1;
+        } catch (RuntimeException runtimeException) {
+            throw kk.a((Throwable) (Object) runtimeException, "ol.D(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -52,16 +47,8 @@ final class ol {
     public static void b(int param0) {
         field_a = null;
         field_b = null;
-        if (param0 != 6985) {
-          field_i = null;
-          field_i = null;
-          field_h = null;
-          return;
-        } else {
-          field_i = null;
-          field_h = null;
-          return;
-        }
+        field_i = null;
+        field_h = null;
     }
 
     final ln a(byte param0) {
@@ -78,10 +65,6 @@ final class ol {
     }
 
     final static boolean b(byte param0) {
-        if (param0 != 38) {
-            field_i = null;
-            return ra.field_Z.a(-42);
-        }
         return ra.field_Z.a(-42);
     }
 
@@ -122,35 +105,76 @@ final class ol {
     }
 
     final static void a(int param0, ah param1) {
-        param1.a(-30510, mm.field_e);
-        if (param0 != 256) {
-            field_d = 120;
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        try {
+          L0: {
+            L1: {
+              param1.a(-30510, mm.field_e);
+              if (param0 == 256) {
+                break L1;
+              } else {
+                field_d = 120;
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_1 = new StringBuilder().append("ol.B(").append(param0).append(44);
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param1 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
+            }
+          }
+          throw kk.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
         }
     }
 
     final static boolean d(int param0) {
-        if (param0 == 0) {
-          if (!pj.b((byte) 87)) {
-            if (0 < fc.field_a) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+        if (pj.b((byte) 87)) {
             return false;
-          }
-        } else {
-          field_f = 110;
-          if (!pj.b((byte) 87)) {
-            if (0 < fc.field_a) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
         }
+        if (0 < fc.field_a) {
+            return false;
+        }
+        return true;
     }
 
     public ol() {

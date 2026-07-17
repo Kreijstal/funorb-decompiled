@@ -20,9 +20,6 @@ final class sp {
         field_b = null;
         field_d = null;
         field_g = null;
-        if (!param0) {
-            sp.a(true);
-        }
     }
 
     static {

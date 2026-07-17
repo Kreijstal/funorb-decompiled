@@ -15,71 +15,114 @@ final class sa {
     }
 
     final static void a(int param0) {
-        int var5 = Main.field_T;
-        int var2 = -116 / ((39 - param0) / 61);
-        int[] var6 = mb.field_c;
-        int[] var1 = var6;
+        int[] var1 = null;
+        RuntimeException var1_ref = null;
+        int var2 = 0;
         int var3 = 0;
-        int var4 = var6.length;
-        while (var4 > var3) {
-            int incrementValue$0 = var3;
-            var3++;
-            var6[incrementValue$0] = 0;
-            int incrementValue$1 = var3;
-            var3++;
-            var6[incrementValue$1] = 0;
-            int incrementValue$2 = var3;
-            var3++;
-            var6[incrementValue$2] = 0;
-            int incrementValue$3 = var3;
-            var3++;
-            var6[incrementValue$3] = 0;
-            int incrementValue$4 = var3;
-            var3++;
-            var6[incrementValue$4] = 0;
-            int incrementValue$5 = var3;
-            var3++;
-            var6[incrementValue$5] = 0;
-            int incrementValue$6 = var3;
-            var3++;
-            var6[incrementValue$6] = 0;
-            int incrementValue$7 = var3;
-            var3++;
-            var6[incrementValue$7] = 0;
+        int var4 = 0;
+        int var5 = 0;
+        int[] var6 = null;
+        RuntimeException decompiledCaughtException = null;
+        var5 = Main.field_T;
+        try {
+          L0: {
+            var2 = -116 / ((39 - param0) / 61);
+            var6 = mb.field_c;
+            var1 = var6;
+            var3 = 0;
+            var4 = var6.length;
+            L1: while (true) {
+              if (var4 <= var3) {
+                break L0;
+              } else {
+                int incrementValue$40 = var3;
+                var3++;
+                var6[incrementValue$40] = 0;
+                int incrementValue$41 = var3;
+                var3++;
+                var6[incrementValue$41] = 0;
+                int incrementValue$42 = var3;
+                var3++;
+                var6[incrementValue$42] = 0;
+                int incrementValue$43 = var3;
+                var3++;
+                var6[incrementValue$43] = 0;
+                int incrementValue$44 = var3;
+                var3++;
+                var6[incrementValue$44] = 0;
+                int incrementValue$45 = var3;
+                var3++;
+                var6[incrementValue$45] = 0;
+                int incrementValue$46 = var3;
+                var3++;
+                var6[incrementValue$46] = 0;
+                int incrementValue$47 = var3;
+                var3++;
+                var6[incrementValue$47] = 0;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw ma.a((Throwable) (Object) var1_ref, "sa.B(" + param0 + 41);
         }
     }
 
     final static int a(int param0, int param1, int param2) {
-        int var3 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
+        int stackIn_10_0 = 0;
+        int stackIn_14_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_9_0 = 0;
+        int stackOut_13_0 = 0;
         var4 = Main.field_T;
-        var3 = 1;
-        L0: while (true) {
-          if (1 >= param2) {
-            if (-2 == (param2 ^ -1)) {
-              return var3 * param1;
-            } else {
-              if (param0 != 22316) {
-                sa.a(-72);
-                return var3;
+        try {
+          L0: {
+            var3_int = 1;
+            L1: while (true) {
+              if (1 >= param2) {
+                if (param2 == 1) {
+                  stackOut_9_0 = var3_int * param1;
+                  stackIn_10_0 = stackOut_9_0;
+                  return stackIn_10_0;
+                } else {
+                  L2: {
+                    if (param0 == 22316) {
+                      break L2;
+                    } else {
+                      sa.a(-72);
+                      break L2;
+                    }
+                  }
+                  stackOut_13_0 = var3_int;
+                  stackIn_14_0 = stackOut_13_0;
+                  break L0;
+                }
               } else {
-                return var3;
+                L3: {
+                  if ((1 & param2) != 0) {
+                    var3_int = var3_int * param1;
+                    break L3;
+                  } else {
+                    break L3;
+                  }
+                }
+                param2 = param2 >> 1;
+                param1 = param1 * param1;
+                continue L1;
               }
             }
-          } else {
-            L1: {
-              if ((1 & param2) != 0) {
-                var3 = var3 * param1;
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            param2 = param2 >> 1;
-            param1 = param1 * param1;
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw ma.a((Throwable) (Object) var3, "sa.C(" + param0 + 44 + param1 + 44 + param2 + 41);
         }
+        return stackIn_14_0;
     }
 
     static {

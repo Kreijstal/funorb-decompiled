@@ -65,7 +65,7 @@ final class sl extends vw {
     final void a(int param0, boolean param1) {
         na var3 = null;
         int var4 = 0;
-        asa var4_ref = null;
+        asa var4_ref_asa = null;
         var3 = ((sl) this).field_c.n(-79);
         if (var3 != null) {
           if (param1) {
@@ -76,8 +76,8 @@ final class sl extends vw {
             ((sl) this).field_c.a(ln.field_F, (byte) -110, r.field_m);
             ((sl) this).field_c.a(lja.field_j, 2, -6219, true, false);
             ((sl) this).field_c.a(0, false, tla.field_c);
-            var4_ref = ((sl) this).field_c.C(0);
-            var4_ref.a(1217, (gda) (Object) ((sl) this).field_c.c(true));
+            var4_ref_asa = ((sl) this).field_c.C(0);
+            var4_ref_asa.a(1217, (gda) (Object) ((sl) this).field_c.c(true));
             ((sl) this).field_c.a(cva.field_b, false);
             ((sl) this).field_c.e(0, false);
             ((sl) this).field_f = true;
@@ -102,14 +102,14 @@ final class sl extends vw {
     }
 
     final void a(int param0, iva param1, int param2) {
-        ((sl) this).field_c.a(true, param1);
-        if (param2 != 24595) {
-          ((sl) this).a(false, -34);
-          ((sl) this).field_c.a((byte) -48, param0);
-          return;
-        } else {
-          ((sl) this).field_c.a((byte) -48, param0);
-          return;
+        try {
+            ((sl) this).field_c.a(true, param1);
+            if (param2 != 24595) {
+                ((sl) this).a(false, -34);
+            }
+            ((sl) this).field_c.a((byte) -48, param0);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "sl.E(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
     }
 

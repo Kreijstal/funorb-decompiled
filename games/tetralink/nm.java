@@ -23,14 +23,7 @@ final class nm extends mc {
         field_n = null;
         field_A = null;
         field_p = null;
-        if (param0 != 6) {
-          field_v = null;
-          field_v = null;
-          return;
-        } else {
-          field_v = null;
-          return;
-        }
+        field_v = null;
     }
 
     final static void b(byte param0) {

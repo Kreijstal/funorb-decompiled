@@ -58,35 +58,61 @@ abstract class em {
     }
 
     final int a(int param0, int param1, int param2) {
+        int var4 = 0;
         int var5 = 0;
         mi var6 = null;
         int var7 = 0;
-        int var8 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        if (null != ((em) this).field_a) {
-            // if_icmpeq L38
-            // if_icmpgt L38
-        } else {
-            return -1;
-        }
-        if (param2 > ((em) this).field_a[((em) this).field_a.length + -1].field_b) {
-            return -1;
-        }
-        if ((((em) this).field_a.length ^ -1) == -2) {
-            return ((em) this).field_a[0].a(-21878, param0);
-        }
-        int var4 = param1;
-        for (var5 = 0; var5 < ((em) this).field_a.length; var5++) {
-            var6 = ((em) this).field_a[var5];
-            if (param2 >= var6.field_e) {
-                if (!(param2 > var6.field_b)) {
-                    var7 = var6.a(-21878, param0);
-                    if (!((var7 ^ -1) != 0)) {
+        int var8 = 0;
+        L0: {
+          var8 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
+          if (null == ((em) this).field_a) {
+            break L0;
+          } else {
+            if (0 == ((em) this).field_a.length) {
+              break L0;
+            } else {
+              if (((em) this).field_a[0].field_e > param2) {
+                break L0;
+              } else {
+                if (param2 <= ((em) this).field_a[((em) this).field_a.length + -1].field_b) {
+                  if (((em) this).field_a.length != 1) {
+                    var4 = param1;
+                    var5 = 0;
+                    L1: while (true) {
+                      if (var5 >= ((em) this).field_a.length) {
                         return -1;
+                      } else {
+                        L2: {
+                          var6 = ((em) this).field_a[var5];
+                          if (param2 < var6.field_e) {
+                            break L2;
+                          } else {
+                            if (param2 <= var6.field_b) {
+                              var7 = var6.a(-21878, param0);
+                              if (var7 == -1) {
+                                return -1;
+                              } else {
+                                return var4 - -var7;
+                              }
+                            } else {
+                              break L2;
+                            }
+                          }
+                        }
+                        var4 = var4 + (-1 + var6.field_a.length);
+                        var5++;
+                        continue L1;
+                      }
                     }
-                    return var4 - -var7;
+                  } else {
+                    return ((em) this).field_a[0].a(-21878, param0);
+                  }
+                } else {
+                  return -1;
                 }
+              }
             }
-            var4 = var4 + (-1 + var6.field_a.length);
+          }
         }
         return -1;
     }
@@ -125,53 +151,106 @@ abstract class em {
     }
 
     final int a(int param0, String param1, int param2, int param3) {
-        int var5 = 0;
+        int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
+        int stackIn_14_0 = 0;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_19_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_13_0 = 0;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
         var10 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        var5 = 0;
-        var6 = 0;
-        var7 = param1.length();
-        var8 = 0;
-        L0: while (true) {
-          if (var8 >= var7) {
-            if (var5 > param3) {
-              return (-param2 + param0 << -217207480) / var5;
-            } else {
-              return 0;
-            }
-          } else {
-            var9 = param1.charAt(var8);
-            if (var9 == 60) {
-              var6 = 1;
-              var8++;
-              continue L0;
-            } else {
-              if (var9 != 62) {
-                if (var6 == 0) {
-                  if (var9 == 32) {
-                    var5++;
-                    var8++;
-                    continue L0;
-                  } else {
-                    var8++;
-                    continue L0;
-                  }
+        try {
+          L0: {
+            var5_int = 0;
+            var6 = 0;
+            var7 = param1.length();
+            var8 = 0;
+            L1: while (true) {
+              if (var8 >= var7) {
+                if (var5_int > param3) {
+                  stackOut_13_0 = (-param2 + param0 << 8) / var5_int;
+                  stackIn_14_0 = stackOut_13_0;
+                  break L0;
                 } else {
-                  var8++;
-                  continue L0;
+                  return 0;
                 }
               } else {
-                var6 = 0;
+                L2: {
+                  var9 = param1.charAt(var8);
+                  if (var9 == 60) {
+                    var6 = 1;
+                    break L2;
+                  } else {
+                    if (var9 != 62) {
+                      L3: {
+                        if (var6 != 0) {
+                          break L3;
+                        } else {
+                          break L3;
+                        }
+                      }
+                      var8++;
+                      continue L1;
+                    } else {
+                      var6 = 0;
+                      break L2;
+                    }
+                  }
+                }
                 var8++;
-                continue L0;
+                continue L1;
               }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var5 = decompiledCaughtException;
+            stackOut_16_0 = (RuntimeException) var5;
+            stackOut_16_1 = new StringBuilder().append("em.K(").append(param0).append(44);
+            stackIn_18_0 = stackOut_16_0;
+            stackIn_18_1 = stackOut_16_1;
+            stackIn_17_0 = stackOut_16_0;
+            stackIn_17_1 = stackOut_16_1;
+            if (param1 == null) {
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "null";
+              stackIn_19_0 = stackOut_18_0;
+              stackIn_19_1 = stackOut_18_1;
+              stackIn_19_2 = stackOut_18_2;
+              break L4;
+            } else {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "{...}";
+              stackIn_19_0 = stackOut_17_0;
+              stackIn_19_1 = stackOut_17_1;
+              stackIn_19_2 = stackOut_17_2;
+              break L4;
+            }
+          }
+          throw ie.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param2 + 44 + param3 + 41);
         }
+        return stackIn_14_0;
     }
 
     final int b(int param0) {

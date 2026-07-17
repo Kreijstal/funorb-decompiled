@@ -8,22 +8,72 @@ class tb extends hq {
     static ja field_s;
 
     public final void a(boolean param0, int param1, int param2, int param3, cf param4) {
+        RuntimeException var6 = null;
         Object var7 = null;
-        L0: {
-          if (param0) {
-            ng.a(1, param3 + param4.field_y, param4.field_n, param4.field_i + param1, param4.field_w);
-            break L0;
-          } else {
-            break L0;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0) {
+                ng.a(1, param3 + param4.field_y, param4.field_n, param4.field_i + param1, param4.field_w);
+                break L1;
+              } else {
+                break L1;
+              }
+            }
+            super.a(param0, param1, param2, param3, param4);
+            if (param2 == -15112) {
+              break L0;
+            } else {
+              var7 = null;
+              ((tb) this).a(true, 39, -62, 86, (cf) null);
+              return;
+            }
           }
-        }
-        super.a(param0, param1, param2 ^ 0, param3, param4);
-        if (param2 != -15112) {
-          var7 = null;
-          ((tb) this).a(true, 39, -62, 86, (cf) null);
-          return;
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var6 = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var6;
+            stackOut_6_1 = new StringBuilder().append("tb.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param4 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L2;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L2;
+            }
+          }
+          throw fa.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
         }
     }
 
@@ -49,85 +99,18 @@ class tb extends hq {
     final static void b(int param0) {
         Object var1 = null;
         Throwable var2 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    if (um.field_c != null) {
-                        statePc = 4;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    if (param0 == 4862) {
-                        statePc = 3;
-                    } else {
-                        statePc = 2;
-                    }
-                    continue stateLoop;
-                }
-                case 2: {
-                    field_s = null;
-                    statePc = 3;
-                    continue stateLoop;
-                }
-                case 3: {
-                    return;
-                }
-                case 4: {
-                    var1 = (Object) (Object) um.field_c;
-                    // monitorenter um.field_c
-                    statePc = 5;
-                    continue stateLoop;
-                }
-                case 5: {
-                    try {
-                        um.field_c = null;
-                        // monitorexit var1
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    if (param0 == 4862) {
-                        statePc = 8;
-                    } else {
-                        statePc = 7;
-                    }
-                    continue stateLoop;
-                }
-                case 7: {
-                    field_s = null;
-                    statePc = 8;
-                    continue stateLoop;
-                }
-                case 8: {
-                    return;
-                }
-                case 9: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1
-                        statePc = 10;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 9;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        if (um.field_c != null) {
+          var1 = (Object) (Object) um.field_c;
+          synchronized (var1) {
+            L0: {
+              um.field_c = null;
+              break L0;
             }
+          }
+          return;
+        } else {
+          return;
         }
     }
 

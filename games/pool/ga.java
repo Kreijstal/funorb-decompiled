@@ -332,9 +332,9 @@ final class ga extends sl implements sc {
                   return;
                 }
               } else {
-                if ((var2 ^ -1) == -3) {
+                if (var2 == 2) {
                   L15: {
-                    if (-2 != (th.field_a ^ -1)) {
+                    if (th.field_a != 1) {
                       break L15;
                     } else {
                       th.field_a = 2;
@@ -343,9 +343,9 @@ final class ga extends sl implements sc {
                   }
                   return;
                 } else {
-                  if (-4 == (var2 ^ -1)) {
+                  if (var2 == 3) {
                     L16: {
-                      if ((th.field_a ^ -1) == -3) {
+                      if (th.field_a == 2) {
                         th.field_a = 1;
                         break L16;
                       } else {
@@ -362,7 +362,7 @@ final class ga extends sl implements sc {
                         break L17;
                       }
                     }
-                    if (-5 == (var2 ^ -1)) {
+                    if (var2 == 4) {
                       th.field_a = 1;
                       var3 = var1.j(-118);
                       cm.field_J = var3.intern();
@@ -415,9 +415,9 @@ final class ga extends sl implements sc {
         try {
           L0: {
             if (param1) {
-              if (-1 > (param0 ^ -1)) {
+              if (param0 > 0) {
                 if (ql.a(param0, -90)) {
-                  stackOut_9_0 = (int)(((long)param2.nextInt() & 4294967295L) * (long)param0 >> -1784665696);
+                  stackOut_9_0 = (int)(((long)param2.nextInt() & 4294967295L) * (long)param0 >> 32);
                   stackIn_10_0 = stackOut_9_0;
                   return stackIn_10_0;
                 } else {
@@ -541,9 +541,9 @@ final class ga extends sl implements sc {
               param1[1] = param1[1] - param0[1];
               param1[0] = param1[0] - param0[0];
               param1[2] = param1[2] - param0[2];
-              var3_int = param1[1] * param0[4] + param0[3] * param1[0] + param1[2] * param0[5] >> 766391623;
-              var4 = param0[7] * param1[1] + (param1[0] * param0[6] + param1[2] * param0[8]) >> 2045428167;
-              param1[2] = param0[10] * param1[1] + (param0[9] * param1[0] + param0[11] * param1[2]) >> -585577648;
+              var3_int = param1[1] * param0[4] + param0[3] * param1[0] + param1[2] * param0[5] >> 7;
+              var4 = param0[7] * param1[1] + (param1[0] * param0[6] + param1[2] * param0[8]) >> 7;
+              param1[2] = param0[10] * param1[1] + (param0[9] * param1[0] + param0[11] * param1[2]) >> 16;
               if (param1[2] != 0) {
                 break L1;
               } else {
@@ -640,7 +640,7 @@ final class ga extends sl implements sc {
         String stackOut_5_2 = null;
         try {
           L0: {
-            super.a(param0, param1 + 0, param2, param3);
+            super.a(param0, param1, param2, param3);
             if (param1 == 958) {
               ((ga) this).field_bb = wn.field_i - (((ga) this).field_C - -param2);
               break L0;

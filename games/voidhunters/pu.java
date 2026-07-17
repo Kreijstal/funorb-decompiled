@@ -12,26 +12,28 @@ final class pu implements dja {
     }
 
     final static int a(byte param0, int param1) {
-        if (param1 != -6407) {
-          if (-6410 != param1) {
+        if (param1 == 6406) {
+          return 1;
+        } else {
+          if (param1 != 6409) {
             if (32841 != param1) {
-              if (param1 != 6410) {
+              if (param1 == 6410) {
+                return 2;
+              } else {
                 if (param1 != 6407) {
-                  if (-6409 == (param1 ^ -1)) {
+                  if (param1 == 6408) {
                     return 4;
                   } else {
-                    if (param0 >= -92) {
-                      int discarded$2 = pu.a((byte) -64, -74);
+                    if (param0 < -92) {
                       throw new IllegalArgumentException("");
                     } else {
+                      int discarded$2 = pu.a((byte) -64, -74);
                       throw new IllegalArgumentException("");
                     }
                   }
                 } else {
                   return 3;
                 }
-              } else {
-                return 2;
               }
             } else {
               return 1;
@@ -39,18 +41,11 @@ final class pu implements dja {
           } else {
             return 1;
           }
-        } else {
-          return 1;
         }
     }
 
     public static void a(int param0) {
         field_c = null;
-        if (param0 < 49) {
-            field_b = null;
-            field_b = null;
-            return;
-        }
         field_b = null;
     }
 

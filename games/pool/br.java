@@ -60,9 +60,6 @@ final class br extends ob {
     final static void f(int param0) {
         lh.field_c = new nf();
         tn.field_n.d((ei) (Object) lh.field_c, 30);
-        if (param0 != 35) {
-            field_J = null;
-        }
     }
 
     final void a(byte param0) {
@@ -72,20 +69,10 @@ final class br extends ob {
     }
 
     public static void b(boolean param0) {
-        if (param0) {
-          field_J = null;
-          field_K = null;
-          field_J = null;
-          field_M = null;
-          field_L = null;
-          return;
-        } else {
-          field_K = null;
-          field_J = null;
-          field_M = null;
-          field_L = null;
-          return;
-        }
+        field_K = null;
+        field_J = null;
+        field_M = null;
+        field_L = null;
     }
 
     final void c(int param0) {

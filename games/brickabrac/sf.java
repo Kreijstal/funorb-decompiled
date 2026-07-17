@@ -40,12 +40,14 @@ final class sf extends vb implements je {
     }
 
     final void a(ia param0, byte param1) {
-        if (param1 != -68) {
-            ((sf) this).n(48);
+        try {
+            if (param1 != -68) {
+                ((sf) this).n(48);
+            }
             ((sf) this).field_W = param0;
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) (Object) runtimeException, "sf.AB(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
-        ((sf) this).field_W = param0;
     }
 
     sf(String param0, uh param1, int param2) {
@@ -60,8 +62,12 @@ final class sf extends vb implements je {
     }
 
     final void a(oc param0, byte param1, int param2, int param3) {
-        super.a(param0, param1, param2, param3);
-        ((sf) this).field_ab = -param2 + -((sf) this).field_o + pq.field_k;
+        try {
+            super.a(param0, param1, param2, param3);
+            ((sf) this).field_ab = -param2 + -((sf) this).field_o + pq.field_k;
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) (Object) runtimeException, "sf.WA(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+        }
     }
 
     final String d(int param0) {

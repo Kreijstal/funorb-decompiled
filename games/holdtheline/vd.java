@@ -11,36 +11,92 @@ abstract class vd {
     abstract void a(float param0, int[] param1, int param2, int[] param3, byte param4);
 
     final static int[] c(int param0) {
-        if (param0 != 1023) {
-            vd.b(-2);
-            return new int[8];
-        }
         return new int[8];
     }
 
     final static ch a(gn param0, int param1, int param2) {
         byte[] var3 = null;
+        RuntimeException var3_ref = null;
         byte[] var4 = null;
-        if (param1 == 65535) {
-          var4 = param0.b(15950, param2);
-          var3 = var4;
-          if (var4 == null) {
-            return null;
-          } else {
-            return new ch(var4);
+        Object stackIn_2_0 = null;
+        ch stackIn_7_0 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        ch stackOut_6_0 = null;
+        Object stackOut_1_0 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        try {
+          L0: {
+            if (param1 == 65535) {
+              var4 = param0.b(15950, param2);
+              var3 = var4;
+              if (var4 != null) {
+                stackOut_6_0 = new ch(var4);
+                stackIn_7_0 = stackOut_6_0;
+                break L0;
+              } else {
+                return null;
+              }
+            } else {
+              stackOut_1_0 = null;
+              stackIn_2_0 = stackOut_1_0;
+              return (ch) (Object) stackIn_2_0;
+            }
           }
-        } else {
-          return null;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var3_ref = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var3_ref;
+            stackOut_8_1 = new StringBuilder().append("vd.F(");
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param0 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L1;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L1;
+            }
+          }
+          throw kk.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param1 + 44 + param2 + 41);
         }
+        return stackIn_7_0;
     }
 
     final static void a(java.awt.Component param0, int param1) {
-        if (param1 >= -109) {
-            return;
+        try {
+            param0.setFocusTraversalKeysEnabled(false);
+            param0.addKeyListener((java.awt.event.KeyListener) (Object) tf.field_n);
+            param0.addFocusListener((java.awt.event.FocusListener) (Object) tf.field_n);
+        } catch (RuntimeException runtimeException) {
+            throw kk.a((Throwable) (Object) runtimeException, "vd.I(" + (param0 != null ? "{...}" : "null") + 44 + -116 + 41);
         }
-        param0.setFocusTraversalKeysEnabled(false);
-        param0.addKeyListener((java.awt.event.KeyListener) (Object) tf.field_n);
-        param0.addFocusListener((java.awt.event.FocusListener) (Object) tf.field_n);
     }
 
     final static String a(int param0) {

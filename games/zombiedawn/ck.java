@@ -19,7 +19,8 @@ final class ck extends le {
     private int field_k;
 
     final void a(wk param0, byte param1) {
-        int var3 = 0;
+        RuntimeException var3 = null;
+        int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -30,122 +31,169 @@ final class ck extends le {
         int var11 = 0;
         oj var12 = null;
         int var13 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_18_0 = 0;
-        int stackOut_4_0 = 0;
+        int stackIn_7_0 = 0;
+        int stackIn_19_0 = 0;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
+        RuntimeException stackIn_31_0 = null;
+        StringBuilder stackIn_31_1 = null;
+        RuntimeException stackIn_32_0 = null;
+        StringBuilder stackIn_32_1 = null;
+        String stackIn_32_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int stackOut_5_0 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_18_0 = 0;
         int stackOut_17_0 = 0;
-        int stackOut_16_0 = 0;
-        L0: {
-          var13 = ZombieDawn.field_J;
-          var3 = param0.a(((ck) this).field_k, (byte) -91);
-          var4 = param0.a(((ck) this).field_p, 0);
-          if (param1 == 110) {
-            break L0;
-          } else {
-            ck.d(-107);
-            break L0;
-          }
-        }
-        L1: {
-          L2: {
-            if (null != ((ck) this).field_j) {
-              break L2;
-            } else {
-              if (((ck) this).field_r != null) {
-                break L2;
+        RuntimeException stackOut_29_0 = null;
+        StringBuilder stackOut_29_1 = null;
+        RuntimeException stackOut_31_0 = null;
+        StringBuilder stackOut_31_1 = null;
+        String stackOut_31_2 = null;
+        RuntimeException stackOut_30_0 = null;
+        StringBuilder stackOut_30_1 = null;
+        String stackOut_30_2 = null;
+        var13 = ZombieDawn.field_J;
+        try {
+          L0: {
+            L1: {
+              var3_int = param0.a(((ck) this).field_k, (byte) -91);
+              var4 = param0.a(((ck) this).field_p, 0);
+              if (param1 == 110) {
+                break L1;
               } else {
-                stackOut_4_0 = 0;
-                stackIn_6_0 = stackOut_4_0;
+                ck.d(-107);
                 break L1;
               }
             }
-          }
-          stackOut_5_0 = pj.a(var4, param1 ^ 34, var3);
-          stackIn_6_0 = stackOut_5_0;
-          break L1;
-        }
-        L3: {
-          var5 = stackIn_6_0;
-          if (((ck) this).field_j == null) {
-            break L3;
-          } else {
-            if (((ck) this).field_j.l()) {
-              ((ck) this).field_j = null;
-              break L3;
-            } else {
-              ((ck) this).field_j.h(var5);
-              break L3;
+            L2: {
+              L3: {
+                if (null != ((ck) this).field_j) {
+                  break L3;
+                } else {
+                  if (((ck) this).field_r != null) {
+                    break L3;
+                  } else {
+                    stackOut_5_0 = 0;
+                    stackIn_7_0 = stackOut_5_0;
+                    break L2;
+                  }
+                }
+              }
+              stackOut_6_0 = pj.a(var4, param1 ^ 34, var3_int);
+              stackIn_7_0 = stackOut_6_0;
+              break L2;
             }
-          }
-        }
-        L4: {
-          if (null == ((ck) this).field_r) {
-            break L4;
-          } else {
-            if (((ck) this).field_r.l()) {
-              ((ck) this).field_r = null;
-              break L4;
-            } else {
-              ((ck) this).field_r.h(var5);
-              break L4;
-            }
-          }
-        }
-        L5: {
-          if ((((ck) this).field_o ^ -1) == -2) {
-            var6 = ((ck) this).field_m / 2;
-            if (var6 > ((ck) this).field_m - ((ck) this).field_q) {
-              om.a(-1, var4, var3, 1, -((ck) this).field_q + ((ck) this).field_m, ((ck) this).field_m - ((ck) this).field_q, ((ck) this).field_q, ((ck) this).field_q * 3 / 4);
-              break L5;
-            } else {
-              om.a(-1, var4, var3, 1, 255, var6, ((ck) this).field_q, ((ck) this).field_q * 3 / 4);
-              break L5;
-            }
-          } else {
-            L6: {
-              var6 = (int)(15.0f * (float)((ck) this).field_q / (float)((ck) this).field_m);
-              var7 = (int)((float)((ck) this).field_q * 128.0f / (float)((ck) this).field_m);
-              if (-97 > (var7 ^ -1)) {
-                stackOut_17_0 = 384 - 3 * var7;
-                stackIn_18_0 = stackOut_17_0;
-                break L6;
+            L4: {
+              var5 = stackIn_7_0;
+              if (((ck) this).field_j == null) {
+                break L4;
               } else {
-                stackOut_16_0 = var7;
-                stackIn_18_0 = stackOut_16_0;
-                break L6;
+                if (((ck) this).field_j.l()) {
+                  ((ck) this).field_j = null;
+                  break L4;
+                } else {
+                  ((ck) this).field_j.h(var5);
+                  break L4;
+                }
               }
             }
-            L7: {
-              var8 = stackIn_18_0;
-              var9 = -var7 + 128 >> -499814751;
-              if (-33 > (var9 ^ -1)) {
-                var9 = 32;
-                break L7;
-              } else {
-                break L7;
-              }
-            }
-            var10 = ((ck) this).field_s;
-            var11 = 0;
-            L8: while (true) {
-              if (var11 >= var10.length) {
+            L5: {
+              if (null == ((ck) this).field_r) {
                 break L5;
               } else {
-                var12 = var10[var11];
-                var12.a(tc.field_z[var6], var8, var4, var9, -124, var3);
-                var11++;
-                continue L8;
+                if (((ck) this).field_r.l()) {
+                  ((ck) this).field_r = null;
+                  break L5;
+                } else {
+                  ((ck) this).field_r.h(var5);
+                  break L5;
+                }
               }
             }
+            L6: {
+              if (((ck) this).field_o == 1) {
+                var6 = ((ck) this).field_m / 2;
+                if (var6 > ((ck) this).field_m - ((ck) this).field_q) {
+                  om.a(-1, var4, var3_int, 1, -((ck) this).field_q + ((ck) this).field_m, ((ck) this).field_m - ((ck) this).field_q, ((ck) this).field_q, ((ck) this).field_q * 3 / 4);
+                  break L6;
+                } else {
+                  om.a(-1, var4, var3_int, 1, 255, var6, ((ck) this).field_q, ((ck) this).field_q * 3 / 4);
+                  break L6;
+                }
+              } else {
+                L7: {
+                  var6 = (int)(15.0f * (float)((ck) this).field_q / (float)((ck) this).field_m);
+                  var7 = (int)((float)((ck) this).field_q * 128.0f / (float)((ck) this).field_m);
+                  if (var7 > 96) {
+                    stackOut_18_0 = 384 - 3 * var7;
+                    stackIn_19_0 = stackOut_18_0;
+                    break L7;
+                  } else {
+                    stackOut_17_0 = var7;
+                    stackIn_19_0 = stackOut_17_0;
+                    break L7;
+                  }
+                }
+                L8: {
+                  var8 = stackIn_19_0;
+                  var9 = -var7 + 128 >> 1;
+                  if (var9 > 32) {
+                    var9 = 32;
+                    break L8;
+                  } else {
+                    break L8;
+                  }
+                }
+                var10 = ((ck) this).field_s;
+                var11 = 0;
+                L9: while (true) {
+                  if (var11 >= var10.length) {
+                    break L6;
+                  } else {
+                    var12 = var10[var11];
+                    var12.a(tc.field_z[var6], var8, var4, var9, -124, var3_int);
+                    var11++;
+                    continue L9;
+                  }
+                }
+              }
+            }
+            break L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L10: {
+            var3 = decompiledCaughtException;
+            stackOut_29_0 = (RuntimeException) var3;
+            stackOut_29_1 = new StringBuilder().append("ck.A(");
+            stackIn_31_0 = stackOut_29_0;
+            stackIn_31_1 = stackOut_29_1;
+            stackIn_30_0 = stackOut_29_0;
+            stackIn_30_1 = stackOut_29_1;
+            if (param0 == null) {
+              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
+              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
+              stackOut_31_2 = "null";
+              stackIn_32_0 = stackOut_31_0;
+              stackIn_32_1 = stackOut_31_1;
+              stackIn_32_2 = stackOut_31_2;
+              break L10;
+            } else {
+              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
+              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
+              stackOut_30_2 = "{...}";
+              stackIn_32_0 = stackOut_30_0;
+              stackIn_32_1 = stackOut_30_1;
+              stackIn_32_2 = stackOut_30_2;
+              break L10;
+            }
+          }
+          throw sh.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + 44 + param1 + 41);
         }
     }
 
     final static boolean c(int param0) {
-        if (param0 != -6376) {
-            return false;
-        }
         return null != cn.field_b ? true : mp.field_c;
     }
 
@@ -158,7 +206,7 @@ final class ck extends le {
                 return false;
             }
             int var2_int = sn.field_c.b((byte) -109);
-            if (-1 > (var2_int ^ -1)) {
+            if (var2_int > 0) {
                 if (-fj.field_g.field_j + param1 < var2_int) {
                     var2_int = -fj.field_g.field_j + param1;
                 }
@@ -171,16 +219,13 @@ final class ck extends le {
                 fj.field_g.field_j = 0;
                 return true;
             }
-            try {
-                if (false) throw (IOException) null;
+            {
                 int var3 = -18 / ((-59 - param0) / 40);
-                if ((var2_int ^ -1) <= -1) {
-                    if (-30001L <= (gd.a(-124) ^ -1L)) {
+                if (var2_int >= 0) {
+                    if (gd.a(-124) <= 30000L) {
                         return false;
                     }
                 }
-                p.a(1);
-            } catch (IOException iOException) {
                 p.a(1);
             }
             return false;
@@ -318,7 +363,7 @@ final class ck extends le {
                             L8: {
                               var6 = var5.a(true) / 24;
                               var7 = var5.f(237239984) / 24;
-                              if (-1 != (var5.f(237239984) % 24 ^ -1)) {
+                              if (var5.f(237239984) % 24 != 0) {
                                 break L8;
                               } else {
                                 var7--;
@@ -344,7 +389,7 @@ final class ck extends le {
                         }
                       }
                     } else {
-                      if (-2 == (((ck) this).field_o ^ -1)) {
+                      if (((ck) this).field_o == 1) {
                         ((kd) (Object) var5).c(401408, ((ck) this).field_p, ((ck) this).field_k);
                         break L7;
                       } else {
@@ -381,7 +426,7 @@ final class ck extends le {
           }
         }
         L1: {
-          if ((param0 ^ -1) != 1) {
+          if (param0 != -2) {
             break L1;
           } else {
             nm.field_b = false;
@@ -390,7 +435,7 @@ final class ck extends le {
         }
         L2: {
           L3: {
-            if (7 != (param0 ^ -1)) {
+            if (param0 != -8) {
               break L3;
             } else {
               if (h.field_d) {
@@ -398,10 +443,10 @@ final class ck extends le {
               } else {
                 L4: {
                   L5: {
-                    if (-8 != (vk.field_c ^ -1)) {
+                    if (vk.field_c != 7) {
                       break L5;
                     } else {
-                      if ((vf.field_f ^ -1) == -4) {
+                      if (vf.field_f == 3) {
                         break L4;
                       } else {
                         break L5;
@@ -409,10 +454,10 @@ final class ck extends le {
                     }
                   }
                   L6: {
-                    if (-8 != (vk.field_c ^ -1)) {
+                    if (vk.field_c != 7) {
                       break L6;
                     } else {
-                      if (-5 == (vf.field_f ^ -1)) {
+                      if (vf.field_f == 4) {
                         break L4;
                       } else {
                         break L6;
@@ -431,7 +476,7 @@ final class ck extends le {
                     }
                   }
                   L8: {
-                    if (-7 != (vk.field_c ^ -1)) {
+                    if (vk.field_c != 6) {
                       break L8;
                     } else {
                       if (vf.field_f == 1) {
@@ -472,7 +517,7 @@ final class ck extends le {
           }
           L10: {
             if (0 == vk.field_c) {
-              if (-1 == (vf.field_f ^ -1)) {
+              if (vf.field_f == 0) {
                 L11: {
                   if (sm.field_a != -1) {
                     break L11;
@@ -489,7 +534,7 @@ final class ck extends le {
                   if (0 != sm.field_a) {
                     break L12;
                   } else {
-                    if ((param0 ^ -1) != 2) {
+                    if (param0 != -3) {
                       break L12;
                     } else {
                       bo.a(param1 ^ -6864, sm.field_a - -1);
@@ -498,10 +543,10 @@ final class ck extends le {
                   }
                 }
                 L13: {
-                  if (-2 != (sm.field_a ^ -1)) {
+                  if (sm.field_a != 1) {
                     break L13;
                   } else {
-                    if (3 == (param0 ^ -1)) {
+                    if (param0 == -4) {
                       bo.a(-82, 1 + sm.field_a);
                       break L2;
                     } else {
@@ -509,10 +554,10 @@ final class ck extends le {
                     }
                   }
                 }
-                if ((sm.field_a ^ -1) != -3) {
+                if (sm.field_a != 2) {
                   break L10;
                 } else {
-                  if (3 == (param0 ^ -1)) {
+                  if (param0 == -4) {
                     bo.a(100, sm.field_a + 1);
                     break L2;
                   } else {
@@ -526,7 +571,7 @@ final class ck extends le {
                       if (sm.field_a != -1) {
                         break L14;
                       } else {
-                        if ((param0 ^ -1) == 0) {
+                        if (param0 == -1) {
                           bo.a(param1 ^ 6831, 0);
                           break L2;
                         } else {
@@ -538,7 +583,7 @@ final class ck extends le {
                       if (0 != sm.field_a) {
                         break L15;
                       } else {
-                        if (-5 == (param0 ^ -1)) {
+                        if (param0 == 4) {
                           bo.a(-72, 1);
                           break L2;
                         } else {
@@ -561,7 +606,7 @@ final class ck extends le {
                     if (sm.field_a != 1) {
                       break L10;
                     } else {
-                      if ((param0 ^ -1) == 4) {
+                      if (param0 == -5) {
                         bo.a(-62, 3);
                         break L2;
                       } else {
@@ -570,16 +615,16 @@ final class ck extends le {
                     }
                   } else {
                     if (3 == vf.field_f) {
-                      if (-1 == (param0 ^ -1)) {
+                      if (param0 == 0) {
                         bo.a(param1 ^ 6862, 0);
                         break L2;
                       } else {
                         break L2;
                       }
                     } else {
-                      if ((vf.field_f ^ -1) == -5) {
+                      if (vf.field_f == 4) {
                         L17: {
-                          if (0 != (sm.field_a ^ -1)) {
+                          if (sm.field_a != -1) {
                             break L17;
                           } else {
                             if (param0 != -1) {
@@ -590,11 +635,11 @@ final class ck extends le {
                             }
                           }
                         }
-                        if ((param0 ^ -1) == -4) {
+                        if (param0 == 3) {
                           bo.a(-91, 1);
                           break L2;
                         } else {
-                          if (-6 == (param0 ^ -1)) {
+                          if (param0 == 5) {
                             bo.a(83, 2);
                             break L2;
                           } else {
@@ -602,12 +647,12 @@ final class ck extends le {
                           }
                         }
                       } else {
-                        if ((vf.field_f ^ -1) == -6) {
+                        if (vf.field_f == 5) {
                           L18: {
                             if (-1 != sm.field_a) {
                               break L18;
                             } else {
-                              if (0 == (param0 ^ -1)) {
+                              if (param0 == -1) {
                                 bo.a(param1 ^ 6807, 0);
                                 break L18;
                               } else {
@@ -616,10 +661,10 @@ final class ck extends le {
                             }
                           }
                           L19: {
-                            if (-1 != (sm.field_a ^ -1)) {
+                            if (sm.field_a != 0) {
                               break L19;
                             } else {
-                              if ((param0 ^ -1) != 6) {
+                              if (param0 != -7) {
                                 break L19;
                               } else {
                                 bo.a(25, 1);
@@ -630,7 +675,7 @@ final class ck extends le {
                           if (0 != sm.field_a) {
                             break L10;
                           } else {
-                            if (4 == (param0 ^ -1)) {
+                            if (param0 == -5) {
                               bo.a(106, 2);
                               break L2;
                             } else {
@@ -645,7 +690,7 @@ final class ck extends le {
                   }
                 } else {
                   L20: {
-                    if ((sm.field_a ^ -1) != 0) {
+                    if (sm.field_a != -1) {
                       break L20;
                     } else {
                       if (-1 != param0) {
@@ -682,10 +727,10 @@ final class ck extends le {
               }
             } else {
               if (vk.field_c != 1) {
-                if (-3 != (vk.field_c ^ -1)) {
-                  if ((vk.field_c ^ -1) != -5) {
-                    if ((vk.field_c ^ -1) != -6) {
-                      if (-7 != (vk.field_c ^ -1)) {
+                if (vk.field_c != 2) {
+                  if (vk.field_c != 4) {
+                    if (vk.field_c != 5) {
+                      if (vk.field_c != 6) {
                         if (7 == vk.field_c) {
                           if (vf.field_f == 0) {
                             L22: {
@@ -698,10 +743,10 @@ final class ck extends le {
                               }
                             }
                             L23: {
-                              if ((param0 ^ -1) != 11) {
+                              if (param0 != -12) {
                                 break L23;
                               } else {
-                                if ((sm.field_a ^ -1) == -1) {
+                                if (sm.field_a == 0) {
                                   bo.a(65, 1);
                                   break L23;
                                 } else {
@@ -716,9 +761,9 @@ final class ck extends le {
                               break L2;
                             }
                           } else {
-                            if ((vf.field_f ^ -1) != -3) {
+                            if (vf.field_f != 2) {
                               if (vf.field_f != 3) {
-                                if ((vf.field_f ^ -1) != -6) {
+                                if (vf.field_f != 5) {
                                   break L10;
                                 } else {
                                   if (-1 == param0) {
@@ -749,9 +794,9 @@ final class ck extends le {
                           break L2;
                         }
                       } else {
-                        if ((vf.field_f ^ -1) != -1) {
+                        if (vf.field_f != 0) {
                           if (2 == vf.field_f) {
-                            if ((param0 ^ -1) != -11) {
+                            if (param0 != 10) {
                               break L10;
                             } else {
                               if (sm.field_a != -1) {
@@ -764,7 +809,7 @@ final class ck extends le {
                           } else {
                             if (vf.field_f == 3) {
                               L24: {
-                                if (0 != (param0 ^ -1)) {
+                                if (param0 != -1) {
                                   break L24;
                                 } else {
                                   bo.a(32, 0);
@@ -772,7 +817,7 @@ final class ck extends le {
                                 }
                               }
                               L25: {
-                                if (9 != (param0 ^ -1)) {
+                                if (param0 != -10) {
                                   break L25;
                                 } else {
                                   if (!ha.field_e) {
@@ -784,7 +829,7 @@ final class ck extends le {
                                   }
                                 }
                               }
-                              if ((param0 ^ -1) != 12) {
+                              if (param0 != -13) {
                                 break L10;
                               } else {
                                 if (!uo.field_d) {
@@ -817,7 +862,7 @@ final class ck extends le {
                               break L26;
                             }
                           }
-                          if ((param0 ^ -1) != 8) {
+                          if (param0 != -9) {
                             break L10;
                           } else {
                             if (0 == sm.field_a) {
@@ -831,12 +876,12 @@ final class ck extends le {
                       }
                     } else {
                       if (vf.field_f != 0) {
-                        if (-2 != (vf.field_f ^ -1)) {
+                        if (vf.field_f != 1) {
                           if (2 != vf.field_f) {
-                            if ((vf.field_f ^ -1) != -5) {
+                            if (vf.field_f != 4) {
                               break L10;
                             } else {
-                              if (0 == (param0 ^ -1)) {
+                              if (param0 == -1) {
                                 bo.a(-88, 0);
                                 break L2;
                               } else {
@@ -844,11 +889,11 @@ final class ck extends le {
                               }
                             }
                           } else {
-                            if (0 != (param0 ^ -1)) {
-                              if ((param0 ^ -1) != -14) {
+                            if (param0 != -1) {
+                              if (param0 != 13) {
                                 break L10;
                               } else {
-                                if (-1 == (sm.field_a ^ -1)) {
+                                if (sm.field_a == 0) {
                                   bo.a(-92, 1);
                                   break L2;
                                 } else {
@@ -882,10 +927,10 @@ final class ck extends le {
                               }
                             }
                           }
-                          if (-16 != (param0 ^ -1)) {
+                          if (param0 != 15) {
                             break L10;
                           } else {
-                            if (-2 != (sm.field_a ^ -1)) {
+                            if (sm.field_a != 1) {
                               break L10;
                             } else {
                               bo.a(105, 2);
@@ -899,8 +944,8 @@ final class ck extends le {
                       }
                     }
                   } else {
-                    if (-1 != (vf.field_f ^ -1)) {
-                      if ((vf.field_f ^ -1) == -2) {
+                    if (vf.field_f != 0) {
+                      if (vf.field_f == 1) {
                         if (param0 == 12) {
                           bo.a(param1 + -6749, 0);
                           break L2;
@@ -908,17 +953,17 @@ final class ck extends le {
                           break L2;
                         }
                       } else {
-                        if (-3 == (vf.field_f ^ -1)) {
-                          if (-10 == (param0 ^ -1)) {
+                        if (vf.field_f == 2) {
+                          if (param0 == 9) {
                             bo.a(param1 + -6910, 0);
                             break L2;
                           } else {
                             break L2;
                           }
                         } else {
-                          if (-4 != (vf.field_f ^ -1)) {
-                            if ((vf.field_f ^ -1) != -5) {
-                              if ((vf.field_f ^ -1) != -6) {
+                          if (vf.field_f != 3) {
+                            if (vf.field_f != 4) {
+                              if (vf.field_f != 5) {
                                 break L10;
                               } else {
                                 if (-1 != param0) {
@@ -929,7 +974,7 @@ final class ck extends le {
                                 }
                               }
                             } else {
-                              if ((param0 ^ -1) != -10) {
+                              if (param0 != 9) {
                                 break L10;
                               } else {
                                 bo.a(57, 0);
@@ -938,7 +983,7 @@ final class ck extends le {
                             }
                           } else {
                             L28: {
-                              if ((param0 ^ -1) != 0) {
+                              if (param0 != -1) {
                                 break L28;
                               } else {
                                 bo.a(-79, 0);
@@ -978,7 +1023,7 @@ final class ck extends le {
                 } else {
                   if (vf.field_f == 5) {
                     L30: {
-                      if (0 != (param0 ^ -1)) {
+                      if (param0 != -1) {
                         break L30;
                       } else {
                         bo.a(-77, 0);
@@ -997,7 +1042,7 @@ final class ck extends le {
                         }
                       }
                     }
-                    if ((param0 ^ -1) != -5) {
+                    if (param0 != 4) {
                       break L10;
                     } else {
                       if (1 != sm.field_a) {
@@ -1013,9 +1058,9 @@ final class ck extends le {
                 }
               } else {
                 L32: {
-                  if ((vf.field_f ^ -1) == -1) {
+                  if (vf.field_f == 0) {
                     L33: {
-                      if ((param0 ^ -1) == 0) {
+                      if (param0 == -1) {
                         bo.a(param1 ^ -6794, 0);
                         break L33;
                       } else {
@@ -1049,7 +1094,7 @@ final class ck extends le {
                   }
                 }
                 L35: {
-                  if ((vf.field_f ^ -1) != -3) {
+                  if (vf.field_f != 2) {
                     break L35;
                   } else {
                     L36: {
@@ -1060,7 +1105,7 @@ final class ck extends le {
                         break L36;
                       }
                     }
-                    if ((sm.field_a ^ -1) != -1) {
+                    if (sm.field_a != 0) {
                       break L35;
                     } else {
                       if (param0 == -4) {
@@ -1073,7 +1118,7 @@ final class ck extends le {
                   }
                 }
                 L37: {
-                  if (-5 != (vf.field_f ^ -1)) {
+                  if (vf.field_f != 4) {
                     break L37;
                   } else {
                     L38: {
@@ -1084,7 +1129,7 @@ final class ck extends le {
                         break L38;
                       }
                     }
-                    if (-8 != (param0 ^ -1)) {
+                    if (param0 != 7) {
                       break L37;
                     } else {
                       bo.a(63, 1);
@@ -1092,8 +1137,8 @@ final class ck extends le {
                     }
                   }
                 }
-                if ((vf.field_f ^ -1) == -6) {
-                  if (0 == (param0 ^ -1)) {
+                if (vf.field_f == 5) {
+                  if (param0 == -1) {
                     bo.a(100, 0);
                     break L2;
                   } else {
@@ -1167,7 +1212,7 @@ final class ck extends le {
             ((ck) this).field_m = 180;
             break L1;
           } else {
-            if ((var4 ^ -1) == -4) {
+            if (var4 == 3) {
               ((ck) this).field_m = 180;
               break L1;
             } else {
@@ -1186,7 +1231,7 @@ final class ck extends le {
           }
         }
         L2: {
-          if (-41 == (((ck) this).field_m ^ -1)) {
+          if (((ck) this).field_m == 40) {
             var4 = 12;
             ((ck) this).field_q = 0;
             ((ck) this).field_s = new oj[75 / var4];
@@ -1249,7 +1294,7 @@ final class ck extends le {
                   if (!(var5 instanceof ah)) {
                     break L7;
                   } else {
-                    if ((((ah) (Object) var5).field_F ^ -1) == -3) {
+                    if (((ah) (Object) var5).field_F == 2) {
                       break L7;
                     } else {
                       break L8;
@@ -1306,7 +1351,7 @@ final class ck extends le {
                       stackOut_29_0 = var11;
                       stackIn_33_0 = stackOut_29_0;
                       stackIn_30_0 = stackOut_29_0;
-                      if (0 != (dj.field_e.field_H.a(-24 + var7 - 26, ((ck) this).field_p, var6, ((ck) this).field_k, 110) ^ -1)) {
+                      if (dj.field_e.field_H.a(-24 + var7 - 26, ((ck) this).field_p, var6, ((ck) this).field_k, 110) != -1) {
                         break L14;
                       } else {
                         stackOut_30_0 = stackIn_30_0;

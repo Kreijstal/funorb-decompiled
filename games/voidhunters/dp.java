@@ -8,7 +8,7 @@ final class dp {
 
     public static void a(int param0) {
         field_a = null;
-        int var1 = 47 % ((-65 - param0) / 45);
+        int var1 = 0;
         field_b = null;
     }
 

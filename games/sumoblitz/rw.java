@@ -27,31 +27,31 @@ abstract class rw extends pj {
 
     public static void c(boolean param0) {
         field_r = null;
-        if (!param0) {
-            field_r = null;
-        }
     }
 
     final static void a(byte param0) {
+        wb var1 = null;
+        wb var2 = null;
         int var3 = 0;
         int var4 = Sumoblitz.field_L ? 1 : 0;
-        wb var1 = new wb(540, 140);
-        jq.a(7161, var1);
-        nk.b();
-        if (param0 != -90) {
-            field_r = null;
+        try {
+            var1 = new wb(540, 140);
+            jq.a(7161, var1);
+            nk.b();
+            lk.b();
+            td.field_u = 0;
+            ok.b(256);
+            var2 = var1.b();
+            for (var3 = 0; var3 < 15; var3++) {
+                var2.c(-2, -2, 16777215);
+                lk.c(4, 4, 0, 0, 540, 140);
+            }
+            eh.field_b.d();
+            var1.b(0, 0);
+            su.a((byte) 76);
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "rw.B(" + -90 + 41);
         }
-        lk.b();
-        td.field_u = 0;
-        ok.b(256);
-        wb var2 = var1.b();
-        for (var3 = 0; var3 < 15; var3++) {
-            var2.c(-2, -2, 16777215);
-            lk.c(4, 4, 0, 0, 540, 140);
-        }
-        eh.field_b.d();
-        var1.b(0, 0);
-        su.a((byte) 76);
     }
 
     static {

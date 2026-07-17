@@ -27,15 +27,15 @@ final class sg {
               if (-3 != ((sg) this).field_i) {
                 break L0;
               } else {
-                if (-1 <= (((sg) this).field_b ^ -1)) {
+                if (((sg) this).field_b <= 0) {
                   break L0;
                 } else {
                   return 2;
                 }
               }
             }
-            if ((((sg) this).field_c ^ -1L) != (ua.field_e ^ -1L)) {
-              if ((kl.field_c ^ -1) == -3) {
+            if (~((sg) this).field_c != ~ua.field_e) {
+              if (kl.field_c == 2) {
                 if (b.a(((sg) this).field_m, (byte) 24)) {
                   return 1;
                 } else {
@@ -54,9 +54,9 @@ final class sg {
           var3 = null;
           int discarded$1 = sg.a(97, (byte) 55, 108, (byte[]) null);
           if (!((sg) this).field_g) {
-            if (-3 == (((sg) this).field_i ^ -1)) {
+            if (((sg) this).field_i == 2) {
               if (-1 >= ((sg) this).field_b) {
-                if ((((sg) this).field_c ^ -1L) != (ua.field_e ^ -1L)) {
+                if (~((sg) this).field_c != ~ua.field_e) {
                   if (kl.field_c == -3) {
                     if (b.a(((sg) this).field_m, (byte) 24)) {
                       return 1;
@@ -73,7 +73,7 @@ final class sg {
                 return 2;
               }
             } else {
-              if ((((sg) this).field_c ^ -1L) != (ua.field_e ^ -1L)) {
+              if (~((sg) this).field_c != ~ua.field_e) {
                 if (kl.field_c == -3) {
                   if (b.a(((sg) this).field_m, (byte) 24)) {
                     return 1;
@@ -94,35 +94,87 @@ final class sg {
     }
 
     final static int a(int param0, byte param1, int param2, byte[] param3) {
-        int var7 = Transmogrify.field_A ? 1 : 0;
-        int var4 = -1;
-        int var5 = param0;
-        int var6 = 36 / ((36 - param1) / 45);
-        while (param2 > var5) {
-            var4 = var4 >>> 1447584872 ^ hi.field_f[255 & (param3[var5] ^ var4)];
-            var5++;
+        int var4_int = 0;
+        RuntimeException var4 = null;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int stackIn_5_0 = 0;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_4_0 = 0;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        var7 = Transmogrify.field_A ? 1 : 0;
+        try {
+          L0: {
+            var4_int = -1;
+            var5 = param0;
+            var6 = 36 / ((36 - param1) / 45);
+            L1: while (true) {
+              if (param2 <= var5) {
+                var4_int = ~var4_int;
+                stackOut_4_0 = var4_int;
+                stackIn_5_0 = stackOut_4_0;
+                break L0;
+              } else {
+                var4_int = var4_int >>> 8 ^ hi.field_f[255 & (param3[var5] ^ var4_int)];
+                var5++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var4 = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var4;
+            stackOut_6_1 = new StringBuilder().append("sg.A(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param3 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L2;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L2;
+            }
+          }
+          throw ch.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
         }
-        var4 = var4 ^ -1;
-        return var4;
+        return stackIn_5_0;
     }
 
     public static void a(byte param0) {
-        Object var2 = null;
         field_p = null;
         field_o = null;
-        if (param0 > -87) {
-          var2 = null;
-          int discarded$2 = sg.a(27, (byte) 105, -29, (byte[]) null);
-          field_k = null;
-          field_a = null;
-          field_d = null;
-          return;
-        } else {
-          field_k = null;
-          field_a = null;
-          field_d = null;
-          return;
-        }
+        field_k = null;
+        field_a = null;
+        field_d = null;
     }
 
     sg(boolean param0) {

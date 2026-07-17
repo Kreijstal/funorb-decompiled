@@ -19,26 +19,82 @@ final class wa extends lw {
 
     final static sba a(int param0, byte[] param1) {
         sba var2 = null;
+        RuntimeException var2_ref = null;
         Object var3 = null;
-        if (param0 == -21231) {
-          if (param1 == null) {
-            return null;
-          } else {
-            var2 = new sba(param1, fl.field_j, fd.field_D, lq.field_A, eha.field_s, hk.field_f, baa.field_P);
-            al.b(-18073);
-            return var2;
+        Object stackIn_4_0 = null;
+        sba stackIn_6_0 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        sba stackOut_5_0 = null;
+        Object stackOut_3_0 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 == -21231) {
+                break L1;
+              } else {
+                var3 = null;
+                sba discarded$2 = wa.a(-91, (byte[]) null);
+                break L1;
+              }
+            }
+            if (param1 != null) {
+              var2 = new sba(param1, fl.field_j, fd.field_D, lq.field_A, eha.field_s, hk.field_f, baa.field_P);
+              al.b(-18073);
+              stackOut_5_0 = (sba) var2;
+              stackIn_6_0 = stackOut_5_0;
+              break L0;
+            } else {
+              stackOut_3_0 = null;
+              stackIn_4_0 = stackOut_3_0;
+              return (sba) (Object) stackIn_4_0;
+            }
           }
-        } else {
-          var3 = null;
-          sba discarded$4 = wa.a(-91, (byte[]) null);
-          if (param1 == null) {
-            return null;
-          } else {
-            var2 = new sba(param1, fl.field_j, fd.field_D, lq.field_A, eha.field_s, hk.field_f, baa.field_P);
-            al.b(-18073);
-            return var2;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2_ref = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var2_ref;
+            stackOut_7_1 = new StringBuilder().append("wa.B(").append(param0).append(44);
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param1 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L2;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L2;
+            }
           }
+          throw pe.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
         }
+        return stackIn_6_0;
     }
 
     final void a(byte param0) {
@@ -48,7 +104,7 @@ final class wa extends lw {
     }
 
     final void a(int param0, byte param1) {
-        if ((param0 ^ -1) == -35) {
+        if (param0 == 34) {
           ((wa) this).b(1);
           if (!((wa) this).c((byte) 95)) {
             L0: {
@@ -84,82 +140,31 @@ final class wa extends lw {
     }
 
     final static void e(byte param0) {
-        Object var1 = null;
-        kr var1_ref = null;
-        int var2 = 0;
-        var1 = null;
-        var2 = BachelorFridge.field_y;
-        if (param0 <= -85) {
-          if (qg.field_b.field_z != null) {
-            var1_ref = (kr) (Object) qg.field_b.field_z.b((byte) 90);
-            L0: while (true) {
-              if (var1_ref != null) {
-                L1: {
-                  if (var1_ref.field_R != 1) {
-                    break L1;
-                  } else {
-                    qm.a(7, 7758);
-                    var1_ref.field_yb.c((byte) -80);
-                    if (-1 != (var1_ref.field_yb.field_g ^ -1)) {
-                      gu.field_d = gu.field_d - 1;
-                      break L1;
-                    } else {
-                      var1_ref.field_yb.a(false);
-                      var1_ref.a(false);
-                      gu.field_d = gu.field_d - 1;
-                      break L1;
-                    }
-                  }
-                }
-                var1_ref = (kr) (Object) qg.field_b.field_z.c(0);
-                continue L0;
-              } else {
-                qf.e(20434);
-                iaa.a(-119);
-                return;
-              }
+        kr var1 = null;
+        int var2 = BachelorFridge.field_y;
+        try {
+            if (param0 > -85) {
+                wa.d((byte) -63);
             }
-          } else {
+            if (qg.field_b.field_z != null) {
+                var1 = (kr) (Object) qg.field_b.field_z.b((byte) 90);
+                while (var1 != null) {
+                    if (var1.field_R == 1) {
+                        qm.a(7, 7758);
+                        var1.field_yb.c((byte) -80);
+                        if (var1.field_yb.field_g == 0) {
+                            var1.field_yb.a(false);
+                            var1.a(false);
+                        }
+                        gu.field_d = gu.field_d - 1;
+                    }
+                    var1 = (kr) (Object) qg.field_b.field_z.c(0);
+                }
+            }
             qf.e(20434);
             iaa.a(-119);
-            return;
-          }
-        } else {
-          wa.d((byte) -63);
-          if (qg.field_b.field_z != null) {
-            var1_ref = (kr) (Object) qg.field_b.field_z.b((byte) 90);
-            L2: while (true) {
-              if (var1_ref != null) {
-                L3: {
-                  if (var1_ref.field_R != 1) {
-                    break L3;
-                  } else {
-                    qm.a(7, 7758);
-                    var1_ref.field_yb.c((byte) -80);
-                    if (-1 != (var1_ref.field_yb.field_g ^ -1)) {
-                      gu.field_d = gu.field_d - 1;
-                      break L3;
-                    } else {
-                      var1_ref.field_yb.a(false);
-                      var1_ref.a(false);
-                      gu.field_d = gu.field_d - 1;
-                      break L3;
-                    }
-                  }
-                }
-                var1_ref = (kr) (Object) qg.field_b.field_z.c(0);
-                continue L2;
-              } else {
-                qf.e(20434);
-                iaa.a(-119);
-                return;
-              }
-            }
-          } else {
-            qf.e(20434);
-            iaa.a(-119);
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "wa.F(" + param0 + 41);
         }
     }
 

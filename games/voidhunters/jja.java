@@ -19,12 +19,6 @@ final class jja implements dja {
     }
 
     public static void b(byte param0) {
-        if (param0 > -98) {
-            field_b = null;
-            field_b = null;
-            field_a = null;
-            return;
-        }
         field_b = null;
         field_a = null;
     }

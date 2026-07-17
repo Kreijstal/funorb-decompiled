@@ -12,17 +12,11 @@ final class sb {
     public static void b(boolean param0) {
         field_e = null;
         field_c = null;
-        if (param0) {
-            field_a = 105;
-        }
         field_b = null;
         field_f = null;
     }
 
     final static int a(boolean param0) {
-        if (!param0) {
-            return 104;
-        }
         return (int)(1000000000L / oj.field_c);
     }
 
@@ -40,7 +34,7 @@ final class sb {
         }
         L1: {
           L2: {
-            if (-11 < (hj.field_a ^ -1)) {
+            if (hj.field_a < 10) {
               break L2;
             } else {
               if (hl.field_G) {
@@ -77,6 +71,7 @@ final class sb {
         var1 = 0;
         L0: while (true) {
           if (var1 >= 256) {
+            return;
           } else {
             var0 = var1;
             var2 = 0;
@@ -91,7 +86,7 @@ final class sb {
                   var2++;
                   continue L1;
                 } else {
-                  var0 = -306674912 ^ var0 >>> 1592307073;
+                  var0 = -306674912 ^ var0 >>> 1;
                   var2++;
                   continue L1;
                 }

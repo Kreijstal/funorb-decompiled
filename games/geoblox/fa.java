@@ -13,37 +13,22 @@ final class fa {
     static String[] field_g;
 
     final static void a(String param0, int param1, boolean param2) {
-        int stackIn_3_0 = 0;
-        int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
-        L0: {
-          if (!param2) {
-            stackOut_2_0 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            break L0;
-          } else {
-            stackOut_1_0 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            break L0;
-          }
-        }
-        mi.field_I = stackIn_3_0 != 0;
+        mi.field_I = param2;
         if (param1 != 480) {
-          return;
-        } else {
-          va.field_d = true;
-          Geoblox.field_y = new f(kd.field_e, hh.field_c, param0, cf.field_i, mi.field_I);
-          kd.field_e.a(false, (el) (Object) Geoblox.field_y);
-          return;
+            return;
+        }
+        try {
+            va.field_d = true;
+            Geoblox.field_y = new f(kd.field_e, hh.field_c, param0, cf.field_i, mi.field_I);
+            kd.field_e.a(false, (el) (Object) Geoblox.field_y);
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) (Object) runtimeException, "fa.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }
     }
 
     public static void a(int param0) {
         field_c = null;
         field_d = null;
-        if (param0 != 30970) {
-            return;
-        }
         field_h = null;
         field_g = null;
     }

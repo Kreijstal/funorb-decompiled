@@ -49,8 +49,12 @@ final class sv extends uda {
         if (param0 < 42) {
             return;
         }
-        ((sv) this).field_d.a(param2, -119);
-        ((sv) this).field_d.h(-127, param1);
+        try {
+            ((sv) this).field_d.a(param2, -119);
+            ((sv) this).field_d.h(-127, param1);
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "sv.E(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void e(int param0) {

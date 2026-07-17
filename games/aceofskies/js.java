@@ -15,7 +15,7 @@ final class js implements Iterator {
             ((js) this).field_d = null;
             var1 = null;
         } else {
-            ((js) this).field_d = ((wt) var1).field_j;
+            ((js) this).field_d = var1.field_j;
         }
         ((js) this).field_a = var1;
         return (Object) (Object) var1;
@@ -35,14 +35,18 @@ final class js implements Iterator {
 
     public static void a(byte param0) {
         field_c = null;
-        int var1 = -35 % ((param0 - 55) / 49);
+        int var1 = 0;
     }
 
     js(hs param0) {
         ((js) this).field_a = null;
-        ((js) this).field_b = param0;
-        ((js) this).field_a = null;
-        ((js) this).field_d = ((js) this).field_b.field_c.field_j;
+        try {
+            ((js) this).field_b = param0;
+            ((js) this).field_a = null;
+            ((js) this).field_d = ((js) this).field_b.field_c.field_j;
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) (Object) runtimeException, "js.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

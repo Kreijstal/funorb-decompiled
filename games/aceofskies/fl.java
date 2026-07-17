@@ -103,7 +103,7 @@ final class fl {
                                     var30 = var14.c();
                                     var17 = 0;
                                     L9: while (true) {
-                                      if (var17 >= ((db) var14).field_b) {
+                                      if (var17 >= var14.field_b) {
                                         continue L8;
                                       } else {
                                         param0[var13 + var15] = param0[var13 + var15] + var30[var17];
@@ -115,7 +115,7 @@ final class fl {
                                   }
                                 }
                               } else {
-                                var15 = ((fl) this).field_e / ((db) var14).field_b;
+                                var15 = ((fl) this).field_e / var14.field_b;
                                 var16 = 0;
                                 L10: while (true) {
                                   if (var16 >= var15) {
@@ -124,7 +124,7 @@ final class fl {
                                     var29 = var14.c();
                                     var18 = 0;
                                     L11: while (true) {
-                                      if (var18 >= ((db) var14).field_b) {
+                                      if (var18 >= var14.field_b) {
                                         var16++;
                                         continue L10;
                                       } else {

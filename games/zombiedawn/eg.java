@@ -29,19 +29,6 @@ final class eg extends le {
     }
 
     final static String a(int param0) {
-        if (param0 <= 71) {
-            field_n = null;
-            if (qo.field_x) {
-                return null;
-            }
-            if (td.field_d > pl.field_m) {
-                return null;
-            }
-            if (!(td.field_d + vf.field_k <= pl.field_m)) {
-                return da.field_m;
-            }
-            return null;
-        }
         if (qo.field_x) {
             return null;
         }
@@ -60,21 +47,14 @@ final class eg extends le {
         int var3 = 0;
         int var4 = 0;
         if (!df.field_h) {
-          if ((ma.field_r ^ -1) != 1) {
+          if (ma.field_r != -2) {
             if (ma.field_r == -3) {
               L0: {
-                if (param0 == 0) {
-                  break L0;
-                } else {
-                  eg.c(-13);
-                  break L0;
-                }
-              }
-              L1: {
-                if ((vj.field_o ^ -1) < -1) {
+                eg.c(-13);
+                if (vj.field_o > 0) {
                   var1 = 7 * nh.field_P / 8;
                   var2 = vh.field_b - -100;
-                  var3 = var2 + (-vj.field_o + 400 >> -993972991);
+                  var3 = var2 + (-vj.field_o + 400 >> 1);
                   var4 = 40 + vj.field_o;
                   bi.f(var3, var1 + -te.field_bb, var4 + var3, var1);
                   bi.a(var3, var1 + -te.field_bb, var4, te.field_bb, 2560, 160);
@@ -90,9 +70,9 @@ final class eg extends le {
                   int discarded$3 = bj.field_q.a(jd.field_c, 20 + var2, -10 + var1 + (-te.field_bb + 20), 400, -40 + te.field_bb + -4, 16777215, 0, 0, 2, 0);
                   bj.field_q.a(ip.field_o, 300 + var2, var1 + -14, 10066329, 0);
                   bi.c();
-                  break L1;
+                  break L0;
                 } else {
-                  break L1;
+                  break L0;
                 }
               }
               return;
@@ -100,19 +80,12 @@ final class eg extends le {
               return;
             }
           } else {
-            L2: {
-              if (param0 == 0) {
-                break L2;
-              } else {
-                eg.c(-13);
-                break L2;
-              }
-            }
-            L3: {
-              if ((vj.field_o ^ -1) < -1) {
+            L1: {
+              eg.c(-13);
+              if (vj.field_o > 0) {
                 var1 = 7 * nh.field_P / 8;
                 var2 = vh.field_b - -100;
-                var3 = var2 + (-vj.field_o + 400 >> -993972991);
+                var3 = var2 + (-vj.field_o + 400 >> 1);
                 var4 = 40 + vj.field_o;
                 bi.f(var3, var1 + -te.field_bb, var4 + var3, var1);
                 bi.a(var3, var1 + -te.field_bb, var4, te.field_bb, 2560, 160);
@@ -128,27 +101,20 @@ final class eg extends le {
                 int discarded$4 = bj.field_q.a(jd.field_c, 20 + var2, -10 + var1 + (-te.field_bb + 20), 400, -40 + te.field_bb + -4, 16777215, 0, 0, 2, 0);
                 bj.field_q.a(ip.field_o, 300 + var2, var1 + -14, 10066329, 0);
                 bi.c();
-                break L3;
+                break L1;
               } else {
-                break L3;
+                break L1;
               }
             }
             return;
           }
         } else {
-          L4: {
-            if (param0 == 0) {
-              break L4;
-            } else {
-              eg.c(-13);
-              break L4;
-            }
-          }
-          L5: {
-            if ((vj.field_o ^ -1) < -1) {
+          L2: {
+            eg.c(-13);
+            if (vj.field_o > 0) {
               var1 = 7 * nh.field_P / 8;
               var2 = vh.field_b - -100;
-              var3 = var2 + (-vj.field_o + 400 >> -993972991);
+              var3 = var2 + (-vj.field_o + 400 >> 1);
               var4 = 40 + vj.field_o;
               bi.f(var3, var1 + -te.field_bb, var4 + var3, var1);
               bi.a(var3, var1 + -te.field_bb, var4, te.field_bb, 2560, 160);
@@ -164,9 +130,9 @@ final class eg extends le {
               int discarded$5 = bj.field_q.a(jd.field_c, 20 + var2, -10 + var1 + (-te.field_bb + 20), 400, -40 + te.field_bb + -4, 16777215, 0, 0, 2, 0);
               bj.field_q.a(ip.field_o, 300 + var2, var1 + -14, 10066329, 0);
               bi.c();
-              break L5;
+              break L2;
             } else {
-              break L5;
+              break L2;
             }
           }
           return;

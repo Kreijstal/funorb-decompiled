@@ -20,43 +20,65 @@ final class wlb extends rqa {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
+        RuntimeException var5 = null;
+        int var5_int = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
         int[] var9_ref_int__ = null;
-        int[] var10_ref_int__ = null;
-        int var11_int = 0;
-        int var12_int = 0;
         int var9 = 0;
+        int[] var10_ref_int__ = null;
         int var10 = 0;
+        int var11_int = 0;
         int[] var11 = null;
+        int var12_int = 0;
         int[] var12 = null;
-        int var13 = VoidHunters.field_G;
-        if (param4 != 2) {
-            wlb.f((byte) -69);
-        }
-        int var5 = 0;
-        int var6 = param3;
-        int var7 = -param3;
-        ww.a(param0, param3 + param1, rba.field_b[param2], (byte) 75, param1 + -param3);
-        int var8 = -1;
-        while (var6 > var5) {
-            var8 += 2;
-            var7 = var7 + var8;
-            var5++;
-            if (!(-1 < (var7 ^ -1))) {
-                var6--;
-                var7 = var7 - (var6 << 1421120641);
-                var9_ref_int__ = rba.field_b[param2 - -var6];
-                var10_ref_int__ = rba.field_b[-var6 + param2];
-                var11_int = param1 - -var5;
-                var12_int = param1 - var5;
-                ww.a(param0, var11_int, var9_ref_int__, (byte) 75, var12_int);
-                ww.a(param0, var11_int, var10_ref_int__, (byte) 75, var12_int);
+        int var13 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var13 = VoidHunters.field_G;
+        try {
+          L0: {
+            var5_int = 0;
+            var6 = param3;
+            var7 = -param3;
+            ww.a(param0, param3 + param1, rba.field_b[param2], (byte) 75, param1 + -param3);
+            var8 = -1;
+            L1: while (true) {
+              if (var6 <= var5_int) {
+                break L0;
+              } else {
+                L2: {
+                  var8 += 2;
+                  var7 = var7 + var8;
+                  var5_int++;
+                  if (var7 >= 0) {
+                    var6--;
+                    var7 = var7 - (var6 << 1);
+                    var9_ref_int__ = rba.field_b[param2 - -var6];
+                    var10_ref_int__ = rba.field_b[-var6 + param2];
+                    var11_int = param1 - -var5_int;
+                    var12_int = param1 - var5_int;
+                    ww.a(param0, var11_int, var9_ref_int__, (byte) 75, var12_int);
+                    ww.a(param0, var11_int, var10_ref_int__, (byte) 75, var12_int);
+                    break L2;
+                  } else {
+                    break L2;
+                  }
+                }
+                var9 = param1 + var6;
+                var10 = -var6 + param1;
+                var11 = rba.field_b[var5_int + param2];
+                var12 = rba.field_b[-var5_int + param2];
+                ww.a(param0, var9, var11, (byte) 75, var10);
+                ww.a(param0, var9, var12, (byte) 75, var10);
+                continue L1;
+              }
             }
-            var9 = param1 + var6;
-            var10 = -var6 + param1;
-            var11 = rba.field_b[var5 + param2];
-            var12 = rba.field_b[-var5 + param2];
-            ww.a(param0, var9, var11, (byte) 75, var10);
-            ww.a(param0, var9, var12, (byte) 75, var10);
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          throw rta.a((Throwable) (Object) var5, "wlb.C(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + 2 + 41);
         }
     }
 
@@ -68,19 +90,19 @@ final class wlb extends rqa {
     }
 
     final static void f(byte param0) {
-        int var1 = 0;
+        int var1_int = 0;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         long var4_long = 0L;
-        Random var4_ref = null;
+        Random var4_ref_Random = null;
         int var5 = 0;
         int[] var6 = null;
         int var6_int = 0;
         int[][] var6_array = null;
         int[] var7_ref_int__ = null;
         int var7 = 0;
-        wfb var8_ref = null;
+        wfb var8_ref_wfb = null;
         int var8 = 0;
         int var9 = 0;
         long var10 = 0L;
@@ -322,62 +344,62 @@ final class wlb extends rqa {
         hab.field_g[47].field_a = 6;
         hab.field_g[47].field_w = new int[][]{new int[52]};
         hab.field_g[47].field_q = 0;
-        var1 = 0;
+        var1_int = 0;
         L1: while (true) {
-          if (hab.field_g.length <= var1) {
-            var1 = 2560;
-            var2 = (int)((double)var1 * Math.sin(1.0471975511965976));
+          if (hab.field_g.length <= var1_int) {
+            var1_int = 2560;
+            var2 = (int)((double)var1_int * Math.sin(1.0471975511965976));
             hab.field_g[30] = new wfb(new int[6], -var2, 0);
             var3 = 1365;
-            hab.field_g[30].a(-119, new lsb(0, var1 / 2, var3));
-            hab.field_g[30].a(param0 + 50, new lsb(0, -var1 / 2, -var3));
+            hab.field_g[30].a(-119, new lsb(0, var1_int / 2, var3));
+            hab.field_g[30].a(param0 + 50, new lsb(0, -var1_int / 2, -var3));
             hab.field_g[30].a(106, 15);
             hab.field_g[30].field_a = 2;
-            var20 = new wfb(new int[10], -var1, 0);
-            var20.a(-116, new lsb(var1 - -var2, var1 / 2, var3));
-            var20.a(96, new lsb(var2 + var1, -var1 / 2, -var3));
-            var20.a(-126, new lsb(0, var1, 2048));
-            var20.a(-11, new lsb(0, -var1, -2048));
+            var20 = new wfb(new int[10], -var1_int, 0);
+            var20.a(-116, new lsb(var1_int - -var2, var1_int / 2, var3));
+            var20.a(96, new lsb(var2 + var1_int, -var1_int / 2, -var3));
+            var20.a(-126, new lsb(0, var1_int, 2048));
+            var20.a(-11, new lsb(0, -var1_int, -2048));
             var20.a(126, 15);
             var20.field_a = 2;
             hab.field_g[31] = var20;
-            var4 = -var1;
-            var5 = var1;
+            var4 = -var1_int;
+            var5 = var1_int;
             var4 += 0;
-            var5 = var5 - 2 * var1;
+            var5 = var5 - 2 * var1_int;
             var4 += 0;
-            var5 = var5 - var1 * 2;
-            var4 = var4 + 2 * var1;
+            var5 = var5 - var1_int * 2;
+            var4 = var4 + 2 * var1_int;
             var5 += 0;
             var4 += 0;
-            var5 = var5 + var1 * 2;
+            var5 = var5 + var1_int * 2;
             var4 += 0;
-            var5 = var5 + 2 * var1;
+            var5 = var5 + 2 * var1_int;
             var4 += 0;
-            var5 = var5 + var1 * 2;
-            var4 = var4 - 2 * var1;
+            var5 = var5 + var1_int * 2;
+            var4 = var4 - 2 * var1_int;
             var5 += 0;
-            var21 = new int[]{var4, var5, var4, var5 - 2 * var1, var4, var5 - var1 * 2, var4 + 2 * var1, var5, var4, var5 + var1 * 2, var4, var5 + 2 * var1, var4, var5 + var1 * 2, var4 - 2 * var1, var5};
+            var21 = new int[]{var4, var5, var4, var5 - 2 * var1_int, var4, var5 - var1_int * 2, var4 + 2 * var1_int, var5, var4, var5 + var1_int * 2, var4, var5 + 2 * var1_int, var4, var5 + var1_int * 2, var4 - 2 * var1_int, var5};
             var6 = var21;
-            var22_ref = new wfb(var6, -var1, 0);
+            var22_ref = new wfb(var6, -var1_int, 0);
             ta.a(var21, 124, var22_ref);
             var22_ref.a(105, 15);
             var22_ref.field_a = 2;
             hab.field_g[32] = var22_ref;
-            var4 = -var1 * 3;
-            var5 = -var1;
+            var4 = -var1_int * 3;
+            var5 = -var1_int;
             var96 = uca.a(var5, (byte) 9, new int[7], var4);
             var80 = var96;
             var64 = var80;
             var23 = var64;
             var6 = var23;
-            var24_ref = new wfb(var6, 3 * -var1, 0);
+            var24_ref = new wfb(var6, 3 * -var1_int, 0);
             ta.a(var96, 119, var24_ref);
             var24_ref.a(127, 15);
             var24_ref.field_a = 2;
             hab.field_g[40] = var24_ref;
             var4 = -var2;
-            var5 = var1;
+            var5 = var1_int;
             var6 = uca.a(var5, (byte) 9, new int[6], var4);
             var25_ref = new wfb(var6, -var2, 0);
             var25_ref.a(param0 + 43, 15);
@@ -386,20 +408,20 @@ final class wlb extends rqa {
             var25_ref.field_B = 0;
             var25_ref.field_q = 0;
             var4 = 0;
-            var5 = 2 * -var2 + -var1;
-            var4 = var4 + var1;
+            var5 = 2 * -var2 + -var1_int;
+            var4 = var4 + var1_int;
             var5 = var5 + 2 * var2;
             var4 += 0;
-            var5 = var5 + var1 * 2;
-            var4 = var4 - var1;
+            var5 = var5 + var1_int * 2;
+            var4 = var4 - var1_int;
             var5 = var5 + var2 * 2;
-            var4 = var4 - var1;
+            var4 = var4 - var1_int;
             var5 = var5 - var2 * 2;
             var4 += 0;
-            var5 = var5 - var1 * 2;
-            var26 = new int[]{var4, var5, var4 + var1, var5 + 2 * var2, var4, var5 + var1 * 2, var4 - var1, var5 + var2 * 2, var4 - var1, var5 - var2 * 2, var4, var5 - var1 * 2};
+            var5 = var5 - var1_int * 2;
+            var26 = new int[]{var4, var5, var4 + var1_int, var5 + 2 * var2, var4, var5 + var1_int * 2, var4 - var1_int, var5 + var2 * 2, var4 - var1_int, var5 - var2 * 2, var4, var5 - var1_int * 2};
             var6 = var26;
-            var27_ref = new wfb(var6, -var1, 0);
+            var27_ref = new wfb(var6, -var1_int, 0);
             ta.a(var26, 127, var27_ref);
             var27_ref.a(118, 15);
             hab.field_g[33] = var27_ref;
@@ -521,35 +543,35 @@ final class wlb extends rqa {
             var40_ref.field_d = 1;
             hab.field_g[45] = var40_ref;
             var40_ref.field_B = 896;
-            var4 = 6 * -var1;
+            var4 = 6 * -var1_int;
             var5 = 0;
-            var4 = var4 + var1;
+            var4 = var4 + var1_int;
             var5 = var5 + -var2 * 2;
             var4 = var4 + 2 * var2;
-            var5 = var5 - var1;
+            var5 = var5 - var1_int;
             var4 = var4 + var2 * 2;
-            var5 = var5 - var1;
+            var5 = var5 - var1_int;
             var4 = var4 + 2 * var2;
-            var5 = var5 + var1;
-            var4 = var4 + 2 * var1;
+            var5 = var5 + var1_int;
+            var4 = var4 + 2 * var1_int;
             var5 += 0;
             var4 = var4 + var2 * 2;
-            var5 = var5 - var1;
-            var4 = var4 + var1;
+            var5 = var5 - var1_int;
+            var4 = var4 + var1_int;
             var5 = var5 + var2 * 2;
             var4 += 0;
-            var5 = var5 + 2 * var1;
-            var41 = new int[]{var4, var5, var4 + var1, var5 + -var2 * 2, var4 + 2 * var2, var5 - var1, var4 + var2 * 2, var5 - var1, var4 + 2 * var2, var5 + var1, var4 + 2 * var1, var5, var4 + var2 * 2, var5 - var1, var4 + var1, var5 + var2 * 2, var4, var5 + 2 * var1};
+            var5 = var5 + 2 * var1_int;
+            var41 = new int[]{var4, var5, var4 + var1_int, var5 + -var2 * 2, var4 + 2 * var2, var5 - var1_int, var4 + var2 * 2, var5 - var1_int, var4 + 2 * var2, var5 + var1_int, var4 + 2 * var1_int, var5, var4 + var2 * 2, var5 - var1_int, var4 + var1_int, var5 + var2 * 2, var4, var5 + 2 * var1_int};
             var100 = gca.a((byte) 104, var41);
             var101 = qfa.a(1, var100);
             var44_ref = new wfb(var101, 0, 0);
             ta.a(var101, 114, var44_ref);
             var44_ref.a(param0 ^ 49, 15);
             var44_ref.field_s = true;
-            var8_ref = var44_ref;
+            var8_ref_wfb = var44_ref;
             hab.field_g[3] = var44_ref;
             var44_ref.field_A = new int[][]{new int[7], new int[4], new int[6]};
-            var8_ref.field_f = true;
+            var8_ref_wfb.field_f = true;
             var4 = -fnb.field_b * 4;
             var5 = -fnb.field_b / 2;
             var102 = uca.a(var5, (byte) 9, new int[15], var4);
@@ -559,8 +581,8 @@ final class wlb extends rqa {
             var46_ref.a(-117, new lsb(3 * -fnb.field_b, 0, 4096));
             var46_ref.a(119, 15);
             var46_ref.field_s = true;
-            var8_ref = var46_ref;
-            var8_ref.field_f = true;
+            var8_ref_wfb = var46_ref;
+            var8_ref_wfb.field_f = true;
             hab.field_g[4] = var46_ref;
             var46_ref.field_A = new int[][]{new int[6], new int[4], new int[10]};
             var4 = 2 * -fnb.field_b;
@@ -569,10 +591,10 @@ final class wlb extends rqa {
             var48_ref = new wfb(var103, 0, 0);
             ta.a(var103, 116, var48_ref);
             var48_ref.a(param0 + 42, 15);
-            var8_ref = var48_ref;
+            var8_ref_wfb = var48_ref;
             var48_ref.field_s = true;
             hab.field_g[5] = var48_ref;
-            var8_ref.field_f = true;
+            var8_ref_wfb.field_f = true;
             var48_ref.field_A = new int[][]{new int[4], new int[4], new int[6], new int[4]};
             var4 = -fnb.field_b * 2;
             var5 = -fnb.field_b;
@@ -582,20 +604,20 @@ final class wlb extends rqa {
             var50_ref.a(param0 ^ 92, new lsb(-fnb.field_b, 0, 0));
             var50_ref.a(120, 15);
             var50_ref.field_s = true;
-            var8_ref = var50_ref;
+            var8_ref_wfb = var50_ref;
             hab.field_g[6] = var50_ref;
             var50_ref.field_A = new int[][]{new int[6], new int[6]};
-            var8_ref.field_f = true;
+            var8_ref_wfb.field_f = true;
             var4 = -fnb.field_b;
             var5 = -fnb.field_b / 2;
             var105 = uca.a(var5, (byte) 9, new int[16], var4);
             var52_ref = new wfb(var105, 0, 0);
             ta.a(var105, 122, var52_ref);
             var52_ref.a(param0 ^ 37, 15);
-            var8_ref = var52_ref;
+            var8_ref_wfb = var52_ref;
             var52_ref.field_s = true;
             hab.field_g[7] = var52_ref;
-            var8_ref.field_f = true;
+            var8_ref_wfb.field_f = true;
             var52_ref.field_A = new int[][]{new int[4], new int[9], new int[4]};
             var4 = 2 * -fnb.field_b;
             var5 = -fnb.field_b / 2;
@@ -603,10 +625,10 @@ final class wlb extends rqa {
             var54_ref = new wfb(var106, 0, 0);
             ta.a(var106, param0 ^ 51, var54_ref);
             var54_ref.a(104, 15);
-            var8_ref = var54_ref;
+            var8_ref_wfb = var54_ref;
             var54_ref.field_s = true;
             hab.field_g[8] = var54_ref;
-            var8_ref.field_f = true;
+            var8_ref_wfb.field_f = true;
             var4 = -fnb.field_b * 6;
             var5 = 0;
             var107 = uca.a(var5, (byte) 9, new int[26], var4);
@@ -616,21 +638,21 @@ final class wlb extends rqa {
             var56_ref.field_n = 125;
             var56_ref.field_y = 50;
             var56_ref.field_d = 1;
-            var8_ref = var56_ref;
+            var8_ref_wfb = var56_ref;
             var56_ref.field_s = true;
             hab.field_g[9] = var56_ref;
             var56_ref.field_A = new int[][]{new int[5], new int[12]};
-            var8_ref.field_f = true;
+            var8_ref_wfb.field_f = true;
             var4 = -fnb.field_a * 2;
             var5 = -fnb.field_b / 2;
             var108 = uca.a(var5, (byte) 9, new int[9], var4);
             var58_ref = new wfb(var108, 0, 0);
             ta.a(var108, 120, var58_ref);
             var58_ref.a(114, 15);
-            var8_ref = var58_ref;
+            var8_ref_wfb = var58_ref;
             var58_ref.field_s = true;
             var58_ref.field_A = new int[][]{new int[8], new int[4]};
-            var8_ref.field_f = true;
+            var8_ref_wfb.field_f = true;
             hab.field_g[10] = var58_ref;
             var4 = -(fnb.field_b / 2) + 4 * -fnb.field_b;
             var5 = fnb.field_b / 2;
@@ -639,13 +661,13 @@ final class wlb extends rqa {
             ta.a(var109, 114, var60_ref);
             var60_ref.a(120, 15);
             var60_ref.field_s = true;
-            var8_ref = var60_ref;
+            var8_ref_wfb = var60_ref;
             hab.field_g[11] = var60_ref;
-            var8_ref.field_f = true;
+            var8_ref_wfb.field_f = true;
             var60_ref.field_A = new int[][]{new int[8], new int[4], new int[8], new int[6], new int[8]};
             var4_long = 32L;
             var6_int = 12;
-            var110 = new int[var6_int << 665926529];
+            var110 = new int[var6_int << 1];
             var94 = var110;
             var78 = var94;
             var61 = var78;
@@ -661,15 +683,15 @@ final class wlb extends rqa {
                 var62.a(128, true);
                 var62.field_p = var62.field_p >> 8;
                 var62.field_u = var62.field_u >> 16;
-                var4_ref = new Random(135435642L);
-                hab.field_g[21] = jba.a(new int[3][], 1000L, 12, var4_ref, mgb.a((int) param0, 47), 2500L);
-                hab.field_g[48] = jba.a(new int[3][], 1000L, 12, var4_ref, mgb.a((int) param0, 61), 2500L);
-                hab.field_g[49] = jba.a(new int[3][], 500L, 12, var4_ref, param0 + 45, 1250L);
-                hab.field_g[50] = jba.a(new int[3][], 500L, 12, var4_ref, mgb.a((int) param0, -10), 1250L);
-                hab.field_g[52] = jba.a(new int[3][], 1500L, 12, var4_ref, -127, 3000L);
-                hab.field_g[53] = jba.a(new int[3][], 1500L, 12, var4_ref, 123, 3000L);
-                hab.field_g[54] = jba.a(new int[3][], 250L, 10, var4_ref, mgb.a((int) param0, -108), 625L);
-                hab.field_g[55] = jba.a(new int[3][], 250L, 10, var4_ref, 122, 625L);
+                var4_ref_Random = new Random(135435642L);
+                hab.field_g[21] = jba.a(new int[3][], 1000L, 12, var4_ref_Random, mgb.a((int) param0, 47), 2500L);
+                hab.field_g[48] = jba.a(new int[3][], 1000L, 12, var4_ref_Random, mgb.a((int) param0, 61), 2500L);
+                hab.field_g[49] = jba.a(new int[3][], 500L, 12, var4_ref_Random, param0 + 45, 1250L);
+                hab.field_g[50] = jba.a(new int[3][], 500L, 12, var4_ref_Random, mgb.a((int) param0, -10), 1250L);
+                hab.field_g[52] = jba.a(new int[3][], 1500L, 12, var4_ref_Random, -127, 3000L);
+                hab.field_g[53] = jba.a(new int[3][], 1500L, 12, var4_ref_Random, 123, 3000L);
+                hab.field_g[54] = jba.a(new int[3][], 250L, 10, var4_ref_Random, mgb.a((int) param0, -108), 625L);
+                hab.field_g[55] = jba.a(new int[3][], 250L, 10, var4_ref_Random, 122, 625L);
                 oea.field_o = 0;
                 gn.field_m = 0;
                 var4 = 0;
@@ -703,47 +725,50 @@ final class wlb extends rqa {
                         break L6;
                       }
                     }
-                    var111 = hab.field_g[var5].field_w;
-                    var95 = var111;
-                    var79 = var95;
-                    var63 = var79;
-                    var6_array = var63;
-                    if (var6_array != null) {
-                      var15 = 0;
-                      var7 = var15;
-                      L7: while (true) {
-                        if (var15 < var111.length) {
-                          var8 = var111[var15].length;
-                          if (var8 > var4) {
-                            var4 = var8;
-                            var15++;
-                            continue L7;
+                    L7: {
+                      var111 = hab.field_g[var5].field_w;
+                      var95 = var111;
+                      var79 = var95;
+                      var63 = var79;
+                      var6_array = var63;
+                      if (var6_array != null) {
+                        var15 = 0;
+                        var7 = var15;
+                        L8: while (true) {
+                          if (var15 >= var111.length) {
+                            break L7;
                           } else {
+                            L9: {
+                              var8 = var111[var15].length;
+                              if (var8 > var4) {
+                                var4 = var8;
+                                break L9;
+                              } else {
+                                break L9;
+                              }
+                            }
                             var15++;
-                            continue L7;
+                            continue L8;
                           }
+                        }
+                      } else {
+                        var7 = hab.field_g[var5].field_v.length;
+                        if (var7 > var4) {
+                          var4 = var7;
+                          break L7;
                         } else {
-                          var5++;
-                          continue L3;
+                          break L7;
                         }
                       }
-                    } else {
-                      var7 = hab.field_g[var5].field_v.length;
-                      if (var7 > var4) {
-                        var4 = var7;
-                        var5++;
-                        continue L3;
-                      } else {
-                        var5++;
-                        continue L3;
-                      }
                     }
+                    var5++;
+                    continue L3;
                   }
                 }
               } else {
-                var9 = (8192 * (var8 >> 1411174625) - -8192) / var6_int;
-                var10 = (long)fc.a(var9, (byte) -86) * var4_long >> 405153800;
-                var12 = var4_long * (long)eu.a(var9, param0 ^ 12) >> 1564010952;
+                var9 = (8192 * (var8 >> 1) - -8192) / var6_int;
+                var10 = (long)fc.a(var9, (byte) -86) * var4_long >> 8;
+                var12 = var4_long * (long)eu.a(var9, param0 ^ 12) >> 8;
                 var7_ref_int__[var8] = (int)var10;
                 var7_ref_int__[var8 + 1] = (int)var12;
                 var8 += 2;
@@ -751,24 +776,86 @@ final class wlb extends rqa {
               }
             }
           } else {
-            if (hab.field_g[var1] != null) {
-              hab.field_g[var1].a(1, 89, true);
-              hab.field_g[var1].a(8, param0 + -1, false);
-              var1++;
-              continue L1;
-            } else {
-              var1++;
-              continue L1;
+            L10: {
+              if (hab.field_g[var1_int] != null) {
+                hab.field_g[var1_int].a(1, 89, true);
+                hab.field_g[var1_int].a(8, param0 + -1, false);
+                break L10;
+              } else {
+                break L10;
+              }
             }
+            var1_int++;
+            continue L1;
           }
         }
     }
 
     final nc a(nc[] param0, int param1) {
-        if (param1 > -119) {
-            field_o = 94;
+        RuntimeException var3 = null;
+        nc stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        nc stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param1 <= -119) {
+                break L1;
+              } else {
+                field_o = 94;
+                break L1;
+              }
+            }
+            stackOut_2_0 = new nc((Object) (Object) frb.a(27, 82));
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_1 = new StringBuilder().append("wlb.A(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw rta.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
         }
-        return new nc((Object) (Object) frb.a(27, 82));
+        return stackIn_3_0;
     }
 
     static {

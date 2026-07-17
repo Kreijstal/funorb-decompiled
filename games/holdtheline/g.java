@@ -27,9 +27,6 @@ final class g extends tg {
     public static void b(byte param0) {
         field_p = null;
         field_k = null;
-        if (param0 != -52) {
-            return;
-        }
         field_l = null;
     }
 
@@ -39,8 +36,8 @@ final class g extends tg {
         var2 = 255 & param0;
         if (var2 != 0) {
           if (128 <= var2) {
-            if (-161 >= (var2 ^ -1)) {
-              var3 = -108 / ((param1 - 58) / 61);
+            if (var2 >= 160) {
+              var3 = 108;
               return (char)var2;
             } else {
               L0: {
@@ -53,11 +50,11 @@ final class g extends tg {
                 }
               }
               var2 = var3;
-              var3 = -108 / ((param1 - 58) / 61);
+              var3 = 108;
               return (char)var2;
             }
           } else {
-            var3 = -108 / ((param1 - 58) / 61);
+            var3 = 108;
             return (char)var2;
           }
         } else {

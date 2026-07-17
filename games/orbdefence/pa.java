@@ -9,18 +9,10 @@ final class pa {
 
     public static void a(int param0) {
         field_c = null;
-        if (param0 != 17) {
-            return;
-        }
         field_a = null;
     }
 
     final static void a(boolean param0) {
-        if (!param0) {
-            field_a = null;
-            il.a(17, 0);
-            return;
-        }
         il.a(17, 0);
     }
 

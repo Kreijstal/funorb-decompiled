@@ -90,15 +90,73 @@ final class gg extends fc {
     }
 
     final void c(ag param0, int param1) {
-        if (!(param0 instanceof ul)) {
-            throw new IllegalArgumentException();
-        }
-        ul var3 = (ul) (Object) param0;
-        ((gg) this).field_B.a((byte) -102, (am) (Object) var3);
-        var3.field_F = true;
-        boolean discarded$5 = var3.a((byte) -90, (ag) this);
-        if (param1 < 78) {
-            ((gg) this).e((byte) 84);
+        ul var3 = null;
+        RuntimeException var3_ref = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        try {
+          L0: {
+            if (!(param0 instanceof ul)) {
+              throw new IllegalArgumentException();
+            } else {
+              L1: {
+                var3 = (ul) (Object) param0;
+                ((gg) this).field_B.a((byte) -102, (am) (Object) var3);
+                var3.field_F = true;
+                boolean discarded$7 = var3.a((byte) -90, (ag) this);
+                if (param1 >= 78) {
+                  break L1;
+                } else {
+                  ((gg) this).e((byte) 84);
+                  break L1;
+                }
+              }
+              break L0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3_ref = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var3_ref;
+            stackOut_6_1 = new StringBuilder().append("gg.R(");
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param0 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L2;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L2;
+            }
+          }
+          throw wg.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 41);
         }
     }
 

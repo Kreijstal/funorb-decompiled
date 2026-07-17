@@ -15,21 +15,31 @@ abstract class m extends wb implements ib {
     }
 
     final void a(ug param0, byte param1) {
-        pf.field_b = param0;
-        ((m) this).b((byte) 116, true);
-        ((m) this).i(12);
-        ((m) this).f(param1 + -15);
-        ((m) this).h((byte) 63);
-        ((m) this).d(false);
-        ((m) this).g((byte) 122);
-        ((m) this).k(-113);
-        if (param1 != 14) {
-            return;
+        try {
+            pf.field_b = param0;
+            ((m) this).b((byte) 116, true);
+            ((m) this).i(12);
+            ((m) this).f(param1 + -15);
+            ((m) this).h((byte) 63);
+            ((m) this).d(false);
+            ((m) this).g((byte) 122);
+            ((m) this).k(-113);
+            if (param1 != 14) {
+                return;
+            }
+            try {
+                wh.field_d[10] = -1;
+                wh.field_d[9] = -1;
+                cf.field_eb = new Vector();
+                on.a((byte) 6, (ib) this);
+            } catch (RuntimeException runtimeException) {
+                throw sh.a((Throwable) (Object) runtimeException, "m.NA(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+            }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+            throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+            throw new RuntimeException(decompiledCheckedException);
         }
-        wh.field_d[10] = -1;
-        wh.field_d[9] = -1;
-        cf.field_eb = new Vector();
-        on.a((byte) 6, (ib) this);
     }
 
     final void c(byte param0) {
@@ -52,7 +62,7 @@ abstract class m extends wb implements ib {
             }
         }
         wn.field_b = true;
-        for (var3 = -1 + cf.field_eb.size(); -1 >= (var3 ^ -1); var3--) {
+        for (var3 = -1 + cf.field_eb.size(); var3 >= 0; var3--) {
             ((ib) cf.field_eb.elementAt(var3)).a(-14964);
         }
         int var4 = 35 / ((param0 - -27) / 44);
@@ -114,7 +124,7 @@ abstract class m extends wb implements ib {
                       cn.a(true, false);
                       break L1;
                     } else {
-                      if ((var3 ^ -1) != -5) {
+                      if (var3 != 4) {
                         break L1;
                       } else {
                         mn.a(-1, hi.field_Y, false);
@@ -178,7 +188,7 @@ abstract class m extends wb implements ib {
                       break L5;
                     }
                   }
-                  if (-3 != (var3 ^ -1)) {
+                  if (var3 != 2) {
                     break L3;
                   } else {
                     bo.a(param0 ^ -1869, hc.a(0));
@@ -192,7 +202,7 @@ abstract class m extends wb implements ib {
                   if (!bg.a(2)) {
                     L6: {
                       var3 = cg.a(param0 + -1831);
-                      if ((var3 ^ -1) == -2) {
+                      if (var3 == 1) {
                         mn.a(-1, vd.field_e, true);
                         break L6;
                       } else {
@@ -217,8 +227,8 @@ abstract class m extends wb implements ib {
                         break L0;
                       } else {
                         L8: {
-                          if ((kg.field_i ^ -1) == 0) {
-                            if (0 != (kg.field_i ^ -1)) {
+                          if (kg.field_i == -1) {
+                            if (kg.field_i != -1) {
                               break L8;
                             } else {
                               if (-1 == var3) {
@@ -268,7 +278,7 @@ abstract class m extends wb implements ib {
         if (param0 == 1831) {
           var3 = 0;
           L11: while (true) {
-            if ((cf.field_eb.size() ^ -1) >= (var3 ^ -1)) {
+            if (~cf.field_eb.size() >= ~var3) {
               return;
             } else {
               L12: {
@@ -306,14 +316,6 @@ abstract class m extends wb implements ib {
         var3 = ZombieDawn.field_J;
         L0: while (true) {
           if (!gf.a(wh.field_d, (byte) 44)) {
-            L1: {
-              if (param0 >= 65) {
-                break L1;
-              } else {
-                field_A = null;
-                break L1;
-              }
-            }
             return;
           } else {
             if (((m) this).a(fj.field_g, l.field_d, 2)) {
@@ -329,9 +331,6 @@ abstract class m extends wb implements ib {
     abstract boolean a(am param0, int param1, int param2);
 
     private final void l(int param0) {
-        if (param0 != 29268) {
-            field_C = null;
-        }
     }
 
     public abstract boolean a(char param0, int param1, int param2);

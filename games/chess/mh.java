@@ -32,9 +32,9 @@ final class mh {
 
     final static void a(int param0, int param1) {
         L0: {
-          sg.field_d = 3 & param1 >> -1442461980;
-          ii.field_Q = (param1 & 13) >> -1730123902;
-          if (-3 > (sg.field_d ^ -1)) {
+          sg.field_d = 3 & param1 >> 4;
+          ii.field_Q = (param1 & 13) >> 2;
+          if (sg.field_d > 2) {
             sg.field_d = 2;
             break L0;
           } else {
@@ -173,7 +173,11 @@ final class mh {
     mh(String param0) {
         ((mh) this).field_h = false;
         ((mh) this).field_c = false;
-        ((mh) this).field_b = param0;
+        try {
+            ((mh) this).field_b = param0;
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "mh.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

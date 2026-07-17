@@ -12,7 +12,7 @@ final class qf {
 
     public static void a(byte param0) {
         field_g = null;
-        int var1 = -77 % ((81 - param0) / 37);
+        int var1 = 0;
         field_c = null;
         field_e = null;
         field_d = null;
@@ -29,64 +29,37 @@ final class qf {
         hq.field_e = param0;
         db.field_c = param1;
         if (param3 < 9) {
-          return;
-        } else {
-          er.field_a = param6;
-          gm.field_i = param7;
-          ai.field_T = (bp) (Object) new ae();
-          ou.field_h = new vo(param8);
-          oi.field_c = new dd(ai.field_T, ou.field_h);
-          return;
+            return;
+        }
+        try {
+            er.field_a = param6;
+            gm.field_i = param7;
+            ai.field_T = (bp) (Object) new ae();
+            ou.field_h = new vo(param8);
+            oi.field_c = new dd(ai.field_T, ou.field_h);
+        } catch (RuntimeException runtimeException) {
+            throw ig.a((Throwable) (Object) runtimeException, "qf.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + (param8 != null ? "{...}" : "null") + 41);
         }
     }
 
     final static void b(int param0) {
-        if (param0 != 56) {
-            field_e = null;
-        }
     }
 
     final static void a(int param0) {
-        if (param0 != 56) {
-          L0: {
-            field_d = null;
-            rl.field_C.j(-114);
-            if (pq.field_a == null) {
-              pq.field_a = new cr(rl.field_C, aw.field_h);
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          rl.field_C.a((kb) (Object) pq.field_a, 0);
-          return;
-        } else {
-          L1: {
-            rl.field_C.j(-114);
-            if (pq.field_a == null) {
-              pq.field_a = new cr(rl.field_C, aw.field_h);
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          rl.field_C.a((kb) (Object) pq.field_a, 0);
-          return;
+        rl.field_C.j(-114);
+        if (!(pq.field_a != null)) {
+            pq.field_a = new cr(rl.field_C, aw.field_h);
         }
+        rl.field_C.a((kb) (Object) pq.field_a, 0);
     }
 
     final static void a(nr param0, int param1, int param2, nr param3, int param4, int param5) {
-        if (param5 >= -107) {
-          field_b = null;
-          et.field_b = param1;
-          el.field_c = param2;
-          cp.field_a = param4;
-          return;
-        } else {
-          et.field_b = param1;
-          el.field_c = param2;
-          cp.field_a = param4;
-          return;
+        try {
+            et.field_b = param1;
+            el.field_c = param2;
+            cp.field_a = param4;
+        } catch (RuntimeException runtimeException) {
+            throw ig.a((Throwable) (Object) runtimeException, "qf.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + -125 + 41);
         }
     }
 

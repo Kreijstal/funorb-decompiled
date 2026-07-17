@@ -55,9 +55,6 @@ final class tn extends rl {
         field_C = null;
         field_D = null;
         field_y = null;
-        if (param0) {
-            field_D = null;
-        }
     }
 
     tn() {

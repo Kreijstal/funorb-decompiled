@@ -12,15 +12,16 @@ final class b {
         if (param0 != 20616) {
             return;
         }
-        param1.removeFocusListener((java.awt.event.FocusListener) (Object) lj.field_j);
-        kb.field_Pb = 0;
+        try {
+            param1.removeFocusListener((java.awt.event.FocusListener) (Object) lj.field_j);
+            kb.field_Pb = 0;
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) (Object) runtimeException, "b.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void a(boolean param0) {
         field_b = null;
-        if (!param0) {
-            field_a = 50;
-        }
     }
 
     static {

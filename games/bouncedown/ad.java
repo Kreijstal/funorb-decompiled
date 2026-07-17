@@ -271,7 +271,7 @@ final class ad {
                                                                                 }
                                                                               } else {
                                                                                 param0.field_k[var31] = param0.field_k[var31] - 1;
-                                                                                param0.field_G[param0.field_k[var31]] = param0.field_G[param0.field_k[var31 - 1] + 16 - 1];
+                                                                                param0.field_G[param0.field_k[var31]] = param0.field_G[param0.field_k[var31 - 1] + 15];
                                                                                 var31--;
                                                                                 continue L19;
                                                                               }
@@ -357,7 +357,7 @@ final class ad {
                                                                       break L27;
                                                                     }
                                                                   } else {
-                                                                    var15 = var15 + 1 * var16;
+                                                                    var15 = var15 + var16;
                                                                     break L27;
                                                                   }
                                                                 }
@@ -535,11 +535,11 @@ final class ad {
                                                 var1 = ad.a(param0);
                                                 if (var1 != 0) {
                                                   var1 = ad.a(param0);
-                                                  if (var1 == 0) {
+                                                  if (var1 != 0) {
                                                     var17--;
                                                     continue L39;
                                                   } else {
-                                                    var17--;
+                                                    var17++;
                                                     continue L39;
                                                   }
                                                 } else {
@@ -744,7 +744,7 @@ final class ad {
         synchronized (var5) {
           L0: {
             field_a.field_r = param2;
-            field_a.field_t = param4;
+            field_a.field_t = 9;
             field_a.field_q = param0;
             field_a.field_C = 0;
             field_a.field_h = param1;

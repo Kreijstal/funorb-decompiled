@@ -10,76 +10,114 @@ final class gp implements Iterable {
     static int field_b;
 
     final static boolean a(byte param0, String param1) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
+        int stackIn_3_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackIn_12_0 = 0;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_11_0 = 0;
+        int stackOut_8_0 = 0;
+        int stackOut_2_0 = 0;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
         var4 = BrickABrac.field_J ? 1 : 0;
-        var2 = param1.charAt(0);
-        if (param0 > 28) {
-          var3 = 1;
-          L0: while (true) {
-            if (param1.length() > var3) {
-              if (param1.charAt(var3) != var2) {
-                return false;
-              } else {
-                var3++;
-                continue L0;
+        try {
+          L0: {
+            var2_int = param1.charAt(0);
+            if (param0 > 28) {
+              var3 = 1;
+              L1: while (true) {
+                if (param1.length() <= var3) {
+                  stackOut_11_0 = 1;
+                  stackIn_12_0 = stackOut_11_0;
+                  break L0;
+                } else {
+                  if (param1.charAt(var3) != var2_int) {
+                    stackOut_8_0 = 0;
+                    stackIn_9_0 = stackOut_8_0;
+                    return stackIn_9_0 != 0;
+                  } else {
+                    var3++;
+                    continue L1;
+                  }
+                }
               }
             } else {
-              return true;
+              stackOut_2_0 = 0;
+              stackIn_3_0 = stackOut_2_0;
+              return stackIn_3_0 != 0;
             }
           }
-        } else {
-          return false;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_13_0 = (RuntimeException) var2;
+            stackOut_13_1 = new StringBuilder().append("gp.G(").append(param0).append(44);
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
+            if (param1 == null) {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L2;
+            } else {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L2;
+            }
+          }
+          throw qb.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
         }
+        return stackIn_12_0 != 0;
     }
 
     final static boolean a(int param0) {
-        int stackIn_8_0 = 0;
-        int stackIn_20_0 = 0;
-        int stackOut_18_0;
-        int stackOut_6_0;
-        if (param0 == -4858) {
-          if (null == bm.field_d) {
-            if (!s.a(-121)) {
-              if (no.field_p == null) {
-                if (jg.b(true)) {
-                  return true;
-                } else {
-                  return false;
-                }
+        int stackIn_7_0 = 0;
+        int stackOut_5_0 = 0;
+        if (null == bm.field_d) {
+          if (!s.a(-121)) {
+            if (no.field_p == null) {
+              if (jg.b(true)) {
+                return true;
               } else {
-                stackOut_18_0 = 1;
-                stackIn_20_0 = stackOut_18_0;
-                return stackIn_20_0 != 0;
+                return false;
               }
             } else {
-              return true;
+              stackOut_5_0 = 1;
+              stackIn_7_0 = stackOut_5_0;
+              return stackIn_7_0 != 0;
             }
           } else {
             return true;
           }
         } else {
-          gp.a(-58, 65, -66, 54, -73);
-          if (null == bm.field_d) {
-            if (!s.a(-121)) {
-              if (no.field_p == null) {
-                if (jg.b(true)) {
-                  return true;
-                } else {
-                  return false;
-                }
-              } else {
-                stackOut_6_0 = 1;
-                stackIn_8_0 = stackOut_6_0;
-                return stackIn_8_0 != 0;
-              }
-            } else {
-              return true;
-            }
-          } else {
-            return true;
-          }
+          return true;
         }
     }
 
@@ -94,35 +132,19 @@ final class gp implements Iterable {
     }
 
     final void a(tk param0, byte param1) {
-        if (null == param0.field_n) {
-          param0.field_s = ((gp) this).field_a;
-          if (param1 > -112) {
-            field_d = null;
+        try {
+            if (null != param0.field_n) {
+                param0.d(3);
+            }
+            param0.field_s = ((gp) this).field_a;
+            if (param1 > -112) {
+                field_d = null;
+            }
             param0.field_n = ((gp) this).field_a.field_n;
             param0.field_n.field_s = param0;
             param0.field_s.field_n = param0;
-            return;
-          } else {
-            param0.field_n = ((gp) this).field_a.field_n;
-            param0.field_n.field_s = param0;
-            param0.field_s.field_n = param0;
-            return;
-          }
-        } else {
-          param0.d(3);
-          param0.field_s = ((gp) this).field_a;
-          if (param1 <= -112) {
-            param0.field_n = ((gp) this).field_a.field_n;
-            param0.field_n.field_s = param0;
-            param0.field_s.field_n = param0;
-            return;
-          } else {
-            field_d = null;
-            param0.field_n = ((gp) this).field_a.field_n;
-            param0.field_n.field_s = param0;
-            param0.field_s.field_n = param0;
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) (Object) runtimeException, "gp.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
@@ -139,9 +161,6 @@ final class gp implements Iterable {
     public static void b(int param0) {
         field_d = null;
         field_c = null;
-        if (param0 != 2) {
-            gp.a(-125, -106, -42, 126, 57);
-        }
     }
 
     final tk a(boolean param0) {

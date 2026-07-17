@@ -23,95 +23,66 @@ final class jg {
 
     final int b(int param0) {
         if (!((jg) this).field_i) {
-          if (((jg) this).field_m == -3) {
-            if (((jg) this).field_b <= 0) {
-              if ((((jg) this).field_h ^ -1L) == (qf.field_a ^ -1L)) {
-                return 1;
-              } else {
-                if (-3 != (jb.field_t ^ -1)) {
-                  if (param0 > -19) {
-                    ((jg) this).field_a = null;
-                    return 0;
-                  } else {
-                    return 0;
-                  }
-                } else {
-                  if (!kl.a(((jg) this).field_n, 1)) {
-                    if (param0 > -19) {
-                      ((jg) this).field_a = null;
-                      return 0;
-                    } else {
-                      return 0;
-                    }
-                  } else {
+            if (((jg) this).field_m != 2) {
+                if (!(~((jg) this).field_h != ~qf.field_a)) {
                     return 1;
-                  }
                 }
-              }
-            } else {
-              return 2;
-            }
-          } else {
-            if ((((jg) this).field_h ^ -1L) == (qf.field_a ^ -1L)) {
-              return 1;
-            } else {
-              if (-3 != jb.field_t) {
+                if (jb.field_t == 2) {
+                    if (!kl.a(((jg) this).field_n, 1)) {
+                        if (param0 > -19) {
+                            ((jg) this).field_a = null;
+                            return 0;
+                        }
+                        return 0;
+                    }
+                    return 1;
+                }
                 if (param0 > -19) {
-                  ((jg) this).field_a = null;
-                  return 0;
-                } else {
-                  return 0;
-                }
-              } else {
-                if (!kl.a(((jg) this).field_n, 1)) {
-                  if (param0 > -19) {
                     ((jg) this).field_a = null;
                     return 0;
-                  } else {
-                    return 0;
-                  }
-                } else {
-                  return 1;
                 }
-              }
+                return 0;
             }
-          }
-        } else {
-          return 2;
+            if (((jg) this).field_b <= 0) {
+                if (!(~((jg) this).field_h != ~qf.field_a)) {
+                    return 1;
+                }
+                if (jb.field_t == 2) {
+                    if (!kl.a(((jg) this).field_n, 1)) {
+                        if (param0 > -19) {
+                            ((jg) this).field_a = null;
+                            return 0;
+                        }
+                        return 0;
+                    }
+                    return 1;
+                }
+                if (param0 > -19) {
+                    ((jg) this).field_a = null;
+                    return 0;
+                }
+                return 0;
+            }
+            return 2;
         }
+        return 2;
     }
 
     final static void a(int param0) {
         int var2 = 0;
         var2 = ArcanistsMulti.field_G ? 1 : 0;
         if (null != jb.field_z) {
-          if (param0 == -3) {
-            if (-1 == (jb.field_z.field_D & 1 << jb.field_z.field_I ^ -1)) {
-              if (0 == jb.field_z.field_D) {
-                ce.field_g[10] = cn.field_K;
-                return;
-              } else {
-                ce.field_g[10] = pe.field_Nb;
-                return;
-              }
+          if ((jb.field_z.field_D & 1 << jb.field_z.field_I) == 0) {
+            if (0 == jb.field_z.field_D) {
+              ce.field_g[10] = cn.field_K;
+              return;
             } else {
-              ce.field_g[10] = uh.field_s;
+              ce.field_g[10] = pe.field_Nb;
               return;
             }
           } else {
-            field_c = null;
-            if (-1 == (jb.field_z.field_D & 1 << jb.field_z.field_I ^ -1)) {
-              if (0 == jb.field_z.field_D) {
-                ce.field_g[10] = cn.field_K;
-                return;
-              } else {
-                ce.field_g[10] = pe.field_Nb;
-                return;
-              }
-            } else {
-              ce.field_g[10] = uh.field_s;
-              return;
-            }
+            ce.field_g[10] = uh.field_s;
+            return;
           }
         } else {
           return;
@@ -123,16 +94,13 @@ final class jg {
         field_j = null;
         field_l = null;
         field_c = null;
-        if (param0 != -25776) {
-            field_p = null;
-        }
     }
 
     final static int a(int param0, int param1, int param2) {
         if (param1 != -271087521) {
             return -96;
         }
-        int var3 = param2 >>> -271087521;
+        int var3 = param2 >>> 31;
         return (var3 + param2) / param0 + -var3;
     }
 
@@ -156,18 +124,22 @@ final class jg {
     }
 
     jg(int param0, String param1, int param2, String param3, String param4) {
-        ((jg) this).field_k = 0;
-        ((jg) this).field_f = null;
-        ((jg) this).field_g = param1;
-        ((jg) this).field_n = param1;
-        ((jg) this).field_b = 0;
-        ((jg) this).field_i = true;
-        ((jg) this).field_q = param2;
-        ((jg) this).field_e = param4;
-        ((jg) this).field_d = 0;
-        ((jg) this).field_h = 0L;
-        ((jg) this).field_o = param3;
-        ((jg) this).field_m = param0;
+        try {
+            ((jg) this).field_k = 0;
+            ((jg) this).field_f = null;
+            ((jg) this).field_g = param1;
+            ((jg) this).field_n = param1;
+            ((jg) this).field_b = 0;
+            ((jg) this).field_i = true;
+            ((jg) this).field_q = param2;
+            ((jg) this).field_e = param4;
+            ((jg) this).field_d = 0;
+            ((jg) this).field_h = 0L;
+            ((jg) this).field_o = param3;
+            ((jg) this).field_m = param0;
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "jg.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

@@ -20,7 +20,7 @@ final class ha implements Runnable {
     static String field_m;
 
     final static void a(int param0, boolean param1) {
-        of.a(true, param1, (byte) 95);
+        of.a(true, false, (byte) 95);
         int var2 = -40 / ((param0 - 64) / 51);
     }
 
@@ -42,7 +42,7 @@ final class ha implements Runnable {
                     break L1;
                   } else {
                     var1_int = ((ha) this).field_c.read(((ha) this).field_a.field_i, ((ha) this).field_a.field_h, -((ha) this).field_a.field_h + ((ha) this).field_a.field_i.length);
-                    if (-1 < (var1_int ^ -1)) {
+                    if (var1_int < 0) {
                       break L1;
                     } else {
                       ((ha) this).field_a.field_h = ((ha) this).field_a.field_h + var1_int;
@@ -102,7 +102,7 @@ final class ha implements Runnable {
         Throwable decompiledCaughtException = null;
         if (((ha) this).field_e < 2) {
           L0: {
-            if (-1 == (((ha) this).field_e ^ -1)) {
+            if (((ha) this).field_e == 0) {
               L1: {
                 if (((ha) this).field_n != null) {
                   break L1;
@@ -111,7 +111,7 @@ final class ha implements Runnable {
                   break L1;
                 }
               }
-              if (-1 == (((ha) this).field_n.field_f ^ -1)) {
+              if (((ha) this).field_n.field_f == 0) {
                 return false;
               } else {
                 if (1 == ((ha) this).field_n.field_f) {
@@ -127,7 +127,7 @@ final class ha implements Runnable {
             }
           }
           L2: {
-            if (-2 == (((ha) this).field_e ^ -1)) {
+            if (((ha) this).field_e == 1) {
               L3: {
                 if (((ha) this).field_f == null) {
                   ((ha) this).field_f = ((ha) this).field_i.a(((ha) this).field_d.getHost(), 443, 0);
@@ -139,7 +139,7 @@ final class ha implements Runnable {
               if (((ha) this).field_f.field_f == 0) {
                 return false;
               } else {
-                if ((((ha) this).field_f.field_f ^ -1) == -2) {
+                if (((ha) this).field_f.field_f == 1) {
                   break L2;
                 } else {
                   ((ha) this).field_f = null;
@@ -155,7 +155,7 @@ final class ha implements Runnable {
             try {
               L4: {
                 L5: {
-                  if (-1 == (((ha) this).field_e ^ -1)) {
+                  if (((ha) this).field_e == 0) {
                     ((ha) this).field_c = (DataInputStream) ((ha) this).field_n.field_e;
                     break L5;
                   } else {
@@ -280,18 +280,68 @@ final class ha implements Runnable {
 
     final static void a(int param0, sa param1, int param2) {
         ii var3 = null;
-        var3 = hh.field_p;
-        var3.a(true, param2);
-        var3.a(5, (byte) 98);
-        var3.a(0, (byte) 65);
-        var3.e(param0 ^ 750670611, param1.field_n);
-        var3.a(param1.field_g, (byte) 63);
-        var3.a(param1.field_m, (byte) 98);
-        if (param0 != -17765) {
-          ha.a(true);
-          return;
-        } else {
-          return;
+        RuntimeException var3_ref = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        try {
+          L0: {
+            var3 = hh.field_p;
+            var3.a(true, param2);
+            var3.a(5, (byte) 98);
+            var3.a(0, (byte) 65);
+            var3.e(param0 ^ 750670611, param1.field_n);
+            var3.a(param1.field_g, (byte) 63);
+            var3.a(param1.field_m, (byte) 98);
+            if (param0 == -17765) {
+              break L0;
+            } else {
+              ha.a(true);
+              return;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var3_ref = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) var3_ref;
+            stackOut_3_1 = new StringBuilder().append("ha.D(").append(param0).append(44);
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param1 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L1;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L1;
+            }
+          }
+          throw ii.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param2 + 41);
         }
     }
 
@@ -309,9 +359,13 @@ final class ha implements Runnable {
     }
 
     ha(si param0, java.net.URL param1, int param2) {
-        ((ha) this).field_i = param0;
-        ((ha) this).field_d = param1;
-        ((ha) this).field_a = new wi(param2);
+        try {
+            ((ha) this).field_i = param0;
+            ((ha) this).field_d = param1;
+            ((ha) this).field_a = new wi(param2);
+        } catch (RuntimeException runtimeException) {
+            throw ii.a((Throwable) (Object) runtimeException, "ha.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     protected final void finalize() {

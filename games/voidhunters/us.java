@@ -8,9 +8,6 @@ class us extends oib {
     private String field_e;
 
     public static void b(byte param0) {
-        if (param0 < 27) {
-            return;
-        }
         field_d = null;
     }
 
@@ -20,20 +17,23 @@ class us extends oib {
     }
 
     us(long param0, String param1) {
-        ((us) this).field_g = param0;
-        ((us) this).field_e = param1;
+        try {
+            ((us) this).field_g = param0;
+            ((us) this).field_e = param1;
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "us.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void a(ds param0, int param1) {
-        if (param1 != -26216) {
-          field_f = 54;
-          param0.a(((us) this).field_g, 90);
-          param0.a((byte) -53, ((us) this).field_e);
-          return;
-        } else {
-          param0.a(((us) this).field_g, 90);
-          param0.a((byte) -53, ((us) this).field_e);
-          return;
+        try {
+            if (param1 != -26216) {
+                field_f = 54;
+            }
+            param0.a(((us) this).field_g, 90);
+            param0.a((byte) -53, ((us) this).field_e);
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "us.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 

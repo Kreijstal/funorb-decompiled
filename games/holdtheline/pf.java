@@ -15,7 +15,7 @@ final class pf implements hd {
         if (!(null == kd.field_b)) {
             om.a(-46342, kd.field_b);
         }
-        co.a(param0);
+        co.a(false);
         lg.b(true);
         jk.a(27370);
         if (!(!cm.a(-2043140287))) {
@@ -34,7 +34,7 @@ final class pf implements hd {
     }
 
     final static int a(byte param0, int param1) {
-        if (-1 != (param1 ^ -1)) {
+        if (param1 != 0) {
           if (of.a(-969)) {
             if (param1 > ao.field_b) {
               return 1;
@@ -65,31 +65,81 @@ final class pf implements hd {
 
     public final int a(byte param0, hd param1) {
         pf var3 = null;
+        RuntimeException var3_ref = null;
         int var4 = 0;
-        var3 = (pf) (Object) param1;
-        var4 = -(var3.field_e * var3.field_a) + var3.field_e * var3.field_a;
-        if (param0 != -101) {
+        int stackIn_5_0 = 0;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_4_0 = 0;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        try {
           L0: {
-            int discarded$1 = pf.a((byte) 83, 126);
-            if (var4 != 0) {
-              break L0;
+            L1: {
+              var3 = (pf) (Object) param1;
+              var4 = -(var3.field_e * var3.field_a) + var3.field_e * var3.field_a;
+              if (param0 == -101) {
+                break L1;
+              } else {
+                int discarded$2 = pf.a((byte) 83, 126);
+                break L1;
+              }
+            }
+            L2: {
+              if (var4 != 0) {
+                break L2;
+              } else {
+                var4 = var3.field_a * var3.field_a + (-(var3.field_a * var3.field_a) + var3.field_e * var3.field_e) - var3.field_e * var3.field_e;
+                break L2;
+              }
+            }
+            stackOut_4_0 = var4;
+            stackIn_5_0 = stackOut_4_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var3_ref = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var3_ref;
+            stackOut_6_1 = new StringBuilder().append("pf.C(").append(param0).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param1 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L3;
             } else {
-              var4 = var3.field_a * var3.field_a + (-(var3.field_a * var3.field_a) + var3.field_e * var3.field_e) - var3.field_e * var3.field_e;
-              break L0;
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L3;
             }
           }
-          return var4;
-        } else {
-          L1: {
-            if (var4 != 0) {
-              break L1;
-            } else {
-              var4 = var3.field_a * var3.field_a + (-(var3.field_a * var3.field_a) + var3.field_e * var3.field_e) - var3.field_e * var3.field_e;
-              break L1;
-            }
-          }
-          return var4;
+          throw kk.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
         }
+        return stackIn_5_0;
     }
 
     public static void b(byte param0) {

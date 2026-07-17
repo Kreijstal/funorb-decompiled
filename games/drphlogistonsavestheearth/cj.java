@@ -13,46 +13,23 @@ final class cj {
     static he field_g;
 
     final static void b(int param0) {
-        if (gf.field_G) {
-          if (param0 != 8227) {
-            field_c = null;
-            gm.field_M = true;
-            qb.a(param0 ^ 8258, true);
-            af.field_b = 0;
-            return;
-          } else {
-            gm.field_M = true;
-            qb.a(param0 ^ 8258, true);
-            af.field_b = 0;
-            return;
-          }
-        } else {
-          throw new IllegalStateException();
+        if (!gf.field_G) {
+            throw new IllegalStateException();
         }
+        gm.field_M = true;
+        qb.a(97, true);
+        af.field_b = 0;
     }
 
     public static void a(int param0) {
         field_i = null;
-        if (param0 > -89) {
-          field_f = null;
-          field_c = null;
-          field_a = null;
-          field_h = null;
-          field_f = null;
-          field_e = null;
-          field_d = null;
-          field_g = null;
-          return;
-        } else {
-          field_c = null;
-          field_a = null;
-          field_h = null;
-          field_f = null;
-          field_e = null;
-          field_d = null;
-          field_g = null;
-          return;
-        }
+        field_c = null;
+        field_a = null;
+        field_h = null;
+        field_f = null;
+        field_e = null;
+        field_d = null;
+        field_g = null;
     }
 
     static {

@@ -11,9 +11,6 @@ final class rn {
     final static void a(int param0) {
         wm.field_p = null;
         gg.field_k = null;
-        if (param0 != 1) {
-            int discarded$0 = rn.a((byte) 67, 3);
-        }
     }
 
     public static void a(byte param0) {
@@ -29,7 +26,7 @@ final class rn {
 
     final static int a(byte param0, int param1) {
         int var2 = 0;
-        if (-1 == (param1 ^ -1)) {
+        if (param1 == 0) {
           return 0;
         } else {
           if (param1 <= 0) {
@@ -44,7 +41,7 @@ final class rn {
               }
             }
             L1: {
-              if (255 >= (param1 ^ -1)) {
+              if (param1 >= -256) {
                 break L1;
               } else {
                 var2 += 8;
@@ -63,7 +60,7 @@ final class rn {
                 }
               }
               L3: {
-                if (3 < (param1 ^ -1)) {
+                if (param1 < -4) {
                   var2 += 2;
                   param1 = param1 >> 2;
                   break L3;
@@ -72,7 +69,7 @@ final class rn {
                 }
               }
               L4: {
-                if (1 < (param1 ^ -1)) {
+                if (param1 < -2) {
                   param1 = param1 >> 1;
                   var2++;
                   break L4;
@@ -93,7 +90,7 @@ final class rn {
                 }
               }
               L6: {
-                if (3 < (param1 ^ -1)) {
+                if (param1 < -4) {
                   var2 += 2;
                   param1 = param1 >> 2;
                   break L6;
@@ -102,7 +99,7 @@ final class rn {
                 }
               }
               L7: {
-                if (1 < (param1 ^ -1)) {
+                if (param1 < -2) {
                   param1 = param1 >> 1;
                   var2++;
                   break L7;
@@ -124,7 +121,7 @@ final class rn {
               }
             }
             L9: {
-              if ((param1 ^ -1) < -256) {
+              if (param1 > 255) {
                 param1 = param1 >> 8;
                 var2 += 8;
                 break L9;

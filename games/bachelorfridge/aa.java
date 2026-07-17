@@ -8,7 +8,7 @@ final class aa extends pu {
     private static String field_z;
 
     public static void b(int param0) {
-        int var1 = 34 / ((param0 - -91) / 32);
+        int var1 = -34;
         field_m = null;
         field_n = null;
         field_l = null;

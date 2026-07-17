@@ -7,19 +7,19 @@ final class ke {
     static wl field_c;
 
     final static void a(wl param0, int param1, int param2, wl param3) {
-        nb.field_a = param0;
-        sb.field_h = param2;
-        pb.field_e = param3;
-        rk.a(em.field_d / 2, em.field_l / param1, 11710);
-        mm.a(param1 + 97, param0.field_x + param0.field_N, param3.field_N, param0.field_N, param3.field_N - -param3.field_x);
+        try {
+            nb.field_a = param0;
+            sb.field_h = param2;
+            pb.field_e = param3;
+            rk.a(em.field_d / 2, em.field_l / param1, 11710);
+            mm.a(param1 + 97, param0.field_x + param0.field_N, param3.field_N, param0.field_N, param3.field_N - -param3.field_x);
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) (Object) runtimeException, "ke.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void a(int param0) {
         field_c = null;
-        if (param0 >= -13) {
-            Object var2 = null;
-            ke.a((wl) null, -2, 75, (wl) null);
-        }
     }
 
     final static boolean a(int param0, int param1, int param2, boolean param3) {

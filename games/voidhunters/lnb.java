@@ -34,7 +34,7 @@ final class lnb extends le {
             L2: {
               var5 = hob.field_d / ((lnb) this).field_k;
               var6 = noa.field_o / ((lnb) this).field_j;
-              if ((var6 ^ -1) >= -1) {
+              if (var6 <= 0) {
                 var4 = ((lnb) this).a(0, 0, 255);
                 break L2;
               } else {
@@ -49,7 +49,7 @@ final class lnb extends le {
               if (hob.field_d <= var11) {
                 break L1;
               } else {
-                if ((var5 ^ -1) >= -1) {
+                if (var5 <= 0) {
                   var10[var11] = var4[0];
                   var11++;
                   continue L3;
@@ -102,7 +102,7 @@ final class lnb extends le {
               L1: {
                 var5 = hob.field_d / ((lnb) this).field_k;
                 var6 = noa.field_o / ((lnb) this).field_j;
-                if ((var6 ^ -1) >= -1) {
+                if (var6 <= 0) {
                   var4 = ((lnb) this).a((byte) 69, 0, 0);
                   break L1;
                 } else {
@@ -150,59 +150,137 @@ final class lnb extends le {
     }
 
     final void a(int param0, int param1, ds param2) {
-        int var4 = 0;
+        int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
-        L0: {
-          var5 = VoidHunters.field_G;
-          var4 = param0;
-          if (var4 != 0) {
-            if (var4 == 1) {
-              ((lnb) this).field_j = param2.e((byte) -126);
-              break L0;
-            } else {
-              break L0;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        var5 = VoidHunters.field_G;
+        try {
+          L0: {
+            L1: {
+              var4_int = param0;
+              if (var4_int != 0) {
+                if (var4_int == 1) {
+                  ((lnb) this).field_j = param2.e((byte) -126);
+                  break L1;
+                } else {
+                  break L1;
+                }
+              } else {
+                ((lnb) this).field_k = param2.e((byte) -121);
+                break L1;
+              }
             }
-          } else {
-            ((lnb) this).field_k = param2.e((byte) -121);
+            L2: {
+              if (param1 < -60) {
+                break L2;
+              } else {
+                ((lnb) this).field_k = 0;
+                break L2;
+              }
+            }
             break L0;
           }
-        }
-        L1: {
-          if (param1 < -60) {
-            break L1;
-          } else {
-            ((lnb) this).field_k = 0;
-            break L1;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var4 = decompiledCaughtException;
+            stackOut_10_0 = (RuntimeException) var4;
+            stackOut_10_1 = new StringBuilder().append("lnb.F(").append(param0).append(44).append(param1).append(44);
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
+            if (param2 == null) {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L3;
+            } else {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L3;
+            }
           }
+          throw rta.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
         }
     }
 
     final static void b(int param0, int param1) {
         try {
-            if (null != ov.field_o) {
-                // if_icmpgt L34
-                // if_acmpne L26
-            } else {
-                dpa.field_p.field_e = 0;
-                return;
-            }
-            if (param1 < 110) {
-                return;
-            }
-            if (dpa.field_p.field_e == 0) {
-                if ((10000L + bgb.field_o ^ -1L) > (wt.a(false) ^ -1L)) {
-                    dpa.field_p.h(24335, param0);
+            Throwable decompiledCaughtException = null;
+            L0: {
+              if (null == ov.field_o) {
+                break L0;
+              } else {
+                L1: {
+                  if (param0 < 0) {
+                    break L1;
+                  } else {
+                    if (sp.field_o != tc.field_c) {
+                      break L0;
+                    } else {
+                      break L1;
+                    }
+                  }
                 }
-            }
-            if (0 < dpa.field_p.field_e) {
-                try {
-                    ov.field_o.a(0, dpa.field_p.field_h, dpa.field_p.field_e, 0);
-                    bgb.field_o = wt.a(false);
-                } catch (IOException iOException) {
-                    ifb.l(-122);
+                if (param1 >= 110) {
+                  L2: {
+                    if (dpa.field_p.field_e != 0) {
+                      break L2;
+                    } else {
+                      if (~(10000L + bgb.field_o) <= ~wt.a(false)) {
+                        break L2;
+                      } else {
+                        dpa.field_p.h(24335, param0);
+                        break L2;
+                      }
+                    }
+                  }
+                  L3: {
+                    if (0 >= dpa.field_p.field_e) {
+                      break L3;
+                    } else {
+                      {
+                        L4: {
+                          ov.field_o.a(0, dpa.field_p.field_h, dpa.field_p.field_e, 0);
+                          bgb.field_o = wt.a(false);
+                          break L4;
+                        }
+                      }
+                      dpa.field_p.field_e = 0;
+                      break L3;
+                    }
+                  }
+                  return;
+                } else {
+                  return;
                 }
-                dpa.field_p.field_e = 0;
+              }
             }
+            dpa.field_p.field_e = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -217,10 +295,7 @@ final class lnb extends le {
     }
 
     final static boolean a(int param0, int param1, boolean param2) {
-        if (param2) {
-            field_i = null;
-        }
-        return -1 != (1024 & param0 ^ -1) ? true : false;
+        return (1024 & param0) != 0;
     }
 
     final static void d(int param0) {
@@ -231,9 +306,6 @@ final class lnb extends le {
         }
         qg.field_a = null;
         cka.field_o = null;
-        if (param0 != 0) {
-            lnb.e(75);
-        }
     }
 
     public static void e(int param0) {

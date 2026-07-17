@@ -13,9 +13,6 @@ final class ub extends li {
 
     public static void a(boolean param0) {
         field_t = null;
-        if (param0) {
-            return;
-        }
         field_p = null;
     }
 

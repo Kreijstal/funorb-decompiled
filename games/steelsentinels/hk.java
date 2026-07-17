@@ -52,7 +52,8 @@ final class hk extends gh {
     gh field_uc;
 
     final static String a(char param0, String param1, boolean param2, String param3) {
-        int var4 = 0;
+        int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -61,95 +62,144 @@ final class hk extends gh {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        StringBuilder var12 = null;
-        StringBuilder var13 = null;
+        String stackIn_14_0 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_18_2 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        String stackIn_21_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        String stackOut_13_0 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
         var11 = SteelSentinels.field_G;
-        var4 = param3.length();
-        if (param2) {
-          var5 = param1.length();
-          var6 = var4;
-          var7 = -1 + var5;
-          if (var7 != 0) {
-            var8_int = 0;
-            L0: while (true) {
-              var8_int = param3.indexOf((int) param0, var8_int);
-              if (var8_int >= 0) {
-                var6 = var6 + var7;
-                var8_int++;
-                continue L0;
+        try {
+          L0: {
+            L1: {
+              var4_int = param3.length();
+              if (param2) {
+                break L1;
               } else {
-                var13 = new StringBuilder(var6);
-                var8 = var13;
-                var9 = 0;
-                L1: while (true) {
-                  var10 = param3.indexOf((int) param0, var9);
-                  if (var10 >= 0) {
-                    StringBuilder discarded$9 = var13.append(param3.substring(var9, var10));
-                    var9 = 1 + var10;
-                    StringBuilder discarded$10 = var13.append(param1);
-                    continue L1;
+                field_pc = null;
+                break L1;
+              }
+            }
+            L2: {
+              var5 = param1.length();
+              var6 = var4_int;
+              var7 = -1 + var5;
+              if (var7 != 0) {
+                var8_int = 0;
+                L3: while (true) {
+                  var8_int = param3.indexOf((int) param0, var8_int);
+                  if (var8_int >= 0) {
+                    var6 = var6 + var7;
+                    var8_int++;
+                    continue L3;
                   } else {
-                    StringBuilder discarded$11 = var13.append(param3.substring(var9));
-                    return var13.toString();
+                    break L2;
                   }
                 }
+              } else {
+                break L2;
               }
             }
-          } else {
-            var12 = new StringBuilder(var6);
+            var8 = new StringBuilder(var6);
             var9 = 0;
-            L2: while (true) {
+            L4: while (true) {
               var10 = param3.indexOf((int) param0, var9);
               if (var10 >= 0) {
-                StringBuilder discarded$12 = var12.append(param3.substring(var9, var10));
+                StringBuilder discarded$3 = var8.append(param3.substring(var9, var10));
                 var9 = 1 + var10;
-                StringBuilder discarded$13 = var12.append(param1);
-                continue L2;
+                StringBuilder discarded$4 = var8.append(param1);
+                continue L4;
               } else {
-                StringBuilder discarded$14 = var12.append(param3.substring(var9));
-                return var12.toString();
+                StringBuilder discarded$5 = var8.append(param3.substring(var9));
+                stackOut_13_0 = var8.toString();
+                stackIn_14_0 = stackOut_13_0;
+                break L0;
               }
             }
           }
-        } else {
-          L3: {
-            field_pc = null;
-            var5 = param1.length();
-            var6 = var4;
-            var7 = -1 + var5;
-            if (var7 != 0) {
-              var8_int = 0;
-              L4: while (true) {
-                var8_int = param3.indexOf((int) param0, var8_int);
-                if (var8_int >= 0) {
-                  var6 = var6 + var7;
-                  var8_int++;
-                  continue L4;
-                } else {
-                  var8 = new StringBuilder(var6);
-                  var9 = 0;
-                  break L3;
-                }
-              }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L5: {
+            var4 = decompiledCaughtException;
+            stackOut_15_0 = (RuntimeException) var4;
+            stackOut_15_1 = new StringBuilder().append("hk.G(").append(param0).append(44);
+            stackIn_17_0 = stackOut_15_0;
+            stackIn_17_1 = stackOut_15_1;
+            stackIn_16_0 = stackOut_15_0;
+            stackIn_16_1 = stackOut_15_1;
+            if (param1 == null) {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "null";
+              stackIn_18_0 = stackOut_17_0;
+              stackIn_18_1 = stackOut_17_1;
+              stackIn_18_2 = stackOut_17_2;
+              break L5;
             } else {
-              var8 = new StringBuilder(var6);
-              var9 = 0;
-              break L3;
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "{...}";
+              stackIn_18_0 = stackOut_16_0;
+              stackIn_18_1 = stackOut_16_1;
+              stackIn_18_2 = stackOut_16_2;
+              break L5;
             }
           }
-          L5: while (true) {
-            var10 = param3.indexOf((int) param0, var9);
-            if (var10 >= 0) {
-              StringBuilder discarded$15 = var8.append(param3.substring(var9, var10));
-              var9 = 1 + var10;
-              StringBuilder discarded$16 = var8.append(param1);
-              continue L5;
+          L6: {
+            stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+            stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(44).append(param2).append(44);
+            stackIn_20_0 = stackOut_18_0;
+            stackIn_20_1 = stackOut_18_1;
+            stackIn_19_0 = stackOut_18_0;
+            stackIn_19_1 = stackOut_18_1;
+            if (param3 == null) {
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "null";
+              stackIn_21_0 = stackOut_20_0;
+              stackIn_21_1 = stackOut_20_1;
+              stackIn_21_2 = stackOut_20_2;
+              break L6;
             } else {
-              StringBuilder discarded$17 = var8.append(param3.substring(var9));
-              return var8.toString();
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "{...}";
+              stackIn_21_0 = stackOut_19_0;
+              stackIn_21_1 = stackOut_19_1;
+              stackIn_21_2 = stackOut_19_2;
+              break L6;
             }
           }
+          throw ci.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 41);
         }
+        return stackIn_14_0;
     }
 
     public static void d(byte param0) {
@@ -184,1422 +234,316 @@ final class hk extends gh {
     }
 
     final boolean a(hk param0, byte param1) {
-        int var3 = 0;
+        RuntimeException var3 = null;
+        int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        int stackIn_12_0 = 0;
-        int stackIn_18_0 = 0;
-        int stackIn_26_0 = 0;
-        boolean stackIn_28_0 = false;
-        boolean stackIn_29_0 = false;
-        boolean stackIn_30_0 = false;
-        int stackIn_30_1 = 0;
-        int stackIn_35_0 = 0;
+        int stackIn_2_0 = 0;
+        int stackIn_9_0 = 0;
+        int stackIn_15_0 = 0;
+        int stackIn_17_0 = 0;
+        int stackIn_22_0 = 0;
+        boolean stackIn_25_0 = false;
+        int stackIn_31_0 = 0;
+        boolean stackIn_33_0 = false;
+        boolean stackIn_34_0 = false;
+        boolean stackIn_35_0 = false;
+        int stackIn_35_1 = 0;
         int stackIn_40_0 = 0;
-        int stackIn_48_0 = 0;
-        int stackIn_51_0 = 0;
-        int stackIn_55_0 = 0;
+        int stackIn_45_0 = 0;
+        int stackIn_52_0 = 0;
+        int stackIn_58_0 = 0;
         int stackIn_61_0 = 0;
-        int stackIn_65_0 = 0;
-        int stackIn_69_0 = 0;
-        int stackIn_75_0 = 0;
-        int stackIn_78_0 = 0;
-        int stackIn_83_0 = 0;
-        int stackIn_85_0 = 0;
-        int stackIn_95_0 = 0;
-        int stackIn_103_0 = 0;
-        boolean stackIn_105_0 = false;
-        boolean stackIn_106_0 = false;
-        boolean stackIn_107_0 = false;
-        int stackIn_107_1 = 0;
-        int stackIn_112_0 = 0;
-        int stackIn_117_0 = 0;
-        int stackIn_127_0 = 0;
-        int stackIn_130_0 = 0;
-        int stackIn_135_0 = 0;
-        int stackIn_139_0 = 0;
-        int stackIn_146_0 = 0;
-        int stackIn_151_0 = 0;
-        int stackIn_153_0 = 0;
-        int stackIn_156_0 = 0;
-        int stackIn_161_0 = 0;
-        int stackIn_163_0 = 0;
-        boolean stackIn_167_0 = false;
-        boolean stackIn_168_0 = false;
-        boolean stackIn_169_0 = false;
-        int stackIn_169_1 = 0;
-        int stackIn_174_0 = 0;
-        int stackIn_179_0 = 0;
-        int stackIn_191_0 = 0;
-        int stackIn_196_0 = 0;
-        int stackIn_198_0 = 0;
-        int stackIn_201_0 = 0;
-        int stackIn_206_0 = 0;
-        int stackIn_208_0 = 0;
-        int stackIn_215_0 = 0;
-        int stackIn_220_0 = 0;
-        int stackIn_222_0 = 0;
-        int stackIn_225_0 = 0;
-        int stackIn_230_0 = 0;
-        int stackIn_234_0 = 0;
-        boolean stackIn_239_0 = false;
-        boolean stackIn_240_0 = false;
-        boolean stackIn_241_0 = false;
-        int stackIn_241_1 = 0;
-        int stackIn_246_0 = 0;
-        int stackIn_251_0 = 0;
-        int stackIn_263_0 = 0;
-        int stackIn_268_0 = 0;
-        int stackIn_270_0 = 0;
-        int stackIn_273_0 = 0;
-        int stackIn_278_0 = 0;
-        int stackIn_280_0 = 0;
-        int stackIn_287_0 = 0;
-        int stackIn_292_0 = 0;
-        int stackIn_294_0 = 0;
-        int stackIn_297_0 = 0;
-        int stackIn_302_0 = 0;
-        int stackIn_307_0 = 0;
-        boolean stackIn_309_0 = false;
-        boolean stackIn_310_0 = false;
-        boolean stackIn_311_0 = false;
-        int stackIn_311_1 = 0;
-        int stackIn_316_0 = 0;
-        int stackIn_321_0 = 0;
-        int stackIn_333_0 = 0;
-        int stackIn_338_0 = 0;
-        int stackIn_340_0 = 0;
-        int stackIn_343_0 = 0;
-        int stackIn_348_0 = 0;
-        int stackIn_350_0 = 0;
-        int stackIn_357_0 = 0;
-        int stackIn_362_0 = 0;
-        int stackIn_364_0 = 0;
-        int stackIn_367_0 = 0;
-        int stackIn_372_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_9_0 = 0;
+        int stackIn_63_0 = 0;
+        int stackIn_67_0 = 0;
+        RuntimeException stackIn_69_0 = null;
+        StringBuilder stackIn_69_1 = null;
+        RuntimeException stackIn_70_0 = null;
+        StringBuilder stackIn_70_1 = null;
+        RuntimeException stackIn_71_0 = null;
+        StringBuilder stackIn_71_1 = null;
+        String stackIn_71_2 = null;
+        RuntimeException decompiledCaughtException = null;
         int stackOut_7_0 = 0;
-        int stackOut_17_0 = 0;
-        int stackOut_16_0 = 0;
-        int stackOut_25_0 = 0;
-        int stackOut_24_0 = 0;
-        boolean stackOut_27_0 = false;
-        boolean stackOut_29_0 = false;
-        int stackOut_29_1 = 0;
-        boolean stackOut_28_0 = false;
-        int stackOut_28_1 = 0;
-        int stackOut_34_0 = 0;
-        int stackOut_33_0 = 0;
-        int stackOut_60_0 = 0;
-        int stackOut_59_0 = 0;
-        int stackOut_74_0 = 0;
-        int stackOut_73_0 = 0;
-        int stackOut_77_0 = 0;
-        int stackOut_76_0 = 0;
-        int stackOut_82_0 = 0;
-        int stackOut_81_0 = 0;
-        int stackOut_64_0 = 0;
-        int stackOut_63_0 = 0;
-        int stackOut_68_0 = 0;
-        int stackOut_67_0 = 0;
-        int stackOut_46_0 = 0;
-        int stackOut_45_0 = 0;
-        int stackOut_43_0 = 0;
-        int stackOut_50_0 = 0;
-        int stackOut_49_0 = 0;
-        int stackOut_54_0 = 0;
-        int stackOut_53_0 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_4_0 = 0;
+        int stackOut_13_0 = 0;
+        int stackOut_12_0 = 0;
+        int stackOut_10_0 = 0;
+        int stackOut_21_0 = 0;
+        int stackOut_20_0 = 0;
+        boolean stackOut_24_0 = false;
+        int stackOut_30_0 = 0;
+        int stackOut_29_0 = 0;
+        boolean stackOut_32_0 = false;
+        boolean stackOut_34_0 = false;
+        int stackOut_34_1 = 0;
+        boolean stackOut_33_0 = false;
+        int stackOut_33_1 = 0;
         int stackOut_39_0 = 0;
         int stackOut_38_0 = 0;
-        int stackOut_5_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_94_0 = 0;
-        int stackOut_93_0 = 0;
-        int stackOut_102_0 = 0;
-        int stackOut_101_0 = 0;
-        boolean stackOut_104_0 = false;
-        boolean stackOut_106_0 = false;
-        int stackOut_106_1 = 0;
-        boolean stackOut_105_0 = false;
-        int stackOut_105_1 = 0;
-        int stackOut_111_0 = 0;
-        int stackOut_110_0 = 0;
-        int stackOut_137_0 = 0;
-        int stackOut_125_0 = 0;
-        int stackOut_124_0 = 0;
-        int stackOut_122_0 = 0;
-        int stackOut_129_0 = 0;
-        int stackOut_128_0 = 0;
-        int stackOut_134_0 = 0;
-        int stackOut_133_0 = 0;
-        int stackOut_120_0 = 0;
-        int stackOut_145_0 = 0;
-        int stackOut_144_0 = 0;
-        int stackOut_150_0 = 0;
-        int stackOut_149_0 = 0;
-        int stackOut_142_0 = 0;
-        int stackOut_140_0 = 0;
-        int stackOut_155_0 = 0;
-        int stackOut_154_0 = 0;
-        int stackOut_160_0 = 0;
-        int stackOut_159_0 = 0;
-        int stackOut_116_0 = 0;
-        int stackOut_115_0 = 0;
-        int stackOut_88_0 = 0;
-        int stackOut_86_0 = 0;
-        int stackOut_233_0 = 0;
-        int stackOut_232_0 = 0;
-        boolean stackOut_308_0 = false;
-        boolean stackOut_310_0 = false;
-        int stackOut_310_1 = 0;
-        boolean stackOut_309_0 = false;
-        int stackOut_309_1 = 0;
-        int stackOut_315_0 = 0;
-        int stackOut_314_0 = 0;
-        int stackOut_332_0 = 0;
-        int stackOut_331_0 = 0;
-        int stackOut_337_0 = 0;
-        int stackOut_336_0 = 0;
-        int stackOut_329_0 = 0;
-        int stackOut_327_0 = 0;
-        int stackOut_342_0 = 0;
-        int stackOut_341_0 = 0;
-        int stackOut_347_0 = 0;
-        int stackOut_346_0 = 0;
-        int stackOut_325_0 = 0;
-        int stackOut_323_0 = 0;
-        int stackOut_356_0 = 0;
-        int stackOut_355_0 = 0;
-        int stackOut_361_0 = 0;
-        int stackOut_360_0 = 0;
-        int stackOut_353_0 = 0;
-        int stackOut_351_0 = 0;
-        int stackOut_366_0 = 0;
-        int stackOut_365_0 = 0;
-        int stackOut_371_0 = 0;
-        int stackOut_370_0 = 0;
-        int stackOut_320_0 = 0;
-        int stackOut_319_0 = 0;
-        int stackOut_306_0 = 0;
-        int stackOut_305_0 = 0;
-        boolean stackOut_238_0 = false;
-        boolean stackOut_240_0 = false;
-        int stackOut_240_1 = 0;
-        boolean stackOut_239_0 = false;
-        int stackOut_239_1 = 0;
-        int stackOut_245_0 = 0;
-        int stackOut_244_0 = 0;
-        int stackOut_262_0 = 0;
-        int stackOut_261_0 = 0;
-        int stackOut_267_0 = 0;
-        int stackOut_266_0 = 0;
-        int stackOut_259_0 = 0;
-        int stackOut_257_0 = 0;
-        int stackOut_272_0 = 0;
-        int stackOut_271_0 = 0;
-        int stackOut_277_0 = 0;
-        int stackOut_276_0 = 0;
-        int stackOut_255_0 = 0;
-        int stackOut_253_0 = 0;
-        int stackOut_286_0 = 0;
-        int stackOut_285_0 = 0;
-        int stackOut_291_0 = 0;
-        int stackOut_290_0 = 0;
-        int stackOut_283_0 = 0;
-        int stackOut_281_0 = 0;
-        int stackOut_296_0 = 0;
-        int stackOut_295_0 = 0;
-        int stackOut_301_0 = 0;
-        int stackOut_300_0 = 0;
-        int stackOut_250_0 = 0;
-        int stackOut_249_0 = 0;
-        boolean stackOut_166_0 = false;
-        boolean stackOut_168_0 = false;
-        int stackOut_168_1 = 0;
-        boolean stackOut_167_0 = false;
-        int stackOut_167_1 = 0;
-        int stackOut_173_0 = 0;
-        int stackOut_172_0 = 0;
-        int stackOut_190_0 = 0;
-        int stackOut_189_0 = 0;
-        int stackOut_195_0 = 0;
-        int stackOut_194_0 = 0;
-        int stackOut_187_0 = 0;
-        int stackOut_185_0 = 0;
-        int stackOut_200_0 = 0;
-        int stackOut_199_0 = 0;
-        int stackOut_205_0 = 0;
-        int stackOut_204_0 = 0;
-        int stackOut_183_0 = 0;
-        int stackOut_181_0 = 0;
-        int stackOut_214_0 = 0;
-        int stackOut_213_0 = 0;
-        int stackOut_219_0 = 0;
-        int stackOut_218_0 = 0;
-        int stackOut_211_0 = 0;
-        int stackOut_209_0 = 0;
-        int stackOut_224_0 = 0;
-        int stackOut_223_0 = 0;
-        int stackOut_229_0 = 0;
-        int stackOut_228_0 = 0;
-        int stackOut_178_0 = 0;
-        int stackOut_177_0 = 0;
-        if (param1 <= 0) {
+        int stackOut_50_0 = 0;
+        int stackOut_49_0 = 0;
+        int stackOut_48_0 = 0;
+        int stackOut_56_0 = 0;
+        int stackOut_55_0 = 0;
+        int stackOut_53_0 = 0;
+        int stackOut_60_0 = 0;
+        int stackOut_59_0 = 0;
+        int stackOut_66_0 = 0;
+        int stackOut_65_0 = 0;
+        int stackOut_62_0 = 0;
+        int stackOut_44_0 = 0;
+        int stackOut_43_0 = 0;
+        int stackOut_16_0 = 0;
+        int stackOut_1_0 = 0;
+        RuntimeException stackOut_68_0 = null;
+        StringBuilder stackOut_68_1 = null;
+        RuntimeException stackOut_70_0 = null;
+        StringBuilder stackOut_70_1 = null;
+        String stackOut_70_2 = null;
+        RuntimeException stackOut_69_0 = null;
+        StringBuilder stackOut_69_1 = null;
+        String stackOut_69_2 = null;
+        try {
           L0: {
-            if (!((hk) this).field_vc) {
-              if (-7 == ((hk) this).field_Ac) {
-                L1: {
-                  var3 = 1;
-                  if (!param0.field_vc) {
-                    if (-7 == param0.field_Ac) {
-                      stackOut_10_0 = 1;
-                      stackIn_12_0 = stackOut_10_0;
-                      break L1;
-                    } else {
-                      stackOut_9_0 = 0;
-                      stackIn_12_0 = stackOut_9_0;
-                      break L1;
-                    }
-                  } else {
+            if (param1 <= 0) {
+              L1: {
+                if (!((hk) this).field_vc) {
+                  if (-7 == ((hk) this).field_Ac) {
                     stackOut_7_0 = 1;
-                    stackIn_12_0 = stackOut_7_0;
+                    stackIn_9_0 = stackOut_7_0;
+                    break L1;
+                  } else {
+                    stackOut_6_0 = 0;
+                    stackIn_9_0 = stackOut_6_0;
                     break L1;
                   }
+                } else {
+                  stackOut_4_0 = 1;
+                  stackIn_9_0 = stackOut_4_0;
+                  break L1;
                 }
-                var4 = stackIn_12_0;
-                if (var4 == var3) {
-                  L2: {
-                    if (var3 != 0) {
-                      break L2;
+              }
+              L2: {
+                var3_int = stackIn_9_0;
+                if (!param0.field_vc) {
+                  if (-7 == param0.field_Ac) {
+                    stackOut_13_0 = 1;
+                    stackIn_15_0 = stackOut_13_0;
+                    break L2;
+                  } else {
+                    stackOut_12_0 = 0;
+                    stackIn_15_0 = stackOut_12_0;
+                    break L2;
+                  }
+                } else {
+                  stackOut_10_0 = 1;
+                  stackIn_15_0 = stackOut_10_0;
+                  break L2;
+                }
+              }
+              var4 = stackIn_15_0;
+              if (var4 == var3_int) {
+                L3: {
+                  if (var3_int != 0) {
+                    break L3;
+                  } else {
+                    L4: {
+                      if (((hk) this).field_cc) {
+                        stackOut_21_0 = 0;
+                        stackIn_22_0 = stackOut_21_0;
+                        break L4;
+                      } else {
+                        stackOut_20_0 = 1;
+                        stackIn_22_0 = stackOut_20_0;
+                        break L4;
+                      }
+                    }
+                    if (stackIn_22_0 == (param0.field_cc ? 1 : 0)) {
+                      stackOut_24_0 = ((hk) this).field_cc;
+                      stackIn_25_0 = stackOut_24_0;
+                      return stackIn_25_0;
                     } else {
-                      L3: {
-                        if (((hk) this).field_cc) {
-                          stackOut_17_0 = 0;
-                          stackIn_18_0 = stackOut_17_0;
+                      if (!((hk) this).field_cc) {
+                        break L3;
+                      } else {
+                        if (((hk) this).field_Nc == param0.field_Nc) {
                           break L3;
                         } else {
-                          stackOut_16_0 = 1;
-                          stackIn_18_0 = stackOut_16_0;
-                          break L3;
-                        }
-                      }
-                      if (stackIn_18_0 == (param0.field_cc ? 1 : 0)) {
-                        return ((hk) this).field_cc;
-                      } else {
-                        if (!((hk) this).field_cc) {
-                          break L2;
-                        } else {
-                          if (((hk) this).field_Nc == param0.field_Nc) {
-                            break L2;
-                          } else {
-                            L4: {
-                              if (param0.field_Nc <= ((hk) this).field_Nc) {
-                                stackOut_25_0 = 0;
-                                stackIn_26_0 = stackOut_25_0;
-                                break L4;
-                              } else {
-                                stackOut_24_0 = 1;
-                                stackIn_26_0 = stackOut_24_0;
-                                break L4;
-                              }
-                            }
-                            return stackIn_26_0 != 0;
-                          }
-                        }
-                      }
-                    }
-                  }
-                  L5: {
-                    stackOut_27_0 = param0.field_rc;
-                    stackIn_29_0 = stackOut_27_0;
-                    stackIn_28_0 = stackOut_27_0;
-                    if (((hk) this).field_rc) {
-                      stackOut_29_0 = stackIn_29_0;
-                      stackOut_29_1 = 0;
-                      stackIn_30_0 = stackOut_29_0;
-                      stackIn_30_1 = stackOut_29_1;
-                      break L5;
-                    } else {
-                      stackOut_28_0 = stackIn_28_0;
-                      stackOut_28_1 = 1;
-                      stackIn_30_0 = stackOut_28_0;
-                      stackIn_30_1 = stackOut_28_1;
-                      break L5;
-                    }
-                  }
-                  if ((stackIn_30_0 ? 1 : 0) == stackIn_30_1) {
-                    L6: {
-                      if (((hk) this).field_rc) {
-                        stackOut_34_0 = 0;
-                        stackIn_35_0 = stackOut_34_0;
-                        break L6;
-                      } else {
-                        stackOut_33_0 = 1;
-                        stackIn_35_0 = stackOut_33_0;
-                        break L6;
-                      }
-                    }
-                    return stackIn_35_0 != 0;
-                  } else {
-                    if (((hk) this).field_rc) {
-                      if (!((hk) this).field_dc) {
-                        L7: {
-                          if (-3 != (((hk) this).field_sc ^ -1)) {
-                            stackOut_60_0 = 0;
-                            stackIn_61_0 = stackOut_60_0;
-                            break L7;
-                          } else {
-                            stackOut_59_0 = 1;
-                            stackIn_61_0 = stackOut_59_0;
-                            break L7;
-                          }
-                        }
-                        var5 = stackIn_61_0;
-                        if (!param0.field_dc) {
-                          L8: {
-                            if (2 != param0.field_sc) {
-                              stackOut_74_0 = 0;
-                              stackIn_75_0 = stackOut_74_0;
-                              break L8;
+                          L5: {
+                            if (param0.field_Nc <= ((hk) this).field_Nc) {
+                              stackOut_30_0 = 0;
+                              stackIn_31_0 = stackOut_30_0;
+                              break L5;
                             } else {
-                              stackOut_73_0 = 1;
-                              stackIn_75_0 = stackOut_73_0;
-                              break L8;
+                              stackOut_29_0 = 1;
+                              stackIn_31_0 = stackOut_29_0;
+                              break L5;
                             }
                           }
-                          L9: {
-                            var6 = stackIn_75_0;
-                            if (var6 != 0) {
-                              stackOut_77_0 = 0;
-                              stackIn_78_0 = stackOut_77_0;
-                              break L9;
-                            } else {
-                              stackOut_76_0 = 1;
-                              stackIn_78_0 = stackOut_76_0;
-                              break L9;
-                            }
-                          }
-                          if (stackIn_78_0 != var5) {
-                            L10: {
-                              if ((((hk) this).field_Hc ^ -1L) >= (param0.field_Hc ^ -1L)) {
-                                stackOut_82_0 = 0;
-                                stackIn_83_0 = stackOut_82_0;
-                                break L10;
-                              } else {
-                                stackOut_81_0 = 1;
-                                stackIn_83_0 = stackOut_81_0;
-                                break L10;
-                              }
-                            }
-                            return stackIn_83_0 != 0;
-                          } else {
-                            return var5 != 0;
-                          }
-                        } else {
-                          L11: {
-                            var6 = 1;
-                            if (var6 != 0) {
-                              stackOut_64_0 = 0;
-                              stackIn_65_0 = stackOut_64_0;
-                              break L11;
-                            } else {
-                              stackOut_63_0 = 1;
-                              stackIn_65_0 = stackOut_63_0;
-                              break L11;
-                            }
-                          }
-                          if (stackIn_65_0 == var5) {
-                            return var5 != 0;
-                          } else {
-                            L12: {
-                              if ((((hk) this).field_Hc ^ -1L) >= (param0.field_Hc ^ -1L)) {
-                                stackOut_68_0 = 0;
-                                stackIn_69_0 = stackOut_68_0;
-                                break L12;
-                              } else {
-                                stackOut_67_0 = 1;
-                                stackIn_69_0 = stackOut_67_0;
-                                break L12;
-                              }
-                            }
-                            return stackIn_69_0 != 0;
-                          }
-                        }
-                      } else {
-                        L13: {
-                          var5 = 1;
-                          if (!param0.field_dc) {
-                            if (2 == param0.field_sc) {
-                              stackOut_46_0 = 1;
-                              stackIn_48_0 = stackOut_46_0;
-                              break L13;
-                            } else {
-                              stackOut_45_0 = 0;
-                              stackIn_48_0 = stackOut_45_0;
-                              break L13;
-                            }
-                          } else {
-                            stackOut_43_0 = 1;
-                            stackIn_48_0 = stackOut_43_0;
-                            break L13;
-                          }
-                        }
-                        L14: {
-                          var6 = stackIn_48_0;
-                          if (var6 != 0) {
-                            stackOut_50_0 = 0;
-                            stackIn_51_0 = stackOut_50_0;
-                            break L14;
-                          } else {
-                            stackOut_49_0 = 1;
-                            stackIn_51_0 = stackOut_49_0;
-                            break L14;
-                          }
-                        }
-                        if (stackIn_51_0 == var5) {
-                          return var5 != 0;
-                        } else {
-                          L15: {
-                            if ((((hk) this).field_Hc ^ -1L) >= (param0.field_Hc ^ -1L)) {
-                              stackOut_54_0 = 0;
-                              stackIn_55_0 = stackOut_54_0;
-                              break L15;
-                            } else {
-                              stackOut_53_0 = 1;
-                              stackIn_55_0 = stackOut_53_0;
-                              break L15;
-                            }
-                          }
-                          return stackIn_55_0 != 0;
+                          return stackIn_31_0 != 0;
                         }
                       }
-                    } else {
-                      L16: {
-                        if (param0.field_Hc <= ((hk) this).field_Hc) {
-                          stackOut_39_0 = 0;
-                          stackIn_40_0 = stackOut_39_0;
-                          break L16;
-                        } else {
-                          stackOut_38_0 = 1;
-                          stackIn_40_0 = stackOut_38_0;
-                          break L16;
-                        }
-                      }
-                      return stackIn_40_0 != 0;
-                    }
-                  }
-                } else {
-                  return var3 != 0;
-                }
-              } else {
-                stackOut_5_0 = 0;
-                stackIn_85_0 = stackOut_5_0;
-                break L0;
-              }
-            } else {
-              stackOut_3_0 = 1;
-              stackIn_85_0 = stackOut_3_0;
-              break L0;
-            }
-          }
-          L17: {
-            var3 = stackIn_85_0;
-            if (!param0.field_vc) {
-              if (-7 == (param0.field_Ac ^ -1)) {
-                var4 = 1;
-                if (var4 == var3) {
-                  L18: {
-                    if (var3 != 0) {
-                      break L18;
-                    } else {
-                      L19: {
-                        if (((hk) this).field_cc) {
-                          stackOut_94_0 = 0;
-                          stackIn_95_0 = stackOut_94_0;
-                          break L19;
-                        } else {
-                          stackOut_93_0 = 1;
-                          stackIn_95_0 = stackOut_93_0;
-                          break L19;
-                        }
-                      }
-                      if (stackIn_95_0 == (param0.field_cc ? 1 : 0)) {
-                        return ((hk) this).field_cc;
-                      } else {
-                        if (!((hk) this).field_cc) {
-                          break L18;
-                        } else {
-                          if (((hk) this).field_Nc == param0.field_Nc) {
-                            break L18;
-                          } else {
-                            L20: {
-                              if (param0.field_Nc <= ((hk) this).field_Nc) {
-                                stackOut_102_0 = 0;
-                                stackIn_103_0 = stackOut_102_0;
-                                break L20;
-                              } else {
-                                stackOut_101_0 = 1;
-                                stackIn_103_0 = stackOut_101_0;
-                                break L20;
-                              }
-                            }
-                            return stackIn_103_0 != 0;
-                          }
-                        }
-                      }
-                    }
-                  }
-                  L21: {
-                    stackOut_104_0 = param0.field_rc;
-                    stackIn_106_0 = stackOut_104_0;
-                    stackIn_105_0 = stackOut_104_0;
-                    if (((hk) this).field_rc) {
-                      stackOut_106_0 = stackIn_106_0;
-                      stackOut_106_1 = 0;
-                      stackIn_107_0 = stackOut_106_0;
-                      stackIn_107_1 = stackOut_106_1;
-                      break L21;
-                    } else {
-                      stackOut_105_0 = stackIn_105_0;
-                      stackOut_105_1 = 1;
-                      stackIn_107_0 = stackOut_105_0;
-                      stackIn_107_1 = stackOut_105_1;
-                      break L21;
-                    }
-                  }
-                  if ((stackIn_107_0 ? 1 : 0) == stackIn_107_1) {
-                    L22: {
-                      if (((hk) this).field_rc) {
-                        stackOut_111_0 = 0;
-                        stackIn_112_0 = stackOut_111_0;
-                        break L22;
-                      } else {
-                        stackOut_110_0 = 1;
-                        stackIn_112_0 = stackOut_110_0;
-                        break L22;
-                      }
-                    }
-                    return stackIn_112_0 != 0;
-                  } else {
-                    if (((hk) this).field_rc) {
-                      L23: {
-                        if (((hk) this).field_dc) {
-                          stackOut_137_0 = 1;
-                          stackIn_139_0 = stackOut_137_0;
-                          break L23;
-                        } else {
-                          if (-3 == (((hk) this).field_sc ^ -1)) {
-                            L24: {
-                              var5 = 1;
-                              if (!param0.field_dc) {
-                                if (2 == param0.field_sc) {
-                                  stackOut_125_0 = 1;
-                                  stackIn_127_0 = stackOut_125_0;
-                                  break L24;
-                                } else {
-                                  stackOut_124_0 = 0;
-                                  stackIn_127_0 = stackOut_124_0;
-                                  break L24;
-                                }
-                              } else {
-                                stackOut_122_0 = 1;
-                                stackIn_127_0 = stackOut_122_0;
-                                break L24;
-                              }
-                            }
-                            L25: {
-                              var6 = stackIn_127_0;
-                              if (var6 != 0) {
-                                stackOut_129_0 = 0;
-                                stackIn_130_0 = stackOut_129_0;
-                                break L25;
-                              } else {
-                                stackOut_128_0 = 1;
-                                stackIn_130_0 = stackOut_128_0;
-                                break L25;
-                              }
-                            }
-                            if (stackIn_130_0 != var5) {
-                              L26: {
-                                if ((((hk) this).field_Hc ^ -1L) >= (param0.field_Hc ^ -1L)) {
-                                  stackOut_134_0 = 0;
-                                  stackIn_135_0 = stackOut_134_0;
-                                  break L26;
-                                } else {
-                                  stackOut_133_0 = 1;
-                                  stackIn_135_0 = stackOut_133_0;
-                                  break L26;
-                                }
-                              }
-                              return stackIn_135_0 != 0;
-                            } else {
-                              return var5 != 0;
-                            }
-                          } else {
-                            stackOut_120_0 = 0;
-                            stackIn_139_0 = stackOut_120_0;
-                            break L23;
-                          }
-                        }
-                      }
-                      L27: {
-                        var5 = stackIn_139_0;
-                        if (!param0.field_dc) {
-                          if (2 == param0.field_sc) {
-                            L28: {
-                              var6 = 1;
-                              if (var6 != 0) {
-                                stackOut_145_0 = 0;
-                                stackIn_146_0 = stackOut_145_0;
-                                break L28;
-                              } else {
-                                stackOut_144_0 = 1;
-                                stackIn_146_0 = stackOut_144_0;
-                                break L28;
-                              }
-                            }
-                            if (stackIn_146_0 != var5) {
-                              L29: {
-                                if ((((hk) this).field_Hc ^ -1L) >= (param0.field_Hc ^ -1L)) {
-                                  stackOut_150_0 = 0;
-                                  stackIn_151_0 = stackOut_150_0;
-                                  break L29;
-                                } else {
-                                  stackOut_149_0 = 1;
-                                  stackIn_151_0 = stackOut_149_0;
-                                  break L29;
-                                }
-                              }
-                              return stackIn_151_0 != 0;
-                            } else {
-                              return var5 != 0;
-                            }
-                          } else {
-                            stackOut_142_0 = 0;
-                            stackIn_153_0 = stackOut_142_0;
-                            break L27;
-                          }
-                        } else {
-                          stackOut_140_0 = 1;
-                          stackIn_153_0 = stackOut_140_0;
-                          break L27;
-                        }
-                      }
-                      L30: {
-                        var6 = stackIn_153_0;
-                        if (var6 != 0) {
-                          stackOut_155_0 = 0;
-                          stackIn_156_0 = stackOut_155_0;
-                          break L30;
-                        } else {
-                          stackOut_154_0 = 1;
-                          stackIn_156_0 = stackOut_154_0;
-                          break L30;
-                        }
-                      }
-                      if (stackIn_156_0 != var5) {
-                        L31: {
-                          if ((((hk) this).field_Hc ^ -1L) >= (param0.field_Hc ^ -1L)) {
-                            stackOut_160_0 = 0;
-                            stackIn_161_0 = stackOut_160_0;
-                            break L31;
-                          } else {
-                            stackOut_159_0 = 1;
-                            stackIn_161_0 = stackOut_159_0;
-                            break L31;
-                          }
-                        }
-                        return stackIn_161_0 != 0;
-                      } else {
-                        return var5 != 0;
-                      }
-                    } else {
-                      L32: {
-                        if (param0.field_Hc <= ((hk) this).field_Hc) {
-                          stackOut_116_0 = 0;
-                          stackIn_117_0 = stackOut_116_0;
-                          break L32;
-                        } else {
-                          stackOut_115_0 = 1;
-                          stackIn_117_0 = stackOut_115_0;
-                          break L32;
-                        }
-                      }
-                      return stackIn_117_0 != 0;
-                    }
-                  }
-                } else {
-                  return var3 != 0;
-                }
-              } else {
-                stackOut_88_0 = 0;
-                stackIn_163_0 = stackOut_88_0;
-                break L17;
-              }
-            } else {
-              stackOut_86_0 = 1;
-              stackIn_163_0 = stackOut_86_0;
-              break L17;
-            }
-          }
-          var4 = stackIn_163_0;
-          if (var4 == var3) {
-            if (var3 == 0) {
-              L33: {
-                if (((hk) this).field_cc) {
-                  stackOut_233_0 = 0;
-                  stackIn_234_0 = stackOut_233_0;
-                  break L33;
-                } else {
-                  stackOut_232_0 = 1;
-                  stackIn_234_0 = stackOut_232_0;
-                  break L33;
-                }
-              }
-              if (stackIn_234_0 == (param0.field_cc ? 1 : 0)) {
-                return ((hk) this).field_cc;
-              } else {
-                if (((hk) this).field_cc) {
-                  if (((hk) this).field_Nc == param0.field_Nc) {
-                    L34: {
-                      stackOut_308_0 = param0.field_rc;
-                      stackIn_310_0 = stackOut_308_0;
-                      stackIn_309_0 = stackOut_308_0;
-                      if (((hk) this).field_rc) {
-                        stackOut_310_0 = stackIn_310_0;
-                        stackOut_310_1 = 0;
-                        stackIn_311_0 = stackOut_310_0;
-                        stackIn_311_1 = stackOut_310_1;
-                        break L34;
-                      } else {
-                        stackOut_309_0 = stackIn_309_0;
-                        stackOut_309_1 = 1;
-                        stackIn_311_0 = stackOut_309_0;
-                        stackIn_311_1 = stackOut_309_1;
-                        break L34;
-                      }
-                    }
-                    if ((stackIn_311_0 ? 1 : 0) == stackIn_311_1) {
-                      L35: {
-                        if (((hk) this).field_rc) {
-                          stackOut_315_0 = 0;
-                          stackIn_316_0 = stackOut_315_0;
-                          break L35;
-                        } else {
-                          stackOut_314_0 = 1;
-                          stackIn_316_0 = stackOut_314_0;
-                          break L35;
-                        }
-                      }
-                      return stackIn_316_0 != 0;
-                    } else {
-                      if (((hk) this).field_rc) {
-                        L36: {
-                          if (!((hk) this).field_dc) {
-                            if (-3 == (((hk) this).field_sc ^ -1)) {
-                              L37: {
-                                var5 = 1;
-                                if (!param0.field_dc) {
-                                  if (2 == param0.field_sc) {
-                                    L38: {
-                                      var6 = 1;
-                                      if (var6 != 0) {
-                                        stackOut_332_0 = 0;
-                                        stackIn_333_0 = stackOut_332_0;
-                                        break L38;
-                                      } else {
-                                        stackOut_331_0 = 1;
-                                        stackIn_333_0 = stackOut_331_0;
-                                        break L38;
-                                      }
-                                    }
-                                    if (stackIn_333_0 != var5) {
-                                      L39: {
-                                        if ((((hk) this).field_Hc ^ -1L) >= (param0.field_Hc ^ -1L)) {
-                                          stackOut_337_0 = 0;
-                                          stackIn_338_0 = stackOut_337_0;
-                                          break L39;
-                                        } else {
-                                          stackOut_336_0 = 1;
-                                          stackIn_338_0 = stackOut_336_0;
-                                          break L39;
-                                        }
-                                      }
-                                      return stackIn_338_0 != 0;
-                                    } else {
-                                      return var5 != 0;
-                                    }
-                                  } else {
-                                    stackOut_329_0 = 0;
-                                    stackIn_340_0 = stackOut_329_0;
-                                    break L37;
-                                  }
-                                } else {
-                                  stackOut_327_0 = 1;
-                                  stackIn_340_0 = stackOut_327_0;
-                                  break L37;
-                                }
-                              }
-                              L40: {
-                                var6 = stackIn_340_0;
-                                if (var6 != 0) {
-                                  stackOut_342_0 = 0;
-                                  stackIn_343_0 = stackOut_342_0;
-                                  break L40;
-                                } else {
-                                  stackOut_341_0 = 1;
-                                  stackIn_343_0 = stackOut_341_0;
-                                  break L40;
-                                }
-                              }
-                              if (stackIn_343_0 != var5) {
-                                L41: {
-                                  if ((((hk) this).field_Hc ^ -1L) >= (param0.field_Hc ^ -1L)) {
-                                    stackOut_347_0 = 0;
-                                    stackIn_348_0 = stackOut_347_0;
-                                    break L41;
-                                  } else {
-                                    stackOut_346_0 = 1;
-                                    stackIn_348_0 = stackOut_346_0;
-                                    break L41;
-                                  }
-                                }
-                                return stackIn_348_0 != 0;
-                              } else {
-                                return var5 != 0;
-                              }
-                            } else {
-                              stackOut_325_0 = 0;
-                              stackIn_350_0 = stackOut_325_0;
-                              break L36;
-                            }
-                          } else {
-                            stackOut_323_0 = 1;
-                            stackIn_350_0 = stackOut_323_0;
-                            break L36;
-                          }
-                        }
-                        L42: {
-                          var5 = stackIn_350_0;
-                          if (!param0.field_dc) {
-                            if (2 == param0.field_sc) {
-                              L43: {
-                                var6 = 1;
-                                if (var6 != 0) {
-                                  stackOut_356_0 = 0;
-                                  stackIn_357_0 = stackOut_356_0;
-                                  break L43;
-                                } else {
-                                  stackOut_355_0 = 1;
-                                  stackIn_357_0 = stackOut_355_0;
-                                  break L43;
-                                }
-                              }
-                              if (stackIn_357_0 != var5) {
-                                L44: {
-                                  if ((((hk) this).field_Hc ^ -1L) >= (param0.field_Hc ^ -1L)) {
-                                    stackOut_361_0 = 0;
-                                    stackIn_362_0 = stackOut_361_0;
-                                    break L44;
-                                  } else {
-                                    stackOut_360_0 = 1;
-                                    stackIn_362_0 = stackOut_360_0;
-                                    break L44;
-                                  }
-                                }
-                                return stackIn_362_0 != 0;
-                              } else {
-                                return var5 != 0;
-                              }
-                            } else {
-                              stackOut_353_0 = 0;
-                              stackIn_364_0 = stackOut_353_0;
-                              break L42;
-                            }
-                          } else {
-                            stackOut_351_0 = 1;
-                            stackIn_364_0 = stackOut_351_0;
-                            break L42;
-                          }
-                        }
-                        L45: {
-                          var6 = stackIn_364_0;
-                          if (var6 != 0) {
-                            stackOut_366_0 = 0;
-                            stackIn_367_0 = stackOut_366_0;
-                            break L45;
-                          } else {
-                            stackOut_365_0 = 1;
-                            stackIn_367_0 = stackOut_365_0;
-                            break L45;
-                          }
-                        }
-                        if (stackIn_367_0 != var5) {
-                          L46: {
-                            if ((((hk) this).field_Hc ^ -1L) >= (param0.field_Hc ^ -1L)) {
-                              stackOut_371_0 = 0;
-                              stackIn_372_0 = stackOut_371_0;
-                              break L46;
-                            } else {
-                              stackOut_370_0 = 1;
-                              stackIn_372_0 = stackOut_370_0;
-                              break L46;
-                            }
-                          }
-                          return stackIn_372_0 != 0;
-                        } else {
-                          return var5 != 0;
-                        }
-                      } else {
-                        L47: {
-                          if (param0.field_Hc <= ((hk) this).field_Hc) {
-                            stackOut_320_0 = 0;
-                            stackIn_321_0 = stackOut_320_0;
-                            break L47;
-                          } else {
-                            stackOut_319_0 = 1;
-                            stackIn_321_0 = stackOut_319_0;
-                            break L47;
-                          }
-                        }
-                        return stackIn_321_0 != 0;
-                      }
-                    }
-                  } else {
-                    L48: {
-                      if (param0.field_Nc <= ((hk) this).field_Nc) {
-                        stackOut_306_0 = 0;
-                        stackIn_307_0 = stackOut_306_0;
-                        break L48;
-                      } else {
-                        stackOut_305_0 = 1;
-                        stackIn_307_0 = stackOut_305_0;
-                        break L48;
-                      }
-                    }
-                    return stackIn_307_0 != 0;
-                  }
-                } else {
-                  L49: {
-                    stackOut_238_0 = param0.field_rc;
-                    stackIn_240_0 = stackOut_238_0;
-                    stackIn_239_0 = stackOut_238_0;
-                    if (((hk) this).field_rc) {
-                      stackOut_240_0 = stackIn_240_0;
-                      stackOut_240_1 = 0;
-                      stackIn_241_0 = stackOut_240_0;
-                      stackIn_241_1 = stackOut_240_1;
-                      break L49;
-                    } else {
-                      stackOut_239_0 = stackIn_239_0;
-                      stackOut_239_1 = 1;
-                      stackIn_241_0 = stackOut_239_0;
-                      stackIn_241_1 = stackOut_239_1;
-                      break L49;
-                    }
-                  }
-                  if ((stackIn_241_0 ? 1 : 0) == stackIn_241_1) {
-                    L50: {
-                      if (((hk) this).field_rc) {
-                        stackOut_245_0 = 0;
-                        stackIn_246_0 = stackOut_245_0;
-                        break L50;
-                      } else {
-                        stackOut_244_0 = 1;
-                        stackIn_246_0 = stackOut_244_0;
-                        break L50;
-                      }
-                    }
-                    return stackIn_246_0 != 0;
-                  } else {
-                    if (((hk) this).field_rc) {
-                      L51: {
-                        if (!((hk) this).field_dc) {
-                          if (-3 == (((hk) this).field_sc ^ -1)) {
-                            L52: {
-                              var5 = 1;
-                              if (!param0.field_dc) {
-                                if (2 == param0.field_sc) {
-                                  L53: {
-                                    var6 = 1;
-                                    if (var6 != 0) {
-                                      stackOut_262_0 = 0;
-                                      stackIn_263_0 = stackOut_262_0;
-                                      break L53;
-                                    } else {
-                                      stackOut_261_0 = 1;
-                                      stackIn_263_0 = stackOut_261_0;
-                                      break L53;
-                                    }
-                                  }
-                                  if (stackIn_263_0 != var5) {
-                                    L54: {
-                                      if ((((hk) this).field_Hc ^ -1L) >= (param0.field_Hc ^ -1L)) {
-                                        stackOut_267_0 = 0;
-                                        stackIn_268_0 = stackOut_267_0;
-                                        break L54;
-                                      } else {
-                                        stackOut_266_0 = 1;
-                                        stackIn_268_0 = stackOut_266_0;
-                                        break L54;
-                                      }
-                                    }
-                                    return stackIn_268_0 != 0;
-                                  } else {
-                                    return var5 != 0;
-                                  }
-                                } else {
-                                  stackOut_259_0 = 0;
-                                  stackIn_270_0 = stackOut_259_0;
-                                  break L52;
-                                }
-                              } else {
-                                stackOut_257_0 = 1;
-                                stackIn_270_0 = stackOut_257_0;
-                                break L52;
-                              }
-                            }
-                            L55: {
-                              var6 = stackIn_270_0;
-                              if (var6 != 0) {
-                                stackOut_272_0 = 0;
-                                stackIn_273_0 = stackOut_272_0;
-                                break L55;
-                              } else {
-                                stackOut_271_0 = 1;
-                                stackIn_273_0 = stackOut_271_0;
-                                break L55;
-                              }
-                            }
-                            if (stackIn_273_0 != var5) {
-                              L56: {
-                                if ((((hk) this).field_Hc ^ -1L) >= (param0.field_Hc ^ -1L)) {
-                                  stackOut_277_0 = 0;
-                                  stackIn_278_0 = stackOut_277_0;
-                                  break L56;
-                                } else {
-                                  stackOut_276_0 = 1;
-                                  stackIn_278_0 = stackOut_276_0;
-                                  break L56;
-                                }
-                              }
-                              return stackIn_278_0 != 0;
-                            } else {
-                              return var5 != 0;
-                            }
-                          } else {
-                            stackOut_255_0 = 0;
-                            stackIn_280_0 = stackOut_255_0;
-                            break L51;
-                          }
-                        } else {
-                          stackOut_253_0 = 1;
-                          stackIn_280_0 = stackOut_253_0;
-                          break L51;
-                        }
-                      }
-                      L57: {
-                        var5 = stackIn_280_0;
-                        if (!param0.field_dc) {
-                          if (2 == param0.field_sc) {
-                            L58: {
-                              var6 = 1;
-                              if (var6 != 0) {
-                                stackOut_286_0 = 0;
-                                stackIn_287_0 = stackOut_286_0;
-                                break L58;
-                              } else {
-                                stackOut_285_0 = 1;
-                                stackIn_287_0 = stackOut_285_0;
-                                break L58;
-                              }
-                            }
-                            if (stackIn_287_0 != var5) {
-                              L59: {
-                                if ((((hk) this).field_Hc ^ -1L) >= (param0.field_Hc ^ -1L)) {
-                                  stackOut_291_0 = 0;
-                                  stackIn_292_0 = stackOut_291_0;
-                                  break L59;
-                                } else {
-                                  stackOut_290_0 = 1;
-                                  stackIn_292_0 = stackOut_290_0;
-                                  break L59;
-                                }
-                              }
-                              return stackIn_292_0 != 0;
-                            } else {
-                              return var5 != 0;
-                            }
-                          } else {
-                            stackOut_283_0 = 0;
-                            stackIn_294_0 = stackOut_283_0;
-                            break L57;
-                          }
-                        } else {
-                          stackOut_281_0 = 1;
-                          stackIn_294_0 = stackOut_281_0;
-                          break L57;
-                        }
-                      }
-                      L60: {
-                        var6 = stackIn_294_0;
-                        if (var6 != 0) {
-                          stackOut_296_0 = 0;
-                          stackIn_297_0 = stackOut_296_0;
-                          break L60;
-                        } else {
-                          stackOut_295_0 = 1;
-                          stackIn_297_0 = stackOut_295_0;
-                          break L60;
-                        }
-                      }
-                      if (stackIn_297_0 != var5) {
-                        L61: {
-                          if ((((hk) this).field_Hc ^ -1L) >= (param0.field_Hc ^ -1L)) {
-                            stackOut_301_0 = 0;
-                            stackIn_302_0 = stackOut_301_0;
-                            break L61;
-                          } else {
-                            stackOut_300_0 = 1;
-                            stackIn_302_0 = stackOut_300_0;
-                            break L61;
-                          }
-                        }
-                        return stackIn_302_0 != 0;
-                      } else {
-                        return var5 != 0;
-                      }
-                    } else {
-                      L62: {
-                        if (param0.field_Hc <= ((hk) this).field_Hc) {
-                          stackOut_250_0 = 0;
-                          stackIn_251_0 = stackOut_250_0;
-                          break L62;
-                        } else {
-                          stackOut_249_0 = 1;
-                          stackIn_251_0 = stackOut_249_0;
-                          break L62;
-                        }
-                      }
-                      return stackIn_251_0 != 0;
                     }
                   }
                 }
-              }
-            } else {
-              L63: {
-                stackOut_166_0 = param0.field_rc;
-                stackIn_168_0 = stackOut_166_0;
-                stackIn_167_0 = stackOut_166_0;
-                if (((hk) this).field_rc) {
-                  stackOut_168_0 = stackIn_168_0;
-                  stackOut_168_1 = 0;
-                  stackIn_169_0 = stackOut_168_0;
-                  stackIn_169_1 = stackOut_168_1;
-                  break L63;
-                } else {
-                  stackOut_167_0 = stackIn_167_0;
-                  stackOut_167_1 = 1;
-                  stackIn_169_0 = stackOut_167_0;
-                  stackIn_169_1 = stackOut_167_1;
-                  break L63;
-                }
-              }
-              if ((stackIn_169_0 ? 1 : 0) == stackIn_169_1) {
-                L64: {
+                L6: {
+                  stackOut_32_0 = param0.field_rc;
+                  stackIn_34_0 = stackOut_32_0;
+                  stackIn_33_0 = stackOut_32_0;
                   if (((hk) this).field_rc) {
-                    stackOut_173_0 = 0;
-                    stackIn_174_0 = stackOut_173_0;
-                    break L64;
+                    stackOut_34_0 = stackIn_34_0;
+                    stackOut_34_1 = 0;
+                    stackIn_35_0 = stackOut_34_0;
+                    stackIn_35_1 = stackOut_34_1;
+                    break L6;
                   } else {
-                    stackOut_172_0 = 1;
-                    stackIn_174_0 = stackOut_172_0;
-                    break L64;
+                    stackOut_33_0 = stackIn_33_0;
+                    stackOut_33_1 = 1;
+                    stackIn_35_0 = stackOut_33_0;
+                    stackIn_35_1 = stackOut_33_1;
+                    break L6;
                   }
                 }
-                return stackIn_174_0 != 0;
-              } else {
-                if (((hk) this).field_rc) {
-                  L65: {
-                    if (!((hk) this).field_dc) {
-                      if (-3 == (((hk) this).field_sc ^ -1)) {
-                        L66: {
-                          var5 = 1;
-                          if (!param0.field_dc) {
-                            if (2 == param0.field_sc) {
-                              L67: {
-                                var6 = 1;
-                                if (var6 != 0) {
-                                  stackOut_190_0 = 0;
-                                  stackIn_191_0 = stackOut_190_0;
-                                  break L67;
-                                } else {
-                                  stackOut_189_0 = 1;
-                                  stackIn_191_0 = stackOut_189_0;
-                                  break L67;
-                                }
-                              }
-                              if (stackIn_191_0 != var5) {
-                                L68: {
-                                  if ((((hk) this).field_Hc ^ -1L) >= (param0.field_Hc ^ -1L)) {
-                                    stackOut_195_0 = 0;
-                                    stackIn_196_0 = stackOut_195_0;
-                                    break L68;
-                                  } else {
-                                    stackOut_194_0 = 1;
-                                    stackIn_196_0 = stackOut_194_0;
-                                    break L68;
-                                  }
-                                }
-                                return stackIn_196_0 != 0;
-                              } else {
-                                return var5 != 0;
-                              }
-                            } else {
-                              stackOut_187_0 = 0;
-                              stackIn_198_0 = stackOut_187_0;
-                              break L66;
-                            }
-                          } else {
-                            stackOut_185_0 = 1;
-                            stackIn_198_0 = stackOut_185_0;
-                            break L66;
-                          }
-                        }
-                        L69: {
-                          var6 = stackIn_198_0;
-                          if (var6 != 0) {
-                            stackOut_200_0 = 0;
-                            stackIn_201_0 = stackOut_200_0;
-                            break L69;
-                          } else {
-                            stackOut_199_0 = 1;
-                            stackIn_201_0 = stackOut_199_0;
-                            break L69;
-                          }
-                        }
-                        if (stackIn_201_0 != var5) {
-                          L70: {
-                            if ((((hk) this).field_Hc ^ -1L) >= (param0.field_Hc ^ -1L)) {
-                              stackOut_205_0 = 0;
-                              stackIn_206_0 = stackOut_205_0;
-                              break L70;
-                            } else {
-                              stackOut_204_0 = 1;
-                              stackIn_206_0 = stackOut_204_0;
-                              break L70;
-                            }
-                          }
-                          return stackIn_206_0 != 0;
-                        } else {
-                          return var5 != 0;
-                        }
-                      } else {
-                        stackOut_183_0 = 0;
-                        stackIn_208_0 = stackOut_183_0;
-                        break L65;
-                      }
+                if ((stackIn_35_0 ? 1 : 0) == stackIn_35_1) {
+                  L7: {
+                    if (((hk) this).field_rc) {
+                      stackOut_39_0 = 0;
+                      stackIn_40_0 = stackOut_39_0;
+                      break L7;
                     } else {
-                      stackOut_181_0 = 1;
-                      stackIn_208_0 = stackOut_181_0;
-                      break L65;
+                      stackOut_38_0 = 1;
+                      stackIn_40_0 = stackOut_38_0;
+                      break L7;
                     }
                   }
-                  L71: {
-                    var5 = stackIn_208_0;
-                    if (!param0.field_dc) {
-                      if (2 == param0.field_sc) {
-                        L72: {
-                          var6 = 1;
-                          if (var6 != 0) {
-                            stackOut_214_0 = 0;
-                            stackIn_215_0 = stackOut_214_0;
-                            break L72;
-                          } else {
-                            stackOut_213_0 = 1;
-                            stackIn_215_0 = stackOut_213_0;
-                            break L72;
-                          }
-                        }
-                        if (stackIn_215_0 != var5) {
-                          L73: {
-                            if ((((hk) this).field_Hc ^ -1L) >= (param0.field_Hc ^ -1L)) {
-                              stackOut_219_0 = 0;
-                              stackIn_220_0 = stackOut_219_0;
-                              break L73;
-                            } else {
-                              stackOut_218_0 = 1;
-                              stackIn_220_0 = stackOut_218_0;
-                              break L73;
-                            }
-                          }
-                          return stackIn_220_0 != 0;
-                        } else {
-                          return var5 != 0;
-                        }
-                      } else {
-                        stackOut_211_0 = 0;
-                        stackIn_222_0 = stackOut_211_0;
-                        break L71;
-                      }
-                    } else {
-                      stackOut_209_0 = 1;
-                      stackIn_222_0 = stackOut_209_0;
-                      break L71;
-                    }
-                  }
-                  L74: {
-                    var6 = stackIn_222_0;
-                    if (var6 != 0) {
-                      stackOut_224_0 = 0;
-                      stackIn_225_0 = stackOut_224_0;
-                      break L74;
-                    } else {
-                      stackOut_223_0 = 1;
-                      stackIn_225_0 = stackOut_223_0;
-                      break L74;
-                    }
-                  }
-                  if (stackIn_225_0 != var5) {
-                    L75: {
-                      if ((((hk) this).field_Hc ^ -1L) >= (param0.field_Hc ^ -1L)) {
-                        stackOut_229_0 = 0;
-                        stackIn_230_0 = stackOut_229_0;
-                        break L75;
-                      } else {
-                        stackOut_228_0 = 1;
-                        stackIn_230_0 = stackOut_228_0;
-                        break L75;
-                      }
-                    }
-                    return stackIn_230_0 != 0;
-                  } else {
-                    return var5 != 0;
-                  }
+                  return stackIn_40_0 != 0;
                 } else {
-                  L76: {
-                    if (param0.field_Hc <= ((hk) this).field_Hc) {
-                      stackOut_178_0 = 0;
-                      stackIn_179_0 = stackOut_178_0;
-                      break L76;
-                    } else {
-                      stackOut_177_0 = 1;
-                      stackIn_179_0 = stackOut_177_0;
-                      break L76;
+                  if (((hk) this).field_rc) {
+                    L8: {
+                      if (((hk) this).field_dc) {
+                        stackOut_50_0 = 1;
+                        stackIn_52_0 = stackOut_50_0;
+                        break L8;
+                      } else {
+                        if (((hk) this).field_sc == 2) {
+                          stackOut_49_0 = 1;
+                          stackIn_52_0 = stackOut_49_0;
+                          break L8;
+                        } else {
+                          stackOut_48_0 = 0;
+                          stackIn_52_0 = stackOut_48_0;
+                          break L8;
+                        }
+                      }
                     }
+                    L9: {
+                      var5 = stackIn_52_0;
+                      if (!param0.field_dc) {
+                        if (2 == param0.field_sc) {
+                          stackOut_56_0 = 1;
+                          stackIn_58_0 = stackOut_56_0;
+                          break L9;
+                        } else {
+                          stackOut_55_0 = 0;
+                          stackIn_58_0 = stackOut_55_0;
+                          break L9;
+                        }
+                      } else {
+                        stackOut_53_0 = 1;
+                        stackIn_58_0 = stackOut_53_0;
+                        break L9;
+                      }
+                    }
+                    L10: {
+                      var6 = stackIn_58_0;
+                      if (var6 != 0) {
+                        stackOut_60_0 = 0;
+                        stackIn_61_0 = stackOut_60_0;
+                        break L10;
+                      } else {
+                        stackOut_59_0 = 1;
+                        stackIn_61_0 = stackOut_59_0;
+                        break L10;
+                      }
+                    }
+                    if (stackIn_61_0 != var5) {
+                      L11: {
+                        if (~((hk) this).field_Hc >= ~param0.field_Hc) {
+                          stackOut_66_0 = 0;
+                          stackIn_67_0 = stackOut_66_0;
+                          break L11;
+                        } else {
+                          stackOut_65_0 = 1;
+                          stackIn_67_0 = stackOut_65_0;
+                          break L11;
+                        }
+                      }
+                      break L0;
+                    } else {
+                      stackOut_62_0 = var5;
+                      stackIn_63_0 = stackOut_62_0;
+                      return stackIn_63_0 != 0;
+                    }
+                  } else {
+                    L12: {
+                      if (param0.field_Hc <= ((hk) this).field_Hc) {
+                        stackOut_44_0 = 0;
+                        stackIn_45_0 = stackOut_44_0;
+                        break L12;
+                      } else {
+                        stackOut_43_0 = 1;
+                        stackIn_45_0 = stackOut_43_0;
+                        break L12;
+                      }
+                    }
+                    return stackIn_45_0 != 0;
                   }
-                  return stackIn_179_0 != 0;
                 }
+              } else {
+                stackOut_16_0 = var3_int;
+                stackIn_17_0 = stackOut_16_0;
+                return stackIn_17_0 != 0;
               }
+            } else {
+              stackOut_1_0 = 1;
+              stackIn_2_0 = stackOut_1_0;
+              return stackIn_2_0 != 0;
             }
-          } else {
-            return var3 != 0;
           }
-        } else {
-          return true;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L13: {
+            var3 = decompiledCaughtException;
+            stackOut_68_0 = (RuntimeException) var3;
+            stackOut_68_1 = new StringBuilder().append("hk.F(");
+            stackIn_70_0 = stackOut_68_0;
+            stackIn_70_1 = stackOut_68_1;
+            stackIn_69_0 = stackOut_68_0;
+            stackIn_69_1 = stackOut_68_1;
+            if (param0 == null) {
+              stackOut_70_0 = (RuntimeException) (Object) stackIn_70_0;
+              stackOut_70_1 = (StringBuilder) (Object) stackIn_70_1;
+              stackOut_70_2 = "null";
+              stackIn_71_0 = stackOut_70_0;
+              stackIn_71_1 = stackOut_70_1;
+              stackIn_71_2 = stackOut_70_2;
+              break L13;
+            } else {
+              stackOut_69_0 = (RuntimeException) (Object) stackIn_69_0;
+              stackOut_69_1 = (StringBuilder) (Object) stackIn_69_1;
+              stackOut_69_2 = "{...}";
+              stackIn_71_0 = stackOut_69_0;
+              stackIn_71_1 = stackOut_69_1;
+              stackIn_71_2 = stackOut_69_2;
+              break L13;
+            }
+          }
+          throw ci.a((Throwable) (Object) stackIn_71_0, stackIn_71_2 + 44 + param1 + 41);
         }
+        return stackIn_67_0 != 0;
     }
 
     final int j(int param0) {
@@ -1618,10 +562,6 @@ final class hk extends gh {
     final static void a(int param0, int param1, int param2) {
         pe.field_d = param1;
         jj.field_c = param0;
-        if (param2 == 17237) {
-            return;
-        }
-        field_Vb = null;
     }
 
     final static int a(boolean param0, int param1) {
@@ -1630,21 +570,23 @@ final class hk extends gh {
         var3 = SteelSentinels.field_G;
         var2 = param1;
         if (0 != var2) {
-          if (-2 != (var2 ^ -1)) {
-            if ((var2 ^ -1) != -3) {
+          if (var2 != 1) {
+            if (var2 != 2) {
               if (var2 != 3) {
                 if (var2 != 4) {
                   if (5 != var2) {
                     if (var2 != 6) {
-                      if (var2 != -8) {
+                      if (var2 != 7) {
                         if (var2 != 8) {
-                          if (-11 != var2) {
-                            if (-10 != (var2 ^ -1)) {
+                          if (var2 == 10) {
+                            return 15;
+                          } else {
+                            if (var2 != 9) {
                               if (var2 != 19) {
-                                if (param0) {
-                                  hk.d((byte) -31);
+                                if (!param0) {
                                   return 17;
                                 } else {
+                                  hk.d((byte) -31);
                                   return 17;
                                 }
                               } else {
@@ -1653,8 +595,6 @@ final class hk extends gh {
                             } else {
                               return 16;
                             }
-                          } else {
-                            return 15;
                           }
                         } else {
                           return 15;
@@ -1687,40 +627,45 @@ final class hk extends gh {
 
     final static void a(byte param0, int param1) {
         ck var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
         cf var4 = null;
+        RuntimeException decompiledCaughtException = null;
         var3 = SteelSentinels.field_G;
-        var4 = (cf) (Object) jb.field_A.e(param0 ^ 13140);
-        L0: while (true) {
-          if (var4 == null) {
-            var2 = ic.field_D.e(param0 ^ 13140);
-            if (param0 != 86) {
-              field_Yb = null;
-              L1: while (true) {
-                if (var2 != null) {
-                  eh.a(param1, -17274);
-                  var2 = ic.field_D.a((byte) -110);
-                  continue L1;
-                } else {
-                  return;
+        try {
+          L0: {
+            var4 = (cf) (Object) jb.field_A.e(param0 ^ 13140);
+            L1: while (true) {
+              if (var4 == null) {
+                L2: {
+                  var2 = ic.field_D.e(param0 ^ 13140);
+                  if (param0 == 86) {
+                    break L2;
+                  } else {
+                    field_Yb = null;
+                    break L2;
+                  }
                 }
-              }
-            } else {
-              L2: while (true) {
-                if (var2 != null) {
-                  eh.a(param1, -17274);
-                  var2 = ic.field_D.a((byte) -110);
-                  continue L2;
-                } else {
-                  return;
+                L3: while (true) {
+                  if (var2 == null) {
+                    break L0;
+                  } else {
+                    eh.a(4, -17274);
+                    var2 = ic.field_D.a((byte) -110);
+                    continue L3;
+                  }
                 }
+              } else {
+                ml.a(param0 ^ 87, var4, 4);
+                var4 = (cf) (Object) jb.field_A.a((byte) -124);
+                continue L1;
               }
             }
-          } else {
-            ml.a(param0 ^ 87, var4, param1);
-            var4 = (cf) (Object) jb.field_A.a((byte) -124);
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          throw ci.a((Throwable) (Object) var2_ref, "hk.A(" + param0 + 44 + 4 + 41);
         }
     }
 

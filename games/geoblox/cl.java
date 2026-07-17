@@ -21,50 +21,93 @@ final class cl {
     }
 
     final static sl a(byte param0, String param1) {
-        if (param0 > 56) {
-          if (tf.field_d != si.field_g) {
-            if (si.field_g == va.field_e) {
-              if (!param1.equals((Object) (Object) cg.field_k)) {
-                si.field_g = tf.field_d;
-                cg.field_k = param1;
-                me.field_g = null;
-                return null;
+        RuntimeException var2 = null;
+        sl stackIn_8_0 = null;
+        Object stackIn_10_0 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        sl stackOut_7_0 = null;
+        Object stackOut_9_0 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 > 56) {
+                break L1;
               } else {
-                si.field_g = uf.field_l;
-                return me.field_g;
+                field_a = -115;
+                break L1;
               }
-            } else {
+            }
+            if (tf.field_d != si.field_g) {
+              L2: {
+                if (si.field_g != va.field_e) {
+                  break L2;
+                } else {
+                  if (!param1.equals((Object) (Object) cg.field_k)) {
+                    break L2;
+                  } else {
+                    si.field_g = uf.field_l;
+                    stackOut_7_0 = me.field_g;
+                    stackIn_8_0 = stackOut_7_0;
+                    return stackIn_8_0;
+                  }
+                }
+              }
               si.field_g = tf.field_d;
               cg.field_k = param1;
               me.field_g = null;
-              return null;
-            }
-          } else {
-            return null;
-          }
-        } else {
-          field_a = -115;
-          if (tf.field_d != si.field_g) {
-            if (si.field_g == va.field_e) {
-              if (!param1.equals((Object) (Object) cg.field_k)) {
-                si.field_g = tf.field_d;
-                cg.field_k = param1;
-                me.field_g = null;
-                return null;
-              } else {
-                si.field_g = uf.field_l;
-                return me.field_g;
-              }
+              stackOut_9_0 = null;
+              stackIn_10_0 = stackOut_9_0;
+              break L0;
             } else {
-              si.field_g = tf.field_d;
-              cg.field_k = param1;
-              me.field_g = null;
               return null;
             }
-          } else {
-            return null;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2 = decompiledCaughtException;
+            stackOut_11_0 = (RuntimeException) var2;
+            stackOut_11_1 = new StringBuilder().append("cl.A(").append(param0).append(44);
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
+            if (param1 == null) {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L3;
+            } else {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L3;
+            }
+          }
+          throw t.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 41);
         }
+        return (sl) (Object) stackIn_10_0;
     }
 
     static {

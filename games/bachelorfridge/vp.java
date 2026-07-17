@@ -101,6 +101,7 @@ final class vp {
           if (var2 >= 10) {
             ((vp) this).field_c = param0.e((byte) 113);
             ((vp) this).field_a = param0.e((byte) 47);
+            return;
           } else {
             var3 = param0.b(16711935);
             if (var3 != 0) {

@@ -53,91 +53,91 @@ final class qm {
         w stackIn_20_0 = null;
         int stackIn_20_1 = 0;
         int stackIn_20_2 = 0;
-        w stackIn_50_0 = null;
-        int stackIn_50_1 = 0;
-        w stackIn_51_0 = null;
-        int stackIn_51_1 = 0;
-        w stackIn_52_0 = null;
-        int stackIn_52_1 = 0;
-        w stackIn_53_0 = null;
-        int stackIn_53_1 = 0;
-        w stackIn_54_0 = null;
-        int stackIn_54_1 = 0;
-        w stackIn_55_0 = null;
-        int stackIn_55_1 = 0;
-        w stackIn_56_0 = null;
-        int stackIn_56_1 = 0;
-        int stackIn_56_2 = 0;
-        w stackIn_57_0 = null;
-        int stackIn_57_1 = 0;
-        w stackIn_58_0 = null;
-        int stackIn_58_1 = 0;
-        w stackIn_59_0 = null;
-        int stackIn_59_1 = 0;
-        w stackIn_60_0 = null;
-        int stackIn_60_1 = 0;
-        w stackIn_61_0 = null;
-        int stackIn_61_1 = 0;
-        w stackIn_62_0 = null;
-        int stackIn_62_1 = 0;
-        w stackIn_63_0 = null;
-        int stackIn_63_1 = 0;
-        int stackIn_63_2 = 0;
-        w stackIn_64_0 = null;
-        int stackIn_64_1 = 0;
-        w stackIn_65_0 = null;
-        int stackIn_65_1 = 0;
-        w stackIn_66_0 = null;
-        int stackIn_66_1 = 0;
-        w stackIn_67_0 = null;
-        int stackIn_67_1 = 0;
-        w stackIn_68_0 = null;
-        int stackIn_68_1 = 0;
-        int stackIn_68_2 = 0;
-        w stackOut_49_0 = null;
-        int stackOut_49_1 = 0;
-        w stackOut_50_0 = null;
-        int stackOut_50_1 = 0;
-        w stackOut_51_0 = null;
-        int stackOut_51_1 = 0;
-        w stackOut_52_0 = null;
-        int stackOut_52_1 = 0;
-        w stackOut_53_0 = null;
-        int stackOut_53_1 = 0;
-        w stackOut_54_0 = null;
-        int stackOut_54_1 = 0;
-        int stackOut_54_2 = 0;
-        w stackOut_55_0 = null;
-        int stackOut_55_1 = 0;
-        int stackOut_55_2 = 0;
-        w stackOut_56_0 = null;
-        int stackOut_56_1 = 0;
-        w stackOut_57_0 = null;
-        int stackOut_57_1 = 0;
-        w stackOut_58_0 = null;
-        int stackOut_58_1 = 0;
-        w stackOut_59_0 = null;
-        int stackOut_59_1 = 0;
-        w stackOut_60_0 = null;
-        int stackOut_60_1 = 0;
-        w stackOut_61_0 = null;
-        int stackOut_61_1 = 0;
-        int stackOut_61_2 = 0;
-        w stackOut_62_0 = null;
-        int stackOut_62_1 = 0;
-        int stackOut_62_2 = 0;
-        w stackOut_63_0 = null;
-        int stackOut_63_1 = 0;
-        w stackOut_64_0 = null;
-        int stackOut_64_1 = 0;
-        w stackOut_65_0 = null;
-        int stackOut_65_1 = 0;
-        w stackOut_66_0 = null;
-        int stackOut_66_1 = 0;
-        int stackOut_66_2 = 0;
-        w stackOut_67_0 = null;
-        int stackOut_67_1 = 0;
-        int stackOut_67_2 = 0;
+        w stackIn_25_0 = null;
+        int stackIn_25_1 = 0;
+        w stackIn_26_0 = null;
+        int stackIn_26_1 = 0;
+        w stackIn_27_0 = null;
+        int stackIn_27_1 = 0;
+        w stackIn_28_0 = null;
+        int stackIn_28_1 = 0;
+        w stackIn_29_0 = null;
+        int stackIn_29_1 = 0;
+        w stackIn_30_0 = null;
+        int stackIn_30_1 = 0;
+        w stackIn_31_0 = null;
+        int stackIn_31_1 = 0;
+        int stackIn_31_2 = 0;
+        w stackIn_32_0 = null;
+        int stackIn_32_1 = 0;
+        w stackIn_33_0 = null;
+        int stackIn_33_1 = 0;
+        w stackIn_34_0 = null;
+        int stackIn_34_1 = 0;
+        w stackIn_35_0 = null;
+        int stackIn_35_1 = 0;
+        w stackIn_36_0 = null;
+        int stackIn_36_1 = 0;
+        w stackIn_37_0 = null;
+        int stackIn_37_1 = 0;
+        w stackIn_38_0 = null;
+        int stackIn_38_1 = 0;
+        int stackIn_38_2 = 0;
+        w stackIn_39_0 = null;
+        int stackIn_39_1 = 0;
+        w stackIn_40_0 = null;
+        int stackIn_40_1 = 0;
+        w stackIn_41_0 = null;
+        int stackIn_41_1 = 0;
+        w stackIn_42_0 = null;
+        int stackIn_42_1 = 0;
+        w stackIn_43_0 = null;
+        int stackIn_43_1 = 0;
+        int stackIn_43_2 = 0;
+        w stackOut_24_0 = null;
+        int stackOut_24_1 = 0;
+        w stackOut_25_0 = null;
+        int stackOut_25_1 = 0;
+        w stackOut_26_0 = null;
+        int stackOut_26_1 = 0;
+        w stackOut_27_0 = null;
+        int stackOut_27_1 = 0;
+        w stackOut_28_0 = null;
+        int stackOut_28_1 = 0;
+        w stackOut_29_0 = null;
+        int stackOut_29_1 = 0;
+        int stackOut_29_2 = 0;
+        w stackOut_30_0 = null;
+        int stackOut_30_1 = 0;
+        int stackOut_30_2 = 0;
+        w stackOut_31_0 = null;
+        int stackOut_31_1 = 0;
+        w stackOut_32_0 = null;
+        int stackOut_32_1 = 0;
+        w stackOut_33_0 = null;
+        int stackOut_33_1 = 0;
+        w stackOut_34_0 = null;
+        int stackOut_34_1 = 0;
+        w stackOut_35_0 = null;
+        int stackOut_35_1 = 0;
+        w stackOut_36_0 = null;
+        int stackOut_36_1 = 0;
+        int stackOut_36_2 = 0;
+        w stackOut_37_0 = null;
+        int stackOut_37_1 = 0;
+        int stackOut_37_2 = 0;
+        w stackOut_38_0 = null;
+        int stackOut_38_1 = 0;
+        w stackOut_39_0 = null;
+        int stackOut_39_1 = 0;
+        w stackOut_40_0 = null;
+        int stackOut_40_1 = 0;
+        w stackOut_41_0 = null;
+        int stackOut_41_1 = 0;
+        int stackOut_41_2 = 0;
+        w stackOut_42_0 = null;
+        int stackOut_42_1 = 0;
+        int stackOut_42_2 = 0;
         w stackOut_1_0 = null;
         int stackOut_1_1 = 0;
         w stackOut_2_0 = null;
@@ -184,61 +184,61 @@ final class qm {
         int stackOut_19_2 = 0;
         var5 = client.field_A ? 1 : 0;
         pa.g((byte) 104);
-        if ((de.field_R ^ -1) > -1) {
+        if (de.field_R < 0) {
           L0: {
             L1: {
               fn.field_g.field_Y = null;
-              stackOut_49_0 = g.field_R;
-              stackOut_49_1 = 0;
-              stackIn_55_0 = stackOut_49_0;
-              stackIn_55_1 = stackOut_49_1;
-              stackIn_50_0 = stackOut_49_0;
-              stackIn_50_1 = stackOut_49_1;
+              stackOut_24_0 = g.field_R;
+              stackOut_24_1 = 0;
+              stackIn_30_0 = stackOut_24_0;
+              stackIn_30_1 = stackOut_24_1;
+              stackIn_25_0 = stackOut_24_0;
+              stackIn_25_1 = stackOut_24_1;
               if (!param0) {
                 break L1;
               } else {
-                stackOut_50_0 = (w) (Object) stackIn_50_0;
-                stackOut_50_1 = stackIn_50_1;
-                stackIn_55_0 = stackOut_50_0;
-                stackIn_55_1 = stackOut_50_1;
-                stackIn_51_0 = stackOut_50_0;
-                stackIn_51_1 = stackOut_50_1;
+                stackOut_25_0 = (w) (Object) stackIn_25_0;
+                stackOut_25_1 = stackIn_25_1;
+                stackIn_30_0 = stackOut_25_0;
+                stackIn_30_1 = stackOut_25_1;
+                stackIn_26_0 = stackOut_25_0;
+                stackIn_26_1 = stackOut_25_1;
                 if (param2) {
                   break L1;
                 } else {
-                  stackOut_51_0 = (w) (Object) stackIn_51_0;
-                  stackOut_51_1 = stackIn_51_1;
-                  stackIn_55_0 = stackOut_51_0;
-                  stackIn_55_1 = stackOut_51_1;
-                  stackIn_52_0 = stackOut_51_0;
-                  stackIn_52_1 = stackOut_51_1;
+                  stackOut_26_0 = (w) (Object) stackIn_26_0;
+                  stackOut_26_1 = stackIn_26_1;
+                  stackIn_30_0 = stackOut_26_0;
+                  stackIn_30_1 = stackOut_26_1;
+                  stackIn_27_0 = stackOut_26_0;
+                  stackIn_27_1 = stackOut_26_1;
                   if (ve.field_Qb) {
                     break L1;
                   } else {
-                    stackOut_52_0 = (w) (Object) stackIn_52_0;
-                    stackOut_52_1 = stackIn_52_1;
-                    stackIn_55_0 = stackOut_52_0;
-                    stackIn_55_1 = stackOut_52_1;
-                    stackIn_53_0 = stackOut_52_0;
-                    stackIn_53_1 = stackOut_52_1;
+                    stackOut_27_0 = (w) (Object) stackIn_27_0;
+                    stackOut_27_1 = stackIn_27_1;
+                    stackIn_30_0 = stackOut_27_0;
+                    stackIn_30_1 = stackOut_27_1;
+                    stackIn_28_0 = stackOut_27_0;
+                    stackIn_28_1 = stackOut_27_1;
                     if (null != cd.field_m) {
                       break L1;
                     } else {
-                      stackOut_53_0 = (w) (Object) stackIn_53_0;
-                      stackOut_53_1 = stackIn_53_1;
-                      stackIn_55_0 = stackOut_53_0;
-                      stackIn_55_1 = stackOut_53_1;
-                      stackIn_54_0 = stackOut_53_0;
-                      stackIn_54_1 = stackOut_53_1;
+                      stackOut_28_0 = (w) (Object) stackIn_28_0;
+                      stackOut_28_1 = stackIn_28_1;
+                      stackIn_30_0 = stackOut_28_0;
+                      stackIn_30_1 = stackOut_28_1;
+                      stackIn_29_0 = stackOut_28_0;
+                      stackIn_29_1 = stackOut_28_1;
                       if (g.field_N != null) {
                         break L1;
                       } else {
-                        stackOut_54_0 = (w) (Object) stackIn_54_0;
-                        stackOut_54_1 = stackIn_54_1;
-                        stackOut_54_2 = 1;
-                        stackIn_56_0 = stackOut_54_0;
-                        stackIn_56_1 = stackOut_54_1;
-                        stackIn_56_2 = stackOut_54_2;
+                        stackOut_29_0 = (w) (Object) stackIn_29_0;
+                        stackOut_29_1 = stackIn_29_1;
+                        stackOut_29_2 = 1;
+                        stackIn_31_0 = stackOut_29_0;
+                        stackIn_31_1 = stackOut_29_1;
+                        stackIn_31_2 = stackOut_29_2;
                         break L0;
                       }
                     }
@@ -246,68 +246,68 @@ final class qm {
                 }
               }
             }
-            stackOut_55_0 = (w) (Object) stackIn_55_0;
-            stackOut_55_1 = stackIn_55_1;
-            stackOut_55_2 = 0;
-            stackIn_56_0 = stackOut_55_0;
-            stackIn_56_1 = stackOut_55_1;
-            stackIn_56_2 = stackOut_55_2;
+            stackOut_30_0 = (w) (Object) stackIn_30_0;
+            stackOut_30_1 = stackIn_30_1;
+            stackOut_30_2 = 0;
+            stackIn_31_0 = stackOut_30_0;
+            stackIn_31_1 = stackOut_30_1;
+            stackIn_31_2 = stackOut_30_2;
             break L0;
           }
           L2: {
             L3: {
-              ((w) (Object) stackIn_56_0).a(stackIn_56_1 != 0, stackIn_56_2 != 0);
-              stackOut_56_0 = wm.field_h;
-              stackOut_56_1 = 0;
-              stackIn_62_0 = stackOut_56_0;
-              stackIn_62_1 = stackOut_56_1;
-              stackIn_57_0 = stackOut_56_0;
-              stackIn_57_1 = stackOut_56_1;
+              ((w) (Object) stackIn_31_0).a(stackIn_31_1 != 0, stackIn_31_2 != 0);
+              stackOut_31_0 = wm.field_h;
+              stackOut_31_1 = 0;
+              stackIn_37_0 = stackOut_31_0;
+              stackIn_37_1 = stackOut_31_1;
+              stackIn_32_0 = stackOut_31_0;
+              stackIn_32_1 = stackOut_31_1;
               if (!param0) {
                 break L3;
               } else {
-                stackOut_57_0 = (w) (Object) stackIn_57_0;
-                stackOut_57_1 = stackIn_57_1;
-                stackIn_62_0 = stackOut_57_0;
-                stackIn_62_1 = stackOut_57_1;
-                stackIn_58_0 = stackOut_57_0;
-                stackIn_58_1 = stackOut_57_1;
+                stackOut_32_0 = (w) (Object) stackIn_32_0;
+                stackOut_32_1 = stackIn_32_1;
+                stackIn_37_0 = stackOut_32_0;
+                stackIn_37_1 = stackOut_32_1;
+                stackIn_33_0 = stackOut_32_0;
+                stackIn_33_1 = stackOut_32_1;
                 if (param2) {
                   break L3;
                 } else {
-                  stackOut_58_0 = (w) (Object) stackIn_58_0;
-                  stackOut_58_1 = stackIn_58_1;
-                  stackIn_62_0 = stackOut_58_0;
-                  stackIn_62_1 = stackOut_58_1;
-                  stackIn_59_0 = stackOut_58_0;
-                  stackIn_59_1 = stackOut_58_1;
+                  stackOut_33_0 = (w) (Object) stackIn_33_0;
+                  stackOut_33_1 = stackIn_33_1;
+                  stackIn_37_0 = stackOut_33_0;
+                  stackIn_37_1 = stackOut_33_1;
+                  stackIn_34_0 = stackOut_33_0;
+                  stackIn_34_1 = stackOut_33_1;
                   if (ve.field_Qb) {
                     break L3;
                   } else {
-                    stackOut_59_0 = (w) (Object) stackIn_59_0;
-                    stackOut_59_1 = stackIn_59_1;
-                    stackIn_62_0 = stackOut_59_0;
-                    stackIn_62_1 = stackOut_59_1;
-                    stackIn_60_0 = stackOut_59_0;
-                    stackIn_60_1 = stackOut_59_1;
+                    stackOut_34_0 = (w) (Object) stackIn_34_0;
+                    stackOut_34_1 = stackIn_34_1;
+                    stackIn_37_0 = stackOut_34_0;
+                    stackIn_37_1 = stackOut_34_1;
+                    stackIn_35_0 = stackOut_34_0;
+                    stackIn_35_1 = stackOut_34_1;
                     if (cd.field_m != null) {
                       break L3;
                     } else {
-                      stackOut_60_0 = (w) (Object) stackIn_60_0;
-                      stackOut_60_1 = stackIn_60_1;
-                      stackIn_62_0 = stackOut_60_0;
-                      stackIn_62_1 = stackOut_60_1;
-                      stackIn_61_0 = stackOut_60_0;
-                      stackIn_61_1 = stackOut_60_1;
+                      stackOut_35_0 = (w) (Object) stackIn_35_0;
+                      stackOut_35_1 = stackIn_35_1;
+                      stackIn_37_0 = stackOut_35_0;
+                      stackIn_37_1 = stackOut_35_1;
+                      stackIn_36_0 = stackOut_35_0;
+                      stackIn_36_1 = stackOut_35_1;
                       if (null != g.field_N) {
                         break L3;
                       } else {
-                        stackOut_61_0 = (w) (Object) stackIn_61_0;
-                        stackOut_61_1 = stackIn_61_1;
-                        stackOut_61_2 = 1;
-                        stackIn_63_0 = stackOut_61_0;
-                        stackIn_63_1 = stackOut_61_1;
-                        stackIn_63_2 = stackOut_61_2;
+                        stackOut_36_0 = (w) (Object) stackIn_36_0;
+                        stackOut_36_1 = stackIn_36_1;
+                        stackOut_36_2 = 1;
+                        stackIn_38_0 = stackOut_36_0;
+                        stackIn_38_1 = stackOut_36_1;
+                        stackIn_38_2 = stackOut_36_2;
                         break L2;
                       }
                     }
@@ -315,138 +315,74 @@ final class qm {
                 }
               }
             }
-            stackOut_62_0 = (w) (Object) stackIn_62_0;
-            stackOut_62_1 = stackIn_62_1;
-            stackOut_62_2 = 0;
-            stackIn_63_0 = stackOut_62_0;
-            stackIn_63_1 = stackOut_62_1;
-            stackIn_63_2 = stackOut_62_2;
+            stackOut_37_0 = (w) (Object) stackIn_37_0;
+            stackOut_37_1 = stackIn_37_1;
+            stackOut_37_2 = 0;
+            stackIn_38_0 = stackOut_37_0;
+            stackIn_38_1 = stackOut_37_1;
+            stackIn_38_2 = stackOut_37_2;
             break L2;
           }
           L4: {
             L5: {
-              ((w) (Object) stackIn_63_0).a(stackIn_63_1 != 0, stackIn_63_2 != 0);
-              stackOut_63_0 = tc.field_Ob;
-              stackOut_63_1 = 0;
-              stackIn_67_0 = stackOut_63_0;
-              stackIn_67_1 = stackOut_63_1;
-              stackIn_64_0 = stackOut_63_0;
-              stackIn_64_1 = stackOut_63_1;
+              ((w) (Object) stackIn_38_0).a(stackIn_38_1 != 0, stackIn_38_2 != 0);
+              stackOut_38_0 = tc.field_Ob;
+              stackOut_38_1 = 0;
+              stackIn_42_0 = stackOut_38_0;
+              stackIn_42_1 = stackOut_38_1;
+              stackIn_39_0 = stackOut_38_0;
+              stackIn_39_1 = stackOut_38_1;
               if (!param0) {
                 break L5;
               } else {
-                stackOut_64_0 = (w) (Object) stackIn_64_0;
-                stackOut_64_1 = stackIn_64_1;
-                stackIn_67_0 = stackOut_64_0;
-                stackIn_67_1 = stackOut_64_1;
-                stackIn_65_0 = stackOut_64_0;
-                stackIn_65_1 = stackOut_64_1;
+                stackOut_39_0 = (w) (Object) stackIn_39_0;
+                stackOut_39_1 = stackIn_39_1;
+                stackIn_42_0 = stackOut_39_0;
+                stackIn_42_1 = stackOut_39_1;
+                stackIn_40_0 = stackOut_39_0;
+                stackIn_40_1 = stackOut_39_1;
                 if (param2) {
                   break L5;
                 } else {
-                  stackOut_65_0 = (w) (Object) stackIn_65_0;
-                  stackOut_65_1 = stackIn_65_1;
-                  stackIn_67_0 = stackOut_65_0;
-                  stackIn_67_1 = stackOut_65_1;
-                  stackIn_66_0 = stackOut_65_0;
-                  stackIn_66_1 = stackOut_65_1;
+                  stackOut_40_0 = (w) (Object) stackIn_40_0;
+                  stackOut_40_1 = stackIn_40_1;
+                  stackIn_42_0 = stackOut_40_0;
+                  stackIn_42_1 = stackOut_40_1;
+                  stackIn_41_0 = stackOut_40_0;
+                  stackIn_41_1 = stackOut_40_1;
                   if (!ve.field_Qb) {
                     break L5;
                   } else {
-                    stackOut_66_0 = (w) (Object) stackIn_66_0;
-                    stackOut_66_1 = stackIn_66_1;
-                    stackOut_66_2 = 1;
-                    stackIn_68_0 = stackOut_66_0;
-                    stackIn_68_1 = stackOut_66_1;
-                    stackIn_68_2 = stackOut_66_2;
+                    stackOut_41_0 = (w) (Object) stackIn_41_0;
+                    stackOut_41_1 = stackIn_41_1;
+                    stackOut_41_2 = 1;
+                    stackIn_43_0 = stackOut_41_0;
+                    stackIn_43_1 = stackOut_41_1;
+                    stackIn_43_2 = stackOut_41_2;
                     break L4;
                   }
                 }
               }
             }
-            stackOut_67_0 = (w) (Object) stackIn_67_0;
-            stackOut_67_1 = stackIn_67_1;
-            stackOut_67_2 = 0;
-            stackIn_68_0 = stackOut_67_0;
-            stackIn_68_1 = stackOut_67_1;
-            stackIn_68_2 = stackOut_67_2;
+            stackOut_42_0 = (w) (Object) stackIn_42_0;
+            stackOut_42_1 = stackIn_42_1;
+            stackOut_42_2 = 0;
+            stackIn_43_0 = stackOut_42_0;
+            stackIn_43_1 = stackOut_42_1;
+            stackIn_43_2 = stackOut_42_2;
             break L4;
           }
-          L6: {
-            ((w) (Object) stackIn_68_0).a(stackIn_68_1 != 0, stackIn_68_2 != 0);
-            dc.field_e.field_h.b(false);
-            if (uh.field_c.field_ob == 0) {
-              break L6;
-            } else {
-              nh.field_a = true;
-              break L6;
-            }
-          }
-          if (param3 != -8) {
+          ((w) (Object) stackIn_43_0).a(stackIn_43_1 != 0, stackIn_43_2 != 0);
+          dc.field_e.field_h.b(false);
+          if (uh.field_c.field_ob != 0) {
+            nh.field_a = true;
             return;
           } else {
-            L7: {
-              if (0 == o.field_a.field_ob) {
-                break L7;
-              } else {
-                if (uc.field_a) {
-                  bf.b(-20861, param1);
-                  break L7;
-                } else {
-                  if (0 < eh.field_a) {
-                    bf.b(-20861, param1);
-                    break L7;
-                  } else {
-                    L8: {
-                      if (2 > te.field_p) {
-                        break L8;
-                      } else {
-                        if (!bj.field_d[12]) {
-                          break L8;
-                        } else {
-                          bf.b(-20861, param1);
-                          break L7;
-                        }
-                      }
-                    }
-                    sn.field_g = true;
-                    break L7;
-                  }
-                }
-              }
-            }
-            L9: {
-              if (0 != se.field_U.field_ob) {
-                if (1 != b.field_P.length) {
-                  ad.a(ne.field_c, param1, true, hd.field_u, 0, true);
-                  break L9;
-                } else {
-                  if (hd.field_u == b.field_P[0]) {
-                    ad.a(ne.field_c, param1, true, hd.field_u, 0, true);
-                    break L9;
-                  } else {
-                    hd.field_u = b.field_P[0];
-                    ad.a(ne.field_c, param1, true, hd.field_u, 0, true);
-                    break L9;
-                  }
-                }
-              } else {
-                break L9;
-              }
-            }
-            L10: {
-              if (-1 != (ce.field_A.field_ob ^ -1)) {
-                ve.field_Qb = false;
-                break L10;
-              } else {
-                break L10;
-              }
-            }
             return;
           }
         } else {
-          L11: {
-            L12: {
+          L6: {
+            L7: {
               fn.field_g.field_Y = cm.a((byte) 94, ke.field_n, new String[1]);
               stackOut_1_0 = g.field_R;
               stackOut_1_1 = 0;
@@ -455,7 +391,7 @@ final class qm {
               stackIn_2_0 = stackOut_1_0;
               stackIn_2_1 = stackOut_1_1;
               if (!param0) {
-                break L12;
+                break L7;
               } else {
                 stackOut_2_0 = (w) (Object) stackIn_2_0;
                 stackOut_2_1 = stackIn_2_1;
@@ -464,7 +400,7 @@ final class qm {
                 stackIn_3_0 = stackOut_2_0;
                 stackIn_3_1 = stackOut_2_1;
                 if (param2) {
-                  break L12;
+                  break L7;
                 } else {
                   stackOut_3_0 = (w) (Object) stackIn_3_0;
                   stackOut_3_1 = stackIn_3_1;
@@ -473,7 +409,7 @@ final class qm {
                   stackIn_4_0 = stackOut_3_0;
                   stackIn_4_1 = stackOut_3_1;
                   if (ve.field_Qb) {
-                    break L12;
+                    break L7;
                   } else {
                     stackOut_4_0 = (w) (Object) stackIn_4_0;
                     stackOut_4_1 = stackIn_4_1;
@@ -482,7 +418,7 @@ final class qm {
                     stackIn_5_0 = stackOut_4_0;
                     stackIn_5_1 = stackOut_4_1;
                     if (null != cd.field_m) {
-                      break L12;
+                      break L7;
                     } else {
                       stackOut_5_0 = (w) (Object) stackIn_5_0;
                       stackOut_5_1 = stackIn_5_1;
@@ -491,7 +427,7 @@ final class qm {
                       stackIn_6_0 = stackOut_5_0;
                       stackIn_6_1 = stackOut_5_1;
                       if (g.field_N != null) {
-                        break L12;
+                        break L7;
                       } else {
                         stackOut_6_0 = (w) (Object) stackIn_6_0;
                         stackOut_6_1 = stackIn_6_1;
@@ -499,7 +435,7 @@ final class qm {
                         stackIn_8_0 = stackOut_6_0;
                         stackIn_8_1 = stackOut_6_1;
                         stackIn_8_2 = stackOut_6_2;
-                        break L11;
+                        break L6;
                       }
                     }
                   }
@@ -512,10 +448,10 @@ final class qm {
             stackIn_8_0 = stackOut_7_0;
             stackIn_8_1 = stackOut_7_1;
             stackIn_8_2 = stackOut_7_2;
-            break L11;
+            break L6;
           }
-          L13: {
-            L14: {
+          L8: {
+            L9: {
               ((w) (Object) stackIn_8_0).a(stackIn_8_1 != 0, stackIn_8_2 != 0);
               stackOut_8_0 = wm.field_h;
               stackOut_8_1 = 0;
@@ -524,7 +460,7 @@ final class qm {
               stackIn_9_0 = stackOut_8_0;
               stackIn_9_1 = stackOut_8_1;
               if (!param0) {
-                break L14;
+                break L9;
               } else {
                 stackOut_9_0 = (w) (Object) stackIn_9_0;
                 stackOut_9_1 = stackIn_9_1;
@@ -533,7 +469,7 @@ final class qm {
                 stackIn_10_0 = stackOut_9_0;
                 stackIn_10_1 = stackOut_9_1;
                 if (param2) {
-                  break L14;
+                  break L9;
                 } else {
                   stackOut_10_0 = (w) (Object) stackIn_10_0;
                   stackOut_10_1 = stackIn_10_1;
@@ -542,7 +478,7 @@ final class qm {
                   stackIn_11_0 = stackOut_10_0;
                   stackIn_11_1 = stackOut_10_1;
                   if (ve.field_Qb) {
-                    break L14;
+                    break L9;
                   } else {
                     stackOut_11_0 = (w) (Object) stackIn_11_0;
                     stackOut_11_1 = stackIn_11_1;
@@ -551,7 +487,7 @@ final class qm {
                     stackIn_12_0 = stackOut_11_0;
                     stackIn_12_1 = stackOut_11_1;
                     if (cd.field_m != null) {
-                      break L14;
+                      break L9;
                     } else {
                       stackOut_12_0 = (w) (Object) stackIn_12_0;
                       stackOut_12_1 = stackIn_12_1;
@@ -560,7 +496,7 @@ final class qm {
                       stackIn_13_0 = stackOut_12_0;
                       stackIn_13_1 = stackOut_12_1;
                       if (null != g.field_N) {
-                        break L14;
+                        break L9;
                       } else {
                         stackOut_13_0 = (w) (Object) stackIn_13_0;
                         stackOut_13_1 = stackIn_13_1;
@@ -568,7 +504,7 @@ final class qm {
                         stackIn_15_0 = stackOut_13_0;
                         stackIn_15_1 = stackOut_13_1;
                         stackIn_15_2 = stackOut_13_2;
-                        break L13;
+                        break L8;
                       }
                     }
                   }
@@ -581,10 +517,10 @@ final class qm {
             stackIn_15_0 = stackOut_14_0;
             stackIn_15_1 = stackOut_14_1;
             stackIn_15_2 = stackOut_14_2;
-            break L13;
+            break L8;
           }
-          L15: {
-            L16: {
+          L10: {
+            L11: {
               ((w) (Object) stackIn_15_0).a(stackIn_15_1 != 0, stackIn_15_2 != 0);
               stackOut_15_0 = tc.field_Ob;
               stackOut_15_1 = 0;
@@ -593,7 +529,7 @@ final class qm {
               stackIn_16_0 = stackOut_15_0;
               stackIn_16_1 = stackOut_15_1;
               if (!param0) {
-                break L16;
+                break L11;
               } else {
                 stackOut_16_0 = (w) (Object) stackIn_16_0;
                 stackOut_16_1 = stackIn_16_1;
@@ -602,7 +538,7 @@ final class qm {
                 stackIn_17_0 = stackOut_16_0;
                 stackIn_17_1 = stackOut_16_1;
                 if (param2) {
-                  break L16;
+                  break L11;
                 } else {
                   stackOut_17_0 = (w) (Object) stackIn_17_0;
                   stackOut_17_1 = stackIn_17_1;
@@ -611,7 +547,7 @@ final class qm {
                   stackIn_18_0 = stackOut_17_0;
                   stackIn_18_1 = stackOut_17_1;
                   if (!ve.field_Qb) {
-                    break L16;
+                    break L11;
                   } else {
                     stackOut_18_0 = (w) (Object) stackIn_18_0;
                     stackOut_18_1 = stackIn_18_1;
@@ -619,7 +555,7 @@ final class qm {
                     stackIn_20_0 = stackOut_18_0;
                     stackIn_20_1 = stackOut_18_1;
                     stackIn_20_2 = stackOut_18_2;
-                    break L15;
+                    break L10;
                   }
                 }
               }
@@ -630,76 +566,14 @@ final class qm {
             stackIn_20_0 = stackOut_19_0;
             stackIn_20_1 = stackOut_19_1;
             stackIn_20_2 = stackOut_19_2;
-            break L15;
+            break L10;
           }
-          L17: {
-            ((w) (Object) stackIn_20_0).a(stackIn_20_1 != 0, stackIn_20_2 != 0);
-            dc.field_e.field_h.b(false);
-            if (uh.field_c.field_ob == 0) {
-              break L17;
-            } else {
-              nh.field_a = true;
-              break L17;
-            }
-          }
-          if (param3 != -8) {
+          ((w) (Object) stackIn_20_0).a(stackIn_20_1 != 0, stackIn_20_2 != 0);
+          dc.field_e.field_h.b(false);
+          if (uh.field_c.field_ob != 0) {
+            nh.field_a = true;
             return;
           } else {
-            L18: {
-              if (0 == o.field_a.field_ob) {
-                break L18;
-              } else {
-                if (uc.field_a) {
-                  bf.b(-20861, param1);
-                  break L18;
-                } else {
-                  if (0 < eh.field_a) {
-                    bf.b(-20861, param1);
-                    break L18;
-                  } else {
-                    if (2 <= te.field_p) {
-                      if (bj.field_d[12]) {
-                        bf.b(-20861, param1);
-                        break L18;
-                      } else {
-                        sn.field_g = true;
-                        break L18;
-                      }
-                    } else {
-                      sn.field_g = true;
-                      break L18;
-                    }
-                  }
-                }
-              }
-            }
-            L19: {
-              if (0 != se.field_U.field_ob) {
-                if (1 != b.field_P.length) {
-                  ad.a(ne.field_c, param1, true, hd.field_u, 0, true);
-                  break L19;
-                } else {
-                  if (hd.field_u == b.field_P[0]) {
-                    ad.a(ne.field_c, param1, true, hd.field_u, 0, true);
-                    break L19;
-                  } else {
-                    hd.field_u = b.field_P[0];
-                    ad.a(ne.field_c, param1, true, hd.field_u, 0, true);
-                    break L19;
-                  }
-                }
-              } else {
-                break L19;
-              }
-            }
-            L20: {
-              if (-1 != (ce.field_A.field_ob ^ -1)) {
-                ve.field_Qb = false;
-                break L20;
-              } else {
-                break L20;
-              }
-            }
             return;
           }
         }
@@ -707,9 +581,6 @@ final class qm {
 
     public static void a(int param0) {
         field_e = null;
-        if (param0 != 2) {
-            return;
-        }
         field_a = null;
         field_g = null;
         field_c = null;
@@ -717,38 +588,80 @@ final class qm {
     }
 
     final static int a(byte param0) {
-        int var1 = 0;
-        int var2 = client.field_A ? 1 : 0;
-        boolean discarded$8 = ah.field_c.a(of.field_i, true, kf.field_K, 29166);
-        ah.field_c.g(0);
-        while (ab.c((byte) -128)) {
-            boolean discarded$9 = ah.field_c.a(wh.field_c, el.field_G, (byte) 123);
-        }
-        if (!((ai.field_P ^ -1) == 0)) {
-            var1 = ai.field_P;
-            hm.a(-1, (byte) -120);
-            return var1;
-        }
-        if (!(!mg.field_Nb)) {
-            return 3;
-        }
-        if (ka.field_P == pa.field_V) {
-            return 1;
-        }
-        if (!(jj.field_f.a(102))) {
-            return 1;
-        }
-        if (param0 != 57) {
-            int discarded$17 = qm.a((byte) -99);
-            if (!(pa.field_V != sh.field_d)) {
-                return 2;
+        int var1_int = 0;
+        RuntimeException var1 = null;
+        int var2 = 0;
+        int stackIn_7_0 = 0;
+        int stackIn_11_0 = 0;
+        int stackIn_14_0 = 0;
+        int stackIn_18_0 = 0;
+        int stackIn_24_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_6_0 = 0;
+        int stackOut_10_0 = 0;
+        int stackOut_17_0 = 0;
+        int stackOut_23_0 = 0;
+        int stackOut_13_0 = 0;
+        var2 = client.field_A ? 1 : 0;
+        try {
+          L0: {
+            boolean discarded$14 = ah.field_c.a(of.field_i, true, kf.field_K, 29166);
+            ah.field_c.g(0);
+            L1: while (true) {
+              if (!ab.c((byte) -128)) {
+                if (ai.field_P != -1) {
+                  var1_int = ai.field_P;
+                  hm.a(-1, (byte) -120);
+                  stackOut_6_0 = var1_int;
+                  stackIn_7_0 = stackOut_6_0;
+                  return stackIn_7_0;
+                } else {
+                  if (mg.field_Nb) {
+                    stackOut_10_0 = 3;
+                    stackIn_11_0 = stackOut_10_0;
+                    return stackIn_11_0;
+                  } else {
+                    if (ka.field_P != pa.field_V) {
+                      if (!jj.field_f.a(102)) {
+                        stackOut_17_0 = 1;
+                        stackIn_18_0 = stackOut_17_0;
+                        return stackIn_18_0;
+                      } else {
+                        L2: {
+                          if (param0 == 57) {
+                            break L2;
+                          } else {
+                            int discarded$15 = qm.a((byte) -99);
+                            break L2;
+                          }
+                        }
+                        if (pa.field_V == sh.field_d) {
+                          stackOut_23_0 = 2;
+                          stackIn_24_0 = stackOut_23_0;
+                          break L0;
+                        } else {
+                          return -1;
+                        }
+                      }
+                    } else {
+                      stackOut_13_0 = 1;
+                      stackIn_14_0 = stackOut_13_0;
+                      return stackIn_14_0;
+                    }
+                  }
+                }
+              } else {
+                boolean discarded$16 = ah.field_c.a(wh.field_c, el.field_G, (byte) 123);
+                continue L1;
+              }
             }
-            return -1;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw dh.a((Throwable) (Object) var1, "qm.C(" + param0 + 41);
         }
-        if (!(pa.field_V != sh.field_d)) {
-            return 2;
-        }
-        return -1;
+        return stackIn_24_0;
     }
 
     static int b(int param0, int param1) {

@@ -34,7 +34,7 @@ abstract class hf implements kf {
         if (!(0 != var1.length())) {
             var1 = ka.c(10367);
         }
-        if (!(param0 != var1.length())) {
+        if (!(0 != var1.length())) {
             var1 = pg.field_c;
         }
         return var1;
@@ -58,7 +58,7 @@ abstract class hf implements kf {
         int var2 = 0;
         var2 = -15 / ((param0 - 20) / 44);
         if (!((hf) this).a(true)) {
-          if ((pf.a(0) ^ -1L) > (350L + ((hf) this).field_e ^ -1L)) {
+          if (~pf.a(0) > ~(350L + ((hf) this).field_e)) {
             return null;
           } else {
             return ((hf) this).c((byte) -58);

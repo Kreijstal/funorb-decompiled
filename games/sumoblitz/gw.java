@@ -17,31 +17,74 @@ final class gw extends nt {
     private int field_s;
 
     final void a(ha param0, int param1) {
-        if (0 != ((gw) this).field_t) {
-          if ((((gw) this).field_t ^ -1) != -2) {
-            if (param1 >= -121) {
-              ((gw) this).field_y = -125;
-              return;
-            } else {
-              return;
+        RuntimeException var3 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (0 != ((gw) this).field_t) {
+                if (((gw) this).field_t != 1) {
+                  break L1;
+                } else {
+                  tc.field_j[((gw) this).field_z].a((float)(((gw) this).field_k >> 8), (float)(((gw) this).field_o >> 8), ((gw) this).field_y << 1, 0, 3, ((gw) this).field_D << 24, 1);
+                  break L1;
+                }
+              } else {
+                wo.field_b[((gw) this).field_z].a((float)(((gw) this).field_k >> 8), (float)(((gw) this).field_o >> 8), ((gw) this).field_y, (int)(65535.0 * ((gw) this).field_x), 3, 570425344, 1);
+                break L1;
+              }
             }
-          } else {
-            tc.field_j[((gw) this).field_z].a((float)(((gw) this).field_k >> -570162872), (float)(((gw) this).field_o >> 1173840904), ((gw) this).field_y << 1536750849, 0, 3, ((gw) this).field_D << -1883450728, 1);
             if (param1 < -121) {
-              return;
+              break L0;
             } else {
               ((gw) this).field_y = -125;
               return;
             }
           }
-        } else {
-          wo.field_b[((gw) this).field_z].a((float)(((gw) this).field_k >> -372206456), (float)(((gw) this).field_o >> -1654651128), ((gw) this).field_y, (int)(65535.0 * ((gw) this).field_x), 3, 570425344, 1);
-          if (param1 < -121) {
-            return;
-          } else {
-            ((gw) this).field_y = -125;
-            return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var3;
+            stackOut_7_1 = new StringBuilder().append("gw.C(");
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param0 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L2;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L2;
+            }
           }
+          throw qo.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param1 + 41);
         }
     }
 
@@ -64,17 +107,11 @@ final class gw extends nt {
         } else {
           ((gw) this).field_x = ((gw) this).field_x + ((gw) this).field_u;
           ((gw) this).field_k = ((gw) this).field_k + ((gw) this).field_w;
-          return super.a(param0 + 0);
+          return super.a(param0);
         }
     }
 
     public static void c(boolean param0) {
-        if (param0) {
-            field_A = null;
-            field_C = null;
-            field_A = null;
-            return;
-        }
         field_C = null;
         field_A = null;
     }

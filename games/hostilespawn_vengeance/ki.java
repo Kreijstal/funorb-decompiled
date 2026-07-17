@@ -18,246 +18,197 @@ final class ki {
 
     final static void a(boolean param0, int param1, String param2, java.awt.Color param3, byte param4) {
         Exception var5 = null;
+        RuntimeException var5_ref = null;
         Exception var6_ref_Exception = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         java.awt.Graphics var9 = null;
         java.awt.Graphics var10 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        String stackIn_22_2 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        String stackIn_25_2 = null;
         Throwable decompiledCaughtException = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    try {
-                        var9 = se.field_h.getGraphics();
-                        if (vh.field_d == null) {
-                            statePc = 2;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_0) {
-                        caughtException = stateCaught_0;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        String stackOut_24_2 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        String stackOut_23_2 = null;
+        try {
+          L0: {
+            try {
+              L1: {
+                L2: {
+                  var9 = se.field_h.getGraphics();
+                  if (vh.field_d == null) {
+                    vh.field_d = new java.awt.Font("Helvetica", 1, 13);
+                    break L2;
+                  } else {
+                    break L2;
+                  }
                 }
-                case 1: {
-                    try {
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
+                L3: {
+                  if (!param0) {
+                    break L3;
+                  } else {
+                    var9.setColor(java.awt.Color.black);
+                    var9.fillRect(0, 0, hf.field_h, qc.field_s);
+                    break L3;
+                  }
                 }
-                case 2: {
-                    try {
-                        vh.field_d = new java.awt.Font("Helvetica", 1, 13);
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
+                L4: {
+                  if (param3 == null) {
+                    param3 = new java.awt.Color(140, 17, 17);
+                    break L4;
+                  } else {
+                    break L4;
+                  }
                 }
-                case 3: {
-                    try {
-                        if (!param0) {
-                            statePc = 5;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        var9.setColor(java.awt.Color.black);
-                        var9.fillRect(0, 0, hf.field_h, qc.field_s);
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        if (param3 == null) {
-                            statePc = 7;
-                        } else {
-                            statePc = 6;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        param3 = new java.awt.Color(140, 17, 17);
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        if (null != he.field_y) {
-                            statePc = 10;
-                        } else {
-                            statePc = 9;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    try {
+                try {
+                  L5: {
+                    L6: {
+                      if (null != he.field_y) {
+                        break L6;
+                      } else {
                         he.field_y = se.field_h.createImage(304, 34);
-                        statePc = 10;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 12;
-                        continue stateLoop;
+                        break L6;
+                      }
                     }
+                    var10 = he.field_y.getGraphics();
+                    var10.setColor(param3);
+                    var10.drawRect(0, 0, 303, 33);
+                    var10.fillRect(2, 2, 3 * param1, 30);
+                    var10.setColor(java.awt.Color.black);
+                    var10.drawRect(1, 1, 301, 31);
+                    var10.fillRect(param1 * 3 + 2, 2, 300 - param1 * 3, 30);
+                    var10.setFont(vh.field_d);
+                    var10.setColor(java.awt.Color.white);
+                    var10.drawString(param2, (-(6 * param2.length()) + 304) / 2, 22);
+                    boolean discarded$1 = var9.drawImage(he.field_y, -152 + hf.field_h / 2, qc.field_s / 2 + -18, (java.awt.image.ImageObserver) null);
+                    break L5;
+                  }
+                } catch (java.lang.Exception decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  L7: {
+                    var6_ref_Exception = (Exception) (Object) decompiledCaughtException;
+                    var7 = -152 + hf.field_h / 2;
+                    var8 = -18 + qc.field_s / 2;
+                    var9.setColor(param3);
+                    var9.drawRect(var7, var8, 303, 33);
+                    var9.fillRect(2 + var7, 2 + var8, 3 * param1, 30);
+                    var9.setColor(java.awt.Color.black);
+                    var9.drawRect(var7 + 1, 1 + var8, 301, 31);
+                    var9.fillRect(param1 * 3 + (var7 + 2), 2 + var8, -(3 * param1) + 300, 30);
+                    var9.setFont(vh.field_d);
+                    var9.setColor(java.awt.Color.white);
+                    var9.drawString(param2, (304 + -(param2.length() * 6)) / 2 + var7, var8 - -22);
+                    break L7;
+                  }
                 }
-                case 10: {
-                    try {
-                        var10 = he.field_y.getGraphics();
-                        var10.setColor(param3);
-                        var10.drawRect(0, 0, 303, 33);
-                        var10.fillRect(2, 2, 3 * param1, 30);
-                        var10.setColor(java.awt.Color.black);
-                        var10.drawRect(1, 1, 301, 31);
-                        var10.fillRect(param1 * 3 + 2, 2, 300 - param1 * 3, 30);
-                        var10.setFont(vh.field_d);
-                        var10.setColor(java.awt.Color.white);
-                        var10.drawString(param2, (-(6 * param2.length()) + 304) / 2, 22);
-                        boolean discarded$2 = var9.drawImage(he.field_y, -152 + hf.field_h / 2, qc.field_s / 2 + -18, (java.awt.image.ImageObserver) null);
-                        statePc = 11;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
+                L8: {
+                  var6 = 0;
+                  if (ed.field_e != null) {
+                    var9.setFont(vh.field_d);
+                    var9.setColor(java.awt.Color.white);
+                    var9.drawString(ed.field_e, hf.field_h / 2 + -(ed.field_e.length() * 6 / 2), qc.field_s / 2 + -26);
+                    break L8;
+                  } else {
+                    break L8;
+                  }
                 }
-                case 11: {
-                    try {
-                        statePc = 13;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_11) {
-                        caughtException = stateCaught_11;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 12: {
-                    try {
-                        var6_ref_Exception = (Exception) (Object) caughtException;
-                        var7 = -152 + hf.field_h / 2;
-                        var8 = -18 + qc.field_s / 2;
-                        var9.setColor(param3);
-                        var9.drawRect(var7, var8, 303, 33);
-                        var9.fillRect(2 + var7, 2 + var8, 3 * param1, 30);
-                        var9.setColor(java.awt.Color.black);
-                        var9.drawRect(var7 + 1, 1 + var8, 301, 31);
-                        var9.fillRect(param1 * 3 + (var7 + 2), 2 + var8, -(3 * param1) + 300, 30);
-                        var9.setFont(vh.field_d);
-                        var9.setColor(java.awt.Color.white);
-                        var9.drawString(param2, (304 + -(param2.length() * 6)) / 2 + var7, var8 - -22);
-                        statePc = 13;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_12) {
-                        caughtException = stateCaught_12;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 13: {
-                    try {
-                        var6 = 50 % ((param4 - -62) / 50);
-                        if (ed.field_e != null) {
-                            statePc = 15;
-                        } else {
-                            statePc = 14;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_13) {
-                        caughtException = stateCaught_13;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 14: {
-                    try {
-                        statePc = 18;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_14) {
-                        caughtException = stateCaught_14;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 15: {
-                    try {
-                        var9.setFont(vh.field_d);
-                        var9.setColor(java.awt.Color.white);
-                        var9.drawString(ed.field_e, hf.field_h / 2 + -(ed.field_e.length() * 6 / 2), qc.field_s / 2 + -26);
-                        statePc = 18;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_15) {
-                        caughtException = stateCaught_15;
-                        statePc = 17;
-                        continue stateLoop;
-                    }
-                }
-                case 17: {
-                    var5 = (Exception) (Object) caughtException;
-                    se.field_h.repaint();
-                    statePc = 18;
-                    continue stateLoop;
-                }
-                case 18: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+                break L1;
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L9: {
+                var5 = (Exception) (Object) decompiledCaughtException;
+                se.field_h.repaint();
+                break L9;
+              }
             }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
+          decompiledCaughtException = decompiledCaughtParameter2;
+          L10: {
+            var5_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackOut_19_0 = (RuntimeException) var5_ref;
+            stackOut_19_1 = new StringBuilder().append("ki.C(").append(param0).append(44).append(param1).append(44);
+            stackIn_21_0 = stackOut_19_0;
+            stackIn_21_1 = stackOut_19_1;
+            stackIn_20_0 = stackOut_19_0;
+            stackIn_20_1 = stackOut_19_1;
+            if (param2 == null) {
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "null";
+              stackIn_22_0 = stackOut_21_0;
+              stackIn_22_1 = stackOut_21_1;
+              stackIn_22_2 = stackOut_21_2;
+              break L10;
+            } else {
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "{...}";
+              stackIn_22_0 = stackOut_20_0;
+              stackIn_22_1 = stackOut_20_1;
+              stackIn_22_2 = stackOut_20_2;
+              break L10;
+            }
+          }
+          L11: {
+            stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+            stackOut_22_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_22_2).append(44);
+            stackIn_24_0 = stackOut_22_0;
+            stackIn_24_1 = stackOut_22_1;
+            stackIn_23_0 = stackOut_22_0;
+            stackIn_23_1 = stackOut_22_1;
+            if (param3 == null) {
+              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
+              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_2 = "null";
+              stackIn_25_0 = stackOut_24_0;
+              stackIn_25_1 = stackOut_24_1;
+              stackIn_25_2 = stackOut_24_2;
+              break L11;
+            } else {
+              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_2 = "{...}";
+              stackIn_25_0 = stackOut_23_0;
+              stackIn_25_1 = stackOut_23_1;
+              stackIn_25_2 = stackOut_23_2;
+              break L11;
+            }
+          }
+          throw wg.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + 44 + 41);
         }
     }
 
     final static void a(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6, bd param7) {
-        int var8 = 0;
+        int var8_int = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -300,23 +251,23 @@ final class ki {
           return;
         } else {
           L0: {
-            var8 = param7.field_w;
+            var8_int = param7.field_w;
             var9 = param7.field_y;
             var10 = param7.field_z;
             var11 = param7.field_A;
             var12 = param7.field_D;
-            param0 = param0 - (var9 << 1411782308);
-            param1 = param1 - (var8 << 582665188);
+            param0 = param0 - (var9 << 4);
+            param1 = param1 - (var8_int << 4);
             var15 = (double)(param6 & 65535) * 0.00009587379924285257;
             var17 = (int)Math.floor(Math.sin(var15) * (double)param5 + 0.5);
             var18 = (int)Math.floor(0.5 + Math.cos(var15) * (double)param5);
             var19 = var18 * -param1 + var17 * -param0;
             var20 = -param0 * var18 + --param1 * var17;
-            var21 = (-param1 + (var10 << -702722172)) * var18 - -(-param0 * var17);
-            var22 = var17 * -((var10 << 766581252) - param1) + var18 * -param0;
-            var23 = (-param0 + (var11 << 2116824548)) * var17 + -param1 * var18;
-            var24 = var18 * ((var11 << -2028365148) - param0) + var17 * --param1;
-            var25 = var17 * (-param0 + (var11 << 645919812)) + var18 * ((var10 << -1985413212) - param1);
+            var21 = (-param1 + (var10 << 4)) * var18 - -(-param0 * var17);
+            var22 = var17 * -((var10 << 4) - param1) + var18 * -param0;
+            var23 = (-param0 + (var11 << 4)) * var17 + -param1 * var18;
+            var24 = var18 * ((var11 << 4) - param0) + var17 * --param1;
+            var25 = var17 * (-param0 + (var11 << 4)) + var18 * ((var10 << 4) - param1);
             if (!param3) {
               break L0;
             } else {
@@ -325,7 +276,7 @@ final class ki {
             }
           }
           L1: {
-            var26 = (-param0 + (var11 << 1897008580)) * var18 + -((var10 << -1625391868) - param1) * var17;
+            var26 = (-param0 + (var11 << 4)) * var18 + -((var10 << 4) - param1) * var17;
             if (var19 < var21) {
               var28 = var21;
               var27 = var19;
@@ -337,7 +288,7 @@ final class ki {
             }
           }
           L2: {
-            if (var27 > var23) {
+            if (~var27 < ~var23) {
               var27 = var23;
               break L2;
             } else {
@@ -345,7 +296,7 @@ final class ki {
             }
           }
           L3: {
-            if (var27 <= var25) {
+            if (~var27 >= ~var25) {
               break L3;
             } else {
               var27 = var25;
@@ -353,7 +304,7 @@ final class ki {
             }
           }
           L4: {
-            if (var28 >= var23) {
+            if (~var28 <= ~var23) {
               break L4;
             } else {
               var28 = var23;
@@ -361,7 +312,7 @@ final class ki {
             }
           }
           L5: {
-            if (var28 < var25) {
+            if (~var28 > ~var25) {
               var28 = var25;
               break L5;
             } else {
@@ -380,7 +331,7 @@ final class ki {
             }
           }
           L7: {
-            if (var24 < var29) {
+            if (~var24 > ~var29) {
               var29 = var24;
               break L7;
             } else {
@@ -404,7 +355,7 @@ final class ki {
             }
           }
           L10: {
-            var28 = var28 - -4095 >> -1568099700;
+            var28 = var28 - -4095 >> 12;
             if (var30 >= var26) {
               break L10;
             } else {
@@ -417,10 +368,10 @@ final class ki {
             var27 = var27 >> 12;
             var28 = var28 + param4;
             var27 = var27 + param4;
-            var30 = var30 - -4095 >> 1834103244;
+            var30 = var30 - -4095 >> 12;
             var29 = var29 + param2;
             var27 = var27 >> 4;
-            var28 = var28 + 15 >> 1405596932;
+            var28 = var28 + 15 >> 4;
             var29 = var29 >> 4;
             var30 = var30 + param2;
             if (var28 <= si.field_l) {
@@ -447,9 +398,9 @@ final class ki {
             }
           }
           L14: {
-            var30 = 15 + var30 >> 176975972;
+            var30 = 15 + var30 >> 4;
             var28 = -var28 + var27;
-            if (var30 > si.field_a) {
+            if (~var30 < ~si.field_a) {
               var30 = si.field_a;
               break L14;
             } else {
@@ -460,7 +411,7 @@ final class ki {
             return;
           } else {
             var30 = -var30 + var29;
-            if ((var30 ^ -1) <= -1) {
+            if (var30 >= 0) {
               return;
             } else {
               L15: {
@@ -468,29 +419,29 @@ final class ki {
                 var32 = 16777216.0 / (double)param5;
                 var34 = (int)Math.floor(var32 * Math.sin(var15) + 0.5);
                 var35 = (int)Math.floor(0.5 + Math.cos(var15) * var32);
-                var36 = -param4 + (8 + (var27 << 1660450692));
-                var37 = 8 + (var29 << 838599876) - param2;
-                var38 = (param1 << 2017259016) + -(var37 * var34 >> -1252754108);
-                var39 = (param0 << -1570622296) + (var37 * var35 >> -1574138460);
+                var36 = -param4 + (8 + (var27 << 4));
+                var37 = 8 + (var29 << 4) - param2;
+                var38 = (param1 << 8) + -(var37 * var34 >> 4);
+                var39 = (param0 << 8) + (var37 * var35 >> 4);
                 if (0 != var35) {
-                  if (-1 >= var35) {
+                  if (var35 >= 0) {
                     if (var34 == 0) {
                       var41 = var30;
                       L16: while (true) {
-                        if ((var41 ^ -1) <= -1) {
+                        if (var41 >= 0) {
                           break L15;
                         } else {
                           L17: {
                             var42 = var31;
-                            var43 = var38 + (var35 * var36 >> -1012166364);
+                            var43 = var38 + (var35 * var36 >> 4);
                             var44 = var39;
                             var45 = var28;
-                            if (var44 <= -1) {
-                              if (-1 <= var44 - (var11 << -201396660)) {
+                            if (var44 >= 0) {
+                              if (var44 - (var11 << 12) >= 0) {
                                 break L17;
                               } else {
                                 L18: {
-                                  if ((var43 ^ -1) <= -1) {
+                                  if (var43 >= 0) {
                                     break L18;
                                   } else {
                                     var40 = (-1 + (var35 - var43)) / var35;
@@ -501,8 +452,8 @@ final class ki {
                                   }
                                 }
                                 L19: {
-                                  var40 = (-var35 + -(var10 << 1280773868) + 1 + var43) / var35;
-                                  if (var45 >= (-var35 + -(var10 << 1280773868) + 1 + var43) / var35) {
+                                  var40 = (-var35 + -(var10 << 12) + 1 + var43) / var35;
+                                  if (~var45 <= ~((-var35 + -(var10 << 12) + 1 + var43) / var35)) {
                                     break L19;
                                   } else {
                                     var45 = var40;
@@ -510,25 +461,28 @@ final class ki {
                                   }
                                 }
                                 L20: while (true) {
-                                  if ((var45 ^ -1) <= -1) {
+                                  if (var45 >= 0) {
                                     break L17;
                                   } else {
-                                    var46 = var12[var10 * (var44 >> 2075591276) + (var43 >> 886140940)];
-                                    var43 = var43 + var35;
-                                    if (var46 == 0) {
-                                      var42++;
-                                      var45++;
-                                      continue L20;
-                                    } else {
-                                      var14 = si.field_i[var42];
-                                      var13 = var14 + var46;
-                                      var46 = (16711935 & var14) + (var46 & 16711935);
-                                      var14 = (var13 + -var46 & 65536) + (var46 & 16777472);
-                                      var42++;
-                                      si.field_i[var42] = ll.a(-(var14 >>> -1166917432) + var14, -var14 + var13);
-                                      var45++;
-                                      continue L20;
+                                    L21: {
+                                      var46 = var12[var10 * (var44 >> 12) + (var43 >> 12)];
+                                      var43 = var43 + var35;
+                                      if (var46 == 0) {
+                                        var42++;
+                                        break L21;
+                                      } else {
+                                        var14 = si.field_i[var42];
+                                        var13 = var14 + var46;
+                                        var46 = (16711935 & var14) + (var46 & 16711935);
+                                        var14 = (var13 + -var46 & 65536) + (var46 & 16777472);
+                                        int incrementValue$9 = var42;
+                                        var42++;
+                                        si.field_i[incrementValue$9] = ll.a(-(var14 >>> 8) + var14, -var14 + var13);
+                                        break L21;
+                                      }
                                     }
+                                    var45++;
+                                    continue L20;
                                   }
                                 }
                               }
@@ -543,98 +497,101 @@ final class ki {
                         }
                       }
                     } else {
-                      if ((var34 ^ -1) > -1) {
+                      if (var34 < 0) {
                         var41 = var30;
-                        L21: while (true) {
-                          if ((var41 ^ -1) <= -1) {
+                        L22: while (true) {
+                          if (var41 >= 0) {
                             break L15;
                           } else {
-                            L22: {
+                            L23: {
                               var42 = var31;
-                              var43 = (var36 * var35 >> 744116260) + var38;
-                              var44 = var39 - -(var34 * var36 >> 255290500);
+                              var43 = (var36 * var35 >> 4) + var38;
+                              var44 = var39 - -(var34 * var36 >> 4);
                               var45 = var28;
-                              if ((var43 ^ -1) <= -1) {
-                                break L22;
+                              if (var43 >= 0) {
+                                break L23;
                               } else {
                                 var40 = (var35 - (1 + var43)) / var35;
                                 var45 = var45 + var40;
                                 var43 = var43 + var35 * var40;
                                 var44 = var44 + var34 * var40;
                                 var42 = var42 + var40;
-                                break L22;
-                              }
-                            }
-                            L23: {
-                              var40 = (var43 + 1 - ((var10 << 1502211948) + var35)) / var35;
-                              if ((var43 + 1 - ((var10 << 1502211948) + var35)) / var35 <= var45) {
-                                break L23;
-                              } else {
-                                var45 = var40;
                                 break L23;
                               }
                             }
                             L24: {
-                              var40 = -(var11 << -1092766932) + var44;
-                              if (0 <= -(var11 << -1092766932) + var44) {
+                              var40 = (var43 + 1 - ((var10 << 12) + var35)) / var35;
+                              if (~((var43 + 1 - ((var10 << 12) + var35)) / var35) >= ~var45) {
+                                break L24;
+                              } else {
+                                var45 = var40;
+                                break L24;
+                              }
+                            }
+                            L25: {
+                              var40 = -(var11 << 12) + var44;
+                              if (0 <= -(var11 << 12) + var44) {
                                 var40 = (var34 + -var40) / var34;
                                 var45 = var45 + var40;
                                 var44 = var44 + var34 * var40;
                                 var43 = var43 + var40 * var35;
                                 var42 = var42 + var40;
-                                break L24;
+                                break L25;
                               } else {
-                                break L24;
+                                break L25;
                               }
                             }
-                            L25: {
+                            L26: {
                               var40 = (var44 + -var34) / var34;
                               if (var45 >= (var44 + -var34) / var34) {
-                                break L25;
+                                break L26;
                               } else {
                                 var45 = var40;
-                                break L25;
+                                break L26;
                               }
                             }
-                            L26: while (true) {
+                            L27: while (true) {
                               if (var45 >= 0) {
                                 var38 = var38 - var34;
                                 var31 = var31 + si.field_e;
                                 var41++;
                                 var39 = var39 + var35;
-                                continue L21;
+                                continue L22;
                               } else {
-                                var46 = var12[(var43 >> 632654604) + var10 * (var44 >> 352520172)];
-                                var44 = var44 + var34;
-                                var43 = var43 + var35;
-                                if (var46 != 0) {
-                                  var14 = si.field_i[var42];
-                                  var13 = var46 + var14;
-                                  var46 = (var46 & 16711935) + (16711935 & var14);
-                                  var14 = (16777472 & var46) - -(65536 & -var46 + var13);
-                                  var42++;
-                                  si.field_i[var42] = ll.a(var14 - (var14 >>> -1132959384), -var14 + var13);
-                                  var45++;
-                                  continue L26;
-                                } else {
-                                  var42++;
-                                  var45++;
-                                  continue L26;
+                                L28: {
+                                  var46 = var12[(var43 >> 12) + var10 * (var44 >> 12)];
+                                  var44 = var44 + var34;
+                                  var43 = var43 + var35;
+                                  if (var46 != 0) {
+                                    var14 = si.field_i[var42];
+                                    var13 = var46 + var14;
+                                    var46 = (var46 & 16711935) + (16711935 & var14);
+                                    var14 = (16777472 & var46) - -(65536 & -var46 + var13);
+                                    int incrementValue$10 = var42;
+                                    var42++;
+                                    si.field_i[incrementValue$10] = ll.a(var14 - (var14 >>> 8), -var14 + var13);
+                                    break L28;
+                                  } else {
+                                    var42++;
+                                    break L28;
+                                  }
                                 }
+                                var45++;
+                                continue L27;
                               }
                             }
                           }
                         }
                       } else {
                         var41 = var30;
-                        L27: while (true) {
+                        L29: while (true) {
                           if (0 <= var41) {
                             break L15;
                           } else {
-                            L28: {
+                            L30: {
                               var42 = var31;
-                              var43 = var38 - -(var35 * var36 >> 1887328644);
-                              var44 = (var34 * var36 >> 1931287844) + var39;
+                              var43 = var38 - -(var35 * var36 >> 4);
+                              var44 = (var34 * var36 >> 4) + var39;
                               var45 = var28;
                               if (0 > var43) {
                                 var40 = (var35 + (-1 + -var43)) / var35;
@@ -642,66 +599,69 @@ final class ki {
                                 var45 = var45 + var40;
                                 var44 = var44 + var34 * var40;
                                 var43 = var43 + var40 * var35;
-                                break L28;
-                              } else {
-                                break L28;
-                              }
-                            }
-                            L29: {
-                              var40 = (-(var10 << -632765396) + (var43 + 1 + -var35)) / var35;
-                              if ((-(var10 << -632765396) + (var43 + 1 + -var35)) / var35 <= var45) {
-                                break L29;
-                              } else {
-                                var45 = var40;
-                                break L29;
-                              }
-                            }
-                            L30: {
-                              if (-1 < (var44 ^ -1)) {
-                                var40 = (-var44 + var34 - 1) / var34;
-                                var43 = var43 + var40 * var35;
-                                var44 = var44 + var34 * var40;
-                                var45 = var45 + var40;
-                                var42 = var42 + var40;
                                 break L30;
                               } else {
                                 break L30;
                               }
                             }
                             L31: {
-                              var40 = (-var34 + (var44 + 1) + -(var11 << -152371700)) / var34;
-                              if ((-var34 + (var44 + 1) + -(var11 << -152371700)) / var34 > var45) {
-                                var45 = var40;
+                              var40 = (-(var10 << 12) + (var43 + 1 + -var35)) / var35;
+                              if (~((-(var10 << 12) + (var43 + 1 + -var35)) / var35) >= ~var45) {
                                 break L31;
                               } else {
+                                var45 = var40;
                                 break L31;
                               }
                             }
-                            L32: while (true) {
-                              if ((var45 ^ -1) <= -1) {
+                            L32: {
+                              if (var44 < 0) {
+                                var40 = (-var44 + var34 - 1) / var34;
+                                var43 = var43 + var40 * var35;
+                                var44 = var44 + var34 * var40;
+                                var45 = var45 + var40;
+                                var42 = var42 + var40;
+                                break L32;
+                              } else {
+                                break L32;
+                              }
+                            }
+                            L33: {
+                              var40 = (-var34 + (var44 + 1) + -(var11 << 12)) / var34;
+                              if (~((-var34 + (var44 + 1) + -(var11 << 12)) / var34) < ~var45) {
+                                var45 = var40;
+                                break L33;
+                              } else {
+                                break L33;
+                              }
+                            }
+                            L34: while (true) {
+                              if (var45 >= 0) {
                                 var31 = var31 + si.field_e;
                                 var41++;
                                 var38 = var38 - var34;
                                 var39 = var39 + var35;
-                                continue L27;
+                                continue L29;
                               } else {
-                                var46 = var12[(var43 >> -892783380) + var10 * (var44 >> -1714768596)];
-                                var43 = var43 + var35;
-                                var44 = var44 + var34;
-                                if (var46 != 0) {
-                                  var14 = si.field_i[var42];
-                                  var13 = var14 + var46;
-                                  var46 = (16711935 & var46) - -(var14 & 16711935);
-                                  var14 = (65536 & -var46 + var13) + (var46 & 16777472);
-                                  var42++;
-                                  si.field_i[var42] = ll.a(var13 - var14, var14 + -(var14 >>> -1614577016));
-                                  var45++;
-                                  continue L32;
-                                } else {
-                                  var42++;
-                                  var45++;
-                                  continue L32;
+                                L35: {
+                                  var46 = var12[(var43 >> 12) + var10 * (var44 >> 12)];
+                                  var43 = var43 + var35;
+                                  var44 = var44 + var34;
+                                  if (var46 != 0) {
+                                    var14 = si.field_i[var42];
+                                    var13 = var14 + var46;
+                                    var46 = (16711935 & var46) - -(var14 & 16711935);
+                                    var14 = (65536 & -var46 + var13) + (var46 & 16777472);
+                                    int incrementValue$11 = var42;
+                                    var42++;
+                                    si.field_i[incrementValue$11] = ll.a(var13 - var14, var14 + -(var14 >>> 8));
+                                    break L35;
+                                  } else {
+                                    var42++;
+                                    break L35;
+                                  }
                                 }
+                                var45++;
+                                continue L34;
                               }
                             }
                           }
@@ -711,64 +671,65 @@ final class ki {
                   } else {
                     if (var34 == 0) {
                       var41 = var30;
-                      L33: while (true) {
-                        if (-1 >= (var41 ^ -1)) {
+                      L36: while (true) {
+                        if (var41 >= 0) {
                           break L15;
                         } else {
-                          L34: {
+                          L37: {
                             var42 = var31;
-                            var43 = (var35 * var36 >> 1090573988) + var38;
+                            var43 = (var35 * var36 >> 4) + var38;
                             var44 = var39;
                             var45 = var28;
-                            if ((var44 ^ -1) > -1) {
-                              break L34;
+                            if (var44 < 0) {
+                              break L37;
                             } else {
-                              if (0 <= var44 - (var11 << 916377932)) {
-                                break L34;
+                              if (0 <= var44 - (var11 << 12)) {
+                                break L37;
                               } else {
-                                L35: {
-                                  var40 = var43 + -(var10 << 821807308);
-                                  if (var43 + -(var10 << 821807308) >= 0) {
+                                L38: {
+                                  var40 = var43 + -(var10 << 12);
+                                  if (var43 + -(var10 << 12) >= 0) {
                                     var40 = (var35 + -var40) / var35;
                                     var42 = var42 + var40;
                                     var43 = var43 + var40 * var35;
                                     var45 = var45 + var40;
-                                    break L35;
+                                    break L38;
                                   } else {
-                                    break L35;
+                                    break L38;
                                   }
                                 }
-                                L36: {
+                                L39: {
                                   var40 = (var43 + -var35) / var35;
                                   if (var45 < (var43 + -var35) / var35) {
                                     var45 = var40;
-                                    break L36;
+                                    break L39;
                                   } else {
-                                    break L36;
+                                    break L39;
                                   }
                                 }
-                                L37: while (true) {
+                                L40: while (true) {
                                   if (var45 >= 0) {
-                                    break L34;
+                                    break L37;
                                   } else {
-                                    L38: {
-                                      var46 = var12[(var43 >> -926819540) + var10 * (var44 >> -600506676)];
+                                    L41: {
+                                      var46 = var12[(var43 >> 12) + var10 * (var44 >> 12)];
                                       if (var46 != 0) {
                                         var14 = si.field_i[var42];
                                         var13 = var14 + var46;
                                         var46 = (16711935 & var14) + (16711935 & var46);
                                         var14 = (16777472 & var46) - -(65536 & var13 - var46);
+                                        int incrementValue$12 = var42;
                                         var42++;
-                                        si.field_i[var42] = ll.a(-var14 + var13, -(var14 >>> 1826620456) + var14);
-                                        break L38;
+                                        si.field_i[incrementValue$12] = ll.a(-var14 + var13, -(var14 >>> 8) + var14);
+                                        break L41;
                                       } else {
                                         var42++;
-                                        break L38;
+                                        break L41;
                                       }
                                     }
                                     var43 = var43 + var35;
                                     var45++;
-                                    continue L37;
+                                    continue L40;
                                   }
                                 }
                               }
@@ -777,171 +738,177 @@ final class ki {
                           var39 = var39 + var35;
                           var41++;
                           var31 = var31 + si.field_e;
-                          continue L33;
+                          continue L36;
                         }
                       }
                     } else {
-                      if (-1 > var34) {
+                      if (var34 < 0) {
                         var41 = var30;
-                        L39: while (true) {
-                          if ((var41 ^ -1) <= -1) {
+                        L42: while (true) {
+                          if (var41 >= 0) {
                             break L15;
                           } else {
-                            L40: {
+                            L43: {
                               var42 = var31;
-                              var43 = (var36 * var35 >> 1143202148) + var38;
-                              var44 = var39 + (var34 * var36 >> -1943006940);
+                              var43 = (var36 * var35 >> 4) + var38;
+                              var44 = var39 + (var34 * var36 >> 4);
                               var45 = var28;
-                              var40 = var43 - (var10 << -1095855348);
-                              if (var43 - (var10 << -1095855348) < 0) {
-                                break L40;
+                              var40 = var43 - (var10 << 12);
+                              if (var43 - (var10 << 12) < 0) {
+                                break L43;
                               } else {
                                 var40 = (-var40 + var35) / var35;
                                 var44 = var44 + var40 * var34;
                                 var42 = var42 + var40;
                                 var45 = var45 + var40;
                                 var43 = var43 + var40 * var35;
-                                break L40;
+                                break L43;
                               }
                             }
-                            L41: {
+                            L44: {
                               var40 = (var43 - var35) / var35;
                               if ((var43 - var35) / var35 <= var45) {
-                                break L41;
+                                break L44;
                               } else {
                                 var45 = var40;
-                                break L41;
+                                break L44;
                               }
                             }
-                            L42: {
-                              var40 = -(var11 << -1965792820) + var44;
-                              if (-(var11 << -1965792820) + var44 < 0) {
-                                break L42;
+                            L45: {
+                              var40 = -(var11 << 12) + var44;
+                              if (-(var11 << 12) + var44 < 0) {
+                                break L45;
                               } else {
                                 var40 = (-var40 + var34) / var34;
                                 var45 = var45 + var40;
                                 var43 = var43 + var35 * var40;
                                 var44 = var44 + var34 * var40;
                                 var42 = var42 + var40;
-                                break L42;
+                                break L45;
                               }
                             }
-                            L43: {
+                            L46: {
                               var40 = (var44 - var34) / var34;
-                              if ((var44 - var34) / var34 <= var45) {
-                                break L43;
+                              if (~((var44 - var34) / var34) >= ~var45) {
+                                break L46;
                               } else {
                                 var45 = var40;
-                                break L43;
+                                break L46;
                               }
                             }
-                            L44: while (true) {
+                            L47: while (true) {
                               if (0 <= var45) {
                                 var39 = var39 + var35;
                                 var38 = var38 - var34;
                                 var41++;
                                 var31 = var31 + si.field_e;
-                                continue L39;
+                                continue L42;
                               } else {
-                                var46 = var12[(var43 >> 231383212) + var10 * (var44 >> -295024212)];
-                                var44 = var44 + var34;
-                                var43 = var43 + var35;
-                                if (0 != var46) {
-                                  var14 = si.field_i[var42];
-                                  var13 = var14 + var46;
-                                  var46 = (16711935 & var46) + (16711935 & var14);
-                                  var14 = (16777472 & var46) - -(var13 - var46 & 65536);
-                                  var42++;
-                                  si.field_i[var42] = ll.a(var14 + -(var14 >>> -20813368), var13 + -var14);
-                                  var45++;
-                                  continue L44;
-                                } else {
-                                  var42++;
-                                  var45++;
-                                  continue L44;
+                                L48: {
+                                  var46 = var12[(var43 >> 12) + var10 * (var44 >> 12)];
+                                  var44 = var44 + var34;
+                                  var43 = var43 + var35;
+                                  if (0 != var46) {
+                                    var14 = si.field_i[var42];
+                                    var13 = var14 + var46;
+                                    var46 = (16711935 & var46) + (16711935 & var14);
+                                    var14 = (16777472 & var46) - -(var13 - var46 & 65536);
+                                    int incrementValue$13 = var42;
+                                    var42++;
+                                    si.field_i[incrementValue$13] = ll.a(var14 + -(var14 >>> 8), var13 + -var14);
+                                    break L48;
+                                  } else {
+                                    var42++;
+                                    break L48;
+                                  }
                                 }
+                                var45++;
+                                continue L47;
                               }
                             }
                           }
                         }
                       } else {
                         var41 = var30;
-                        L45: while (true) {
-                          if (-1 >= (var41 ^ -1)) {
+                        L49: while (true) {
+                          if (var41 >= 0) {
                             break L15;
                           } else {
-                            L46: {
+                            L50: {
                               var42 = var31;
-                              var43 = (var36 * var35 >> -1581188732) + var38;
-                              var44 = var39 - -(var36 * var34 >> -881786076);
+                              var43 = (var36 * var35 >> 4) + var38;
+                              var44 = var39 - -(var36 * var34 >> 4);
                               var45 = var28;
-                              var40 = var43 + -(var10 << 160731116);
-                              if (var43 + -(var10 << 160731116) < 0) {
-                                break L46;
+                              var40 = var43 + -(var10 << 12);
+                              if (var43 + -(var10 << 12) < 0) {
+                                break L50;
                               } else {
                                 var40 = (var35 - var40) / var35;
                                 var44 = var44 + var34 * var40;
                                 var42 = var42 + var40;
                                 var43 = var43 + var40 * var35;
                                 var45 = var45 + var40;
-                                break L46;
+                                break L50;
                               }
                             }
-                            L47: {
+                            L51: {
                               var40 = (var43 + -var35) / var35;
                               if ((var43 + -var35) / var35 > var45) {
                                 var45 = var40;
-                                break L47;
+                                break L51;
                               } else {
-                                break L47;
+                                break L51;
                               }
                             }
-                            L48: {
-                              if (-1 >= (var44 ^ -1)) {
-                                break L48;
+                            L52: {
+                              if (var44 >= 0) {
+                                break L52;
                               } else {
                                 var40 = (-var44 + (var34 - 1)) / var34;
                                 var42 = var42 + var40;
                                 var45 = var45 + var40;
                                 var44 = var44 + var34 * var40;
                                 var43 = var43 + var40 * var35;
-                                break L48;
+                                break L52;
                               }
                             }
-                            L49: {
-                              var40 = (-var34 + (-(var11 << 1924726188) + (1 + var44))) / var34;
-                              if ((-var34 + (-(var11 << 1924726188) + (1 + var44))) / var34 <= var45) {
-                                break L49;
+                            L53: {
+                              var40 = (-var34 + (-(var11 << 12) + (1 + var44))) / var34;
+                              if ((-var34 + (-(var11 << 12) + (1 + var44))) / var34 <= var45) {
+                                break L53;
                               } else {
                                 var45 = var40;
-                                break L49;
+                                break L53;
                               }
                             }
-                            L50: while (true) {
-                              if ((var45 ^ -1) <= -1) {
+                            L54: while (true) {
+                              if (var45 >= 0) {
                                 var39 = var39 + var35;
                                 var38 = var38 - var34;
                                 var31 = var31 + si.field_e;
                                 var41++;
-                                continue L45;
+                                continue L49;
                               } else {
-                                var46 = var12[(var44 >> 1829781708) * var10 - -(var43 >> -668365396)];
-                                var43 = var43 + var35;
-                                var44 = var44 + var34;
-                                if (-1 != (var46 ^ -1)) {
-                                  var14 = si.field_i[var42];
-                                  var13 = var46 - -var14;
-                                  var46 = (16711935 & var14) + (16711935 & var46);
-                                  var14 = (var13 + -var46 & 65536) + (var46 & 16777472);
-                                  var42++;
-                                  si.field_i[var42] = ll.a(var14 + -(var14 >>> -562217176), var13 + -var14);
-                                  var45++;
-                                  continue L50;
-                                } else {
-                                  var42++;
-                                  var45++;
-                                  continue L50;
+                                L55: {
+                                  var46 = var12[(var44 >> 12) * var10 - -(var43 >> 12)];
+                                  var43 = var43 + var35;
+                                  var44 = var44 + var34;
+                                  if (var46 != 0) {
+                                    var14 = si.field_i[var42];
+                                    var13 = var46 - -var14;
+                                    var46 = (16711935 & var14) + (16711935 & var46);
+                                    var14 = (var13 + -var46 & 65536) + (var46 & 16777472);
+                                    int incrementValue$14 = var42;
+                                    var42++;
+                                    si.field_i[incrementValue$14] = ll.a(var14 + -(var14 >>> 8), var13 + -var14);
+                                    break L55;
+                                  } else {
+                                    var42++;
+                                    break L55;
+                                  }
                                 }
+                                var45++;
+                                continue L54;
                               }
                             }
                           }
@@ -950,132 +917,65 @@ final class ki {
                     }
                   }
                 } else {
-                  if (-1 == var34) {
+                  if (var34 == 0) {
                     var41 = var30;
-                    L51: while (true) {
+                    L56: while (true) {
                       if (0 <= var41) {
                         break L15;
                       } else {
-                        L52: {
+                        L57: {
                           var42 = var31;
                           var43 = var38;
                           var44 = var39;
                           var45 = var28;
-                          if (-1 >= (var43 ^ -1)) {
-                            if ((var44 ^ -1) <= -1) {
-                              if (-(var10 << 1958872652) + var43 > -1) {
-                                if (-1 <= var44 + -(var11 << -1619782964)) {
-                                  break L52;
+                          if (var43 >= 0) {
+                            if (var44 >= 0) {
+                              if (-(var10 << 12) + var43 < 0) {
+                                if (var44 + -(var11 << 12) >= 0) {
+                                  break L57;
                                 } else {
-                                  L53: while (true) {
-                                    if (-1 >= var45) {
-                                      break L52;
+                                  L58: while (true) {
+                                    if (var45 >= 0) {
+                                      break L57;
                                     } else {
-                                      var46 = var12[(var43 >> -690199892) + (var44 >> 1151898732) * var10];
-                                      if (-1 == var46) {
-                                        var42++;
-                                        var45++;
-                                        continue L53;
-                                      } else {
-                                        var14 = si.field_i[var42];
-                                        var13 = var46 - -var14;
-                                        var46 = (16711935 & var46) - -(16711935 & var14);
-                                        var14 = (var46 & 16777472) + (-var46 + var13 & 65536);
-                                        var42++;
-                                        si.field_i[var42] = ll.a(var13 - var14, -(var14 >>> -1858362648) + var14);
-                                        var45++;
-                                        continue L53;
+                                      L59: {
+                                        var46 = var12[(var43 >> 12) + (var44 >> 12) * var10];
+                                        if (var46 == 0) {
+                                          var42++;
+                                          break L59;
+                                        } else {
+                                          var14 = si.field_i[var42];
+                                          var13 = var46 - -var14;
+                                          var46 = (16711935 & var46) - -(16711935 & var14);
+                                          var14 = (var46 & 16777472) + (-var46 + var13 & 65536);
+                                          int incrementValue$15 = var42;
+                                          var42++;
+                                          si.field_i[incrementValue$15] = ll.a(var13 - var14, -(var14 >>> 8) + var14);
+                                          break L59;
+                                        }
                                       }
+                                      var45++;
+                                      continue L58;
                                     }
                                   }
                                 }
                               } else {
-                                break L52;
+                                break L57;
                               }
                             } else {
-                              break L52;
+                              break L57;
                             }
                           } else {
-                            break L52;
+                            break L57;
                           }
                         }
                         var41++;
                         var31 = var31 + si.field_e;
-                        continue L51;
+                        continue L56;
                       }
                     }
                   } else {
-                    if (-1 <= var34) {
-                      var41 = var30;
-                      L54: while (true) {
-                        if (0 <= var41) {
-                          break L15;
-                        } else {
-                          L55: {
-                            var42 = var31;
-                            var43 = var38;
-                            var44 = var39 + (var36 * var34 >> 1943614692);
-                            var45 = var28;
-                            if (var43 < 0) {
-                              break L55;
-                            } else {
-                              if (0 > var43 - (var10 << -886203476)) {
-                                L56: {
-                                  if (-1 >= (var44 ^ -1)) {
-                                    break L56;
-                                  } else {
-                                    var40 = (-1 + (var34 + -var44)) / var34;
-                                    var44 = var44 + var40 * var34;
-                                    var42 = var42 + var40;
-                                    var45 = var45 + var40;
-                                    break L56;
-                                  }
-                                }
-                                L57: {
-                                  var40 = (-var34 + var44 + (1 - (var11 << -1332892276))) / var34;
-                                  if (var45 < (-var34 + var44 + (1 - (var11 << -1332892276))) / var34) {
-                                    var45 = var40;
-                                    break L57;
-                                  } else {
-                                    break L57;
-                                  }
-                                }
-                                L58: while (true) {
-                                  if (-1 >= (var45 ^ -1)) {
-                                    break L55;
-                                  } else {
-                                    L59: {
-                                      var46 = var12[(var43 >> -284943220) + var10 * (var44 >> 737028428)];
-                                      if (var46 != 0) {
-                                        var14 = si.field_i[var42];
-                                        var13 = var46 + var14;
-                                        var46 = (16711935 & var14) + (var46 & 16711935);
-                                        var14 = (var46 & 16777472) - -(var13 + -var46 & 65536);
-                                        var42++;
-                                        si.field_i[var42] = ll.a(-(var14 >>> 1731114472) + var14, -var14 + var13);
-                                        break L59;
-                                      } else {
-                                        var42++;
-                                        break L59;
-                                      }
-                                    }
-                                    var44 = var44 + var34;
-                                    var45++;
-                                    continue L58;
-                                  }
-                                }
-                              } else {
-                                break L55;
-                              }
-                            }
-                          }
-                          var41++;
-                          var31 = var31 + si.field_e;
-                          var38 = var38 - var34;
-                          continue L54;
-                        }
-                      }
-                    } else {
+                    if (var34 >= 0) {
                       var41 = var30;
                       L60: while (true) {
                         if (0 <= var41) {
@@ -1084,18 +984,17 @@ final class ki {
                           L61: {
                             var42 = var31;
                             var43 = var38;
-                            var44 = (var34 * var36 >> -781675420) + var39;
+                            var44 = var39 + (var36 * var34 >> 4);
                             var45 = var28;
-                            if (0 <= var43) {
-                              if ((-(var10 << -2125681812) + var43 ^ -1) <= -1) {
-                                break L61;
-                              } else {
+                            if (var43 < 0) {
+                              break L61;
+                            } else {
+                              if (0 > var43 - (var10 << 12)) {
                                 L62: {
-                                  var40 = -(var11 << 444537740) + var44;
-                                  if (0 > -(var11 << 444537740) + var44) {
+                                  if (var44 >= 0) {
                                     break L62;
                                   } else {
-                                    var40 = (-var40 + var34) / var34;
+                                    var40 = (-1 + (var34 + -var44)) / var34;
                                     var44 = var44 + var40 * var34;
                                     var42 = var42 + var40;
                                     var45 = var45 + var40;
@@ -1103,45 +1002,120 @@ final class ki {
                                   }
                                 }
                                 L63: {
-                                  var40 = (-var34 + var44) / var34;
-                                  if (var45 >= (-var34 + var44) / var34) {
+                                  var40 = (-var34 + var44 + (1 - (var11 << 12))) / var34;
+                                  if (var45 < (-var34 + var44 + (1 - (var11 << 12))) / var34) {
+                                    var45 = var40;
                                     break L63;
                                   } else {
-                                    var45 = var40;
                                     break L63;
                                   }
                                 }
                                 L64: while (true) {
-                                  if (0 <= var45) {
+                                  if (var45 >= 0) {
                                     break L61;
                                   } else {
-                                    var46 = var12[(var43 >> -888437012) + var10 * (var44 >> -95983060)];
-                                    var44 = var44 + var34;
-                                    if (0 != var46) {
-                                      var14 = si.field_i[var42];
-                                      var13 = var14 + var46;
-                                      var46 = (16711935 & var14) + (16711935 & var46);
-                                      var14 = (var13 - var46 & 65536) + (var46 & 16777472);
-                                      var42++;
-                                      si.field_i[var42] = ll.a(-var14 + var13, var14 + -(var14 >>> 449735176));
-                                      var45++;
-                                      continue L64;
-                                    } else {
-                                      var42++;
-                                      var45++;
-                                      continue L64;
+                                    L65: {
+                                      var46 = var12[(var43 >> 12) + var10 * (var44 >> 12)];
+                                      if (var46 != 0) {
+                                        var14 = si.field_i[var42];
+                                        var13 = var46 + var14;
+                                        var46 = (16711935 & var14) + (var46 & 16711935);
+                                        var14 = (var46 & 16777472) - -(var13 + -var46 & 65536);
+                                        int incrementValue$16 = var42;
+                                        var42++;
+                                        si.field_i[incrementValue$16] = ll.a(-(var14 >>> 8) + var14, -var14 + var13);
+                                        break L65;
+                                      } else {
+                                        var42++;
+                                        break L65;
+                                      }
                                     }
+                                    var44 = var44 + var34;
+                                    var45++;
+                                    continue L64;
                                   }
                                 }
+                              } else {
+                                break L61;
                               }
-                            } else {
-                              break L61;
                             }
                           }
                           var41++;
                           var31 = var31 + si.field_e;
                           var38 = var38 - var34;
                           continue L60;
+                        }
+                      }
+                    } else {
+                      var41 = var30;
+                      L66: while (true) {
+                        if (0 <= var41) {
+                          break L15;
+                        } else {
+                          L67: {
+                            var42 = var31;
+                            var43 = var38;
+                            var44 = (var34 * var36 >> 4) + var39;
+                            var45 = var28;
+                            if (0 <= var43) {
+                              if (-(var10 << 12) + var43 >= 0) {
+                                break L67;
+                              } else {
+                                L68: {
+                                  var40 = -(var11 << 12) + var44;
+                                  if (0 > -(var11 << 12) + var44) {
+                                    break L68;
+                                  } else {
+                                    var40 = (-var40 + var34) / var34;
+                                    var44 = var44 + var40 * var34;
+                                    var42 = var42 + var40;
+                                    var45 = var45 + var40;
+                                    break L68;
+                                  }
+                                }
+                                L69: {
+                                  var40 = (-var34 + var44) / var34;
+                                  if (var45 >= (-var34 + var44) / var34) {
+                                    break L69;
+                                  } else {
+                                    var45 = var40;
+                                    break L69;
+                                  }
+                                }
+                                L70: while (true) {
+                                  if (0 <= var45) {
+                                    break L67;
+                                  } else {
+                                    L71: {
+                                      var46 = var12[(var43 >> 12) + var10 * (var44 >> 12)];
+                                      var44 = var44 + var34;
+                                      if (0 != var46) {
+                                        var14 = si.field_i[var42];
+                                        var13 = var14 + var46;
+                                        var46 = (16711935 & var14) + (16711935 & var46);
+                                        var14 = (var13 - var46 & 65536) + (var46 & 16777472);
+                                        int incrementValue$17 = var42;
+                                        var42++;
+                                        si.field_i[incrementValue$17] = ll.a(-var14 + var13, var14 + -(var14 >>> 8));
+                                        break L71;
+                                      } else {
+                                        var42++;
+                                        break L71;
+                                      }
+                                    }
+                                    var45++;
+                                    continue L70;
+                                  }
+                                }
+                              }
+                            } else {
+                              break L67;
+                            }
+                          }
+                          var41++;
+                          var31 = var31 + si.field_e;
+                          var38 = var38 - var34;
+                          continue L66;
                         }
                       }
                     }
@@ -1160,9 +1134,6 @@ final class ki {
         field_a = null;
         field_e = null;
         field_c = null;
-        if (!param0) {
-            return;
-        }
         field_b = null;
     }
 

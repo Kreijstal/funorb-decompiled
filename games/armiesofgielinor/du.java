@@ -14,19 +14,12 @@ abstract class du {
     static String[] field_g;
 
     final static boolean c(int param0) {
-        if (param0 != 10) {
-            field_h = true;
-            return true;
-        }
         return true;
     }
 
     public static void b(int param0) {
         field_d = null;
         field_e = null;
-        if (param0 != 16) {
-            return;
-        }
         field_b = null;
         field_g = null;
         field_f = null;

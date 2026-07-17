@@ -93,6 +93,7 @@ final class fg {
           if (var2 >= 10) {
             ((fg) this).field_c = param0.b(true);
             ((fg) this).field_b = param0.b(true);
+            return;
           } else {
             var3 = param0.c((byte) 34);
             if (var3 != 0) {

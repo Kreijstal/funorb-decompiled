@@ -15,80 +15,28 @@ final class fd {
         int var1 = 0;
         Object var2 = null;
         Throwable var3 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var1 = -57 / ((param0 - 13) / 46);
-                    if (ad.field_b == null) {
-                        statePc = 6;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    var2 = (Object) (Object) ad.field_b;
-                    // monitorenter ad.field_b
-                    statePc = 2;
-                    continue stateLoop;
-                }
-                case 2: {
-                    try {
-                        ad.field_b = null;
-                        // monitorexit var2
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 4;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    return;
-                }
-                case 4: {
-                    try {
-                        var3 = caughtException;
-                        // monitorexit var2
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 4;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    throw (RuntimeException) (Object) var3;
-                }
-                case 6: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        var1 = 28;
+        if (ad.field_b == null) {
+          return;
+        } else {
+          var2 = (Object) (Object) ad.field_b;
+          synchronized (var2) {
+            L0: {
+              ad.field_b = null;
+              break L0;
             }
+          }
+          return;
         }
     }
 
     public static void a(int param0) {
-        if (param0 != -32311) {
-          field_c = -92;
-          field_h = null;
-          field_g = null;
-          field_d = null;
-          field_a = null;
-          field_e = null;
-          return;
-        } else {
-          field_h = null;
-          field_g = null;
-          field_d = null;
-          field_a = null;
-          field_e = null;
-          return;
-        }
+        field_h = null;
+        field_g = null;
+        field_d = null;
+        field_a = null;
+        field_e = null;
     }
 
     static {

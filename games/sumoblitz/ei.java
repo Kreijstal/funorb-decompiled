@@ -8,9 +8,6 @@ final class ei {
 
     public static void a(int param0) {
         field_b = null;
-        if (param0 > -74) {
-            field_b = null;
-        }
     }
 
     static {

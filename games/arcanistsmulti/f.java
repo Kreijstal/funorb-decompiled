@@ -9,7 +9,7 @@ final class f extends pg {
     static int field_h;
 
     final static jg a(int param0, int param1, int param2, int param3) {
-        jg var4 = null;
+        Object var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -77,7 +77,7 @@ final class f extends pg {
         var6 = 0;
         var7 = gb.field_f - 1;
         L0: while (true) {
-          if ((var7 ^ -1) > -1) {
+          if (var7 < 0) {
             var7 = 0;
             var8 = 0;
             L1: while (true) {
@@ -113,7 +113,7 @@ final class f extends pg {
                                 }
                               }
                               di.field_j = stackIn_122_0 != 0;
-                              return var4;
+                              return (jg) var4;
                             } else {
                               L4: {
                                 qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
@@ -128,7 +128,7 @@ final class f extends pg {
                                 }
                               }
                               di.field_j = stackIn_118_0 != 0;
-                              return var4;
+                              return (jg) var4;
                             }
                           }
                         }
@@ -149,7 +149,7 @@ final class f extends pg {
                           }
                         }
                         di.field_j = stackIn_132_0 != 0;
-                        return var4;
+                        return (jg) var4;
                       } else {
                         L6: {
                           qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
@@ -164,7 +164,7 @@ final class f extends pg {
                           }
                         }
                         di.field_j = stackIn_128_0 != 0;
-                        return var4;
+                        return (jg) var4;
                       }
                     } else {
                       ui.field_s = false;
@@ -190,7 +190,7 @@ final class f extends pg {
                               }
                             }
                             di.field_j = stackIn_110_0 != 0;
-                            return var4;
+                            return (jg) var4;
                           } else {
                             L8: {
                               qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
@@ -205,7 +205,7 @@ final class f extends pg {
                               }
                             }
                             di.field_j = stackIn_106_0 != 0;
-                            return var4;
+                            return (jg) var4;
                           }
                         } else {
                           var9 = -qo.field_f.field_Cb.field_B + -qo.field_f.field_Cb.field_I + qo.field_f.field_Hb.field_I;
@@ -224,7 +224,7 @@ final class f extends pg {
                               }
                             }
                             di.field_j = stackIn_100_0 != 0;
-                            return var4;
+                            return (jg) var4;
                           } else {
                             L10: {
                               qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
@@ -239,7 +239,7 @@ final class f extends pg {
                               }
                             }
                             di.field_j = stackIn_96_0 != 0;
-                            return var4;
+                            return (jg) var4;
                           }
                         }
                       } else {
@@ -259,7 +259,7 @@ final class f extends pg {
                             }
                           }
                           di.field_j = stackIn_89_0 != 0;
-                          return var4;
+                          return (jg) var4;
                         } else {
                           L12: {
                             qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
@@ -274,7 +274,7 @@ final class f extends pg {
                             }
                           }
                           di.field_j = stackIn_85_0 != 0;
-                          return var4;
+                          return (jg) var4;
                         }
                       }
                     }
@@ -304,7 +304,7 @@ final class f extends pg {
                               }
                             }
                             di.field_j = stackIn_77_0 != 0;
-                            return var4;
+                            return (jg) var4;
                           } else {
                             L14: {
                               qo.field_f.a(param2, param1 * 2 * param2, 9860, true);
@@ -319,7 +319,7 @@ final class f extends pg {
                               }
                             }
                             di.field_j = stackIn_73_0 != 0;
-                            return var4;
+                            return (jg) var4;
                           }
                         } else {
                           L15: {
@@ -345,7 +345,7 @@ final class f extends pg {
                             }
                           }
                           di.field_j = stackIn_68_0 != 0;
-                          return var4;
+                          return (jg) var4;
                         }
                       } else {
                         L17: {
@@ -370,7 +370,7 @@ final class f extends pg {
                           }
                         }
                         di.field_j = stackIn_61_0 != 0;
-                        return var4;
+                        return (jg) var4;
                       }
                     } else {
                       L19: {
@@ -407,7 +407,7 @@ final class f extends pg {
                         }
                       }
                       di.field_j = stackIn_54_0 != 0;
-                      return var4;
+                      return (jg) var4;
                     }
                   }
                 } else {
@@ -467,7 +467,7 @@ final class f extends pg {
                     }
                   }
                   di.field_j = stackIn_43_0 != 0;
-                  return var4;
+                  return (jg) var4;
                 }
               } else {
                 var9_ref_jg = g.field_d[var8];
@@ -476,7 +476,7 @@ final class f extends pg {
                     qo.field_f.field_Cb.a(var9_ref_jg.field_a, 110);
                     var9_ref_jg.field_a.a(var9_ref_jg.field_a.c(-25921), param3, var7, param2, (byte) -120);
                     if (0 != var9_ref_jg.field_a.field_U) {
-                      var4 = var9_ref_jg;
+                      var4 = (Object) (Object) var9_ref_jg;
                       break L27;
                     } else {
                       break L27;
@@ -553,8 +553,8 @@ final class f extends pg {
                 var8_ref_jg.field_a = new kc(0L, nf.field_A, var11);
                 var6 = var6 + param2;
                 var8_ref_jg.field_a.field_ob = var12;
-                var8_ref_jg.field_a.field_J = var12 + (-((var12 & 16711422) >> -585510175) - -((16711422 & nf.field_A.field_J) >> -477794143));
-                var8_ref_jg.field_a.field_eb = var12 + (-(var12 >> 1160290241 & 8355711) + (nf.field_A.field_eb >> 980145249 & 8355711));
+                var8_ref_jg.field_a.field_J = var12 + (-((var12 & 16711422) >> 1) - -((16711422 & nf.field_A.field_J) >> 1));
+                var8_ref_jg.field_a.field_eb = var12 + (-(var12 >> 1 & 8355711) + (nf.field_A.field_eb >> 1 & 8355711));
                 var8_ref_jg.field_a.field_Z = oo.field_x;
                 break L30;
               }
@@ -568,14 +568,15 @@ final class f extends pg {
     }
 
     f(byte[] param0) {
-        ((f) this).field_k = param0;
+        try {
+            ((f) this).field_k = param0;
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "f.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void a(int param0) {
         field_i = null;
-        if (param0 != -1) {
-            return;
-        }
         field_g = null;
     }
 

@@ -7,7 +7,11 @@ final class wn extends nv {
 
     wn(la param0, kh param1, boolean param2) {
         super(param0, param1, param2);
-        ((wn) this).field_o = param1.b((byte) 44, 4);
+        try {
+            ((wn) this).field_o = param1.b((byte) 44, 4);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "wn.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     final int a(int param0, int param1) {
@@ -45,7 +49,7 @@ final class wn extends nv {
             ((wn) this).field_g.v((byte) 109);
             break L0;
           } else {
-            if ((var3 ^ -1) != -2) {
+            if (var3 != 1) {
               break L0;
             } else {
               L1: {
@@ -88,52 +92,143 @@ final class wn extends nv {
     }
 
     final void a(boolean param0, kh param1) {
-        super.a(param0, param1);
-        param1.a((byte) -125, ((wn) this).field_o, 4);
+        try {
+            super.a(param0, param1);
+            param1.a((byte) -125, ((wn) this).field_o, 4);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "wn.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void a(boolean param0, fsa param1) {
-        if (!param0) {
-            Object var4 = null;
-            ((wn) this).a(true, (fsa) null);
+        try {
+            if (!param0) {
+                Object var4 = null;
+                ((wn) this).a(true, (fsa) null);
+            }
+            super.a(param0, param1);
+            ((wn) this).field_f = false;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "wn.Q(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        super.a(param0, param1);
-        ((wn) this).field_f = false;
     }
 
     public static void b(int param0) {
-        if (param0 < 120) {
-            return;
-        }
         field_n = null;
     }
 
     final static hra a(int param0, String param1) {
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        String[] var3 = null;
+        String[] var4 = null;
         int var5 = 0;
         String var6_ref_String = null;
+        int var6 = 0;
         hra var7 = null;
-        int var8 = TombRacer.field_G ? 1 : 0;
-        int var2 = param1.length();
-        if (!(var2 != 0)) {
-            return is.field_wb;
-        }
-        if (!(255 >= var2)) {
-            return rg.field_A;
-        }
-        String[] var3 = rga.a(32287, param1, '.');
-        if (!((var3.length ^ -1) <= -3)) {
-            return is.field_wb;
-        }
-        String[] var4 = var3;
-        for (var5 = 0; var5 < var4.length; var5++) {
-            var6_ref_String = var4[var5];
-            var7 = kua.a(var6_ref_String, -6962);
-            if (var7 != null) {
-                return var7;
+        int var8 = 0;
+        hra stackIn_4_0 = null;
+        hra stackIn_8_0 = null;
+        hra stackIn_12_0 = null;
+        hra stackIn_17_0 = null;
+        hra stackIn_20_0 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        String stackIn_24_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        hra stackOut_3_0 = null;
+        hra stackOut_7_0 = null;
+        hra stackOut_11_0 = null;
+        hra stackOut_19_0 = null;
+        hra stackOut_16_0 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        String stackOut_23_2 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        String stackOut_22_2 = null;
+        var8 = TombRacer.field_G ? 1 : 0;
+        try {
+          L0: {
+            var2_int = param1.length();
+            if (var2_int == 0) {
+              stackOut_3_0 = is.field_wb;
+              stackIn_4_0 = stackOut_3_0;
+              return stackIn_4_0;
+            } else {
+              if (255 < var2_int) {
+                stackOut_7_0 = rg.field_A;
+                stackIn_8_0 = stackOut_7_0;
+                return stackIn_8_0;
+              } else {
+                var3 = rga.a(32287, param1, '.');
+                if (var3.length < 2) {
+                  stackOut_11_0 = is.field_wb;
+                  stackIn_12_0 = stackOut_11_0;
+                  return stackIn_12_0;
+                } else {
+                  var4 = var3;
+                  var5 = 0;
+                  L1: while (true) {
+                    if (var5 >= var4.length) {
+                      var6 = -62 / ((param0 - -53) / 56);
+                      stackOut_19_0 = qh.a(-58, var3[var3.length + -1]);
+                      stackIn_20_0 = stackOut_19_0;
+                      break L0;
+                    } else {
+                      var6_ref_String = var4[var5];
+                      var7 = kua.a(var6_ref_String, -6962);
+                      if (var7 == null) {
+                        var5++;
+                        continue L1;
+                      } else {
+                        stackOut_16_0 = (hra) var7;
+                        stackIn_17_0 = stackOut_16_0;
+                        return stackIn_17_0;
+                      }
+                    }
+                  }
+                }
+              }
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_21_0 = (RuntimeException) var2;
+            stackOut_21_1 = new StringBuilder().append("wn.L(").append(param0).append(44);
+            stackIn_23_0 = stackOut_21_0;
+            stackIn_23_1 = stackOut_21_1;
+            stackIn_22_0 = stackOut_21_0;
+            stackIn_22_1 = stackOut_21_1;
+            if (param1 == null) {
+              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_2 = "null";
+              stackIn_24_0 = stackOut_23_0;
+              stackIn_24_1 = stackOut_23_1;
+              stackIn_24_2 = stackOut_23_2;
+              break L2;
+            } else {
+              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_2 = "{...}";
+              stackIn_24_0 = stackOut_22_0;
+              stackIn_24_1 = stackOut_22_1;
+              stackIn_24_2 = stackOut_22_2;
+              break L2;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_24_0, stackIn_24_2 + 41);
         }
-        int var6 = -62 / ((param0 - -53) / 56);
-        return qh.a(-58, var3[var3.length + -1]);
+        return stackIn_20_0;
     }
 
     final void k(int param0) {

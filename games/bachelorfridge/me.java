@@ -9,12 +9,70 @@ final class me extends bca {
     static String field_s;
 
     final at a(int param0, gj param1) {
-        if (param0 != 5) {
-          me.d((byte) 14);
-          return (at) (Object) new od(param1, (me) this, ((me) this).field_p);
-        } else {
-          return (at) (Object) new od(param1, (me) this, ((me) this).field_p);
+        RuntimeException var3 = null;
+        od stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        od stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 == 5) {
+                break L1;
+              } else {
+                me.d((byte) 14);
+                break L1;
+              }
+            }
+            stackOut_2_0 = new od(param1, (me) this, ((me) this).field_p);
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_1 = new StringBuilder().append("me.A(").append(param0).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param1 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw pe.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
         }
+        return (at) (Object) stackIn_3_0;
     }
 
     me(int param0, nq param1) {
@@ -22,59 +80,18 @@ final class me extends bca {
     }
 
     final void a(op param0, int param1) {
-        int var3 = 0;
-        Object stackIn_1_0 = null;
-        Object stackIn_2_0 = null;
-        Object stackIn_3_0 = null;
-        int stackIn_3_1 = 0;
-        Object stackOut_0_0 = null;
-        Object stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        Object stackOut_1_0 = null;
-        int stackOut_1_1 = 0;
-        L0: {
-          aga discarded$1 = ((me) this).field_l.a(107, param0);
-          stackOut_0_0 = this;
-          stackIn_2_0 = stackOut_0_0;
-          stackIn_1_0 = stackOut_0_0;
-          if (param0.e(((me) this).field_r, ((me) this).field_u, -11066)) {
-            stackOut_2_0 = this;
-            stackOut_2_1 = 0;
-            stackIn_3_0 = stackOut_2_0;
-            stackIn_3_1 = stackOut_2_1;
-            break L0;
-          } else {
-            stackOut_1_0 = this;
-            stackOut_1_1 = 1;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_3_1 = stackOut_1_1;
-            break L0;
-          }
-        }
-        ((me) this).field_p = stackIn_3_1 != 0;
-        if (null != param0.field_a[((me) this).field_r][((me) this).field_u].field_l) {
-          L1: {
-            ((me) this).field_p = true;
-            if (!((me) this).field_p) {
-              param0.b((byte) 91, 36, ((me) this).field_r, ((me) this).field_u);
-              break L1;
-            } else {
-              break L1;
+        try {
+            aga discarded$12 = ((me) this).field_l.a(107, param0);
+            ((me) this).field_p = !param0.e(((me) this).field_r, ((me) this).field_u, -11066) ? true : false;
+            if (null != param0.field_a[((me) this).field_r][((me) this).field_u].field_l) {
+                ((me) this).field_p = true;
             }
-          }
-          var3 = -2 / ((param1 - 12) / 35);
-          return;
-        } else {
-          L2: {
-            if (!((me) this).field_p) {
-              param0.b((byte) 91, 36, ((me) this).field_r, ((me) this).field_u);
-              break L2;
-            } else {
-              break L2;
+            if (!(((me) this).field_p)) {
+                param0.b((byte) 91, 36, ((me) this).field_r, ((me) this).field_u);
             }
-          }
-          var3 = -2 / ((param1 - 12) / 35);
-          return;
+            int var3_int = -2 / ((param1 - 12) / 35);
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "me.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
@@ -88,70 +105,16 @@ final class me extends bca {
     }
 
     final void a(byte param0, lu param1) {
-        lu stackIn_2_0 = null;
-        lu stackIn_3_0 = null;
-        lu stackIn_4_0 = null;
-        int stackIn_4_1 = 0;
-        lu stackIn_6_0 = null;
-        lu stackIn_7_0 = null;
-        lu stackIn_8_0 = null;
-        int stackIn_8_1 = 0;
-        lu stackOut_5_0 = null;
-        lu stackOut_7_0 = null;
-        int stackOut_7_1 = 0;
-        lu stackOut_6_0 = null;
-        int stackOut_6_1 = 0;
-        lu stackOut_1_0 = null;
-        lu stackOut_3_0 = null;
-        int stackOut_3_1 = 0;
-        lu stackOut_2_0 = null;
-        int stackOut_2_1 = 0;
-        this.a((byte) -38, param1);
-        param1.d(((me) this).field_r, 0);
-        param1.d(((me) this).field_u, 0);
-        if (param0 > -12) {
-          L0: {
-            me.d(94);
-            stackOut_5_0 = (lu) param1;
-            stackIn_7_0 = stackOut_5_0;
-            stackIn_6_0 = stackOut_5_0;
-            if (((me) this).field_p) {
-              stackOut_7_0 = (lu) (Object) stackIn_7_0;
-              stackOut_7_1 = 1;
-              stackIn_8_0 = stackOut_7_0;
-              stackIn_8_1 = stackOut_7_1;
-              break L0;
-            } else {
-              stackOut_6_0 = (lu) (Object) stackIn_6_0;
-              stackOut_6_1 = 0;
-              stackIn_8_0 = stackOut_6_0;
-              stackIn_8_1 = stackOut_6_1;
-              break L0;
+        try {
+            super.a((byte) -38, param1);
+            param1.d(((me) this).field_r, 0);
+            param1.d(((me) this).field_u, 0);
+            if (param0 > -12) {
+                me.d(94);
             }
-          }
-          ((lu) (Object) stackIn_8_0).d(stackIn_8_1, 0);
-          return;
-        } else {
-          L1: {
-            stackOut_1_0 = (lu) param1;
-            stackIn_3_0 = stackOut_1_0;
-            stackIn_2_0 = stackOut_1_0;
-            if (((me) this).field_p) {
-              stackOut_3_0 = (lu) (Object) stackIn_3_0;
-              stackOut_3_1 = 1;
-              stackIn_4_0 = stackOut_3_0;
-              stackIn_4_1 = stackOut_3_1;
-              break L1;
-            } else {
-              stackOut_2_0 = (lu) (Object) stackIn_2_0;
-              stackOut_2_1 = 0;
-              stackIn_4_0 = stackOut_2_0;
-              stackIn_4_1 = stackOut_2_1;
-              break L1;
-            }
-          }
-          ((lu) (Object) stackIn_4_0).d(stackIn_4_1, 0);
-          return;
+            param1.d(!((me) this).field_p ? 0 : 1, 0);
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "me.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -172,19 +135,24 @@ final class me extends bca {
 
     me(lu param0) {
         super(param0);
-        ((me) this).field_k = param0.e((byte) 55);
-        ((me) this).field_o = new eaa();
-        int var2 = param0.b(16711935);
-        while (true) {
-            var2--;
-            if ((var2 ^ -1) > -1) {
-                break;
+        int var2_int = 0;
+        try {
+            ((me) this).field_k = param0.e((byte) 55);
+            ((me) this).field_o = new eaa();
+            var2_int = param0.b(16711935);
+            while (true) {
+                var2_int--;
+                if (var2_int < 0) {
+                    break;
+                }
+                ((me) this).field_o.a((bw) (Object) dca.a((byte) 102, param0), true);
             }
-            ((me) this).field_o.a((bw) (Object) dca.a((byte) 102, param0), true);
+            ((me) this).field_r = param0.b(16711935);
+            ((me) this).field_u = param0.b(16711935);
+            ((me) this).field_p = param0.b(16711935) == 1 ? true : false;
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "me.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }
-        ((me) this).field_r = param0.b(16711935);
-        ((me) this).field_u = param0.b(16711935);
-        ((me) this).field_p = (param0.b(16711935) ^ -1) == -2 ? true : false;
     }
 
     static {

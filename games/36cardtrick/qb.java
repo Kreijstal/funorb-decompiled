@@ -10,10 +10,7 @@ class qb {
     long field_e;
 
     final static void a(byte param0) {
-        wf.a((byte) -96, mk.g(param0 ^ -102));
-        if (param0 != 18) {
-            field_f = 121L;
-        }
+        wf.a((byte) -96, mk.g(-120));
     }
 
     final void c(int param0) {

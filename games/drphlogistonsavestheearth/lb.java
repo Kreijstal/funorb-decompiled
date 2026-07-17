@@ -15,28 +15,13 @@ abstract class lb extends uh {
     static int field_v;
 
     final static boolean a(char param0, boolean param1) {
-        if (param1) {
-          if (param0 >= 48) {
-            if (param0 > 57) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+        if (param0 < 48) {
             return false;
-          }
-        } else {
-          field_C = null;
-          if (param0 >= 48) {
-            if (param0 > 57) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
         }
+        if (param0 > 57) {
+            return false;
+        }
+        return true;
     }
 
     abstract int g(int param0);
@@ -49,9 +34,6 @@ abstract class lb extends uh {
         field_B = null;
         field_C = null;
         field_D = null;
-        if (param0 <= 8) {
-            return;
-        }
         field_z = null;
     }
 

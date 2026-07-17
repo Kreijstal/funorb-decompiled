@@ -7,12 +7,14 @@ final class pt extends wda {
     static String field_q;
 
     final void a(int param0, fsa param1) {
-        if (param0 < 35) {
-            ((pt) this).field_o = 28;
+        try {
+            if (param0 < 35) {
+                ((pt) this).field_o = 28;
+            }
             super.a(89, param1);
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "pt.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        super.a(89, param1);
     }
 
     final int a(int param0, int param1) {
@@ -93,7 +95,7 @@ final class pt extends wda {
             return;
           } else {
             L0: while (true) {
-              if (4095 >= (var7 ^ -1)) {
+              if (var7 >= -4096) {
                 L1: while (true) {
                   if (var7 <= 4096) {
                     if (var7 <= ((pt) this).field_o) {
@@ -111,12 +113,12 @@ final class pt extends wda {
                       return;
                     }
                   } else {
-                    // wide iinc 7 -8192
+                    var7 -= 8192;
                     continue L1;
                   }
                 }
               } else {
-                // wide iinc 7 8192
+                var7 += 8192;
                 continue L0;
               }
             }
@@ -128,19 +130,66 @@ final class pt extends wda {
 
     final static byte[] a(byte[] param0, int param1, int param2) {
         byte[] var3 = null;
+        RuntimeException var3_ref = null;
         byte[] var4 = null;
-        if (param2 != 4096) {
-          field_p = null;
-          var4 = new byte[param1];
-          var3 = var4;
-          lua.a(param0, 0, var4, 0, param1);
-          return var4;
-        } else {
-          var4 = new byte[param1];
-          var3 = var4;
-          lua.a(param0, 0, var4, 0, param1);
-          return var4;
+        byte[] stackIn_1_0 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        byte[] stackOut_0_0 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
+        try {
+          L0: {
+            var4 = new byte[param1];
+            var3 = var4;
+            lua.a(param0, 0, var4, 0, param1);
+            stackOut_0_0 = (byte[]) var4;
+            stackIn_1_0 = stackOut_0_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var3_ref = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var3_ref;
+            stackOut_2_1 = new StringBuilder().append("pt.M(");
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
+            if (param0 == null) {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + 4096 + 41);
         }
+        return stackIn_1_0;
     }
 
     final void a(int param0, byte param1) {
@@ -154,18 +203,9 @@ final class pt extends wda {
     }
 
     final static void b(int param0, byte param1) {
-        if (param1 != 65) {
-          boolean discarded$2 = pt.a(-7, 14, 68);
-          ub.field_b = sra.field_u[param0];
-          hra.field_c = wha.field_K[param0];
-          voa.field_s = nl.field_e[param0];
-          return;
-        } else {
-          ub.field_b = sra.field_u[param0];
-          hra.field_c = wha.field_K[param0];
-          voa.field_s = nl.field_e[param0];
-          return;
-        }
+        ub.field_b = sra.field_u[param0];
+        hra.field_c = wha.field_K[param0];
+        voa.field_s = nl.field_e[param0];
     }
 
     public static void e(int param0) {
@@ -180,27 +220,88 @@ final class pt extends wda {
 
     pt(la param0, boolean param1) {
         super(param0, param1);
-        ((pt) this).field_o = 16;
+        try {
+            ((pt) this).field_o = 16;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "pt.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     pt(la param0, kh param1, boolean param2) {
         super(param0, param1, param2);
-        ((pt) this).field_o = bla.a(true, 12, param1.b((byte) 44, 12));
+        try {
+            ((pt) this).field_o = bla.a(true, 12, param1.b((byte) 44, 12));
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "pt.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     final void a(kh param0, byte param1) {
-        super.a(param0, (byte) -124);
-        param0.a((byte) 37, dqa.a(true, ((pt) this).field_o, 12), 12);
-        if (param1 <= -78) {
-          return;
-        } else {
-          upa discarded$2 = pt.a(-12, 90, -68, 66);
-          return;
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        try {
+          L0: {
+            L1: {
+              super.a(param0, (byte) -124);
+              param0.a((byte) 37, dqa.a(true, ((pt) this).field_o, 12), 12);
+              if (param1 <= -78) {
+                break L1;
+              } else {
+                upa discarded$2 = pt.a(-12, 90, -68, 66);
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_1 = new StringBuilder().append("pt.R(");
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param0 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param1 + 41);
         }
     }
 
     final static upa a(int param0, int param1, int param2, int param3) {
-        upa var4 = null;
+        Object var4 = null;
         upa var4_ref = null;
         int var5 = 0;
         upa var6 = null;
@@ -231,15 +332,15 @@ final class pt extends wda {
           var4_ref = (upa) (Object) ina.field_d.f(-80);
           L1: while (true) {
             if (var4_ref != null) {
-              if (param3 != var4.field_n) {
+              if (param3 != var4_ref.field_n) {
                 var4_ref = (upa) (Object) ina.field_d.e(param0 + -22454);
                 continue L1;
               } else {
-                return var4;
+                return var4_ref;
               }
             } else {
               var7 = new upa();
-              var4 = var7;
+              var4_ref = var7;
               var7.field_n = param3;
               var7.field_k = param2;
               ina.field_d.b((byte) -49, (vg) (Object) var7);

@@ -14,227 +14,134 @@ final class td implements kh {
     public static void a(int param0) {
         field_h = null;
         field_a = null;
-        if (param0 >= -9) {
-          field_g = null;
-          field_f = null;
-          field_d = null;
-          field_g = null;
-          return;
-        } else {
-          field_f = null;
-          field_d = null;
-          field_g = null;
-          return;
-        }
+        field_f = null;
+        field_d = null;
+        field_g = null;
     }
 
     public final void a(kb param0, int param1, int param2, boolean param3, int param4) {
-        int var6 = 0;
+        RuntimeException var6 = null;
+        int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
+        int stackIn_7_0 = 0;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        String stackIn_22_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_5_0 = 0;
+        int stackOut_6_0 = 0;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
         var11 = ArmiesOfGielinor.field_M ? 1 : 0;
-        if (param2 <= -79) {
-          if (!param0.field_t) {
-            if (!param0.a(false)) {
-              var6 = 2188450;
-              int discarded$3 = ((td) this).field_b.a("<u=" + Integer.toString(var6, 16) + ">" + param0.field_v + "</u>", param0.field_B + param1, param0.field_p + param4, param0.field_l, param0.field_w, var6, -1, ((td) this).field_e, ((td) this).field_c, ((td) this).field_b.field_H - -((td) this).field_b.field_L);
-              if (param0.a(false)) {
-                var7 = ((td) this).field_b.a(param0.field_v);
-                var8 = ((td) this).field_b.field_H + ((td) this).field_b.field_L;
-                var9 = param1 - -param0.field_B;
-                if (-3 == (((td) this).field_e ^ -1)) {
-                  L0: {
-                    var9 = var9 + (-var7 + param0.field_l);
-                    var10 = param4 + param0.field_p;
-                    if (-3 == (((td) this).field_c ^ -1)) {
-                      var10 = var10 + (param0.field_w + -var8);
-                      break L0;
-                    } else {
-                      if (((td) this).field_c != 1) {
-                        break L0;
-                      } else {
-                        var10 = var10 + (param0.field_w - var8 >> 1595299585);
-                        na.c(4 + var7, -2 + var9, -70, var8, 2 + var10);
-                        return;
-                      }
-                    }
-                  }
-                  na.c(4 + var7, -2 + var9, -70, var8, 2 + var10);
-                  return;
-                } else {
-                  if (((td) this).field_e == -2) {
-                    var9 = var9 + (param0.field_l - var7 >> -237831007);
-                    var10 = param4 + param0.field_p;
-                    if (-3 != (((td) this).field_c ^ -1)) {
-                      if (((td) this).field_c == 1) {
-                        var10 = var10 + (param0.field_w - var8 >> 1595299585);
-                        na.c(4 + var7, -2 + var9, -70, var8, 2 + var10);
-                        return;
-                      } else {
-                        na.c(4 + var7, -2 + var9, -70, var8, 2 + var10);
-                        return;
-                      }
-                    } else {
-                      var10 = var10 + (param0.field_w + -var8);
-                      na.c(4 + var7, -2 + var9, -70, var8, 2 + var10);
-                      return;
-                    }
+        try {
+          L0: {
+            if (param2 <= -79) {
+              L1: {
+                L2: {
+                  if (param0.field_t) {
+                    break L2;
                   } else {
-                    var10 = param4 + param0.field_p;
-                    if (-3 != ((td) this).field_c) {
-                      if (((td) this).field_c == 1) {
-                        var10 = var10 + (param0.field_w - var8 >> 1595299585);
-                        na.c(4 + var7, -2 + var9, -70, var8, 2 + var10);
-                        return;
-                      } else {
-                        na.c(4 + var7, -2 + var9, -70, var8, 2 + var10);
-                        return;
-                      }
-                    } else {
-                      var10 = var10 + (param0.field_w + -var8);
-                      na.c(4 + var7, -2 + var9, -70, var8, 2 + var10);
-                      return;
-                    }
-                  }
-                }
-              } else {
-                return;
-              }
-            } else {
-              var6 = 3249872;
-              int discarded$4 = ((td) this).field_b.a("<u=" + Integer.toString(var6, 16) + ">" + param0.field_v + "</u>", param0.field_B + param1, param0.field_p + param4, param0.field_l, param0.field_w, var6, -1, ((td) this).field_e, ((td) this).field_c, ((td) this).field_b.field_H - -((td) this).field_b.field_L);
-              if (param0.a(false)) {
-                var7 = ((td) this).field_b.a(param0.field_v);
-                var8 = ((td) this).field_b.field_H + ((td) this).field_b.field_L;
-                var9 = param1 - -param0.field_B;
-                if (-3 == (((td) this).field_e ^ -1)) {
-                  var9 = var9 + (-var7 + param0.field_l);
-                  var10 = param4 + param0.field_p;
-                  if (-3 != (((td) this).field_c ^ -1)) {
-                    if (((td) this).field_c != 1) {
-                      na.c(4 + var7, -2 + var9, -70, var8, 2 + var10);
-                      return;
-                    } else {
-                      var10 = var10 + (param0.field_w - var8 >> 1595299585);
-                      na.c(4 + var7, -2 + var9, -70, var8, 2 + var10);
-                      return;
-                    }
-                  } else {
-                    var10 = var10 + (param0.field_w + -var8);
-                    na.c(4 + var7, -2 + var9, -70, var8, 2 + var10);
-                    return;
-                  }
-                } else {
-                  if (((td) this).field_e == -2) {
-                    var9 = var9 + (param0.field_l - var7 >> -237831007);
-                    var10 = param4 + param0.field_p;
-                    if (-3 != (((td) this).field_c ^ -1)) {
-                      if (((td) this).field_c != 1) {
-                        na.c(4 + var7, -2 + var9, -70, var8, 2 + var10);
-                        return;
-                      } else {
-                        var10 = var10 + (param0.field_w - var8 >> 1595299585);
-                        na.c(4 + var7, -2 + var9, -70, var8, 2 + var10);
-                        return;
-                      }
-                    } else {
-                      var10 = var10 + (param0.field_w + -var8);
-                      na.c(4 + var7, -2 + var9, -70, var8, 2 + var10);
-                      return;
-                    }
-                  } else {
-                    var10 = param4 + param0.field_p;
-                    if (-3 != ((td) this).field_c) {
-                      if (((td) this).field_c == 1) {
-                        var10 = var10 + (param0.field_w - var8 >> 1595299585);
-                        na.c(4 + var7, -2 + var9, -70, var8, 2 + var10);
-                        return;
-                      } else {
-                        na.c(4 + var7, -2 + var9, -70, var8, 2 + var10);
-                        return;
-                      }
-                    } else {
-                      var10 = var10 + (param0.field_w + -var8);
-                      na.c(4 + var7, -2 + var9, -70, var8, 2 + var10);
-                      return;
-                    }
-                  }
-                }
-              } else {
-                return;
-              }
-            }
-          } else {
-            var6 = 3249872;
-            int discarded$5 = ((td) this).field_b.a("<u=" + Integer.toString(var6, 16) + ">" + param0.field_v + "</u>", param0.field_B + param1, param0.field_p + param4, param0.field_l, param0.field_w, var6, -1, ((td) this).field_e, ((td) this).field_c, ((td) this).field_b.field_H - -((td) this).field_b.field_L);
-            if (param0.a(false)) {
-              var7 = ((td) this).field_b.a(param0.field_v);
-              var8 = ((td) this).field_b.field_H + ((td) this).field_b.field_L;
-              var9 = param1 - -param0.field_B;
-              if (-3 == (((td) this).field_e ^ -1)) {
-                var9 = var9 + (-var7 + param0.field_l);
-                var10 = param4 + param0.field_p;
-                if (-3 != (((td) this).field_c ^ -1)) {
-                  if (((td) this).field_c == 1) {
-                    var10 = var10 + (param0.field_w - var8 >> 1595299585);
-                    na.c(4 + var7, -2 + var9, -70, var8, 2 + var10);
-                    return;
-                  } else {
-                    na.c(4 + var7, -2 + var9, -70, var8, 2 + var10);
-                    return;
-                  }
-                } else {
-                  var10 = var10 + (param0.field_w + -var8);
-                  na.c(4 + var7, -2 + var9, -70, var8, 2 + var10);
-                  return;
-                }
-              } else {
-                if (((td) this).field_e != -2) {
-                  L1: {
-                    var10 = param4 + param0.field_p;
-                    if (-3 == ((td) this).field_c) {
-                      var10 = var10 + (param0.field_w + -var8);
-                      break L1;
-                    } else {
-                      if (((td) this).field_c != 1) {
-                        break L1;
-                      } else {
-                        var10 = var10 + (param0.field_w - var8 >> 1595299585);
-                        break L1;
-                      }
-                    }
-                  }
-                  na.c(4 + var7, -2 + var9, -70, var8, 2 + var10);
-                  return;
-                } else {
-                  L2: {
-                    var9 = var9 + (param0.field_l - var7 >> -237831007);
-                    var10 = param4 + param0.field_p;
-                    if (-3 == (((td) this).field_c ^ -1)) {
-                      var10 = var10 + (param0.field_w + -var8);
+                    if (param0.a(false)) {
                       break L2;
                     } else {
-                      if (((td) this).field_c != 1) {
-                        break L2;
+                      stackOut_5_0 = 2188450;
+                      stackIn_7_0 = stackOut_5_0;
+                      break L1;
+                    }
+                  }
+                }
+                stackOut_6_0 = 3249872;
+                stackIn_7_0 = stackOut_6_0;
+                break L1;
+              }
+              L3: {
+                var6_int = stackIn_7_0;
+                int discarded$1 = ((td) this).field_b.a("<u=" + Integer.toString(var6_int, 16) + ">" + param0.field_v + "</u>", param0.field_B + param1, param0.field_p + param4, param0.field_l, param0.field_w, var6_int, -1, ((td) this).field_e, ((td) this).field_c, ((td) this).field_b.field_H - -((td) this).field_b.field_L);
+                if (!param0.a(false)) {
+                  break L3;
+                } else {
+                  L4: {
+                    var7 = ((td) this).field_b.a(param0.field_v);
+                    var8 = ((td) this).field_b.field_H + ((td) this).field_b.field_L;
+                    var9 = param1 - -param0.field_B;
+                    if (((td) this).field_e == 2) {
+                      var9 = var9 + (-var7 + param0.field_l);
+                      break L4;
+                    } else {
+                      if (((td) this).field_e == 1) {
+                        var9 = var9 + (param0.field_l - var7 >> 1);
+                        break L4;
                       } else {
-                        var10 = var10 + (param0.field_w - var8 >> 1595299585);
-                        break L2;
+                        break L4;
+                      }
+                    }
+                  }
+                  L5: {
+                    var10 = param4 + param0.field_p;
+                    if (((td) this).field_c == 2) {
+                      var10 = var10 + (param0.field_w + -var8);
+                      break L5;
+                    } else {
+                      if (((td) this).field_c != 1) {
+                        break L5;
+                      } else {
+                        var10 = var10 + (param0.field_w - var8 >> 1);
+                        break L5;
                       }
                     }
                   }
                   na.c(4 + var7, -2 + var9, -70, var8, 2 + var10);
-                  return;
+                  break L3;
                 }
               }
+              break L0;
             } else {
               return;
             }
           }
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L6: {
+            var6 = decompiledCaughtException;
+            stackOut_19_0 = (RuntimeException) var6;
+            stackOut_19_1 = new StringBuilder().append("td.C(");
+            stackIn_21_0 = stackOut_19_0;
+            stackIn_21_1 = stackOut_19_1;
+            stackIn_20_0 = stackOut_19_0;
+            stackIn_20_1 = stackOut_19_1;
+            if (param0 == null) {
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "null";
+              stackIn_22_0 = stackOut_21_0;
+              stackIn_22_1 = stackOut_21_1;
+              stackIn_22_2 = stackOut_21_2;
+              break L6;
+            } else {
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "{...}";
+              stackIn_22_0 = stackOut_20_0;
+              stackIn_22_1 = stackOut_20_1;
+              stackIn_22_2 = stackOut_20_2;
+              break L6;
+            }
+          }
+          throw ig.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
@@ -247,7 +154,7 @@ final class td implements kh {
           if (-54 != var2) {
             if (var2 != 43) {
               if (var2 != 63) {
-                if (-59 != (var2 ^ -1)) {
+                if (var2 != 58) {
                   if (param1 > -40) {
                     return -5;
                   } else {
@@ -285,9 +192,13 @@ final class td implements kh {
     }
 
     td(ka param0, int param1, int param2) {
-        ((td) this).field_b = param0;
-        ((td) this).field_c = param2;
-        ((td) this).field_e = param1;
+        try {
+            ((td) this).field_b = param0;
+            ((td) this).field_c = param2;
+            ((td) this).field_e = param1;
+        } catch (RuntimeException runtimeException) {
+            throw ig.a((Throwable) (Object) runtimeException, "td.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     static {

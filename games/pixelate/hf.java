@@ -18,14 +18,10 @@ final class hf extends fa {
 
     public static void a(byte param0) {
         field_m = null;
-        int var1 = -120 % ((-78 - param0) / 48);
+        int var1 = 0;
     }
 
     final static boolean b(byte param0) {
-        if (param0 != 100) {
-            field_q = -107;
-            return sm.field_l;
-        }
         return sm.field_l;
     }
 

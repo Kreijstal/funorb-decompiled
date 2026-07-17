@@ -15,24 +15,12 @@ final class sb {
     }
 
     final static void a(int param0) {
-        if (param0 != 500) {
-          field_a = null;
-          hg.field_t = null;
-          uo.field_b = null;
-          jn.field_k = null;
-          jc.field_f = null;
-          fe.field_g = null;
-          ub.field_q = null;
-          return;
-        } else {
-          hg.field_t = null;
-          uo.field_b = null;
-          jn.field_k = null;
-          jc.field_f = null;
-          fe.field_g = null;
-          ub.field_q = null;
-          return;
-        }
+        hg.field_t = null;
+        uo.field_b = null;
+        jn.field_k = null;
+        jc.field_f = null;
+        fe.field_g = null;
+        ub.field_q = null;
     }
 
     static {

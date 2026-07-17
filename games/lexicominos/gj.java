@@ -45,7 +45,11 @@ final class gj extends rh {
 
     gj(Object param0, int param1) {
         super(param1);
-        ((gj) this).field_v = param0;
+        try {
+            ((gj) this).field_v = param0;
+        } catch (RuntimeException runtimeException) {
+            throw ld.a((Throwable) (Object) runtimeException, "gj.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     static {

@@ -73,48 +73,113 @@ final class wqa extends kna {
     }
 
     final void a(boolean param0, kh param1) {
-        super.a(param0, param1);
-        param1.a((byte) 15, wma.a((byte) 8, 2, ((wqa) this).field_I), 6);
+        try {
+            super.a(param0, param1);
+            param1.a((byte) 15, wma.a((byte) 8, 2, ((wqa) this).field_I), 6);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "wqa.V(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final fsa a(boolean param0, int param1, la param2) {
-        fsa var13 = new fsa(param2, param0);
-        var13.b((byte) -11, ((wqa) this).field_k, ((wqa) this).field_l);
-        var13.a((byte) -3, 0);
-        var13.h(3, param1 ^ param1);
-        var13.e(false, param1 + 116);
-        var13.b((byte) 17, true);
-        var13.a(1, (byte) -12, true);
-        eq var5 = new eq(param2, param0);
-        var13.a((byte) 83, (nv) (Object) var5);
-        tl var6 = new tl(param2, param0);
-        var6.a(new mg(50 * ((wqa) this).field_I >> 1273978480), (byte) -105);
-        var6.k((byte) -91).b(1, 97);
-        var13.a((byte) 83, (nv) (Object) var6);
-        fsa var7 = new fsa(param2, true);
-        int var8 = param2.m((byte) -86);
-        int var9 = param2.s(-127);
-        var7.b((byte) -11, var9, var8);
-        var7.b(437453352, var9 / 2, var8 / 2);
-        var7.a((byte) -3, 0);
-        var7.b((byte) 17, true);
-        eq var10 = new eq(param2, true);
-        var10.b((byte) -106, true);
-        var10.a(16, (byte) -22);
-        var7.a((byte) 83, (nv) (Object) var10);
-        var7.m(-45);
-        param2.a(var7, (byte) 32);
-        var6.k((byte) -115).h(1).a(9, new lj[1]);
-        mfa var11 = rm.field_a;
-        pqa var12 = (pqa) (Object) var11.a(20, 83);
-        var13.a((gr) (Object) var6, (byte) 124, (dg) (Object) var12);
-        return var13;
+        RuntimeException var4 = null;
+        eq var5 = null;
+        tl var6 = null;
+        fsa var7 = null;
+        int var8 = 0;
+        int var9 = 0;
+        eq var10 = null;
+        mfa var11 = null;
+        pqa var12 = null;
+        fsa var13 = null;
+        fsa stackIn_1_0 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        fsa stackOut_0_0 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
+        try {
+          L0: {
+            var13 = new fsa(param2, param0);
+            var13.b((byte) -11, ((wqa) this).field_k, ((wqa) this).field_l);
+            var13.a((byte) -3, 0);
+            var13.h(3, param1 ^ param1);
+            var13.e(false, param1 + 116);
+            var13.b((byte) 17, true);
+            var13.a(1, (byte) -12, true);
+            var5 = new eq(param2, param0);
+            var13.a((byte) 83, (nv) (Object) var5);
+            var6 = new tl(param2, param0);
+            var6.a(new mg(50 * ((wqa) this).field_I >> 16), (byte) -105);
+            var6.k((byte) -91).b(1, 97);
+            var13.a((byte) 83, (nv) (Object) var6);
+            var7 = new fsa(param2, true);
+            var8 = param2.m((byte) -86);
+            var9 = param2.s(-127);
+            var7.b((byte) -11, var9, var8);
+            var7.b(437453352, var9 / 2, var8 / 2);
+            var7.a((byte) -3, 0);
+            var7.b((byte) 17, true);
+            var10 = new eq(param2, true);
+            var10.b((byte) -106, true);
+            var10.a(16, (byte) -22);
+            var7.a((byte) 83, (nv) (Object) var10);
+            var7.m(-45);
+            param2.a(var7, (byte) 32);
+            var6.k((byte) -115).h(1).a(9, new lj[1]);
+            var11 = rm.field_a;
+            var12 = (pqa) (Object) var11.a(20, 83);
+            var13.a((gr) (Object) var6, (byte) 124, (dg) (Object) var12);
+            stackOut_0_0 = (fsa) var13;
+            stackIn_1_0 = stackOut_0_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var4 = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var4;
+            stackOut_2_1 = new StringBuilder().append("wqa.AC(").append(param0).append(44).append(param1).append(44);
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
+            if (param2 == null) {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 41);
+        }
+        return stackIn_1_0;
     }
 
     public static void e(boolean param0) {
-        if (!param0) {
-            return;
-        }
         field_J = null;
         field_F = null;
         field_H = null;
@@ -123,7 +188,11 @@ final class wqa extends kna {
     wqa(la param0, int param1, kh param2, csa param3) {
         super(param0, param1, param2, param3);
         ((wqa) this).field_I = 262144;
-        ((wqa) this).field_I = ji.a(param2.b((byte) 44, 6), 87, 2);
+        try {
+            ((wqa) this).field_I = ji.a(param2.b((byte) 44, 6), 87, 2);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "wqa.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final boolean z(int param0) {

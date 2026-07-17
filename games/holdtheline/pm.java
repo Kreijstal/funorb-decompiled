@@ -101,6 +101,7 @@ final class pm {
           if (var2 >= 10) {
             ((pm) this).field_c = param0.k(-105);
             ((pm) this).field_a = param0.k(118);
+            return;
           } else {
             var3 = param0.f((byte) -24);
             if (var3 != 0) {

@@ -48,12 +48,20 @@ final class ck extends d {
 
     private ck(String param0, ur param1, uf param2) {
         super(param0, param1, param2);
-        ((ck) this).field_B = eb.field_c.field_g;
+        try {
+            ((ck) this).field_B = eb.field_c.field_g;
+        } catch (RuntimeException runtimeException) {
+            throw wn.a((Throwable) (Object) runtimeException, "ck.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     ck(String param0, uf param1, boolean param2) {
         this(param0, param1);
-        ((ck) this).field_G = param2 ? true : false;
+        try {
+            ((ck) this).field_G = param2 ? true : false;
+        } catch (RuntimeException runtimeException) {
+            throw wn.a((Throwable) (Object) runtimeException, "ck.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     public static void b(boolean param0) {
@@ -67,7 +75,11 @@ final class ck extends d {
 
     private ck(String param0, uf param1) {
         this(param0, eb.field_c.field_p, param1);
-        ((ck) this).field_B = eb.field_c.field_g;
+        try {
+            ((ck) this).field_B = eb.field_c.field_g;
+        } catch (RuntimeException runtimeException) {
+            throw wn.a((Throwable) (Object) runtimeException, "ck.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

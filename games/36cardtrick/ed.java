@@ -12,43 +12,21 @@ final class ed implements Iterable {
 
     final void a(int param0, long param1, qb param2) {
         qb var5 = null;
-        qb var6 = null;
-        qb var7 = null;
-        if (null == param2.field_a) {
-          var7 = ((ed) this).field_b[(int)(param1 & (long)(-1 + ((ed) this).field_a))];
-          var5 = var7;
-          param2.field_d = var5;
-          param2.field_a = var7.field_a;
-          if (param0 >= -94) {
-            ((ed) this).field_d = null;
+        try {
+            if (null != param2.field_a) {
+                param2.c(83);
+            }
+            var5 = ((ed) this).field_b[(int)(param1 & (long)(-1 + ((ed) this).field_a))];
+            param2.field_d = var5;
+            param2.field_a = var5.field_a;
+            if (param0 >= -94) {
+                ((ed) this).field_d = null;
+            }
             param2.field_a.field_d = param2;
             param2.field_d.field_a = param2;
             param2.field_e = param1;
-            return;
-          } else {
-            param2.field_a.field_d = param2;
-            param2.field_d.field_a = param2;
-            param2.field_e = param1;
-            return;
-          }
-        } else {
-          param2.c(83);
-          var6 = ((ed) this).field_b[(int)(param1 & (long)(-1 + ((ed) this).field_a))];
-          var5 = var6;
-          param2.field_d = var5;
-          param2.field_a = var6.field_a;
-          if (param0 < -94) {
-            param2.field_a.field_d = param2;
-            param2.field_d.field_a = param2;
-            param2.field_e = param1;
-            return;
-          } else {
-            ((ed) this).field_d = null;
-            param2.field_a.field_d = param2;
-            param2.field_d.field_a = param2;
-            param2.field_e = param1;
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) (Object) runtimeException, "ed.B(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -88,9 +66,6 @@ final class ed implements Iterable {
 
     public static void a(int param0) {
         field_e = null;
-        if (param0 != 3663) {
-            field_c = -42;
-        }
     }
 
     static {

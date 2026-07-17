@@ -19,75 +19,112 @@ final class ck implements td {
     private kc field_m;
 
     public final void a(int param0, int param1, pj param2, int param3, boolean param4) {
+        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         ue var12 = null;
-        pj stackIn_3_0 = null;
-        Object stackOut_2_0 = null;
-        pj stackOut_1_0 = null;
-        L0: {
-          var11 = OrbDefence.field_D ? 1 : 0;
-          if (!(param2 instanceof ue)) {
-            stackOut_2_0 = null;
-            stackIn_3_0 = (pj) (Object) stackOut_2_0;
-            break L0;
-          } else {
-            stackOut_1_0 = (pj) param2;
-            stackIn_3_0 = stackOut_1_0;
-            break L0;
-          }
-        }
-        L1: {
-          var12 = (ue) (Object) stackIn_3_0;
-          if (var12 != null) {
-            break L1;
-          } else {
-            break L1;
-          }
-        }
-        ul.h(param2.field_s + param1, param2.field_n + param0, param2.field_m, param2.field_r, ((ck) this).field_o);
-        var7 = -(var12.field_I * 2) + param2.field_m;
-        var8 = param2.field_s + param1 + var12.field_I;
-        if (param3 == -4394) {
-          var9 = param2.field_n + (param0 - -var12.field_L);
-          ul.b(var8, var9, var7 + var8, var9, ((ck) this).field_d);
-          var10 = -1 + var12.a((byte) -90);
-          L2: while (true) {
-            if ((var10 ^ -1) > -1) {
-              if (null == ((ck) this).field_m) {
-                return;
+        pj stackIn_4_0 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        Object stackOut_3_0 = null;
+        pj stackOut_2_0 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        var11 = OrbDefence.field_D ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              if (!(param2 instanceof ue)) {
+                stackOut_3_0 = null;
+                stackIn_4_0 = (pj) (Object) stackOut_3_0;
+                break L1;
               } else {
-                ((ck) this).field_m.c(var12.field_l, var7 / 2 + var8, var12.field_L + ((ck) this).field_m.field_z + var9, ((ck) this).field_l, ((ck) this).field_i);
-                return;
+                stackOut_2_0 = (pj) param2;
+                stackIn_4_0 = stackOut_2_0;
+                break L1;
               }
-            } else {
-              ul.f(var8 - -(var7 * var12.a(-1, var10) / var12.j(1)), var9, ((ck) this).field_b, ((ck) this).field_a);
-              var10--;
-              continue L2;
+            }
+            L2: {
+              var12 = (ue) (Object) stackIn_4_0;
+              if (var12 != null) {
+                break L2;
+              } else {
+                break L2;
+              }
+            }
+            L3: {
+              ul.h(param2.field_s + param1, param2.field_n + param0, param2.field_m, param2.field_r, ((ck) this).field_o);
+              var7 = -(var12.field_I * 2) + param2.field_m;
+              var8 = param2.field_s + param1 + var12.field_I;
+              if (param3 == -4394) {
+                break L3;
+              } else {
+                field_j = null;
+                break L3;
+              }
+            }
+            var9 = param2.field_n + (param0 - -var12.field_L);
+            ul.b(var8, var9, var7 + var8, var9, ((ck) this).field_d);
+            var10 = -1 + var12.a((byte) -90);
+            L4: while (true) {
+              if (var10 < 0) {
+                if (null == ((ck) this).field_m) {
+                  break L0;
+                } else {
+                  ((ck) this).field_m.c(var12.field_l, var7 / 2 + var8, var12.field_L + ((ck) this).field_m.field_z + var9, ((ck) this).field_l, ((ck) this).field_i);
+                  return;
+                }
+              } else {
+                ul.f(var8 - -(var7 * var12.a(-1, var10) / var12.j(1)), var9, ((ck) this).field_b, ((ck) this).field_a);
+                var10--;
+                continue L4;
+              }
             }
           }
-        } else {
-          field_j = null;
-          var9 = param2.field_n + (param0 - -var12.field_L);
-          ul.b(var8, var9, var7 + var8, var9, ((ck) this).field_d);
-          var10 = -1 + var12.a((byte) -90);
-          L3: while (true) {
-            if ((var10 ^ -1) > -1) {
-              if (null == ((ck) this).field_m) {
-                return;
-              } else {
-                ((ck) this).field_m.c(var12.field_l, var7 / 2 + var8, var12.field_L + ((ck) this).field_m.field_z + var9, ((ck) this).field_l, ((ck) this).field_i);
-                return;
-              }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L5: {
+            var6 = decompiledCaughtException;
+            stackOut_13_0 = (RuntimeException) var6;
+            stackOut_13_1 = new StringBuilder().append("ck.A(").append(param0).append(44).append(param1).append(44);
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
+            if (param2 == null) {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L5;
             } else {
-              ul.f(var8 - -(var7 * var12.a(-1, var10) / var12.j(1)), var9, ((ck) this).field_b, ((ck) this).field_a);
-              var10--;
-              continue L3;
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L5;
             }
           }
+          throw dd.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
@@ -95,28 +132,23 @@ final class ck implements td {
         field_g = null;
         field_j = null;
         field_n = null;
-        if (param0 != 22499) {
-          field_j = null;
-          field_k = null;
-          field_h = null;
-          field_c = null;
-          return;
-        } else {
-          field_k = null;
-          field_h = null;
-          field_c = null;
-          return;
-        }
+        field_k = null;
+        field_h = null;
+        field_c = null;
     }
 
     ck(kc param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        ((ck) this).field_i = param2;
-        ((ck) this).field_o = param4;
-        ((ck) this).field_l = param1;
-        ((ck) this).field_d = param3;
-        ((ck) this).field_a = param6;
-        ((ck) this).field_m = param0;
-        ((ck) this).field_b = param5;
+        try {
+            ((ck) this).field_i = param2;
+            ((ck) this).field_o = param4;
+            ((ck) this).field_l = param1;
+            ((ck) this).field_d = param3;
+            ((ck) this).field_a = param6;
+            ((ck) this).field_m = param0;
+            ((ck) this).field_b = param5;
+        } catch (RuntimeException runtimeException) {
+            throw dd.a((Throwable) (Object) runtimeException, "ck.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+        }
     }
 
     static {

@@ -26,17 +26,15 @@ class ah extends gg {
     final static void a(java.awt.Component param0, boolean param1) {
         param0.removeKeyListener((java.awt.event.KeyListener) (Object) pk.field_e);
         param0.removeFocusListener((java.awt.event.FocusListener) (Object) pk.field_e);
-        if (param1) {
-            return;
+        try {
+            se.field_H = -1;
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) (Object) runtimeException, "ah.EB(" + (param0 != null ? "{...}" : "null") + 44 + 0 + 41);
         }
-        se.field_H = -1;
     }
 
     public static void a(byte param0) {
         field_k = null;
-        if (param0 != -31) {
-            return;
-        }
         field_n = null;
         field_q = null;
         field_p = null;

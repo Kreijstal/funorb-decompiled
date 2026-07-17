@@ -361,11 +361,11 @@ abstract class qb {
                               break L14;
                             } else {
                               if (!gn.d(false)) {
-                                int discarded$3 = go.field_l.a(fa.field_i, 484, -go.field_l.field_o + 15 + 4 + var3_int, 152, 1000, 16760896, -1, 1, 0, 20);
+                                int discarded$3 = go.field_l.a(fa.field_i, 484, -go.field_l.field_o + 19 + var3_int, 152, 1000, 16760896, -1, 1, 0, 20);
                                 if (!qh.field_o.isEmpty()) {
                                   break L14;
                                 } else {
-                                  if (-1 != (en.field_O ^ -1)) {
+                                  if (en.field_O != 0) {
                                     break L14;
                                   } else {
                                     if (cn.field_d == null) {
@@ -373,7 +373,7 @@ abstract class qb {
                                         var4_int = 16760896;
                                         var5_int = go.field_l.a(f.field_e, 152);
                                         var6 = -(10 * var5_int) + 100;
-                                        if (-4 >= (var5_int ^ -1)) {
+                                        if (var5_int >= 3) {
                                           var6 += 10;
                                           break L15;
                                         } else {
@@ -388,7 +388,7 @@ abstract class qb {
                                           if (qh.field_i >= 640) {
                                             break L16;
                                           } else {
-                                            if ((bm.field_h ^ -1) > (4 + var3_int + var6 ^ -1)) {
+                                            if (~bm.field_h > ~(4 + var3_int + var6)) {
                                               break L16;
                                             } else {
                                               if (var7 + 4 + var3_int <= bm.field_h) {
@@ -427,7 +427,7 @@ abstract class qb {
                 if (!qh.field_o.isEmpty()) {
                   break L6;
                 } else {
-                  if (-1 != (en.field_O ^ -1)) {
+                  if (en.field_O != 0) {
                     break L6;
                   } else {
                     if (cn.field_d != null) {
@@ -477,16 +477,16 @@ abstract class qb {
                     } else {
                       L19: {
                         L20: {
-                          if (-481 < (qh.field_i ^ -1)) {
+                          if (qh.field_i < 480) {
                             break L20;
                           } else {
                             if (640 <= qh.field_i) {
                               break L20;
                             } else {
-                              if ((var2 + -16 ^ -1) < (bm.field_h ^ -1)) {
+                              if (~(var2 + -16) < ~bm.field_h) {
                                 break L20;
                               } else {
-                                if ((4 + var2 ^ -1) >= (bm.field_h ^ -1)) {
+                                if (~(4 + var2) >= ~bm.field_h) {
                                   break L20;
                                 } else {
                                   stackOut_94_0 = 1;
@@ -726,16 +726,16 @@ abstract class qb {
                   }
                   L34: {
                     L35: {
-                      if (-481 < (qh.field_i ^ -1)) {
+                      if (qh.field_i < 480) {
                         break L35;
                       } else {
-                        if (-641 >= (qh.field_i ^ -1)) {
+                        if (qh.field_i >= 640) {
                           break L35;
                         } else {
                           if (-16 + var2 > bm.field_h) {
                             break L35;
                           } else {
-                            if ((4 + var2 ^ -1) >= (bm.field_h ^ -1)) {
+                            if (~(4 + var2) >= ~bm.field_h) {
                               break L35;
                             } else {
                               stackOut_145_0 = 1;
@@ -825,16 +825,16 @@ abstract class qb {
                     L40: {
                       lb.a(stackIn_156_0, stackIn_156_1, stackIn_156_2, 632, param0 ^ 414);
                       var2 -= 20;
-                      if (-481 < (qh.field_i ^ -1)) {
+                      if (qh.field_i < 480) {
                         break L40;
                       } else {
                         if (qh.field_i >= 640) {
                           break L40;
                         } else {
-                          if ((bm.field_h ^ -1) > (-16 + var2 ^ -1)) {
+                          if (~bm.field_h > ~(-16 + var2)) {
                             break L40;
                           } else {
-                            if ((bm.field_h ^ -1) <= (4 + var2 ^ -1)) {
+                            if (~bm.field_h <= ~(4 + var2)) {
                               break L40;
                             } else {
                               stackOut_163_0 = 1;
@@ -1009,7 +1009,7 @@ abstract class qb {
                     var7 = stackIn_194_0;
                     L51: while (true) {
                       L52: {
-                        if ((var7 ^ -1) <= -4) {
+                        if (var7 >= 3) {
                           break L52;
                         } else {
                           if (var11 != 0) {
@@ -1034,8 +1034,8 @@ abstract class qb {
                                                 break L59;
                                               } else {
                                                 var10 = (fq) qh.field_o.elementAt(var9);
-                                                stackOut_203_0 = var10.field_u ^ -1;
-                                                stackOut_203_1 = var7 ^ -1;
+                                                stackOut_203_0 = ~var10.field_u;
+                                                stackOut_203_1 = ~var7;
                                                 stackIn_214_0 = stackOut_203_0;
                                                 stackIn_214_1 = stackOut_203_1;
                                                 stackIn_204_0 = stackOut_203_0;
@@ -1075,11 +1075,11 @@ abstract class qb {
                                         }
                                       }
                                     }
-                                    vj.field_a[3][(km.field_d >> 1660334178) % bp.field_c[3]].c(var6, 48, ek.field_f[var7]);
+                                    vj.field_a[3][(km.field_d >> 2) % bp.field_c[3]].c(var6, 48, ek.field_f[var7]);
                                     jf.field_b[var7].a(-(jf.field_b[var7].field_n / 2) + (24 + var6), 110);
                                     break L55;
                                   }
-                                  stackOut_213_0 = q.field_a[var7].field_i ^ -1;
+                                  stackOut_213_0 = ~q.field_a[var7].field_i;
                                   stackOut_213_1 = -1;
                                   stackIn_214_0 = stackOut_213_0;
                                   stackIn_214_1 = stackOut_213_1;
@@ -1116,10 +1116,10 @@ abstract class qb {
                 }
               }
             }
-            if ((jo.field_o ^ -1) == -2) {
+            if (jo.field_o == 1) {
               L62: {
                 var5 = null;
-                if (-20 != (uo.field_o ^ -1)) {
+                if (uo.field_o != 19) {
                   break L62;
                 } else {
                   var5 = (Object) (Object) ci.a(new String[3], fb.field_e, 3);

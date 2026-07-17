@@ -891,7 +891,7 @@ final class qi extends qg {
                 break L1;
               } else {
                 L6: {
-                  if ((((qi) this).field_B ^ -1) != (((qi) this).field_o ^ -1)) {
+                  if (~((qi) this).field_B != ~((qi) this).field_o) {
                     L7: {
                       var5_int = ((qi) this).field_B + -((qi) this).field_o;
                       stackOut_25_0 = this;
@@ -900,10 +900,10 @@ final class qi extends qg {
                       stackIn_32_1 = stackOut_25_1;
                       stackIn_26_0 = stackOut_25_0;
                       stackIn_26_1 = stackOut_25_1;
-                      if ((Math.abs(var5_int) ^ -1) < -3) {
+                      if (Math.abs(var5_int) > 2) {
                         stackOut_32_0 = this;
                         stackOut_32_1 = stackIn_32_1;
-                        stackOut_32_2 = var5_int >> -1255491743;
+                        stackOut_32_2 = var5_int >> 1;
                         stackIn_33_0 = stackOut_32_0;
                         stackIn_33_1 = stackOut_32_1;
                         stackIn_33_2 = stackOut_32_2;
@@ -958,7 +958,7 @@ final class qi extends qg {
                     if (2 < Math.abs(var5_int)) {
                       stackOut_42_0 = this;
                       stackOut_42_1 = stackIn_42_1;
-                      stackOut_42_2 = var5_int >> 775613345;
+                      stackOut_42_2 = var5_int >> 1;
                       stackIn_43_0 = stackOut_42_0;
                       stackIn_43_1 = stackOut_42_1;
                       stackIn_43_2 = stackOut_42_2;
@@ -970,7 +970,7 @@ final class qi extends qg {
                       stackIn_41_1 = stackOut_36_1;
                       stackIn_37_0 = stackOut_36_0;
                       stackIn_37_1 = stackOut_36_1;
-                      if (-1 <= (var5_int ^ -1)) {
+                      if (var5_int <= 0) {
                         stackOut_41_0 = this;
                         stackOut_41_1 = stackIn_41_1;
                         stackOut_41_2 = -1;
@@ -1006,7 +1006,7 @@ final class qi extends qg {
                 break L9;
               }
             }
-            super.a(param0, param1, param2, param3 ^ 0);
+            super.a(param0, param1, param2, param3);
             break L0;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

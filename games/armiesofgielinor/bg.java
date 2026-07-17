@@ -53,7 +53,7 @@ final class bg {
             bg.a(-7);
         }
         while (var4 != ((bg) this).field_e) {
-            if (!((param1 ^ -1L) != (((bg) this).field_e.field_i ^ -1L))) {
+            if (!(~param1 != ~((bg) this).field_e.field_i)) {
                 var5 = ((bg) this).field_e;
                 ((bg) this).field_e = ((bg) this).field_e.field_b;
                 return var5;
@@ -101,8 +101,9 @@ final class bg {
         ((bg) this).field_a = new tc[param0];
         ((bg) this).field_c = param0;
         for (var2 = 0; var2 < param0; var2++) {
-            var3 = new tc();
-            ((bg) this).field_a[var2] = new tc();
+            tc dupTemp$0 = new tc();
+            var3 = dupTemp$0;
+            ((bg) this).field_a[var2] = dupTemp$0;
             var3.field_b = var3;
             var3.field_j = var3;
         }
@@ -110,7 +111,7 @@ final class bg {
 
     final tc b(byte param0) {
         tc var2 = null;
-        tc var4 = null;
+        tc var4_ref = null;
         int var3 = ArmiesOfGielinor.field_M ? 1 : 0;
         if (param0 <= 45) {
             int discarded$0 = ((bg) this).a((byte) 90);
@@ -126,10 +127,11 @@ final class bg {
             if (((bg) this).field_c <= ((bg) this).field_d) {
                 return null;
             }
+            int fieldTemp$1 = ((bg) this).field_d;
             ((bg) this).field_d = ((bg) this).field_d + 1;
-            var4 = ((bg) this).field_a[((bg) this).field_d].field_b;
-            var2 = var4;
-        } while (var4 == ((bg) this).field_a[((bg) this).field_d - 1]);
+            var4_ref = ((bg) this).field_a[fieldTemp$1].field_b;
+            var2 = var4_ref;
+        } while (var4_ref == ((bg) this).field_a[((bg) this).field_d - 1]);
         ((bg) this).field_f = var2.field_b;
         return var2;
     }
@@ -142,18 +144,23 @@ final class bg {
     }
 
     final void a(tc param0, long param1, int param2) {
-        if (!(null == param0.field_j)) {
-            param0.d(-128);
+        tc var5 = null;
+        try {
+            if (!(null == param0.field_j)) {
+                param0.d(-128);
+            }
+            if (param2 < 14) {
+                ((bg) this).field_e = null;
+            }
+            var5 = ((bg) this).field_a[(int)((long)(-1 + ((bg) this).field_c) & param1)];
+            param0.field_b = var5;
+            param0.field_j = var5.field_j;
+            param0.field_j.field_b = param0;
+            param0.field_i = param1;
+            param0.field_b.field_j = param0;
+        } catch (RuntimeException runtimeException) {
+            throw ig.a((Throwable) (Object) runtimeException, "bg.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }
-        if (param2 < 14) {
-            ((bg) this).field_e = null;
-        }
-        tc var5 = ((bg) this).field_a[(int)((long)(-1 + ((bg) this).field_c) & param1)];
-        param0.field_b = var5;
-        param0.field_j = var5.field_j;
-        param0.field_j.field_b = param0;
-        param0.field_i = param1;
-        param0.field_b.field_j = param0;
     }
 
     static {

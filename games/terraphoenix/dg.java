@@ -16,10 +16,7 @@ final class dg {
         if (le.field_r != null) {
             return le.field_r;
         }
-        if (param0) {
-            dg.b(false);
-            return (java.applet.Applet) (Object) gm.field_f;
-        }
+        dg.b(false);
         return (java.applet.Applet) (Object) gm.field_f;
     }
 
@@ -42,109 +39,84 @@ final class dg {
         int var4 = 0;
         if (param2 == -76) {
           var4 = 0;
-          if (!param0) {
+          if (param0) {
             L0: {
-              if (param1) {
-                var4 += 2;
-                break L0;
-              } else {
-                break L0;
-              }
-            }
-            if (param3) {
-              var4++;
-              return ug.field_a[var4];
-            } else {
-              return ug.field_a[var4];
-            }
-          } else {
-            L1: {
               var4 += 4;
               if (param1) {
                 var4 += 2;
+                break L0;
+              } else {
+                break L0;
+              }
+            }
+            return ug.field_a[var4];
+          } else {
+            L1: {
+              if (param1) {
+                var4 += 2;
                 break L1;
               } else {
                 break L1;
               }
             }
-            if (param3) {
-              var4++;
-              return ug.field_a[var4];
-            } else {
-              return ug.field_a[var4];
-            }
+            return ug.field_a[var4];
           }
         } else {
           field_c = null;
           var4 = 0;
-          if (param0) {
+          if (!param0) {
             L2: {
+              if (param1) {
+                var4 += 2;
+                break L2;
+              } else {
+                break L2;
+              }
+            }
+            return ug.field_a[var4];
+          } else {
+            L3: {
               var4 += 4;
               if (param1) {
                 var4 += 2;
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            if (!param3) {
-              return ug.field_a[var4];
-            } else {
-              var4++;
-              return ug.field_a[var4];
-            }
-          } else {
-            L3: {
-              if (param1) {
-                var4 += 2;
                 break L3;
               } else {
                 break L3;
               }
             }
-            if (param3) {
-              var4++;
-              return ug.field_a[var4];
-            } else {
-              return ug.field_a[var4];
-            }
+            return ug.field_a[var4];
           }
         }
     }
 
     final static void a(int param0) {
         uc var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
+        RuntimeException decompiledCaughtException = null;
         var3 = Terraphoenix.field_V;
-        var1 = di.field_l;
-        if (param0 < 37) {
-          field_c = null;
-          L0: while (true) {
-            if (b.a((byte) -102)) {
-              var1.k(-17410, 8);
-              var1.field_k = var1.field_k + 1;
-              var2 = var1.field_k + 1;
-              ql.a(-124, var1);
-              di.field_l.j(var1.field_k + -var2, -119);
-              continue L0;
-            } else {
-              return;
+        try {
+          L0: {
+            var1 = di.field_l;
+            L1: while (true) {
+              if (!b.a((byte) -102)) {
+                break L0;
+              } else {
+                var1.k(-17410, 8);
+                int fieldTemp$5 = var1.field_k + 1;
+                var1.field_k = var1.field_k + 1;
+                var2 = fieldTemp$5;
+                ql.a(-124, var1);
+                di.field_l.j(var1.field_k + -var2, -119);
+                continue L1;
+              }
             }
           }
-        } else {
-          L1: while (true) {
-            if (b.a((byte) -102)) {
-              var1.k(-17410, 8);
-              var1.field_k = var1.field_k + 1;
-              var2 = var1.field_k + 1;
-              ql.a(-124, var1);
-              di.field_l.j(var1.field_k + -var2, -119);
-              continue L1;
-            } else {
-              return;
-            }
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw qk.a((Throwable) (Object) var1_ref, "dg.A(" + 81 + 41);
         }
     }
 

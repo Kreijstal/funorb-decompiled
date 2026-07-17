@@ -19,37 +19,51 @@ final class ll {
     public static void a(byte param0) {
         field_h = null;
         field_g = null;
-        if (param0 <= 78) {
-            int discarded$0 = ll.a(-66, -115);
-            field_d = null;
-            return;
-        }
         field_d = null;
     }
 
     final static int a(int param0, int param1) {
         g[] var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
         g var4 = null;
         int var5 = 0;
         g[] var6 = null;
+        int stackIn_6_0 = 0;
+        int stackIn_9_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_8_0 = 0;
+        int stackOut_5_0 = 0;
         var5 = TombRacer.field_G ? 1 : 0;
-        var6 = qg.field_a;
-        var2 = var6;
-        var3 = param1;
-        L0: while (true) {
-          if (var6.length > var3) {
-            var4 = var6[var3];
-            if (var4.field_f == param0) {
-              return var4.field_a;
-            } else {
-              var3++;
-              continue L0;
+        try {
+          L0: {
+            var6 = qg.field_a;
+            var2 = var6;
+            var3 = param1;
+            L1: while (true) {
+              if (var6.length <= var3) {
+                stackOut_8_0 = -1;
+                stackIn_9_0 = stackOut_8_0;
+                break L0;
+              } else {
+                var4 = var6[var3];
+                if (var4.field_f == param0) {
+                  stackOut_5_0 = var4.field_a;
+                  stackIn_6_0 = stackOut_5_0;
+                  return stackIn_6_0;
+                } else {
+                  var3++;
+                  continue L1;
+                }
+              }
             }
-          } else {
-            return -1;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          throw tba.a((Throwable) (Object) var2_ref, "ll.B(" + param0 + 44 + param1 + 41);
         }
+        return stackIn_9_0;
     }
 
     ll(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, boolean param9, boolean param10, int param11) {

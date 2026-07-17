@@ -11,40 +11,25 @@ final class cl {
     public static void a(int param0) {
         field_c = null;
         field_d = null;
-        if (param0 != -11784) {
-          cl.a(101, -52, -57);
-          field_e = null;
-          field_b = null;
-          field_a = null;
-          return;
-        } else {
-          field_e = null;
-          field_b = null;
-          field_a = null;
-          return;
-        }
+        field_e = null;
+        field_b = null;
+        field_a = null;
     }
 
     final static void a(int param0, boolean param1, uh param2, la param3) {
-        if (param1) {
-          field_c = null;
-          pf.field_A = n.c((byte) 57) * param0 / 1000;
-          ti.a(param3, 28922);
-          le.a(6, param3);
-          kl.a((byte) 66, param3);
-          nb.g((byte) 96);
-          af.a(true);
-          jh.field_z = 0 - pf.field_A;
-          return;
-        } else {
-          pf.field_A = n.c((byte) 57) * param0 / 1000;
-          ti.a(param3, 28922);
-          le.a(6, param3);
-          kl.a((byte) 66, param3);
-          nb.g((byte) 96);
-          af.a(true);
-          jh.field_z = 0 - pf.field_A;
-          return;
+        try {
+            if (param1) {
+                field_c = null;
+            }
+            pf.field_A = n.c((byte) 57) * param0 / 1000;
+            ti.a(param3, 28922);
+            le.a(6, param3);
+            kl.a((byte) 66, param3);
+            nb.g((byte) 96);
+            af.a(true);
+            jh.field_z = 0 - pf.field_A;
+        } catch (RuntimeException runtimeException) {
+            throw rb.a((Throwable) (Object) runtimeException, "cl.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 

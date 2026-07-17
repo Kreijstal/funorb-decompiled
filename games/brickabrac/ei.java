@@ -18,102 +18,121 @@ final class ei implements ub {
     private int field_e;
 
     public final void a(boolean param0, int param1, int param2, oc param3, int param4) {
+        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         bf var11 = null;
         oc stackIn_3_0 = null;
-        oc stackOut_2_0;
-        Object stackOut_1_0;
-        L0: {
-          if (param3 instanceof bf) {
-            stackOut_2_0 = (oc) param3;
-            stackIn_3_0 = stackOut_2_0;
-            break L0;
-          } else {
-            stackOut_1_0 = null;
-            stackIn_3_0 = (oc) (Object) stackOut_1_0;
-            break L0;
-          }
-        }
-        L1: {
-          var11 = (bf) (Object) stackIn_3_0;
-          if (var11 != null) {
-            param0 = param0 & var11.field_J;
-            break L1;
-          } else {
-            break L1;
-          }
-        }
-        L2: {
-          var7 = 5592405;
-          if (!param0) {
-            break L2;
-          } else {
-            var7 = 16777215;
-            break L2;
-          }
-        }
-        lb.g(param3.field_o + param2, param4 - -param3.field_w, param3.field_t, param3.field_s, ((ei) this).field_b);
-        var8 = ((ei) this).field_m + param2 - -param3.field_o;
-        var9 = ((ei) this).field_h + param4 - -param3.field_w;
-        lb.a(var8, var9, ((ei) this).field_l, ((ei) this).field_d, 5592405);
-        if (param1 == -20618) {
-          lb.g(var8, var9, ((ei) this).field_l, ((ei) this).field_d, var7);
-          if (var11.field_F) {
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_19_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        oc stackOut_2_0 = null;
+        Object stackOut_1_0 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param3 instanceof bf) {
+                stackOut_2_0 = (oc) param3;
+                stackIn_3_0 = stackOut_2_0;
+                break L1;
+              } else {
+                stackOut_1_0 = null;
+                stackIn_3_0 = (oc) (Object) stackOut_1_0;
+                break L1;
+              }
+            }
+            L2: {
+              var11 = (bf) (Object) stackIn_3_0;
+              if (var11 != null) {
+                param0 = param0 & var11.field_J;
+                break L2;
+              } else {
+                break L2;
+              }
+            }
             L3: {
-              lb.d(var8, var9, ((ei) this).field_l + var8, var9 - -((ei) this).field_d, 1);
-              lb.d(var8 + ((ei) this).field_l, var9, var8, var9 - -((ei) this).field_d, 1);
-              if (null != ((ei) this).field_n) {
-                var10 = ((ei) this).field_l - -((ei) this).field_m - -((ei) this).field_f;
-                int discarded$4 = ((ei) this).field_n.a(param3.field_A, param2 + (param3.field_o + var10), ((ei) this).field_c + (param3.field_w + param4), param3.field_t - (((ei) this).field_f + var10), param3.field_s - (((ei) this).field_f << 516393857), ((ei) this).field_e, ((ei) this).field_j, ((ei) this).field_i, ((ei) this).field_k, 0);
+              var7 = 5592405;
+              if (!param0) {
                 break L3;
               } else {
+                var7 = 16777215;
                 break L3;
               }
             }
-            return;
-          } else {
             L4: {
-              if (null != ((ei) this).field_n) {
-                var10 = ((ei) this).field_l - -((ei) this).field_m - -((ei) this).field_f;
-                int discarded$5 = ((ei) this).field_n.a(param3.field_A, param2 + (param3.field_o + var10), ((ei) this).field_c + (param3.field_w + param4), param3.field_t - (((ei) this).field_f + var10), param3.field_s - (((ei) this).field_f << 516393857), ((ei) this).field_e, ((ei) this).field_j, ((ei) this).field_i, ((ei) this).field_k, 0);
+              lb.g(param3.field_o + param2, param4 - -param3.field_w, param3.field_t, param3.field_s, ((ei) this).field_b);
+              var8 = ((ei) this).field_m + param2 - -param3.field_o;
+              var9 = ((ei) this).field_h + param4 - -param3.field_w;
+              lb.a(var8, var9, ((ei) this).field_l, ((ei) this).field_d, 5592405);
+              if (param1 == -20618) {
                 break L4;
               } else {
+                ((ei) this).field_h = 116;
                 break L4;
               }
             }
-            return;
-          }
-        } else {
-          ((ei) this).field_h = 116;
-          lb.g(var8, var9, ((ei) this).field_l, ((ei) this).field_d, var7);
-          if (!var11.field_F) {
             L5: {
-              if (null != ((ei) this).field_n) {
-                var10 = ((ei) this).field_l - -((ei) this).field_m - -((ei) this).field_f;
-                int discarded$6 = ((ei) this).field_n.a(param3.field_A, param2 + (param3.field_o + var10), ((ei) this).field_c + (param3.field_w + param4), param3.field_t - (((ei) this).field_f + var10), param3.field_s - (((ei) this).field_f << 516393857), ((ei) this).field_e, ((ei) this).field_j, ((ei) this).field_i, ((ei) this).field_k, 0);
+              lb.g(var8, var9, ((ei) this).field_l, ((ei) this).field_d, var7);
+              if (!var11.field_F) {
                 break L5;
               } else {
+                lb.d(var8, var9, ((ei) this).field_l + var8, var9 - -((ei) this).field_d, 1);
+                lb.d(var8 + ((ei) this).field_l, var9, var8, var9 - -((ei) this).field_d, 1);
                 break L5;
               }
             }
-            return;
-          } else {
-            L6: {
-              lb.d(var8, var9, ((ei) this).field_l + var8, var9 - -((ei) this).field_d, 1);
-              lb.d(var8 + ((ei) this).field_l, var9, var8, var9 - -((ei) this).field_d, 1);
-              if (null != ((ei) this).field_n) {
-                var10 = ((ei) this).field_l - -((ei) this).field_m - -((ei) this).field_f;
-                int discarded$7 = ((ei) this).field_n.a(param3.field_A, param2 + (param3.field_o + var10), ((ei) this).field_c + (param3.field_w + param4), param3.field_t - (((ei) this).field_f + var10), param3.field_s - (((ei) this).field_f << 516393857), ((ei) this).field_e, ((ei) this).field_j, ((ei) this).field_i, ((ei) this).field_k, 0);
-                break L6;
-              } else {
-                break L6;
-              }
+            if (null != ((ei) this).field_n) {
+              var10 = ((ei) this).field_l - -((ei) this).field_m - -((ei) this).field_f;
+              int discarded$1 = ((ei) this).field_n.a(param3.field_A, param2 + (param3.field_o + var10), ((ei) this).field_c + (param3.field_w + param4), param3.field_t - (((ei) this).field_f + var10), param3.field_s - (((ei) this).field_f << 1), ((ei) this).field_e, ((ei) this).field_j, ((ei) this).field_i, ((ei) this).field_k, 0);
+              break L0;
+            } else {
+              return;
             }
-            return;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L6: {
+            var6 = decompiledCaughtException;
+            stackOut_16_0 = (RuntimeException) var6;
+            stackOut_16_1 = new StringBuilder().append("ei.AA(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackIn_18_0 = stackOut_16_0;
+            stackIn_18_1 = stackOut_16_1;
+            stackIn_17_0 = stackOut_16_0;
+            stackIn_17_1 = stackOut_16_1;
+            if (param3 == null) {
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "null";
+              stackIn_19_0 = stackOut_18_0;
+              stackIn_19_1 = stackOut_18_1;
+              stackIn_19_2 = stackOut_18_2;
+              break L6;
+            } else {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "{...}";
+              stackIn_19_0 = stackOut_17_0;
+              stackIn_19_1 = stackOut_17_1;
+              stackIn_19_2 = stackOut_17_2;
+              break L6;
+            }
+          }
+          throw qb.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param4 + 41);
         }
     }
 
@@ -156,25 +175,26 @@ final class ei implements ub {
 
     public static void a(int param0) {
         field_g = null;
-        if (param0 != 1) {
-            return;
-        }
         field_a = null;
     }
 
     ei(dh param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         ((ei) this).field_i = 1;
         ((ei) this).field_k = 1;
-        ((ei) this).field_n = param0;
-        ((ei) this).field_l = param8;
-        ((ei) this).field_f = param1;
-        ((ei) this).field_d = param7;
-        ((ei) this).field_m = param5;
-        ((ei) this).field_h = param6;
-        ((ei) this).field_b = param9;
-        ((ei) this).field_e = param3;
-        ((ei) this).field_j = param4;
-        ((ei) this).field_c = param2;
+        try {
+            ((ei) this).field_n = param0;
+            ((ei) this).field_l = param8;
+            ((ei) this).field_f = param1;
+            ((ei) this).field_d = param7;
+            ((ei) this).field_m = param5;
+            ((ei) this).field_h = param6;
+            ((ei) this).field_b = param9;
+            ((ei) this).field_e = param3;
+            ((ei) this).field_j = param4;
+            ((ei) this).field_c = param2;
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) (Object) runtimeException, "ei.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 41);
+        }
     }
 
     static {

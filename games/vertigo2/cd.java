@@ -8,11 +8,6 @@ final class cd {
 
     public static void a(int param0) {
         field_b = null;
-        if (param0 <= 63) {
-            boolean discarded$0 = cd.b(44);
-            field_c = null;
-            return;
-        }
         field_c = null;
     }
 

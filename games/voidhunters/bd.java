@@ -34,7 +34,7 @@ final class bd {
             L1: while (true) {
               L2: {
                 L3: {
-                  if ((mha.field_a ^ -1) >= (var7_int ^ -1)) {
+                  if (mha.field_a <= var7_int) {
                     break L3;
                   } else {
                     var6_array[var7_int] = var5[var7_int];
@@ -55,7 +55,7 @@ final class bd {
               }
               L4: while (true) {
                 L5: {
-                  if ((var7_int ^ -1) <= (param4.length ^ -1)) {
+                  if (var7_int >= param4.length) {
                     break L5;
                   } else {
                     var6_array[mha.field_a - -var7_int] = param4[var7_int];
@@ -82,7 +82,7 @@ final class bd {
         L6: while (true) {
           L7: {
             L8: {
-              if ((mha.field_a ^ -1) >= (var7_int ^ -1)) {
+              if (mha.field_a <= var7_int) {
                 break L8;
               } else {
                 var6[var7_int] = 10;
@@ -276,8 +276,9 @@ final class bd {
           tia.field_M = new llb(0L, jta.field_o);
           jta.field_o.field_gb = bbb.a(wjb.a(param3, true, "lobby", "smallbutton"), (byte) 36);
           jta.field_o.field_mb = bbb.a(wjb.a(param3, true, "lobby", "smallbutton_mouseover"), (byte) -119);
-          jta.field_o.field_nb = bbb.a(wjb.a(param3, true, "lobby", "smallbutton_active"), (byte) -96);
-          jta.field_o.field_A = bbb.a(wjb.a(param3, true, "lobby", "smallbutton_active"), (byte) -96);
+          phb[] dupTemp$4 = bbb.a(wjb.a(param3, true, "lobby", "smallbutton_active"), (byte) -96);
+          jta.field_o.field_nb = dupTemp$4;
+          jta.field_o.field_A = dupTemp$4;
           jta.field_o.field_ub = bbb.a(wjb.a(param3, true, "lobby", "smallbutton_disabled"), (byte) -82);
           hnb.field_X.field_gb = bbb.a(wjb.a(param3, true, "lobby", "mediumbutton"), (byte) 124);
           hnb.field_X.field_mb = bbb.a(wjb.a(param3, true, "lobby", "mediumbutton_mouseover"), (byte) -105);
@@ -298,17 +299,20 @@ final class bd {
           vj.field_q.field_ub = bbb.a(wjb.a(param3, true, "lobby", "backbutton_disabled"), (byte) 39);
           tia.field_M.field_gb = bbb.a(wjb.a(param3, true, "lobby", "gameoptionbutton"), (byte) 29);
           tia.field_M.field_mb = bbb.a(wjb.a(param3, true, "lobby", "gameoptionbutton_mouseover"), (byte) -85);
-          tia.field_M.field_nb = bbb.a(wjb.a(param3, true, "lobby", "gameoptionbutton_active"), (byte) 22);
-          tia.field_M.field_A = bbb.a(wjb.a(param3, true, "lobby", "gameoptionbutton_active"), (byte) 22);
+          phb[] dupTemp$5 = bbb.a(wjb.a(param3, true, "lobby", "gameoptionbutton_active"), (byte) 22);
+          tia.field_M.field_nb = dupTemp$5;
+          tia.field_M.field_A = dupTemp$5;
           tia.field_M.field_ub = bbb.a(wjb.a(param3, true, "lobby", "gameoptionbutton_disabled"), (byte) -85);
           pva.field_d.field_gb = bbb.a(wjb.a(param3, true, "lobby", "chatbutton"), (byte) 54);
           pva.field_d.field_mb = bbb.a(wjb.a(param3, true, "lobby", "chatbutton_mouseover"), (byte) -54);
-          pva.field_d.field_nb = bbb.a(wjb.a(param3, true, "lobby", "chatbutton_active"), (byte) -66);
-          pva.field_d.field_A = bbb.a(wjb.a(param3, true, "lobby", "chatbutton_active"), (byte) -66);
+          phb[] dupTemp$6 = bbb.a(wjb.a(param3, true, "lobby", "chatbutton_active"), (byte) -66);
+          pva.field_d.field_nb = dupTemp$6;
+          pva.field_d.field_A = dupTemp$6;
           vlb.field_a.field_gb = bbb.a(wjb.a(param3, true, "lobby", "chatfilterbutton"), (byte) 123);
           vlb.field_a.field_mb = bbb.a(wjb.a(param3, true, "lobby", "chatfilterbutton_mouseover"), (byte) 21);
-          vlb.field_a.field_nb = bbb.a(wjb.a(param3, true, "lobby", "chatfilterbutton_active"), (byte) 45);
-          vlb.field_a.field_A = bbb.a(wjb.a(param3, true, "lobby", "chatfilterbutton_active"), (byte) 45);
+          phb[] dupTemp$7 = bbb.a(wjb.a(param3, true, "lobby", "chatfilterbutton_active"), (byte) 45);
+          vlb.field_a.field_nb = dupTemp$7;
+          vlb.field_a.field_A = dupTemp$7;
           var18 = wjb.a(param3, true, "lobby", "checkbox");
           urb.field_o = new qca(0L, var18[1], var18[0], 1, iga.field_o, (String) null);
           ga.field_s = new llb(0L, (llb) null);
@@ -338,102 +342,15 @@ final class bd {
     }
 
     final static boolean a(int param0, byte param1) {
-        RuntimeException var2 = null;
-        int stackIn_2_0 = 0;
-        int stackIn_7_0 = 0;
-        int stackOut_1_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_6_0 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    try {
-                        if (param1 == -95) {
-                            statePc = 3;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_0) {
-                        caughtException = stateCaught_0;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 1: {
-                    try {
-                        stackOut_1_0 = 0;
-                        stackIn_2_0 = stackOut_1_0;
-                        statePc = 2;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        caughtException = stateCaught_1;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    return stackIn_2_0 != 0;
-                }
-                case 3: {
-                    try {
-                        if ((-param0 & param0) != param0) {
-                            statePc = 6;
-                        } else {
-                            statePc = 4;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_3) {
-                        caughtException = stateCaught_3;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 4: {
-                    try {
-                        stackOut_4_0 = 1;
-                        stackIn_7_0 = stackOut_4_0;
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        caughtException = stateCaught_4;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        stackOut_6_0 = 0;
-                        stackIn_7_0 = stackOut_6_0;
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 8;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    return stackIn_7_0 != 0;
-                }
-                case 8: {
-                    var2 = (RuntimeException) (Object) caughtException;
-                    throw rta.a((Throwable) (Object) var2, "bd.C(" + param0 + 44 + param1 + 41);
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
-            }
+        if (param1 != -95) {
+            return false;
         }
+        return (-param0 & param0) == param0 ? true : false;
     }
 
     public static void a(byte param0) {
-        try {
-            field_a = null;
-            int var1_int = 45 % ((-20 - param0) / 48);
-        } catch (RuntimeException runtimeException) {
-            throw rta.a((Throwable) (Object) runtimeException, "bd.B(" + param0 + 41);
-        }
+        field_a = null;
+        int var1 = 45 % ((-20 - param0) / 48);
     }
 
     static {

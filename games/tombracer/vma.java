@@ -101,6 +101,7 @@ final class vma {
           if (var2 >= 10) {
             ((vma) this).field_c = param0.d(127);
             ((vma) this).field_b = param0.d(121);
+            return;
           } else {
             var3 = param0.h(255);
             if (var3 != 0) {

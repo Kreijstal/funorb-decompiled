@@ -14,9 +14,6 @@ final class ag implements Iterator {
     public static void b(int param0) {
         field_e = null;
         field_c = null;
-        if (param0 != 640) {
-            ag.a(-73);
-        }
     }
 
     public final boolean hasNext() {
@@ -79,9 +76,13 @@ final class ag implements Iterator {
 
     ag(ak param0) {
         ((ag) this).field_a = null;
-        ((ag) this).field_b = param0;
-        ((ag) this).field_a = null;
-        ((ag) this).field_f = ((ag) this).field_b.field_f.field_k;
+        try {
+            ((ag) this).field_b = param0;
+            ((ag) this).field_a = null;
+            ((ag) this).field_f = ((ag) this).field_b.field_f.field_k;
+        } catch (RuntimeException runtimeException) {
+            throw oj.a((Throwable) (Object) runtimeException, "ag.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

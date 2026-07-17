@@ -16,9 +16,6 @@ final class ik extends hg {
 
     public static void d(int param0) {
         field_h = null;
-        if (param0 != 65535) {
-            String discarded$0 = ik.a(false, false, (byte) -31, false);
-        }
     }
 
     final static String a(boolean param0, boolean param1, byte param2, boolean param3) {
@@ -55,16 +52,20 @@ final class ik extends hg {
     }
 
     ik(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
-        ((ik) this).field_o = param2;
-        ((ik) this).field_n = param4;
-        ((ik) this).field_g = param5;
-        ((ik) this).field_m = param3;
-        ((ik) this).field_k = param1;
-        ((ik) this).field_q = param6;
-        ((ik) this).field_j = param0;
-        int fieldTemp$0 = qh.field_m;
-        qh.field_m = qh.field_m + 1;
-        ((ik) this).field_i = 65535 & fieldTemp$0;
+        try {
+            ((ik) this).field_o = param2;
+            ((ik) this).field_n = param4;
+            ((ik) this).field_g = param5;
+            ((ik) this).field_m = param3;
+            ((ik) this).field_k = param1;
+            ((ik) this).field_q = param6;
+            ((ik) this).field_j = param0;
+            int fieldTemp$0 = qh.field_m;
+            qh.field_m = qh.field_m + 1;
+            ((ik) this).field_i = 65535 & fieldTemp$0;
+        } catch (RuntimeException runtimeException) {
+            throw t.a((Throwable) (Object) runtimeException, "ik.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

@@ -33,7 +33,7 @@ abstract class pg {
               if (((pg) this).field_a == null) {
                 break L1;
               } else {
-                if ((((pg) this).field_a.length ^ -1) < -1) {
+                if (((pg) this).field_a.length > 0) {
                   stackOut_6_0 = ((pg) this).field_a[-1 + ((pg) this).field_a.length].field_a + -((pg) this).field_a[0].field_d;
                   stackIn_7_0 = stackOut_6_0;
                   break L0;
@@ -102,67 +102,117 @@ abstract class pg {
     }
 
     final int a(int param0, int param1, String param2, int param3) {
-        int var5 = 0;
+        int var5_int = 0;
+        RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        L0: {
-          var10 = EscapeVector.field_A;
-          if (param0 == -21446) {
-            break L0;
-          } else {
-            ((pg) this).field_a = null;
-            break L0;
-          }
-        }
-        var5 = 0;
-        var6 = 0;
-        var7 = param2.length();
-        var8 = 0;
-        L1: while (true) {
-          if (var7 <= var8) {
-            if (var5 > 0) {
-              return (param3 + -param1 << -389338296) / var5;
-            } else {
-              return 0;
-            }
-          } else {
-            var9 = param2.charAt(var8);
-            if (var9 != 60) {
-              if (62 == var9) {
-                var6 = 0;
-                var8++;
-                continue L1;
+        int stackIn_16_0 = 0;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        String stackIn_20_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_15_0 = 0;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        var10 = EscapeVector.field_A;
+        try {
+          L0: {
+            L1: {
+              if (param0 == -21446) {
+                break L1;
               } else {
-                if (var6 == 0) {
-                  if (var9 == 32) {
-                    var5++;
-                    var8++;
-                    continue L1;
-                  } else {
-                    var8++;
-                    continue L1;
-                  }
-                } else {
-                  var8++;
-                  continue L1;
-                }
+                ((pg) this).field_a = null;
+                break L1;
               }
-            } else {
-              var6 = 1;
-              var8++;
-              continue L1;
+            }
+            var5_int = 0;
+            var6 = 0;
+            var7 = param2.length();
+            var8 = 0;
+            L2: while (true) {
+              if (var7 <= var8) {
+                if (var5_int > 0) {
+                  stackOut_15_0 = (param3 + -param1 << 8) / var5_int;
+                  stackIn_16_0 = stackOut_15_0;
+                  break L0;
+                } else {
+                  return 0;
+                }
+              } else {
+                L3: {
+                  var9 = param2.charAt(var8);
+                  if (var9 != 60) {
+                    if (62 == var9) {
+                      var6 = 0;
+                      break L3;
+                    } else {
+                      L4: {
+                        if (var6 != 0) {
+                          break L4;
+                        } else {
+                          break L4;
+                        }
+                      }
+                      var8++;
+                      continue L2;
+                    }
+                  } else {
+                    var6 = 1;
+                    break L3;
+                  }
+                }
+                var8++;
+                continue L2;
+              }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L5: {
+            var5 = decompiledCaughtException;
+            stackOut_17_0 = (RuntimeException) var5;
+            stackOut_17_1 = new StringBuilder().append("pg.K(").append(param0).append(44).append(param1).append(44);
+            stackIn_19_0 = stackOut_17_0;
+            stackIn_19_1 = stackOut_17_1;
+            stackIn_18_0 = stackOut_17_0;
+            stackIn_18_1 = stackOut_17_1;
+            if (param2 == null) {
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "null";
+              stackIn_20_0 = stackOut_19_0;
+              stackIn_20_1 = stackOut_19_1;
+              stackIn_20_2 = stackOut_19_2;
+              break L5;
+            } else {
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "{...}";
+              stackIn_20_0 = stackOut_18_0;
+              stackIn_20_1 = stackOut_18_1;
+              stackIn_20_2 = stackOut_18_2;
+              break L5;
+            }
+          }
+          throw t.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + param3 + 41);
         }
+        return stackIn_16_0;
     }
 
     public static void b(int param0) {
-        if (param0 != 0) {
-            field_d = -128;
-        }
         field_e = null;
         field_c = null;
         field_f = null;
@@ -206,7 +256,7 @@ abstract class pg {
           if (null == ((pg) this).field_a) {
             break L0;
           } else {
-            if (-1 == (((pg) this).field_a.length ^ -1)) {
+            if (((pg) this).field_a.length == 0) {
               break L0;
             } else {
               if (((pg) this).field_a[0].field_d > param2) {

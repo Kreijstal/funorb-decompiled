@@ -61,10 +61,10 @@ final class on {
                       L5: while (true) {
                         L6: {
                           L7: {
-                            if ((((on) this).field_h[0].length ^ -1) >= (var4 ^ -1)) {
+                            if (~((on) this).field_h[0].length >= ~var4) {
                               break L7;
                             } else {
-                              var5 = (127 & ((on) this).field_f[var3_int][var4]) >> 2083899776;
+                              var5 = 127 & ((on) this).field_f[var3_int][var4];
                               var6 = ub.a(127, var5);
                               if (var7 != 0) {
                                 break L6;
@@ -187,7 +187,7 @@ final class on {
           L0: {
             var4_int = this.a(param0, param1, 1);
             var4_int = var4_int & -67108865;
-            var5 = (var4_int & 65408) >> 1832864999;
+            var5 = (var4_int & 65408) >> 7;
             if ((var4_int & 33554432) == 0) {
               break L0;
             } else {
@@ -212,7 +212,7 @@ final class on {
                   break L1;
                 }
                 var6 = stackIn_174_0;
-                var7 = (this.a(param0, param1 - 1, 1) & 33488896) >> -712883376;
+                var7 = (this.a(param0, param1 - 1, 1) & 33488896) >> 16;
                 var8 = this.b(param0, 3 + param1, -1777127001) ? 1 : 0;
                 if (param2 <= -34) {
                   L3: {
@@ -221,7 +221,7 @@ final class on {
                         break L4;
                       } else {
                         L5: {
-                          if (-1 == (var7 ^ -1)) {
+                          if (var7 == 0) {
                             break L5;
                           } else {
                             if (64 >= var7) {
@@ -1428,8 +1428,8 @@ final class on {
             if (param1 == -39) {
               var3_int = 0;
               L1: while (true) {
-                stackOut_4_0 = param0.length ^ -1;
-                stackOut_4_1 = var3_int ^ -1;
+                stackOut_4_0 = ~param0.length;
+                stackOut_4_1 = ~var3_int;
                 stackIn_5_0 = stackOut_4_0;
                 stackIn_5_1 = stackOut_4_1;
                 L2: while (true) {
@@ -1447,11 +1447,11 @@ final class on {
                           var4 = stackIn_7_0;
                           L5: while (true) {
                             L6: {
-                              if ((var4 ^ -1) <= (param0[0].length ^ -1)) {
+                              if (~var4 <= ~param0[0].length) {
                                 break L6;
                               } else {
                                 stackOut_9_0 = -1;
-                                stackOut_9_1 = param0[var3_int][var4] & 33554432 ^ -1;
+                                stackOut_9_1 = ~(param0[var3_int][var4] & 33554432);
                                 stackIn_5_0 = stackOut_9_0;
                                 stackIn_5_1 = stackOut_9_1;
                                 stackIn_10_0 = stackOut_9_0;
@@ -1557,7 +1557,7 @@ final class on {
                                     break L14;
                                   } else {
                                     stackOut_27_0 = -2;
-                                    stackOut_27_1 = ((on) this).field_p[var3_int][var4] & 1 ^ -1;
+                                    stackOut_27_1 = ~(((on) this).field_p[var3_int][var4] & 1);
                                     stackIn_23_0 = stackOut_27_0;
                                     stackIn_23_1 = stackOut_27_1;
                                     stackIn_28_0 = stackOut_27_0;
@@ -1685,12 +1685,12 @@ final class on {
           L0: {
             var6_int = param2 & -25165825;
             var7 = null;
-            if (-1 != (param3 ^ -1)) {
+            if (param3 != 0) {
               L1: {
-                if ((param3 ^ -1) != -2) {
+                if (param3 != 1) {
                   if (2 == param3) {
                     L2: {
-                      if (-1 <= (param2 & 1073741824 ^ -1)) {
+                      if ((param2 & 1073741824) <= 0) {
                         stackOut_32_0 = 0;
                         stackIn_33_0 = stackOut_32_0;
                         break L2;
@@ -1733,10 +1733,10 @@ final class on {
                       }
                     }
                     var7 = (Object) (Object) co.a(stackIn_37_0 != 0, stackIn_37_1, stackIn_37_2, stackIn_37_3 != 0, var6_int & -1610612737, -19653);
-                    ((id) var7).field_E = param2 >> 606456887 & 3;
+                    ((id) var7).field_E = param2 >> 23 & 3;
                     break L1;
                   } else {
-                    if ((param3 ^ -1) == -4) {
+                    if (param3 == 3) {
                       L4: {
                         var6_int = var6_int & -134217729;
                         var8_ref = new gb(param0, param1, var6_int);
@@ -1764,7 +1764,7 @@ final class on {
                   L5: {
                     var6_int = -67108865 & var6_int & -134217729;
                     var8 = eo.a(60, param0, var6_int, param1);
-                    if ((param2 & 67108864 ^ -1) == -1) {
+                    if ((param2 & 67108864) == 0) {
                       break L5;
                     } else {
                       var8.field_ib = true;
@@ -1773,7 +1773,7 @@ final class on {
                   }
                   L6: {
                     var7 = (Object) (Object) var8;
-                    if (-1 != (134217728 & param2 ^ -1)) {
+                    if ((134217728 & param2) != 0) {
                       var8.field_C = true;
                       break L6;
                     } else {
@@ -1796,13 +1796,13 @@ final class on {
                 stackIn_45_0 = stackOut_44_0;
                 break L0;
               } else {
-                ((fb) var7).field_z = (param2 & 25165824) >> 738869015;
+                ((fb) var7).field_z = (param2 & 25165824) >> 23;
                 stackOut_39_0 = var7;
                 stackIn_40_0 = stackOut_39_0;
                 return (fb) (Object) stackIn_40_0;
               }
             } else {
-              stackOut_1_0 = new kd(param0, param1, 3 & param2, param2 >> -1588842078 & 3);
+              stackOut_1_0 = new kd(param0, param1, 3 & param2, param2 >> 2 & 3);
               stackIn_2_0 = stackOut_1_0;
               return (fb) (Object) stackIn_2_0;
             }
@@ -1829,11 +1829,11 @@ final class on {
             if (param1 < -43) {
               L1: {
                 L2: {
-                  var4_int = (33488896 & this.a(param0, param2, 1)) >> 178162352;
-                  if ((var4_int ^ -1) < -65) {
+                  var4_int = (33488896 & this.a(param0, param2, 1)) >> 16;
+                  if (var4_int > 64) {
                     break L2;
                   } else {
-                    if ((var4_int ^ -1) != -1) {
+                    if (var4_int != 0) {
                       stackOut_9_0 = 0;
                       stackIn_10_0 = stackOut_9_0;
                       break L1;
@@ -1947,8 +1947,8 @@ final class on {
           L0: {
             var3_int = 0;
             L1: while (true) {
-              stackOut_2_0 = param1.length ^ -1;
-              stackOut_2_1 = var3_int ^ -1;
+              stackOut_2_0 = ~param1.length;
+              stackOut_2_1 = ~var3_int;
               stackIn_3_0 = stackOut_2_0;
               stackIn_3_1 = stackOut_2_1;
               L2: while (true) {
@@ -1966,13 +1966,13 @@ final class on {
                         var4 = stackIn_5_0;
                         L5: while (true) {
                           L6: {
-                            if ((param1[0].length ^ -1) >= (var4 ^ -1)) {
+                            if (~param1[0].length >= ~var4) {
                               break L6;
                             } else {
                               var5 = this.c(var4, var3_int, -35);
-                              var6 = var5 >> -133895673 & 511;
-                              var7 = 511 & var5 >> 1703707888;
-                              stackOut_7_0 = -2147483648 & var5 ^ -1;
+                              var6 = var5 >> 7 & 511;
+                              var7 = 511 & var5 >> 16;
+                              stackOut_7_0 = ~(-2147483648 & var5);
                               stackOut_7_1 = -1;
                               stackIn_3_0 = stackOut_7_0;
                               stackIn_3_1 = stackOut_7_1;
@@ -1987,7 +1987,7 @@ final class on {
                                   } else {
                                     L8: {
                                       L9: {
-                                        if ((var6 ^ -1) > -10) {
+                                        if (var6 < 9) {
                                           break L9;
                                         } else {
                                           if (var6 <= 32) {
@@ -2001,14 +2001,14 @@ final class on {
                                         if (var7 < 9) {
                                           break L10;
                                         } else {
-                                          if (-33 <= (var7 ^ -1)) {
+                                          if (var7 <= 32) {
                                             break L8;
                                           } else {
                                             break L10;
                                           }
                                         }
                                       }
-                                      if ((this.c(var4, 1 + var3_int, -65) & 65408) >> 1868421511 == 16) {
+                                      if ((this.c(var4, 1 + var3_int, -65) & 65408) >> 7 == 16) {
                                         break L8;
                                       } else {
                                         break L7;
@@ -2021,7 +2021,7 @@ final class on {
                                 L11: {
                                   var8 = this.a(false, var3_int, var4);
                                   var5 = var5 & -128;
-                                  if ((65408 & var8 ^ -1) != -1) {
+                                  if ((65408 & var8) != 0) {
                                     var5 = var5 & -65409;
                                     break L11;
                                   } else {
@@ -2132,14 +2132,14 @@ final class on {
             }
             L2: {
               L3: {
-                var4_int = 511 & this.a(param2, param1, 1) >> -480426201;
+                var4_int = 511 & this.a(param2, param1, 1) >> 7;
                 if (8 == ((on) this).field_a) {
                   break L3;
                 } else {
-                  if ((((on) this).field_a ^ -1) == -8) {
+                  if (((on) this).field_a == 7) {
                     break L3;
                   } else {
-                    if ((((on) this).field_a ^ -1) == -6) {
+                    if (((on) this).field_a == 5) {
                       break L3;
                     } else {
                       break L2;
@@ -2152,19 +2152,19 @@ final class on {
                 stackIn_16_0 = stackOut_15_0;
                 return stackIn_16_0;
               } else {
-                if (-1 < (param1 ^ -1)) {
+                if (param1 < 0) {
                   stackOut_20_0 = -1;
                   stackIn_21_0 = stackOut_20_0;
                   return stackIn_21_0;
                 } else {
-                  if ((((on) this).field_f.length ^ -1) < (param1 ^ -1)) {
+                  if (~((on) this).field_f.length < ~param1) {
                     if (((on) this).field_f[0].length <= param2) {
                       stackOut_28_0 = -1;
                       stackIn_29_0 = stackOut_28_0;
                       return stackIn_29_0;
                     } else {
                       L4: {
-                        var5 = 511 & ((on) this).field_h[param1][param2] >> 1604294119;
+                        var5 = 511 & ((on) this).field_h[param1][param2] >> 7;
                         if (0 < var5) {
                           var4_int = var5;
                           break L4;
@@ -2176,7 +2176,7 @@ final class on {
                         if (73 > var4_int) {
                           break L5;
                         } else {
-                          if (-101 <= (var4_int ^ -1)) {
+                          if (var4_int <= 100) {
                             stackOut_40_0 = 1;
                             stackIn_41_0 = stackOut_40_0;
                             return stackIn_41_0;
@@ -2189,7 +2189,7 @@ final class on {
                         if (((on) this).field_a == 8) {
                           break L6;
                         } else {
-                          if ((((on) this).field_a ^ -1) != -8) {
+                          if (((on) this).field_a != 7) {
                             break L2;
                           } else {
                             break L6;
@@ -2212,7 +2212,7 @@ final class on {
                       if (217 > var4_int) {
                         break L2;
                       } else {
-                        if (-247 <= (var4_int ^ -1)) {
+                        if (var4_int <= 246) {
                           stackOut_62_0 = 3;
                           stackIn_63_0 = stackOut_62_0;
                           return stackIn_63_0;
@@ -2265,10 +2265,10 @@ final class on {
             }
             L2: {
               L3: {
-                if ((33554432 & this.a(param0, param1, 1) ^ -1) == -1) {
+                if ((33554432 & this.a(param0, param1, 1)) == 0) {
                   break L3;
                 } else {
-                  if ((this.a(param0, param1, 1) >> -1777127001 & 511) <= 64) {
+                  if ((this.a(param0, param1, 1) >> 7 & 511) <= 64) {
                     stackOut_9_0 = 0;
                     stackIn_10_0 = stackOut_9_0;
                     break L2;
@@ -2351,7 +2351,7 @@ final class on {
             } else {
               if (!tb.a(-10723, param1)) {
                 if (!tk.a((byte) 84, param1)) {
-                  if (-1 != (param2.length() ^ -1)) {
+                  if (param2.length() != 0) {
                     if (param0 <= -7) {
                       if (lf.a(param2, param1, -7235)) {
                         stackOut_20_0 = 0;
@@ -2464,7 +2464,7 @@ final class on {
         int stackOut_1_0 = 0;
         try {
           L0: {
-            if ((33554432 & this.a(param1, param2, 1) ^ -1) != -1) {
+            if ((33554432 & this.a(param1, param2, 1)) != 0) {
               L1: {
                 if (param0 < -78) {
                   break L1;
@@ -2474,7 +2474,7 @@ final class on {
                 }
               }
               L2: {
-                if ((this.c((byte) 41, param2, param1) ^ -1) != 0) {
+                if (this.c((byte) 41, param2, param1) != -1) {
                   stackOut_9_0 = 0;
                   stackIn_10_0 = stackOut_9_0;
                   break L2;
@@ -2515,7 +2515,7 @@ final class on {
           synchronized (var1_ref) {
             L0: {
               var2 = -66 / ((param0 - 42) / 59);
-              if ((wb.field_y ^ -1) != (he.field_e ^ -1)) {
+              if (~wb.field_y != ~he.field_e) {
                 kg.field_i = vd.field_b[he.field_e];
                 lc.field_c = gg.field_a[he.field_e];
                 he.field_e = he.field_e - -1 & 127;
@@ -2637,7 +2637,7 @@ final class on {
             L1: {
               var4_int = this.a(param2, param1, 1) & 127;
               var5 = this.a(param2, param1, 1) & 65408;
-              if ((((on) this).field_a ^ -1) != -7) {
+              if (((on) this).field_a != 6) {
                 break L1;
               } else {
                 L2: {
@@ -2665,7 +2665,7 @@ final class on {
                 }
                 L4: {
                   var7_int = stackIn_10_0;
-                  if (-2 != (127 & this.a(1 + param2, 1 + param1, 1) ^ -1)) {
+                  if ((127 & this.a(1 + param2, 1 + param1, 1)) != 1) {
                     stackOut_12_0 = 0;
                     stackIn_13_0 = stackOut_12_0;
                     break L4;
@@ -2677,7 +2677,7 @@ final class on {
                 }
                 L5: {
                   var8_int = stackIn_13_0;
-                  if ((127 & this.a(-1 + param2, 1 + param1, 1) ^ -1) != -2) {
+                  if ((127 & this.a(-1 + param2, 1 + param1, 1)) != 1) {
                     stackOut_15_0 = 0;
                     stackIn_16_0 = stackOut_15_0;
                     break L5;
@@ -2725,7 +2725,7 @@ final class on {
                 }
                 L9: {
                   var12 = stackIn_25_0;
-                  if (-2 != (127 & this.a(-1 + param2, param1, 1) ^ -1)) {
+                  if ((127 & this.a(-1 + param2, param1, 1)) != 1) {
                     stackOut_27_0 = 0;
                     stackIn_28_0 = stackOut_27_0;
                     break L9;
@@ -2738,7 +2738,7 @@ final class on {
                 L10: {
                   L11: {
                     var13 = stackIn_28_0;
-                    if ((var4_int ^ -1) != -1) {
+                    if (var4_int != 0) {
                       break L11;
                     } else {
                       L12: {
@@ -3163,7 +3163,7 @@ final class on {
                     }
                   }
                   L36: {
-                    if (-49 >= (var4_int ^ -1)) {
+                    if (var4_int >= 48) {
                       break L36;
                     } else {
                       if (8 != var4_int) {
@@ -3173,7 +3173,7 @@ final class on {
                       }
                     }
                   }
-                  if ((var5 ^ -1) != -1) {
+                  if (var5 != 0) {
                     break L10;
                   } else {
                     L37: {
@@ -3441,10 +3441,10 @@ final class on {
                       var5 += 25;
                       break L37;
                     }
-                    if (-335 == (var5 ^ -1)) {
+                    if (var5 == 334) {
                       break L10;
                     } else {
-                      var4_int = var5 << 1026802503 | -65409 & var4_int;
+                      var4_int = var5 << 7 | -65409 & var4_int;
                       break L10;
                     }
                   }
@@ -3457,7 +3457,7 @@ final class on {
               }
             }
             if (8 == ((on) this).field_a) {
-              if (-56 == (var4_int ^ -1)) {
+              if (var4_int == 55) {
                 L53: {
                   var6 = 55;
                   var7 = new int[]{52, 43, 57, 59};
@@ -3474,7 +3474,7 @@ final class on {
                 }
                 L54: {
                   var9 = stackIn_292_0;
-                  if ((this.a(1 + param2, param1, 1) & 127 ^ -1) == (var6 ^ -1)) {
+                  if (~(this.a(1 + param2, param1, 1) & 127) == ~var6) {
                     stackOut_294_0 = 0;
                     stackIn_295_0 = stackOut_294_0;
                     break L54;
@@ -3486,7 +3486,7 @@ final class on {
                 }
                 L55: {
                   var10 = stackIn_295_0;
-                  if ((var6 ^ -1) == (this.a(param2, param1 + 1, 1) & 127 ^ -1)) {
+                  if (~var6 == ~(this.a(param2, param1 + 1, 1) & 127)) {
                     stackOut_297_0 = 0;
                     stackIn_298_0 = stackOut_297_0;
                     break L55;
@@ -3858,7 +3858,7 @@ final class on {
         try {
           L0: {
             var3_int = -34 % ((30 - param1) / 39);
-            stackOut_0_0 = param0 << -1976960889;
+            stackOut_0_0 = param0 << 7;
             stackIn_1_0 = stackOut_0_0;
             break L0;
           }
@@ -3936,7 +3936,7 @@ final class on {
             }
             L4: {
               var9 = stackIn_13_0;
-              if ((var6 ^ -1) > (bi.field_d ^ -1)) {
+              if (~var6 > ~bi.field_d) {
                 stackOut_16_0 = var6;
                 stackIn_17_0 = stackOut_16_0;
                 break L4;
@@ -3950,12 +3950,12 @@ final class on {
               L6: {
                 L7: {
                   var10 = stackIn_17_0;
-                  if ((param2 ^ -1) > (bi.field_g ^ -1)) {
+                  if (~param2 > ~bi.field_g) {
                     break L7;
                   } else {
                     if (param2 < bi.field_b) {
                       var11 = var8 * bi.field_f + param2;
-                      var12 = var10 + 1 + -var8 >> 1896876385;
+                      var12 = var10 + 1 + -var8 >> 1;
                       L8: while (true) {
                         var12--;
                         if (var12 < 0) {
@@ -3982,11 +3982,11 @@ final class on {
                 if (bi.field_l > param4) {
                   break L6;
                 } else {
-                  if ((bi.field_d ^ -1) >= (var6 ^ -1)) {
+                  if (~bi.field_d >= ~var6) {
                     break L6;
                   } else {
                     var11 = var7 + param4 * bi.field_f;
-                    var12 = -var7 + (1 - -var9) >> 511509825;
+                    var12 = -var7 + (1 - -var9) >> 1;
                     L9: while (true) {
                       var12--;
                       if (0 > var12) {
@@ -4021,12 +4021,12 @@ final class on {
                   if (var5_int < bi.field_g) {
                     break L12;
                   } else {
-                    if ((bi.field_b ^ -1) < (var5_int ^ -1)) {
+                    if (~bi.field_b < ~var5_int) {
                       var11 = bi.field_f * ((1 & -param2 + var5_int) + var8) - -var5_int;
-                      var12 = var10 + (1 - var8) >> 798750145;
+                      var12 = var10 + (1 - var8) >> 1;
                       L13: while (true) {
                         var12--;
-                        if (-1 < (var12 ^ -1)) {
+                        if (var12 < 0) {
                           break L12;
                         } else {
                           bi.field_c[var11] = 16777215;
@@ -4050,12 +4050,12 @@ final class on {
                 if (bi.field_l > param4) {
                   break L11;
                 } else {
-                  if ((bi.field_d ^ -1) < (var6 ^ -1)) {
+                  if (~bi.field_d < ~var6) {
                     var11 = (1 & -param4 + var6) + var7 + bi.field_f * var6;
-                    var12 = 1 - (-var9 + var7) >> 1787966977;
+                    var12 = 1 - (-var9 + var7) >> 1;
                     L14: while (true) {
                       var12--;
-                      if (-1 < (var12 ^ -1)) {
+                      if (var12 < 0) {
                         break L11;
                       } else {
                         bi.field_c[var11] = 16777215;
@@ -4102,7 +4102,7 @@ final class on {
               if (param0 < 0) {
                 break L1;
               } else {
-                if ((param0 ^ -1) <= (((on) this).field_f[0].length ^ -1)) {
+                if (~param0 <= ~((on) this).field_f[0].length) {
                   break L1;
                 } else {
                   if (param1 < 0) {
@@ -4326,7 +4326,7 @@ final class on {
               }
             }
             L5: {
-              if ((((on) this).field_p[param2].length ^ -1) < (1 + param4 ^ -1)) {
+              if (~((on) this).field_p[param2].length < ~(1 + param4)) {
                 L6: {
                   stackOut_18_0 = ((on) this).field_p[param2];
                   stackOut_18_1 = 1 + param4;
@@ -4741,11 +4741,11 @@ final class on {
             L1: {
               var4_int = this.a(param1, param2, 1);
               var4_int = var4_int & -67108865;
-              var5 = var4_int >> -739042233 & 511;
+              var5 = var4_int >> 7 & 511;
               if (0 == (33554432 & var4_int)) {
                 break L1;
               } else {
-                if (-1 == (var5 ^ -1)) {
+                if (var5 == 0) {
                   var4_int = var4_int & -65409;
                   if (((on) this).field_a == 6) {
                     var4_int = var4_int | this.a(511, -66);
@@ -5383,7 +5383,7 @@ final class on {
                         }
                       }
                       L41: {
-                        if (-1 == (var4_int & 65408 ^ -1)) {
+                        if ((var4_int & 65408) == 0) {
                           var4_int = var4_int | this.a(24 - -var11, 80);
                           break L41;
                         } else {

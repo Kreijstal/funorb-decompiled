@@ -8,25 +8,43 @@ final class mi {
     static int field_a;
 
     final static int a(byte param0, int param1, int param2) {
-        int var3 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
+        int stackIn_7_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_6_0 = 0;
         var4 = Sumoblitz.field_L ? 1 : 0;
-        var3 = 0;
-        L0: while (true) {
-          if (0 >= param2) {
-            if (param0 != 72) {
-              field_a = 103;
-              return var3;
-            } else {
-              return var3;
+        try {
+          L0: {
+            var3_int = 0;
+            L1: while (true) {
+              if (0 >= param2) {
+                L2: {
+                  if (param0 == 72) {
+                    break L2;
+                  } else {
+                    field_a = 103;
+                    break L2;
+                  }
+                }
+                stackOut_6_0 = var3_int;
+                stackIn_7_0 = stackOut_6_0;
+                break L0;
+              } else {
+                var3_int = var3_int << 1 | param1 & 1;
+                param2--;
+                param1 = param1 >>> 1;
+                continue L1;
+              }
             }
-          } else {
-            var3 = var3 << 1786806113 | param1 & 1;
-            param2--;
-            param1 = param1 >>> 1;
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw qo.a((Throwable) (Object) var3, "mi.B(" + param0 + 44 + param1 + 44 + param2 + 41);
         }
+        return stackIn_7_0;
     }
 
     public final String toString() {
@@ -35,9 +53,6 @@ final class mi {
 
     public static void a(boolean param0) {
         field_b = null;
-        if (param0) {
-            int discarded$0 = mi.a((byte) 75, 50, 40);
-        }
     }
 
     static {

@@ -13,11 +13,6 @@ final class ph extends hf {
         field_j = null;
         field_k = null;
         field_i = null;
-        if (param0 != 112) {
-            field_k = null;
-            field_g = null;
-            return;
-        }
         field_g = null;
     }
 

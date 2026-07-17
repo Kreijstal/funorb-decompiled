@@ -11,20 +11,14 @@ final class hq extends gpb implements java.awt.image.ImageProducer {
     private java.awt.Canvas field_k;
 
     public final void startProduction(java.awt.image.ImageConsumer param0) {
-        ((hq) this).addConsumer(param0);
+        try {
+            ((hq) this).addConsumer(param0);
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "hq.startProduction(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     private final synchronized void e(byte param0) {
-        if (param0 != 105) {
-            Object var3 = null;
-            boolean discarded$4 = ((hq) this).isConsumer((java.awt.image.ImageConsumer) null);
-            if (!(((hq) this).field_g != null)) {
-                return;
-            }
-            ((hq) this).field_g.setPixels(0, 0, ((hq) this).field_e, ((hq) this).field_d, ((hq) this).field_h, ((hq) this).field_f, 0, ((hq) this).field_e);
-            ((hq) this).field_g.imageComplete(2);
-            return;
-        }
         if (!(((hq) this).field_g != null)) {
             return;
         }
@@ -34,86 +28,53 @@ final class hq extends gpb implements java.awt.image.ImageProducer {
 
     final void a(java.awt.Graphics param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         java.awt.Shape var9 = null;
-        this.a(param2, param4, (byte) 31, param1, param7);
-        var9 = param0.getClip();
-        param0.clipRect(param6, param5, param1, param7);
-        if (param3 != 32255) {
-          ((hq) this).field_j = null;
-          boolean discarded$4 = param0.drawImage(((hq) this).field_j, -param4 + param6, param5 - param2, (java.awt.image.ImageObserver) (Object) ((hq) this).field_k);
-          param0.setClip(var9);
-          return;
-        } else {
-          boolean discarded$5 = param0.drawImage(((hq) this).field_j, -param4 + param6, param5 - param2, (java.awt.image.ImageObserver) (Object) ((hq) this).field_k);
-          param0.setClip(var9);
-          return;
+        try {
+            this.a(param2, param4, (byte) 31, param1, param7);
+            var9 = param0.getClip();
+            param0.clipRect(param6, param5, param1, param7);
+            if (param3 != 32255) {
+                ((hq) this).field_j = null;
+            }
+            boolean discarded$0 = param0.drawImage(((hq) this).field_j, -param4 + param6, param5 - param2, (java.awt.image.ImageObserver) (Object) ((hq) this).field_k);
+            param0.setClip(var9);
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "hq.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
         }
     }
 
     final static void d(byte param0) {
         try {
             Exception var1 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        if (vsa.field_r == null) {
-                            statePc = 7;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        try {
-                            vsa.field_r.a(0, 0L);
-                            vsa.field_r.a(24, qga.field_b.field_e, (byte) -88, qga.field_b.field_h);
-                            statePc = 2;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_1) {
-                            caughtException = stateCaught_1;
-                            statePc = 6;
-                            continue stateLoop;
-                        }
-                    }
-                    case 2: {
-                        if (param0 < 53) {
-                            statePc = 4;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    }
-                    case 3: {
-                        qga.field_b.field_e = qga.field_b.field_e + 24;
-                        return;
-                    }
-                    case 4: {
-                        return;
-                    }
-                    case 6: {
-                        var1 = (Exception) (Object) caughtException;
-                        statePc = 7;
-                        continue stateLoop;
-                    }
-                    case 7: {
-                        if (param0 < 53) {
-                            statePc = 9;
-                        } else {
-                            statePc = 8;
-                        }
-                        continue stateLoop;
-                    }
-                    case 8: {
-                        qga.field_b.field_e = qga.field_b.field_e + 24;
-                        return;
-                    }
-                    case 9: {
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
+            L0: {
+              if (vsa.field_r == null) {
+                break L0;
+              } else {
+                try {
+                  L1: {
+                    vsa.field_r.a(0, 0L);
+                    vsa.field_r.a(24, qga.field_b.field_e, (byte) -88, qga.field_b.field_h);
+                    decompiledRegionSelector0 = 0;
+                    break L1;
+                  }
+                } catch (java.lang.Exception decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  L2: {
+                    var1 = (Exception) (Object) decompiledCaughtException;
+                    decompiledRegionSelector0 = 1;
+                    break L2;
+                  }
                 }
+                if (decompiledRegionSelector0 == 0) {
+                  qga.field_b.field_e = qga.field_b.field_e + 24;
+                  return;
+                } else {
+                  break L0;
+                }
+              }
             }
+            qga.field_b.field_e = qga.field_b.field_e + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -126,44 +87,44 @@ final class hq extends gpb implements java.awt.image.ImageProducer {
     }
 
     public final synchronized void addConsumer(java.awt.image.ImageConsumer param0) {
-        ((hq) this).field_g = param0;
-        param0.setDimensions(((hq) this).field_e, ((hq) this).field_d);
-        param0.setProperties((Hashtable) null);
-        param0.setColorModel(((hq) this).field_h);
-        param0.setHints(14);
+        try {
+            ((hq) this).field_g = param0;
+            param0.setDimensions(((hq) this).field_e, ((hq) this).field_d);
+            param0.setProperties((Hashtable) null);
+            param0.setColorModel(((hq) this).field_h);
+            param0.setHints(14);
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "hq.addConsumer(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public final void requestTopDownLeftRightResend(java.awt.image.ImageConsumer param0) {
     }
 
     final void a(int param0, int param1, int param2, java.awt.Canvas param3) {
+        ((hq) this).field_k = param3;
+        ((hq) this).field_e = param1;
+        ((hq) this).field_d = param2;
+        ((hq) this).field_f = new int[((hq) this).field_d * ((hq) this).field_e];
+        ((hq) this).field_h = (java.awt.image.ColorModel) (Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
+        ((hq) this).field_j = ((hq) this).field_k.createImage((java.awt.image.ImageProducer) this);
+        this.e((byte) 105);
+        boolean discarded$9 = ((hq) this).field_k.prepareImage(((hq) this).field_j, (java.awt.image.ImageObserver) (Object) ((hq) this).field_k);
+        if (param0 != 4904) {
+            return;
+        }
         try {
-            ((hq) this).field_k = param3;
-            ((hq) this).field_e = param1;
-            ((hq) this).field_d = param2;
-            ((hq) this).field_f = new int[((hq) this).field_d * ((hq) this).field_e];
-            ((hq) this).field_h = (java.awt.image.ColorModel) (Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
-            ((hq) this).field_j = ((hq) this).field_k.createImage((java.awt.image.ImageProducer) this);
             this.e((byte) 105);
-            boolean discarded$14 = ((hq) this).field_k.prepareImage(((hq) this).field_j, (java.awt.image.ImageObserver) (Object) ((hq) this).field_k);
-            if (param0 != 4904) {
-              return;
-            } else {
-              this.e((byte) 105);
-              boolean discarded$15 = ((hq) this).field_k.prepareImage(((hq) this).field_j, (java.awt.image.ImageObserver) (Object) ((hq) this).field_k);
-              this.e((byte) 105);
-              boolean discarded$16 = ((hq) this).field_k.prepareImage(((hq) this).field_j, (java.awt.image.ImageObserver) (Object) ((hq) this).field_k);
-              return;
-            }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-            throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-            throw new RuntimeException(decompiledCheckedException);
+            boolean discarded$10 = ((hq) this).field_k.prepareImage(((hq) this).field_j, (java.awt.image.ImageObserver) (Object) ((hq) this).field_k);
+            this.e((byte) 105);
+            boolean discarded$11 = ((hq) this).field_k.prepareImage(((hq) this).field_j, (java.awt.image.ImageObserver) (Object) ((hq) this).field_k);
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "hq.B(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
     }
 
     public static void c(byte param0) {
-        int var1 = -59 / ((param0 - -84) / 41);
+        int var1 = 59;
         field_i = null;
     }
 
@@ -188,8 +149,64 @@ final class hq extends gpb implements java.awt.image.ImageProducer {
     }
 
     public final synchronized void removeConsumer(java.awt.image.ImageConsumer param0) {
-        if (param0 == ((hq) this).field_g) {
-            ((hq) this).field_g = null;
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 != ((hq) this).field_g) {
+                break L1;
+              } else {
+                ((hq) this).field_g = null;
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_1 = new StringBuilder().append("hq.removeConsumer(");
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param0 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
+            }
+          }
+          throw rta.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
         }
     }
 

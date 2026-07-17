@@ -19,10 +19,10 @@ final class wq extends oh {
         if (!(null != ((wq) this).field_C)) {
             return;
         }
-        if (!(-1 != (((wq) this).field_J ^ -1))) {
+        if (!(((wq) this).field_J != 0)) {
             return;
         }
-        if (!((((wq) this).field_J ^ -1) != -257)) {
+        if (!(((wq) this).field_J != 256)) {
             ((wq) this).field_C.a(false, param1, ((wq) this).field_o + param2, param3 + ((wq) this).field_t);
             return;
         }
@@ -40,9 +40,13 @@ final class wq extends oh {
 
     wq(iq param0) {
         super(param0.field_o, param0.field_t, param0.field_n, param0.field_s, (ur) null, (uf) null);
-        param0.a(false, 0, 0, ((wq) this).field_s, ((wq) this).field_n);
-        ((wq) this).field_J = 256;
-        ((wq) this).field_C = param0;
+        try {
+            param0.a(false, 0, 0, ((wq) this).field_s, ((wq) this).field_n);
+            ((wq) this).field_J = 256;
+            ((wq) this).field_C = param0;
+        } catch (RuntimeException runtimeException) {
+            throw wn.a((Throwable) (Object) runtimeException, "wq.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void h(int param0) {
@@ -57,12 +61,7 @@ final class wq extends oh {
     }
 
     final static void i(int param0) {
-        p.a(param0 + -33);
-        if (param0 != 0) {
-            wq.h(-95);
-            rh.b(-14, 4);
-            return;
-        }
+        p.a(-33);
         rh.b(-14, 4);
     }
 

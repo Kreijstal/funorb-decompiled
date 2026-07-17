@@ -12,68 +12,72 @@ final class rh implements jk {
 
     final static void b(byte param0) {
         nf var1 = null;
+        RuntimeException var1_ref = null;
         tm var2_ref_tm = null;
         int var2 = 0;
         int var3 = 0;
-        L0: {
-          var3 = ShatteredPlansClient.field_F ? 1 : 0;
-          var1 = rp.i(0);
-          if (var1 == null) {
-            break L0;
-          } else {
-            if (var1 == hs.field_j) {
-              break L0;
-            } else {
-              no.a(hs.field_j, 1);
-              hs.field_j = var1;
-              break L0;
+        RuntimeException decompiledCaughtException = null;
+        var3 = ShatteredPlansClient.field_F ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              var1 = rp.i(0);
+              if (var1 == null) {
+                break L1;
+              } else {
+                if (var1 == hs.field_j) {
+                  break L1;
+                } else {
+                  no.a(hs.field_j, 1);
+                  hs.field_j = var1;
+                  break L1;
+                }
+              }
+            }
+            L2: {
+              if (qd.field_a >= 18) {
+                break L2;
+              } else {
+                qd.field_a = qd.field_a + 1;
+                break L2;
+              }
+            }
+            L3: {
+              if (qd.field_a >= 18) {
+                qd.field_a = 18;
+                var2_ref_tm = (tm) (Object) ld.field_p.h(35);
+                if (var2_ref_tm == null) {
+                  break L3;
+                } else {
+                  gs.a(var2_ref_tm, true);
+                  break L3;
+                }
+              } else {
+                break L3;
+              }
+            }
+            var2 = 0;
+            L4: while (true) {
+              if (var2 >= hj.field_l.length) {
+                break L0;
+              } else {
+                L5: {
+                  if (hj.field_l[var2] == null) {
+                    break L5;
+                  } else {
+                    hj.field_l[var2].a(256);
+                    break L5;
+                  }
+                }
+                var2++;
+                continue L4;
+              }
             }
           }
-        }
-        L1: {
-          if (qd.field_a >= 18) {
-            break L1;
-          } else {
-            qd.field_a = qd.field_a + 1;
-            break L1;
-          }
-        }
-        L2: {
-          if ((qd.field_a ^ -1) <= -19) {
-            qd.field_a = 18;
-            var2_ref_tm = (tm) (Object) ld.field_p.h(35);
-            if (var2_ref_tm == null) {
-              break L2;
-            } else {
-              gs.a(var2_ref_tm, true);
-              break L2;
-            }
-          } else {
-            break L2;
-          }
-        }
-        L3: {
-          if (param0 <= -126) {
-            break L3;
-          } else {
-            field_g = null;
-            break L3;
-          }
-        }
-        var2 = 0;
-        L4: while (true) {
-          if (var2 >= hj.field_l.length) {
-            return;
-          } else {
-            if (hj.field_l[var2] != null) {
-              hj.field_l[var2].a(256);
-              var2++;
-              continue L4;
-            } else {
-              var2++;
-              continue L4;
-            }
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw r.a((Throwable) (Object) var1_ref, "rh.B(" + -127 + 41);
         }
     }
 
@@ -81,9 +85,6 @@ final class rh implements jk {
         field_f = null;
         field_a = null;
         field_g = null;
-        if (param0 != 5) {
-            field_e = 0.9834237462567611;
-        }
     }
 
     final static void a(byte param0) {

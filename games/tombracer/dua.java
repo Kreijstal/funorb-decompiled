@@ -83,21 +83,21 @@ final class dua extends me {
               var23 = ((dua) this).field_g.f(0, 0);
               var6 = 0;
               var7 = var23.l(-7);
-              var8 = koa.b(0) >> 1707283137;
+              var8 = koa.b(0) >> 1;
               if (var7 % 2 == 0) {
                 stackOut_40_0 = var4;
                 stackIn_41_0 = stackOut_40_0;
                 break L1;
               } else {
-                stackOut_39_0 = var4 >> 241727201;
+                stackOut_39_0 = var4 >> 1;
                 stackIn_41_0 = stackOut_39_0;
                 break L1;
               }
             }
             L2: {
-              var9 = -stackIn_41_0 + var8 + var4 * (var7 >> 505415649);
-              if (-1 != (var7 % 2 ^ -1)) {
-                stackOut_43_0 = var4 >> 33748577;
+              var9 = -stackIn_41_0 + var8 + var4 * (var7 >> 1);
+              if (var7 % 2 != 0) {
+                stackOut_43_0 = var4 >> 1;
                 stackIn_44_0 = stackOut_43_0;
                 break L2;
               } else {
@@ -106,9 +106,9 @@ final class dua extends me {
                 break L2;
               }
             }
-            var10 = -stackIn_44_0 + var8 - var4 * (var7 >> 1484710817);
+            var10 = -stackIn_44_0 + var8 - var4 * (var7 >> 1);
             var11 = var9;
-            tga.field_a.KA(10, -6 + var10, var3 + 16 - -6, var10 + var7 * var4 - -4);
+            tga.field_a.KA(10, -6 + var10, var3 + 22, var10 + var7 * var4 - -4);
             var12 = var6;
             L3: while (true) {
               if (var7 <= var12) {
@@ -149,7 +149,7 @@ final class dua extends me {
                     var14 = var3;
                     var16 = var9;
                     ega.field_e.a(var13 - 4, var16 + -5);
-                    var9 = var9 - (var4 << -1266057759);
+                    var9 = var9 - (var4 << 1);
                     if (!var24.j(0)) {
                       L5: {
                         if (var23.d(28091)) {
@@ -197,21 +197,21 @@ final class dua extends me {
               var20 = ((dua) this).field_g.f(0, 0);
               var6 = 0;
               var7 = var20.l(-7);
-              var8 = koa.b(0) >> 1707283137;
+              var8 = koa.b(0) >> 1;
               if (var7 % 2 == 0) {
                 stackOut_8_0 = var4;
                 stackIn_9_0 = stackOut_8_0;
                 break L7;
               } else {
-                stackOut_7_0 = var4 >> 241727201;
+                stackOut_7_0 = var4 >> 1;
                 stackIn_9_0 = stackOut_7_0;
                 break L7;
               }
             }
             L8: {
-              var9 = -stackIn_9_0 + var8 + var4 * (var7 >> 505415649);
-              if (-1 != (var7 % 2 ^ -1)) {
-                stackOut_11_0 = var4 >> 33748577;
+              var9 = -stackIn_9_0 + var8 + var4 * (var7 >> 1);
+              if (var7 % 2 != 0) {
+                stackOut_11_0 = var4 >> 1;
                 stackIn_12_0 = stackOut_11_0;
                 break L8;
               } else {
@@ -221,9 +221,9 @@ final class dua extends me {
               }
             }
             L9: {
-              var10 = -stackIn_12_0 + var8 - var4 * (var7 >> 1484710817);
+              var10 = -stackIn_12_0 + var8 - var4 * (var7 >> 1);
               var11 = var9;
-              tga.field_a.KA(10, -6 + var10, var3 + 16 - -6, var10 + var7 * var4 - -4);
+              tga.field_a.KA(10, -6 + var10, var3 + 22, var10 + var7 * var4 - -4);
               var12 = var6;
               if (var7 <= var12) {
                 break L9;
@@ -243,7 +243,7 @@ final class dua extends me {
                           var14 = var3;
                           var16 = var9;
                           ega.field_e.a(var13 - 4, var16 + -5);
-                          var9 = var9 - (var4 << -1266057759);
+                          var9 = var9 - (var4 << 1);
                           if (var21.j(0)) {
                             break L11;
                           } else {
@@ -320,9 +320,6 @@ final class dua extends me {
     }
 
     public static void d(byte param0) {
-        if (param0 > -125) {
-            return;
-        }
         field_j = null;
     }
 

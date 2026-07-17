@@ -13,13 +13,13 @@ final class bm extends jj {
     static tf field_u;
 
     private final void a(int param0, int param1) {
-        param0 = (16711935 + -(param0 & 16711935) & 133695482) >> -261682461 | (65280 + -(65280 & param0) & 522245) >> 1861692835;
-        int var3 = (16711680 & param0) >> -1038271376;
-        int var4 = (param0 & 65280) >> -1902746200;
+        param0 = (16711935 + -(param0 & 16711935) & 133695482) >> 3 | (65280 + -(65280 & param0) & 522245) >> 3;
+        int var3 = (16711680 & param0) >> 16;
+        int var4 = (param0 & 65280) >> 8;
         if (!(0 != var4)) {
             var4 = 1;
         }
-        if (var3 == param1) {
+        if (var3 == 0) {
             var3 = 1;
         }
         int var5 = param0 & 255;
@@ -27,7 +27,7 @@ final class bm extends jj {
             var5 = 1;
         }
         uj.field_Ob = -param0;
-        int var6 = this.a(255 / var4, 255 / var3, 255 / var5, param1 + 3);
+        int var6 = this.a(255 / var4, 255 / var3, 255 / var5, 3);
         od.field_Gb = var6 * uj.field_Ob + 16777215;
         pl.field_O = 3 * uj.field_Ob + 16777215;
     }
@@ -42,7 +42,7 @@ final class bm extends jj {
         var6 = Pixelate.field_H ? 1 : 0;
         var2 = 0;
         L0: while (true) {
-          if ((var2 ^ -1) <= -307201) {
+          if (var2 >= 307200) {
             var3_ref_lp__ = ((bm) this).field_p;
             var4 = 0;
             L1: while (true) {
@@ -93,64 +93,163 @@ final class bm extends jj {
     }
 
     final static short[] a(short[] param0, byte param1, pc param2, int param3) {
-        int var4 = 0;
+        int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
+        Object stackIn_10_0 = null;
+        short[] stackIn_19_0 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        String stackIn_23_2 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        String stackIn_26_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        short[] stackOut_18_0 = null;
+        Object stackOut_9_0 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        String stackOut_22_2 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        RuntimeException stackOut_25_0 = null;
+        StringBuilder stackOut_25_1 = null;
+        String stackOut_25_2 = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        String stackOut_24_2 = null;
         var8 = Pixelate.field_H ? 1 : 0;
-        var4 = param2.c(param3, (byte) -34);
-        if (0 != var4) {
+        try {
           L0: {
-            L1: {
-              if (param0 == null) {
+            var4_int = param2.c(16, (byte) -34);
+            if (0 != var4_int) {
+              L1: {
+                L2: {
+                  if (param0 == null) {
+                    break L2;
+                  } else {
+                    if (param0.length != var4_int) {
+                      break L2;
+                    } else {
+                      break L1;
+                    }
+                  }
+                }
+                param0 = new short[var4_int];
                 break L1;
-              } else {
-                if (param0.length != var4) {
-                  break L1;
-                } else {
-                  break L0;
-                }
               }
-            }
-            param0 = new short[var4];
-            break L0;
-          }
-          if (param1 <= -127) {
-            L2: {
-              var5 = param2.c(4, (byte) -34);
-              var6 = (short)param2.c(16, (byte) -34);
-              if ((var5 ^ -1) >= -1) {
-                var7 = 0;
-                L3: while (true) {
-                  if (var7 >= var4) {
-                    break L2;
+              if (param1 <= -127) {
+                L3: {
+                  var5 = param2.c(4, (byte) -34);
+                  var6 = (short)param2.c(16, (byte) -34);
+                  if (var5 <= 0) {
+                    var7 = 0;
+                    L4: while (true) {
+                      if (var7 >= var4_int) {
+                        break L3;
+                      } else {
+                        param0[var7] = (short)var6;
+                        var7++;
+                        continue L4;
+                      }
+                    }
                   } else {
-                    param0[var7] = (short)var6;
-                    var7++;
-                    continue L3;
+                    var7 = 0;
+                    L5: while (true) {
+                      if (var7 >= var4_int) {
+                        break L3;
+                      } else {
+                        param0[var7] = (short)(param2.c(var5, (byte) -34) + var6);
+                        var7++;
+                        continue L5;
+                      }
+                    }
                   }
                 }
+                stackOut_18_0 = (short[]) param0;
+                stackIn_19_0 = stackOut_18_0;
+                break L0;
               } else {
-                var7 = 0;
-                L4: while (true) {
-                  if (var7 >= var4) {
-                    break L2;
-                  } else {
-                    param0[var7] = (short)(param2.c(var5, (byte) -34) + var6);
-                    var7++;
-                    continue L4;
-                  }
-                }
+                stackOut_9_0 = null;
+                stackIn_10_0 = stackOut_9_0;
+                return (short[]) (Object) stackIn_10_0;
               }
+            } else {
+              return null;
             }
-            return param0;
-          } else {
-            return null;
           }
-        } else {
-          return null;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L6: {
+            var4 = decompiledCaughtException;
+            stackOut_20_0 = (RuntimeException) var4;
+            stackOut_20_1 = new StringBuilder().append("bm.B(");
+            stackIn_22_0 = stackOut_20_0;
+            stackIn_22_1 = stackOut_20_1;
+            stackIn_21_0 = stackOut_20_0;
+            stackIn_21_1 = stackOut_20_1;
+            if (param0 == null) {
+              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_2 = "null";
+              stackIn_23_0 = stackOut_22_0;
+              stackIn_23_1 = stackOut_22_1;
+              stackIn_23_2 = stackOut_22_2;
+              break L6;
+            } else {
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "{...}";
+              stackIn_23_0 = stackOut_21_0;
+              stackIn_23_1 = stackOut_21_1;
+              stackIn_23_2 = stackOut_21_2;
+              break L6;
+            }
+          }
+          L7: {
+            stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+            stackOut_23_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_23_2).append(44).append(param1).append(44);
+            stackIn_25_0 = stackOut_23_0;
+            stackIn_25_1 = stackOut_23_1;
+            stackIn_24_0 = stackOut_23_0;
+            stackIn_24_1 = stackOut_23_1;
+            if (param2 == null) {
+              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
+              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_2 = "null";
+              stackIn_26_0 = stackOut_25_0;
+              stackIn_26_1 = stackOut_25_1;
+              stackIn_26_2 = stackOut_25_2;
+              break L7;
+            } else {
+              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
+              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_2 = "{...}";
+              stackIn_26_0 = stackOut_24_0;
+              stackIn_26_1 = stackOut_24_1;
+              stackIn_26_2 = stackOut_24_2;
+              break L7;
+            }
+          }
+          throw aa.a((Throwable) (Object) stackIn_26_0, stackIn_26_2 + 44 + 16 + 41);
         }
+        return stackIn_19_0;
     }
 
     private final int a(int param0, int param1, int param2, int param3) {
@@ -168,9 +267,6 @@ final class bm extends jj {
     public static void d(int param0) {
         field_u = null;
         field_r = null;
-        if (param0 != 0) {
-            field_t = null;
-        }
         field_t = null;
         field_n = null;
         field_m = null;
@@ -178,13 +274,17 @@ final class bm extends jj {
 
     bm(String param0, tf[] param1) {
         super(param0, param1);
-        int var3 = 0;
+        int var3_int = 0;
         ((bm) this).field_s = 0;
-        ((bm) this).field_p = new lp[500];
-        for (var3 = 0; ((bm) this).field_p.length > var3; var3++) {
-            ((bm) this).field_p[var3] = new lp();
+        try {
+            ((bm) this).field_p = new lp[500];
+            for (var3_int = 0; ((bm) this).field_p.length > var3_int; var3_int++) {
+                ((bm) this).field_p[var3_int] = new lp();
+            }
+            this.a(((bm) this).field_s, 0);
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "bm.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        this.a(((bm) this).field_s, 0);
     }
 
     final void c(int param0) {

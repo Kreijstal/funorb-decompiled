@@ -35,12 +35,14 @@ final class of extends gf {
     }
 
     final static void a(int param0, og param1) {
-        if (param0 != -2) {
-            String discarded$0 = of.d((byte) 104);
+        try {
+            if (param0 != -2) {
+                String discarded$0 = of.d((byte) 104);
+            }
             wd.field_w.a((mh) (Object) param1, 0);
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) (Object) runtimeException, "of.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        wd.field_w.a((mh) (Object) param1, 0);
     }
 
     final boolean a(char param0, int param1, int param2) {

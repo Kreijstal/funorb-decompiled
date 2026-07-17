@@ -22,7 +22,7 @@ final class pj {
             bm.field_o = false;
             if (param1) {
               if (0 >= oo.field_b) {
-                if ((vn.field_g ^ -1) < -1) {
+                if (vn.field_g > 0) {
                   vn.field_g = vn.field_g - 1;
                   return;
                 } else {
@@ -41,15 +41,15 @@ final class pj {
               if (io.field_c == null) {
                 if (null == bn.field_S) {
                   bm.field_o = false;
-                  if ((vn.field_g ^ -1) < -1) {
+                  if (vn.field_g > 0) {
                     vn.field_g = vn.field_g - 1;
                     return;
                   } else {
-                    if (-1 > (h.field_W ^ -1)) {
+                    if (h.field_W > 0) {
                       h.field_W = h.field_W - 1;
                       return;
                     } else {
-                      if ((qh.field_c ^ -1) < (oo.field_b ^ -1)) {
+                      if (~qh.field_c < ~oo.field_b) {
                         if (oo.field_b != 0) {
                           oo.field_b = oo.field_b + 1;
                           return;
@@ -64,10 +64,10 @@ final class pj {
                     }
                   }
                 } else {
-                  if ((oo.field_b ^ -1) >= -1) {
+                  if (oo.field_b <= 0) {
                     if (h.field_W <= 0) {
-                      if ((vn.field_g ^ -1) > (qh.field_c ^ -1)) {
-                        if (-1 == (vn.field_g ^ -1)) {
+                      if (~vn.field_g > ~qh.field_c) {
+                        if (vn.field_g == 0) {
                           nl.a(true, -71);
                           vn.field_g = vn.field_g + 1;
                           return;
@@ -90,7 +90,7 @@ final class pj {
               } else {
                 if (0 >= oo.field_b) {
                   if (vn.field_g <= 0) {
-                    if ((qh.field_c ^ -1) < (h.field_W ^ -1)) {
+                    if (~qh.field_c < ~h.field_W) {
                       L0: {
                         if (0 == h.field_W) {
                           nl.a(false, -102);
@@ -119,7 +119,7 @@ final class pj {
               bm.field_o = false;
               if (param1) {
                 if (0 >= oo.field_b) {
-                  if ((vn.field_g ^ -1) < -1) {
+                  if (vn.field_g > 0) {
                     vn.field_g = vn.field_g - 1;
                     return;
                   } else {
@@ -138,15 +138,15 @@ final class pj {
                 if (io.field_c == null) {
                   if (null == bn.field_S) {
                     bm.field_o = false;
-                    if ((vn.field_g ^ -1) < -1) {
+                    if (vn.field_g > 0) {
                       vn.field_g = vn.field_g - 1;
                       return;
                     } else {
-                      if (-1 > (h.field_W ^ -1)) {
+                      if (h.field_W > 0) {
                         h.field_W = h.field_W - 1;
                         return;
                       } else {
-                        if ((qh.field_c ^ -1) < (oo.field_b ^ -1)) {
+                        if (~qh.field_c < ~oo.field_b) {
                           if (oo.field_b != 0) {
                             oo.field_b = oo.field_b + 1;
                             return;
@@ -161,10 +161,10 @@ final class pj {
                       }
                     }
                   } else {
-                    if ((oo.field_b ^ -1) >= -1) {
+                    if (oo.field_b <= 0) {
                       if (h.field_W <= 0) {
-                        if ((vn.field_g ^ -1) > (qh.field_c ^ -1)) {
-                          if (-1 == (vn.field_g ^ -1)) {
+                        if (~vn.field_g > ~qh.field_c) {
+                          if (vn.field_g == 0) {
                             nl.a(true, -71);
                             vn.field_g = vn.field_g + 1;
                             return;
@@ -187,7 +187,7 @@ final class pj {
                 } else {
                   if (0 >= oo.field_b) {
                     if (vn.field_g <= 0) {
-                      if ((qh.field_c ^ -1) < (h.field_W ^ -1)) {
+                      if (~qh.field_c < ~h.field_W) {
                         L1: {
                           if (0 == h.field_W) {
                             nl.a(false, -102);
@@ -214,7 +214,7 @@ final class pj {
             } else {
               if (param1) {
                 if (0 >= oo.field_b) {
-                  if ((vn.field_g ^ -1) < -1) {
+                  if (vn.field_g > 0) {
                     vn.field_g = vn.field_g - 1;
                     return;
                   } else {
@@ -233,15 +233,15 @@ final class pj {
                 if (io.field_c == null) {
                   if (null == bn.field_S) {
                     bm.field_o = false;
-                    if ((vn.field_g ^ -1) < -1) {
+                    if (vn.field_g > 0) {
                       vn.field_g = vn.field_g - 1;
                       return;
                     } else {
-                      if (-1 > (h.field_W ^ -1)) {
+                      if (h.field_W > 0) {
                         h.field_W = h.field_W - 1;
                         return;
                       } else {
-                        if ((qh.field_c ^ -1) < (oo.field_b ^ -1)) {
+                        if (~qh.field_c < ~oo.field_b) {
                           if (oo.field_b != 0) {
                             oo.field_b = oo.field_b + 1;
                             return;
@@ -256,10 +256,10 @@ final class pj {
                       }
                     }
                   } else {
-                    if ((oo.field_b ^ -1) >= -1) {
+                    if (oo.field_b <= 0) {
                       if (h.field_W <= 0) {
-                        if ((vn.field_g ^ -1) > (qh.field_c ^ -1)) {
-                          if (-1 == (vn.field_g ^ -1)) {
+                        if (~vn.field_g > ~qh.field_c) {
+                          if (vn.field_g == 0) {
                             nl.a(true, -71);
                             vn.field_g = vn.field_g + 1;
                             return;
@@ -283,7 +283,7 @@ final class pj {
                   L2: {
                     if (0 >= oo.field_b) {
                       if (vn.field_g <= 0) {
-                        if ((qh.field_c ^ -1) < (h.field_W ^ -1)) {
+                        if (~qh.field_c < ~h.field_W) {
                           L3: {
                             if (0 == h.field_W) {
                               nl.a(false, -102);
@@ -327,7 +327,7 @@ final class pj {
           }
           if (param1) {
             if (0 >= oo.field_b) {
-              if ((vn.field_g ^ -1) < -1) {
+              if (vn.field_g > 0) {
                 vn.field_g = vn.field_g - 1;
                 return;
               } else {
@@ -347,15 +347,15 @@ final class pj {
               if (io.field_c == null) {
                 if (null == bn.field_S) {
                   bm.field_o = false;
-                  if ((vn.field_g ^ -1) < -1) {
+                  if (vn.field_g > 0) {
                     vn.field_g = vn.field_g - 1;
                     return;
                   } else {
-                    if (-1 > (h.field_W ^ -1)) {
+                    if (h.field_W > 0) {
                       h.field_W = h.field_W - 1;
                       return;
                     } else {
-                      if ((qh.field_c ^ -1) < (oo.field_b ^ -1)) {
+                      if (~qh.field_c < ~oo.field_b) {
                         if (oo.field_b == 0) {
                           gd.a((byte) -7);
                           oo.field_b = oo.field_b + 1;
@@ -370,10 +370,10 @@ final class pj {
                     }
                   }
                 } else {
-                  if ((oo.field_b ^ -1) >= -1) {
+                  if (oo.field_b <= 0) {
                     if (h.field_W <= 0) {
-                      if ((vn.field_g ^ -1) > (qh.field_c ^ -1)) {
-                        if (-1 == (vn.field_g ^ -1)) {
+                      if (~vn.field_g > ~qh.field_c) {
+                        if (vn.field_g == 0) {
                           nl.a(true, -71);
                           vn.field_g = vn.field_g + 1;
                           break L5;
@@ -396,7 +396,7 @@ final class pj {
               } else {
                 if (0 >= oo.field_b) {
                   if (vn.field_g <= 0) {
-                    if ((qh.field_c ^ -1) < (h.field_W ^ -1)) {
+                    if (~qh.field_c < ~h.field_W) {
                       L6: {
                         if (0 == h.field_W) {
                           nl.a(false, -102);
@@ -426,55 +426,34 @@ final class pj {
     }
 
     final void a(String param0, int param1, int param2, int param3) {
-        int var5 = 0;
-        ((pj) this).field_h = 0;
-        ((pj) this).field_c = param1;
-        if (param2 == -1379417087) {
-          L0: {
+        int var5_int = 0;
+        try {
+            ((pj) this).field_h = 0;
+            ((pj) this).field_c = param1;
+            if (param2 != -1379417087) {
+                ((pj) this).field_b = -57;
+            }
             ((pj) this).field_g = 0;
             ((pj) this).field_d = param3;
             ((pj) this).field_f = false;
             ((pj) this).field_j = 0;
-            var5 = rk.field_e.c(param0);
-            if ((var5 ^ -1) < (((pj) this).field_e.field_A ^ -1)) {
-              ((pj) this).field_e = new tf(10 + var5, ((pj) this).field_e.field_B);
-              break L0;
-            } else {
-              break L0;
+            var5_int = rk.field_e.c(param0);
+            if (!(~var5_int >= ~((pj) this).field_e.field_A)) {
+                ((pj) this).field_e = new tf(10 + var5_int, ((pj) this).field_e.field_B);
             }
-          }
-          ((pj) this).field_e.c();
-          t.d();
-          rk.field_e.b(param0, ((pj) this).field_e.field_A >> -1379417087, ((pj) this).field_e.field_B, 0, -1);
-          qa.field_f.a(19692);
-          return;
-        } else {
-          L1: {
-            ((pj) this).field_b = -57;
-            ((pj) this).field_g = 0;
-            ((pj) this).field_d = param3;
-            ((pj) this).field_f = false;
-            ((pj) this).field_j = 0;
-            var5 = rk.field_e.c(param0);
-            if ((var5 ^ -1) < (((pj) this).field_e.field_A ^ -1)) {
-              ((pj) this).field_e = new tf(10 + var5, ((pj) this).field_e.field_B);
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          ((pj) this).field_e.c();
-          t.d();
-          rk.field_e.b(param0, ((pj) this).field_e.field_A >> -1379417087, ((pj) this).field_e.field_B, 0, -1);
-          qa.field_f.a(19692);
-          return;
+            ((pj) this).field_e.c();
+            t.d();
+            rk.field_e.b(param0, ((pj) this).field_e.field_A >> 1, ((pj) this).field_e.field_B, 0, -1);
+            qa.field_f.a(19692);
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "pj.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }
     }
 
     final static int a(int param0, int param1, int param2, byte param3) {
         if (param3 <= 19) {
             field_a = null;
-            if ((t.field_d ^ -1) <= (param1 - -param2 - -param0 ^ -1)) {
+            if (~t.field_d <= ~(param1 - -param2 - -param0)) {
                 return param1 + param2;
             }
             if (!(0 > -param0 + param1)) {
@@ -482,7 +461,7 @@ final class pj {
             }
             return t.field_d + -param0;
         }
-        if ((t.field_d ^ -1) <= (param1 - -param2 - -param0 ^ -1)) {
+        if (~t.field_d <= ~(param1 - -param2 - -param0)) {
             return param1 + param2;
         }
         if (!(0 > -param0 + param1)) {
@@ -498,20 +477,20 @@ final class pj {
           if (((pj) this).field_f) {
             return;
           } else {
-            if ((((pj) this).field_h ^ -1) <= -9) {
+            if (((pj) this).field_h >= 8) {
               if (66 > ((pj) this).field_h) {
-                ((pj) this).field_e.b(((pj) this).field_c + -(((pj) this).field_e.field_A >> 1343830689), ((pj) this).field_d - (((pj) this).field_e.field_B >> 802407105));
+                ((pj) this).field_e.b(((pj) this).field_c + -(((pj) this).field_e.field_A >> 1), ((pj) this).field_d - (((pj) this).field_e.field_B >> 1));
                 return;
               } else {
                 if (0 < ((pj) this).field_b) {
-                  ((pj) this).field_e.c(((pj) this).field_c - (((pj) this).field_j >> -371053727), -(((pj) this).field_g >> -1824177279) + ((pj) this).field_d, ((pj) this).field_j, ((pj) this).field_g, ((pj) this).field_b);
+                  ((pj) this).field_e.c(((pj) this).field_c - (((pj) this).field_j >> 1), -(((pj) this).field_g >> 1) + ((pj) this).field_d, ((pj) this).field_j, ((pj) this).field_g, ((pj) this).field_b);
                   return;
                 } else {
                   return;
                 }
               }
             } else {
-              ((pj) this).field_e.d(-(((pj) this).field_j >> 1692418881) + ((pj) this).field_c, -(((pj) this).field_g >> 221394785) + ((pj) this).field_d, ((pj) this).field_j, ((pj) this).field_g);
+              ((pj) this).field_e.d(-(((pj) this).field_j >> 1) + ((pj) this).field_c, -(((pj) this).field_g >> 1) + ((pj) this).field_d, ((pj) this).field_j, ((pj) this).field_g);
               return;
             }
           }
@@ -520,20 +499,20 @@ final class pj {
           if (((pj) this).field_f) {
             return;
           } else {
-            if ((((pj) this).field_h ^ -1) <= -9) {
+            if (((pj) this).field_h >= 8) {
               if (66 > ((pj) this).field_h) {
-                ((pj) this).field_e.b(((pj) this).field_c + -(((pj) this).field_e.field_A >> 1343830689), ((pj) this).field_d - (((pj) this).field_e.field_B >> 802407105));
+                ((pj) this).field_e.b(((pj) this).field_c + -(((pj) this).field_e.field_A >> 1), ((pj) this).field_d - (((pj) this).field_e.field_B >> 1));
                 return;
               } else {
                 if (0 < ((pj) this).field_b) {
-                  ((pj) this).field_e.c(((pj) this).field_c - (((pj) this).field_j >> -371053727), -(((pj) this).field_g >> -1824177279) + ((pj) this).field_d, ((pj) this).field_j, ((pj) this).field_g, ((pj) this).field_b);
+                  ((pj) this).field_e.c(((pj) this).field_c - (((pj) this).field_j >> 1), -(((pj) this).field_g >> 1) + ((pj) this).field_d, ((pj) this).field_j, ((pj) this).field_g, ((pj) this).field_b);
                   return;
                 } else {
                   return;
                 }
               }
             } else {
-              ((pj) this).field_e.d(-(((pj) this).field_j >> 1692418881) + ((pj) this).field_c, -(((pj) this).field_g >> 221394785) + ((pj) this).field_d, ((pj) this).field_j, ((pj) this).field_g);
+              ((pj) this).field_e.d(-(((pj) this).field_j >> 1) + ((pj) this).field_c, -(((pj) this).field_g >> 1) + ((pj) this).field_d, ((pj) this).field_j, ((pj) this).field_g);
               return;
             }
           }
@@ -555,10 +534,10 @@ final class pj {
                 int discarded$0 = pj.a(31, 2, 48, (byte) 8);
                 return;
             }
-            if (-77 < (((pj) this).field_h ^ -1)) {
+            if (((pj) this).field_h < 76) {
                 var2 = -58 + (-8 + ((pj) this).field_h);
                 ((pj) this).field_g = ((pj) this).field_e.field_B;
-                ((pj) this).field_j = (var2 << -845252860) + ((pj) this).field_e.field_A;
+                ((pj) this).field_j = (var2 << 4) + ((pj) this).field_e.field_A;
                 ((pj) this).field_b = (10 - var2) * 256 / 10;
                 if (param0 <= -55) {
                     return;
@@ -588,9 +567,6 @@ final class pj {
     }
 
     public static void a(boolean param0) {
-        if (param0) {
-            return;
-        }
         field_a = null;
         field_i = null;
     }

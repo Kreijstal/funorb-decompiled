@@ -46,10 +46,10 @@ final class wm implements Iterable {
         int var3 = 0;
         var2 = 41 / ((-39 - param1) / 56);
         var3 = 0;
-        if (-1 >= (param0 ^ -1)) {
-          if ((param0 ^ -1) > -65537) {
+        if (param0 >= 0) {
+          if (param0 < 65536) {
             L0: {
-              if (-257 < (param0 ^ -1)) {
+              if (param0 < 256) {
                 break L0;
               } else {
                 param0 = param0 >>> 8;
@@ -58,7 +58,7 @@ final class wm implements Iterable {
               }
             }
             L1: {
-              if ((param0 ^ -1) <= -17) {
+              if (param0 >= 16) {
                 param0 = param0 >>> 4;
                 var3 += 4;
                 break L1;
@@ -76,7 +76,7 @@ final class wm implements Iterable {
               }
             }
             L3: {
-              if ((param0 ^ -1) <= -2) {
+              if (param0 >= 1) {
                 var3++;
                 param0 = param0 >>> 1;
                 break L3;
@@ -89,7 +89,7 @@ final class wm implements Iterable {
             L4: {
               param0 = param0 >>> 16;
               var3 += 16;
-              if (-257 < (param0 ^ -1)) {
+              if (param0 < 256) {
                 break L4;
               } else {
                 param0 = param0 >>> 8;
@@ -98,7 +98,7 @@ final class wm implements Iterable {
               }
             }
             L5: {
-              if ((param0 ^ -1) <= -17) {
+              if (param0 >= 16) {
                 param0 = param0 >>> 4;
                 var3 += 4;
                 break L5;
@@ -116,7 +116,7 @@ final class wm implements Iterable {
               }
             }
             L7: {
-              if ((param0 ^ -1) <= -2) {
+              if (param0 >= 1) {
                 var3++;
                 param0 = param0 >>> 1;
                 break L7;
@@ -130,7 +130,7 @@ final class wm implements Iterable {
           L8: {
             param0 = param0 >>> 16;
             var3 += 16;
-            if (-257 < (param0 ^ -1)) {
+            if (param0 < 256) {
               break L8;
             } else {
               param0 = param0 >>> 8;
@@ -139,7 +139,7 @@ final class wm implements Iterable {
             }
           }
           L9: {
-            if ((param0 ^ -1) <= -17) {
+            if (param0 >= 16) {
               param0 = param0 >>> 4;
               var3 += 4;
               break L9;
@@ -157,7 +157,7 @@ final class wm implements Iterable {
             }
           }
           L11: {
-            if ((param0 ^ -1) <= -2) {
+            if (param0 >= 1) {
               var3++;
               param0 = param0 >>> 1;
               break L11;
@@ -170,12 +170,70 @@ final class wm implements Iterable {
     }
 
     final static hn a(int param0, gi param1) {
-        if (param0 != 96) {
-          field_b = 21;
-          return aa.a(106, fn.a(param1, 100, 96));
-        } else {
-          return aa.a(106, fn.a(param1, 100, 96));
+        RuntimeException var2 = null;
+        hn stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        hn stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 == 96) {
+                break L1;
+              } else {
+                field_b = 21;
+                break L1;
+              }
+            }
+            stackOut_2_0 = aa.a(106, fn.a(param1, 100, 96));
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_1 = new StringBuilder().append("wm.B(").append(param0).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param1 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw sh.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
         }
+        return stackIn_3_0;
     }
 
     public final Iterator iterator() {
@@ -184,45 +242,21 @@ final class wm implements Iterable {
 
     final void a(long param0, boolean param1, le param2) {
         le var5 = null;
-        le var6 = null;
-        le var7 = null;
-        if (null == param2.field_d) {
-          var7 = ((wm) this).field_c[(int)((long)(((wm) this).field_f - 1) & param0)];
-          var5 = var7;
-          param2.field_b = var5;
-          if (!param1) {
-            Iterator discarded$2 = ((wm) this).iterator();
-            param2.field_d = var7.field_d;
+        try {
+            if (null != param2.field_d) {
+                param2.b(-27598);
+            }
+            var5 = ((wm) this).field_c[(int)((long)(((wm) this).field_f - 1) & param0)];
+            param2.field_b = var5;
+            if (!param1) {
+                Iterator discarded$0 = ((wm) this).iterator();
+            }
+            param2.field_d = var5.field_d;
             param2.field_d.field_b = param2;
             param2.field_f = param0;
             param2.field_b.field_d = param2;
-            return;
-          } else {
-            param2.field_d = var7.field_d;
-            param2.field_d.field_b = param2;
-            param2.field_f = param0;
-            param2.field_b.field_d = param2;
-            return;
-          }
-        } else {
-          param2.b(-27598);
-          var6 = ((wm) this).field_c[(int)((long)(((wm) this).field_f - 1) & param0)];
-          var5 = var6;
-          param2.field_b = var5;
-          if (param1) {
-            param2.field_d = var6.field_d;
-            param2.field_d.field_b = param2;
-            param2.field_f = param0;
-            param2.field_b.field_d = param2;
-            return;
-          } else {
-            Iterator discarded$3 = ((wm) this).iterator();
-            param2.field_d = var6.field_d;
-            param2.field_d.field_b = param2;
-            param2.field_f = param0;
-            param2.field_b.field_d = param2;
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw sh.a((Throwable) (Object) runtimeException, "wm.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 

@@ -76,7 +76,11 @@ final class fm extends kn {
         if (param1 >= -8) {
             return;
         }
-        boolean discarded$0 = var3.a(0, (mf) this);
+        try {
+            boolean discarded$0 = var3.a(0, (mf) this);
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "fm.Q(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     final void j(int param0) {
@@ -139,32 +143,37 @@ final class fm extends kn {
     }
 
     final static void a(ci param0, int param1) {
+        ci var4 = null;
         ci var5 = null;
         int var3 = Chess.field_G;
         if (param1 >= -59) {
             return;
         }
-        ci var4 = (ci) (Object) param0.field_I.g(-18110);
-        ci var2 = var4;
-        while (var4 != null) {
-            var4.field_pb = 0;
-            var4.field_vb = 0;
-            var4.field_N = 0;
-            var4.field_V = 0;
-            var5 = (ci) (Object) param0.field_I.a((byte) -102);
-            var5 = var5;
+        try {
+            var4 = (ci) (Object) param0.field_I.g(-18110);
+            ci var2 = var4;
+            while (var4 != null) {
+                var4.field_pb = 0;
+                var4.field_vb = 0;
+                var4.field_N = 0;
+                var4.field_V = 0;
+                var5 = (ci) (Object) param0.field_I.a((byte) -102);
+                var5 = var5;
+            }
+            param0.field_N = 0;
+            param0.field_vb = 0;
+            param0.field_pb = 0;
+            param0.field_V = 0;
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "fm.P(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
-        param0.field_N = 0;
-        param0.field_vb = 0;
-        param0.field_pb = 0;
-        param0.field_V = 0;
     }
 
     public static void l(int param0) {
         field_T = null;
         field_O = null;
         field_R = null;
-        int var1 = 117 / ((-73 - param0) / 38);
+        int var1 = -117;
         field_P = null;
         field_Q = null;
         field_U = null;

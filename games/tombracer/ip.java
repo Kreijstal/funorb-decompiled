@@ -8,7 +8,7 @@ abstract class ip {
     final int a(byte param0, long param1) {
         long var4 = 0L;
         var4 = ((ip) this).a((byte) 47);
-        if ((var4 ^ -1L) >= -1L) {
+        if (var4 <= 0L) {
           if (param0 <= 3) {
             return 67;
           } else {
@@ -28,16 +28,13 @@ abstract class ip {
 
     final static void a(upa param0, int param1, int param2) {
         kh var3 = null;
-        var3 = ql.field_k;
-        var3.k(param1, -2988);
-        var3.i(param0.field_n, 0);
-        if (param2 != 2147) {
-          field_a = null;
-          var3.i(param0.field_k, param2 + -2147);
-          return;
-        } else {
-          var3.i(param0.field_k, param2 + -2147);
-          return;
+        try {
+            var3 = ql.field_k;
+            var3.k(param1, -2988);
+            var3.i(param0.field_n, 0);
+            var3.i(param0.field_k, 0);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "ip.H(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + 2147 + 41);
         }
     }
 
@@ -47,7 +44,7 @@ abstract class ip {
 
     public static void b(int param0) {
         field_a = null;
-        int var1 = 63 / ((-11 - param0) / 48);
+        int var1 = 63;
     }
 
     static {

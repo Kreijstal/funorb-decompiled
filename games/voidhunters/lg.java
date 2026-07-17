@@ -38,11 +38,6 @@ final class lg extends uj {
     }
 
     public static void d(int param0) {
-        if (param0 != 108) {
-            field_d = null;
-            field_d = null;
-            return;
-        }
         field_d = null;
     }
 

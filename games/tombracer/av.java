@@ -17,18 +17,10 @@ final class av {
         var2 = 0;
         L0: while (true) {
           if (var2 >= ((av) this).field_f.field_f) {
-            L1: {
-              if (param0) {
-                break L1;
-              } else {
-                int discarded$1 = this.b(47, 0);
-                break L1;
-              }
-            }
             return;
           } else {
             var3 = 0;
-            L2: while (true) {
+            L1: while (true) {
               if (var3 >= ((av) this).field_f.field_a) {
                 var2++;
                 continue L0;
@@ -36,10 +28,10 @@ final class av {
                 if (this.c(-124, ((av) this).field_f.b((byte) -5, var3, var2))) {
                   ((av) this).field_f.a(var3, 0, 0, var2);
                   var3++;
-                  continue L2;
+                  continue L1;
                 } else {
                   var3++;
-                  continue L2;
+                  continue L1;
                 }
               }
             }
@@ -48,55 +40,109 @@ final class av {
     }
 
     final static void a(int param0, int param1, int param2, int param3, String param4, int param5, int param6, int param7, int param8) {
-        int var9 = 0;
+        RuntimeException var9 = null;
+        int var9_int = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        L0: {
-          lra.field_e.field_r = param4;
-          if (2 == bta.field_q) {
-            qpa.field_b.field_r = gj.field_a;
-            break L0;
-          } else {
-            qpa.field_b.field_r = sd.field_J;
-            break L0;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        try {
+          L0: {
+            L1: {
+              lra.field_e.field_r = param4;
+              if (2 == bta.field_q) {
+                qpa.field_b.field_r = gj.field_a;
+                break L1;
+              } else {
+                qpa.field_b.field_r = sd.field_J;
+                break L1;
+              }
+            }
+            var9_int = 495;
+            var10 = 5;
+            dh.field_e.a(var9_int + -10, param7, -23776, var10, 5);
+            pq.field_g.a(dh.field_e.field_G - mka.field_b.field_G, param7, -23776, 0, 0);
+            if (param3 == -5327) {
+              var10 = var10 + (param7 + param5);
+              mka.field_b.a(mka.field_b.field_G, param7, -23776, 0, pq.field_g.field_G);
+              lra.field_d.a(lra.field_d.b((byte) 69), param6, param3 + -18449, var10, 5);
+              var11 = qpa.field_b.b((byte) 69);
+              qpa.field_b.a(var11, param6, -23776, var10, var9_int + -5 + -var11);
+              var12 = 5 + (param6 + var10);
+              lra.field_e.a(var9_int, param1, -23776, 0, 0);
+              ep.field_r.a(var9_int, var12, -23776, param1, 0);
+              ep.field_r.field_w = hca.c(ep.field_r.field_t, 2105376, 3, 11579568, -112, 8421504);
+              var12 = var12 + param1;
+              wi.field_s.a(var9_int, var12, -23776, -(var12 / 2) + param0, -(var9_int / 2) + param8);
+              break L0;
+            } else {
+              return;
+            }
           }
-        }
-        var9 = 495;
-        var10 = 5;
-        dh.field_e.a(var9 + -10, param7, -23776, var10, 5);
-        pq.field_g.a(dh.field_e.field_G - mka.field_b.field_G, param7, -23776, 0, 0);
-        if (param3 == -5327) {
-          var10 = var10 + (param7 + param5);
-          mka.field_b.a(mka.field_b.field_G, param7, -23776, 0, pq.field_g.field_G);
-          lra.field_d.a(lra.field_d.b((byte) 69), param6, param3 + -18449, var10, 5);
-          var11 = qpa.field_b.b((byte) 69);
-          qpa.field_b.a(var11, param6, -23776, var10, var9 + -5 + -var11);
-          var12 = 5 + (param6 + var10);
-          lra.field_e.a(var9, param1, -23776, 0, 0);
-          ep.field_r.a(var9, var12, -23776, param1, 0);
-          ep.field_r.field_w = hca.c(ep.field_r.field_t, 2105376, 3, 11579568, -112, 8421504);
-          var12 = var12 + param1;
-          wi.field_s.a(var9, var12, -23776, -(var12 / 2) + param0, -(var9 / 2) + param8);
-          return;
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var9 = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var9;
+            stackOut_7_1 = new StringBuilder().append("av.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param4 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L2;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L2;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 41);
         }
     }
 
     final static void a(int param0, fia param1, int param2, String param3, int param4, int param5, int param6, int param7, int param8) {
-        wea.field_a = param4;
-        int var9 = -25 / ((44 - param2) / 33);
-        pu.field_b = param0;
-        wk.field_n = param5;
-        pca.field_a = param3;
-        oi.field_a = param1;
-        joa.field_a = param7;
-        ko.field_d = param8;
-        du.field_d = param6;
-        wg.field_l = (qda) (Object) new gv();
-        ep.field_k = new ss(param1);
-        uja.field_a = new fma(wg.field_l, ep.field_k);
+        try {
+            wea.field_a = param4;
+            int var9_int = -25 / ((44 - param2) / 33);
+            pu.field_b = param0;
+            wk.field_n = param5;
+            pca.field_a = param3;
+            oi.field_a = param1;
+            joa.field_a = param7;
+            ko.field_d = param8;
+            du.field_d = param6;
+            wg.field_l = (qda) (Object) new gv();
+            ep.field_k = new ss(param1);
+            uja.field_a = new fma(wg.field_l, ep.field_k);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "av.J(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 41);
+        }
     }
 
     private final void a(boolean param0, int param1, int param2, int param3) {
@@ -136,22 +182,14 @@ final class av {
         int var7 = 0;
         int var8 = 0;
         var8 = TombRacer.field_G ? 1 : 0;
-        if (99 <= (((av) this).field_f.b((byte) -5, ((av) this).field_c, ((av) this).field_d) ^ -1)) {
-          L0: {
-            var2 = this.a((byte) -111, ((av) this).field_f.b((byte) -5, ((av) this).field_c, ((av) this).field_d));
-            var3 = var2;
-            ((av) this).field_a = new int[var2][2];
-            if (param0 > 57) {
-              break L0;
-            } else {
-              ((av) this).a(93, 41, -21, -32, -119);
-              break L0;
-            }
-          }
+        if (((av) this).field_f.b((byte) -5, ((av) this).field_c, ((av) this).field_d) <= -100) {
+          var2 = this.a((byte) -111, ((av) this).field_f.b((byte) -5, ((av) this).field_c, ((av) this).field_d));
+          var3 = var2;
+          ((av) this).field_a = new int[var2][2];
           var4 = ((av) this).field_d;
           var5 = ((av) this).field_c;
           var6 = 0;
-          L1: while (true) {
+          L0: while (true) {
             if (((av) this).field_a.length <= var6) {
               return;
             } else {
@@ -162,19 +200,19 @@ final class av {
                 var3--;
                 var4--;
                 var6++;
-                continue L1;
+                continue L0;
               } else {
                 if (-1 + var3 == this.a(90, var5, var4 - -1)) {
                   var3--;
                   var4++;
                   var6++;
-                  continue L1;
+                  continue L0;
                 } else {
                   if (var3 - 1 == this.a(-41, -1 + var5, var4)) {
                     var5--;
                     var3--;
                     var6++;
-                    continue L1;
+                    continue L0;
                   } else {
                     if (this.a(96, var5 - -1, var4) != -1 + var3) {
                       return;
@@ -182,7 +220,7 @@ final class av {
                       var3--;
                       var5++;
                       var6++;
-                      continue L1;
+                      continue L0;
                     }
                   }
                 }
@@ -297,7 +335,7 @@ final class av {
                       break L6;
                     }
                   }
-                  if ((var5_int ^ -1) == -2) {
+                  if (var5_int == 1) {
                     var8.b((byte) -80, (vg) (Object) new qja(var3_int, var4));
                     var4++;
                     continue L2;
@@ -317,16 +355,13 @@ final class av {
 
     public static void b(boolean param0) {
         field_b = null;
-        if (param0) {
-            field_e = false;
-        }
     }
 
     private final boolean c(int param0, int param1) {
         if (param0 > -104) {
             return true;
         }
-        return (param1 ^ -1) >= 99 ? true : false;
+        return param1 <= -100 ? true : false;
     }
 
     private final int a(int param0, int param1, int param2) {
@@ -357,7 +392,7 @@ final class av {
         if (param1 != 0) {
             ht discarded$0 = av.a(96, 11);
         }
-        return (ht) (Object) (null != jb.field_K ? jb.field_K.a(-122, (long)param0) : null);
+        return null != jb.field_K ? (ht) (Object) jb.field_K.a(-122, (long)param0) : null;
     }
 
     private final boolean b(int param0, int param1, int param2) {
@@ -369,7 +404,11 @@ final class av {
     }
 
     av(hj param0) {
-        ((av) this).field_f = param0;
+        try {
+            ((av) this).field_f = param0;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "av.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

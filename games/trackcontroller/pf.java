@@ -76,27 +76,33 @@ final class pf {
     }
 
     final static void a(int param0, long param1) {
-        InterruptedException var3 = null;
-        Throwable decompiledCaughtException = null;
         try {
-          L0: {
-            L1: {
-              Thread.sleep(param1);
-              if (param0 == 3) {
-                break L1;
-              } else {
-                field_P = null;
-                break L1;
+            InterruptedException var3 = null;
+            Throwable decompiledCaughtException = null;
+            try {
+              L0: {
+                L1: {
+                  Thread.sleep(param1);
+                  if (param0 == 3) {
+                    break L1;
+                  } else {
+                    field_P = null;
+                    break L1;
+                  }
+                }
+                break L0;
+              }
+            } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L2: {
+                var3 = (InterruptedException) (Object) decompiledCaughtException;
+                break L2;
               }
             }
-            break L0;
-          }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          L2: {
-            var3 = (InterruptedException) (Object) decompiledCaughtException;
-            break L2;
-          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+            throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+            throw new RuntimeException(decompiledCheckedException);
         }
     }
 

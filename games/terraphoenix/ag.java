@@ -14,22 +14,11 @@ final class ag {
     }
 
     final static void a(int param0) {
-        if (param0 != 8468) {
-          ag.a((byte) -118);
-          dh.g((byte) -124);
-          qi.field_b = true;
-          dj.field_d = true;
-          jl.field_I.b(false);
-          ta.a(jh.field_o, false, 10);
-          return;
-        } else {
-          dh.g((byte) -124);
-          qi.field_b = true;
-          dj.field_d = true;
-          jl.field_I.b(false);
-          ta.a(jh.field_o, false, 10);
-          return;
-        }
+        dh.g((byte) -124);
+        qi.field_b = true;
+        dj.field_d = true;
+        jl.field_I.b(false);
+        ta.a(jh.field_o, false, 10);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {

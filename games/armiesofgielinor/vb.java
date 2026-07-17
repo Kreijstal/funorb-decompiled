@@ -106,7 +106,7 @@ final class vb extends tc {
           var5 = ArmiesOfGielinor.field_M ? 1 : 0;
           var2 = 0;
           if (0 != ((vb) this).field_r.field_m) {
-            if (-2 == (((vb) this).field_r.field_m ^ -1)) {
+            if (((vb) this).field_r.field_m == 1) {
               L1: {
                 ((vb) this).field_z = true;
                 ((vb) this).field_B = (pa) (Object) new sk(((vb) this).field_k, ((vb) this).field_y.field_M, (vb) this);
@@ -123,7 +123,7 @@ final class vb extends tc {
               var2 = stackIn_135_0;
               break L0;
             } else {
-              if ((((vb) this).field_r.field_m ^ -1) == -7) {
+              if (((vb) this).field_r.field_m == 6) {
                 L2: {
                   ((vb) this).field_z = false;
                   ((vb) this).field_B = (pa) (Object) new tb(((vb) this).field_k, ((vb) this).field_y.field_M, (vb) this);
@@ -141,8 +141,8 @@ final class vb extends tc {
                 break L0;
               } else {
                 if (((vb) this).field_r.field_m != 21) {
-                  if (-27 != (((vb) this).field_r.field_m ^ -1)) {
-                    if (-6 == (((vb) this).field_r.field_m ^ -1)) {
+                  if (((vb) this).field_r.field_m != 26) {
+                    if (((vb) this).field_r.field_m == 5) {
                       L3: {
                         var3 = (kn) (Object) ((vb) this).field_r;
                         if (var3.b(((vb) this).field_k, -75)) {
@@ -202,7 +202,7 @@ final class vb extends tc {
                           var2 = stackIn_116_0;
                           break L0;
                         } else {
-                          if ((((vb) this).field_r.field_m ^ -1) == -12) {
+                          if (((vb) this).field_r.field_m == 11) {
                             L7: {
                               ((vb) this).field_z = false;
                               ((vb) this).field_r.a(((vb) this).field_k, -26661);
@@ -221,9 +221,9 @@ final class vb extends tc {
                             break L0;
                           } else {
                             if (((vb) this).field_r.field_m != 15) {
-                              if ((((vb) this).field_r.field_m ^ -1) != -15) {
+                              if (((vb) this).field_r.field_m != 14) {
                                 if (12 != ((vb) this).field_r.field_m) {
-                                  if (-17 != (((vb) this).field_r.field_m ^ -1)) {
+                                  if (((vb) this).field_r.field_m != 16) {
                                     if (((vb) this).field_r.field_m == 17) {
                                       L8: {
                                         ((vb) this).field_z = false;
@@ -241,7 +241,7 @@ final class vb extends tc {
                                       var2 = stackIn_108_0;
                                       break L0;
                                     } else {
-                                      if (-4 != (((vb) this).field_r.field_m ^ -1)) {
+                                      if (((vb) this).field_r.field_m != 3) {
                                         if (18 == ((vb) this).field_r.field_m) {
                                           L9: {
                                             ((vb) this).field_z = false;
@@ -259,9 +259,9 @@ final class vb extends tc {
                                           var2 = stackIn_104_0;
                                           break L0;
                                         } else {
-                                          if (-21 != (((vb) this).field_r.field_m ^ -1)) {
-                                            if (-20 != (((vb) this).field_r.field_m ^ -1)) {
-                                              if (-3 != (((vb) this).field_r.field_m ^ -1)) {
+                                          if (((vb) this).field_r.field_m != 20) {
+                                            if (((vb) this).field_r.field_m != 19) {
+                                              if (((vb) this).field_r.field_m != 2) {
                                                 if (((vb) this).field_r.field_m == 25) {
                                                   L10: {
                                                     ((vb) this).field_z = false;
@@ -280,9 +280,9 @@ final class vb extends tc {
                                                   var2 = stackIn_100_0;
                                                   break L0;
                                                 } else {
-                                                  if (-24 != (((vb) this).field_r.field_m ^ -1)) {
+                                                  if (((vb) this).field_r.field_m != 23) {
                                                     if (((vb) this).field_r.field_m != 24) {
-                                                      if ((((vb) this).field_r.field_m ^ -1) != -28) {
+                                                      if (((vb) this).field_r.field_m != 27) {
                                                         break L0;
                                                       } else {
                                                         ((vb) this).field_z = false;
@@ -607,7 +607,7 @@ final class vb extends tc {
         field_q = null;
         field_t = null;
         field_o = null;
-        int var1 = -72 % ((param0 - 30) / 51);
+        int var1 = 0;
         field_l = null;
     }
 
@@ -828,29 +828,37 @@ final class vb extends tc {
     vb(ic param0, ha param1, eo param2, oj param3, boolean param4) {
         ((vb) this).field_z = false;
         ((vb) this).field_x = -1;
-        ((vb) this).field_k = param1;
-        ((vb) this).field_r = param3;
-        ((vb) this).field_u = param2;
-        ((vb) this).field_y = param0;
-        j discarded$0 = new j(240, param0.field_M);
-        ((vb) this).field_r.a(-97);
-        ((vb) this).field_p = 0;
-        ((vb) this).field_n = false;
-        ((vb) this).field_w = param4 ? true : false;
-        ((vb) this).field_s = false;
+        try {
+            ((vb) this).field_k = param1;
+            ((vb) this).field_r = param3;
+            ((vb) this).field_u = param2;
+            ((vb) this).field_y = param0;
+            j discarded$0 = new j(240, param0.field_M);
+            ((vb) this).field_r.a(-97);
+            ((vb) this).field_p = 0;
+            ((vb) this).field_n = false;
+            ((vb) this).field_w = param4 ? true : false;
+            ((vb) this).field_s = false;
+        } catch (RuntimeException runtimeException) {
+            throw ig.a((Throwable) (Object) runtimeException, "vb.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 41);
+        }
     }
 
     vb(ic param0, ha param1, eo param2, oj param3, int param4, int param5, boolean param6) {
         ((vb) this).field_z = false;
         ((vb) this).field_x = -1;
-        ((vb) this).field_r = param3;
-        ((vb) this).field_k = param1;
-        ((vb) this).field_u = param2;
-        ((vb) this).field_y = param0;
-        j discarded$0 = new j(240, param0.field_M);
-        ((vb) this).field_r.a(-97);
-        ((vb) this).field_n = false;
-        ((vb) this).field_w = param6 ? true : false;
+        try {
+            ((vb) this).field_r = param3;
+            ((vb) this).field_k = param1;
+            ((vb) this).field_u = param2;
+            ((vb) this).field_y = param0;
+            j discarded$0 = new j(240, param0.field_M);
+            ((vb) this).field_r.a(-97);
+            ((vb) this).field_n = false;
+            ((vb) this).field_w = param6 ? true : false;
+        } catch (RuntimeException runtimeException) {
+            throw ig.a((Throwable) (Object) runtimeException, "vb.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+        }
     }
 
     static {

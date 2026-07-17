@@ -9,22 +9,17 @@ final class cc extends uf {
     static String field_j;
 
     public static void c(byte param0) {
-        if (param0 != -17) {
-          field_j = null;
-          field_l = null;
-          field_i = null;
-          field_j = null;
-          return;
-        } else {
-          field_l = null;
-          field_i = null;
-          field_j = null;
-          return;
-        }
+        field_l = null;
+        field_i = null;
+        field_j = null;
     }
 
     cc(byte[] param0) {
-        ((cc) this).field_h = param0;
+        try {
+            ((cc) this).field_h = param0;
+        } catch (RuntimeException runtimeException) {
+            throw qk.a((Throwable) (Object) runtimeException, "cc.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

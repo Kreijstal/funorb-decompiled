@@ -44,8 +44,9 @@ final class nj extends nm {
           if (((nj) this).field_K <= 0) {
             break L0;
           } else {
+            int fieldTemp$2 = ((nj) this).field_K - 1;
             ((nj) this).field_K = ((nj) this).field_K - 1;
-            if (((nj) this).field_K - 1 <= 0) {
+            if (fieldTemp$2 <= 0) {
               break L0;
             } else {
               return;
@@ -88,8 +89,9 @@ final class nj extends nm {
               }
             }
             L5: {
+              int fieldTemp$3 = ((nj) this).field_k + 1;
               ((nj) this).field_k = ((nj) this).field_k + 1;
-              if (((nj) this).field_u != ((nj) this).field_k + 1) {
+              if (((nj) this).field_u != fieldTemp$3) {
                 break L5;
               } else {
                 ((nj) this).b((byte) 111);
@@ -119,7 +121,7 @@ final class nj extends nm {
                   ((nj) this).field_r[var2] = ((nj) this).field_r[var2] + ((nj) this).field_p;
                   if (((nj) this).field_o < ((nj) this).field_k) {
                     L8: {
-                      if (-1 == (((nj) this).field_p ^ -1)) {
+                      if (((nj) this).field_p == 0) {
                         ((nj) this).field_p = ip.field_r.a(-37880252, 3) + -1;
                         break L8;
                       } else {
@@ -160,10 +162,10 @@ final class nj extends nm {
         }
         for (var3 = 0; ((nj) this).field_w > var3; var3++) {
             for (var4 = 0; var4 < ((nj) this).field_J; var4++) {
-                lb.a((((nj) this).field_D[var3][var4] >> -1196049244) + param1, ((nj) this).field_m[var3][var4] >> -593133180, 48, -(((nj) this).field_i * ((nj) this).field_j) + 64, eb.field_r[((nj) this).field_P[var3]]);
+                lb.a((((nj) this).field_D[var3][var4] >> 4) + param1, ((nj) this).field_m[var3][var4] >> 4, 48, -(((nj) this).field_i * ((nj) this).field_j) + 64, eb.field_r[((nj) this).field_P[var3]]);
             }
-            lb.a(param1 - -(((nj) this).field_A[var3] >> -2090539484), ((nj) this).field_C[var3] >> -637335740, 224, -(((nj) this).field_j * ((nj) this).field_E) + 165, eb.field_r[((nj) this).field_n[var3]]);
-            lb.a((((nj) this).field_A[var3] >> 1009824580) + param1, ((nj) this).field_C[var3] >> -744014204, 64, -(((nj) this).field_x * ((nj) this).field_j) + 250, eb.field_r[((nj) this).field_n[var3]]);
+            lb.a(param1 - -(((nj) this).field_A[var3] >> 4), ((nj) this).field_C[var3] >> 4, 224, -(((nj) this).field_j * ((nj) this).field_E) + 165, eb.field_r[((nj) this).field_n[var3]]);
+            lb.a((((nj) this).field_A[var3] >> 4) + param1, ((nj) this).field_C[var3] >> 4, 64, -(((nj) this).field_x * ((nj) this).field_j) + 250, eb.field_r[((nj) this).field_n[var3]]);
         }
     }
 
@@ -186,8 +188,8 @@ final class nj extends nm {
         ((nj) this).field_H = param1;
         ((nj) this).field_L = param0;
         ((nj) this).field_w = ((nj) this).field_H * ((nj) this).field_L;
-        ((nj) this).field_s = param2 << -901864408;
-        ((nj) this).field_N = param3 << -60158744;
+        ((nj) this).field_s = param2 << 8;
+        ((nj) this).field_N = param3 << 8;
         ((nj) this).field_K = 30 + ip.field_r.a(-37880252, 30);
         ((nj) this).field_u = 100 - -ip.field_r.a(-37880252, 30);
         ((nj) this).field_I = ip.field_r.a(-37880252, 5) + 12;
@@ -195,7 +197,7 @@ final class nj extends nm {
         ((nj) this).field_q = ip.field_r.a(-37880252, 10) + 25;
         ((nj) this).field_t = ip.field_r.a(-37880252, 15) + 80;
         ((nj) this).field_o = 2 * ip.field_r.a(-37880252, ((nj) this).field_u);
-        ((nj) this).field_O = ip.field_r.a(-37880252, 2) << 220150625;
+        ((nj) this).field_O = ip.field_r.a(-37880252, 2) << 1;
         ((nj) this).field_p = ip.field_r.a(-37880252, 3) + -1;
         ((nj) this).field_D = new int[((nj) this).field_w][((nj) this).field_u];
         ((nj) this).field_y = new int[((nj) this).field_w];
@@ -214,10 +216,10 @@ final class nj extends nm {
             var10 = ip.field_r.a(-37880252, eb.field_q.length);
             for (var12 = 0; ((nj) this).field_H > var12; var12++) {
                 var8 = ip.field_r.a(-37880252, 800);
-                ((nj) this).field_A[var5] = ((nj) this).field_s - -(ip.field_r.a(-37880252, 4) - 2 << 311394888);
-                ((nj) this).field_C[var5] = ((nj) this).field_N + (-2 + ip.field_r.a(-37880252, 4) << 873818952);
-                ((nj) this).field_r[var5] = (sa.a(var12 * var7 - -var8, -4097) >> 2098116680) * var6 >> 1885634184;
-                ((nj) this).field_y[var5] = var6 * (BrickABrac.c(2048, var8 + var12 * var7) >> -1599398456) >> 1424474376;
+                ((nj) this).field_A[var5] = ((nj) this).field_s - -(ip.field_r.a(-37880252, 4) - 2 << 8);
+                ((nj) this).field_C[var5] = ((nj) this).field_N + (-2 + ip.field_r.a(-37880252, 4) << 8);
+                ((nj) this).field_r[var5] = (sa.a(var12 * var7 - -var8, -4097) >> 8) * var6 >> 8;
+                ((nj) this).field_y[var5] = var6 * (BrickABrac.c(2048, var8 + var12 * var7) >> 8) >> 8;
                 ((nj) this).field_n[var5] = var9;
                 ((nj) this).field_P[var5] = var10;
                 var5++;

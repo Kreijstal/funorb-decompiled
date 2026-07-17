@@ -1163,9 +1163,6 @@ final class hj {
         field_a = null;
         field_e = null;
         field_f = null;
-        if (param0 > -122) {
-            hj.a(-5, false);
-        }
     }
 
     static {

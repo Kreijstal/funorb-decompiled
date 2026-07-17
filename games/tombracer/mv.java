@@ -15,9 +15,7 @@ final class mv {
     final int[] a(byte param0, int param1) {
         int var3 = 0;
         tba var4 = null;
-        tba var4_ref = null;
         tba var5 = null;
-        tba var5_ref = null;
         int var6 = 0;
         Object stackIn_2_0 = null;
         Object stackIn_3_0 = null;
@@ -49,26 +47,26 @@ final class mv {
                 L1: {
                   ((mv) this).field_d = true;
                   if (((mv) this).field_c < ((mv) this).field_e) {
-                    var4_ref = new tba(param1, ((mv) this).field_c);
+                    var4 = new tba(param1, ((mv) this).field_c);
                     ((mv) this).field_c = ((mv) this).field_c + 1;
                     break L1;
                   } else {
-                    var5_ref = (tba) (Object) ((mv) this).field_g.b(3);
-                    var4_ref = new tba(param1, var5_ref.field_j);
-                    ((mv) this).field_f[var5_ref.field_h] = null;
-                    var5_ref.p(69);
+                    var5 = (tba) (Object) ((mv) this).field_g.b(3);
+                    var4 = new tba(param1, var5.field_j);
+                    ((mv) this).field_f[var5.field_h] = null;
+                    var5.p(69);
                     break L1;
                   }
                 }
-                ((mv) this).field_f[param1] = var4_ref;
+                ((mv) this).field_f[param1] = var4;
                 break L0;
               } else {
                 ((mv) this).field_d = false;
                 break L0;
               }
             }
-            ((mv) this).field_g.a((byte) 103, (vg) (Object) var4_ref);
-            return ((mv) this).field_a[var4_ref.field_j];
+            ((mv) this).field_g.a((byte) 103, (vg) (Object) var4);
+            return ((mv) this).field_a[var4.field_j];
           } else {
             L2: {
               stackOut_6_0 = this;

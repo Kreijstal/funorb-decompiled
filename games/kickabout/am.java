@@ -17,9 +17,6 @@ class am extends gn {
         field_h = null;
         field_m = null;
         field_g = null;
-        if (param0 != 13421568) {
-            field_j = null;
-        }
         field_j = null;
     }
 

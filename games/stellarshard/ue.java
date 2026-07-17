@@ -11,9 +11,6 @@ final class ue {
     static hc field_e;
 
     public static void b(byte param0) {
-        if (param0 >= -69) {
-            return;
-        }
         field_e = null;
         field_c = null;
     }
@@ -23,25 +20,13 @@ final class ue {
     }
 
     final static void a(byte param0) {
-        CharSequence var2 = null;
-        CharSequence var3 = null;
-        if (param0 > -119) {
-          field_c = null;
-          wf.field_b = ae.field_N.e((byte) 95);
-          var2 = (CharSequence) (Object) wf.field_b;
-          wb.field_b = nh.a(var2, false);
-          return;
-        } else {
-          wf.field_b = ae.field_N.e((byte) 95);
-          var3 = (CharSequence) (Object) wf.field_b;
-          wb.field_b = nh.a(var3, false);
-          return;
-        }
+        wf.field_b = ae.field_N.e((byte) 95);
+        CharSequence var2 = (CharSequence) (Object) wf.field_b;
+        wb.field_b = nh.a(var2, false);
     }
 
     final static void a(byte param0, int param1) {
         try {
-            IOException iOException = null;
             int var2 = 0;
             Throwable decompiledCaughtException = null;
             L0: {
@@ -49,7 +34,7 @@ final class ue {
                 break L0;
               } else {
                 L1: {
-                  if ((param1 ^ -1) > -1) {
+                  if (param1 < 0) {
                     break L1;
                   } else {
                     if (sl.field_d == la.field_O) {
@@ -74,18 +59,11 @@ final class ue {
                 L3: {
                   var2 = 97 % ((-22 - param0) / 57);
                   if (0 < pg.field_fb.field_k) {
-                    try {
+                    {
                       L4: {
                         ob.field_b.a(pg.field_fb.field_r, 0, 113, pg.field_fb.field_k);
                         t.field_d = ih.a((byte) -98);
                         break L4;
-                      }
-                    } catch (java.io.IOException decompiledCaughtParameter0) {
-                      decompiledCaughtException = decompiledCaughtParameter0;
-                      L5: {
-                        iOException = (IOException) (Object) decompiledCaughtException;
-                        oj.c(-2290);
-                        break L5;
                       }
                     }
                     pg.field_fb.field_k = 0;

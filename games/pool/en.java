@@ -46,7 +46,7 @@ final class en {
           var3 = param1;
           if (-1 != var3) {
             if (1 != var3) {
-              if ((var3 ^ -1) != -3) {
+              if (var3 != 2) {
                 if (var3 != 0) {
                   if (var3 == 3) {
                     L0: {
@@ -125,7 +125,7 @@ final class en {
           var3 = param1;
           if (-1 != var3) {
             if (1 != var3) {
-              if ((var3 ^ -1) != -3) {
+              if (var3 != 2) {
                 if (var3 != 0) {
                   if (var3 == 3) {
                     L5: {

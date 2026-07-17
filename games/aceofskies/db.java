@@ -48,7 +48,7 @@ final class db {
         int stackOut_22_0 = 0;
         int stackOut_21_0 = 0;
         L0: {
-          int discarded$1 = t.d(24);
+          int discarded$2 = t.d(24);
           ((db) this).field_b = t.d(16);
           ((db) this).field_c = t.d(24);
           ((db) this).field_a = new int[((db) this).field_c];
@@ -115,8 +115,9 @@ final class db {
                     var3_int++;
                     continue L5;
                   } else {
+                    int incrementValue$3 = var2;
                     var2++;
-                    ((db) this).field_a[var2] = var3_int;
+                    ((db) this).field_a[incrementValue$3] = var3_int;
                     var5++;
                     continue L6;
                   }
@@ -274,7 +275,7 @@ final class db {
                   var7 = 0;
                   L2: while (true) {
                     if (var7 >= var4) {
-                      ((db) this).field_f[var6] = var3 ^ -1;
+                      ((db) this).field_f[var6] = ~var3;
                       if (var6 >= var2) {
                         var2 = var6 + 1;
                         var3++;
@@ -398,6 +399,6 @@ final class db {
         while (((db) this).field_f[var1] >= 0) {
             var1 = t.b() != 0 ? ((db) this).field_f[var1] : var1 + 1;
         }
-        return ((db) this).field_f[var1] ^ -1;
+        return ~((db) this).field_f[var1];
     }
 }

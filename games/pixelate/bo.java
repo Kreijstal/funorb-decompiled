@@ -17,41 +17,37 @@ final class bo {
 
     final static void a(int param0, int param1) {
         fa var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
         og var4 = null;
+        RuntimeException decompiledCaughtException = null;
         var3 = Pixelate.field_H ? 1 : 0;
-        var4 = (og) (Object) wk.field_g.c(1504642273);
-        L0: while (true) {
-          if (var4 == null) {
-            if (param1 == 7) {
-              var2 = bq.field_a.c(1504642273);
-              L1: while (true) {
-                if (var2 == null) {
-                  return;
-                } else {
-                  sd.a(true, param0);
-                  var2 = bq.field_a.f(1504642273);
-                  continue L1;
+        try {
+          L0: {
+            var4 = (og) (Object) wk.field_g.c(1504642273);
+            L1: while (true) {
+              if (var4 == null) {
+                var2 = bq.field_a.c(1504642273);
+                L2: while (true) {
+                  if (var2 == null) {
+                    break L0;
+                  } else {
+                    sd.a(true, param0);
+                    var2 = bq.field_a.f(1504642273);
+                    continue L2;
+                  }
                 }
-              }
-            } else {
-              field_k = null;
-              var2 = bq.field_a.c(1504642273);
-              L2: while (true) {
-                if (var2 == null) {
-                  return;
-                } else {
-                  sd.a(true, param0);
-                  var2 = bq.field_a.f(1504642273);
-                  continue L2;
-                }
+              } else {
+                dq.a(param0, -18989, var4);
+                var4 = (og) (Object) wk.field_g.f(1504642273);
+                continue L1;
               }
             }
-          } else {
-            dq.a(param0, -18989, var4);
-            var4 = (og) (Object) wk.field_g.f(param1 + 1504642266);
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          throw aa.a((Throwable) (Object) var2_ref, "bo.D(" + param0 + 44 + 7 + 41);
         }
     }
 
@@ -60,33 +56,28 @@ final class bo {
         field_a = null;
         field_h = null;
         field_f = null;
-        if (!param0) {
-          return;
-        } else {
-          field_d = null;
-          field_k = null;
-          field_b = null;
-          return;
-        }
+        field_d = null;
+        field_k = null;
+        field_b = null;
     }
 
     final static byte[] a(int param0) {
         byte[] var2 = new byte[8];
         byte[] var1 = var2;
-        var2[6] = (byte)(int)mk.a(255L, jo.field_h >> -1134873808);
-        var2[2] = (byte)(int)mk.a((long)param0, jo.field_h >> 406974032);
-        var2[3] = (byte)(int)mk.a(jo.field_h >> -1191275688, 255L);
-        var2[5] = (byte)(int)mk.a(jo.field_h >> 739468520, 255L);
-        var2[1] = (byte)(int)mk.a(255L, jo.field_h >> 778563784);
-        var2[0] = (byte)(int)mk.a(jo.field_h >> 779366912, 255L);
-        var2[4] = (byte)(int)mk.a(255L, jo.field_h >> -1984372448);
-        var2[7] = (byte)(int)mk.a(255L, jo.field_h >> -1677962184);
+        var2[6] = (byte)(int)mk.a(255L, jo.field_h >> 48);
+        var2[2] = (byte)(int)mk.a((long)param0, jo.field_h >> 16);
+        var2[3] = (byte)(int)mk.a(jo.field_h >> 24, 255L);
+        var2[5] = (byte)(int)mk.a(jo.field_h >> 40, 255L);
+        var2[1] = (byte)(int)mk.a(255L, jo.field_h >> 8);
+        var2[0] = (byte)(int)mk.a(jo.field_h, 255L);
+        var2[4] = (byte)(int)mk.a(255L, jo.field_h >> 32);
+        var2[7] = (byte)(int)mk.a(255L, jo.field_h >> 56);
         return var2;
     }
 
     final static int a(byte param0, int param1, int param2) {
         int var3 = 0;
-        if (-2 == (param2 ^ -1)) {
+        if (param2 == 1) {
           if (!sh.a(false, param1)) {
             var3 = 54 / ((43 - param0) / 45);
             return gb.field_e[param2];

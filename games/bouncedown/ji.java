@@ -15,25 +15,28 @@ class ji extends ng {
 
     public static void c(byte param0) {
         field_d = null;
-        int var1 = 39 / ((-41 - param0) / 51);
+        int var1 = -39;
     }
 
     final void a(boolean param0, wi param1) {
-        if (param0) {
-          ((ji) this).field_c = null;
-          param1.a(252186072, ((ji) this).field_e);
-          param1.b(((ji) this).field_c, (byte) -118);
-          return;
-        } else {
-          param1.a(252186072, ((ji) this).field_e);
-          param1.b(((ji) this).field_c, (byte) -118);
-          return;
+        try {
+            if (param0) {
+                ((ji) this).field_c = null;
+            }
+            param1.a(252186072, ((ji) this).field_e);
+            param1.b(((ji) this).field_c, (byte) -118);
+        } catch (RuntimeException runtimeException) {
+            throw ii.a((Throwable) (Object) runtimeException, "ji.H(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
     ji(long param0, String param1) {
-        ((ji) this).field_e = param0;
-        ((ji) this).field_c = param1;
+        try {
+            ((ji) this).field_e = param0;
+            ((ji) this).field_c = param1;
+        } catch (RuntimeException runtimeException) {
+            throw ii.a((Throwable) (Object) runtimeException, "ji.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

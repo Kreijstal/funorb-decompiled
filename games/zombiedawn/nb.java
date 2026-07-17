@@ -25,25 +25,13 @@ class nb extends le {
     }
 
     public static void a(int param0) {
-        if (param0 > -22) {
-          field_k = null;
-          field_o = null;
-          field_k = null;
-          field_l = null;
-          return;
-        } else {
-          field_o = null;
-          field_k = null;
-          field_l = null;
-          return;
-        }
+        field_o = null;
+        field_k = null;
+        field_l = null;
     }
 
     final static boolean c(int param0) {
-        if (param0 != 0) {
-            return false;
-        }
-        return vh.field_c == tk.field_a ? true : false;
+        return vh.field_c == tk.field_a;
     }
 
     protected nb() {

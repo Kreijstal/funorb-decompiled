@@ -50,7 +50,7 @@ final class ek {
                   var7 = 0;
                   L2: while (true) {
                     if (var7 >= var4) {
-                      ((ek) this).field_d[var6] = var3 ^ -1;
+                      ((ek) this).field_d[var6] = ~var3;
                       if (var6 >= var2) {
                         var2 = var6 + 1;
                         var3++;
@@ -174,7 +174,7 @@ final class ek {
         while (((ek) this).field_d[var1] >= 0) {
             var1 = qf.b() != 0 ? ((ek) this).field_d[var1] : var1 + 1;
         }
-        return ((ek) this).field_d[var1] ^ -1;
+        return ~((ek) this).field_d[var1];
     }
 
     final float[] c() {
@@ -216,7 +216,7 @@ final class ek {
         int stackOut_22_0 = 0;
         int stackOut_21_0 = 0;
         L0: {
-          int discarded$1 = qf.e(24);
+          int discarded$2 = qf.e(24);
           ((ek) this).field_f = qf.e(16);
           ((ek) this).field_c = qf.e(24);
           ((ek) this).field_b = new int[((ek) this).field_c];
@@ -283,8 +283,9 @@ final class ek {
                     var3_int++;
                     continue L5;
                   } else {
+                    int incrementValue$3 = var2;
                     var2++;
-                    ((ek) this).field_b[var2] = var3_int;
+                    ((ek) this).field_b[incrementValue$3] = var3_int;
                     var5++;
                     continue L6;
                   }

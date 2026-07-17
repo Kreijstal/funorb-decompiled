@@ -17,15 +17,15 @@ final class cb extends le {
     }
 
     final void a(byte[] param0, byte param1) {
-        ((cb) this).field_k = java.nio.ByteBuffer.allocateDirect(param0.length);
-        java.nio.Buffer discarded$11 = ((cb) this).field_k.position(0);
-        if (param1 != 95) {
-          cb.a((byte) -7);
-          java.nio.ByteBuffer discarded$12 = ((cb) this).field_k.put(param0);
-          return;
-        } else {
-          java.nio.ByteBuffer discarded$13 = ((cb) this).field_k.put(param0);
-          return;
+        try {
+            ((cb) this).field_k = java.nio.ByteBuffer.allocateDirect(param0.length);
+            java.nio.Buffer discarded$6 = ((cb) this).field_k.position(0);
+            if (param1 != 95) {
+                cb.a((byte) -7);
+            }
+            java.nio.ByteBuffer discarded$7 = ((cb) this).field_k.put(param0);
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "cb.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 

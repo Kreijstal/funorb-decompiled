@@ -84,7 +84,7 @@ final class ib implements ch {
             L4: while (true) {
               L5: {
                 L6: {
-                  if ((var10 ^ -1) > -1) {
+                  if (var10 < 0) {
                     break L6;
                   } else {
                     gb.f(var7 * var6_ref.a(var10, 100) / var6_ref.a((byte) 9) + var8, var9, ((ib) this).field_b, ((ib) this).field_j);
@@ -347,7 +347,7 @@ final class ib implements ch {
             var1_ref = ae.field_a;
             var2 = var1_ref.e(false);
             if (var2 != 0) {
-              if ((var2 ^ -1) == -2) {
+              if (var2 == 1) {
                 L1: {
                   if (null != di.field_b) {
                     break L1;
@@ -466,9 +466,9 @@ final class ib implements ch {
                   }
                   return;
                 } else {
-                  if ((var2 ^ -1) == -4) {
+                  if (var2 == 3) {
                     L12: {
-                      if ((nb.field_i ^ -1) == -3) {
+                      if (nb.field_i == 2) {
                         nb.field_i = 1;
                         break L12;
                       } else {
@@ -511,7 +511,7 @@ final class ib implements ch {
                 }
               }
               L15: {
-                if (-2 != (var1_ref.e(false) ^ -1)) {
+                if (var1_ref.e(false) != 1) {
                   stackOut_10_0 = 0;
                   stackIn_11_0 = stackOut_10_0;
                   break L15;

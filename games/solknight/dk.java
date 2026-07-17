@@ -17,22 +17,19 @@ final class dk extends rj {
         if (param0 <= 114) {
             return 98L;
         }
-        if ((((dk) this).field_g ^ -1L) < (((dk) this).field_f ^ -1L)) {
+        if (~((dk) this).field_g < ~((dk) this).field_f) {
             return (((dk) this).field_g - ((dk) this).field_f) / 1000000L;
         }
         return 0L;
     }
 
     public static void e(int param0) {
-        if (param0 > -17) {
-            field_h = null;
-        }
         field_l = null;
         field_h = null;
     }
 
     final void c(int param0) {
-        if (!((((dk) this).field_f ^ -1L) <= (((dk) this).field_g ^ -1L))) {
+        if (!(~((dk) this).field_f <= ~((dk) this).field_g)) {
             ((dk) this).field_f = ((dk) this).field_f + (-((dk) this).field_f + ((dk) this).field_g);
         }
         if (param0 != -10158) {
@@ -53,16 +50,16 @@ final class dk extends rj {
             break L0;
           }
         }
-        if ((((dk) this).field_f ^ -1L) <= (((dk) this).field_g ^ -1L)) {
+        if (~((dk) this).field_f <= ~((dk) this).field_g) {
           var4 = 0;
           L1: while (true) {
             L2: {
               var4++;
               ((dk) this).field_g = ((dk) this).field_g + param0;
-              if (-11 >= (var4 ^ -1)) {
+              if (var4 >= 10) {
                 break L2;
               } else {
-                if ((((dk) this).field_f ^ -1L) < (((dk) this).field_g ^ -1L)) {
+                if (~((dk) this).field_f < ~((dk) this).field_g) {
                   continue L1;
                 } else {
                   break L2;
@@ -90,14 +87,11 @@ final class dk extends rj {
     private final long d(int param0) {
         int var8 = 0;
         int var9 = SolKnight.field_L ? 1 : 0;
-        if (param0 != -5378) {
-            return 76L;
-        }
         long var2 = System.nanoTime();
         long var4 = -((dk) this).field_j + var2;
         ((dk) this).field_j = var2;
         if (var4 > -5000000000L) {
-            if (-5000000001L < (var4 ^ -1L)) {
+            if (var4 < 5000000000L) {
                 ((dk) this).field_k[((dk) this).field_e] = var4;
                 if (!(((dk) this).field_d >= 1)) {
                     ((dk) this).field_d = ((dk) this).field_d + 1;

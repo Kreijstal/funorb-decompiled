@@ -27,7 +27,7 @@ final class di {
         pg var9 = null;
         var3 = ArcanistsMulti.field_G ? 1 : 0;
         if (param0 < -51) {
-          if ((((di) this).field_e ^ -1) < -1) {
+          if (((di) this).field_e > 0) {
             if (((di) this).field_f[((di) this).field_e - 1] != ((di) this).field_a) {
               var9 = ((di) this).field_a;
               ((di) this).field_a = var9.field_b;
@@ -35,8 +35,9 @@ final class di {
             } else {
               L0: while (true) {
                 if (((di) this).field_e < ((di) this).field_k) {
+                  int fieldTemp$2 = ((di) this).field_e;
                   ((di) this).field_e = ((di) this).field_e + 1;
-                  var4 = ((di) this).field_f[((di) this).field_e].field_b;
+                  var4 = ((di) this).field_f[fieldTemp$2].field_b;
                   var6 = var4;
                   if (var4 != ((di) this).field_f[((di) this).field_e - 1]) {
                     ((di) this).field_a = var6.field_b;
@@ -52,8 +53,9 @@ final class di {
           } else {
             L1: while (true) {
               if (((di) this).field_e < ((di) this).field_k) {
+                int fieldTemp$3 = ((di) this).field_e;
                 ((di) this).field_e = ((di) this).field_e + 1;
-                var4 = ((di) this).field_f[((di) this).field_e].field_b;
+                var4 = ((di) this).field_f[fieldTemp$3].field_b;
                 var5 = var4;
                 if (var4 != ((di) this).field_f[((di) this).field_e - 1]) {
                   ((di) this).field_a = var5.field_b;
@@ -86,10 +88,6 @@ final class di {
         field_i = null;
         field_b = null;
         field_d = null;
-        if (param0 == 13) {
-            return;
-        }
-        field_l = null;
     }
 
     final pg a(long param0, int param1) {
@@ -101,7 +99,7 @@ final class di {
         pg var4 = ((di) this).field_f[(int)(param0 & (long)(-1 + ((di) this).field_k))];
         ((di) this).field_g = var4.field_b;
         while (var4 != ((di) this).field_g) {
-            if ((param0 ^ -1L) == (((di) this).field_g.field_e ^ -1L)) {
+            if (~param0 == ~((di) this).field_g.field_e) {
                 var5 = ((di) this).field_g;
                 ((di) this).field_g = ((di) this).field_g.field_b;
                 return var5;
@@ -138,8 +136,12 @@ final class di {
         if (!param1) {
             return;
         }
-        param0.field_b.field_a = param0;
-        param0.field_e = param2;
+        try {
+            param0.field_b.field_a = param0;
+            param0.field_e = param2;
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "di.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     di(int param0) {
@@ -151,13 +153,15 @@ final class di {
         var2 = 0;
         L0: while (true) {
           if (var2 < param0) {
-            var3 = new pg();
-            ((di) this).field_f[var2] = new pg();
+            pg dupTemp$2 = new pg();
+            var3 = dupTemp$2;
+            ((di) this).field_f[var2] = dupTemp$2;
             var3.field_b = var3;
             var3.field_a = var3;
             var2++;
             continue L0;
           } else {
+            return;
           }
         }
     }

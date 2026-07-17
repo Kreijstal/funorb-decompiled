@@ -10,42 +10,7 @@ final class ve {
     static String field_c;
 
     final static boolean a(boolean param0) {
-        int stackIn_5_0 = 0;
-        int stackIn_11_0 = 0;
-        int stackOut_9_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        if (!param0) {
-          if (!ed.c(true)) {
-            if ((pb.field_G ^ -1) >= -1) {
-              return true;
-            } else {
-              return false;
-            }
-          } else {
-            stackOut_9_0 = 1;
-            stackIn_11_0 = stackOut_9_0;
-            return stackIn_11_0 != 0;
-          }
-        } else {
-          boolean discarded$5 = ve.a(false);
-          if (ed.c(true)) {
-            return true;
-          } else {
-            L0: {
-              if ((pb.field_G ^ -1) < -1) {
-                stackOut_4_0 = 0;
-                stackIn_5_0 = stackOut_4_0;
-                break L0;
-              } else {
-                stackOut_3_0 = 1;
-                stackIn_5_0 = stackOut_3_0;
-                break L0;
-              }
-            }
-            return stackIn_5_0 != 0;
-          }
-        }
+        return ed.c(true) || pb.field_G <= 0;
     }
 
     private final void a(int param0, int param1, int param2, int param3) {
@@ -67,7 +32,7 @@ final class ve {
         if (param0) {
           L0: while (true) {
             if (((Math.abs(((ve) this).field_d) | Math.abs(((ve) this).field_f) | Math.abs(((ve) this).field_b)) & -65536) == 0) {
-              var2 = this.c(false) >> 931920705;
+              var2 = this.c(false) >> 1;
               var3 = 15;
               L1: while (true) {
                 if (65536 > var2) {
@@ -124,7 +89,7 @@ final class ve {
           var12 = DungeonAssault.field_K;
           var6 = 44;
           var7 = 46;
-          if (param3 == -1) {
+          if (param3 == 0) {
             var7 = 44;
             var6 = 46;
             break L0;
@@ -133,7 +98,7 @@ final class ve {
           }
         }
         L1: {
-          if (-3 != param3) {
+          if (param3 != 2) {
             break L1;
           } else {
             var7 = 160;
@@ -155,7 +120,7 @@ final class ve {
           if (param0 > 0) {
             var10 = 0;
             L4: while (true) {
-              if (param0 <= var10) {
+              if (~param0 >= ~var10) {
                 StringBuilder discarded$6 = var9.append(var6);
                 break L3;
               } else {
@@ -175,22 +140,17 @@ final class ve {
           var11 = (int)param1;
           param1 = param1 / 10L;
           StringBuilder discarded$8 = var9.append((char)(48 - (-var11 - -(10 * (int)param1))));
-          if ((param1 ^ -1L) != -1L) {
-            if (param4) {
-              var10++;
-              if (0 != var10 % 3) {
-                continue L5;
-              } else {
-                StringBuilder discarded$9 = var9.append(var7);
-                continue L5;
-              }
+          if (param1 != 0L) {
+            var10++;
+            if (0 != var10 % 3) {
+              continue L5;
             } else {
+              StringBuilder discarded$9 = var9.append(var7);
               continue L5;
             }
           } else {
-            if (param2 != -17311) {
+            if (param2 == -17311) {
               L6: {
-                field_a = true;
                 if (var8 != 0) {
                   StringBuilder discarded$10 = var9.append(45);
                   break L6;
@@ -201,6 +161,7 @@ final class ve {
               return var9.reverse().toString();
             } else {
               L7: {
+                field_a = true;
                 if (var8 != 0) {
                   StringBuilder discarded$11 = var9.append(45);
                   break L7;
@@ -216,49 +177,11 @@ final class ve {
 
     private final int c(boolean param0) {
         int var2 = 0;
-        int stackIn_5_0 = 0;
-        int stackIn_12_0 = 0;
-        int stackOut_11_0 = 0;
-        int stackOut_10_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_3_0 = 0;
-        if (!param0) {
-          var2 = (((ve) this).field_b >> -2089464094) * (((ve) this).field_b >> -118145502) + (((ve) this).field_f >> -1225268702) * (((ve) this).field_f >> -799567614) + (((ve) this).field_d >> -1084721886) * (((ve) this).field_d >> -2147109758);
-          if (var2 < 0) {
-            throw new RuntimeException();
-          } else {
-            L0: {
-              if (param0) {
-                stackOut_11_0 = 0;
-                stackIn_12_0 = stackOut_11_0;
-                break L0;
-              } else {
-                stackOut_10_0 = 1;
-                stackIn_12_0 = stackOut_10_0;
-                break L0;
-              }
-            }
-            return ug.a(stackIn_12_0 != 0, var2) << -1156140638;
-          }
+        var2 = (((ve) this).field_b >> 2) * (((ve) this).field_b >> 2) + (((ve) this).field_f >> 2) * (((ve) this).field_f >> 2) + (((ve) this).field_d >> 2) * (((ve) this).field_d >> 2);
+        if (var2 < 0) {
+          throw new RuntimeException();
         } else {
-          this.a(56, -92, 125, -12);
-          var2 = (((ve) this).field_b >> -2089464094) * (((ve) this).field_b >> -118145502) + (((ve) this).field_f >> -1225268702) * (((ve) this).field_f >> -799567614) + (((ve) this).field_d >> -1084721886) * (((ve) this).field_d >> -2147109758);
-          if (var2 < 0) {
-            throw new RuntimeException();
-          } else {
-            L1: {
-              if (param0) {
-                stackOut_4_0 = 0;
-                stackIn_5_0 = stackOut_4_0;
-                break L1;
-              } else {
-                stackOut_3_0 = 1;
-                stackIn_5_0 = stackOut_3_0;
-                break L1;
-              }
-            }
-            return ug.a(stackIn_5_0 != 0, var2) << -1156140638;
-          }
+          return ug.a(true, var2) << 2;
         }
     }
 

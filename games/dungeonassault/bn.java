@@ -40,7 +40,7 @@ final class bn {
         if (param0 == 6731) {
           if (cm.field_R == null) {
             L0: {
-              if ((pb.field_G ^ -1) >= -1) {
+              if (pb.field_G <= 0) {
                 ((bn) this).field_d = false;
                 break L0;
               } else {
@@ -48,8 +48,9 @@ final class bn {
               }
             }
             if (((bn) this).field_d) {
+              int fieldTemp$2 = ((bn) this).field_c - 1;
               ((bn) this).field_c = ((bn) this).field_c - 1;
-              if (0 < ((bn) this).field_c - 1) {
+              if (0 < fieldTemp$2) {
                 return;
               } else {
                 ((bn) this).field_c = ((bn) this).field_k;
@@ -63,7 +64,7 @@ final class bn {
               }
             } else {
               if (((bn) this).field_x <= up.field_d) {
-                if ((((bn) this).field_x ^ -1) >= -1) {
+                if (((bn) this).field_x <= 0) {
                   if (((bn) this).field_o == up.field_d) {
                     if (eg.field_d != ((bn) this).field_v) {
                       ((bn) this).field_g.a(((bn) this).field_v, ((bn) this).field_o, (byte) -118);
@@ -111,7 +112,7 @@ final class bn {
           this.c(-81);
           if (cm.field_R == null) {
             L1: {
-              if ((pb.field_G ^ -1) >= -1) {
+              if (pb.field_G <= 0) {
                 ((bn) this).field_d = false;
                 break L1;
               } else {
@@ -119,8 +120,9 @@ final class bn {
               }
             }
             if (((bn) this).field_d) {
+              int fieldTemp$3 = ((bn) this).field_c - 1;
               ((bn) this).field_c = ((bn) this).field_c - 1;
-              if (0 < ((bn) this).field_c - 1) {
+              if (0 < fieldTemp$3) {
                 return;
               } else {
                 ((bn) this).field_c = ((bn) this).field_k;
@@ -135,7 +137,7 @@ final class bn {
             } else {
               L2: {
                 if (((bn) this).field_x <= up.field_d) {
-                  if ((((bn) this).field_x ^ -1) < -1) {
+                  if (((bn) this).field_x > 0) {
                     aj.field_Gb = 0;
                     break L2;
                   } else {
@@ -181,7 +183,7 @@ final class bn {
         int var2 = 0;
         var2 = -125 / ((param0 - 24) / 43);
         if (((bn) this).field_b <= sj.field_bb) {
-          if ((pb.field_G ^ -1) >= -1) {
+          if (pb.field_G <= 0) {
             return false;
           } else {
             return true;
@@ -203,37 +205,91 @@ final class bn {
         try {
             Class var4 = null;
             Throwable var4_ref = null;
+            RuntimeException var4_ref2 = null;
             c var5 = null;
             kf var5_ref = null;
             Object var6 = null;
             c stackIn_3_0 = null;
+            kf stackIn_5_0 = null;
+            RuntimeException stackIn_7_0 = null;
+            StringBuilder stackIn_7_1 = null;
+            RuntimeException stackIn_8_0 = null;
+            StringBuilder stackIn_8_1 = null;
+            RuntimeException stackIn_9_0 = null;
+            StringBuilder stackIn_9_1 = null;
+            String stackIn_9_2 = null;
             Throwable decompiledCaughtException = null;
             c stackOut_2_0 = null;
+            kf stackOut_4_0 = null;
+            RuntimeException stackOut_6_0 = null;
+            StringBuilder stackOut_6_1 = null;
+            RuntimeException stackOut_8_0 = null;
+            StringBuilder stackOut_8_1 = null;
+            String stackOut_8_2 = null;
+            RuntimeException stackOut_7_0 = null;
+            StringBuilder stackOut_7_1 = null;
+            String stackOut_7_2 = null;
             try {
-              L0: {
-                var4 = Class.forName("ij");
-                var5 = (c) var4.newInstance();
-                var5.a((byte) -48, param1, param3, param2);
-                if (param0 == -1) {
-                  break L0;
+              try {
+                L0: {
+                  var4 = Class.forName("ij");
+                  var5 = (c) var4.newInstance();
+                  var5.a((byte) -48, param1, param3, param2);
+                  if (param0 == -1) {
+                    break L0;
+                  } else {
+                    var6 = null;
+                    c discarded$2 = bn.a(92, (java.awt.Component) null, 26, -40);
+                    break L0;
+                  }
+                }
+                stackOut_2_0 = (c) var5;
+                stackIn_3_0 = stackOut_2_0;
+                return stackIn_3_0;
+              } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var4_ref = decompiledCaughtException;
+                var5_ref = new kf();
+                ((c) (Object) var5_ref).a((byte) 72, param1, param3, param2);
+                stackOut_4_0 = (kf) var5_ref;
+                stackIn_5_0 = stackOut_4_0;
+                return (c) (Object) stackIn_5_0;
+              }
+            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L1: {
+                var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_6_0 = (RuntimeException) var4_ref2;
+                stackOut_6_1 = new StringBuilder().append("bn.C(").append(param0).append(44);
+                stackIn_8_0 = stackOut_6_0;
+                stackIn_8_1 = stackOut_6_1;
+                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_1 = stackOut_6_1;
+                if (param1 == null) {
+                  stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+                  stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+                  stackOut_8_2 = "null";
+                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_1 = stackOut_8_1;
+                  stackIn_9_2 = stackOut_8_2;
+                  break L1;
                 } else {
-                  var6 = null;
-                  c discarded$2 = bn.a(92, (java.awt.Component) null, 26, -40);
-                  break L0;
+                  stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+                  stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+                  stackOut_7_2 = "{...}";
+                  stackIn_9_0 = stackOut_7_0;
+                  stackIn_9_1 = stackOut_7_1;
+                  stackIn_9_2 = stackOut_7_2;
+                  break L1;
                 }
               }
-              stackOut_2_0 = (c) var5;
-              stackIn_3_0 = stackOut_2_0;
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
-              return stackIn_3_0;
+              throw vk.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param2 + 44 + param3 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
             throw new RuntimeException(decompiledCheckedException);
         }
-        return null;
     }
 
     private final void c(int param0) {
@@ -562,22 +618,12 @@ final class bn {
     }
 
     public static void a(byte param0) {
-        Object var2 = null;
         field_i = null;
         field_f = null;
         field_m = null;
         field_h = null;
-        if (param0 > -102) {
-          var2 = null;
-          c discarded$2 = bn.a(41, (java.awt.Component) null, 93, -122);
-          field_q = null;
-          field_j = null;
-          return;
-        } else {
-          field_q = null;
-          field_j = null;
-          return;
-        }
+        field_q = null;
+        field_j = null;
     }
 
     private bn() throws Throwable {

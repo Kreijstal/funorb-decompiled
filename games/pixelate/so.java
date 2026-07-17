@@ -27,7 +27,7 @@ final class so {
         if (param0 != 0) {
             ((so) this).field_n = true;
         }
-        if (!(-1 <= (((so) this).field_p ^ -1))) {
+        if (!(((so) this).field_p <= 0)) {
             ((so) this).field_l = ((so) this).field_l + 37;
         }
         int fieldTemp$0 = ((so) this).field_p;
@@ -72,15 +72,12 @@ final class so {
     }
 
     final static void c(int param0) {
-        if (param0 != 4478) {
-            field_d = null;
-        }
         if (!ik.field_a) {
             if (null == pk.field_f) {
                 pk.field_f = wg.b(255, 4);
             }
             if (pk.field_f.field_p) {
-                go.field_k = go.field_k & (pk.field_f.field_s ^ -1);
+                go.field_k = go.field_k & ~pk.field_f.field_s;
                 de.field_n = de.field_n | pk.field_f.field_s;
                 ik.field_a = true;
                 pk.field_f = null;
@@ -103,7 +100,7 @@ final class so {
             if (!(!db.field_U)) {
                 eh.c(5);
                 ni.a(-31470);
-                if (-10 == (fc.field_e ^ -1)) {
+                if (fc.field_e == 9) {
                     if (!(go.field_k != 0)) {
                         fc.field_e = 5;
                         la.a(ti.field_t, 5, false, -25528);
@@ -126,9 +123,6 @@ final class so {
     }
 
     public static void a(boolean param0) {
-        if (!param0) {
-            field_d = null;
-        }
         field_d = null;
         field_c = null;
     }
@@ -287,13 +281,17 @@ final class so {
     so(int param0, int param1, int param2, int param3, int param4, int[] param5) {
         ((so) this).field_f = false;
         ((so) this).field_p = 0;
-        ((so) this).field_a = param4;
-        ((so) this).field_e = param0;
-        ((so) this).field_i = param5;
-        ((so) this).field_k = param2;
-        ((so) this).field_m = param1;
-        ((so) this).field_j = param3;
-        ((so) this).field_b = ((so) this).field_i.length * 37 - 5;
+        try {
+            ((so) this).field_a = param4;
+            ((so) this).field_e = param0;
+            ((so) this).field_i = param5;
+            ((so) this).field_k = param2;
+            ((so) this).field_m = param1;
+            ((so) this).field_j = param3;
+            ((so) this).field_b = ((so) this).field_i.length * 37 - 5;
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "so.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

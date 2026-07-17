@@ -120,61 +120,186 @@ final class iba extends bca {
     }
 
     final at a(int param0, gj param1) {
+        RuntimeException var3 = null;
         Object var4 = null;
-        if (param0 != 5) {
-          var4 = null;
-          ((iba) this).a((op) null, 123);
-          return (at) (Object) new ki(param1, (iba) this);
-        } else {
-          return (at) (Object) new ki(param1, (iba) this);
+        ki stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        ki stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 == 5) {
+                break L1;
+              } else {
+                var4 = null;
+                ((iba) this).a((op) null, 123);
+                break L1;
+              }
+            }
+            stackOut_2_0 = new ki(param1, (iba) this);
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_1 = new StringBuilder().append("iba.A(").append(param0).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param1 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw pe.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
         }
+        return (at) (Object) stackIn_3_0;
     }
 
     final static pp b(byte param0, lu param1) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
-        if (param0 > -101) {
-          iba.d(107);
-          var2 = param1.b(16711935);
-          var3 = param1.b(16711935);
-          return (pp) (Object) new ro(var2, var3);
-        } else {
-          var2 = param1.b(16711935);
-          var3 = param1.b(16711935);
-          return (pp) (Object) new ro(var2, var3);
+        ro stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        ro stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 <= -101) {
+                break L1;
+              } else {
+                iba.d(107);
+                break L1;
+              }
+            }
+            var2_int = param1.b(16711935);
+            var3 = param1.b(16711935);
+            stackOut_2_0 = new ro(var2_int, var3);
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_1 = new StringBuilder().append("iba.D(").append(param0).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param1 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw pe.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
         }
+        return (pp) (Object) stackIn_3_0;
     }
 
     iba(lu param0) {
         super(param0);
-        ((iba) this).field_k = param0.e((byte) 103);
-        ((iba) this).field_o = new eaa();
-        int var2 = param0.b(16711935);
-        while (true) {
-            var2--;
-            if (var2 < 0) {
-                break;
+        int var2_int = 0;
+        try {
+            ((iba) this).field_k = param0.e((byte) 103);
+            ((iba) this).field_o = new eaa();
+            var2_int = param0.b(16711935);
+            while (true) {
+                var2_int--;
+                if (var2_int < 0) {
+                    break;
+                }
+                ((iba) this).field_o.a((bw) (Object) dca.a((byte) 102, param0), true);
             }
-            ((iba) this).field_o.a((bw) (Object) dca.a((byte) 102, param0), true);
+            ((iba) this).field_q = param0.b(16711935);
+            ((iba) this).field_r = param0.b(16711935);
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "iba.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }
-        ((iba) this).field_q = param0.b(16711935);
-        ((iba) this).field_r = param0.b(16711935);
     }
 
     final void a(op param0, int param1) {
-        aga discarded$0 = ((iba) this).field_l.a(91, param0);
-        param0.b((byte) -85, 34, ((iba) this).field_q, ((iba) this).field_r);
-        int var3 = -88 % ((param1 - 12) / 35);
+        try {
+            aga discarded$0 = ((iba) this).field_l.a(91, param0);
+            param0.b((byte) -85, 34, ((iba) this).field_q, ((iba) this).field_r);
+            int var3_int = -88 % ((param1 - 12) / 35);
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "iba.E(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     final void a(byte param0, lu param1) {
-        this.a((byte) -62, param1);
+        super.a((byte) -62, param1);
         param1.d(((iba) this).field_q, 0);
         if (param0 >= -12) {
-          return;
-        } else {
-          param1.d(((iba) this).field_r, 0);
-          return;
+            return;
+        }
+        try {
+            param1.d(((iba) this).field_r, 0);
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "iba.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

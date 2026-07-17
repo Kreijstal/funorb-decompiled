@@ -68,22 +68,19 @@ final class wa {
     }
 
     final void a(al param0, boolean param1) {
-        L0: {
-          if (param0.field_q != null) {
+        if (!(param0.field_q == null)) {
             param0.a((byte) -112);
-            break L0;
-          } else {
-            break L0;
-          }
         }
         if (param1) {
-          return;
-        } else {
-          param0.field_t = ((wa) this).field_c;
-          param0.field_q = ((wa) this).field_c.field_q;
-          param0.field_q.field_t = param0;
-          param0.field_t.field_q = param0;
-          return;
+            return;
+        }
+        try {
+            param0.field_t = ((wa) this).field_c;
+            param0.field_q = ((wa) this).field_c.field_q;
+            param0.field_q.field_t = param0;
+            param0.field_t.field_q = param0;
+        } catch (RuntimeException runtimeException) {
+            throw lj.a((Throwable) (Object) runtimeException, "wa.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
@@ -95,11 +92,6 @@ final class wa {
 
     public static void e(int param0) {
         field_b = null;
-        if (param0 < 10) {
-            field_b = null;
-            field_d = null;
-            return;
-        }
         field_d = null;
     }
 

@@ -15,9 +15,6 @@ abstract class bl extends kf {
     static String field_X;
 
     private final int a(int param0) {
-        if (param0 != -10604) {
-            return -74;
-        }
         return !((bl) this).field_S ? 0 : (Object) (Object) ((bl) this).field_ab.g((byte) -83) == this ? 256 : 0;
     }
 
@@ -25,11 +22,11 @@ abstract class bl extends kf {
         if (param0 <= 92) {
             boolean discarded$0 = ((bl) this).h((byte) -10);
         }
-        ((bl) this).b(param2, param1, cf.field_f + -param1 >> -715540319, -param2 + vd.field_n >> -532348575, -16555);
+        ((bl) this).b(param2, param1, cf.field_f + -param1 >> 1, -param2 + vd.field_n >> 1, -16555);
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        if (-1 == (((bl) this).field_V ^ -1)) {
+        if (((bl) this).field_V == 0) {
           return;
         } else {
           if (256 <= ((bl) this).field_V) {
@@ -80,10 +77,14 @@ abstract class bl extends kf {
     }
 
     bl(ka param0, int param1, int param2) {
-        super(-param1 + cf.field_f >> -954919615, vd.field_n - param2 >> -1866710303, param1, param2, (gl) null);
-        ((bl) this).field_S = false;
-        ((bl) this).field_V = 0;
-        ((bl) this).field_ab = param0;
+        super(-param1 + cf.field_f >> 1, vd.field_n - param2 >> 1, param1, param2, (gl) null);
+        try {
+            ((bl) this).field_S = false;
+            ((bl) this).field_V = 0;
+            ((bl) this).field_ab = param0;
+        } catch (RuntimeException runtimeException) {
+            throw dh.a((Throwable) (Object) runtimeException, "bl.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     final ce e(byte param0) {
@@ -95,7 +96,7 @@ abstract class bl extends kf {
     }
 
     final static void a(int param0, int param1, boolean param2) {
-        int var3 = 0;
+        int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -170,9 +171,9 @@ abstract class bl extends kf {
           var9 = client.field_A ? 1 : 0;
           fj.field_e = true;
           bc.field_B = param1;
-          if (-1 == (bc.field_B ^ -1)) {
-            var3 = te.a(df.field_X, 124, om.field_a, vg.field_I, rk.field_R);
-            var4 = 3 + var3;
+          if (bc.field_B == 0) {
+            var3_int = te.a(df.field_X, 124, om.field_a, vg.field_I, rk.field_R);
+            var4 = 3 + var3_int;
             rk.field_P = new String[var4];
             k.field_g = new int[var4];
             var5 = 0;
@@ -181,7 +182,7 @@ abstract class bl extends kf {
                 qf.field_i = new int[2];
                 var5 = 0;
                 L2: while (true) {
-                  if ((var3 ^ -1) >= (var5 ^ -1)) {
+                  if (~var3_int >= ~var5) {
                     rk.field_P[var4 - 3] = "";
                     rk.field_P[-2 + var4] = me.field_C;
                     k.field_g[var4 + -2] = 0;
@@ -203,18 +204,18 @@ abstract class bl extends kf {
               }
             }
           } else {
-            if (-2 == (bc.field_B ^ -1)) {
-              var3 = te.a(df.field_X, 96, om.field_a, vg.field_I, rk.field_R);
-              var4 = var3 + 2;
+            if (bc.field_B == 1) {
+              var3_int = te.a(df.field_X, 96, om.field_a, vg.field_I, rk.field_R);
+              var4 = var3_int + 2;
               k.field_g = new int[var4];
               rk.field_P = new String[var4];
               var5 = 0;
               L3: while (true) {
-                if ((var4 ^ -1) >= (var5 ^ -1)) {
+                if (~var4 >= ~var5) {
                   qf.field_i = new int[1];
                   var5 = 0;
                   L4: while (true) {
-                    if ((var5 ^ -1) <= (var3 ^ -1)) {
+                    if (~var5 <= ~var3_int) {
                       rk.field_P[-2 + var4] = "";
                       rk.field_P[-1 + var4] = og.field_gb;
                       k.field_g[-1 + var4] = 0;
@@ -233,27 +234,27 @@ abstract class bl extends kf {
                 }
               }
             } else {
-              if (-3 != (bc.field_B ^ -1)) {
-                if (-4 == (bc.field_B ^ -1)) {
+              if (bc.field_B != 2) {
+                if (bc.field_B == 3) {
                   L5: {
                     if (!lf.field_e.field_a) {
-                      var3 = te.a(si.field_c, 81, om.field_a, vg.field_I, rk.field_R);
+                      var3_int = te.a(si.field_c, 81, om.field_a, vg.field_I, rk.field_R);
                       break L5;
                     } else {
-                      var3 = te.a(rb.field_a, 99, om.field_a, vg.field_I, rk.field_R);
+                      var3_int = te.a(rb.field_a, 99, om.field_a, vg.field_I, rk.field_R);
                       break L5;
                     }
                   }
-                  var4 = 2 - -var3;
+                  var4 = 2 - -var3_int;
                   rk.field_P = new String[var4];
                   k.field_g = new int[var4];
                   var5 = 0;
                   L6: while (true) {
-                    if ((var5 ^ -1) <= (var4 ^ -1)) {
+                    if (~var5 <= ~var4) {
                       qf.field_i = new int[1];
                       var5 = 0;
                       L7: while (true) {
-                        if ((var5 ^ -1) <= (var3 ^ -1)) {
+                        if (~var5 <= ~var3_int) {
                           rk.field_P[var4 - 2] = "";
                           rk.field_P[var4 + -1] = og.field_gb;
                           k.field_g[-1 + var4] = 0;
@@ -272,18 +273,18 @@ abstract class bl extends kf {
                     }
                   }
                 } else {
-                  if ((bc.field_B ^ -1) == -5) {
-                    var3 = te.a(dc.field_g, 117, om.field_a, vg.field_I, rk.field_R);
-                    var4 = 2 + var3;
+                  if (bc.field_B == 4) {
+                    var3_int = te.a(dc.field_g, 117, om.field_a, vg.field_I, rk.field_R);
+                    var4 = 2 + var3_int;
                     k.field_g = new int[var4];
                     rk.field_P = new String[var4];
                     var5 = 0;
                     L8: while (true) {
-                      if ((var4 ^ -1) >= (var5 ^ -1)) {
+                      if (~var4 >= ~var5) {
                         qf.field_i = new int[1];
                         var5 = 0;
                         L9: while (true) {
-                          if (var3 <= var5) {
+                          if (var3_int <= var5) {
                             rk.field_P[-2 + var4] = "";
                             rk.field_P[var4 + -1] = og.field_gb;
                             k.field_g[-1 + var4] = 0;
@@ -303,17 +304,17 @@ abstract class bl extends kf {
                     }
                   } else {
                     if (bc.field_B == 5) {
-                      var3 = te.a(gd.field_i, 76, om.field_a, vg.field_I, rk.field_R);
-                      var4 = 3 + var3;
+                      var3_int = te.a(gd.field_i, 76, om.field_a, vg.field_I, rk.field_R);
+                      var4 = 3 + var3_int;
                       rk.field_P = new String[var4];
                       k.field_g = new int[var4];
                       var5 = 0;
                       L10: while (true) {
-                        if ((var5 ^ -1) <= (var4 ^ -1)) {
+                        if (~var5 <= ~var4) {
                           qf.field_i = new int[2];
                           var5 = 0;
                           L11: while (true) {
-                            if ((var3 ^ -1) >= (var5 ^ -1)) {
+                            if (~var3_int >= ~var5) {
                               rk.field_P[-3 + var4] = "";
                               rk.field_P[var4 + -2] = fj.field_c;
                               k.field_g[-2 + var4] = 0;
@@ -340,12 +341,12 @@ abstract class bl extends kf {
                   }
                 }
               } else {
-                var3 = te.a(cm.a((byte) 91, de.field_ab, new String[1]), 86, om.field_a, vg.field_I, rk.field_R);
+                var3_int = te.a(cm.a((byte) 91, de.field_ab, new String[1]), 86, om.field_a, vg.field_I, rk.field_R);
                 var4 = -1;
                 var5 = 0;
                 L12: while (true) {
                   L13: {
-                    if (var5 >= var3) {
+                    if (var5 >= var3_int) {
                       break L13;
                     } else {
                       if (!"<%0>".equals((Object) (Object) vg.field_I[var5])) {
@@ -357,17 +358,17 @@ abstract class bl extends kf {
                       }
                     }
                   }
-                  if ((var4 ^ -1) != 0) {
+                  if (var4 != -1) {
                     tg.field_g = new String[var4];
                     an.a((Object[]) (Object) vg.field_I, 0, (Object[]) (Object) tg.field_g, 0, var4);
-                    dh.field_b = new String[-1 + (var3 + -var4)];
-                    an.a((Object[]) (Object) vg.field_I, 1 + var4, (Object[]) (Object) dh.field_b, 0, -var4 + var3 + -1);
+                    dh.field_b = new String[-1 + (var3_int + -var4)];
+                    an.a((Object[]) (Object) vg.field_I, 1 + var4, (Object[]) (Object) dh.field_b, 0, -var4 + var3_int + -1);
                     var4 = -1;
-                    var3 = te.a(cm.a((byte) 86, ga.field_d, new String[1]), 112, om.field_a, vg.field_I, rk.field_R);
+                    var3_int = te.a(cm.a((byte) 86, ga.field_d, new String[1]), 112, om.field_a, vg.field_I, rk.field_R);
                     var5 = 0;
                     L14: while (true) {
                       L15: {
-                        if ((var5 ^ -1) <= (var3 ^ -1)) {
+                        if (~var5 <= ~var3_int) {
                           break L15;
                         } else {
                           if (!"<%0>".equals((Object) (Object) vg.field_I[var5])) {
@@ -383,8 +384,8 @@ abstract class bl extends kf {
                         L16: {
                           vb.field_U = new String[var4];
                           an.a((Object[]) (Object) vg.field_I, 0, (Object[]) (Object) vb.field_U, 0, var4);
-                          wb.field_Qb = new String[var3 - (var4 + 1)];
-                          an.a((Object[]) (Object) vg.field_I, var4 - -1, (Object[]) (Object) wb.field_Qb, 0, -1 + (-var4 + var3));
+                          wb.field_Qb = new String[var3_int - (var4 + 1)];
+                          an.a((Object[]) (Object) vg.field_I, var4 - -1, (Object[]) (Object) wb.field_Qb, 0, -1 + (-var4 + var3_int));
                           if (tg.field_g.length >= vb.field_U.length) {
                             stackOut_19_0 = tg.field_g.length;
                             stackIn_20_0 = stackOut_19_0;
@@ -397,7 +398,7 @@ abstract class bl extends kf {
                         }
                         L17: {
                           var5 = stackIn_20_0;
-                          if ((dh.field_b.length ^ -1) > (wb.field_Qb.length ^ -1)) {
+                          if (~dh.field_b.length > ~wb.field_Qb.length) {
                             stackOut_22_0 = wb.field_Qb.length;
                             stackIn_23_0 = stackOut_22_0;
                             break L17;
@@ -413,7 +414,7 @@ abstract class bl extends kf {
                         k.field_g = new int[var7];
                         var8 = 0;
                         L18: while (true) {
-                          if ((var7 ^ -1) >= (var8 ^ -1)) {
+                          if (~var7 >= ~var8) {
                             qf.field_i = new int[2];
                             rk.field_P[1] = i.field_g;
                             k.field_g[1] = 0;
@@ -427,7 +428,7 @@ abstract class bl extends kf {
                             rk.field_P[5] = "";
                             var8 = 0;
                             L19: while (true) {
-                              if ((var8 ^ -1) <= (var5 ^ -1)) {
+                              if (~var8 <= ~var5) {
                                 rk.field_P[var5 + 6] = null;
                                 k.field_g[var5 + 6] = -2;
                                 var8 = 0;
@@ -524,12 +525,12 @@ abstract class bl extends kf {
           }
         }
         k.field_f.field_l = qf.field_i.length;
-        var3 = 0;
+        var3_int = 0;
         var4 = 0;
         L24: while (true) {
-          if ((var4 ^ -1) <= (rk.field_P.length ^ -1)) {
+          if (~var4 <= ~rk.field_P.length) {
             L25: {
-              if (-3 != (bc.field_B ^ -1)) {
+              if (bc.field_B != 2) {
                 break L25;
               } else {
                 var10 = tg.field_g;
@@ -545,10 +546,10 @@ abstract class bl extends kf {
                         L28: {
                           var13 = var11[var5];
                           var7 = si.a(false, var13, false);
-                          if (var3 >= var7) {
+                          if (var3_int >= var7) {
                             break L28;
                           } else {
-                            var3 = var7;
+                            var3_int = var7;
                             break L28;
                           }
                         }
@@ -560,8 +561,8 @@ abstract class bl extends kf {
                     L29: {
                       var12 = var10[var5];
                       var7 = si.a(false, var12, false);
-                      if (var7 > var3) {
-                        var3 = var7;
+                      if (var7 > var3_int) {
+                        var3_int = var7;
                         break L29;
                       } else {
                         break L29;
@@ -573,20 +574,20 @@ abstract class bl extends kf {
                 }
               }
             }
-            ig.field_dc = (qk.field_m + pa.field_Y << -1078448671) * k.field_f.field_l;
-            ri.field_i = -(var3 >> -2049814175) + (var3 + qk.field_d);
-            ge.field_e = qk.field_d + -(var3 >> 504032897);
+            ig.field_dc = (qk.field_m + pa.field_Y << 1) * k.field_f.field_l;
+            ri.field_i = -(var3_int >> 1) + (var3_int + qk.field_d);
+            ge.field_e = qk.field_d + -(var3_int >> 1);
             var4 = 0;
             L30: while (true) {
-              if ((rk.field_P.length ^ -1) >= (var4 ^ -1)) {
-                fc.field_a = ul.field_d + -(ig.field_dc >> 890590369);
+              if (~rk.field_P.length >= ~var4) {
+                fc.field_a = ul.field_d + -(ig.field_dc >> 1);
                 tj.field_jc = new int[rk.field_P.length][];
                 var4 = 0;
                 var5 = fc.field_a;
                 L31: while (true) {
                   if (rk.field_P.length <= var4) {
                     L32: {
-                      if (-3 != (bc.field_B ^ -1)) {
+                      if (bc.field_B != 2) {
                         k.field_f.a(0, 0, ub.a(bh.field_g, (byte) -81, pm.field_f), param2);
                         break L32;
                       } else {
@@ -598,16 +599,16 @@ abstract class bl extends kf {
                   } else {
                     L33: {
                       var6 = k.field_g[var4];
-                      if (-1 >= (var6 ^ -1)) {
+                      if (var6 >= 0) {
                         var7 = si.a(false, rk.field_P[var4], true);
                         var5 = var5 + qk.field_m;
-                        var8 = qk.field_d - (var7 >> -1233259135);
+                        var8 = qk.field_d - (var7 >> 1);
                         tj.field_jc[var4] = new int[4];
                         tj.field_jc[var4][0] = var8 - mb.field_c;
                         tj.field_jc[var4][1] = var5;
-                        tj.field_jc[var4][2] = var7 - -(mb.field_c << 1785328417);
-                        var5 = var5 + ((pa.field_Y << -668883583) + qk.field_m + cc.field_a);
-                        tj.field_jc[var4][3] = cc.field_a + (pa.field_Y << 1538379393);
+                        tj.field_jc[var4][2] = var7 - -(mb.field_c << 1);
+                        var5 = var5 + ((pa.field_Y << 1) + qk.field_m + cc.field_a);
+                        tj.field_jc[var4][3] = cc.field_a + (pa.field_Y << 1);
                         break L33;
                       } else {
                         var5 = var5 + ke.field_d;
@@ -623,7 +624,7 @@ abstract class bl extends kf {
                   stackOut_106_0 = ig.field_dc;
                   stackIn_108_0 = stackOut_106_0;
                   stackIn_107_0 = stackOut_106_0;
-                  if (-1 < (k.field_g[var4] ^ -1)) {
+                  if (k.field_g[var4] < 0) {
                     stackOut_108_0 = stackIn_108_0;
                     stackOut_108_1 = ke.field_d;
                     stackIn_109_0 = stackOut_108_0;
@@ -670,8 +671,8 @@ abstract class bl extends kf {
             }
             L36: {
               var5 = si.a(stackIn_88_0 != 0, stackIn_88_1, stackIn_88_2 != 0);
-              if (var5 > var3) {
-                var3 = var5;
+              if (var5 > var3_int) {
+                var3_int = var5;
                 break L36;
               } else {
                 break L36;
@@ -695,7 +696,7 @@ abstract class bl extends kf {
         int stackOut_1_0 = 0;
         int stackOut_1_1 = 0;
         L0: {
-          fl.a(130, param1 ^ 12362, 16694016, mb.field_e, 80 + param0, (mm) (Object) w.field_kb);
+          fl.a(130, 256, 16694016, mb.field_e, 80 + param0, (mm) (Object) w.field_kb);
           var2 = 145;
           kd.field_t.c(param0 + 82, var2, 18, 18);
           var2 = var2 + (16 + ga.a(188, 0, var2, nk.field_c, 16, 64, 16777215, (mm) (Object) se.field_S, (byte) -127, 0, param0 + 110) * 16);
@@ -717,22 +718,14 @@ abstract class bl extends kf {
             break L0;
           }
         }
-        L1: {
-          var2 = stackIn_3_0 + (stackIn_3_1 - -(ga.a(188, 0, var2, kb.field_e, 16, 64, 16777215, (mm) (Object) se.field_S, (byte) -127, 0, param0 + 110) * 16));
-          vk.a(nf.field_e, param0 + 190, 3, gi.field_c, kk.field_n, var2, -22981);
-          hk.g(309 - -param0, 117, 242, 263172);
-          hk.g(310 - -param0, 117, 242, 6316128);
-          fl.a(130, param1 ^ 12362, 16694016, hg.field_d, 320 + param0, (mm) (Object) w.field_kb);
-          var2 = 145;
-          tg.a(true, 0).c(320 - -param0, var2, 18, 18);
-          var2 = var2 + (16 * ga.a(212, 0, var2, dk.field_f, 16, 64, 16777215, (mm) (Object) se.field_S, (byte) -128, 0, 348 - -param0) + 16);
-          if (param1 == 12618) {
-            break L1;
-          } else {
-            bl.a(105, 85, false);
-            break L1;
-          }
-        }
+        var2 = stackIn_3_0 + (stackIn_3_1 - -(ga.a(188, 0, var2, kb.field_e, 16, 64, 16777215, (mm) (Object) se.field_S, (byte) -127, 0, param0 + 110) * 16));
+        vk.a(nf.field_e, param0 + 190, 3, gi.field_c, kk.field_n, var2, -22981);
+        hk.g(309 - -param0, 117, 242, 263172);
+        hk.g(310 - -param0, 117, 242, 6316128);
+        fl.a(130, 256, 16694016, hg.field_d, 320 + param0, (mm) (Object) w.field_kb);
+        var2 = 145;
+        tg.a(true, 0).c(320 - -param0, var2, 18, 18);
+        var2 = var2 + (16 * ga.a(212, 0, var2, dk.field_f, 16, 64, 16777215, (mm) (Object) se.field_S, (byte) -128, 0, 348 - -param0) + 16);
         fl.a(var2 - -14, 256, 16694016, kc.field_q, param0 + 320, (mm) (Object) w.field_kb);
         var2 += 29;
         tg.a(true, 3).c(param0 + 320, var2, 18, 18);
@@ -798,7 +791,7 @@ abstract class bl extends kf {
           }
         }
         L2: {
-          if (-1 < (var3 ^ -1)) {
+          if (var3 < 0) {
             ((bl) this).field_V = ((bl) this).field_V + (1 + (-16 + var3)) / 16;
             break L2;
           } else {
@@ -810,7 +803,7 @@ abstract class bl extends kf {
             if (((bl) this).field_V != 0) {
               break L4;
             } else {
-              if (-1 != (var2 ^ -1)) {
+              if (var2 != 0) {
                 break L4;
               } else {
                 if (((bl) this).field_S) {
@@ -834,18 +827,12 @@ abstract class bl extends kf {
 
     final static void g(byte param0) {
         bf.field_x = bg.a(true);
-        if (param0 > -12) {
-            field_Z = null;
-        }
         ah.field_c = new ka();
         dd.a(true, true, (byte) 66);
     }
 
     public static void i(int param0) {
         field_Y = null;
-        if (param0 != 2) {
-            field_X = null;
-        }
         field_U = null;
         field_W = null;
         field_X = null;

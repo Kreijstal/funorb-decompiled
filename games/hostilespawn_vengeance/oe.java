@@ -18,8 +18,9 @@ final class oe implements Iterator {
         if (((oe) this).field_c.field_f[-1 + ((oe) this).field_e] == ((oe) this).field_b) {
           L0: while (true) {
             if (((oe) this).field_c.field_b > ((oe) this).field_e) {
+              int fieldTemp$1 = ((oe) this).field_e;
               ((oe) this).field_e = ((oe) this).field_e + 1;
-              if (((oe) this).field_c.field_f[((oe) this).field_e].field_g == ((oe) this).field_c.field_f[((oe) this).field_e + -1]) {
+              if (((oe) this).field_c.field_f[fieldTemp$1].field_g == ((oe) this).field_c.field_f[((oe) this).field_e + -1]) {
                 ((oe) this).field_b = ((oe) this).field_c.field_f[((oe) this).field_e + -1];
                 continue L0;
               } else {
@@ -46,23 +47,13 @@ final class oe implements Iterator {
     public static void a(int param0) {
         field_d = null;
         field_a = null;
-        if (param0 <= 31) {
-            field_d = null;
-            field_g = null;
-            return;
-        }
         field_g = null;
     }
 
     private final void a(byte param0) {
         ((oe) this).field_f = null;
-        if (param0 != 105) {
-          return;
-        } else {
-          ((oe) this).field_e = 1;
-          ((oe) this).field_b = ((oe) this).field_c.field_f[0].field_g;
-          return;
-        }
+        ((oe) this).field_e = 1;
+        ((oe) this).field_b = ((oe) this).field_c.field_f[0].field_g;
     }
 
     public final Object next() {
@@ -72,8 +63,9 @@ final class oe implements Iterator {
         if (((oe) this).field_c.field_f[((oe) this).field_e - 1] == ((oe) this).field_b) {
           L0: while (true) {
             if (((oe) this).field_e < ((oe) this).field_c.field_b) {
+              int fieldTemp$2 = ((oe) this).field_e;
               ((oe) this).field_e = ((oe) this).field_e + 1;
-              var1 = ((oe) this).field_c.field_f[((oe) this).field_e].field_g;
+              var1 = ((oe) this).field_c.field_f[fieldTemp$2].field_g;
               if (((oe) this).field_c.field_f[-1 + ((oe) this).field_e] != var1) {
                 ((oe) this).field_f = var1;
                 ((oe) this).field_b = var1.field_g;
@@ -157,8 +149,12 @@ final class oe implements Iterator {
 
     oe(ed param0) {
         ((oe) this).field_f = null;
-        ((oe) this).field_c = param0;
-        this.a((byte) 105);
+        try {
+            ((oe) this).field_c = param0;
+            this.a((byte) 105);
+        } catch (RuntimeException runtimeException) {
+            throw wg.a((Throwable) (Object) runtimeException, "oe.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

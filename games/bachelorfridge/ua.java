@@ -8,25 +8,30 @@ final class ua {
     static kv field_d;
 
     ua(String param0, mu param1) {
-        ((ua) this).field_c = new ola();
+        try {
+            ((ua) this).field_c = new ola();
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "ua.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void a(int param0) {
         field_d = null;
-        int var1 = -19 % ((64 - param0) / 60);
+        int var1 = 0;
         field_a = null;
     }
 
     final static void a(byte param0, int param1, int param2, lda param3) {
-        it.field_s = param3;
-        if (param0 != -50) {
-            field_b = false;
+        try {
+            it.field_s = param3;
+            if (param0 != -50) {
+                field_b = false;
+            }
             lda.field_a = param2;
             fh.field_v = param1;
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "ua.B(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
-        lda.field_a = param2;
-        fh.field_v = param1;
     }
 
     static {

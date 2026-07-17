@@ -27,11 +27,6 @@ final class va extends mc {
     public static void b(byte param0) {
         field_n = null;
         field_t = null;
-        if (param0 != 44) {
-            field_n = null;
-            field_q = null;
-            return;
-        }
         field_q = null;
     }
 

@@ -84,7 +84,7 @@ final class sk {
                 var7 = var6;
                 var8 = 0;
                 L3: while (true) {
-                  if ((var8 ^ -1) <= -129) {
+                  if (var8 >= 128) {
                     var5++;
                     continue L2;
                   } else {
@@ -93,22 +93,27 @@ final class sk {
                     var11 = 128 * (1 + var8 & 127) + var7;
                     var12 = 0;
                     L4: while (true) {
-                      if (-129 >= (var12 ^ -1)) {
+                      if (var12 >= 128) {
                         var8++;
                         continue L3;
                       } else {
                         var13 = (float)((var2[var12 + var10] & 255) + -(var2[var12 + var11] & 255));
                         var14 = (float)((var2[(var12 + -1 & 127) + var9] & 255) - (255 & var2[var9 + (127 & var12 + 1)]));
                         var15 = (float)(128.0 / Math.sqrt((double)(16384.0f + var14 * var14 + var13 * var13)));
+                        int incrementValue$5 = var4;
                         var4++;
-                        var3[var4] = (byte)(int)(127.0f + var15 * var14);
+                        var3[incrementValue$5] = (byte)(int)(127.0f + var15 * var14);
+                        int incrementValue$6 = var4;
                         var4++;
-                        var3[var4] = (byte)(int)(127.0f + 128.0f * var15);
+                        var3[incrementValue$6] = (byte)(int)(127.0f + 128.0f * var15);
+                        int incrementValue$7 = var4;
                         var4++;
-                        var3[var4] = (byte)(int)(var13 * var15 + 127.0f);
+                        var3[incrementValue$7] = (byte)(int)(var13 * var15 + 127.0f);
+                        int incrementValue$8 = var4;
                         var4++;
+                        int incrementValue$9 = var6;
                         var6++;
-                        var3[var4] = var2[var6];
+                        var3[incrementValue$8] = var2[incrementValue$9];
                         var12++;
                         continue L4;
                       }
@@ -185,99 +190,272 @@ final class sk {
     }
 
     final static mk a(fr param0, boolean param1, int param2, String param3) {
-        byte[] var8 = null;
-        long var4 = jaggl.OpenGL.glCreateShaderObjectARB(param2);
-        jaggl.OpenGL.glShaderSourceARB(var4, param3);
-        jaggl.OpenGL.glCompileShaderARB(var4);
-        jaggl.OpenGL.glGetObjectParameterivARB(var4, 35713, cl.field_z, 0);
-        if (param1) {
-            return null;
+        long var4_long = 0L;
+        RuntimeException var4 = null;
+        byte[] var10 = null;
+        Object stackIn_2_0 = null;
+        Object stackIn_13_0 = null;
+        mk stackIn_15_0 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_19_2 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        String stackIn_22_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        Object stackOut_12_0 = null;
+        mk stackOut_14_0 = null;
+        Object stackOut_1_0 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
+        try {
+          L0: {
+            var4_long = jaggl.OpenGL.glCreateShaderObjectARB(param2);
+            jaggl.OpenGL.glShaderSourceARB(var4_long, param3);
+            jaggl.OpenGL.glCompileShaderARB(var4_long);
+            jaggl.OpenGL.glGetObjectParameterivARB(var4_long, 35713, cl.field_z, 0);
+            if (!param1) {
+              L1: {
+                if (cl.field_z[0] == 0) {
+                  L2: {
+                    if (cl.field_z[0] == 0) {
+                      System.out.println("Shader compile failed:");
+                      break L2;
+                    } else {
+                      break L2;
+                    }
+                  }
+                  L3: {
+                    jaggl.OpenGL.glGetObjectParameterivARB(var4_long, 35716, cl.field_z, 1);
+                    if (cl.field_z[1] <= 1) {
+                      break L3;
+                    } else {
+                      var10 = new byte[cl.field_z[1]];
+                      jaggl.OpenGL.glGetInfoLogARB(var4_long, cl.field_z[1], cl.field_z, 0, var10, 0);
+                      System.out.println(new String(var10));
+                      break L3;
+                    }
+                  }
+                  if (0 == cl.field_z[0]) {
+                    jaggl.OpenGL.glDeleteObjectARB(var4_long);
+                    stackOut_12_0 = null;
+                    stackIn_13_0 = stackOut_12_0;
+                    return (mk) (Object) stackIn_13_0;
+                  } else {
+                    break L1;
+                  }
+                } else {
+                  break L1;
+                }
+              }
+              stackOut_14_0 = new mk(param0, var4_long, param2);
+              stackIn_15_0 = stackOut_14_0;
+              break L0;
+            } else {
+              stackOut_1_0 = null;
+              stackIn_2_0 = stackOut_1_0;
+              return (mk) (Object) stackIn_2_0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var4 = decompiledCaughtException;
+            stackOut_16_0 = (RuntimeException) var4;
+            stackOut_16_1 = new StringBuilder().append("sk.C(");
+            stackIn_18_0 = stackOut_16_0;
+            stackIn_18_1 = stackOut_16_1;
+            stackIn_17_0 = stackOut_16_0;
+            stackIn_17_1 = stackOut_16_1;
+            if (param0 == null) {
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "null";
+              stackIn_19_0 = stackOut_18_0;
+              stackIn_19_1 = stackOut_18_1;
+              stackIn_19_2 = stackOut_18_2;
+              break L4;
+            } else {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "{...}";
+              stackIn_19_0 = stackOut_17_0;
+              stackIn_19_1 = stackOut_17_1;
+              stackIn_19_2 = stackOut_17_2;
+              break L4;
+            }
+          }
+          L5: {
+            stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+            stackOut_19_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_19_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackIn_21_0 = stackOut_19_0;
+            stackIn_21_1 = stackOut_19_1;
+            stackIn_20_0 = stackOut_19_0;
+            stackIn_20_1 = stackOut_19_1;
+            if (param3 == null) {
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "null";
+              stackIn_22_0 = stackOut_21_0;
+              stackIn_22_1 = stackOut_21_1;
+              stackIn_22_2 = stackOut_21_2;
+              break L5;
+            } else {
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "{...}";
+              stackIn_22_0 = stackOut_20_0;
+              stackIn_22_1 = stackOut_20_1;
+              stackIn_22_2 = stackOut_20_2;
+              break L5;
+            }
+          }
+          throw qo.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 41);
         }
-        if (!(cl.field_z[0] != 0)) {
-            if (!(cl.field_z[0] != 0)) {
-                System.out.println("Shader compile failed:");
-            }
-            jaggl.OpenGL.glGetObjectParameterivARB(var4, 35716, cl.field_z, 1);
-            if (-2 > (cl.field_z[1] ^ -1)) {
-                var8 = new byte[cl.field_z[1]];
-                jaggl.OpenGL.glGetInfoLogARB(var4, cl.field_z[1], cl.field_z, 0, var8, 0);
-                System.out.println(new String(var8));
-            }
-            if (!(0 != cl.field_z[0])) {
-                jaggl.OpenGL.glDeleteObjectARB(var4);
-                return null;
-            }
-        }
-        return new mk(param0, var4, param2);
+        return stackIn_15_0;
     }
 
     sk(aw param0) {
-        int var2 = 0;
+        RuntimeException var2 = null;
+        int var2_int = 0;
         byte[] var15 = null;
         byte[] var16 = null;
         byte[] var17 = null;
         byte[] var18 = null;
-        L0: {
-          ((sk) this).field_e = null;
-          ((sk) this).field_f = null;
-          ((sk) this).field_d = null;
-          ((sk) this).field_b = null;
-          ((sk) this).field_a = param0;
-          ((sk) this).field_g = ((sk) this).field_a.field_Eb;
-          if (!((sk) this).field_g) {
-            break L0;
-          } else {
-            if (((sk) this).field_a.a((byte) -42, io.field_g, ps.field_c)) {
-              break L0;
-            } else {
-              ((sk) this).field_g = false;
-              break L0;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        String stackIn_20_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        ((sk) this).field_e = null;
+        ((sk) this).field_f = null;
+        ((sk) this).field_d = null;
+        ((sk) this).field_b = null;
+        try {
+          L0: {
+            L1: {
+              ((sk) this).field_a = param0;
+              ((sk) this).field_g = ((sk) this).field_a.field_Eb;
+              if (!((sk) this).field_g) {
+                break L1;
+              } else {
+                if (((sk) this).field_a.a((byte) -42, io.field_g, ps.field_c)) {
+                  break L1;
+                } else {
+                  ((sk) this).field_g = false;
+                  break L1;
+                }
+              }
             }
-          }
-        }
-        L1: {
-          if (((sk) this).field_g) {
-            break L1;
-          } else {
-            if (((sk) this).field_a.a(io.field_g, ps.field_c, 6)) {
-              break L1;
-            } else {
+            L2: {
+              if (((sk) this).field_g) {
+                break L2;
+              } else {
+                if (((sk) this).field_a.a(io.field_g, ps.field_c, 6)) {
+                  break L2;
+                } else {
+                  return;
+                }
+              }
             }
-          }
-        }
-        L2: {
-          as.f(23369);
-          if (!((sk) this).field_g) {
-            ((sk) this).field_d = new ru[16];
-            var2 = 0;
-            L3: while (true) {
-              if (-17 >= (var2 ^ -1)) {
-                ((sk) this).field_b = new ru[16];
-                var2 = 0;
+            L3: {
+              as.f(23369);
+              if (!((sk) this).field_g) {
+                ((sk) this).field_d = new ru[16];
+                var2_int = 0;
                 L4: while (true) {
-                  if (var2 >= 16) {
-                    break L2;
+                  if (var2_int >= 16) {
+                    ((sk) this).field_b = new ru[16];
+                    var2_int = 0;
+                    L5: while (true) {
+                      if (var2_int >= 16) {
+                        break L3;
+                      } else {
+                        var18 = iq.a(mk.field_d, 14381, 32768, 32768 * var2_int);
+                        ((sk) this).field_b[var2_int] = ((sk) this).field_a.a(var18, 128, 128, ps.field_c, 0, true);
+                        var2_int++;
+                        continue L5;
+                      }
+                    }
                   } else {
-                    var18 = iq.a(mk.field_d, 14381, 32768, 32768 * var2);
-                    ((sk) this).field_b[var2] = ((sk) this).field_a.a(var18, 128, 128, ps.field_c, 0, true);
-                    var2++;
+                    var17 = iq.a(pd.field_n, 14381, 32768, var2_int * 32768);
+                    ((sk) this).field_d[var2_int] = ((sk) this).field_a.a(var17, 128, 128, ps.field_c, 0, true);
+                    var2_int++;
                     continue L4;
                   }
                 }
               } else {
-                var17 = iq.a(pd.field_n, 14381, 32768, var2 * 32768);
-                ((sk) this).field_d[var2] = ((sk) this).field_a.a(var17, 128, 128, ps.field_c, 0, true);
-                var2++;
-                continue L3;
+                var15 = ab.a(false, pd.field_n, 0);
+                ((sk) this).field_f = ((sk) this).field_a.a(true, ps.field_c, 16, 128, var15, 128);
+                var16 = ab.a(false, mk.field_d, 0);
+                nh discarded$1 = ((sk) this).field_a.a(true, ps.field_c, 16, 128, var16, 128);
+                break L3;
               }
             }
-          } else {
-            var15 = ab.a(false, pd.field_n, 0);
-            ((sk) this).field_f = ((sk) this).field_a.a(true, ps.field_c, 16, 128, var15, 128);
-            var16 = ab.a(false, mk.field_d, 0);
-            nh discarded$1 = ((sk) this).field_a.a(true, ps.field_c, 16, 128, var16, 128);
-            break L2;
+            break L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L6: {
+            var2 = decompiledCaughtException;
+            stackOut_17_0 = (RuntimeException) var2;
+            stackOut_17_1 = new StringBuilder().append("sk.<init>(");
+            stackIn_19_0 = stackOut_17_0;
+            stackIn_19_1 = stackOut_17_1;
+            stackIn_18_0 = stackOut_17_0;
+            stackIn_18_1 = stackOut_17_1;
+            if (param0 == null) {
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "null";
+              stackIn_20_0 = stackOut_19_0;
+              stackIn_20_1 = stackOut_19_1;
+              stackIn_20_2 = stackOut_19_2;
+              break L6;
+            } else {
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "{...}";
+              stackIn_20_0 = stackOut_18_0;
+              stackIn_20_1 = stackOut_18_1;
+              stackIn_20_2 = stackOut_18_2;
+              break L6;
+            }
+          }
+          throw qo.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 41);
         }
     }
 

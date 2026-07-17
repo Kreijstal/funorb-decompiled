@@ -14,11 +14,72 @@ final class wv extends le {
     }
 
     final void a(int param0, int param1, ds param2) {
-        if (param1 > -60) {
-            wv.d(-72);
-        }
-        if (param0 == 0) {
-            ((wv) this).field_i = param2.e(1869);
+        RuntimeException var4 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param1 <= -60) {
+                break L1;
+              } else {
+                wv.d(-72);
+                break L1;
+              }
+            }
+            L2: {
+              if (param0 != 0) {
+                break L2;
+              } else {
+                ((wv) this).field_i = param2.e(1869);
+                break L2;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var4 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var4;
+            stackOut_5_1 = new StringBuilder().append("wv.F(").append(param0).append(44).append(param1).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param2 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L3;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L3;
+            }
+          }
+          throw rta.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
         }
     }
 
@@ -110,9 +171,9 @@ final class wv extends le {
                   } else {
                     var9 = var8 * ((wv) this).field_m / hob.field_d;
                     var10 = ((wv) this).field_k[var4 - -var9];
-                    var7[var8] = dla.a(255, var10) << 975436100;
-                    var6[var8] = dla.a(var10 >> -1942130620, 4080);
-                    var5[var8] = dla.a(16711680, var10) >> -1656817044;
+                    var7[var8] = dla.a(255, var10) << 4;
+                    var6[var8] = dla.a(var10 >> 4, 4080);
+                    var5[var8] = dla.a(16711680, var10) >> 12;
                     var8++;
                     continue L2;
                   }
@@ -123,11 +184,12 @@ final class wv extends le {
                   if (hob.field_d <= var8) {
                     break L0;
                   } else {
+                    int incrementValue$1 = var4;
                     var4++;
-                    var9 = ((wv) this).field_k[var4];
-                    var7[var8] = dla.a(var9 << -1820230716, 4080);
-                    var6[var8] = dla.a(var9, 65280) >> 1134535780;
-                    var5[var8] = dla.a(var9 >> 443042092, 4080);
+                    var9 = ((wv) this).field_k[incrementValue$1];
+                    var7[var8] = dla.a(var9 << 4, 4080);
+                    var6[var8] = dla.a(var9, 65280) >> 4;
+                    var5[var8] = dla.a(var9 >> 12, 4080);
                     var8++;
                     continue L3;
                   }

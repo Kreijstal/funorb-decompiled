@@ -93,6 +93,7 @@ final class dq {
           if (var2 >= 10) {
             ((dq) this).field_c = param0.f(-20976);
             ((dq) this).field_a = param0.f(-20976);
+            return;
           } else {
             var3 = param0.j(-68);
             if (var3 != 0) {

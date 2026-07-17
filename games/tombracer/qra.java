@@ -35,32 +35,122 @@ abstract class qra {
     abstract boolean e(int param0);
 
     final static void a(la param0, int param1, ff param2) {
-        if (param1 != 100) {
-            field_e = null;
-            if (vpa.a(84)) {
-                return;
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param1 == 100) {
+                break L1;
+              } else {
+                field_e = null;
+                break L1;
+              }
             }
-            if (param2.k(param1 + -25419)) {
-                return;
+            L2: {
+              if (vpa.a(84)) {
+                break L2;
+              } else {
+                if (!param2.k(param1 + -25419)) {
+                  if (0 > param0.q((byte) -82)) {
+                    return;
+                  } else {
+                    ql.field_k.k(96, -2988);
+                    ql.field_k.f(-1477662136, param0.q((byte) -82));
+                    break L0;
+                  }
+                } else {
+                  break L2;
+                }
+              }
             }
-            if (!(0 <= param0.q((byte) -82))) {
-                return;
+            return;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            runtimeException = decompiledCaughtException;
+            stackOut_11_0 = (RuntimeException) runtimeException;
+            stackOut_11_1 = new StringBuilder().append("qra.L(");
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
+            if (param0 == null) {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L3;
+            } else {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L3;
             }
-            ql.field_k.k(96, -2988);
-            ql.field_k.f(-1477662136, param0.q((byte) -82));
-            return;
+          }
+          L4: {
+            stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+            stackOut_14_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_14_2).append(44).append(param1).append(44);
+            stackIn_16_0 = stackOut_14_0;
+            stackIn_16_1 = stackOut_14_1;
+            stackIn_15_0 = stackOut_14_0;
+            stackIn_15_1 = stackOut_14_1;
+            if (param2 == null) {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "null";
+              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_1 = stackOut_16_1;
+              stackIn_17_2 = stackOut_16_2;
+              break L4;
+            } else {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "{...}";
+              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_1 = stackOut_15_1;
+              stackIn_17_2 = stackOut_15_2;
+              break L4;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 41);
         }
-        if (vpa.a(84)) {
-            return;
-        }
-        if (param2.k(param1 + -25419)) {
-            return;
-        }
-        if (!(0 <= param0.q((byte) -82))) {
-            return;
-        }
-        ql.field_k.k(96, -2988);
-        ql.field_k.f(-1477662136, param0.q((byte) -82));
     }
 
     abstract void b(int param0, boolean param1);
@@ -68,10 +158,7 @@ abstract class qra {
     abstract boolean a(char param0, int param1, int param2);
 
     final static int a(int param0) {
-        if (param0 != 96) {
-            return 112;
-        }
-        return ej.field_a.f(param0 ^ -2147483552);
+        return ej.field_a.f(-2147483648);
     }
 
     private final void a(byte param0) {
@@ -690,10 +777,14 @@ abstract class qra {
     }
 
     qra(qh param0, v param1) {
-        ((qra) this).field_c = param0.field_k;
-        ((qra) this).field_f = param1;
-        ((qra) this).field_h = param0;
-        this.a((byte) -78);
+        try {
+            ((qra) this).field_c = param0.field_k;
+            ((qra) this).field_f = param1;
+            ((qra) this).field_h = param0;
+            this.a((byte) -78);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "qra.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void d(int param0) {

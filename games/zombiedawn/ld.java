@@ -11,9 +11,6 @@ final class ld extends bn {
     public static void d(int param0) {
         field_n = null;
         field_k = null;
-        if (param0 != 25008) {
-            field_j = 49;
-        }
         field_l = null;
     }
 
@@ -24,7 +21,7 @@ final class ld extends bn {
         if (!(0L < param0)) {
             return;
         }
-        if ((param0 % 10L ^ -1L) == -1L) {
+        if (param0 % 10L == 0L) {
             pb.a(-1L + param0, (byte) 37);
             pb.a(1L, (byte) 29);
         } else {
@@ -56,15 +53,15 @@ final class ld extends bn {
         int var1 = 0;
         field_k = new int[32];
         field_n = new int[98304];
-        for (var0 = 92682; -46342 >= (var0 ^ -1); var0--) {
-            var4 = (long)(-1 + (var0 << -2029372223));
-            var6 = (long)((var0 << -123421503) - -1);
-            var2 = (int)(-32768L + (var4 * var4 >> -1326313134));
-            var3 = (int)(-32768L + (var6 * var6 >> -1829200814));
+        for (var0 = 92682; var0 >= 46341; var0--) {
+            var4 = (long)(-1 + (var0 << 1));
+            var6 = (long)((var0 << 1) - -1);
+            var2 = (int)(-32768L + (var4 * var4 >> 18));
+            var3 = (int)(-32768L + (var6 * var6 >> 18));
             if (!(field_n.length > var3)) {
                 var3 = field_n.length - 1;
             }
-            for (var1 = -1 >= (var2 ^ -1) ? var2 : 0; var1 <= var3; var1++) {
+            for (var1 = var2 >= 0 ? var2 : 0; var1 <= var3; var1++) {
                 field_n[var1] = var0;
             }
         }

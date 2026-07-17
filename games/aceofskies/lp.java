@@ -18,52 +18,49 @@ final class lp extends Exception {
         field_f = null;
         field_a = null;
         field_b = null;
-        int var1 = 115 / ((param0 - -7) / 44);
+        int var1 = -115;
         field_c = null;
     }
 
     final static void a(boolean param0) {
-        int var1 = 0;
+        int var1_int = 0;
+        RuntimeException var1 = null;
         double var2 = 0.0;
         int var4 = 0;
         int var5 = 0;
+        RuntimeException decompiledCaughtException = null;
         var4 = AceOfSkies.field_G ? 1 : 0;
-        re.a();
-        em.field_b = new int[260];
-        im.field_f = 11;
-        var1 = 0;
-        L0: while (true) {
-          if (256 <= var1) {
-            var5 = 256;
-            var1 = var5;
-            if (param0) {
-              field_g = (al[]) null;
-              L1: while (true) {
-                if (var5 < em.field_b.length) {
-                  em.field_b[var5] = 255;
-                  var5++;
-                  continue L1;
-                } else {
-                  return;
+        try {
+          L0: {
+            re.a();
+            em.field_b = new int[260];
+            im.field_f = 11;
+            var1_int = 0;
+            L1: while (true) {
+              if (256 <= var1_int) {
+                var5 = 256;
+                var1_int = var5;
+                L2: while (true) {
+                  if (var5 >= em.field_b.length) {
+                    break L0;
+                  } else {
+                    em.field_b[var5] = 255;
+                    var5++;
+                    continue L2;
+                  }
                 }
-              }
-            } else {
-              L2: while (true) {
-                if (var5 < em.field_b.length) {
-                  em.field_b[var5] = 255;
-                  var5++;
-                  continue L2;
-                } else {
-                  return;
-                }
+              } else {
+                var2 = 15.0;
+                em.field_b[var1_int] = (int)(255.0 * Math.pow((double)((float)var1_int / 256.0f), var2));
+                var1_int++;
+                continue L1;
               }
             }
-          } else {
-            var2 = 15.0;
-            em.field_b[var1] = (int)(255.0 * Math.pow((double)((float)var1 / 256.0f), var2));
-            var1++;
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw pn.a((Throwable) (Object) var1, "lp.A(" + 0 + 41);
         }
     }
 

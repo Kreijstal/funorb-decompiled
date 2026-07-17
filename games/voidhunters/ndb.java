@@ -10,11 +10,6 @@ final class ndb extends IOException {
 
     public static void a(int param0) {
         field_a = null;
-        if (param0 != 91) {
-            field_b = null;
-            field_b = null;
-            return;
-        }
         field_b = null;
     }
 
@@ -26,7 +21,7 @@ final class ndb extends IOException {
         ee.field_o[192] = 28;
         ee.field_o[46] = 72;
         ee.field_o[45] = 26;
-        ee.field_o[param0] = 73;
+        ee.field_o[47] = 73;
         ee.field_o[93] = 43;
         ee.field_o[91] = 42;
         ee.field_o[92] = 74;

@@ -81,15 +81,7 @@ final class ak {
     }
 
     private final void a(java.awt.Frame param0, boolean param1) {
-        L0: {
-          ((ak) this).field_b.setFullScreenWindow((java.awt.Window) (Object) param0);
-          if (!param1) {
-            break L0;
-          } else {
-            ((ak) this).field_b = null;
-            break L0;
-          }
-        }
+        ((ak) this).field_b.setFullScreenWindow((java.awt.Window) (Object) param0);
     }
 
     public final void exit() {
@@ -109,12 +101,12 @@ final class ak {
         int var3 = 0;
         java.awt.DisplayMode[] var4 = ((ak) this).field_b.getDisplayModes();
         java.awt.DisplayMode[] var1 = var4;
-        int[] var2 = new int[var4.length << -1403891038];
+        int[] var2 = new int[var4.length << 2];
         for (var3 = 0; var4.length > var3; var3++) {
-            var2[var3 << 644468738] = var4[var3].getWidth();
-            var2[1 + (var3 << -1874756670)] = var4[var3].getHeight();
-            var2[(var3 << 141344898) + 2] = var4[var3].getBitDepth();
-            var2[(var3 << 1117054978) + 3] = var4[var3].getRefreshRate();
+            var2[var3 << 2] = var4[var3].getWidth();
+            var2[1 + (var3 << 2)] = var4[var3].getHeight();
+            var2[(var3 << 2) + 2] = var4[var3].getBitDepth();
+            var2[(var3 << 2) + 3] = var4[var3].getRefreshRate();
         }
         return var2;
     }

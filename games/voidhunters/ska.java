@@ -19,15 +19,16 @@ final class ska extends is {
     public static void e(int param0) {
         field_o = null;
         field_m = null;
-        if (param0 != 5697) {
-            return;
-        }
         field_n = null;
     }
 
     ska(Object param0, int param1) {
         super(param1);
-        ((ska) this).field_l = param0;
+        try {
+            ((ska) this).field_l = param0;
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "ska.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     final boolean e(byte param0) {

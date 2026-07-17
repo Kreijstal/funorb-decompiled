@@ -30,9 +30,7 @@ final class fk {
     final int[][] a(int param0, byte param1) {
         int var3 = 0;
         dq var4 = null;
-        dq var4_ref = null;
         dq var5 = null;
-        dq var5_ref = null;
         int var6 = 0;
         Object stackIn_2_0 = null;
         Object stackIn_3_0 = null;
@@ -55,7 +53,7 @@ final class fk {
         var6 = TombRacer.field_G ? 1 : 0;
         var3 = 89 / ((param1 - 61) / 38);
         if (((fk) this).field_c != ((fk) this).field_e) {
-          if ((((fk) this).field_e ^ -1) != -2) {
+          if (((fk) this).field_e != 1) {
             L0: {
               var4 = ((fk) this).field_k[param0];
               var5 = var4;
@@ -64,26 +62,26 @@ final class fk {
                 L1: {
                   ((fk) this).field_f = true;
                   if (((fk) this).field_g < ((fk) this).field_e) {
-                    var4_ref = new dq(param0, ((fk) this).field_g);
+                    var4 = new dq(param0, ((fk) this).field_g);
                     ((fk) this).field_g = ((fk) this).field_g + 1;
                     break L1;
                   } else {
-                    var5_ref = (dq) (Object) ((fk) this).field_h.b(3);
-                    var4_ref = new dq(param0, var5_ref.field_g);
-                    ((fk) this).field_k[var5_ref.field_i] = null;
-                    var5_ref.p(63);
+                    var5 = (dq) (Object) ((fk) this).field_h.b(3);
+                    var4 = new dq(param0, var5.field_g);
+                    ((fk) this).field_k[var5.field_i] = null;
+                    var5.p(63);
                     break L1;
                   }
                 }
-                ((fk) this).field_k[param0] = var4_ref;
+                ((fk) this).field_k[param0] = var4;
                 break L0;
               } else {
                 ((fk) this).field_f = false;
                 break L0;
               }
             }
-            ((fk) this).field_h.a((byte) 116, (vg) (Object) var4_ref);
-            return ((fk) this).field_a[var4_ref.field_g];
+            ((fk) this).field_h.a((byte) 116, (vg) (Object) var4);
+            return ((fk) this).field_a[var4.field_g];
           } else {
             L2: {
               stackOut_6_0 = this;
@@ -133,46 +131,67 @@ final class fk {
     }
 
     final static int a(int param0, byte param1, int param2) {
-        int var3 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        L0: {
-          var8 = TombRacer.field_G ? 1 : 0;
-          var3 = 0;
-          if (param1 == -113) {
-            break L0;
-          } else {
-            field_j = null;
-            break L0;
-          }
-        }
-        var4 = wp.field_b;
-        L1: while (true) {
-          if (cna.field_b.length <= var3) {
-            return -1;
-          } else {
-            var5 = f.field_c[var3];
-            if (var5 >= 0) {
-              var6 = apa.a((byte) -50, true, cna.field_b[var3]);
-              var7 = gda.field_a + -(var6 >> 1065113793);
-              var4 = var4 + aqa.field_a;
-              if (!rea.a(param2, var6 + (vra.field_a << 1973548385), var7 + -vra.field_a, param0, am.field_n - -(vf.field_d << -611719359), false, var4)) {
-                var4 = var4 + ((vf.field_d << 541864929) + (aqa.field_a + am.field_n));
-                var3++;
-                continue L1;
+        int stackIn_9_0 = 0;
+        int stackIn_13_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_12_0 = 0;
+        int stackOut_8_0 = 0;
+        var8 = TombRacer.field_G ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              var3_int = 0;
+              if (param1 == -113) {
+                break L1;
               } else {
-                return var5;
+                field_j = null;
+                break L1;
               }
-            } else {
-              var4 = var4 + uda.field_x;
-              var3++;
-              continue L1;
+            }
+            var4 = wp.field_b;
+            L2: while (true) {
+              if (cna.field_b.length <= var3_int) {
+                stackOut_12_0 = -1;
+                stackIn_13_0 = stackOut_12_0;
+                break L0;
+              } else {
+                L3: {
+                  var5 = f.field_c[var3_int];
+                  if (var5 >= 0) {
+                    var6 = apa.a((byte) -50, true, cna.field_b[var3_int]);
+                    var7 = gda.field_a + -(var6 >> 1);
+                    var4 = var4 + aqa.field_a;
+                    if (!rea.a(param2, var6 + (vra.field_a << 1), var7 + -vra.field_a, param0, am.field_n - -(vf.field_d << 1), false, var4)) {
+                      var4 = var4 + ((vf.field_d << 1) + (aqa.field_a + am.field_n));
+                      break L3;
+                    } else {
+                      stackOut_8_0 = var5;
+                      stackIn_9_0 = stackOut_8_0;
+                      return stackIn_9_0;
+                    }
+                  } else {
+                    var4 = var4 + uda.field_x;
+                    break L3;
+                  }
+                }
+                var3_int++;
+                continue L2;
+              }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw tba.a((Throwable) (Object) var3, "fk.C(" + param0 + 44 + param1 + 44 + param2 + 41);
         }
+        return stackIn_13_0;
     }
 
     final void a(int param0) {
@@ -196,9 +215,6 @@ final class fk {
 
     public static void b(int param0) {
         field_j = null;
-        if (param0 >= -101) {
-            return;
-        }
         field_d = null;
     }
 

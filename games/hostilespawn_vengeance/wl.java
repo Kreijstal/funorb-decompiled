@@ -17,26 +17,36 @@ final class wl {
     }
 
     final static int b(int param0) {
-        int var1 = 0;
+        int var1_int = 0;
+        RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
+        int stackIn_5_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_4_0 = 0;
         var3 = HostileSpawn.field_I ? 1 : 0;
-        var1 = 0;
-        var2 = 0;
-        L0: while (true) {
-          if (-7 >= (var2 ^ -1)) {
-            if (param0 != 25685) {
-              na discarded$2 = wl.c(-10);
-              return var1;
-            } else {
-              return var1;
+        try {
+          L0: {
+            var1_int = 0;
+            var2 = 0;
+            L1: while (true) {
+              if (var2 >= 6) {
+                stackOut_4_0 = var1_int;
+                stackIn_5_0 = stackOut_4_0;
+                break L0;
+              } else {
+                var1_int = var1_int + al.field_U[var2];
+                var2++;
+                continue L1;
+              }
             }
-          } else {
-            var1 = var1 + al.field_U[var2];
-            var2++;
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw wg.a((Throwable) (Object) var1, "wl.B(" + 25685 + 41);
         }
+        return stackIn_5_0;
     }
 
     final static na c(int param0) {

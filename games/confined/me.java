@@ -7,21 +7,83 @@ final class me extends am {
 
     final static void a(byte param0, java.applet.Applet param1) {
         try {
+            String var2 = null;
+            Exception var2_ref = null;
+            RuntimeException var2_ref2 = null;
+            int var3 = 0;
+            String var4 = null;
             java.net.URL var5 = null;
-            String var2 = param1.getDocumentBase().getFile();
-            int var3 = var2.indexOf('?');
-            String var4 = "reload.ws";
-            if (param0 < 31) {
-                return;
-            }
+            RuntimeException stackIn_10_0 = null;
+            StringBuilder stackIn_10_1 = null;
+            RuntimeException stackIn_11_0 = null;
+            StringBuilder stackIn_11_1 = null;
+            RuntimeException stackIn_12_0 = null;
+            StringBuilder stackIn_12_1 = null;
+            String stackIn_12_2 = null;
+            Throwable decompiledCaughtException = null;
+            RuntimeException stackOut_9_0 = null;
+            StringBuilder stackOut_9_1 = null;
+            RuntimeException stackOut_11_0 = null;
+            StringBuilder stackOut_11_1 = null;
+            String stackOut_11_2 = null;
+            RuntimeException stackOut_10_0 = null;
+            StringBuilder stackOut_10_1 = null;
+            String stackOut_10_2 = null;
             try {
-                if (!((var3 ^ -1) > -1)) {
-                    var4 = var4 + var2.substring(var3);
+              try {
+                var2 = param1.getDocumentBase().getFile();
+                var3 = var2.indexOf('?');
+                var4 = "reload.ws";
+                if (param0 >= 31) {
+                  L0: {
+                    if (var3 >= 0) {
+                      var4 = var4 + var2.substring(var3);
+                      break L0;
+                    } else {
+                      break L0;
+                    }
+                  }
+                  var5 = new java.net.URL(param1.getCodeBase(), var4);
+                  param1.getAppletContext().showDocument(pn.a(var5, (byte) -33, param1), "_self");
+                  return;
+                } else {
+                  return;
                 }
-                var5 = new java.net.URL(param1.getCodeBase(), var4);
-                param1.getAppletContext().showDocument(pn.a(var5, (byte) -33, param1), "_self");
-            } catch (Exception exception) {
-                exception.printStackTrace();
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var2_ref = (Exception) (Object) decompiledCaughtException;
+                var2_ref.printStackTrace();
+                return;
+              }
+            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L1: {
+                var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_9_0 = (RuntimeException) var2_ref2;
+                stackOut_9_1 = new StringBuilder().append("me.B(").append(param0).append(44);
+                stackIn_11_0 = stackOut_9_0;
+                stackIn_11_1 = stackOut_9_1;
+                stackIn_10_0 = stackOut_9_0;
+                stackIn_10_1 = stackOut_9_1;
+                if (param1 == null) {
+                  stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+                  stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+                  stackOut_11_2 = "null";
+                  stackIn_12_0 = stackOut_11_0;
+                  stackIn_12_1 = stackOut_11_1;
+                  stackIn_12_2 = stackOut_11_2;
+                  break L1;
+                } else {
+                  stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+                  stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+                  stackOut_10_2 = "{...}";
+                  stackIn_12_0 = stackOut_10_0;
+                  stackIn_12_1 = stackOut_10_1;
+                  stackIn_12_2 = stackOut_10_2;
+                  break L1;
+                }
+              }
+              throw sd.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -31,17 +93,18 @@ final class me extends am {
     }
 
     public static void g(byte param0) {
-        if (param0 >= -13) {
-            return;
-        }
         field_J = null;
     }
 
     me(fj param0) {
         super(param0.field_q, param0.field_m, param0.field_F, param0.field_z, (fe) null, (uk) null);
-        param0.a(-117, ((me) this).field_F, 0, ((me) this).field_z, 0);
-        ((me) this).field_H = param0;
-        ((me) this).field_K = 256;
+        try {
+            param0.a(-117, ((me) this).field_F, 0, ((me) this).field_z, 0);
+            ((me) this).field_H = param0;
+            ((me) this).field_K = 256;
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "me.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
@@ -52,7 +115,7 @@ final class me extends am {
           } else {
             if (((me) this).field_H != null) {
               if (0 != ((me) this).field_K) {
-                if ((((me) this).field_K ^ -1) == -257) {
+                if (((me) this).field_K == 256) {
                   ((me) this).field_H.a(param0 - -((me) this).field_m, param1, (byte) 45, param3 + ((me) this).field_q);
                   return;
                 } else {

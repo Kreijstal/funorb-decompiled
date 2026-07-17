@@ -66,9 +66,6 @@ final class eb {
     }
 
     public static void a(int param0) {
-        if (param0 <= 12) {
-            return;
-        }
         field_b = null;
         field_o = null;
         field_j = null;

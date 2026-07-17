@@ -14,105 +14,130 @@ final class g extends w {
 
     public static void a(boolean param0) {
         field_t = null;
-        if (param0) {
-            field_s = 92;
-        }
     }
 
     final void a(Object param0, boolean param1, byte param2) {
         try {
             Exception var4 = null;
             IOException var4_ref = null;
-            fk var4_ref2 = null;
+            RuntimeException var4_ref2 = null;
+            fk var4_ref3 = null;
             Exception var5 = null;
             int var6 = 0;
+            RuntimeException stackIn_28_0 = null;
+            StringBuilder stackIn_28_1 = null;
+            RuntimeException stackIn_29_0 = null;
+            StringBuilder stackIn_29_1 = null;
+            RuntimeException stackIn_30_0 = null;
+            StringBuilder stackIn_30_1 = null;
+            String stackIn_30_2 = null;
             Throwable decompiledCaughtException = null;
-            L0: {
-              var6 = fleas.field_A ? 1 : 0;
-              if (null != ((g) this).field_v) {
-                try {
-                  L1: {
-                    ((g) this).field_v.h(0);
+            RuntimeException stackOut_27_0 = null;
+            StringBuilder stackOut_27_1 = null;
+            RuntimeException stackOut_29_0 = null;
+            StringBuilder stackOut_29_1 = null;
+            String stackOut_29_2 = null;
+            RuntimeException stackOut_28_0 = null;
+            StringBuilder stackOut_28_1 = null;
+            String stackOut_28_2 = null;
+            var6 = fleas.field_A ? 1 : 0;
+            try {
+              L0: {
+                L1: {
+                  if (null != ((g) this).field_v) {
+                    try {
+                      L2: {
+                        ((g) this).field_v.h(0);
+                        break L2;
+                      }
+                    } catch (java.lang.Exception decompiledCaughtParameter0) {
+                      decompiledCaughtException = decompiledCaughtParameter0;
+                      L3: {
+                        var4 = (Exception) (Object) decompiledCaughtException;
+                        break L3;
+                      }
+                    }
+                    ((g) this).field_v = null;
+                    break L1;
+                  } else {
                     break L1;
                   }
-                } catch (java.lang.Exception decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  L2: {
-                    var4 = (Exception) (Object) decompiledCaughtException;
-                    break L2;
-                  }
                 }
-                ((g) this).field_v = null;
-                break L0;
-              } else {
-                break L0;
-              }
-            }
-            if (param2 == 105) {
-              ((g) this).field_v = (td) param0;
-              this.g(-79);
-              this.a(param2 + 5, param1);
-              ((g) this).field_p = null;
-              ((g) this).field_f.field_i = 0;
-              L3: while (true) {
-                var4_ref2 = (fk) (Object) ((g) this).field_q.a(param2 ^ -30);
-                if (var4_ref2 != null) {
-                  ((g) this).field_o.a((pa) (Object) var4_ref2, -1089421886);
-                  continue L3;
-                } else {
+                if (param2 == 105) {
+                  ((g) this).field_v = (td) param0;
+                  this.g(-79);
+                  this.a(param2 + 5, param1);
+                  ((g) this).field_p = null;
+                  ((g) this).field_f.field_i = 0;
                   L4: while (true) {
-                    var4_ref2 = (fk) (Object) ((g) this).field_h.a(-122);
-                    if (var4_ref2 != null) {
-                      ((g) this).field_n.a((pa) (Object) var4_ref2, param2 ^ -1089421909);
+                    var4_ref3 = (fk) (Object) ((g) this).field_q.a(param2 ^ -30);
+                    if (var4_ref3 != null) {
+                      ((g) this).field_o.a((pa) (Object) var4_ref3, -1089421886);
                       continue L4;
                     } else {
-                      L5: {
-                        if (((g) this).field_g != 0) {
-                          try {
-                            L6: {
-                              ((g) this).field_d.field_i = 0;
-                              ((g) this).field_d.a(-11, 4);
-                              ((g) this).field_d.a(param2 + -116, (int) ((g) this).field_g);
-                              ((g) this).field_d.a(0, (byte) -58);
-                              ((g) this).field_v.a((byte) -117, ((g) this).field_d.field_k.length, 0, ((g) this).field_d.field_k);
-                              break L6;
-                            }
-                          } catch (java.io.IOException decompiledCaughtParameter1) {
-                            decompiledCaughtException = decompiledCaughtParameter1;
-                            L7: {
-                              var4_ref = (IOException) (Object) decompiledCaughtException;
-                              try {
-                                L8: {
-                                  ((g) this).field_v.h(0);
-                                  break L8;
-                                }
-                              } catch (java.lang.Exception decompiledCaughtParameter2) {
-                                decompiledCaughtException = decompiledCaughtParameter2;
-                                L9: {
-                                  var5 = (Exception) (Object) decompiledCaughtException;
-                                  break L9;
+                      L5: while (true) {
+                        var4_ref3 = (fk) (Object) ((g) this).field_h.a(-122);
+                        if (var4_ref3 != null) {
+                          ((g) this).field_n.a((pa) (Object) var4_ref3, param2 ^ -1089421909);
+                          continue L5;
+                        } else {
+                          L6: {
+                            if (((g) this).field_g != 0) {
+                              {
+                                L7: {
+                                  ((g) this).field_d.field_i = 0;
+                                  ((g) this).field_d.a(-11, 4);
+                                  ((g) this).field_d.a(param2 + -116, (int) ((g) this).field_g);
+                                  ((g) this).field_d.a(0, (byte) -58);
+                                  ((g) this).field_v.a((byte) -117, ((g) this).field_d.field_k.length, 0, ((g) this).field_d.field_k);
+                                  break L7;
                                 }
                               }
-                              ((g) this).field_b = -2;
-                              ((g) this).field_c = ((g) this).field_c + 1;
-                              ((g) this).field_v = null;
-                              break L7;
+                              break L6;
+                            } else {
+                              break L6;
                             }
                           }
-                          break L5;
-                        } else {
-                          break L5;
+                          ((g) this).field_k = 0;
+                          ((g) this).field_m = lj.a((byte) -67);
+                          break L0;
                         }
                       }
-                      ((g) this).field_k = 0;
-                      ((g) this).field_m = lj.a((byte) -67);
-                      return;
                     }
                   }
+                } else {
+                  return;
                 }
               }
-            } else {
-              return;
+            } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
+              decompiledCaughtException = decompiledCaughtParameter3;
+              L11: {
+                var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_27_0 = (RuntimeException) var4_ref2;
+                stackOut_27_1 = new StringBuilder().append("g.L(");
+                stackIn_29_0 = stackOut_27_0;
+                stackIn_29_1 = stackOut_27_1;
+                stackIn_28_0 = stackOut_27_0;
+                stackIn_28_1 = stackOut_27_1;
+                if (param0 == null) {
+                  stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
+                  stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
+                  stackOut_29_2 = "null";
+                  stackIn_30_0 = stackOut_29_0;
+                  stackIn_30_1 = stackOut_29_1;
+                  stackIn_30_2 = stackOut_29_2;
+                  break L11;
+                } else {
+                  stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
+                  stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+                  stackOut_28_2 = "{...}";
+                  stackIn_30_0 = stackOut_28_0;
+                  stackIn_30_1 = stackOut_28_1;
+                  stackIn_30_2 = stackOut_28_2;
+                  break L11;
+                }
+              }
+              throw pf.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 44 + param1 + 44 + param2 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -243,16 +268,15 @@ final class g extends w {
         int var5 = jc.a(param1, 117);
         int var6 = 104 % ((53 - param0) / 58);
         int var7 = we.a((byte) 101, param1);
-        int var8 = (int)((long)var5 * (long)var3 >> 922083344);
-        int var9 = (int)((long)var7 * (long)var3 >> -961792752);
-        int var10 = (int)((long)var4 * (long)var5 >> 21370448);
-        int var11 = (int)((long)var7 * (long)var4 >> 484235664);
+        int var8 = (int)((long)var5 * (long)var3 >> 16);
+        int var9 = (int)((long)var7 * (long)var3 >> 16);
+        int var10 = (int)((long)var4 * (long)var5 >> 16);
+        int var11 = (int)((long)var7 * (long)var4 >> 16);
         return new int[]{0, 0, 0, var7, 0, var5, var8, var4, -var9, -var10, var3, var11};
     }
 
     private final void g(int param0) {
         try {
-            IOException iOException = null;
             Exception var3 = null;
             Throwable decompiledCaughtException = null;
             if (((g) this).field_v != null) {
@@ -264,7 +288,7 @@ final class g extends w {
                   break L0;
                 }
               }
-              try {
+              {
                 L1: {
                   ((g) this).field_d.field_i = 0;
                   ((g) this).field_d.a(-11, 6);
@@ -272,27 +296,6 @@ final class g extends w {
                   ((g) this).field_d.b((byte) 75, 0);
                   ((g) this).field_v.a((byte) -117, ((g) this).field_d.field_k.length, 0, ((g) this).field_d.field_k);
                   break L1;
-                }
-              } catch (java.io.IOException decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                L2: {
-                  iOException = (IOException) (Object) decompiledCaughtException;
-                  try {
-                    L3: {
-                      ((g) this).field_v.h(0);
-                      break L3;
-                    }
-                  } catch (java.lang.Exception decompiledCaughtParameter1) {
-                    decompiledCaughtException = decompiledCaughtParameter1;
-                    L4: {
-                      var3 = (Exception) (Object) decompiledCaughtException;
-                      break L4;
-                    }
-                  }
-                  ((g) this).field_b = -2;
-                  ((g) this).field_v = null;
-                  ((g) this).field_c = ((g) this).field_c + 1;
-                  break L2;
                 }
               }
               return;
@@ -343,7 +346,7 @@ final class g extends w {
                 L1: {
                   var2_long = lj.a((byte) -24);
                   var4 = (int)(-((g) this).field_m + var2_long);
-                  if ((var4 ^ -1) >= -201) {
+                  if (var4 <= 200) {
                     break L1;
                   } else {
                     var4 = 200;
@@ -492,7 +495,7 @@ final class g extends w {
                                         }
                                         L17: {
                                           ((g) this).field_v.a(var5, ((g) this).field_f.field_k, ((g) this).field_f.field_i, false);
-                                          if (-1 != (((g) this).field_g ^ -1)) {
+                                          if (((g) this).field_g != 0) {
                                             var6 = 0;
                                             L18: while (true) {
                                               if (var6 >= var5) {
@@ -512,8 +515,8 @@ final class g extends w {
                                           break L11;
                                         } else {
                                           if (((g) this).field_p != null) {
-                                            if (-1 == (((g) this).field_p.field_y ^ -1)) {
-                                              if ((((g) this).field_f.field_k[0] ^ -1) == 0) {
+                                            if (((g) this).field_p.field_y == 0) {
+                                              if (((g) this).field_f.field_k[0] == -1) {
                                                 ((g) this).field_f.field_i = 0;
                                                 ((g) this).field_p.field_y = 1;
                                                 break L11;
@@ -544,7 +547,7 @@ final class g extends w {
                                             }
                                             L20: {
                                               var11 = stackIn_50_0;
-                                              var12 = (long)var7 + ((long)var6 << -919735392);
+                                              var12 = (long)var7 + ((long)var6 << 32);
                                               var14 = null;
                                               if (var11 != 0) {
                                                 var14_ref = (fk) (Object) ((g) this).field_h.b((byte) 120);
@@ -552,7 +555,7 @@ final class g extends w {
                                                   if (var14_ref == null) {
                                                     break L20;
                                                   } else {
-                                                    if ((var14_ref.field_j ^ -1L) == (var12 ^ -1L)) {
+                                                    if (~var14_ref.field_j == ~var12) {
                                                       break L20;
                                                     } else {
                                                       var14_ref = (fk) (Object) ((g) this).field_h.c((byte) 97);

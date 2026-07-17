@@ -134,20 +134,24 @@ final class cra {
         if (param1 >= -9) {
             return false;
         }
-        return ((-1 != (24 & param2 ^ -1) ? 1 : 0) | (544 == (544 & param2) ? 1 : 0)) != 0;
+        return (((24 & param2) != 0 ? 1 : 0) | (544 == (544 & param2) ? 1 : 0)) != 0;
     }
 
     final static void a(cn param0, cn param1, int param2, boolean param3, cn param4) {
-        if (param2 != 1) {
-            Object var6 = null;
-            cra.a((cn) null, (cn) null, -57, true, (cn) null);
+        try {
+            if (param2 != 1) {
+                Object var6 = null;
+                cra.a((cn) null, (cn) null, -57, true, (cn) null);
+            }
+            gva.field_b = ai.a((byte) 121, "");
+            gva.field_b.a(-71, false);
+            fha.a(true, param1, param0, param4);
+            pq.b(117);
+            kl.field_a = fta.field_c;
+            wt.field_d = fta.field_c;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "cra.E(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
         }
-        gva.field_b = ai.a((byte) 121, "");
-        gva.field_b.a(-71, false);
-        fha.a(true, param1, param0, param4);
-        pq.b(117);
-        kl.field_a = fta.field_c;
-        wt.field_d = fta.field_c;
     }
 
     final void a(byte param0) {
@@ -195,7 +199,7 @@ final class cra {
             return true;
         }
         ((cra) this).field_d = ((cra) this).field_d - 1;
-        if ((((cra) this).field_d ^ -1) >= -1) {
+        if (((cra) this).field_d <= 0) {
             return this.a(-99);
         }
         return false;
@@ -203,17 +207,70 @@ final class cra {
 
     public static void c(int param0) {
         field_a = null;
-        if (param0 > -59) {
-            field_a = null;
-        }
     }
 
     final void a(int param0, ka param1) {
-        int var3 = -103 / ((param0 - -36) / 51);
-        if (((cra) this).field_b.field_i) {
-            param1.a(-124, hba.field_c, ((cra) this).field_c, ((cra) this).field_g, ((cra) this).field_i - ((cra) this).field_d, hba.field_c, ((cra) this).field_i, ((cra) this).field_b.field_h, 0);
-        } else {
-            param1.a(-121, hba.field_c, -1, ((cra) this).field_g, 0, (ena) null, 0, ((cra) this).field_b.field_h, 0);
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              var3_int = -103 / ((param0 - -36) / 51);
+              if (!((cra) this).field_b.field_i) {
+                param1.a(-121, hba.field_c, -1, ((cra) this).field_g, 0, (ena) null, 0, ((cra) this).field_b.field_h, 0);
+                break L1;
+              } else {
+                param1.a(-124, hba.field_c, ((cra) this).field_c, ((cra) this).field_g, ((cra) this).field_i - ((cra) this).field_d, hba.field_c, ((cra) this).field_i, ((cra) this).field_b.field_h, 0);
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_1 = new StringBuilder().append("cra.C(").append(param0).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param1 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
         }
     }
 
@@ -258,34 +315,42 @@ final class cra {
     }
 
     final void a(dk param0, int param1) {
-        ((cra) this).a((byte) -91);
-        ((cra) this).field_b = param0;
-        ((cra) this).field_f = -1;
-        if (param1 != -30988) {
-            boolean discarded$0 = this.a(102);
+        try {
+            ((cra) this).a((byte) -91);
+            ((cra) this).field_b = param0;
+            ((cra) this).field_f = -1;
+            if (param1 != -30988) {
+                boolean discarded$0 = this.a(102);
+            }
+            boolean discarded$1 = this.a(-95);
+            ((cra) this).field_k = -1;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "cra.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
-        boolean discarded$1 = this.a(-95);
-        ((cra) this).field_k = -1;
     }
 
     final void a(dk param0, int param1, int param2) {
-        if (((cra) this).field_h == null) {
-            throw new RuntimeException();
+        try {
+            if (((cra) this).field_h == null) {
+                throw new RuntimeException();
+            }
+            ((cra) this).field_h[((cra) this).field_l] = param0;
+            if (param2 != 8198) {
+                boolean discarded$0 = this.a(16);
+            }
+            ((cra) this).field_e[((cra) this).field_l] = param1;
+            if (0 > ((cra) this).field_k) {
+                ((cra) this).field_k = ((cra) this).field_l;
+            }
+            ((cra) this).field_l = ((cra) this).field_l + 1;
+            if (!(((cra) this).field_h.length != ((cra) this).field_l)) {
+                ((cra) this).field_l = 0;
+            }
+            ((cra) this).field_o = true;
+            ((cra) this).field_i = 1;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "cra.H(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }
-        ((cra) this).field_h[((cra) this).field_l] = param0;
-        if (param2 != 8198) {
-            boolean discarded$0 = this.a(16);
-        }
-        ((cra) this).field_e[((cra) this).field_l] = param1;
-        if (0 > ((cra) this).field_k) {
-            ((cra) this).field_k = ((cra) this).field_l;
-        }
-        ((cra) this).field_l = ((cra) this).field_l + 1;
-        if (!(((cra) this).field_h.length != ((cra) this).field_l)) {
-            ((cra) this).field_l = 0;
-        }
-        ((cra) this).field_o = true;
-        ((cra) this).field_i = 1;
     }
 
     public cra() {

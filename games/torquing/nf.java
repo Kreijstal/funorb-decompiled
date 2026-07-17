@@ -482,11 +482,13 @@ final class nf {
     final static void a(int param0, int param1, int[] param2, int[] param3, int[] param4, int param5, int param6, int param7) {
         int var8 = 0;
         int var9 = 0;
-        int var10 = 0;
+        int var10_int = 0;
+        RuntimeException var10 = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
         int stackIn_18_0 = 0;
+        RuntimeException decompiledCaughtException = null;
         int stackOut_17_0 = 0;
         int stackOut_16_0 = 0;
         if (param0 != -1) {
@@ -498,75 +500,86 @@ final class nf {
           var8 = be.field_g;
           var9 = be.field_b;
           field_h = false;
-          var10 = 0;
+          var10_int = 0;
           L0: while (true) {
-            if (var10 >= 3) {
-              L1: {
-                var10 = field_q[0];
-                var11 = field_q[1];
-                var12 = field_q[2];
-                if (field_h) {
-                  break L1;
-                } else {
+            if (var10_int >= 3) {
+              try {
+                L1: {
                   L2: {
-                    L3: {
-                      if (var10 < ph.field_k) {
-                        break L3;
-                      } else {
-                        if (var11 < ph.field_k) {
-                          break L3;
-                        } else {
-                          if (var12 < ph.field_k) {
-                            break L3;
+                    var10_int = field_q[0];
+                    var11 = field_q[1];
+                    var12 = field_q[2];
+                    if (field_h) {
+                      break L2;
+                    } else {
+                      L3: {
+                        L4: {
+                          if (var10_int < ph.field_k) {
+                            break L4;
                           } else {
-                            if (var10 > ph.field_a) {
-                              break L3;
+                            if (var11 < ph.field_k) {
+                              break L4;
                             } else {
-                              if (var11 > ph.field_a) {
-                                break L3;
+                              if (var12 < ph.field_k) {
+                                break L4;
                               } else {
-                                if (var12 <= ph.field_a) {
-                                  stackOut_17_0 = 0;
-                                  stackIn_18_0 = stackOut_17_0;
-                                  break L2;
+                                if (var10_int > ph.field_a) {
+                                  break L4;
                                 } else {
-                                  break L3;
+                                  if (var11 > ph.field_a) {
+                                    break L4;
+                                  } else {
+                                    if (var12 <= ph.field_a) {
+                                      stackOut_17_0 = 0;
+                                      stackIn_18_0 = stackOut_17_0;
+                                      break L3;
+                                    } else {
+                                      break L4;
+                                    }
+                                  }
                                 }
                               }
                             }
                           }
                         }
+                        stackOut_16_0 = 1;
+                        stackIn_18_0 = stackOut_16_0;
+                        break L3;
                       }
+                      field_m = stackIn_18_0 != 0;
+                      break L2;
                     }
-                    stackOut_16_0 = 1;
-                    stackIn_18_0 = stackOut_16_0;
-                    break L2;
                   }
-                  field_m = stackIn_18_0 != 0;
+                  nf.a();
                   break L1;
                 }
-              }
-              nf.a();
-              return;
-            } else {
-              L4: {
-                var11 = param2[var10];
-                var12 = param3[var10];
-                var13 = param4[var10];
-                if (var13 < 50) {
-                  field_q[var10] = -5000;
-                  field_h = true;
-                  break L4;
-                } else {
-                  field_q[var10] = var8 + (var11 << 9) / var13;
-                  field_j[var10] = var9 + (var12 << 9) / var13;
-                  break L4;
+              } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                L5: {
+                  var10 = decompiledCaughtException;
+                  break L5;
                 }
               }
-              field_p[var10] = var11;
-              field_b[var10] = var12;
-              field_c[var10] = var13;
-              var10++;
+              return;
+            } else {
+              L6: {
+                var11 = param2[var10_int];
+                var12 = param3[var10_int];
+                var13 = param4[var10_int];
+                if (var13 < 50) {
+                  field_q[var10_int] = -5000;
+                  field_h = true;
+                  break L6;
+                } else {
+                  field_q[var10_int] = var8 + (var11 << 9) / var13;
+                  field_j[var10_int] = var9 + (var12 << 9) / var13;
+                  break L6;
+                }
+              }
+              field_p[var10_int] = var11;
+              field_b[var10_int] = var12;
+              field_c[var10_int] = var13;
+              var10_int++;
               continue L0;
             }
           }

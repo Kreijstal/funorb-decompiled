@@ -16,16 +16,15 @@ final class t extends eg {
 
     t(Object param0, int param1) {
         super(param1);
-        ((t) this).field_s = param0;
+        try {
+            ((t) this).field_s = param0;
+        } catch (RuntimeException runtimeException) {
+            throw ii.a((Throwable) (Object) runtimeException, "t.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     public static void f(int param0) {
         field_t = null;
-        if (param0 != -32504) {
-            field_r = null;
-            field_r = null;
-            return;
-        }
         field_r = null;
     }
 

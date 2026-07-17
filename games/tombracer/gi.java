@@ -51,7 +51,7 @@ final class gi extends me {
           L0: while (true) {
             if (((gi) this).field_g.field_c.field_e.length > var11) {
               var12 = ((gi) this).field_g.field_c.field_e[var11];
-              if (0 != (var12 ^ -1)) {
+              if (var12 != -1) {
                 L1: {
                   if (var12 == var4) {
                     var13 = var5;

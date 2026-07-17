@@ -18,9 +18,6 @@ abstract class gf {
         field_g = null;
         field_c = null;
         field_f = null;
-        if (param0 != 540) {
-            field_f = null;
-        }
     }
 
     static {

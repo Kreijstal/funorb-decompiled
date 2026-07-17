@@ -17,15 +17,12 @@ abstract class mu extends pj {
     final static void e(int param0) {
         Object var2 = null;
         wv.a((byte) 77, "", (String) null);
-        if (param0 != 0) {
-            field_r = null;
-        }
     }
 
     public static void a(int param0) {
         field_t = null;
         field_r = null;
-        int var1 = -35 % ((param0 - -7) / 32);
+        int var1 = -2;
         field_B = null;
         field_y = null;
     }

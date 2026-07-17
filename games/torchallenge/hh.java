@@ -27,10 +27,10 @@ final class hh {
         var4 = lc.b(-88, param0);
         var5 = ai.a(true, param2);
         var6 = lc.b(-116, param2);
-        var7 = (int)((long)var5 * (long)var3 >> 1515446672);
-        var8 = (int)((long)var3 * (long)var6 >> -999452336);
-        var9 = (int)((long)var4 * (long)var5 >> -1055390000);
-        var10 = (int)((long)var6 * (long)var4 >> -2000789680);
+        var7 = (int)((long)var5 * (long)var3 >> 16);
+        var8 = (int)((long)var3 * (long)var6 >> 16);
+        var9 = (int)((long)var4 * (long)var5 >> 16);
+        var10 = (int)((long)var6 * (long)var4 >> 16);
         return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
     }
 
@@ -1060,7 +1060,7 @@ final class hh {
 
     public static void a(byte param0) {
         field_b = null;
-        int var1 = 65 / ((param0 - 28) / 44);
+        int var1 = 32;
         field_a = null;
         field_c = null;
     }

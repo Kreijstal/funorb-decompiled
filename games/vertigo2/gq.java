@@ -24,20 +24,43 @@ public class gq {
     }
 
     public static void a(byte param0, String param1, int param2) {
-        if (param0 != -110) {
-            return;
-        }
-        field_a = param2;
-        field_e = param1;
-        try {
-            field_b = System.getProperty("user.home");
-            // ifnull L57
-            field_b = field_b + "/";
-        } catch (Exception exception) {
-        }
-        field_c = true;
-        if (!(field_b != null)) {
-            field_b = "~/";
+        Exception exception = null;
+        Throwable decompiledCaughtException = null;
+        if (param0 == -110) {
+          field_a = param2;
+          field_e = param1;
+          try {
+            L0: {
+              L1: {
+                field_b = System.getProperty("user.home");
+                if (field_b == null) {
+                  break L1;
+                } else {
+                  field_b = field_b + "/";
+                  break L1;
+                }
+              }
+              break L0;
+            }
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            L2: {
+              exception = (Exception) (Object) decompiledCaughtException;
+              break L2;
+            }
+          }
+          L3: {
+            field_c = true;
+            if (field_b == null) {
+              field_b = "~/";
+              break L3;
+            } else {
+              break L3;
+            }
+          }
+          return;
+        } else {
+          return;
         }
     }
 

@@ -61,37 +61,94 @@ final class ir {
 
     final static byte[] a(Object param0, int param1, boolean param2) {
         byte[] var3 = null;
+        RuntimeException var3_ref = null;
         qu var4 = null;
-        if (param0 == null) {
-            return null;
-        }
-        if (param1 != 13588) {
-            field_c = null;
-            if (param0 instanceof byte[]) {
-                var3 = (byte[]) param0;
-                if (!param2) {
-                    return var3;
-                }
-                return lh.a(var3, 6711);
+        byte[] stackIn_8_0 = null;
+        byte[] stackIn_10_0 = null;
+        byte[] stackIn_14_0 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        String stackIn_19_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        byte[] stackOut_13_0 = null;
+        byte[] stackOut_9_0 = null;
+        byte[] stackOut_7_0 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        try {
+          if (param0 != null) {
+            L0: {
+              if (param1 == 13588) {
+                break L0;
+              } else {
+                field_c = null;
+                break L0;
+              }
             }
-            if (!(!(param0 instanceof qu))) {
+            if (!(param0 instanceof byte[])) {
+              if (param0 instanceof qu) {
                 var4 = (qu) param0;
-                return var4.a(false);
+                stackOut_13_0 = var4.a(false);
+                stackIn_14_0 = stackOut_13_0;
+                return stackIn_14_0;
+              } else {
+                throw new IllegalArgumentException();
+              }
+            } else {
+              var3 = (byte[]) param0;
+              if (!param2) {
+                stackOut_9_0 = (byte[]) var3;
+                stackIn_10_0 = stackOut_9_0;
+                return stackIn_10_0;
+              } else {
+                stackOut_7_0 = lh.a(var3, 6711);
+                stackIn_8_0 = stackOut_7_0;
+                return stackIn_8_0;
+              }
             }
-            throw new IllegalArgumentException();
-        }
-        if (param0 instanceof byte[]) {
-            var3 = (byte[]) param0;
-            if (!param2) {
-                return var3;
+          } else {
+            return null;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var3_ref = decompiledCaughtException;
+            stackOut_16_0 = (RuntimeException) var3_ref;
+            stackOut_16_1 = new StringBuilder().append("ir.A(");
+            stackIn_18_0 = stackOut_16_0;
+            stackIn_18_1 = stackOut_16_1;
+            stackIn_17_0 = stackOut_16_0;
+            stackIn_17_1 = stackOut_16_1;
+            if (param0 == null) {
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "null";
+              stackIn_19_0 = stackOut_18_0;
+              stackIn_19_1 = stackOut_18_1;
+              stackIn_19_2 = stackOut_18_2;
+              break L1;
+            } else {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "{...}";
+              stackIn_19_0 = stackOut_17_0;
+              stackIn_19_1 = stackOut_17_1;
+              stackIn_19_2 = stackOut_17_2;
+              break L1;
             }
-            return lh.a(var3, 6711);
+          }
+          throw tba.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param1 + 44 + param2 + 41);
         }
-        if (!(!(param0 instanceof qu))) {
-            var4 = (qu) param0;
-            return var4.a(false);
-        }
-        throw new IllegalArgumentException();
     }
 
     public ir() {

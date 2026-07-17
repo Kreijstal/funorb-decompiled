@@ -14,61 +14,108 @@ final class eh implements bf {
     private int field_g;
 
     public final void a(int param0, int param1, ub param2, boolean param3, boolean param4) {
+        RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         vb var12 = null;
-        ub stackIn_3_0 = null;
-        Object stackOut_2_0 = null;
-        ub stackOut_1_0 = null;
-        L0: {
-          var11 = wizardrun.field_H;
-          if (!(param2 instanceof vb)) {
-            stackOut_2_0 = null;
-            stackIn_3_0 = (ub) (Object) stackOut_2_0;
-            break L0;
-          } else {
-            stackOut_1_0 = (ub) param2;
-            stackIn_3_0 = stackOut_1_0;
-            break L0;
-          }
-        }
-        L1: {
-          var12 = (vb) (Object) stackIn_3_0;
-          ed.c(param2.field_o + param0, param1 + param2.field_l, param2.field_r, param2.field_n, ((eh) this).field_a);
-          if (var12 != null) {
-            break L1;
-          } else {
-            break L1;
-          }
-        }
-        var7 = -(2 * var12.field_G) + param2.field_r;
-        var8 = var12.field_G + (param2.field_o + param0);
-        if (!param3) {
-          return;
-        } else {
-          var9 = param2.field_l + param1 - -var12.field_J;
-          ed.e(var8, var9, var8 - -var7, var9, ((eh) this).field_j);
-          var10 = -1 + var12.d(0);
-          L2: while (true) {
-            if (-1 < (var10 ^ -1)) {
-              L3: {
-                if (((eh) this).field_b != null) {
-                  ((eh) this).field_b.b(var12.field_k, var8 - -(var7 / 2), var12.field_J + var9 + ((eh) this).field_b.field_E, ((eh) this).field_c, ((eh) this).field_g);
-                  break L3;
+        ub stackIn_4_0 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        Object stackOut_3_0 = null;
+        ub stackOut_2_0 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        var11 = wizardrun.field_H;
+        try {
+          L0: {
+            L1: {
+              if (!(param2 instanceof vb)) {
+                stackOut_3_0 = null;
+                stackIn_4_0 = (ub) (Object) stackOut_3_0;
+                break L1;
+              } else {
+                stackOut_2_0 = (ub) param2;
+                stackIn_4_0 = stackOut_2_0;
+                break L1;
+              }
+            }
+            L2: {
+              var12 = (vb) (Object) stackIn_4_0;
+              ed.c(param2.field_o + param0, param1 + param2.field_l, param2.field_r, param2.field_n, ((eh) this).field_a);
+              if (var12 != null) {
+                break L2;
+              } else {
+                break L2;
+              }
+            }
+            var7 = -(2 * var12.field_G) + param2.field_r;
+            var8 = var12.field_G + (param2.field_o + param0);
+            if (param3) {
+              var9 = param2.field_l + param1 - -var12.field_J;
+              ed.e(var8, var9, var8 - -var7, var9, ((eh) this).field_j);
+              var10 = -1 + var12.d(0);
+              L3: while (true) {
+                if (var10 < 0) {
+                  if (((eh) this).field_b != null) {
+                    ((eh) this).field_b.b(var12.field_k, var8 - -(var7 / 2), var12.field_J + var9 + ((eh) this).field_b.field_E, ((eh) this).field_c, ((eh) this).field_g);
+                    break L0;
+                  } else {
+                    return;
+                  }
                 } else {
-                  break L3;
+                  ed.a(var12.b(-10455, var10) * var7 / var12.e(1) + var8, var9, ((eh) this).field_d, ((eh) this).field_f);
+                  var10--;
+                  continue L3;
                 }
               }
-              return;
             } else {
-              ed.a(var12.b(-10455, var10) * var7 / var12.e(1) + var8, var9, ((eh) this).field_d, ((eh) this).field_f);
-              var10--;
-              continue L2;
+              return;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var6 = decompiledCaughtException;
+            stackOut_14_0 = (RuntimeException) var6;
+            stackOut_14_1 = new StringBuilder().append("eh.B(").append(param0).append(44).append(param1).append(44);
+            stackIn_16_0 = stackOut_14_0;
+            stackIn_16_1 = stackOut_14_1;
+            stackIn_15_0 = stackOut_14_0;
+            stackIn_15_1 = stackOut_14_1;
+            if (param2 == null) {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "null";
+              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_1 = stackOut_16_1;
+              stackIn_17_2 = stackOut_16_2;
+              break L4;
+            } else {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "{...}";
+              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_1 = stackOut_15_1;
+              stackIn_17_2 = stackOut_15_2;
+              break L4;
+            }
+          }
+          throw bd.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
@@ -85,20 +132,20 @@ final class eh implements bf {
     }
 
     eh(vd param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        ((eh) this).field_d = param5;
-        ((eh) this).field_g = param2;
-        ((eh) this).field_j = param3;
-        ((eh) this).field_f = param6;
-        ((eh) this).field_c = param1;
-        ((eh) this).field_b = param0;
-        ((eh) this).field_a = param4;
+        try {
+            ((eh) this).field_d = param5;
+            ((eh) this).field_g = param2;
+            ((eh) this).field_j = param3;
+            ((eh) this).field_f = param6;
+            ((eh) this).field_c = param1;
+            ((eh) this).field_b = param0;
+            ((eh) this).field_a = param4;
+        } catch (RuntimeException runtimeException) {
+            throw bd.a((Throwable) (Object) runtimeException, "eh.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 41);
+        }
     }
 
     final static long a(int param0) {
-        if (param0 != 2) {
-            field_e = null;
-            return d.a((byte) 75) + -eg.field_C;
-        }
         return d.a((byte) 75) + -eg.field_C;
     }
 

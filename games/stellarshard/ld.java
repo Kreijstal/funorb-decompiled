@@ -30,7 +30,11 @@ final class ld extends gj {
 
     ld(Object param0, int param1) {
         super(param1);
-        ((ld) this).field_B = param0;
+        try {
+            ((ld) this).field_B = param0;
+        } catch (RuntimeException runtimeException) {
+            throw ma.a((Throwable) (Object) runtimeException, "ld.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     public static void g(int param0) {
@@ -49,9 +53,6 @@ final class ld extends gj {
     }
 
     final static void e(byte param0) {
-        if (param0 != -111) {
-            return;
-        }
         wk.field_c = false;
         h.field_c = -1;
         am.field_f = -1;

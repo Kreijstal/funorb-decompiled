@@ -24,7 +24,7 @@ final class kc extends bh {
         var2 = 0;
         var3 = gd.field_e;
         if (var3 >= 5) {
-          if (-106 >= (var3 ^ -1)) {
+          if (var3 >= 105) {
             L0: {
               if (120 <= var3) {
                 break L0;
@@ -46,7 +46,7 @@ final class kc extends bh {
                 }
               }
               L2: {
-                if (-4 == (param1 ^ -1)) {
+                if (param1 == 3) {
                   var4 = -1;
                   break L2;
                 } else {
@@ -63,7 +63,7 @@ final class kc extends bh {
                 }
               }
               L4: {
-                if (-6 == (param1 ^ -1)) {
+                if (param1 == 5) {
                   var4 = -1;
                   var5 = 1;
                   break L4;
@@ -72,7 +72,7 @@ final class kc extends bh {
                 }
               }
               L5: {
-                if (-7 == (param1 ^ -1)) {
+                if (param1 == 6) {
                   var4 = 1;
                   var5 = -1;
                   break L5;
@@ -105,7 +105,7 @@ final class kc extends bh {
                 }
               }
               L9: {
-                if (-13 == (param1 ^ -1)) {
+                if (param1 == 12) {
                   var4 = -1;
                   var5 = -1;
                   break L9;
@@ -159,7 +159,7 @@ final class kc extends bh {
                 }
               }
               L14: {
-                if (-4 == (param1 ^ -1)) {
+                if (param1 == 3) {
                   var4 = -1;
                   break L14;
                 } else {
@@ -176,7 +176,7 @@ final class kc extends bh {
                 }
               }
               L16: {
-                if (-6 == (param1 ^ -1)) {
+                if (param1 == 5) {
                   var4 = -1;
                   var5 = 1;
                   break L16;
@@ -185,7 +185,7 @@ final class kc extends bh {
                 }
               }
               L17: {
-                if (-7 == (param1 ^ -1)) {
+                if (param1 == 6) {
                   var4 = 1;
                   var5 = -1;
                   break L17;
@@ -218,7 +218,7 @@ final class kc extends bh {
                 }
               }
               L21: {
-                if (-13 == (param1 ^ -1)) {
+                if (param1 == 12) {
                   var4 = -1;
                   var5 = -1;
                   break L21;
@@ -273,7 +273,7 @@ final class kc extends bh {
               }
             }
             L26: {
-              if (-4 == (param1 ^ -1)) {
+              if (param1 == 3) {
                 var4 = -1;
                 break L26;
               } else {
@@ -290,7 +290,7 @@ final class kc extends bh {
               }
             }
             L28: {
-              if (-6 == (param1 ^ -1)) {
+              if (param1 == 5) {
                 var4 = -1;
                 var5 = 1;
                 break L28;
@@ -299,7 +299,7 @@ final class kc extends bh {
               }
             }
             L29: {
-              if (-7 == (param1 ^ -1)) {
+              if (param1 == 6) {
                 var4 = 1;
                 var5 = -1;
                 break L29;
@@ -318,7 +318,7 @@ final class kc extends bh {
                   }
                 }
                 L31: {
-                  if (-13 == (param1 ^ -1)) {
+                  if (param1 == 12) {
                     var4 = -1;
                     var5 = -1;
                     break L31;
@@ -367,7 +367,7 @@ final class kc extends bh {
                   }
                 }
                 L36: {
-                  if (-13 == (param1 ^ -1)) {
+                  if (param1 == 12) {
                     var4 = -1;
                     var5 = -1;
                     break L36;
@@ -417,7 +417,7 @@ final class kc extends bh {
                 }
               }
               L41: {
-                if (-13 == (param1 ^ -1)) {
+                if (param1 == 12) {
                   var4 = -1;
                   var5 = -1;
                   break L41;
@@ -548,9 +548,6 @@ final class kc extends bh {
     public static void a(int param0) {
         field_q = null;
         field_s = null;
-        if (param0 < 40) {
-            field_s = null;
-        }
     }
 
     static {

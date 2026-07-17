@@ -162,7 +162,7 @@ public final class Transmogrify extends ig {
                 rb.a(0, -377);
                 if (vc.e(false)) {
                   var3 = ((Transmogrify) this).f((byte) 102);
-                  if ((var3 ^ -1) != -3) {
+                  if (var3 != 2) {
                     break L10;
                   } else {
                     jd.a(240, 10, eh.field_c, 3, wf.field_d.field_y, 320, (kg) (Object) wf.field_d, wf.field_d.field_y * 3 / 2, 3, pf.field_h, false);
@@ -192,29 +192,40 @@ public final class Transmogrify extends ig {
 
     final static void m(int param0) {
         hj var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
-        L0: {
-          var3 = field_A ? 1 : 0;
-          if (param0 > 85) {
-            break L0;
-          } else {
-            field_B = null;
-            break L0;
+        RuntimeException decompiledCaughtException = null;
+        var3 = field_A ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              if (param0 > 85) {
+                break L1;
+              } else {
+                field_B = null;
+                break L1;
+              }
+            }
+            var1 = ff.field_D;
+            L2: while (true) {
+              if (!cg.g(-5591)) {
+                break L0;
+              } else {
+                var1.a(false, 8);
+                int fieldTemp$9 = var1.field_h + 1;
+                var1.field_h = var1.field_h + 1;
+                var2 = fieldTemp$9;
+                lc.a((byte) 65, var1);
+                ff.field_D.a((byte) -42, var1.field_h - var2);
+                continue L2;
+              }
+            }
           }
-        }
-        var1 = ff.field_D;
-        L1: while (true) {
-          if (!cg.g(-5591)) {
-            return;
-          } else {
-            var1.a(false, 8);
-            var1.field_h = var1.field_h + 1;
-            var2 = var1.field_h + 1;
-            lc.a((byte) 65, var1);
-            ff.field_D.a((byte) -42, var1.field_h - var2);
-            continue L1;
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw ch.a((Throwable) (Object) var1_ref, "Transmogrify.I(" + param0 + 41);
         }
     }
 
@@ -415,7 +426,7 @@ public final class Transmogrify extends ig {
                 break L0;
               } else {
                 lc.field_q = lc.field_q - 1;
-                if ((lc.field_q ^ -1) != -1) {
+                if (lc.field_q != 0) {
                   break L0;
                 } else {
                   lb.field_i = 0;
@@ -424,7 +435,7 @@ public final class Transmogrify extends ig {
               }
             } else {
               lc.field_q = lc.field_q + 1;
-              if ((lc.field_q ^ -1) != -17) {
+              if (lc.field_q != 16) {
                 break L0;
               } else {
                 L3: {
@@ -441,10 +452,10 @@ public final class Transmogrify extends ig {
               }
             }
           } else {
-            if ((be.field_q ^ -1) == (qf.field_d ^ -1)) {
+            if (~be.field_q == ~qf.field_d) {
               if (be.field_q == -1) {
                 ia.d(80);
-                if (-2 == (qf.field_d ^ -1)) {
+                if (qf.field_d == 1) {
                   oh.field_j = oh.field_j + 1;
                   g.field_z = 0;
                   break L0;
@@ -456,7 +467,7 @@ public final class Transmogrify extends ig {
                 if (oh.field_j <= 2) {
                   break L0;
                 } else {
-                  if (-11 < (n.field_a ^ -1)) {
+                  if (n.field_a < 10) {
                     wk.field_c = wk.field_c + 1;
                     dc.field_a = dc.field_a + 1;
                     break L0;
@@ -467,12 +478,13 @@ public final class Transmogrify extends ig {
               }
             } else {
               L4: {
+                int fieldTemp$1 = lc.field_q + 1;
                 lc.field_q = lc.field_q + 1;
-                if (16 != lc.field_q + 1) {
-                  if ((lc.field_q ^ -1) != -2) {
+                if (16 != fieldTemp$1) {
+                  if (lc.field_q != 1) {
                     break L4;
                   } else {
-                    if ((qf.field_d ^ -1) <= -1) {
+                    if (qf.field_d >= 0) {
                       L5: {
                         if (-1 != be.field_q) {
                           ej.field_l[qf.field_d].a(ej.field_l[be.field_q].field_j.field_f, param0 ^ 10923);
@@ -499,7 +511,7 @@ public final class Transmogrify extends ig {
                           stackIn_22_1 = stackOut_21_1;
                           stackIn_22_2 = stackOut_21_2;
                           stackIn_22_3 = stackOut_21_3;
-                          if (-1 == (hc.field_u ^ -1)) {
+                          if (hc.field_u == 0) {
                             stackOut_23_0 = stackIn_23_0;
                             stackOut_23_1 = stackIn_23_1;
                             stackOut_23_2 = (mi) (Object) stackIn_23_2;
@@ -665,7 +677,7 @@ public final class Transmogrify extends ig {
                           stackIn_31_5 = stackOut_30_5;
                           stackIn_31_6 = stackOut_30_6;
                           stackIn_31_7 = stackOut_30_7;
-                          if (-1 == (hc.field_u ^ -1)) {
+                          if (hc.field_u == 0) {
                             stackOut_32_0 = (int[]) (Object) stackIn_32_0;
                             stackOut_32_1 = stackIn_32_1;
                             stackOut_32_2 = stackIn_32_2;
@@ -726,7 +738,7 @@ public final class Transmogrify extends ig {
                     }
                   }
                   L11: {
-                    if (-6 != (be.field_q ^ -1)) {
+                    if (be.field_q != 5) {
                       break L11;
                     } else {
                       if (qj.b((byte) 99)) {
@@ -742,7 +754,7 @@ public final class Transmogrify extends ig {
                   }
                   lc.field_q = 0;
                   be.field_q = qf.field_d;
-                  if ((be.field_q ^ -1) == -1) {
+                  if (be.field_q == 0) {
                     wd.a(17099, true, bd.field_u[6]);
                     break L4;
                   } else {
@@ -1061,7 +1073,7 @@ public final class Transmogrify extends ig {
                     mk.field_y.d(337, 14, 0);
                     var4 = 0;
                     L12: while (true) {
-                      if ((var4 ^ -1) <= (sb.field_h.length ^ -1)) {
+                      if (~var4 <= ~sb.field_h.length) {
                         L13: {
                           rk.field_r[4].e();
                           uj.field_e.f(0, 0);
@@ -1082,7 +1094,7 @@ public final class Transmogrify extends ig {
                           rk.field_r[1].e();
                           uj.field_e.f(0, 0);
                           if (!wl.a(false, 0)) {
-                            pc.a("", "pausemenu_nobox", oi.field_g, param0 ^ -1).c(0, 0);
+                            pc.a("", "pausemenu_nobox", oi.field_g, ~param0).c(0, 0);
                             break L14;
                           } else {
                             pc.a("halloween", "pausemenu_nobox", oi.field_g, -127).c(0, 0);
@@ -1098,7 +1110,7 @@ public final class Transmogrify extends ig {
                         return false;
                       } else {
                         L15: {
-                          if ((sb.field_h[var4] ^ -1) != -1) {
+                          if (sb.field_h[var4] != 0) {
                             sb.field_h[var4] = 16777215;
                             break L15;
                           } else {
@@ -1114,7 +1126,7 @@ public final class Transmogrify extends ig {
                       if (l.field_a == null) {
                         var3 = 0;
                         L16: while (true) {
-                          if ((var3 ^ -1) <= -9) {
+                          if (var3 >= 8) {
                             be.field_q = 0;
                             ek.a(118);
                             el.b(-6491);
@@ -1133,16 +1145,17 @@ public final class Transmogrify extends ig {
                         var5_int = 0;
                         L17: while (true) {
                           if (var5_int >= var15.length) {
+                            int incrementValue$3 = var4;
                             var4--;
-                            var16 = new ad[var4];
+                            var16 = new ad[incrementValue$3];
                             var5 = var16;
                             var6_int = var15.length - 1;
                             L18: while (true) {
-                              if (-1 < (var6_int ^ -1)) {
+                              if (var6_int < 0) {
                                 we.field_l = new nf[var16.length];
                                 var6_int = 0;
                                 L19: while (true) {
-                                  if ((var6_int ^ -1) <= (we.field_l.length ^ -1)) {
+                                  if (~var6_int <= ~we.field_l.length) {
                                     var6 = we.field_l[am.field_n];
                                     var17 = w.a(de.field_d, 1, var6, (byte) 60, var6.field_d.charAt(0));
                                     var17.field_g = 1000;
@@ -1151,8 +1164,9 @@ public final class Transmogrify extends ig {
                                     ob.a(1, 1, var17, 0);
                                     ue.field_c[1].field_h = var6.field_c.field_D - -8;
                                     var17.d(1);
-                                    sg.field_p = w.a(de.field_d, 1, var6, (byte) 88, var6.field_n.charAt(1));
-                                    var18 = w.a(de.field_d, 1, var6, (byte) 88, var6.field_n.charAt(1));
+                                    sj dupTemp$4 = w.a(de.field_d, 1, var6, (byte) 88, var6.field_n.charAt(1));
+                                    sg.field_p = dupTemp$4;
+                                    var18 = dupTemp$4;
                                     var7 = var18;
                                     var7.field_g = 1000;
                                     var9 = var7;
@@ -1182,8 +1196,9 @@ public final class Transmogrify extends ig {
                               } else {
                                 L21: {
                                   if (var15[var6_int] != null) {
+                                    int incrementValue$5 = var4;
                                     var4--;
-                                    var5[var4] = var15[var6_int];
+                                    var5[incrementValue$5] = var15[var6_int];
                                     break L21;
                                   } else {
                                     break L21;
@@ -1258,7 +1273,7 @@ public final class Transmogrify extends ig {
                       var13 = fc.field_h;
                       var4 = 0;
                       L25: while (true) {
-                        if ((var13.length ^ -1) >= (var4 ^ -1)) {
+                        if (~var13.length >= ~var4) {
                           L26: {
                             if (wl.a(false, 0)) {
                               ij.field_h = pc.a("halloween", "intro_host", oi.field_g, -128);
@@ -1315,7 +1330,7 @@ public final class Transmogrify extends ig {
                     jk.field_x = new mg(ej.a((byte) -43, oi.field_g, "var_button", ""));
                     var5_int = wf.field_d.a(mc.field_a[0]);
                     var6_int = wf.field_d.a(mc.field_a[1]);
-                    if ((var5_int ^ -1) > (var6_int ^ -1)) {
+                    if (~var5_int > ~var6_int) {
                       var5_int = var6_int;
                       break L27;
                     } else {
@@ -1325,7 +1340,7 @@ public final class Transmogrify extends ig {
                   L28: {
                     var6_int = wf.field_d.a(mc.field_a[2]);
                     tb.field_b = new ti[3];
-                    if ((var6_int ^ -1) >= (var5_int ^ -1)) {
+                    if (~var6_int >= ~var5_int) {
                       break L28;
                     } else {
                       var5_int = var6_int;
@@ -1346,13 +1361,13 @@ public final class Transmogrify extends ig {
                       dk.a(var7_int, mk.field_B, -28018, 0, 0, var5_int);
                       var9_int = 0;
                       L30: while (true) {
-                        if ((sb.field_h.length ^ -1) >= (var9_int ^ -1)) {
-                          wf.field_d.c(mc.field_a[var8_int], var5_int >> 828777697, wf.field_d.field_y + 2, 1, -1);
+                        if (~sb.field_h.length >= ~var9_int) {
+                          wf.field_d.c(mc.field_a[var8_int], var5_int >> 1, wf.field_d.field_y + 2, 1, -1);
                           var8_int++;
                           continue L29;
                         } else {
                           L31: {
-                            if (-1 == (sb.field_h[var9_int] ^ -1)) {
+                            if (sb.field_h[var9_int] == 0) {
                               break L31;
                             } else {
                               if (7500402 <= sb.field_h[var9_int]) {
@@ -1431,27 +1446,12 @@ public final class Transmogrify extends ig {
     }
 
     private final void n(int param0) {
-        L0: {
-          if (qj.b((byte) 126)) {
-            break L0;
-          } else {
-            if (kb.field_n == null) {
-              kb.field_n = l.a((byte) 12, 4);
-              break L0;
-            } else {
-              break L0;
+        if (!qj.b((byte) 126)) {
+            if (!(kb.field_n != null)) {
+                kb.field_n = l.a((byte) 12, 4);
             }
-          }
         }
-        L1: {
-          wd.a(param0 + -15099, false, bd.field_u[0]);
-          if (param0 == 32198) {
-            break L1;
-          } else {
-            ((Transmogrify) this).c(9);
-            break L1;
-          }
-        }
+        wd.a(17099, false, bd.field_u[0]);
     }
 
     final static boolean d(boolean param0) {
@@ -1467,32 +1467,19 @@ public final class Transmogrify extends ig {
     }
 
     private final void j(int param0) {
-        L0: {
-          if (null == nk.field_d) {
-            break L0;
-          } else {
+        if (null != nk.field_d) {
             dl.a(nk.field_d, (byte) 119);
             nk.field_d = null;
             el.b(-6491);
-            break L0;
-          }
         }
-        L1: {
-          oi.field_g = cg.a((byte) -82, 1);
-          pc.field_a = cg.a((byte) -82, 2);
-          di.field_h = cg.a((byte) -82, 3);
-          be.field_n = cg.a((byte) -82, 4);
-          ta.field_d = cg.a((byte) -82, 5);
-          l.field_a = cg.a((byte) -82, 6);
-          kk.field_a = cg.a((byte) -82, 7);
-          of.b(22);
-          if (param0 == -7632) {
-            break L1;
-          } else {
-            String discarded$2 = Transmogrify.k(115);
-            break L1;
-          }
-        }
+        oi.field_g = cg.a((byte) -82, 1);
+        pc.field_a = cg.a((byte) -82, 2);
+        di.field_h = cg.a((byte) -82, 3);
+        be.field_n = cg.a((byte) -82, 4);
+        ta.field_d = cg.a((byte) -82, 5);
+        l.field_a = cg.a((byte) -82, 6);
+        kk.field_a = cg.a((byte) -82, 7);
+        of.b(22);
     }
 
     final void c(int param0) {

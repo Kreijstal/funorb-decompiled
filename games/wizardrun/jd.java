@@ -12,18 +12,23 @@ final class jd {
     private int field_e;
 
     final void a(rk param0, long param1, int param2) {
+        rk var5 = null;
         if (param2 <= 103) {
             return;
         }
-        if (!(param0.field_l == null)) {
-            param0.b(false);
+        try {
+            if (!(param0.field_l == null)) {
+                param0.b(false);
+            }
+            var5 = ((jd) this).field_d[(int)((long)(((jd) this).field_e + -1) & param1)];
+            param0.field_i = var5;
+            param0.field_l = var5.field_l;
+            param0.field_l.field_i = param0;
+            param0.field_i.field_l = param0;
+            param0.field_o = param1;
+        } catch (RuntimeException runtimeException) {
+            throw bd.a((Throwable) (Object) runtimeException, "jd.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }
-        rk var5 = ((jd) this).field_d[(int)((long)(((jd) this).field_e + -1) & param1)];
-        param0.field_i = var5;
-        param0.field_l = var5.field_l;
-        param0.field_l.field_i = param0;
-        param0.field_i.field_l = param0;
-        param0.field_o = param1;
     }
 
     final rk a(boolean param0) {
@@ -40,7 +45,7 @@ final class jd {
                 ((jd) this).field_h = null;
                 return null;
               } else {
-                if ((((jd) this).field_h.field_o ^ -1L) == (((jd) this).field_g ^ -1L)) {
+                if (~((jd) this).field_h.field_o == ~((jd) this).field_g) {
                   var3 = ((jd) this).field_h;
                   ((jd) this).field_h = ((jd) this).field_h.field_i;
                   return var3;
@@ -56,7 +61,7 @@ final class jd {
                 ((jd) this).field_h = null;
                 return null;
               } else {
-                if ((((jd) this).field_h.field_o ^ -1L) == (((jd) this).field_g ^ -1L)) {
+                if (~((jd) this).field_h.field_o == ~((jd) this).field_g) {
                   var3 = ((jd) this).field_h;
                   ((jd) this).field_h = ((jd) this).field_h.field_i;
                   return var3;
@@ -96,7 +101,7 @@ final class jd {
               ((jd) this).field_h = null;
               return null;
             } else {
-              if ((param0 ^ -1L) != (((jd) this).field_h.field_o ^ -1L)) {
+              if (~param0 != ~((jd) this).field_h.field_o) {
                 ((jd) this).field_h = ((jd) this).field_h.field_i;
                 continue L0;
               } else {
@@ -112,7 +117,7 @@ final class jd {
               ((jd) this).field_h = null;
               return null;
             } else {
-              if ((param0 ^ -1L) != (((jd) this).field_h.field_o ^ -1L)) {
+              if (~param0 != ~((jd) this).field_h.field_o) {
                 ((jd) this).field_h = ((jd) this).field_h.field_i;
                 continue L1;
               } else {

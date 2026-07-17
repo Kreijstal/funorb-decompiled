@@ -12,8 +12,9 @@ final class vk extends me {
         ((vk) this).field_i = param0.a(((vk) this).field_i, (byte) -128);
         ((vk) this).field_j = param0.a((byte) -128, ((vk) this).field_j);
         if (((vk) this).field_k == ((vk) this).field_l) {
-          ((vk) this).field_l = param0.a(((vk) this).field_k, (byte) 101);
-          ((vk) this).field_k = param0.a(((vk) this).field_k, (byte) 101);
+          int dupTemp$2 = param0.a(((vk) this).field_k, (byte) 101);
+          ((vk) this).field_l = dupTemp$2;
+          ((vk) this).field_k = dupTemp$2;
           return (vk) this;
         } else {
           L0: {

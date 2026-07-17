@@ -14,9 +14,6 @@ final class ae {
     public static void a(byte param0) {
         field_a = null;
         field_b = null;
-        if (param0 != -67) {
-            return;
-        }
         field_d = null;
     }
 

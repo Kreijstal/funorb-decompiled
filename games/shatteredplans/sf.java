@@ -13,20 +13,10 @@ final class sf {
 
     public static void a(byte param0) {
         field_f = null;
-        if (param0 != 82) {
-          sf.a((byte) -109, 97);
-          field_a = null;
-          field_g = null;
-          field_h = null;
-          field_d = null;
-          return;
-        } else {
-          field_a = null;
-          field_g = null;
-          field_h = null;
-          field_d = null;
-          return;
-        }
+        field_a = null;
+        field_g = null;
+        field_h = null;
+        field_d = null;
     }
 
     final static void a(byte param0, int param1) {
@@ -51,8 +41,12 @@ final class sf {
     }
 
     sf(gm param0, int param1) {
-        ((sf) this).field_c = param1;
-        ((sf) this).field_b = null;
+        try {
+            ((sf) this).field_c = param1;
+            ((sf) this).field_b = null;
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "sf.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     static {

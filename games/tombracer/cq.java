@@ -13,7 +13,7 @@ final class cq {
         field_b = null;
         field_e = null;
         field_a = null;
-        int var1 = -104 / ((param0 - 18) / 32);
+        int var1 = 34;
         field_c = null;
         field_d = null;
     }

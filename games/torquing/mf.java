@@ -46,9 +46,9 @@ final class mf extends am {
             var9 = var30[1];
             var10 = var30[2];
             for (var11 = 0; ci.field_c > var11; var11++) {
-                var8[var11] = ((mf) this).field_v - -(var31[var11] * ((mf) this).field_y >> 471891468);
-                var9[var11] = (var32[var11] * ((mf) this).field_y >> -1029241972) + ((mf) this).field_v;
-                var10[var11] = ((mf) this).field_v - -(var33[var11] * ((mf) this).field_y >> -1471040980);
+                var8[var11] = ((mf) this).field_v - -(var31[var11] * ((mf) this).field_y >> 12);
+                var9[var11] = (var32[var11] * ((mf) this).field_y >> 12) + ((mf) this).field_v;
+                var10[var11] = ((mf) this).field_v - -(var33[var11] * ((mf) this).field_y >> 12);
             }
         }
         return var13;
@@ -65,7 +65,7 @@ final class mf extends am {
         if (!(kb.field_h)) {
             throw new IllegalStateException();
         }
-        r.field_c = param0;
+        r.field_c = true;
         cb.a(false, -27);
         op.field_i = 0;
     }
@@ -80,59 +80,109 @@ final class mf extends am {
     }
 
     final void a(fj param0, int param1, int param2) {
-        int var4 = 0;
+        int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
-        Object stackIn_10_0 = null;
         Object stackIn_11_0 = null;
         Object stackIn_12_0 = null;
-        int stackIn_12_1 = 0;
-        Object stackOut_9_0 = null;
+        Object stackIn_13_0 = null;
+        int stackIn_13_1 = 0;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_18_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        Object stackOut_10_0 = null;
+        Object stackOut_12_0 = null;
+        int stackOut_12_1 = 0;
         Object stackOut_11_0 = null;
         int stackOut_11_1 = 0;
-        Object stackOut_10_0 = null;
-        int stackOut_10_1 = 0;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        String stackOut_17_2 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
         var5 = Torquing.field_u;
-        if (param1 == 35) {
+        try {
           L0: {
-            var4 = param2;
-            if (-1 == (var4 ^ -1)) {
-              ((mf) this).field_v = param0.i(7088);
-              break L0;
-            } else {
-              if (1 != var4) {
-                if ((var4 ^ -1) == -3) {
-                  L1: {
-                    stackOut_9_0 = this;
-                    stackIn_11_0 = stackOut_9_0;
-                    stackIn_10_0 = stackOut_9_0;
-                    if (1 != param0.i((byte) -101)) {
-                      stackOut_11_0 = this;
-                      stackOut_11_1 = 0;
-                      stackIn_12_0 = stackOut_11_0;
-                      stackIn_12_1 = stackOut_11_1;
+            if (param1 == 35) {
+              L1: {
+                var4_int = param2;
+                if (var4_int == 0) {
+                  ((mf) this).field_v = param0.i(7088);
+                  break L1;
+                } else {
+                  if (1 != var4_int) {
+                    if (var4_int == 2) {
+                      L2: {
+                        stackOut_10_0 = this;
+                        stackIn_12_0 = stackOut_10_0;
+                        stackIn_11_0 = stackOut_10_0;
+                        if (1 != param0.i((byte) -101)) {
+                          stackOut_12_0 = this;
+                          stackOut_12_1 = 0;
+                          stackIn_13_0 = stackOut_12_0;
+                          stackIn_13_1 = stackOut_12_1;
+                          break L2;
+                        } else {
+                          stackOut_11_0 = this;
+                          stackOut_11_1 = 1;
+                          stackIn_13_0 = stackOut_11_0;
+                          stackIn_13_1 = stackOut_11_1;
+                          break L2;
+                        }
+                      }
+                      ((mf) this).field_p = stackIn_13_1 != 0;
                       break L1;
                     } else {
-                      stackOut_10_0 = this;
-                      stackOut_10_1 = 1;
-                      stackIn_12_0 = stackOut_10_0;
-                      stackIn_12_1 = stackOut_10_1;
                       break L1;
                     }
+                  } else {
+                    ((mf) this).field_x = param0.i(7088);
+                    break L1;
                   }
-                  ((mf) this).field_p = stackIn_12_1 != 0;
-                  break L0;
-                } else {
-                  break L0;
                 }
-              } else {
-                ((mf) this).field_x = param0.i(7088);
-                break L0;
               }
+              break L0;
+            } else {
+              return;
             }
           }
-          return;
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var4 = decompiledCaughtException;
+            stackOut_15_0 = (RuntimeException) var4;
+            stackOut_15_1 = new StringBuilder().append("mf.H(");
+            stackIn_17_0 = stackOut_15_0;
+            stackIn_17_1 = stackOut_15_1;
+            stackIn_16_0 = stackOut_15_0;
+            stackIn_16_1 = stackOut_15_1;
+            if (param0 == null) {
+              stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+              stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+              stackOut_17_2 = "null";
+              stackIn_18_0 = stackOut_17_0;
+              stackIn_18_1 = stackOut_17_1;
+              stackIn_18_2 = stackOut_17_2;
+              break L3;
+            } else {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "{...}";
+              stackIn_18_0 = stackOut_16_0;
+              stackIn_18_1 = stackOut_16_1;
+              stackIn_18_2 = stackOut_16_2;
+              break L3;
+            }
+          }
+          throw rb.a((Throwable) (Object) stackIn_18_0, stackIn_18_2 + 44 + param1 + 44 + param2 + 41);
         }
     }
 
@@ -148,7 +198,7 @@ final class mf extends am {
         if (((mf) this).field_l.field_b) {
             var4 = ((mf) this).b(0, 0, param1);
             for (var5 = 0; var5 < ci.field_c; var5++) {
-                var7[var5] = (((mf) this).field_y * var4[var5] >> 721064236) + ((mf) this).field_v;
+                var7[var5] = (((mf) this).field_y * var4[var5] >> 12) + ((mf) this).field_v;
             }
         }
         return var3;
@@ -156,12 +206,12 @@ final class mf extends am {
 
     final static char b(byte param0, int param1) {
         int var3 = 0;
-        int var2 = param0 & param1;
+        int var2 = param0 & 255;
         if (0 == var2) {
             throw new IllegalArgumentException("" + Integer.toString(var2, 16));
         }
-        if ((var2 ^ -1) <= -129) {
-            if (-161 < (var2 ^ -1)) {
+        if (var2 >= 128) {
+            if (var2 < 160) {
                 var3 = ef.field_c[var2 + -128];
                 if (!(var3 != 0)) {
                     var3 = 63;

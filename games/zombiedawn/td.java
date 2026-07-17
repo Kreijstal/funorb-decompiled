@@ -9,23 +9,28 @@ final class td {
     static long field_e;
 
     final static void a(int param0, byte param1) {
+        RuntimeException var2 = null;
         int var3 = 0;
         nn var4 = null;
+        RuntimeException decompiledCaughtException = null;
         var3 = ZombieDawn.field_J;
-        var4 = (nn) (Object) ro.field_a.b((byte) 26);
-        L0: while (true) {
-          if (var4 == null) {
-            if (param1 > -62) {
-              field_b = null;
-              return;
-            } else {
-              return;
+        try {
+          L0: {
+            var4 = (nn) (Object) ro.field_a.b((byte) 26);
+            L1: while (true) {
+              if (var4 == null) {
+                break L0;
+              } else {
+                pi.a((byte) 25, param0, var4);
+                var4 = (nn) (Object) ro.field_a.a(false);
+                continue L1;
+              }
             }
-          } else {
-            pi.a((byte) 25, param0, var4);
-            var4 = (nn) (Object) ro.field_a.a(false);
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw sh.a((Throwable) (Object) var2, "td.A(" + param0 + 44 + -95 + 41);
         }
     }
 

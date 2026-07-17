@@ -73,7 +73,7 @@ final class th {
           if (var2 == 0) {
             break L0;
           } else {
-            ((rb) param0).field_g = ((rb) param0).field_g - 1;
+            param0.field_g = param0.field_g - 1;
             ((th) this).field_u = new wh();
             ((th) this).field_u.b(param0);
             ((th) this).field_t = new wh();
@@ -86,7 +86,7 @@ final class th {
           if (var2 == 0) {
             break L1;
           } else {
-            ((rb) param0).field_g = ((rb) param0).field_g - 1;
+            param0.field_g = param0.field_g - 1;
             ((th) this).field_i = new wh();
             ((th) this).field_i.b(param0);
             ((th) this).field_y = new wh();
@@ -99,7 +99,7 @@ final class th {
           if (var2 == 0) {
             break L2;
           } else {
-            ((rb) param0).field_g = ((rb) param0).field_g - 1;
+            param0.field_g = param0.field_g - 1;
             ((th) this).field_b = new wh();
             ((th) this).field_b.b(param0);
             ((th) this).field_j = new wh();
@@ -219,7 +219,7 @@ final class th {
                             }
                           }
                           L7: {
-                            // wide iinc 11 256
+                            var11 += 256;
                             if (var11 < var12) {
                               break L7;
                             } else {
@@ -318,7 +318,7 @@ final class th {
                                 if (var14 < param0 - var12) {
                                   var12 = ((th) this).field_p.a(0, (float)var11 / 65536.0f);
                                   var13 = ((th) this).field_p.a(1, (float)var11 / 65536.0f);
-                                  // wide iinc 15 128
+                                  var15 += 128;
                                   continue L15;
                                 } else {
                                   L18: while (true) {

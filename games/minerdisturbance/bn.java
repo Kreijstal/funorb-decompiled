@@ -23,82 +23,83 @@ final class bn implements uj {
         field_d = null;
         field_b = null;
         field_a = null;
-        if (param0 != 160) {
-            boolean discarded$0 = bn.a(-15, '￬');
-        }
     }
 
     final static boolean a(int param0, char param1) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         char[] var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        L0: {
-          L1: {
-            var6 = MinerDisturbance.field_ab;
-            if (param1 <= 0) {
-              break L1;
-            } else {
-              if (128 > param1) {
-                break L0;
-              } else {
-                break L1;
+        int stackIn_8_0 = 0;
+        int stackIn_15_0 = 0;
+        int stackIn_18_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_17_0 = 0;
+        int stackOut_14_0 = 0;
+        int stackOut_7_0 = 0;
+        var6 = MinerDisturbance.field_ab;
+        try {
+          L0: {
+            L1: {
+              L2: {
+                if (param1 <= 0) {
+                  break L2;
+                } else {
+                  if (128 > param1) {
+                    break L1;
+                  } else {
+                    break L2;
+                  }
+                }
               }
-            }
-          }
-          L2: {
-            if (param1 < 160) {
-              var2 = -111 / ((param0 - 28) / 63);
+              L3: {
+                if (param1 < 160) {
+                  break L3;
+                } else {
+                  if (param1 <= 255) {
+                    break L1;
+                  } else {
+                    break L3;
+                  }
+                }
+              }
+              var2_int = -111 / ((param0 - 28) / 63);
               if (param1 != 0) {
                 var3 = tk.field_e;
                 var4 = 0;
-                L3: while (true) {
+                L4: while (true) {
                   if (var4 >= var3.length) {
-                    break L2;
+                    stackOut_17_0 = 0;
+                    stackIn_18_0 = stackOut_17_0;
+                    break L0;
                   } else {
                     var5 = var3[var4];
                     if (var5 != param1) {
                       var4++;
-                      continue L3;
+                      continue L4;
                     } else {
-                      return true;
+                      stackOut_14_0 = 1;
+                      stackIn_15_0 = stackOut_14_0;
+                      return stackIn_15_0 != 0;
                     }
                   }
                 }
               } else {
-                break L2;
-              }
-            } else {
-              if (param1 <= 255) {
-                break L0;
-              } else {
-                var2 = -111 / ((param0 - 28) / 63);
-                if (param1 != 0) {
-                  var3 = tk.field_e;
-                  var4 = 0;
-                  L4: while (true) {
-                    if (var4 >= var3.length) {
-                      break L2;
-                    } else {
-                      var5 = var3[var4];
-                      if (var5 != param1) {
-                        var4++;
-                        continue L4;
-                      } else {
-                        return true;
-                      }
-                    }
-                  }
-                } else {
-                  return false;
-                }
+                return false;
               }
             }
+            stackOut_7_0 = 1;
+            stackIn_8_0 = stackOut_7_0;
+            return stackIn_8_0 != 0;
           }
-          return false;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw lj.a((Throwable) (Object) var2, "bn.D(" + param0 + 44 + param1 + 41);
         }
-        return true;
+        return stackIn_18_0 != 0;
     }
 
     static {

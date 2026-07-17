@@ -12,8 +12,9 @@ final class gg extends id {
         ((gg) this).field_k = param0.a((byte) 109, ((gg) this).field_k);
         ((gg) this).field_l = param0.a(((gg) this).field_l, true);
         if (((gg) this).field_j == ((gg) this).field_m) {
-          ((gg) this).field_m = param0.a((byte) 46, ((gg) this).field_j);
-          ((gg) this).field_j = param0.a((byte) 46, ((gg) this).field_j);
+          int dupTemp$2 = param0.a((byte) 46, ((gg) this).field_j);
+          ((gg) this).field_m = dupTemp$2;
+          ((gg) this).field_j = dupTemp$2;
           return (gg) this;
         } else {
           L0: {

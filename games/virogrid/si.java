@@ -13,7 +13,7 @@ final class si {
         int var3 = 0;
         int[] var2 = new int[param0.length];
         for (var3 = param0.length - 1; var3 >= 0; var3--) {
-            var2[var3] = (int)Math.round(param0[var3] * (double)(1 << param1));
+            var2[var3] = (int)Math.round(param0[var3] * (double)65536);
         }
         return var2;
     }
@@ -544,9 +544,9 @@ final class si {
         float stackOut_30_0 = 0.0f;
         float stackOut_28_0 = 0.0f;
         L0: {
-          var1 = (float)((param0 & 16711680) >> 16) / 255.0f;
-          var2 = (float)((param0 & 65280) >> 8) / 255.0f;
-          var3 = (float)(param0 & 255) / 255.0f;
+          var1 = (float)128 / 255.0f;
+          var2 = (float)191 / 255.0f;
+          var3 = (float)255 / 255.0f;
           if (var1 <= var2) {
             if (var2 <= var3) {
               stackOut_6_0 = var3;

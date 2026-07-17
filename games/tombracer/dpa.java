@@ -16,9 +16,9 @@ final class dpa implements fo {
     public final int e(byte param0) {
         if (param0 > -86) {
           dpa.a(-37);
-          return ((dpa) this).field_e.e((byte) -99) + -(((dpa) this).field_h << -1850429168);
+          return ((dpa) this).field_e.e((byte) -99) + -(((dpa) this).field_h << 16);
         } else {
-          return ((dpa) this).field_e.e((byte) -99) + -(((dpa) this).field_h << -1850429168);
+          return ((dpa) this).field_e.e((byte) -99) + -(((dpa) this).field_h << 16);
         }
     }
 
@@ -52,57 +52,33 @@ final class dpa implements fo {
     }
 
     public final void a(int param0, iq param1) {
-        gr var3 = null;
-        ka var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        var3 = ((dpa) this).field_e.c(-85);
+        ka var4 = null;
+        gr var3 = ((dpa) this).field_e.c(-85);
         if (var3 != null) {
-          if (var3.a(-102)) {
-            if (param0 <= 103) {
-              return;
-            } else {
-              L0: {
-                if (-1 == (((dpa) this).field_h ^ -1)) {
-                  var4 = ((dpa) this).field_e.a((dpa) this, 44);
-                  break L0;
-                } else {
-                  var4 = ((dpa) this).field_e.a(107, (dpa) this);
-                  break L0;
-                }
-              }
-              var5 = dfa.a(((dpa) this).field_f, 2048, -54);
-              var6 = ((dpa) this).b((byte) -95);
-              var7 = ((dpa) this).c((byte) 117);
-              var8 = ((dpa) this).e((byte) -106);
-              gqa.a(var5, -83584144, var7, var6, var4, var8);
-              return;
+            if (!var3.a(-102)) {
+                return;
             }
-          } else {
+        }
+        if (param0 <= 103) {
             return;
-          }
-        } else {
-          if (param0 <= 103) {
-            return;
-          } else {
-            L1: {
-              if (-1 == (((dpa) this).field_h ^ -1)) {
-                var4 = ((dpa) this).field_e.a((dpa) this, 44);
-                break L1;
-              } else {
+        }
+        try {
+            if (((dpa) this).field_h != 0) {
                 var4 = ((dpa) this).field_e.a(107, (dpa) this);
-                break L1;
-              }
+            } else {
+                var4 = ((dpa) this).field_e.a((dpa) this, 44);
             }
             var5 = dfa.a(((dpa) this).field_f, 2048, -54);
             var6 = ((dpa) this).b((byte) -95);
             var7 = ((dpa) this).c((byte) 117);
             var8 = ((dpa) this).e((byte) -106);
             gqa.a(var5, -83584144, var7, var6, var4, var8);
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "dpa.DB(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

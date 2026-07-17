@@ -9,12 +9,12 @@ final class bd {
         int var3 = 0;
         java.awt.DisplayMode[] var4 = ((bd) this).field_b.getDisplayModes();
         java.awt.DisplayMode[] var1 = var4;
-        int[] var2 = new int[var4.length << -1993417662];
+        int[] var2 = new int[var4.length << 2];
         for (var3 = 0; var4.length > var3; var3++) {
-            var2[var3 << -1005182750] = var4[var3].getWidth();
-            var2[1 + (var3 << 1470302530)] = var4[var3].getHeight();
-            var2[(var3 << -1112674686) + 2] = var4[var3].getBitDepth();
-            var2[3 + (var3 << 2092355170)] = var4[var3].getRefreshRate();
+            var2[var3 << 2] = var4[var3].getWidth();
+            var2[1 + (var3 << 2)] = var4[var3].getHeight();
+            var2[(var3 << 2) + 2] = var4[var3].getBitDepth();
+            var2[3 + (var3 << 2)] = var4[var3].getRefreshRate();
         }
         return var2;
     }

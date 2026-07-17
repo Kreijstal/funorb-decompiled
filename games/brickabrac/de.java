@@ -48,26 +48,8 @@ final class de extends km {
     }
 
     final static void a(boolean param0, boolean param1) {
-        if (param1) {
-          L0: {
-            if (null != tn.field_m) {
-              tn.field_m.a(true, param0);
-              break L0;
-            } else {
-              break L0;
-            }
-          }
-          return;
-        } else {
-          L1: {
-            if (null != tn.field_m) {
-              tn.field_m.a(true, param0);
-              break L1;
-            } else {
-              break L1;
-            }
-          }
-          return;
+        if (!(null == tn.field_m)) {
+            tn.field_m.a(true, param0);
         }
     }
 
@@ -83,12 +65,12 @@ final class de extends km {
         int var3 = 0;
         int stackIn_8_0 = 0;
         int stackIn_11_0 = 0;
-        int stackOut_7_0;
-        int stackOut_6_0;
-        int stackOut_10_0;
-        int stackOut_9_0;
+        int stackOut_7_0 = 0;
+        int stackOut_6_0 = 0;
+        int stackOut_10_0 = 0;
+        int stackOut_9_0 = 0;
         if (param0 == 460) {
-          if (-1 != (param1 ^ -1)) {
+          if (param1 != 0) {
             if (3 == param1) {
               return false;
             } else {
@@ -128,7 +110,11 @@ final class de extends km {
 
     de(mf param0) {
         super(12, 180, 460, 150, 35, (int[]) null);
-        ((de) this).field_u = param0;
+        try {
+            ((de) this).field_u = param0;
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) (Object) runtimeException, "de.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void a(boolean param0, boolean param1, int param2) {

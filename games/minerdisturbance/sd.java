@@ -18,36 +18,25 @@ final class sd implements Iterable {
         field_d = null;
         field_g = null;
         field_c = null;
-        if (param0 != -1) {
-          field_a = null;
-          field_a = null;
-          return;
-        } else {
-          field_a = null;
-          return;
-        }
+        field_a = null;
     }
 
     final void a(long param0, boolean param1, pi param2) {
-        pi var5 = null;
-        L0: {
-          if (null != param2.field_c) {
+        if (!(null == param2.field_c)) {
             param2.b(34);
-            break L0;
-          } else {
-            break L0;
-          }
         }
-        var5 = ((sd) this).field_b[(int)(param0 & (long)(((sd) this).field_f + -1))];
+        pi var5 = ((sd) this).field_b[(int)(param0 & (long)(((sd) this).field_f + -1))];
         if (!param1) {
-          return;
-        } else {
-          param2.field_c = var5.field_c;
-          param2.field_f = var5;
-          param2.field_c.field_f = param2;
-          param2.field_d = param0;
-          param2.field_f.field_c = param2;
-          return;
+            return;
+        }
+        try {
+            param2.field_c = var5.field_c;
+            param2.field_f = var5;
+            param2.field_c.field_f = param2;
+            param2.field_d = param0;
+            param2.field_f.field_c = param2;
+        } catch (RuntimeException runtimeException) {
+            throw lj.a((Throwable) (Object) runtimeException, "sd.A(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -67,7 +56,7 @@ final class sd implements Iterable {
               return null;
             }
           } else {
-            if ((param1 ^ -1L) != (((sd) this).field_h.field_d ^ -1L)) {
+            if (~param1 != ~((sd) this).field_h.field_d) {
               ((sd) this).field_h = ((sd) this).field_h.field_f;
               continue L0;
             } else {

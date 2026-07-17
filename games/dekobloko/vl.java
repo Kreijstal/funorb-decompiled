@@ -40,7 +40,7 @@ final class vl {
 
     final static int a(int param0, int param1, int param2) {
         int var3 = 0;
-        var3 = param2 >>> 1762660287;
+        var3 = param2 >>> 31;
         if (param0 != 23841) {
           field_k = -119;
           return (param2 + var3) / param1 + -var3;
@@ -52,9 +52,6 @@ final class vl {
     public static void a(boolean param0) {
         field_A = null;
         field_G = null;
-        if (!param0) {
-            field_G = null;
-        }
     }
 
     vl() {
@@ -81,6 +78,6 @@ final class vl {
     }
 
     private static void $cfr$clinit() {
-        field_A = new byte[]{(byte)2, (byte)5, (byte)5, (byte)5, (byte)3};
+        field_A = new byte[]{(byte) 2, (byte) 5, (byte) 5, (byte) 5, (byte) 3};
     }
 }

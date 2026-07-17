@@ -18,7 +18,11 @@ final class vv extends wv {
     vv(int param0, int param1, int param2, int param3, int param4, int[] param5) {
         super(param0, param1, param2, param3, param4, param5);
         ((vv) this).field_s = new dea(0);
-        ((vv) this).field_o = false;
+        try {
+            ((vv) this).field_o = false;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "vv.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void a(boolean param0, boolean param1, int param2) {
@@ -35,8 +39,12 @@ final class vv extends wv {
     }
 
     final static void a(int param0, byte param1, int param2, int param3, da param4, String param5, int param6, int param7, int param8) {
-        param4.a(jg.a(param2, (byte) -76, param3), -1, param8, jg.a(param0, (byte) -121, param7), param6, param5);
-        int var9 = -7 % ((66 - param1) / 47);
+        try {
+            param4.a(jg.a(param2, (byte) -76, param3), -1, param8, jg.a(param0, (byte) -121, param7), param6, param5);
+            int var9_int = -7 % ((66 - param1) / 47);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "vv.BA(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 44 + param6 + 44 + param7 + 44 + param8 + 41);
+        }
     }
 
     private final void h(int param0, int param1) {
@@ -78,13 +86,13 @@ final class vv extends wv {
 
     final void a(byte param0, boolean param1) {
         int var3 = ((vv) this).field_s.e(param0 ^ 103);
-        gg.field_f.a(aaa.a(false) + -gg.field_f.a() >> 718103457, var3 - -(gg.field_f.c() / 2));
+        gg.field_f.a(aaa.a(false) + -gg.field_f.a() >> 1, var3 - -(gg.field_f.c() / 2));
         this.h(-127, var3);
         super.a(param0, param1);
     }
 
     public static void d(int param0) {
-        int var1 = 121 % ((-79 - param0) / 34);
+        int var1 = 0;
         field_q = null;
     }
 

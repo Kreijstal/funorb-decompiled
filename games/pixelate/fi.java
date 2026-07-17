@@ -18,7 +18,7 @@ final class fi {
         int var7 = 0;
         param0 = param0 - (param3.field_A >> 1);
         var5 = param2 - 5;
-        var6 = param2 - 3 - 1;
+        var6 = param2 - 4;
         var7 = 0;
         L0: while (true) {
           if (var7 >= param2) {
@@ -621,8 +621,8 @@ final class fi {
                 var10++;
                 continue L4;
               } else {
-                var8 = (param4 & 16711935) * param5;
-                var9 = (var8 & -16711936) + (param4 * param5 - var8 & 16711680) >>> 8;
+                var8 = (param4 & 16711935) * 40;
+                var9 = (var8 & -16711936) + (param4 * 40 - var8 & 16711680) >>> 8;
                 var8 = t.field_k[var7];
                 var12 = var9 + var8;
                 var9 = (var9 & 16711935) + (var8 & 16711935);

@@ -23,29 +23,110 @@ final class cf implements bo {
     }
 
     public final void a(int param0, kh param1) {
-        int var3 = 0;
+        RuntimeException var3 = null;
+        int var3_int = 0;
         int var4 = 0;
-        int var5 = TombRacer.field_G ? 1 : 0;
-        param1.i(param0 + -192);
-        param1.a((byte) 115, ((cf) this).field_g, 3);
-        for (var3 = 0; ((cf) this).field_g > var3; var3++) {
-            for (var4 = 0; -4 < (var4 ^ -1); var4++) {
-                param1.a((byte) -128, ((cf) this).field_i[var3][var4], 8);
+        int var5 = 0;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        String stackIn_20_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        var5 = TombRacer.field_G ? 1 : 0;
+        try {
+          L0: {
+            param1.i(param0 + -192);
+            param1.a((byte) 115, ((cf) this).field_g, 3);
+            var3_int = 0;
+            L1: while (true) {
+              if (((cf) this).field_g <= var3_int) {
+                var3_int = 0;
+                L2: while (true) {
+                  if (var3_int >= ((cf) this).field_g) {
+                    L3: {
+                      if (param0 == 200) {
+                        break L3;
+                      } else {
+                        field_f = null;
+                        break L3;
+                      }
+                    }
+                    var3_int = 0;
+                    L4: while (true) {
+                      if (((cf) this).field_g <= var3_int) {
+                        param1.a((byte) 55, ((cf) this).field_d - -1, 3);
+                        param1.a((byte) -125, 1 + ((cf) this).field_j, 16);
+                        param1.k(param0 ^ -1826190742);
+                        break L0;
+                      } else {
+                        param1.a((byte) 69, ((cf) this).field_a[var3_int] + 1, 4);
+                        param1.a((byte) -128, ((cf) this).field_h[var3_int], 10);
+                        var3_int++;
+                        continue L4;
+                      }
+                    }
+                  } else {
+                    param1.a((byte) -127, ((cf) this).field_b[var3_int], 10);
+                    var3_int++;
+                    continue L2;
+                  }
+                }
+              } else {
+                var4 = 0;
+                L5: while (true) {
+                  if (var4 >= 3) {
+                    var3_int++;
+                    continue L1;
+                  } else {
+                    param1.a((byte) -128, ((cf) this).field_i[var3_int][var4], 8);
+                    var4++;
+                    continue L5;
+                  }
+                }
+              }
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L6: {
+            var3 = decompiledCaughtException;
+            stackOut_17_0 = (RuntimeException) var3;
+            stackOut_17_1 = new StringBuilder().append("cf.B(").append(param0).append(44);
+            stackIn_19_0 = stackOut_17_0;
+            stackIn_19_1 = stackOut_17_1;
+            stackIn_18_0 = stackOut_17_0;
+            stackIn_18_1 = stackOut_17_1;
+            if (param1 == null) {
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "null";
+              stackIn_20_0 = stackOut_19_0;
+              stackIn_20_1 = stackOut_19_1;
+              stackIn_20_2 = stackOut_19_2;
+              break L6;
+            } else {
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "{...}";
+              stackIn_20_0 = stackOut_18_0;
+              stackIn_20_1 = stackOut_18_1;
+              stackIn_20_2 = stackOut_18_2;
+              break L6;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 41);
         }
-        for (var3 = 0; var3 < ((cf) this).field_g; var3++) {
-            param1.a((byte) -127, ((cf) this).field_b[var3], 10);
-        }
-        if (param0 != 200) {
-            field_f = null;
-        }
-        for (var3 = 0; ((cf) this).field_g > var3; var3++) {
-            param1.a((byte) 69, ((cf) this).field_a[var3] + 1, 4);
-            param1.a((byte) -128, ((cf) this).field_h[var3], 10);
-        }
-        param1.a((byte) 55, ((cf) this).field_d - -1, 3);
-        param1.a((byte) -125, 1 + ((cf) this).field_j, 16);
-        param1.k(param0 ^ -1826190742);
     }
 
     public final String toString() {
@@ -61,65 +142,115 @@ final class cf implements bo {
     }
 
     public final void a(kh param0, byte param1) {
-        int var3 = 0;
+        RuntimeException var3 = null;
+        int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
         Object var6 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        String stackIn_20_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
         var5 = TombRacer.field_G ? 1 : 0;
-        param0.h((byte) -71);
-        ((cf) this).field_g = param0.b((byte) 44, 3);
-        ((cf) this).field_i = new int[((cf) this).field_g][3];
-        var3 = 0;
-        L0: while (true) {
-          if (((cf) this).field_g <= var3) {
-            L1: {
-              if (param1 == -19) {
-                break L1;
-              } else {
-                var6 = null;
-                ((cf) this).a(41, (kh) null);
-                break L1;
-              }
-            }
-            ((cf) this).field_b = new int[((cf) this).field_g];
-            var3 = 0;
-            L2: while (true) {
-              if (((cf) this).field_g <= var3) {
-                ((cf) this).field_a = new int[((cf) this).field_g];
-                ((cf) this).field_h = new int[((cf) this).field_g];
-                var3 = 0;
-                L3: while (true) {
-                  if (var3 >= ((cf) this).field_g) {
-                    ((cf) this).field_d = param0.b((byte) 44, 3) - 1;
-                    ((cf) this).field_j = -1 + param0.b((byte) 44, 16);
-                    param0.i((byte) 98);
-                    return;
+        try {
+          L0: {
+            param0.h((byte) -71);
+            ((cf) this).field_g = param0.b((byte) 44, 3);
+            ((cf) this).field_i = new int[((cf) this).field_g][3];
+            var3_int = 0;
+            L1: while (true) {
+              if (((cf) this).field_g <= var3_int) {
+                L2: {
+                  if (param1 == -19) {
+                    break L2;
                   } else {
-                    ((cf) this).field_a[var3] = -1 + param0.b((byte) 44, 4);
-                    ((cf) this).field_h[var3] = param0.b((byte) 44, 10);
-                    var3++;
+                    var6 = null;
+                    ((cf) this).a(41, (kh) null);
+                    break L2;
+                  }
+                }
+                ((cf) this).field_b = new int[((cf) this).field_g];
+                var3_int = 0;
+                L3: while (true) {
+                  if (((cf) this).field_g <= var3_int) {
+                    ((cf) this).field_a = new int[((cf) this).field_g];
+                    ((cf) this).field_h = new int[((cf) this).field_g];
+                    var3_int = 0;
+                    L4: while (true) {
+                      if (var3_int >= ((cf) this).field_g) {
+                        ((cf) this).field_d = param0.b((byte) 44, 3) - 1;
+                        ((cf) this).field_j = -1 + param0.b((byte) 44, 16);
+                        param0.i((byte) 98);
+                        break L0;
+                      } else {
+                        ((cf) this).field_a[var3_int] = -1 + param0.b((byte) 44, 4);
+                        ((cf) this).field_h[var3_int] = param0.b((byte) 44, 10);
+                        var3_int++;
+                        continue L4;
+                      }
+                    }
+                  } else {
+                    ((cf) this).field_b[var3_int] = param0.b((byte) 44, 10);
+                    var3_int++;
                     continue L3;
                   }
                 }
               } else {
-                ((cf) this).field_b[var3] = param0.b((byte) 44, 10);
-                var3++;
-                continue L2;
-              }
-            }
-          } else {
-            var4 = 0;
-            L4: while (true) {
-              if (-4 >= (var4 ^ -1)) {
-                var3++;
-                continue L0;
-              } else {
-                ((cf) this).field_i[var3][var4] = param0.b((byte) 44, 8);
-                var4++;
-                continue L4;
+                var4 = 0;
+                L5: while (true) {
+                  if (var4 >= 3) {
+                    var3_int++;
+                    continue L1;
+                  } else {
+                    ((cf) this).field_i[var3_int][var4] = param0.b((byte) 44, 8);
+                    var4++;
+                    continue L5;
+                  }
+                }
               }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L6: {
+            var3 = decompiledCaughtException;
+            stackOut_17_0 = (RuntimeException) var3;
+            stackOut_17_1 = new StringBuilder().append("cf.A(");
+            stackIn_19_0 = stackOut_17_0;
+            stackIn_19_1 = stackOut_17_1;
+            stackIn_18_0 = stackOut_17_0;
+            stackIn_18_1 = stackOut_17_1;
+            if (param0 == null) {
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "null";
+              stackIn_20_0 = stackOut_19_0;
+              stackIn_20_1 = stackOut_19_1;
+              stackIn_20_2 = stackOut_19_2;
+              break L6;
+            } else {
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "{...}";
+              stackIn_20_0 = stackOut_18_0;
+              stackIn_20_1 = stackOut_18_1;
+              stackIn_20_2 = stackOut_18_2;
+              break L6;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + param1 + 41);
         }
     }
 
@@ -137,39 +268,79 @@ final class cf implements bo {
     }
 
     final static int a(int param0, int param1, int param2, int param3) {
-        int var5 = TombRacer.field_G ? 1 : 0;
-        if (param1 != -16390) {
-            cf.a(-31);
-        }
-        int var4 = -param2 + param3;
-        if (!(var4 <= 0)) {
-            while (var4 < -param0 / 2) {
-                var4 = var4 + param0;
+        int var4_int = 0;
+        RuntimeException var4 = null;
+        int var5 = 0;
+        int stackIn_10_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_9_0 = 0;
+        var5 = TombRacer.field_G ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              if (param1 == -16390) {
+                break L1;
+              } else {
+                cf.a(-31);
+                break L1;
+              }
             }
-            while (var4 > param0 / 2) {
-                var4 = var4 - param0;
+            L2: {
+              var4_int = -param2 + param3;
+              if (var4_int > 0) {
+                L3: while (true) {
+                  if (var4_int >= -param0 / 2) {
+                    L4: while (true) {
+                      if (var4_int <= param0 / 2) {
+                        break L2;
+                      } else {
+                        var4_int = var4_int - param0;
+                        continue L4;
+                      }
+                    }
+                  } else {
+                    var4_int = var4_int + param0;
+                    continue L3;
+                  }
+                }
+              } else {
+                break L2;
+              }
             }
+            stackOut_9_0 = var4_int;
+            stackIn_10_0 = stackOut_9_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = decompiledCaughtException;
+          throw tba.a((Throwable) (Object) var4, "cf.D(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }
-        return var4;
+        return stackIn_10_0;
     }
 
     final void a(qh param0, int param1) {
+        ff var8 = null;
         int var4 = 0;
         hca var5 = null;
         int var6 = 0;
         int var7 = TombRacer.field_G ? 1 : 0;
-        ff var8 = param0.field_k;
-        for (var4 = param1; var8.field_H.length > var4; var4++) {
-            var5 = var8.field_H[var4];
-            for (var6 = 0; 3 > var6; var6++) {
-                var5.a(true, var6, ((cf) this).field_i[var4][var6]);
+        try {
+            var8 = param0.field_k;
+            for (var4 = param1; var8.field_H.length > var4; var4++) {
+                var5 = var8.field_H[var4];
+                for (var6 = 0; 3 > var6; var6++) {
+                    var5.a(true, var6, ((cf) this).field_i[var4][var6]);
+                }
+                var5.a((byte) 126, ((cf) this).field_b[var4]);
+                var5.b(18202625, ((cf) this).field_a[var4]);
+                var5.f(((cf) this).field_h[var4], -25915);
             }
-            var5.a((byte) 126, ((cf) this).field_b[var4]);
-            var5.b(18202625, ((cf) this).field_a[var4]);
-            var5.f(((cf) this).field_h[var4], -25915);
+            param0.field_k.field_E = ((cf) this).field_j;
+            param0.a((byte) 101, ((cf) this).field_i, ((cf) this).field_d);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "cf.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
-        param0.field_k.field_E = ((cf) this).field_j;
-        param0.a((byte) 101, ((cf) this).field_i, ((cf) this).field_d);
     }
 
     cf(int param0) {

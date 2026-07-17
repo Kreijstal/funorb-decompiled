@@ -11,39 +11,86 @@ final class up extends ji {
     private int field_A;
 
     final void a(byte param0, int param1, ed param2) {
-        int var4 = 0;
+        int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
         var5 = Vertigo2.field_L ? 1 : 0;
-        if (param0 == 110) {
+        try {
           L0: {
-            var4 = param1;
-            if (-1 != var4) {
-              if (-2 != var4) {
-                if (var4 == 2) {
-                  ((up) this).field_A = param2.a((byte) -11);
-                  break L0;
+            if (param0 == 110) {
+              L1: {
+                var4_int = param1;
+                if (var4_int != 0) {
+                  if (var4_int != 1) {
+                    if (var4_int == 2) {
+                      ((up) this).field_A = param2.a((byte) -11);
+                      break L1;
+                    } else {
+                      break L1;
+                    }
+                  } else {
+                    ((up) this).field_E = param2.h(-11);
+                    break L1;
+                  }
                 } else {
-                  break L0;
+                  ((up) this).field_C = param2.h(-11);
+                  break L1;
                 }
-              } else {
-                ((up) this).field_E = param2.h(-11);
-                break L0;
               }
-            } else {
-              ((up) this).field_C = param2.h(-11);
               break L0;
+            } else {
+              return;
             }
           }
-          return;
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var4 = decompiledCaughtException;
+            stackOut_13_0 = (RuntimeException) var4;
+            stackOut_13_1 = new StringBuilder().append("up.C(").append(param0).append(44).append(param1).append(44);
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
+            if (param2 == null) {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L2;
+            } else {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L2;
+            }
+          }
+          throw wn.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 41);
         }
     }
 
     public static void g(int param0) {
-        if (param0 != -3144) {
-            field_y = null;
-        }
         field_B = null;
         field_z = null;
         field_y = null;
@@ -90,8 +137,8 @@ final class up extends ji {
                 L3: {
                   var5 = rh.field_O[var4];
                   var6 = lf.field_y[param0];
-                  var7 = var5 * ((up) this).field_C >> 327136492;
-                  var8 = var6 * ((up) this).field_E >> -1006957460;
+                  var7 = var5 * ((up) this).field_C >> 12;
+                  var8 = var6 * ((up) this).field_E >> 12;
                   var9 = var5 % (4096 / ((up) this).field_C) * ((up) this).field_C;
                   var10 = ((up) this).field_E * (var6 % (4096 / ((up) this).field_E));
                   if (((up) this).field_A <= var10) {
@@ -135,9 +182,9 @@ final class up extends ji {
                   } else {
                     var7 = var7 - var8;
                     L7: while (true) {
-                      if (-1 >= (var7 ^ -1)) {
+                      if (var7 >= 0) {
                         L8: while (true) {
-                          if ((var7 ^ -1) >= -4) {
+                          if (var7 <= 3) {
                             if (var7 <= 0) {
                               break L6;
                             } else {

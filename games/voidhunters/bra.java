@@ -11,9 +11,13 @@ final class bra {
     static int field_d;
 
     bra(ha param0, fs param1, java.awt.Canvas param2) {
-        ((bra) this).field_a = param2;
-        ((bra) this).field_g = param0;
-        ((bra) this).field_b = param1;
+        try {
+            ((bra) this).field_a = param2;
+            ((bra) this).field_g = param0;
+            ((bra) this).field_b = param1;
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "bra.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final t a(byte param0) {
@@ -44,11 +48,6 @@ final class bra {
     }
 
     public static void a(boolean param0) {
-        if (!param0) {
-            bra.a(true);
-            field_f = null;
-            return;
-        }
         field_f = null;
     }
 

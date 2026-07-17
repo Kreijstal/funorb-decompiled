@@ -45,7 +45,7 @@ final class ja implements m {
           break L0;
         }
         L2: {
-          if ((param1 ^ -1) <= -257) {
+          if (param1 >= 256) {
             var2 += 8;
             param1 = param1 >>> 8;
             break L2;
@@ -80,7 +80,7 @@ final class ja implements m {
           }
         }
         L6: {
-          if ((param1 ^ -1) > -2) {
+          if (param1 < 1) {
             break L6;
           } else {
             param1 = param1 >>> 1;
@@ -99,31 +99,45 @@ final class ja implements m {
     }
 
     private final void a(byte param0, jn param1, float param2) {
+        kh var10 = null;
+        byte[] var18 = null;
+        int[] var17 = null;
+        int[] var15 = null;
+        int[] var13 = null;
+        int[] var11 = null;
+        int[] var6 = null;
         int var7 = 0;
-        int var8 = TetraLink.field_J;
-        kh var10 = hd.a(param0 + -5, param1.field_e, ((ja) this).field_c);
-        var10.a();
-        byte[] var14 = var10.field_o;
-        int[] var13 = var10.field_p;
-        int[] var11 = var13;
-        int[] var6 = var11;
-        for (var7 = 0; var7 < var13.length; var7++) {
-            var6[var7] = oa.a(var13[var7], (double)param2, (byte) 45);
-        }
-        param1.field_c = new int[16384];
-        if (128 != var10.field_b) {
-            throw new RuntimeException();
-        }
         int var9 = 0;
-        var7 = var9;
-        while (16384 > var9) {
-            param1.field_c[var9] = var6[pl.a(255, (int) var14[var9])];
-            var9++;
+        int var8 = TetraLink.field_J;
+        try {
+            var10 = hd.a(param0 + -5, param1.field_e, ((ja) this).field_c);
+            var10.a();
+            var18 = var10.field_o;
+            var17 = var10.field_p;
+            var15 = var17;
+            var13 = var15;
+            var11 = var13;
+            var6 = var11;
+            for (var7 = 0; var7 < var17.length; var7++) {
+                var6[var7] = oa.a(var17[var7], (double)param2, (byte) 45);
+            }
+            param1.field_c = new int[16384];
+            if (128 != var10.field_b) {
+                throw new RuntimeException();
+            }
+            var9 = 0;
+            var7 = var9;
+            while (16384 > var9) {
+                param1.field_c[var9] = var6[pl.a(255, (int) var18[var9])];
+                var9++;
+            }
+            if (param0 != 6) {
+                ja.a((byte) 125);
+            }
+            param1.field_f = param2;
+        } catch (RuntimeException runtimeException) {
+            throw oi.a((Throwable) (Object) runtimeException, "ja.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
-        if (param0 != 6) {
-            ja.a((byte) 125);
-        }
-        param1.field_f = param2;
     }
 
     public static void a(byte param0) {
@@ -152,9 +166,6 @@ final class ja implements m {
         if (!(null == hc.field_v)) {
             hc.field_v.b();
         }
-        if (param0 != 0) {
-            int discarded$0 = ja.c(104, -23);
-        }
     }
 
     public final int a(int param0, int param1) {
@@ -173,16 +184,116 @@ final class ja implements m {
     }
 
     ja(ah param0, ah param1) {
+        int[] var3 = null;
+        RuntimeException var3_ref = null;
+        int var4 = 0;
         int var5 = 0;
         bh var6 = null;
-        ((ja) this).field_c = param1;
-        int[] var8 = param0.c(0, 0);
-        int[] var3 = var8;
-        int var4 = var8.length;
-        ((ja) this).field_b = new jn[param0.b(-23126, 0)];
-        for (var5 = 0; var5 < var4; var5++) {
-            var6 = new bh(param0.a(50, var8[var5], 0));
-            ((ja) this).field_b[var8[var5]] = new jn(var6);
+        int[] var8 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        try {
+          L0: {
+            ((ja) this).field_c = param1;
+            var8 = param0.c(0, 0);
+            var3 = var8;
+            var4 = var8.length;
+            ((ja) this).field_b = new jn[param0.b(-23126, 0)];
+            var5 = 0;
+            L1: while (true) {
+              if (var5 >= var4) {
+                break L0;
+              } else {
+                var6 = new bh(param0.a(50, var8[var5], 0));
+                ((ja) this).field_b[var8[var5]] = new jn(var6);
+                var5++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3_ref = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var3_ref;
+            stackOut_5_1 = new StringBuilder().append("ja.<init>(");
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param0 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L2;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L2;
+            }
+          }
+          L3: {
+            stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param1 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L3;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L3;
+            }
+          }
+          throw oi.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
         }
     }
 
@@ -239,7 +350,7 @@ final class ja implements m {
               rd.a(var12.field_c, 0, var5, var6 * 128, -(128 * var6) + 16384);
               rd.a(var12.field_c, 128 * (-var6 + 128), var16, 0, 128 * var6);
               var7 = (3 * param1 + 17) * dh.field_e & 255;
-              if (-129 < (var7 ^ -1)) {
+              if (var7 < 128) {
                 var7 = var7 >> 2;
                 break L3;
               } else {
@@ -248,7 +359,7 @@ final class ja implements m {
             }
             var8 = 0;
             L4: while (true) {
-              if (-16385 >= (var8 ^ -1)) {
+              if (var8 >= 16384) {
                 return var5;
               } else {
                 var9 = var16[var8];
@@ -256,7 +367,7 @@ final class ja implements m {
                 var10 = var7 * var10 & 16711680;
                 var9 = var9 & 16711935;
                 var9 = -16711936 & var9 * var7;
-                var5[var8] = mc.a(var9, var10) >>> -1765847640;
+                var5[var8] = mc.a(var9, var10) >>> 8;
                 var8++;
                 continue L4;
               }

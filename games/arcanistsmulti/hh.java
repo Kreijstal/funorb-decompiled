@@ -13,18 +13,9 @@ abstract class hh {
     public static void b(int param0) {
         field_a = null;
         field_e = null;
-        if (param0 != 1) {
-          field_d = null;
-          field_b = null;
-          field_c = null;
-          field_d = null;
-          return;
-        } else {
-          field_b = null;
-          field_c = null;
-          field_d = null;
-          return;
-        }
+        field_b = null;
+        field_c = null;
+        field_d = null;
     }
 
     abstract void a(int param0, java.awt.Component param1);

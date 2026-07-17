@@ -10,7 +10,7 @@ final class ok {
     public static void a(int param0) {
         field_d = null;
         field_b = null;
-        int var1 = -67 % ((param0 - 81) / 38);
+        int var1 = -1;
         field_a = null;
     }
 
@@ -20,13 +20,13 @@ final class ok {
         if (param7 != 12423) {
           field_a = null;
           param11 = ve.a(param1, param0, param9, param7 + 9488, param11, param12, param2);
-          in.a(param8, param3, param6, param11, param5, param9, param10, param13, (byte) -66, param4);
+          in.a(param8, param3, param6, param11, param5, param9, param10, 16777215, (byte) -66, param4);
           ho.a(24285, param3, param10);
           ko.a(param11, param10, param12, true);
           return;
         } else {
           param11 = ve.a(param1, param0, param9, param7 + 9488, param11, param12, param2);
-          in.a(param8, param3, param6, param11, param5, param9, param10, param13, (byte) -66, param4);
+          in.a(param8, param3, param6, param11, param5, param9, param10, 16777215, (byte) -66, param4);
           ho.a(24285, param3, param10);
           ko.a(param11, param10, param12, true);
           return;

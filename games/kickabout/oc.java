@@ -62,7 +62,7 @@ final class oc {
                   var3 = (Object) (Object) new ot(kw.field_i, ai.field_J, aq.field_f[0], fc.field_g[0], ku.field_c[0], lo.field_j[0], var20);
                   break L0;
                 } else {
-                  var5_ref_int__[var6] = hf.a(lt.field_a[qj.b((int) var18[var6], 255)], qj.b(-16777216, var19[var6] << 831319448));
+                  var5_ref_int__[var6] = hf.a(lt.field_a[qj.b((int) var18[var6], 255)], qj.b(-16777216, var19[var6] << 24));
                   var6++;
                   continue L2;
                 }
@@ -91,12 +91,6 @@ final class oc {
     }
 
     public static void b(byte param0) {
-        if (param0 > -48) {
-            ut discarded$0 = oc.c((byte) 119);
-            field_b = null;
-            field_f = null;
-            return;
-        }
         field_b = null;
         field_f = null;
     }

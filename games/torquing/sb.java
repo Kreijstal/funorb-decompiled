@@ -11,11 +11,6 @@ final class sb extends q {
     static String[] field_n;
 
     public static void a(int param0) {
-        if (param0 != 31238) {
-            boolean discarded$0 = sb.b(-114);
-            field_n = null;
-            return;
-        }
         field_n = null;
     }
 
@@ -26,7 +21,7 @@ final class sb extends q {
           L0: {
             ((sb) this).field_j = ((sb) this).field_j - 2;
             ((sb) this).field_m = ((sb) this).field_m - ((sb) this).field_l;
-            if (-17 >= (((sb) this).field_j ^ -1)) {
+            if (((sb) this).field_j >= 16) {
               break L0;
             } else {
               ((sb) this).f(0);
@@ -50,11 +45,15 @@ final class sb extends q {
     }
 
     sb(String param0, int param1, int param2, int param3) {
-        ((sb) this).field_m = param2;
-        ((sb) this).field_j = 255;
-        ((sb) this).field_k = param1;
-        ((sb) this).field_o = param0;
-        ((sb) this).field_l = param3;
+        try {
+            ((sb) this).field_m = param2;
+            ((sb) this).field_j = 255;
+            ((sb) this).field_k = param1;
+            ((sb) this).field_o = param0;
+            ((sb) this).field_l = param3;
+        } catch (RuntimeException runtimeException) {
+            throw rb.a((Throwable) (Object) runtimeException, "sb.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+        }
     }
 
     static {

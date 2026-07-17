@@ -31,9 +31,6 @@ final class af {
         field_b = null;
         field_a = null;
         field_o = null;
-        if (param0 >= -103) {
-            field_a = null;
-        }
     }
 
     final static km[] a(byte param0) {
@@ -61,32 +58,7 @@ final class af {
     }
 
     final static boolean b(byte param0) {
-        int stackIn_6_0 = 0;
-        int stackOut_4_0 = 0;
-        int stackOut_5_0 = 0;
-        if (param0 > 14) {
-          L0: {
-            L1: {
-              if (me.field_a == null) {
-                break L1;
-              } else {
-                if (!me.field_a.k(-1)) {
-                  break L1;
-                } else {
-                  stackOut_4_0 = 1;
-                  stackIn_6_0 = stackOut_4_0;
-                  break L0;
-                }
-              }
-            }
-            stackOut_5_0 = 0;
-            stackIn_6_0 = stackOut_5_0;
-            break L0;
-          }
-          return stackIn_6_0 != 0;
-        } else {
-          return false;
-        }
+        return me.field_a != null && me.field_a.k(-1);
     }
 
     final void a(byte param0, int param1) {
@@ -98,55 +70,113 @@ final class af {
     }
 
     final void a(int param0, p param1, uk param2, un param3) {
-        if (param0 != 0) {
-            Object var6 = null;
-            ((af) this).a(68, -28, (uk) null, 40, 39);
+        try {
+            if (param0 != 0) {
+                Object var6 = null;
+                ((af) this).a(68, -28, (uk) null, 40, 39);
+            }
+            param2.a(param3, param1, true);
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "af.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
         }
-        param2.a(param3, param1, true);
     }
 
     af(int param0, String[] param1, int param2) {
         ((af) this).field_f = -2;
-        ((af) this).field_j = param0;
-        ((af) this).field_h = (byte)param1.length;
-        ((af) this).field_l = param2;
-        ((af) this).field_k = param2;
-        ((af) this).field_i = param1;
+        try {
+            ((af) this).field_j = param0;
+            ((af) this).field_h = (byte)param1.length;
+            ((af) this).field_l = param2;
+            ((af) this).field_k = param2;
+            ((af) this).field_i = param1;
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "af.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     final void a(int param0, int param1, uk param2, int param3, int param4) {
-        if (((af) this).field_d) {
-          throw new IllegalStateException();
-        } else {
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        try {
           L0: {
-            if (0 > param0) {
-              break L0;
+            if (((af) this).field_d) {
+              throw new IllegalStateException();
             } else {
-              if (64 <= param0) {
-                break L0;
-              } else {
-                if (0 > param4) {
-                  break L0;
+              L1: {
+                if (0 > param0) {
+                  break L1;
                 } else {
-                  if (-65 >= (param4 ^ -1)) {
-                    break L0;
+                  if (64 <= param0) {
+                    break L1;
                   } else {
-                    L1: {
-                      if (param3 == -65) {
+                    if (0 > param4) {
+                      break L1;
+                    } else {
+                      if (param4 >= 64) {
                         break L1;
                       } else {
-                        ((af) this).field_l = -106;
-                        break L1;
+                        L2: {
+                          if (param3 == -65) {
+                            break L2;
+                          } else {
+                            ((af) this).field_l = -106;
+                            break L2;
+                          }
+                        }
+                        param2.a((byte) 19, param1, param0, param4);
+                        break L0;
                       }
                     }
-                    param2.a((byte) 19, param1, param0, param4);
-                    return;
                   }
                 }
               }
+              throw new IllegalArgumentException();
             }
           }
-          throw new IllegalArgumentException();
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            runtimeException = decompiledCaughtException;
+            stackOut_13_0 = (RuntimeException) runtimeException;
+            stackOut_13_1 = new StringBuilder().append("af.E(").append(param0).append(44).append(param1).append(44);
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
+            if (param2 == null) {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L3;
+            } else {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L3;
+            }
+          }
+          throw fk.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 

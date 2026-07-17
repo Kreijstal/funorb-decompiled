@@ -12,9 +12,6 @@ final class vc implements sm {
     public static void a(byte param0) {
         field_b = null;
         field_a = null;
-        if (param0 <= 64) {
-            return;
-        }
         field_d = null;
         field_e = null;
     }

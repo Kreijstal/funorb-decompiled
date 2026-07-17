@@ -9,7 +9,7 @@ abstract class af {
 
     public static void a(int param0) {
         field_a = null;
-        int var1 = -94 / ((param0 - -42) / 41);
+        int var1 = 47;
         field_b = null;
         field_c = null;
     }

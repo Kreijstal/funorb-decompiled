@@ -41,7 +41,7 @@ final class un extends ci {
           if (!((un) this).field_i.field_d) {
             break L1;
           } else {
-            var7 = ((un) this).field_o * ooa.field_g >> -1117378100;
+            var7 = ((un) this).field_o * ooa.field_g >> 12;
             var26 = ((un) this).c(0, -126, hba.field_b & -1 + param1);
             var9 = ((un) this).c(0, param0 ^ -36, param1);
             var25 = ((un) this).c(0, -116, param1 - -1 & hba.field_b);
@@ -51,11 +51,11 @@ final class un extends ci {
                 break L1;
               } else {
                 L3: {
-                  var12 = (var25[var11] + -var26[var11]) * var7 >> -580672500;
-                  var13 = var7 * (var9[-1 + var11 & una.field_b] + -var9[una.field_b & var11 - -1]) >> 1557055244;
-                  var14 = var13 >> -577099804;
-                  var15 = var12 >> 397617732;
-                  if ((var14 ^ -1) <= -1) {
+                  var12 = (var25[var11] + -var26[var11]) * var7 >> 12;
+                  var13 = var7 * (var9[-1 + var11 & una.field_b] + -var9[una.field_b & var11 - -1]) >> 12;
+                  var14 = var13 >> 4;
+                  var15 = var12 >> 4;
+                  if (var14 >= 0) {
                     break L3;
                   } else {
                     var14 = -var14;
@@ -79,20 +79,20 @@ final class un extends ci {
                   }
                 }
                 L6: {
-                  if ((var15 ^ -1) >= -256) {
+                  if (var15 <= 255) {
                     break L6;
                   } else {
                     var15 = 255;
                     break L6;
                   }
                 }
-                var16 = 255 & pda.field_b[var14 - -(var15 * (1 + var15) >> 885331841)];
-                var5 = var12 * var16 >> -1744199224;
-                var4 = var16 * var13 >> 2065884872;
-                var6 = var16 * 4096 >> 1171917128;
-                var6 = var6 * ((un) this).field_n[2] >> -463689204;
-                var4 = ((un) this).field_n[0] * var4 >> 1113290092;
-                var5 = var5 * ((un) this).field_n[1] >> 989269644;
+                var16 = 255 & pda.field_b[var14 - -(var15 * (1 + var15) >> 1)];
+                var5 = var12 * var16 >> 8;
+                var4 = var16 * var13 >> 8;
+                var6 = var16 * 4096 >> 8;
+                var6 = var6 * ((un) this).field_n[2] >> 12;
+                var4 = ((un) this).field_n[0] * var4 >> 12;
+                var5 = var5 * ((un) this).field_n[1] >> 12;
                 var18[var11] = var6 + var4 - -var5;
                 var11++;
                 continue L2;
@@ -112,35 +112,86 @@ final class un extends ci {
     }
 
     final void a(byte param0, uia param1, int param2) {
-        int var4 = 0;
+        int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
-        L0: {
-          var5 = TombRacer.field_G ? 1 : 0;
-          var4 = param2;
-          if (var4 != 0) {
-            if ((var4 ^ -1) != -2) {
-              if (2 != var4) {
-                break L0;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        String stackIn_16_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        var5 = TombRacer.field_G ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              var4_int = param2;
+              if (var4_int != 0) {
+                if (var4_int != 1) {
+                  if (2 != var4_int) {
+                    break L1;
+                  } else {
+                    ((un) this).field_m = param1.d(param0 + 20);
+                    break L1;
+                  }
+                } else {
+                  ((un) this).field_p = param1.d(123);
+                  break L1;
+                }
               } else {
-                ((un) this).field_m = param1.d(param0 + 20);
-                break L0;
+                ((un) this).field_o = param1.d(param0 + 14);
+                break L1;
               }
-            } else {
-              ((un) this).field_p = param1.d(123);
-              break L0;
             }
-          } else {
-            ((un) this).field_o = param1.d(param0 + 14);
+            L2: {
+              if (param0 == 107) {
+                break L2;
+              } else {
+                int[] discarded$1 = ((un) this).c(24, 112);
+                break L2;
+              }
+            }
             break L0;
           }
-        }
-        L1: {
-          if (param0 == 107) {
-            break L1;
-          } else {
-            int[] discarded$1 = ((un) this).c(24, 112);
-            break L1;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var4 = decompiledCaughtException;
+            stackOut_13_0 = (RuntimeException) var4;
+            stackOut_13_1 = new StringBuilder().append("un.A(").append(param0).append(44);
+            stackIn_15_0 = stackOut_13_0;
+            stackIn_15_1 = stackOut_13_1;
+            stackIn_14_0 = stackOut_13_0;
+            stackIn_14_1 = stackOut_13_1;
+            if (param1 == null) {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "null";
+              stackIn_16_0 = stackOut_15_0;
+              stackIn_16_1 = stackOut_15_1;
+              stackIn_16_2 = stackOut_15_2;
+              break L3;
+            } else {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "{...}";
+              stackIn_16_0 = stackOut_14_0;
+              stackIn_16_1 = stackOut_14_1;
+              stackIn_16_2 = stackOut_14_2;
+              break L3;
+            }
           }
+          throw tba.a((Throwable) (Object) stackIn_16_0, stackIn_16_2 + 44 + param2 + 41);
         }
     }
 
@@ -155,25 +206,17 @@ final class un extends ci {
           ((un) this).field_n[0] = (int)(4096.0 * (Math.sin((double)((float)((un) this).field_p / 4096.0f)) * var2));
           ((un) this).field_n[1] = (int)(Math.cos((double)((float)((un) this).field_p / 4096.0f)) * var2 * 4096.0);
           ((un) this).field_n[2] = (int)(Math.sin((double)((float)((un) this).field_m / 4096.0f)) * 4096.0);
-          var4 = ((un) this).field_n[0] * ((un) this).field_n[0] >> -2115637396;
-          var5 = ((un) this).field_n[1] * ((un) this).field_n[1] >> 885633420;
-          var6 = ((un) this).field_n[2] * ((un) this).field_n[2] >> -1271222740;
-          if (param0 == 28427) {
-            break L0;
-          } else {
-            ((un) this).b((byte) -32);
-            break L0;
-          }
-        }
-        L1: {
-          var7 = (int)(Math.sqrt((double)(var6 + var4 + var5 >> 291581964)) * 4096.0);
+          var4 = ((un) this).field_n[0] * ((un) this).field_n[0] >> 12;
+          var5 = ((un) this).field_n[1] * ((un) this).field_n[1] >> 12;
+          var6 = ((un) this).field_n[2] * ((un) this).field_n[2] >> 12;
+          var7 = (int)(Math.sqrt((double)(var6 + var4 + var5 >> 12)) * 4096.0);
           if (var7 == 0) {
-            break L1;
+            break L0;
           } else {
-            ((un) this).field_n[0] = (((un) this).field_n[0] << -2007394740) / var7;
-            ((un) this).field_n[2] = (((un) this).field_n[2] << 555811276) / var7;
-            ((un) this).field_n[1] = (((un) this).field_n[1] << -3381684) / var7;
-            break L1;
+            ((un) this).field_n[0] = (((un) this).field_n[0] << 12) / var7;
+            ((un) this).field_n[2] = (((un) this).field_n[2] << 12) / var7;
+            ((un) this).field_n[1] = (((un) this).field_n[1] << 12) / var7;
+            break L0;
           }
         }
     }
@@ -186,9 +229,6 @@ final class un extends ci {
     }
 
     public static void a(boolean param0) {
-        if (!param0) {
-            return;
-        }
         field_r = null;
         field_q = null;
     }

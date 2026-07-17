@@ -7,16 +7,74 @@ final class aj {
     static String field_b;
 
     final static ee a(int param0, int param1, int param2, vr param3) {
-        if (g.a(param1, param0, -30744, param3)) {
-          if (param2 != 0) {
-            int discarded$2 = aj.a((byte) -31, -21);
-            return dr.b(param2 + -32124);
-          } else {
-            return dr.b(param2 + -32124);
+        RuntimeException var4 = null;
+        ee stackIn_6_0 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        ee stackOut_5_0 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        try {
+          L0: {
+            if (g.a(param1, param0, -30744, param3)) {
+              L1: {
+                if (param2 == 0) {
+                  break L1;
+                } else {
+                  int discarded$2 = aj.a((byte) -31, -21);
+                  break L1;
+                }
+              }
+              stackOut_5_0 = dr.b(param2 + -32124);
+              stackIn_6_0 = stackOut_5_0;
+              break L0;
+            } else {
+              return null;
+            }
           }
-        } else {
-          return null;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var4 = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var4;
+            stackOut_7_1 = new StringBuilder().append("aj.B(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param3 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L2;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L2;
+            }
+          }
+          throw pe.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
         }
+        return stackIn_6_0;
     }
 
     final void a(int param0, int param1, int param2) {
@@ -28,48 +86,55 @@ final class aj {
     }
 
     public static void a(int param0) {
-        if (param0 < 41) {
-            field_b = null;
-            field_b = null;
-            return;
-        }
         field_b = null;
     }
 
     final static int a(byte param0, int param1) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         int var3 = 0;
+        Object var4 = null;
+        int stackIn_7_0 = 0;
+        int stackIn_10_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_9_0 = 0;
+        int stackOut_6_0 = 0;
         var3 = BachelorFridge.field_y;
-        if (param0 == -20) {
-          var2 = 0;
-          L0: while (true) {
-            if (-30 > var2) {
-              if (qe.field_q[var2] != param1) {
-                var2++;
-                continue L0;
+        try {
+          L0: {
+            L1: {
+              if (param0 == -20) {
+                break L1;
               } else {
-                return var2;
+                var4 = null;
+                ee discarded$2 = aj.a(-51, -127, 29, (vr) null);
+                break L1;
               }
-            } else {
-              return -1;
+            }
+            var2_int = 0;
+            L2: while (true) {
+              if (var2_int >= 29) {
+                stackOut_9_0 = -1;
+                stackIn_10_0 = stackOut_9_0;
+                break L0;
+              } else {
+                if (qe.field_q[var2_int] != param1) {
+                  var2_int++;
+                  continue L2;
+                } else {
+                  stackOut_6_0 = var2_int;
+                  stackIn_7_0 = stackOut_6_0;
+                  return stackIn_7_0;
+                }
+              }
             }
           }
-        } else {
-          ee discarded$5 = aj.a(-51, -127, 29, (vr) null);
-          var2 = 0;
-          L1: while (true) {
-            if (-30 < var2) {
-              if (qe.field_q[var2] != param1) {
-                var2++;
-                continue L1;
-              } else {
-                return var2;
-              }
-            } else {
-              return -1;
-            }
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw pe.a((Throwable) (Object) var2, "aj.A(" + param0 + 44 + param1 + 41);
         }
+        return stackIn_10_0;
     }
 
     aj(int param0, int param1) {
@@ -77,11 +142,15 @@ final class aj {
     }
 
     aj(aj param0) {
-        ((aj) this).a(-1, param0.field_c, param0.field_a);
+        try {
+            ((aj) this).a(-1, param0.field_c, param0.field_a);
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "aj.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static boolean a(byte param0) {
-        int var1 = 74 / ((11 - param0) / 63);
+        int var1 = 74;
         return !ut.field_m.a(false) ? true : false;
     }
 

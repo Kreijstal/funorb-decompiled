@@ -6,7 +6,7 @@ final class aq {
 
     public static void b(int param0) {
         field_a = null;
-        int var1 = 75 % ((param0 - -32) / 34);
+        int var1 = 1;
     }
 
     final static int a(int param0) {

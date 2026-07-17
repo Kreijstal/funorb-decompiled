@@ -71,28 +71,27 @@ class ot extends iga {
     }
 
     ot(long param0, String param1) {
-        ((ot) this).field_f = param0;
-        ((ot) this).field_g = param1;
+        try {
+            ((ot) this).field_f = param0;
+            ((ot) this).field_g = param1;
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "ot.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void a(lu param0, boolean param1) {
-        param0.b(1686281208, ((ot) this).field_f);
-        if (param1) {
-          ((ot) this).field_f = -1L;
-          param0.a(26, ((ot) this).field_g);
-          return;
-        } else {
-          param0.a(26, ((ot) this).field_g);
-          return;
+        try {
+            param0.b(1686281208, ((ot) this).field_f);
+            if (param1) {
+                ((ot) this).field_f = -1L;
+            }
+            param0.a(26, ((ot) this).field_g);
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "ot.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
     public static void b(byte param0) {
-        if (param0 >= -36) {
-            field_e = null;
-            field_e = null;
-            return;
-        }
         field_e = null;
     }
 

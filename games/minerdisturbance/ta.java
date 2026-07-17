@@ -34,16 +34,13 @@ final class ta {
                 kj.field_a.field_o = 0;
                 return true;
             }
-            try {
-                if (false) throw (IOException) null;
+            {
                 if (var2_int >= param0) {
-                    if (-30001L <= (qa.a(param0 + -125) ^ -1L)) {
+                    if (qa.a(param0 + -125) <= 30000L) {
                         return false;
                     }
                 }
                 si.a(-124);
-            } catch (IOException iOException) {
-                si.a(param0 + -80);
             }
             return false;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -90,24 +87,19 @@ final class ta {
     }
 
     final void a(pi param0, int param1) {
-        L0: {
-          if (param0.field_c != null) {
-            param0.b(34);
-            break L0;
-          } else {
-            break L0;
-          }
-        }
-        param0.field_f = ((ta) this).field_c.field_f;
-        param0.field_c = ((ta) this).field_c;
-        param0.field_c.field_f = param0;
-        if (param1 != 27862) {
-          boolean discarded$2 = ta.a(-86, 37);
-          param0.field_f.field_c = param0;
-          return;
-        } else {
-          param0.field_f.field_c = param0;
-          return;
+        try {
+            if (!(param0.field_c == null)) {
+                param0.b(34);
+            }
+            param0.field_f = ((ta) this).field_c.field_f;
+            param0.field_c = ((ta) this).field_c;
+            param0.field_c.field_f = param0;
+            if (param1 != 27862) {
+                boolean discarded$0 = ta.a(-86, 37);
+            }
+            param0.field_f.field_c = param0;
+        } catch (RuntimeException runtimeException) {
+            throw lj.a((Throwable) (Object) runtimeException, "ta.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
@@ -189,22 +181,17 @@ final class ta {
     }
 
     final void a(byte param0, pi param1) {
-        int var3 = 0;
-        if (param1.field_c != null) {
-          param1.b(34);
-          param1.field_c = ((ta) this).field_c.field_c;
-          var3 = 7 / ((-29 - param0) / 56);
-          param1.field_f = ((ta) this).field_c;
-          param1.field_c.field_f = param1;
-          param1.field_f.field_c = param1;
-          return;
-        } else {
-          param1.field_c = ((ta) this).field_c.field_c;
-          var3 = 7 / ((-29 - param0) / 56);
-          param1.field_f = ((ta) this).field_c;
-          param1.field_c.field_f = param1;
-          param1.field_f.field_c = param1;
-          return;
+        try {
+            if (param1.field_c != null) {
+                param1.b(34);
+            }
+            param1.field_c = ((ta) this).field_c.field_c;
+            int var3_int = 7 / ((-29 - param0) / 56);
+            param1.field_f = ((ta) this).field_c;
+            param1.field_c.field_f = param1;
+            param1.field_f.field_c = param1;
+        } catch (RuntimeException runtimeException) {
+            throw lj.a((Throwable) (Object) runtimeException, "ta.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

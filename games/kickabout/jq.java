@@ -11,9 +11,6 @@ final class jq {
         field_b = null;
         field_a = null;
         field_c = null;
-        if (!param0) {
-            field_c = null;
-        }
     }
 
     static {

@@ -14,9 +14,6 @@ final class bf implements dja {
 
     public static void b(byte param0) {
         field_a = null;
-        if (param0 != 27) {
-            field_a = null;
-        }
     }
 
     public final tv a(byte param0) {

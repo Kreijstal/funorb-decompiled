@@ -16,7 +16,11 @@ final class ria extends dg {
     }
 
     final void a(gr param0, gma param1, byte param2) {
-        super.a(param0, param1, param2);
+        try {
+            super.a(param0, param1, param2);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "ria.E(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     final void h(int param0) {
@@ -40,7 +44,59 @@ final class ria extends dg {
     }
 
     final void a(iq param0, int param1, int param2, int param3, byte param4) {
-        int var6 = -26 / ((-38 - param4) / 47);
+        int var6_int = 0;
+        RuntimeException var6 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
+        try {
+          L0: {
+            var6_int = -26 / ((-38 - param4) / 47);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var6 = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var6;
+            stackOut_2_1 = new StringBuilder().append("ria.D(");
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
+            if (param0 == null) {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+        }
     }
 
     ria(int param0) {
@@ -60,30 +116,28 @@ final class ria extends dg {
     }
 
     final void a(int param0, la param1, kh param2) {
-        if (param0 > 119) {
-          super.a(126, param1, param2);
-          if (param1.field_E <= 17) {
+        if (param0 <= 119) {
+            ((ria) this).field_q = -123;
+        }
+        super.a(126, param1, param2);
+        if (param1.field_E <= 17) {
             return;
-          } else {
+        }
+        try {
             ((ria) this).field_q = param2.b((byte) 44, 4);
-            return;
-          }
-        } else {
-          ((ria) this).field_q = -123;
-          super.a(126, param1, param2);
-          if (param1.field_E <= 17) {
-            return;
-          } else {
-            ((ria) this).field_q = param2.b((byte) 44, 4);
-            return;
-          }
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "ria.G(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
     }
 
     final void a(byte param0, kh param1) {
-        int var3 = 33 % ((param0 - -8) / 40);
-        super.a((byte) 117, param1);
-        param1.a((byte) -126, ((ria) this).field_q, 4);
+        try {
+            int var3_int = 33 % ((param0 - -8) / 40);
+            super.a((byte) 117, param1);
+            param1.a((byte) -126, ((ria) this).field_q, 4);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "ria.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

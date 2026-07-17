@@ -65,8 +65,9 @@ final class nfa extends ci {
             wl.field_f[0][35] = wl.field_f[0][22];
             wl.field_f[0][36] = m.a("henryj_large_pull", -125, param5, var12);
             wl.field_f[0][37] = m.a("henryj_cheer", -124, param5, var12);
+            int incrementValue$7 = param3;
             param3++;
-            var11.a(param3, (byte) 47, param1);
+            var11.a(incrementValue$7, (byte) 47, param1);
             var8 = 0;
             L1: while (true) {
               if (13 <= var8) {
@@ -87,8 +88,9 @@ final class nfa extends ci {
                   wl.field_f[1][14] = m.a("ace_key_idle", -126, param5, var12);
                   wl.field_f[1][17] = m.a("ace_gun_idle", -125, param5, var12);
                   wl.field_f[1][34] = m.a("ace_cut_in_half", -127, param5, var12);
+                  int incrementValue$8 = param3;
                   param3++;
-                  var11.a(param3, (byte) 47, param1);
+                  var11.a(incrementValue$8, (byte) 47, param1);
                   wl.field_f[3][5] = m.a("baroness_trait", -124, param5, var12);
                   wl.field_f[3][15] = m.a("baroness_key_run", -125, param5, var12);
                   wl.field_f[3][14] = m.a("baroness_key_idle", -128, param5, var12);
@@ -106,8 +108,9 @@ final class nfa extends ci {
                   wl.field_f[4][5] = wl.field_f[11][5];
                   wl.field_f[4][34] = m.a("borees_cut_in_half", -128, param5, var12);
                   wl.field_f[4][37] = m.a("borees_cheer", -124, param5, var12);
+                  int incrementValue$9 = param3;
                   param3++;
-                  var11.a(param3, (byte) 47, param1);
+                  var11.a(incrementValue$9, (byte) 47, param1);
                   wl.field_f[5][1] = m.a("bruce_run", -128, param5, var12);
                   wl.field_f[5][0] = m.a("bruce_idle", -125, param5, var12);
                   wl.field_f[5][5] = m.a("bruce_trait", -128, param5, var12);
@@ -129,8 +132,9 @@ final class nfa extends ci {
                   wl.field_f[5][36] = m.a("bruce_large_pull", -127, param5, var12);
                   wl.field_f[5][37] = m.a("bruce_cheer", -124, param5, var12);
                   wl.field_f[5][2] = m.a("bruce_pull_small", -127, param5, var12);
+                  int incrementValue$10 = param3;
                   param3++;
-                  var11.a(param3, (byte) 47, param1);
+                  var11.a(incrementValue$10, (byte) 47, param1);
                   wl.field_f[7][1] = m.a("hans_run", -125, param5, var12);
                   wl.field_f[7][14] = m.a("hans_key_idle", -124, param5, var12);
                   wl.field_f[7][15] = m.a("hans_key_run", -126, param5, var12);
@@ -158,8 +162,9 @@ final class nfa extends ci {
                   wl.field_f[6][34] = m.a("feng_cut_in_half", -128, param5, var12);
                   wl.field_f[6][37] = m.a("feng_cheer", -124, param5, var12);
                   wl.field_f[6][36] = m.a("feng_large_pull", -124, param5, var12);
+                  int incrementValue$11 = param3;
                   param3++;
-                  var11.a(param3, (byte) 47, param1);
+                  var11.a(incrementValue$11, (byte) 47, param1);
                   wl.field_f[8][5] = wl.field_f[1][5];
                   wl.field_f[8][15] = m.a("jamille_key_run", -128, param5, var12);
                   wl.field_f[8][14] = m.a("jamille_key_idle", -125, param5, var12);
@@ -185,8 +190,9 @@ final class nfa extends ci {
                   wl.field_f[10][21] = m.a("piles_death_two", -125, param5, var12);
                   wl.field_f[10][22] = m.a("piles_death_three", -128, param5, var12);
                   wl.field_f[10][36] = m.a("piles_large_pull", -124, param5, var12);
+                  int incrementValue$12 = param3;
                   param3++;
-                  var11.a(param3, (byte) 47, param1);
+                  var11.a(incrementValue$12, (byte) 47, param1);
                   wl.field_f[10][18] = m.a("piles_fall_two", -124, param5, var12);
                   wl.field_f[10][17] = m.a("piles_gun_idle", -125, param5, var12);
                   wl.field_f[10][19] = m.a("piles_idle_to_run", -128, param5, var12);
@@ -222,8 +228,9 @@ final class nfa extends ci {
                   qja.field_f[7] = m.a("snake_walk", -124, param5, var14);
                   qja.field_f[8] = m.a("snake_idle_to_walk", -126, param5, var14);
                   qja.field_f[9] = m.a("snake_walk_to_idle", -125, param5, var14);
+                  int incrementValue$13 = param3;
                   param3++;
-                  var11.a(param3, (byte) 47, param1);
+                  var11.a(incrementValue$13, (byte) 47, param1);
                   var15 = "rope_bridge";
                   cva.field_c = new dk[4];
                   cva.field_c[0] = m.a("start", -127, param5, var15);
@@ -253,22 +260,24 @@ final class nfa extends ci {
                 jf.field_p[12] = m.a("platform3_crumble_grey", -124, param5, "platform_grey");
                 return;
               } else {
-                if (-1 != var8) {
-                  var9 = 0;
-                  L3: while (true) {
-                    if (-39 > var9) {
-                      wl.field_f[var8][var9] = wl.field_f[0][var9];
-                      var9++;
-                      continue L3;
-                    } else {
-                      var8++;
-                      continue L1;
+                L3: {
+                  if (var8 == 0) {
+                    break L3;
+                  } else {
+                    var9 = 0;
+                    L4: while (true) {
+                      if (var9 >= 38) {
+                        break L3;
+                      } else {
+                        wl.field_f[var8][var9] = wl.field_f[0][var9];
+                        var9++;
+                        continue L4;
+                      }
                     }
                   }
-                } else {
-                  var8++;
-                  continue L1;
                 }
+                var8++;
+                continue L1;
               }
             }
           } else {
@@ -278,7 +287,8 @@ final class nfa extends ci {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        int var5 = 0;
+        RuntimeException var5 = null;
+        int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -289,82 +299,91 @@ final class nfa extends ci {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
+        RuntimeException decompiledCaughtException = null;
         var15 = TombRacer.field_G ? 1 : 0;
-        var5 = param0;
-        var6 = param1;
-        var7 = -param1;
-        var8 = -1;
-        var9 = rp.a(ss.field_c, -16226, pka.field_b, param3 + param1);
-        var10 = rp.a(ss.field_c, -16226, pka.field_b, param3 + -param1);
-        nra.a((byte) -55, param2, var9, vaa.field_a[param4], var10);
-        L0: while (true) {
-          if (var6 <= var5) {
-            return;
-          } else {
-            L1: {
-              var8 += 2;
-              var7 = var7 + var8;
-              if ((var7 ^ -1) < -1) {
-                var6--;
-                var7 = var7 - (var6 << 24737825);
-                var11 = param4 + -var6;
-                var12 = var6 + param4;
-                if (var12 < gca.field_d) {
-                  break L1;
-                } else {
-                  if (var11 > hc.field_h) {
-                    break L1;
-                  } else {
-                    L2: {
-                      var13 = rp.a(ss.field_c, param0 ^ -16226, pka.field_b, var5 + param3);
-                      var14 = rp.a(ss.field_c, -16226, pka.field_b, param3 - var5);
-                      if (var12 > hc.field_h) {
+        try {
+          L0: {
+            var5_int = param0;
+            var6 = param1;
+            var7 = -param1;
+            var8 = -1;
+            var9 = rp.a(ss.field_c, -16226, pka.field_b, param3 + param1);
+            var10 = rp.a(ss.field_c, -16226, pka.field_b, param3 + -param1);
+            nra.a((byte) -55, param2, var9, vaa.field_a[param4], var10);
+            L1: while (true) {
+              if (var6 <= var5_int) {
+                break L0;
+              } else {
+                L2: {
+                  var8 += 2;
+                  var7 = var7 + var8;
+                  if (var7 > 0) {
+                    var6--;
+                    var7 = var7 - (var6 << 1);
+                    var11 = param4 + -var6;
+                    var12 = var6 + param4;
+                    if (var12 < gca.field_d) {
+                      break L2;
+                    } else {
+                      if (var11 > hc.field_h) {
                         break L2;
                       } else {
-                        nra.a((byte) -55, param2, var13, vaa.field_a[var12], var14);
-                        break L2;
+                        L3: {
+                          var13 = rp.a(ss.field_c, param0 ^ -16226, pka.field_b, var5_int + param3);
+                          var14 = rp.a(ss.field_c, -16226, pka.field_b, param3 - var5_int);
+                          if (var12 > hc.field_h) {
+                            break L3;
+                          } else {
+                            nra.a((byte) -55, param2, var13, vaa.field_a[var12], var14);
+                            break L3;
+                          }
+                        }
+                        if (var11 < gca.field_d) {
+                          break L2;
+                        } else {
+                          nra.a((byte) -55, param2, var13, vaa.field_a[var11], var14);
+                          break L2;
+                        }
                       }
                     }
-                    if (var11 < gca.field_d) {
-                      break L1;
+                  } else {
+                    break L2;
+                  }
+                }
+                var5_int++;
+                var11 = param4 - var5_int;
+                var12 = param4 + var5_int;
+                if (gca.field_d > var12) {
+                  continue L1;
+                } else {
+                  if (var11 > hc.field_h) {
+                    continue L1;
+                  } else {
+                    L4: {
+                      var13 = rp.a(ss.field_c, param0 ^ -16226, pka.field_b, param3 + var6);
+                      var14 = rp.a(ss.field_c, param0 + -16226, pka.field_b, param3 - var6);
+                      if (hc.field_h < var12) {
+                        break L4;
+                      } else {
+                        nra.a((byte) -55, param2, var13, vaa.field_a[var12], var14);
+                        break L4;
+                      }
+                    }
+                    if (gca.field_d > var11) {
+                      continue L1;
                     } else {
                       nra.a((byte) -55, param2, var13, vaa.field_a[var11], var14);
-                      break L1;
+                      continue L1;
                     }
                   }
-                }
-              } else {
-                break L1;
-              }
-            }
-            var5++;
-            var11 = param4 - var5;
-            var12 = param4 + var5;
-            if (gca.field_d > var12) {
-              continue L0;
-            } else {
-              if (var11 > hc.field_h) {
-                continue L0;
-              } else {
-                L3: {
-                  var13 = rp.a(ss.field_c, param0 ^ -16226, pka.field_b, param3 + var6);
-                  var14 = rp.a(ss.field_c, param0 + -16226, pka.field_b, param3 - var6);
-                  if (hc.field_h < var12) {
-                    break L3;
-                  } else {
-                    nra.a((byte) -55, param2, var13, vaa.field_a[var12], var14);
-                    break L3;
-                  }
-                }
-                if (gca.field_d > var11) {
-                  continue L0;
-                } else {
-                  nra.a((byte) -55, param2, var13, vaa.field_a[var11], var14);
-                  continue L0;
                 }
               }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          throw tba.a((Throwable) (Object) var5, "nfa.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
@@ -406,7 +425,7 @@ final class nfa extends ci {
                 break L1;
               } else {
                 var7_int = param0 % var6;
-                var4 = ((nfa) this).a(var7_int * qda.field_i / var6, 0, param1 + 0);
+                var4 = ((nfa) this).a(var7_int * qda.field_i / var6, 0, param1);
                 break L1;
               }
             }
@@ -422,7 +441,7 @@ final class nfa extends ci {
                 break L0;
               } else {
                 L3: {
-                  if ((var5 ^ -1) >= -1) {
+                  if (var5 <= 0) {
                     var14 = 0;
                     break L3;
                   } else {
@@ -479,7 +498,7 @@ final class nfa extends ci {
             L2: {
               var5 = ns.field_g / ((nfa) this).field_m;
               var6 = qda.field_i / ((nfa) this).field_o;
-              if ((var6 ^ -1) >= -1) {
+              if (var6 <= 0) {
                 var4 = ((nfa) this).c(0, -84, 0);
                 break L2;
               } else {
@@ -494,7 +513,7 @@ final class nfa extends ci {
               if (var10 >= ns.field_g) {
                 break L1;
               } else {
-                if ((var5 ^ -1) < -1) {
+                if (var5 > 0) {
                   var8 = var10 % var5;
                   var3[var10] = var4[var8 * ns.field_g / var5];
                   var10++;
@@ -518,8 +537,12 @@ final class nfa extends ci {
     }
 
     final static void a(int[][] param0, int param1) {
-        vaa.field_a = param0;
-        int var2 = -93 % ((param1 - 57) / 49);
+        try {
+            vaa.field_a = param0;
+            int var2_int = -93 % ((param1 - 57) / 49);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "nfa.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     public nfa() {
@@ -529,30 +552,81 @@ final class nfa extends ci {
     }
 
     final void a(byte param0, uia param1, int param2) {
-        int var4 = 0;
+        int var4_int = 0;
+        RuntimeException var4 = null;
         int var5 = 0;
-        L0: {
-          var5 = TombRacer.field_G ? 1 : 0;
-          var4 = param2;
-          if (0 == var4) {
-            ((nfa) this).field_m = param1.h(param0 + 148);
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        var5 = TombRacer.field_G ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              var4_int = param2;
+              if (0 == var4_int) {
+                ((nfa) this).field_m = param1.h(param0 + 148);
+                break L1;
+              } else {
+                if (var4_int != 1) {
+                  break L1;
+                } else {
+                  ((nfa) this).field_o = param1.h(255);
+                  break L1;
+                }
+              }
+            }
+            L2: {
+              if (param0 == 107) {
+                break L2;
+              } else {
+                nfa.a((int[][]) null, 80);
+                break L2;
+              }
+            }
             break L0;
-          } else {
-            if (-2 != (var4 ^ -1)) {
-              break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var4 = decompiledCaughtException;
+            stackOut_9_0 = (RuntimeException) var4;
+            stackOut_9_1 = new StringBuilder().append("nfa.A(").append(param0).append(44);
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
+            if (param1 == null) {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
+              break L3;
             } else {
-              ((nfa) this).field_o = param1.h(255);
-              break L0;
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
+              break L3;
             }
           }
-        }
-        L1: {
-          if (param0 == 107) {
-            break L1;
-          } else {
-            nfa.a((int[][]) null, 80);
-            break L1;
-          }
+          throw tba.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param2 + 41);
         }
     }
 

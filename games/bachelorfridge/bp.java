@@ -9,14 +9,15 @@ final class bp extends ana {
     private kk field_v;
 
     private final void g(int param0) {
-        if (param0 > -41) {
-            bp.d(112);
-        }
     }
 
     bp(gj param0, kk param1) {
         super(param0, (bca) (Object) param1);
-        ((bp) this).field_v = param1;
+        try {
+            ((bp) this).field_v = param1;
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "bp.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final boolean c(byte param0) {
@@ -24,10 +25,11 @@ final class bp extends ana {
         if (((bp) this).field_m.a((byte) -106)) {
             return false;
         }
-        if (-76 > (((bp) this).field_l ^ -1)) {
+        if (((bp) this).field_l > 75) {
             if (((bp) this).field_l % 10 != 0) {
+                int fieldTemp$0 = ((bp) this).field_l - 1;
                 ((bp) this).field_l = ((bp) this).field_l - 1;
-                if (!((((bp) this).field_l - 1 ^ -1) > -1)) {
+                if (!(fieldTemp$0 < 0)) {
                     if (((bp) this).field_l == 75) {
                         this.f(-2602);
                         return false;
@@ -40,8 +42,9 @@ final class bp extends ana {
             }
             wf.a(3, (byte) 126);
         }
+        int fieldTemp$1 = ((bp) this).field_l - 1;
         ((bp) this).field_l = ((bp) this).field_l - 1;
-        if (!((((bp) this).field_l - 1 ^ -1) > -1)) {
+        if (!(fieldTemp$1 < 0)) {
             if (!(((bp) this).field_l != 75)) {
                 this.f(-2602);
             }
@@ -53,72 +56,36 @@ final class bp extends ana {
     }
 
     private final void f(int param0) {
-        Object var3 = null;
-        iv var3_ref = null;
+        iv var3 = null;
+        ad var4 = null;
         int var5 = 0;
-        aga var7 = null;
-        ad var8 = null;
-        aga var9 = null;
-        ad var10 = null;
-        var3 = null;
+        aga var6 = null;
         var5 = BachelorFridge.field_y;
-        if (param0 == -2602) {
-          var9 = ((bp) this).field_v.field_l.a(63, ((bp) this).field_q.field_h);
-          if (var9.i(-100)) {
-            return;
-          } else {
-            var3_ref = (iv) (Object) ((bp) this).field_v.field_o.b((byte) 90);
-            oha discarded$2 = al.a(106, ((bp) this).field_v.field_k);
-            L0: while (true) {
-              if (var3_ref == null) {
-                return;
-              } else {
-                L1: {
-                  var3_ref.a(var9, ((bp) this).field_q.field_h, 12);
-                  var10 = var3_ref.field_h.a(param0 ^ 24849, ((bp) this).field_q);
-                  if (var10 != null) {
-                    ((bp) this).a(27799, (at) (Object) new taa(((bp) this).field_q, var10));
-                    ((bp) this).a(27799, (at) (Object) new iu(3));
-                    ((bp) this).a(27799, (at) (Object) new cb(var10, 7));
-                    ((bp) this).a(27799, (at) (Object) new wn(var10, kna.field_g[18], 24831));
-                    break L1;
-                  } else {
-                    break L1;
-                  }
-                }
-                var3_ref = (iv) (Object) ((bp) this).field_v.field_o.c(0);
-                continue L0;
-              }
-            }
-          }
+        var6 = ((bp) this).field_v.field_l.a(63, ((bp) this).field_q.field_h);
+        if (var6.i(-100)) {
+          return;
         } else {
-          field_x = -4;
-          var7 = ((bp) this).field_v.field_l.a(63, ((bp) this).field_q.field_h);
-          if (var7.i(-100)) {
-            return;
-          } else {
-            var3_ref = (iv) (Object) ((bp) this).field_v.field_o.b((byte) 90);
-            oha discarded$3 = al.a(106, ((bp) this).field_v.field_k);
-            L2: while (true) {
-              if (var3_ref == null) {
-                return;
-              } else {
-                L3: {
-                  var3_ref.a(var7, ((bp) this).field_q.field_h, 12);
-                  var8 = var3_ref.field_h.a(param0 ^ 24849, ((bp) this).field_q);
-                  if (var8 != null) {
-                    ((bp) this).a(27799, (at) (Object) new taa(((bp) this).field_q, var8));
-                    ((bp) this).a(27799, (at) (Object) new iu(3));
-                    ((bp) this).a(27799, (at) (Object) new cb(var8, 7));
-                    ((bp) this).a(27799, (at) (Object) new wn(var8, kna.field_g[18], 24831));
-                    break L3;
-                  } else {
-                    break L3;
-                  }
+          var3 = (iv) (Object) ((bp) this).field_v.field_o.b((byte) 90);
+          oha discarded$1 = al.a(106, ((bp) this).field_v.field_k);
+          L0: while (true) {
+            if (var3 == null) {
+              return;
+            } else {
+              L1: {
+                var3.a(var6, ((bp) this).field_q.field_h, 12);
+                var4 = var3.field_h.a(-27449, ((bp) this).field_q);
+                if (var4 != null) {
+                  ((bp) this).a(27799, (at) (Object) new taa(((bp) this).field_q, var4));
+                  ((bp) this).a(27799, (at) (Object) new iu(3));
+                  ((bp) this).a(27799, (at) (Object) new cb(var4, 7));
+                  ((bp) this).a(27799, (at) (Object) new wn(var4, kna.field_g[18], 24831));
+                  break L1;
+                } else {
+                  break L1;
                 }
-                var3_ref = (iv) (Object) ((bp) this).field_v.field_o.c(0);
-                continue L2;
               }
+              var3 = (iv) (Object) ((bp) this).field_v.field_o.c(0);
+              continue L0;
             }
           }
         }
@@ -157,9 +124,6 @@ final class bp extends ana {
 
     public static void e(byte param0) {
         field_y = null;
-        if (param0 < 90) {
-            return;
-        }
         field_w = null;
     }
 

@@ -153,11 +153,13 @@ final class ae extends le {
                   } else {
                     var14 = (((ae) this).field_s[var9] >>> 24) * var13 >> 8;
                     var15 = 256 - var14;
+                    int incrementValue$2 = var9;
                     var9++;
-                    var16 = ((ae) this).field_s[var9];
+                    var16 = ((ae) this).field_s[incrementValue$2];
                     var17 = ge.field_i[var12];
+                    int incrementValue$3 = var12;
                     var12++;
-                    ge.field_i[var12] = ((var16 & 16711935) * var14 + (var17 & 16711935) * var15 & -16711936) + ((var16 & 65280) * var14 + (var17 & 65280) * var15 & 16711680) >>> 8;
+                    ge.field_i[incrementValue$3] = ((var16 & 16711935) * var14 + (var17 & 16711935) * var15 & -16711936) + ((var16 & 65280) * var14 + (var17 & 65280) * var15 & 16711680) >>> 8;
                     param0++;
                     continue L5;
                   }
@@ -423,8 +425,9 @@ final class ae extends le {
                 if (var16 != 0) {
                     var17 = 256 - var16;
                     var18 = param0[param5];
+                    int incrementValue$0 = param5;
                     param5++;
-                    param0[param5] = ((param2 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((param2 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >>> 8;
+                    param0[incrementValue$0] = ((param2 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((param2 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >>> 8;
                 } else {
                     param5++;
                 }
@@ -470,8 +473,9 @@ final class ae extends le {
                 var15++;
                 continue L0;
               } else {
+                int incrementValue$2 = param3;
                 param3++;
-                param2 = param1[param3];
+                param2 = param1[incrementValue$2];
                 var17 = param2 >>> 24;
                 if (var17 == 0) {
                   param4++;
@@ -504,8 +508,9 @@ final class ae extends le {
                   }
                   var22 = 256 - var17;
                   var23 = param0[param4];
+                  int incrementValue$3 = param4;
                   param4++;
-                  param0[param4] = ((var18 & 16711935) * var17 + (var23 & 16711935) * var22 & -16711936) + ((var18 & 65280) * var17 + (var23 & 65280) * var22 & 16711680) >>> 8;
+                  param0[incrementValue$3] = ((var18 & 16711935) * var17 + (var23 & 16711935) * var22 & -16711936) + ((var18 & 65280) * var17 + (var23 & 65280) * var22 & 16711680) >>> 8;
                   var16++;
                   continue L1;
                 }
@@ -773,8 +778,9 @@ final class ae extends le {
                                 var39 = ge.field_i[var34];
                                 var40 = var38 >>> 24;
                                 var41 = 256 - var40;
+                                int incrementValue$9 = var34;
                                 var34++;
-                                ge.field_i[var34] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
+                                ge.field_i[incrementValue$9] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                 var35 = var35 + var27;
                                 var36 = var36 + var26;
                                 var37++;
@@ -848,8 +854,9 @@ final class ae extends le {
                                 var39 = ge.field_i[var34];
                                 var40 = var38 >>> 24;
                                 var41 = 256 - var40;
+                                int incrementValue$10 = var34;
                                 var34++;
-                                ge.field_i[var34] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
+                                ge.field_i[incrementValue$10] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                 var35 = var35 + var27;
                                 var36 = var36 + var26;
                                 var37++;
@@ -900,8 +907,9 @@ final class ae extends le {
                                     var39 = ge.field_i[var34];
                                     var40 = var38 >>> 24;
                                     var41 = 256 - var40;
+                                    int incrementValue$11 = var34;
                                     var34++;
-                                    ge.field_i[var34] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
+                                    ge.field_i[incrementValue$11] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                     var35 = var35 + var27;
                                     var37++;
                                     continue L31;
@@ -988,8 +996,9 @@ final class ae extends le {
                                 var39 = ge.field_i[var34];
                                 var40 = var38 >>> 24;
                                 var41 = 256 - var40;
+                                int incrementValue$12 = var34;
                                 var34++;
-                                ge.field_i[var34] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
+                                ge.field_i[incrementValue$12] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                 var35 = var35 + var27;
                                 var36 = var36 + var26;
                                 var37++;
@@ -1064,8 +1073,9 @@ final class ae extends le {
                                 var39 = ge.field_i[var34];
                                 var40 = var38 >>> 24;
                                 var41 = 256 - var40;
+                                int incrementValue$13 = var34;
                                 var34++;
-                                ge.field_i[var34] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
+                                ge.field_i[incrementValue$13] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                 var35 = var35 + var27;
                                 var36 = var36 + var26;
                                 var37++;
@@ -1117,8 +1127,9 @@ final class ae extends le {
                                     var39 = ge.field_i[var34];
                                     var40 = var38 >>> 24;
                                     var41 = 256 - var40;
+                                    int incrementValue$14 = var34;
                                     var34++;
-                                    ge.field_i[var34] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
+                                    ge.field_i[incrementValue$14] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                     var35 = var35 + var27;
                                     var37++;
                                     continue L48;
@@ -1182,8 +1193,9 @@ final class ae extends le {
                                     var39 = ge.field_i[var34];
                                     var40 = var38 >>> 24;
                                     var41 = 256 - var40;
+                                    int incrementValue$15 = var34;
                                     var34++;
-                                    ge.field_i[var34] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
+                                    ge.field_i[incrementValue$15] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                     var36 = var36 + var26;
                                     var37++;
                                     continue L53;
@@ -1244,8 +1256,9 @@ final class ae extends le {
                                     var39 = ge.field_i[var34];
                                     var40 = var38 >>> 24;
                                     var41 = 256 - var40;
+                                    int incrementValue$16 = var34;
                                     var34++;
-                                    ge.field_i[var34] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
+                                    ge.field_i[incrementValue$16] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                     var36 = var36 + var26;
                                     var37++;
                                     continue L58;
@@ -1288,8 +1301,9 @@ final class ae extends le {
                                       var39 = ge.field_i[var34];
                                       var40 = var38 >>> 24;
                                       var41 = 256 - var40;
+                                      int incrementValue$17 = var34;
                                       var34++;
-                                      ge.field_i[var34] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
+                                      ge.field_i[incrementValue$17] = ((var38 & 16711935) * var40 + (var39 & 16711935) * var41 & -16711936) + ((var38 & 65280) * var40 + (var39 & 65280) * var41 & 16711680) >>> 8;
                                       var37++;
                                       continue L61;
                                     }
@@ -1741,8 +1755,9 @@ final class ae extends le {
                 param8++;
                 continue L0;
               } else {
+                int incrementValue$66 = param5;
                 param5++;
-                param0 = param4[param5];
+                param0 = param4[incrementValue$66];
                 if (param0 == 0) {
                   param7++;
                   param6++;
@@ -1755,8 +1770,9 @@ final class ae extends le {
                   param2 = param0 + param1;
                   param0 = (param0 & 16711935) + (param1 & 16711935);
                   param1 = (param0 & 16777472) + (param2 - param0 & 65536);
+                  int incrementValue$67 = param7;
                   param7++;
-                  param3[param7] = param2 - param1 | param1 - (param1 >>> 8);
+                  param3[incrementValue$67] = param2 - param1 | param1 - (param1 >>> 8);
                   param6++;
                   continue L1;
                 }
@@ -1787,8 +1803,9 @@ final class ae extends le {
                 var10++;
                 continue L0;
               } else {
+                int incrementValue$66 = param3;
                 param3++;
-                param2 = param1[param3];
+                param2 = param1[incrementValue$66];
                 var12 = param2 >>> 24;
                 if (var12 == 0) {
                   param4++;
@@ -1797,8 +1814,9 @@ final class ae extends le {
                 } else {
                   var13 = 256 - var12;
                   var14 = param0[param4];
+                  int incrementValue$67 = param4;
                   param4++;
-                  param0[param4] = ((param2 & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((param2 & 65280) * var12 + (var14 & 65280) * var13 & 16711680) >>> 8;
+                  param0[incrementValue$67] = ((param2 & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((param2 & 65280) * var12 + (var14 & 65280) * var13 & 16711680) >>> 8;
                   var11++;
                   continue L1;
                 }
@@ -1945,8 +1963,9 @@ final class ae extends le {
                 param6++;
                 continue L0;
               } else {
+                int incrementValue$66 = param3;
                 param3++;
-                param2 = param1[param3];
+                param2 = param1[incrementValue$66];
                 var14 = param2 >>> 24;
                 param2 = param2 & 16777215;
                 if (var14 == 0) {
@@ -1967,8 +1986,9 @@ final class ae extends le {
                   }
                   var16 = 256 - var14;
                   var17 = param0[param4];
+                  int incrementValue$67 = param4;
                   param4++;
-                  param0[param4] = ((var15 & 16711935) * var14 + (var17 & 16711935) * var16 & -16711936) + ((var15 & 65280) * var14 + (var17 & 65280) * var16 & 16711680) >>> 8;
+                  param0[incrementValue$67] = ((var15 & 16711935) * var14 + (var17 & 16711935) * var16 & -16711936) + ((var15 & 65280) * var14 + (var17 & 65280) * var16 & 16711680) >>> 8;
                   param5++;
                   continue L1;
                 }
@@ -2062,11 +2082,13 @@ final class ae extends le {
             for (var11 = -param5; var11 < 0; var11++) {
                 var12 = (param1[param3] >>> 24) * param9 >> 8;
                 var13 = 256 - var12;
+                int incrementValue$0 = param3;
                 param3++;
-                var14 = param1[param3];
+                var14 = param1[incrementValue$0];
                 var15 = param0[param4];
+                int incrementValue$1 = param4;
                 param4++;
-                param0[param4] = ((var14 & 16711935) * var12 + (var15 & 16711935) * var13 & -16711936) + ((var14 & 65280) * var12 + (var15 & 65280) * var13 & 16711680) >>> 8;
+                param0[incrementValue$1] = ((var14 & 16711935) * var12 + (var15 & 16711935) * var13 & -16711936) + ((var14 & 65280) * var12 + (var15 & 65280) * var13 & 16711680) >>> 8;
             }
             param4 = param4 + param7;
             param3 = param3 + param8;
@@ -2171,8 +2193,9 @@ final class ae extends le {
                 var10++;
                 continue L0;
               } else {
+                int incrementValue$66 = param3;
                 param3--;
-                param2 = param1[param3];
+                param2 = param1[incrementValue$66];
                 var12 = param2 >>> 24;
                 if (var12 == 0) {
                   param4++;
@@ -2181,8 +2204,9 @@ final class ae extends le {
                 } else {
                   var13 = 256 - var12;
                   var14 = param0[param4];
+                  int incrementValue$67 = param4;
                   param4++;
-                  param0[param4] = ((param2 & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((param2 & 65280) * var12 + (var14 & 65280) * var13 & 16711680) >>> 8;
+                  param0[incrementValue$67] = ((param2 & 16711935) * var12 + (var14 & 16711935) * var13 & -16711936) + ((param2 & 65280) * var12 + (var14 & 65280) * var13 & 16711680) >>> 8;
                   var11++;
                   continue L1;
                 }

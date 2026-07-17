@@ -13,32 +13,85 @@ final class dh extends df {
 
     final static fb a(int param0, lj param1, boolean param2) {
         byte[] var3 = null;
+        RuntimeException var3_ref = null;
         byte[] var4 = null;
-        if (param2) {
-          var4 = param1.c(param0, -103);
-          var3 = var4;
-          if (var4 == null) {
-            return null;
-          } else {
-            return new fb(var4);
+        Object stackIn_2_0 = null;
+        fb stackIn_4_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        fb stackOut_3_0 = null;
+        Object stackOut_1_0 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            field_V = null;
+            var4 = param1.c(param0, -103);
+            var3 = var4;
+            if (var4 != null) {
+              stackOut_3_0 = new fb(var4);
+              stackIn_4_0 = stackOut_3_0;
+              break L0;
+            } else {
+              stackOut_1_0 = null;
+              stackIn_2_0 = stackOut_1_0;
+              return (fb) (Object) stackIn_2_0;
+            }
           }
-        } else {
-          field_V = null;
-          var4 = param1.c(param0, -103);
-          var3 = var4;
-          if (var4 == null) {
-            return null;
-          } else {
-            return new fb(var4);
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var3_ref = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var3_ref;
+            stackOut_5_1 = new StringBuilder().append("dh.B(").append(param0).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param1 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L1;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L1;
+            }
           }
+          throw oj.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + 0 + 41);
         }
+        return stackIn_4_0;
     }
 
     dh(wd param0, String param1, int param2, int param3, int param4, int param5) {
         super(param1, (j) (Object) kk.c(false));
-        ((dh) this).field_W = param1;
-        ((dh) this).field_bb = param0;
-        ((dh) this).a((byte) 118, param2, param5, param4, param3);
+        try {
+            ((dh) this).field_W = param1;
+            ((dh) this).field_bb = param0;
+            ((dh) this).a((byte) 118, param2, param5, param4, param3);
+        } catch (RuntimeException runtimeException) {
+            throw oj.a((Throwable) (Object) runtimeException, "dh.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+        }
     }
 
     final static int a(int param0, int param1) {
@@ -66,22 +119,18 @@ final class dh extends df {
         if (param2 > -97) {
             return;
         }
-        super.a(param0, param1, (byte) -103, param3);
+        try {
+            super.a(param0, param1, (byte) -103, param3);
+        } catch (RuntimeException runtimeException) {
+            throw oj.a((Throwable) (Object) runtimeException, "dh.U(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+        }
     }
 
     public static void g(int param0) {
         field_Y = null;
         field_cb = null;
-        if (param0 != 112) {
-          int discarded$2 = dh.a(-110, -29);
-          field_ab = null;
-          field_V = null;
-          return;
-        } else {
-          field_ab = null;
-          field_V = null;
-          return;
-        }
+        field_ab = null;
+        field_V = null;
     }
 
     final void a(int param0, int param1, boolean param2, int param3) {
@@ -141,7 +190,7 @@ final class dh extends df {
               var6 = ((dh) this).field_bb.b(-74);
               var43 = (gd) (Object) ((dh) this).field_q;
               var9 = ((dh) this).field_m + param1;
-              var10 = var43.a((ee) this, 3, param0) + (var43.a(102, (ee) this).a((byte) -63) >> 1843213441);
+              var10 = var43.a((ee) this, 3, param0) + (var43.a(102, (ee) this).a((byte) -63) >> 1);
               if (var6 == bl.field_S) {
                 break L2;
               } else {
@@ -153,51 +202,51 @@ final class dh extends df {
                       return;
                     } else {
                       var39 = ub.field_f[1];
-                      var39.b(var9, var10 + -(var39.field_x >> -1199853439), 256);
+                      var39.b(var9, var10 + -(var39.field_x >> 1), 256);
                       return;
                     }
                   } else {
                     var38 = ub.field_f[2];
-                    var38.b(var9, -(var38.field_x >> 2018012417) + var10, 256);
+                    var38.b(var9, -(var38.field_x >> 1) + var10, 256);
                     return;
                   }
                 }
               }
             }
             var40 = ub.field_f[0];
-            var11 = var40.field_q << -1522393343;
-            var12 = var40.field_v << 1586846593;
+            var11 = var40.field_q << 1;
+            var12 = var40.field_v << 1;
             if (((dh) this).field_Z != null) {
               if (((dh) this).field_Z.field_u >= var11) {
                 if (((dh) this).field_Z.field_x >= var12) {
                   ad.a(122, ((dh) this).field_Z);
                   qg.b();
-                  var40.b(112, 144, var40.field_q << 1481584004, var40.field_v << -2119609404, -((dh) this).field_X << -246025206, 4096);
+                  var40.b(112, 144, var40.field_q << 4, var40.field_v << 4, -((dh) this).field_X << 10, 4096);
                   ie.b((byte) -9);
-                  ((dh) this).field_Z.b(-(var40.field_q >> -1191985439) + var9, var10 + -var40.field_v, 256);
+                  ((dh) this).field_Z.b(-(var40.field_q >> 1) + var9, var10 + -var40.field_v, 256);
                   return;
                 } else {
                   ((dh) this).field_Z = new ka(var11, var12);
                   ad.a(-114, ((dh) this).field_Z);
-                  var40.b(112, 144, var40.field_q << 1481584004, var40.field_v << -2119609404, -((dh) this).field_X << -246025206, 4096);
+                  var40.b(112, 144, var40.field_q << 4, var40.field_v << 4, -((dh) this).field_X << 10, 4096);
                   ie.b((byte) -9);
-                  ((dh) this).field_Z.b(-(var40.field_q >> -1191985439) + var9, var10 + -var40.field_v, 256);
+                  ((dh) this).field_Z.b(-(var40.field_q >> 1) + var9, var10 + -var40.field_v, 256);
                   return;
                 }
               } else {
                 ((dh) this).field_Z = new ka(var11, var12);
                 ad.a(-114, ((dh) this).field_Z);
-                var40.b(112, 144, var40.field_q << 1481584004, var40.field_v << -2119609404, -((dh) this).field_X << -246025206, 4096);
+                var40.b(112, 144, var40.field_q << 4, var40.field_v << 4, -((dh) this).field_X << 10, 4096);
                 ie.b((byte) -9);
-                ((dh) this).field_Z.b(-(var40.field_q >> -1191985439) + var9, var10 + -var40.field_v, 256);
+                ((dh) this).field_Z.b(-(var40.field_q >> 1) + var9, var10 + -var40.field_v, 256);
                 return;
               }
             } else {
               ((dh) this).field_Z = new ka(var11, var12);
               ad.a(-114, ((dh) this).field_Z);
-              var40.b(112, 144, var40.field_q << 1481584004, var40.field_v << -2119609404, -((dh) this).field_X << -246025206, 4096);
+              var40.b(112, 144, var40.field_q << 4, var40.field_v << 4, -((dh) this).field_X << 10, 4096);
               ie.b((byte) -9);
-              ((dh) this).field_Z.b(-(var40.field_q >> -1191985439) + var9, var10 + -var40.field_v, 256);
+              ((dh) this).field_Z.b(-(var40.field_q >> 1) + var9, var10 + -var40.field_v, 256);
               return;
             }
           } else {
@@ -215,44 +264,44 @@ final class dh extends df {
             var6 = ((dh) this).field_bb.b(-74);
             var42 = (gd) (Object) ((dh) this).field_q;
             var9 = ((dh) this).field_m + param1;
-            var10 = var42.a((ee) this, 3, param0) + (var42.a(102, (ee) this).a((byte) -63) >> 1843213441);
+            var10 = var42.a((ee) this, 3, param0) + (var42.a(102, (ee) this).a((byte) -63) >> 1);
             if (var6 != bl.field_S) {
               if (jh.field_c == var6) {
                 var32 = ub.field_f[0];
                 var16 = var32;
-                var11 = var32.field_q << -1522393343;
-                var12 = var32.field_v << 1586846593;
+                var11 = var32.field_q << 1;
+                var12 = var32.field_v << 1;
                 if (((dh) this).field_Z != null) {
                   if (((dh) this).field_Z.field_u >= var11) {
                     if (((dh) this).field_Z.field_x >= var12) {
                       ad.a(122, ((dh) this).field_Z);
                       qg.b();
-                      var32.b(112, 144, var32.field_q << 1481584004, var32.field_v << -2119609404, -((dh) this).field_X << -246025206, 4096);
+                      var32.b(112, 144, var32.field_q << 4, var32.field_v << 4, -((dh) this).field_X << 10, 4096);
                       ie.b((byte) -9);
-                      ((dh) this).field_Z.b(-(var32.field_q >> -1191985439) + var9, var10 + -var32.field_v, 256);
+                      ((dh) this).field_Z.b(-(var32.field_q >> 1) + var9, var10 + -var32.field_v, 256);
                       return;
                     } else {
                       ((dh) this).field_Z = new ka(var11, var12);
                       ad.a(-114, ((dh) this).field_Z);
-                      var32.b(112, 144, var32.field_q << 1481584004, var32.field_v << -2119609404, -((dh) this).field_X << -246025206, 4096);
+                      var32.b(112, 144, var32.field_q << 4, var32.field_v << 4, -((dh) this).field_X << 10, 4096);
                       ie.b((byte) -9);
-                      ((dh) this).field_Z.b(-(var32.field_q >> -1191985439) + var9, var10 + -var32.field_v, 256);
+                      ((dh) this).field_Z.b(-(var32.field_q >> 1) + var9, var10 + -var32.field_v, 256);
                       return;
                     }
                   } else {
                     ((dh) this).field_Z = new ka(var11, var12);
                     ad.a(-114, ((dh) this).field_Z);
-                    var32.b(112, 144, var32.field_q << 1481584004, var32.field_v << -2119609404, -((dh) this).field_X << -246025206, 4096);
+                    var32.b(112, 144, var32.field_q << 4, var32.field_v << 4, -((dh) this).field_X << 10, 4096);
                     ie.b((byte) -9);
-                    ((dh) this).field_Z.b(-(var32.field_q >> -1191985439) + var9, var10 + -var32.field_v, 256);
+                    ((dh) this).field_Z.b(-(var32.field_q >> 1) + var9, var10 + -var32.field_v, 256);
                     return;
                   }
                 } else {
                   ((dh) this).field_Z = new ka(var11, var12);
                   ad.a(-114, ((dh) this).field_Z);
-                  var32.b(112, 144, var32.field_q << 1481584004, var32.field_v << -2119609404, -((dh) this).field_X << -246025206, 4096);
+                  var32.b(112, 144, var32.field_q << 4, var32.field_v << 4, -((dh) this).field_X << 10, 4096);
                   ie.b((byte) -9);
-                  ((dh) this).field_Z.b(-(var32.field_q >> -1191985439) + var9, var10 + -var32.field_v, 256);
+                  ((dh) this).field_Z.b(-(var32.field_q >> 1) + var9, var10 + -var32.field_v, 256);
                   return;
                 }
               } else {
@@ -261,12 +310,12 @@ final class dh extends df {
                     return;
                   } else {
                     var30 = ub.field_f[1];
-                    var30.b(var9, var10 + -(var30.field_x >> -1199853439), 256);
+                    var30.b(var9, var10 + -(var30.field_x >> 1), 256);
                     return;
                   }
                 } else {
                   var27 = ub.field_f[2];
-                  var27.b(var9, -(var27.field_x >> 2018012417) + var10, 256);
+                  var27.b(var9, -(var27.field_x >> 1) + var10, 256);
                   return;
                 }
               }
@@ -275,8 +324,8 @@ final class dh extends df {
                 L5: {
                   var25 = ub.field_f[0];
                   var16 = var25;
-                  var11 = var25.field_q << -1522393343;
-                  var12 = var25.field_v << 1586846593;
+                  var11 = var25.field_q << 1;
+                  var12 = var25.field_v << 1;
                   if (((dh) this).field_Z == null) {
                     break L5;
                   } else {
@@ -297,9 +346,9 @@ final class dh extends df {
                 ad.a(-114, ((dh) this).field_Z);
                 break L4;
               }
-              var25.b(112, 144, var25.field_q << 1481584004, var25.field_v << -2119609404, -((dh) this).field_X << -246025206, 4096);
+              var25.b(112, 144, var25.field_q << 4, var25.field_v << 4, -((dh) this).field_X << 10, 4096);
               ie.b((byte) -9);
-              ((dh) this).field_Z.b(-(var25.field_q >> -1191985439) + var9, var10 + -var25.field_v, 256);
+              ((dh) this).field_Z.b(-(var25.field_q >> 1) + var9, var10 + -var25.field_v, 256);
               return;
             }
           }
@@ -320,7 +369,7 @@ final class dh extends df {
               var6 = ((dh) this).field_bb.b(-74);
               var41 = (gd) (Object) ((dh) this).field_q;
               var9 = ((dh) this).field_m + param1;
-              var10 = var41.a((ee) this, 3, param0) + (var41.a(102, (ee) this).a((byte) -63) >> 1843213441);
+              var10 = var41.a((ee) this, 3, param0) + (var41.a(102, (ee) this).a((byte) -63) >> 1);
               if (var6 == bl.field_S) {
                 break L8;
               } else {
@@ -330,14 +379,14 @@ final class dh extends df {
                   if (lk.field_c != var6) {
                     if (var6 == tf.field_w) {
                       var20 = ub.field_f[1];
-                      var20.b(var9, var10 + -(var20.field_x >> -1199853439), 256);
+                      var20.b(var9, var10 + -(var20.field_x >> 1), 256);
                       break L7;
                     } else {
                       break L7;
                     }
                   } else {
                     var19 = ub.field_f[2];
-                    var19.b(var9, -(var19.field_x >> 2018012417) + var10, 256);
+                    var19.b(var9, -(var19.field_x >> 1) + var10, 256);
                     break L7;
                   }
                 }
@@ -347,8 +396,8 @@ final class dh extends df {
               L10: {
                 var21 = ub.field_f[0];
                 var16 = var21;
-                var11 = var21.field_q << -1522393343;
-                var12 = var21.field_v << 1586846593;
+                var11 = var21.field_q << 1;
+                var12 = var21.field_v << 1;
                 if (((dh) this).field_Z == null) {
                   break L10;
                 } else {
@@ -369,9 +418,9 @@ final class dh extends df {
               ad.a(-114, ((dh) this).field_Z);
               break L9;
             }
-            var21.b(112, 144, var21.field_q << 1481584004, var21.field_v << -2119609404, -((dh) this).field_X << -246025206, 4096);
+            var21.b(112, 144, var21.field_q << 4, var21.field_v << 4, -((dh) this).field_X << 10, 4096);
             ie.b((byte) -9);
-            ((dh) this).field_Z.b(-(var21.field_q >> -1191985439) + var9, var10 + -var21.field_v, 256);
+            ((dh) this).field_Z.b(-(var21.field_q >> 1) + var9, var10 + -var21.field_v, 256);
             break L7;
           }
           return;
@@ -379,15 +428,71 @@ final class dh extends df {
     }
 
     final boolean a(ee param0, int param1) {
-        if (param1 != 0) {
-            ((dh) this).field_W = null;
-            return false;
+        RuntimeException var3 = null;
+        int stackIn_3_0 = 0;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_2_0 = 0;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            if (param1 == 0) {
+              stackOut_2_0 = 0;
+              stackIn_3_0 = stackOut_2_0;
+              break L0;
+            } else {
+              ((dh) this).field_W = null;
+              return false;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var3 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_1 = new StringBuilder().append("dh.RA(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L1;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L1;
+            }
+          }
+          throw oj.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 41);
         }
-        return false;
+        return stackIn_3_0 != 0;
     }
 
     final static ae a(int param0, int param1, byte param2, int param3, int param4) {
-        ae var5 = null;
+        Object var5 = null;
         ae var5_ref = null;
         int var6 = 0;
         ae var7 = null;
@@ -419,15 +524,15 @@ final class dh extends df {
           var5_ref = (ae) (Object) bk.field_t.c((byte) 121);
           L1: while (true) {
             if (var5_ref != null) {
-              if (var5.field_o == param0) {
-                return var5;
+              if (var5_ref.field_o == param0) {
+                return var5_ref;
               } else {
                 var5_ref = (ae) (Object) bk.field_t.c(param2 ^ 329);
                 continue L1;
               }
             } else {
               var8 = new ae();
-              var5 = var8;
+              var5_ref = var8;
               var8.field_r = param1;
               var8.field_q = param3;
               var8.field_o = param0;

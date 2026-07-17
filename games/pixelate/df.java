@@ -74,12 +74,6 @@ final class df extends fa {
     }
 
     public static void a(int param0) {
-        if (param0 != 3) {
-            field_m = null;
-            field_r = null;
-            field_m = null;
-            return;
-        }
         field_r = null;
         field_m = null;
     }

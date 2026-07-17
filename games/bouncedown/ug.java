@@ -11,12 +11,6 @@ class ug extends ai {
 
     public static void b(byte param0) {
         field_g = null;
-        if (param0 != 115) {
-            field_h = null;
-            field_k = null;
-            field_h = null;
-            return;
-        }
         field_k = null;
         field_h = null;
     }

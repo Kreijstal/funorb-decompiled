@@ -27,15 +27,78 @@ final class oq extends ge {
     }
 
     final void a(int param0, int param1, byte[] param2, int param3) {
-        int var5 = 0;
-        if (param1 >= -102) {
-            Object var6 = null;
-            ((oq) this).a(33, -53, (byte[]) null, -26);
-        }
-        for (var5 = 0; var5 < param3; var5++) {
-            int fieldTemp$0 = ((oq) this).field_v;
-            ((oq) this).field_v = ((oq) this).field_v + 1;
-            param2[var5 + param0] = (byte)(((oq) this).field_t[fieldTemp$0] + -((oq) this).field_A.a((byte) 7));
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        Object var6 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param1 < -102) {
+                break L1;
+              } else {
+                var6 = null;
+                ((oq) this).a(33, -53, (byte[]) null, -26);
+                break L1;
+              }
+            }
+            var5_int = 0;
+            L2: while (true) {
+              if (var5_int >= param3) {
+                break L0;
+              } else {
+                int fieldTemp$5 = ((oq) this).field_v;
+                ((oq) this).field_v = ((oq) this).field_v + 1;
+                param2[var5_int + param0] = (byte)(((oq) this).field_t[fieldTemp$5] + -((oq) this).field_A.a((byte) 7));
+                var5_int++;
+                continue L2;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var5 = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var5;
+            stackOut_6_1 = new StringBuilder().append("oq.D(").append(param0).append(44).append(param1).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param2 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L3;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L3;
+            }
+          }
+          throw wm.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param3 + 41);
         }
     }
 
@@ -74,7 +137,7 @@ final class oq extends ge {
     }
 
     final int e(int param0, int param1) {
-        int var3 = ((oq) this).field_y >> -1632069917;
+        int var3 = ((oq) this).field_y >> 3;
         int var4 = 8 - (7 & ((oq) this).field_y);
         ((oq) this).field_y = ((oq) this).field_y + param0;
         int var5 = 0;
@@ -100,7 +163,11 @@ final class oq extends ge {
         if (param0 != 32) {
             return;
         }
-        ((oq) this).field_A = new li(param1);
+        try {
+            ((oq) this).field_A = new li(param1);
+        } catch (RuntimeException runtimeException) {
+            throw wm.a((Throwable) (Object) runtimeException, "oq.G(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     oq(byte[] param0) {
@@ -109,9 +176,6 @@ final class oq extends ge {
 
     public static void c(boolean param0) {
         field_C = null;
-        if (!param0) {
-            field_C = null;
-        }
         field_B = null;
         field_z = null;
         field_D = null;

@@ -15,8 +15,9 @@ final class jd {
     private int field_h;
 
     final int c(byte param0) {
+        int fieldTemp$0 = ((jd) this).field_b;
         ((jd) this).field_b = ((jd) this).field_b - 1;
-        if (!(((jd) this).field_b != 0)) {
+        if (!(fieldTemp$0 != 0)) {
             this.a((byte) -103);
             ((jd) this).field_b = 255;
         }
@@ -48,15 +49,7 @@ final class jd {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        L0: {
-          var11 = ArcanistsMulti.field_G ? 1 : 0;
-          if (param0 == 1046142536) {
-            break L0;
-          } else {
-            field_c = null;
-            break L0;
-          }
-        }
+        var11 = ArcanistsMulti.field_G ? 1 : 0;
         var8 = -1640531527;
         var3 = -1640531527;
         var5 = -1640531527;
@@ -66,14 +59,14 @@ final class jd {
         var7 = -1640531527;
         var10 = -1640531527;
         var2 = 0;
-        L1: while (true) {
+        L0: while (true) {
           if (var2 >= 4) {
             var2 = 0;
-            L2: while (true) {
+            L1: while (true) {
               if (var2 >= 256) {
                 var2 = 0;
-                L3: while (true) {
-                  if ((var2 ^ -1) <= -257) {
+                L2: while (true) {
+                  if (var2 >= 256) {
                     this.a((byte) -126);
                     ((jd) this).field_b = 256;
                     return;
@@ -86,28 +79,28 @@ final class jd {
                     var4 = var4 + ((jd) this).field_f[var2 + 1];
                     var8 = var8 + ((jd) this).field_f[5 + var2];
                     var5 = var5 + ((jd) this).field_f[var2 - -2];
-                    var3 = var3 ^ var4 << 875389387;
+                    var3 = var3 ^ var4 << 11;
                     var4 = var4 + var5;
                     var6 = var6 + var3;
-                    var4 = var4 ^ var5 >>> 664968706;
+                    var4 = var4 ^ var5 >>> 2;
                     var7 = var7 + var4;
                     var5 = var5 + var6;
-                    var5 = var5 ^ var6 << -893967960;
+                    var5 = var5 ^ var6 << 8;
                     var8 = var8 + var5;
                     var6 = var6 + var7;
-                    var6 = var6 ^ var7 >>> -562421744;
+                    var6 = var6 ^ var7 >>> 16;
                     var9 = var9 + var6;
                     var7 = var7 + var8;
-                    var7 = var7 ^ var8 << -2044102166;
+                    var7 = var7 ^ var8 << 10;
                     var8 = var8 + var9;
                     var10 = var10 + var7;
-                    var8 = var8 ^ var9 >>> 639147780;
+                    var8 = var8 ^ var9 >>> 4;
                     var9 = var9 + var10;
                     var3 = var3 + var8;
-                    var9 = var9 ^ var10 << -872798648;
+                    var9 = var9 ^ var10 << 8;
                     var10 = var10 + var3;
                     var4 = var4 + var9;
-                    var10 = var10 ^ var3 >>> -568192471;
+                    var10 = var10 ^ var3 >>> 9;
                     var3 = var3 + var4;
                     var5 = var5 + var10;
                     ((jd) this).field_f[var2] = var3;
@@ -119,7 +112,7 @@ final class jd {
                     ((jd) this).field_f[var2 - -6] = var9;
                     ((jd) this).field_f[var2 - -7] = var10;
                     var2 += 8;
-                    continue L3;
+                    continue L2;
                   }
                 }
               } else {
@@ -131,28 +124,28 @@ final class jd {
                 var9 = var9 + ((jd) this).field_a[var2 + 6];
                 var6 = var6 + ((jd) this).field_a[3 + var2];
                 var3 = var3 + ((jd) this).field_a[var2];
-                var3 = var3 ^ var4 << -693057493;
+                var3 = var3 ^ var4 << 11;
                 var4 = var4 + var5;
                 var6 = var6 + var3;
-                var4 = var4 ^ var5 >>> -640872414;
+                var4 = var4 ^ var5 >>> 2;
                 var7 = var7 + var4;
                 var5 = var5 + var6;
-                var5 = var5 ^ var6 << 656376392;
+                var5 = var5 ^ var6 << 8;
                 var8 = var8 + var5;
                 var6 = var6 + var7;
-                var6 = var6 ^ var7 >>> 1145160752;
+                var6 = var6 ^ var7 >>> 16;
                 var7 = var7 + var8;
                 var9 = var9 + var6;
-                var7 = var7 ^ var8 << 745669386;
+                var7 = var7 ^ var8 << 10;
                 var8 = var8 + var9;
                 var10 = var10 + var7;
-                var8 = var8 ^ var9 >>> -2086837532;
+                var8 = var8 ^ var9 >>> 4;
                 var9 = var9 + var10;
                 var3 = var3 + var8;
-                var9 = var9 ^ var10 << -1991288184;
+                var9 = var9 ^ var10 << 8;
                 var4 = var4 + var9;
                 var10 = var10 + var3;
-                var10 = var10 ^ var3 >>> 916879017;
+                var10 = var10 ^ var3 >>> 9;
                 var5 = var5 + var10;
                 var3 = var3 + var4;
                 ((jd) this).field_f[var2] = var3;
@@ -164,36 +157,36 @@ final class jd {
                 ((jd) this).field_f[6 + var2] = var9;
                 ((jd) this).field_f[7 + var2] = var10;
                 var2 += 8;
-                continue L2;
+                continue L1;
               }
             }
           } else {
-            var3 = var3 ^ var4 << 892115883;
+            var3 = var3 ^ var4 << 11;
             var4 = var4 + var5;
             var6 = var6 + var3;
-            var4 = var4 ^ var5 >>> 722398754;
+            var4 = var4 ^ var5 >>> 2;
             var7 = var7 + var4;
             var5 = var5 + var6;
-            var5 = var5 ^ var6 << -2069697496;
+            var5 = var5 ^ var6 << 8;
             var6 = var6 + var7;
             var8 = var8 + var5;
-            var6 = var6 ^ var7 >>> -1030212400;
+            var6 = var6 ^ var7 >>> 16;
             var9 = var9 + var6;
             var7 = var7 + var8;
-            var7 = var7 ^ var8 << 1854946794;
+            var7 = var7 ^ var8 << 10;
             var8 = var8 + var9;
             var10 = var10 + var7;
-            var8 = var8 ^ var9 >>> 630984964;
+            var8 = var8 ^ var9 >>> 4;
             var3 = var3 + var8;
             var9 = var9 + var10;
-            var9 = var9 ^ var10 << 1046142536;
+            var9 = var9 ^ var10 << 8;
             var10 = var10 + var3;
             var4 = var4 + var9;
-            var10 = var10 ^ var3 >>> -929659831;
+            var10 = var10 ^ var3 >>> 9;
             var5 = var5 + var10;
             var3 = var3 + var4;
             var2++;
-            continue L1;
+            continue L0;
           }
         }
     }
@@ -212,38 +205,41 @@ final class jd {
             break L0;
           }
         }
+        int fieldTemp$3 = ((jd) this).field_d + 1;
         ((jd) this).field_d = ((jd) this).field_d + 1;
-        ((jd) this).field_k = ((jd) this).field_k + (((jd) this).field_d + 1);
+        ((jd) this).field_k = ((jd) this).field_k + fieldTemp$3;
         var2 = 0;
         L1: while (true) {
-          if (-257 >= var2) {
+          if (var2 >= 256) {
             return;
           } else {
             L2: {
               var3 = ((jd) this).field_f[var2];
-              if (-1 != (2 & var2)) {
+              if ((2 & var2) != 0) {
                 if (0 != (1 & var2)) {
-                  ((jd) this).field_h = ((jd) this).field_h ^ ((jd) this).field_h >>> -533837616;
+                  ((jd) this).field_h = ((jd) this).field_h ^ ((jd) this).field_h >>> 16;
                   break L2;
                 } else {
-                  ((jd) this).field_h = ((jd) this).field_h ^ ((jd) this).field_h << 1649781730;
+                  ((jd) this).field_h = ((jd) this).field_h ^ ((jd) this).field_h << 2;
                   break L2;
                 }
               } else {
-                if (-1 != (var2 & 1 ^ -1)) {
-                  ((jd) this).field_h = ((jd) this).field_h ^ ((jd) this).field_h >>> 61505094;
+                if ((var2 & 1) != 0) {
+                  ((jd) this).field_h = ((jd) this).field_h ^ ((jd) this).field_h >>> 6;
                   break L2;
                 } else {
-                  ((jd) this).field_h = ((jd) this).field_h ^ ((jd) this).field_h << -1625450995;
+                  ((jd) this).field_h = ((jd) this).field_h ^ ((jd) this).field_h << 13;
                   break L2;
                 }
               }
             }
             ((jd) this).field_h = ((jd) this).field_h + ((jd) this).field_f[var2 + 128 & 255];
-            var4 = ((jd) this).field_h + ((jd) this).field_f[dg.a(var3 >> 160291746, 255)] + ((jd) this).field_k;
-            ((jd) this).field_f[var2] = ((jd) this).field_h + ((jd) this).field_f[dg.a(var3 >> 160291746, 255)] + ((jd) this).field_k;
-            ((jd) this).field_k = var3 + ((jd) this).field_f[dg.a(255, var4 >> -147818776 >> 1203664194)];
-            ((jd) this).field_a[var2] = var3 + ((jd) this).field_f[dg.a(255, var4 >> -147818776 >> 1203664194)];
+            int dupTemp$4 = ((jd) this).field_h + ((jd) this).field_f[dg.a(var3 >> 2, 255)] + ((jd) this).field_k;
+            var4 = dupTemp$4;
+            ((jd) this).field_f[var2] = dupTemp$4;
+            int dupTemp$5 = var3 + ((jd) this).field_f[dg.a(255, var4 >> 8 >> 2)];
+            ((jd) this).field_k = dupTemp$5;
+            ((jd) this).field_a[var2] = dupTemp$5;
             var2++;
             continue L1;
           }
@@ -266,7 +262,7 @@ final class jd {
         if (param1 != -116) {
             ((jd) this).field_b = 111;
         }
-        if (!((param0 ^ -1) < -1)) {
+        if (!(param0 > 0)) {
             throw new IllegalArgumentException();
         }
         int var3 = 2147483647 + -(int)(4294967296L % (long)param0);
@@ -303,13 +299,17 @@ final class jd {
     }
 
     jd(int[] param0) {
-        int var2 = 0;
-        ((jd) this).field_a = new int[256];
-        ((jd) this).field_f = new int[256];
-        for (var2 = 0; var2 < param0.length; var2++) {
-            ((jd) this).field_a[var2] = param0[var2];
+        int var2_int = 0;
+        try {
+            ((jd) this).field_a = new int[256];
+            ((jd) this).field_f = new int[256];
+            for (var2_int = 0; var2_int < param0.length; var2_int++) {
+                ((jd) this).field_a[var2_int] = param0[var2_int];
+            }
+            this.a(1046142536);
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "jd.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }
-        this.a(1046142536);
     }
 
     static {

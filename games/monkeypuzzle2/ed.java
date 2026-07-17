@@ -9,78 +9,70 @@ final class ed {
     static long field_d;
 
     final static int a(int param0, int param1, int param2) {
-        int var3 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
+        int stackIn_8_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_7_0 = 0;
         var4 = MonkeyPuzzle2.field_F ? 1 : 0;
-        if (param2 != 0) {
+        try {
           L0: {
-            field_a = null;
-            if (param1 <= param0) {
-              break L0;
-            } else {
-              var3 = param0;
-              param0 = param1;
-              param1 = var3;
-              break L0;
+            L1: {
+              if (param2 == 0) {
+                break L1;
+              } else {
+                field_a = null;
+                break L1;
+              }
+            }
+            L2: {
+              if (param1 <= param0) {
+                break L2;
+              } else {
+                var3_int = param0;
+                param0 = param1;
+                param1 = var3_int;
+                break L2;
+              }
+            }
+            L3: while (true) {
+              if (0 == param1) {
+                stackOut_7_0 = param0;
+                stackIn_8_0 = stackOut_7_0;
+                break L0;
+              } else {
+                var3_int = param0 % param1;
+                param0 = param1;
+                param1 = var3_int;
+                continue L3;
+              }
             }
           }
-          L1: while (true) {
-            if (0 == param1) {
-              return param0;
-            } else {
-              var3 = param0 % param1;
-              param0 = param1;
-              param1 = var3;
-              continue L1;
-            }
-          }
-        } else {
-          L2: {
-            if (param1 <= param0) {
-              break L2;
-            } else {
-              var3 = param0;
-              param0 = param1;
-              param1 = var3;
-              break L2;
-            }
-          }
-          L3: while (true) {
-            if (0 == param1) {
-              return param0;
-            } else {
-              var3 = param0 % param1;
-              param0 = param1;
-              param1 = var3;
-              continue L3;
-            }
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw la.a((Throwable) (Object) var3, "ed.B(" + param0 + 44 + param1 + 44 + param2 + 41);
         }
+        return stackIn_8_0;
     }
 
     final static void a(ad param0, int param1) {
         sf var2 = null;
-        sf.a(param0.a("", "headers.packvorbis", 30));
-        if (param1 < 44) {
-          int discarded$6 = ed.a(-96, -76, 44);
-          var2 = sf.a(param0, "jagex logo2.packvorbis", "");
-          td discarded$7 = var2.a();
-          return;
-        } else {
-          var2 = sf.a(param0, "jagex logo2.packvorbis", "");
-          td discarded$8 = var2.a();
-          return;
+        try {
+            sf.a(param0.a("", "headers.packvorbis", 30));
+            if (param1 < 44) {
+                int discarded$0 = ed.a(-96, -76, 44);
+            }
+            var2 = sf.a(param0, "jagex logo2.packvorbis", "");
+            td discarded$1 = var2.a();
+        } catch (RuntimeException runtimeException) {
+            throw la.a((Throwable) (Object) runtimeException, "ed.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
     public static void a(boolean param0) {
         field_b = null;
-        if (param0) {
-            field_a = null;
-            field_c = null;
-            field_a = null;
-            return;
-        }
         field_c = null;
         field_a = null;
     }

@@ -42,14 +42,7 @@ final class lm {
         field_g = null;
         field_a = null;
         field_e = null;
-        if (param0 != -26377) {
-          lm.a((byte) -120);
-          field_d = null;
-          return;
-        } else {
-          field_d = null;
-          return;
-        }
+        field_d = null;
     }
 
     private lm() throws Throwable {

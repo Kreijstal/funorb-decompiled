@@ -109,6 +109,7 @@ final class fk {
           if (var2 >= 10) {
             ((fk) this).field_a = param0.a((byte) 25);
             ((fk) this).field_b = param0.a((byte) 25);
+            return;
           } else {
             var3 = param0.c(32);
             if (var3 != 0) {

@@ -24,32 +24,24 @@ final class nf {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        L0: {
-          var11 = TrackController.field_F ? 1 : 0;
-          var10 = -1640531527;
-          var6 = -1640531527;
-          var3 = -1640531527;
-          if (param0 > 11) {
-            break L0;
-          } else {
-            int discarded$1 = ((nf) this).c(100);
-            break L0;
-          }
-        }
+        var11 = TrackController.field_F ? 1 : 0;
+        var10 = -1640531527;
+        var6 = -1640531527;
+        var3 = -1640531527;
         var9 = -1640531527;
         var4 = -1640531527;
         var5 = -1640531527;
         var7 = -1640531527;
         var8 = -1640531527;
         var2 = 0;
-        L1: while (true) {
-          if ((var2 ^ -1) <= -5) {
+        L0: while (true) {
+          if (var2 >= 4) {
             var2 = 0;
-            L2: while (true) {
-              if ((var2 ^ -1) <= -257) {
+            L1: while (true) {
+              if (var2 >= 256) {
                 var2 = 0;
-                L3: while (true) {
-                  if (-257 >= (var2 ^ -1)) {
+                L2: while (true) {
+                  if (var2 >= 256) {
                     this.a((byte) 35);
                     ((nf) this).field_a = 256;
                     return;
@@ -62,28 +54,28 @@ final class nf {
                     var3 = var3 + ((nf) this).field_d[var2];
                     var4 = var4 + ((nf) this).field_d[var2 - -1];
                     var5 = var5 + ((nf) this).field_d[var2 - -2];
-                    var3 = var3 ^ var4 << 1667466955;
+                    var3 = var3 ^ var4 << 11;
                     var4 = var4 + var5;
                     var6 = var6 + var3;
-                    var4 = var4 ^ var5 >>> -172377726;
+                    var4 = var4 ^ var5 >>> 2;
                     var7 = var7 + var4;
                     var5 = var5 + var6;
-                    var5 = var5 ^ var6 << -278718712;
+                    var5 = var5 ^ var6 << 8;
                     var6 = var6 + var7;
                     var8 = var8 + var5;
-                    var6 = var6 ^ var7 >>> 1300225680;
+                    var6 = var6 ^ var7 >>> 16;
                     var9 = var9 + var6;
                     var7 = var7 + var8;
-                    var7 = var7 ^ var8 << 73030602;
+                    var7 = var7 ^ var8 << 10;
                     var10 = var10 + var7;
                     var8 = var8 + var9;
-                    var8 = var8 ^ var9 >>> 1747567652;
+                    var8 = var8 ^ var9 >>> 4;
                     var9 = var9 + var10;
                     var3 = var3 + var8;
-                    var9 = var9 ^ var10 << -1272227224;
+                    var9 = var9 ^ var10 << 8;
                     var10 = var10 + var3;
                     var4 = var4 + var9;
-                    var10 = var10 ^ var3 >>> -1797124791;
+                    var10 = var10 ^ var3 >>> 9;
                     var3 = var3 + var4;
                     var5 = var5 + var10;
                     ((nf) this).field_d[var2] = var3;
@@ -95,7 +87,7 @@ final class nf {
                     ((nf) this).field_d[var2 + 6] = var9;
                     ((nf) this).field_d[var2 - -7] = var10;
                     var2 += 8;
-                    continue L3;
+                    continue L2;
                   }
                 }
               } else {
@@ -107,28 +99,28 @@ final class nf {
                 var7 = var7 + ((nf) this).field_i[var2 - -4];
                 var6 = var6 + ((nf) this).field_i[3 + var2];
                 var5 = var5 + ((nf) this).field_i[var2 + 2];
-                var3 = var3 ^ var4 << -181970773;
+                var3 = var3 ^ var4 << 11;
                 var6 = var6 + var3;
                 var4 = var4 + var5;
-                var4 = var4 ^ var5 >>> 1432336226;
+                var4 = var4 ^ var5 >>> 2;
                 var7 = var7 + var4;
                 var5 = var5 + var6;
-                var5 = var5 ^ var6 << 129906856;
+                var5 = var5 ^ var6 << 8;
                 var6 = var6 + var7;
                 var8 = var8 + var5;
-                var6 = var6 ^ var7 >>> -1483674992;
+                var6 = var6 ^ var7 >>> 16;
                 var7 = var7 + var8;
                 var9 = var9 + var6;
-                var7 = var7 ^ var8 << 1740627978;
+                var7 = var7 ^ var8 << 10;
                 var10 = var10 + var7;
                 var8 = var8 + var9;
-                var8 = var8 ^ var9 >>> 1279641220;
+                var8 = var8 ^ var9 >>> 4;
                 var3 = var3 + var8;
                 var9 = var9 + var10;
-                var9 = var9 ^ var10 << -1845179608;
+                var9 = var9 ^ var10 << 8;
                 var10 = var10 + var3;
                 var4 = var4 + var9;
-                var10 = var10 ^ var3 >>> -1589383191;
+                var10 = var10 ^ var3 >>> 9;
                 var3 = var3 + var4;
                 var5 = var5 + var10;
                 ((nf) this).field_d[var2] = var3;
@@ -140,54 +132,139 @@ final class nf {
                 ((nf) this).field_d[var2 - -6] = var9;
                 ((nf) this).field_d[var2 - -7] = var10;
                 var2 += 8;
-                continue L2;
+                continue L1;
               }
             }
           } else {
-            var3 = var3 ^ var4 << -549939605;
+            var3 = var3 ^ var4 << 11;
             var6 = var6 + var3;
             var4 = var4 + var5;
-            var4 = var4 ^ var5 >>> 1953388258;
+            var4 = var4 ^ var5 >>> 2;
             var5 = var5 + var6;
             var7 = var7 + var4;
-            var5 = var5 ^ var6 << -1524374968;
+            var5 = var5 ^ var6 << 8;
             var6 = var6 + var7;
             var8 = var8 + var5;
-            var6 = var6 ^ var7 >>> -1342190384;
+            var6 = var6 ^ var7 >>> 16;
             var7 = var7 + var8;
             var9 = var9 + var6;
-            var7 = var7 ^ var8 << 778803018;
+            var7 = var7 ^ var8 << 10;
             var10 = var10 + var7;
             var8 = var8 + var9;
-            var8 = var8 ^ var9 >>> -683276988;
+            var8 = var8 ^ var9 >>> 4;
             var3 = var3 + var8;
             var9 = var9 + var10;
-            var9 = var9 ^ var10 << -168783512;
+            var9 = var9 ^ var10 << 8;
             var10 = var10 + var3;
             var4 = var4 + var9;
-            var10 = var10 ^ var3 >>> 1288660425;
+            var10 = var10 ^ var3 >>> 9;
             var3 = var3 + var4;
             var5 = var5 + var10;
             var2++;
-            continue L1;
+            continue L0;
           }
         }
     }
 
     public static void b(int param0) {
         field_h = null;
-        if (param0 != 261211) {
-            field_g = null;
-        }
         field_g = null;
     }
 
     final static void a(boolean param0, String param1, String param2, byte param3) {
-        qg.field_c = param2;
-        lf.field_T = param1;
-        nb.a(rk.field_Z, param0, param3 + -16152);
-        if (param3 != -105) {
-            field_h = null;
+        RuntimeException var4 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            qg.field_c = param2;
+            lf.field_T = param1;
+            nb.a(rk.field_Z, param0, -16257);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var4 = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var4;
+            stackOut_2_1 = new StringBuilder().append("nf.D(").append(param0).append(44);
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
+            if (param1 == null) {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
+            }
+          }
+          L2: {
+            stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+            stackOut_5_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_5_2).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param2 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L2;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L2;
+            }
+          }
+          throw sl.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + -105 + 41);
         }
     }
 
@@ -210,34 +287,34 @@ final class nf {
         }
         var2 = 0;
         L1: while (true) {
-          if (-257 >= (var2 ^ -1)) {
+          if (var2 >= 256) {
             return;
           } else {
             L2: {
               var3 = ((nf) this).field_d[var2];
               if ((2 & var2) == 0) {
                 if ((1 & var2) != 0) {
-                  ((nf) this).field_c = ((nf) this).field_c ^ ((nf) this).field_c >>> -623723002;
+                  ((nf) this).field_c = ((nf) this).field_c ^ ((nf) this).field_c >>> 6;
                   break L2;
                 } else {
-                  ((nf) this).field_c = ((nf) this).field_c ^ ((nf) this).field_c << 407897933;
+                  ((nf) this).field_c = ((nf) this).field_c ^ ((nf) this).field_c << 13;
                   break L2;
                 }
               } else {
                 if (0 != (var2 & 1)) {
-                  ((nf) this).field_c = ((nf) this).field_c ^ ((nf) this).field_c >>> -932204784;
+                  ((nf) this).field_c = ((nf) this).field_c ^ ((nf) this).field_c >>> 16;
                   break L2;
                 } else {
-                  ((nf) this).field_c = ((nf) this).field_c ^ ((nf) this).field_c << 121624642;
+                  ((nf) this).field_c = ((nf) this).field_c ^ ((nf) this).field_c << 2;
                   break L2;
                 }
               }
             }
             ((nf) this).field_c = ((nf) this).field_c + ((nf) this).field_d[var2 - -128 & 255];
-            int dupTemp$4 = ((nf) this).field_j + (((nf) this).field_d[tc.a(1020, var3) >> 445898626] - -((nf) this).field_c);
+            int dupTemp$4 = ((nf) this).field_j + (((nf) this).field_d[tc.a(1020, var3) >> 2] - -((nf) this).field_c);
             var4 = dupTemp$4;
             ((nf) this).field_d[var2] = dupTemp$4;
-            int dupTemp$5 = var3 + ((nf) this).field_d[tc.a(var4, 261211) >> -1807985880 >> -253428158];
+            int dupTemp$5 = var3 + ((nf) this).field_d[tc.a(var4, 261211) >> 8 >> 2];
             ((nf) this).field_j = dupTemp$5;
             ((nf) this).field_i[var2] = dupTemp$5;
             var2++;
@@ -260,13 +337,17 @@ final class nf {
     }
 
     nf(int[] param0) {
-        int var2 = 0;
-        ((nf) this).field_i = new int[256];
-        ((nf) this).field_d = new int[256];
-        for (var2 = 0; var2 < param0.length; var2++) {
-            ((nf) this).field_i[var2] = param0[var2];
+        int var2_int = 0;
+        try {
+            ((nf) this).field_i = new int[256];
+            ((nf) this).field_d = new int[256];
+            for (var2_int = 0; var2_int < param0.length; var2_int++) {
+                ((nf) this).field_i[var2_int] = param0[var2_int];
+            }
+            this.a(66);
+        } catch (RuntimeException runtimeException) {
+            throw sl.a((Throwable) (Object) runtimeException, "nf.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }
-        this.a(66);
     }
 
     static {

@@ -8,9 +8,6 @@ final class tv extends oha {
     static String field_m;
 
     public static void a(boolean param0) {
-        if (!param0) {
-            return;
-        }
         field_m = null;
         field_p = null;
         field_o = null;
@@ -19,8 +16,12 @@ final class tv extends oha {
 
     tv(int param0, int param1, int param2, String param3, String param4, int param5, int param6) {
         super(2, param0, param1, param2, param5, param6);
-        ((tv) this).field_k = param4;
-        ((tv) this).field_f = param3;
+        try {
+            ((tv) this).field_k = param4;
+            ((tv) this).field_f = param3;
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "tv.<init>(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 44 + param6 + 41);
+        }
     }
 
     static {

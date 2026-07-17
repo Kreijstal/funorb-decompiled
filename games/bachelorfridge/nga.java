@@ -37,24 +37,17 @@ final class nga extends vo {
     }
 
     final void a(int param0, int param1, int param2) {
-        int var4 = ((nga) this).field_k * param0 >> 516311724;
-        int var5 = ((nga) this).field_l * param0 >> 1787356268;
-        int var6 = param2 * ((nga) this).field_h >> 2023069004;
-        int var7 = param2 * ((nga) this).field_m >> -1096410612;
+        int var4 = ((nga) this).field_k * param0 >> 12;
+        int var5 = ((nga) this).field_l * param0 >> 12;
+        int var6 = param2 * ((nga) this).field_h >> 12;
+        int var7 = param2 * ((nga) this).field_m >> 12;
         pna.a(var7, ((nga) this).field_f, param1 ^ param1, var5, var4, var6);
     }
 
     public static void a(int param0) {
         field_i = null;
         field_j = null;
-        if (param0 != -20804) {
-          int discarded$2 = nga.a(56, 107, (byte) -3, 87);
-          field_g = null;
-          return;
-        } else {
-          field_g = null;
-          return;
-        }
+        field_g = null;
     }
 
     nga(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -67,9 +60,6 @@ final class nga extends vo {
 
     final static void b(byte param0) {
         fda.field_i = lia.a(5);
-        if (param0 != 113) {
-            return;
-        }
         gja.field_m = new rp();
         nw.a(true, true, (byte) -107);
     }

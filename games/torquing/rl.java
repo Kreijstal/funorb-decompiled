@@ -8,9 +8,6 @@ final class rl {
 
     public static void a(byte param0) {
         field_a = null;
-        if (param0 != 120) {
-            return;
-        }
         field_b = null;
     }
 

@@ -13,23 +13,29 @@ final class bl {
         field_d = null;
         field_c = null;
         field_e = null;
-        int var1 = 67 % ((47 - param0) / 46);
+        int var1 = 0;
     }
 
     final static void a(int param0, ne param1, int param2) {
-        en var5 = s.field_b;
-        var5.i(19319, param2);
-        var5.field_i = var5.field_i + 1;
-        int var4 = var5.field_i;
-        var5.d(105, param0);
-        var5.d(96, param1.field_i);
-        var5.c(-97, param1.field_m);
-        var5.b(param1.field_r, 25251);
-        var5.b(param1.field_l, param0 ^ 25250);
-        var5.b(param1.field_k, 25251);
-        var5.b(param1.field_h, 25251);
-        int discarded$0 = var5.f(var4, param0 + -70);
-        var5.a(-var4 + var5.field_i, -19720);
+        en var5 = null;
+        int var4 = 0;
+        try {
+            var5 = s.field_b;
+            var5.i(19319, param2);
+            var5.field_i = var5.field_i + 1;
+            var4 = var5.field_i;
+            var5.d(105, param0);
+            var5.d(96, param1.field_i);
+            var5.c(-97, param1.field_m);
+            var5.b(param1.field_r, 25251);
+            var5.b(param1.field_l, param0 ^ 25250);
+            var5.b(param1.field_k, 25251);
+            var5.b(param1.field_h, 25251);
+            int discarded$0 = var5.f(var4, param0 + -70);
+            var5.a(-var4 + var5.field_i, -19720);
+        } catch (RuntimeException runtimeException) {
+            throw wg.a((Throwable) (Object) runtimeException, "bl.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     public final String toString() {

@@ -11,17 +11,19 @@ final class ft extends kt {
         if (param0 != 0) {
           field_t = -1;
           var4 = param2 * 2;
+          int incrementValue$2 = var4;
           var4++;
-          ((ft) this).field_u[var4] = (byte)-1;
+          ((ft) this).field_u[incrementValue$2] = (byte) -1;
           var5 = 255 & param1;
-          ((ft) this).field_u[var4] = (byte)(3 * var5 >> 696092293);
+          ((ft) this).field_u[var4] = (byte)(3 * var5 >> 5);
           return;
         } else {
           var4 = param2 * 2;
+          int incrementValue$3 = var4;
           var4++;
-          ((ft) this).field_u[var4] = (byte)-1;
+          ((ft) this).field_u[incrementValue$3] = (byte) -1;
           var5 = 255 & param1;
-          ((ft) this).field_u[var4] = (byte)(3 * var5 >> 696092293);
+          ((ft) this).field_u[var4] = (byte)(3 * var5 >> 5);
           return;
         }
     }
@@ -29,7 +31,7 @@ final class ft extends kt {
     final static void b(int param0) {
         int var1 = 0;
         if (param0 == 18941) {
-          if (-225 < (kt.field_l ^ -1)) {
+          if (kt.field_l < 224) {
             var1 = kt.field_l % 32;
             nl.a(-var1 + kt.field_l - -32, param0 ^ -31338);
             return;
@@ -39,7 +41,7 @@ final class ft extends kt {
           }
         } else {
           ft.b(-27);
-          if (-225 < (kt.field_l ^ -1)) {
+          if (kt.field_l < 224) {
             var1 = kt.field_l % 32;
             nl.a(-var1 + kt.field_l - -32, param0 ^ -31338);
             return;

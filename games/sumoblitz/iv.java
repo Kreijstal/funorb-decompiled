@@ -24,7 +24,7 @@ final class iv {
         if (param0 != 241) {
           field_f = 31L;
           var2 = param1;
-          if (-33 != (var2 ^ -1)) {
+          if (var2 != 32) {
             L0: {
               if (160 == var2) {
                 break L0;
@@ -37,8 +37,8 @@ final class iv {
                       if (91 == var2) {
                         break L1;
                       } else {
-                        if (var2 != -94) {
-                          if (-36 == var2) {
+                        if (var2 != 93) {
+                          if (var2 == 35) {
                             break L1;
                           } else {
                             L2: {
@@ -53,25 +53,25 @@ final class iv {
                                       break L2;
                                     } else {
                                       if (var2 != 227) {
-                                        if (var2 != -193) {
+                                        if (var2 != 192) {
                                           if (193 == var2) {
                                             break L2;
                                           } else {
                                             if (194 != var2) {
-                                              if (-197 != var2) {
+                                              if (var2 != 196) {
                                                 if (var2 != 195) {
                                                   L3: {
                                                     if (var2 == 232) {
                                                       break L3;
                                                     } else {
-                                                      if (-234 == var2) {
+                                                      if (var2 == 233) {
                                                         break L3;
                                                       } else {
-                                                        if (-235 == var2) {
+                                                        if (var2 == 234) {
                                                           break L3;
                                                         } else {
-                                                          if (-236 != (var2 ^ -1)) {
-                                                            if ((var2 ^ -1) == -201) {
+                                                          if (var2 != 235) {
+                                                            if (var2 == 200) {
                                                               break L3;
                                                             } else {
                                                               if (var2 == 201) {
@@ -82,12 +82,12 @@ final class iv {
                                                                     break L3;
                                                                   } else {
                                                                     L4: {
-                                                                      if (var2 == -238) {
+                                                                      if (var2 == 237) {
                                                                         break L4;
                                                                       } else {
-                                                                        if (var2 != -239) {
-                                                                          if (-240 != var2) {
-                                                                            if (-206 != var2) {
+                                                                        if (var2 != 238) {
+                                                                          if (var2 != 239) {
+                                                                            if (var2 != 205) {
                                                                               if (206 == var2) {
                                                                                 break L4;
                                                                               } else {
@@ -97,34 +97,34 @@ final class iv {
                                                                                       if (243 == var2) {
                                                                                         break L5;
                                                                                       } else {
-                                                                                        if (-245 == var2) {
+                                                                                        if (var2 == 244) {
                                                                                           break L5;
                                                                                         } else {
                                                                                           if (var2 == 246) {
                                                                                             break L5;
                                                                                           } else {
-                                                                                            if (-246 == var2) {
+                                                                                            if (var2 == 245) {
                                                                                               break L5;
                                                                                             } else {
                                                                                               if (210 != var2) {
-                                                                                                if (-212 == (var2 ^ -1)) {
+                                                                                                if (var2 == 211) {
                                                                                                   break L5;
                                                                                                 } else {
-                                                                                                  if ((var2 ^ -1) != -213) {
+                                                                                                  if (var2 != 212) {
                                                                                                     if (214 == var2) {
                                                                                                       break L5;
                                                                                                     } else {
                                                                                                       if (var2 != 213) {
                                                                                                         if (var2 != 249) {
                                                                                                           if (250 != var2) {
-                                                                                                            if (var2 != -252) {
+                                                                                                            if (var2 != 251) {
                                                                                                               if (252 != var2) {
-                                                                                                                if (-218 == var2) {
+                                                                                                                if (var2 == 217) {
                                                                                                                   return 'u';
                                                                                                                 } else {
-                                                                                                                  if ((var2 ^ -1) != -219) {
-                                                                                                                    if ((var2 ^ -1) != -220) {
-                                                                                                                      if (var2 != -221) {
+                                                                                                                  if (var2 != 218) {
+                                                                                                                    if (var2 != 219) {
+                                                                                                                      if (var2 != 220) {
                                                                                                                         L6: {
                                                                                                                           if (231 == var2) {
                                                                                                                             break L6;
@@ -136,14 +136,14 @@ final class iv {
                                                                                                                                 if (255 == var2) {
                                                                                                                                   break L7;
                                                                                                                                 } else {
-                                                                                                                                  if (-377 == var2) {
+                                                                                                                                  if (var2 == 376) {
                                                                                                                                     break L7;
                                                                                                                                   } else {
                                                                                                                                     if (var2 != 241) {
-                                                                                                                                      if (-210 == (var2 ^ -1)) {
+                                                                                                                                      if (var2 == 209) {
                                                                                                                                         return 'n';
                                                                                                                                       } else {
-                                                                                                                                        if ((var2 ^ -1) == -224) {
+                                                                                                                                        if (var2 == 223) {
                                                                                                                                           return 'b';
                                                                                                                                         } else {
                                                                                                                                           return Character.toLowerCase(param1);
@@ -275,14 +275,14 @@ final class iv {
           }
         } else {
           var2 = param1;
-          if (-33 != (var2 ^ -1)) {
+          if (var2 != 32) {
             if (160 != var2) {
               if (95 != var2) {
                 if (var2 != 45) {
                   if (91 != var2) {
                     L8: {
-                      if (var2 != -94) {
-                        if (-36 == var2) {
+                      if (var2 != 93) {
+                        if (var2 == 35) {
                           break L8;
                         } else {
                           L9: {
@@ -297,25 +297,25 @@ final class iv {
                                     break L9;
                                   } else {
                                     if (var2 != 227) {
-                                      if (var2 != -193) {
+                                      if (var2 != 192) {
                                         if (193 == var2) {
                                           break L9;
                                         } else {
                                           if (194 != var2) {
-                                            if (-197 != var2) {
+                                            if (var2 != 196) {
                                               if (var2 != 195) {
                                                 L10: {
                                                   if (var2 == 232) {
                                                     break L10;
                                                   } else {
-                                                    if (-234 == var2) {
+                                                    if (var2 == 233) {
                                                       break L10;
                                                     } else {
-                                                      if (-235 == var2) {
+                                                      if (var2 == 234) {
                                                         break L10;
                                                       } else {
-                                                        if (-236 != (var2 ^ -1)) {
-                                                          if ((var2 ^ -1) == -201) {
+                                                        if (var2 != 235) {
+                                                          if (var2 == 200) {
                                                             break L10;
                                                           } else {
                                                             if (var2 == 201) {
@@ -326,12 +326,12 @@ final class iv {
                                                                   break L10;
                                                                 } else {
                                                                   L11: {
-                                                                    if (var2 == -238) {
+                                                                    if (var2 == 237) {
                                                                       break L11;
                                                                     } else {
-                                                                      if (var2 != -239) {
-                                                                        if (-240 != var2) {
-                                                                          if (-206 != var2) {
+                                                                      if (var2 != 238) {
+                                                                        if (var2 != 239) {
+                                                                          if (var2 != 205) {
                                                                             if (206 == var2) {
                                                                               break L11;
                                                                             } else {
@@ -341,20 +341,20 @@ final class iv {
                                                                                     if (243 == var2) {
                                                                                       break L12;
                                                                                     } else {
-                                                                                      if (-245 == var2) {
+                                                                                      if (var2 == 244) {
                                                                                         break L12;
                                                                                       } else {
                                                                                         if (var2 == 246) {
                                                                                           break L12;
                                                                                         } else {
-                                                                                          if (-246 == var2) {
+                                                                                          if (var2 == 245) {
                                                                                             break L12;
                                                                                           } else {
                                                                                             if (210 != var2) {
-                                                                                              if (-212 == (var2 ^ -1)) {
+                                                                                              if (var2 == 211) {
                                                                                                 break L12;
                                                                                               } else {
-                                                                                                if ((var2 ^ -1) != -213) {
+                                                                                                if (var2 != 212) {
                                                                                                   if (214 == var2) {
                                                                                                     break L12;
                                                                                                   } else {
@@ -362,14 +362,14 @@ final class iv {
                                                                                                       L13: {
                                                                                                         if (var2 != 249) {
                                                                                                           if (250 != var2) {
-                                                                                                            if (var2 != -252) {
+                                                                                                            if (var2 != 251) {
                                                                                                               if (252 != var2) {
-                                                                                                                if (-218 == var2) {
+                                                                                                                if (var2 == 217) {
                                                                                                                   break L13;
                                                                                                                 } else {
-                                                                                                                  if ((var2 ^ -1) != -219) {
-                                                                                                                    if ((var2 ^ -1) != -220) {
-                                                                                                                      if (var2 != -221) {
+                                                                                                                  if (var2 != 218) {
+                                                                                                                    if (var2 != 219) {
+                                                                                                                      if (var2 != 220) {
                                                                                                                         L14: {
                                                                                                                           if (231 == var2) {
                                                                                                                             break L14;
@@ -381,14 +381,14 @@ final class iv {
                                                                                                                                 if (255 == var2) {
                                                                                                                                   break L15;
                                                                                                                                 } else {
-                                                                                                                                  if (-377 == var2) {
+                                                                                                                                  if (var2 == 376) {
                                                                                                                                     break L15;
                                                                                                                                   } else {
                                                                                                                                     if (var2 != 241) {
-                                                                                                                                      if (-210 == (var2 ^ -1)) {
+                                                                                                                                      if (var2 == 209) {
                                                                                                                                         return 'n';
                                                                                                                                       } else {
-                                                                                                                                        if ((var2 ^ -1) == -224) {
+                                                                                                                                        if (var2 == 223) {
                                                                                                                                           return 'b';
                                                                                                                                         } else {
                                                                                                                                           return Character.toLowerCase(param1);
@@ -530,9 +530,6 @@ final class iv {
     public static void a(int param0) {
         field_a = null;
         field_b = null;
-        if (param0 != 255) {
-            return;
-        }
         field_g = null;
         field_l = null;
     }
@@ -547,7 +544,7 @@ final class iv {
               if (8 != param5) {
                 if (9 == param5) {
                   L1: {
-                    if ((param5 ^ -1) == -5) {
+                    if (param5 == 4) {
                       param1 = param3;
                       break L1;
                     } else {
@@ -575,7 +572,7 @@ final class iv {
                         break L3;
                       } else {
                         ((iv) this).field_d[2147483647 & ((iv) this).field_k].a(-65, param4);
-                        if (param3 != ((iv) this).field_j) {
+                        if (~param3 != ~((iv) this).field_j) {
                           ((iv) this).field_d[2147483647 & ((iv) this).field_k].a((byte) 87, param3, param1);
                           ((iv) this).field_c = param1;
                           ((iv) this).field_j = param3;
@@ -601,7 +598,7 @@ final class iv {
                       }
                     } else {
                       L5: {
-                        if (((iv) this).field_k != -1) {
+                        if (((iv) this).field_k != 0) {
                           ((iv) this).field_d[((iv) this).field_k & 2147483647].b(-127);
                           break L5;
                         } else {
@@ -609,7 +606,7 @@ final class iv {
                         }
                       }
                       L6: {
-                        if (-1 != param5) {
+                        if (param5 != 0) {
                           ((iv) this).field_d[2147483647 & param5].a((byte) 88, param4);
                           ((iv) this).field_d[param5 & 2147483647].a(-61, param4);
                           ((iv) this).field_d[2147483647 & param5].a((byte) 68, param3, param1);
@@ -624,16 +621,16 @@ final class iv {
                       break L3;
                     }
                   }
-                  if (param2 <= 123) {
-                    ((iv) this).field_e = null;
+                  if (param2 > 123) {
                     return;
                   } else {
+                    ((iv) this).field_e = null;
                     return;
                   }
                 }
               } else {
                 L7: {
-                  if ((param5 ^ -1) == -5) {
+                  if (param5 == 4) {
                     param1 = param3;
                     break L7;
                   } else {
@@ -655,26 +652,29 @@ final class iv {
                 }
                 if (((iv) this).field_k == param5) {
                   if (((iv) this).field_k == 0) {
-                    if (param2 <= 123) {
-                      ((iv) this).field_e = null;
+                    if (param2 > 123) {
                       return;
                     } else {
+                      ((iv) this).field_e = null;
                       return;
                     }
                   } else {
                     ((iv) this).field_d[2147483647 & ((iv) this).field_k].a(-65, param4);
-                    if (param3 == ((iv) this).field_j) {
-                      if (((iv) this).field_c == param1) {
-                        L9: {
-                          if (param2 > 123) {
-                            break L9;
-                          } else {
-                            ((iv) this).field_e = null;
-                            break L9;
-                          }
+                    if (~param3 != ~((iv) this).field_j) {
+                      L9: {
+                        ((iv) this).field_d[2147483647 & ((iv) this).field_k].a((byte) 87, param3, param1);
+                        ((iv) this).field_c = param1;
+                        ((iv) this).field_j = param3;
+                        if (param2 > 123) {
+                          break L9;
+                        } else {
+                          ((iv) this).field_e = null;
+                          break L9;
                         }
-                        return;
-                      } else {
+                      }
+                      return;
+                    } else {
+                      if (((iv) this).field_c != param1) {
                         L10: {
                           ((iv) this).field_d[2147483647 & ((iv) this).field_k].a((byte) 87, param3, param1);
                           ((iv) this).field_c = param1;
@@ -687,25 +687,22 @@ final class iv {
                           }
                         }
                         return;
-                      }
-                    } else {
-                      L11: {
-                        ((iv) this).field_d[2147483647 & ((iv) this).field_k].a((byte) 87, param3, param1);
-                        ((iv) this).field_c = param1;
-                        ((iv) this).field_j = param3;
-                        if (param2 > 123) {
-                          break L11;
-                        } else {
-                          ((iv) this).field_e = null;
-                          break L11;
+                      } else {
+                        L11: {
+                          if (param2 > 123) {
+                            break L11;
+                          } else {
+                            ((iv) this).field_e = null;
+                            break L11;
+                          }
                         }
+                        return;
                       }
-                      return;
                     }
                   }
                 } else {
                   L12: {
-                    if (((iv) this).field_k != -1) {
+                    if (((iv) this).field_k != 0) {
                       ((iv) this).field_d[((iv) this).field_k & 2147483647].b(-127);
                       break L12;
                     } else {
@@ -713,7 +710,7 @@ final class iv {
                     }
                   }
                   L13: {
-                    if (-1 != param5) {
+                    if (param5 != 0) {
                       ((iv) this).field_d[2147483647 & param5].a((byte) 88, param4);
                       ((iv) this).field_d[param5 & 2147483647].a(-61, param4);
                       ((iv) this).field_d[2147483647 & param5].a((byte) 68, param3, param1);
@@ -738,7 +735,7 @@ final class iv {
               }
             } else {
               L15: {
-                if ((param5 ^ -1) == -5) {
+                if (param5 == 4) {
                   param1 = param3;
                   break L15;
                 } else {
@@ -760,26 +757,29 @@ final class iv {
               }
               if (((iv) this).field_k == param5) {
                 if (((iv) this).field_k == 0) {
-                  if (param2 <= 123) {
-                    ((iv) this).field_e = null;
+                  if (param2 > 123) {
                     return;
                   } else {
+                    ((iv) this).field_e = null;
                     return;
                   }
                 } else {
                   ((iv) this).field_d[2147483647 & ((iv) this).field_k].a(-65, param4);
-                  if (param3 == ((iv) this).field_j) {
-                    if (((iv) this).field_c == param1) {
-                      L17: {
-                        if (param2 > 123) {
-                          break L17;
-                        } else {
-                          ((iv) this).field_e = null;
-                          break L17;
-                        }
+                  if (~param3 != ~((iv) this).field_j) {
+                    L17: {
+                      ((iv) this).field_d[2147483647 & ((iv) this).field_k].a((byte) 87, param3, param1);
+                      ((iv) this).field_c = param1;
+                      ((iv) this).field_j = param3;
+                      if (param2 > 123) {
+                        break L17;
+                      } else {
+                        ((iv) this).field_e = null;
+                        break L17;
                       }
-                      return;
-                    } else {
+                    }
+                    return;
+                  } else {
+                    if (((iv) this).field_c != param1) {
                       L18: {
                         ((iv) this).field_d[2147483647 & ((iv) this).field_k].a((byte) 87, param3, param1);
                         ((iv) this).field_c = param1;
@@ -792,25 +792,22 @@ final class iv {
                         }
                       }
                       return;
-                    }
-                  } else {
-                    L19: {
-                      ((iv) this).field_d[2147483647 & ((iv) this).field_k].a((byte) 87, param3, param1);
-                      ((iv) this).field_c = param1;
-                      ((iv) this).field_j = param3;
-                      if (param2 > 123) {
-                        break L19;
-                      } else {
-                        ((iv) this).field_e = null;
-                        break L19;
+                    } else {
+                      L19: {
+                        if (param2 > 123) {
+                          break L19;
+                        } else {
+                          ((iv) this).field_e = null;
+                          break L19;
+                        }
                       }
+                      return;
                     }
-                    return;
                   }
                 }
               } else {
                 L20: {
-                  if (((iv) this).field_k != -1) {
+                  if (((iv) this).field_k != 0) {
                     ((iv) this).field_d[((iv) this).field_k & 2147483647].b(-127);
                     break L20;
                   } else {
@@ -818,7 +815,7 @@ final class iv {
                   }
                 }
                 L21: {
-                  if (-1 != param5) {
+                  if (param5 != 0) {
                     ((iv) this).field_d[2147483647 & param5].a((byte) 88, param4);
                     ((iv) this).field_d[param5 & 2147483647].a(-61, param4);
                     ((iv) this).field_d[2147483647 & param5].a((byte) 68, param3, param1);
@@ -865,7 +862,7 @@ final class iv {
             }
           } else {
             ((iv) this).field_d[2147483647 & ((iv) this).field_k].a(-65, param4);
-            if (param3 != ((iv) this).field_j) {
+            if (~param3 != ~((iv) this).field_j) {
               ((iv) this).field_d[2147483647 & ((iv) this).field_k].a((byte) 87, param3, param1);
               ((iv) this).field_c = param1;
               ((iv) this).field_j = param3;
@@ -898,7 +895,7 @@ final class iv {
           }
         } else {
           L24: {
-            if (((iv) this).field_k != -1) {
+            if (((iv) this).field_k != 0) {
               ((iv) this).field_d[((iv) this).field_k & 2147483647].b(-127);
               break L24;
             } else {
@@ -906,7 +903,7 @@ final class iv {
             }
           }
           L25: {
-            if (-1 != param5) {
+            if (param5 != 0) {
               ((iv) this).field_d[2147483647 & param5].a((byte) 88, param4);
               ((iv) this).field_d[param5 & 2147483647].a(-61, param4);
               ((iv) this).field_d[2147483647 & param5].a((byte) 68, param3, param1);
@@ -918,22 +915,83 @@ final class iv {
           ((iv) this).field_j = param3;
           ((iv) this).field_k = param5;
           ((iv) this).field_c = param1;
-          if (param2 <= 123) {
-            ((iv) this).field_e = null;
+          if (param2 > 123) {
             return;
           } else {
+            ((iv) this).field_e = null;
             return;
           }
         }
     }
 
     final boolean a(int param0, byte param1, ht param2) {
-        if (!(-1 != (((iv) this).field_k ^ -1))) {
-            return false;
+        int var4_int = 0;
+        RuntimeException var4 = null;
+        int stackIn_3_0 = 0;
+        int stackIn_5_0 = 0;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_2_0 = 0;
+        int stackOut_4_0 = 0;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        try {
+          L0: {
+            if (((iv) this).field_k == 0) {
+              stackOut_2_0 = 0;
+              stackIn_3_0 = stackOut_2_0;
+              return stackIn_3_0 != 0;
+            } else {
+              ((iv) this).field_d[2147483647 & ((iv) this).field_k].a((byte) 35, param0, param2);
+              var4_int = -112 % ((-12 - param1) / 57);
+              stackOut_4_0 = 1;
+              stackIn_5_0 = stackOut_4_0;
+              break L0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var4 = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var4;
+            stackOut_6_1 = new StringBuilder().append("iv.A(").append(param0).append(44).append(param1).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param2 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L1;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L1;
+            }
+          }
+          throw qo.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
         }
-        ((iv) this).field_d[2147483647 & ((iv) this).field_k].a((byte) 35, param0, param2);
-        int var4 = -112 % ((-12 - param1) / 57);
-        return true;
+        return stackIn_5_0 != 0;
     }
 
     final boolean a(int param0, byte param1) {
@@ -946,36 +1004,87 @@ final class iv {
     }
 
     iv(fr param0) {
-        L0: {
-          ((iv) this).field_c = 0;
-          ((iv) this).field_k = 0;
-          ((iv) this).field_j = 0;
-          ((iv) this).field_h = param0;
-          ((iv) this).field_e = new ch(param0);
-          ((iv) this).field_d = new bq[10];
-          ((iv) this).field_d[1] = (bq) (Object) new wt(param0);
-          ((iv) this).field_d[2] = (bq) (Object) new es(param0, ((iv) this).field_e);
-          ((iv) this).field_d[4] = (bq) (Object) new gi(param0, ((iv) this).field_e);
-          ((iv) this).field_d[5] = (bq) (Object) new kj(param0, ((iv) this).field_e);
-          ((iv) this).field_d[6] = (bq) (Object) new ra(param0);
-          ((iv) this).field_d[7] = (bq) (Object) new au(param0);
-          ((iv) this).field_d[3] = (bq) (Object) new ga(param0);
-          ((iv) this).field_d[8] = (bq) (Object) new lv(param0, ((iv) this).field_e);
-          ((iv) this).field_d[9] = (bq) (Object) new gr(param0, ((iv) this).field_e);
-          if (((iv) this).field_d[8].b((byte) -126)) {
-            break L0;
-          } else {
-            ((iv) this).field_d[8] = ((iv) this).field_d[4];
+        RuntimeException var2 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        ((iv) this).field_c = 0;
+        ((iv) this).field_k = 0;
+        ((iv) this).field_j = 0;
+        try {
+          L0: {
+            L1: {
+              ((iv) this).field_h = param0;
+              ((iv) this).field_e = new ch(param0);
+              ((iv) this).field_d = new bq[10];
+              ((iv) this).field_d[1] = (bq) (Object) new wt(param0);
+              ((iv) this).field_d[2] = (bq) (Object) new es(param0, ((iv) this).field_e);
+              ((iv) this).field_d[4] = (bq) (Object) new gi(param0, ((iv) this).field_e);
+              ((iv) this).field_d[5] = (bq) (Object) new kj(param0, ((iv) this).field_e);
+              ((iv) this).field_d[6] = (bq) (Object) new ra(param0);
+              ((iv) this).field_d[7] = (bq) (Object) new au(param0);
+              ((iv) this).field_d[3] = (bq) (Object) new ga(param0);
+              ((iv) this).field_d[8] = (bq) (Object) new lv(param0, ((iv) this).field_e);
+              ((iv) this).field_d[9] = (bq) (Object) new gr(param0, ((iv) this).field_e);
+              if (((iv) this).field_d[8].b((byte) -126)) {
+                break L1;
+              } else {
+                ((iv) this).field_d[8] = ((iv) this).field_d[4];
+                break L1;
+              }
+            }
+            L2: {
+              if (((iv) this).field_d[9].b((byte) -82)) {
+                break L2;
+              } else {
+                ((iv) this).field_d[9] = ((iv) this).field_d[8];
+                break L2;
+              }
+            }
             break L0;
           }
-        }
-        L1: {
-          if (((iv) this).field_d[9].b((byte) -82)) {
-            break L1;
-          } else {
-            ((iv) this).field_d[9] = ((iv) this).field_d[8];
-            break L1;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2 = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var2;
+            stackOut_6_1 = new StringBuilder().append("iv.<init>(");
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param0 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L3;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L3;
+            }
           }
+          throw qo.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
         }
     }
 

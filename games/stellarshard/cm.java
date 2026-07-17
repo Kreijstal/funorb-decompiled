@@ -17,9 +17,6 @@ final class cm {
     }
 
     final static void a(byte param0) {
-        if (param0 > -53) {
-            cm.a(22);
-        }
     }
 
     static {

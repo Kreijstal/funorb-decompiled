@@ -117,7 +117,7 @@ final class ug extends pl {
               L1: {
                 var9 = -param0 + -((ug) this).field_o + (-((ug) this).field_J + param2);
                 var10 = param5 + (-((ug) this).field_L + -param3) + -((ug) this).field_l;
-                if ((var9 * var9 + var10 * var10 ^ -1) <= (((ug) this).field_G * ((ug) this).field_G ^ -1)) {
+                if (~(var9 * var9 + var10 * var10) <= ~(((ug) this).field_G * ((ug) this).field_G)) {
                   break L1;
                 } else {
                   L2: {
@@ -144,7 +144,7 @@ final class ug extends pl {
                   ((ug) this).field_M = (int)(var11 * (double)((ug) this).field_O / 6.283185307179586);
                   L4: while (true) {
                     L5: {
-                      if ((((ug) this).field_M ^ -1) > (((ug) this).field_O ^ -1)) {
+                      if (~((ug) this).field_M > ~((ug) this).field_O) {
                         break L5;
                       } else {
                         ((ug) this).field_M = ((ug) this).field_M - ((ug) this).field_O;
@@ -288,7 +288,7 @@ final class ug extends pl {
             L2: while (true) {
               L3: {
                 L4: {
-                  if ((param4.field_N ^ -1) >= (var8 ^ -1)) {
+                  if (~param4.field_N >= ~var8) {
                     break L4;
                   } else {
                     var9 = param4.field_p[var8];
@@ -323,7 +323,7 @@ final class ug extends pl {
                           }
                         }
                         var12 = dl.field_a[var9];
-                        if (2147483647 == (var12 ^ -1)) {
+                        if (var12 == -2147483648) {
                           break L5;
                         } else {
                           L7: {
@@ -344,7 +344,7 @@ final class ug extends pl {
                           } else {
                             L8: {
                               var15 = var14 + (var13 + var12) + -var6;
-                              if ((var7 ^ -1) <= -1) {
+                              if (var7 >= 0) {
                                 stackOut_27_0 = var15 >> var7;
                                 stackIn_28_0 = stackOut_27_0;
                                 break L8;
@@ -359,11 +359,11 @@ final class ug extends pl {
                             L9: while (true) {
                               L10: {
                                 L11: {
-                                  if ((var17 >> -534240348 ^ -1) == -1) {
+                                  if (var17 >> 4 == 0) {
                                     break L11;
                                   } else {
                                     var16--;
-                                    stackOut_30_0 = var16 ^ -1;
+                                    stackOut_30_0 = ~var16;
                                     stackOut_30_1 = -1;
                                     stackIn_39_0 = stackOut_30_0;
                                     stackIn_39_1 = stackOut_30_1;
@@ -393,7 +393,7 @@ final class ug extends pl {
                                     }
                                   }
                                 }
-                                stackOut_38_0 = var16 << -488067580;
+                                stackOut_38_0 = var16 << 4;
                                 stackOut_38_1 = var17;
                                 stackIn_39_0 = stackOut_38_0;
                                 stackIn_39_1 = stackOut_38_1;
@@ -443,7 +443,7 @@ final class ug extends pl {
               }
               L15: {
                 L16: {
-                  if ((param4.field_n ^ -1) >= -1) {
+                  if (param4.field_n <= 0) {
                     break L16;
                   } else {
                     if (null != param4.field_x) {

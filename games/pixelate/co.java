@@ -56,7 +56,7 @@ final class co {
         int var5 = 0;
         int var6 = 0;
         var6 = Pixelate.field_H ? 1 : 0;
-        var2 = 110 / ((-76 - param0) / 34);
+        var2 = 110;
         var3 = ((co) this).field_n;
         var4 = ((co) this).field_f;
         if (((co) this).a((byte) 99)) {
@@ -108,7 +108,7 @@ final class co {
                         }
                       }
                       L4: {
-                        if ((((co) this).field_n ^ -1) < -1) {
+                        if (((co) this).field_n > 0) {
                           ae.field_a = (((co) this).field_n - uo.field_i) / 2;
                           break L4;
                         } else {
@@ -130,7 +130,7 @@ final class co {
                         if (var4 != wp.field_c) {
                           L5: {
                             ((co) this).field_s.a(var3, 127, var4);
-                            if ((((co) this).field_n ^ -1) < -1) {
+                            if (((co) this).field_n > 0) {
                               ae.field_a = (((co) this).field_n - uo.field_i) / 2;
                               break L5;
                             } else {
@@ -140,7 +140,7 @@ final class co {
                           return;
                         } else {
                           L6: {
-                            if ((((co) this).field_n ^ -1) < -1) {
+                            if (((co) this).field_n > 0) {
                               ae.field_a = (((co) this).field_n - uo.field_i) / 2;
                               break L6;
                             } else {
@@ -152,7 +152,7 @@ final class co {
                       } else {
                         L7: {
                           ((co) this).field_s.a(var3, 127, var4);
-                          if ((((co) this).field_n ^ -1) < -1) {
+                          if (((co) this).field_n > 0) {
                             ae.field_a = (((co) this).field_n - uo.field_i) / 2;
                             break L7;
                           } else {
@@ -176,7 +176,7 @@ final class co {
                         }
                       }
                       L9: {
-                        if ((((co) this).field_n ^ -1) < -1) {
+                        if (((co) this).field_n > 0) {
                           ae.field_a = (((co) this).field_n - uo.field_i) / 2;
                           break L9;
                         } else {
@@ -201,7 +201,7 @@ final class co {
                       }
                     }
                     L11: {
-                      if ((((co) this).field_n ^ -1) < -1) {
+                      if (((co) this).field_n > 0) {
                         ae.field_a = (((co) this).field_n - uo.field_i) / 2;
                         break L11;
                       } else {
@@ -225,7 +225,7 @@ final class co {
                     }
                   }
                   L13: {
-                    if ((((co) this).field_n ^ -1) < -1) {
+                    if (((co) this).field_n > 0) {
                       ae.field_a = (((co) this).field_n - uo.field_i) / 2;
                       break L13;
                     } else {
@@ -265,7 +265,7 @@ final class co {
                 if (uo.field_i == var3) {
                   if (var4 == wp.field_c) {
                     L16: {
-                      if ((((co) this).field_n ^ -1) < -1) {
+                      if (((co) this).field_n > 0) {
                         ae.field_a = (((co) this).field_n - uo.field_i) / 2;
                         break L16;
                       } else {
@@ -276,7 +276,7 @@ final class co {
                   } else {
                     ((co) this).field_s.a(var3, 127, var4);
                     L17: {
-                      if ((((co) this).field_n ^ -1) < -1) {
+                      if (((co) this).field_n > 0) {
                         ae.field_a = (((co) this).field_n - uo.field_i) / 2;
                         break L17;
                       } else {
@@ -288,7 +288,7 @@ final class co {
                 } else {
                   ((co) this).field_s.a(var3, 127, var4);
                   L18: {
-                    if ((((co) this).field_n ^ -1) < -1) {
+                    if (((co) this).field_n > 0) {
                       ae.field_a = (((co) this).field_n - uo.field_i) / 2;
                       break L18;
                     } else {
@@ -310,7 +310,7 @@ final class co {
                 if (uo.field_i == var3) {
                   if (var4 == wp.field_c) {
                     L19: {
-                      if ((((co) this).field_n ^ -1) < -1) {
+                      if (((co) this).field_n > 0) {
                         ae.field_a = (((co) this).field_n - uo.field_i) / 2;
                         break L19;
                       } else {
@@ -321,7 +321,7 @@ final class co {
                   } else {
                     L20: {
                       ((co) this).field_s.a(var3, 127, var4);
-                      if ((((co) this).field_n ^ -1) < -1) {
+                      if (((co) this).field_n > 0) {
                         ae.field_a = (((co) this).field_n - uo.field_i) / 2;
                         break L20;
                       } else {
@@ -333,7 +333,7 @@ final class co {
                 } else {
                   L21: {
                     ((co) this).field_s.a(var3, 127, var4);
-                    if ((((co) this).field_n ^ -1) < -1) {
+                    if (((co) this).field_n > 0) {
                       ae.field_a = (((co) this).field_n - uo.field_i) / 2;
                       break L21;
                     } else {
@@ -346,7 +346,7 @@ final class co {
                 if (uo.field_i == var3) {
                   if (var4 == wp.field_c) {
                     L22: {
-                      if ((((co) this).field_n ^ -1) < -1) {
+                      if (((co) this).field_n > 0) {
                         ae.field_a = (((co) this).field_n - uo.field_i) / 2;
                         break L22;
                       } else {
@@ -357,7 +357,7 @@ final class co {
                   } else {
                     L23: {
                       ((co) this).field_s.a(var3, 127, var4);
-                      if ((((co) this).field_n ^ -1) < -1) {
+                      if (((co) this).field_n > 0) {
                         ae.field_a = (((co) this).field_n - uo.field_i) / 2;
                         break L23;
                       } else {
@@ -369,7 +369,7 @@ final class co {
                 } else {
                   L24: {
                     ((co) this).field_s.a(var3, 127, var4);
-                    if ((((co) this).field_n ^ -1) < -1) {
+                    if (((co) this).field_n > 0) {
                       ae.field_a = (((co) this).field_n - uo.field_i) / 2;
                       break L24;
                     } else {
@@ -385,7 +385,7 @@ final class co {
                 if (var4 != wp.field_c) {
                   L25: {
                     ((co) this).field_s.a(var3, 127, var4);
-                    if ((((co) this).field_n ^ -1) < -1) {
+                    if (((co) this).field_n > 0) {
                       ae.field_a = (((co) this).field_n - uo.field_i) / 2;
                       break L25;
                     } else {
@@ -395,7 +395,7 @@ final class co {
                   return;
                 } else {
                   L26: {
-                    if ((((co) this).field_n ^ -1) < -1) {
+                    if (((co) this).field_n > 0) {
                       ae.field_a = (((co) this).field_n - uo.field_i) / 2;
                       break L26;
                     } else {
@@ -407,7 +407,7 @@ final class co {
               } else {
                 L27: {
                   ((co) this).field_s.a(var3, 127, var4);
-                  if ((((co) this).field_n ^ -1) < -1) {
+                  if (((co) this).field_n > 0) {
                     ae.field_a = (((co) this).field_n - uo.field_i) / 2;
                     break L27;
                   } else {
@@ -422,7 +422,7 @@ final class co {
               if (var4 != wp.field_c) {
                 L28: {
                   ((co) this).field_s.a(var3, 127, var4);
-                  if ((((co) this).field_n ^ -1) < -1) {
+                  if (((co) this).field_n > 0) {
                     ae.field_a = (((co) this).field_n - uo.field_i) / 2;
                     break L28;
                   } else {
@@ -432,7 +432,7 @@ final class co {
                 return;
               } else {
                 L29: {
-                  if ((((co) this).field_n ^ -1) < -1) {
+                  if (((co) this).field_n > 0) {
                     ae.field_a = (((co) this).field_n - uo.field_i) / 2;
                     break L29;
                   } else {
@@ -444,7 +444,7 @@ final class co {
             } else {
               L30: {
                 ((co) this).field_s.a(var3, 127, var4);
-                if ((((co) this).field_n ^ -1) < -1) {
+                if (((co) this).field_n > 0) {
                   ae.field_a = (((co) this).field_n - uo.field_i) / 2;
                   break L30;
                 } else {
@@ -481,16 +481,8 @@ final class co {
         field_d = null;
         field_k = null;
         field_e = null;
-        if (!param0) {
-          field_e = null;
-          field_u = null;
-          field_h = null;
-          return;
-        } else {
-          field_u = null;
-          field_h = null;
-          return;
-        }
+        field_u = null;
+        field_h = null;
     }
 
     final void c(int param0) {
@@ -499,7 +491,7 @@ final class co {
           return;
         } else {
           L0: {
-            if (-1 <= (uo.field_j ^ -1)) {
+            if (uo.field_j <= 0) {
               ((co) this).field_c = false;
               break L0;
             } else {

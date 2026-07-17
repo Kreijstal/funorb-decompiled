@@ -51,7 +51,7 @@ final class gsa {
                       break L2;
                     } else {
                       L3: {
-                        if ((((gsa) this).field_v ^ -1) < -1) {
+                        if (((gsa) this).field_v > 0) {
                           var4 = 63;
                           break L3;
                         } else {
@@ -106,7 +106,7 @@ final class gsa {
                     } else {
                       ((gsa) this).field_x = ((gsa) this).field_x + ((gsa) this).field_n;
                       ((gsa) this).field_d = true;
-                      if ((((gsa) this).field_n ^ -1) >= -1) {
+                      if (((gsa) this).field_n <= 0) {
                         break L6;
                       } else {
                         var4 = 64;
@@ -121,7 +121,7 @@ final class gsa {
                   if (param1 >= 25 + (50 * param2 + nta.field_d)) {
                     L7: {
                       ((gsa) this).field_x = ((gsa) this).field_x + ((gsa) this).field_z;
-                      if (-1 <= (((gsa) this).field_z ^ -1)) {
+                      if (((gsa) this).field_z <= 0) {
                         break L7;
                       } else {
                         if (((gsa) this).field_n != 0) {
@@ -154,7 +154,7 @@ final class gsa {
                   if (param1 >= iv.field_ub - -(50 * param2)) {
                     L9: {
                       ((gsa) this).field_l = true;
-                      if (-1 <= (((gsa) this).field_a ^ -1)) {
+                      if (((gsa) this).field_a <= 0) {
                         break L9;
                       } else {
                         var4 = 65;
@@ -197,7 +197,7 @@ final class gsa {
           }
         }
         L11: {
-          if ((var4 ^ -1) == 0) {
+          if (var4 == -1) {
             break L11;
           } else {
             fla discarded$1 = mr.field_w.a(new fm(var4, 0, 0, 0), -58);
@@ -231,7 +231,7 @@ final class gsa {
                 if (!((gsa) this).field_t.l((byte) -98)) {
                   break L15;
                 } else {
-                  if (-1 != (var6 ^ -1)) {
+                  if (var6 != 0) {
                     break L14;
                   } else {
                     if (null == ((gsa) this).field_t) {
@@ -246,7 +246,7 @@ final class gsa {
               }
             }
             ((gsa) this).field_t = mr.field_w.a(new fm(param2 + 94, 0, 0, 0), -58);
-            if (-1 != (var6 ^ -1)) {
+            if (var6 != 0) {
               break L14;
             } else {
               if (null == ((gsa) this).field_t) {
@@ -258,7 +258,7 @@ final class gsa {
               }
             }
           } else {
-            if (-1 != (var6 ^ -1)) {
+            if (var6 != 0) {
               break L14;
             } else {
               if (null == ((gsa) this).field_t) {
@@ -326,9 +326,6 @@ final class gsa {
     }
 
     public static void a(int param0) {
-        if (param0 != 1) {
-            field_w = null;
-        }
         field_w = null;
         field_s = null;
         field_y = null;
@@ -344,32 +341,141 @@ final class gsa {
     }
 
     gsa(hca param0, int[] param1) {
-        ((gsa) this).field_o = false;
-        ((gsa) this).field_l = false;
-        ((gsa) this).field_h = false;
-        ((gsa) this).field_p = param1[0];
-        ((gsa) this).field_r = param1[1];
-        ((gsa) this).field_q = 73.0;
-        ((gsa) this).field_k = false;
-        ((gsa) this).field_b = false;
-        ((gsa) this).field_x = 0;
-        ((gsa) this).field_c = param1[2];
-        ((gsa) this).field_d = false;
-        ((gsa) this).field_m = 0;
-        ((gsa) this).field_n = gp.field_i[1] * ((gsa) this).field_r;
-        ((gsa) this).field_a = gp.field_i[2] * ((gsa) this).field_c;
-        ((gsa) this).field_v = ((gsa) this).field_p * gp.field_i[0];
-        int var3 = param0.z(-96);
-        if (var3 != -1) {
-            if (-1 == (bta.field_n[var3] ^ -1)) {
-                ((gsa) this).field_u = ((gsa) this).field_u + param0.j(false);
+        RuntimeException var3 = null;
+        int var3_int = 0;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        try {
+          L0: {
+            L1: {
+              ((gsa) this).field_o = false;
+              ((gsa) this).field_l = false;
+              ((gsa) this).field_h = false;
+              ((gsa) this).field_p = param1[0];
+              ((gsa) this).field_r = param1[1];
+              ((gsa) this).field_q = 73.0;
+              ((gsa) this).field_k = false;
+              ((gsa) this).field_b = false;
+              ((gsa) this).field_x = 0;
+              ((gsa) this).field_c = param1[2];
+              ((gsa) this).field_d = false;
+              ((gsa) this).field_m = 0;
+              ((gsa) this).field_n = gp.field_i[1] * ((gsa) this).field_r;
+              ((gsa) this).field_a = gp.field_i[2] * ((gsa) this).field_c;
+              ((gsa) this).field_v = ((gsa) this).field_p * gp.field_i[0];
+              var3_int = param0.z(-96);
+              if (var3_int == -1) {
+                break L1;
+              } else {
+                L2: {
+                  if (bta.field_n[var3_int] != 0) {
+                    break L2;
+                  } else {
+                    ((gsa) this).field_u = ((gsa) this).field_u + param0.j(false);
+                    break L2;
+                  }
+                }
+                L3: {
+                  if (1 != bta.field_n[var3_int]) {
+                    break L3;
+                  } else {
+                    ((gsa) this).field_z = ((gsa) this).field_z + param0.j(false);
+                    break L3;
+                  }
+                }
+                if (2 != bta.field_n[var3_int]) {
+                  break L1;
+                } else {
+                  ((gsa) this).field_f = ((gsa) this).field_f + param0.j(false);
+                  break L1;
+                }
+              }
             }
-            if (1 == bta.field_n[var3]) {
-                ((gsa) this).field_z = ((gsa) this).field_z + param0.j(false);
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var3 = decompiledCaughtException;
+            stackOut_9_0 = (RuntimeException) var3;
+            stackOut_9_1 = new StringBuilder().append("gsa.<init>(");
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
+            if (param0 == null) {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
+              break L4;
+            } else {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
+              break L4;
             }
-            if (2 == bta.field_n[var3]) {
-                ((gsa) this).field_f = ((gsa) this).field_f + param0.j(false);
+          }
+          L5: {
+            stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+            stackOut_12_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_12_2).append(44);
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
+            if (param1 == null) {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L5;
+            } else {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L5;
             }
+          }
+          throw tba.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 41);
         }
     }
 

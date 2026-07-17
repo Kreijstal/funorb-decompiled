@@ -31,9 +31,6 @@ final class pj extends sf {
         field_L = null;
         field_I = null;
         field_F = null;
-        if (param0 < 78) {
-            int discarded$0 = pj.d(-100);
-        }
     }
 
     final byte[] g(byte param0) {
@@ -60,43 +57,80 @@ final class pj extends sf {
 
     final static void a(ve param0, byte param1) {
         ve var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
         var3 = client.field_A ? 1 : 0;
-        param0.b((byte) 108);
-        if (param1 == -50) {
-          var2 = (ve) (Object) h.field_b.c((byte) -99);
-          L0: while (true) {
-            if (var2 != null) {
-              if (var2.a(param0, false)) {
-                var2 = (ve) (Object) h.field_b.d(true);
-                continue L0;
-              } else {
-                L1: {
-                  if (var2 != null) {
-                    fm.a((byte) 114, (bh) (Object) param0, (bh) (Object) var2);
-                    break L1;
-                  } else {
-                    h.field_b.a((bh) (Object) param0, 2777);
-                    break L1;
-                  }
-                }
-                return;
-              }
-            } else {
+        try {
+          L0: {
+            param0.b((byte) 108);
+            var2 = (ve) (Object) h.field_b.c((byte) -99);
+            L1: while (true) {
               L2: {
-                if (var2 != null) {
-                  fm.a((byte) 114, (bh) (Object) param0, (bh) (Object) var2);
+                if (var2 == null) {
                   break L2;
                 } else {
-                  h.field_b.a((bh) (Object) param0, 2777);
-                  break L2;
+                  if (!var2.a(param0, false)) {
+                    break L2;
+                  } else {
+                    var2 = (ve) (Object) h.field_b.d(true);
+                    continue L1;
+                  }
                 }
               }
-              return;
+              if (var2 != null) {
+                fm.a((byte) 114, (bh) (Object) param0, (bh) (Object) var2);
+                break L0;
+              } else {
+                h.field_b.a((bh) (Object) param0, 2777);
+                return;
+              }
             }
           }
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2_ref = decompiledCaughtException;
+            stackOut_11_0 = (RuntimeException) var2_ref;
+            stackOut_11_1 = new StringBuilder().append("pj.E(");
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
+            if (param0 == null) {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L3;
+            } else {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L3;
+            }
+          }
+          throw dh.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + -50 + 41);
         }
     }
 

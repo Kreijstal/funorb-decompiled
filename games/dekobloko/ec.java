@@ -25,51 +25,60 @@ final class ec {
         field_k = null;
         field_p = null;
         field_i = null;
-        if (param0 < 78) {
-          return;
-        } else {
-          field_c = null;
-          field_f = null;
-          field_j = null;
-          field_a = null;
-          field_q = null;
-          field_b = null;
-          field_e = null;
-          return;
-        }
+        field_c = null;
+        field_f = null;
+        field_j = null;
+        field_a = null;
+        field_q = null;
+        field_b = null;
+        field_e = null;
     }
 
     final static void a(int param0) {
         uf var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
+        RuntimeException decompiledCaughtException = null;
         var3 = client.field_A ? 1 : 0;
-        var1 = we.field_b;
-        L0: while (true) {
-          if (!sc.c((byte) -104)) {
-            if (param0 > -91) {
-              ec.a(-123);
-              return;
-            } else {
-              return;
+        try {
+          L0: {
+            var1 = we.field_b;
+            L1: while (true) {
+              if (!sc.c((byte) -104)) {
+                if (param0 <= -91) {
+                  break L0;
+                } else {
+                  ec.a(-123);
+                  return;
+                }
+              } else {
+                var1.f(8, -4);
+                int fieldTemp$2 = var1.field_n + 1;
+                var1.field_n = var1.field_n + 1;
+                var2 = fieldTemp$2;
+                ba.a(-32141, var1);
+                we.field_b.b(var1.field_n - var2, true);
+                continue L1;
+              }
             }
-          } else {
-            var1.f(8, -4);
-            int fieldTemp$2 = var1.field_n + 1;
-            var1.field_n = var1.field_n + 1;
-            var2 = fieldTemp$2;
-            ba.a(-32141, var1);
-            we.field_b.b(var1.field_n - var2, true);
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw dh.a((Throwable) (Object) var1_ref, "ec.A(" + param0 + 41);
         }
     }
 
     ec(int param0, String param1, mm param2) {
-        ((ec) this).field_d = param0;
-        ((ec) this).field_o = param1;
-        ((ec) this).field_n = param2.a(((ec) this).field_o) + 46;
-        ((ec) this).field_r = 30;
+        try {
+            ((ec) this).field_d = param0;
+            ((ec) this).field_o = param1;
+            ((ec) this).field_n = param2.a(((ec) this).field_o) + 46;
+            ((ec) this).field_r = 30;
+        } catch (RuntimeException runtimeException) {
+            throw dh.a((Throwable) (Object) runtimeException, "ec.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     ec(int param0) {

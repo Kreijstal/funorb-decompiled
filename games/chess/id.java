@@ -42,20 +42,27 @@ final class id {
     }
 
     id(String param0, ci param1) {
-        String[] var3 = new String[]{param0, gg.field_g, ke.field_b};
-        ci[] var4 = new ci[]{param1, hb.field_a, (ci) (Object) fg.field_d};
-        ((id) this).field_a = new d(0L, ao.field_a, var3, hd.field_b, var4, 0);
+        String[] var3 = null;
+        ci[] var4 = null;
+        try {
+            var3 = new String[]{param0, gg.field_g, ke.field_b};
+            var4 = new ci[]{param1, hb.field_a, (ci) (Object) fg.field_d};
+            ((id) this).field_a = new d(0L, ao.field_a, var3, hd.field_b, var4, 0);
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "id.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static void a(int param0, int param1, int param2, km[] param3, boolean param4, byte param5, lh param6, int param7, km[] param8, int param9, int param10, int param11) {
-        int var12 = 19 % ((-8 - param5) / 42);
-        n.a(param6, param7, param4, param3, param1, param2, param10, param11, param0, param6, param9, 126, param10, param11, param8);
+        try {
+            int var12_int = 19 % ((-8 - param5) / 42);
+            n.a(param6, param7, param4, param3, param1, param2, param10, param11, param0, param6, param9, 126, param10, param11, param8);
+        } catch (RuntimeException runtimeException) {
+            throw fk.a((Throwable) (Object) runtimeException, "id.A(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 44 + (param6 != null ? "{...}" : "null") + 44 + param7 + 44 + (param8 != null ? "{...}" : "null") + 44 + param9 + 44 + param10 + 44 + param11 + 41);
+        }
     }
 
     public static void a(int param0) {
-        if (param0 != 23111) {
-            return;
-        }
         field_b = null;
     }
 

@@ -8,49 +8,40 @@ final class kj {
     static eg field_c;
 
     final static void a(int param0) {
-        tm var1 = null;
-        int var2 = 0;
-        int var3 = 0;
         tm var4 = null;
+        tm var1 = null;
         tm var5 = null;
-        tm var6 = null;
-        var3 = MinerDisturbance.field_ab;
-        L0: while (true) {
-          tm dupTemp$2 = (tm) (Object) ok.field_b.e(63854);
-          var4 = dupTemp$2;
-          var1 = var4;
-          if (null != dupTemp$2) {
-            ke.field_X[var4.field_s] = false;
-            continue L0;
-          } else {
-            L1: while (true) {
-              tm dupTemp$3 = (tm) (Object) ec.field_c.e(63854);
-              var6 = dupTemp$3;
-              var5 = var6;
-              var1 = var5;
-              if (null == dupTemp$3) {
-                if (param0 > -16) {
-                  return;
-                } else {
-                  var2 = 0;
-                  L2: while (true) {
-                    if (-36 >= (var2 ^ -1)) {
-                      jn.a(0);
-                      ja.field_u = 150;
-                      return;
-                    } else {
-                      ke.field_X[var2] = false;
-                      var2++;
-                      continue L2;
-                    }
-                  }
-                }
-              } else {
-                ke.field_X[var6.field_s] = false;
-                continue L1;
-              }
+        int var2 = 0;
+        int var3 = MinerDisturbance.field_ab;
+        while (true) {
+            tm dupTemp$0 = (tm) (Object) ok.field_b.e(63854);
+            var4 = dupTemp$0;
+            var1 = var4;
+            if (null == dupTemp$0) {
+                break;
             }
-          }
+            ke.field_X[var4.field_s] = false;
+        }
+        while (true) {
+            tm dupTemp$1 = (tm) (Object) ec.field_c.e(63854);
+            var5 = dupTemp$1;
+            var1 = var5;
+            if (null == dupTemp$1) {
+                break;
+            }
+            ke.field_X[var5.field_s] = false;
+        }
+        if (param0 > -16) {
+            return;
+        }
+        try {
+            for (var2 = 0; var2 < 35; var2++) {
+                ke.field_X[var2] = false;
+            }
+            jn.a(0);
+            ja.field_u = 150;
+        } catch (RuntimeException runtimeException) {
+            throw lj.a((Throwable) (Object) runtimeException, "kj.B(" + param0 + 41);
         }
     }
 
@@ -64,9 +55,6 @@ final class kj {
     }
 
     final static void a(byte param0) {
-        if (param0 != -123) {
-            return;
-        }
         mk.a(false, aa.field_e, 0);
     }
 
@@ -84,31 +72,16 @@ final class kj {
             }
           }
         }
-        if (param0 == -9319) {
-          if (-2 == rj.field_d) {
-            if (!ta.a(0, 2)) {
-              return false;
-            } else {
-              rj.field_d = field_a.e(-81);
-              field_a.field_o = 0;
-              return ta.a(0, rj.field_d);
-            }
+        if (-2 == rj.field_d) {
+          if (!ta.a(0, 2)) {
+            return false;
           } else {
+            rj.field_d = field_a.e(-81);
+            field_a.field_o = 0;
             return ta.a(0, rj.field_d);
           }
         } else {
-          field_b = null;
-          if (-2 == rj.field_d) {
-            if (!ta.a(0, 2)) {
-              return false;
-            } else {
-              rj.field_d = field_a.e(-81);
-              field_a.field_o = 0;
-              return ta.a(0, rj.field_d);
-            }
-          } else {
-            return ta.a(0, rj.field_d);
-          }
+          return ta.a(0, rj.field_d);
         }
     }
 
@@ -116,10 +89,6 @@ final class kj {
         field_a = null;
         field_b = null;
         field_c = null;
-        if (!param0) {
-            return;
-        }
-        byte discarded$0 = kj.a('[', 105);
     }
 
     final static boolean a(boolean param0) {

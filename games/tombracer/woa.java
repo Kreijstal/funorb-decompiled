@@ -6,15 +6,11 @@ final class woa extends od {
     static String field_l;
 
     final static void a(int param0, cga param1, boolean param2) {
-        if (param2) {
-          woa.a(-60);
-          aba.field_a.b((byte) -86, (vg) (Object) param1);
-          wj.a(param1, param0, -118);
-          return;
-        } else {
-          aba.field_a.b((byte) -86, (vg) (Object) param1);
-          wj.a(param1, param0, -118);
-          return;
+        try {
+            aba.field_a.b((byte) -86, (vg) (Object) param1);
+            wj.a(param1, param0, -118);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "woa.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + 0 + 41);
         }
     }
 
@@ -23,11 +19,19 @@ final class woa extends od {
         if (param0 > -52) {
             return;
         }
-        dk.field_c = param2;
+        try {
+            dk.field_c = param2;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "woa.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + 0 + 41);
+        }
     }
 
     woa(byte[] param0) {
-        ((woa) this).field_k = param0;
+        try {
+            ((woa) this).field_k = param0;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "woa.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void a(int param0) {

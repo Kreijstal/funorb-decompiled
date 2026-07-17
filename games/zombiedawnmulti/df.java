@@ -33,10 +33,14 @@ abstract class df extends se {
     }
 
     df(vk param0, int param1, int param2) {
-        super(ub.field_wb - param1 >> 522697857, -param2 + kc.field_a >> 1892845985, param1, param2, (nl) null);
-        ((df) this).field_N = param0;
-        ((df) this).field_R = false;
-        ((df) this).field_K = 0;
+        super(ub.field_wb - param1 >> 1, -param2 + kc.field_a >> 1, param1, param2, (nl) null);
+        try {
+            ((df) this).field_N = param0;
+            ((df) this).field_R = false;
+            ((df) this).field_K = 0;
+        } catch (RuntimeException runtimeException) {
+            throw fa.a((Throwable) (Object) runtimeException, "df.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     abstract void a(boolean param0, int param1, int param2);
@@ -60,7 +64,7 @@ abstract class df extends se {
     }
 
     final static void a(int param0, int param1) {
-        if (!((param1 ^ -1) == -1)) {
+        if (!(param1 == 0)) {
             jh.field_ic = param1;
         }
         io.field_g = qj.field_p;
@@ -71,7 +75,7 @@ abstract class df extends se {
     }
 
     final static String a(int param0) {
-        int var1 = -20 % ((-50 - param0) / 60);
+        int var1 = 0;
         if (qj.field_p) {
             return vi.field_a[0];
         }
@@ -104,7 +108,7 @@ abstract class df extends se {
               break L0;
             }
           }
-          if (-1 < (var3 ^ -1)) {
+          if (var3 < 0) {
             L1: {
               L2: {
                 ((df) this).field_K = ((df) this).field_K + (var3 - 15) / 16;
@@ -164,7 +168,7 @@ abstract class df extends se {
               break L5;
             }
           }
-          if (-1 < (var3 ^ -1)) {
+          if (var3 < 0) {
             ((df) this).field_K = ((df) this).field_K + (var3 - 15) / 16;
             if (((df) this).field_K == 0) {
               if (var2 != 0) {
@@ -219,10 +223,10 @@ abstract class df extends se {
     final void b(int param0, int param1, int param2) {
         if (param2 < 48) {
           df.g((byte) -100);
-          ((df) this).b(ub.field_wb + -param0 >> 509927361, -param1 + kc.field_a >> -415988927, 28972, param0, param1);
+          ((df) this).b(ub.field_wb + -param0 >> 1, -param1 + kc.field_a >> 1, 28972, param0, param1);
           return;
         } else {
-          ((df) this).b(ub.field_wb + -param0 >> 509927361, -param1 + kc.field_a >> -415988927, 28972, param0, param1);
+          ((df) this).b(ub.field_wb + -param0 >> 1, -param1 + kc.field_a >> 1, 28972, param0, param1);
           return;
         }
     }
@@ -234,7 +238,7 @@ abstract class df extends se {
               return;
             } else {
               ((df) this).a(true, param3 + ((df) this).field_y, param1 - -((df) this).field_i);
-              super.a(param0 ^ 0, param1, param2, param3);
+              super.a(param0, param1, param2, param3);
               return;
             }
           } else {
@@ -244,7 +248,7 @@ abstract class df extends se {
                   r.a(0, ej.field_g);
                   oo.b();
                   ((df) this).a(true, 0, 0);
-                  super.a(param0 ^ 0, -((df) this).field_i + -param1, param2, -param3 - ((df) this).field_y);
+                  super.a(param0, -((df) this).field_i + -param1, param2, -param3 - ((df) this).field_y);
                   ql.a(true);
                   ej.field_g.c(param3 + ((df) this).field_y, param1 - -((df) this).field_i, ((df) this).field_K);
                   if (param0 != -2) {
@@ -258,7 +262,7 @@ abstract class df extends se {
                   r.a(0, ej.field_g);
                   oo.b();
                   ((df) this).a(true, 0, 0);
-                  super.a(param0 ^ 0, -((df) this).field_i + -param1, param2, -param3 - ((df) this).field_y);
+                  super.a(param0, -((df) this).field_i + -param1, param2, -param3 - ((df) this).field_y);
                   ql.a(true);
                   ej.field_g.c(param3 + ((df) this).field_y, param1 - -((df) this).field_i, ((df) this).field_K);
                   if (param0 != -2) {
@@ -273,7 +277,7 @@ abstract class df extends se {
                 r.a(0, ej.field_g);
                 oo.b();
                 ((df) this).a(true, 0, 0);
-                super.a(param0 ^ 0, -((df) this).field_i + -param1, param2, -param3 - ((df) this).field_y);
+                super.a(param0, -((df) this).field_i + -param1, param2, -param3 - ((df) this).field_y);
                 ql.a(true);
                 ej.field_g.c(param3 + ((df) this).field_y, param1 - -((df) this).field_i, ((df) this).field_K);
                 if (param0 != -2) {
@@ -288,7 +292,7 @@ abstract class df extends se {
               r.a(0, ej.field_g);
               oo.b();
               ((df) this).a(true, 0, 0);
-              super.a(param0 ^ 0, -((df) this).field_i + -param1, param2, -param3 - ((df) this).field_y);
+              super.a(param0, -((df) this).field_i + -param1, param2, -param3 - ((df) this).field_y);
               ql.a(true);
               ej.field_g.c(param3 + ((df) this).field_y, param1 - -((df) this).field_i, ((df) this).field_K);
               if (param0 != -2) {

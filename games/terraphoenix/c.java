@@ -15,7 +15,8 @@ final class c implements Iterator {
     static char[] field_a;
 
     final static void a(byte param0, ci param1, int param2) {
-        int[] var3 = null;
+        RuntimeException var3 = null;
+        int[] var3_array = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -25,150 +26,196 @@ final class c implements Iterator {
         int[] var10 = null;
         int[] var11 = null;
         int[] var12 = null;
+        RuntimeException stackIn_43_0 = null;
+        StringBuilder stackIn_43_1 = null;
+        RuntimeException stackIn_44_0 = null;
+        StringBuilder stackIn_44_1 = null;
+        RuntimeException stackIn_45_0 = null;
+        StringBuilder stackIn_45_1 = null;
+        String stackIn_45_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_42_0 = null;
+        StringBuilder stackOut_42_1 = null;
+        RuntimeException stackOut_44_0 = null;
+        StringBuilder stackOut_44_1 = null;
+        String stackOut_44_2 = null;
+        RuntimeException stackOut_43_0 = null;
+        StringBuilder stackOut_43_1 = null;
+        String stackOut_43_2 = null;
         var7 = Terraphoenix.field_V;
-        var12 = param1.field_z;
-        var11 = var12;
-        var10 = var11;
-        var9 = var10;
-        var3 = var9;
-        var4 = 0;
-        var5 = -1 + param1.field_t;
-        L0: while (true) {
-          if (var5 < 0) {
+        try {
+          L0: {
+            var12 = param1.field_z;
+            var11 = var12;
+            var10 = var11;
+            var9 = var10;
+            var3_array = var9;
             var4 = 0;
-            var5 = 0;
+            var5 = -1 + param1.field_t;
             L1: while (true) {
-              if (var5 >= param1.field_t) {
+              if (var5 < 0) {
                 var4 = 0;
-                var5 = -1 + param1.field_t;
+                var5 = 0;
                 L2: while (true) {
-                  if ((var5 ^ -1) > -1) {
-                    L3: {
-                      if (param0 == -86) {
-                        break L3;
+                  if (var5 >= param1.field_t) {
+                    var4 = 0;
+                    var5 = -1 + param1.field_t;
+                    L3: while (true) {
+                      if (var5 < 0) {
+                        L4: {
+                          if (param0 == -86) {
+                            break L4;
+                          } else {
+                            var8 = null;
+                            c.a((byte) 118, (java.applet.Applet) null);
+                            break L4;
+                          }
+                        }
+                        break L0;
                       } else {
-                        var8 = null;
-                        c.a((byte) 118, (java.applet.Applet) null);
-                        break L3;
+                        var6 = param1.field_r - 1;
+                        L5: while (true) {
+                          if (0 > var6) {
+                            var5--;
+                            continue L3;
+                          } else {
+                            L6: {
+                              if (var12[var4] != 1) {
+                                var4++;
+                                break L6;
+                              } else {
+                                int incrementValue$2 = var4;
+                                var4++;
+                                var3_array[incrementValue$2] = param2;
+                                break L6;
+                              }
+                            }
+                            var6--;
+                            continue L5;
+                          }
+                        }
                       }
                     }
-                    return;
                   } else {
-                    var6 = param1.field_r - 1;
-                    L4: while (true) {
-                      if (0 > var6) {
-                        var5--;
+                    var6 = 0;
+                    L7: while (true) {
+                      if (param1.field_r <= var6) {
+                        var5++;
                         continue L2;
                       } else {
-                        if ((var12[var4] ^ -1) != -2) {
-                          var4++;
-                          var6--;
-                          continue L4;
-                        } else {
-                          var4++;
-                          var3[var4] = param2;
-                          var6--;
-                          continue L4;
-                        }
-                      }
-                    }
-                  }
-                }
-              } else {
-                var6 = 0;
-                L5: while (true) {
-                  if (param1.field_r <= var6) {
-                    var5++;
-                    continue L1;
-                  } else {
-                    if (-1 == (var12[var4] ^ -1)) {
-                      L6: {
-                        if (0 >= var6) {
-                          break L6;
-                        } else {
-                          if (var3[-1 + var4] <= 1) {
-                            break L6;
-                          } else {
-                            var12[var4] = 1;
+                        L8: {
+                          if (var12[var4] == 0) {
+                            L9: {
+                              if (0 >= var6) {
+                                break L9;
+                              } else {
+                                if (var3_array[-1 + var4] <= 1) {
+                                  break L9;
+                                } else {
+                                  var12[var4] = 1;
+                                  break L8;
+                                }
+                              }
+                            }
+                            L10: {
+                              if (var5 <= 0) {
+                                break L10;
+                              } else {
+                                if (var3_array[-param1.field_r + var4] <= 1) {
+                                  break L10;
+                                } else {
+                                  var12[var4] = 1;
+                                  break L8;
+                                }
+                              }
+                            }
+                            L11: {
+                              if (param1.field_r - 1 <= var6) {
+                                break L11;
+                              } else {
+                                if (var3_array[var4 + 1] <= 1) {
+                                  break L11;
+                                } else {
+                                  var12[var4] = 1;
+                                  break L8;
+                                }
+                              }
+                            }
+                            L12: {
+                              if (param1.field_t - 1 <= var5) {
+                                break L12;
+                              } else {
+                                break L12;
+                              }
+                            }
                             var4++;
                             var6++;
-                            continue L5;
-                          }
-                        }
-                      }
-                      L7: {
-                        if (-1 <= (var5 ^ -1)) {
-                          break L7;
-                        } else {
-                          if ((var3[-param1.field_r + var4] ^ -1) >= -2) {
-                            break L7;
+                            continue L7;
                           } else {
-                            var12[var4] = 1;
-                            var4++;
-                            var6++;
-                            continue L5;
-                          }
-                        }
-                      }
-                      L8: {
-                        if (param1.field_r - 1 <= var6) {
-                          break L8;
-                        } else {
-                          if ((var3[var4 + 1] ^ -1) >= -2) {
                             break L8;
-                          } else {
-                            var12[var4] = 1;
-                            var4++;
-                            var6++;
-                            continue L5;
                           }
                         }
-                      }
-                      if (param1.field_t - 1 > var5) {
-                        if (var3[var4 + param1.field_r] > 1) {
-                          var12[var4] = 1;
-                          var4++;
-                          var6++;
-                          continue L5;
-                        } else {
-                          var4++;
-                          var6++;
-                          continue L5;
-                        }
-                      } else {
                         var4++;
                         var6++;
-                        continue L5;
+                        continue L7;
                       }
-                    } else {
-                      var4++;
-                      var6++;
-                      continue L5;
                     }
                   }
                 }
-              }
-            }
-          } else {
-            var6 = param1.field_r + -1;
-            L9: while (true) {
-              if (0 > var6) {
-                var5--;
-                continue L0;
               } else {
-                if (1 == var12[var4]) {
-                  var4++;
-                  var3[var4] = 2;
-                  var6--;
-                  continue L9;
-                } else {
-                  var4++;
-                  var6--;
-                  continue L9;
+                var6 = param1.field_r + -1;
+                L13: while (true) {
+                  if (0 > var6) {
+                    var5--;
+                    continue L1;
+                  } else {
+                    L14: {
+                      if (1 == var12[var4]) {
+                        int incrementValue$3 = var4;
+                        var4++;
+                        var3_array[incrementValue$3] = 2;
+                        break L14;
+                      } else {
+                        var4++;
+                        break L14;
+                      }
+                    }
+                    var6--;
+                    continue L13;
+                  }
                 }
               }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L15: {
+            var3 = decompiledCaughtException;
+            stackOut_42_0 = (RuntimeException) var3;
+            stackOut_42_1 = new StringBuilder().append("c.C(").append(param0).append(44);
+            stackIn_44_0 = stackOut_42_0;
+            stackIn_44_1 = stackOut_42_1;
+            stackIn_43_0 = stackOut_42_0;
+            stackIn_43_1 = stackOut_42_1;
+            if (param1 == null) {
+              stackOut_44_0 = (RuntimeException) (Object) stackIn_44_0;
+              stackOut_44_1 = (StringBuilder) (Object) stackIn_44_1;
+              stackOut_44_2 = "null";
+              stackIn_45_0 = stackOut_44_0;
+              stackIn_45_1 = stackOut_44_1;
+              stackIn_45_2 = stackOut_44_2;
+              break L15;
+            } else {
+              stackOut_43_0 = (RuntimeException) (Object) stackIn_43_0;
+              stackOut_43_1 = (StringBuilder) (Object) stackIn_43_1;
+              stackOut_43_2 = "{...}";
+              stackIn_45_0 = stackOut_43_0;
+              stackIn_45_1 = stackOut_43_1;
+              stackIn_45_2 = stackOut_43_2;
+              break L15;
+            }
+          }
+          throw qk.a((Throwable) (Object) stackIn_45_0, stackIn_45_2 + 44 + param2 + 41);
         }
     }
 
@@ -177,9 +224,6 @@ final class c implements Iterator {
         field_b = null;
         field_a = null;
         field_i = null;
-        if (param0 != 1) {
-            boolean discarded$0 = c.b(125);
-        }
         field_d = null;
     }
 
@@ -193,8 +237,9 @@ final class c implements Iterator {
             if (((c) this).field_h.field_c <= ((c) this).field_f) {
               return false;
             } else {
+              int fieldTemp$8 = ((c) this).field_f;
               ((c) this).field_f = ((c) this).field_f + 1;
-              if (((c) this).field_h.field_a[((c) this).field_f].field_d != ((c) this).field_h.field_a[((c) this).field_f - 1]) {
+              if (((c) this).field_h.field_a[fieldTemp$8].field_d != ((c) this).field_h.field_a[((c) this).field_f - 1]) {
                 ((c) this).field_e = ((c) this).field_h.field_a[-1 + ((c) this).field_f].field_d;
                 return true;
               } else {
@@ -227,8 +272,9 @@ final class c implements Iterator {
             if (((c) this).field_f >= ((c) this).field_h.field_c) {
                 return null;
             }
+            int fieldTemp$0 = ((c) this).field_f;
             ((c) this).field_f = ((c) this).field_f + 1;
-            var1 = ((c) this).field_h.field_a[((c) this).field_f].field_d;
+            var1 = ((c) this).field_h.field_a[fieldTemp$0].field_d;
         } while (((c) this).field_h.field_a[((c) this).field_f - 1] == var1);
         ((c) this).field_g = var1;
         ((c) this).field_e = var1.field_d;
@@ -238,14 +284,72 @@ final class c implements Iterator {
     final static void a(byte param0, java.applet.Applet param1) {
         try {
             java.net.URL var2 = null;
-            if (param0 != -110) {
-                return;
-            }
+            Exception var2_ref = null;
+            RuntimeException var2_ref2 = null;
+            RuntimeException stackIn_7_0 = null;
+            StringBuilder stackIn_7_1 = null;
+            RuntimeException stackIn_8_0 = null;
+            StringBuilder stackIn_8_1 = null;
+            RuntimeException stackIn_9_0 = null;
+            StringBuilder stackIn_9_1 = null;
+            String stackIn_9_2 = null;
+            Throwable decompiledCaughtException = null;
+            RuntimeException stackOut_6_0 = null;
+            StringBuilder stackOut_6_1 = null;
+            RuntimeException stackOut_8_0 = null;
+            StringBuilder stackOut_8_1 = null;
+            String stackOut_8_2 = null;
+            RuntimeException stackOut_7_0 = null;
+            StringBuilder stackOut_7_1 = null;
+            String stackOut_7_2 = null;
             try {
-                var2 = new java.net.URL(param1.getCodeBase(), "subscribe.ws");
-                param1.getAppletContext().showDocument(bb.a((byte) 126, var2, param1), "_top");
-            } catch (Exception exception) {
-                exception.printStackTrace();
+              try {
+                L0: {
+                  if (param0 == -110) {
+                    var2 = new java.net.URL(param1.getCodeBase(), "subscribe.ws");
+                    param1.getAppletContext().showDocument(bb.a((byte) 126, var2, param1), "_top");
+                    break L0;
+                  } else {
+                    return;
+                  }
+                }
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                L1: {
+                  var2_ref = (Exception) (Object) decompiledCaughtException;
+                  var2_ref.printStackTrace();
+                  break L1;
+                }
+              }
+            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L2: {
+                var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_6_0 = (RuntimeException) var2_ref2;
+                stackOut_6_1 = new StringBuilder().append("c.D(").append(param0).append(44);
+                stackIn_8_0 = stackOut_6_0;
+                stackIn_8_1 = stackOut_6_1;
+                stackIn_7_0 = stackOut_6_0;
+                stackIn_7_1 = stackOut_6_1;
+                if (param1 == null) {
+                  stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+                  stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+                  stackOut_8_2 = "null";
+                  stackIn_9_0 = stackOut_8_0;
+                  stackIn_9_1 = stackOut_8_1;
+                  stackIn_9_2 = stackOut_8_2;
+                  break L2;
+                } else {
+                  stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+                  stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+                  stackOut_7_2 = "{...}";
+                  stackIn_9_0 = stackOut_7_0;
+                  stackIn_9_1 = stackOut_7_1;
+                  stackIn_9_2 = stackOut_7_2;
+                  break L2;
+                }
+              }
+              throw qk.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -256,17 +360,18 @@ final class c implements Iterator {
 
     private final void a(boolean param0) {
         ((c) this).field_e = ((c) this).field_h.field_a[0].field_d;
-        if (param0) {
-            return;
-        }
         ((c) this).field_f = 1;
         ((c) this).field_g = null;
     }
 
     c(ce param0) {
         ((c) this).field_g = null;
-        ((c) this).field_h = param0;
-        this.a(false);
+        try {
+            ((c) this).field_h = param0;
+            this.a(false);
+        } catch (RuntimeException runtimeException) {
+            throw qk.a((Throwable) (Object) runtimeException, "c.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static boolean b(int param0) {
@@ -321,6 +426,6 @@ final class c implements Iterator {
         field_c = "6000pts";
         field_b = "Build ";
         field_d = "Options Menu";
-        field_a = new char[]{(char)32, (char)160, (char)95, (char)45, (char)224, (char)225, (char)226, (char)228, (char)227, (char)192, (char)193, (char)194, (char)196, (char)195, (char)232, (char)233, (char)234, (char)235, (char)200, (char)201, (char)202, (char)203, (char)237, (char)238, (char)239, (char)205, (char)206, (char)207, (char)242, (char)243, (char)244, (char)246, (char)245, (char)210, (char)211, (char)212, (char)214, (char)213, (char)249, (char)250, (char)251, (char)252, (char)217, (char)218, (char)219, (char)220, (char)231, (char)199, (char)255, (char)376, (char)241, (char)209, (char)223};
+        field_a = new char[]{' ', ' ', '_', '-', 'à', 'á', 'â', 'ä', 'ã', 'À', 'Á', 'Â', 'Ä', 'Ã', 'è', 'é', 'ê', 'ë', 'È', 'É', 'Ê', 'Ë', 'í', 'î', 'ï', 'Í', 'Î', 'Ï', 'ò', 'ó', 'ô', 'ö', 'õ', 'Ò', 'Ó', 'Ô', 'Ö', 'Õ', 'ù', 'ú', 'û', 'ü', 'Ù', 'Ú', 'Û', 'Ü', 'ç', 'Ç', 'ÿ', 'Ÿ', 'ñ', 'Ñ', 'ß'};
     }
 }

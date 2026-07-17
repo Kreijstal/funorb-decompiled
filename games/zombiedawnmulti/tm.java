@@ -39,26 +39,16 @@ final class tm {
           }
         }
         dk.e(param0, -7579);
-        if (!sa.field_f) {
-          if (param1) {
-            field_a = null;
-            an.a(1, param0);
-            return;
-          } else {
-            an.a(1, param0);
-            return;
-          }
-        } else {
+        if (sa.field_f) {
           oo.f(em.field_U.field_c.field_x, em.field_U.field_c.field_Q, em.field_U.field_c.field_zb, em.field_U.field_c.field_z);
           em.field_U.field_c.c(param0, -1);
-          if (!param1) {
-            an.a(1, param0);
-            return;
-          } else {
-            field_a = null;
-            an.a(1, param0);
-            return;
-          }
+          field_a = null;
+          an.a(1, param0);
+          return;
+        } else {
+          field_a = null;
+          an.a(1, param0);
+          return;
         }
     }
 

@@ -16,21 +16,21 @@ final class nd extends kj {
         var4 = 0;
         var5 = param1;
         if (((nd) this).field_f >= 10) {
-          if (-51 >= (((nd) this).field_f ^ -1)) {
-            var4 = 128 - ((nd) this).field_f * 12 - -588 << -993476639;
-            var5 = 64 + -(6 * (((nd) this).field_f + -49)) << -39136799;
-            uu.field_vb.a((127 + -var4 >> -1635176543) + param2, (-var5 + 64 + -1 >> -1060869919) + (param0 - 64), var4 + 1, 1 + var5);
+          if (((nd) this).field_f >= 50) {
+            var4 = 128 - ((nd) this).field_f * 12 - -588 << 1;
+            var5 = 64 + -(6 * (((nd) this).field_f + -49)) << 1;
+            uu.field_vb.a((127 + -var4 >> 1) + param2, (-var5 + 63 >> 1) + (param0 - 64), var4 + 1, 1 + var5);
             return;
           } else {
             var4 = 256;
             var5 = 128;
-            uu.field_vb.a((127 + -var4 >> -1635176543) + param2, (-var5 + 64 + -1 >> -1060869919) + (param0 - 64), var4 + 1, 1 + var5);
+            uu.field_vb.a((127 + -var4 >> 1) + param2, (-var5 + 63 >> 1) + (param0 - 64), var4 + 1, 1 + var5);
             return;
           }
         } else {
-          var5 = 6 * ((nd) this).field_f << -1149108671;
-          var4 = ((nd) this).field_f * 12 << 750968865;
-          uu.field_vb.a((127 + -var4 >> -1635176543) + param2, (-var5 + 64 + -1 >> -1060869919) + (param0 - 64), var4 + 1, 1 + var5);
+          var5 = 6 * ((nd) this).field_f << 1;
+          var4 = ((nd) this).field_f * 12 << 1;
+          uu.field_vb.a((127 + -var4 >> 1) + param2, (-var5 + 63 >> 1) + (param0 - 64), var4 + 1, 1 + var5);
           return;
         }
     }
@@ -50,22 +50,22 @@ final class nd extends kj {
           }
         }
         var5 = 0;
-        if (-11 >= (((nd) this).field_f ^ -1)) {
+        if (((nd) this).field_f >= 10) {
           if (50 > ((nd) this).field_f) {
             var4 = 256;
             var5 = 128;
-            uu.field_vb.a((128 + -var4 - 1 >> 2064960577) + param2, param0 + (-var5 + 63 >> -1098854143) - 64, 1 + var4, 1 + var5);
+            uu.field_vb.a((128 + -var4 - 1 >> 1) + param2, param0 + (-var5 + 63 >> 1) - 64, 1 + var4, 1 + var5);
             return;
           } else {
-            var5 = 64 - (((nd) this).field_f * 6 - 294) << 1487332673;
-            var4 = -((((nd) this).field_f - 49) * 12) + 128 << -1619400575;
-            uu.field_vb.a((128 + -var4 - 1 >> 2064960577) + param2, param0 + (-var5 + 63 >> -1098854143) - 64, 1 + var4, 1 + var5);
+            var5 = 64 - (((nd) this).field_f * 6 - 294) << 1;
+            var4 = -((((nd) this).field_f - 49) * 12) + 128 << 1;
+            uu.field_vb.a((128 + -var4 - 1 >> 1) + param2, param0 + (-var5 + 63 >> 1) - 64, 1 + var4, 1 + var5);
             return;
           }
         } else {
-          var5 = ((nd) this).field_f * 6 << 3565185;
-          var4 = ((nd) this).field_f * 12 << 1107296801;
-          uu.field_vb.a((128 + -var4 - 1 >> 2064960577) + param2, param0 + (-var5 + 63 >> -1098854143) - 64, 1 + var4, 1 + var5);
+          var5 = ((nd) this).field_f * 6 << 1;
+          var4 = ((nd) this).field_f * 12 << 1;
+          uu.field_vb.a((128 + -var4 - 1 >> 1) + param2, param0 + (-var5 + 63 >> 1) - 64, 1 + var4, 1 + var5);
           return;
         }
     }
@@ -75,17 +75,19 @@ final class nd extends kj {
         int stackOut_3_0 = 0;
         int stackOut_2_0 = 0;
         if (param0 < 21) {
-          boolean discarded$2 = ((nd) this).b(69);
+          boolean discarded$6 = ((nd) this).b(69);
+          int fieldTemp$7 = ((nd) this).field_f + 1;
           ((nd) this).field_f = ((nd) this).field_f + 1;
-          if (60 > ((nd) this).field_f + 1) {
+          if (60 > fieldTemp$7) {
             return false;
           } else {
             return true;
           }
         } else {
           L0: {
+            int fieldTemp$8 = ((nd) this).field_f + 1;
             ((nd) this).field_f = ((nd) this).field_f + 1;
-            if (60 <= ((nd) this).field_f + 1) {
+            if (60 <= fieldTemp$8) {
               stackOut_3_0 = 1;
               stackIn_4_0 = stackOut_3_0;
               break L0;
@@ -106,9 +108,6 @@ final class nd extends kj {
     public static void a(boolean param0) {
         field_g = null;
         field_i = null;
-        if (param0) {
-            field_j = -0.9287268583469704;
-        }
     }
 
     static {

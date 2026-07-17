@@ -14,20 +14,19 @@ final class vs {
     static String field_b;
 
     final static void a(int param0, mq param1) {
-        if (param1 != null) {
-          qd.field_I = param1;
-          as.field_E.field_fb.b(75);
-          as.field_E.a((je) (Object) qd.field_I, 105);
-          if (param0 != 256) {
-            field_j = true;
-            iu.field_h = true;
+        if (param1 == null) {
             return;
-          } else {
+        }
+        try {
+            qd.field_I = param1;
+            as.field_E.field_fb.b(75);
+            as.field_E.a((je) (Object) qd.field_I, 105);
+            if (param0 != 256) {
+                field_j = true;
+            }
             iu.field_h = true;
-            return;
-          }
-        } else {
-          return;
+        } catch (RuntimeException runtimeException) {
+            throw ig.a((Throwable) (Object) runtimeException, "vs.B(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 

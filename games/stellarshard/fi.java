@@ -14,7 +14,7 @@ final class fi {
         while (((fi) this).field_a[var1] >= 0) {
             var1 = ad.a() != 0 ? ((fi) this).field_a[var1] : var1 + 1;
         }
-        return ((fi) this).field_a[var1] ^ -1;
+        return ~((fi) this).field_a[var1];
     }
 
     private final void c() {
@@ -58,7 +58,7 @@ final class fi {
                   var7 = 0;
                   L2: while (true) {
                     if (var7 >= var4) {
-                      ((fi) this).field_a[var6] = var3 ^ -1;
+                      ((fi) this).field_a[var6] = ~var3;
                       if (var6 >= var2) {
                         var2 = var6 + 1;
                         var3++;

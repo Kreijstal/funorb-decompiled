@@ -18,28 +18,155 @@ final class tl {
 
     final static void a(int param0, String param1, int param2, int param3, int param4, boolean param5, df param6, int param7, boolean param8, long param9, int param10, int param11, int param12, int param13) {
         try {
-            if (param4 != 9737) {
-                return;
-            }
-            e.field_c = new hb(param2);
-            vh.field_a = new hb(param13);
-            kk.field_b = param7;
-            na.field_W = param8 ? true : false;
-            d.field_d = param5 ? true : false;
-            ld.field_k = param6;
-            rg.field_M = param12;
-            ac.field_b = param11;
-            mc.field_a = param9;
-            wm.field_db = param0;
-            af.field_ab = param1;
-            nd.field_s = param10;
-            qa.field_c = param3;
-            if (null != ld.field_k.field_n) {
-                try {
-                    bg.field_b = new pf(ld.field_k.field_n, 64, 0);
-                } catch (IOException iOException) {
-                    throw new RuntimeException(iOException.toString());
+            IOException var15 = null;
+            RuntimeException var15_ref = null;
+            int stackIn_5_0 = 0;
+            int stackIn_8_0 = 0;
+            RuntimeException stackIn_14_0 = null;
+            StringBuilder stackIn_14_1 = null;
+            RuntimeException stackIn_15_0 = null;
+            StringBuilder stackIn_15_1 = null;
+            RuntimeException stackIn_16_0 = null;
+            StringBuilder stackIn_16_1 = null;
+            String stackIn_16_2 = null;
+            RuntimeException stackIn_17_0 = null;
+            StringBuilder stackIn_17_1 = null;
+            RuntimeException stackIn_18_0 = null;
+            StringBuilder stackIn_18_1 = null;
+            RuntimeException stackIn_19_0 = null;
+            StringBuilder stackIn_19_1 = null;
+            String stackIn_19_2 = null;
+            Throwable decompiledCaughtException = null;
+            int stackOut_4_0 = 0;
+            int stackOut_3_0 = 0;
+            int stackOut_7_0 = 0;
+            int stackOut_6_0 = 0;
+            RuntimeException stackOut_13_0 = null;
+            StringBuilder stackOut_13_1 = null;
+            RuntimeException stackOut_15_0 = null;
+            StringBuilder stackOut_15_1 = null;
+            String stackOut_15_2 = null;
+            RuntimeException stackOut_14_0 = null;
+            StringBuilder stackOut_14_1 = null;
+            String stackOut_14_2 = null;
+            RuntimeException stackOut_16_0 = null;
+            StringBuilder stackOut_16_1 = null;
+            RuntimeException stackOut_18_0 = null;
+            StringBuilder stackOut_18_1 = null;
+            String stackOut_18_2 = null;
+            RuntimeException stackOut_17_0 = null;
+            StringBuilder stackOut_17_1 = null;
+            String stackOut_17_2 = null;
+            try {
+              L0: {
+                if (param4 == 9737) {
+                  L1: {
+                    e.field_c = new hb(param2);
+                    vh.field_a = new hb(5000);
+                    kk.field_b = param7;
+                    if (!param8) {
+                      stackOut_4_0 = 0;
+                      stackIn_5_0 = stackOut_4_0;
+                      break L1;
+                    } else {
+                      stackOut_3_0 = 1;
+                      stackIn_5_0 = stackOut_3_0;
+                      break L1;
+                    }
+                  }
+                  L2: {
+                    na.field_W = stackIn_5_0 != 0;
+                    if (!param5) {
+                      stackOut_7_0 = 0;
+                      stackIn_8_0 = stackOut_7_0;
+                      break L2;
+                    } else {
+                      stackOut_6_0 = 1;
+                      stackIn_8_0 = stackOut_6_0;
+                      break L2;
+                    }
+                  }
+                  L3: {
+                    d.field_d = stackIn_8_0 != 0;
+                    ld.field_k = param6;
+                    rg.field_M = param12;
+                    ac.field_b = param11;
+                    mc.field_a = param9;
+                    wm.field_db = param0;
+                    af.field_ab = param1;
+                    nd.field_s = param10;
+                    qa.field_c = param3;
+                    if (null == ld.field_k.field_n) {
+                      break L3;
+                    } else {
+                      {
+                        L4: {
+                          bg.field_b = new pf(ld.field_k.field_n, 64, 0);
+                          break L4;
+                        }
+                      }
+                      break L3;
+                    }
+                  }
+                  break L0;
+                } else {
+                  return;
                 }
+              }
+            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L5: {
+                var15_ref = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_13_0 = (RuntimeException) var15_ref;
+                stackOut_13_1 = new StringBuilder().append("tl.A(").append(param0).append(44);
+                stackIn_15_0 = stackOut_13_0;
+                stackIn_15_1 = stackOut_13_1;
+                stackIn_14_0 = stackOut_13_0;
+                stackIn_14_1 = stackOut_13_1;
+                if (param1 == null) {
+                  stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+                  stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+                  stackOut_15_2 = "null";
+                  stackIn_16_0 = stackOut_15_0;
+                  stackIn_16_1 = stackOut_15_1;
+                  stackIn_16_2 = stackOut_15_2;
+                  break L5;
+                } else {
+                  stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+                  stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+                  stackOut_14_2 = "{...}";
+                  stackIn_16_0 = stackOut_14_0;
+                  stackIn_16_1 = stackOut_14_1;
+                  stackIn_16_2 = stackOut_14_2;
+                  break L5;
+                }
+              }
+              L6: {
+                stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+                stackOut_16_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_16_2).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44);
+                stackIn_18_0 = stackOut_16_0;
+                stackIn_18_1 = stackOut_16_1;
+                stackIn_17_0 = stackOut_16_0;
+                stackIn_17_1 = stackOut_16_1;
+                if (param6 == null) {
+                  stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+                  stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+                  stackOut_18_2 = "null";
+                  stackIn_19_0 = stackOut_18_0;
+                  stackIn_19_1 = stackOut_18_1;
+                  stackIn_19_2 = stackOut_18_2;
+                  break L6;
+                } else {
+                  stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+                  stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+                  stackOut_17_2 = "{...}";
+                  stackIn_19_0 = stackOut_17_0;
+                  stackIn_19_1 = stackOut_17_1;
+                  stackIn_19_2 = stackOut_17_2;
+                  break L6;
+                }
+              }
+              throw sd.a((Throwable) (Object) stackIn_19_0, stackIn_19_2 + 44 + param7 + 44 + param8 + 44 + param9 + 44 + param10 + 44 + param11 + 44 + param12 + 44 + 5000 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -61,9 +188,6 @@ final class tl {
             ci.field_b.field_s = 5;
             ci.field_b.field_g = 7697781;
         }
-        if (param0 != 4314) {
-            field_i = null;
-        }
         return ci.field_b;
     }
 
@@ -71,9 +195,6 @@ final class tl {
         field_a = null;
         field_e = null;
         field_d = null;
-        if (param0 < 102) {
-            field_e = null;
-        }
         field_b = null;
         field_i = null;
     }
@@ -91,6 +212,7 @@ final class tl {
             field_i = new int[16384];
             field_e = new e(2, 4, 4, 0);
             field_a = new double[][]{null, null, null, null, new double[6], new double[3], new double[6], new double[6], null, new double[3], new double[3], new double[3], new double[3]};
+            return;
           } else {
             field_d[var0] = 65793 * var0;
             var0++;

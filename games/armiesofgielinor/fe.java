@@ -157,7 +157,7 @@ final class fe {
     }
 
     final static void a(int param0, int param1, int param2, int param3, wk[] param4, int[] param5, int param6, int param7) {
-        fe.a(param0, param1, param2, param3, param4, param5, param6, param7, true);
+        fe.a(param0, param1, param2, param3, param4, param5, param6, 0, true);
     }
 
     final static void a(String param0, int param1, int param2, int param3, int[] param4, boolean param5, int param6, int param7) {
@@ -218,10 +218,10 @@ final class fe {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        param4[0].e(param0, param1, param5);
-        param4[1].e(param0 + param2 - param4[0].field_y, param1, param5);
-        param4[2].e(param0, param1 + param3 - param4[0].field_v, param5);
-        param4[3].e(param0 + param2 - param4[0].field_y, param1 + param3 - param4[0].field_v, param5);
+        param4[0].e(param0, param1, 128);
+        param4[1].e(param0 + param2 - param4[0].field_y, param1, 128);
+        param4[2].e(param0, param1 + param3 - param4[0].field_v, 128);
+        param4[3].e(param0 + param2 - param4[0].field_y, param1 + param3 - param4[0].field_v, 128);
         var6 = param1;
         var7 = param3 - param4[0].field_v;
         var8 = param2 - param4[0].field_y;
@@ -232,18 +232,18 @@ final class fe {
           } else {
             if (param1 >= param4[0].field_v) {
               if (param1 < var7) {
-                qn.d(param0, var6, param0 + param2 - 1, var6, 0, param5);
+                qn.d(param0, var6, param0 + param2 - 1, var6, 0, 128);
                 var6++;
                 param1++;
                 continue L0;
               } else {
-                qn.d(param0 + param4[0].field_y, var6, param0 + var8 - 1, var6, 0, param5);
+                qn.d(param0 + param4[0].field_y, var6, param0 + var8 - 1, var6, 0, 128);
                 var6++;
                 param1++;
                 continue L0;
               }
             } else {
-              qn.d(param0 + param4[0].field_y, var6, param0 + var8 - 1, var6, 0, param5);
+              qn.d(param0 + param4[0].field_y, var6, param0 + var8 - 1, var6, 0, 128);
               var6++;
               param1++;
               continue L0;
@@ -333,8 +333,9 @@ final class fe {
                       var17 = ((param0 & 16711680) >>> 16) * ((param1 & 16711680) >>> 16) >>> 8;
                       var18 = (param0 & 65280) * (param1 & 65280) >>> 24;
                       var19 = (param0 & 255) * (param1 & 255) >>> 8;
+                      int incrementValue$145 = param10;
                       param10++;
-                      param5[param10] = (var17 << 16) + (var18 << 8) + var19;
+                      param5[incrementValue$145] = (var17 << 16) + (var18 << 8) + var19;
                       param3 = param3 + param13;
                       param6++;
                       continue L1;
@@ -619,8 +620,8 @@ final class fe {
     }
 
     final static void d(String param0, int param1, int param2, int param3, boolean param4) {
-        param1 = param1 - (field_i.a(param0) >> (param4 ? 1 : 0));
-        fe.a(param0, param1, param2, param3, param4);
+        param1 = param1 - (field_i.a(param0) >> 1);
+        fe.a(param0, param1, param2, param3, true);
     }
 
     final static wk[] a(int param0, int param1, int param2, int param3, wk[] param4, int[] param5) {
@@ -870,145 +871,75 @@ final class fe {
         int var19_int = 0;
         int var20 = 0;
         int var21 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    if (field_e == null) {
-                        statePc = 3;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    if (field_e.length == qn.field_l) {
-                        statePc = 4;
-                    } else {
-                        statePc = 3;
-                    }
-                    continue stateLoop;
-                }
-                case 3: {
-                    field_e = new int[qn.field_l];
-                    statePc = 4;
-                    continue stateLoop;
-                }
-                case 4: {
-                    var7 = param2 & 15;
-                    var8 = param1 & 15;
-                    param2 = param2 >> 4;
-                    param1 = param1 >> 4;
-                    var15 = param3 + param4 * qn.field_l;
-                    var16 = qn.field_l - param5;
-                    var17 = param2 * param0.field_y + param1;
-                    var18 = param0.field_y - param5;
-                    statePc = 5;
-                    continue stateLoop;
-                }
-                case 5: {
-                    try {
-                        var19_int = -qn.field_g;
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        caughtException = stateCaught_5;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        if (var19_int >= 0) {
-                            statePc = 13;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        var20 = param6[-1 - var19_int];
-                        var21 = param5 - 1;
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        caughtException = stateCaught_7;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        if (var21 < 0) {
-                            statePc = 10;
-                        } else {
-                            statePc = 9;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        caughtException = stateCaught_8;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    try {
-                        var9 = param0.field_B[var17];
-                        var10 = var9 & 16711935;
-                        var11 = var9 & 65280;
-                        var13 = var10 * var8 & 267390960;
-                        var14 = var11 * var8 & 1044480;
-                        var12 = var13 | var14;
-                        var11 = var12 + var20;
-                        var20 = (var9 << 4) - var12;
-                        var10 = var11 & 267390960;
-                        var9 = var11 & 1044480;
-                        var13 = var10 * var7 & -16711936;
-                        var14 = var9 * var7 & 16711680;
-                        var12 = var13 | var14;
-                        qn.field_d[var15] = var12 + field_e[var21] >> 8;
-                        field_e[var21] = (var11 << 4) - var12;
-                        var21--;
-                        var15++;
-                        var17++;
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        caughtException = stateCaught_9;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    try {
-                        var15 = var15 + var16;
-                        param6[-1 - var19_int] = var20;
-                        var19_int++;
-                        var17 = var17 + var18;
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        caughtException = stateCaught_10;
-                        statePc = 12;
-                        continue stateLoop;
-                    }
-                }
-                case 12: {
-                    var19 = (Exception) (Object) caughtException;
-                    return;
-                }
-                case 13: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        L0: {
+          L1: {
+            if (field_e == null) {
+              break L1;
+            } else {
+              if (field_e.length == qn.field_l) {
+                break L0;
+              } else {
+                break L1;
+              }
             }
+          }
+          field_e = new int[qn.field_l];
+          break L0;
+        }
+        var7 = param2 & 15;
+        var8 = param1 & 15;
+        param2 = param2 >> 4;
+        param1 = param1 >> 4;
+        var15 = param3 + param4 * qn.field_l;
+        var16 = qn.field_l - param5;
+        var17 = param2 * param0.field_y + param1;
+        var18 = param0.field_y - param5;
+        try {
+          L2: {
+            var19_int = -qn.field_g;
+            L3: while (true) {
+              if (var19_int >= 0) {
+                break L2;
+              } else {
+                var20 = param6[-1 - var19_int];
+                var21 = param5 - 1;
+                L4: while (true) {
+                  if (var21 < 0) {
+                    var15 = var15 + var16;
+                    param6[-1 - var19_int] = var20;
+                    var19_int++;
+                    var17 = var17 + var18;
+                    continue L3;
+                  } else {
+                    var9 = param0.field_B[var17];
+                    var10 = var9 & 16711935;
+                    var11 = var9 & 65280;
+                    var13 = var10 * var8 & 267390960;
+                    var14 = var11 * var8 & 1044480;
+                    var12 = var13 | var14;
+                    var11 = var12 + var20;
+                    var20 = (var9 << 4) - var12;
+                    var10 = var11 & 267390960;
+                    var9 = var11 & 1044480;
+                    var13 = var10 * var7 & -16711936;
+                    var14 = var9 * var7 & 16711680;
+                    var12 = var13 | var14;
+                    qn.field_d[var15] = var12 + field_e[var21] >> 8;
+                    field_e[var21] = (var11 << 4) - var12;
+                    var21--;
+                    var15++;
+                    var17++;
+                    continue L4;
+                  }
+                }
+              }
+            }
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var19 = (Exception) (Object) decompiledCaughtException;
+          return;
         }
     }
 
@@ -1302,16 +1233,18 @@ final class fe {
                 var10++;
                 continue L0;
               } else {
+                int incrementValue$14 = param4;
                 param4++;
-                param3 = param2[param4];
+                param3 = param2[incrementValue$14];
                 if (param3 != 0) {
                   param0 = param1[param5];
                   if (param0 != 0) {
                     var12 = ((param3 & 16711680) >>> 16) * ((param0 & 16711680) >>> 16) >>> 8;
                     var13 = (param3 & 65280) * (param0 & 65280) >>> 24;
                     var14 = (param3 & 255) * (param0 & 255) >>> 8;
+                    int incrementValue$15 = param5;
                     param5++;
-                    param1[param5] = (var12 << 16) + (var13 << 8) + var14;
+                    param1[incrementValue$15] = (var12 << 16) + (var13 << 8) + var14;
                     var11++;
                     continue L1;
                   } else {
@@ -1332,17 +1265,17 @@ final class fe {
 
     final static void b(String param0, int param1, int param2, int param3, boolean param4) {
         int var7 = 0;
-        field_d[0] = param3 << (param4 ? 1 : 0);
+        field_d[0] = param3 << 1;
         int var5 = field_i.a(param0, field_d, field_k);
-        int var6 = field_i.field_v >> (param4 ? 1 : 0);
+        int var6 = field_i.field_v >> 1;
         for (var7 = 0; var7 < var5; var7++) {
-            fe.b(field_k[var7], param1, param2 + var6 * var7, param4);
+            fe.b(field_k[var7], param1, param2 + var6 * var7, true);
         }
     }
 
     final static int b(int param0, int param1) {
-        int var2 = (param0 & 16711935) * param1 >>> 8;
-        int var3 = (param0 & 65280) * param1 >>> 8;
+        int var2 = (param0 & 16711935) * 128 >>> 8;
+        int var3 = (param0 & 65280) * 128 >>> 8;
         return var2 & 16711935 | var3 & 65280;
     }
 
@@ -1492,14 +1425,18 @@ final class fe {
                 var7++;
                 continue L1;
               } else {
+                int incrementValue$4 = var5;
                 var5++;
-                var10 = param0.field_B[var5] & 255;
+                var10 = param0.field_B[incrementValue$4] & 255;
+                int incrementValue$5 = var5;
                 var5++;
-                var10 = var10 + (param0.field_B[var5] & 255);
+                var10 = var10 + (param0.field_B[incrementValue$5] & 255);
+                int incrementValue$6 = var6;
                 var6++;
-                var10 = var10 + (param0.field_B[var6] & 255);
+                var10 = var10 + (param0.field_B[incrementValue$6] & 255);
+                int incrementValue$7 = var6;
                 var6++;
-                var10 = var10 + (param0.field_B[var6] & 255);
+                var10 = var10 + (param0.field_B[incrementValue$7] & 255);
                 var10 = var10 >> 2;
                 if (var10 > 0) {
                   fe.b(param1 + var9, param2 + var7, var8, var10);
@@ -1554,14 +1491,18 @@ final class fe {
                 var7++;
                 continue L1;
               } else {
+                int incrementValue$256 = var5;
                 var5++;
-                var9 = param0.field_B[var5] & 255;
+                var9 = param0.field_B[incrementValue$256] & 255;
+                int incrementValue$257 = var5;
                 var5++;
-                var9 = var9 + (param0.field_B[var5] & 255);
+                var9 = var9 + (param0.field_B[incrementValue$257] & 255);
+                int incrementValue$258 = var6;
                 var6++;
-                var9 = var9 + (param0.field_B[var6] & 255);
+                var9 = var9 + (param0.field_B[incrementValue$258] & 255);
+                int incrementValue$259 = var6;
                 var6++;
-                var9 = var9 + (param0.field_B[var6] & 255);
+                var9 = var9 + (param0.field_B[incrementValue$259] & 255);
                 var9 = var9 >> 2;
                 if (var9 > 0) {
                   fe.b(param1 + var8, param2 + var7, param4, var9);
@@ -1578,28 +1519,35 @@ final class fe {
     }
 
     final static void a(String param0, int param1, int param2, int[] param3, int param4, boolean param5) {
-        if (param4 == 0) {
+        L0: {
+          if (param4 != 0) {
+            if (param4 != 1) {
+              if (param4 != 2) {
+                return;
+              } else {
+                fe.b(param0, param1, param2, param3, param5);
+                break L0;
+              }
+            } else {
+              fe.b(param0, param1, param2, param5);
+              fe.c(param0, param1, param2, param3, param5);
+              break L0;
+            }
+          } else {
             fe.a(param0, param1, param2, param5);
             fe.a(param0, param1, param2, param3, param5);
-        } else {
-            if (param4 == 1) {
-                fe.b(param0, param1, param2, param5);
-                fe.c(param0, param1, param2, param3, param5);
-            } else {
-                // if_icmpne L67
-                fe.b(param0, param1, param2, param3, param5);
-            }
+            break L0;
+          }
         }
-        return;
     }
 
     final static void a(String param0, int param1, int param2, int param3, int param4, boolean param5) {
         int var8 = 0;
-        field_d[0] = param3 << (param5 ? 1 : 0);
+        field_d[0] = param3 << 1;
         int var6 = field_i.a(param0, field_d, field_k);
-        int var7 = field_i.field_v >> (param5 ? 1 : 0);
+        int var7 = field_i.field_v >> 1;
         for (var8 = 0; var8 < var6; var8++) {
-            fe.c(field_k[var8], param1, param2 + var7 * var8, param4, param5);
+            fe.c(field_k[var8], param1, param2 + var7 * var8, param4, true);
         }
     }
 
@@ -1793,7 +1741,7 @@ final class fe {
     }
 
     final static void a(String param0, int param1, int param2, int param3, int[] param4, boolean param5) {
-        fe.a(param0, param1, param2, param3, param4, param5, 0, 0);
+        fe.a(param0, param1, param2, param3, param4, true, 0, 0);
     }
 
     final static void b(String param0, int param1, int param2) {
@@ -1842,8 +1790,9 @@ final class fe {
                 var11++;
                 continue L0;
               } else {
+                int incrementValue$2 = param4;
                 param4++;
-                param3 = param2[param4];
+                param3 = param2[incrementValue$2];
                 if (param3 != 0) {
                   param0 = param1[param5];
                   if (param0 != 0) {
@@ -1853,8 +1802,9 @@ final class fe {
                     var13 = var13 * param10 + ((param0 & 16711680) >>> 16) * (256 - param10) >> 8;
                     var14 = var14 * param10 + ((param0 & 65280) >>> 8) * (256 - param10) >> 8;
                     var15 = var15 * param10 + (param0 & 255) * (256 - param10) >> 8;
+                    int incrementValue$3 = param5;
                     param5++;
-                    param1[param5] = (var13 << 16) + (var14 << 8) + var15;
+                    param1[incrementValue$3] = (var13 << 16) + (var14 << 8) + var15;
                     var12++;
                     continue L1;
                   } else {

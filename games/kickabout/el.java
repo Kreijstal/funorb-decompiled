@@ -456,7 +456,7 @@ final class el extends tm {
             L1: while (true) {
               L2: {
                 L3: {
-                  if (-6 >= (var18 ^ -1)) {
+                  if (var18 >= 5) {
                     break L3;
                   } else {
                     stackOut_3_0 = var18;
@@ -491,7 +491,7 @@ final class el extends tm {
                             }
                           }
                           L8: {
-                            if (-2 != (var18 ^ -1)) {
+                            if (var18 != 1) {
                               break L8;
                             } else {
                               if (!uk.field_d) {
@@ -931,7 +931,7 @@ final class el extends tm {
         try {
           L0: {
             if (param0 == 29430) {
-              stackOut_3_0 = param2 - (param1 - p.a((byte) -24, param1 << 972380193));
+              stackOut_3_0 = param2 - (param1 - p.a((byte) -24, param1 << 1));
               stackIn_4_0 = stackOut_3_0;
               break L0;
             } else {

@@ -15,8 +15,8 @@ final class tba extends vg {
         int[] var6 = null;
         int var7 = 0;
         int var8 = 0;
-        iu var10 = null;
-        iu var11 = null;
+        Object var10 = null;
+        Object var11 = null;
         int[] var12 = null;
         int[] var15 = null;
         int[] var16 = null;
@@ -47,7 +47,7 @@ final class tba extends vg {
               break L0;
             } else {
               var18 = var17.a();
-              var10 = var18;
+              var10 = (Object) (Object) var18;
               var18.c();
               bea.c(0, 0, 5, 0);
               bea.c(0, 1, 3, 0);
@@ -61,7 +61,7 @@ final class tba extends vg {
             var11 = null;
             if (param1) {
               var19 = var17.a();
-              var11 = var19;
+              var11 = (Object) (Object) var19;
               var19.c();
               bea.c(11, 0, 5, 0);
               bea.c(13, 1, 3, 0);
@@ -74,7 +74,7 @@ final class tba extends vg {
             }
           }
           bea.a(var24, var7, var8);
-          return new iu[]{null, null, null, var10, var17, var11, null, null, null};
+          return new iu[]{null, null, null, (iu) var10, var17, (iu) var11, null, null, null};
         } else {
           L2: {
             var7 = bea.field_g;
@@ -87,7 +87,7 @@ final class tba extends vg {
               break L2;
             } else {
               var22 = var21.a();
-              var10 = var22;
+              var10 = (Object) (Object) var22;
               var22.c();
               bea.c(0, 0, 5, 0);
               bea.c(0, 1, 3, 0);
@@ -101,7 +101,7 @@ final class tba extends vg {
             var11 = null;
             if (param1) {
               var23 = var21.a();
-              var11 = var23;
+              var11 = (Object) (Object) var23;
               var23.c();
               bea.c(11, 0, 5, 0);
               bea.c(13, 1, 3, 0);
@@ -114,20 +114,19 @@ final class tba extends vg {
             }
           }
           bea.a(var24, var7, var8);
-          return new iu[]{null, null, null, var10, var21, var11, null, null, null};
+          return new iu[]{null, null, null, (iu) var10, var21, (iu) var11, null, null, null};
         }
     }
 
     final static lr a(Throwable param0, String param1) {
-        lr var2_ref = null;
         lr var2 = null;
         if (param0 instanceof lr) {
             var2 = (lr) (Object) param0;
             var2.field_d = var2.field_d + 32 + param1;
         } else {
-            var2_ref = new lr(param0, param1);
+            var2 = new lr(param0, param1);
         }
-        return var2_ref;
+        return var2;
     }
 
     final static cn a(byte param0) {
@@ -140,9 +139,6 @@ final class tba extends vg {
         field_l = null;
         field_g = null;
         field_f = null;
-        if (param0 != 0) {
-            return;
-        }
         field_i = null;
     }
 

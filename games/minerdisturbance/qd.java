@@ -17,33 +17,84 @@ final class qd extends kn implements sh {
     static int field_K;
 
     public final void a(int param0, byte param1, hc param2, int param3, int param4) {
+        RuntimeException var6 = null;
         int var7 = 0;
-        L0: {
-          var7 = MinerDisturbance.field_ab;
-          if (param2 != ((qd) this).field_L) {
-            if (param2 == ((qd) this).field_I) {
-              fe.e(param1 + 26307);
-              break L0;
-            } else {
-              if (param2 == ((qd) this).field_N) {
-                km.a((byte) -63);
-                break L0;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        var7 = MinerDisturbance.field_ab;
+        try {
+          L0: {
+            L1: {
+              if (param2 != ((qd) this).field_L) {
+                if (param2 == ((qd) this).field_I) {
+                  fe.e(param1 + 26307);
+                  break L1;
+                } else {
+                  if (param2 == ((qd) this).field_N) {
+                    km.a((byte) -63);
+                    break L1;
+                  } else {
+                    break L1;
+                  }
+                }
               } else {
-                break L0;
+                fl.a((byte) -122);
+                break L1;
               }
             }
-          } else {
-            fl.a((byte) -122);
+            L2: {
+              if (param1 == 6) {
+                break L2;
+              } else {
+                field_O = null;
+                break L2;
+              }
+            }
             break L0;
           }
-        }
-        L1: {
-          if (param1 == 6) {
-            break L1;
-          } else {
-            field_O = null;
-            break L1;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var6 = decompiledCaughtException;
+            stackOut_11_0 = (RuntimeException) var6;
+            stackOut_11_1 = new StringBuilder().append("qd.B(").append(param0).append(44).append(param1).append(44);
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
+            if (param2 == null) {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L3;
+            } else {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L3;
+            }
           }
+          throw lj.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
@@ -65,10 +116,10 @@ final class qd extends kn implements sh {
         ((qd) this).field_N.field_A = (ad) (Object) var1;
         int var2 = 4;
         int var3 = 326;
-        int var4 = var3 - var2 >> 523070369;
-        ((qd) this).field_L.a(30, -115, -var3 + ((qd) this).field_v >> -233422495, var4, -var2 + (-48 + ((qd) this).field_q));
-        ((qd) this).field_N.a(30, -51, var4 + (((qd) this).field_v + -var3 >> -2063726175) + var2, var4, -var2 + -48 + ((qd) this).field_q);
-        ((qd) this).field_I.a(30, -108, ((qd) this).field_v - var3 >> -1560461119, var3, -(var2 * 2) + -78 + ((qd) this).field_q);
+        int var4 = var3 - var2 >> 1;
+        ((qd) this).field_L.a(30, -115, -var3 + ((qd) this).field_v >> 1, var4, -var2 + (-48 + ((qd) this).field_q));
+        ((qd) this).field_N.a(30, -51, var4 + (((qd) this).field_v + -var3 >> 1) + var2, var4, -var2 + -48 + ((qd) this).field_q);
+        ((qd) this).field_I.a(30, -108, ((qd) this).field_v - var3 >> 1, var3, -(var2 * 2) + -78 + ((qd) this).field_q);
         ((qd) this).field_L.field_y = (rm) this;
         ((qd) this).field_I.field_y = (rm) this;
         ((qd) this).field_I.field_n = ha.field_f;
@@ -80,28 +131,98 @@ final class qd extends kn implements sh {
     }
 
     final static void a(int param0, String param1) {
-        pm.field_b = param1;
-        if (param0 != 5) {
-            field_J = -98;
+        try {
+            pm.field_b = param1;
+            if (param0 != 5) {
+                field_J = -98;
+            }
+            oj.a(12, 3);
+        } catch (RuntimeException runtimeException) {
+            throw lj.a((Throwable) (Object) runtimeException, "qd.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        oj.a(12, 3);
     }
 
     final boolean a(char param0, fe param1, byte param2, int param3) {
-        if (!(!super.a(param0, param1, param2, param3))) {
-            return true;
+        RuntimeException var5 = null;
+        int stackIn_3_0 = 0;
+        boolean stackIn_6_0 = false;
+        boolean stackIn_10_0 = false;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_2_0 = 0;
+        boolean stackOut_9_0 = false;
+        boolean stackOut_5_0 = false;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        try {
+          L0: {
+            if (super.a(param0, param1, param2, param3)) {
+              stackOut_2_0 = 1;
+              stackIn_3_0 = stackOut_2_0;
+              return stackIn_3_0 != 0;
+            } else {
+              if (param3 != 98) {
+                if (param3 == 99) {
+                  stackOut_9_0 = ((qd) this).a(param1, (byte) 12);
+                  stackIn_10_0 = stackOut_9_0;
+                  break L0;
+                } else {
+                  return false;
+                }
+              } else {
+                stackOut_5_0 = ((qd) this).b(param1, 0);
+                stackIn_6_0 = stackOut_5_0;
+                return stackIn_6_0;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var5 = decompiledCaughtException;
+            stackOut_11_0 = (RuntimeException) var5;
+            stackOut_11_1 = new StringBuilder().append("qd.K(").append(param0).append(44);
+            stackIn_13_0 = stackOut_11_0;
+            stackIn_13_1 = stackOut_11_1;
+            stackIn_12_0 = stackOut_11_0;
+            stackIn_12_1 = stackOut_11_1;
+            if (param1 == null) {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "null";
+              stackIn_14_0 = stackOut_13_0;
+              stackIn_14_1 = stackOut_13_1;
+              stackIn_14_2 = stackOut_13_2;
+              break L1;
+            } else {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "{...}";
+              stackIn_14_0 = stackOut_12_0;
+              stackIn_14_1 = stackOut_12_1;
+              stackIn_14_2 = stackOut_12_2;
+              break L1;
+            }
+          }
+          throw lj.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + param2 + 44 + param3 + 41);
         }
-        if (-99 == (param3 ^ -1)) {
-            return ((qd) this).b(param1, 0);
-        }
-        if (param3 != 99) {
-            return false;
-        }
-        return ((qd) this).a(param1, (byte) 12);
+        return stackIn_10_0;
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        int var3 = 0;
+        int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -133,10 +254,10 @@ final class qd extends kn implements sh {
         String stackIn_87_0 = null;
         String stackIn_88_0 = null;
         int stackIn_88_1 = 0;
-        int stackIn_106_0 = 0;
-        int stackIn_107_0 = 0;
-        int stackIn_108_0 = 0;
-        int stackIn_108_1 = 0;
+        int stackIn_103_0 = 0;
+        int stackIn_104_0 = 0;
+        int stackIn_105_0 = 0;
+        int stackIn_105_1 = 0;
         int stackOut_21_0 = 0;
         int stackOut_20_0 = 0;
         int stackOut_24_0 = 0;
@@ -157,11 +278,11 @@ final class qd extends kn implements sh {
         String[] stackOut_31_0 = null;
         int stackOut_31_1 = 0;
         String stackOut_31_2 = null;
-        int stackOut_105_0 = 0;
-        int stackOut_107_0 = 0;
-        int stackOut_107_1 = 0;
-        int stackOut_106_0 = 0;
-        int stackOut_106_1 = 0;
+        int stackOut_102_0 = 0;
+        int stackOut_104_0 = 0;
+        int stackOut_104_1 = 0;
+        int stackOut_103_0 = 0;
+        int stackOut_103_1 = 0;
         String stackOut_85_0 = null;
         String stackOut_87_0 = null;
         int stackOut_87_1 = 0;
@@ -172,8 +293,8 @@ final class qd extends kn implements sh {
           ti.field_M = param2;
           cg.field_C = true;
           if (0 == ti.field_M) {
-            var3 = jc.a((byte) 106, gh.field_b, fd.field_J, w.field_S, ta.field_a);
-            var4 = 3 + var3;
+            var3_int = jc.a((byte) 106, gh.field_b, fd.field_J, w.field_S, ta.field_a);
+            var4 = 3 + var3_int;
             mf.field_m = new int[var4];
             ne.field_K = new String[var4];
             var5 = 0;
@@ -182,7 +303,7 @@ final class qd extends kn implements sh {
                 wf.field_P = new int[2];
                 var5 = 0;
                 L2: while (true) {
-                  if (var5 >= var3) {
+                  if (var5 >= var3_int) {
                     ne.field_K[-3 + var4] = "";
                     ne.field_K[var4 + -2] = ud.field_b;
                     mf.field_m[-2 + var4] = 0;
@@ -204,9 +325,9 @@ final class qd extends kn implements sh {
               }
             }
           } else {
-            if (-2 == (ti.field_M ^ -1)) {
-              var3 = jc.a((byte) 106, gh.field_b, fd.field_J, w.field_S, ta.field_a);
-              var4 = var3 + 2;
+            if (ti.field_M == 1) {
+              var3_int = jc.a((byte) 106, gh.field_b, fd.field_J, w.field_S, ta.field_a);
+              var4 = var3_int + 2;
               ne.field_K = new String[var4];
               mf.field_m = new int[var4];
               var5 = 0;
@@ -215,7 +336,7 @@ final class qd extends kn implements sh {
                   wf.field_P = new int[1];
                   var5 = 0;
                   L4: while (true) {
-                    if (var5 >= var3) {
+                    if (var5 >= var3_int) {
                       ne.field_K[var4 + -2] = "";
                       ne.field_K[var4 + -1] = ed.field_f;
                       mf.field_m[var4 - 1] = 0;
@@ -234,11 +355,11 @@ final class qd extends kn implements sh {
                 }
               }
             } else {
-              if ((ti.field_M ^ -1) != -3) {
-                if ((ti.field_M ^ -1) != -4) {
+              if (ti.field_M != 2) {
+                if (ti.field_M != 3) {
                   if (ti.field_M == 4) {
-                    var3 = jc.a((byte) 106, gh.field_b, fd.field_J, w.field_S, ri.field_f);
-                    var4 = var3 + 2;
+                    var3_int = jc.a((byte) 106, gh.field_b, fd.field_J, w.field_S, ri.field_f);
+                    var4 = var3_int + 2;
                     mf.field_m = new int[var4];
                     ne.field_K = new String[var4];
                     var5 = 0;
@@ -247,7 +368,7 @@ final class qd extends kn implements sh {
                         wf.field_P = new int[1];
                         var5 = 0;
                         L6: while (true) {
-                          if (var5 >= var3) {
+                          if (var5 >= var3_int) {
                             ne.field_K[-2 + var4] = "";
                             ne.field_K[var4 + -1] = ed.field_f;
                             mf.field_m[var4 - 1] = 0;
@@ -266,11 +387,11 @@ final class qd extends kn implements sh {
                       }
                     }
                   } else {
-                    if ((ti.field_M ^ -1) != -6) {
+                    if (ti.field_M != 5) {
                       throw new IllegalArgumentException();
                     } else {
-                      var3 = jc.a((byte) 106, gh.field_b, fd.field_J, w.field_S, cn.field_F);
-                      var4 = 3 - -var3;
+                      var3_int = jc.a((byte) 106, gh.field_b, fd.field_J, w.field_S, cn.field_F);
+                      var4 = 3 - -var3_int;
                       ne.field_K = new String[var4];
                       mf.field_m = new int[var4];
                       var5 = 0;
@@ -279,7 +400,7 @@ final class qd extends kn implements sh {
                           wf.field_P = new int[2];
                           var5 = 0;
                           L8: while (true) {
-                            if (var3 <= var5) {
+                            if (var3_int <= var5) {
                               ne.field_K[-3 + var4] = "";
                               ne.field_K[-2 + var4] = li.field_b;
                               mf.field_m[-2 + var4] = 0;
@@ -305,14 +426,14 @@ final class qd extends kn implements sh {
                 } else {
                   L9: {
                     if (qa.field_a.field_a) {
-                      var3 = jc.a((byte) 106, gh.field_b, fd.field_J, w.field_S, ub.field_b);
+                      var3_int = jc.a((byte) 106, gh.field_b, fd.field_J, w.field_S, ub.field_b);
                       break L9;
                     } else {
-                      var3 = jc.a((byte) 106, gh.field_b, fd.field_J, w.field_S, pn.field_d);
+                      var3_int = jc.a((byte) 106, gh.field_b, fd.field_J, w.field_S, pn.field_d);
                       break L9;
                     }
                   }
-                  var4 = 2 - -var3;
+                  var4 = 2 - -var3_int;
                   mf.field_m = new int[var4];
                   ne.field_K = new String[var4];
                   var5 = 0;
@@ -321,7 +442,7 @@ final class qd extends kn implements sh {
                       wf.field_P = new int[1];
                       var5 = 0;
                       L11: while (true) {
-                        if (var3 <= var5) {
+                        if (var3_int <= var5) {
                           ne.field_K[-2 + var4] = "";
                           ne.field_K[var4 - 1] = ed.field_f;
                           mf.field_m[-1 + var4] = 0;
@@ -341,12 +462,12 @@ final class qd extends kn implements sh {
                   }
                 }
               } else {
-                var3 = jc.a((byte) 106, gh.field_b, fd.field_J, w.field_S, oa.a((byte) -74, fb.field_h, new String[1]));
+                var3_int = jc.a((byte) 106, gh.field_b, fd.field_J, w.field_S, oa.a((byte) -74, fb.field_h, new String[1]));
                 var4 = -1;
                 var5 = 0;
                 L12: while (true) {
                   L13: {
-                    if (var5 >= var3) {
+                    if (var5 >= var3_int) {
                       break L13;
                     } else {
                       if ("<%0>".equals((Object) (Object) fd.field_J[var5])) {
@@ -361,14 +482,14 @@ final class qd extends kn implements sh {
                   if (-1 != var4) {
                     oe.field_g = new String[var4];
                     ai.a((Object[]) (Object) fd.field_J, 0, (Object[]) (Object) oe.field_g, 0, var4);
-                    om.field_f = new String[-1 + (-var4 + var3)];
-                    ai.a((Object[]) (Object) fd.field_J, 1 + var4, (Object[]) (Object) om.field_f, 0, var3 - var4 - 1);
+                    om.field_f = new String[-1 + (-var4 + var3_int)];
+                    ai.a((Object[]) (Object) fd.field_J, 1 + var4, (Object[]) (Object) om.field_f, 0, var3_int - var4 - 1);
                     var4 = -1;
-                    var3 = jc.a((byte) 106, gh.field_b, fd.field_J, w.field_S, oa.a((byte) -127, ff.field_e, new String[1]));
+                    var3_int = jc.a((byte) 106, gh.field_b, fd.field_J, w.field_S, oa.a((byte) -127, ff.field_e, new String[1]));
                     var5 = 0;
                     L14: while (true) {
                       L15: {
-                        if (var3 <= var5) {
+                        if (var3_int <= var5) {
                           break L15;
                         } else {
                           if (!"<%0>".equals((Object) (Object) fd.field_J[var5])) {
@@ -380,14 +501,14 @@ final class qd extends kn implements sh {
                           }
                         }
                       }
-                      if (0 == (var4 ^ -1)) {
+                      if (var4 == -1) {
                         throw new IllegalStateException();
                       } else {
                         L16: {
                           ce.field_c = new String[var4];
                           ai.a((Object[]) (Object) fd.field_J, 0, (Object[]) (Object) ce.field_c, 0, var4);
-                          ik.field_N = new String[-1 + (var3 - var4)];
-                          ai.a((Object[]) (Object) fd.field_J, 1 + var4, (Object[]) (Object) ik.field_N, 0, -1 + -var4 + var3);
+                          ik.field_N = new String[-1 + (var3_int - var4)];
+                          ai.a((Object[]) (Object) fd.field_J, 1 + var4, (Object[]) (Object) ik.field_N, 0, -1 + -var4 + var3_int);
                           if (ce.field_c.length <= oe.field_g.length) {
                             stackOut_21_0 = oe.field_g.length;
                             stackIn_22_0 = stackOut_21_0;
@@ -477,7 +598,7 @@ final class qd extends kn implements sh {
                                   stackIn_32_1 = stackOut_30_1;
                                   stackIn_31_0 = stackOut_30_0;
                                   stackIn_31_1 = stackOut_30_1;
-                                  if (-1 >= (var8 - -ce.field_c.length + -var5 ^ -1)) {
+                                  if (var8 - -ce.field_c.length + -var5 >= 0) {
                                     stackOut_32_0 = (String[]) (Object) stackIn_32_0;
                                     stackOut_32_1 = stackIn_32_1;
                                     stackOut_32_2 = ce.field_c[-var5 + ce.field_c.length + var8];
@@ -517,12 +638,12 @@ final class qd extends kn implements sh {
           }
         }
         pn.field_a.field_i = wf.field_P.length;
-        var3 = 0;
+        var3_int = 0;
         var4 = 0;
         L23: while (true) {
           if (ne.field_K.length <= var4) {
             L24: {
-              if ((ti.field_M ^ -1) == -3) {
+              if (ti.field_M == 2) {
                 var11 = oe.field_g;
                 var5 = 0;
                 L25: while (true) {
@@ -533,105 +654,109 @@ final class qd extends kn implements sh {
                       if (var12.length <= var5) {
                         break L24;
                       } else {
-                        var14 = var12[var5];
-                        var7 = hl.a(var14, false, -15388);
-                        if (var7 > var3) {
-                          var3 = var7;
-                          var5++;
-                          continue L26;
-                        } else {
-                          var5++;
-                          continue L26;
+                        L27: {
+                          var14 = var12[var5];
+                          var7 = hl.a(var14, false, -15388);
+                          if (var7 <= var3_int) {
+                            break L27;
+                          } else {
+                            break L27;
+                          }
                         }
+                        var5++;
+                        continue L26;
                       }
                     }
                   } else {
-                    var13 = var11[var5];
-                    var7 = hl.a(var13, false, -15388);
-                    if (var7 > var3) {
-                      var3 = var7;
-                      var5++;
-                      continue L25;
-                    } else {
-                      var5++;
-                      continue L25;
+                    L28: {
+                      var13 = var11[var5];
+                      var7 = hl.a(var13, false, -15388);
+                      if (var7 <= var3_int) {
+                        break L28;
+                      } else {
+                        break L28;
+                      }
                     }
+                    var5++;
+                    continue L25;
                   }
                 }
               } else {
                 break L24;
               }
             }
-            si.field_d = -(var3 >> -1619714175) + (rj.field_e + var3);
-            hn.field_b = pn.field_a.field_i * (sn.field_d - -hi.field_z << 340041025);
-            cg.field_o = -(var3 >> -1669044063) + rj.field_e;
+            si.field_d = -(var3_int >> 1) + (rj.field_e + var3_int);
+            hn.field_b = pn.field_a.field_i * (sn.field_d - -hi.field_z << 1);
+            cg.field_o = -(var3_int >> 1) + rj.field_e;
             var4 = 0;
-            L27: while (true) {
+            L29: while (true) {
               if (var4 >= ne.field_K.length) {
                 var4 = 86 % ((72 - param0) / 52);
-                lj.field_p = aa.field_d + -(hn.field_b >> 1855427745);
+                lj.field_p = aa.field_d + -(hn.field_b >> 1);
                 ed.field_a = new int[ne.field_K.length][];
                 var5 = 0;
                 var6 = lj.field_p;
-                L28: while (true) {
+                L30: while (true) {
                   if (ne.field_K.length <= var5) {
-                    L29: {
-                      if ((ti.field_M ^ -1) == -3) {
+                    L31: {
+                      if (ti.field_M == 2) {
                         pn.field_a.a(0, -1, -1, param1);
-                        break L29;
+                        break L31;
                       } else {
                         pn.field_a.a(0, 0, sj.a(nk.field_w, (byte) 126, gb.field_e), param1);
-                        break L29;
+                        break L31;
                       }
                     }
                     return;
                   } else {
-                    var7 = mf.field_m[var5];
-                    if (0 > var7) {
-                      var6 = var6 + vd.field_z;
-                      var5++;
-                      continue L28;
-                    } else {
-                      var8 = hl.a(ne.field_K[var5], true, -15388);
-                      var9 = -(var8 >> -1102621311) + rj.field_e;
-                      var6 = var6 + hi.field_z;
-                      ed.field_a[var5] = new int[4];
-                      ed.field_a[var5][0] = -ka.field_a + var9;
-                      ed.field_a[var5][1] = var6;
-                      ed.field_a[var5][2] = (ka.field_a << -1376077567) + var8;
-                      var6 = var6 + (nk.field_u + hi.field_z + (sn.field_d << 1943270273));
-                      ed.field_a[var5][3] = (sn.field_d << -21649503) + nk.field_u;
-                      var5++;
-                      continue L28;
+                    L32: {
+                      var7 = mf.field_m[var5];
+                      if (0 > var7) {
+                        var6 = var6 + vd.field_z;
+                        break L32;
+                      } else {
+                        var8 = hl.a(ne.field_K[var5], true, -15388);
+                        var9 = -(var8 >> 1) + rj.field_e;
+                        var6 = var6 + hi.field_z;
+                        ed.field_a[var5] = new int[4];
+                        ed.field_a[var5][0] = -ka.field_a + var9;
+                        ed.field_a[var5][1] = var6;
+                        ed.field_a[var5][2] = (ka.field_a << 1) + var8;
+                        var6 = var6 + (nk.field_u + hi.field_z + (sn.field_d << 1));
+                        ed.field_a[var5][3] = (sn.field_d << 1) + nk.field_u;
+                        break L32;
+                      }
                     }
+                    var5++;
+                    continue L30;
                   }
                 }
               } else {
-                L30: {
-                  stackOut_105_0 = hn.field_b;
-                  stackIn_107_0 = stackOut_105_0;
-                  stackIn_106_0 = stackOut_105_0;
+                L33: {
+                  stackOut_102_0 = hn.field_b;
+                  stackIn_104_0 = stackOut_102_0;
+                  stackIn_103_0 = stackOut_102_0;
                   if (0 <= mf.field_m[var4]) {
-                    stackOut_107_0 = stackIn_107_0;
-                    stackOut_107_1 = nk.field_u;
-                    stackIn_108_0 = stackOut_107_0;
-                    stackIn_108_1 = stackOut_107_1;
-                    break L30;
+                    stackOut_104_0 = stackIn_104_0;
+                    stackOut_104_1 = nk.field_u;
+                    stackIn_105_0 = stackOut_104_0;
+                    stackIn_105_1 = stackOut_104_1;
+                    break L33;
                   } else {
-                    stackOut_106_0 = stackIn_106_0;
-                    stackOut_106_1 = vd.field_z;
-                    stackIn_108_0 = stackOut_106_0;
-                    stackIn_108_1 = stackOut_106_1;
-                    break L30;
+                    stackOut_103_0 = stackIn_103_0;
+                    stackOut_103_1 = vd.field_z;
+                    stackIn_105_0 = stackOut_103_0;
+                    stackIn_105_1 = stackOut_103_1;
+                    break L33;
                   }
                 }
-                hn.field_b = stackIn_108_0 + stackIn_108_1;
+                hn.field_b = stackIn_105_0 + stackIn_105_1;
                 var4++;
-                continue L27;
+                continue L29;
               }
             }
           } else {
-            L31: {
+            L34: {
               stackOut_85_0 = ne.field_K[var4];
               stackIn_87_0 = stackOut_85_0;
               stackIn_86_0 = stackOut_85_0;
@@ -640,50 +765,74 @@ final class qd extends kn implements sh {
                 stackOut_87_1 = 0;
                 stackIn_88_0 = stackOut_87_0;
                 stackIn_88_1 = stackOut_87_1;
-                break L31;
+                break L34;
               } else {
                 stackOut_86_0 = (String) (Object) stackIn_86_0;
                 stackOut_86_1 = 1;
                 stackIn_88_0 = stackOut_86_0;
                 stackIn_88_1 = stackOut_86_1;
-                break L31;
+                break L34;
               }
             }
-            var5 = hl.a(stackIn_88_0, stackIn_88_1 != 0, -15388);
-            if (var5 > var3) {
-              var3 = var5;
-              var4++;
-              continue L23;
-            } else {
-              var4++;
-              continue L23;
+            L35: {
+              var5 = hl.a(stackIn_88_0, stackIn_88_1 != 0, -15388);
+              if (var5 <= var3_int) {
+                break L35;
+              } else {
+                break L35;
+              }
             }
+            var4++;
+            continue L23;
           }
         }
     }
 
     final static void a(int param0, byte param1, sl param2) {
-        tc.field_v.a((byte) -87, (pi) (Object) param2);
-        if (param1 >= -18) {
-            field_J = -12;
+        try {
+            tc.field_v.a((byte) -87, (pi) (Object) param2);
+            if (param1 >= -18) {
+                field_J = -12;
+            }
+            fg.a((byte) 5, param2, param0);
+        } catch (RuntimeException runtimeException) {
+            throw lj.a((Throwable) (Object) runtimeException, "qd.F(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
-        fg.a((byte) 5, param2, param0);
     }
 
     final static void a(int param0, byte param1) {
-        int var3 = MinerDisturbance.field_ab;
-        sl var4 = (sl) (Object) tc.field_v.b(112);
-        while (var4 != null) {
-            fg.a((byte) 5, var4, param0);
-            var4 = (sl) (Object) tc.field_v.b((byte) 56);
-        }
-        if (param1 >= -81) {
-            qd.a(false);
-        }
-        pi var2 = on.field_v.b(99);
-        while (var2 != null) {
-            tc.a(1, param0);
-            var2 = on.field_v.b((byte) 56);
+        pi var2 = null;
+        RuntimeException var2_ref = null;
+        int var3 = 0;
+        sl var4 = null;
+        RuntimeException decompiledCaughtException = null;
+        var3 = MinerDisturbance.field_ab;
+        try {
+          L0: {
+            var4 = (sl) (Object) tc.field_v.b(112);
+            L1: while (true) {
+              if (var4 == null) {
+                var2 = on.field_v.b(99);
+                L2: while (true) {
+                  if (var2 == null) {
+                    break L0;
+                  } else {
+                    tc.a(1, param0);
+                    var2 = on.field_v.b((byte) 56);
+                    continue L2;
+                  }
+                }
+              } else {
+                fg.a((byte) 5, var4, param0);
+                var4 = (sl) (Object) tc.field_v.b((byte) 56);
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          throw lj.a((Throwable) (Object) var2_ref, "qd.G(" + param0 + 44 + -125 + 41);
         }
     }
 
@@ -748,7 +897,7 @@ final class qd extends kn implements sh {
         e.field_i[5] = lf.field_i;
         e.field_i[1] = ed.field_b;
         e.field_i[3] = vi.field_c;
-        e.field_i[param0] = cg.field_K;
+        e.field_i[21] = cg.field_K;
         e.field_i[19] = af.field_n;
         e.field_i[18] = lj.field_u;
         e.field_i[7] = il.field_t;

@@ -25,31 +25,29 @@ final class nf extends li {
             Object var4 = null;
             Throwable decompiledCaughtException = null;
             try {
-              L0: {
-                var1 = Runtime.class.getMethod("maxMemory", new Class[0]);
-                if (param0) {
-                  break L0;
-                } else {
-                  field_o = null;
-                  break L0;
-                }
-              }
+              var1 = Runtime.class.getMethod("maxMemory", new Class[0]);
               if (var1 != null) {
                 try {
-                  var2_ref = Runtime.getRuntime();
-                  var4 = null;
-                  var3 = (Long) var1.invoke((Object) (Object) var2_ref, (Object[]) null);
-                  ci.field_a = 1 + (int)(var3.longValue() / 1048576L);
-                } catch (java.lang.Throwable decompiledCaughtParameter) {
-                  decompiledCaughtException = decompiledCaughtParameter;
+                  L0: {
+                    var2_ref = Runtime.getRuntime();
+                    var4 = null;
+                    var3 = (Long) var1.invoke((Object) (Object) var2_ref, (Object[]) null);
+                    ci.field_a = 1 + (int)(var3.longValue() / 1048576L);
+                    break L0;
+                  }
+                } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  var2 = decompiledCaughtException;
                   return;
                 }
+                return;
               } else {
                 return;
               }
-            } catch (java.lang.Exception decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
-              var2 = decompiledCaughtException;
+            } catch (java.lang.Exception decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              var1_ref = (Exception) (Object) decompiledCaughtException;
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -140,7 +138,7 @@ final class nf extends li {
         if (param0 == -28) {
           if (param1 >= 4096) {
             L0: {
-              if (-6145 >= (param1 ^ -1)) {
+              if (param1 >= 6144) {
                 stackOut_18_0 = -jc.field_b[-param1 + 8192];
                 stackIn_19_0 = stackOut_18_0;
                 break L0;
@@ -169,7 +167,7 @@ final class nf extends li {
           field_u = null;
           if (param1 >= 4096) {
             L2: {
-              if (-6145 >= (param1 ^ -1)) {
+              if (param1 >= 6144) {
                 stackOut_8_0 = -jc.field_b[-param1 + 8192];
                 stackIn_9_0 = stackOut_8_0;
                 break L2;
@@ -199,8 +197,8 @@ final class nf extends li {
 
     final static int a(int param0, int param1, int param2) {
         if (param0 >= 73) {
-          if ((param2 ^ -1) > -3) {
-            if ((param1 ^ -1) <= -6) {
+          if (param2 < 2) {
+            if (param1 >= 5) {
               return 1;
             } else {
               return 0;
@@ -210,8 +208,8 @@ final class nf extends li {
           }
         } else {
           nf.a((byte) -33);
-          if ((param2 ^ -1) > -3) {
-            if ((param1 ^ -1) <= -6) {
+          if (param2 < 2) {
+            if (param1 >= 5) {
               return 1;
             } else {
               return 0;

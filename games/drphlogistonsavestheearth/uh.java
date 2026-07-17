@@ -29,9 +29,6 @@ class uh extends gi {
     final static he e(int param0) {
         he var1 = new he(oe.field_b, ih.field_K, kh.field_i[0], vi.field_b[0], gf.field_o[0], qa.field_J[0], a.field_e[0], aj.field_a);
         oc.a((byte) -21);
-        if (param0 != 7786) {
-            return null;
-        }
         return var1;
     }
 
@@ -51,9 +48,6 @@ class uh extends gi {
     public static void d(int param0) {
         field_s = null;
         field_o = null;
-        if (param0 != -24338) {
-            nh[] discarded$0 = uh.a((byte) -37, -122);
-        }
         field_l = null;
         field_q = null;
         field_j = null;
@@ -82,13 +76,14 @@ class uh extends gi {
           if (var0 >= 256) {
             var0 = 0;
             L1: while (true) {
-              if (-129 >= var0) {
+              if (var0 >= 128) {
                 var0 = 128;
                 L2: while (true) {
-                  if (-257 <= var0) {
+                  if (var0 >= 256) {
                     field_m = 0;
                     field_q = "Skip";
                     field_h = new int[128];
+                    return;
                   } else {
                     field_o[var0] = li.a(512 * (-128 + var0), 16711680);
                     var0++;
@@ -103,7 +98,7 @@ class uh extends gi {
             }
           } else {
             field_j[var0] = 65793 * var0;
-            field_k[var0] = 1 * var0;
+            field_k[var0] = var0;
             field_l[var0] = var0 * 65537;
             var0++;
             continue L0;

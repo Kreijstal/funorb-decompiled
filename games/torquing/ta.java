@@ -54,31 +54,36 @@ class ta extends q {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int var6 = 0;
+        int var6_int = 0;
+        RuntimeException var6 = null;
         int var7 = 0;
+        RuntimeException decompiledCaughtException = null;
         var7 = Torquing.field_u;
-        var6 = param2;
-        if (param0 != 0) {
-          ta.g(-46);
-          L0: while (true) {
-            if (param1 >= var6) {
-              di.a(param4, (byte) -97, param3, qd.field_a[var6], param5);
-              var6++;
-              continue L0;
-            } else {
-              return;
+        try {
+          L0: {
+            L1: {
+              var6_int = param2;
+              if (param0 == 0) {
+                break L1;
+              } else {
+                ta.g(-46);
+                break L1;
+              }
+            }
+            L2: while (true) {
+              if (param1 < var6_int) {
+                break L0;
+              } else {
+                di.a(param4, (byte) -97, param3, qd.field_a[var6_int], param5);
+                var6_int++;
+                continue L2;
+              }
             }
           }
-        } else {
-          L1: while (true) {
-            if (param1 >= var6) {
-              di.a(param4, (byte) -97, param3, qd.field_a[var6], param5);
-              var6++;
-              continue L1;
-            } else {
-              return;
-            }
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = decompiledCaughtException;
+          throw rb.a((Throwable) (Object) var6, "ta.Q(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
     }
 

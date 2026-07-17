@@ -18,8 +18,12 @@ final class wl extends vg {
     }
 
     wl(ha param0, ssa param1) {
-        ((wl) this).field_g = param0;
-        ((wl) this).field_j = param1;
+        try {
+            ((wl) this).field_g = param0;
+            ((wl) this).field_j = param1;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "wl.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

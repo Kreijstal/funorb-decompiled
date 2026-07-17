@@ -46,58 +46,25 @@ final class ri {
         if (param1 != 66) {
           ri.a((byte) -82);
           var6 = j.a(param0, -101);
-          var7 = (int)((long)var5 * (long)var3 >> 1805538576);
-          var8 = (int)((long)var3 * (long)var6 >> 390711056);
-          var9 = (int)((long)var5 * (long)var4 >> -1809537904);
-          var10 = (int)((long)var6 * (long)var4 >> -1485661872);
+          var7 = (int)((long)var5 * (long)var3 >> 16);
+          var8 = (int)((long)var3 * (long)var6 >> 16);
+          var9 = (int)((long)var5 * (long)var4 >> 16);
+          var10 = (int)((long)var6 * (long)var4 >> 16);
           return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
         } else {
           var6 = j.a(param0, -101);
-          var7 = (int)((long)var5 * (long)var3 >> 1805538576);
-          var8 = (int)((long)var3 * (long)var6 >> 390711056);
-          var9 = (int)((long)var5 * (long)var4 >> -1809537904);
-          var10 = (int)((long)var6 * (long)var4 >> -1485661872);
+          var7 = (int)((long)var5 * (long)var3 >> 16);
+          var8 = (int)((long)var3 * (long)var6 >> 16);
+          var9 = (int)((long)var5 * (long)var4 >> 16);
+          var10 = (int)((long)var6 * (long)var4 >> 16);
           return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
         }
     }
 
     final static boolean a(int param0) {
-        int stackIn_4_0 = 0;
-        int stackIn_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
         oj.field_h = true;
         tn.field_Hb = qj.b(-26572) - -15000L;
-        if (param0 > -87) {
-          L0: {
-            ri.a(50, -118, -15);
-            if ((fj.field_j ^ -1) != -12) {
-              stackOut_7_0 = 0;
-              stackIn_8_0 = stackOut_7_0;
-              break L0;
-            } else {
-              stackOut_6_0 = 1;
-              stackIn_8_0 = stackOut_6_0;
-              break L0;
-            }
-          }
-          return stackIn_8_0 != 0;
-        } else {
-          L1: {
-            if ((fj.field_j ^ -1) != -12) {
-              stackOut_3_0 = 0;
-              stackIn_4_0 = stackOut_3_0;
-              break L1;
-            } else {
-              stackOut_2_0 = 1;
-              stackIn_4_0 = stackOut_2_0;
-              break L1;
-            }
-          }
-          return stackIn_4_0 != 0;
-        }
+        return fj.field_j == 11 ? true : false;
     }
 
     public static void a(byte param0) {

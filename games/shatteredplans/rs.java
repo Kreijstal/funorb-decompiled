@@ -14,12 +14,16 @@ final class rs extends qr {
 
     private rs(long param0, qr param1, qr param2, String param3) {
         super(param0, (qr) null);
-        ((rs) this).field_xb = new qr(0L, param1);
-        ((rs) this).field_Ab = new qr(0L, param2);
-        ((rs) this).field_Ab.field_z = param3;
-        ((rs) this).a(4, ((rs) this).field_xb);
-        ((rs) this).a(4, ((rs) this).field_Ab);
-        ((rs) this).e((byte) -123);
+        try {
+            ((rs) this).field_xb = new qr(0L, param1);
+            ((rs) this).field_Ab = new qr(0L, param2);
+            ((rs) this).field_Ab.field_z = param3;
+            ((rs) this).a(4, ((rs) this).field_xb);
+            ((rs) this).a(4, ((rs) this).field_Ab);
+            ((rs) this).e((byte) -123);
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "rs.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 41);
+        }
     }
 
     rs(long param0, rs param1, String param2) {
@@ -30,115 +34,44 @@ final class rs extends qr {
         ((rs) this).field_xb.a(((rs) this).field_xb.e(false), ((rs) this).field_mb, (byte) 69, 0, 0);
         int var3 = ((rs) this).field_xb.field_K + param0;
         ((rs) this).field_Ab.a(-var3 + ((rs) this).field_K, ((rs) this).field_mb, (byte) 112, 0, var3);
-        int var4 = 8 / ((23 - param1) / 43);
+        int var4 = 8;
     }
 
     public static void h(int param0) {
         field_yb = null;
         field_zb = null;
         field_Eb = null;
-        if (param0 != 2616) {
-          field_yb = null;
-          field_Bb = null;
-          field_Cb = null;
-          field_Db = null;
-          return;
-        } else {
-          field_Bb = null;
-          field_Cb = null;
-          field_Db = null;
-          return;
-        }
+        field_Bb = null;
+        field_Cb = null;
+        field_Db = null;
     }
 
     rs(long param0, bi param1, bi param2, int param3, qr param4, String param5) {
         this(param0, (qr) null, param4, param5);
-        ((rs) this).field_xb.field_pb = param2;
-        ((rs) this).field_xb.field_G = param3;
-        ((rs) this).field_xb.field_Z = param1;
+        try {
+            ((rs) this).field_xb.field_pb = param2;
+            ((rs) this).field_xb.field_G = param3;
+            ((rs) this).field_xb.field_Z = param1;
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "rs.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static void g(int param0) {
         Object var1 = null;
         Throwable var2 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    if (im.field_c == null) {
-                        statePc = 8;
-                    } else {
-                        statePc = 1;
-                    }
-                    continue stateLoop;
-                }
-                case 1: {
-                    var1 = (Object) (Object) im.field_c;
-                    // monitorenter im.field_c
-                    statePc = 2;
-                    continue stateLoop;
-                }
-                case 2: {
-                    try {
-                        im.field_c = null;
-                        // monitorexit var1
-                        statePc = 3;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_2) {
-                        caughtException = stateCaught_2;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    if (param0 < -70) {
-                        statePc = 5;
-                    } else {
-                        statePc = 4;
-                    }
-                    continue stateLoop;
-                }
-                case 4: {
-                    field_Db = null;
-                    statePc = 5;
-                    continue stateLoop;
-                }
-                case 5: {
-                    return;
-                }
-                case 6: {
-                    try {
-                        var2 = caughtException;
-                        // monitorexit var1
-                        statePc = 7;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        caughtException = stateCaught_6;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    throw (RuntimeException) (Object) var2;
-                }
-                case 8: {
-                    if (param0 >= -70) {
-                        statePc = 10;
-                    } else {
-                        statePc = 9;
-                    }
-                    continue stateLoop;
-                }
-                case 9: {
-                    return;
-                }
-                case 10: {
-                    field_Db = null;
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        Throwable decompiledCaughtException = null;
+        if (im.field_c == null) {
+          return;
+        } else {
+          var1 = (Object) (Object) im.field_c;
+          synchronized (var1) {
+            L0: {
+              im.field_c = null;
+              break L0;
             }
+          }
+          return;
         }
     }
 

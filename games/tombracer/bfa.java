@@ -125,8 +125,12 @@ final class bfa {
     }
 
     bfa(Object param0) {
-        ((bfa) this).field_a = false;
-        ((bfa) this).field_d = param0;
+        try {
+            ((bfa) this).field_a = false;
+            ((bfa) this).field_d = param0;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "bfa.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

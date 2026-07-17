@@ -14,40 +14,55 @@ final class ge {
         field_d = null;
         field_c = null;
         field_a = null;
-        if (param0 <= -102) {
-            return;
-        }
-        field_b = -22;
     }
 
     final static int a(int param0, int param1, int param2) {
-        int var3 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
+        int stackIn_3_0 = 0;
+        int stackIn_9_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_8_0 = 0;
+        int stackOut_2_0 = 0;
         var4 = Terraphoenix.field_V;
-        if (param0 != -1) {
-          return -89;
-        } else {
+        try {
           L0: {
-            if (param1 <= param2) {
-              break L0;
+            if (param0 == -1) {
+              L1: {
+                if (param1 <= param2) {
+                  break L1;
+                } else {
+                  var3_int = param2;
+                  param2 = param1;
+                  param1 = var3_int;
+                  break L1;
+                }
+              }
+              L2: while (true) {
+                if (param1 == 0) {
+                  stackOut_8_0 = param2;
+                  stackIn_9_0 = stackOut_8_0;
+                  break L0;
+                } else {
+                  var3_int = param2 % param1;
+                  param2 = param1;
+                  param1 = var3_int;
+                  continue L2;
+                }
+              }
             } else {
-              var3 = param2;
-              param2 = param1;
-              param1 = var3;
-              break L0;
+              stackOut_2_0 = -89;
+              stackIn_3_0 = stackOut_2_0;
+              return stackIn_3_0;
             }
           }
-          L1: while (true) {
-            if (-1 == (param1 ^ -1)) {
-              return param2;
-            } else {
-              var3 = param2 % param1;
-              param2 = param1;
-              param1 = var3;
-              continue L1;
-            }
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw qk.a((Throwable) (Object) var3, "ge.B(" + param0 + 44 + param1 + 44 + param2 + 41);
         }
+        return stackIn_9_0;
     }
 
     static {

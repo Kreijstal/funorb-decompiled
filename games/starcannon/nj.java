@@ -41,7 +41,7 @@ final class nj extends rf {
 
     private final static void a(byte[] param0, int param1) {
         field_i = param0;
-        field_F = param1;
+        field_F = 0;
         field_o = 0;
     }
 
@@ -94,12 +94,13 @@ final class nj extends rf {
                     if ((var7 & -256) == 0) {
                       break L3;
                     } else {
-                      var7 = (var7 ^ -1) >> 31;
+                      var7 = ~var7 >> 31;
                       break L3;
                     }
                   }
+                  int incrementValue$1 = var2;
                   var2++;
-                  var1[var2] = (byte)(var7 - 128);
+                  var1[incrementValue$1] = (byte)(var7 - 128);
                   var6++;
                   continue L2;
                 } else {
@@ -141,7 +142,6 @@ final class nj extends rf {
         int var16 = 0;
         int var17_int = 0;
         Object var17 = null;
-        float[] var17_array = null;
         int var18_int = 0;
         float[] var18 = null;
         int var19 = 0;
@@ -657,7 +657,7 @@ final class nj extends rf {
                   var50 = var54;
                   var46 = var50;
                   var40 = var46;
-                  var17_array = var40;
+                  var17 = (Object) (Object) var40;
                   if (((nj) this).field_A) {
                     break L36;
                   } else {
@@ -715,7 +715,7 @@ final class nj extends rf {
               }
             }
             ((nj) this).field_A = stackIn_111_1 != 0;
-            return var17_array;
+            return (float[]) var17;
           } else {
             var42 = field_q[var14.field_c[var17_int]];
             var55 = field_M;
@@ -750,6 +750,7 @@ final class nj extends rf {
 
     final static nj a(ue param0, int param1, int param2) {
         try {
+            nj var4_ref = null;
             if (!nj.a(param0)) {
                 boolean discarded$0 = param0.a((byte) -93, param1, param2);
                 return null;
@@ -758,13 +759,11 @@ final class nj extends rf {
             if (var3 == null) {
                 return null;
             }
-            nj var4 = null;
-            try {
-                var4 = new nj(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
+            Object var4 = null;
+            {
+                var4_ref = new nj(var3);
             }
-            return var4;
+            return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -858,12 +857,13 @@ final class nj extends rf {
                       if ((var6 & -256) == 0) {
                         break L8;
                       } else {
-                        var6 = (var6 ^ -1) >> 31;
+                        var6 = ~var6 >> 31;
                         break L8;
                       }
                     }
+                    int incrementValue$1 = var3;
                     var3++;
-                    ((nj) this).field_D[var3] = (byte)(var6 - 128);
+                    ((nj) this).field_D[incrementValue$1] = (byte)(var6 - 128);
                     var5++;
                     continue L6;
                   }
@@ -887,7 +887,7 @@ final class nj extends rf {
         ((nj) this).field_x = var2.f((byte) -120);
         ((nj) this).field_s = var2.f((byte) -96);
         if (((nj) this).field_s < 0) {
-            ((nj) this).field_s = ((nj) this).field_s ^ -1;
+            ((nj) this).field_s = ~((nj) this).field_s;
             ((nj) this).field_r = true;
         }
         int var3 = var2.f((byte) -86);
@@ -919,6 +919,7 @@ final class nj extends rf {
 
     final static nj a(ue param0, String param1, String param2) {
         try {
+            nj var4_ref = null;
             if (!nj.a(param0)) {
                 boolean discarded$0 = param0.a(param1, param2, (byte) -17);
                 return null;
@@ -927,13 +928,11 @@ final class nj extends rf {
             if (var3 == null) {
                 return null;
             }
-            nj var4 = null;
-            try {
-                var4 = new nj(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
+            Object var4 = null;
+            {
+                var4_ref = new nj(var3);
             }
-            return var4;
+            return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

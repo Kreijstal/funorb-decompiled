@@ -13,41 +13,125 @@ final class hc extends mc {
     int field_t;
 
     final static de a(int param0, byte param1, ah param2, int param3, ah param4) {
-        if (ia.a(param3, param2, param0, -81)) {
-          if (param1 != 74) {
-            field_o = null;
-            return t.a(false, param4.a(-3, param3, param0));
-          } else {
-            return t.a(false, param4.a(-3, param3, param0));
+        RuntimeException var5 = null;
+        de stackIn_6_0 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        de stackOut_5_0 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        try {
+          L0: {
+            if (ia.a(param3, param2, param0, -81)) {
+              L1: {
+                if (param1 == 74) {
+                  break L1;
+                } else {
+                  field_o = null;
+                  break L1;
+                }
+              }
+              stackOut_5_0 = t.a(false, param4.a(-3, param3, param0));
+              stackIn_6_0 = stackOut_5_0;
+              break L0;
+            } else {
+              return null;
+            }
           }
-        } else {
-          return null;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var5 = decompiledCaughtException;
+            stackOut_7_0 = (RuntimeException) var5;
+            stackOut_7_1 = new StringBuilder().append("hc.B(").append(param0).append(44).append(param1).append(44);
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param2 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L2;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L2;
+            }
+          }
+          L3: {
+            stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+            stackOut_10_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_10_2).append(44).append(param3).append(44);
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
+            if (param4 == null) {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L3;
+            } else {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L3;
+            }
+          }
+          throw oi.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
         }
+        return stackIn_6_0;
     }
 
     final static boolean c(int param0) {
-        if (param0 == 64) {
-          if (qj.c(124)) {
-            if (0 != (8 & dh.field_e)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
+        field_r = null;
+        if (!qj.c(124)) {
             return false;
-          }
-        } else {
-          field_r = null;
-          if (qj.c(124)) {
-            if (0 != (8 & dh.field_e)) {
-              return false;
-            } else {
-              return true;
-            }
-          } else {
-            return false;
-          }
         }
+        if (0 != (8 & dh.field_e)) {
+            return false;
+        }
+        return true;
     }
 
     public static void a(int param0) {
@@ -66,70 +150,62 @@ final class hc extends mc {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        String stackIn_8_0 = null;
-        String stackIn_9_0 = null;
-        String stackOut_7_0 = null;
-        L0: {
-          var5 = TetraLink.field_J;
-          if (!param0) {
-            break L0;
-          } else {
-            String discarded$2 = hc.a(false);
-            break L0;
-          }
-        }
+        String stackIn_6_0 = null;
+        String stackIn_7_0 = null;
+        String stackOut_5_0 = null;
+        var5 = TetraLink.field_J;
         var1 = "(" + mh.field_g + " " + lk.field_sb + " " + md.field_A + ") " + ua.field_c;
         if (0 < rl.field_d) {
           var1 = var1 + ":";
           var2 = 0;
-          L1: while (true) {
+          L0: while (true) {
             if (var2 < rl.field_d) {
-              stackOut_7_0 = var1 + 32;
-              stackIn_9_0 = stackOut_7_0;
-              stackIn_8_0 = stackOut_7_0;
+              stackOut_5_0 = var1 + 32;
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_6_0 = stackOut_5_0;
               if (var5 == 0) {
-                L2: {
-                  L3: {
-                    var1 = stackIn_9_0;
+                L1: {
+                  L2: {
+                    var1 = stackIn_7_0;
                     var3 = kb.field_q.field_u[var2] & 255;
-                    var4 = var3 >> 1570241892;
+                    var4 = var3 >> 4;
                     var3 = var3 & 15;
-                    if (-11 < (var4 ^ -1)) {
-                      break L3;
+                    if (var4 < 10) {
+                      break L2;
                     } else {
                       var4 += 55;
                       if (var5 == 0) {
-                        break L2;
+                        break L1;
                       } else {
-                        break L3;
+                        break L2;
                       }
                     }
                   }
                   var4 += 48;
-                  break L2;
+                  break L1;
                 }
-                L4: {
-                  L5: {
+                L3: {
+                  L4: {
                     if (var3 < 10) {
-                      break L5;
+                      break L4;
                     } else {
                       var3 += 55;
                       if (var5 == 0) {
-                        break L4;
+                        break L3;
                       } else {
-                        break L5;
+                        break L4;
                       }
                     }
                   }
                   var3 += 48;
-                  break L4;
+                  break L3;
                 }
                 var1 = var1 + (char)var4;
                 var1 = var1 + (char)var3;
                 var2++;
-                continue L1;
+                continue L0;
               } else {
-                return stackIn_8_0;
+                return stackIn_6_0;
               }
             } else {
               return var1;
@@ -145,7 +221,8 @@ final class hc extends mc {
     }
 
     final static void a(int param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        int[] var10 = null;
+        RuntimeException var10 = null;
+        int[] var10_array = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -153,58 +230,87 @@ final class hc extends mc {
         int var15 = 0;
         int var16 = 0;
         int[] var17 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
         var16 = TetraLink.field_J;
-        if (param4 != -32263) {
-          boolean discarded$1 = hc.c(-55);
-          L0: while (true) {
-            param2--;
-            if (0 <= param2) {
-              var17 = param1;
-              var10 = var17;
-              var11 = param5;
-              var12 = param7;
-              var13 = param6;
-              var14 = param3;
-              var15 = (var17[var11] & 16711422) >> 960723649;
-              var10[var11] = pl.a(var14 >> -1494622383, 255) + (pl.a(33423361, var12) >> 1389264257) + (pl.a(var13 >> 149686889, 65280) + var15);
-              param7 = param7 + param0;
-              param6 = param6 + param8;
-              param3 = param3 + param9;
-              param5++;
-              if (var16 == 0) {
-                continue L0;
+        try {
+          L0: {
+            L1: {
+              if (param4 == -32263) {
+                break L1;
               } else {
-                return;
+                boolean discarded$1 = hc.c(-55);
+                break L1;
               }
-            } else {
-              return;
+            }
+            L2: while (true) {
+              param2--;
+              if (0 > param2) {
+                break L0;
+              } else {
+                var17 = param1;
+                var10_array = var17;
+                var11 = param5;
+                var12 = param7;
+                var13 = param6;
+                var14 = param3;
+                var15 = (var17[var11] & 16711422) >> 1;
+                var10_array[var11] = pl.a(var14 >> 17, 255) + (pl.a(33423361, var12) >> 1) + (pl.a(var13 >> 9, 65280) + var15);
+                param7 = param7 + param0;
+                param6 = param6 + param8;
+                param3 = param3 + param9;
+                param5++;
+                if (var16 == 0) {
+                  continue L2;
+                } else {
+                  return;
+                }
+              }
             }
           }
-        } else {
-          L1: while (true) {
-            param2--;
-            if (0 <= param2) {
-              var17 = param1;
-              var10 = var17;
-              var11 = param5;
-              var12 = param7;
-              var13 = param6;
-              var14 = param3;
-              var15 = (var17[var11] & 16711422) >> 960723649;
-              var10[var11] = pl.a(var14 >> -1494622383, 255) + (pl.a(33423361, var12) >> 1389264257) + (pl.a(var13 >> 149686889, 65280) + var15);
-              param7 = param7 + param0;
-              param6 = param6 + param8;
-              param3 = param3 + param9;
-              param5++;
-              if (var16 == 0) {
-                continue L1;
-              } else {
-                return;
-              }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var10 = decompiledCaughtException;
+            stackOut_9_0 = (RuntimeException) var10;
+            stackOut_9_1 = new StringBuilder().append("hc.C(").append(param0).append(44);
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
+            if (param1 == null) {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
+              break L3;
             } else {
-              return;
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
+              break L3;
             }
           }
+          throw oi.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 44 + param8 + 44 + param9 + 41);
         }
     }
 
@@ -213,7 +319,7 @@ final class hc extends mc {
     }
 
     private static void $cfr$clinit() {
-        field_o = new char[]{(char)8364, (char)0, (char)8218, (char)402, (char)8222, (char)8230, (char)8224, (char)8225, (char)710, (char)8240, (char)352, (char)8249, (char)338, (char)0, (char)381, (char)0, (char)0, (char)8216, (char)8217, (char)8220, (char)8221, (char)8226, (char)8211, (char)8212, (char)732, (char)8482, (char)353, (char)8250, (char)339, (char)0, (char)382, (char)376};
+        field_o = new char[]{'€', ' ', '‚', 'ƒ', '„', '…', '†', '‡', 'ˆ', '‰', 'Š', '‹', 'Œ', ' ', 'Ž', ' ', ' ', '‘', '’', '“', '”', '•', '–', '—', '˜', '™', 'š', '›', 'œ', ' ', 'ž', 'Ÿ'};
         field_s = new int[4];
         field_u = new boolean[64];
         field_r = "You need to play 1 more rated game to unlock this option.";

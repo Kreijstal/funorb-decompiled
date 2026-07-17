@@ -54,21 +54,21 @@ final class le {
             param1 = var14_ref.field_e;
             break L0;
           }
-          L2: {
+          var15 = new StringWriter();
+          var4 = new PrintWriter((Writer) (Object) var15);
+          param1.printStackTrace(var4);
+          var4.close();
+          var5 = var15.toString();
+          var11 = var5;
+          var2 = var11;
+          var11 = var5;
+          var6 = new BufferedReader((Reader) (Object) new StringReader(var5));
+          var7 = var6.readLine();
+          var11 = var7;
+          var2 = var11;
+          var11 = var7;
+          L2: while (true) {
             L3: {
-              var15 = new StringWriter();
-              var4 = new PrintWriter((Writer) (Object) var15);
-              param1.printStackTrace(var4);
-              var4.close();
-              var5 = var15.toString();
-              var11 = var5;
-              var2 = var11;
-              var11 = var5;
-              var6 = new BufferedReader((Reader) (Object) new StringReader(var5));
-              var7 = var6.readLine();
-              var11 = var7;
-              var2 = var11;
-              var11 = var7;
               var8 = var6.readLine();
               var11 = var8;
               var2 = var11;
@@ -77,26 +77,34 @@ final class le {
                 break L3;
               } else {
                 if (var13 == 0) {
-                  break L2;
+                  var2 = var2 + "| " + var7;
+                  return var2;
                 } else {
                   break L3;
                 }
               }
             }
             L4: {
-              var9 = var8.indexOf('(');
-              var10 = var8.indexOf(')', var9 - -1);
-              if (var9 == -1) {
-                break L4;
-              } else {
-                var11 = var8.substring(0, var9);
-                break L4;
+              L5: {
+                var9 = var8.indexOf('(');
+                var10 = var8.indexOf(')', var9 - -1);
+                if (var9 == -1) {
+                  break L5;
+                } else {
+                  var11 = var8.substring(0, var9);
+                  if (var13 == 0) {
+                    break L4;
+                  } else {
+                    break L5;
+                  }
+                }
               }
-            }
-            L5: {
               var11 = var8;
               var2 = var11;
               var2 = var11;
+              break L4;
+            }
+            L6: {
               var16 = var11.trim();
               var2 = var16;
               var2 = var16;
@@ -109,38 +117,36 @@ final class le {
               var19 = var2 + var18;
               var2 = var19;
               var2 = var19;
-              if (0 == (var9 ^ -1)) {
-                break L5;
+              if (var9 == -1) {
+                break L6;
               } else {
                 if (-1 != var10) {
                   var12 = var8.indexOf(".java:", var9);
                   if (var12 >= 0) {
                     var2 = var19 + var8.substring(5 + var12, var10);
-                    break L5;
+                    break L6;
                   } else {
-                    break L5;
+                    break L6;
                   }
                 } else {
-                  break L5;
+                  break L6;
                 }
               }
             }
             var2 = var2 + 32;
-            break L2;
+            continue L2;
           }
-          var2 = var2 + "| " + var7;
-          return var2;
         } else {
-          L6: {
-            L7: {
+          L7: {
+            L8: {
               if (param1 instanceof bs) {
-                break L7;
+                break L8;
               } else {
                 var2 = "";
                 if (var13 == 0) {
-                  break L6;
-                } else {
                   break L7;
+                } else {
+                  break L8;
                 }
               }
             }
@@ -150,51 +156,59 @@ final class le {
             var2 = var11;
             var11 = var2;
             param1 = var14_ref.field_e;
-            break L6;
+            break L7;
           }
-          L8: {
-            L9: {
-              var15 = new StringWriter();
-              var4 = new PrintWriter((Writer) (Object) var15);
-              param1.printStackTrace(var4);
-              var4.close();
-              var5 = var15.toString();
-              var11 = var5;
-              var2 = var11;
-              var11 = var5;
-              var6 = new BufferedReader((Reader) (Object) new StringReader(var5));
-              var7 = var6.readLine();
-              var11 = var7;
-              var2 = var11;
-              var11 = var7;
+          var15 = new StringWriter();
+          var4 = new PrintWriter((Writer) (Object) var15);
+          param1.printStackTrace(var4);
+          var4.close();
+          var5 = var15.toString();
+          var11 = var5;
+          var2 = var11;
+          var11 = var5;
+          var6 = new BufferedReader((Reader) (Object) new StringReader(var5));
+          var7 = var6.readLine();
+          var11 = var7;
+          var2 = var11;
+          var11 = var7;
+          L9: while (true) {
+            L10: {
               var8 = var6.readLine();
               var11 = var8;
               var2 = var11;
               var11 = var8;
               if (var8 != null) {
-                break L9;
+                break L10;
               } else {
                 if (var13 == 0) {
-                  break L8;
+                  var2 = var2 + "| " + var7;
+                  return var2;
                 } else {
-                  break L9;
+                  break L10;
                 }
               }
             }
-            L10: {
-              var9 = var8.indexOf('(');
-              var10 = var8.indexOf(')', var9 - -1);
-              if (var9 == -1) {
-                break L10;
-              } else {
-                var11 = var8.substring(0, var9);
-                break L10;
-              }
-            }
             L11: {
+              L12: {
+                var9 = var8.indexOf('(');
+                var10 = var8.indexOf(')', var9 - -1);
+                if (var9 == -1) {
+                  break L12;
+                } else {
+                  var11 = var8.substring(0, var9);
+                  if (var13 == 0) {
+                    break L11;
+                  } else {
+                    break L12;
+                  }
+                }
+              }
               var11 = var8;
               var2 = var11;
               var2 = var11;
+              break L11;
+            }
+            L13: {
               var16 = var11.trim();
               var2 = var16;
               var2 = var16;
@@ -207,27 +221,25 @@ final class le {
               var19 = var2 + var18;
               var2 = var19;
               var2 = var19;
-              if (0 == (var9 ^ -1)) {
-                break L11;
+              if (var9 == -1) {
+                break L13;
               } else {
                 if (-1 != var10) {
                   var12 = var8.indexOf(".java:", var9);
                   if (var12 >= 0) {
                     var2 = var19 + var8.substring(5 + var12, var10);
-                    break L11;
+                    break L13;
                   } else {
-                    break L11;
+                    break L13;
                   }
                 } else {
-                  break L11;
+                  break L13;
                 }
               }
             }
             var2 = var2 + 32;
-            break L8;
+            continue L9;
           }
-          var2 = var2 + "| " + var7;
-          return var2;
         }
     }
 

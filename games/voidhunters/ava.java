@@ -6,10 +6,7 @@ final class ava {
     private static String field_z;
 
     final static boolean a(int param0, int param1, boolean param2) {
-        if (param2) {
-            return true;
-        }
-        return (52 & param1) != 0 ? true : false;
+        return (52 & param1) != 0;
     }
 
     static {

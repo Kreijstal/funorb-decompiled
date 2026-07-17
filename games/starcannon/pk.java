@@ -12,9 +12,6 @@ final class pk {
         field_d = null;
         field_a = null;
         field_e = null;
-        if (param0 != 4) {
-            return;
-        }
         field_b = null;
     }
 
@@ -34,7 +31,7 @@ final class pk {
         }
         sh.field_t = true;
         ma.a(true, 0);
-        bl.field_a = param0;
+        bl.field_a = 0;
     }
 
     static {

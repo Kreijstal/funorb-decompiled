@@ -42,8 +42,9 @@ final class uc {
 
     final int a(int param0) {
         if (((uc) this).field_b >= ((uc) this).field_h) {
+            int fieldTemp$0 = ((uc) this).field_a;
             ((uc) this).field_a = ((uc) this).field_a + 1;
-            ((uc) this).field_d = ((uc) this).field_i[((uc) this).field_a] << 15;
+            ((uc) this).field_d = ((uc) this).field_i[fieldTemp$0] << 15;
             if (((uc) this).field_a >= ((uc) this).field_k) {
                 ((uc) this).field_a = ((uc) this).field_k - 1;
             }

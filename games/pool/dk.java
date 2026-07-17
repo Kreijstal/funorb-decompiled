@@ -134,7 +134,7 @@ final class dk {
               var7 = param0 - param3.field_g;
               var8 = -param3.field_k + param4;
               var9 = bm.a(-107, od.a((long)var7, (long)var7, false) - -od.a((long)var8, (long)var8, false));
-              if ((var9 ^ -1L) < -2147483648L) {
+              if (var9 > 2147483647L) {
                 break L1;
               } else {
                 if (var9 >= -2147483648L) {
@@ -144,12 +144,12 @@ final class dk {
                     var11 = aj.a(var7, false, param3.field_I) - -aj.a(var8, false, param3.field_t);
                     param3.field_I = param3.field_I - 2 * aj.a(var11, false, var7);
                     param3.field_t = param3.field_t - aj.a(var11, false, var8) * 2;
-                    param3.field_n = param3.field_n * kp.field_m >> 1197710536;
+                    param3.field_n = param3.field_n * kp.field_m >> 8;
                     param3.field_v = 1;
-                    param3.field_b = param3.field_b * kp.field_m >> -685301976;
-                    param3.field_K = kp.field_m * param3.field_K >> -1327171448;
+                    param3.field_b = param3.field_b * kp.field_m >> 8;
+                    param3.field_K = kp.field_m * param3.field_K >> 8;
                     var12 = param3.e(-14770);
-                    if ((td.field_b ^ -1) <= (nn.field_e.length ^ -1)) {
+                    if (~td.field_b <= ~nn.field_e.length) {
                       break L2;
                     } else {
                       nn.field_e[td.field_b][0] = param0;
@@ -159,7 +159,7 @@ final class dk {
                     }
                   }
                   L3: {
-                    if ((td.field_b ^ -1) > (cf.field_g.length ^ -1)) {
+                    if (~td.field_b > ~cf.field_g.length) {
                       int fieldTemp$1 = td.field_b;
                       td.field_b = td.field_b + 1;
                       cf.field_g[fieldTemp$1] = (int)(var5_long - var12);
@@ -333,7 +333,7 @@ final class dk {
                   var5 = "|";
                   var6 = hn.field_b;
                   var7 = 0;
-                  if ((var6 ^ -1) == -3) {
+                  if (var6 == 2) {
                     var4 = nr.a(new String[1], -1, jl.field_a);
                     var8 = nr.a(new String[1], -1, vh.field_S);
                     var7 = pa.field_J.field_gb - (-fj.field_j.field_gb + (485 - m.field_c.b(var8) + m.field_c.b(var4)));
@@ -345,7 +345,7 @@ final class dk {
                     }
                   } else {
                     L9: {
-                      if ((var6 ^ -1) == -1) {
+                      if (var6 == 0) {
                         L10: {
                           if (null != em.field_L) {
                             break L10;
@@ -445,7 +445,7 @@ final class dk {
                             }
                           }
                         }
-                        if ((pa.field_J.field_R ^ -1) == -1) {
+                        if (pa.field_J.field_R == 0) {
                           break L16;
                         } else {
                           if (var9 <= pa.field_J.field_mb) {
@@ -742,11 +742,11 @@ final class dk {
             }
             L2: {
               var2 = param0.field_hb;
-              var2.field_B = -var2.field_A + param0.field_Db >> -60928575;
+              var2.field_B = -var2.field_A + param0.field_Db >> 1;
               var2.field_y = var2.field_B + var2.field_A;
               var2 = param0.field_yb;
               if (null != var2) {
-                var2.field_B = -var2.field_A + param0.field_Db >> 1201808769;
+                var2.field_B = -var2.field_A + param0.field_Db >> 1;
                 var2.field_y = var2.field_B + var2.field_A;
                 break L2;
               } else {

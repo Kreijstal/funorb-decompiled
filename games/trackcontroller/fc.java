@@ -18,7 +18,7 @@ class fc {
         if (param0 >= 2) {
           L0: {
             L1: {
-              if (-11 < (rl.field_N ^ -1)) {
+              if (rl.field_N < 10) {
                 break L1;
               } else {
                 if (ge.field_D) {
@@ -59,9 +59,6 @@ class fc {
         if (!(!param1)) {
             var4 += 4;
         }
-        if (param3 != 12105912) {
-            return null;
-        }
         if (!(!param0)) {
             var4 += 2;
         }
@@ -72,35 +69,67 @@ class fc {
     }
 
     final static void a(int param0, int param1, int param2, byte param3, int param4) {
+        RuntimeException var5 = null;
+        int var5_int = 0;
+        int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        int var10 = TrackController.field_F ? 1 : 0;
-        if (param3 > -14) {
-            field_a = null;
-        }
-        ll.a(param4, param1, param0 + 1, 10000536);
-        ll.a(param4, param2 + param1, param0 + 1, 12105912);
-        int var5 = 1;
-        int var6 = param2;
-        if (!(var5 + param1 >= ll.field_b)) {
-            var5 = ll.field_b - param1;
-        }
-        if (!(param1 + var6 <= ll.field_g)) {
-            var6 = -param1 + ll.field_g;
-        }
-        for (var7 = var5; var7 < var6; var7++) {
-            var8 = 152 - -(var7 * 48 / param2);
-            var9 = var8 << 1811903240 | var8 << -231469744 | var8;
-            ll.field_i[param4 + (param1 - -var7) * ll.field_d] = var9;
-            ll.field_i[param0 + (ll.field_d * (var7 + param1) - -param4)] = var9;
+        int var10 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var10 = TrackController.field_F ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              if (param3 <= -14) {
+                break L1;
+              } else {
+                field_a = null;
+                break L1;
+              }
+            }
+            L2: {
+              ll.a(param4, param1, param0 + 1, 10000536);
+              ll.a(param4, param2 + param1, param0 + 1, 12105912);
+              var5_int = 1;
+              var6 = param2;
+              if (var5_int + param1 < ll.field_b) {
+                var5_int = ll.field_b - param1;
+                break L2;
+              } else {
+                break L2;
+              }
+            }
+            L3: {
+              if (param1 + var6 > ll.field_g) {
+                var6 = -param1 + ll.field_g;
+                break L3;
+              } else {
+                break L3;
+              }
+            }
+            var7 = var5_int;
+            L4: while (true) {
+              if (var7 >= var6) {
+                break L0;
+              } else {
+                var8 = 152 - -(var7 * 48 / param2);
+                var9 = var8 << 8 | var8 << 16 | var8;
+                ll.field_i[param4 + (param1 - -var7) * ll.field_d] = var9;
+                ll.field_i[param0 + (ll.field_d * (var7 + param1) - -param4)] = var9;
+                var7++;
+                continue L4;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          throw sl.a((Throwable) (Object) var5, "fc.LB(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
     final static void a(boolean param0) {
-        if (param0) {
-            field_a = null;
-        }
         if (!(null == sb.field_b)) {
             sb.field_b.f();
         }
@@ -112,35 +141,53 @@ class fc {
     final static boolean b(boolean param0, String param1) {
         String var2 = null;
         Exception var2_ref = null;
+        RuntimeException var2_ref2 = null;
         int var3 = 0;
         int var4 = 0;
         int stackIn_3_0 = 0;
         int stackIn_9_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_17_0 = 0;
+        int stackIn_19_0 = 0;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        String stackIn_23_2 = null;
         Throwable decompiledCaughtException = null;
         int stackOut_8_0 = 0;
         int stackOut_16_0 = 0;
         int stackOut_13_0 = 0;
         int stackOut_2_0 = 0;
+        int stackOut_18_0 = 0;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        String stackOut_22_2 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
         var4 = TrackController.field_F ? 1 : 0;
         try {
-          L0: {
+          try {
             if (uf.field_b.startsWith("win")) {
-              L1: {
+              L0: {
                 if (!param0) {
-                  break L1;
+                  break L0;
                 } else {
                   field_a = null;
-                  break L1;
+                  break L0;
                 }
               }
-              L2: {
+              L1: {
                 if (param1.startsWith("http://")) {
-                  break L2;
+                  break L1;
                 } else {
                   if (param1.startsWith("https://")) {
-                    break L2;
+                    break L1;
                   } else {
                     stackOut_8_0 = 0;
                     stackIn_9_0 = stackOut_8_0;
@@ -150,16 +197,16 @@ class fc {
               }
               var2 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
               var3 = 0;
-              L3: while (true) {
+              L2: while (true) {
                 if (var3 >= param1.length()) {
                   Process discarded$2 = Runtime.getRuntime().exec("cmd /c start \"j\" \"" + param1 + "\"");
                   stackOut_16_0 = 1;
                   stackIn_17_0 = stackOut_16_0;
-                  break L0;
+                  return stackIn_17_0 != 0;
                 } else {
                   if (-1 != var2.indexOf((int) param1.charAt(var3))) {
                     var3++;
-                    continue L3;
+                    continue L2;
                   } else {
                     stackOut_13_0 = 0;
                     stackIn_14_0 = stackOut_13_0;
@@ -172,22 +219,49 @@ class fc {
               stackIn_3_0 = stackOut_2_0;
               return stackIn_3_0 != 0;
             }
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var2_ref = (Exception) (Object) decompiledCaughtException;
+            stackOut_18_0 = 0;
+            stackIn_19_0 = stackOut_18_0;
+            return stackIn_19_0 != 0;
           }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = (Exception) (Object) decompiledCaughtException;
-          return false;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+          decompiledCaughtException = decompiledCaughtParameter1;
+          L3: {
+            var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+            stackOut_20_0 = (RuntimeException) var2_ref2;
+            stackOut_20_1 = new StringBuilder().append("fc.QB(").append(param0).append(44);
+            stackIn_22_0 = stackOut_20_0;
+            stackIn_22_1 = stackOut_20_1;
+            stackIn_21_0 = stackOut_20_0;
+            stackIn_21_1 = stackOut_20_1;
+            if (param1 == null) {
+              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_2 = "null";
+              stackIn_23_0 = stackOut_22_0;
+              stackIn_23_1 = stackOut_22_1;
+              stackIn_23_2 = stackOut_22_2;
+              break L3;
+            } else {
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "{...}";
+              stackIn_23_0 = stackOut_21_0;
+              stackIn_23_1 = stackOut_21_1;
+              stackIn_23_2 = stackOut_21_2;
+              break L3;
+            }
+          }
+          throw sl.a((Throwable) (Object) stackIn_23_0, stackIn_23_2 + 41);
         }
-        return stackIn_17_0 != 0;
     }
 
     public static void b(byte param0) {
         field_g = null;
         field_f = null;
         field_a = null;
-        if (param0 != 118) {
-            field_d = 105;
-        }
         field_c = null;
     }
 

@@ -11,14 +11,18 @@ final class rk implements Iterable {
     static byte[][][] field_c;
 
     final void a(byte param0, gb param1) {
-        if (param1.field_s != null) {
-            param1.e(0);
+        try {
+            if (param1.field_s != null) {
+                param1.e(0);
+            }
+            param1.field_s = ((rk) this).field_e.field_s;
+            int var3_int = -118 % ((31 - param0) / 42);
+            param1.field_o = ((rk) this).field_e;
+            param1.field_s.field_o = param1;
+            param1.field_o.field_s = param1;
+        } catch (RuntimeException runtimeException) {
+            throw oi.a((Throwable) (Object) runtimeException, "rk.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        param1.field_s = ((rk) this).field_e.field_s;
-        int var3 = -118 % ((31 - param0) / 42);
-        param1.field_o = ((rk) this).field_e;
-        param1.field_s.field_o = param1;
-        param1.field_o.field_s = param1;
     }
 
     public final Iterator iterator() {
@@ -46,19 +50,20 @@ final class rk implements Iterable {
     }
 
     final static void c(int param0) {
-        int var1 = 0;
+        int var1_int = 0;
         int var2 = TetraLink.field_J;
-        wn.field_t.a(104);
-        if (param0 != -8243) {
-            field_b = null;
+        try {
+            wn.field_t.a(104);
+            for (var1_int = 0; var1_int < 32; var1_int++) {
+                uh.field_c[var1_int] = 0L;
+            }
+            for (var1_int = 0; var1_int < 32; var1_int++) {
+                ui.field_c[var1_int] = 0L;
+            }
+            qh.field_n = 0;
+        } catch (RuntimeException runtimeException) {
+            throw oi.a((Throwable) (Object) runtimeException, "rk.E(" + -8243 + 41);
         }
-        for (var1 = 0; (var1 ^ -1) > -33; var1++) {
-            uh.field_c[var1] = 0L;
-        }
-        for (var1 = 0; -33 < (var1 ^ -1); var1++) {
-            ui.field_c[var1] = 0L;
-        }
-        qh.field_n = 0;
     }
 
     rk() {

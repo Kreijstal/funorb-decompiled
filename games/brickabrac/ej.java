@@ -15,10 +15,14 @@ final class ej extends sl {
     static String field_H;
 
     final static void a(int param0, jp param1, int param2, int param3, int param4, pb param5) {
-        fc.a(-53, param5.field_p);
-        lb.g(param0, 0, param5.field_i, param5.field_q, bg.field_u[param4], 928072);
-        param1.b(-(30 / param2) + (param5.field_i + -param1.field_x) / 2, -(66 / param2) + (-param1.field_z + param3 + param5.field_q), 0, 208);
-        sc.b(-101);
+        try {
+            fc.a(-53, param5.field_p);
+            lb.g(param0, 0, param5.field_i, param5.field_q, bg.field_u[param4], 928072);
+            param1.b(-(30 / param2) + (param5.field_i + -param1.field_x) / 2, -(66 / param2) + (-param1.field_z + param3 + param5.field_q), 0, 208);
+            sc.b(-101);
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) (Object) runtimeException, "ej.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 44 + (param5 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final boolean b(boolean param0) {
@@ -34,27 +38,29 @@ final class ej extends sl {
         field_L = null;
         field_P = null;
         field_F = null;
-        if (param0 != 928072) {
-          return;
-        } else {
-          field_K = null;
-          field_H = null;
-          field_E = null;
-          return;
-        }
+        field_K = null;
+        field_H = null;
+        field_E = null;
     }
 
     ej(Object param0, int param1) {
         super(param1);
-        ((ej) this).field_N = param0;
+        try {
+            ((ej) this).field_N = param0;
+        } catch (RuntimeException runtimeException) {
+            throw qb.a((Throwable) (Object) runtimeException, "ej.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     final Object g(int param0) {
+        Object var3 = null;
         if (param0 != 1) {
-            ej.a(-50, (jp) null, -35, 2, 119, (pb) null);
-            return ((ej) this).field_N;
+          var3 = null;
+          ej.a(-50, (jp) null, -35, 2, 119, (pb) null);
+          return ((ej) this).field_N;
+        } else {
+          return ((ej) this).field_N;
         }
-        return ((ej) this).field_N;
     }
 
     static {

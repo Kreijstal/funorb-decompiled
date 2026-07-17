@@ -22,7 +22,6 @@ final class j {
         int var3 = 0;
         sj var4 = null;
         int var5 = 0;
-        int var6 = 0;
         L0: {
           var5 = Transmogrify.field_A ? 1 : 0;
           if (param0 == -10874) {
@@ -34,33 +33,33 @@ final class j {
         }
         var2 = ((j) this).field_e.length;
         L1: while (true) {
-          if ((var2 ^ -1) >= -2) {
-            var6 = 0;
-            var2 = var6;
+          if (var2 <= 1) {
+            var2 = 0;
             L2: while (true) {
-              if (var6 >= ((j) this).field_e.length) {
+              if (var2 >= ((j) this).field_e.length) {
                 return;
               } else {
-                if (((j) this).field_e[var6] != null) {
-                  ((j) this).field_e[var6].field_t = var6;
-                  ((j) this).field_e[var6].field_g = var6 * 32 + ((j) this).field_d;
-                  if ((Object) (Object) ((j) this).field_e[var6].field_k == this) {
-                    ((j) this).field_e[var6].field_s = var6;
-                    var6++;
+                if (((j) this).field_e[var2] != null) {
+                  ((j) this).field_e[var2].field_t = var2;
+                  ((j) this).field_e[var2].field_g = var2 * 32 + ((j) this).field_d;
+                  if ((Object) (Object) ((j) this).field_e[var2].field_k == this) {
+                    ((j) this).field_e[var2].field_s = var2;
+                    var2++;
                     continue L2;
                   } else {
-                    var6++;
+                    var2++;
                     continue L2;
                   }
                 } else {
-                  var6++;
+                  var2++;
                   continue L2;
                 }
               }
             }
           } else {
+            int incrementValue$2 = var2;
             var2--;
-            var3 = li.a(var2, o.field_o, false);
+            var3 = li.a(incrementValue$2, o.field_o, false);
             var4 = ((j) this).field_e[var3];
             ((j) this).field_e[var3] = ((j) this).field_e[var2];
             ((j) this).field_e[var2] = var4;
@@ -100,7 +99,8 @@ final class j {
     }
 
     final void a(boolean param0, int param1, int param2, int[][] param3, int param4) {
-        int[][] var6 = null;
+        RuntimeException var6 = null;
+        int[][] var6_array = null;
         int var7 = 0;
         int[] var8 = null;
         sj[] var9 = null;
@@ -108,89 +108,95 @@ final class j {
         sj var11 = null;
         int var12 = 0;
         int[][] var13 = null;
-        boolean stackIn_9_0 = false;
-        boolean stackIn_10_0 = false;
-        boolean stackIn_11_0 = false;
-        boolean stackIn_12_0 = false;
-        int stackIn_12_1 = 0;
-        boolean stackOut_8_0 = false;
-        boolean stackOut_9_0 = false;
-        boolean stackOut_10_0 = false;
-        int stackOut_10_1 = 0;
-        boolean stackOut_11_0 = false;
-        int stackOut_11_1 = 0;
-        L0: {
-          var12 = Transmogrify.field_A ? 1 : 0;
-          sb.a(nc.field_p);
-          if (param2 == 3) {
-            break L0;
-          } else {
-            ((j) this).a(false);
-            break L0;
-          }
-        }
-        var13 = param3;
-        var6 = var13;
-        var7 = 0;
-        L1: while (true) {
-          if (var13.length <= var7) {
-            return;
-          } else {
-            var8 = var13[var7];
-            sb.g(var8[0], var8[1], var8[2], var8[3]);
-            var9 = ((j) this).field_e;
-            var10 = 0;
-            L2: while (true) {
-              if (var9.length <= var10) {
-                sb.b(nc.field_p);
-                var7++;
-                continue L1;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        String stackOut_14_2 = null;
+        RuntimeException stackOut_13_0 = null;
+        StringBuilder stackOut_13_1 = null;
+        String stackOut_13_2 = null;
+        var12 = Transmogrify.field_A ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              sb.a(nc.field_p);
+              if (param2 == 3) {
+                break L1;
               } else {
-                var11 = var9[var10];
-                if (var11 != null) {
-                  L3: {
-                    L4: {
-                      stackOut_8_0 = param0;
-                      stackIn_11_0 = stackOut_8_0;
-                      stackIn_9_0 = stackOut_8_0;
-                      if (var11.field_g != var11.field_j) {
-                        break L4;
-                      } else {
-                        stackOut_9_0 = stackIn_9_0;
-                        stackIn_11_0 = stackOut_9_0;
-                        stackIn_10_0 = stackOut_9_0;
-                        if (var11.field_q != var11.field_p) {
-                          break L4;
-                        } else {
-                          stackOut_10_0 = stackIn_10_0;
-                          stackOut_10_1 = 1;
-                          stackIn_12_0 = stackOut_10_0;
-                          stackIn_12_1 = stackOut_10_1;
-                          break L3;
-                        }
-                      }
-                    }
-                    stackOut_11_0 = stackIn_11_0;
-                    stackOut_11_1 = 0;
-                    stackIn_12_0 = stackOut_11_0;
-                    stackIn_12_1 = stackOut_11_1;
-                    break L3;
-                  }
-                  if (stackIn_12_0 ^ stackIn_12_1 != 0) {
-                    var11.a(param1, param4, param2 + -2, 0);
-                    var10++;
+                ((j) this).a(false);
+                break L1;
+              }
+            }
+            var13 = param3;
+            var6_array = var13;
+            var7 = 0;
+            L2: while (true) {
+              if (var13.length <= var7) {
+                break L0;
+              } else {
+                var8 = var13[var7];
+                sb.g(var8[0], var8[1], var8[2], var8[3]);
+                var9 = ((j) this).field_e;
+                var10 = 0;
+                L3: while (true) {
+                  if (var9.length <= var10) {
+                    sb.b(nc.field_p);
+                    var7++;
                     continue L2;
                   } else {
+                    L4: {
+                      var11 = var9[var10];
+                      if (var11 == null) {
+                        break L4;
+                      } else {
+                        break L4;
+                      }
+                    }
                     var10++;
-                    continue L2;
+                    continue L3;
                   }
-                } else {
-                  var10++;
-                  continue L2;
                 }
               }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L5: {
+            var6 = decompiledCaughtException;
+            stackOut_12_0 = (RuntimeException) var6;
+            stackOut_12_1 = new StringBuilder().append("j.C(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackIn_14_0 = stackOut_12_0;
+            stackIn_14_1 = stackOut_12_1;
+            stackIn_13_0 = stackOut_12_0;
+            stackIn_13_1 = stackOut_12_1;
+            if (param3 == null) {
+              stackOut_14_0 = (RuntimeException) (Object) stackIn_14_0;
+              stackOut_14_1 = (StringBuilder) (Object) stackIn_14_1;
+              stackOut_14_2 = "null";
+              stackIn_15_0 = stackOut_14_0;
+              stackIn_15_1 = stackOut_14_1;
+              stackIn_15_2 = stackOut_14_2;
+              break L5;
+            } else {
+              stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+              stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+              stackOut_13_2 = "{...}";
+              stackIn_15_0 = stackOut_13_0;
+              stackIn_15_1 = stackOut_13_1;
+              stackIn_15_2 = stackOut_13_2;
+              break L5;
+            }
+          }
+          throw ch.a((Throwable) (Object) stackIn_15_0, stackIn_15_2 + 44 + param4 + 41);
         }
     }
 

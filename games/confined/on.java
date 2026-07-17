@@ -13,35 +13,81 @@ abstract class on {
         try {
             Class var4 = null;
             Throwable var4_ref = null;
+            RuntimeException var4_ref2 = null;
             rb var5 = null;
             cd var5_ref = null;
-            rb stackIn_3_0 = null;
+            rb stackIn_1_0 = null;
+            cd stackIn_3_0 = null;
+            RuntimeException stackIn_5_0 = null;
+            StringBuilder stackIn_5_1 = null;
+            RuntimeException stackIn_6_0 = null;
+            StringBuilder stackIn_6_1 = null;
+            RuntimeException stackIn_7_0 = null;
+            StringBuilder stackIn_7_1 = null;
+            String stackIn_7_2 = null;
             Throwable decompiledCaughtException = null;
-            rb stackOut_2_0 = null;
+            rb stackOut_0_0 = null;
+            cd stackOut_2_0 = null;
+            RuntimeException stackOut_4_0 = null;
+            StringBuilder stackOut_4_1 = null;
+            RuntimeException stackOut_6_0 = null;
+            StringBuilder stackOut_6_1 = null;
+            String stackOut_6_2 = null;
+            RuntimeException stackOut_5_0 = null;
+            StringBuilder stackOut_5_1 = null;
+            String stackOut_5_2 = null;
             try {
-              L0: {
+              try {
                 var4 = Class.forName("gn");
-                if (param3 == 1359) {
+                var5 = (rb) var4.newInstance();
+                var5.a(param0, param2, -118, param1);
+                stackOut_0_0 = (rb) var5;
+                stackIn_1_0 = stackOut_0_0;
+                return stackIn_1_0;
+              } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var4_ref = decompiledCaughtException;
+                var5_ref = new cd();
+                ((rb) (Object) var5_ref).a(param0, param2, -68, param1);
+                stackOut_2_0 = (cd) var5_ref;
+                stackIn_3_0 = stackOut_2_0;
+                return (rb) (Object) stackIn_3_0;
+              }
+            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L0: {
+                var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_4_0 = (RuntimeException) var4_ref2;
+                stackOut_4_1 = new StringBuilder().append("on.N(");
+                stackIn_6_0 = stackOut_4_0;
+                stackIn_6_1 = stackOut_4_1;
+                stackIn_5_0 = stackOut_4_0;
+                stackIn_5_1 = stackOut_4_1;
+                if (param0 == null) {
+                  stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+                  stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+                  stackOut_6_2 = "null";
+                  stackIn_7_0 = stackOut_6_0;
+                  stackIn_7_1 = stackOut_6_1;
+                  stackIn_7_2 = stackOut_6_2;
                   break L0;
                 } else {
-                  field_d = null;
+                  stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+                  stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+                  stackOut_5_2 = "{...}";
+                  stackIn_7_0 = stackOut_5_0;
+                  stackIn_7_1 = stackOut_5_1;
+                  stackIn_7_2 = stackOut_5_2;
                   break L0;
                 }
               }
-              var5 = (rb) var4.newInstance();
-              var5.a(param0, param2, param3 + -1477, param1);
-              stackOut_2_0 = (rb) var5;
-              stackIn_3_0 = stackOut_2_0;
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
-              return stackIn_3_0;
+              throw sd.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 44 + param2 + 44 + 1359 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
             throw new RuntimeException(decompiledCheckedException);
         }
-        return null;
     }
 
     public static void a(int param0) {

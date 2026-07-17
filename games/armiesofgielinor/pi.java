@@ -13,7 +13,7 @@ final class pi extends fw {
     static String field_O;
 
     final int a(int param0, byte param1) {
-        if ((param0 ^ -1) <= -1) {
+        if (param0 >= 0) {
           if (param0 < ((pi) this).field_Q.a(-102)) {
             if (param1 != -47) {
               return -9;
@@ -36,138 +36,143 @@ final class pi extends fw {
     }
 
     final boolean a(int param0, int param1, int param2, int param3, kb param4, int param5, int param6) {
-        int var8 = 0;
+        RuntimeException var8 = null;
+        int var8_int = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
+        int stackIn_26_0 = 0;
+        int stackIn_28_0 = 0;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
+        RuntimeException stackIn_31_0 = null;
+        StringBuilder stackIn_31_1 = null;
+        RuntimeException stackIn_32_0 = null;
+        StringBuilder stackIn_32_1 = null;
+        String stackIn_32_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_27_0 = 0;
+        int stackOut_25_0 = 0;
+        RuntimeException stackOut_29_0 = null;
+        StringBuilder stackOut_29_1 = null;
+        RuntimeException stackOut_31_0 = null;
+        StringBuilder stackOut_31_1 = null;
+        String stackOut_31_2 = null;
+        RuntimeException stackOut_30_0 = null;
+        StringBuilder stackOut_30_1 = null;
+        String stackOut_30_2 = null;
         var14 = ArmiesOfGielinor.field_M ? 1 : 0;
-        if (param3 > 103) {
-          if (this.a(param0, param1, param2, 122, param4, param5, param6)) {
-            L0: {
-              var8 = -param1 + (param0 + -((pi) this).field_R);
-              var9 = -(((pi) this).field_R * 2) + ((pi) this).field_l;
-              if (var8 > var9) {
-                var8 = var9;
-                break L0;
-              } else {
-                break L0;
-              }
-            }
+        try {
+          L0: {
             L1: {
-              if (var8 < 0) {
-                var8 = 0;
+              if (param3 > 103) {
                 break L1;
               } else {
+                field_N = null;
                 break L1;
               }
             }
-            var8 = ((pi) this).field_L * var8 / var9;
-            if (-2 != param6) {
-              if (-3 == param6) {
-                var10 = 2147483647;
-                var11 = -1;
-                var12 = 0;
-                L2: while (true) {
-                  if (((pi) this).field_Q.a(-125) <= var12) {
-                    if (0 <= var11) {
-                      ((pi) this).field_Q.b(var11, -66);
-                      return true;
-                    } else {
-                      return true;
-                    }
-                  } else {
-                    var13 = ((pi) this).field_Q.d(var12, 652110180) - var8;
-                    var13 = var13 * var13;
-                    if (var13 < var10) {
-                      var10 = var13;
-                      var11 = var12;
-                      var12++;
-                      continue L2;
-                    } else {
-                      var12++;
-                      continue L2;
-                    }
-                  }
-                }
-              } else {
-                return true;
-              }
+            if (!super.a(param0, param1, param2, 122, param4, param5, param6)) {
+              stackOut_27_0 = 0;
+              stackIn_28_0 = stackOut_27_0;
+              break L0;
             } else {
-              ((pi) this).field_Q.e(26884, var8);
-              return true;
-            }
-          } else {
-            return false;
-          }
-        } else {
-          field_N = null;
-          if (this.a(param0, param1, param2, 122, param4, param5, param6)) {
-            L3: {
-              var8 = -param1 + (param0 + -((pi) this).field_R);
-              var9 = -(((pi) this).field_R * 2) + ((pi) this).field_l;
-              if (var8 > var9) {
-                var8 = var9;
-                break L3;
-              } else {
-                break L3;
+              L2: {
+                var8_int = -param1 + (param0 + -((pi) this).field_R);
+                var9 = -(((pi) this).field_R * 2) + ((pi) this).field_l;
+                if (var8_int > var9) {
+                  var8_int = var9;
+                  break L2;
+                } else {
+                  break L2;
+                }
               }
-            }
-            L4: {
-              if (var8 < 0) {
-                var8 = 0;
-                break L4;
-              } else {
-                break L4;
+              L3: {
+                if (var8_int < 0) {
+                  var8_int = 0;
+                  break L3;
+                } else {
+                  break L3;
+                }
               }
-            }
-            var8 = ((pi) this).field_L * var8 / var9;
-            if (-2 != param6) {
-              if (-3 == param6) {
-                L5: {
-                  var10 = 2147483647;
-                  var11 = -1;
-                  var12 = 0;
-                  if (((pi) this).field_Q.a(-125) <= var12) {
-                    break L5;
-                  } else {
-                    L6: {
-                      var13 = ((pi) this).field_Q.d(var12, 652110180) - var8;
-                      var13 = var13 * var13;
-                      if (var13 >= var10) {
-                        var12++;
-                        break L6;
+              L4: {
+                var8_int = ((pi) this).field_L * var8_int / var9;
+                if (param6 == 1) {
+                  ((pi) this).field_Q.e(26884, var8_int);
+                  break L4;
+                } else {
+                  if (param6 == 2) {
+                    var10 = 2147483647;
+                    var11 = -1;
+                    var12 = 0;
+                    L5: while (true) {
+                      if (((pi) this).field_Q.a(-125) <= var12) {
+                        if (0 <= var11) {
+                          ((pi) this).field_Q.b(var11, -66);
+                          break L4;
+                        } else {
+                          break L4;
+                        }
                       } else {
-                        var10 = var13;
-                        var11 = var12;
-                        break L6;
+                        var13 = ((pi) this).field_Q.d(var12, 652110180) - var8_int;
+                        var13 = var13 * var13;
+                        if (~var13 <= ~var10) {
+                          var12++;
+                          var12++;
+                          continue L5;
+                        } else {
+                          var10 = var13;
+                          var11 = var12;
+                          var12++;
+                          var12++;
+                          continue L5;
+                        }
                       }
                     }
-                    var12++;
-                    var12++;
-                    var12++;
-                    break L5;
+                  } else {
+                    return true;
                   }
                 }
-                if (0 <= var11) {
-                  ((pi) this).field_Q.b(var11, -66);
-                  return true;
-                } else {
-                  return true;
-                }
-              } else {
-                return true;
               }
-            } else {
-              ((pi) this).field_Q.e(26884, var8);
-              return true;
+              stackOut_25_0 = 1;
+              stackIn_26_0 = stackOut_25_0;
+              return stackIn_26_0 != 0;
             }
-          } else {
-            return false;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L6: {
+            var8 = decompiledCaughtException;
+            stackOut_29_0 = (RuntimeException) var8;
+            stackOut_29_1 = new StringBuilder().append("pi.NA(").append(param0).append(44).append(param1).append(44).append(param2).append(44).append(param3).append(44);
+            stackIn_31_0 = stackOut_29_0;
+            stackIn_31_1 = stackOut_29_1;
+            stackIn_30_0 = stackOut_29_0;
+            stackIn_30_1 = stackOut_29_1;
+            if (param4 == null) {
+              stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
+              stackOut_31_1 = (StringBuilder) (Object) stackIn_31_1;
+              stackOut_31_2 = "null";
+              stackIn_32_0 = stackOut_31_0;
+              stackIn_32_1 = stackOut_31_1;
+              stackIn_32_2 = stackOut_31_2;
+              break L6;
+            } else {
+              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
+              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
+              stackOut_30_2 = "{...}";
+              stackIn_32_0 = stackOut_30_0;
+              stackIn_32_1 = stackOut_30_1;
+              stackIn_32_2 = stackOut_30_2;
+              break L6;
+            }
+          }
+          throw ig.a((Throwable) (Object) stackIn_32_0, stackIn_32_2 + 44 + param5 + 44 + param6 + 41);
         }
+        return stackIn_28_0 != 0;
     }
 
     final int a(int param0) {
@@ -185,9 +190,6 @@ final class pi extends fw {
         field_O = null;
         field_P = null;
         field_M = null;
-        if (param0 != -63) {
-            return;
-        }
         field_N = null;
         field_T = null;
     }

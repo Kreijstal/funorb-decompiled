@@ -15,18 +15,9 @@ final class am {
         field_g = null;
         field_b = null;
         field_h = null;
-        if (param0 != 29) {
-          String discarded$2 = am.b(-56);
-          field_f = null;
-          field_c = null;
-          field_d = null;
-          return;
-        } else {
-          field_f = null;
-          field_c = null;
-          field_d = null;
-          return;
-        }
+        field_f = null;
+        field_c = null;
+        field_d = null;
     }
 
     final static void a(int param0) {
@@ -87,17 +78,40 @@ final class am {
     }
 
     final static void a(int param0, int param1) {
-        int var4 = OrbDefence.field_D ? 1 : 0;
-        int var2_int = 6 % ((param1 - 15) / 33);
-        ha var3 = (ha) (Object) oa.field_d.b((byte) -111);
-        while (var3 != null) {
-            tl.a(-128, var3, param0);
-            var3 = (ha) (Object) oa.field_d.d(853);
-        }
-        ca var2 = mj.field_m.b((byte) -123);
-        while (var2 != null) {
-            tg.a(-126, param0);
-            var2 = mj.field_m.d(853);
+        int var2_int = 0;
+        ca var2 = null;
+        RuntimeException var2_ref = null;
+        ha var3 = null;
+        int var4 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var4 = OrbDefence.field_D ? 1 : 0;
+        try {
+          L0: {
+            var2_int = 0;
+            var3 = (ha) (Object) oa.field_d.b((byte) -111);
+            L1: while (true) {
+              if (var3 == null) {
+                var2 = mj.field_m.b((byte) -123);
+                L2: while (true) {
+                  if (var2 == null) {
+                    break L0;
+                  } else {
+                    tg.a(-126, param0);
+                    var2 = mj.field_m.d(853);
+                    continue L2;
+                  }
+                }
+              } else {
+                tl.a(-128, var3, param0);
+                var3 = (ha) (Object) oa.field_d.d(853);
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          throw dd.a((Throwable) (Object) var2_ref, "am.C(" + param0 + 44 + 113 + 41);
         }
     }
 

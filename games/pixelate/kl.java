@@ -13,13 +13,10 @@ final class kl implements Iterable {
     final static void a(int param0) {
         ce.field_d = 0;
         oo.field_d = true;
-        if (param0 != 7500) {
-            kl.a((byte) -13);
-        }
     }
 
     final static int a(int param0, int param1) {
-        int var2 = param1;
+        int var2 = 0;
         if (0 == param0) {
             var2 = io.field_e;
         }
@@ -57,24 +54,23 @@ final class kl implements Iterable {
     }
 
     final void a(fa param0, long param1, int param2) {
-        if (!(param0.field_h == null)) {
-            param0.c(2779);
+        fa var5 = null;
+        try {
+            if (!(param0.field_h == null)) {
+                param0.c(2779);
+            }
+            var5 = ((kl) this).field_e[(int)(param1 & (long)(param2 + ((kl) this).field_a))];
+            param0.field_h = var5.field_h;
+            param0.field_a = var5;
+            param0.field_h.field_a = param0;
+            param0.field_e = param1;
+            param0.field_a.field_h = param0;
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "kl.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }
-        fa var5 = ((kl) this).field_e[(int)(param1 & (long)(param2 + ((kl) this).field_a))];
-        param0.field_h = var5.field_h;
-        param0.field_a = var5;
-        param0.field_h.field_a = param0;
-        param0.field_e = param1;
-        param0.field_a.field_h = param0;
     }
 
     public static void b(byte param0) {
-        if (param0 >= -74) {
-            field_c = null;
-            field_d = null;
-            field_c = null;
-            return;
-        }
         field_d = null;
         field_c = null;
     }

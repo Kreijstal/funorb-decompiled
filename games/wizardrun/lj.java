@@ -13,9 +13,6 @@ final class lj {
     public static void a(byte param0) {
         field_e = null;
         field_d = null;
-        if (param0 != -60) {
-            return;
-        }
         field_c = null;
         field_f = null;
         field_b = null;

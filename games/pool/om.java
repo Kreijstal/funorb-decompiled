@@ -16,19 +16,77 @@ class om extends am {
     }
 
     final static double[] a(int param0, double[] param1) {
-        param1[5] = param1[5] * 512.0;
-        param1[1] = param1[1] * 288.0;
-        param1[0] = param1[0] * 576.0;
-        param1[4] = param1[4] * 288.0;
-        param1[2] = param1[2] * 512.0;
-        param1[3] = param1[3] * 576.0;
-        if (param0 > -19) {
-            om.a(-59, false);
+        RuntimeException var2 = null;
+        double[] stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        double[] stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              param1[5] = param1[5] * 512.0;
+              param1[1] = param1[1] * 288.0;
+              param1[0] = param1[0] * 576.0;
+              param1[4] = param1[4] * 288.0;
+              param1[2] = param1[2] * 512.0;
+              param1[3] = param1[3] * 576.0;
+              if (param0 <= -19) {
+                break L1;
+              } else {
+                om.a(-59, false);
+                break L1;
+              }
+            }
             param1[5] = param1[5] - 8.0;
-            return param1;
+            stackOut_2_0 = (double[]) param1;
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var2;
+            stackOut_4_1 = new StringBuilder().append("om.DA(").append(param0).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param1 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw wm.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
         }
-        param1[5] = param1[5] - 8.0;
-        return param1;
+        return stackIn_3_0;
     }
 
     om(int param0) {
@@ -36,20 +94,24 @@ class om extends am {
     }
 
     public final void a(boolean param0, int param1, byte param2, int param3, ei param4) {
-        if (!(!param0)) {
-            mh.a(param4.field_C + param1, param4.field_D + param3, param4.field_y, param4.field_l, false);
+        try {
+            if (!(!param0)) {
+                mh.a(param4.field_C + param1, param4.field_D + param3, param4.field_y, param4.field_l, false);
+            }
+            int var6_int = 5 / ((2 - param2) / 41);
+            super.a(param0, param1, (byte) -73, param3, param4);
+        } catch (RuntimeException runtimeException) {
+            throw wm.a((Throwable) (Object) runtimeException, "om.A(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
         }
-        int var6 = 5 / ((2 - param2) / 41);
-        super.a(param0, param1, (byte) -73, param3, param4);
     }
 
     final static void a(int param0, int param1, int param2, byte param3) {
         int var4 = 0;
         L0: {
-          if ((param1 ^ -1) != -1) {
+          if (param1 != 0) {
             break L0;
           } else {
-            if ((param0 ^ -1) != (ec.field_i ^ -1)) {
+            if (~param0 != ~ec.field_i) {
               lf.field_c = true;
               ec.field_i = param0;
               mj.a(param2, 27712);
@@ -69,7 +131,7 @@ class om extends am {
                 }
                 if (2 == param1) {
                   L2: {
-                    if ((di.field_e ^ -1) != (param0 ^ -1)) {
+                    if (~di.field_e != ~param0) {
                       lf.field_c = true;
                       di.field_e = param0;
                       mj.a(param2, 27712);
@@ -87,7 +149,7 @@ class om extends am {
                   if (2 != param1) {
                     break L3;
                   } else {
-                    if ((di.field_e ^ -1) != (param0 ^ -1)) {
+                    if (~di.field_e != ~param0) {
                       lf.field_c = true;
                       di.field_e = param0;
                       mj.a(param2, 27712);
@@ -117,7 +179,7 @@ class om extends am {
                 if (2 != param1) {
                   break L5;
                 } else {
-                  if ((di.field_e ^ -1) != (param0 ^ -1)) {
+                  if (~di.field_e != ~param0) {
                     lf.field_c = true;
                     di.field_e = param0;
                     mj.a(param2, 27712);
@@ -135,7 +197,7 @@ class om extends am {
           if (2 != param1) {
             break L6;
           } else {
-            if ((di.field_e ^ -1) != (param0 ^ -1)) {
+            if (~di.field_e != ~param0) {
               lf.field_c = true;
               di.field_e = param0;
               mj.a(param2, 27712);
@@ -149,7 +211,7 @@ class om extends am {
 
     public static void c(byte param0) {
         field_t = null;
-        int var1 = 111 / ((param0 - 40) / 61);
+        int var1 = -111;
         field_y = null;
         field_u = null;
         field_s = null;

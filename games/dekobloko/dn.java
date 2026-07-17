@@ -75,9 +75,6 @@ final class dn extends ie {
         field_l = null;
         field_s = null;
         field_p = null;
-        if (param0 <= 65) {
-            ac discarded$0 = dn.b((byte) 101);
-        }
     }
 
     final long a(int param0) {
@@ -133,13 +130,11 @@ final class dn extends ie {
         int var9 = client.field_A ? 1 : 0;
         long var2 = System.nanoTime();
         long var4 = var2 - ((dn) this).field_h;
-        if (param0 != -8325) {
-        }
         ((dn) this).field_h = var2;
         if (var4 > -5000000000L) {
-            if (!((var4 ^ -1L) <= -5000000001L)) {
+            if (!(var4 >= 5000000000L)) {
                 ((dn) this).field_f[((dn) this).field_o] = var4;
-                if (!(-2 >= (((dn) this).field_n ^ -1))) {
+                if (!(((dn) this).field_n >= 1)) {
                     ((dn) this).field_n = ((dn) this).field_n + 1;
                 }
                 ((dn) this).field_o = (1 + ((dn) this).field_o) % 10;

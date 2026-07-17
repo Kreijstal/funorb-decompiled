@@ -30,9 +30,6 @@ final class ih extends hl {
     public static void a(byte param0) {
         field_n = null;
         field_j = null;
-        if (param0 < 116) {
-            field_n = null;
-        }
         field_t = null;
     }
 
@@ -56,23 +53,15 @@ final class ih extends hl {
         String var19 = null;
         L0: {
           var13 = HoldTheLine.field_D;
-          if (param1 == -12895) {
-            break L0;
-          } else {
-            field_m = -46;
-            break L0;
-          }
-        }
-        L1: {
           if (param0 instanceof ii) {
             var14 = (ii) (Object) param0;
             param0 = var14.field_f;
             var2 = var14.field_a + " | ";
             var11 = var2;
-            break L1;
+            break L0;
           } else {
             var2 = "";
-            break L1;
+            break L0;
           }
         }
         var15 = new StringWriter();
@@ -86,26 +75,26 @@ final class ih extends hl {
         var7 = var6.readLine();
         var2 = var7;
         var11 = var7;
-        L2: while (true) {
+        L1: while (true) {
           var8 = var6.readLine();
           var2 = var8;
           var11 = var8;
           var2 = var11;
           if (var8 != null) {
-            L3: {
+            L2: {
               var9 = var8.indexOf('(');
               var10 = var8.indexOf(')', var9 + 1);
-              if (0 == (var9 ^ -1)) {
+              if (var9 == -1) {
                 var11 = var8;
                 var2 = var11;
                 var2 = var11;
-                break L3;
+                break L2;
               } else {
                 var11 = var8.substring(0, var9);
-                break L3;
+                break L2;
               }
             }
-            L4: {
+            L3: {
               var16 = var11.trim();
               var2 = var16;
               var2 = var16;
@@ -119,23 +108,23 @@ final class ih extends hl {
               var2 = var19;
               var2 = var19;
               if (-1 == var9) {
-                break L4;
+                break L3;
               } else {
                 if (var10 == -1) {
-                  break L4;
+                  break L3;
                 } else {
                   var12 = var8.indexOf(".java:", var9);
                   if (var12 >= 0) {
                     var2 = var19 + var8.substring(5 + var12, var10);
-                    break L4;
+                    break L3;
                   } else {
-                    break L4;
+                    break L3;
                   }
                 }
               }
             }
             var2 = var2 + 32;
-            continue L2;
+            continue L1;
           } else {
             var2 = var11;
             var11 = var2;
@@ -149,7 +138,7 @@ final class ih extends hl {
     final static String a(int param0, int param1) {
         int var3 = 0;
         int var4 = HoldTheLine.field_D;
-        StringBuilder var2 = new StringBuilder(param1);
+        StringBuilder var2 = new StringBuilder(5);
         for (var3 = 0; var3 < param0; var3++) {
             StringBuilder discarded$0 = var2.append(8216);
         }

@@ -31,7 +31,7 @@ final class lc implements Iterator {
         if (null != k.field_m) {
           var3 = k.field_m.a((byte) 84, param2);
           if (var3 != 0) {
-            if (-3 == (var3 ^ -1)) {
+            if (var3 == 2) {
               if (k.field_m.field_E != null) {
                 if (!k.field_m.field_E.equals((Object) (Object) "")) {
                   L0: {
@@ -48,7 +48,7 @@ final class lc implements Iterator {
                   }
                   L1: {
                     var5 = null;
-                    if ((fs.field_b ^ -1) != -1) {
+                    if (fs.field_b != 0) {
                       break L1;
                     } else {
                       var5 = lh.a(param1, 100, var4);
@@ -64,7 +64,7 @@ final class lc implements Iterator {
                     }
                   }
                   L3: {
-                    if ((fs.field_b ^ -1) == -3) {
+                    if (fs.field_b == 2) {
                       var5 = il.a(var4, param1, (byte) 126);
                       break L3;
                     } else {
@@ -72,7 +72,7 @@ final class lc implements Iterator {
                     }
                   }
                   L4: {
-                    if (-4 != (fs.field_b ^ -1)) {
+                    if (fs.field_b != 3) {
                       break L4;
                     } else {
                       var5 = rn.a(var4, 2, param1, var4);
@@ -126,19 +126,18 @@ final class lc implements Iterator {
 
     public static void a(int param0) {
         field_b = null;
-        if (param0 >= -19) {
-            field_b = null;
-            field_e = null;
-            return;
-        }
         field_e = null;
     }
 
     lc(ci param0) {
         ((lc) this).field_d = null;
-        ((lc) this).field_c = param0;
-        ((lc) this).field_a = ((lc) this).field_c.field_d.field_f;
-        ((lc) this).field_d = null;
+        try {
+            ((lc) this).field_c = param0;
+            ((lc) this).field_a = ((lc) this).field_c.field_d.field_f;
+            ((lc) this).field_d = null;
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "lc.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public final void remove() {

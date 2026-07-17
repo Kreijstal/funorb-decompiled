@@ -9,21 +9,51 @@ final class ec {
     public static void a(byte param0) {
         field_b = null;
         field_a = null;
-        if (param0 != -12) {
-            field_b = null;
-        }
     }
 
     final static String a(java.applet.Applet param0, byte param1, String param2) {
         try {
-            Throwable var3 = null;
+            RuntimeException var3 = null;
+            Throwable var3_ref = null;
             String[] var4 = null;
             int var5 = 0;
             int var6 = 0;
             int var7 = 0;
             String var8 = null;
             String stackIn_7_0 = null;
+            Object stackIn_14_0 = null;
+            RuntimeException stackIn_16_0 = null;
+            StringBuilder stackIn_16_1 = null;
+            RuntimeException stackIn_17_0 = null;
+            StringBuilder stackIn_17_1 = null;
+            RuntimeException stackIn_18_0 = null;
+            StringBuilder stackIn_18_1 = null;
+            String stackIn_18_2 = null;
+            RuntimeException stackIn_19_0 = null;
+            StringBuilder stackIn_19_1 = null;
+            RuntimeException stackIn_20_0 = null;
+            StringBuilder stackIn_20_1 = null;
+            RuntimeException stackIn_21_0 = null;
+            StringBuilder stackIn_21_1 = null;
+            String stackIn_21_2 = null;
             String stackOut_6_0 = null;
+            Object stackOut_13_0 = null;
+            RuntimeException stackOut_15_0 = null;
+            StringBuilder stackOut_15_1 = null;
+            RuntimeException stackOut_16_0 = null;
+            StringBuilder stackOut_16_1 = null;
+            String stackOut_16_2 = null;
+            RuntimeException stackOut_17_0 = null;
+            StringBuilder stackOut_17_1 = null;
+            String stackOut_17_2 = null;
+            RuntimeException stackOut_18_0 = null;
+            StringBuilder stackOut_18_1 = null;
+            RuntimeException stackOut_19_0 = null;
+            StringBuilder stackOut_19_1 = null;
+            String stackOut_19_2 = null;
+            RuntimeException stackOut_20_0 = null;
+            StringBuilder stackOut_20_1 = null;
+            String stackOut_20_2 = null;
             int statePc = 0;
             Throwable caughtException = null;
             stateLoop: while (true) {
@@ -63,7 +93,7 @@ final class ec {
                     case 3: {
                         try {
                             var6 = var4[var5].indexOf('=');
-                            if ((var6 ^ -1) > -1) {
+                            if (var6 < 0) {
                                 statePc = 8;
                             } else {
                                 statePc = 4;
@@ -142,7 +172,8 @@ final class ec {
                     case 10: {
                         try {
                             field_a = null;
-                            return null;
+                            statePc = 13;
+                            continue stateLoop;
                         } catch (Throwable stateCaught_10) {
                             caughtException = stateCaught_10;
                             statePc = 12;
@@ -150,12 +181,102 @@ final class ec {
                         }
                     }
                     case 12: {
-                        var3 = caughtException;
-                        statePc = 13;
-                        continue stateLoop;
+                        try {
+                            var3_ref = caughtException;
+                            statePc = 13;
+                            continue stateLoop;
+                        } catch (Throwable stateCaught_12) {
+                            caughtException = stateCaught_12;
+                            statePc = 15;
+                            continue stateLoop;
+                        }
                     }
                     case 13: {
-                        return null;
+                        try {
+                            stackOut_13_0 = null;
+                            stackIn_14_0 = stackOut_13_0;
+                            statePc = 14;
+                            continue stateLoop;
+                        } catch (Throwable stateCaught_13) {
+                            caughtException = stateCaught_13;
+                            statePc = 15;
+                            continue stateLoop;
+                        }
+                    }
+                    case 14: {
+                        return (String) (Object) stackIn_14_0;
+                    }
+                    case 15: {
+                        var3 = (RuntimeException) (Object) caughtException;
+                        stackOut_15_0 = (RuntimeException) var3;
+                        stackOut_15_1 = new StringBuilder().append("ec.B(");
+                        stackIn_17_0 = stackOut_15_0;
+                        stackIn_17_1 = stackOut_15_1;
+                        stackIn_16_0 = stackOut_15_0;
+                        stackIn_16_1 = stackOut_15_1;
+                        if (param0 == null) {
+                            statePc = 17;
+                        } else {
+                            statePc = 16;
+                        }
+                        continue stateLoop;
+                    }
+                    case 16: {
+                        stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+                        stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+                        stackOut_16_2 = "{...}";
+                        stackIn_18_0 = stackOut_16_0;
+                        stackIn_18_1 = stackOut_16_1;
+                        stackIn_18_2 = stackOut_16_2;
+                        statePc = 18;
+                        continue stateLoop;
+                    }
+                    case 17: {
+                        stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+                        stackOut_17_1 = (StringBuilder) (Object) stackIn_17_1;
+                        stackOut_17_2 = "null";
+                        stackIn_18_0 = stackOut_17_0;
+                        stackIn_18_1 = stackOut_17_1;
+                        stackIn_18_2 = stackOut_17_2;
+                        statePc = 18;
+                        continue stateLoop;
+                    }
+                    case 18: {
+                        stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+                        stackOut_18_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_18_2).append(44).append(param1).append(44);
+                        stackIn_20_0 = stackOut_18_0;
+                        stackIn_20_1 = stackOut_18_1;
+                        stackIn_19_0 = stackOut_18_0;
+                        stackIn_19_1 = stackOut_18_1;
+                        if (param2 == null) {
+                            statePc = 20;
+                        } else {
+                            statePc = 19;
+                        }
+                        continue stateLoop;
+                    }
+                    case 19: {
+                        stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+                        stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+                        stackOut_19_2 = "{...}";
+                        stackIn_21_0 = stackOut_19_0;
+                        stackIn_21_1 = stackOut_19_1;
+                        stackIn_21_2 = stackOut_19_2;
+                        statePc = 21;
+                        continue stateLoop;
+                    }
+                    case 20: {
+                        stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+                        stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+                        stackOut_20_2 = "null";
+                        stackIn_21_0 = stackOut_20_0;
+                        stackIn_21_1 = stackOut_20_1;
+                        stackIn_21_2 = stackOut_20_2;
+                        statePc = 21;
+                        continue stateLoop;
+                    }
+                    case 21: {
+                        throw fa.a((Throwable) (Object) stackIn_21_0, stackIn_21_2 + 41);
                     }
                     default: throw new IllegalStateException("invalid CFG state " + statePc);
                 }

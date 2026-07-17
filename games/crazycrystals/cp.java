@@ -17,18 +17,9 @@ final class cp {
     private static String field_z;
 
     public static void a(int param0) {
-        if (param0 != 112) {
-          field_d = null;
-          field_h = null;
-          field_d = null;
-          field_k = null;
-          return;
-        } else {
-          field_h = null;
-          field_d = null;
-          field_k = null;
-          return;
-        }
+        field_h = null;
+        field_d = null;
+        field_k = null;
     }
 
     static {

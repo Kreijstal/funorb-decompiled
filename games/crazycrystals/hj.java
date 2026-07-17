@@ -6,16 +6,15 @@ final class hj {
     private dl[] field_a;
 
     public static void a(int param0) {
-        if (param0 != 0) {
-            String discarded$0 = hj.a(false, 74, true, true);
-            field_b = null;
-            return;
-        }
         field_b = null;
     }
 
     hj(dl[] param0) {
-        ((hj) this).field_a = param0;
+        try {
+            ((hj) this).field_a = param0;
+        } catch (RuntimeException runtimeException) {
+            throw dn.a((Throwable) (Object) runtimeException, "hj.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {

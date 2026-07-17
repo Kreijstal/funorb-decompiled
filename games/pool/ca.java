@@ -13,17 +13,15 @@ final class ca extends re {
 
     public static void b(int param0) {
         if (param0 != 17518) {
-          ca.b(8);
-          field_j = null;
-          field_m = null;
-          field_g = null;
-          return;
-        } else {
-          field_j = null;
-          field_m = null;
-          field_g = null;
-          return;
+            ca.b(8);
+            field_j = null;
+            field_m = null;
+            field_g = null;
+            return;
         }
+        field_j = null;
+        field_m = null;
+        field_g = null;
     }
 
     final tf b(byte param0) {
@@ -32,14 +30,22 @@ final class ca extends re {
     }
 
     final void a(byte param0, ge param1) {
-        int var3 = -92 / ((22 - param0) / 51);
-        param1.a(false, ((ca) this).field_n);
-        param1.a(((ca) this).field_k, 109);
+        try {
+            int var3_int = -92 / ((22 - param0) / 51);
+            param1.a(false, ((ca) this).field_n);
+            param1.a(((ca) this).field_k, 109);
+        } catch (RuntimeException runtimeException) {
+            throw wm.a((Throwable) (Object) runtimeException, "ca.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     ca(String param0, String param1) {
-        ((ca) this).field_k = param1;
-        ((ca) this).field_n = param0;
+        try {
+            ((ca) this).field_k = param1;
+            ((ca) this).field_n = param0;
+        } catch (RuntimeException runtimeException) {
+            throw wm.a((Throwable) (Object) runtimeException, "ca.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

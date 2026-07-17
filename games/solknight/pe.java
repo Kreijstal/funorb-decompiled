@@ -7,9 +7,6 @@ abstract class pe extends ec {
     static volatile boolean field_n;
 
     final static boolean a(byte param0) {
-        if (param0 > -65) {
-            return false;
-        }
         if (null == fc.field_l) {
             return false;
         }

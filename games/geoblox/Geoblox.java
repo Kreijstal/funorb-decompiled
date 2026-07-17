@@ -1,7 +1,6 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-import java.lang.String;
 import java.awt.Canvas;
 
 public final class Geoblox extends wf {
@@ -16,9 +15,6 @@ public final class Geoblox extends wf {
         if (ll.field_f.a(0)) {
             if (!(ll.field_f.a("sports", (byte) -126))) {
                 return;
-            }
-            if (param0 <= 37) {
-                this.m(92);
             }
             hd.field_H = ug.a("sports_foreground", ll.field_f, (byte) -78, "sports");
             th.field_f = jg.a(ll.field_f, 1, "sports", "sports_background");
@@ -82,7 +78,7 @@ public final class Geoblox extends wf {
         if (null != ll.field_f) {
             if (null != ii.field_k) {
                 if (ki.field_b != null) {
-                    lc.a(oh.field_c, param0 + -25871, 80.0f);
+                    lc.a(oh.field_c, -2, 80.0f);
                     ((Geoblox) this).a(25853);
                     dd.field_G = w.a("", ll.field_f, ii.field_k, true, "font");
                     wf.field_p = dd.field_G.e(1);
@@ -94,31 +90,31 @@ public final class Geoblox extends wf {
                     dd.field_G.field_K[1][wf.field_p] = 16777215;
                     var12 = wj.a("geoms", "", ll.field_f, 0);
                     var4 = -1;
-                    for (var5_int = 0; var12.length > var5_int; var5_int++) {
+                    for (var5_int = 0; ~var12.length < ~var5_int; var5_int++) {
                         var6_int = var5_int % 7;
-                        if (!(var6_int != -1)) {
+                        if (!(var6_int != 0)) {
                             var4++;
-                            if (-8 <= var4) {
+                            if (var4 >= 7) {
                                 break;
                             }
                         }
                         var7_int = var12[var5_int].field_s;
                         var8_int = var12[var5_int].field_o;
                         s.field_G[var4][var6_int] = var12[var5_int];
-                        for (var9 = 0; -8 < (var9 ^ -1); var9++) {
+                        for (var9 = 0; var9 < 7; var9++) {
                             ke.field_a[var4][var6_int][var9] = new dm(var7_int, var8_int);
                             ke.field_a[var4][var6_int][var9].e();
                             var12[var5_int].b(0, 0, jg.field_f[var4][var9]);
                         }
                     }
-                    var13 = wj.a("amorphic", "", ll.field_f, param0 ^ 25869);
-                    for (var4 = 0; -8 < (var4 ^ -1); var4++) {
-                        for (var5_int = 0; (var5_int ^ -1) > -8; var5_int++) {
-                            for (var6_int = 0; var6_int < var13.length; var6_int++) {
+                    var13 = wj.a("amorphic", "", ll.field_f, 0);
+                    for (var4 = 0; var4 < 7; var4++) {
+                        for (var5_int = 0; var5_int < 7; var5_int++) {
+                            for (var6_int = 0; ~var6_int > ~var13.length; var6_int++) {
                                 ka.field_m[var4][var5_int][var6_int] = new dm(4 + var13[var6_int].field_s, 4 + var13[var6_int].field_o);
                                 ka.field_m[var4][var5_int][var6_int].e();
                                 var13[var6_int].b(2, 2, jg.field_f[var4][var5_int]);
-                                k.a(0, 0, ka.field_m[var4][var5_int][var6_int].field_s, param0 ^ -3266, ka.field_m[var4][var5_int][var6_int].field_o);
+                                k.a(0, 0, ka.field_m[var4][var5_int][var6_int].field_s, -27085, ka.field_m[var4][var5_int][var6_int].field_o);
                             }
                         }
                     }
@@ -142,11 +138,11 @@ public final class Geoblox extends wf {
                         fc.field_b[var6_int].d();
                     }
                     var6 = wj.a("player_mouth", "", ll.field_f, 0);
-                    if (da.a(0, param0 + -25774)) {
+                    if (da.a(0, 95)) {
                         var6 = wj.a("player_mouth", "halloween", ll.field_f, 0);
                     }
                     vh.field_H = new dm[var6.length];
-                    for (var7_int = 0; var6.length > var7_int; var7_int++) {
+                    for (var7_int = 0; ~var6.length < ~var7_int; var7_int++) {
                         vh.field_H[var7_int] = new dm(var6[var7_int].field_s + 4, var6[var7_int].field_o + 4);
                         vh.field_H[var7_int].e();
                         var6[var7_int].c(2, 2);
@@ -162,7 +158,7 @@ public final class Geoblox extends wf {
                     qj.field_c = ug.a("transition", ll.field_f, (byte) -78, "");
                     vg.field_f = wj.a("silver_shock", "", ll.field_f, 0);
                     mi.field_B = wj.a("sparkle", "", ll.field_f, 0);
-                    for (var7_int = 0; mi.field_B.length > var7_int; var7_int++) {
+                    for (var7_int = 0; ~mi.field_B.length < ~var7_int; var7_int++) {
                         mi.field_B[var7_int].g(1);
                     }
                     vj.field_a = wj.a("bang", "", ll.field_f, 0);
@@ -183,7 +179,7 @@ public final class Geoblox extends wf {
                     var7[1] = jg.a(ll.field_f, 1, "", "keyboard_right");
                     var7[2] = jg.a(ll.field_f, 1, "", "keyboard_enter");
                     var7[3] = jg.a(ll.field_f, 1, "", "keyboard_space");
-                    var7[4] = jg.a(ll.field_f, h.a(param0, 25868), "", "keyboard_esc");
+                    var7[4] = jg.a(ll.field_f, h.a(25869, 25868), "", "keyboard_esc");
                     var7[5] = jg.a(ll.field_f, 1, "", "keyboard_backspace");
                     var7[6] = jg.a(ll.field_f, 1, "", "keyboard_down");
                     var7[7] = jg.a(ll.field_f, 1, "", "keyboard_i");
@@ -194,7 +190,7 @@ public final class Geoblox extends wf {
                     var8 = var14;
                     var11 = 0;
                     var9 = var11;
-                    while (var11 < var17.length) {
+                    while (~var11 > ~var17.length) {
                         var8[var11] = var7[var11].field_c + -3;
                         var11++;
                     }
@@ -242,79 +238,13 @@ public final class Geoblox extends wf {
                 }
             }
         }
-        if (param0 != 25869) {
-            field_z = null;
-        }
         lc.a(uj.field_a, -2, 100.0f);
-        ((Geoblox) this).a(param0 ^ 496);
+        ((Geoblox) this).a(25853);
         qg.b(9313);
         return true;
     }
 
     private final boolean g(boolean param0) {
-        rh stackIn_9_0 = null;
-        rh stackIn_10_0 = null;
-        rh stackIn_11_0 = null;
-        int stackIn_11_1 = 0;
-        String stackIn_26_0 = null;
-        rh stackIn_26_1 = null;
-        String stackIn_26_2 = null;
-        String stackIn_26_3 = null;
-        String stackIn_27_0 = null;
-        rh stackIn_27_1 = null;
-        String stackIn_27_2 = null;
-        String stackIn_27_3 = null;
-        String stackIn_28_0 = null;
-        rh stackIn_28_1 = null;
-        String stackIn_28_2 = null;
-        String stackIn_28_3 = null;
-        int stackIn_28_4 = 0;
-        String stackIn_46_0 = null;
-        rh stackIn_46_1 = null;
-        String stackIn_46_2 = null;
-        String stackIn_46_3 = null;
-        String stackIn_47_0 = null;
-        rh stackIn_47_1 = null;
-        String stackIn_47_2 = null;
-        String stackIn_47_3 = null;
-        String stackIn_48_0 = null;
-        rh stackIn_48_1 = null;
-        String stackIn_48_2 = null;
-        String stackIn_48_3 = null;
-        int stackIn_48_4 = 0;
-        rh stackOut_8_0 = null;
-        rh stackOut_10_0 = null;
-        int stackOut_10_1 = 0;
-        rh stackOut_9_0 = null;
-        int stackOut_9_1 = 0;
-        String stackOut_45_0 = null;
-        rh stackOut_45_1 = null;
-        String stackOut_45_2 = null;
-        String stackOut_45_3 = null;
-        String stackOut_47_0 = null;
-        rh stackOut_47_1 = null;
-        String stackOut_47_2 = null;
-        String stackOut_47_3 = null;
-        int stackOut_47_4 = 0;
-        String stackOut_46_0 = null;
-        rh stackOut_46_1 = null;
-        String stackOut_46_2 = null;
-        String stackOut_46_3 = null;
-        int stackOut_46_4 = 0;
-        String stackOut_25_0 = null;
-        rh stackOut_25_1 = null;
-        String stackOut_25_2 = null;
-        String stackOut_25_3 = null;
-        String stackOut_27_0 = null;
-        rh stackOut_27_1 = null;
-        String stackOut_27_2 = null;
-        String stackOut_27_3 = null;
-        int stackOut_27_4 = 0;
-        String stackOut_26_0 = null;
-        rh stackOut_26_1 = null;
-        String stackOut_26_2 = null;
-        String stackOut_26_3 = null;
-        int stackOut_26_4 = 0;
         if (ef.field_e) {
           return true;
         } else {
@@ -330,70 +260,52 @@ public final class Geoblox extends wf {
                   if (!ah.field_c.a(0)) {
                     break L1;
                   } else {
-                    L2: {
-                      stackOut_8_0 = ah.field_c;
-                      stackIn_10_0 = stackOut_8_0;
-                      stackIn_9_0 = stackOut_8_0;
-                      if (param0) {
-                        stackOut_10_0 = (rh) (Object) stackIn_10_0;
-                        stackOut_10_1 = 0;
-                        stackIn_11_0 = stackOut_10_0;
-                        stackIn_11_1 = stackOut_10_1;
-                        break L2;
-                      } else {
-                        stackOut_9_0 = (rh) (Object) stackIn_9_0;
-                        stackOut_9_1 = 1;
-                        stackIn_11_0 = stackOut_9_0;
-                        stackIn_11_1 = stackOut_9_1;
-                        break L2;
-                      }
-                    }
-                    if (((rh) (Object) stackIn_11_0).b(stackIn_11_1 == 0)) {
+                    if (!ah.field_c.b(true)) {
                       break L1;
                     } else {
-                      L3: {
+                      L2: {
                         if (!fe.field_a.a(0)) {
-                          break L3;
+                          break L2;
                         } else {
                           if (fe.field_a.b(true)) {
-                            L4: {
+                            L3: {
                               if (!cd.field_m.a(0)) {
-                                break L4;
+                                break L3;
                               } else {
                                 if (cd.field_m.b(true)) {
-                                  L5: {
+                                  L4: {
                                     if (!ii.field_k.a(0)) {
-                                      break L5;
+                                      break L4;
                                     } else {
                                       if (!ii.field_k.b(true)) {
-                                        break L5;
+                                        break L4;
                                       } else {
-                                        L6: {
+                                        L5: {
                                           if (!ll.field_f.a(0)) {
-                                            break L6;
+                                            break L5;
                                           } else {
                                             if (!ll.field_f.a("", (byte) -127)) {
-                                              break L6;
+                                              break L5;
                                             } else {
-                                              L7: {
+                                              L6: {
                                                 if (!ll.field_f.a(0)) {
-                                                  break L7;
+                                                  break L6;
                                                 } else {
                                                   if (!ll.field_f.a("sun", (byte) -127)) {
-                                                    break L7;
+                                                    break L6;
                                                   } else {
-                                                    L8: {
+                                                    L7: {
                                                       if (!da.a(0, -112)) {
-                                                        break L8;
+                                                        break L7;
                                                       } else {
-                                                        L9: {
+                                                        L8: {
                                                           if (!ll.field_f.a(0)) {
-                                                            break L9;
+                                                            break L8;
                                                           } else {
                                                             if (!ll.field_f.a("halloween", (byte) -127)) {
-                                                              break L9;
-                                                            } else {
                                                               break L8;
+                                                            } else {
+                                                              break L7;
                                                             }
                                                           }
                                                         }
@@ -401,65 +313,18 @@ public final class Geoblox extends wf {
                                                         return false;
                                                       }
                                                     }
-                                                    L10: {
+                                                    L9: {
                                                       if (!ki.field_b.a(0)) {
-                                                        break L10;
+                                                        break L9;
                                                       } else {
                                                         if (!ki.field_b.a("basic", (byte) -124)) {
-                                                          break L10;
+                                                          break L9;
                                                         } else {
-                                                          if (!param0) {
-                                                            wd.c(480);
-                                                            lc.a(uj.field_a, -2, 50.0f);
-                                                            ((Geoblox) this).a(25853);
-                                                            ef.field_e = true;
-                                                            return true;
-                                                          } else {
-                                                            return true;
-                                                          }
+                                                          return true;
                                                         }
                                                       }
                                                     }
-                                                    L11: {
-                                                      stackOut_45_0 = ff.field_l;
-                                                      stackOut_45_1 = ki.field_b;
-                                                      stackOut_45_2 = "basic";
-                                                      stackOut_45_3 = wi.field_F;
-                                                      stackIn_47_0 = stackOut_45_0;
-                                                      stackIn_47_1 = stackOut_45_1;
-                                                      stackIn_47_2 = stackOut_45_2;
-                                                      stackIn_47_3 = stackOut_45_3;
-                                                      stackIn_46_0 = stackOut_45_0;
-                                                      stackIn_46_1 = stackOut_45_1;
-                                                      stackIn_46_2 = stackOut_45_2;
-                                                      stackIn_46_3 = stackOut_45_3;
-                                                      if (param0) {
-                                                        stackOut_47_0 = (String) (Object) stackIn_47_0;
-                                                        stackOut_47_1 = (rh) (Object) stackIn_47_1;
-                                                        stackOut_47_2 = (String) (Object) stackIn_47_2;
-                                                        stackOut_47_3 = (String) (Object) stackIn_47_3;
-                                                        stackOut_47_4 = 0;
-                                                        stackIn_48_0 = stackOut_47_0;
-                                                        stackIn_48_1 = stackOut_47_1;
-                                                        stackIn_48_2 = stackOut_47_2;
-                                                        stackIn_48_3 = stackOut_47_3;
-                                                        stackIn_48_4 = stackOut_47_4;
-                                                        break L11;
-                                                      } else {
-                                                        stackOut_46_0 = (String) (Object) stackIn_46_0;
-                                                        stackOut_46_1 = (rh) (Object) stackIn_46_1;
-                                                        stackOut_46_2 = (String) (Object) stackIn_46_2;
-                                                        stackOut_46_3 = (String) (Object) stackIn_46_3;
-                                                        stackOut_46_4 = 1;
-                                                        stackIn_48_0 = stackOut_46_0;
-                                                        stackIn_48_1 = stackOut_46_1;
-                                                        stackIn_48_2 = stackOut_46_2;
-                                                        stackIn_48_3 = stackOut_46_3;
-                                                        stackIn_48_4 = stackOut_46_4;
-                                                        break L11;
-                                                      }
-                                                    }
-                                                    lc.a(gf.a(stackIn_48_0, stackIn_48_1, stackIn_48_2, stackIn_48_3, stackIn_48_4 != 0), -2, 50.0f);
+                                                    lc.a(gf.a(ff.field_l, ki.field_b, "basic", wi.field_F, true), -2, 50.0f);
                                                     return false;
                                                   }
                                                 }
@@ -474,56 +339,17 @@ public final class Geoblox extends wf {
                                       }
                                     }
                                   }
-                                  L12: {
-                                    stackOut_25_0 = ik.field_b;
-                                    stackOut_25_1 = ii.field_k;
-                                    stackOut_25_2 = "";
-                                    stackOut_25_3 = nb.field_a;
-                                    stackIn_27_0 = stackOut_25_0;
-                                    stackIn_27_1 = stackOut_25_1;
-                                    stackIn_27_2 = stackOut_25_2;
-                                    stackIn_27_3 = stackOut_25_3;
-                                    stackIn_26_0 = stackOut_25_0;
-                                    stackIn_26_1 = stackOut_25_1;
-                                    stackIn_26_2 = stackOut_25_2;
-                                    stackIn_26_3 = stackOut_25_3;
-                                    if (param0) {
-                                      stackOut_27_0 = (String) (Object) stackIn_27_0;
-                                      stackOut_27_1 = (rh) (Object) stackIn_27_1;
-                                      stackOut_27_2 = (String) (Object) stackIn_27_2;
-                                      stackOut_27_3 = (String) (Object) stackIn_27_3;
-                                      stackOut_27_4 = 0;
-                                      stackIn_28_0 = stackOut_27_0;
-                                      stackIn_28_1 = stackOut_27_1;
-                                      stackIn_28_2 = stackOut_27_2;
-                                      stackIn_28_3 = stackOut_27_3;
-                                      stackIn_28_4 = stackOut_27_4;
-                                      break L12;
-                                    } else {
-                                      stackOut_26_0 = (String) (Object) stackIn_26_0;
-                                      stackOut_26_1 = (rh) (Object) stackIn_26_1;
-                                      stackOut_26_2 = (String) (Object) stackIn_26_2;
-                                      stackOut_26_3 = (String) (Object) stackIn_26_3;
-                                      stackOut_26_4 = 1;
-                                      stackIn_28_0 = stackOut_26_0;
-                                      stackIn_28_1 = stackOut_26_1;
-                                      stackIn_28_2 = stackOut_26_2;
-                                      stackIn_28_3 = stackOut_26_3;
-                                      stackIn_28_4 = stackOut_26_4;
-                                      break L12;
-                                    }
-                                  }
-                                  lc.a(gf.a(stackIn_28_0, stackIn_28_1, stackIn_28_2, stackIn_28_3, stackIn_28_4 != 0), -2, 35.0f);
+                                  lc.a(gf.a(ik.field_b, ii.field_k, "", nb.field_a, true), -2, 35.0f);
                                   return false;
                                 } else {
-                                  break L4;
+                                  break L3;
                                 }
                               }
                             }
-                            lc.a(vd.a(ud.field_b, pa.field_e, 0, param0, cd.field_m), -2, 25.0f);
+                            lc.a(vd.a(ud.field_b, pa.field_e, 0, false, cd.field_m), -2, 25.0f);
                             return false;
                           } else {
-                            break L3;
+                            break L2;
                           }
                         }
                       }
@@ -785,7 +611,7 @@ public final class Geoblox extends wf {
             }
             sl.field_c = ug.a("germs_foreground", ll.field_f, (byte) -78, "germs");
             sg.field_e = jg.a(ll.field_f, 1, "germs", "germs_background");
-            int var2 = -24 / ((param0 - -13) / 61);
+            int var2 = 24;
             ll.field_g[3] = true;
             return;
         }
@@ -796,11 +622,68 @@ public final class Geoblox extends wf {
     }
 
     final static void a(int param0, dm param1) {
-        oc.b(9);
-        vb.a(param1.field_v, param1.field_s, param1.field_o);
-        if (param0 != 1) {
-            Object var3 = null;
-            Geoblox.a(-34, (dm) null);
+        RuntimeException runtimeException = null;
+        Object var3 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        try {
+          L0: {
+            L1: {
+              oc.b(9);
+              vb.a(param1.field_v, param1.field_s, param1.field_o);
+              if (param0 == 1) {
+                break L1;
+              } else {
+                var3 = null;
+                Geoblox.a(-34, (dm) null);
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_1 = new StringBuilder().append("Geoblox.T(").append(param0).append(44);
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param1 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
+            }
+          }
+          throw t.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
         }
     }
 
@@ -949,7 +832,7 @@ public final class Geoblox extends wf {
                               }
                               L10: {
                                 var2 = sl.a(stackIn_91_0 != 0, (wf) this, false);
-                                if (-2364825 != (var2 ^ -1)) {
+                                if (var2 != 2364824) {
                                   L11: {
                                     if (var2 == 1) {
                                       break L11;
@@ -970,7 +853,7 @@ public final class Geoblox extends wf {
                                       break L12;
                                     }
                                   }
-                                  if ((var2 ^ -1) == -3) {
+                                  if (var2 == 2) {
                                     gf.a(k.c(109), 62);
                                     break L10;
                                   } else {
@@ -1061,7 +944,7 @@ public final class Geoblox extends wf {
                                   if (null == el.field_o) {
                                     break L18;
                                   } else {
-                                    if ((el.field_o.field_o ^ -1) >= -1) {
+                                    if (el.field_o.field_o <= 0) {
                                       break L18;
                                     } else {
                                       el.field_o.e((byte) -70);
@@ -1104,7 +987,7 @@ public final class Geoblox extends wf {
                             }
                           }
                           L21: {
-                            if (0 == (ai.field_p ^ -1)) {
+                            if (ai.field_p == -1) {
                               break L21;
                             } else {
                               og.field_q[ai.field_p].c(16405);
@@ -1126,8 +1009,9 @@ public final class Geoblox extends wf {
                               break L22;
                             }
                           }
+                          int fieldTemp$2 = nf.field_A + 1;
                           nf.field_A = nf.field_A + 1;
-                          if (nf.field_A + 1 != 160) {
+                          if (fieldTemp$2 != 160) {
                             break L6;
                           } else {
                             L23: {
@@ -1165,7 +1049,7 @@ public final class Geoblox extends wf {
                             break L6;
                           }
                         } else {
-                          if ((tc.field_c ^ -1) == 0) {
+                          if (tc.field_c == -1) {
                             if (dl.field_b) {
                               L26: {
                                 if (gb.b(1)) {
@@ -1204,8 +1088,8 @@ public final class Geoblox extends wf {
                     break L5;
                   } else {
                     var2 = ((Geoblox) this).d((byte) -67);
-                    if ((var2 ^ -1) == -3) {
-                      oh.a(320, 240, (m) (Object) fi.field_d, fi.field_d.field_o * 3 >> 1516183521, -128, fi.field_d.field_o);
+                    if (var2 == 2) {
+                      oh.a(320, 240, (m) (Object) fi.field_d, fi.field_d.field_o * 3 >> 1, -128, fi.field_d.field_o);
                       break L5;
                     } else {
                       break L5;
@@ -1225,7 +1109,7 @@ public final class Geoblox extends wf {
                   if (!fj.f(-31456)) {
                     break L5;
                   } else {
-                    boolean discarded$1 = this.g(false);
+                    boolean discarded$3 = this.g(false);
                     break L5;
                   }
                 }
@@ -1284,7 +1168,7 @@ public final class Geoblox extends wf {
                   if (tc.field_c != ai.field_p) {
                     break L2;
                   } else {
-                    if (0 != (el.field_i ^ -1)) {
+                    if (el.field_i != -1) {
                       break L2;
                     } else {
                       if (tc.field_c == -1) {
@@ -1329,7 +1213,7 @@ public final class Geoblox extends wf {
                   break L3;
                 }
                 L5: {
-                  if ((tc.field_c ^ -1) != 1) {
+                  if (tc.field_c != -2) {
                     break L5;
                   } else {
                     oc.c(param0 ^ 25613);
@@ -1338,7 +1222,7 @@ public final class Geoblox extends wf {
                 }
                 L6: {
                   vb.e(0, 0, 640, var3);
-                  if ((ai.field_p ^ -1) != 0) {
+                  if (ai.field_p != -1) {
                     og.field_q[ai.field_p].a(-28750);
                     break L6;
                   } else {
@@ -1347,7 +1231,7 @@ public final class Geoblox extends wf {
                 }
                 L7: {
                   vb.e(0, var3, 640, 480);
-                  if ((tc.field_c ^ -1) < 0) {
+                  if (tc.field_c > -1) {
                     og.field_q[tc.field_c].a(-28750);
                     break L7;
                   } else {
@@ -1422,15 +1306,12 @@ public final class Geoblox extends wf {
     }
 
     private final void q(int param0) {
-        if (ll.field_f.a(param0 + -2)) {
+        if (ll.field_f.a(0)) {
             if (!(ll.field_f.a("baking", (byte) -125))) {
                 return;
             }
             hi.field_F = ug.a("baking_foreground", ll.field_f, (byte) -78, "baking");
-            if (param0 != 2) {
-                return;
-            }
-            ca.field_g = jg.a(ll.field_f, param0 + -1, "baking", "baking_background");
+            ca.field_g = jg.a(ll.field_f, 1, "baking", "baking_background");
             ll.field_g[4] = true;
             return;
         }
@@ -1443,9 +1324,6 @@ public final class Geoblox extends wf {
             }
             fl.field_a = ug.a("space_foreground", ll.field_f, (byte) -78, "space");
             df.field_a = jg.a(ll.field_f, 1, "space", "space_background");
-            if (param0) {
-                return;
-            }
             ll.field_g[6] = true;
             return;
         }
@@ -1457,7 +1335,7 @@ public final class Geoblox extends wf {
             ak.field_b = null;
             ih.b(-105);
         }
-        ll.field_f = je.a(1, true, param0, true, (byte) -111);
+        ll.field_f = je.a(1, true, false, true, (byte) -111);
         wj.field_F = kk.a(2, (byte) -62);
         ah.field_c = kk.a(3, (byte) -62);
         cd.field_m = kk.a(4, (byte) -62);
@@ -1477,7 +1355,7 @@ public final class Geoblox extends wf {
           var2 = 0;
           var3 = gb.field_f;
           if (var3 >= 5) {
-            if ((var3 ^ -1) > -106) {
+            if (var3 < 105) {
               var2 = (-40960 + 16384 * var3) / 220;
               break L0;
             } else {
@@ -1497,7 +1375,7 @@ public final class Geoblox extends wf {
         L1: {
           var4 = 1;
           var5 = 0;
-          if (-2 != (param1 ^ -1)) {
+          if (param1 != 1) {
             break L1;
           } else {
             var5 = 1;
@@ -1522,7 +1400,7 @@ public final class Geoblox extends wf {
           }
         }
         L4: {
-          if ((param1 ^ -1) == -6) {
+          if (param1 == 5) {
             var5 = 1;
             var4 = -1;
             break L4;
@@ -1556,7 +1434,7 @@ public final class Geoblox extends wf {
           break L6;
         }
         L8: {
-          if (-12 == (param1 ^ -1)) {
+          if (param1 == 11) {
             var4 = -1;
             break L8;
           } else {
@@ -1564,7 +1442,7 @@ public final class Geoblox extends wf {
           }
         }
         L9: {
-          if ((param1 ^ -1) != -13) {
+          if (param1 != 12) {
             break L9;
           } else {
             var5 = -1;
@@ -1573,7 +1451,7 @@ public final class Geoblox extends wf {
           }
         }
         L10: {
-          if (param1 == -14) {
+          if (param1 == 13) {
             var5 = -1;
             var4 = 1;
             break L10;
@@ -1582,7 +1460,7 @@ public final class Geoblox extends wf {
           }
         }
         L11: {
-          if (-15 != param1) {
+          if (param1 != 14) {
             break L11;
           } else {
             var4 = -1;
@@ -1591,7 +1469,7 @@ public final class Geoblox extends wf {
           }
         }
         L12: {
-          if (-16 == (param1 ^ -1)) {
+          if (param1 == 15) {
             var4 = 1;
             var5 = 1;
             break L12;
@@ -1635,9 +1513,6 @@ public final class Geoblox extends wf {
                 return;
             }
             lb.field_d = ug.a("sweets_foreground", ll.field_f, (byte) -78, "sweets");
-            if (param0 != 7) {
-                return;
-            }
             pi.field_O = jg.a(ll.field_f, 1, "sweets", "sweets_background");
             ll.field_g[2] = true;
             return;

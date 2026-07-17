@@ -27,33 +27,34 @@ final class la {
         field_a = null;
         field_f = null;
         field_e = null;
-        if (param0 > -96) {
-            return;
-        }
         field_k = null;
     }
 
     final void a(int param0, int param1) {
-        int var3 = ug.a(param0 ^ -2943, ((la) this).field_g >> -194384432);
-        int var4 = lf.a((byte) -123, ((la) this).field_b >> -1202993712);
-        int var5 = -var3 + ug.a(param0 ^ param0, ((la) this).field_i >> -1383202992);
-        int var6 = -var4 + lf.a((byte) -117, ((la) this).field_h >> 752504496);
+        int var3 = ug.a(param0 ^ -2943, ((la) this).field_g >> 16);
+        int var4 = lf.a((byte) -123, ((la) this).field_b >> 16);
+        int var5 = -var3 + ug.a(param0 ^ param0, ((la) this).field_i >> 16);
+        int var6 = -var4 + lf.a((byte) -117, ((la) this).field_h >> 16);
         on.a(var3, var4, var5, var6, param1, 50);
         on.e(var3, var4, var5, var6, param1);
     }
 
     final static void a(nu param0, int param1) {
-        ja.field_O = true;
-        et.field_d = param0;
-        if (!(null != ss.field_b)) {
-            ss.field_b = gt.c(0);
+        try {
+            ja.field_O = true;
+            et.field_d = param0;
+            if (!(null != ss.field_b)) {
+                ss.field_b = gt.c(0);
+            }
+            ld.field_f = (gm) (Object) et.field_d.field_P[0][3];
+            fc.field_c = (gm) (Object) et.field_d.field_P[0][4];
+            mc.field_a = 0;
+            cq.field_g = 640;
+            mh.field_k = (gm) (Object) et.field_d.field_P[0][1];
+            jw.c(1, false);
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "la.F(" + (param0 != null ? "{...}" : "null") + 44 + 0 + 41);
         }
-        ld.field_f = (gm) (Object) et.field_d.field_P[0][3];
-        fc.field_c = (gm) (Object) et.field_d.field_P[0][4];
-        mc.field_a = 0;
-        cq.field_g = 640;
-        mh.field_k = (gm) (Object) et.field_d.field_P[param1][1];
-        jw.c(1, false);
     }
 
     final boolean a(int param0, int param1, int param2, int param3) {
@@ -202,18 +203,15 @@ final class la {
 
     final static void a(boolean param0) {
         ad.a(gk.field_h, (byte) -49);
-        if (!param0) {
-            field_e = null;
-        }
     }
 
     la(int param0, int param1, int param2, int param3, int param4, int param5) {
-        ((la) this).field_i = param2 << 820907312;
-        ((la) this).field_j = param5 << 1476908624;
-        ((la) this).field_h = param3 << 496060240;
-        ((la) this).field_l = param4 << 1895260048;
-        ((la) this).field_b = param1 << 703166480;
-        ((la) this).field_g = param0 << -1165831440;
+        ((la) this).field_i = param2 << 16;
+        ((la) this).field_j = param5 << 16;
+        ((la) this).field_h = param3 << 16;
+        ((la) this).field_l = param4 << 16;
+        ((la) this).field_b = param1 << 16;
+        ((la) this).field_g = param0 << 16;
     }
 
     static {

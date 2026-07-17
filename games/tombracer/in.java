@@ -13,7 +13,7 @@ final class in {
         var3 = TombRacer.field_G ? 1 : 0;
         if (param0 != -30600) {
           in.a(118, false);
-          if ((wla.field_ub ^ -1) >= -1) {
+          if (wla.field_ub <= 0) {
             if (vpa.a(9)) {
               L0: {
                 var2 = 0;
@@ -109,7 +109,7 @@ final class in {
             }
           }
         } else {
-          if ((wla.field_ub ^ -1) >= -1) {
+          if (wla.field_ub <= 0) {
             if (vpa.a(9)) {
               var2 = 0;
               if (wba.field_o == null) {
@@ -205,29 +205,86 @@ final class in {
     }
 
     public static void a(boolean param0) {
-        if (!param0) {
-            in.a(true);
-            field_a = null;
-            return;
-        }
         field_a = null;
     }
 
     final static boolean a(String param0, int param1) {
-        if (param1 != 480) {
-            return false;
+        RuntimeException var2 = null;
+        int stackIn_2_0 = 0;
+        boolean stackIn_4_0 = false;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        boolean stackOut_3_0 = false;
+        int stackOut_1_0 = 0;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            if (param1 == 480) {
+              stackOut_3_0 = qi.a(30054, param0, qt.class);
+              stackIn_4_0 = stackOut_3_0;
+              break L0;
+            } else {
+              stackOut_1_0 = 0;
+              stackIn_2_0 = stackOut_1_0;
+              return stackIn_2_0 != 0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var2 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var2;
+            stackOut_5_1 = new StringBuilder().append("in.E(");
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param0 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L1;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L1;
+            }
+          }
+          throw tba.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param1 + 41);
         }
-        return qi.a(30054, param0, qt.class);
+        return stackIn_4_0;
     }
 
     final char b(int param0) {
         if (param0 != 21098) {
-          String discarded$2 = ((in) this).toString();
+          String discarded$6 = ((in) this).toString();
+          int fieldTemp$7 = ((in) this).field_b;
           ((in) this).field_b = ((in) this).field_b + 1;
-          return ((in) this).field_c.charAt(((in) this).field_b);
+          return ((in) this).field_c.charAt(fieldTemp$7);
         } else {
+          int fieldTemp$8 = ((in) this).field_b;
           ((in) this).field_b = ((in) this).field_b + 1;
-          return ((in) this).field_c.charAt(((in) this).field_b);
+          return ((in) this).field_c.charAt(fieldTemp$8);
         }
     }
 
@@ -367,8 +424,12 @@ final class in {
 
     in(String param0) {
         ((in) this).field_b = 0;
-        ((in) this).field_c = param0;
-        ((in) this).field_d = ((in) this).field_c.length();
+        try {
+            ((in) this).field_c = param0;
+            ((in) this).field_d = ((in) this).field_c.length();
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "in.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

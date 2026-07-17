@@ -11,35 +11,15 @@ final class ff extends bh {
     int field_q;
 
     public static void a(int param0) {
-        if (param0 > -5) {
-            return;
-        }
         field_o = null;
     }
 
     final static void a(boolean param0, int param1) {
-        L0: {
-          if (null == kb.field_i) {
-            break L0;
-          } else {
-            if (kb.field_i.b(-1, param0)) {
-              kb.field_i = null;
-              break L0;
-            } else {
-              if (param1 == 10891) {
+        if (null != kb.field_i) {
+            if (!kb.field_i.b(-1, param0)) {
                 return;
-              } else {
-                field_o = null;
-                return;
-              }
             }
-          }
-        }
-        if (param1 != 10891) {
-          field_o = null;
-          return;
-        } else {
-          return;
+            kb.field_i = null;
         }
     }
 

@@ -210,12 +210,12 @@ class oa {
     }
 
     private final void a(int param0) {
-        ((oa) this).field_m = ((oa) this).field_m - param0;
+        ((oa) this).field_m = ((oa) this).field_m - 256;
         if (((oa) this).field_m < 0) {
             ((oa) this).field_m = 0;
         }
         if (((oa) this).field_i != null) {
-            ((oa) this).field_i.d(param0);
+            ((oa) this).field_i.d(256);
             return;
         }
     }
@@ -472,7 +472,7 @@ class oa {
                 }
               }
               field_k = stackIn_7_0 != 0;
-              field_o = param2;
+              field_o = 10;
               return;
             } else {
               break L0;
@@ -500,7 +500,7 @@ class oa {
         wh var15 = null;
         int var15_int = 0;
         L0: {
-          var3 = param1;
+          var3 = 256;
           if (!field_k) {
             break L0;
           } else {
@@ -510,7 +510,7 @@ class oa {
         }
         L1: {
           pd.a(param0, 0, var3);
-          ((oa) this).field_m = ((oa) this).field_m - param1;
+          ((oa) this).field_m = ((oa) this).field_m - 256;
           if (((oa) this).field_i == null) {
             break L1;
           } else {
@@ -544,7 +544,7 @@ class oa {
                       if (var9 != 0) {
                         L6: {
                           if ((var9 & 1) != 0) {
-                            var5 = var5 & (1 << var7_int ^ -1);
+                            var5 = var5 & ~(1 << var7_int);
                             var10 = null;
                             var11 = ((oa) this).field_j[var7_int];
                             var14 = var11;
@@ -677,7 +677,7 @@ class oa {
           if (((oa) this).field_i == null) {
             break L17;
           } else {
-            ((oa) this).field_i.a(param0, 0, param1);
+            ((oa) this).field_i.a(param0, 0, 256);
             break L17;
           }
         }

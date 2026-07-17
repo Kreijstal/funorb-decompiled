@@ -10,25 +10,29 @@ final class wb {
     static String field_f;
 
     final static void a(boolean param0, java.applet.Applet param1) {
-        aj.a(param1, -18788, "");
-        if (param0) {
-            wb.a((byte) 31);
+        try {
+            aj.a(param1, -18788, "");
+            if (param0) {
+                wb.a((byte) 31);
+            }
             gg.a(param1, (byte) -85);
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw wm.a((Throwable) (Object) runtimeException, "wb.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        gg.a(param1, (byte) -85);
     }
 
     final static void a(ea param0, int param1, byte param2) {
         oq var3 = null;
         if (param2 != -96) {
-          return;
-        } else {
-          var3 = ej.field_j;
-          var3.b(false, param1);
-          var3.a(param0.field_s, false);
-          var3.a(param0.field_o, false);
-          return;
+            return;
+        }
+        try {
+            var3 = ej.field_j;
+            var3.b(false, param1);
+            var3.a(param0.field_s, false);
+            var3.a(param0.field_o, false);
+        } catch (RuntimeException runtimeException) {
+            throw wm.a((Throwable) (Object) runtimeException, "wb.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }
     }
 

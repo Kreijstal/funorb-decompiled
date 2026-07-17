@@ -22,27 +22,8 @@ abstract class ht implements ft {
     }
 
     private final int b(boolean param0) {
-        int var2 = 0;
-        int stackIn_4_0 = 0;
-        int stackOut_3_0 = 0;
-        int stackOut_2_0 = 0;
-        var2 = ((ht) this).field_d.d(((ht) this).field_a, -120) * ((ht) this).field_g;
-        if (param0) {
-          return -30;
-        } else {
-          L0: {
-            if (!((ht) this).field_f) {
-              stackOut_3_0 = var2;
-              stackIn_4_0 = stackOut_3_0;
-              break L0;
-            } else {
-              stackOut_2_0 = var2 * 4 / 3;
-              stackIn_4_0 = stackOut_2_0;
-              break L0;
-            }
-          }
-          return stackIn_4_0;
-        }
+        int var2 = ((ht) this).field_d.d(((ht) this).field_a, -120) * ((ht) this).field_g;
+        return ((ht) this).field_f ? var2 * 4 / 3 : var2;
     }
 
     final boolean a(boolean param0) {
@@ -229,107 +210,184 @@ abstract class ht implements ft {
     }
 
     final static oh a(qj[] param0, on param1, byte param2) {
+        RuntimeException var3 = null;
         int var3_int = 0;
-        long var3 = 0L;
+        long var3_long = 0L;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        byte[] var12 = null;
-        byte[] var13 = null;
+        byte[] var11 = null;
+        Object stackIn_25_0 = null;
+        oh stackIn_27_0 = null;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
+        RuntimeException stackIn_31_0 = null;
+        StringBuilder stackIn_31_1 = null;
+        String stackIn_31_2 = null;
+        RuntimeException stackIn_32_0 = null;
+        StringBuilder stackIn_32_1 = null;
+        RuntimeException stackIn_33_0 = null;
+        StringBuilder stackIn_33_1 = null;
+        RuntimeException stackIn_34_0 = null;
+        StringBuilder stackIn_34_1 = null;
+        String stackIn_34_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        Object stackOut_24_0 = null;
+        oh stackOut_26_0 = null;
+        RuntimeException stackOut_28_0 = null;
+        StringBuilder stackOut_28_1 = null;
+        RuntimeException stackOut_30_0 = null;
+        StringBuilder stackOut_30_1 = null;
+        String stackOut_30_2 = null;
+        RuntimeException stackOut_29_0 = null;
+        StringBuilder stackOut_29_1 = null;
+        String stackOut_29_2 = null;
+        RuntimeException stackOut_31_0 = null;
+        StringBuilder stackOut_31_1 = null;
+        RuntimeException stackOut_33_0 = null;
+        StringBuilder stackOut_33_1 = null;
+        String stackOut_33_2 = null;
+        RuntimeException stackOut_32_0 = null;
+        StringBuilder stackOut_32_1 = null;
+        String stackOut_32_2 = null;
         var6 = Sumoblitz.field_L ? 1 : 0;
-        var3_int = 0;
-        L0: while (true) {
-          if (param0.length <= var3_int) {
-            var4 = 12 % ((param2 - 40) / 55);
-            var3 = jaggl.OpenGL.glCreateProgramObjectARB();
-            var5 = 0;
+        try {
+          L0: {
+            var3_int = 0;
             L1: while (true) {
-              if (param0.length <= var5) {
-                jaggl.OpenGL.glLinkProgramARB(var3);
-                jaggl.OpenGL.glGetObjectParameterivARB(var3, 35714, kh.field_b, 0);
-                if (kh.field_b[0] == 0) {
-                  if (kh.field_b[0] != 0) {
-                    L2: {
-                      jaggl.OpenGL.glGetObjectParameterivARB(var3, 35716, kh.field_b, 1);
-                      if (kh.field_b[1] > 1) {
-                        var13 = new byte[kh.field_b[1]];
-                        jaggl.OpenGL.glGetInfoLogARB(var3, kh.field_b[1], kh.field_b, 0, var13, 0);
-                        System.out.println(new String(var13));
-                        break L2;
-                      } else {
-                        break L2;
-                      }
-                    }
-                    if (-1 != (kh.field_b[0] ^ -1)) {
-                      return new oh(param1, var3, param0);
-                    } else {
-                      var7 = 0;
-                      var5 = var7;
-                      L3: while (true) {
-                        if (param0.length <= var7) {
-                          jaggl.OpenGL.glDeleteObjectARB(var3);
-                          return null;
-                        } else {
-                          jaggl.OpenGL.glDetachObjectARB(var3, param0[var7].field_a);
-                          var7++;
-                          continue L3;
+              if (param0.length <= var3_int) {
+                var4 = 0;
+                var3_long = jaggl.OpenGL.glCreateProgramObjectARB();
+                var5 = 0;
+                L2: while (true) {
+                  if (param0.length <= var5) {
+                    L3: {
+                      jaggl.OpenGL.glLinkProgramARB(var3_long);
+                      jaggl.OpenGL.glGetObjectParameterivARB(var3_long, 35714, kh.field_b, 0);
+                      if (kh.field_b[0] == 0) {
+                        L4: {
+                          if (kh.field_b[0] != 0) {
+                            break L4;
+                          } else {
+                            System.out.println("Shader linking failed:");
+                            break L4;
+                          }
                         }
+                        L5: {
+                          jaggl.OpenGL.glGetObjectParameterivARB(var3_long, 35716, kh.field_b, 1);
+                          if (kh.field_b[1] > 1) {
+                            var11 = new byte[kh.field_b[1]];
+                            jaggl.OpenGL.glGetInfoLogARB(var3_long, kh.field_b[1], kh.field_b, 0, var11, 0);
+                            System.out.println(new String(var11));
+                            break L5;
+                          } else {
+                            break L5;
+                          }
+                        }
+                        if (kh.field_b[0] == 0) {
+                          var7 = 0;
+                          var5 = var7;
+                          L6: while (true) {
+                            if (param0.length <= var7) {
+                              jaggl.OpenGL.glDeleteObjectARB(var3_long);
+                              stackOut_24_0 = null;
+                              stackIn_25_0 = stackOut_24_0;
+                              return (oh) (Object) stackIn_25_0;
+                            } else {
+                              jaggl.OpenGL.glDetachObjectARB(var3_long, param0[var7].field_a);
+                              var7++;
+                              continue L6;
+                            }
+                          }
+                        } else {
+                          break L3;
+                        }
+                      } else {
+                        break L3;
                       }
                     }
+                    stackOut_26_0 = new oh(param1, var3_long, param0);
+                    stackIn_27_0 = stackOut_26_0;
+                    break L0;
                   } else {
-                    L4: {
-                      System.out.println("Shader linking failed:");
-                      jaggl.OpenGL.glGetObjectParameterivARB(var3, 35716, kh.field_b, 1);
-                      if (kh.field_b[1] > 1) {
-                        var12 = new byte[kh.field_b[1]];
-                        jaggl.OpenGL.glGetInfoLogARB(var3, kh.field_b[1], kh.field_b, 0, var12, 0);
-                        System.out.println(new String(var12));
-                        break L4;
-                      } else {
-                        break L4;
-                      }
-                    }
-                    if (-1 == (kh.field_b[0] ^ -1)) {
-                      var7 = 0;
-                      var5 = var7;
-                      L5: while (true) {
-                        if (param0.length <= var7) {
-                          jaggl.OpenGL.glDeleteObjectARB(var3);
-                          return null;
-                        } else {
-                          jaggl.OpenGL.glDetachObjectARB(var3, param0[var7].field_a);
-                          var7++;
-                          continue L5;
-                        }
-                      }
-                    } else {
-                      return new oh(param1, var3, param0);
-                    }
+                    jaggl.OpenGL.glAttachObjectARB(var3_long, param0[var5].field_a);
+                    var5++;
+                    continue L2;
                   }
-                } else {
-                  return new oh(param1, var3, param0);
                 }
               } else {
-                jaggl.OpenGL.glAttachObjectARB(var3, param0[var5].field_a);
-                var5++;
-                continue L1;
+                if (param0[var3_int] != null) {
+                  if (param0[var3_int].field_a > 0L) {
+                    var3_int++;
+                    continue L1;
+                  } else {
+                    return null;
+                  }
+                } else {
+                  return null;
+                }
               }
-            }
-          } else {
-            if (param0[var3_int] != null) {
-              if (param0[var3_int].field_a > 0L) {
-                var3_int++;
-                var3_int++;
-                continue L0;
-              } else {
-                return null;
-              }
-            } else {
-              return null;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L7: {
+            var3 = decompiledCaughtException;
+            stackOut_28_0 = (RuntimeException) var3;
+            stackOut_28_1 = new StringBuilder().append("ht.P(");
+            stackIn_30_0 = stackOut_28_0;
+            stackIn_30_1 = stackOut_28_1;
+            stackIn_29_0 = stackOut_28_0;
+            stackIn_29_1 = stackOut_28_1;
+            if (param0 == null) {
+              stackOut_30_0 = (RuntimeException) (Object) stackIn_30_0;
+              stackOut_30_1 = (StringBuilder) (Object) stackIn_30_1;
+              stackOut_30_2 = "null";
+              stackIn_31_0 = stackOut_30_0;
+              stackIn_31_1 = stackOut_30_1;
+              stackIn_31_2 = stackOut_30_2;
+              break L7;
+            } else {
+              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
+              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
+              stackOut_29_2 = "{...}";
+              stackIn_31_0 = stackOut_29_0;
+              stackIn_31_1 = stackOut_29_1;
+              stackIn_31_2 = stackOut_29_2;
+              break L7;
+            }
+          }
+          L8: {
+            stackOut_31_0 = (RuntimeException) (Object) stackIn_31_0;
+            stackOut_31_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_31_2).append(44);
+            stackIn_33_0 = stackOut_31_0;
+            stackIn_33_1 = stackOut_31_1;
+            stackIn_32_0 = stackOut_31_0;
+            stackIn_32_1 = stackOut_31_1;
+            if (param1 == null) {
+              stackOut_33_0 = (RuntimeException) (Object) stackIn_33_0;
+              stackOut_33_1 = (StringBuilder) (Object) stackIn_33_1;
+              stackOut_33_2 = "null";
+              stackIn_34_0 = stackOut_33_0;
+              stackIn_34_1 = stackOut_33_1;
+              stackIn_34_2 = stackOut_33_2;
+              break L8;
+            } else {
+              stackOut_32_0 = (RuntimeException) (Object) stackIn_32_0;
+              stackOut_32_1 = (StringBuilder) (Object) stackIn_32_1;
+              stackOut_32_2 = "{...}";
+              stackIn_34_0 = stackOut_32_0;
+              stackIn_34_1 = stackOut_32_1;
+              stackIn_34_2 = stackOut_32_2;
+              break L8;
+            }
+          }
+          throw qo.a((Throwable) (Object) stackIn_34_0, stackIn_34_2 + 44 + 109 + 41);
         }
+        return stackIn_27_0;
     }
 
     private final void b(int param0) {
@@ -601,22 +659,23 @@ abstract class ht implements ft {
     }
 
     final static lj c(boolean param0) {
-        if (!param0) {
-            return null;
-        }
         return new lj(of.c(100), bt.b(77));
     }
 
     ht(fr param0, int param1, int param2, int param3, boolean param4) {
         ((ht) this).field_i = false;
-        ((ht) this).field_g = param3;
-        ((ht) this).field_a = param2;
-        ((ht) this).field_f = param4 ? true : false;
-        ((ht) this).field_d = param0;
-        ((ht) this).field_c = param1;
-        jaggl.OpenGL.glGenTextures(1, hg.field_m, 0);
-        ((ht) this).field_j = hg.field_m[0];
-        this.a((byte) 78, 0);
+        try {
+            ((ht) this).field_g = param3;
+            ((ht) this).field_a = param2;
+            ((ht) this).field_f = param4 ? true : false;
+            ((ht) this).field_d = param0;
+            ((ht) this).field_c = param1;
+            jaggl.OpenGL.glGenTextures(1, hg.field_m, 0);
+            ((ht) this).field_j = hg.field_m[0];
+            this.a((byte) 78, 0);
+        } catch (RuntimeException runtimeException) {
+            throw qo.a((Throwable) (Object) runtimeException, "ht.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
+        }
     }
 
     static {

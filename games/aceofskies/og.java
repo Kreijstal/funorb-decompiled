@@ -9,7 +9,7 @@ final class og extends ib implements qi {
     private jagdx.IDirect3DTexture field_i;
 
     public final void a(ke param0, int param1) {
-        this.a(param0, param1);
+        super.a(param0, param1);
     }
 
     public final void a(byte param0) {
@@ -89,7 +89,7 @@ final class og extends ib implements qi {
               stackIn_2_1 = stackOut_1_1;
               stackIn_2_2 = stackOut_1_2;
               stackIn_2_3 = stackOut_1_3;
-              if (!((kr) param0).field_Gc) {
+              if (!param0.field_Gc) {
                 break L1;
               } else {
                 stackOut_2_0 = this;
@@ -160,6 +160,7 @@ final class og extends ib implements qi {
               L6: while (true) {
                 if (param3 <= var12) {
                   boolean discarded$3 = ((og) this).field_i.UnlockRect(0);
+                  return;
                 } else {
                   var13.a(param5, param6 + param7 * var12, var11 * var12, param2);
                   var12++;
@@ -176,6 +177,7 @@ final class og extends ib implements qi {
                 L7: while (true) {
                   if (param3 <= var12) {
                     boolean discarded$5 = ((og) this).field_i.UnlockRect(0);
+                    return;
                   } else {
                     var13.a(param5, param6 + param7 * var12, var11 * var12, param2);
                     var12++;
@@ -219,7 +221,7 @@ final class og extends ib implements qi {
 
     public final float a(float param0, byte param1) {
         if (param1 != -32) {
-          ((og) this).field_i = (jagdx.IDirect3DTexture) null;
+          ((og) this).field_i = null;
           return param0 / (float)((og) this).field_h;
         } else {
           return param0 / (float)((og) this).field_h;
@@ -316,7 +318,7 @@ final class og extends ib implements qi {
               stackIn_2_1 = stackOut_1_1;
               stackIn_2_2 = stackOut_1_2;
               stackIn_2_3 = stackOut_1_3;
-              if (!((kr) param0).field_Gc) {
+              if (!param0.field_Gc) {
                 break L1;
               } else {
                 stackOut_2_0 = this;
@@ -368,6 +370,7 @@ final class og extends ib implements qi {
         var12 = ((og) this).field_c.field_Ec;
         var9 = ((og) this).field_i.LockRect(0, 0, 0, param1, param2, 0, var12);
         if (!jagdx.gf.a((byte) 104, var9)) {
+          return;
         } else {
           L4: {
             if (0 != param6) {
@@ -382,11 +385,13 @@ final class og extends ib implements qi {
             if (param1 == param6) {
               var12.a(param4, param5, 0, param2 * param1);
               boolean discarded$3 = ((og) this).field_i.UnlockRect(0);
+              return;
             } else {
               var11 = 0;
               L5: while (true) {
                 if (param2 <= var11) {
                   boolean discarded$4 = ((og) this).field_i.UnlockRect(0);
+                  return;
                 } else {
                   var12.a(param4, param6 * var11 + param5, var10 * var11, param1);
                   var11++;
@@ -399,6 +404,7 @@ final class og extends ib implements qi {
             L6: while (true) {
               if (param2 <= var11) {
                 boolean discarded$5 = ((og) this).field_i.UnlockRect(0);
+                return;
               } else {
                 var12.a(param4, param6 * var11 + param5, var10 * var11, param1);
                 var11++;

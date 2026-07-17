@@ -12,7 +12,7 @@ final class pc {
         field_a = null;
         field_d = null;
         field_b = null;
-        int var1 = -35 % ((77 - param0) / 35);
+        int var1 = 0;
     }
 
     static {
@@ -33,7 +33,7 @@ final class pc {
             var0 = var1;
             var2 = 0;
             L1: while (true) {
-              if ((var2 ^ -1) <= -9) {
+              if (var2 >= 8) {
                 field_b[var1] = var0;
                 var1++;
                 continue L0;
@@ -43,7 +43,7 @@ final class pc {
                   var2++;
                   continue L1;
                 } else {
-                  var0 = -306674912 ^ var0 >>> 1567166081;
+                  var0 = -306674912 ^ var0 >>> 1;
                   var2++;
                   continue L1;
                 }

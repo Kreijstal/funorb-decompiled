@@ -12,49 +12,100 @@ final class cq extends am {
     private int field_t;
 
     final void a(fj param0, int param1, int param2) {
-        int var4 = 0;
+        RuntimeException var4 = null;
+        int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
-        L0: {
-          var6 = Torquing.field_u;
-          if (param1 == 35) {
-            break L0;
-          } else {
-            ((cq) this).field_x = -23;
-            break L0;
-          }
-        }
-        L1: {
-          var5 = param2;
-          if (-1 == (var5 ^ -1)) {
-            ((cq) this).field_s = param0.i(7088);
-            break L1;
-          } else {
-            if (var5 != 1) {
-              if (2 == var5) {
-                ((cq) this).field_t = param0.i(7088);
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        String stackIn_20_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        var6 = Torquing.field_u;
+        try {
+          L0: {
+            L1: {
+              if (param1 == 35) {
                 break L1;
               } else {
-                if (-4 != (var5 ^ -1)) {
-                  if (var5 == 4) {
-                    var4 = param0.e((byte) 62);
-                    ((cq) this).field_z[0] = ie.a(var4 << -1608898396, 267386880);
-                    ((cq) this).field_z[1] = ie.a(4080, var4 >> 734328804);
-                    ((cq) this).field_z[2] = ie.a(255, var4) >> -698708980;
-                    break L1;
+                ((cq) this).field_x = -23;
+                break L1;
+              }
+            }
+            L2: {
+              var5 = param2;
+              if (var5 == 0) {
+                ((cq) this).field_s = param0.i(7088);
+                break L2;
+              } else {
+                if (var5 != 1) {
+                  if (2 == var5) {
+                    ((cq) this).field_t = param0.i(7088);
+                    break L2;
                   } else {
-                    break L1;
+                    if (var5 != 3) {
+                      if (var5 == 4) {
+                        var4_int = param0.e((byte) 62);
+                        ((cq) this).field_z[0] = ie.a(var4_int << 4, 267386880);
+                        ((cq) this).field_z[1] = ie.a(4080, var4_int >> 4);
+                        ((cq) this).field_z[2] = ie.a(255, var4_int) >> 12;
+                        break L2;
+                      } else {
+                        break L2;
+                      }
+                    } else {
+                      ((cq) this).field_v = param0.i(7088);
+                      break L2;
+                    }
                   }
                 } else {
-                  ((cq) this).field_v = param0.i(7088);
-                  break L1;
+                  ((cq) this).field_x = param0.i(7088);
+                  break L2;
                 }
               }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var4 = decompiledCaughtException;
+            stackOut_17_0 = (RuntimeException) var4;
+            stackOut_17_1 = new StringBuilder().append("cq.H(");
+            stackIn_19_0 = stackOut_17_0;
+            stackIn_19_1 = stackOut_17_1;
+            stackIn_18_0 = stackOut_17_0;
+            stackIn_18_1 = stackOut_17_1;
+            if (param0 == null) {
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "null";
+              stackIn_20_0 = stackOut_19_0;
+              stackIn_20_1 = stackOut_19_1;
+              stackIn_20_2 = stackOut_19_2;
+              break L3;
             } else {
-              ((cq) this).field_x = param0.i(7088);
-              break L1;
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "{...}";
+              stackIn_20_0 = stackOut_18_0;
+              stackIn_20_1 = stackOut_18_1;
+              stackIn_20_2 = stackOut_18_2;
+              break L3;
             }
           }
+          throw rb.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + param1 + 44 + param2 + 41);
         }
     }
 
@@ -70,30 +121,80 @@ final class cq extends am {
         try {
             java.net.URL var2 = null;
             Exception var2_ref = null;
+            RuntimeException var2_ref2 = null;
             Object var3 = null;
+            RuntimeException stackIn_6_0 = null;
+            StringBuilder stackIn_6_1 = null;
+            RuntimeException stackIn_7_0 = null;
+            StringBuilder stackIn_7_1 = null;
+            RuntimeException stackIn_8_0 = null;
+            StringBuilder stackIn_8_1 = null;
+            String stackIn_8_2 = null;
             Throwable decompiledCaughtException = null;
+            RuntimeException stackOut_5_0 = null;
+            StringBuilder stackOut_5_1 = null;
+            RuntimeException stackOut_7_0 = null;
+            StringBuilder stackOut_7_1 = null;
+            String stackOut_7_2 = null;
+            RuntimeException stackOut_6_0 = null;
+            StringBuilder stackOut_6_1 = null;
+            String stackOut_6_2 = null;
             try {
               L0: {
-                L1: {
-                  var2 = new java.net.URL(param1.getCodeBase(), "subscribe.ws");
-                  param1.getAppletContext().showDocument(og.a(var2, param1, (byte) -122), "_top");
-                  if (param0) {
+                try {
+                  L1: {
+                    L2: {
+                      var2 = new java.net.URL(param1.getCodeBase(), "subscribe.ws");
+                      param1.getAppletContext().showDocument(og.a(var2, param1, (byte) -122), "_top");
+                      if (param0) {
+                        break L2;
+                      } else {
+                        var3 = null;
+                        cq.a(false, (java.applet.Applet) null);
+                        break L2;
+                      }
+                    }
                     break L1;
-                  } else {
-                    var3 = null;
-                    cq.a(false, (java.applet.Applet) null);
-                    break L1;
+                  }
+                } catch (java.lang.Exception decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  L3: {
+                    var2_ref = (Exception) (Object) decompiledCaughtException;
+                    var2_ref.printStackTrace();
+                    break L3;
                   }
                 }
                 break L0;
               }
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              L2: {
-                var2_ref = (Exception) (Object) decompiledCaughtException;
-                var2_ref.printStackTrace();
-                break L2;
+            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L4: {
+                var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_5_0 = (RuntimeException) var2_ref2;
+                stackOut_5_1 = new StringBuilder().append("cq.C(").append(param0).append(44);
+                stackIn_7_0 = stackOut_5_0;
+                stackIn_7_1 = stackOut_5_1;
+                stackIn_6_0 = stackOut_5_0;
+                stackIn_6_1 = stackOut_5_1;
+                if (param1 == null) {
+                  stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+                  stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+                  stackOut_7_2 = "null";
+                  stackIn_8_0 = stackOut_7_0;
+                  stackIn_8_1 = stackOut_7_1;
+                  stackIn_8_2 = stackOut_7_2;
+                  break L4;
+                } else {
+                  stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+                  stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+                  stackOut_6_2 = "{...}";
+                  stackIn_8_0 = stackOut_6_0;
+                  stackIn_8_1 = stackOut_6_1;
+                  stackIn_8_2 = stackOut_6_2;
+                  break L4;
+                }
               }
+              throw rb.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -212,7 +313,7 @@ final class cq extends am {
                     L5: {
                       var15 = var47[var11];
                       var12 = -((cq) this).field_z[2] + var15;
-                      if (-1 >= (var12 ^ -1)) {
+                      if (var12 >= 0) {
                         break L5;
                       } else {
                         var12 = -var12;
@@ -220,9 +321,9 @@ final class cq extends am {
                       }
                     }
                     if (((cq) this).field_s >= var12) {
-                      var8[var11] = ((cq) this).field_v * var13 >> -537926708;
-                      var9[var11] = var14 * ((cq) this).field_t >> -1339901236;
-                      var10[var11] = ((cq) this).field_x * var15 >> 1015642764;
+                      var8[var11] = ((cq) this).field_v * var13 >> 12;
+                      var9[var11] = var14 * ((cq) this).field_t >> 12;
+                      var10[var11] = ((cq) this).field_x * var15 >> 12;
                       var11++;
                       continue L2;
                     } else {
@@ -250,17 +351,35 @@ final class cq extends am {
     }
 
     final static int a(int param0, int param1, byte param2) {
-        int var4 = Torquing.field_u;
-        if (param2 <= 119) {
-            return -88;
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        int stackIn_7_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_6_0 = 0;
+        var4 = Torquing.field_u;
+        try {
+          L0: {
+            var3_int = 0;
+            L1: while (true) {
+              if (param1 <= 0) {
+                stackOut_6_0 = var3_int;
+                stackIn_7_0 = stackOut_6_0;
+                break L0;
+              } else {
+                var3_int = 1 & param0 | var3_int << 1;
+                param0 = param0 >>> 1;
+                param1--;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw rb.a((Throwable) (Object) var3, "cq.D(" + param0 + 44 + param1 + 44 + 125 + 41);
         }
-        int var3 = 0;
-        while (param1 > 0) {
-            var3 = 1 & param0 | var3 << -526281919;
-            param0 = param0 >>> 1;
-            param1--;
-        }
-        return var3;
+        return stackIn_7_0;
     }
 
     public cq() {

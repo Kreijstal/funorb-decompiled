@@ -26,7 +26,7 @@ final class fv {
 
     final void a(int param0) {
         int var2 = 0;
-        ha var3_ref = null;
+        ha var3_ref_ha = null;
         int var3 = 0;
         int var4_int = 0;
         nh var4 = null;
@@ -36,26 +36,26 @@ final class fv {
         nh[] var8 = null;
         L0: {
           var2 = ((fv) this).field_h.b((byte) -75).a(param0 ^ 28, ((fv) this).field_f);
-          var3_ref = tga.field_a;
+          var3_ref_ha = tga.field_a;
           var4_int = ((fv) this).field_g;
           var5 = ((fv) this).field_c;
           var6 = ((fv) this).field_j;
           var7 = ((fv) this).field_i;
           var8 = dr.field_a;
-          tra.a(1, var8, (byte) -51, var4_int, var3_ref, var6, param0, var7, var5, 0);
+          tra.a(1, var8, (byte) -51, var4_int, var3_ref_ha, var6, param0, var7, var5, 0);
           if (var2 == -1) {
             break L0;
           } else {
             var3 = bta.field_n[var2];
             var4 = eca.field_c[var3];
-            var4.a((((fv) this).field_j >> -1388118751) + ((fv) this).field_g - (var4.a() >> 578394689), (((fv) this).field_i >> 476067553) + (((fv) this).field_c + -(var4.c() >> -897548031)));
+            var4.a((((fv) this).field_j >> 1) + ((fv) this).field_g - (var4.a() >> 1), (((fv) this).field_i >> 1) + (((fv) this).field_c + -(var4.c() >> 1)));
             break L0;
           }
         }
         if (0 > var2) {
           return;
         } else {
-          sta.field_y[bta.field_f[var2]].a(-20 + (((fv) this).field_g + (((fv) this).field_j >> 1426122529)), (((fv) this).field_i >> -367273535) + ((fv) this).field_c + -10);
+          sta.field_y[bta.field_f[var2]].a(-20 + (((fv) this).field_g + (((fv) this).field_j >> 1)), (((fv) this).field_i >> 1) + ((fv) this).field_c + -10);
           return;
         }
     }
@@ -87,16 +87,20 @@ final class fv {
     public static void a(byte param0) {
         field_d = null;
         field_b = null;
-        int var1 = 28 / ((param0 - 3) / 37);
+        int var1 = -14;
     }
 
     fv(ab param0, int param1, int param2, int param3, int param4, int param5) {
-        ((fv) this).field_f = param1;
-        ((fv) this).field_j = param4;
-        ((fv) this).field_c = param3;
-        ((fv) this).field_g = param2;
-        ((fv) this).field_i = param5;
-        ((fv) this).field_h = param0;
+        try {
+            ((fv) this).field_f = param1;
+            ((fv) this).field_j = param4;
+            ((fv) this).field_c = param3;
+            ((fv) this).field_g = param2;
+            ((fv) this).field_i = param5;
+            ((fv) this).field_h = param0;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "fv.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+        }
     }
 
     static {

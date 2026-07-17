@@ -15,23 +15,43 @@ final class bj {
     }
 
     final static void a(int param0, int param1) {
-        int var2 = 0;
-        int var3 = TrackController.field_F ? 1 : 0;
-        ij.a((byte) 120, fj.field_U, param1, vi.field_d, oe.field_c, true, 0);
-        for (var2 = param0; var2 < oe.field_c; var2++) {
-            lf.field_Y[param1 + var2] = var2;
-        }
-        ij.a((byte) 119, mj.field_d, param1 + param1, sd.field_b, param1 + oe.field_c, false, param1);
-        if (!(oe.field_c <= param1)) {
-            oe.field_c = param1;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var3 = TrackController.field_F ? 1 : 0;
+        try {
+          L0: {
+            ij.a((byte) 120, fj.field_U, param1, vi.field_d, oe.field_c, true, 0);
+            var2_int = param0;
+            L1: while (true) {
+              if (var2_int >= oe.field_c) {
+                L2: {
+                  ij.a((byte) 119, mj.field_d, param1 + param1, sd.field_b, param1 + oe.field_c, false, param1);
+                  if (oe.field_c > param1) {
+                    oe.field_c = param1;
+                    break L2;
+                  } else {
+                    break L2;
+                  }
+                }
+                break L0;
+              } else {
+                lf.field_Y[param1 + var2_int] = var2_int;
+                var2_int++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw sl.a((Throwable) (Object) var2, "bj.A(" + param0 + 44 + param1 + 41);
         }
     }
 
     public static void a(boolean param0) {
         field_c = null;
-        if (param0) {
-            bj.a(84, -97);
-        }
     }
 
     final gb a(int param0) {
@@ -54,16 +74,21 @@ final class bj {
     }
 
     final void a(gb param0, long param1, int param2) {
-        if (null != param0.field_j) {
-            param0.e(0);
+        gb var5 = null;
+        try {
+            if (null != param0.field_j) {
+                param0.e(0);
+            }
+            var5 = ((bj) this).field_d[(int)(param1 & (long)(((bj) this).field_a + -1))];
+            param0.field_j = var5.field_j;
+            param0.field_k = var5;
+            param0.field_j.field_k = param0;
+            param0.field_m = param1;
+            int var6 = -35 / ((param2 - 52) / 58);
+            param0.field_k.field_j = param0;
+        } catch (RuntimeException runtimeException) {
+            throw sl.a((Throwable) (Object) runtimeException, "bj.F(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }
-        gb var5 = ((bj) this).field_d[(int)(param1 & (long)(((bj) this).field_a + -1))];
-        param0.field_j = var5.field_j;
-        param0.field_k = var5;
-        param0.field_j.field_k = param0;
-        param0.field_m = param1;
-        int var6 = -35 / ((param2 - 52) / 58);
-        param0.field_k.field_j = param0;
     }
 
     final gb a(int param0, long param1) {

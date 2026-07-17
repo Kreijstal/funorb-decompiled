@@ -16,8 +16,9 @@ final class ve {
 
     final int a(int param0) {
         if (((ve) this).field_a >= ((ve) this).field_i) {
+            int fieldTemp$0 = ((ve) this).field_e;
             ((ve) this).field_e = ((ve) this).field_e + 1;
-            ((ve) this).field_j = ((ve) this).field_c[((ve) this).field_e] << 15;
+            ((ve) this).field_j = ((ve) this).field_c[fieldTemp$0] << 15;
             if (((ve) this).field_e >= ((ve) this).field_k) {
                 ((ve) this).field_e = ((ve) this).field_k - 1;
             }

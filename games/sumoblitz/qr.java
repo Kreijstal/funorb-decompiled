@@ -9,12 +9,65 @@ final class qr {
     static ud field_b;
 
     final static an a(String[] args, int param1) {
-        an var2 = new an(false);
-        var2.field_h = args;
-        if (param1 != 8192) {
-            qr.a(1, -118);
+        an var2 = null;
+        RuntimeException var2_ref = null;
+        an stackIn_1_0 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        an stackOut_0_0 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
+        try {
+          L0: {
+            var2 = new an(false);
+            var2.field_h = args;
+            stackOut_0_0 = (an) var2;
+            stackIn_1_0 = stackOut_0_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var2_ref = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var2_ref;
+            stackOut_2_1 = new StringBuilder().append("qr.A(");
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
+            if (args == null) {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
+            }
+          }
+          throw qo.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + 8192 + 41);
         }
-        return var2;
+        return stackIn_1_0;
     }
 
     public final String toString() {
@@ -22,18 +75,46 @@ final class qr {
     }
 
     final static void a(int param0, int param1) {
-        int var2 = 0;
-        int var3 = Sumoblitz.field_L ? 1 : 0;
-        vk.a(qu.field_k, kc.field_l, (byte) -107, se.field_d, param1, 0, true);
-        if (param0 != 13136) {
-            field_d = null;
-        }
-        for (var2 = 0; var2 < se.field_d; var2++) {
-            pd.field_q[param1 + var2] = var2;
-        }
-        vk.a(ab.field_c, oc.field_f, (byte) -107, param1 + se.field_d, param1 + param1, param1, false);
-        if (se.field_d > param1) {
-            se.field_d = param1;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var3 = Sumoblitz.field_L ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              vk.a(qu.field_k, kc.field_l, (byte) -107, se.field_d, param1, 0, true);
+              if (param0 == 13136) {
+                break L1;
+              } else {
+                field_d = null;
+                break L1;
+              }
+            }
+            var2_int = 0;
+            L2: while (true) {
+              if (var2_int >= se.field_d) {
+                L3: {
+                  vk.a(ab.field_c, oc.field_f, (byte) -107, param1 + se.field_d, param1 + param1, param1, false);
+                  if (se.field_d <= param1) {
+                    break L3;
+                  } else {
+                    se.field_d = param1;
+                    break L3;
+                  }
+                }
+                break L0;
+              } else {
+                pd.field_q[param1 + var2_int] = var2_int;
+                var2_int++;
+                continue L2;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw qo.a((Throwable) (Object) var2, "qr.C(" + param0 + 44 + param1 + 41);
         }
     }
 
@@ -75,9 +156,6 @@ final class qr {
         field_c = null;
         field_a = null;
         field_b = null;
-        if (param0 != 119) {
-            field_e = null;
-        }
         field_d = null;
     }
 

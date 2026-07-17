@@ -10,23 +10,33 @@ final class wi implements ml {
     static String[] field_b;
 
     final static void a(int param0, int param1) {
+        RuntimeException var2 = null;
         int var3 = 0;
         me var4 = null;
+        RuntimeException decompiledCaughtException = null;
         var3 = MonkeyPuzzle2.field_F ? 1 : 0;
-        var4 = (me) (Object) af.field_a.a((byte) -117);
-        L0: while (true) {
-          if (var4 == null) {
-            if (param1 != 1197) {
-              field_d = null;
-              return;
-            } else {
-              return;
+        try {
+          L0: {
+            var4 = (me) (Object) af.field_a.a((byte) -117);
+            L1: while (true) {
+              if (var4 == null) {
+                if (param1 == 1197) {
+                  break L0;
+                } else {
+                  field_d = null;
+                  return;
+                }
+              } else {
+                qc.a(var4, (byte) 117, param0);
+                var4 = (me) (Object) af.field_a.d((byte) 63);
+                continue L1;
+              }
             }
-          } else {
-            qc.a(var4, (byte) 117, param0);
-            var4 = (me) (Object) af.field_a.d((byte) 63);
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw la.a((Throwable) (Object) var2, "wi.A(" + param0 + 44 + param1 + 41);
         }
     }
 
@@ -47,71 +57,88 @@ final class wi implements ml {
     }
 
     public final void a(boolean param0, we param1, int param2, int param3, int param4) {
-        int var6 = 0;
+        RuntimeException var6 = null;
+        int var6_int = 0;
         int var7 = 0;
-        le var9 = null;
-        le var10 = null;
-        if (param4 > 19) {
-          var6 = param3 + param1.field_r;
-          var7 = param1.field_e + param2;
-          eb.b(var6, 0, param1.field_p, param1.field_l, var7);
-          var10 = hk.field_i[1];
-          if (param1 instanceof t) {
-            if (((t) (Object) param1).field_u) {
-              var10.c((-var10.field_m + param1.field_l >> 1687994465) + var6 + 1, (param1.field_p - var10.field_n >> 1839470177) + (1 + var7), 256);
-              if (param1.b((byte) 64)) {
-                hk.a(2 + var6, var7 + 2, 2, param1.field_l + -4, param1.field_p - 4);
-                return;
+        le var8 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param4 > 19) {
+                break L1;
               } else {
-                return;
-              }
-            } else {
-              if (param1.b((byte) 64)) {
-                hk.a(2 + var6, var7 + 2, 2, param1.field_l + -4, param1.field_p - 4);
-                return;
-              } else {
-                return;
-              }
-            }
-          } else {
-            if (param1.b((byte) 64)) {
-              hk.a(2 + var6, var7 + 2, 2, param1.field_l + -4, param1.field_p - 4);
-              return;
-            } else {
-              return;
-            }
-          }
-        } else {
-          wi.a(-113);
-          var6 = param3 + param1.field_r;
-          var7 = param1.field_e + param2;
-          eb.b(var6, 0, param1.field_p, param1.field_l, var7);
-          var9 = hk.field_i[1];
-          if (param1 instanceof t) {
-            if (((t) (Object) param1).field_u) {
-              var9.c((-var9.field_m + param1.field_l >> 1687994465) + var6 + 1, (param1.field_p - var9.field_n >> 1839470177) + (1 + var7), 256);
-              if (param1.b((byte) 64)) {
-                hk.a(2 + var6, var7 + 2, 2, param1.field_l + -4, param1.field_p - 4);
-                return;
-              } else {
-                return;
-              }
-            } else {
-              if (param1.b((byte) 64)) {
-                hk.a(2 + var6, var7 + 2, 2, param1.field_l + -4, param1.field_p - 4);
-                return;
-              } else {
-                return;
+                wi.a(-113);
+                break L1;
               }
             }
-          } else {
-            if (param1.b((byte) 64)) {
-              hk.a(2 + var6, var7 + 2, 2, param1.field_l + -4, param1.field_p - 4);
-              return;
+            L2: {
+              var6_int = param3 + param1.field_r;
+              var7 = param1.field_e + param2;
+              eb.b(var6_int, 0, param1.field_p, param1.field_l, var7);
+              var8 = hk.field_i[1];
+              if (!(param1 instanceof t)) {
+                break L2;
+              } else {
+                if (!((t) (Object) param1).field_u) {
+                  break L2;
+                } else {
+                  var8.c((-var8.field_m + param1.field_l >> 1) + var6_int + 1, (param1.field_p - var8.field_n >> 1) + (1 + var7), 256);
+                  break L2;
+                }
+              }
+            }
+            if (!param1.b((byte) 64)) {
+              break L0;
             } else {
+              hk.a(2 + var6_int, var7 + 2, 2, param1.field_l + -4, param1.field_p - 4);
               return;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var6 = decompiledCaughtException;
+            stackOut_8_0 = (RuntimeException) var6;
+            stackOut_8_1 = new StringBuilder().append("wi.C(").append(param0).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param1 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L3;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L3;
+            }
+          }
+          throw la.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 

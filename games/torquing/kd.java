@@ -180,7 +180,7 @@ final class kd extends com.ms.dll.Callback {
                 return 0;
               } else {
                 L1: {
-                  if (-2 == (param1 ^ -1)) {
+                  if (param1 == 1) {
                     ((kd) this).field_b = 0;
                     ((kd) this).field_d = true;
                     break L1;
@@ -222,7 +222,7 @@ final class kd extends com.ms.dll.Callback {
               return 0;
             } else {
               L4: {
-                if (-2 == (param1 ^ -1)) {
+                if (param1 == 1) {
                   ((kd) this).field_b = 0;
                   ((kd) this).field_d = true;
                   break L4;

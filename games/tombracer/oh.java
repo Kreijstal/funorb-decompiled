@@ -12,54 +12,38 @@ final class oh extends nv {
     private int field_t;
 
     final void a(boolean param0, kh param1) {
-        super.a(param0, param1);
-        param1.a((byte) -128, ((oh) this).field_t >> 512291344, 10);
-        param1.a((byte) -126, ((oh) this).field_p / 50, 6);
-        param1.a((byte) 1, ((oh) this).field_s / 50, 6);
-        param1.a((byte) 105, !((oh) this).field_q ? 0 : 1, 1);
+        try {
+            super.a(param0, param1);
+            param1.a((byte) -128, ((oh) this).field_t >> 16, 10);
+            param1.a((byte) -126, ((oh) this).field_p / 50, 6);
+            param1.a((byte) 1, ((oh) this).field_s / 50, 6);
+            param1.a((byte) 105, !((oh) this).field_q ? 0 : 1, 1);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "oh.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static void a(byte param0, fna[] param1) {
-        dea var2 = null;
+        dea var7 = null;
         fna[] var3 = null;
         int var4 = 0;
         fna var5 = null;
-        int var6 = 0;
-        dea var7 = null;
-        var6 = TombRacer.field_G ? 1 : 0;
-        var7 = param1[0].field_c;
-        var2 = var7;
-        if (param0 != -91) {
-          jea discarded$2 = oh.b(-52);
-          var3 = param1;
-          var4 = 0;
-          L0: while (true) {
-            if (var3.length <= var4) {
-              param1[0].field_a = false;
-              return;
-            } else {
-              var5 = var3[var4];
-              var5.field_c = var7;
-              var5.field_a = true;
-              var4++;
-              continue L0;
+        int var6 = TombRacer.field_G ? 1 : 0;
+        try {
+            var7 = param1[0].field_c;
+            dea var2 = var7;
+            if (param0 != -91) {
+                jea discarded$0 = oh.b(-52);
             }
-          }
-        } else {
-          var3 = param1;
-          var4 = 0;
-          L1: while (true) {
-            if (var3.length <= var4) {
-              param1[0].field_a = false;
-              return;
-            } else {
-              var5 = var3[var4];
-              var5.field_c = var7;
-              var5.field_a = true;
-              var4++;
-              continue L1;
+            var3 = param1;
+            for (var4 = 0; var3.length > var4; var4++) {
+                var5 = var3[var4];
+                var5.field_c = var7;
+                var5.field_a = true;
             }
-          }
+            param1[0].field_a = false;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "oh.L(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
     }
 
@@ -71,8 +55,12 @@ final class oh extends nv {
     }
 
     final void a(boolean param0, fsa param1) {
-        super.a(param0, param1);
-        ((oh) this).field_n = fda.field_a;
+        try {
+            super.a(param0, param1);
+            ((oh) this).field_n = fda.field_a;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "oh.Q(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final int a(int param0, int param1) {
@@ -98,10 +86,14 @@ final class oh extends nv {
         ((oh) this).field_s = 50;
         ((oh) this).field_q = true;
         ((oh) this).field_t = 8388608;
-        ((oh) this).field_t = param1.b((byte) 44, 10) << 9382800;
-        ((oh) this).field_p = param1.b((byte) 44, 6) * 50;
-        ((oh) this).field_s = param1.b((byte) 44, 6) * 50;
-        ((oh) this).field_q = -2 == (param1.b((byte) 44, 1) ^ -1) ? true : false;
+        try {
+            ((oh) this).field_t = param1.b((byte) 44, 10) << 16;
+            ((oh) this).field_p = param1.b((byte) 44, 6) * 50;
+            ((oh) this).field_s = param1.b((byte) 44, 6) * 50;
+            ((oh) this).field_q = param1.b((byte) 44, 1) == 1 ? true : false;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "oh.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     final void k(int param0) {
@@ -130,13 +122,13 @@ final class oh extends nv {
           } else {
             if (0 != ((oh) this).field_n.length) {
               if (0 < ((oh) this).field_p) {
-                if (-1 <= (((oh) this).field_r ^ -1)) {
-                  var2 = ((oh) this).field_t >> -1426969840;
+                if (((oh) this).field_r <= 0) {
+                  var2 = ((oh) this).field_t >> 16;
                   if (param0 == 5418) {
                     var2 = var2 * var2;
                     var21 = ((oh) this).m((byte) 19);
-                    var4 = ((oh) this).field_g.d(3) + -var21.d(param0 ^ 5417) >> 486038448;
-                    var5 = ((oh) this).field_g.e(9648) + -var21.e(9648) >> -1954226704;
+                    var4 = ((oh) this).field_g.d(3) + -var21.d(param0 ^ 5417) >> 16;
+                    var5 = ((oh) this).field_g.e(9648) + -var21.e(9648) >> 16;
                     var6 = var4 * var4 - -(var5 * var5);
                     if (var2 > var6) {
                       if (!((oh) this).field_q) {
@@ -174,8 +166,8 @@ final class oh extends nv {
                     int discarded$4 = ((oh) this).a(-91, 115);
                     var2 = var2 * var2;
                     var15 = ((oh) this).m((byte) 19);
-                    var4 = ((oh) this).field_g.d(3) + -var15.d(param0 ^ 5417) >> 486038448;
-                    var5 = ((oh) this).field_g.e(9648) + -var15.e(9648) >> -1954226704;
+                    var4 = ((oh) this).field_g.d(3) + -var15.d(param0 ^ 5417) >> 16;
+                    var5 = ((oh) this).field_g.e(9648) + -var15.e(9648) >> 16;
                     var6 = var4 * var4 - -(var5 * var5);
                     if (var2 > var6) {
                       if (!((oh) this).field_q) {
@@ -215,12 +207,12 @@ final class oh extends nv {
                   return;
                 }
               } else {
-                var2 = ((oh) this).field_t >> -1426969840;
+                var2 = ((oh) this).field_t >> 16;
                 if (param0 == 5418) {
                   var2 = var2 * var2;
                   var11 = ((oh) this).m((byte) 19);
-                  var4 = ((oh) this).field_g.d(3) + -var11.d(param0 ^ 5417) >> 486038448;
-                  var5 = ((oh) this).field_g.e(9648) + -var11.e(9648) >> -1954226704;
+                  var4 = ((oh) this).field_g.d(3) + -var11.d(param0 ^ 5417) >> 16;
+                  var5 = ((oh) this).field_g.e(9648) + -var11.e(9648) >> 16;
                   var6 = var4 * var4 - -(var5 * var5);
                   if (var2 > var6) {
                     if (!((oh) this).field_q) {
@@ -259,8 +251,8 @@ final class oh extends nv {
                     int discarded$5 = ((oh) this).a(-91, 115);
                     var2 = var2 * var2;
                     var9 = ((oh) this).m((byte) 19);
-                    var4 = ((oh) this).field_g.d(3) + -var9.d(param0 ^ 5417) >> 486038448;
-                    var5 = ((oh) this).field_g.e(9648) + -var9.e(9648) >> -1954226704;
+                    var4 = ((oh) this).field_g.d(3) + -var9.d(param0 ^ 5417) >> 16;
+                    var5 = ((oh) this).field_g.e(9648) + -var9.e(9648) >> 16;
                     var6 = var4 * var4 - -(var5 * var5);
                     if (var2 <= var6) {
                       break L1;

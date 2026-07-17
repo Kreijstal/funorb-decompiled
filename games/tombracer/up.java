@@ -19,50 +19,24 @@ final class up implements noa {
         if (param1 != 2348) {
             return;
         }
-        ((up) this).field_c = param0;
+        try {
+            ((up) this).field_c = param0;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "up.H(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     final static boolean a(char param0, boolean param1) {
-        int stackIn_7_0 = 0;
-        int stackOut_6_0 = 0;
-        int stackOut_5_0 = 0;
-        if (param1) {
-          if (param0 != 32) {
-            if (40 != param0) {
-              if (41 == param0) {
-                return true;
-              } else {
-                return false;
-              }
-            } else {
-              return true;
-            }
-          } else {
+        if (param0 == 32) {
             return true;
-          }
-        } else {
-          field_d = null;
-          if (param0 != 32) {
-            if (40 == param0) {
-              return true;
-            } else {
-              L0: {
-                if (41 != param0) {
-                  stackOut_6_0 = 0;
-                  stackIn_7_0 = stackOut_6_0;
-                  break L0;
-                } else {
-                  stackOut_5_0 = 1;
-                  stackIn_7_0 = stackOut_5_0;
-                  break L0;
-                }
-              }
-              return stackIn_7_0 != 0;
-            }
-          } else {
-            return true;
-          }
         }
+        if (40 == param0) {
+            return true;
+        }
+        if (41 == param0) {
+            return true;
+        }
+        return false;
     }
 
     final int e(int param0) {
@@ -85,22 +59,19 @@ final class up implements noa {
         field_a = null;
         field_h = null;
         field_i = null;
-        if (param0 != 2) {
-            return;
-        }
         field_e = null;
         field_d = null;
     }
 
     final void a(kh param0, byte param1) {
-        param0.a((byte) -125, ((up) this).field_f, 4);
-        if (param1 != 125) {
-          ((up) this).field_f = 36;
-          param0.a((byte) 116, ((up) this).field_b, 10);
-          return;
-        } else {
-          param0.a((byte) 116, ((up) this).field_b, 10);
-          return;
+        try {
+            param0.a((byte) -125, ((up) this).field_f, 4);
+            if (param1 != 125) {
+                ((up) this).field_f = 36;
+            }
+            param0.a((byte) 116, ((up) this).field_b, 10);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "up.C(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
@@ -127,7 +98,7 @@ final class up implements noa {
         if (0 != var3) {
           if (var3 != 2) {
             if (1 != var3) {
-              if ((var3 ^ -1) != -6) {
+              if (var3 != 5) {
                 return 0;
               } else {
                 return 2;
@@ -145,69 +116,35 @@ final class up implements noa {
 
     private final int a(boolean param0) {
         int var2 = 0;
-        if (param0) {
-          var2 = ((up) this).field_f;
-          if (var2 != 0) {
-            if ((var2 ^ -1) != -3) {
-              if (var2 != 1) {
-                if ((var2 ^ -1) != -4) {
-                  if (4 != var2) {
-                    if (5 != var2) {
-                      if (6 != var2) {
-                        throw new IllegalStateException("Unknown effect preset: " + ((up) this).field_f);
-                      } else {
-                        return 2;
-                      }
+        var2 = ((up) this).field_f;
+        if (var2 != 0) {
+          if (var2 != 2) {
+            if (var2 != 1) {
+              if (var2 != 3) {
+                if (4 != var2) {
+                  if (5 != var2) {
+                    if (6 != var2) {
+                      throw new IllegalStateException("Unknown effect preset: " + ((up) this).field_f);
                     } else {
-                      return 5;
+                      return 2;
                     }
                   } else {
-                    return 1;
+                    return 5;
                   }
                 } else {
-                  return 4;
+                  return 1;
                 }
               } else {
-                return 3;
+                return 4;
               }
             } else {
               return 3;
             }
           } else {
-            return 0;
+            return 3;
           }
         } else {
-          field_i = null;
-          var2 = ((up) this).field_f;
-          if (var2 != 0) {
-            if ((var2 ^ -1) != -3) {
-              if (var2 != 1) {
-                if ((var2 ^ -1) != -4) {
-                  if (4 != var2) {
-                    if (5 != var2) {
-                      if (6 != var2) {
-                        throw new IllegalStateException("Unknown effect preset: " + ((up) this).field_f);
-                      } else {
-                        return 2;
-                      }
-                    } else {
-                      return 5;
-                    }
-                  } else {
-                    return 1;
-                  }
-                } else {
-                  return 4;
-                }
-              } else {
-                return 3;
-              }
-            } else {
-              return 3;
-            }
-          } else {
-            return 0;
-          }
+          return 0;
         }
     }
 
@@ -263,14 +200,22 @@ final class up implements noa {
 
     up(gma param0, up param1) {
         this(param0, param1.field_f, param1.field_b);
-        ((up) this).field_k = param1.field_k;
+        try {
+            ((up) this).field_k = param1.field_k;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "up.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     up(gma param0, int param1, int param2) {
-        ((up) this).field_f = param1;
-        ((up) this).field_b = param2;
-        ((up) this).a(param0, 2348);
-        this.a(-70);
+        try {
+            ((up) this).field_f = param1;
+            ((up) this).field_b = param2;
+            ((up) this).a(param0, 2348);
+            this.a(-70);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "up.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     public final String toString() {

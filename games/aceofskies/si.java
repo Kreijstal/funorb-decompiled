@@ -67,13 +67,10 @@ final class si {
 
     public static void a(boolean param0) {
         field_d = null;
-        if (!param0) {
-            si.a(false, 22);
-        }
     }
 
     final static void c(boolean param0) {
-        kh.field_a = param0 ? true : false;
+        kh.field_a = true;
         za.a(34, new int[7], 220, 210, 0, 430, (byte) -67);
         aa.field_b[0] = new nk(0);
     }
@@ -84,7 +81,11 @@ final class si {
     }
 
     si(wl param0, int param1) {
-        ((si) this).field_a = jaggl.OpenGL.glGenLists(param1);
+        try {
+            ((si) this).field_a = jaggl.OpenGL.glGenLists(param1);
+        } catch (RuntimeException runtimeException) {
+            throw pn.a((Throwable) (Object) runtimeException, "si.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     static {

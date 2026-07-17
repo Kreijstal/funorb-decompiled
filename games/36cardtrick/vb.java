@@ -23,9 +23,6 @@ final class vb {
     }
 
     public static void a(int param0) {
-        if (param0 != -1) {
-            return;
-        }
         field_k = null;
         field_a = null;
         field_c = null;
@@ -44,7 +41,7 @@ final class vb {
         qb var42 = null;
         var3 = Main.field_T;
         if (param0) {
-          if ((((vb) this).field_j ^ -1) < -1) {
+          if (((vb) this).field_j > 0) {
             if (((vb) this).field_f[((vb) this).field_j + -1] != ((vb) this).field_i) {
               var42 = ((vb) this).field_i;
               ((vb) this).field_i = var42.field_d;
@@ -87,7 +84,7 @@ final class vb {
           }
         } else {
           ((vb) this).field_g = null;
-          if ((((vb) this).field_j ^ -1) < -1) {
+          if (((vb) this).field_j > 0) {
             if (((vb) this).field_f[((vb) this).field_j + -1] != ((vb) this).field_i) {
               var36 = ((vb) this).field_i;
               ((vb) this).field_i = var36.field_d;
@@ -133,36 +130,82 @@ final class vb {
 
     final void a(long param0, byte param1, qb param2) {
         qb var5 = null;
-        if (param2.field_a != null) {
-            param2.c(106);
-            var5 = ((vb) this).field_f[(int)((long)(-1 + ((vb) this).field_d) & param0)];
-            param2.field_d = var5;
-            param2.field_a = var5.field_a;
-            param2.field_a.field_d = param2;
-            param2.field_d.field_a = param2;
-            param2.field_e = param0;
-            if (param1 >= 24) {
-                return;
+        RuntimeException var5_ref = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param2.field_a == null) {
+                break L1;
+              } else {
+                param2.c(106);
+                break L1;
+              }
             }
-            qb discarded$0 = ((vb) this).a(true);
-            return;
+            L2: {
+              var5 = ((vb) this).field_f[(int)((long)(-1 + ((vb) this).field_d) & param0)];
+              param2.field_d = var5;
+              param2.field_a = var5.field_a;
+              param2.field_a.field_d = param2;
+              param2.field_d.field_a = param2;
+              param2.field_e = param0;
+              if (param1 >= 24) {
+                break L2;
+              } else {
+                qb discarded$2 = ((vb) this).a(true);
+                break L2;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var5_ref = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var5_ref;
+            stackOut_5_1 = new StringBuilder().append("vb.A(").append(param0).append(44).append(param1).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param2 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L3;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L3;
+            }
+          }
+          throw ma.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 41);
         }
-        var5 = ((vb) this).field_f[(int)((long)(-1 + ((vb) this).field_d) & param0)];
-        param2.field_d = var5;
-        param2.field_a = var5.field_a;
-        param2.field_a.field_d = param2;
-        param2.field_d.field_a = param2;
-        param2.field_e = param0;
-        if (param1 >= 24) {
-            return;
-        }
-        qb discarded$1 = ((vb) this).a(true);
     }
 
     final static void a(byte param0) {
-        if (param0 < 1) {
-            return;
-        }
         Main.field_G = 0;
         ti.field_a = -1;
         t.field_e = null;
@@ -187,7 +230,7 @@ final class vb {
               ((vb) this).field_g = null;
               return null;
             } else {
-              if ((((vb) this).field_g.field_e ^ -1L) == (param1 ^ -1L)) {
+              if (~((vb) this).field_g.field_e == ~param1) {
                 var5 = ((vb) this).field_g;
                 ((vb) this).field_g = ((vb) this).field_g.field_d;
                 return var5;
@@ -208,7 +251,7 @@ final class vb {
               ((vb) this).field_g = null;
               return null;
             } else {
-              if ((((vb) this).field_g.field_e ^ -1L) == (param1 ^ -1L)) {
+              if (~((vb) this).field_g.field_e == ~param1) {
                 var5 = ((vb) this).field_g;
                 ((vb) this).field_g = ((vb) this).field_g.field_d;
                 return var5;

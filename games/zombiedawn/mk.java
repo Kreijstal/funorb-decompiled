@@ -5,42 +5,48 @@ final class mk {
     static vn[] field_a;
 
     final static void a(int param0) {
+        RuntimeException var1 = null;
         int var2 = 0;
+        RuntimeException decompiledCaughtException = null;
         var2 = ZombieDawn.field_J;
-        if (we.o((byte) -80)) {
-          if (param0 > -100) {
-            return;
-          } else {
-            boolean discarded$2 = wo.field_xb.a(um.field_a, ah.field_eb, true, true);
-            wo.field_xb.g(-128);
-            L0: while (true) {
-              if (!on.b(102)) {
-                return;
-              } else {
-                boolean discarded$3 = wo.field_xb.a(kg.field_i, (byte) 106, lc.field_c);
-                continue L0;
+        try {
+          L0: {
+            if (we.o((byte) -80)) {
+              boolean discarded$15 = wo.field_xb.a(um.field_a, ah.field_eb, true, true);
+              wo.field_xb.g(-128);
+              L1: while (true) {
+                if (!on.b(102)) {
+                  break L0;
+                } else {
+                  boolean discarded$16 = wo.field_xb.a(kg.field_i, (byte) 106, lc.field_c);
+                  continue L1;
+                }
               }
-            }
-          }
-        } else {
-          if (cn.field_b != null) {
-            if (!cn.field_b.field_a) {
-              return;
             } else {
-              re.a((byte) -71);
-              wo.field_xb.a((ga) (Object) new i(wo.field_xb, gf.field_b), true);
+              L2: {
+                if (cn.field_b == null) {
+                  break L2;
+                } else {
+                  if (!cn.field_b.field_a) {
+                    break L2;
+                  } else {
+                    re.a((byte) -71);
+                    wo.field_xb.a((ga) (Object) new i(wo.field_xb, gf.field_b), true);
+                    break L2;
+                  }
+                }
+              }
               return;
             }
-          } else {
-            return;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw sh.a((Throwable) (Object) var1, "mk.A(" + -128 + 41);
         }
     }
 
     final static void a(byte param0) {
-        if (param0 != -121) {
-            return;
-        }
         og.b(-123, 4);
     }
 

@@ -49,7 +49,7 @@ final class u implements Runnable {
                 }
               }
               if (((u) this).field_l.field_a != 0) {
-                if ((((u) this).field_l.field_a ^ -1) == -2) {
+                if (((u) this).field_l.field_a == 1) {
                   break L0;
                 } else {
                   ((u) this).field_l = null;
@@ -71,7 +71,7 @@ final class u implements Runnable {
                   break L3;
                 }
               }
-              if (-1 == (((u) this).field_f.field_a ^ -1)) {
+              if (((u) this).field_f.field_a == 0) {
                 return false;
               } else {
                 if (((u) this).field_f.field_a == 1) {
@@ -337,9 +337,13 @@ final class u implements Runnable {
     }
 
     u(bu param0, java.net.URL param1, int param2) {
-        ((u) this).field_a = param0;
-        ((u) this).field_k = param1;
-        ((u) this).field_g = new iw(param2);
+        try {
+            ((u) this).field_a = param0;
+            ((u) this).field_k = param1;
+            ((u) this).field_g = new iw(param2);
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "u.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     protected final void finalize() {

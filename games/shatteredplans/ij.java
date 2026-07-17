@@ -7,45 +7,25 @@ final class ij {
     final static void a(int param0) {
         try {
             Exception var1 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        if (null != vc.field_a) {
-                            statePc = 2;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        sa.field_a.field_j = sa.field_a.field_j + param0;
-                        return;
-                    }
-                    case 2: {
-                        try {
-                            vc.field_a.a((byte) -26, 0L);
-                            vc.field_a.a(param0 + 84, 24, sa.field_a.field_j, sa.field_a.field_h);
-                            statePc = 3;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_2) {
-                            caughtException = stateCaught_2;
-                            statePc = 4;
-                            continue stateLoop;
-                        }
-                    }
-                    case 3: {
-                        sa.field_a.field_j = sa.field_a.field_j + param0;
-                        return;
-                    }
-                    case 4: {
-                        var1 = (Exception) (Object) caughtException;
-                        sa.field_a.field_j = sa.field_a.field_j + param0;
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            Throwable decompiledCaughtException = null;
+            if (null != vc.field_a) {
+              try {
+                L0: {
+                  vc.field_a.a((byte) -26, 0L);
+                  vc.field_a.a(108, 24, sa.field_a.field_j, sa.field_a.field_h);
+                  break L0;
                 }
+              } catch (java.lang.Exception decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                var1 = (Exception) (Object) decompiledCaughtException;
+                sa.field_a.field_j = sa.field_a.field_j + 24;
+                return;
+              }
+              sa.field_a.field_j = sa.field_a.field_j + 24;
+              return;
+            } else {
+              sa.field_a.field_j = sa.field_a.field_j + 24;
+              return;
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -62,7 +42,7 @@ final class ij {
     }
 
     final static fp b(int param0) {
-        int var1 = 55 / ((param0 - 37) / 59);
+        int var1 = 55;
         return (fp) (Object) new gs();
     }
 
@@ -75,17 +55,12 @@ final class ij {
         tm.field_k.a((vd) (Object) var2, 8);
         tm.field_k.field_z = var2;
         rh var3 = new rh();
-        int var4 = -110 % ((param0 - -14) / 61);
+        int var4 = 0;
         tm.field_k.field_x = (jk) (Object) var3;
         return tm.field_k;
     }
 
     public static void a(byte param0) {
-        if (param0 != -29) {
-            field_a = null;
-            field_a = null;
-            return;
-        }
         field_a = null;
     }
 

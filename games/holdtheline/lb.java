@@ -81,35 +81,88 @@ final class lb extends vj {
     }
 
     lb(qm param0, qm param1, int param2, boolean param3, boolean param4) {
-        ((lb) this).field_p = param3 ? true : false;
-        ((lb) this).field_s = param1;
-        ((lb) this).field_k = param2;
-        ((lb) this).field_q = param4 ? true : false;
-        ((lb) this).field_r = param0;
-    }
-
-    public static void d(boolean param0) {
-        if (param0) {
-          field_t = null;
-          field_w = null;
-          field_t = null;
-          field_u = null;
-          return;
-        } else {
-          field_w = null;
-          field_t = null;
-          field_u = null;
-          return;
+        try {
+            ((lb) this).field_p = param3 ? true : false;
+            ((lb) this).field_s = param1;
+            ((lb) this).field_k = param2;
+            ((lb) this).field_q = param4 ? true : false;
+            ((lb) this).field_r = param0;
+        } catch (RuntimeException runtimeException) {
+            throw kk.a((Throwable) (Object) runtimeException, "lb.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
+    public static void d(boolean param0) {
+        field_w = null;
+        field_t = null;
+        field_u = null;
+    }
+
     final static go[] b(String param0, byte param1) {
-        go[] var2 = new go[2];
-        int var4 = -16 / ((param1 - -14) / 63);
-        var2[0] = bi.a(false, param0, true, false, 2048);
-        String var3 = param0 + "_destroyed";
-        var2[1] = bi.a(false, var3, true, false, 2048);
-        return var2;
+        go[] var2 = null;
+        RuntimeException var2_ref = null;
+        String var3 = null;
+        int var4 = 0;
+        go[] stackIn_1_0 = null;
+        RuntimeException stackIn_3_0 = null;
+        StringBuilder stackIn_3_1 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        go[] stackOut_0_0 = null;
+        RuntimeException stackOut_2_0 = null;
+        StringBuilder stackOut_2_1 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        String stackOut_3_2 = null;
+        try {
+          L0: {
+            var2 = new go[2];
+            var4 = -16 / ((param1 - -14) / 63);
+            var2[0] = bi.a(false, param0, true, false, 2048);
+            var3 = param0 + "_destroyed";
+            var2[1] = bi.a(false, var3, true, false, 2048);
+            stackOut_0_0 = (go[]) var2;
+            stackIn_1_0 = stackOut_0_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var2_ref = decompiledCaughtException;
+            stackOut_2_0 = (RuntimeException) var2_ref;
+            stackOut_2_1 = new StringBuilder().append("lb.H(");
+            stackIn_4_0 = stackOut_2_0;
+            stackIn_4_1 = stackOut_2_1;
+            stackIn_3_0 = stackOut_2_0;
+            stackIn_3_1 = stackOut_2_1;
+            if (param0 == null) {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "null";
+              stackIn_5_0 = stackOut_4_0;
+              stackIn_5_1 = stackOut_4_1;
+              stackIn_5_2 = stackOut_4_2;
+              break L1;
+            } else {
+              stackOut_3_0 = (RuntimeException) (Object) stackIn_3_0;
+              stackOut_3_1 = (StringBuilder) (Object) stackIn_3_1;
+              stackOut_3_2 = "{...}";
+              stackIn_5_0 = stackOut_3_0;
+              stackIn_5_1 = stackOut_3_1;
+              stackIn_5_2 = stackOut_3_2;
+              break L1;
+            }
+          }
+          throw kk.a((Throwable) (Object) stackIn_5_0, stackIn_5_2 + 44 + param1 + 41);
+        }
+        return stackIn_1_0;
     }
 
     static {

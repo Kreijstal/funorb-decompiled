@@ -193,7 +193,7 @@ abstract class kk extends ni {
                               if (var31 < 1024) {
                                 break L13;
                               } else {
-                                // wide iinc 31 -2048
+                                var31 -= 2048;
                                 break L13;
                               }
                             }
@@ -201,7 +201,7 @@ abstract class kk extends ni {
                               if (var32 < 1024) {
                                 break L14;
                               } else {
-                                // wide iinc 32 -2048
+                                var32 -= 2048;
                                 break L14;
                               }
                             }
@@ -209,7 +209,7 @@ abstract class kk extends ni {
                               if (var33 < 1024) {
                                 break L15;
                               } else {
-                                // wide iinc 33 -2048
+                                var33 -= 2048;
                                 break L15;
                               }
                             }
@@ -334,7 +334,6 @@ abstract class kk extends ni {
     abstract void a(int param0, int[] param1, int param2, int param3, int param4, boolean param5, int param6, int[] param7);
 
     final void a(wp param0, int param1, wp param2, int param3, int param4, int param5, boolean param6) {
-        ht var10_ref = null;
         if (param1 == -1) {
             return;
         }
@@ -345,12 +344,12 @@ abstract class kk extends ni {
         ig var9 = var8.field_n;
         Object var10 = null;
         if (param2 != null) {
-            var10_ref = param2.field_A[param3];
-            if (var10_ref.field_n != var9) {
-                var10_ref = null;
+            var10 = (Object) (Object) param2.field_A[param3];
+            if (((ht) var10).field_n != var9) {
+                var10 = null;
             }
         }
-        this.a(var9, var8, var10_ref, param4, param5, (boolean[]) null, false, param6, 65535, (int[]) null);
+        this.a(var9, var8, (ht) var10, param4, param5, (boolean[]) null, false, param6, 65535, (int[]) null);
         ((kk) this).a();
     }
 

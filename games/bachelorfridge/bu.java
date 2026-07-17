@@ -10,19 +10,24 @@ final class bu extends kj {
 
     bu(gj param0, int param1, int param2, int param3) {
         super(param0, param1, param2);
-        ((bu) this).field_h = param3;
-        ((bu) this).field_i = 64;
-        kv var5 = param0.field_s.field_p;
-        ((bu) this).field_f = new kv(var5.field_q, var5.field_p);
-        bu.a(0, ((bu) this).field_f);
-        var5.e(0, 0, 16777215);
-        db.b(62);
+        kv var5 = null;
+        try {
+            ((bu) this).field_h = param3;
+            ((bu) this).field_i = 64;
+            var5 = param0.field_s.field_p;
+            ((bu) this).field_f = new kv(var5.field_q, var5.field_p);
+            bu.a(0, ((bu) this).field_f);
+            var5.e(0, 0, 16777215);
+            db.b(62);
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "bu.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+        }
     }
 
     public static void c(int param0) {
         field_j = null;
         field_g = null;
-        int var1 = 81 / ((14 - param0) / 62);
+        int var1 = -81;
     }
 
     final static void a(int param0, kv param1) {
@@ -30,12 +35,17 @@ final class bu extends kj {
         if (param0 != 0) {
             return;
         }
-        dg.a(param1.field_v, param1.field_n, param1.field_o);
+        try {
+            dg.a(param1.field_v, param1.field_n, param1.field_o);
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "bu.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final boolean b(int param0) {
+        int fieldTemp$2 = ((bu) this).field_i - 1;
         ((bu) this).field_i = ((bu) this).field_i - 1;
-        if (0 >= ((bu) this).field_i - 1) {
+        if (0 >= fieldTemp$2) {
           if (param0 <= 21) {
             ((bu) this).field_f = null;
             return true;
@@ -43,7 +53,7 @@ final class bu extends kj {
             return true;
           }
         } else {
-          if ((((bu) this).field_i ^ -1) == -33) {
+          if (((bu) this).field_i == 32) {
             ((bu) this).field_e.field_T[((bu) this).field_h] = ((bu) this).field_e.field_T[((bu) this).field_h] + 1;
             return false;
           } else {
@@ -54,7 +64,7 @@ final class bu extends kj {
 
     final void a(int param0, int param1, int param2) {
         int var4 = (int)(128.0 * (-Math.cos(3.141592653589793 * (double)((bu) this).field_i / 32.0) + 1.0));
-        this.a(param0, param1, param2);
+        super.a(param0, param1, param2);
         ((bu) this).field_f.a(param2, param0, var4);
     }
 

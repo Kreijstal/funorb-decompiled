@@ -9,9 +9,6 @@ final class ua {
     private static String field_z;
 
     public static void a(int param0) {
-        if (param0 != -24750) {
-            return;
-        }
         field_c = null;
     }
 

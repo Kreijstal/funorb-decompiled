@@ -43,43 +43,125 @@ final class gj extends kb {
         try {
             Throwable throwable = null;
             String var3 = null;
+            RuntimeException var3_ref = null;
             String var4 = null;
             String var5 = null;
+            RuntimeException stackIn_9_0 = null;
+            StringBuilder stackIn_9_1 = null;
+            RuntimeException stackIn_10_0 = null;
+            StringBuilder stackIn_10_1 = null;
+            RuntimeException stackIn_11_0 = null;
+            StringBuilder stackIn_11_1 = null;
+            String stackIn_11_2 = null;
+            RuntimeException stackIn_12_0 = null;
+            StringBuilder stackIn_12_1 = null;
+            RuntimeException stackIn_13_0 = null;
+            StringBuilder stackIn_13_1 = null;
+            RuntimeException stackIn_14_0 = null;
+            StringBuilder stackIn_14_1 = null;
+            String stackIn_14_2 = null;
             Throwable decompiledCaughtException = null;
-            bh.field_n = param0;
+            RuntimeException stackOut_8_0 = null;
+            StringBuilder stackOut_8_1 = null;
+            RuntimeException stackOut_10_0 = null;
+            StringBuilder stackOut_10_1 = null;
+            String stackOut_10_2 = null;
+            RuntimeException stackOut_9_0 = null;
+            StringBuilder stackOut_9_1 = null;
+            String stackOut_9_2 = null;
+            RuntimeException stackOut_11_0 = null;
+            StringBuilder stackOut_11_1 = null;
+            RuntimeException stackOut_13_0 = null;
+            StringBuilder stackOut_13_1 = null;
+            String stackOut_13_2 = null;
+            RuntimeException stackOut_12_0 = null;
+            StringBuilder stackOut_12_1 = null;
+            String stackOut_12_2 = null;
             try {
-              L0: {
-                L1: {
-                  var3 = param1.getParameter("cookieprefix");
-                  var5 = var3;
-                  var5 = var3;
-                  var4 = param1.getParameter("cookiehost");
-                  var5 = var4;
-                  var5 = var4;
-                  var5 = var3 + "session=" + param0 + "; version=1; path=/; domain=" + var4;
-                  if (param0.length() != 0) {
-                    break L1;
-                  } else {
-                    var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
-                    break L1;
+              bh.field_n = param0;
+              try {
+                L0: {
+                  L1: {
+                    var3 = param1.getParameter("cookieprefix");
+                    var5 = var3;
+                    var5 = var3;
+                    var4 = param1.getParameter("cookiehost");
+                    var5 = var4;
+                    var5 = var4;
+                    var5 = var3 + "session=" + param0 + "; version=1; path=/; domain=" + var4;
+                    if (param0.length() != 0) {
+                      break L1;
+                    } else {
+                      var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
+                      break L1;
+                    }
                   }
+                  cq.a(param1, (byte) -122, "document.cookie=\"" + var5 + "\"");
+                  break L0;
                 }
-                cq.a(param1, (byte) -122, "document.cookie=\"" + var5 + "\"");
-                break L0;
+              } catch (java.lang.Throwable decompiledCaughtParameter0) {
+                decompiledCaughtException = decompiledCaughtParameter0;
+                L2: {
+                  throwable = decompiledCaughtException;
+                  break L2;
+                }
               }
-            } catch (java.lang.Throwable decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              L2: {
-                throwable = decompiledCaughtException;
-                break L2;
+              ib.a(param1, false);
+              return;
+            } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              L3: {
+                var3_ref = (RuntimeException) (Object) decompiledCaughtException;
+                stackOut_8_0 = (RuntimeException) var3_ref;
+                stackOut_8_1 = new StringBuilder().append("gj.E(");
+                stackIn_10_0 = stackOut_8_0;
+                stackIn_10_1 = stackOut_8_1;
+                stackIn_9_0 = stackOut_8_0;
+                stackIn_9_1 = stackOut_8_1;
+                if (param0 == null) {
+                  stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+                  stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+                  stackOut_10_2 = "null";
+                  stackIn_11_0 = stackOut_10_0;
+                  stackIn_11_1 = stackOut_10_1;
+                  stackIn_11_2 = stackOut_10_2;
+                  break L3;
+                } else {
+                  stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+                  stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+                  stackOut_9_2 = "{...}";
+                  stackIn_11_0 = stackOut_9_0;
+                  stackIn_11_1 = stackOut_9_1;
+                  stackIn_11_2 = stackOut_9_2;
+                  break L3;
+                }
               }
-            }
-            ib.a(param1, false);
-            if (!param2) {
-              field_V = false;
-              return;
-            } else {
-              return;
+              L4: {
+                stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+                stackOut_11_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_11_2).append(44);
+                stackIn_13_0 = stackOut_11_0;
+                stackIn_13_1 = stackOut_11_1;
+                stackIn_12_0 = stackOut_11_0;
+                stackIn_12_1 = stackOut_11_1;
+                if (param1 == null) {
+                  stackOut_13_0 = (RuntimeException) (Object) stackIn_13_0;
+                  stackOut_13_1 = (StringBuilder) (Object) stackIn_13_1;
+                  stackOut_13_2 = "null";
+                  stackIn_14_0 = stackOut_13_0;
+                  stackIn_14_1 = stackOut_13_1;
+                  stackIn_14_2 = stackOut_13_2;
+                  break L4;
+                } else {
+                  stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+                  stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+                  stackOut_12_2 = "{...}";
+                  stackIn_14_0 = stackOut_12_0;
+                  stackIn_14_1 = stackOut_12_1;
+                  stackIn_14_2 = stackOut_12_2;
+                  break L4;
+                }
+              }
+              throw aa.a((Throwable) (Object) stackIn_14_0, stackIn_14_2 + 44 + 1 + 41);
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
@@ -90,21 +172,25 @@ final class gj extends kb {
 
     private gj(eb param0, boolean param1) {
         super(0, 0, 0, 0, (eb) null);
-        ((gj) this).field_U = (c) (Object) new gk("", (fn) null, 2);
-        ((gj) this).field_O = (c) (Object) new gk("", (fn) null, 2);
-        ((gj) this).field_Q = (c) (Object) new gk("", (fn) null, 4);
-        ((gj) this).field_Q.field_y = param0;
-        ((gj) this).field_O.field_y = param0;
-        ((gj) this).field_U.field_y = param0;
-        ((gj) this).field_S = param1 ? true : false;
-        if (!((gj) this).field_S) {
-            ((gj) this).b((ng) (Object) ((gj) this).field_U, 80);
-            ((gj) this).b((ng) (Object) ((gj) this).field_O, 80);
-        } else {
-            ((gj) this).b((ng) (Object) ((gj) this).field_O, 80);
-            ((gj) this).b((ng) (Object) ((gj) this).field_U, 80);
+        try {
+            ((gj) this).field_U = (c) (Object) new gk("", (fn) null, 2);
+            ((gj) this).field_O = (c) (Object) new gk("", (fn) null, 2);
+            ((gj) this).field_Q = (c) (Object) new gk("", (fn) null, 4);
+            ((gj) this).field_Q.field_y = param0;
+            ((gj) this).field_O.field_y = param0;
+            ((gj) this).field_U.field_y = param0;
+            ((gj) this).field_S = param1 ? true : false;
+            if (!((gj) this).field_S) {
+                ((gj) this).b((ng) (Object) ((gj) this).field_U, 80);
+                ((gj) this).b((ng) (Object) ((gj) this).field_O, 80);
+            } else {
+                ((gj) this).b((ng) (Object) ((gj) this).field_O, 80);
+                ((gj) this).b((ng) (Object) ((gj) this).field_U, 80);
+            }
+            ((gj) this).b((ng) (Object) ((gj) this).field_Q, 80);
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "gj.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
-        ((gj) this).b((ng) (Object) ((gj) this).field_Q, 80);
     }
 
     final int e(byte param0) {
@@ -163,7 +249,7 @@ final class gj extends kb {
     final void a(int param0, byte param1, int param2, int param3, int param4) {
         int var6 = 0;
         super.a(param0, (byte) 77, param2, param3, param4);
-        var6 = param0 - 130 >> -974963391;
+        var6 = param0 - 130 >> 1;
         if (!((gj) this).field_S) {
           ((gj) this).field_U.a(25, (byte) 77, 0, var6, param4);
           ((gj) this).field_O.a(25, (byte) 48, 0, 45 + var6, param4);
@@ -228,35 +314,39 @@ final class gj extends kb {
 
     private final void a(String param0, int param1, int param2, int param3, ng param4) {
         if (param3 != 0) {
-          return;
-        } else {
-          ep.field_b.b(param0, param2 + (param4.field_z - -(param4.field_E >> 122344577)), -5 + param4.field_p + param1, 16777215, -1);
-          return;
+            return;
+        }
+        try {
+            ep.field_b.b(param0, param2 + (param4.field_z - -(param4.field_E >> 1)), -5 + param4.field_p + param1, 16777215, -1);
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "gj.A(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 41);
         }
     }
 
     final void a(oa param0, int param1) {
-        super.a(param0, param1);
-        ((gj) this).field_U.field_n = (fn) (Object) param0;
-        ((gj) this).field_O.field_n = (fn) (Object) param0;
-        ((gj) this).field_Q.field_n = (fn) (Object) param0;
+        try {
+            super.a(param0, param1);
+            ((gj) this).field_U.field_n = (fn) (Object) param0;
+            ((gj) this).field_O.field_n = (fn) (Object) param0;
+            ((gj) this).field_Q.field_n = (fn) (Object) param0;
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "gj.H(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     public static void f(byte param0) {
         field_T = null;
-        if (param0 != -28) {
-            field_R = null;
-            field_W = null;
-            field_R = null;
-            return;
-        }
         field_W = null;
         field_R = null;
     }
 
     gj(eb param0, boolean param1, int param2, int param3, int param4, int param5) {
         this(param0, param1);
-        ((gj) this).a(param4, (byte) 21, param3, param2, param5);
+        try {
+            ((gj) this).a(param4, (byte) 21, param3, param2, param5);
+        } catch (RuntimeException runtimeException) {
+            throw aa.a((Throwable) (Object) runtimeException, "gj.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+        }
     }
 
     final String b(byte param0) {

@@ -24,8 +24,9 @@ final class vj {
 
     final int a(int param0) {
         if (((vj) this).field_j >= ((vj) this).field_h) {
+            int fieldTemp$0 = ((vj) this).field_f;
             ((vj) this).field_f = ((vj) this).field_f + 1;
-            ((vj) this).field_i = ((vj) this).field_g[((vj) this).field_f] << 15;
+            ((vj) this).field_i = ((vj) this).field_g[fieldTemp$0] << 15;
             if (((vj) this).field_f >= ((vj) this).field_c) {
                 ((vj) this).field_f = ((vj) this).field_c - 1;
             }

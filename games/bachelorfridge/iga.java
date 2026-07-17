@@ -11,9 +11,6 @@ abstract class iga {
     public static void a(boolean param0) {
         field_d = null;
         field_b = null;
-        if (param0) {
-            return;
-        }
         field_c = null;
         field_a = null;
     }

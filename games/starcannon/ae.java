@@ -7,71 +7,55 @@ final class ae {
 
     final static void a(int param0) {
         int[] var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        Object var5 = null;
-        int[] var6 = null;
-        int[] var7 = null;
-        int[] var8 = null;
+        int[] var5 = null;
+        RuntimeException decompiledCaughtException = null;
         var4 = StarCannon.field_A;
-        var8 = jb.field_h;
-        var7 = var8;
-        var6 = var7;
-        var1 = var6;
-        var2 = 0;
-        if (param0 != -5607) {
-          var5 = null;
-          ae.a((String) null, true, -70, true);
-          var3 = var8.length;
-          L0: while (true) {
-            if (var3 <= var2) {
-              return;
-            } else {
-              var2++;
-              var6[var2] = 0;
-              var2++;
-              var6[var2] = 0;
-              var2++;
-              var6[var2] = 0;
-              var2++;
-              var6[var2] = 0;
-              var2++;
-              var6[var2] = 0;
-              var2++;
-              var6[var2] = 0;
-              var2++;
-              var6[var2] = 0;
-              var2++;
-              var6[var2] = 0;
-              continue L0;
+        try {
+          L0: {
+            var5 = jb.field_h;
+            var1 = var5;
+            var2 = 0;
+            var3 = var5.length;
+            L1: while (true) {
+              if (var3 <= var2) {
+                break L0;
+              } else {
+                int incrementValue$40 = var2;
+                var2++;
+                var5[incrementValue$40] = 0;
+                int incrementValue$41 = var2;
+                var2++;
+                var5[incrementValue$41] = 0;
+                int incrementValue$42 = var2;
+                var2++;
+                var5[incrementValue$42] = 0;
+                int incrementValue$43 = var2;
+                var2++;
+                var5[incrementValue$43] = 0;
+                int incrementValue$44 = var2;
+                var2++;
+                var5[incrementValue$44] = 0;
+                int incrementValue$45 = var2;
+                var2++;
+                var5[incrementValue$45] = 0;
+                int incrementValue$46 = var2;
+                var2++;
+                var5[incrementValue$46] = 0;
+                int incrementValue$47 = var2;
+                var2++;
+                var5[incrementValue$47] = 0;
+                continue L1;
+              }
             }
           }
-        } else {
-          var3 = var8.length;
-          L1: while (true) {
-            if (var3 <= var2) {
-              return;
-            } else {
-              var2++;
-              var6[var2] = 0;
-              var2++;
-              var6[var2] = 0;
-              var2++;
-              var6[var2] = 0;
-              var2++;
-              var6[var2] = 0;
-              var2++;
-              var6[var2] = 0;
-              var2++;
-              var6[var2] = 0;
-              var2++;
-              var6[var2] = 0;
-              var2++;
-              var6[var2] = 0;
-              continue L1;
-            }
-          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw sd.a((Throwable) (Object) var1_ref, "ae.B(" + -5607 + 41);
         }
     }
 
@@ -81,12 +65,18 @@ final class ae {
             Throwable var2 = null;
             Throwable decompiledCaughtException = null;
             try {
-              var2_int = 31 / ((param1 - -46) / 45);
-              Object discarded$1 = mb.a(new Object[1], ll.b(105), "resizing", -27504);
-            } catch (java.lang.Throwable decompiledCaughtParameter) {
-              decompiledCaughtException = decompiledCaughtParameter;
+              L0: {
+                var2_int = 31;
+                Object discarded$1 = mb.a(new Object[1], ll.b(105), "resizing", -27504);
+                break L0;
+              }
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L1: {
+                var2 = decompiledCaughtException;
+                break L1;
+              }
             }
-            var2 = decompiledCaughtException;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -99,7 +89,7 @@ final class ae {
     }
 
     public static void a(byte param0) {
-        int var1 = -55 % ((param0 - -17) / 41);
+        int var1 = 0;
         field_b = null;
         field_a = null;
     }
@@ -108,12 +98,14 @@ final class ae {
         qb.b(-1);
         ti.field_b.l(26756);
         if (param2 != 0) {
-          return;
-        } else {
-          wi.field_c = new rg(lc.field_hb, (String) null, tc.field_x, param1, param3);
-          t.field_h = new lc(ti.field_b, (uj) (Object) wi.field_c);
-          ti.field_b.a((byte) 102, (uj) (Object) t.field_h);
-          return;
+            return;
+        }
+        try {
+            wi.field_c = new rg(lc.field_hb, (String) null, tc.field_x, param1, param3);
+            t.field_h = new lc(ti.field_b, (uj) (Object) wi.field_c);
+            ti.field_b.a((byte) 102, (uj) (Object) t.field_h);
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "ae.D(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
         }
     }
 

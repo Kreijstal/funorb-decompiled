@@ -238,7 +238,7 @@ final class pj extends bk {
                     }
                   }
                 }
-                ((pj) this).field_z[var9] = (short)-1;
+                ((pj) this).field_z[var9] = (short) -1;
                 var9++;
                 continue L1;
               }
@@ -278,14 +278,14 @@ final class pj extends bk {
                               break L3;
                             } else {
                               if (param0.field_D[var11] == -1) {
-                                ((pj) this).field_F[var11] = (byte)-1;
+                                ((pj) this).field_F[var11] = (byte) -1;
                                 var11++;
                                 continue L7;
                               } else {
                                 ((pj) this).field_F[var11] = (byte)var9_ref_int__[param0.field_D[var11] & 255];
                                 if (((pj) this).field_F[var11] == -1) {
                                   if (((pj) this).field_z != null) {
-                                    ((pj) this).field_z[var11] = (short)-1;
+                                    ((pj) this).field_z[var11] = (short) -1;
                                     var11++;
                                     continue L7;
                                   } else {
@@ -850,7 +850,7 @@ final class pj extends bk {
                           break L20;
                         } else {
                           if (var14.field_z == null) {
-                            ((pj) this).field_z[((pj) this).field_x] = (short)-1;
+                            ((pj) this).field_z[((pj) this).field_x] = (short) -1;
                             break L20;
                           } else {
                             ((pj) this).field_z[((pj) this).field_x] = var11.field_z[var9_int];

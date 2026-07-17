@@ -13,7 +13,7 @@ final class ie extends hl {
         fo var4 = null;
         var4 = new fo();
         var4.field_j = param0;
-        var4.field_l = param3;
+        var4.field_l = 0;
         ji.field_a.a((byte) -94, (hl) (Object) var4);
         if (param1 != 31043) {
           field_j = -119;
@@ -31,9 +31,6 @@ final class ie extends hl {
     public static void a(byte param0) {
         field_i = null;
         field_k = null;
-        if (param0 <= 67) {
-            field_k = null;
-        }
     }
 
     static {

@@ -41,46 +41,67 @@ final class cm {
     }
 
     final static int a(byte param0, int param1, int param2) {
-        int var3 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        L0: {
-          var8 = HoldTheLine.field_D;
-          if (param0 == 110) {
-            break L0;
-          } else {
-            cm.a((byte) 84);
-            break L0;
-          }
-        }
-        var3 = 0;
-        var4 = ie.field_j;
-        L1: while (true) {
-          if (var3 >= ii.field_b.length) {
-            return -1;
-          } else {
-            var5 = cd.field_f[var3];
-            if ((var5 ^ -1) <= -1) {
-              var6 = h.a(ii.field_b[var3], (byte) -113, true);
-              var7 = -(var6 >> 943837537) + mk.field_i;
-              var4 = var4 + dc.field_bb;
-              if (!mo.a((vf.field_w << -221223775) + w.field_b, param2, var6 - -(pg.field_G << -2043140287), param1, 27, -pg.field_G + var7, var4)) {
-                var4 = var4 + ((vf.field_w << -1855829503) + dc.field_bb - -w.field_b);
-                var3++;
-                continue L1;
+        int stackIn_9_0 = 0;
+        int stackIn_13_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_12_0 = 0;
+        int stackOut_8_0 = 0;
+        var8 = HoldTheLine.field_D;
+        try {
+          L0: {
+            L1: {
+              if (param0 == 110) {
+                break L1;
               } else {
-                return var5;
+                cm.a((byte) 84);
+                break L1;
               }
-            } else {
-              var4 = var4 + hn.field_M;
-              var3++;
-              continue L1;
+            }
+            var3_int = 0;
+            var4 = ie.field_j;
+            L2: while (true) {
+              if (var3_int >= ii.field_b.length) {
+                stackOut_12_0 = -1;
+                stackIn_13_0 = stackOut_12_0;
+                break L0;
+              } else {
+                L3: {
+                  var5 = cd.field_f[var3_int];
+                  if (var5 >= 0) {
+                    var6 = h.a(ii.field_b[var3_int], (byte) -113, true);
+                    var7 = -(var6 >> 1) + mk.field_i;
+                    var4 = var4 + dc.field_bb;
+                    if (!mo.a((vf.field_w << 1) + w.field_b, param2, var6 - -(pg.field_G << 1), param1, 27, -pg.field_G + var7, var4)) {
+                      var4 = var4 + ((vf.field_w << 1) + dc.field_bb - -w.field_b);
+                      break L3;
+                    } else {
+                      stackOut_8_0 = var5;
+                      stackIn_9_0 = stackOut_8_0;
+                      return stackIn_9_0;
+                    }
+                  } else {
+                    var4 = var4 + hn.field_M;
+                    break L3;
+                  }
+                }
+                var3_int++;
+                continue L2;
+              }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw kk.a((Throwable) (Object) var3, "cm.C(" + param0 + 44 + param1 + 44 + param2 + 41);
         }
+        return stackIn_13_0;
     }
 
     public static void a(byte param0) {

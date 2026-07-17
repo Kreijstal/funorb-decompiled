@@ -10,9 +10,13 @@ final class q extends rf {
     static String field_i;
 
     q(long param0, int param1, byte[] param2) {
-        ((q) this).field_f = param1;
-        ((q) this).field_k = param2;
-        ((q) this).field_g = param0;
+        try {
+            ((q) this).field_f = param1;
+            ((q) this).field_k = param2;
+            ((q) this).field_g = param0;
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "q.<init>(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void b(byte param0) {

@@ -95,14 +95,14 @@ final class bn extends nv {
           var3 = ((bn) this).field_g.e(param0 + 4230);
           var4 = ((bn) this).field_g.c(param0 + -5487);
           var5 = ((bn) this).field_g.a((byte) 55);
-          var7 = ((bn) this).field_p << -1823745648;
-          var8 = ((bn) this).field_r << 968483440;
-          var9 = var4 >> 275384145;
-          var10 = var5 >> -422570639;
+          var7 = ((bn) this).field_p << 16;
+          var8 = ((bn) this).field_r << 16;
+          var9 = var4 >> 17;
+          var10 = var5 >> 17;
           var11 = et.b(var10, var9, -1);
           var12 = ((bn) this).o((byte) 46).a(8192, 0);
-          var13 = hua.a((byte) 98, var12 >> -1007795806);
-          var14 = bua.a(0, var12 >> -1786581662);
+          var13 = hua.a((byte) 98, var12 >> 2);
+          var14 = bua.a(0, var12 >> 2);
           var16 = ((bn) this).field_g.P(0);
           if (((bn) this).field_q) {
             var17_int = 1 + ((bn) this).o((byte) 46).a(5, 0);
@@ -131,13 +131,13 @@ final class bn extends nv {
                 var21 = var20.d(3);
                 var22 = var20.e(9648);
                 if (((bn) this).field_g.a((byte) 110, var22, var21, var20.a((byte) 55), var20.c(-40))) {
-                  var23 = var21 - var2 >> -291850544;
-                  var24 = -var3 + var22 >> -1963051248;
+                  var23 = var21 - var2 >> 16;
+                  var24 = -var3 + var22 >> 16;
                   var25 = ira.a(var24, var23, 124);
                   if (var25 <= var11) {
-                    if (-1 != (var25 ^ -1)) {
+                    if (var25 != 0) {
                       L3: {
-                        var6 = (var25 << 639407120) / var11;
+                        var6 = (var25 << 16) / var11;
                         var6 = -gqa.a(var6, (byte) 24, var8 - var7) + var8;
                         var6 = za.a(var7, (byte) 74, var8, var6);
                         if (!((bn) this).field_q) {
@@ -151,7 +151,7 @@ final class bn extends nv {
                         if (!((bn) this).field_q) {
                           break L4;
                         } else {
-                          if (ua.a(var6, param0 ^ -5442) > var25 << -2138048976) {
+                          if (ua.a(var6, param0 ^ -5442) > var25 << 16) {
                             L5: {
                               stackOut_26_0 = (ffa) var20;
                               stackOut_26_1 = param0 + -5313;
@@ -184,7 +184,7 @@ final class bn extends nv {
                                 break L5;
                               }
                             }
-                            boolean discarded$2 = ((ffa) (Object) stackIn_29_0).a(stackIn_29_1, stackIn_29_2 != 0, stackIn_29_3, -var24 << -613134000, -var23 << -603718160, 0);
+                            boolean discarded$2 = ((ffa) (Object) stackIn_29_0).a(stackIn_29_1, stackIn_29_2 != 0, stackIn_29_3, -var24 << 16, -var23 << 16, 0);
                             var19++;
                             continue L2;
                           } else {
@@ -255,9 +255,6 @@ final class bn extends nv {
         field_u = null;
         field_o = null;
         field_t = null;
-        if (param0) {
-            field_u = null;
-        }
     }
 
     final int a(boolean param0) {
@@ -268,10 +265,14 @@ final class bn extends nv {
     }
 
     final void a(boolean param0, kh param1) {
-        super.a(param0, param1);
-        param1.a((byte) 72, ((bn) this).field_q ? 1 : 0, 1);
-        param1.a((byte) 32, ((bn) this).field_r, 4);
-        param1.a((byte) -127, ((bn) this).field_p, 4);
+        try {
+            super.a(param0, param1);
+            param1.a((byte) 72, ((bn) this).field_q ? 1 : 0, 1);
+            param1.a((byte) 32, ((bn) this).field_r, 4);
+            param1.a((byte) -127, ((bn) this).field_p, 4);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "bn.F(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final boolean p(byte param0) {
@@ -286,9 +287,13 @@ final class bn extends nv {
         ((bn) this).field_r = 2;
         ((bn) this).field_q = true;
         ((bn) this).field_p = 1;
-        ((bn) this).field_q = -2 == (param1.b((byte) 44, 1) ^ -1) ? true : false;
-        ((bn) this).field_r = param1.b((byte) 44, 4);
-        ((bn) this).field_p = param1.b((byte) 44, 4);
+        try {
+            ((bn) this).field_q = param1.b((byte) 44, 1) == 1 ? true : false;
+            ((bn) this).field_r = param1.b((byte) 44, 4);
+            ((bn) this).field_p = param1.b((byte) 44, 4);
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "bn.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     final int a(int param0, int param1) {

@@ -17,7 +17,7 @@ final class on {
               } else {
                 ra.e(0, 0, ra.field_f, oj.field_a.field_z);
                 t.field_q.a(param1, 256);
-                if (-1 > (ng.field_t ^ -1)) {
+                if (ng.field_t > 0) {
                   if (!lg.field_S) {
                     return;
                   } else {
@@ -42,7 +42,7 @@ final class on {
             }
           }
           L1: {
-            if (-1 > (ng.field_t ^ -1)) {
+            if (ng.field_t > 0) {
               if (!lg.field_S) {
                 break L1;
               } else {
@@ -71,7 +71,7 @@ final class on {
             if (hm.field_b) {
               ra.e(0, 0, ra.field_f, oj.field_a.field_z);
               t.field_q.a(param1, 256);
-              if (-1 > (ng.field_t ^ -1)) {
+              if (ng.field_t > 0) {
                 if (!lg.field_S) {
                   return;
                 } else {
@@ -93,7 +93,7 @@ final class on {
                 }
               }
             } else {
-              if (-1 > (ng.field_t ^ -1)) {
+              if (ng.field_t > 0) {
                 if (lg.field_S) {
                   ra.e(0, 0, ra.field_f, oj.field_a.field_z);
                   fj.field_b.a(param1, 256);
@@ -116,7 +116,7 @@ final class on {
               }
             }
           } else {
-            if (-1 > (ng.field_t ^ -1)) {
+            if (ng.field_t > 0) {
               if (lg.field_S) {
                 ra.e(0, 0, ra.field_f, oj.field_a.field_z);
                 fj.field_b.a(param1, 256);
@@ -145,9 +145,6 @@ final class on {
     }
 
     public static void a(int param0) {
-        if (param0 != -10457) {
-            return;
-        }
         field_a = null;
         field_c = null;
     }

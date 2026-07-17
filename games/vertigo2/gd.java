@@ -39,9 +39,6 @@ final class gd extends jq {
         field_j = null;
         field_l = null;
         field_s = null;
-        if (!param0) {
-            field_k = 50;
-        }
     }
 
     final void b(int param0, byte param1, int param2) {
@@ -59,17 +56,17 @@ final class gd extends jq {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        var4 = param1 * ((gd) this).field_q >> -1274338548;
-        var5 = ((gd) this).field_t * param0 >> 748862860;
+        var4 = param1 * ((gd) this).field_q >> 12;
+        var5 = ((gd) this).field_t * param0 >> 12;
         if (param2 != 45) {
           return;
         } else {
-          var6 = param1 * ((gd) this).field_p >> 856939980;
-          var7 = param0 * ((gd) this).field_o >> 1748065548;
-          var8 = ((gd) this).field_i * param1 >> 1024587052;
-          var9 = ((gd) this).field_h * param0 >> -261667156;
-          var10 = ((gd) this).field_m * param1 >> -1480812532;
-          var11 = ((gd) this).field_n * param0 >> -714017204;
+          var6 = param1 * ((gd) this).field_p >> 12;
+          var7 = param0 * ((gd) this).field_o >> 12;
+          var8 = ((gd) this).field_i * param1 >> 12;
+          var9 = ((gd) this).field_h * param0 >> 12;
+          var10 = ((gd) this).field_m * param1 >> 12;
+          var11 = ((gd) this).field_n * param0 >> 12;
           hi.a(var9, -35, var8, var10, var11, var7, var5, var4, var6, ((gd) this).field_a);
           return;
         }

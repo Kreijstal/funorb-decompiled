@@ -12,11 +12,6 @@ final class qm {
         field_b = null;
         field_d = null;
         field_c = null;
-        if (param0 > -100) {
-            field_b = null;
-            field_e = null;
-            return;
-        }
         field_e = null;
     }
 
@@ -24,36 +19,19 @@ final class qm {
         try {
             int var2 = 0;
             Throwable var3 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        var2 = 25 / ((42 - param0) / 40);
-                        statePc = 1;
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        try {
-                            Object discarded$1 = ne.a(new Object[1], 78, uc.e((byte) -82), "resizing");
-                            statePc = 4;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_1) {
-                            caughtException = stateCaught_1;
-                            statePc = 3;
-                            continue stateLoop;
-                        }
-                    }
-                    case 3: {
-                        var3 = caughtException;
-                        statePc = 4;
-                        continue stateLoop;
-                    }
-                    case 4: {
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
-                }
+            Throwable decompiledCaughtException = null;
+            var2 = 25 / ((42 - param0) / 40);
+            try {
+              L0: {
+                Object discarded$1 = ne.a(new Object[1], 78, uc.e((byte) -82), "resizing");
+                break L0;
+              }
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              L1: {
+                var3 = decompiledCaughtException;
+                break L1;
+              }
             }
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;

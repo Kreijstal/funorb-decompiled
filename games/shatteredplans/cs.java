@@ -26,7 +26,7 @@ final class cs extends oh {
         bi var11 = null;
         bi var12 = null;
         bi var13 = null;
-        bi var14 = null;
+        Object var14 = null;
         int[] var15 = null;
         bi var16 = null;
         int[] var17 = null;
@@ -60,7 +60,7 @@ final class cs extends oh {
           var14 = null;
           if (0 < param5) {
             var16 = new bi(16, 16);
-            var14 = var16;
+            var14 = (Object) (Object) var16;
             var16.e();
             gf.d(0, 0, 16, 16, param5);
             break L0;
@@ -69,13 +69,17 @@ final class cs extends oh {
           }
         }
         gf.a(var20, var7, var8);
-        return new bi[]{var10, var11, var10, var9, var14, var9, var12, var13, var12};
+        return new bi[]{var10, var11, var10, var9, (bi) var14, var9, var12, var13, var12};
     }
 
     cs(ln param0, ln param1, int param2) {
-        ((cs) this).field_k = param1;
-        ((cs) this).field_m = param2;
-        ((cs) this).field_n = param0;
+        try {
+            ((cs) this).field_k = param1;
+            ((cs) this).field_m = param2;
+            ((cs) this).field_n = param0;
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "cs.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
+        }
     }
 
     final static void a(byte param0) {

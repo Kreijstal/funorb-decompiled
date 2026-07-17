@@ -9,11 +9,6 @@ final class pe extends k {
 
     public static void d(int param0) {
         field_n = null;
-        if (param0 >= -18) {
-            field_m = -104;
-            field_l = null;
-            return;
-        }
         field_l = null;
     }
 
@@ -45,15 +40,14 @@ final class pe extends k {
     }
 
     final static gi a(Throwable param0, String param1) {
-        gi var2_ref = null;
         gi var2 = null;
         if (!(param0 instanceof gi)) {
             var2 = new gi(param0, param1);
         } else {
-            var2_ref = (gi) (Object) param0;
-            var2_ref.field_e = var2_ref.field_e + 32 + param1;
+            var2 = (gi) (Object) param0;
+            var2.field_e = var2.field_e + 32 + param1;
         }
-        return var2_ref;
+        return var2;
     }
 
     static {

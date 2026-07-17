@@ -76,12 +76,13 @@ final class ac extends br {
                     if ((var7 & -256) == 0) {
                       break L3;
                     } else {
-                      var7 = (var7 ^ -1) >> 31;
+                      var7 = ~var7 >> 31;
                       break L3;
                     }
                   }
+                  int incrementValue$1 = var2;
                   var2++;
-                  var1[var2] = (byte)(var7 - 128);
+                  var1[incrementValue$1] = (byte)(var7 - 128);
                   var6++;
                   continue L2;
                 } else {
@@ -108,7 +109,7 @@ final class ac extends br {
         ((ac) this).field_z = var2.i(-1478490344);
         ((ac) this).field_N = var2.i(-1478490344);
         if (((ac) this).field_N < 0) {
-            ((ac) this).field_N = ((ac) this).field_N ^ -1;
+            ((ac) this).field_N = ~((ac) this).field_N;
             ((ac) this).field_n = true;
         }
         int var3 = var2.i(-1478490344);
@@ -172,6 +173,7 @@ final class ac extends br {
 
     final static ac a(ul param0, int param1, int param2) {
         try {
+            ac var4_ref = null;
             if (!ac.a(param0)) {
                 boolean discarded$0 = param0.b(param2, param1, 0);
                 return null;
@@ -180,13 +182,11 @@ final class ac extends br {
             if (var3 == null) {
                 return null;
             }
-            ac var4 = null;
-            try {
-                var4 = new ac(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
+            Object var4 = null;
+            {
+                var4_ref = new ac(var3);
             }
-            return var4;
+            return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -196,7 +196,7 @@ final class ac extends br {
 
     private final static void a(byte[] param0, int param1) {
         field_L = param0;
-        field_i = param1;
+        field_i = 0;
         field_I = 0;
     }
 
@@ -502,12 +502,13 @@ final class ac extends br {
                       if ((var6 & -256) == 0) {
                         break L8;
                       } else {
-                        var6 = (var6 ^ -1) >> 31;
+                        var6 = ~var6 >> 31;
                         break L8;
                       }
                     }
+                    int incrementValue$1 = var3;
                     var3++;
-                    ((ac) this).field_C[var3] = (byte)(var6 - 128);
+                    ((ac) this).field_C[incrementValue$1] = (byte)(var6 - 128);
                     var5++;
                     continue L6;
                   }
@@ -538,7 +539,6 @@ final class ac extends br {
         int var16 = 0;
         int var17_int = 0;
         Object var17 = null;
-        float[] var17_array = null;
         int var18_int = 0;
         float[] var18 = null;
         int var19 = 0;
@@ -1054,7 +1054,7 @@ final class ac extends br {
                   var50 = var54;
                   var46 = var50;
                   var40 = var46;
-                  var17_array = var40;
+                  var17 = (Object) (Object) var40;
                   if (((ac) this).field_K) {
                     break L36;
                   } else {
@@ -1112,7 +1112,7 @@ final class ac extends br {
               }
             }
             ((ac) this).field_K = stackIn_111_1 != 0;
-            return var17_array;
+            return (float[]) var17;
           } else {
             var42 = field_l[var14.field_a[var17_int]];
             var55 = field_E;
@@ -1125,6 +1125,7 @@ final class ac extends br {
 
     final static ac a(ul param0, String param1, String param2) {
         try {
+            ac var4_ref = null;
             if (!ac.a(param0)) {
                 boolean discarded$0 = param0.a((byte) -28, param2, param1);
                 return null;
@@ -1133,13 +1134,11 @@ final class ac extends br {
             if (var3 == null) {
                 return null;
             }
-            ac var4 = null;
-            try {
-                var4 = new ac(var3);
-            } catch (IOException iOException) {
-                iOException.printStackTrace();
+            Object var4 = null;
+            {
+                var4_ref = new ac(var3);
             }
-            return var4;
+            return var4_ref;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

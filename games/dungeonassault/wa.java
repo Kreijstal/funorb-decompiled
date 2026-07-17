@@ -18,8 +18,12 @@ final class wa {
     static int field_l;
 
     final static void a(int param0, int param1, int param2, cn param3, int param4, int param5) {
-        param3.h(param4, param5);
-        db.field_v.b(Integer.toString(param0), 20 + param4, (param3.field_v + la.field_b.field_H >> 1075709729) + param5, param2, param1);
+        try {
+            param3.h(param4, param5);
+            db.field_v.b(Integer.toString(param0), 20 + param4, (param3.field_v + la.field_b.field_H >> 1) + param5, param2, param1);
+        } catch (RuntimeException runtimeException) {
+            throw vk.a((Throwable) (Object) runtimeException, "wa.A(" + param0 + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 41);
+        }
     }
 
     final ne a(long param0, int param1) {
@@ -38,7 +42,7 @@ final class wa {
               ((wa) this).field_d = null;
               return null;
             } else {
-              if ((((wa) this).field_d.field_h ^ -1L) != (param0 ^ -1L)) {
+              if (~((wa) this).field_d.field_h != ~param0) {
                 ((wa) this).field_d = ((wa) this).field_d.field_e;
                 continue L0;
               } else {
@@ -58,7 +62,7 @@ final class wa {
               ((wa) this).field_d = null;
               return null;
             } else {
-              if ((((wa) this).field_d.field_h ^ -1L) != (param0 ^ -1L)) {
+              if (~((wa) this).field_d.field_h != ~param0) {
                 ((wa) this).field_d = ((wa) this).field_d.field_e;
                 continue L1;
               } else {
@@ -85,24 +89,19 @@ final class wa {
         field_b = null;
         field_m = null;
         field_j = null;
-        if (param0 != 23413) {
-            Object var2 = null;
-            wa.a(-5, (cn) null);
-            field_f = null;
-            field_e = null;
-            return;
-        }
         field_f = null;
         field_e = null;
     }
 
     final static void a(int param0, cn param1) {
-        if (param0 < 116) {
-            field_m = null;
+        try {
+            if (param0 < 116) {
+                field_m = null;
+            }
             ol.field_b = param1;
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw vk.a((Throwable) (Object) runtimeException, "wa.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
         }
-        ol.field_b = param1;
     }
 
     final static int[] b(int param0) {
@@ -125,8 +124,9 @@ final class wa {
           } else {
             L0: while (true) {
               if (((wa) this).field_g < ((wa) this).field_n) {
+                int fieldTemp$2 = ((wa) this).field_g;
                 ((wa) this).field_g = ((wa) this).field_g + 1;
-                var8 = ((wa) this).field_h[((wa) this).field_g].field_e;
+                var8 = ((wa) this).field_h[fieldTemp$2].field_e;
                 if (((wa) this).field_h[((wa) this).field_g + -1] != var8) {
                   ((wa) this).field_i = var8.field_e;
                   return var8;
@@ -149,8 +149,9 @@ final class wa {
             } else {
               L1: while (true) {
                 if (((wa) this).field_g < ((wa) this).field_n) {
+                  int fieldTemp$3 = ((wa) this).field_g;
                   ((wa) this).field_g = ((wa) this).field_g + 1;
-                  var4 = ((wa) this).field_h[((wa) this).field_g].field_e;
+                  var4 = ((wa) this).field_h[fieldTemp$3].field_e;
                   if (((wa) this).field_h[((wa) this).field_g + -1] != var4) {
                     ((wa) this).field_i = var4.field_e;
                     return var4;
@@ -167,38 +168,23 @@ final class wa {
     }
 
     final void a(ne param0, int param1, long param2) {
-        ne var6 = null;
         ne var5 = null;
-        if (null != param0.field_a) {
-            param0.a(false);
-            var6 = ((wa) this).field_h[(int)(param2 & (long)(((wa) this).field_n + -1))];
-            var5 = var6;
-            param0.field_a = var6.field_a;
+        try {
+            if (null != param0.field_a) {
+                param0.a(false);
+            }
+            var5 = ((wa) this).field_h[(int)(param2 & (long)(((wa) this).field_n + -1))];
+            param0.field_a = var5.field_a;
             param0.field_e = var5;
             param0.field_a.field_e = param0;
-            if (param1 == 12460) {
-                param0.field_e.field_a = param0;
-                param0.field_h = param2;
-                return;
+            if (param1 != 12460) {
+                field_e = null;
             }
-            field_e = null;
             param0.field_e.field_a = param0;
             param0.field_h = param2;
-            return;
+        } catch (RuntimeException runtimeException) {
+            throw vk.a((Throwable) (Object) runtimeException, "wa.H(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }
-        ne var7 = ((wa) this).field_h[(int)(param2 & (long)(((wa) this).field_n + -1))];
-        var5 = var7;
-        param0.field_a = var7.field_a;
-        param0.field_e = var5;
-        param0.field_a.field_e = param0;
-        if (param1 != 12460) {
-            field_e = null;
-            param0.field_e.field_a = param0;
-            param0.field_h = param2;
-            return;
-        }
-        param0.field_e.field_a = param0;
-        param0.field_h = param2;
     }
 
     wa(int param0) {
@@ -210,13 +196,15 @@ final class wa {
         var2 = 0;
         L0: while (true) {
           if (var2 < param0) {
-            var3 = new ne();
-            ((wa) this).field_h[var2] = new ne();
+            ne dupTemp$2 = new ne();
+            var3 = dupTemp$2;
+            ((wa) this).field_h[var2] = dupTemp$2;
             var3.field_a = var3;
             var3.field_e = var3;
             var2++;
             continue L0;
           } else {
+            return;
           }
         }
     }

@@ -19,9 +19,6 @@ final class co {
         field_i = null;
         field_h = null;
         field_f = null;
-        if (param0 > -42) {
-            co.c(8);
-        }
         field_d = null;
         field_g = null;
         field_e = null;
@@ -29,20 +26,53 @@ final class co {
     }
 
     final static int a(int param0) {
-        int var4 = ArcanistsMulti.field_G ? 1 : 0;
-        vn var1 = rk.field_O.g((byte) 56);
+        vn var1 = null;
+        RuntimeException var1_ref = null;
         int var2 = 0;
-        ml var3 = (ml) (Object) var1.b(param0 + 33298);
-        if (param0 != -20675) {
-            field_h = null;
-        }
-        while (var3 != null) {
-            if (40 == var3.field_jb) {
-                var2++;
+        ml var3 = null;
+        int var4 = 0;
+        int stackIn_8_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_7_0 = 0;
+        var4 = ArcanistsMulti.field_G ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              var1 = rk.field_O.g((byte) 56);
+              var2 = 0;
+              var3 = (ml) (Object) var1.b(param0 + 33298);
+              if (param0 == -20675) {
+                break L1;
+              } else {
+                field_h = null;
+                break L1;
+              }
             }
-            var3 = (ml) (Object) var1.a(0);
+            L2: while (true) {
+              if (var3 == null) {
+                stackOut_7_0 = var2;
+                stackIn_8_0 = stackOut_7_0;
+                break L0;
+              } else {
+                L3: {
+                  if (40 != var3.field_jb) {
+                    break L3;
+                  } else {
+                    var2++;
+                    break L3;
+                  }
+                }
+                var3 = (ml) (Object) var1.a(0);
+                continue L2;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw aa.a((Throwable) (Object) var1_ref, "co.C(" + param0 + 41);
         }
-        return var2;
+        return stackIn_8_0;
     }
 
     public final String toString() {
@@ -50,7 +80,7 @@ final class co {
     }
 
     final static void c(int param0) {
-        int var1 = 0;
+        int var1_int = 0;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -78,7 +108,7 @@ final class co {
           }
         }
         L1: {
-          if ((mj.field_p ^ -1) == -2) {
+          if (mj.field_p == 1) {
             rk.field_O.field_y = 960;
             rk.field_O.field_H = 960;
             rk.field_O.d(33, true);
@@ -88,7 +118,7 @@ final class co {
           }
         }
         L2: {
-          if ((mj.field_p ^ -1) == -3) {
+          if (mj.field_p == 2) {
             rk.field_O.d(3, true);
             break L2;
           } else {
@@ -104,7 +134,7 @@ final class co {
           }
         }
         L4: {
-          if ((mj.field_p ^ -1) != -5) {
+          if (mj.field_p != 4) {
             break L4;
           } else {
             rk.field_O.d(15, true);
@@ -128,7 +158,7 @@ final class co {
           }
         }
         L7: {
-          if ((mj.field_p ^ -1) != -8) {
+          if (mj.field_p != 7) {
             break L7;
           } else {
             rk.field_O.d(45, true);
@@ -136,8 +166,8 @@ final class co {
           }
         }
         L8: {
-          rk.field_O.field_Hb = rk.field_O.field_H >> 2135688897;
-          rk.field_O.field_hb = rk.field_O.field_y >> -1733914751;
+          rk.field_O.field_Hb = rk.field_O.field_H >> 1;
+          rk.field_O.field_hb = rk.field_O.field_y >> 1;
           rk.field_O.b(649860712, true);
           if (jh.field_c[rk.field_O.a(-31497) + 1] != null) {
             mi.a(jh.field_c[rk.field_O.a(-31497) - -1], 3);
@@ -163,8 +193,8 @@ final class co {
             rk.field_O.a(1, (byte) -121);
             break L9;
           } else {
-            if ((var2 ^ -1) != -2) {
-              if ((var2 ^ -1) == -3) {
+            if (var2 != 1) {
+              if (var2 == 2) {
                 rk.field_O.a(false, -1, false);
                 qn.field_ob.field_G = false;
                 qn.field_ob.field_y = false;
@@ -194,7 +224,7 @@ final class co {
                     if (var2 != 5) {
                       if (6 != var2) {
                         L10: {
-                          if ((var2 ^ -1) == -8) {
+                          if (var2 == 7) {
                             break L10;
                           } else {
                             break L10;
@@ -216,80 +246,61 @@ final class co {
                         rk.field_O.h((byte) 19);
                         var2 = 0;
                         L12: while (true) {
-                          if ((var2 ^ -1) <= -17) {
-                            var1 = 10;
+                          if (var2 >= 16) {
+                            var1_int = 10;
                             var2 = 0;
                             L13: while (true) {
-                              if ((var2 ^ -1) < -5) {
-                                rk.field_O.field_x[0] = var1;
+                              if (var2 > 4) {
+                                rk.field_O.field_x[0] = var1_int;
                                 rk.field_O.field_X[0] = 0;
                                 rk.field_O.field_Ab[0] = 0;
                                 rk.field_O.field_o[0] = 0;
                                 rk.field_O.b(0, true, 0);
                                 break L9;
                               } else {
-                                if (0 <= b.field_f[var2]) {
-                                  if (0 == b.field_f[var2] % 12) {
-                                    if (b.field_f[11 + var2] == 11 + b.field_f[var2]) {
-                                      var1 = b.field_f[var2] / 12 - 1;
-                                      if (var1 == -1) {
-                                        var1 = 10;
-                                        if (qf.field_d >= 2) {
-                                          var1 = 9;
-                                          var2++;
-                                          continue L13;
-                                        } else {
-                                          var2++;
-                                          continue L13;
-                                        }
-                                      } else {
-                                        var2++;
-                                        continue L13;
-                                      }
-                                    } else {
-                                      var2++;
-                                      continue L13;
-                                    }
+                                L14: {
+                                  if (0 > b.field_f[var2]) {
+                                    break L14;
                                   } else {
-                                    var2++;
-                                    continue L13;
+                                    break L14;
                                   }
-                                } else {
-                                  var2++;
-                                  continue L13;
                                 }
+                                var2++;
+                                continue L13;
                               }
                             }
                           } else {
-                            var3 = b.field_f[var2];
-                            if (var3 != -1) {
-                              L14: {
-                                var4 = hh.field_b[var3];
-                                if (hh.field_b[var3] != -1) {
-                                  break L14;
-                                } else {
-                                  var4 = 1;
-                                  break L14;
+                            L15: {
+                              var3 = b.field_f[var2];
+                              if (var3 != -1) {
+                                L16: {
+                                  var4 = hh.field_b[var3];
+                                  if (hh.field_b[var3] != -1) {
+                                    break L16;
+                                  } else {
+                                    var4 = 1;
+                                    break L16;
+                                  }
                                 }
-                              }
-                              L15: {
-                                if (hh.field_b[var3] == 0) {
-                                  var4 = -1;
-                                  break L15;
-                                } else {
-                                  break L15;
+                                L17: {
+                                  if (hh.field_b[var3] == 0) {
+                                    var4 = -1;
+                                    break L17;
+                                  } else {
+                                    break L17;
+                                  }
                                 }
+                                rk.field_O.a(0, var2, var4, 27, var3);
+                                rk.field_O.a(1, var2, var4, 67, var3);
+                                rk.field_O.a(2, var2, var4, 75, var3);
+                                rk.field_O.a(3, var2, var4, 36, var3);
+                                break L15;
+                              } else {
+                                break L15;
                               }
-                              rk.field_O.a(0, var2, var4, 27, var3);
-                              rk.field_O.a(1, var2, var4, 67, var3);
-                              rk.field_O.a(2, var2, var4, 75, var3);
-                              rk.field_O.a(3, var2, var4, 36, var3);
-                              var2++;
-                              continue L12;
-                            } else {
-                              var2++;
-                              continue L12;
                             }
+                            var2++;
+                            continue L12;
                           }
                         }
                       } else {
@@ -352,25 +363,25 @@ final class co {
             }
           }
         }
-        L16: {
+        L18: {
           ce.field_m.a(true);
           qn.field_ob.field_z = gj.field_a[rk.field_O.field_F];
           if (param0 > 103) {
-            break L16;
+            break L18;
           } else {
             co.c(-94);
-            break L16;
+            break L18;
           }
         }
-        L17: {
+        L19: {
           var6 = rk.field_O.a(0, true);
           if (var6 != null) {
             qn.field_ob.field_m.a(-88, var6);
             qn.field_ob.field_bb = var6.field_T;
-            break L17;
+            break L19;
           } else {
             qn.field_ob.field_bb = -1;
-            break L17;
+            break L19;
           }
         }
     }

@@ -9,9 +9,6 @@ final class tja extends pb {
     public static void a(boolean param0) {
         field_p = null;
         field_q = null;
-        if (param0) {
-            tja.a(false);
-        }
     }
 
     final boolean a(int param0) {
@@ -32,7 +29,11 @@ final class tja extends pb {
 
     tja(Object param0, int param1) {
         super(param1);
-        ((tja) this).field_o = param0;
+        try {
+            ((tja) this).field_o = param0;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "tja.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     static {

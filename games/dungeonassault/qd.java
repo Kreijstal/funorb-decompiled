@@ -47,9 +47,6 @@ final class qd {
     }
 
     public static void a(boolean param0) {
-        if (!param0) {
-            int discarded$0 = qd.a(-11, -87, -69);
-        }
         field_a = null;
         field_e = null;
         field_c = null;

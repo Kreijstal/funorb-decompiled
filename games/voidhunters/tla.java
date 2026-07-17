@@ -16,13 +16,10 @@ final class tla extends aja {
     private int field_i;
 
     private final void a(int param0) {
-        if (param0 != -27568) {
-            ((tla) this).field_e = null;
-        }
         ((tla) this).field_g.h(33984, 1);
         ((tla) this).field_g.a(65, (pib) null);
         ((tla) this).field_g.b(8448, 8448, false);
-        ((tla) this).field_g.c(1, param0 + 61760, 768, 34168);
+        ((tla) this).field_g.c(1, 34192, 768, 34168);
         ((tla) this).field_g.b(0, 770, 5890, 34184);
         ((tla) this).field_g.h(33984, 0);
         ((tla) this).field_g.c(1, 34192, 768, 34168);
@@ -40,7 +37,7 @@ final class tla extends aja {
           ((tla) this).field_f.a(-78, false);
           ((tla) this).field_g.n(27841);
           ((tla) this).field_g.d(param4, 73);
-          jaggl.OpenGL.glColor4ub((byte)(param3 >> -1898587152), (byte)(param3 >> 1433623560), (byte)param3, (byte)(param3 >> 1320538392));
+          jaggl.OpenGL.glColor4ub((byte)(param3 >> 16), (byte)(param3 >> 8), (byte)param3, (byte)(param3 >> 24));
           param1 = param1 + ((tla) this).field_d;
           param0 = param0 + ((tla) this).field_i;
           if (((tla) this).field_e == null) {
@@ -130,7 +127,7 @@ final class tla extends aja {
           ((tla) this).field_g.a(63, (pib) (Object) ((tla) this).field_e);
           ((tla) this).field_g.b(34479, 7681, false);
           ((tla) this).field_g.c(1, 34192, 768, 34166);
-          if (-1 == (((tla) this).field_j ^ -1)) {
+          if (((tla) this).field_j == 0) {
             L2: {
               stackOut_10_0 = ((tla) this).field_g;
               stackOut_10_1 = 0.0f;
@@ -166,12 +163,12 @@ final class tla extends aja {
             ((qfa) (Object) stackIn_13_0).a(stackIn_13_1, stackIn_13_2, stackIn_13_3 != 0, 0.5f, 1.0f);
             break L1;
           } else {
-            if (((tla) this).field_j == -2) {
+            if (((tla) this).field_j == 1) {
               ((tla) this).field_g.a(0.0f, 1.0f, false, 0.5f, 0.5f);
               break L1;
             } else {
-              if (-3 != ((tla) this).field_j) {
-                if ((((tla) this).field_j ^ -1) == -4) {
+              if (((tla) this).field_j != 2) {
+                if (((tla) this).field_j == 3) {
                   ((tla) this).field_g.a(0.0f, 128.5f, false, 128.5f, 128.5f);
                   break L1;
                 } else {
@@ -187,7 +184,11 @@ final class tla extends aja {
     }
 
     final void a(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {
-        ((tla) this).field_f.a((byte) 32, param6, param2, param1, param3, param0, param5, true, param4);
+        try {
+            ((tla) this).field_f.a((byte) 32, param6, param2, param1, param3, param0, param5, true, param4);
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "tla.D(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + (param4 != null ? "{...}" : "null") + 44 + param5 + 44 + param6 + 41);
+        }
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
@@ -243,7 +244,7 @@ final class tla extends aja {
           ((im) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2 != 0);
           ((tla) this).field_g.n(27841);
           ((tla) this).field_g.d(param6, 115);
-          jaggl.OpenGL.glColor4ub((byte)(param5 >> -844912), (byte)(param5 >> 2066705736), (byte)param5, (byte)(param5 >> 875985752));
+          jaggl.OpenGL.glColor4ub((byte)(param5 >> 16), (byte)(param5 >> 8), (byte)param5, (byte)(param5 >> 24));
           if (!((tla) this).field_l) {
             if (null != ((tla) this).field_e) {
               this.a(true, param4);
@@ -350,7 +351,7 @@ final class tla extends aja {
             ((tla) this).field_g.a(31, (pib) (Object) ((tla) this).field_f);
             ((tla) this).field_g.d(param6, 111);
             ((tla) this).field_g.c(0, param4);
-            jaggl.OpenGL.glColor4ub((byte)(param5 >> 1565038224), (byte)(param5 >> -1041554616), (byte)param5, (byte)(param5 >> -1503411368));
+            jaggl.OpenGL.glColor4ub((byte)(param5 >> 16), (byte)(param5 >> 8), (byte)param5, (byte)(param5 >> 24));
             if (!((tla) this).field_f.field_l) {
               break L1;
             } else {
@@ -661,7 +662,7 @@ final class tla extends aja {
         ((tla) this).field_g.a(54, (pib) (Object) ((tla) this).field_f);
         ((tla) this).field_g.d(param8, 122);
         ((tla) this).field_g.c(0, param6);
-        jaggl.OpenGL.glColor4ub((byte)(param7 >> -744830640), (byte)(param7 >> -1787943960), (byte)param7, (byte)(param7 >> -704913352));
+        jaggl.OpenGL.glColor4ub((byte)(param7 >> 16), (byte)(param7 >> 8), (byte)param7, (byte)(param7 >> 24));
         jaggl.OpenGL.glBegin(7);
         jaggl.OpenGL.glTexCoord2f(0.0f, ((tla) this).field_f.field_o);
         jaggl.OpenGL.glVertex2f(param0, param1);
@@ -677,9 +678,6 @@ final class tla extends aja {
     public static void b(int param0) {
         field_k = null;
         field_h = null;
-        if (param0 != 1) {
-            field_h = null;
-        }
     }
 
     tla(qfa param0, int param1, int param2, boolean param3) {
@@ -689,8 +687,12 @@ final class tla extends aja {
         ((tla) this).field_j = 0;
         ((tla) this).field_i = 0;
         ((tla) this).field_l = false;
-        ((tla) this).field_g = param0;
-        ((tla) this).field_f = jr.a(28, param1, param2, param0, param3 ? 6408 : 6407);
+        try {
+            ((tla) this).field_g = param0;
+            ((tla) this).field_f = jr.a(28, param1, param2, param0, param3 ? 6408 : 6407);
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "tla.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 41);
+        }
     }
 
     tla(qfa param0, int param1, int param2, int[] param3, int param4, int param5) {
@@ -700,8 +702,12 @@ final class tla extends aja {
         ((tla) this).field_j = 0;
         ((tla) this).field_i = 0;
         ((tla) this).field_l = false;
-        ((tla) this).field_g = param0;
-        ((tla) this).field_f = uw.a(param0, param4, param5, param2, param3, param1, false, (byte) 60);
+        try {
+            ((tla) this).field_g = param0;
+            ((tla) this).field_f = uw.a(param0, param4, param5, param2, param3, param1, false, (byte) 60);
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "tla.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + (param3 != null ? "{...}" : "null") + 44 + param4 + 44 + param5 + 41);
+        }
     }
 
     static {

@@ -549,7 +549,7 @@ final class sg {
                   var5_int = -var5_int;
                   break L0;
                 } else {
-                  var8 = field_a[0 + var11];
+                  var8 = field_a[var11];
                   break L0;
                 }
               }

@@ -22,9 +22,6 @@ final class qc {
         field_d = null;
         field_c = null;
         field_f = null;
-        if (param0 != 225) {
-            return;
-        }
         field_a = null;
         field_b = null;
     }
@@ -69,7 +66,7 @@ final class qc {
             var7 = Math.sin(var3);
             for (var9 = 0; 7 > var9; var9++) {
                 var10 = 6 == var9 ? 0.5 : 0.0;
-                var12 = (var9 ^ -1) != -7 ? 0.0 : 0.5;
+                var12 = var9 != 6 ? 0.0 : 0.5;
                 for (var14 = 0; var14 < 4; var14++) {
                     var15 = (double)field_b[var9][var1][2 * var14] - var10;
                     var17 = (double)field_b[var9][var1][1 + var14 * 2] - var12;

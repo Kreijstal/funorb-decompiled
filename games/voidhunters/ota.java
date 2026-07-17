@@ -309,8 +309,9 @@ final class ota {
             for (var12 = 0; var12 < var8; var12++) {
                 var13 = ((ota) this).field_k[var7][var11 & var10];
                 var11 = var11 >>> var9;
+                int incrementValue$0 = var5;
                 var5++;
-                field_h[var5] = var13 >= 0 ? fca.field_s[var13].b() : 0;
+                field_h[incrementValue$0] = var13 >= 0 ? fca.field_s[var13].b() : 0;
             }
         }
         return true;
@@ -454,6 +455,7 @@ final class ota {
                             field_j = new boolean[var5];
                             break L4;
                           }
+                          return;
                         } else {
                           var7 = ((ota) this).field_b[var6];
                           var8 = 0;
@@ -462,8 +464,9 @@ final class ota {
                               var6++;
                               continue L3;
                             } else {
+                              int incrementValue$2 = var5;
                               var5++;
-                              ((ota) this).field_e[var5] = fca.c(var4);
+                              ((ota) this).field_e[incrementValue$2] = fca.c(var4);
                               var8++;
                               continue L6;
                             }
@@ -479,8 +482,9 @@ final class ota {
                 } else {
                   L7: {
                     ((ota) this).field_c[var4] = fca.c(3) + 1;
-                    ((ota) this).field_l[var4] = fca.c(2);
-                    var5 = fca.c(2);
+                    int dupTemp$3 = fca.c(2);
+                    ((ota) this).field_l[var4] = dupTemp$3;
+                    var5 = dupTemp$3;
                     if (var5 == 0) {
                       break L7;
                     } else {

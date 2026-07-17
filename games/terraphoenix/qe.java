@@ -19,10 +19,6 @@ final class qe {
         field_f = null;
         field_h = null;
         field_k = null;
-        if (!param0) {
-            Object var2 = null;
-            qe.a(-54, (fa) null);
-        }
         field_g = null;
         field_j = null;
     }
@@ -33,46 +29,41 @@ final class qe {
         int var4 = 0;
         int var5 = 0;
         var5 = Terraphoenix.field_V;
+        int fieldTemp$3 = ((qe) this).field_c + 1;
         ((qe) this).field_c = ((qe) this).field_c + 1;
-        ((qe) this).field_e = ((qe) this).field_e + (((qe) this).field_c + 1);
+        ((qe) this).field_e = ((qe) this).field_e + fieldTemp$3;
         var2 = 0;
         L0: while (true) {
           if (var2 >= 256) {
-            L1: {
-              if (param0 == -38) {
-                break L1;
-              } else {
-                field_h = null;
-                break L1;
-              }
-            }
             return;
           } else {
-            L2: {
+            L1: {
               var3 = ((qe) this).field_a[var2];
               if ((2 & var2) != 0) {
                 if (0 != (var2 & 1)) {
-                  ((qe) this).field_b = ((qe) this).field_b ^ ((qe) this).field_b >>> 1332198768;
-                  break L2;
+                  ((qe) this).field_b = ((qe) this).field_b ^ ((qe) this).field_b >>> 16;
+                  break L1;
                 } else {
-                  ((qe) this).field_b = ((qe) this).field_b ^ ((qe) this).field_b << 1760828226;
-                  break L2;
+                  ((qe) this).field_b = ((qe) this).field_b ^ ((qe) this).field_b << 2;
+                  break L1;
                 }
               } else {
                 if ((var2 & 1) == 0) {
-                  ((qe) this).field_b = ((qe) this).field_b ^ ((qe) this).field_b << 1080141645;
-                  break L2;
+                  ((qe) this).field_b = ((qe) this).field_b ^ ((qe) this).field_b << 13;
+                  break L1;
                 } else {
-                  ((qe) this).field_b = ((qe) this).field_b ^ ((qe) this).field_b >>> 1284776614;
-                  break L2;
+                  ((qe) this).field_b = ((qe) this).field_b ^ ((qe) this).field_b >>> 6;
+                  break L1;
                 }
               }
             }
             ((qe) this).field_b = ((qe) this).field_b + ((qe) this).field_a[128 + var2 & 255];
-            var4 = ((qe) this).field_e + (((qe) this).field_a[dg.a(var3, 1020) >> 870073890] - -((qe) this).field_b);
-            ((qe) this).field_a[var2] = ((qe) this).field_e + (((qe) this).field_a[dg.a(var3, 1020) >> 870073890] - -((qe) this).field_b);
-            ((qe) this).field_e = ((qe) this).field_a[dg.a(var4, 261306) >> -475825944 >> -1282238686] + var3;
-            ((qe) this).field_i[var2] = ((qe) this).field_a[dg.a(var4, 261306) >> -475825944 >> -1282238686] + var3;
+            int dupTemp$4 = ((qe) this).field_e + (((qe) this).field_a[dg.a(var3, 1020) >> 2] - -((qe) this).field_b);
+            var4 = dupTemp$4;
+            ((qe) this).field_a[var2] = dupTemp$4;
+            int dupTemp$5 = ((qe) this).field_a[dg.a(var4, 261306) >> 8 >> 2] + var3;
+            ((qe) this).field_e = dupTemp$5;
+            ((qe) this).field_i[var2] = dupTemp$5;
             var2++;
             continue L0;
           }
@@ -90,15 +81,7 @@ final class qe {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        L0: {
-          var11 = Terraphoenix.field_V;
-          if (param0 == -1) {
-            break L0;
-          } else {
-            ((qe) this).field_i = null;
-            break L0;
-          }
-        }
+        var11 = Terraphoenix.field_V;
         var6 = -1640531527;
         var3 = -1640531527;
         var8 = -1640531527;
@@ -108,14 +91,14 @@ final class qe {
         var5 = -1640531527;
         var7 = -1640531527;
         var2 = 0;
-        L1: while (true) {
-          if (-5 >= (var2 ^ -1)) {
+        L0: while (true) {
+          if (var2 >= 4) {
             var2 = 0;
-            L2: while (true) {
+            L1: while (true) {
               if (256 <= var2) {
                 var2 = 0;
-                L3: while (true) {
-                  if (-257 >= (var2 ^ -1)) {
+                L2: while (true) {
+                  if (var2 >= 256) {
                     this.a((byte) -38);
                     ((qe) this).field_d = 256;
                     return;
@@ -128,28 +111,28 @@ final class qe {
                     var6 = var6 + ((qe) this).field_a[3 + var2];
                     var10 = var10 + ((qe) this).field_a[var2 - -7];
                     var7 = var7 + ((qe) this).field_a[var2 + 4];
-                    var3 = var3 ^ var4 << -1012803669;
+                    var3 = var3 ^ var4 << 11;
                     var4 = var4 + var5;
                     var6 = var6 + var3;
-                    var4 = var4 ^ var5 >>> 1535899970;
+                    var4 = var4 ^ var5 >>> 2;
                     var5 = var5 + var6;
                     var7 = var7 + var4;
-                    var5 = var5 ^ var6 << -1322237176;
+                    var5 = var5 ^ var6 << 8;
                     var6 = var6 + var7;
                     var8 = var8 + var5;
-                    var6 = var6 ^ var7 >>> 673664144;
+                    var6 = var6 ^ var7 >>> 16;
                     var9 = var9 + var6;
                     var7 = var7 + var8;
-                    var7 = var7 ^ var8 << -1802057046;
+                    var7 = var7 ^ var8 << 10;
                     var10 = var10 + var7;
                     var8 = var8 + var9;
-                    var8 = var8 ^ var9 >>> 1325804740;
+                    var8 = var8 ^ var9 >>> 4;
                     var3 = var3 + var8;
                     var9 = var9 + var10;
-                    var9 = var9 ^ var10 << 2129165640;
+                    var9 = var9 ^ var10 << 8;
                     var10 = var10 + var3;
                     var4 = var4 + var9;
-                    var10 = var10 ^ var3 >>> -509153303;
+                    var10 = var10 ^ var3 >>> 9;
                     var5 = var5 + var10;
                     var3 = var3 + var4;
                     ((qe) this).field_a[var2] = var3;
@@ -161,7 +144,7 @@ final class qe {
                     ((qe) this).field_a[6 + var2] = var9;
                     ((qe) this).field_a[var2 + 7] = var10;
                     var2 += 8;
-                    continue L3;
+                    continue L2;
                   }
                 }
               } else {
@@ -173,28 +156,28 @@ final class qe {
                 var8 = var8 + ((qe) this).field_i[5 + var2];
                 var10 = var10 + ((qe) this).field_i[var2 - -7];
                 var3 = var3 + ((qe) this).field_i[var2];
-                var3 = var3 ^ var4 << 1399989995;
+                var3 = var3 ^ var4 << 11;
                 var6 = var6 + var3;
                 var4 = var4 + var5;
-                var4 = var4 ^ var5 >>> 1740077090;
+                var4 = var4 ^ var5 >>> 2;
                 var7 = var7 + var4;
                 var5 = var5 + var6;
-                var5 = var5 ^ var6 << -1516401208;
+                var5 = var5 ^ var6 << 8;
                 var8 = var8 + var5;
                 var6 = var6 + var7;
-                var6 = var6 ^ var7 >>> -1942710064;
+                var6 = var6 ^ var7 >>> 16;
                 var7 = var7 + var8;
                 var9 = var9 + var6;
-                var7 = var7 ^ var8 << -168808598;
+                var7 = var7 ^ var8 << 10;
                 var8 = var8 + var9;
                 var10 = var10 + var7;
-                var8 = var8 ^ var9 >>> 1575054148;
+                var8 = var8 ^ var9 >>> 4;
                 var9 = var9 + var10;
                 var3 = var3 + var8;
-                var9 = var9 ^ var10 << -122292024;
+                var9 = var9 ^ var10 << 8;
                 var10 = var10 + var3;
                 var4 = var4 + var9;
-                var10 = var10 ^ var3 >>> -1118520343;
+                var10 = var10 ^ var3 >>> 9;
                 var3 = var3 + var4;
                 var5 = var5 + var10;
                 ((qe) this).field_a[var2] = var3;
@@ -206,36 +189,36 @@ final class qe {
                 ((qe) this).field_a[6 + var2] = var9;
                 ((qe) this).field_a[var2 - -7] = var10;
                 var2 += 8;
-                continue L2;
+                continue L1;
               }
             }
           } else {
-            var3 = var3 ^ var4 << 1415239723;
+            var3 = var3 ^ var4 << 11;
             var6 = var6 + var3;
             var4 = var4 + var5;
-            var4 = var4 ^ var5 >>> -917396510;
+            var4 = var4 ^ var5 >>> 2;
             var5 = var5 + var6;
             var7 = var7 + var4;
-            var5 = var5 ^ var6 << -234794520;
+            var5 = var5 ^ var6 << 8;
             var6 = var6 + var7;
             var8 = var8 + var5;
-            var6 = var6 ^ var7 >>> 1605636368;
+            var6 = var6 ^ var7 >>> 16;
             var9 = var9 + var6;
             var7 = var7 + var8;
-            var7 = var7 ^ var8 << -178099446;
+            var7 = var7 ^ var8 << 10;
             var8 = var8 + var9;
             var10 = var10 + var7;
-            var8 = var8 ^ var9 >>> 1841850660;
+            var8 = var8 ^ var9 >>> 4;
             var3 = var3 + var8;
             var9 = var9 + var10;
-            var9 = var9 ^ var10 << 1627527784;
+            var9 = var9 ^ var10 << 8;
             var4 = var4 + var9;
             var10 = var10 + var3;
-            var10 = var10 ^ var3 >>> -1980907415;
+            var10 = var10 ^ var3 >>> 9;
             var3 = var3 + var4;
             var5 = var5 + var10;
             var2++;
-            continue L1;
+            continue L0;
           }
         }
     }
@@ -244,15 +227,17 @@ final class qe {
         if (param0 < 64) {
             ((qe) this).field_e = -7;
         }
-        if (-1 == (((qe) this).field_d ^ -1)) {
+        if (((qe) this).field_d == 0) {
             this.a((byte) -38);
             ((qe) this).field_d = 256;
         }
+        int fieldTemp$0 = ((qe) this).field_d - 1;
         ((qe) this).field_d = ((qe) this).field_d - 1;
-        return ((qe) this).field_i[((qe) this).field_d - 1];
+        return ((qe) this).field_i[fieldTemp$0];
     }
 
     final static void a(int param0, fa param1) {
+        RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
         ee var5 = null;
@@ -261,54 +246,107 @@ final class qe {
         uc var8 = null;
         int var9 = 0;
         uc var10 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        RuntimeException stackOut_12_0 = null;
+        StringBuilder stackOut_12_1 = null;
+        String stackOut_12_2 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
         var7 = Terraphoenix.field_V;
-        var8 = new uc(param1.a("logo.fo3d", "", -21653));
-        var10 = var8;
-        var3 = var10.a(-16384);
-        var10.k(-1694261224);
-        qk.field_l = ig.a(-25831, var10);
-        cm.field_b = new ee[var3];
-        vh.field_j = new int[var3][];
-        if (param0 == -28664) {
-          var4 = 0;
-          L0: while (true) {
-            if (var3 <= var4) {
-              var10.n(8);
-              var9 = 0;
-              var4 = var9;
+        try {
+          L0: {
+            var8 = new uc(param1.a("logo.fo3d", "", -21653));
+            var10 = var8;
+            var3 = var10.a(-16384);
+            var10.k(-1694261224);
+            qk.field_l = ig.a(-25831, var10);
+            cm.field_b = new ee[var3];
+            vh.field_j = new int[var3][];
+            if (param0 == -28664) {
+              var4 = 0;
               L1: while (true) {
-                if (var9 >= var3) {
-                  return;
+                if (var3 <= var4) {
+                  var10.n(8);
+                  var9 = 0;
+                  var4 = var9;
+                  L2: while (true) {
+                    if (var9 >= var3) {
+                      break L0;
+                    } else {
+                      var5 = cm.field_b[var9];
+                      var5.a(true, 6, 6, 1, 6);
+                      var5.c((byte) 41);
+                      var6 = new int[]{var5.field_K + var5.field_r >> 1, var5.field_a + var5.field_M >> 1, var5.field_t + var5.field_v >> 1};
+                      vh.field_j[var9] = var6;
+                      var5.a(true, -var6[2], -var6[0], -var6[1]);
+                      var9++;
+                      continue L2;
+                    }
+                  }
                 } else {
-                  var5 = cm.field_b[var9];
-                  var5.a(true, 6, 6, 1, 6);
-                  var5.c((byte) 41);
-                  var6 = new int[]{var5.field_K + var5.field_r >> 313848161, var5.field_a + var5.field_M >> 1312590529, var5.field_t + var5.field_v >> 1689125985};
-                  vh.field_j[var9] = var6;
-                  var5.a(true, -var6[2], -var6[0], -var6[1]);
-                  var9++;
+                  cm.field_b[var4] = fc.a(11043, var8);
+                  var4++;
                   continue L1;
                 }
               }
             } else {
-              cm.field_b[var4] = fc.a(11043, var8);
-              var4++;
-              continue L0;
+              return;
             }
           }
-        } else {
-          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var2 = decompiledCaughtException;
+            stackOut_10_0 = (RuntimeException) var2;
+            stackOut_10_1 = new StringBuilder().append("qe.B(").append(param0).append(44);
+            stackIn_12_0 = stackOut_10_0;
+            stackIn_12_1 = stackOut_10_1;
+            stackIn_11_0 = stackOut_10_0;
+            stackIn_11_1 = stackOut_10_1;
+            if (param1 == null) {
+              stackOut_12_0 = (RuntimeException) (Object) stackIn_12_0;
+              stackOut_12_1 = (StringBuilder) (Object) stackIn_12_1;
+              stackOut_12_2 = "null";
+              stackIn_13_0 = stackOut_12_0;
+              stackIn_13_1 = stackOut_12_1;
+              stackIn_13_2 = stackOut_12_2;
+              break L3;
+            } else {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "{...}";
+              stackIn_13_0 = stackOut_11_0;
+              stackIn_13_1 = stackOut_11_1;
+              stackIn_13_2 = stackOut_11_2;
+              break L3;
+            }
+          }
+          throw qk.a((Throwable) (Object) stackIn_13_0, stackIn_13_2 + 41);
         }
     }
 
     qe(int[] param0) {
-        int var2 = 0;
-        ((qe) this).field_i = new int[256];
-        ((qe) this).field_a = new int[256];
-        for (var2 = 0; param0.length > var2; var2++) {
-            ((qe) this).field_i[var2] = param0[var2];
+        int var2_int = 0;
+        try {
+            ((qe) this).field_i = new int[256];
+            ((qe) this).field_a = new int[256];
+            for (var2_int = 0; param0.length > var2_int; var2_int++) {
+                ((qe) this).field_i[var2_int] = param0[var2_int];
+            }
+            this.b(-1);
+        } catch (RuntimeException runtimeException) {
+            throw qk.a((Throwable) (Object) runtimeException, "qe.<init>(" + (param0 != null ? "{...}" : "null") + 41);
         }
-        this.b(-1);
     }
 
     static {

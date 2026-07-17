@@ -52,7 +52,7 @@ abstract class cc extends kn {
               return;
             }
           } else {
-            if (-1 != (param3 ^ -1)) {
+            if (param3 != 0) {
               return;
             } else {
               ((cc) this).b(21533, ((cc) this).field_t + param2, ((cc) this).field_u + param1);
@@ -90,7 +90,7 @@ abstract class cc extends kn {
         if (param2 != 55) {
           return;
         } else {
-          ((cc) this).a(param0, -101, -param1 + od.field_n >> -569255487, param1, ae.field_c - param0 >> 217727105);
+          ((cc) this).a(param0, -101, -param1 + od.field_n >> 1, param1, ae.field_c - param0 >> 1);
           return;
         }
     }
@@ -121,62 +121,41 @@ abstract class cc extends kn {
         int var4 = 0;
         int var5 = 0;
         cm var6 = null;
-        L0: {
-          var5 = MinerDisturbance.field_ab;
-          var6 = (cm) (Object) ce.field_a.b(94);
-          var1 = var6;
-          if (var1 == null) {
-            break L0;
-          } else {
-            var3 = tf.field_a;
-            if (var3 >= 100) {
-              if (-251 < (var3 ^ -1)) {
-                var2 = 424;
-                var4 = ce.field_d.c(ld.field_A[var6.field_s], 640);
-                g.a(var2 + -10, 60, -var4 + 570, var4 + 60, (byte) 60, he.field_b);
-                nj.field_c[var6.field_s].c(590, var2);
-                ce.field_d.c(ld.field_A[var6.field_s], 582, var2 + ce.field_d.field_I, 1, -1);
-                break L0;
-              } else {
-                var2 = -123 - (-(var3 / 2) + -480) + -58;
-                var4 = ce.field_d.c(ld.field_A[var6.field_s], 640);
-                g.a(var2 + -10, 60, -var4 + 570, var4 + 60, (byte) 60, he.field_b);
-                nj.field_c[var6.field_s].c(590, var2);
-                ce.field_d.c(ld.field_A[var6.field_s], 582, var2 + ce.field_d.field_I, 1, -1);
-                if (param0 < -79) {
-                  return;
-                } else {
-                  cc.a(37, 30);
-                  return;
-                }
-              }
-            } else {
-              var2 = 480 + (32 + (-var3 / 2 - 38));
+        var5 = MinerDisturbance.field_ab;
+        var6 = (cm) (Object) ce.field_a.b(94);
+        var1 = var6;
+        if (var1 != null) {
+          var3 = tf.field_a;
+          if (var3 >= 100) {
+            if (var3 >= 250) {
+              var2 = -123 - (-(var3 / 2) + -480) + -58;
               var4 = ce.field_d.c(ld.field_A[var6.field_s], 640);
               g.a(var2 + -10, 60, -var4 + 570, var4 + 60, (byte) 60, he.field_b);
               nj.field_c[var6.field_s].c(590, var2);
               ce.field_d.c(ld.field_A[var6.field_s], 582, var2 + ce.field_d.field_I, 1, -1);
-              if (param0 < -79) {
-                return;
-              } else {
-                cc.a(37, 30);
-                return;
-              }
+              return;
+            } else {
+              var2 = 424;
+              var4 = ce.field_d.c(ld.field_A[var6.field_s], 640);
+              g.a(var2 + -10, 60, -var4 + 570, var4 + 60, (byte) 60, he.field_b);
+              nj.field_c[var6.field_s].c(590, var2);
+              ce.field_d.c(ld.field_A[var6.field_s], 582, var2 + ce.field_d.field_I, 1, -1);
+              return;
             }
+          } else {
+            var2 = 480 + (32 + (-var3 / 2 - 38));
+            var4 = ce.field_d.c(ld.field_A[var6.field_s], 640);
+            g.a(var2 + -10, 60, -var4 + 570, var4 + 60, (byte) 60, he.field_b);
+            nj.field_c[var6.field_s].c(590, var2);
+            ce.field_d.c(ld.field_A[var6.field_s], 582, var2 + ce.field_d.field_I, 1, -1);
+            return;
           }
-        }
-        if (param0 >= -79) {
-          cc.a(37, 30);
-          return;
         } else {
           return;
         }
     }
 
     public static void e(byte param0) {
-        if (param0 != 15) {
-            return;
-        }
         field_M = null;
         field_L = null;
     }
@@ -244,7 +223,7 @@ abstract class cc extends kn {
             }
           }
           if (param0 == -4) {
-            if (-1 == (((cc) this).field_J ^ -1)) {
+            if (((cc) this).field_J == 0) {
               if (var2 != 0) {
                 return false;
               } else {
@@ -290,10 +269,14 @@ abstract class cc extends kn {
     }
 
     cc(hm param0, int param1, int param2) {
-        super(-param1 + od.field_n >> 1447125505, ae.field_c - param2 >> 136989569, param1, param2, (ad) null);
-        ((cc) this).field_K = false;
-        ((cc) this).field_J = 0;
-        ((cc) this).field_I = param0;
+        super(-param1 + od.field_n >> 1, ae.field_c - param2 >> 1, param1, param2, (ad) null);
+        try {
+            ((cc) this).field_K = false;
+            ((cc) this).field_J = 0;
+            ((cc) this).field_I = param0;
+        } catch (RuntimeException runtimeException) {
+            throw lj.a((Throwable) (Object) runtimeException, "cc.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
+        }
     }
 
     static {

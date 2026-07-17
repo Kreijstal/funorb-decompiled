@@ -21,141 +21,270 @@ final class sl {
     static gh[] field_k;
 
     final static void a(wk[] param0, int param1, int param2, int param3, int param4, byte param5) {
-        int var6 = 0;
+        RuntimeException var6 = null;
+        int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        L0: {
-          var11 = SteelSentinels.field_G;
-          if (param0 == null) {
-            break L0;
-          } else {
-            if ((param1 ^ -1) < -1) {
-              L1: {
-                var6 = param0[0].field_z;
-                var7 = param0[2].field_z;
-                var8 = param0[1].field_z;
-                param0[0].d(param3, param2, param4);
-                param0[2].d(param1 + param3 + -var7, param2, param4);
-                pb.b(aj.field_v);
-                pb.h(var6 + param3, param2, -var7 + param3 - -param1, param2 - -param0[1].field_B);
-                var9 = param3 - -var6;
-                var10 = -var7 + (param3 + param1);
-                if (param5 <= -64) {
-                  break L1;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        RuntimeException stackOut_11_0 = null;
+        StringBuilder stackOut_11_1 = null;
+        String stackOut_11_2 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        var11 = SteelSentinels.field_G;
+        try {
+          L0: {
+            L1: {
+              if (param0 == null) {
+                break L1;
+              } else {
+                if (param1 > 0) {
+                  var6_int = param0[0].field_z;
+                  var7 = param0[2].field_z;
+                  var8 = param0[1].field_z;
+                  param0[0].d(param3, param2, param4);
+                  param0[2].d(param1 + param3 + -var7, param2, param4);
+                  pb.b(aj.field_v);
+                  pb.h(var6_int + param3, param2, -var7 + param3 - -param1, param2 - -param0[1].field_B);
+                  var9 = param3 - -var6_int;
+                  var10 = -var7 + (param3 + param1);
+                  param3 = var9;
+                  L2: while (true) {
+                    if (var10 <= param3) {
+                      pb.a(aj.field_v);
+                      break L0;
+                    } else {
+                      param0[1].d(param3, param2, param4);
+                      param3 = param3 + var8;
+                      continue L2;
+                    }
+                  }
                 } else {
-                  field_j = null;
                   break L1;
                 }
               }
-              param3 = var9;
-              L2: while (true) {
-                if (var10 <= param3) {
-                  pb.a(aj.field_v);
-                  return;
-                } else {
-                  param0[1].d(param3, param2, param4);
-                  param3 = param3 + var8;
-                  continue L2;
-                }
-              }
+            }
+            return;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var6 = decompiledCaughtException;
+            stackOut_9_0 = (RuntimeException) var6;
+            stackOut_9_1 = new StringBuilder().append("sl.E(");
+            stackIn_11_0 = stackOut_9_0;
+            stackIn_11_1 = stackOut_9_1;
+            stackIn_10_0 = stackOut_9_0;
+            stackIn_10_1 = stackOut_9_1;
+            if (param0 == null) {
+              stackOut_11_0 = (RuntimeException) (Object) stackIn_11_0;
+              stackOut_11_1 = (StringBuilder) (Object) stackIn_11_1;
+              stackOut_11_2 = "null";
+              stackIn_12_0 = stackOut_11_0;
+              stackIn_12_1 = stackOut_11_1;
+              stackIn_12_2 = stackOut_11_2;
+              break L3;
             } else {
-              break L0;
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "{...}";
+              stackIn_12_0 = stackOut_10_0;
+              stackIn_12_1 = stackOut_10_1;
+              stackIn_12_2 = stackOut_10_2;
+              break L3;
             }
           }
+          throw ci.a((Throwable) (Object) stackIn_12_0, stackIn_12_2 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + -119 + 41);
         }
     }
 
     final static int a(nk param0, int[] param1, int param2) {
-        int var3 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        L0: {
-          var7 = SteelSentinels.field_G;
-          var3 = 0;
-          var4 = param0.i(-126);
-          if (param2 == -7) {
-            break L0;
-          } else {
-            field_c = null;
-            break L0;
+        int stackIn_23_0 = 0;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        String stackIn_27_2 = null;
+        RuntimeException stackIn_28_0 = null;
+        StringBuilder stackIn_28_1 = null;
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
+        RuntimeException stackIn_30_0 = null;
+        StringBuilder stackIn_30_1 = null;
+        String stackIn_30_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_22_0 = 0;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        RuntimeException stackOut_26_0 = null;
+        StringBuilder stackOut_26_1 = null;
+        String stackOut_26_2 = null;
+        RuntimeException stackOut_25_0 = null;
+        StringBuilder stackOut_25_1 = null;
+        String stackOut_25_2 = null;
+        RuntimeException stackOut_27_0 = null;
+        StringBuilder stackOut_27_1 = null;
+        RuntimeException stackOut_29_0 = null;
+        StringBuilder stackOut_29_1 = null;
+        String stackOut_29_2 = null;
+        RuntimeException stackOut_28_0 = null;
+        StringBuilder stackOut_28_1 = null;
+        String stackOut_28_2 = null;
+        var7 = SteelSentinels.field_G;
+        try {
+          L0: {
+            var3_int = 0;
+            var4 = param0.i(-126);
+            var5 = 0;
+            var6 = 0;
+            L1: while (true) {
+              if (var6 >= var4) {
+                L2: {
+                  if (var5 != 0) {
+                    var3_int += 15;
+                    break L2;
+                  } else {
+                    break L2;
+                  }
+                }
+                var3_int += 2;
+                stackOut_22_0 = var3_int;
+                stackIn_23_0 = stackOut_22_0;
+                break L0;
+              } else {
+                L3: {
+                  if (param1[var6] == -6) {
+                    var3_int++;
+                    break L3;
+                  } else {
+                    break L3;
+                  }
+                }
+                L4: {
+                  if (-7 != param1[var6]) {
+                    break L4;
+                  } else {
+                    var3_int += 2;
+                    break L4;
+                  }
+                }
+                L5: {
+                  if (7 == param1[var6]) {
+                    var3_int += 3;
+                    break L5;
+                  } else {
+                    break L5;
+                  }
+                }
+                L6: {
+                  if (8 != param1[var6]) {
+                    break L6;
+                  } else {
+                    var3_int += 4;
+                    break L6;
+                  }
+                }
+                L7: {
+                  if (9 != param1[var6]) {
+                    break L7;
+                  } else {
+                    var3_int += 5;
+                    break L7;
+                  }
+                }
+                L8: {
+                  if (param1[var6] == 34) {
+                    var5 = 1;
+                    break L8;
+                  } else {
+                    break L8;
+                  }
+                }
+                var6++;
+                continue L1;
+              }
+            }
           }
-        }
-        var5 = 0;
-        var6 = 0;
-        L1: while (true) {
-          if (var6 >= var4) {
-            L2: {
-              if (var5 != 0) {
-                var3 += 15;
-                break L2;
-              } else {
-                break L2;
-              }
-            }
-            var3 += 2;
-            return var3;
-          } else {
-            L3: {
-              if (param1[var6] == -6) {
-                var3++;
-                break L3;
-              } else {
-                break L3;
-              }
-            }
-            L4: {
-              if (-7 != param1[var6]) {
-                break L4;
-              } else {
-                var3 += 2;
-                break L4;
-              }
-            }
-            L5: {
-              if (7 == param1[var6]) {
-                var3 += 3;
-                break L5;
-              } else {
-                break L5;
-              }
-            }
-            L6: {
-              if (8 != param1[var6]) {
-                break L6;
-              } else {
-                var3 += 4;
-                break L6;
-              }
-            }
-            L7: {
-              if (9 != param1[var6]) {
-                break L7;
-              } else {
-                var3 += 5;
-                break L7;
-              }
-            }
-            if ((param1[var6] ^ -1) == -35) {
-              var5 = 1;
-              var6++;
-              continue L1;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L9: {
+            var3 = decompiledCaughtException;
+            stackOut_24_0 = (RuntimeException) var3;
+            stackOut_24_1 = new StringBuilder().append("sl.D(");
+            stackIn_26_0 = stackOut_24_0;
+            stackIn_26_1 = stackOut_24_1;
+            stackIn_25_0 = stackOut_24_0;
+            stackIn_25_1 = stackOut_24_1;
+            if (param0 == null) {
+              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
+              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_2 = "null";
+              stackIn_27_0 = stackOut_26_0;
+              stackIn_27_1 = stackOut_26_1;
+              stackIn_27_2 = stackOut_26_2;
+              break L9;
             } else {
-              var6++;
-              continue L1;
+              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
+              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_2 = "{...}";
+              stackIn_27_0 = stackOut_25_0;
+              stackIn_27_1 = stackOut_25_1;
+              stackIn_27_2 = stackOut_25_2;
+              break L9;
             }
           }
+          L10: {
+            stackOut_27_0 = (RuntimeException) (Object) stackIn_27_0;
+            stackOut_27_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_27_2).append(44);
+            stackIn_29_0 = stackOut_27_0;
+            stackIn_29_1 = stackOut_27_1;
+            stackIn_28_0 = stackOut_27_0;
+            stackIn_28_1 = stackOut_27_1;
+            if (param1 == null) {
+              stackOut_29_0 = (RuntimeException) (Object) stackIn_29_0;
+              stackOut_29_1 = (StringBuilder) (Object) stackIn_29_1;
+              stackOut_29_2 = "null";
+              stackIn_30_0 = stackOut_29_0;
+              stackIn_30_1 = stackOut_29_1;
+              stackIn_30_2 = stackOut_29_2;
+              break L10;
+            } else {
+              stackOut_28_0 = (RuntimeException) (Object) stackIn_28_0;
+              stackOut_28_1 = (StringBuilder) (Object) stackIn_28_1;
+              stackOut_28_2 = "{...}";
+              stackIn_30_0 = stackOut_28_0;
+              stackIn_30_1 = stackOut_28_1;
+              stackIn_30_2 = stackOut_28_2;
+              break L10;
+            }
+          }
+          throw ci.a((Throwable) (Object) stackIn_30_0, stackIn_30_2 + 44 + -7 + 41);
         }
+        return stackIn_23_0;
     }
 
     final static wk[] a(int param0, int param1) {
-        if (param1 != 2) {
-            field_n = null;
-        }
         wk[] var3 = new wk[9];
         wk[] var2 = var3;
         var3[4] = bd.a(param0, 64, 248);
@@ -168,7 +297,7 @@ final class sl {
         field_c = null;
         field_l = null;
         field_o = null;
-        int var1 = 1 / ((param0 - -20) / 52);
+        int var1 = -1;
         field_f = null;
         field_q = null;
         field_k = null;

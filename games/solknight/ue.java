@@ -1000,7 +1000,7 @@ final class ue {
                                   }
                                 }
                               }
-                              if (-161 < (var8 ^ -1)) {
+                              if (var8 < 160) {
                                 break L5;
                               } else {
                                 if (var8 > 255) {
@@ -1022,7 +1022,7 @@ final class ue {
                               break L8;
                             } else {
                               L9: {
-                                if (-8219 != (var8 ^ -1)) {
+                                if (var8 != 8218) {
                                   break L9;
                                 } else {
                                   param4[var7 + param0] = (byte) -126;
@@ -1046,7 +1046,7 @@ final class ue {
                                 }
                               }
                               L11: {
-                                if ((var8 ^ -1) != -8223) {
+                                if (var8 != 8222) {
                                   break L11;
                                 } else {
                                   param4[var7 + param0] = (byte) -124;
@@ -1058,7 +1058,7 @@ final class ue {
                                 }
                               }
                               L12: {
-                                if (-8231 != (var8 ^ -1)) {
+                                if (var8 != 8230) {
                                   break L12;
                                 } else {
                                   param4[var7 + param0] = (byte) -123;
@@ -1070,7 +1070,7 @@ final class ue {
                                 }
                               }
                               L13: {
-                                if ((var8 ^ -1) == -8225) {
+                                if (var8 == 8224) {
                                   break L13;
                                 } else {
                                   L14: {
@@ -1134,7 +1134,7 @@ final class ue {
                                                 }
                                               }
                                               L21: {
-                                                if ((var8 ^ -1) == -8217) {
+                                                if (var8 == 8216) {
                                                   break L21;
                                                 } else {
                                                   L22: {
@@ -1150,7 +1150,7 @@ final class ue {
                                                               break L24;
                                                             } else {
                                                               L25: {
-                                                                if (-8227 == (var8 ^ -1)) {
+                                                                if (var8 == 8226) {
                                                                   break L25;
                                                                 } else {
                                                                   L26: {
@@ -1186,7 +1186,7 @@ final class ue {
                                                                             }
                                                                           }
                                                                           L30: {
-                                                                            if (-354 == (var8 ^ -1)) {
+                                                                            if (var8 == 353) {
                                                                               break L30;
                                                                             } else {
                                                                               L31: {
@@ -1214,7 +1214,7 @@ final class ue {
                                                                                 }
                                                                               }
                                                                               L33: {
-                                                                                if ((var8 ^ -1) != -383) {
+                                                                                if (var8 != 382) {
                                                                                   break L33;
                                                                                 } else {
                                                                                   param4[param0 + var7] = (byte) -98;

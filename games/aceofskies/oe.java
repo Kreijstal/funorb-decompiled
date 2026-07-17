@@ -12,7 +12,7 @@ abstract class oe extends wf {
         if (dk.field_h == ht.field_k) {
           throw new IllegalStateException();
         } else {
-          var1 = 35 % ((23 - param0) / 61);
+          var1 = 0;
           if (uk.field_j != ht.field_k) {
             return null;
           } else {
@@ -28,7 +28,7 @@ abstract class oe extends wf {
 
     public static void a(int param0) {
         if (param0 != 6259) {
-            field_f = (String[]) null;
+            field_f = null;
             field_f = null;
             return;
         }

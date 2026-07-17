@@ -7,17 +7,8 @@ final class ch {
     static String field_c;
 
     public static void a(int param0) {
-        Object var2 = null;
         field_c = null;
-        if (param0 != 1426) {
-          var2 = null;
-          boolean discarded$2 = ch.a((CharSequence) null, false, -68);
-          field_a = null;
-          return;
-        } else {
-          field_a = null;
-          return;
-        }
+        field_a = null;
     }
 
     final static void b(int param0) {
@@ -30,10 +21,6 @@ final class ch {
 
     final static void a(byte param0) {
         ac.field_m = 1426;
-        if (param0 != 80) {
-            Object var2 = null;
-            boolean discarded$0 = ch.a((CharSequence) null, false, 20);
-        }
     }
 
     final synchronized static byte[] a(int param0, int param1) {
@@ -41,7 +28,7 @@ final class ch {
         int var2_int = 0;
         byte[] var3 = null;
         if (100 == param1) {
-          if ((qg.field_c ^ -1) < -1) {
+          if (qg.field_c > 0) {
             byte[][] fieldTemp$82 = ff.field_c;
             int fieldTemp$83 = qg.field_c - 1;
             qg.field_c = qg.field_c - 1;
@@ -50,8 +37,8 @@ final class ch {
             return var2;
           } else {
             if (param0 == -5827) {
-              if ((param1 ^ -1) != -5001) {
-                if (-30001 != (param1 ^ -1)) {
+              if (param1 != 5000) {
+                if (param1 != 30000) {
                   if (wg.field_j != null) {
                     var2_int = 0;
                     L0: while (true) {
@@ -63,7 +50,7 @@ final class ch {
                             var2_int++;
                             break L1;
                           } else {
-                            if ((ba.field_w[var2_int] ^ -1) < -1) {
+                            if (ba.field_w[var2_int] > 0) {
                               ba.field_w[var2_int] = ba.field_w[var2_int] - 1;
                               var3 = wg.field_j[var2_int][ba.field_w[var2_int] - 1];
                               wg.field_j[var2_int][ba.field_w[var2_int]] = null;
@@ -81,7 +68,7 @@ final class ch {
                     return new byte[param1];
                   }
                 } else {
-                  if ((kn.field_F ^ -1) < -1) {
+                  if (kn.field_F > 0) {
                     int fieldTemp$84 = kn.field_F - 1;
                     kn.field_F = kn.field_F - 1;
                     var2 = sh.field_j[fieldTemp$84];
@@ -99,7 +86,7 @@ final class ch {
                               var2_int++;
                               break L3;
                             } else {
-                              if ((ba.field_w[var2_int] ^ -1) < -1) {
+                              if (ba.field_w[var2_int] > 0) {
                                 ba.field_w[var2_int] = ba.field_w[var2_int] - 1;
                                 var3 = wg.field_j[var2_int][ba.field_w[var2_int] - 1];
                                 wg.field_j[var2_int][ba.field_w[var2_int]] = null;
@@ -127,7 +114,7 @@ final class ch {
                   ka.field_e[re.field_e] = null;
                   return var2;
                 } else {
-                  if (-30001 != (param1 ^ -1)) {
+                  if (param1 != 30000) {
                     if (wg.field_j != null) {
                       var2_int = 0;
                       L4: while (true) {
@@ -139,7 +126,7 @@ final class ch {
                               var2_int++;
                               break L5;
                             } else {
-                              if ((ba.field_w[var2_int] ^ -1) < -1) {
+                              if (ba.field_w[var2_int] > 0) {
                                 ba.field_w[var2_int] = ba.field_w[var2_int] - 1;
                                 var3 = wg.field_j[var2_int][ba.field_w[var2_int] - 1];
                                 wg.field_j[var2_int][ba.field_w[var2_int]] = null;
@@ -157,7 +144,7 @@ final class ch {
                       return new byte[param1];
                     }
                   } else {
-                    if ((kn.field_F ^ -1) < -1) {
+                    if (kn.field_F > 0) {
                       int fieldTemp$87 = kn.field_F - 1;
                       kn.field_F = kn.field_F - 1;
                       var2 = sh.field_j[fieldTemp$87];
@@ -175,7 +162,7 @@ final class ch {
                                 var2_int++;
                                 break L7;
                               } else {
-                                if ((ba.field_w[var2_int] ^ -1) < -1) {
+                                if (ba.field_w[var2_int] > 0) {
                                   ba.field_w[var2_int] = ba.field_w[var2_int] - 1;
                                   var3 = wg.field_j[var2_int][ba.field_w[var2_int] - 1];
                                   wg.field_j[var2_int][ba.field_w[var2_int]] = null;
@@ -205,8 +192,8 @@ final class ch {
           }
         } else {
           if (param0 == -5827) {
-            if ((param1 ^ -1) != -5001) {
-              if (-30001 != (param1 ^ -1)) {
+            if (param1 != 5000) {
+              if (param1 != 30000) {
                 if (wg.field_j != null) {
                   L8: {
                     var2_int = 0;
@@ -218,7 +205,7 @@ final class ch {
                           var2_int++;
                           break L9;
                         } else {
-                          if ((ba.field_w[var2_int] ^ -1) < -1) {
+                          if (ba.field_w[var2_int] > 0) {
                             ba.field_w[var2_int] = ba.field_w[var2_int] - 1;
                             var3 = wg.field_j[var2_int][ba.field_w[var2_int] - 1];
                             wg.field_j[var2_int][ba.field_w[var2_int]] = null;
@@ -239,7 +226,7 @@ final class ch {
                   return new byte[param1];
                 }
               } else {
-                if ((kn.field_F ^ -1) < -1) {
+                if (kn.field_F > 0) {
                   int fieldTemp$88 = kn.field_F - 1;
                   kn.field_F = kn.field_F - 1;
                   var2 = sh.field_j[fieldTemp$88];
@@ -257,7 +244,7 @@ final class ch {
                             var2_int++;
                             break L11;
                           } else {
-                            if ((ba.field_w[var2_int] ^ -1) < -1) {
+                            if (ba.field_w[var2_int] > 0) {
                               ba.field_w[var2_int] = ba.field_w[var2_int] - 1;
                               var3 = wg.field_j[var2_int][ba.field_w[var2_int] - 1];
                               wg.field_j[var2_int][ba.field_w[var2_int]] = null;
@@ -290,10 +277,10 @@ final class ch {
                 return var2;
               } else {
                 L12: {
-                  if (-30001 != (param1 ^ -1)) {
+                  if (param1 != 30000) {
                     break L12;
                   } else {
-                    if ((kn.field_F ^ -1) < -1) {
+                    if (kn.field_F > 0) {
                       int fieldTemp$91 = kn.field_F - 1;
                       kn.field_F = kn.field_F - 1;
                       var2 = sh.field_j[fieldTemp$91];
@@ -315,7 +302,7 @@ final class ch {
                           var2_int++;
                           break L14;
                         } else {
-                          if ((ba.field_w[var2_int] ^ -1) < -1) {
+                          if (ba.field_w[var2_int] > 0) {
                             ba.field_w[var2_int] = ba.field_w[var2_int] - 1;
                             var3 = wg.field_j[var2_int][ba.field_w[var2_int] - 1];
                             wg.field_j[var2_int][ba.field_w[var2_int]] = null;
@@ -345,26 +332,89 @@ final class ch {
     }
 
     final static boolean a(CharSequence param0, boolean param1, int param2) {
-        int var3 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
         int var4 = 0;
+        int stackIn_4_0 = 0;
+        int stackIn_10_0 = 0;
+        int stackIn_13_0 = 0;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_3_0 = 0;
+        int stackOut_12_0 = 0;
+        int stackOut_9_0 = 0;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
         var4 = ZombieDawn.field_J;
-        if (!vb.a(param2, param0, param1)) {
-          return false;
-        } else {
-          var3 = 0;
-          L0: while (true) {
-            if (param0.length() > var3) {
-              if (!jb.a((byte) 27, param0.charAt(var3))) {
-                return false;
-              } else {
-                var3++;
-                continue L0;
-              }
+        try {
+          L0: {
+            if (!vb.a(param2, param0, param1)) {
+              stackOut_3_0 = 0;
+              stackIn_4_0 = stackOut_3_0;
+              return stackIn_4_0 != 0;
             } else {
-              return true;
+              var3_int = 0;
+              L1: while (true) {
+                if (param0.length() <= var3_int) {
+                  stackOut_12_0 = 1;
+                  stackIn_13_0 = stackOut_12_0;
+                  break L0;
+                } else {
+                  if (!jb.a((byte) 27, param0.charAt(var3_int))) {
+                    stackOut_9_0 = 0;
+                    stackIn_10_0 = stackOut_9_0;
+                    return stackIn_10_0 != 0;
+                  } else {
+                    var3_int++;
+                    continue L1;
+                  }
+                }
+              }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_14_0 = (RuntimeException) var3;
+            stackOut_14_1 = new StringBuilder().append("ch.B(");
+            stackIn_16_0 = stackOut_14_0;
+            stackIn_16_1 = stackOut_14_1;
+            stackIn_15_0 = stackOut_14_0;
+            stackIn_15_1 = stackOut_14_1;
+            if (param0 == null) {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "null";
+              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_1 = stackOut_16_1;
+              stackIn_17_2 = stackOut_16_2;
+              break L2;
+            } else {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "{...}";
+              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_1 = stackOut_15_1;
+              stackIn_17_2 = stackOut_15_2;
+              break L2;
+            }
+          }
+          throw sh.a((Throwable) (Object) stackIn_17_0, stackIn_17_2 + 44 + param1 + 44 + param2 + 41);
         }
+        return stackIn_13_0 != 0;
     }
 
     static {

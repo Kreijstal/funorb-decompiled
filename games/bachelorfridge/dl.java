@@ -45,7 +45,7 @@ final class dl extends jla {
             }
           }
         }
-        this.e(param0);
+        super.e(param0);
     }
 
     final int a(int param0, boolean param1) {
@@ -62,7 +62,7 @@ final class dl extends jla {
         if (0 == var3) {
           return 260;
         } else {
-          if (-2 == (var3 ^ -1)) {
+          if (var3 == 1) {
             return 475;
           } else {
             throw new IllegalArgumentException();
@@ -77,7 +77,7 @@ final class dl extends jla {
         if (param1 == 40) {
           var3 = param0;
           if (var3 != 0) {
-            if ((var3 ^ -1) != -2) {
+            if (var3 != 1) {
               throw new IllegalArgumentException();
             } else {
               return 600;
@@ -240,14 +240,14 @@ final class dl extends jla {
         int var3 = 0;
         int var4 = 0;
         var4 = BachelorFridge.field_y;
-        var2 = param0;
+        var2 = 0;
         var3 = 0;
         L0: while (true) {
           if (rga.field_a.length <= var2) {
             return;
           } else {
             if (null != rga.field_a[var2]) {
-              rga.field_a[var2].field_f.a(false, false, 2048, 2048, 0, -115, 256, (640 - raa.field_F * 80 >> 781790625) + (80 * var3 - 30), 250);
+              rga.field_a[var2].field_f.a(false, false, 2048, 2048, 0, -115, 256, (640 - raa.field_F * 80 >> 1) + (80 * var3 - 30), 250);
               var3++;
               var2++;
               continue L0;
@@ -302,13 +302,13 @@ final class dl extends jla {
           }
         }
         L2: {
-          var9 = ((dl) this).a(param1, true) + ((dl) this).b(param1, param2 + 40) >> -2056174751;
-          var10 = ((dl) this).a(param1, (byte) -48) + (((dl) this).a(-123, param1) >> 1042980993);
+          var9 = ((dl) this).a(param1, true) + ((dl) this).b(param1, param2 + 40) >> 1;
+          var10 = ((dl) this).a(param1, (byte) -48) + (((dl) this).a(-123, param1) >> 1);
           if (var5 != 0) {
-            var11.e(var9 - (var11.field_n >> 167634625), var10 + -22);
+            var11.e(var9 - (var11.field_n >> 1), var10 + -22);
             break L2;
           } else {
-            var11.b(var9 + -(var11.field_n >> 547186049), var10 - 22, 128);
+            var11.b(var9 + -(var11.field_n >> 1), var10 - 22, 128);
             break L2;
           }
         }
@@ -398,7 +398,7 @@ final class dl extends jla {
 
     final void j(int param0) {
         vj.field_m = null;
-        this.j(param0);
+        super.j(param0);
     }
 
     static {

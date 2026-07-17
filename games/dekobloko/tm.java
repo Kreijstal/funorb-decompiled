@@ -12,294 +12,80 @@ final class tm {
     static int field_c;
 
     final static int a(byte param0) {
-        int var1 = 0;
+        RuntimeException var1 = null;
+        int var1_int = 0;
         int var2 = 0;
         int var3 = 0;
         long var4 = 0L;
         int var6 = 0;
         int var7 = 0;
+        int stackIn_31_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_30_0 = 0;
         var7 = client.field_A ? 1 : 0;
-        var1 = 0;
-        var2 = 0;
-        L0: while (true) {
-          if (!ab.c((byte) 52)) {
-            L1: {
-              k.field_f.a(ub.a(bh.field_g, (byte) -81, pm.field_f), -20563, ub.a(he.field_S, (byte) -81, nf.field_h));
-              if (k.field_f.b((byte) 114)) {
-                var1 = 1;
-                break L1;
-              } else {
-                break L1;
-              }
-            }
-            var3 = 0;
-            if (var1 != 0) {
-              if ((k.field_f.field_h ^ -1) <= -1) {
-                var3 = qf.field_i[k.field_f.field_h];
-                if (2 == var3) {
-                  L2: {
-                    bf.a(false);
-                    if (param0 <= -88) {
-                      break L2;
-                    } else {
-                      int discarded$7 = tm.a((byte) 116);
-                      break L2;
-                    }
-                  }
-                  if (var3 == 0) {
-                    if (2 == bc.field_B) {
-                      var4 = ik.a(4) - di.field_F;
-                      var6 = (int)((10999L - var4) / 1000L);
-                      if (0 >= var6) {
-                        var3 = 2;
-                        bl.a(-79, 5, true);
-                        return var3;
-                      } else {
-                        return var3;
-                      }
-                    } else {
-                      return var3;
-                    }
+        try {
+          L0: {
+            var1_int = 0;
+            var2 = 0;
+            L1: while (true) {
+              if (!ab.c((byte) 52)) {
+                L2: {
+                  k.field_f.a(ub.a(bh.field_g, (byte) -81, pm.field_f), -20563, ub.a(he.field_S, (byte) -81, nf.field_h));
+                  if (k.field_f.b((byte) 114)) {
+                    var1_int = 1;
+                    break L2;
                   } else {
-                    return var3;
-                  }
-                } else {
-                  if (-6 == (var3 ^ -1)) {
-                    bf.a(false);
-                    if (param0 <= -88) {
-                      if (var3 == 0) {
-                        if (2 == bc.field_B) {
-                          var4 = ik.a(4) - di.field_F;
-                          var6 = (int)((10999L - var4) / 1000L);
-                          if (0 < var6) {
-                            return var3;
-                          } else {
-                            var3 = 2;
-                            bl.a(-79, 5, true);
-                            return var3;
-                          }
-                        } else {
-                          return var3;
-                        }
-                      } else {
-                        return var3;
-                      }
-                    } else {
-                      int discarded$8 = tm.a((byte) 116);
-                      if (var3 == 0) {
-                        if (2 == bc.field_B) {
-                          var4 = ik.a(4) - di.field_F;
-                          var6 = (int)((10999L - var4) / 1000L);
-                          if (0 >= var6) {
-                            var3 = 2;
-                            bl.a(-79, 5, true);
-                            return var3;
-                          } else {
-                            return var3;
-                          }
-                        } else {
-                          return var3;
-                        }
-                      } else {
-                        return var3;
-                      }
-                    }
-                  } else {
-                    L3: {
-                      if (param0 <= -88) {
-                        break L3;
-                      } else {
-                        int discarded$9 = tm.a((byte) 116);
-                        break L3;
-                      }
-                    }
-                    L4: {
-                      if (var3 != 0) {
-                        break L4;
-                      } else {
-                        if (2 == bc.field_B) {
-                          var4 = ik.a(4) - di.field_F;
-                          var6 = (int)((10999L - var4) / 1000L);
-                          if (0 >= var6) {
-                            var3 = 2;
-                            bl.a(-79, 5, true);
-                            break L4;
-                          } else {
-                            break L4;
-                          }
-                        } else {
-                          break L4;
-                        }
-                      }
-                    }
-                    return var3;
+                    break L2;
                   }
                 }
-              } else {
-                if (var2 != 0) {
-                  if (-3 != (bc.field_B ^ -1)) {
-                    bf.a(false);
-                    if (param0 <= -88) {
-                      L5: {
-                        if (var3 != 0) {
-                          break L5;
-                        } else {
-                          if (2 == bc.field_B) {
-                            var4 = ik.a(4) - di.field_F;
-                            var6 = (int)((10999L - var4) / 1000L);
-                            if (0 >= var6) {
-                              var3 = 2;
-                              bl.a(-79, 5, true);
+                L3: {
+                  L4: {
+                    var3 = 0;
+                    if (var1_int == 0) {
+                      break L4;
+                    } else {
+                      if (k.field_f.field_h >= 0) {
+                        L5: {
+                          var3 = qf.field_i[k.field_f.field_h];
+                          if (2 == var3) {
+                            break L5;
+                          } else {
+                            if (var3 == 5) {
                               break L5;
                             } else {
-                              return var3;
+                              break L3;
                             }
-                          } else {
-                            return var3;
                           }
                         }
-                      }
-                      return var3;
-                    } else {
-                      int discarded$10 = tm.a((byte) 116);
-                      if (var3 == 0) {
-                        if (2 == bc.field_B) {
-                          var4 = ik.a(4) - di.field_F;
-                          var6 = (int)((10999L - var4) / 1000L);
-                          if (0 >= var6) {
-                            var3 = 2;
-                            bl.a(-79, 5, true);
-                            return var3;
-                          } else {
-                            return var3;
-                          }
-                        } else {
-                          return var3;
-                        }
+                        bf.a(false);
+                        break L3;
                       } else {
-                        return var3;
-                      }
-                    }
-                  } else {
-                    if (param0 <= -88) {
-                      if (var3 == 0) {
-                        if (2 == bc.field_B) {
-                          var4 = ik.a(4) - di.field_F;
-                          var6 = (int)((10999L - var4) / 1000L);
-                          if (0 < var6) {
-                            return var3;
-                          } else {
-                            var3 = 2;
-                            bl.a(-79, 5, true);
-                            return var3;
-                          }
-                        } else {
-                          return var3;
-                        }
-                      } else {
-                        return var3;
-                      }
-                    } else {
-                      int discarded$11 = tm.a((byte) 116);
-                      if (var3 == 0) {
-                        if (2 == bc.field_B) {
-                          var4 = ik.a(4) - di.field_F;
-                          var6 = (int)((10999L - var4) / 1000L);
-                          if (0 < var6) {
-                            return var3;
-                          } else {
-                            var3 = 2;
-                            bl.a(-79, 5, true);
-                            return var3;
-                          }
-                        } else {
-                          return var3;
-                        }
-                      } else {
-                        return var3;
+                        break L4;
                       }
                     }
                   }
-                } else {
+                  if (var2 == 0) {
+                    break L3;
+                  } else {
+                    if (bc.field_B == 2) {
+                      break L3;
+                    } else {
+                      bf.a(false);
+                      break L3;
+                    }
+                  }
+                }
+                L6: {
                   if (param0 <= -88) {
-                    if (var3 == 0) {
-                      if (2 == bc.field_B) {
-                        var4 = ik.a(4) - di.field_F;
-                        var6 = (int)((10999L - var4) / 1000L);
-                        if (0 < var6) {
-                          return var3;
-                        } else {
-                          var3 = 2;
-                          bl.a(-79, 5, true);
-                          return var3;
-                        }
-                      } else {
-                        return var3;
-                      }
-                    } else {
-                      return var3;
-                    }
+                    break L6;
                   } else {
-                    L6: {
-                      int discarded$12 = tm.a((byte) 116);
-                      if (var3 != 0) {
-                        break L6;
-                      } else {
-                        if (2 == bc.field_B) {
-                          var4 = ik.a(4) - di.field_F;
-                          var6 = (int)((10999L - var4) / 1000L);
-                          if (0 >= var6) {
-                            var3 = 2;
-                            bl.a(-79, 5, true);
-                            break L6;
-                          } else {
-                            break L6;
-                          }
-                        } else {
-                          break L6;
-                        }
-                      }
-                    }
-                    return var3;
+                    int discarded$1 = tm.a((byte) 116);
+                    break L6;
                   }
                 }
-              }
-            } else {
-              L7: {
-                if (var2 == 0) {
-                  break L7;
-                } else {
-                  if (-3 == (bc.field_B ^ -1)) {
-                    break L7;
-                  } else {
-                    bf.a(false);
-                    break L7;
-                  }
-                }
-              }
-              if (param0 <= -88) {
-                if (var3 == 0) {
-                  if (2 == bc.field_B) {
-                    var4 = ik.a(4) - di.field_F;
-                    var6 = (int)((10999L - var4) / 1000L);
-                    if (0 < var6) {
-                      return var3;
-                    } else {
-                      var3 = 2;
-                      bl.a(-79, 5, true);
-                      return var3;
-                    }
-                  } else {
-                    return var3;
-                  }
-                } else {
-                  return var3;
-                }
-              } else {
-                L8: {
-                  int discarded$13 = tm.a((byte) 116);
+                L7: {
                   if (var3 != 0) {
-                    break L8;
+                    break L7;
                   } else {
                     if (2 == bc.field_B) {
                       var4 = ik.a(4) - di.field_F;
@@ -307,36 +93,43 @@ final class tm {
                       if (0 >= var6) {
                         var3 = 2;
                         bl.a(-79, 5, true);
-                        break L8;
+                        break L7;
                       } else {
-                        break L8;
+                        break L7;
                       }
                     } else {
-                      break L8;
+                      break L7;
                     }
                   }
                 }
-                return var3;
-              }
-            }
-          } else {
-            L9: {
-              k.field_f.a(-111);
-              if (k.field_f.b((byte) 114)) {
-                var1 = 1;
-                break L9;
+                stackOut_30_0 = var3;
+                stackIn_31_0 = stackOut_30_0;
+                break L0;
               } else {
-                break L9;
+                L8: {
+                  k.field_f.a(-111);
+                  if (k.field_f.b((byte) 114)) {
+                    var1_int = 1;
+                    break L8;
+                  } else {
+                    break L8;
+                  }
+                }
+                if (wh.field_c == 13) {
+                  var2 = 1;
+                  continue L1;
+                } else {
+                  continue L1;
+                }
               }
-            }
-            if (wh.field_c == 13) {
-              var2 = 1;
-              continue L0;
-            } else {
-              continue L0;
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = decompiledCaughtException;
+          throw dh.a((Throwable) (Object) var1, "tm.B(" + param0 + 41);
         }
+        return stackIn_31_0;
     }
 
     public static void a(int param0) {
@@ -345,14 +138,7 @@ final class tm {
         field_a = null;
         field_f = null;
         field_h = null;
-        if (param0 <= 87) {
-          field_h = null;
-          field_g = null;
-          return;
-        } else {
-          field_g = null;
-          return;
-        }
+        field_g = null;
     }
 
     final static void b(byte param0) {
@@ -362,15 +148,10 @@ final class tm {
         md.field_U[2] = u.field_c;
         md.field_U[3] = kl.field_w;
         md.field_U[6] = l.field_e;
-        if (param0 > -30) {
-          return;
-        } else {
-          md.field_U[5] = ea.field_y;
-          md.field_U[0] = vf.field_c;
-          ac.field_z[ac.field_z.length - 2] = ta.field_g;
-          ac.field_z[-1 + ac.field_z.length] = ph.field_zb;
-          return;
-        }
+        md.field_U[5] = ea.field_y;
+        md.field_U[0] = vf.field_c;
+        ac.field_z[ac.field_z.length - 2] = ta.field_g;
+        ac.field_z[-1 + ac.field_z.length] = ph.field_zb;
     }
 
     static {

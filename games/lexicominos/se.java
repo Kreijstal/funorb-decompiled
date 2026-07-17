@@ -16,8 +16,9 @@ final class se {
 
     final int a(int param0) {
         if (((se) this).field_i >= ((se) this).field_g) {
+            int fieldTemp$0 = ((se) this).field_h;
             ((se) this).field_h = ((se) this).field_h + 1;
-            ((se) this).field_k = ((se) this).field_j[((se) this).field_h] << 15;
+            ((se) this).field_k = ((se) this).field_j[fieldTemp$0] << 15;
             if (((se) this).field_h >= ((se) this).field_b) {
                 ((se) this).field_h = ((se) this).field_b - 1;
             }

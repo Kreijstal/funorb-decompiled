@@ -18,7 +18,7 @@ abstract class gg implements jb {
             if (((gg) this).b(true)) {
                 return uk.field_b;
             }
-            if (!((350L + ((gg) this).field_c ^ -1L) >= (lj.a((byte) -31) ^ -1L))) {
+            if (!(~(350L + ((gg) this).field_c) >= ~lj.a((byte) -31))) {
                 return ea.field_b;
             }
             return ((gg) this).a((byte) -8);
@@ -26,7 +26,7 @@ abstract class gg implements jb {
         if (((gg) this).b(true)) {
             return uk.field_b;
         }
-        if (!((350L + ((gg) this).field_c ^ -1L) >= (lj.a((byte) -31) ^ -1L))) {
+        if (!(~(350L + ((gg) this).field_c) >= ~lj.a((byte) -31))) {
             return ea.field_b;
         }
         return ((gg) this).a((byte) -8);

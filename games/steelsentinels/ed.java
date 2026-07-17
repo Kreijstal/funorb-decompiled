@@ -16,59 +16,36 @@ final class ed {
     final static void b(byte param0) {
         try {
             Exception var1 = null;
-            int statePc = 0;
-            Throwable caughtException = null;
-            stateLoop: while (true) {
-                switch (statePc) {
-                    case 0: {
-                        if (param0 == -105) {
-                            statePc = 2;
-                        } else {
-                            statePc = 1;
-                        }
-                        continue stateLoop;
-                    }
-                    case 1: {
-                        field_b = null;
-                        statePc = 2;
-                        continue stateLoop;
-                    }
-                    case 2: {
-                        if (null == va.field_h) {
-                            statePc = 6;
-                        } else {
-                            statePc = 3;
-                        }
-                        continue stateLoop;
-                    }
-                    case 3: {
-                        try {
-                            va.field_h.a(-94, 0L);
-                            va.field_h.a(rf.field_d.field_p, 24, param0 ^ -67, rf.field_d.field_t);
-                            statePc = 4;
-                            continue stateLoop;
-                        } catch (Throwable stateCaught_3) {
-                            caughtException = stateCaught_3;
-                            statePc = 5;
-                            continue stateLoop;
-                        }
-                    }
-                    case 4: {
-                        rf.field_d.field_p = rf.field_d.field_p + 24;
-                        return;
-                    }
-                    case 5: {
-                        var1 = (Exception) (Object) caughtException;
-                        statePc = 6;
-                        continue stateLoop;
-                    }
-                    case 6: {
-                        rf.field_d.field_p = rf.field_d.field_p + 24;
-                        return;
-                    }
-                    default: throw new IllegalStateException("invalid CFG state " + statePc);
+            int decompiledRegionSelector0 = 0;
+            Throwable decompiledCaughtException = null;
+            L0: {
+              if (null == va.field_h) {
+                break L0;
+              } else {
+                try {
+                  L1: {
+                    va.field_h.a(-94, 0L);
+                    va.field_h.a(rf.field_d.field_p, 24, 42, rf.field_d.field_t);
+                    decompiledRegionSelector0 = 0;
+                    break L1;
+                  }
+                } catch (java.lang.Exception decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  L2: {
+                    var1 = (Exception) (Object) decompiledCaughtException;
+                    decompiledRegionSelector0 = 1;
+                    break L2;
+                  }
                 }
+                if (decompiledRegionSelector0 == 0) {
+                  rf.field_d.field_p = rf.field_d.field_p + 24;
+                  return;
+                } else {
+                  break L0;
+                }
+              }
             }
+            rf.field_d.field_p = rf.field_d.field_p + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
             throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -80,7 +57,7 @@ final class ed {
         field_e = null;
         field_c = null;
         field_g = null;
-        int var1 = -80 / ((28 - param0) / 45);
+        int var1 = 80;
         field_d = null;
         field_b = null;
     }

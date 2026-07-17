@@ -3,39 +3,21 @@
  */
 final class rm {
     final static void a(byte param0) {
-        if (0 + -gi.field_i != td.field_u) {
-          if (250 - gi.field_i == td.field_u) {
-            if (param0 <= 42) {
-              return;
-            } else {
-              td.field_u = td.field_u + 1;
-              return;
-            }
-          } else {
-            if (param0 <= 42) {
-              return;
-            } else {
-              td.field_u = td.field_u + 1;
-              return;
-            }
-          }
-        } else {
-          if (param0 <= 42) {
+        if (~-gi.field_i == ~td.field_u) {
             return;
-          } else {
-            td.field_u = td.field_u + 1;
+        }
+        if (250 - gi.field_i != td.field_u) {
             return;
-          }
         }
     }
 
     final static int b(int param0, int param1) {
         int var2 = 0;
-        if (-65536 > (param1 ^ -1)) {
+        if (param1 > 65535) {
             var2 = var2 | 16;
             param1 = param1 >>> 16;
         }
-        if (!((param1 ^ -1) >= -256)) {
+        if (!(param1 <= 255)) {
             param1 = param1 >>> 8;
             var2 = var2 | 8;
         }
@@ -48,7 +30,7 @@ final class rm {
             var2 = var2 | 2;
             param1 = param1 >>> 2;
         }
-        if ((param1 ^ -1) < -2) {
+        if (param1 > 1) {
             param1 = param1 >>> 1;
             var2 = var2 | 1;
         }

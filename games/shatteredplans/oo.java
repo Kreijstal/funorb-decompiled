@@ -23,8 +23,12 @@ final class oo {
     }
 
     final static void a(String param0, byte param1) {
-        fr.field_H = param0;
-        int var2 = 81 % ((param1 - 0) / 43);
+        try {
+            fr.field_H = param0;
+            int var2_int = 0;
+        } catch (RuntimeException runtimeException) {
+            throw r.a((Throwable) (Object) runtimeException, "oo.C(" + (param0 != null ? "{...}" : "null") + 44 + -70 + 41);
+        }
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6, int param7) {
@@ -121,9 +125,6 @@ final class oo {
         field_f = null;
         field_b = null;
         field_a = null;
-        if (param0 != 4) {
-            field_c = null;
-        }
     }
 
     static {

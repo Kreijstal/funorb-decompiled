@@ -21,12 +21,12 @@ final class hg {
         int var3 = 0;
         java.awt.DisplayMode[] var4 = ((hg) this).field_b.getDisplayModes();
         java.awt.DisplayMode[] var1 = var4;
-        int[] var2 = new int[var4.length << 718772226];
+        int[] var2 = new int[var4.length << 2];
         for (var3 = 0; var3 < var4.length; var3++) {
-            var2[var3 << 609165282] = var4[var3].getWidth();
-            var2[(var3 << -1441497246) + 1] = var4[var3].getHeight();
-            var2[(var3 << -1500719070) - -2] = var4[var3].getBitDepth();
-            var2[3 + (var3 << 48201538)] = var4[var3].getRefreshRate();
+            var2[var3 << 2] = var4[var3].getWidth();
+            var2[(var3 << 2) + 1] = var4[var3].getHeight();
+            var2[(var3 << 2) - -2] = var4[var3].getBitDepth();
+            var2[3 + (var3 << 2)] = var4[var3].getRefreshRate();
         }
         return var2;
     }
@@ -79,7 +79,7 @@ final class hg {
             param0.setUndecorated(true);
             param0.enableInputMethods(false);
             this.a(param0, (byte) -116);
-            if (-1 == (param4 ^ -1)) {
+            if (param4 == 0) {
               var6 = ((hg) this).field_a.getRefreshRate();
               var7 = ((hg) this).field_b.getDisplayModes();
               var8 = 0;

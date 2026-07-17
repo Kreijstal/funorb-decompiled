@@ -11,9 +11,6 @@ abstract class ih {
     public static void a(byte param0) {
         field_c = null;
         field_a = null;
-        if (param0 != -46) {
-            field_c = null;
-        }
     }
 
     abstract el a(int param0);

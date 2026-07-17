@@ -11,9 +11,6 @@ final class kp {
 
     public static void a(boolean param0) {
         field_f = null;
-        if (param0) {
-            return;
-        }
         field_d = null;
     }
 
@@ -228,7 +225,7 @@ final class kp {
                         stackIn_41_0 = stackOut_40_0;
                         stackIn_41_1 = stackOut_40_1;
                         stackIn_41_2 = stackOut_40_2;
-                        if (-1 == (var5.field_r ^ -1)) {
+                        if (var5.field_r == 0) {
                           stackOut_42_0 = (eo) (Object) stackIn_42_0;
                           stackOut_42_1 = stackIn_42_1;
                           stackOut_42_2 = stackIn_42_2;
@@ -266,7 +263,7 @@ final class kp {
                         stackIn_37_0 = stackOut_36_0;
                         stackIn_37_1 = stackOut_36_1;
                         stackIn_37_2 = stackOut_36_2;
-                        if (-1 == (var5.field_r ^ -1)) {
+                        if (var5.field_r == 0) {
                           stackOut_38_0 = (eo) (Object) stackIn_38_0;
                           stackOut_38_1 = stackIn_38_1;
                           stackOut_38_2 = stackIn_38_2;
@@ -305,7 +302,7 @@ final class kp {
                       stackIn_32_0 = stackOut_31_0;
                       stackIn_32_1 = stackOut_31_1;
                       stackIn_32_2 = stackOut_31_2;
-                      if (-1 == (var5.field_r ^ -1)) {
+                      if (var5.field_r == 0) {
                         stackOut_33_0 = (eo) (Object) stackIn_33_0;
                         stackOut_33_1 = stackIn_33_1;
                         stackOut_33_2 = stackIn_33_2;
@@ -395,7 +392,7 @@ final class kp {
                       stackIn_21_0 = stackOut_20_0;
                       stackIn_21_1 = stackOut_20_1;
                       stackIn_21_2 = stackOut_20_2;
-                      if (-1 == (var5.field_r ^ -1)) {
+                      if (var5.field_r == 0) {
                         stackOut_22_0 = (eo) (Object) stackIn_22_0;
                         stackOut_22_1 = stackIn_22_1;
                         stackOut_22_2 = stackIn_22_2;
@@ -433,7 +430,7 @@ final class kp {
                       stackIn_17_0 = stackOut_16_0;
                       stackIn_17_1 = stackOut_16_1;
                       stackIn_17_2 = stackOut_16_2;
-                      if (-1 == (var5.field_r ^ -1)) {
+                      if (var5.field_r == 0) {
                         stackOut_18_0 = (eo) (Object) stackIn_18_0;
                         stackOut_18_1 = stackIn_18_1;
                         stackOut_18_2 = stackIn_18_2;
@@ -474,7 +471,7 @@ final class kp {
                     stackIn_12_0 = stackOut_11_0;
                     stackIn_12_1 = stackOut_11_1;
                     stackIn_12_2 = stackOut_11_2;
-                    if (-1 == (var5.field_r ^ -1)) {
+                    if (var5.field_r == 0) {
                       stackOut_13_0 = (eo) (Object) stackIn_13_0;
                       stackOut_13_1 = stackIn_13_1;
                       stackOut_13_2 = stackIn_13_2;
@@ -515,8 +512,12 @@ final class kp {
 
     kp(eo param0, d param1) {
         ((kp) this).field_b = new dd(256);
-        ((kp) this).field_e = param1;
-        ((kp) this).field_a = param0;
+        try {
+            ((kp) this).field_e = param1;
+            ((kp) this).field_a = param0;
+        } catch (RuntimeException runtimeException) {
+            throw tba.a((Throwable) (Object) runtimeException, "kp.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

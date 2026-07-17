@@ -124,23 +124,19 @@ final class oa implements Iterator {
     }
 
     public static void a(int param0) {
-        if (param0 <= 70) {
-          boolean discarded$2 = oa.a((byte) -83, -53, 50, true);
-          field_d = null;
-          field_c = null;
-          return;
-        } else {
-          field_d = null;
-          field_c = null;
-          return;
-        }
+        field_d = null;
+        field_c = null;
     }
 
     oa(dg param0) {
         ((oa) this).field_a = null;
-        ((oa) this).field_f = param0;
-        ((oa) this).field_e = ((oa) this).field_f.field_b.field_p;
-        ((oa) this).field_a = null;
+        try {
+            ((oa) this).field_f = param0;
+            ((oa) this).field_e = ((oa) this).field_f.field_b.field_p;
+            ((oa) this).field_a = null;
+        } catch (RuntimeException runtimeException) {
+            throw ie.a((Throwable) (Object) runtimeException, "oa.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

@@ -14,14 +14,111 @@ final class ro extends pn implements Cloneable {
 
     final f a(mj param0, byte param1, boolean param2, f[][] param3) {
         dl var5 = null;
-        if (param1 > -74) {
-          ro.g(-49);
-          var5 = param0.a(13214, ((ro) this).field_m);
-          return (f) (Object) new ma(var5, (f) this, param0);
-        } else {
-          var5 = param0.a(13214, ((ro) this).field_m);
-          return (f) (Object) new ma(var5, (f) this, param0);
+        RuntimeException var5_ref = null;
+        ma stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        ma stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param1 <= -74) {
+                break L1;
+              } else {
+                ro.g(-49);
+                break L1;
+              }
+            }
+            var5 = param0.a(13214, ((ro) this).field_m);
+            stackOut_2_0 = new ma(var5, (f) this, param0);
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var5_ref = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var5_ref;
+            stackOut_4_1 = new StringBuilder().append("ro.S(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          L3: {
+            stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+            stackOut_7_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_7_2).append(44).append(param1).append(44).append(param2).append(44);
+            stackIn_9_0 = stackOut_7_0;
+            stackIn_9_1 = stackOut_7_1;
+            stackIn_8_0 = stackOut_7_0;
+            stackIn_8_1 = stackOut_7_1;
+            if (param3 == null) {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "null";
+              stackIn_10_0 = stackOut_9_0;
+              stackIn_10_1 = stackOut_9_1;
+              stackIn_10_2 = stackOut_9_2;
+              break L3;
+            } else {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "{...}";
+              stackIn_10_0 = stackOut_8_0;
+              stackIn_10_1 = stackOut_8_1;
+              stackIn_10_2 = stackOut_8_2;
+              break L3;
+            }
+          }
+          throw dn.a((Throwable) (Object) stackIn_10_0, stackIn_10_2 + 41);
         }
+        return (f) (Object) stackIn_3_0;
     }
 
     private final void a(int param0, byte param1, int param2, int param3, boolean param4, int param5) {
@@ -48,10 +145,110 @@ final class ro extends pn implements Cloneable {
     }
 
     final boolean a(boolean param0, f[][] param1, mj param2) {
-        if (param0) {
-            return true;
+        RuntimeException var4 = null;
+        int stackIn_2_0 = 0;
+        int stackIn_4_0 = 0;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_3_0 = 0;
+        int stackOut_1_0 = 0;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        try {
+          L0: {
+            if (!param0) {
+              stackOut_3_0 = 1;
+              stackIn_4_0 = stackOut_3_0;
+              break L0;
+            } else {
+              stackOut_1_0 = 1;
+              stackIn_2_0 = stackOut_1_0;
+              return stackIn_2_0 != 0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var4 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var4;
+            stackOut_5_1 = new StringBuilder().append("ro.A(").append(param0).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param1 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L1;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L1;
+            }
+          }
+          L2: {
+            stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param2 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L2;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L2;
+            }
+          }
+          throw dn.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 41);
         }
-        return true;
+        return stackIn_4_0 != 0;
     }
 
     final static void g(int param0) {
@@ -227,7 +424,7 @@ final class ro extends pn implements Cloneable {
               break L1;
             } else {
               L3: {
-                if ((var13 + var12 ^ -1) >= -1) {
+                if (var13 + var12 <= 0) {
                   stackOut_8_0 = 0;
                   stackIn_9_0 = stackOut_8_0;
                   break L3;
@@ -242,7 +439,7 @@ final class ro extends pn implements Cloneable {
             }
           }
           if (0 != ((ro) this).field_p.field_m) {
-            if (-7 <= (((ro) this).field_p.field_m ^ -1)) {
+            if (((ro) this).field_p.field_m <= 6) {
               L4: {
                 if (var7 != 0) {
                   stackOut_218_0 = 0;
@@ -260,9 +457,9 @@ final class ro extends pn implements Cloneable {
                   L6: {
                     var12 = ((ro) this).field_o.field_G;
                     var13 = ((ro) this).field_o.field_x;
-                    if (-2 == (((ro) this).field_m ^ -1)) {
+                    if (((ro) this).field_m == 1) {
                       L7: {
-                        if ((-var12 + var13 ^ -1) <= -1) {
+                        if (-var12 + var13 >= 0) {
                           stackOut_228_0 = 0;
                           stackIn_229_0 = stackOut_228_0;
                           break L7;
@@ -276,7 +473,7 @@ final class ro extends pn implements Cloneable {
                       break L6;
                     } else {
                       L8: {
-                        if (-1 >= (var13 - -var12 ^ -1)) {
+                        if (var13 - -var12 >= 0) {
                           stackOut_224_0 = 0;
                           stackIn_225_0 = stackOut_224_0;
                           break L8;
@@ -302,13 +499,13 @@ final class ro extends pn implements Cloneable {
                     }
                   }
                   var10 = stackIn_233_0;
-                  if (-7 >= (((ro) this).field_o.field_m ^ -1)) {
+                  if (((ro) this).field_o.field_m >= 6) {
                     break L5;
                   } else {
                     var14 = ((ro) this).field_o.field_m;
                     if (1 != ((ro) this).field_m) {
                       L10: {
-                        if (-1 >= (var13 + var12 ^ -1)) {
+                        if (var13 + var12 >= 0) {
                           stackOut_241_0 = en.field_K[var14];
                           stackIn_242_0 = stackOut_241_0;
                           break L10;
@@ -362,7 +559,7 @@ final class ro extends pn implements Cloneable {
                   if (param1 != 24) {
                     break L15;
                   } else {
-                    if (-25 == (param2 ^ -1)) {
+                    if (param2 == 24) {
                       var11.a(param4, -param2 + param5);
                       break L14;
                     } else {
@@ -392,7 +589,7 @@ final class ro extends pn implements Cloneable {
               return;
             } else {
               L18: {
-                if ((((ro) this).field_p.field_m ^ -1) == -1) {
+                if (((ro) this).field_p.field_m == 0) {
                   var14 = 0;
                   break L18;
                 } else {
@@ -400,9 +597,9 @@ final class ro extends pn implements Cloneable {
                   break L18;
                 }
               }
-              if (-2 != (((ro) this).field_m ^ -1)) {
+              if (((ro) this).field_m != 1) {
                 L19: {
-                  if (-1 > (var12 + var13 ^ -1)) {
+                  if (var12 + var13 > 0) {
                     stackOut_170_0 = db.field_j[var14];
                     stackIn_171_0 = stackOut_170_0;
                     break L19;
@@ -430,9 +627,9 @@ final class ro extends pn implements Cloneable {
                     L22: {
                       var12 = ((ro) this).field_o.field_G;
                       var13 = ((ro) this).field_o.field_x;
-                      if (-2 == (((ro) this).field_m ^ -1)) {
+                      if (((ro) this).field_m == 1) {
                         L23: {
-                          if ((-var12 + var13 ^ -1) <= -1) {
+                          if (-var12 + var13 >= 0) {
                             stackOut_183_0 = 0;
                             stackIn_184_0 = stackOut_183_0;
                             break L23;
@@ -446,7 +643,7 @@ final class ro extends pn implements Cloneable {
                         break L22;
                       } else {
                         L24: {
-                          if (-1 >= (var13 - -var12 ^ -1)) {
+                          if (var13 - -var12 >= 0) {
                             stackOut_179_0 = 0;
                             stackIn_180_0 = stackOut_179_0;
                             break L24;
@@ -472,13 +669,13 @@ final class ro extends pn implements Cloneable {
                       }
                     }
                     var10 = stackIn_188_0;
-                    if (-7 >= (((ro) this).field_o.field_m ^ -1)) {
+                    if (((ro) this).field_o.field_m >= 6) {
                       break L21;
                     } else {
                       var14 = ((ro) this).field_o.field_m;
                       if (1 != ((ro) this).field_m) {
                         L26: {
-                          if (-1 >= (var13 + var12 ^ -1)) {
+                          if (var13 + var12 >= 0) {
                             stackOut_196_0 = en.field_K[var14];
                             stackIn_197_0 = stackOut_196_0;
                             break L26;
@@ -532,7 +729,7 @@ final class ro extends pn implements Cloneable {
                     if (param1 != 24) {
                       break L31;
                     } else {
-                      if (-25 == (param2 ^ -1)) {
+                      if (param2 == 24) {
                         var11.a(param4, -param2 + param5);
                         break L30;
                       } else {
@@ -562,7 +759,7 @@ final class ro extends pn implements Cloneable {
                 return;
               } else {
                 L34: {
-                  if (-1 <= (-var13 + var12 ^ -1)) {
+                  if (-var13 + var12 <= 0) {
                     stackOut_122_0 = ja.field_h[var14];
                     stackIn_123_0 = stackOut_122_0;
                     break L34;
@@ -590,9 +787,9 @@ final class ro extends pn implements Cloneable {
                     L37: {
                       var12 = ((ro) this).field_o.field_G;
                       var13 = ((ro) this).field_o.field_x;
-                      if (-2 == (((ro) this).field_m ^ -1)) {
+                      if (((ro) this).field_m == 1) {
                         L38: {
-                          if ((-var12 + var13 ^ -1) <= -1) {
+                          if (-var12 + var13 >= 0) {
                             stackOut_135_0 = 0;
                             stackIn_136_0 = stackOut_135_0;
                             break L38;
@@ -606,7 +803,7 @@ final class ro extends pn implements Cloneable {
                         break L37;
                       } else {
                         L39: {
-                          if (-1 >= (var13 - -var12 ^ -1)) {
+                          if (var13 - -var12 >= 0) {
                             stackOut_131_0 = 0;
                             stackIn_132_0 = stackOut_131_0;
                             break L39;
@@ -632,13 +829,13 @@ final class ro extends pn implements Cloneable {
                       }
                     }
                     var10 = stackIn_140_0;
-                    if (-7 >= (((ro) this).field_o.field_m ^ -1)) {
+                    if (((ro) this).field_o.field_m >= 6) {
                       break L36;
                     } else {
                       var14 = ((ro) this).field_o.field_m;
                       if (1 != ((ro) this).field_m) {
                         L41: {
-                          if (-1 >= (var13 + var12 ^ -1)) {
+                          if (var13 + var12 >= 0) {
                             stackOut_148_0 = en.field_K[var14];
                             stackIn_149_0 = stackOut_148_0;
                             break L41;
@@ -692,7 +889,7 @@ final class ro extends pn implements Cloneable {
                     if (param1 != 24) {
                       break L46;
                     } else {
-                      if (-25 == (param2 ^ -1)) {
+                      if (param2 == 24) {
                         var11.a(param4, -param2 + param5);
                         break L45;
                       } else {
@@ -724,7 +921,7 @@ final class ro extends pn implements Cloneable {
             }
           } else {
             L49: {
-              if ((((ro) this).field_p.field_m ^ -1) == -1) {
+              if (((ro) this).field_p.field_m == 0) {
                 var14 = 0;
                 break L49;
               } else {
@@ -732,9 +929,9 @@ final class ro extends pn implements Cloneable {
                 break L49;
               }
             }
-            if (-2 != (((ro) this).field_m ^ -1)) {
+            if (((ro) this).field_m != 1) {
               L50: {
-                if (-1 > (var12 + var13 ^ -1)) {
+                if (var12 + var13 > 0) {
                   stackOut_69_0 = db.field_j[var14];
                   stackIn_70_0 = stackOut_69_0;
                   break L50;
@@ -762,9 +959,9 @@ final class ro extends pn implements Cloneable {
                   L53: {
                     var12 = ((ro) this).field_o.field_G;
                     var13 = ((ro) this).field_o.field_x;
-                    if (-2 == (((ro) this).field_m ^ -1)) {
+                    if (((ro) this).field_m == 1) {
                       L54: {
-                        if ((-var12 + var13 ^ -1) <= -1) {
+                        if (-var12 + var13 >= 0) {
                           stackOut_82_0 = 0;
                           stackIn_83_0 = stackOut_82_0;
                           break L54;
@@ -778,7 +975,7 @@ final class ro extends pn implements Cloneable {
                       break L53;
                     } else {
                       L55: {
-                        if (-1 >= (var13 - -var12 ^ -1)) {
+                        if (var13 - -var12 >= 0) {
                           stackOut_78_0 = 0;
                           stackIn_79_0 = stackOut_78_0;
                           break L55;
@@ -804,13 +1001,13 @@ final class ro extends pn implements Cloneable {
                     }
                   }
                   var10 = stackIn_87_0;
-                  if (-7 >= (((ro) this).field_o.field_m ^ -1)) {
+                  if (((ro) this).field_o.field_m >= 6) {
                     break L52;
                   } else {
                     var14 = ((ro) this).field_o.field_m;
                     if (1 != ((ro) this).field_m) {
                       L57: {
-                        if (-1 >= (var13 + var12 ^ -1)) {
+                        if (var13 + var12 >= 0) {
                           stackOut_95_0 = en.field_K[var14];
                           stackIn_96_0 = stackOut_95_0;
                           break L57;
@@ -864,7 +1061,7 @@ final class ro extends pn implements Cloneable {
                   if (param1 != 24) {
                     break L62;
                   } else {
-                    if (-25 == (param2 ^ -1)) {
+                    if (param2 == 24) {
                       var11.a(param4, -param2 + param5);
                       break L61;
                     } else {
@@ -894,7 +1091,7 @@ final class ro extends pn implements Cloneable {
               return;
             } else {
               L65: {
-                if (-1 <= (-var13 + var12 ^ -1)) {
+                if (-var13 + var12 <= 0) {
                   stackOut_21_0 = ja.field_h[var14];
                   stackIn_22_0 = stackOut_21_0;
                   break L65;
@@ -922,9 +1119,9 @@ final class ro extends pn implements Cloneable {
                   L68: {
                     var12 = ((ro) this).field_o.field_G;
                     var13 = ((ro) this).field_o.field_x;
-                    if (-2 == (((ro) this).field_m ^ -1)) {
+                    if (((ro) this).field_m == 1) {
                       L69: {
-                        if ((-var12 + var13 ^ -1) <= -1) {
+                        if (-var12 + var13 >= 0) {
                           stackOut_34_0 = 0;
                           stackIn_35_0 = stackOut_34_0;
                           break L69;
@@ -938,7 +1135,7 @@ final class ro extends pn implements Cloneable {
                       break L68;
                     } else {
                       L70: {
-                        if (-1 >= (var13 - -var12 ^ -1)) {
+                        if (var13 - -var12 >= 0) {
                           stackOut_30_0 = 0;
                           stackIn_31_0 = stackOut_30_0;
                           break L70;
@@ -964,13 +1161,13 @@ final class ro extends pn implements Cloneable {
                     }
                   }
                   var10 = stackIn_39_0;
-                  if (-7 >= (((ro) this).field_o.field_m ^ -1)) {
+                  if (((ro) this).field_o.field_m >= 6) {
                     break L67;
                   } else {
                     var14 = ((ro) this).field_o.field_m;
                     if (1 != ((ro) this).field_m) {
                       L72: {
-                        if (-1 >= (var13 + var12 ^ -1)) {
+                        if (var13 + var12 >= 0) {
                           stackOut_47_0 = en.field_K[var14];
                           stackIn_48_0 = stackOut_47_0;
                           break L72;
@@ -1024,7 +1221,7 @@ final class ro extends pn implements Cloneable {
                   if (param1 != 24) {
                     break L77;
                   } else {
-                    if (-25 == (param2 ^ -1)) {
+                    if (param2 == 24) {
                       var11.a(param4, -param2 + param5);
                       break L76;
                     } else {
@@ -1059,9 +1256,9 @@ final class ro extends pn implements Cloneable {
             L80: {
               var12 = ((ro) this).field_o.field_G;
               var13 = ((ro) this).field_o.field_x;
-              if (-2 == (((ro) this).field_m ^ -1)) {
+              if (((ro) this).field_m == 1) {
                 L81: {
-                  if ((-var12 + var13 ^ -1) <= -1) {
+                  if (-var12 + var13 >= 0) {
                     stackOut_294_0 = 0;
                     stackIn_295_0 = stackOut_294_0;
                     break L81;
@@ -1075,7 +1272,7 @@ final class ro extends pn implements Cloneable {
                 break L80;
               } else {
                 L82: {
-                  if (-1 >= (var13 - -var12 ^ -1)) {
+                  if (var13 - -var12 >= 0) {
                     stackOut_290_0 = 0;
                     stackIn_291_0 = stackOut_290_0;
                     break L82;
@@ -1102,13 +1299,13 @@ final class ro extends pn implements Cloneable {
             }
             L84: {
               var10 = stackIn_299_0;
-              if (-7 >= (((ro) this).field_o.field_m ^ -1)) {
+              if (((ro) this).field_o.field_m >= 6) {
                 break L84;
               } else {
                 var14 = ((ro) this).field_o.field_m;
                 if (1 != ((ro) this).field_m) {
                   L85: {
-                    if (-1 >= (var13 + var12 ^ -1)) {
+                    if (var13 + var12 >= 0) {
                       stackOut_335_0 = en.field_K[var14];
                       stackIn_336_0 = stackOut_335_0;
                       break L85;
@@ -1151,7 +1348,7 @@ final class ro extends pn implements Cloneable {
                   }
                   var12 = -84 % ((param0 - 74) / 41);
                   if (param1 == 24) {
-                    if (-25 == (param2 ^ -1)) {
+                    if (param2 == 24) {
                       L89: {
                         var11.a(param4, -param2 + param5);
                         if (var9 != 0) {
@@ -1250,7 +1447,7 @@ final class ro extends pn implements Cloneable {
               }
               return;
             } else {
-              if (-25 == (param2 ^ -1)) {
+              if (param2 == 24) {
                 L99: {
                   var11.a(param4, -param2 + param5);
                   if (var9 != 0) {
@@ -1310,7 +1507,7 @@ final class ro extends pn implements Cloneable {
             var12 = -84 % ((param0 - 74) / 41);
             if (param1 == 24) {
               L105: {
-                if (-25 == (param2 ^ -1)) {
+                if (param2 == 24) {
                   var11.a(param4, -param2 + param5);
                   break L105;
                 } else {
@@ -1360,12 +1557,70 @@ final class ro extends pn implements Cloneable {
     }
 
     final nj a(int param0, nj param1) {
-        if (param0 != 23525) {
-          ((ro) this).a(-44, -106, 68, (f[][]) null, 106, 20, 110, -87);
-          return ng.a(sn.field_b, param1, (f) (Object) new ro(((ro) this).field_m, (f) (Object) new kp(-1)), (byte) -83, qk.field_z);
-        } else {
-          return ng.a(sn.field_b, param1, (f) (Object) new ro(((ro) this).field_m, (f) (Object) new kp(-1)), (byte) -83, qk.field_z);
+        RuntimeException var3 = null;
+        nj stackIn_3_0 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        nj stackOut_2_0 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 == 23525) {
+                break L1;
+              } else {
+                ((ro) this).a(-44, -106, 68, (f[][]) null, 106, 20, 110, -87);
+                break L1;
+              }
+            }
+            stackOut_2_0 = ng.a(sn.field_b, param1, (f) (Object) new ro(((ro) this).field_m, (f) (Object) new kp(-1)), (byte) -83, qk.field_z);
+            stackIn_3_0 = stackOut_2_0;
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var3 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var3;
+            stackOut_4_1 = new StringBuilder().append("ro.V(").append(param0).append(44);
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param1 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L2;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L2;
+            }
+          }
+          throw dn.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 41);
         }
+        return stackIn_3_0;
     }
 
     final f a(int param0, byte param1, int param2) {
@@ -1377,8 +1632,64 @@ final class ro extends pn implements Cloneable {
     }
 
     final void a(int param0, int param1, int param2, f[][] param3, int param4, int param5, int param6, int param7) {
-        if (param0 <= 92) {
-            f discarded$0 = ((ro) this).a(-61, (byte) -122, 116);
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param0 > 92) {
+                break L1;
+              } else {
+                f discarded$2 = ((ro) this).a(-61, (byte) -122, 116);
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_1 = new StringBuilder().append("ro.HA(").append(param0).append(44).append(param1).append(44).append(param2).append(44);
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param3 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
+            }
+          }
+          throw dn.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 44 + param4 + 44 + param5 + 44 + param6 + 44 + param7 + 41);
         }
     }
 
@@ -1392,7 +1703,7 @@ final class ro extends pn implements Cloneable {
         if (!param0) {
           L0: {
             field_u = null;
-            if ((((ro) this).field_m ^ -1) == -2) {
+            if (((ro) this).field_m == 1) {
               stackOut_7_0 = 8;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -1405,7 +1716,7 @@ final class ro extends pn implements Cloneable {
           return stackIn_8_0;
         } else {
           L1: {
-            if ((((ro) this).field_m ^ -1) == -2) {
+            if (((ro) this).field_m == 1) {
               stackOut_3_0 = 8;
               stackIn_4_0 = stackOut_3_0;
               break L1;
@@ -1439,70 +1750,311 @@ final class ro extends pn implements Cloneable {
         field_q = null;
         field_t = null;
         field_r = null;
-        if (param0 != 4) {
-            return;
-        }
         field_s = null;
         field_u = null;
     }
 
     final boolean a(int param0, f[][] param1, boolean param2, int param3, int param4, int param5, ea param6, int param7) {
-        if (param0 != 16736352) {
-            return true;
+        RuntimeException var9 = null;
+        int stackIn_2_0 = 0;
+        boolean stackIn_4_0 = false;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        boolean stackOut_3_0 = false;
+        int stackOut_1_0 = 0;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        RuntimeException stackOut_10_0 = null;
+        StringBuilder stackOut_10_1 = null;
+        String stackOut_10_2 = null;
+        RuntimeException stackOut_9_0 = null;
+        StringBuilder stackOut_9_1 = null;
+        String stackOut_9_2 = null;
+        try {
+          L0: {
+            if (param0 == 16736352) {
+              stackOut_3_0 = param2;
+              stackIn_4_0 = stackOut_3_0;
+              break L0;
+            } else {
+              stackOut_1_0 = 1;
+              stackIn_2_0 = stackOut_1_0;
+              return stackIn_2_0 != 0;
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var9 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var9;
+            stackOut_5_1 = new StringBuilder().append("ro.M(").append(param0).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param1 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L1;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L1;
+            }
+          }
+          L2: {
+            stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+            stackOut_8_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_8_2).append(44).append(param2).append(44).append(param3).append(44).append(param4).append(44).append(param5).append(44);
+            stackIn_10_0 = stackOut_8_0;
+            stackIn_10_1 = stackOut_8_1;
+            stackIn_9_0 = stackOut_8_0;
+            stackIn_9_1 = stackOut_8_1;
+            if (param6 == null) {
+              stackOut_10_0 = (RuntimeException) (Object) stackIn_10_0;
+              stackOut_10_1 = (StringBuilder) (Object) stackIn_10_1;
+              stackOut_10_2 = "null";
+              stackIn_11_0 = stackOut_10_0;
+              stackIn_11_1 = stackOut_10_1;
+              stackIn_11_2 = stackOut_10_2;
+              break L2;
+            } else {
+              stackOut_9_0 = (RuntimeException) (Object) stackIn_9_0;
+              stackOut_9_1 = (StringBuilder) (Object) stackIn_9_1;
+              stackOut_9_2 = "{...}";
+              stackIn_11_0 = stackOut_9_0;
+              stackIn_11_1 = stackOut_9_1;
+              stackIn_11_2 = stackOut_9_2;
+              break L2;
+            }
+          }
+          throw dn.a((Throwable) (Object) stackIn_11_0, stackIn_11_2 + 44 + param7 + 41);
         }
-        return param2;
+        return stackIn_4_0;
     }
 
     ro(int param0, f param1) {
         super(param1);
         ((ro) this).field_p = null;
         ((ro) this).field_o = null;
-        ((ro) this).field_m = param0;
+        try {
+            ((ro) this).field_m = param0;
+        } catch (RuntimeException runtimeException) {
+            throw dn.a((Throwable) (Object) runtimeException, "ro.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final static boolean a(db param0, db param1, boolean param2, db param3) {
-        int stackIn_14_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_13_0 = 0;
-        if (!param2) {
-          if (param0.a((byte) 102)) {
-            if (param0.a(-20402, "commonui")) {
-              if (param1.a((byte) 102)) {
-                if (!param1.a(-20402, "commonui")) {
-                  return false;
-                } else {
-                  L0: {
-                    L1: {
-                      if (!param3.a((byte) 102)) {
-                        break L1;
-                      } else {
-                        if (!param3.a(-20402, "button.gif")) {
-                          break L1;
-                        } else {
-                          stackOut_12_0 = 1;
-                          stackIn_14_0 = stackOut_12_0;
-                          break L0;
+        RuntimeException var4 = null;
+        int stackIn_2_0 = 0;
+        int stackIn_7_0 = 0;
+        int stackIn_12_0 = 0;
+        int stackIn_17_0 = 0;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        String stackIn_21_2 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        String stackIn_24_2 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        RuntimeException stackIn_27_0 = null;
+        StringBuilder stackIn_27_1 = null;
+        String stackIn_27_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_6_0 = 0;
+        int stackOut_16_0 = 0;
+        int stackOut_11_0 = 0;
+        int stackOut_1_0 = 0;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        String stackOut_23_2 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        String stackOut_22_2 = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        RuntimeException stackOut_26_0 = null;
+        StringBuilder stackOut_26_1 = null;
+        String stackOut_26_2 = null;
+        RuntimeException stackOut_25_0 = null;
+        StringBuilder stackOut_25_1 = null;
+        String stackOut_25_2 = null;
+        try {
+          L0: {
+            if (!param2) {
+              if (!param0.a((byte) 102)) {
+                stackOut_6_0 = 0;
+                stackIn_7_0 = stackOut_6_0;
+                return stackIn_7_0 != 0;
+              } else {
+                if (param0.a(-20402, "commonui")) {
+                  L1: {
+                    if (!param1.a((byte) 102)) {
+                      break L1;
+                    } else {
+                      if (param1.a(-20402, "commonui")) {
+                        L2: {
+                          if (!param3.a((byte) 102)) {
+                            break L2;
+                          } else {
+                            if (!param3.a(-20402, "button.gif")) {
+                              break L2;
+                            } else {
+                              return true;
+                            }
+                          }
                         }
+                        stackOut_16_0 = 0;
+                        stackIn_17_0 = stackOut_16_0;
+                        break L0;
+                      } else {
+                        break L1;
                       }
                     }
-                    stackOut_13_0 = 0;
-                    stackIn_14_0 = stackOut_13_0;
-                    break L0;
                   }
-                  return stackIn_14_0 != 0;
+                  stackOut_11_0 = 0;
+                  stackIn_12_0 = stackOut_11_0;
+                  return stackIn_12_0 != 0;
+                } else {
+                  return false;
                 }
-              } else {
-                return false;
               }
             } else {
-              return false;
+              stackOut_1_0 = 0;
+              stackIn_2_0 = stackOut_1_0;
+              return stackIn_2_0 != 0;
             }
-          } else {
-            return false;
           }
-        } else {
-          return false;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L3: {
+            var4 = decompiledCaughtException;
+            stackOut_18_0 = (RuntimeException) var4;
+            stackOut_18_1 = new StringBuilder().append("ro.P(");
+            stackIn_20_0 = stackOut_18_0;
+            stackIn_20_1 = stackOut_18_1;
+            stackIn_19_0 = stackOut_18_0;
+            stackIn_19_1 = stackOut_18_1;
+            if (param0 == null) {
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "null";
+              stackIn_21_0 = stackOut_20_0;
+              stackIn_21_1 = stackOut_20_1;
+              stackIn_21_2 = stackOut_20_2;
+              break L3;
+            } else {
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "{...}";
+              stackIn_21_0 = stackOut_19_0;
+              stackIn_21_1 = stackOut_19_1;
+              stackIn_21_2 = stackOut_19_2;
+              break L3;
+            }
+          }
+          L4: {
+            stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+            stackOut_21_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_21_2).append(44);
+            stackIn_23_0 = stackOut_21_0;
+            stackIn_23_1 = stackOut_21_1;
+            stackIn_22_0 = stackOut_21_0;
+            stackIn_22_1 = stackOut_21_1;
+            if (param1 == null) {
+              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_2 = "null";
+              stackIn_24_0 = stackOut_23_0;
+              stackIn_24_1 = stackOut_23_1;
+              stackIn_24_2 = stackOut_23_2;
+              break L4;
+            } else {
+              stackOut_22_0 = (RuntimeException) (Object) stackIn_22_0;
+              stackOut_22_1 = (StringBuilder) (Object) stackIn_22_1;
+              stackOut_22_2 = "{...}";
+              stackIn_24_0 = stackOut_22_0;
+              stackIn_24_1 = stackOut_22_1;
+              stackIn_24_2 = stackOut_22_2;
+              break L4;
+            }
+          }
+          L5: {
+            stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
+            stackOut_24_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_24_2).append(44).append(param2).append(44);
+            stackIn_26_0 = stackOut_24_0;
+            stackIn_26_1 = stackOut_24_1;
+            stackIn_25_0 = stackOut_24_0;
+            stackIn_25_1 = stackOut_24_1;
+            if (param3 == null) {
+              stackOut_26_0 = (RuntimeException) (Object) stackIn_26_0;
+              stackOut_26_1 = (StringBuilder) (Object) stackIn_26_1;
+              stackOut_26_2 = "null";
+              stackIn_27_0 = stackOut_26_0;
+              stackIn_27_1 = stackOut_26_1;
+              stackIn_27_2 = stackOut_26_2;
+              break L5;
+            } else {
+              stackOut_25_0 = (RuntimeException) (Object) stackIn_25_0;
+              stackOut_25_1 = (StringBuilder) (Object) stackIn_25_1;
+              stackOut_25_2 = "{...}";
+              stackIn_27_0 = stackOut_25_0;
+              stackIn_27_1 = stackOut_25_1;
+              stackIn_27_2 = stackOut_25_2;
+              break L5;
+            }
+          }
+          throw dn.a((Throwable) (Object) stackIn_27_0, stackIn_27_2 + 41);
         }
+        return stackIn_17_0 != 0;
     }
 
     static {

@@ -5,31 +5,133 @@ final class dd {
     static String field_a;
 
     final static ms a(boolean param0, String param1, String param2, int param3, long param4) {
-        if ((param4 ^ -1L) != -1L) {
-          if (param0) {
-            return (ms) (Object) new jm(param4, param1);
-          } else {
-            if (param3 != 4684) {
-              return null;
-            } else {
-              return (ms) (Object) new kp(param4, param1);
-            }
-          }
-        } else {
-          if (param2 == null) {
-            if (param0) {
-              return (ms) (Object) new jm(param4, param1);
-            } else {
-              if (param3 != 4684) {
-                return null;
+        RuntimeException var6 = null;
+        jm stackIn_6_0 = null;
+        ee stackIn_8_0 = null;
+        Object stackIn_11_0 = null;
+        kp stackIn_13_0 = null;
+        RuntimeException stackIn_15_0 = null;
+        StringBuilder stackIn_15_1 = null;
+        RuntimeException stackIn_16_0 = null;
+        StringBuilder stackIn_16_1 = null;
+        RuntimeException stackIn_17_0 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_17_2 = null;
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        RuntimeException stackIn_19_0 = null;
+        StringBuilder stackIn_19_1 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        String stackIn_20_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        ee stackOut_7_0 = null;
+        jm stackOut_5_0 = null;
+        kp stackOut_12_0 = null;
+        Object stackOut_10_0 = null;
+        RuntimeException stackOut_14_0 = null;
+        StringBuilder stackOut_14_1 = null;
+        RuntimeException stackOut_16_0 = null;
+        StringBuilder stackOut_16_1 = null;
+        String stackOut_16_2 = null;
+        RuntimeException stackOut_15_0 = null;
+        StringBuilder stackOut_15_1 = null;
+        String stackOut_15_2 = null;
+        RuntimeException stackOut_17_0 = null;
+        StringBuilder stackOut_17_1 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        String stackOut_19_2 = null;
+        RuntimeException stackOut_18_0 = null;
+        StringBuilder stackOut_18_1 = null;
+        String stackOut_18_2 = null;
+        try {
+          L0: {
+            L1: {
+              if (param4 != 0L) {
+                break L1;
               } else {
-                return (ms) (Object) new kp(param4, param1);
+                if (param2 != null) {
+                  stackOut_7_0 = new ee(param2, param1);
+                  stackIn_8_0 = stackOut_7_0;
+                  return (ms) (Object) stackIn_8_0;
+                } else {
+                  break L1;
+                }
               }
             }
-          } else {
-            return (ms) (Object) new ee(param2, param1);
+            if (param0) {
+              stackOut_5_0 = new jm(param4, param1);
+              stackIn_6_0 = stackOut_5_0;
+              return (ms) (Object) stackIn_6_0;
+            } else {
+              if (param3 == 4684) {
+                stackOut_12_0 = new kp(param4, param1);
+                stackIn_13_0 = stackOut_12_0;
+                break L0;
+              } else {
+                stackOut_10_0 = null;
+                stackIn_11_0 = stackOut_10_0;
+                return (ms) (Object) stackIn_11_0;
+              }
+            }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var6 = decompiledCaughtException;
+            stackOut_14_0 = (RuntimeException) var6;
+            stackOut_14_1 = new StringBuilder().append("dd.D(").append(param0).append(44);
+            stackIn_16_0 = stackOut_14_0;
+            stackIn_16_1 = stackOut_14_1;
+            stackIn_15_0 = stackOut_14_0;
+            stackIn_15_1 = stackOut_14_1;
+            if (param1 == null) {
+              stackOut_16_0 = (RuntimeException) (Object) stackIn_16_0;
+              stackOut_16_1 = (StringBuilder) (Object) stackIn_16_1;
+              stackOut_16_2 = "null";
+              stackIn_17_0 = stackOut_16_0;
+              stackIn_17_1 = stackOut_16_1;
+              stackIn_17_2 = stackOut_16_2;
+              break L2;
+            } else {
+              stackOut_15_0 = (RuntimeException) (Object) stackIn_15_0;
+              stackOut_15_1 = (StringBuilder) (Object) stackIn_15_1;
+              stackOut_15_2 = "{...}";
+              stackIn_17_0 = stackOut_15_0;
+              stackIn_17_1 = stackOut_15_1;
+              stackIn_17_2 = stackOut_15_2;
+              break L2;
+            }
+          }
+          L3: {
+            stackOut_17_0 = (RuntimeException) (Object) stackIn_17_0;
+            stackOut_17_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_17_2).append(44);
+            stackIn_19_0 = stackOut_17_0;
+            stackIn_19_1 = stackOut_17_1;
+            stackIn_18_0 = stackOut_17_0;
+            stackIn_18_1 = stackOut_17_1;
+            if (param2 == null) {
+              stackOut_19_0 = (RuntimeException) (Object) stackIn_19_0;
+              stackOut_19_1 = (StringBuilder) (Object) stackIn_19_1;
+              stackOut_19_2 = "null";
+              stackIn_20_0 = stackOut_19_0;
+              stackIn_20_1 = stackOut_19_1;
+              stackIn_20_2 = stackOut_19_2;
+              break L3;
+            } else {
+              stackOut_18_0 = (RuntimeException) (Object) stackIn_18_0;
+              stackOut_18_1 = (StringBuilder) (Object) stackIn_18_1;
+              stackOut_18_2 = "{...}";
+              stackIn_20_0 = stackOut_18_0;
+              stackIn_20_1 = stackOut_18_1;
+              stackIn_20_2 = stackOut_18_2;
+              break L3;
+            }
+          }
+          throw r.a((Throwable) (Object) stackIn_20_0, stackIn_20_2 + 44 + param3 + 44 + param4 + 41);
         }
+        return (ms) (Object) stackIn_13_0;
     }
 
     public static void a(int param0) {
@@ -40,7 +142,8 @@ final class dd {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        int var5 = 0;
+        RuntimeException var5 = null;
+        int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -49,652 +152,174 @@ final class dd {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_13_0 = 0;
-        int stackIn_81_0 = 0;
+        int stackIn_4_0 = 0;
+        int stackIn_7_0 = 0;
+        int stackIn_10_0 = 0;
+        int stackIn_15_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int stackOut_3_0 = 0;
         int stackOut_2_0 = 0;
-        int stackOut_1_0 = 0;
+        int stackOut_6_0 = 0;
         int stackOut_5_0 = 0;
-        int stackOut_4_0 = 0;
+        int stackOut_9_0 = 0;
         int stackOut_8_0 = 0;
-        int stackOut_7_0 = 0;
-        int stackOut_80_0 = 0;
-        int stackOut_79_0 = 0;
-        int stackOut_12_0 = 0;
-        int stackOut_11_0 = 0;
-        L0: {
-          var13 = ShatteredPlansClient.field_F ? 1 : 0;
-          var5 = param3 - -param2;
-          var6 = param0 + param4;
-          if (param3 <= gf.field_i) {
-            stackOut_2_0 = gf.field_i;
-            stackIn_3_0 = stackOut_2_0;
-            break L0;
-          } else {
-            stackOut_1_0 = param3;
-            stackIn_3_0 = stackOut_1_0;
-            break L0;
-          }
-        }
-        L1: {
-          var7 = stackIn_3_0;
-          if (gf.field_a >= param4) {
-            stackOut_5_0 = gf.field_a;
-            stackIn_6_0 = stackOut_5_0;
-            break L1;
-          } else {
-            stackOut_4_0 = param4;
-            stackIn_6_0 = stackOut_4_0;
-            break L1;
-          }
-        }
-        L2: {
-          var8 = stackIn_6_0;
-          if (gf.field_l <= var5) {
-            stackOut_8_0 = gf.field_l;
-            stackIn_9_0 = stackOut_8_0;
-            break L2;
-          } else {
-            stackOut_7_0 = var5;
-            stackIn_9_0 = stackOut_7_0;
-            break L2;
-          }
-        }
-        var9 = stackIn_9_0;
-        if (param1 == 1) {
-          L3: {
-            if (gf.field_f > var6) {
-              stackOut_80_0 = var6;
-              stackIn_81_0 = stackOut_80_0;
-              break L3;
-            } else {
-              stackOut_79_0 = gf.field_f;
-              stackIn_81_0 = stackOut_79_0;
-              break L3;
-            }
-          }
-          L4: {
-            var10 = stackIn_81_0;
-            if (gf.field_i > param3) {
-              break L4;
-            } else {
-              if (gf.field_l > param3) {
-                var11 = gf.field_b * var8 + param3;
-                var12 = var10 + 1 + -var8 >> 632687489;
-                L5: while (true) {
-                  var12--;
-                  if ((var12 ^ -1) > -1) {
-                    break L4;
-                  } else {
-                    gf.field_h[var11] = 16777215;
-                    var11 = var11 + gf.field_b * 2;
-                    continue L5;
-                  }
-                }
+        int stackOut_14_0 = 0;
+        int stackOut_13_0 = 0;
+        var13 = ShatteredPlansClient.field_F ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              var5_int = param3 - -param2;
+              var6 = param0 + param4;
+              if (param3 <= gf.field_i) {
+                stackOut_3_0 = gf.field_i;
+                stackIn_4_0 = stackOut_3_0;
+                break L1;
               } else {
-                if (param4 >= gf.field_a) {
-                  if (gf.field_f <= var6) {
-                    L6: {
-                      if (gf.field_i > var5) {
-                        break L6;
-                      } else {
-                        if (var5 >= gf.field_l) {
-                          break L6;
-                        } else {
-                          var11 = gf.field_b * ((1 & var5 + -param3) + var8) + var5;
-                          var12 = 1 - (-var10 + var8) >> 279857089;
-                          L7: while (true) {
-                            var12--;
-                            if ((var12 ^ -1) > -1) {
-                              break L6;
-                            } else {
-                              gf.field_h[var11] = 16777215;
-                              var11 = var11 + gf.field_b * 2;
-                              continue L7;
-                            }
-                          }
-                        }
-                      }
-                    }
-                    L8: {
-                      if (param4 < gf.field_a) {
-                        break L8;
-                      } else {
-                        if (gf.field_f <= var6) {
-                          break L8;
-                        } else {
-                          var11 = (1 & var6 + -param4) + (var6 * gf.field_b - -var7);
-                          var12 = -var7 + (1 - -var9) >> 1568068993;
-                          L9: while (true) {
-                            var12--;
-                            if (0 > var12) {
-                              break L8;
-                            } else {
-                              gf.field_h[var11] = 16777215;
-                              var11 += 2;
-                              continue L9;
-                            }
-                          }
-                        }
-                      }
-                    }
-                    return;
-                  } else {
-                    var11 = var7 + param4 * gf.field_b;
-                    var12 = -var7 + (1 - -var9) >> -552467103;
-                    L10: while (true) {
-                      var12--;
-                      if (-1 < (var12 ^ -1)) {
-                        L11: {
-                          if (gf.field_i > var5) {
-                            break L11;
-                          } else {
-                            if (var5 >= gf.field_l) {
-                              break L11;
-                            } else {
-                              var11 = gf.field_b * ((1 & var5 + -param3) + var8) + var5;
-                              var12 = 1 - (-var10 + var8) >> 279857089;
-                              L12: while (true) {
-                                var12--;
-                                if ((var12 ^ -1) > -1) {
-                                  break L11;
-                                } else {
-                                  gf.field_h[var11] = 16777215;
-                                  var11 = var11 + gf.field_b * 2;
-                                  continue L12;
-                                }
-                              }
-                            }
-                          }
-                        }
-                        L13: {
-                          if (param4 < gf.field_a) {
-                            break L13;
-                          } else {
-                            if (gf.field_f <= var6) {
-                              break L13;
-                            } else {
-                              var11 = (1 & var6 + -param4) + (var6 * gf.field_b - -var7);
-                              var12 = -var7 + (1 - -var9) >> 1568068993;
-                              L14: while (true) {
-                                var12--;
-                                if (0 > var12) {
-                                  break L13;
-                                } else {
-                                  gf.field_h[var11] = 16777215;
-                                  var11 += 2;
-                                  continue L14;
-                                }
-                              }
-                            }
-                          }
-                        }
-                        return;
-                      } else {
-                        gf.field_h[var11] = 16777215;
-                        var11 += 2;
-                        continue L10;
-                      }
-                    }
-                  }
-                } else {
-                  L15: {
-                    if (gf.field_i > var5) {
-                      break L15;
-                    } else {
-                      if (var5 >= gf.field_l) {
-                        break L15;
-                      } else {
-                        var11 = gf.field_b * ((1 & var5 + -param3) + var8) + var5;
-                        var12 = 1 - (-var10 + var8) >> 279857089;
-                        L16: while (true) {
-                          var12--;
-                          if ((var12 ^ -1) > -1) {
-                            break L15;
-                          } else {
-                            gf.field_h[var11] = 16777215;
-                            var11 = var11 + gf.field_b * 2;
-                            continue L16;
-                          }
-                        }
-                      }
-                    }
-                  }
-                  L17: {
-                    if (param4 < gf.field_a) {
-                      break L17;
-                    } else {
-                      if (gf.field_f <= var6) {
-                        break L17;
-                      } else {
-                        var11 = (1 & var6 + -param4) + (var6 * gf.field_b - -var7);
-                        var12 = -var7 + (1 - -var9) >> 1568068993;
-                        L18: while (true) {
-                          var12--;
-                          if (0 > var12) {
-                            break L17;
-                          } else {
-                            gf.field_h[var11] = 16777215;
-                            var11 += 2;
-                            continue L18;
-                          }
-                        }
-                      }
-                    }
-                  }
-                  return;
-                }
+                stackOut_2_0 = param3;
+                stackIn_4_0 = stackOut_2_0;
+                break L1;
               }
             }
-          }
-          if (param4 >= gf.field_a) {
-            if (gf.field_f > var6) {
-              var11 = var7 + param4 * gf.field_b;
-              var12 = -var7 + (1 - -var9) >> -552467103;
-              L19: while (true) {
-                var12--;
-                if (-1 < (var12 ^ -1)) {
-                  L20: {
-                    if (gf.field_i > var5) {
-                      break L20;
-                    } else {
-                      if (var5 >= gf.field_l) {
-                        break L20;
-                      } else {
-                        var11 = gf.field_b * ((1 & var5 + -param3) + var8) + var5;
-                        var12 = 1 - (-var10 + var8) >> 279857089;
-                        L21: while (true) {
-                          var12--;
-                          if ((var12 ^ -1) > -1) {
-                            break L20;
-                          } else {
-                            gf.field_h[var11] = 16777215;
-                            var11 = var11 + gf.field_b * 2;
-                            continue L21;
-                          }
-                        }
-                      }
-                    }
-                  }
-                  L22: {
-                    if (param4 < gf.field_a) {
-                      break L22;
-                    } else {
-                      if (gf.field_f <= var6) {
-                        break L22;
-                      } else {
-                        var11 = (1 & var6 + -param4) + (var6 * gf.field_b - -var7);
-                        var12 = -var7 + (1 - -var9) >> 1568068993;
-                        L23: while (true) {
-                          var12--;
-                          if (0 > var12) {
-                            break L22;
-                          } else {
-                            gf.field_h[var11] = 16777215;
-                            var11 += 2;
-                            continue L23;
-                          }
-                        }
-                      }
-                    }
-                  }
-                  return;
-                } else {
-                  gf.field_h[var11] = 16777215;
-                  var11 += 2;
-                  continue L19;
-                }
-              }
-            } else {
-              L24: {
-                if (gf.field_i > var5) {
-                  break L24;
-                } else {
-                  if (var5 >= gf.field_l) {
-                    break L24;
-                  } else {
-                    var11 = gf.field_b * ((1 & var5 + -param3) + var8) + var5;
-                    var12 = 1 - (-var10 + var8) >> 279857089;
-                    L25: while (true) {
-                      var12--;
-                      if ((var12 ^ -1) > -1) {
-                        break L24;
-                      } else {
-                        gf.field_h[var11] = 16777215;
-                        var11 = var11 + gf.field_b * 2;
-                        continue L25;
-                      }
-                    }
-                  }
-                }
-              }
-              L26: {
-                if (param4 < gf.field_a) {
-                  break L26;
-                } else {
-                  if (gf.field_f <= var6) {
-                    break L26;
-                  } else {
-                    var11 = (1 & var6 + -param4) + (var6 * gf.field_b - -var7);
-                    var12 = -var7 + (1 - -var9) >> 1568068993;
-                    L27: while (true) {
-                      var12--;
-                      if (0 > var12) {
-                        break L26;
-                      } else {
-                        gf.field_h[var11] = 16777215;
-                        var11 += 2;
-                        continue L27;
-                      }
-                    }
-                  }
-                }
-              }
-              return;
-            }
-          } else {
-            L28: {
-              if (gf.field_i > var5) {
-                break L28;
+            L2: {
+              var7 = stackIn_4_0;
+              if (gf.field_a >= param4) {
+                stackOut_6_0 = gf.field_a;
+                stackIn_7_0 = stackOut_6_0;
+                break L2;
               } else {
-                if (var5 >= gf.field_l) {
-                  break L28;
-                } else {
-                  var11 = gf.field_b * ((1 & var5 + -param3) + var8) + var5;
-                  var12 = 1 - (-var10 + var8) >> 279857089;
-                  L29: while (true) {
+                stackOut_5_0 = param4;
+                stackIn_7_0 = stackOut_5_0;
+                break L2;
+              }
+            }
+            L3: {
+              var8 = stackIn_7_0;
+              if (gf.field_l <= var5_int) {
+                stackOut_9_0 = gf.field_l;
+                stackIn_10_0 = stackOut_9_0;
+                break L3;
+              } else {
+                stackOut_8_0 = var5_int;
+                stackIn_10_0 = stackOut_8_0;
+                break L3;
+              }
+            }
+            L4: {
+              var9 = stackIn_10_0;
+              if (param1 == 1) {
+                break L4;
+              } else {
+                dd.a(-10);
+                break L4;
+              }
+            }
+            L5: {
+              if (gf.field_f > var6) {
+                stackOut_14_0 = var6;
+                stackIn_15_0 = stackOut_14_0;
+                break L5;
+              } else {
+                stackOut_13_0 = gf.field_f;
+                stackIn_15_0 = stackOut_13_0;
+                break L5;
+              }
+            }
+            L6: {
+              var10 = stackIn_15_0;
+              if (gf.field_i > param3) {
+                break L6;
+              } else {
+                if (gf.field_l > param3) {
+                  var11 = gf.field_b * var8 + param3;
+                  var12 = var10 + 1 + -var8 >> 1;
+                  L7: while (true) {
                     var12--;
-                    if ((var12 ^ -1) > -1) {
-                      break L28;
+                    if (var12 < 0) {
+                      break L6;
                     } else {
                       gf.field_h[var11] = 16777215;
                       var11 = var11 + gf.field_b * 2;
-                      continue L29;
+                      continue L7;
                     }
                   }
+                } else {
+                  break L6;
                 }
               }
             }
-            L30: {
+            L8: {
               if (param4 < gf.field_a) {
-                break L30;
+                break L8;
               } else {
-                if (gf.field_f <= var6) {
-                  break L30;
-                } else {
-                  var11 = (1 & var6 + -param4) + (var6 * gf.field_b - -var7);
-                  var12 = -var7 + (1 - -var9) >> 1568068993;
-                  L31: while (true) {
+                if (gf.field_f > var6) {
+                  var11 = var7 + param4 * gf.field_b;
+                  var12 = -var7 + (1 - -var9) >> 1;
+                  L9: while (true) {
                     var12--;
-                    if (0 > var12) {
-                      break L30;
+                    if (var12 < 0) {
+                      break L8;
                     } else {
                       gf.field_h[var11] = 16777215;
                       var11 += 2;
-                      continue L31;
+                      continue L9;
                     }
                   }
+                } else {
+                  break L8;
                 }
               }
             }
-            return;
-          }
-        } else {
-          L32: {
-            dd.a(-10);
-            if (gf.field_f > var6) {
-              stackOut_12_0 = var6;
-              stackIn_13_0 = stackOut_12_0;
-              break L32;
-            } else {
-              stackOut_11_0 = gf.field_f;
-              stackIn_13_0 = stackOut_11_0;
-              break L32;
-            }
-          }
-          L33: {
-            var10 = stackIn_13_0;
-            if (gf.field_i > param3) {
-              break L33;
-            } else {
-              if (gf.field_l > param3) {
-                var11 = gf.field_b * var8 + param3;
-                var12 = var10 + 1 + -var8 >> 632687489;
-                L34: while (true) {
-                  var12--;
-                  if ((var12 ^ -1) > -1) {
-                    break L33;
-                  } else {
-                    gf.field_h[var11] = 16777215;
-                    var11 = var11 + gf.field_b * 2;
-                    continue L34;
-                  }
-                }
+            L10: {
+              if (gf.field_i > var5_int) {
+                break L10;
               } else {
-                L35: {
-                  if (param4 < gf.field_a) {
-                    break L35;
-                  } else {
-                    if (gf.field_f > var6) {
-                      var11 = var7 + param4 * gf.field_b;
-                      var12 = -var7 + (1 - -var9) >> -552467103;
-                      L36: while (true) {
-                        var12--;
-                        if (-1 < (var12 ^ -1)) {
-                          break L35;
-                        } else {
-                          gf.field_h[var11] = 16777215;
-                          var11 += 2;
-                          continue L36;
-                        }
-                      }
-                    } else {
-                      break L35;
-                    }
-                  }
-                }
-                L37: {
-                  if (gf.field_i > var5) {
-                    break L37;
-                  } else {
-                    if (var5 >= gf.field_l) {
-                      break L37;
-                    } else {
-                      var11 = gf.field_b * ((1 & var5 + -param3) + var8) + var5;
-                      var12 = 1 - (-var10 + var8) >> 279857089;
-                      L38: while (true) {
-                        var12--;
-                        if ((var12 ^ -1) > -1) {
-                          break L37;
-                        } else {
-                          gf.field_h[var11] = 16777215;
-                          var11 = var11 + gf.field_b * 2;
-                          continue L38;
-                        }
-                      }
-                    }
-                  }
-                }
-                L39: {
-                  if (param4 < gf.field_a) {
-                    break L39;
-                  } else {
-                    if (gf.field_f <= var6) {
-                      break L39;
-                    } else {
-                      var11 = (1 & var6 + -param4) + (var6 * gf.field_b - -var7);
-                      var12 = -var7 + (1 - -var9) >> 1568068993;
-                      L40: while (true) {
-                        var12--;
-                        if (0 > var12) {
-                          break L39;
-                        } else {
-                          gf.field_h[var11] = 16777215;
-                          var11 += 2;
-                          continue L40;
-                        }
-                      }
-                    }
-                  }
-                }
-                return;
-              }
-            }
-          }
-          if (param4 >= gf.field_a) {
-            if (gf.field_f > var6) {
-              var11 = var7 + param4 * gf.field_b;
-              var12 = -var7 + (1 - -var9) >> -552467103;
-              L41: while (true) {
-                var12--;
-                if (-1 >= (var12 ^ -1)) {
-                  gf.field_h[var11] = 16777215;
-                  var11 += 2;
-                  continue L41;
+                if (var5_int >= gf.field_l) {
+                  break L10;
                 } else {
-                  L42: {
-                    if (gf.field_i > var5) {
-                      break L42;
-                    } else {
-                      if (var5 >= gf.field_l) {
-                        break L42;
-                      } else {
-                        var11 = gf.field_b * ((1 & var5 + -param3) + var8) + var5;
-                        var12 = 1 - (-var10 + var8) >> 279857089;
-                        L43: while (true) {
-                          var12--;
-                          if ((var12 ^ -1) > -1) {
-                            break L42;
-                          } else {
-                            gf.field_h[var11] = 16777215;
-                            var11 = var11 + gf.field_b * 2;
-                            continue L43;
-                          }
-                        }
-                      }
-                    }
-                  }
-                  L44: {
-                    if (param4 < gf.field_a) {
-                      break L44;
-                    } else {
-                      if (gf.field_f <= var6) {
-                        break L44;
-                      } else {
-                        var11 = (1 & var6 + -param4) + (var6 * gf.field_b - -var7);
-                        var12 = -var7 + (1 - -var9) >> 1568068993;
-                        L45: while (true) {
-                          var12--;
-                          if (0 > var12) {
-                            break L44;
-                          } else {
-                            gf.field_h[var11] = 16777215;
-                            var11 += 2;
-                            continue L45;
-                          }
-                        }
-                      }
-                    }
-                  }
-                  return;
-                }
-              }
-            } else {
-              L46: {
-                if (gf.field_i > var5) {
-                  break L46;
-                } else {
-                  if (var5 >= gf.field_l) {
-                    break L46;
-                  } else {
-                    var11 = gf.field_b * ((1 & var5 + -param3) + var8) + var5;
-                    var12 = 1 - (-var10 + var8) >> 279857089;
-                    L47: while (true) {
-                      var12--;
-                      if ((var12 ^ -1) > -1) {
-                        break L46;
-                      } else {
-                        gf.field_h[var11] = 16777215;
-                        var11 = var11 + gf.field_b * 2;
-                        continue L47;
-                      }
-                    }
-                  }
-                }
-              }
-              L48: {
-                if (param4 < gf.field_a) {
-                  break L48;
-                } else {
-                  if (gf.field_f <= var6) {
-                    break L48;
-                  } else {
-                    var11 = (1 & var6 + -param4) + (var6 * gf.field_b - -var7);
-                    var12 = -var7 + (1 - -var9) >> 1568068993;
-                    L49: while (true) {
-                      var12--;
-                      if (0 > var12) {
-                        break L48;
-                      } else {
-                        gf.field_h[var11] = 16777215;
-                        var11 += 2;
-                        continue L49;
-                      }
-                    }
-                  }
-                }
-              }
-              return;
-            }
-          } else {
-            L50: {
-              if (gf.field_i > var5) {
-                break L50;
-              } else {
-                if (var5 >= gf.field_l) {
-                  break L50;
-                } else {
-                  var11 = gf.field_b * ((1 & var5 + -param3) + var8) + var5;
-                  var12 = 1 - (-var10 + var8) >> 279857089;
-                  L51: while (true) {
+                  var11 = gf.field_b * ((1 & var5_int + -param3) + var8) + var5_int;
+                  var12 = 1 - (-var10 + var8) >> 1;
+                  L11: while (true) {
                     var12--;
-                    if ((var12 ^ -1) > -1) {
-                      break L50;
+                    if (var12 < 0) {
+                      break L10;
                     } else {
                       gf.field_h[var11] = 16777215;
                       var11 = var11 + gf.field_b * 2;
-                      continue L51;
+                      continue L11;
                     }
                   }
                 }
               }
             }
-            L52: {
+            L12: {
               if (param4 < gf.field_a) {
-                break L52;
+                break L12;
               } else {
                 if (gf.field_f <= var6) {
-                  break L52;
+                  break L12;
                 } else {
                   var11 = (1 & var6 + -param4) + (var6 * gf.field_b - -var7);
-                  var12 = -var7 + (1 - -var9) >> 1568068993;
-                  L53: while (true) {
+                  var12 = -var7 + (1 - -var9) >> 1;
+                  L13: while (true) {
                     var12--;
                     if (0 > var12) {
-                      break L52;
+                      break L12;
                     } else {
                       gf.field_h[var11] = 16777215;
                       var11 += 2;
-                      continue L53;
+                      continue L13;
                     }
                   }
                 }
               }
             }
-            return;
+            break L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          throw r.a((Throwable) (Object) var5, "dd.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 

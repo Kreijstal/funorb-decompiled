@@ -18,43 +18,80 @@ final class rb {
     private we[] field_j;
 
     final static void c(int param0, int param1) {
-        oq var2 = null;
-        var2 = ej.field_j;
+        oq var2 = ej.field_j;
         var2.b(false, param0);
-        if (param1 != 100) {
-          return;
-        } else {
-          var2.a(1, false);
-          var2.a(0, false);
-          return;
-        }
+        var2.a(1, false);
+        var2.a(0, false);
     }
 
     private final void a(we param0, boolean param1, int param2) {
-        float var4 = 0.0f;
+        float var4_float = 0.0f;
+        RuntimeException var4 = null;
         Object var5 = null;
-        if (!param1) {
-          var4 = (float)param2 / 100.0f + (float)(((rb) this).field_k + 1);
-          ((rb) this).field_c = (float)((rb) this).field_i * var4 / (float)(1 + ((rb) this).field_h);
-          if (param2 != 0) {
-            ((rb) this).field_m = param0.field_i + " - " + param2 + "%";
-            return;
-          } else {
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        try {
+          L0: {
+            if (!param1) {
+              break L0;
+            } else {
+              var5 = null;
+              rb.a((String) null, (String) null, (String) null, 64, -116, 103);
+              break L0;
+            }
+          }
+          var4_float = (float)param2 / 100.0f + (float)(((rb) this).field_k + 1);
+          ((rb) this).field_c = (float)((rb) this).field_i * var4_float / (float)(1 + ((rb) this).field_h);
+          if (param2 == 0) {
             ((rb) this).field_m = param0.field_b;
             return;
-          }
-        } else {
-          var5 = null;
-          rb.a((String) null, (String) null, (String) null, 64, -116, 103);
-          var4 = (float)param2 / 100.0f + (float)(((rb) this).field_k + 1);
-          ((rb) this).field_c = (float)((rb) this).field_i * var4 / (float)(1 + ((rb) this).field_h);
-          if (param2 != 0) {
+          } else {
             ((rb) this).field_m = param0.field_i + " - " + param2 + "%";
             return;
-          } else {
-            ((rb) this).field_m = param0.field_b;
-            return;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L1: {
+            var4 = decompiledCaughtException;
+            stackOut_6_0 = (RuntimeException) var4;
+            stackOut_6_1 = new StringBuilder().append("rb.B(");
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param0 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L1;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L1;
+            }
+          }
+          throw wm.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param1 + 44 + param2 + 41);
         }
     }
 
@@ -125,7 +162,7 @@ final class rb {
                 }
               }
               L3: {
-                if ((var4.field_n ^ -1) <= -1) {
+                if (var4.field_n >= 0) {
                   break L3;
                 } else {
                   if (var4.field_a != null) {
@@ -152,34 +189,26 @@ final class rb {
     }
 
     final static void a(String param0, String param1, String param2, int param3, int param4, int param5) {
-        int var6 = 0;
-        if (null == kh.field_Vb) {
-          qq.o((byte) -125);
-          var6 = 102 % ((-49 - param3) / 58);
-          ag.field_a = param5;
-          hk.field_t.field_nb = param2;
-          me.field_n = param4;
-          rl.field_b.field_nb = param1;
-          kh.field_Vb.field_nb = param0;
-          mc.c((byte) -86);
-          oh.field_h = true;
-          return;
-        } else {
-          var6 = 102 % ((-49 - param3) / 58);
-          ag.field_a = param5;
-          hk.field_t.field_nb = param2;
-          me.field_n = param4;
-          rl.field_b.field_nb = param1;
-          kh.field_Vb.field_nb = param0;
-          mc.c((byte) -86);
-          oh.field_h = true;
-          return;
+        try {
+            if (null == kh.field_Vb) {
+                qq.o((byte) -125);
+            }
+            int var6_int = 102 % ((-49 - param3) / 58);
+            ag.field_a = param5;
+            hk.field_t.field_nb = param2;
+            me.field_n = param4;
+            rl.field_b.field_nb = param1;
+            kh.field_Vb.field_nb = param0;
+            mc.c((byte) -86);
+            oh.field_h = true;
+        } catch (RuntimeException runtimeException) {
+            throw wm.a((Throwable) (Object) runtimeException, "rb.G(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + param3 + 44 + param4 + 44 + param5 + 41);
         }
     }
 
     final static kh a(int param0, int param1) {
-        int var2 = 8 / ((73 - param1) / 46);
-        return (kh) (Object) (lf.field_a == null ? null : lf.field_a.a((long)param0, false));
+        int var2 = -8;
+        return lf.field_a == null ? null : (kh) (Object) lf.field_a.a((long)param0, false);
     }
 
     private rb() throws Throwable {

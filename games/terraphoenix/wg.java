@@ -16,30 +16,20 @@ final class wg {
     static String[] field_h;
 
     private final void a(int param0, bb param1, int param2) {
-        float var4 = 0.0f;
-        if (param2 >= 105) {
-          var4 = (float)param0 / 100.0f + (float)(((wg) this).field_a - -1);
-          if (param0 != 0) {
-            ((wg) this).field_e = param1.field_b + " - " + param0 + "%";
-            ((wg) this).field_c = (float)((wg) this).field_j * var4 / (float)(1 + ((wg) this).field_i);
-            return;
-          } else {
-            ((wg) this).field_e = param1.field_c;
-            ((wg) this).field_c = (float)((wg) this).field_j * var4 / (float)(1 + ((wg) this).field_i);
-            return;
-          }
-        } else {
-          field_k = null;
-          var4 = (float)param0 / 100.0f + (float)(((wg) this).field_a - -1);
-          if (param0 != 0) {
-            ((wg) this).field_e = param1.field_b + " - " + param0 + "%";
-            ((wg) this).field_c = (float)((wg) this).field_j * var4 / (float)(1 + ((wg) this).field_i);
-            return;
-          } else {
-            ((wg) this).field_e = param1.field_c;
-            ((wg) this).field_c = (float)((wg) this).field_j * var4 / (float)(1 + ((wg) this).field_i);
-            return;
-          }
+        float var4_float = 0.0f;
+        try {
+            if (param2 < 105) {
+                field_k = null;
+            }
+            var4_float = (float)param0 / 100.0f + (float)(((wg) this).field_a - -1);
+            if (param0 != 0) {
+                ((wg) this).field_e = param1.field_b + " - " + param0 + "%";
+            } else {
+                ((wg) this).field_e = param1.field_c;
+            }
+            ((wg) this).field_c = (float)((wg) this).field_j * var4_float / (float)(1 + ((wg) this).field_i);
+        } catch (RuntimeException runtimeException) {
+            throw qk.a((Throwable) (Object) runtimeException, "wg.C(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + param2 + 41);
         }
     }
 
@@ -61,7 +51,7 @@ final class wg {
               return false;
             } else {
               L1: {
-                if (-1 < (var4.field_e ^ -1)) {
+                if (var4.field_e < 0) {
                   break L1;
                 } else {
                   if (var4.field_a.e(var4.field_e, 4)) {
@@ -115,9 +105,6 @@ final class wg {
         field_k = null;
         field_g = null;
         field_l = null;
-        if (param0 != 113) {
-            return;
-        }
         field_b = null;
         field_f = null;
         field_h = null;

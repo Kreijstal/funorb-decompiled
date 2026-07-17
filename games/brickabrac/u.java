@@ -15,11 +15,6 @@ final class u {
         field_c = null;
         field_e = null;
         field_b = null;
-        if (param0 != 2) {
-            field_b = null;
-            field_f = null;
-            return;
-        }
         field_f = null;
     }
 

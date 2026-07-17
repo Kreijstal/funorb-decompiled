@@ -10,15 +10,115 @@ final class ita extends vq {
     private uf field_C;
 
     private final void a(shb param0, int param1, String param2, int param3, int param4) {
-        web.field_o.a(param2, (param0.field_h >> 1225728129) + (param4 - -param0.field_g), param1 + param0.field_r + -5, 16777215, -1);
-        if (param3 != 1225728129) {
-            boolean discarded$0 = ((ita) this).d(108);
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        RuntimeException stackOut_8_0 = null;
+        StringBuilder stackOut_8_1 = null;
+        String stackOut_8_2 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        try {
+          L0: {
+            L1: {
+              web.field_o.a(param2, (param0.field_h >> 1) + (param4 - -param0.field_g), param1 + param0.field_r + -5, 16777215, -1);
+              if (param3 == 1225728129) {
+                break L1;
+              } else {
+                boolean discarded$2 = ((ita) this).d(108);
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_1 = new StringBuilder().append("ita.O(");
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param0 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
+            }
+          }
+          L3: {
+            stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+            stackOut_6_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_6_2).append(44).append(param1).append(44);
+            stackIn_8_0 = stackOut_6_0;
+            stackIn_8_1 = stackOut_6_1;
+            stackIn_7_0 = stackOut_6_0;
+            stackIn_7_1 = stackOut_6_1;
+            if (param2 == null) {
+              stackOut_8_0 = (RuntimeException) (Object) stackIn_8_0;
+              stackOut_8_1 = (StringBuilder) (Object) stackIn_8_1;
+              stackOut_8_2 = "null";
+              stackIn_9_0 = stackOut_8_0;
+              stackIn_9_1 = stackOut_8_1;
+              stackIn_9_2 = stackOut_8_2;
+              break L3;
+            } else {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "{...}";
+              stackIn_9_0 = stackOut_7_0;
+              stackIn_9_1 = stackOut_7_1;
+              stackIn_9_2 = stackOut_7_2;
+              break L3;
+            }
+          }
+          throw rta.a((Throwable) (Object) stackIn_9_0, stackIn_9_2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
     ita(wwa param0, boolean param1, int param2, int param3, int param4, int param5) {
         this(param0, param1);
-        ((ita) this).a(param2, param4, param5, 1, param3);
+        try {
+            ((ita) this).a(param2, param4, param5, 1, param3);
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "ita.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 44 + param5 + 41);
+        }
     }
 
     final void b(int param0, int param1, int param2, int param3) {
@@ -52,16 +152,20 @@ final class ita extends vq {
         int stackOut_2_0 = 0;
         if (param0 == 3476) {
           try {
-            stackOut_2_0 = Integer.parseInt(((ita) this).field_C.field_j);
-            stackIn_3_0 = stackOut_2_0;
-          } catch (java.lang.Exception decompiledCaughtParameter) {
-            decompiledCaughtException = decompiledCaughtParameter;
-            return stackIn_3_0;
+            L0: {
+              stackOut_2_0 = Integer.parseInt(((ita) this).field_C.field_j);
+              stackIn_3_0 = stackOut_2_0;
+              break L0;
+            }
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var2 = (NumberFormatException) (Object) decompiledCaughtException;
+            return -1;
           }
+          return stackIn_3_0;
         } else {
           return 3;
         }
-        return 0;
     }
 
     final boolean d(int param0) {
@@ -136,16 +240,20 @@ final class ita extends vq {
         int stackOut_2_0 = 0;
         if (param0 == -5) {
           try {
-            stackOut_2_0 = Integer.parseInt(((ita) this).field_E.field_j);
-            stackIn_3_0 = stackOut_2_0;
-          } catch (java.lang.Exception decompiledCaughtParameter) {
-            decompiledCaughtException = decompiledCaughtParameter;
-            return stackIn_3_0;
+            L0: {
+              stackOut_2_0 = Integer.parseInt(((ita) this).field_E.field_j);
+              stackIn_3_0 = stackOut_2_0;
+              break L0;
+            }
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var2 = (NumberFormatException) (Object) decompiledCaughtException;
+            return -1;
           }
+          return stackIn_3_0;
         } else {
           return -67;
         }
-        return 0;
     }
 
     final static no a(int param0, int param1) {
@@ -168,12 +276,68 @@ final class ita extends vq {
     }
 
     final void a(int param0, wta param1) {
-        super.a(75, param1);
-        ((ita) this).field_E.field_l = (sba) (Object) param1;
-        ((ita) this).field_B.field_l = (sba) (Object) param1;
-        ((ita) this).field_C.field_l = (sba) (Object) param1;
-        if (param0 <= 73) {
-            boolean discarded$0 = ((ita) this).d(-83);
+        RuntimeException runtimeException = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_6_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_3_0 = null;
+        StringBuilder stackOut_3_1 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        String stackOut_4_2 = null;
+        try {
+          L0: {
+            L1: {
+              super.a(75, param1);
+              ((ita) this).field_E.field_l = (sba) (Object) param1;
+              ((ita) this).field_B.field_l = (sba) (Object) param1;
+              ((ita) this).field_C.field_l = (sba) (Object) param1;
+              if (param0 > 73) {
+                break L1;
+              } else {
+                boolean discarded$2 = ((ita) this).d(-83);
+                break L1;
+              }
+            }
+            break L0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            runtimeException = decompiledCaughtException;
+            stackOut_3_0 = (RuntimeException) runtimeException;
+            stackOut_3_1 = new StringBuilder().append("ita.K(").append(param0).append(44);
+            stackIn_5_0 = stackOut_3_0;
+            stackIn_5_1 = stackOut_3_1;
+            stackIn_4_0 = stackOut_3_0;
+            stackIn_4_1 = stackOut_3_1;
+            if (param1 == null) {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "null";
+              stackIn_6_0 = stackOut_5_0;
+              stackIn_6_1 = stackOut_5_1;
+              stackIn_6_2 = stackOut_5_2;
+              break L2;
+            } else {
+              stackOut_4_0 = (RuntimeException) (Object) stackIn_4_0;
+              stackOut_4_1 = (StringBuilder) (Object) stackIn_4_1;
+              stackOut_4_2 = "{...}";
+              stackIn_6_0 = stackOut_4_0;
+              stackIn_6_1 = stackOut_4_1;
+              stackIn_6_2 = stackOut_4_2;
+              break L2;
+            }
+          }
+          throw rta.a((Throwable) (Object) stackIn_6_0, stackIn_6_2 + 41);
         }
     }
 
@@ -184,41 +348,49 @@ final class ita extends vq {
         int stackOut_2_0 = 0;
         if (param0) {
           try {
-            stackOut_2_0 = Integer.parseInt(((ita) this).field_B.field_j) - 1;
-            stackIn_3_0 = stackOut_2_0;
-          } catch (java.lang.Exception decompiledCaughtParameter) {
-            decompiledCaughtException = decompiledCaughtParameter;
-            return stackIn_3_0;
+            L0: {
+              stackOut_2_0 = Integer.parseInt(((ita) this).field_B.field_j) - 1;
+              stackIn_3_0 = stackOut_2_0;
+              break L0;
+            }
+          } catch (java.lang.Exception decompiledCaughtParameter0) {
+            decompiledCaughtException = decompiledCaughtParameter0;
+            var2 = (NumberFormatException) (Object) decompiledCaughtException;
+            return -1;
           }
+          return stackIn_3_0;
         } else {
           return 37;
         }
-        return 0;
     }
 
     private ita(wwa param0, boolean param1) {
         super(0, 0, 0, 0, (wwa) null);
-        ((ita) this).field_E = (uf) (Object) new tga("", (sba) null, 2);
-        ((ita) this).field_B = (uf) (Object) new tga("", (sba) null, 2);
-        ((ita) this).field_C = (uf) (Object) new tga("", (sba) null, 4);
-        ((ita) this).field_C.field_q = param0;
-        ((ita) this).field_B.field_q = param0;
-        ((ita) this).field_E.field_q = param0;
-        ((ita) this).field_F = param1 ? true : false;
-        if (!((ita) this).field_F) {
-            ((ita) this).b(-18756, (shb) (Object) ((ita) this).field_E);
-            ((ita) this).b(-18756, (shb) (Object) ((ita) this).field_B);
-        } else {
-            ((ita) this).b(-18756, (shb) (Object) ((ita) this).field_B);
-            ((ita) this).b(-18756, (shb) (Object) ((ita) this).field_E);
+        try {
+            ((ita) this).field_E = (uf) (Object) new tga("", (sba) null, 2);
+            ((ita) this).field_B = (uf) (Object) new tga("", (sba) null, 2);
+            ((ita) this).field_C = (uf) (Object) new tga("", (sba) null, 4);
+            ((ita) this).field_C.field_q = param0;
+            ((ita) this).field_B.field_q = param0;
+            ((ita) this).field_E.field_q = param0;
+            ((ita) this).field_F = param1 ? true : false;
+            if (!((ita) this).field_F) {
+                ((ita) this).b(-18756, (shb) (Object) ((ita) this).field_E);
+                ((ita) this).b(-18756, (shb) (Object) ((ita) this).field_B);
+            } else {
+                ((ita) this).b(-18756, (shb) (Object) ((ita) this).field_B);
+                ((ita) this).b(-18756, (shb) (Object) ((ita) this).field_E);
+            }
+            ((ita) this).b(-18756, (shb) (Object) ((ita) this).field_C);
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "ita.<init>(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
-        ((ita) this).b(-18756, (shb) (Object) ((ita) this).field_C);
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         L0: {
-          super.a(param0, param1, param2, param3 ^ 0, param4);
+          super.a(param0, param1, param2, param3, param4);
           if (param3 == 1) {
             break L0;
           } else {
@@ -226,16 +398,16 @@ final class ita extends vq {
             break L0;
           }
         }
-        var6 = param1 - 130 >> 1542941825;
+        var6 = param1 - 130 >> 1;
         if (((ita) this).field_F) {
           ((ita) this).field_B.a(var6, 25, param2, 1, 0);
           ((ita) this).field_E.a(var6 - -45, 25, param2, 1, 0);
-          ((ita) this).field_C.a(90 + var6, 40, param2, param3 + 0, 0);
+          ((ita) this).field_C.a(90 + var6, 40, param2, param3, 0);
           return;
         } else {
-          ((ita) this).field_E.a(var6, 25, param2, param3 + 0, 0);
-          ((ita) this).field_B.a(var6 + 45, 25, param2, param3 + 0, 0);
-          ((ita) this).field_C.a(90 + var6, 40, param2, param3 + 0, 0);
+          ((ita) this).field_E.a(var6, 25, param2, param3, 0);
+          ((ita) this).field_B.a(var6 + 45, 25, param2, param3, 0);
+          ((ita) this).field_C.a(90 + var6, 40, param2, param3, 0);
           return;
         }
     }
@@ -243,9 +415,6 @@ final class ita extends vq {
     public static void j(byte param0) {
         field_A = null;
         field_D = null;
-        if (param0 <= 71) {
-            field_A = null;
-        }
     }
 
     static {

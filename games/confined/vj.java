@@ -106,7 +106,11 @@ final class vj {
     vj(String param0) {
         ((vj) this).field_a = false;
         ((vj) this).field_c = false;
-        ((vj) this).field_d = param0;
+        try {
+            ((vj) this).field_d = param0;
+        } catch (RuntimeException runtimeException) {
+            throw sd.a((Throwable) (Object) runtimeException, "vj.<init>(" + (param0 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

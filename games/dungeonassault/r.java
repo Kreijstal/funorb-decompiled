@@ -149,8 +149,8 @@ final class r {
     }
 
     final static void a(byte param0, int param1) {
-        lm.field_k = (param1 & 54) >> 239212132;
-        mp.field_d = (12 & param1) >> 1714203074;
+        lm.field_k = (param1 & 54) >> 4;
+        mp.field_d = (12 & param1) >> 2;
         if (param0 >= -58) {
           L0: {
             field_a = null;
@@ -212,9 +212,6 @@ final class r {
     public static void a(int param0) {
         field_a = null;
         field_b = null;
-        if (param0 >= -79) {
-            field_c = -80;
-        }
     }
 
     static {

@@ -67,7 +67,7 @@ final class tt {
                 }
               }
               L2: {
-                if (-2 != (var1_ref.h((byte) -110) ^ -1)) {
+                if (var1_ref.h((byte) -110) != 1) {
                   stackOut_11_0 = 0;
                   stackIn_12_0 = stackOut_11_0;
                   break L2;
@@ -138,9 +138,9 @@ final class tt {
               return;
             } else {
               if (1 != var2) {
-                if ((var2 ^ -1) != -3) {
-                  if ((var2 ^ -1) != -4) {
-                    if (-5 == (var2 ^ -1)) {
+                if (var2 != 2) {
+                  if (var2 != 3) {
+                    if (var2 == 4) {
                       ts.field_d = 1;
                       var3 = var1_ref.a(111);
                       bh.field_h = var3.intern();

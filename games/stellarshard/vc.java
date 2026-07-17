@@ -16,9 +16,6 @@ final class vc {
     pf field_e;
 
     public static void a(int param0) {
-        if (param0 != -1) {
-            return;
-        }
         field_h = null;
         field_b = null;
         field_g = null;
@@ -26,19 +23,58 @@ final class vc {
     }
 
     final static pb a(pf param0, int param1, int param2, int param3) {
-        if (param3 == -2) {
-          if (!tl.a(param0, (byte) -5, param2, param1)) {
-            return null;
-          } else {
+        RuntimeException var4 = null;
+        RuntimeException stackIn_5_0 = null;
+        StringBuilder stackIn_5_1 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_4_0 = null;
+        StringBuilder stackOut_4_1 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        String stackOut_5_2 = null;
+        try {
+          if (tl.a(param0, (byte) -5, param2, param1)) {
             return vg.c((byte) -118);
-          }
-        } else {
-          field_a = 32L;
-          if (!tl.a(param0, (byte) -5, param2, param1)) {
-            return null;
           } else {
-            return vg.c((byte) -118);
+            return null;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L0: {
+            var4 = decompiledCaughtException;
+            stackOut_4_0 = (RuntimeException) var4;
+            stackOut_4_1 = new StringBuilder().append("vc.A(");
+            stackIn_6_0 = stackOut_4_0;
+            stackIn_6_1 = stackOut_4_1;
+            stackIn_5_0 = stackOut_4_0;
+            stackIn_5_1 = stackOut_4_1;
+            if (param0 == null) {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "null";
+              stackIn_7_0 = stackOut_6_0;
+              stackIn_7_1 = stackOut_6_1;
+              stackIn_7_2 = stackOut_6_2;
+              break L0;
+            } else {
+              stackOut_5_0 = (RuntimeException) (Object) stackIn_5_0;
+              stackOut_5_1 = (StringBuilder) (Object) stackIn_5_1;
+              stackOut_5_2 = "{...}";
+              stackIn_7_0 = stackOut_5_0;
+              stackIn_7_1 = stackOut_5_1;
+              stackIn_7_2 = stackOut_5_2;
+              break L0;
+            }
+          }
+          throw ma.a((Throwable) (Object) stackIn_7_0, stackIn_7_2 + 44 + param1 + 44 + param2 + 44 + -2 + 41);
         }
     }
 
@@ -108,7 +144,7 @@ final class vc {
                     if (kc.field_b != 1) {
                       break L2;
                     } else {
-                      if ((dl.field_A.field_f ^ -1) == -3) {
+                      if (dl.field_A.field_f == 2) {
                         stackOut_13_0 = tc.a(-1, (byte) 127);
                         stackIn_14_0 = stackOut_13_0;
                         return stackIn_14_0;
@@ -123,7 +159,7 @@ final class vc {
                     }
                   }
                   L3: {
-                    if ((kc.field_b ^ -1) != -3) {
+                    if (kc.field_b != 2) {
                       break L3;
                     } else {
                       k.field_b = new fh((java.net.Socket) dl.field_A.field_b, fa.field_p);
@@ -139,12 +175,12 @@ final class vc {
                   }
                   L4: {
                     var1_int = 23 / ((param0 - -55) / 60);
-                    if (-4 != (kc.field_b ^ -1)) {
+                    if (kc.field_b != 3) {
                       break L4;
                     } else {
-                      if (-1 > (k.field_b.b(-95) ^ -1)) {
+                      if (k.field_b.b(-95) > 0) {
                         var2 = k.field_b.a(0);
-                        if (-1 == (var2 ^ -1)) {
+                        if (var2 == 0) {
                           kc.field_b = kc.field_b + 1;
                           break L4;
                         } else {
@@ -153,7 +189,7 @@ final class vc {
                           return stackIn_27_0;
                         }
                       } else {
-                        if ((fj.field_j ^ -1L) <= (ih.a((byte) -98) ^ -1L)) {
+                        if (~fj.field_j <= ~ih.a((byte) -98)) {
                           break L4;
                         } else {
                           stackOut_23_0 = tc.a(-2, (byte) 126);

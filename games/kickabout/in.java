@@ -48,10 +48,10 @@ final class in {
     }
 
     final static void a(boolean param0, int param1) {
-        hl.field_e = kd.a(25, 0, true, !param0 ? true : false, 11, param1);
-        am.field_h = kd.a(50, 25, param0, !param0 ? true : false, 11, param1);
-        hq.field_e = kd.a(75, 50, false, false, 11, param1);
-        ub.field_G = kd.a(100, 75, false, false, 11, param1);
+        hl.field_e = kd.a(25, 0, true, !param0 ? true : false, 11, 128);
+        am.field_h = kd.a(50, 25, param0, !param0 ? true : false, 11, 128);
+        hq.field_e = kd.a(75, 50, false, false, 11, 128);
+        ub.field_G = kd.a(100, 75, false, false, 11, 128);
     }
 
     final static boolean a(byte param0) {

@@ -46,9 +46,6 @@ final class wd extends ik {
     }
 
     final static long d(int param0) {
-        if (param0 != -1322) {
-            field_j = 104;
-        }
         return -wg.field_y + lo.a((byte) 82);
     }
 
@@ -59,12 +56,12 @@ final class wd extends ik {
             this.a(-104, 80, -33, 70);
         }
         if (!((wd) this).field_i) {
-            for (var5 = 0; (var5 ^ -1) > -8; var5++) {
+            for (var5 = 0; var5 < 7; var5++) {
                 kh.f(-var5 + (-1 + (14 + param3)), -8 + (15 + param1 - -var5), 2 + var5 * 2, param0);
             }
-            kh.f(-3 + (14 + param3), param1 - -15 - 1, 6, 7, param0);
+            kh.f(-3 + (14 + param3), param1 + 14, 6, 7, param0);
         } else {
-            kh.f(param3 - -15 - 4, -7 + (-1 + param1) - -15, 6, 7, param0);
+            kh.f(param3 + 11, -7 + (-1 + param1) - -15, 6, 7, param0);
             for (var5 = 0; var5 < 7; var5++) {
                 kh.f(-8 + (15 + param3) - -var5, -1 + (15 + param1) - -var5, 14 - var5 * 2, param0);
             }

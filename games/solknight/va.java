@@ -29,35 +29,18 @@ abstract class va {
     }
 
     final static String a(boolean param0) {
-        if (param0) {
-          if (!ab.field_u) {
-            if (kk.field_d >= kg.field_e) {
-              if (kk.field_d >= kg.field_e - -wi.field_l) {
-                return null;
-              } else {
-                return s.field_ib;
-              }
-            } else {
+        if (!ab.field_u) {
+          if (kk.field_d >= kg.field_e) {
+            if (kk.field_d >= kg.field_e - -wi.field_l) {
               return null;
+            } else {
+              return s.field_ib;
             }
           } else {
             return null;
           }
         } else {
-          field_g = null;
-          if (!ab.field_u) {
-            if (kk.field_d >= kg.field_e) {
-              if (kk.field_d >= kg.field_e - -wi.field_l) {
-                return null;
-              } else {
-                return s.field_ib;
-              }
-            } else {
-              return null;
-            }
-          } else {
-            return null;
-          }
+          return null;
         }
     }
 
@@ -76,7 +59,7 @@ abstract class va {
         ic stackOut_1_0 = null;
         int stackOut_1_1 = 0;
         L0: {
-          var6 = (long)param2 + ((long)param0 << 437409504);
+          var6 = (long)param2 + ((long)param0 << 32);
           var8 = new ic();
           var8.field_l = var6;
           stackOut_0_0 = (ic) var8;
@@ -107,7 +90,7 @@ abstract class va {
               return var8;
             }
           } else {
-            if (-21 < (((va) this).b(false) ^ -1)) {
+            if (((va) this).b(false) < 20) {
               ((va) this).field_m.a((ec) (Object) var8, 0);
               return var8;
             } else {
@@ -124,7 +107,7 @@ abstract class va {
               return var8;
             }
           } else {
-            if (-21 < (((va) this).b(false) ^ -1)) {
+            if (((va) this).b(false) < 20) {
               ((va) this).field_m.a((ec) (Object) var8, 0);
               return var8;
             } else {
@@ -136,11 +119,6 @@ abstract class va {
 
     public static void b(byte param0) {
         field_g = null;
-        if (param0 != 0) {
-            field_g = null;
-            field_f = null;
-            return;
-        }
         field_f = null;
     }
 
@@ -148,7 +126,7 @@ abstract class va {
         if (param0 != -5868) {
             return true;
         }
-        return (((va) this).c(-49) ^ -1) <= -21 ? true : false;
+        return ((va) this).c(-49) >= 20 ? true : false;
     }
 
     final boolean b(int param0) {

@@ -10,26 +10,17 @@ final class nm {
     static int field_f;
 
     final static void a(int param0) {
-        nn var1 = null;
-        am var2 = null;
-        var1 = (nn) (Object) ro.field_a.b((byte) 26);
-        if (var1 == null) {
-          p.a(1);
-          return;
-        } else {
-          var2 = fj.field_g;
-          int discarded$64 = var2.c(param0 ^ 14826);
-          int discarded$65 = var2.c(param0 ^ 14820);
-          int discarded$66 = var2.c(-37);
-          int discarded$67 = var2.c(95);
-          var1.b(-27598);
-          if (param0 != 14740) {
-            boolean discarded$68 = nm.c(-16);
+        nn var1 = (nn) (Object) ro.field_a.b((byte) 26);
+        if (!(var1 != null)) {
+            p.a(1);
             return;
-          } else {
-            return;
-          }
         }
+        am var2 = fj.field_g;
+        int discarded$0 = var2.c(126);
+        int discarded$1 = var2.c(112);
+        int discarded$2 = var2.c(-37);
+        int discarded$3 = var2.c(95);
+        var1.b(-27598);
     }
 
     final static boolean c(int param0) {
@@ -41,9 +32,6 @@ final class nm {
 
     public static void b(int param0) {
         field_e = null;
-        if (param0 > -19) {
-            boolean discarded$0 = nm.c(-1);
-        }
     }
 
     static {

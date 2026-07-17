@@ -24,6 +24,7 @@ final class qs extends fj implements nh {
         var15 = ((qs) this).field_b.field_Jc;
         var8 = ((qs) this).field_h.LockBox(0, 0, 0, 0, param2, param3, param4, 0, var15);
         if (!jagdx.gv.b(var8, -94)) {
+          return;
         } else {
           var9 = ((qs) this).field_d.field_c * ((qs) this).field_g;
           var10 = var9 * ((qs) this).field_i;
@@ -35,6 +36,7 @@ final class qs extends fj implements nh {
               L0: while (true) {
                 if (((qs) this).field_f <= var13) {
                   boolean discarded$3 = ((qs) this).field_h.UnlockBox(0);
+                  return;
                 } else {
                   var14 = 0;
                   L1: while (true) {
@@ -54,6 +56,7 @@ final class qs extends fj implements nh {
               L2: while (true) {
                 if (((qs) this).field_f <= var13) {
                   boolean discarded$4 = ((qs) this).field_h.UnlockBox(0);
+                  return;
                 } else {
                   var15.a(param5, var10 * var13, var13 * var11, var10);
                   var13++;
@@ -64,6 +67,7 @@ final class qs extends fj implements nh {
           } else {
             var15.a(param5, 0, 0, var9 * ((qs) this).field_i * ((qs) this).field_f);
             boolean discarded$5 = ((qs) this).field_h.UnlockBox(0);
+            return;
           }
         }
     }
@@ -72,7 +76,7 @@ final class qs extends fj implements nh {
         if (param1 != 15149) {
             return;
         }
-        super.a(param0, param1 + 0);
+        super.a(param0, param1);
     }
 
     final jagdx.IDirect3DBaseTexture d(int param0) {

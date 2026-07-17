@@ -9,9 +9,6 @@ final class aj {
 
     public static void a(int param0) {
         field_b = null;
-        if (param0 != -9097) {
-            return;
-        }
         field_d = null;
         field_c = null;
     }
@@ -20,7 +17,7 @@ final class aj {
         if (param0 <= 0L) {
           return;
         } else {
-          if (-1L == (param0 % 10L ^ -1L)) {
+          if (param0 % 10L == 0L) {
             rq.a((byte) -93, param0 + -1L);
             rq.a((byte) -93, 1L);
             if (param1 == 1) {

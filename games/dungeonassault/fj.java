@@ -18,12 +18,7 @@ final class fj {
         field_e = null;
         field_c = null;
         field_a = null;
-        if (param0 != -75) {
-          return;
-        } else {
-          field_g = null;
-          return;
-        }
+        field_g = null;
     }
 
     static {

@@ -16,9 +16,6 @@ final class eo {
     public static void a(int param0) {
         field_c = null;
         field_h = null;
-        if (param0 != -25401) {
-            return;
-        }
         field_j = null;
         field_i = null;
         field_f = null;
@@ -33,21 +30,21 @@ final class eo {
 
     final static ah a(int param0, int param1, int param2, int param3) {
         if (param0 >= 49) {
-          if (-10 < (param2 ^ -1)) {
+          if (param2 < 9) {
             return (ah) (Object) new wo(param1, param3, param2);
           } else {
-            if ((param2 ^ -1) <= -12) {
+            if (param2 >= 11) {
               L0: {
-                if (-18 < (param2 ^ -1)) {
+                if (param2 < 17) {
                   break L0;
                 } else {
                   if (28 == param2) {
                     break L0;
                   } else {
                     if (param2 != 23) {
-                      if (-19 != (param2 ^ -1)) {
-                        if (-20 != (param2 ^ -1)) {
-                          if (-21 != (param2 ^ -1)) {
+                      if (param2 != 18) {
+                        if (param2 != 19) {
+                          if (param2 != 20) {
                             if (27 != param2) {
                               return (ah) (Object) new wo(param1, param3, param2);
                             } else {
@@ -72,7 +69,7 @@ final class eo {
                 if (ng.field_e) {
                   break L1;
                 } else {
-                  if (-8 != (dj.field_e.field_q ^ -1)) {
+                  if (dj.field_e.field_q != 7) {
                     break L1;
                   } else {
                     return (ah) (Object) new jo(param1, param3, param2);
@@ -86,16 +83,16 @@ final class eo {
           }
         } else {
           eo.a(false);
-          if (-10 < (param2 ^ -1)) {
+          if (param2 < 9) {
             return (ah) (Object) new wo(param1, param3, param2);
           } else {
-            if ((param2 ^ -1) <= -12) {
-              if (-18 >= (param2 ^ -1)) {
+            if (param2 >= 11) {
+              if (param2 >= 17) {
                 if (28 != param2) {
                   if (param2 != 23) {
-                    if (-19 != (param2 ^ -1)) {
-                      if (-20 != (param2 ^ -1)) {
-                        if (-21 != (param2 ^ -1)) {
+                    if (param2 != 18) {
+                      if (param2 != 19) {
+                        if (param2 != 20) {
                           if (27 != param2) {
                             return (ah) (Object) new wo(param1, param3, param2);
                           } else {
@@ -115,7 +112,7 @@ final class eo {
                   }
                 } else {
                   if (!ng.field_e) {
-                    if (-8 == (dj.field_e.field_q ^ -1)) {
+                    if (dj.field_e.field_q == 7) {
                       return (ah) (Object) new jo(param1, param3, param2);
                     } else {
                       return (ah) (Object) new qk(param1, param3, param2);
@@ -126,7 +123,7 @@ final class eo {
                 }
               } else {
                 if (!ng.field_e) {
-                  if (-8 == (dj.field_e.field_q ^ -1)) {
+                  if (dj.field_e.field_q == 7) {
                     return (ah) (Object) new jo(param1, param3, param2);
                   } else {
                     return (ah) (Object) new qk(param1, param3, param2);
@@ -143,9 +140,6 @@ final class eo {
     }
 
     final static boolean b(int param0) {
-        if (param0 < 65) {
-            return false;
-        }
         return nm.field_c;
     }
 

@@ -11,7 +11,8 @@ final class hl extends pg {
     wk field_j;
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        int var5 = 0;
+        RuntimeException var5 = null;
+        int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -33,242 +34,157 @@ final class hl extends pg {
         int[] var24 = null;
         int[] var25 = null;
         int[] var26 = null;
-        L0: {
-          var22 = ArcanistsMulti.field_G ? 1 : 0;
-          var5 = param4 * param4;
-          var6 = param0 - param4;
-          var7 = param4 + param0;
-          var8 = -param4 + param1;
-          var9 = param1 + param4;
-          if (var8 < de.field_i) {
-            var8 = de.field_i;
-            break L0;
-          } else {
-            break L0;
-          }
-        }
-        L1: {
-          if (de.field_h >= var9) {
-            break L1;
-          } else {
-            var9 = de.field_h;
-            break L1;
-          }
-        }
-        L2: {
-          if (var6 < de.field_c) {
-            var6 = de.field_c;
-            break L2;
-          } else {
-            break L2;
-          }
-        }
-        L3: {
-          if (var7 > de.field_k) {
-            var7 = de.field_k;
-            break L3;
-          } else {
-            break L3;
-          }
-        }
-        var26 = de.field_l;
-        var25 = var26;
-        var24 = var25;
-        var23 = var24;
-        var10 = var23;
-        if (param3 != 2232) {
-          field_l = null;
-          var15 = var6;
-          if (var7 > var15) {
-            var16 = var8;
-            L4: while (true) {
-              if (var9 > var16) {
-                var12 = var16 - param1;
-                var13 = -param0 + var15;
-                var14 = var13 * var13 + var12 * var12;
-                if (var14 < var5) {
-                  L5: {
-                    if (var14 != 0) {
-                      break L5;
-                    } else {
-                      var14 = 1;
-                      break L5;
-                    }
-                  }
-                  var11 = var16 + var15 * de.field_e;
-                  var17 = 256 - -(param2 * var14 / var5) - param2;
-                  var18 = var26[var11];
-                  var19 = var18 >> 1768713072 & 255;
-                  var20 = 255 & var18 >> 1771034792;
-                  var21 = 255 & var18;
-                  if (0 < var17) {
-                    if (-257 != (var17 ^ -1)) {
-                      L6: {
-                        if (var17 <= var20) {
-                          var20 = -(var17 * (var20 - var17) / (256 - var17)) + var17;
-                          break L6;
-                        } else {
-                          var20 = var20 + (256 + -var17);
-                          break L6;
-                        }
-                      }
-                      L7: {
-                        if (var17 <= var19) {
-                          var19 = var17 - var17 * (var19 - var17) / (256 + -var17);
-                          break L7;
-                        } else {
-                          var19 = var19 + (256 + -var17);
-                          break L7;
-                        }
-                      }
-                      if (var17 <= var21) {
-                        var21 = var17 + -(var17 * (var21 + -var17) / (-var17 + 256));
-                        var10[var11] = fj.b(fj.b(var19 << -1513388336, var20 << -480690840), var21);
-                        var16++;
-                        var16++;
-                        var16++;
-                        var15++;
-                        return;
-                      } else {
-                        var21 = var21 + (256 - var17);
-                        var10[var11] = fj.b(fj.b(var19 << -1513388336, var20 << -480690840), var21);
-                        var16++;
-                        var16++;
-                        var16++;
-                        var15++;
-                        return;
-                      }
-                    } else {
-                      var10[var11] = fj.b(fj.b(var19 << -1513388336, var20 << -480690840), var21);
-                      var16++;
-                      continue L4;
-                    }
-                  } else {
-                    var20 = -var20 + 255;
-                    var19 = 255 + -var19;
-                    var21 = -var21 + 255;
-                    var10[var11] = fj.b(fj.b(var19 << -1513388336, var20 << -480690840), var21);
-                    var16++;
-                    var16++;
-                    var16++;
-                    var15++;
-                    return;
-                  }
-                } else {
-                  var16++;
-                  var16++;
-                  var16++;
-                  var16++;
-                  var15++;
-                  return;
-                }
+        RuntimeException decompiledCaughtException = null;
+        var22 = ArcanistsMulti.field_G ? 1 : 0;
+        try {
+          L0: {
+            L1: {
+              var5_int = param4 * param4;
+              var6 = param0 - param4;
+              var7 = param4 + param0;
+              var8 = -param4 + param1;
+              var9 = param1 + param4;
+              if (var8 < de.field_i) {
+                var8 = de.field_i;
+                break L1;
               } else {
-                var15++;
-                return;
+                break L1;
               }
             }
-          } else {
-            return;
-          }
-        } else {
-          var15 = var6;
-          L8: while (true) {
-            if (var7 <= var15) {
-              return;
-            } else {
-              var16 = var8;
-              L9: while (true) {
-                if (var9 <= var16) {
-                  var15++;
-                  continue L8;
-                } else {
-                  var12 = var16 - param1;
-                  var13 = -param0 + var15;
-                  var14 = var13 * var13 + var12 * var12;
-                  if (var14 < var5) {
-                    L10: {
-                      if (var14 != 0) {
-                        break L10;
-                      } else {
-                        var14 = 1;
-                        break L10;
-                      }
-                    }
-                    L11: {
-                      var11 = var16 + var15 * de.field_e;
-                      var17 = 256 - -(param2 * var14 / var5) - param2;
-                      var18 = var26[var11];
-                      var19 = var18 >> 1768713072 & 255;
-                      var20 = 255 & var18 >> 1771034792;
-                      var21 = 255 & var18;
-                      if (0 < var17) {
-                        if (-257 != (var17 ^ -1)) {
-                          L12: {
-                            if (var17 <= var20) {
-                              var20 = -(var17 * (var20 - var17) / (256 - var17)) + var17;
-                              break L12;
-                            } else {
-                              var20 = var20 + (256 + -var17);
-                              break L12;
-                            }
-                          }
-                          L13: {
-                            if (var17 <= var19) {
-                              var19 = var17 - var17 * (var19 - var17) / (256 + -var17);
-                              break L13;
-                            } else {
-                              var19 = var19 + (256 + -var17);
-                              break L13;
-                            }
-                          }
-                          if (var17 > var21) {
-                            var21 = var21 + (256 - var17);
-                            break L11;
-                          } else {
-                            var21 = var17 + -(var17 * (var21 + -var17) / (-var17 + 256));
-                            break L11;
-                          }
-                        } else {
-                          var10[var11] = fj.b(fj.b(var19 << -1513388336, var20 << -480690840), var21);
-                          var16++;
-                          continue L9;
-                        }
-                      } else {
-                        var20 = -var20 + 255;
-                        var19 = 255 + -var19;
-                        var21 = -var21 + 255;
-                        break L11;
-                      }
-                    }
-                    var10[var11] = fj.b(fj.b(var19 << -1513388336, var20 << -480690840), var21);
-                    var16++;
-                    continue L9;
+            L2: {
+              if (de.field_h >= var9) {
+                break L2;
+              } else {
+                var9 = de.field_h;
+                break L2;
+              }
+            }
+            L3: {
+              if (var6 < de.field_c) {
+                var6 = de.field_c;
+                break L3;
+              } else {
+                break L3;
+              }
+            }
+            L4: {
+              if (var7 > de.field_k) {
+                var7 = de.field_k;
+                break L4;
+              } else {
+                break L4;
+              }
+            }
+            L5: {
+              var26 = de.field_l;
+              var25 = var26;
+              var24 = var25;
+              var23 = var24;
+              var10 = var23;
+              if (param3 == 2232) {
+                break L5;
+              } else {
+                field_l = null;
+                break L5;
+              }
+            }
+            var15 = var6;
+            L6: while (true) {
+              if (var7 <= var15) {
+                break L0;
+              } else {
+                var16 = var8;
+                L7: while (true) {
+                  if (var9 <= var16) {
+                    var15++;
+                    continue L6;
                   } else {
+                    L8: {
+                      var12 = var16 - param1;
+                      var13 = -param0 + var15;
+                      var14 = var13 * var13 + var12 * var12;
+                      if (var14 < var5_int) {
+                        L9: {
+                          if (var14 != 0) {
+                            break L9;
+                          } else {
+                            var14 = 1;
+                            break L9;
+                          }
+                        }
+                        L10: {
+                          var11 = var16 + var15 * de.field_e;
+                          var17 = 256 - -(param2 * var14 / var5_int) - param2;
+                          var18 = var26[var11];
+                          var19 = var18 >> 16 & 255;
+                          var20 = 255 & var18 >> 8;
+                          var21 = 255 & var18;
+                          if (0 < var17) {
+                            if (var17 != 256) {
+                              L11: {
+                                if (var17 <= var20) {
+                                  var20 = -(var17 * (var20 - var17) / (256 - var17)) + var17;
+                                  break L11;
+                                } else {
+                                  var20 = var20 + (256 + -var17);
+                                  break L11;
+                                }
+                              }
+                              L12: {
+                                if (var17 <= var19) {
+                                  var19 = var17 - var17 * (var19 - var17) / (256 + -var17);
+                                  break L12;
+                                } else {
+                                  var19 = var19 + (256 + -var17);
+                                  break L12;
+                                }
+                              }
+                              if (var17 > var21) {
+                                var21 = var21 + (256 - var17);
+                                break L10;
+                              } else {
+                                var21 = var17 + -(var17 * (var21 + -var17) / (-var17 + 256));
+                                break L10;
+                              }
+                            } else {
+                              var10[var11] = fj.b(fj.b(var19 << 16, var20 << 8), var21);
+                              var16++;
+                              continue L7;
+                            }
+                          } else {
+                            var20 = -var20 + 255;
+                            var19 = 255 + -var19;
+                            var21 = -var21 + 255;
+                            break L10;
+                          }
+                        }
+                        var10[var11] = fj.b(fj.b(var19 << 16, var20 << 8), var21);
+                        var16++;
+                        break L8;
+                      } else {
+                        var16++;
+                        break L8;
+                      }
+                    }
                     var16++;
-                    continue L9;
+                    continue L7;
                   }
                 }
               }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          throw aa.a((Throwable) (Object) var5, "hl.B(" + param0 + 44 + param1 + 44 + param2 + 44 + param3 + 44 + param4 + 41);
         }
     }
 
     public static void a(int param0) {
-        if (param0 != -1513388336) {
-          field_m = null;
-          field_m = null;
-          field_h = null;
-          field_l = null;
-          field_i = null;
-          return;
-        } else {
-          field_m = null;
-          field_h = null;
-          field_l = null;
-          field_i = null;
-          return;
-        }
+        field_m = null;
+        field_h = null;
+        field_l = null;
+        field_i = null;
     }
 
     hl() {

@@ -100,8 +100,8 @@ abstract class ld extends km {
         int var11 = 0;
         jp var12 = null;
         jp[] stackIn_26_0 = null;
-        jp[] stackOut_25_0;
-        jp[] stackOut_24_0;
+        jp[] stackOut_25_0 = null;
+        jp[] stackOut_24_0 = null;
         L0: {
           var11 = BrickABrac.field_J ? 1 : 0;
           if (null == ec.field_Q) {
@@ -126,7 +126,7 @@ abstract class ld extends km {
         var3 = ((ld) this).f(-6);
         var4 = 0;
         L2: while (true) {
-          if ((var4 ^ -1) <= -4) {
+          if (var4 >= 3) {
             L3: {
               if (param0 <= -14) {
                 break L3;
@@ -149,12 +149,12 @@ abstract class ld extends km {
                     L6: {
                       var8 = 320;
                       var9 = var2;
-                      if ((sk.field_I ^ -1) != -3) {
-                        if (-1 == (var5 ^ -1)) {
+                      if (sk.field_I != 2) {
+                        if (var5 == 0) {
                           var9 += 14;
                           break L6;
                         } else {
-                          if ((var5 ^ -1) == -2) {
+                          if (var5 == 1) {
                             var9 += 38;
                             var8 = var8 - (-10 + var4 / 3);
                             break L6;
@@ -191,11 +191,11 @@ abstract class ld extends km {
                         break L7;
                       }
                     }
-                    var10 = (jp) (Object) stackIn_26_0[da.field_C[var7]];
+                    var10 = stackIn_26_0[da.field_C[var7]];
                     var10.c(var8 - var10.field_x / 2, var9 + -var10.field_z);
                     ce.field_e.b(fh.field_h[var7], var8, var2 - -85, 0, -1);
                     var5++;
-                    if ((var5 ^ -1) == -4) {
+                    if (var5 == 3) {
                       break L5;
                     } else {
                       var6++;
@@ -240,10 +240,7 @@ abstract class ld extends km {
     }
 
     private final int h(int param0) {
-        if (param0 != 6175) {
-            return 116;
-        }
-        return (284 + ((ld) this).f(param0 + -6181)) / 2;
+        return (284 + ((ld) this).f(-6)) / 2;
     }
 
     final void a(boolean param0, boolean param1, int param2) {

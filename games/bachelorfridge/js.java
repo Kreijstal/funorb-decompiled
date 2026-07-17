@@ -28,8 +28,9 @@ final class js {
           }
           L1: while (true) {
             if (((js) this).field_a < ((js) this).field_e) {
+              int fieldTemp$4 = ((js) this).field_a;
               ((js) this).field_a = ((js) this).field_a + 1;
-              var2 = ((js) this).field_b[((js) this).field_a].field_b;
+              var2 = ((js) this).field_b[fieldTemp$4].field_b;
               if (((js) this).field_b[((js) this).field_a - 1] != var2) {
                 ((js) this).field_d = var2.field_b;
                 return var2;
@@ -41,13 +42,14 @@ final class js {
             }
           }
         } else {
-          bw discarded$1 = ((js) this).a(false, -79L);
+          bw discarded$5 = ((js) this).a(false, -79L);
           if (((js) this).field_a > 0) {
             if (((js) this).field_d == ((js) this).field_b[-1 + ((js) this).field_a]) {
               L2: while (true) {
                 if (((js) this).field_a < ((js) this).field_e) {
+                  int fieldTemp$6 = ((js) this).field_a;
                   ((js) this).field_a = ((js) this).field_a + 1;
-                  var2 = ((js) this).field_b[((js) this).field_a].field_b;
+                  var2 = ((js) this).field_b[fieldTemp$6].field_b;
                   if (((js) this).field_b[((js) this).field_a - 1] != var2) {
                     ((js) this).field_d = var2.field_b;
                     return var2;
@@ -66,8 +68,9 @@ final class js {
           } else {
             L3: while (true) {
               if (((js) this).field_a < ((js) this).field_e) {
+                int fieldTemp$7 = ((js) this).field_a;
                 ((js) this).field_a = ((js) this).field_a + 1;
-                var2 = ((js) this).field_b[((js) this).field_a].field_b;
+                var2 = ((js) this).field_b[fieldTemp$7].field_b;
                 if (((js) this).field_b[((js) this).field_a - 1] != var2) {
                   ((js) this).field_d = var2.field_b;
                   return var2;
@@ -83,16 +86,21 @@ final class js {
     }
 
     final void a(long param0, byte param1, bw param2) {
-        if (!(null == param2.field_e)) {
-            param2.a(false);
+        bw var5 = null;
+        try {
+            if (!(null == param2.field_e)) {
+                param2.a(false);
+            }
+            var5 = ((js) this).field_b[(int)((long)(-1 + ((js) this).field_e) & param0)];
+            param2.field_b = var5;
+            param2.field_e = var5.field_e;
+            param2.field_e.field_b = param2;
+            param2.field_b.field_e = param2;
+            param2.field_c = param0;
+            int var6 = 41 / ((param1 - 13) / 45);
+        } catch (RuntimeException runtimeException) {
+            throw pe.a((Throwable) (Object) runtimeException, "js.E(" + param0 + 44 + param1 + 44 + (param2 != null ? "{...}" : "null") + 41);
         }
-        bw var5 = ((js) this).field_b[(int)((long)(-1 + ((js) this).field_e) & param0)];
-        param2.field_b = var5;
-        param2.field_e = var5.field_e;
-        param2.field_e.field_b = param2;
-        param2.field_b.field_e = param2;
-        param2.field_c = param0;
-        int var6 = 41 / ((param1 - 13) / 45);
     }
 
     final bw a(boolean param0, long param1) {
@@ -165,8 +173,9 @@ final class js {
         ((js) this).field_b = new bw[param0];
         ((js) this).field_e = param0;
         for (var2 = 0; param0 > var2; var2++) {
-            var3 = new bw();
-            ((js) this).field_b[var2] = new bw();
+            bw dupTemp$0 = new bw();
+            var3 = dupTemp$0;
+            ((js) this).field_b[var2] = dupTemp$0;
             var3.field_e = var3;
             var3.field_b = var3;
         }

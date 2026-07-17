@@ -13,48 +13,44 @@ abstract class pf {
     abstract void a(byte[] param0, int param1);
 
     final static void a(int param0, dl param1, byte param2) {
-        int var3 = -84 / ((param2 - -50) / 61);
-        ml var4 = or.field_d;
-        var4.b(param0, (byte) -80);
-        var4.a(125, 2);
-        var4.a(119, 0);
-        var4.a(108, param1.field_e);
+        ml var4 = null;
+        try {
+            int var3_int = 84;
+            var4 = or.field_d;
+            var4.b(param0, (byte) -80);
+            var4.a(125, 2);
+            var4.a(119, 0);
+            var4.a(108, param1.field_e);
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "pf.A(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + -114 + 41);
+        }
     }
 
     public static void a(byte param0) {
         field_a = null;
         field_e = null;
-        if (param0 <= 90) {
-          field_a = null;
-          field_d = null;
-          field_b = null;
-          return;
-        } else {
-          field_d = null;
-          field_b = null;
-          return;
-        }
+        field_d = null;
+        field_b = null;
     }
 
     final static void a(iw param0, int param1) {
-        int var2 = 0;
-        if (param1 != 542439655) {
-          return;
-        } else {
-          pl.field_d = param0.a((byte) 81) << -365488795;
-          var2 = param0.h((byte) -125);
-          pl.field_d = pl.field_d + (var2 >> 1074824387);
-          df.field_E = 1835008 & var2 << -964825838;
-          df.field_E = df.field_E + (param0.a((byte) 81) << 931742658);
-          var2 = param0.h((byte) -126);
-          io.field_j = 2064384 & var2 << -134217809;
-          df.field_E = df.field_E + (var2 >> 1296029030);
-          io.field_j = io.field_j + (param0.h((byte) -106) << 542439655);
-          var2 = param0.h((byte) -105);
-          io.field_j = io.field_j + (var2 >> 361645953);
-          lr.field_r = (var2 & 1) << 1124531280;
-          lr.field_r = lr.field_r + param0.a((byte) 81);
-          return;
+        int var2_int = 0;
+        try {
+            pl.field_d = param0.a((byte) 81) << 5;
+            var2_int = param0.h((byte) -125);
+            pl.field_d = pl.field_d + (var2_int >> 3);
+            df.field_E = 1835008 & var2_int << 18;
+            df.field_E = df.field_E + (param0.a((byte) 81) << 2);
+            var2_int = param0.h((byte) -126);
+            io.field_j = 2064384 & var2_int << 15;
+            df.field_E = df.field_E + (var2_int >> 6);
+            io.field_j = io.field_j + (param0.h((byte) -106) << 7);
+            var2_int = param0.h((byte) -105);
+            io.field_j = io.field_j + (var2_int >> 1);
+            lr.field_r = (var2_int & 1) << 16;
+            lr.field_r = lr.field_r + param0.a((byte) 81);
+        } catch (RuntimeException runtimeException) {
+            throw nb.a((Throwable) (Object) runtimeException, "pf.E(" + (param0 != null ? "{...}" : "null") + 44 + 542439655 + 41);
         }
     }
 

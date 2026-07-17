@@ -30,7 +30,7 @@ final class tg {
               return null;
             }
           } else {
-            if ((param1 ^ -1L) == (((tg) this).field_e.field_g ^ -1L)) {
+            if (~param1 == ~((tg) this).field_e.field_g) {
               var5 = ((tg) this).field_e;
               ((tg) this).field_e = ((tg) this).field_e.field_e;
               return var5;
@@ -63,8 +63,9 @@ final class tg {
           if (param0 == -114) {
             L0: while (true) {
               if (((tg) this).field_h < ((tg) this).field_f) {
+                int fieldTemp$2 = ((tg) this).field_h;
                 ((tg) this).field_h = ((tg) this).field_h + 1;
-                var8 = ((tg) this).field_d[((tg) this).field_h].field_e;
+                var8 = ((tg) this).field_d[fieldTemp$2].field_e;
                 if (((tg) this).field_d[-1 + ((tg) this).field_h] != var8) {
                   ((tg) this).field_a = var8.field_e;
                   return var8;
@@ -83,8 +84,9 @@ final class tg {
             if (param0 == -114) {
               L1: while (true) {
                 if (((tg) this).field_h < ((tg) this).field_f) {
+                  int fieldTemp$3 = ((tg) this).field_h;
                   ((tg) this).field_h = ((tg) this).field_h + 1;
-                  var4 = ((tg) this).field_d[((tg) this).field_h].field_e;
+                  var4 = ((tg) this).field_d[fieldTemp$3].field_e;
                   if (((tg) this).field_d[-1 + ((tg) this).field_h] != var4) {
                     ((tg) this).field_a = var4.field_e;
                     return var4;
@@ -125,27 +127,34 @@ final class tg {
         var2 = 0;
         L0: while (true) {
           if (param0 > var2) {
-            var3 = new gi();
-            ((tg) this).field_d[var2] = new gi();
+            gi dupTemp$2 = new gi();
+            var3 = dupTemp$2;
+            ((tg) this).field_d[var2] = dupTemp$2;
             var3.field_b = var3;
             var3.field_e = var3;
             var2++;
             continue L0;
           } else {
+            return;
           }
         }
     }
 
     final void a(gi param0, long param1, int param2) {
-        if (!(null == param0.field_b)) {
-            param0.a(-16175);
+        gi var5 = null;
+        try {
+            if (!(null == param0.field_b)) {
+                param0.a(-16175);
+            }
+            var5 = ((tg) this).field_d[(int)(param1 & (long)(((tg) this).field_f + param2))];
+            param0.field_b = var5.field_b;
+            param0.field_e = var5;
+            param0.field_b.field_e = param0;
+            param0.field_g = param1;
+            param0.field_e.field_b = param0;
+        } catch (RuntimeException runtimeException) {
+            throw ie.a((Throwable) (Object) runtimeException, "tg.B(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 44 + param2 + 41);
         }
-        gi var5 = ((tg) this).field_d[(int)(param1 & (long)(((tg) this).field_f + param2))];
-        param0.field_b = var5.field_b;
-        param0.field_e = var5;
-        param0.field_b.field_e = param0;
-        param0.field_g = param1;
-        param0.field_e.field_b = param0;
     }
 
     static {

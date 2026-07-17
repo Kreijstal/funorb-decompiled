@@ -30,9 +30,6 @@ abstract class ob {
 
     public static void a(int param0) {
         field_b = null;
-        if (param0 != 12554) {
-            field_l = -115;
-        }
     }
 
     abstract void e(int param0);
@@ -111,7 +108,7 @@ abstract class ob {
         int stackOut_2_1 = 0;
         if (param1 == 18303) {
           L0: {
-            var6 = (long)param2 + ((long)param3 << 586864800);
+            var6 = (long)param2 + ((long)param3 << 32);
             var8 = new ld();
             var8.field_u = param4;
             var8.field_k = var6;
@@ -142,7 +139,7 @@ abstract class ob {
                 break L1;
               }
             } else {
-              if (-21 >= (((ob) this).d(20) ^ -1)) {
+              if (((ob) this).d(20) >= 20) {
                 throw new RuntimeException();
               } else {
                 ((ob) this).field_k.a((byte) 100, (ij) (Object) var8);
@@ -155,7 +152,7 @@ abstract class ob {
           L2: {
             var9 = null;
             ((ob) this).a(true, (Object) null, false);
-            var6 = (long)param2 + ((long)param3 << 586864800);
+            var6 = (long)param2 + ((long)param3 << 32);
             var8 = new ld();
             var8.field_u = param4;
             var8.field_k = var6;
@@ -186,7 +183,7 @@ abstract class ob {
                 break L3;
               }
             } else {
-              if (-21 >= (((ob) this).d(20) ^ -1)) {
+              if (((ob) this).d(20) >= 20) {
                 throw new RuntimeException();
               } else {
                 ((ob) this).field_k.a((byte) 100, (ij) (Object) var8);

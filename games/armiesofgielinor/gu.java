@@ -15,108 +15,119 @@ final class gu {
 
     final static at a(boolean param0, String param1) {
         at var2 = null;
+        RuntimeException var2_ref = null;
         mt var3 = null;
         int var4 = 0;
         int var5 = 0;
-        mt var6 = null;
-        mt var7 = null;
+        at stackIn_18_0 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        RuntimeException stackIn_22_0 = null;
+        StringBuilder stackIn_22_1 = null;
+        String stackIn_22_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        at stackOut_17_0 = null;
+        RuntimeException stackOut_19_0 = null;
+        StringBuilder stackOut_19_1 = null;
+        RuntimeException stackOut_21_0 = null;
+        StringBuilder stackOut_21_1 = null;
+        String stackOut_21_2 = null;
+        RuntimeException stackOut_20_0 = null;
+        StringBuilder stackOut_20_1 = null;
+        String stackOut_20_2 = null;
         var5 = ArmiesOfGielinor.field_M ? 1 : 0;
-        if (!param0) {
-          var2 = new at();
-          var6 = new mt(param1);
-          L0: while (true) {
-            if (var6.a((byte) 16)) {
-              return var2;
-            } else {
-              var4 = var6.b(-1);
-              if (Character.isWhitespace((char) var4)) {
-                continue L0;
+        try {
+          L0: {
+            L1: {
+              if (!param0) {
+                break L1;
               } else {
-                L1: {
-                  if (var4 == 34) {
-                    break L1;
-                  } else {
-                    if (var4 == 39) {
-                      break L1;
-                    } else {
-                      if (var4 != 40) {
-                        if (var4 != 41) {
-                          if (44 != var4) {
-                            var2.a((byte) -119, (tc) (Object) bi.a((byte) -118, var6));
-                            continue L0;
-                          } else {
-                            var2.a((byte) -119, (tc) (Object) new og(sb.field_d, var6.field_c + -1));
-                            continue L0;
-                          }
-                        } else {
-                          var2.a((byte) -119, (tc) (Object) new og(gm.field_d, -1 + var6.field_c));
-                          continue L0;
-                        }
-                      } else {
-                        var2.a((byte) -119, (tc) (Object) new og(mo.field_j, -1 + var6.field_c));
-                        continue L0;
-                      }
-                    }
-                  }
-                }
-                var2.a((byte) -119, (tc) (Object) aw.a((byte) 121, var6));
-                continue L0;
+                boolean discarded$2 = gu.a(102);
+                break L1;
               }
             }
-          }
-        } else {
-          boolean discarded$1 = gu.a(102);
-          var2 = new at();
-          var7 = new mt(param1);
-          var3 = var7;
-          L2: while (true) {
-            if (var7.a((byte) 16)) {
-              return var2;
-            } else {
-              var4 = var7.b(-1);
-              if (Character.isWhitespace((char) var4)) {
-                continue L2;
+            var2 = new at();
+            var3 = new mt(param1);
+            L2: while (true) {
+              if (var3.a((byte) 16)) {
+                stackOut_17_0 = (at) var2;
+                stackIn_18_0 = stackOut_17_0;
+                break L0;
               } else {
-                L3: {
-                  if (var4 == 34) {
-                    break L3;
-                  } else {
-                    if (var4 == 39) {
+                var4 = var3.b(-1);
+                if (Character.isWhitespace((char) var4)) {
+                  continue L2;
+                } else {
+                  L3: {
+                    if (var4 == 34) {
                       break L3;
                     } else {
-                      if (var4 != 40) {
-                        if (var4 != 41) {
-                          if (44 != var4) {
-                            var2.a((byte) -119, (tc) (Object) bi.a((byte) -118, var7));
-                            continue L2;
+                      if (var4 == 39) {
+                        break L3;
+                      } else {
+                        if (var4 != 40) {
+                          if (var4 != 41) {
+                            if (44 != var4) {
+                              var2.a((byte) -119, (tc) (Object) bi.a((byte) -118, var3));
+                              continue L2;
+                            } else {
+                              var2.a((byte) -119, (tc) (Object) new og(sb.field_d, var3.field_c + -1));
+                              continue L2;
+                            }
                           } else {
-                            var2.a((byte) -119, (tc) (Object) new og(sb.field_d, var7.field_c + -1));
+                            var2.a((byte) -119, (tc) (Object) new og(gm.field_d, -1 + var3.field_c));
                             continue L2;
                           }
                         } else {
-                          var2.a((byte) -119, (tc) (Object) new og(gm.field_d, -1 + var7.field_c));
+                          var2.a((byte) -119, (tc) (Object) new og(mo.field_j, -1 + var3.field_c));
                           continue L2;
                         }
-                      } else {
-                        var2.a((byte) -119, (tc) (Object) new og(mo.field_j, -1 + var7.field_c));
-                        continue L2;
                       }
                     }
                   }
+                  var2.a((byte) -119, (tc) (Object) aw.a((byte) 121, var3));
+                  continue L2;
                 }
-                var2.a((byte) -119, (tc) (Object) aw.a((byte) 121, var7));
-                continue L2;
               }
             }
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L4: {
+            var2_ref = decompiledCaughtException;
+            stackOut_19_0 = (RuntimeException) var2_ref;
+            stackOut_19_1 = new StringBuilder().append("gu.D(").append(param0).append(44);
+            stackIn_21_0 = stackOut_19_0;
+            stackIn_21_1 = stackOut_19_1;
+            stackIn_20_0 = stackOut_19_0;
+            stackIn_20_1 = stackOut_19_1;
+            if (param1 == null) {
+              stackOut_21_0 = (RuntimeException) (Object) stackIn_21_0;
+              stackOut_21_1 = (StringBuilder) (Object) stackIn_21_1;
+              stackOut_21_2 = "null";
+              stackIn_22_0 = stackOut_21_0;
+              stackIn_22_1 = stackOut_21_1;
+              stackIn_22_2 = stackOut_21_2;
+              break L4;
+            } else {
+              stackOut_20_0 = (RuntimeException) (Object) stackIn_20_0;
+              stackOut_20_1 = (StringBuilder) (Object) stackIn_20_1;
+              stackOut_20_2 = "{...}";
+              stackIn_22_0 = stackOut_20_0;
+              stackIn_22_1 = stackOut_20_1;
+              stackIn_22_2 = stackOut_20_2;
+              break L4;
+            }
+          }
+          throw ig.a((Throwable) (Object) stackIn_22_0, stackIn_22_2 + 41);
         }
+        return stackIn_18_0;
     }
 
     public static void b(int param0) {
         field_b = null;
-        if (param0 != -16356) {
-            return;
-        }
         field_a = null;
     }
 

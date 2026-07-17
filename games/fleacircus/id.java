@@ -126,45 +126,22 @@ final class id {
         int var3 = 0;
         int var4 = 0;
         var4 = fleas.field_A ? 1 : 0;
-        if (!param1) {
-          field_j = null;
-          var3 = ((id) this).field_a.length;
-          L0: while (true) {
-            if (param0 < var3) {
-              return var3;
-            } else {
-              if (((id) this).field_d) {
-                if (0 != var3) {
-                  var3 = var3 * ((id) this).field_f;
-                  continue L0;
-                } else {
-                  var3 = 1;
-                  continue L0;
-                }
+        var3 = ((id) this).field_a.length;
+        L0: while (true) {
+          if (param0 < var3) {
+            return var3;
+          } else {
+            if (((id) this).field_d) {
+              if (0 != var3) {
+                var3 = var3 * ((id) this).field_f;
+                continue L0;
               } else {
-                var3 = var3 + ((id) this).field_f;
+                var3 = 1;
                 continue L0;
               }
-            }
-          }
-        } else {
-          var3 = ((id) this).field_a.length;
-          L1: while (true) {
-            if (param0 < var3) {
-              return var3;
             } else {
-              if (((id) this).field_d) {
-                if (0 != var3) {
-                  var3 = var3 * ((id) this).field_f;
-                  continue L1;
-                } else {
-                  var3 = 1;
-                  continue L1;
-                }
-              } else {
-                var3 = var3 + ((id) this).field_f;
-                continue L1;
-              }
+              var3 = var3 + ((id) this).field_f;
+              continue L0;
             }
           }
         }
@@ -262,84 +239,115 @@ final class id {
     }
 
     final static ob a(String param0, int param1) {
-        int var2 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
         String[] var3 = null;
+        String[] var4 = null;
         int var5 = 0;
+        String var6 = null;
         ob var7 = null;
         int var8 = 0;
-        String[] var9 = null;
-        String[] var10 = null;
-        String var11 = null;
-        String[] var12 = null;
-        String[] var13 = null;
-        String var14 = null;
+        ob stackIn_4_0 = null;
+        ob stackIn_8_0 = null;
+        ob stackIn_12_0 = null;
+        ob stackIn_18_0 = null;
+        ob stackIn_21_0 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        String stackIn_25_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        ob stackOut_3_0 = null;
+        ob stackOut_7_0 = null;
+        ob stackOut_11_0 = null;
+        ob stackOut_20_0 = null;
+        ob stackOut_17_0 = null;
+        RuntimeException stackOut_22_0 = null;
+        StringBuilder stackOut_22_1 = null;
+        RuntimeException stackOut_24_0 = null;
+        StringBuilder stackOut_24_1 = null;
+        String stackOut_24_2 = null;
+        RuntimeException stackOut_23_0 = null;
+        StringBuilder stackOut_23_1 = null;
+        String stackOut_23_2 = null;
         var8 = fleas.field_A ? 1 : 0;
-        if (param1 == 31592) {
-          var2 = param0.length();
-          if (var2 == 0) {
-            return tf.field_H;
-          } else {
-            if (var2 > 255) {
-              return hg.field_i;
+        try {
+          L0: {
+            var2_int = param0.length();
+            if (var2_int == 0) {
+              stackOut_3_0 = tf.field_H;
+              stackIn_4_0 = stackOut_3_0;
+              return stackIn_4_0;
             } else {
-              var12 = m.a('.', 114, param0);
-              var3 = var12;
-              if ((var12.length ^ -1) > -3) {
-                return tf.field_H;
+              if (var2_int > 255) {
+                stackOut_7_0 = hg.field_i;
+                stackIn_8_0 = stackOut_7_0;
+                return stackIn_8_0;
               } else {
-                var13 = var12;
-                var5 = 0;
-                L0: while (true) {
-                  if (var13.length > var5) {
-                    var14 = var13[var5];
-                    var7 = bj.a(param1 + -31656, var14);
-                    if (var7 != null) {
-                      return var7;
+                var3 = m.a('.', 114, param0);
+                if (var3.length < 2) {
+                  stackOut_11_0 = tf.field_H;
+                  stackIn_12_0 = stackOut_11_0;
+                  return stackIn_12_0;
+                } else {
+                  var4 = var3;
+                  var5 = 0;
+                  L1: while (true) {
+                    if (var4.length <= var5) {
+                      stackOut_20_0 = oa.a(var3[var3.length - 1], -23);
+                      stackIn_21_0 = stackOut_20_0;
+                      break L0;
                     } else {
-                      var5++;
-                      continue L0;
+                      var6 = var4[var5];
+                      var7 = bj.a(-64, var6);
+                      if (var7 != null) {
+                        stackOut_17_0 = (ob) var7;
+                        stackIn_18_0 = stackOut_17_0;
+                        return stackIn_18_0;
+                      } else {
+                        var5++;
+                        continue L1;
+                      }
                     }
-                  } else {
-                    return oa.a(var3[var12.length - 1], -23);
                   }
                 }
               }
             }
           }
-        } else {
-          field_h = null;
-          var2 = param0.length();
-          if (var2 == 0) {
-            return tf.field_H;
-          } else {
-            if (var2 > 255) {
-              return hg.field_i;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var2 = decompiledCaughtException;
+            stackOut_22_0 = (RuntimeException) var2;
+            stackOut_22_1 = new StringBuilder().append("id.J(");
+            stackIn_24_0 = stackOut_22_0;
+            stackIn_24_1 = stackOut_22_1;
+            stackIn_23_0 = stackOut_22_0;
+            stackIn_23_1 = stackOut_22_1;
+            if (param0 == null) {
+              stackOut_24_0 = (RuntimeException) (Object) stackIn_24_0;
+              stackOut_24_1 = (StringBuilder) (Object) stackIn_24_1;
+              stackOut_24_2 = "null";
+              stackIn_25_0 = stackOut_24_0;
+              stackIn_25_1 = stackOut_24_1;
+              stackIn_25_2 = stackOut_24_2;
+              break L2;
             } else {
-              var9 = m.a('.', 114, param0);
-              var3 = var9;
-              if ((var9.length ^ -1) > -3) {
-                return tf.field_H;
-              } else {
-                var10 = var9;
-                var5 = 0;
-                L1: while (true) {
-                  if (var10.length > var5) {
-                    var11 = var10[var5];
-                    var7 = bj.a(param1 + -31656, var11);
-                    if (var7 != null) {
-                      return var7;
-                    } else {
-                      var5++;
-                      continue L1;
-                    }
-                  } else {
-                    return oa.a(var3[var9.length - 1], -23);
-                  }
-                }
-              }
+              stackOut_23_0 = (RuntimeException) (Object) stackIn_23_0;
+              stackOut_23_1 = (StringBuilder) (Object) stackIn_23_1;
+              stackOut_23_2 = "{...}";
+              stackIn_25_0 = stackOut_23_0;
+              stackIn_25_1 = stackOut_23_1;
+              stackIn_25_2 = stackOut_23_2;
+              break L2;
             }
           }
+          throw pf.a((Throwable) (Object) stackIn_25_0, stackIn_25_2 + 44 + 31592 + 41);
         }
+        return stackIn_21_0;
     }
 
     private final void a(int param0, int param1) {
@@ -374,7 +382,7 @@ final class id {
     }
 
     public static void a(byte param0) {
-        int var1 = 33 / ((-80 - param0) / 42);
+        int var1 = -8;
         field_i = null;
         field_j = null;
         field_h = null;

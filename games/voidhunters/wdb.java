@@ -15,22 +15,23 @@ final class wdb extends llb {
 
     wdb(long param0, llb param1, llb param2, pjb param3, llb param4, String param5, String param6) {
         super(param0, param1);
-        ((wdb) this).field_yb = new llb(0L, (llb) null);
-        ((wdb) this).field_xb = new soa(0L, ((wdb) this).field_yb, param2, param3);
-        ((wdb) this).field_wb = new llb(0L, param4);
-        ((wdb) this).field_zb = new llb(0L, param4);
-        ((wdb) this).field_wb.field_R = param5;
-        ((wdb) this).field_zb.field_R = param6;
-        ((wdb) this).b(-561, (llb) (Object) ((wdb) this).field_xb);
-        ((wdb) this).b(-561, ((wdb) this).field_wb);
-        ((wdb) this).b(-561, ((wdb) this).field_zb);
+        try {
+            ((wdb) this).field_yb = new llb(0L, (llb) null);
+            ((wdb) this).field_xb = new soa(0L, ((wdb) this).field_yb, param2, param3);
+            ((wdb) this).field_wb = new llb(0L, param4);
+            ((wdb) this).field_zb = new llb(0L, param4);
+            ((wdb) this).field_wb.field_R = param5;
+            ((wdb) this).field_zb.field_R = param6;
+            ((wdb) this).b(-561, (llb) (Object) ((wdb) this).field_xb);
+            ((wdb) this).b(-561, ((wdb) this).field_wb);
+            ((wdb) this).b(-561, ((wdb) this).field_zb);
+        } catch (RuntimeException runtimeException) {
+            throw rta.a((Throwable) (Object) runtimeException, "wdb.<init>(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 44 + (param2 != null ? "{...}" : "null") + 44 + (param3 != null ? "{...}" : "null") + 44 + (param4 != null ? "{...}" : "null") + 44 + (param5 != null ? "{...}" : "null") + 44 + (param6 != null ? "{...}" : "null") + 41);
+        }
     }
 
     public static void e(byte param0) {
         field_Ab = null;
-        if (param0 < 126) {
-            field_vb = 24;
-        }
     }
 
     final void a(int param0, int param1, int param2, byte param3) {

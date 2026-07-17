@@ -216,19 +216,12 @@ final class vm extends ie {
 
     final void b(int param0) throws javax.sound.sampled.LineUnavailableException {
         javax.sound.sampled.DataLine.Info var2 = null;
-        try {
+        {
             var2 = new javax.sound.sampled.DataLine.Info(javax.sound.sampled.SourceDataLine.class, ((vm) this).field_y, param0 << (field_o ? 2 : 1));
             ((vm) this).field_x = (javax.sound.sampled.SourceDataLine) (Object) javax.sound.sampled.AudioSystem.getLine((javax.sound.sampled.Line.Info) (Object) var2);
             ((vm) this).field_x.open();
             ((vm) this).field_x.start();
             ((vm) this).field_v = param0;
-        } catch (javax.sound.sampled.LineUnavailableException lineUnavailableException) {
-            if (ej.a(858993459, param0) != 1) {
-                ((vm) this).b(md.a((byte) 127, param0));
-                return;
-            }
-            ((vm) this).field_x = null;
-            throw lineUnavailableException;
         }
     }
 

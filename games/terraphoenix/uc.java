@@ -11,16 +11,13 @@ final class uc extends dh {
 
     public static void m(int param0) {
         field_p = null;
-        if (param0 >= -104) {
-            field_n = null;
-        }
         field_q = null;
         field_n = null;
     }
 
     final int a(boolean param0, int param1) {
         int var6 = Terraphoenix.field_V;
-        int var3 = ((uc) this).field_o >> 2146516483;
+        int var3 = ((uc) this).field_o >> 3;
         if (param0) {
             field_q = null;
         }
@@ -28,8 +25,9 @@ final class uc extends dh {
         int var5 = 0;
         ((uc) this).field_o = ((uc) this).field_o + param1;
         while (param1 > var4) {
+            int incrementValue$0 = var3;
             var3++;
-            var5 = var5 + ((ai.field_a[var4] & ((uc) this).field_i[var3]) << param1 - var4);
+            var5 = var5 + ((ai.field_a[var4] & ((uc) this).field_i[incrementValue$0]) << param1 - var4);
             param1 = param1 - var4;
             var4 = 8;
         }
@@ -55,18 +53,11 @@ final class uc extends dh {
         for (var2 = 0; var2 < kf.field_b; var2++) {
             var1[var2] = new bg(ah.field_A, sb.field_j, ha.field_s[var2], hj.field_K[var2], sb.field_m[var2], rf.field_p[var2], qc.field_b[var2], wb.field_a);
         }
-        if (param0 != -28336) {
-            Object var4 = null;
-            uc.b(-83, (String) null);
-        }
         mj.a((byte) 113);
         return var1;
     }
 
     final static int j(byte param0) {
-        if (param0 > -124) {
-            field_p = null;
-        }
         return (int)(1000000000L / dm.field_f);
     }
 
@@ -100,7 +91,7 @@ final class uc extends dh {
         int[] var26 = null;
         var8 = Terraphoenix.field_V;
         var1 = new ci[kf.field_b];
-        var2 = param0;
+        var2 = 0;
         L0: while (true) {
           if (var2 >= kf.field_b) {
             mj.a((byte) 95);
@@ -142,7 +133,7 @@ final class uc extends dh {
                   var2++;
                   continue L0;
                 } else {
-                  var6_ref_int__[var7] = ei.b(wb.field_a[dg.a((int) var23[var7], 255)], dg.a((int) var24[var7], 255) << -1694261224);
+                  var6_ref_int__[var7] = ei.b(wb.field_a[dg.a((int) var23[var7], 255)], dg.a((int) var24[var7], 255) << 24);
                   var7++;
                   continue L2;
                 }
@@ -153,16 +144,79 @@ final class uc extends dh {
     }
 
     final static void b(int param0, String param1) {
-        og.field_e = param1;
-        int var2 = 111 / ((49 - param0) / 53);
+        try {
+            og.field_e = param1;
+            int var2_int = 111 / ((49 - param0) / 53);
+        } catch (RuntimeException runtimeException) {
+            throw qk.a((Throwable) (Object) runtimeException, "uc.TA(" + param0 + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     final void b(int param0, byte[] param1, int param2, int param3) {
-        int var5 = 0;
-        int var6 = Terraphoenix.field_V;
-        for (var5 = param0; var5 < param2; var5++) {
-            ((uc) this).field_k = ((uc) this).field_k + 1;
-            param1[param3 + var5] = (byte)(((uc) this).field_i[((uc) this).field_k] + -((uc) this).field_m.a(112));
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        int var6 = 0;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException stackOut_5_0 = null;
+        StringBuilder stackOut_5_1 = null;
+        RuntimeException stackOut_7_0 = null;
+        StringBuilder stackOut_7_1 = null;
+        String stackOut_7_2 = null;
+        RuntimeException stackOut_6_0 = null;
+        StringBuilder stackOut_6_1 = null;
+        String stackOut_6_2 = null;
+        var6 = Terraphoenix.field_V;
+        try {
+          L0: {
+            var5_int = param0;
+            L1: while (true) {
+              if (var5_int >= param2) {
+                break L0;
+              } else {
+                int fieldTemp$5 = ((uc) this).field_k;
+                ((uc) this).field_k = ((uc) this).field_k + 1;
+                param1[param3 + var5_int] = (byte)(((uc) this).field_i[fieldTemp$5] + -((uc) this).field_m.a(112));
+                var5_int++;
+                continue L1;
+              }
+            }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          L2: {
+            var5 = decompiledCaughtException;
+            stackOut_5_0 = (RuntimeException) var5;
+            stackOut_5_1 = new StringBuilder().append("uc.UA(").append(param0).append(44);
+            stackIn_7_0 = stackOut_5_0;
+            stackIn_7_1 = stackOut_5_1;
+            stackIn_6_0 = stackOut_5_0;
+            stackIn_6_1 = stackOut_5_1;
+            if (param1 == null) {
+              stackOut_7_0 = (RuntimeException) (Object) stackIn_7_0;
+              stackOut_7_1 = (StringBuilder) (Object) stackIn_7_1;
+              stackOut_7_2 = "null";
+              stackIn_8_0 = stackOut_7_0;
+              stackIn_8_1 = stackOut_7_1;
+              stackIn_8_2 = stackOut_7_2;
+              break L2;
+            } else {
+              stackOut_6_0 = (RuntimeException) (Object) stackIn_6_0;
+              stackOut_6_1 = (StringBuilder) (Object) stackIn_6_1;
+              stackOut_6_2 = "{...}";
+              stackIn_8_0 = stackOut_6_0;
+              stackIn_8_1 = stackOut_6_1;
+              stackIn_8_2 = stackOut_6_2;
+              break L2;
+            }
+          }
+          throw qk.a((Throwable) (Object) stackIn_8_0, stackIn_8_2 + 44 + param2 + 44 + param3 + 41);
         }
     }
 
@@ -170,15 +224,20 @@ final class uc extends dh {
         if (param1 != 16888) {
             return;
         }
-        ((uc) this).field_m = new qe(param0);
+        try {
+            ((uc) this).field_m = new qe(param0);
+        } catch (RuntimeException runtimeException) {
+            throw qk.a((Throwable) (Object) runtimeException, "uc.WA(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
+        }
     }
 
     final void k(int param0, int param1) {
         if (param0 != -17410) {
             return;
         }
+        int fieldTemp$0 = ((uc) this).field_k;
         ((uc) this).field_k = ((uc) this).field_k + 1;
-        ((uc) this).field_i[((uc) this).field_k] = (byte)(param1 + ((uc) this).field_m.a(65));
+        ((uc) this).field_i[fieldTemp$0] = (byte)(param1 + ((uc) this).field_m.a(65));
     }
 
     final void n(int param0) {
@@ -197,8 +256,9 @@ final class uc extends dh {
         if (param0) {
             return 72;
         }
+        int fieldTemp$0 = ((uc) this).field_k;
         ((uc) this).field_k = ((uc) this).field_k + 1;
-        return ((uc) this).field_i[((uc) this).field_k] - ((uc) this).field_m.a(116) & 255;
+        return ((uc) this).field_i[fieldTemp$0] - ((uc) this).field_m.a(116) & 255;
     }
 
     static {

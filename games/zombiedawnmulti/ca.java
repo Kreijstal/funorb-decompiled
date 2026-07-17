@@ -8,39 +8,26 @@ final class ca extends fm {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        int var12 = 0;
         int var13 = 0;
-        var9 = -param6;
-        L0: while (true) {
-          if (var9 >= 0) {
-            return;
-          } else {
-            var10 = -param5;
-            L1: while (true) {
-              if (var10 >= 0) {
-                param4 = param4 + param7;
-                param3 = param3 + param8;
-                var9++;
-                continue L0;
-              } else {
+        int var12 = 0;
+        for (var9 = -param6; var9 < 0; var9++) {
+            for (var10 = -param5; var10 < 0; var10++) {
+                int incrementValue$0 = param3;
                 param3++;
-                var11 = 255 & param1[param3];
-                if (var11 == 0) {
-                  param4++;
-                  var10++;
-                  continue L1;
+                var11 = 255 & param1[incrementValue$0];
+                if (var11 != 0) {
+                    var12 = ((param2 & 16711935) * var11 & -16711936) + ((param2 & 65280) * var11 & 16711680) >> 8;
+                    var11 = 256 - var11;
+                    var13 = param0[param4];
+                    int incrementValue$1 = param4;
+                    param4++;
+                    param0[incrementValue$1] = (((var13 & 16711935) * var11 & -16711936) + ((var13 & 65280) * var11 & 16711680) >> 8) + var12;
                 } else {
-                  var12 = ((param2 & 16711935) * var11 & -16711936) + ((param2 & 65280) * var11 & 16711680) >> 8;
-                  var11 = 256 - var11;
-                  var13 = param0[param4];
-                  param4++;
-                  param0[param4] = (((var13 & 16711935) * var11 & -16711936) + ((var13 & 65280) * var11 & 16711680) >> 8) + var12;
-                  var10++;
-                  continue L1;
+                    param4++;
                 }
-              }
             }
-          }
+            param4 = param4 + param7;
+            param3 = param3 + param8;
         }
     }
 
@@ -48,39 +35,26 @@ final class ca extends fm {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        int var13 = 0;
         int var14 = 0;
-        var10 = -param6;
-        L0: while (true) {
-          if (var10 >= 0) {
-            return;
-          } else {
-            var11 = -param5;
-            L1: while (true) {
-              if (var11 >= 0) {
-                param4 = param4 + param7;
-                param3 = param3 + param8;
-                var10++;
-                continue L0;
-              } else {
+        int var13 = 0;
+        for (var10 = -param6; var10 < 0; var10++) {
+            for (var11 = -param5; var11 < 0; var11++) {
+                int incrementValue$0 = param3;
                 param3++;
-                var12 = (255 & param1[param3]) * param9 >> 8;
-                if (var12 == 0) {
-                  param4++;
-                  var11++;
-                  continue L1;
+                var12 = (255 & param1[incrementValue$0]) * param9 >> 8;
+                if (var12 != 0) {
+                    var13 = ((param2 & 16711935) * var12 & -16711936) + ((param2 & 65280) * var12 & 16711680) >> 8;
+                    var12 = 256 - var12;
+                    var14 = param0[param4];
+                    int incrementValue$1 = param4;
+                    param4++;
+                    param0[incrementValue$1] = (((var14 & 16711935) * var12 & -16711936) + ((var14 & 65280) * var12 & 16711680) >> 8) + var13;
                 } else {
-                  var13 = ((param2 & 16711935) * var12 & -16711936) + ((param2 & 65280) * var12 & 16711680) >> 8;
-                  var12 = 256 - var12;
-                  var14 = param0[param4];
-                  param4++;
-                  param0[param4] = (((var14 & 16711935) * var12 & -16711936) + ((var14 & 65280) * var12 & 16711680) >> 8) + var13;
-                  var11++;
-                  continue L1;
+                    param4++;
                 }
-              }
             }
-          }
+            param4 = param4 + param7;
+            param3 = param3 + param8;
         }
     }
 
@@ -240,49 +214,27 @@ final class ca extends fm {
 
     private final static byte[][] a(int[] param0, byte[][] param1) {
         int var2_int = 0;
-        byte[][] var2 = null;
         int var3 = 0;
         int var4_int = 0;
         byte[] var4 = null;
         int var5 = 0;
         int var6 = 0;
-        var2_int = 0;
-        L0: while (true) {
-          if (var2_int >= param0.length) {
-            var2 = param1;
-            var3 = 0;
-            L1: while (true) {
-              if (var3 >= var2.length) {
-                return param1;
-              } else {
-                var4 = var2[var3];
-                var5 = 0;
-                L2: while (true) {
-                  if (var5 >= var4.length) {
-                    var3++;
-                    continue L1;
-                  } else {
-                    var6 = var4[var5];
-                    if (var6 != 0) {
-                      var4[var5] = (byte)param0[var6];
-                      var5++;
-                      continue L2;
-                    } else {
-                      var5++;
-                      continue L2;
-                    }
-                  }
-                }
-              }
-            }
-          } else {
+        for (var2_int = 0; var2_int < param0.length; var2_int++) {
             var3 = param0[var2_int];
             var4_int = (var3 >> 15 & 510) + (var3 & 255);
             param0[var2_int] = var4_int / 3 + (var3 >> 8 & 255) >> 1;
-            var2_int++;
-            continue L0;
-          }
         }
+        byte[][] var2 = param1;
+        for (var3 = 0; var3 < var2.length; var3++) {
+            var4 = var2[var3];
+            for (var5 = 0; var5 < var4.length; var5++) {
+                var6 = var4[var5];
+                if (var6 != 0) {
+                    var4[var5] = (byte)param0[var6];
+                }
+            }
+        }
+        return param1;
     }
 
     ca(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4, int[] param5, byte[][] param6) {

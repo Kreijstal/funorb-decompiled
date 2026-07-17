@@ -23,32 +23,42 @@ final class si {
 
     final static void a(int param0, boolean param1) {
         jb var2 = null;
+        RuntimeException var2_ref = null;
         int var3 = 0;
         ca var4 = null;
+        RuntimeException decompiledCaughtException = null;
         var3 = CrazyCrystals.field_B;
-        var4 = (ca) (Object) gn.field_Q.g(32073);
-        L0: while (true) {
-          if (var4 == null) {
-            var2 = pm.field_c.g(32073);
+        try {
+          L0: {
+            var4 = (ca) (Object) gn.field_Q.g(32073);
             L1: while (true) {
-              if (var2 == null) {
-                if (!param1) {
-                  return;
-                } else {
-                  si.a(98, true);
-                  return;
+              if (var4 == null) {
+                var2 = pm.field_c.g(32073);
+                L2: while (true) {
+                  if (var2 == null) {
+                    if (!param1) {
+                      break L0;
+                    } else {
+                      si.a(98, true);
+                      return;
+                    }
+                  } else {
+                    eq.b(2, param0);
+                    var2 = pm.field_c.a(param1);
+                    continue L2;
+                  }
                 }
               } else {
-                eq.b(2, param0);
-                var2 = pm.field_c.a(param1);
+                nh.a(param0, (byte) -99, var4);
+                var4 = (ca) (Object) gn.field_Q.a(false);
                 continue L1;
               }
             }
-          } else {
-            nh.a(param0, (byte) -99, var4);
-            var4 = (ca) (Object) gn.field_Q.a(false);
-            continue L0;
           }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          throw dn.a((Throwable) (Object) var2_ref, "si.A(" + param0 + 44 + param1 + 41);
         }
     }
 

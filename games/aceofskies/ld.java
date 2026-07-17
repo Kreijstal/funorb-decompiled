@@ -8,9 +8,6 @@ final class ld {
     static int field_a;
 
     public static void a(byte param0) {
-        if (param0 != 62) {
-            return;
-        }
         field_c = null;
     }
 

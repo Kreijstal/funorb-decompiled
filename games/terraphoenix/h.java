@@ -67,7 +67,7 @@ abstract class h {
     }
 
     final nh a(int param0, boolean param1, int param2, byte param3, byte param4) {
-        long var6 = (long)param0 + ((long)param2 << -1456343840);
+        long var6 = (long)param0 + ((long)param2 << 32);
         nh var8 = new nh();
         var8.field_G = param4;
         var8.field_m = var6;
@@ -125,7 +125,7 @@ abstract class h {
         if (!param0) {
           L0: {
             boolean discarded$10 = ((h) this).b(false);
-            if ((((h) this).a((byte) -103) ^ -1) > -21) {
+            if (((h) this).a((byte) -103) < 20) {
               stackOut_7_0 = 0;
               stackIn_8_0 = stackOut_7_0;
               break L0;
@@ -138,7 +138,7 @@ abstract class h {
           return stackIn_8_0 != 0;
         } else {
           L1: {
-            if ((((h) this).a((byte) -103) ^ -1) > -21) {
+            if (((h) this).a((byte) -103) < 20) {
               stackOut_3_0 = 0;
               stackIn_4_0 = stackOut_3_0;
               break L1;

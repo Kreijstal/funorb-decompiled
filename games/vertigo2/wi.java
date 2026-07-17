@@ -12,7 +12,7 @@ final class wi extends v {
 
     public static void b(int param0) {
         field_d = null;
-        int var1 = 81 / ((param0 - -3) / 49);
+        int var1 = 81;
         field_j = null;
         field_g = null;
         field_h = null;
@@ -26,21 +26,24 @@ final class wi extends v {
     }
 
     final void a(ed param0, int param1) {
-        if (param1 != 47) {
-          tq discarded$2 = ((wi) this).a((byte) -76);
-          param0.a(684868900, ((wi) this).field_e);
-          param0.b(0, ((wi) this).field_i);
-          return;
-        } else {
-          param0.a(684868900, ((wi) this).field_e);
-          param0.b(0, ((wi) this).field_i);
-          return;
+        try {
+            if (param1 != 47) {
+                tq discarded$0 = ((wi) this).a((byte) -76);
+            }
+            param0.a(684868900, ((wi) this).field_e);
+            param0.b(0, ((wi) this).field_i);
+        } catch (RuntimeException runtimeException) {
+            throw wn.a((Throwable) (Object) runtimeException, "wi.H(" + (param0 != null ? "{...}" : "null") + 44 + param1 + 41);
         }
     }
 
     wi(String param0, String param1) {
-        ((wi) this).field_i = param1;
-        ((wi) this).field_e = param0;
+        try {
+            ((wi) this).field_i = param1;
+            ((wi) this).field_e = param0;
+        } catch (RuntimeException runtimeException) {
+            throw wn.a((Throwable) (Object) runtimeException, "wi.<init>(" + (param0 != null ? "{...}" : "null") + 44 + (param1 != null ? "{...}" : "null") + 41);
+        }
     }
 
     static {

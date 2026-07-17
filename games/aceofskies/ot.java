@@ -30,7 +30,7 @@ final class ot {
 
     final void a(int param0, byte param1) {
         if (param1 == -58) {
-          if ((param0 ^ -1) <= -1) {
+          if (param0 >= 0) {
             if (param0 <= ((ot) this).field_f) {
               if (((ot) this).field_f != param0) {
                 au.a(((ot) this).field_c, 1 + param0, ((ot) this).field_c, param0, ((ot) this).field_f - param0);
@@ -48,7 +48,7 @@ final class ot {
           }
         } else {
           ((ot) this).a((byte) 9, 30);
-          if ((param0 ^ -1) <= -1) {
+          if (param0 >= 0) {
             if (param0 <= ((ot) this).field_f) {
               if (((ot) this).field_f != param0) {
                 au.a(((ot) this).field_c, 1 + param0, ((ot) this).field_c, param0, ((ot) this).field_f - param0);
@@ -69,7 +69,7 @@ final class ot {
 
     final static gk a(int param0, int param1) {
         if (param0 > -23) {
-            return (gk) null;
+            return null;
         }
         return lc.a(true, false, false, (byte) -65, 1, param1);
     }
@@ -111,9 +111,6 @@ final class ot {
     }
 
     public static void b(byte param0) {
-        if (param0 > -36) {
-            return;
-        }
         field_b = null;
     }
 
